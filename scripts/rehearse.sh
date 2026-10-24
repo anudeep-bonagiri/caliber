@@ -22,7 +22,7 @@ beat "answer 2231"; agent/.venv/bin/python -m agent.cli "answer 2231 Yes. Ortiz 
 for i in $(seq 1 30); do RID=$(curl -s -X POST "$STDB_URI/v1/database/$STDB_DB/sql" -d "SELECT id FROM rule WHERE status = 'candidate'" | python3 -c 'import sys,json; r=json.load(sys.stdin)[0]["rows"]; print(r[0][0] if r else "")'); [ -n "$RID" ] && break; sleep 0.5; done
 beat "approve rule $RID"; agent/.venv/bin/python -m agent.cli "approve rule $RID" | head -1
 beat "hold 2231 now: $(curl -s -X POST "$STDB_URI/v1/database/$STDB_DB/sql" -d "SELECT status FROM hold WHERE txn_ref = '2231'" | python3 -c 'import sys,json; print(json.load(sys.stdin)[0]["rows"][0][0])')"
-beat "segregation of duties: as_agent approve INV-1077 (not yet received on day 41; expect refusal by role)"; scripts/as_agent.sh approve INV-1077 | head -1
+beat "segregation of duties: as_agent approve INV-1077 (not yet received on day 41; expect refusal by role)"; scripts/as_agent.sh approve INV-1077 2>&1 | sed -n 1p; true
 beat "run to day 44 for moment two"; scripts/clock.sh run >/dev/null; while [ "$(day)" -lt 44 ]; do sleep 0.2; done; scripts/clock.sh pause >/dev/null; beat "paused on day $(day)"
 for i in $(seq 1 30); do st=$(curl -s -X POST "$STDB_URI/v1/database/$STDB_DB/sql" -d "SELECT status FROM agent_task WHERE txn_ref = 'INV-1077'" | python3 -c 'import sys,json; r=json.load(sys.stdin)[0]["rows"]; print(r[0][0] if r else "")'); [ "$st" = "investigated" ] && break; sleep 0.5; done
 beat "moment two: approve INV-1077 without a note"; agent/.venv/bin/python -m agent.cli "approve INV-1077" | head -1

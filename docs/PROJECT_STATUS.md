@@ -33,6 +33,14 @@ Fifteen findings, all addressed except one that is a judgment call. The importan
 - 92 days advance in under a second of module time through step_day; the whole cycle is about ten seconds.
 - Second Codex review (worker and agent) found 8 defects; all fixed: claimed-task recovery, retried terminal writes, evidence verification against sources, abort-safe timeouts, payload fitting, bounded chat text in the agent and the module.
 
+## 2026-10-24 12:40 PDT Cold start, target checklist, rehearsals
+
+- Item 1, cold start from a fresh clone with Wi-Fi off: demo_up 8 s, full cycle 9 s, facts identical to the committed file, refusal row present, CLI 2.13.0 matches the SDK, bindings regenerate with no diff. Three defects fixed first: a fresh seed identity could not publish over a database owned by another checkout (demo_up now restarts the local server on its own data dir), the seed venv had no pytest, and the facts file carried a wall-clock stamp.
+- Item 2, every line of the target run literally: pass on all but the Devpost entry itself (draft exists). The clock replayed 92 days on the real 2 s tick (184 s of tick time) and paused on day 41 with hold 2231 on screen; a judge scenario 54 miles off route raised location_mismatch and cleared through rule 13 after one answer.
+- Item 5, runbook rewritten as a beat table with moment two; dashboard shows the call-back pill, the call-back note on release, and live/replayed/stand-in counts; three end-to-end rehearsals from demo_up through both moments and the judge scenarios: 27 s, 28 s, 28 s.
+- Secret scan clean after quoting the blanked key exports (gitleaks read `FACTORY_API_KEY= ANTHROPIC_API_KEY=` as a key).
+- Items 3 and 4 wait on keys.
+
 ## Tried and rejected
 
 | What | Why rejected |
