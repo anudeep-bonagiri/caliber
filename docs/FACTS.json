@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-24T19:05:22+00:00",
+  "asOf": "2026-10-24T20:35:56+00:00",
   "autoPaid": {
     "cents": 108363052,
     "count": 7886
@@ -1135,8 +1135,7 @@
   "decoysClearedWithOneAnswer": 6,
   "investigations": {
     "bySource": {
-      "none": 45,
-      "replayed": 2
+      "replayed": 47
     },
     "byStatus": {
       "investigated": 47
@@ -1166,9 +1165,9 @@
   "transactionsMatched": 7944,
   "unreviewedPlanted": [],
   "worker_cost": {
-    "durationMs": 0,
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "tasks": 0
+    "durationMs": 1330401,
+    "inputTokens": 53739,
+    "outputTokens": 70433,
+    "tasks": 52
   }
 }

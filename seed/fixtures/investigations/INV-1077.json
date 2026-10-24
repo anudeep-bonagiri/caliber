@@ -1,74 +1,191 @@
 {
   "recorded": true,
-  "note": "RECORDED investigation for moment two (vendor bank change), hand-written in the shape WORKER_MODE=record emits (no live Droid run produced it). Replayed verbatim by the worker in replay mode and labelled status 'replayed', source 'replayed'. Nothing here is produced at demo time by a model.",
+  "note": "Recorded from a live Droid run in WORKER_MODE=record. Replayed verbatim when the worker runs offline.",
   "finding": {
-    "finding": "Invoice INV-1077 from Gulf Coast Diesel bills $9,800.00 for a brake job on unit 17 against PO-1026 at the contract rate, and the quantity matches receiving. The invoice itself says the remit-to account was updated on 2026-08-27, two business days before it arrived, which is inside the 7 day window, so the invoice is clean but the payee is not yet confirmed.",
+    "finding": "The new account ending 7730 remains unverified. The invoice rate matches the live contract, but that does not authenticate the bank change. No vendor callback was performed. The local contract file concerns a different vendor and service.",
     "evidence": [
       {
         "source": "invoices/INV-1077.txt",
-        "ref": "line 7",
-        "quote": "Brake job (per axle)                     qty   4 x  $2,450.00 =   $9,800.00"
+        "ref": "Remittance instructions",
+        "quote": "Remit to account ending 7730"
       },
       {
         "source": "invoices/INV-1077.txt",
-        "ref": "line 12",
+        "ref": "Bank-change notice",
         "quote": "NOTE: remit-to account updated on 2026-08-27. Please update your records."
       },
       {
         "source": "contract_rate_for_vendor",
-        "ref": "vendor 3 brake_job on day 44",
-        "quote": "{\"rate_cents\":245000,\"clause\":\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included.\",\"contract_id\":\"17\"}"
+        "ref": "vendor_id=3, item=brake_job, on=44; contract_id=17; rate_cents=245000",
+        "quote": "Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included. Work beyond the axle count on the purchase order needs a change order before the truck leaves the shop."
       },
       {
-        "source": "kernel",
-        "ref": "evidence.daysSinceChange",
-        "quote": "bank account changed on day 42, invoice received day 44, threshold 7 days"
+        "source": "contracts/3.txt",
+        "ref": "Vendor and service mismatch",
+        "quote": "Vendor: Alamo Fleet Service, San Antonio TX\nItem: oil_service (Oil and filter service)"
       }
     ],
-    "recommendation": "hold",
-    "question_for_controller": "Call Gulf Coast Diesel on the number on file, not the one on the invoice, and record who confirmed the new account before releasing $9,800.00.",
-    "confidence": 0.91,
+    "recommendation": "hold_and_ask",
+    "question_for_controller": "Who at Gulf Coast Diesel confirmed account ending 7730 during a callback to a previously verified vendor phone number?",
+    "confidence": 0.99,
     "status": "ok",
     "model": "droid",
-    "durationMs": 17240,
+    "durationMs": 28847,
     "tokenUsage": {
-      "input": 12210,
-      "output": 640
+      "input": 1022,
+      "output": 1317
     }
   },
   "steps": [
     {
       "type": "note",
-      "at": "2026-10-23T21:31:40.000Z",
-      "text": "hand-written recorded investigation for INV-1077 (shape of a record-mode run)"
-    },
-    {
-      "type": "assistant",
-      "at": "2026-10-23T21:31:43.100Z",
-      "text": "The kernel raised vendor_bank_change: the payee's bank details changed inside the window before a payment over $5,000. I will confirm the invoice matches its PO and the contract rate, then report what the controller must verify out of band."
+      "at": "2026-10-24T20:28:07.391Z",
+      "text": "live droid run (record) for INV-1077"
     },
     {
       "type": "tool_call",
-      "at": "2026-10-23T21:31:43.800Z",
-      "name": "Read",
-      "toolUseId": "toolu_01_read_invoice_1077",
+      "at": "2026-10-24T20:28:11.071Z",
+      "name": "Script",
+      "toolUseId": "call_Zh7py08g337eqr3ZO50EptOB",
       "input": {
-        "path": "invoices/INV-1077.txt"
+        "script": "text(await tools.ToolSearch({query:\"select:elastic___find_trips_near,elastic___contract_rate_for_vendor\"}));\n"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:11.087Z",
+      "name": "ToolSearch",
+      "toolUseId": "73e79d29-b920-4885-9eb6-0b025a867168-1",
+      "input": {
+        "query": "select:elastic___find_trips_near,elastic___contract_rate_for_vendor"
       }
     },
     {
       "type": "tool_result",
-      "at": "2026-10-23T21:31:44.050Z",
-      "toolUseId": "toolu_01_read_invoice_1077",
-      "toolName": "Read",
-      "content": "GULF COAST DIESEL\nHouston, TX\nINVOICE INV-1077\nDate received: 2026-08-31 (business day 44)\nCustomer PO: PO-1026   Unit: 17\n\nBrake job (per axle)                     qty   4 x  $2,450.00 =   $9,800.00\n\nTOTAL DUE $9,800.00\nRemit to account ending 7730\nTerms: net 15\nNOTE: remit-to account updated on 2026-08-27. Please update your records.\n",
+      "at": "2026-10-24T20:28:11.089Z",
+      "toolUseId": "73e79d29-b920-4885-9eb6-0b025a867168-1",
+      "toolName": "ToolSearch",
+      "content": "Loaded 2 tool(s): elastic___find_trips_near, elastic___contract_rate_for_vendor. Call them from a later Script at the `tools.<path>` shown in their declarations, which follow in a system reminder. A path can differ from the listed name; for example, `server__tool` becomes `tools.server.tool`.",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:11.101Z",
+      "toolUseId": "call_Zh7py08g337eqr3ZO50EptOB",
+      "toolName": "Script",
+      "content": "[{\"type\":\"text\",\"text\":\"Loaded 2 tool(s): elastic___find_trips_near, elastic___contract_rate_for_vendor. Call them from a later Script at the `tools.<path>` shown in their declarations, which follow in a system reminder. A path can differ from the listed name; for example, `server__tool` becomes `tools.server.tool`.\"},{\"type\":\"text\",\"text\":\"[Script completed · 0.0 s elapsed · 1 call · log: /Users/anudeepbonagiri/.factory/artifacts/scripts/57ef407f-009b-4161-8281-335acaaa146d/call_Zh7py08g337eqr3ZO50EptOB.log]\"}]",
       "isError": false
     },
     {
       "type": "tool_call",
-      "at": "2026-10-23T21:31:45.200Z",
-      "name": "contract_rate_for_vendor",
-      "toolUseId": "toolu_02_contract_rate_1077",
+      "at": "2026-10-24T20:28:20.174Z",
+      "name": "Script",
+      "toolUseId": "call_tlqOFuJwrljo7vNOjkFwOC17",
+      "input": {
+        "script": "const base=\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence\";\nconst files=[\"invoices/INV-1077.txt\",\"contracts/3.txt\",\"swap_log.txt\",\"telematics/44.csv\"];\nconst results=await Promise.allSettled(files.map(p=>tools.Read({file_path:base+\"/\"+p,...(p.startsWith(\"telematics/\")?{limit:12}:{})})));\nresults.forEach((r,i)=>text({source:files[i],result:r.status===\"fulfilled\"?r.value:String(r.reason)}));\n"
+      }
+    },
+    {
+      "type": "assistant",
+      "at": "2026-10-24T20:28:20.174Z",
+      "text": "The brief has no station coordinates or transaction time for the location lookup. I’ll check the invoice and supporting records for those details and any bank-change confirmation.\n"
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:20.203Z",
+      "name": "Read",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-1",
+      "input": {
+        "file_path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/invoices/INV-1077.txt"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:20.204Z",
+      "name": "Read",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-2",
+      "input": {
+        "file_path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/contracts/3.txt"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:20.205Z",
+      "name": "Read",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-3",
+      "input": {
+        "file_path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/swap_log.txt"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:20.206Z",
+      "name": "Read",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-4",
+      "input": {
+        "file_path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/44.csv",
+        "limit": 12
+      }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:20.210Z",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-3",
+      "toolName": "Read",
+      "content": "Read /Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/swap_log.txt: lines 1-16 (16 lines, 1.4 KiB); the file holds the bytes",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:20.212Z",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-4",
+      "toolName": "Read",
+      "content": "Read /Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/44.csv: lines 1-12 (12 lines, 659 B); the file holds the bytes",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:20.213Z",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-1",
+      "toolName": "Read",
+      "content": "Read /Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/invoices/INV-1077.txt: lines 1-13 (13 lines, 338 B); the file holds the bytes",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:20.214Z",
+      "toolUseId": "51d52746-34c7-4745-893e-6488cee2a0d5-2",
+      "toolName": "Read",
+      "content": "Read /Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/contracts/3.txt: lines 1-9 (9 lines, 498 B); the file holds the bytes",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:20.224Z",
+      "toolUseId": "call_tlqOFuJwrljo7vNOjkFwOC17",
+      "toolName": "Script",
+      "content": "[{\"type\":\"text\",\"text\":\"{\\\"source\\\":\\\"invoices/INV-1077.txt\\\",\\\"result\\\":\\\"GULF COAST DIESEL\\\\nHouston, TX\\\\nINVOICE INV-1077\\\\nDate received: 2026-08-31 (business day 44)\\\\nCustomer PO: PO-1026   Unit: 17\\\\n\\\\nBrake job (per axle)                     qty   4 x  $2,450.00 =   $9,800.00\\\\n\\\\nTOTAL DUE $9,800.00\\\\nRemit to account ending 7730\\\\nTerms: net 15\\\\nNOTE: remit-to account updated on 2026-08-27. Please update your records.\\\\n\\\"}\\n{\\\"source\\\":\\\"contracts/3.txt\\\",\\\"result\\\":\\\"SERVICE RATE AGREEMENT 3\\\\nVendor: Alamo Fleet Service, San Antonio TX\\\\nItem: oil_service (Oil and filter service)\\\\nUnit rate: $328.00\\\\nValid: business day 45 (2026-09-01) to day 92 (2026-11-05)\\\\nTolerance: invoices above 105 percent of the unit rate are held for review.\\\\n\\\\nEach service includes engine oil, all filters, chassis lube and a 40-point inspection at the unit rate. Vendor invoices against the standing purchase order within five business days of completion and attaches the inspection sheet.\\\\n\\\"}\\n{\\\"source\\\":\\\"swap_log.txt\\\",\\\"result\\\":\\\"DISPATCH LOG - UNIT SWAPS (San Antonio desk, all terminals)\\\\ndate        driver                        from  to    reason\\\\n\\\\n2026-07-10  Burks, Clayton (drv 22)       15    9     unit 15 in shop: ac service; moved to unit 9 through 2026-07-13\\\\n2026-07-14  Burks, Clayton (drv 22)       9     15    unit 15 back from shop; driver returns to own unit\\\\n2026-07-27  Watkins, Jerome (drv 10)      30    14    unit 30 in shop: oil service; moved to unit 14 through 2026-07-30\\\\n2026-07-31  Watkins, Jerome (drv 10)      14    30    unit 30 back from shop; driver returns to own unit\\\\n2026-08-26  Ortiz, Ramon (drv 23)         17    22    unit 17 in shop: brake job (PO-1026); moved to unit 22 through 2026-08-31\\\\n2026-09-01  Ortiz, Ramon (drv 23)         22    17    unit 17 back from shop; driver returns to own unit\\\\n2026-09-09  Whitaker, Carl (drv 6)        35    27    unit 35 in shop: ac service; moved to unit 27 through 2026-09-14\\\\n2026-09-15  Whitaker, Carl (drv 6)        27    35    unit 35 back from shop; driver returns to own unit\\\\n2026-10-12  Garza, Alejandro (drv 11)     6     13    unit 6 in shop: alignment; moved to unit 13 through 2026-10-13\\\\n2026-10-14  Garza, Alejandro (drv 11)     13    6     unit 6 back from shop; driver returns to own unit\\\\n2026-10-23  Osborne, Derrick (drv 35)     16    31    unit 16 in shop: tire replacement; moved to unit 31 through 2026-10-27\\\\n2026-10-28  Osborne, Derrick (drv 35)     31    16    unit 16 back from shop; driver returns to own unit\\\\n\\\"}\\n{\\\"source\\\":\\\"telematics/44.csv\\\",\\\"result\\\":\\\"truckId,at,lat,lon,engineOn,odometer\\\\n1,2026-08-31T05:00:00Z,29.76022,-95.36993,false,169397.8\\\\n1,2026-08-31T06:00:00Z,29.76043,-95.36974,false,169397.8\\\\n1,2026-08-31T07:00:00Z,29.76048,-95.36988,false,169397.8\\\\n1,2026-08-31T08:00:00Z,29.76039,-95.36981,false,169397.8\\\\n1,2026-08-31T09:00:00Z,29.76052,-95.36952,false,169397.8\\\\n1,2026-08-31T10:00:00Z,29.76069,-95.36966,false,169397.8\\\\n1,2026-08-31T11:00:00Z,29.76014,-95.36962,false,169397.8\\\\n1,2026-08-31T12:00:00Z,29.7607,-95.36981,false,169397.8\\\\n1,2026-08-31T13:00:00Z,29.7604,-95.37008,false,169397.8\\\\n1,2026-08-31T13:30:00Z,29.77614,-95.32495,true,169397.8\\\\n1,2026-08-31T13:30:00Z,29.77606,-95.32473,true,169397.8\\\"}\"},{\"type\":\"text\",\"text\":\"[Script completed · 0.0 s elapsed · 4 calls · log: /Users/anudeepbonagiri/.factory/artifacts/scripts/57ef407f-009b-4161-8281-335acaaa146d/call_tlqOFuJwrljo7vNOjkFwOC17.log]\"}]",
+      "isError": false
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:22.137Z",
+      "name": "Script",
+      "toolUseId": "call_Lq3Z1Q1flZVr4zZAqkZSNmhM",
+      "input": {
+        "script": "text({source:\"contract_rate_for_vendor\",result:await tools.elastic.contract_rate_for_vendor({vendor_id:\"3\",item:\"brake_job\",on:44})});\n"
+      }
+    },
+    {
+      "type": "note",
+      "at": "2026-10-24T20:28:22.141Z",
+      "text": "permission proceed once: Script:script"
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:28:22.168Z",
+      "name": "elastic___contract_rate_for_vendor",
+      "toolUseId": "2e016344-0205-49d8-a6b1-e589f8aca5ff-1",
       "input": {
         "vendor_id": "3",
         "item": "brake_job",
@@ -77,24 +194,32 @@
     },
     {
       "type": "tool_result",
-      "at": "2026-10-23T21:31:47.600Z",
-      "toolUseId": "toolu_02_contract_rate_1077",
-      "toolName": "contract_rate_for_vendor",
-      "content": "[{\"rate_cents\":245000,\"clause\":\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included.\",\"contract_id\":\"17\"}]",
+      "at": "2026-10-24T20:28:22.351Z",
+      "toolUseId": "2e016344-0205-49d8-a6b1-e589f8aca5ff-1",
+      "toolName": "elastic___contract_rate_for_vendor",
+      "content": "{\"results\":[{\"type\":\"query\",\"data\":{\"esql\":\"FROM contracts\\n| WHERE\\n    vendor_id == \\\"3\\\" AND item == \\\"brake_job\\\" AND valid_from <= 44\\n      AND valid_to >= 44\\n| KEEP contract_id, rate_cents, clause\\n| LIMIT 1\"},\"tool_result_id\":\"UM0JfX\"},{\"tool_result_id\":\"AKADuO\",\"type\":\"esql_results\",\"data\":{\"source\":\"esql\",\"query\":\"FROM contracts\\n| WHERE\\n    vendor_id == \\\"3\\\" AND item == \\\"brake_job\\\" AND valid_from <= 44\\n      AND valid_to >= 44\\n| KEEP contract_id, rate_cents, clause\\n| LIMIT 1\",\"columns\":[{\"name\":\"contract_id\",\"type\":\"keyword\"},{\"name\":\"rate_cents\",\"type\":\"long\"},{\"name\":\"clause\",\"type\":\"text\"}],\"values\":[[\"17\",245000,\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included. Work beyond the axle count on the purchase order needs a change order before the truck leaves the shop.\"]]}}]}",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:28:22.365Z",
+      "toolUseId": "call_Lq3Z1Q1flZVr4zZAqkZSNmhM",
+      "toolName": "Script",
+      "content": "[{\"type\":\"text\",\"text\":\"{\\\"source\\\":\\\"contract_rate_for_vendor\\\",\\\"result\\\":\\\"{\\\\\\\"results\\\\\\\":[{\\\\\\\"type\\\\\\\":\\\\\\\"query\\\\\\\",\\\\\\\"data\\\\\\\":{\\\\\\\"esql\\\\\\\":\\\\\\\"FROM contracts\\\\\\\\n| WHERE\\\\\\\\n    vendor_id == \\\\\\\\\\\\\\\"3\\\\\\\\\\\\\\\" AND item == \\\\\\\\\\\\\\\"brake_job\\\\\\\\\\\\\\\" AND valid_from <= 44\\\\\\\\n      AND valid_to >= 44\\\\\\\\n| KEEP contract_id, rate_cents, clause\\\\\\\\n| LIMIT 1\\\\\\\"},\\\\\\\"tool_result_id\\\\\\\":\\\\\\\"UM0JfX\\\\\\\"},{\\\\\\\"tool_result_id\\\\\\\":\\\\\\\"AKADuO\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"esql_results\\\\\\\",\\\\\\\"data\\\\\\\":{\\\\\\\"source\\\\\\\":\\\\\\\"esql\\\\\\\",\\\\\\\"query\\\\\\\":\\\\\\\"FROM contracts\\\\\\\\n| WHERE\\\\\\\\n    vendor_id == \\\\\\\\\\\\\\\"3\\\\\\\\\\\\\\\" AND item == \\\\\\\\\\\\\\\"brake_job\\\\\\\\\\\\\\\" AND valid_from <= 44\\\\\\\\n      AND valid_to >= 44\\\\\\\\n| KEEP contract_id, rate_cents, clause\\\\\\\\n| LIMIT 1\\\\\\\",\\\\\\\"columns\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"contract_id\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"keyword\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"rate_cents\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"long\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"clause\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"text\\\\\\\"}],\\\\\\\"values\\\\\\\":[[\\\\\\\"17\\\\\\\",245000,\\\\\\\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included. Work beyond the axle count on the purchase order needs a change order before the truck leaves the shop.\\\\\\\"]]}}]}\\\"}\"},{\"type\":\"text\",\"text\":\"[Script completed · 0.2 s elapsed · 1 call · log: /Users/anudeepbonagiri/.factory/artifacts/scripts/57ef407f-009b-4161-8281-335acaaa146d/call_Lq3Z1Q1flZVr4zZAqkZSNmhM.log]\"}]",
       "isError": false
     },
     {
       "type": "assistant",
-      "at": "2026-10-23T21:31:50.900Z",
-      "text": "The unit price equals the contract rate and the quantity equals receiving, so the invoice is clean on its face. The remit-to account on the invoice is new and matches the bank change the kernel flagged. I cannot verify a bank account from documents; this needs a call-back on a known number. Recommendation: hold."
+      "at": "2026-10-24T20:28:37.856Z",
+      "text": "{\"finding\":\"The new account ending 7730 remains unverified. The invoice rate matches the live contract, but that does not authenticate the bank change. No vendor callback was performed. The local contract file concerns a different vendor and service.\",\"evidence\":[{\"source\":\"invoices/INV-1077.txt\",\"ref\":\"Remittance instructions\",\"quote\":\"Remit to account ending 7730\"},{\"source\":\"invoices/INV-1077.txt\",\"ref\":\"Bank-change notice\",\"quote\":\"NOTE: remit-to account updated on 2026-08-27. Please update your records.\"},{\"source\":\"contract_rate_for_vendor\",\"ref\":\"vendor_id=3, item=brake_job, on=44; contract_id=17; rate_cents=245000\",\"quote\":\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included. Work beyond the axle count on the purchase order needs a change order before the truck leaves the shop.\"},{\"source\":\"contracts/3.txt\",\"ref\":\"Vendor and service mismatch\",\"quote\":\"Vendor: Alamo Fleet Service, San Antonio TX\\nItem: oil_service (Oil and filter service)\"}],\"recommendation\":\"hold_and_ask\",\"question_for_controller\":\"Who at Gulf Coast Diesel confirmed account ending 7730 during a callback to a previously verified vendor phone number?\",\"confidence\":0.99}"
     },
     {
       "type": "result",
-      "at": "2026-10-23T21:31:51.400Z",
+      "at": "2026-10-24T20:28:37.862Z",
       "subtype": "success",
-      "durationMs": 17240,
+      "durationMs": 28847,
       "success": true
     }
   ],
-  "recordedAt": "2026-10-23T21:31:51.400Z"
+  "recordedAt": "2026-10-24T20:28:39.296Z"
 }

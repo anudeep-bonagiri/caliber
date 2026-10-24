@@ -1,6 +1,6 @@
 # Results
 
-Run date: 2026-10-24T19:05:22+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
+Run date: 2026-10-24T20:35:56+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
 
 | Metric | Result | Target |
 | --- | --- | --- |
@@ -35,11 +35,11 @@ The six decoys are legitimate unit swaps recorded in the dispatcher's swap log. 
 <!-- honesty:start -->
 ## Provenance
 
-In the measured run of 2026-10-24T19:05:22+00:00, 0 investigations were produced by a live model, 2 replayed recorded findings, and 45 were scripted stand-ins, each labelled on its card.
+In the measured run of 2026-10-24T20:35:56+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card.
 
 The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role.
 
-The replayed findings come from the recordings in `seed/fixtures/investigations/`, one per txnRef: 2231 and INV-1077. Each of these recordings is hand-written in the shape `WORKER_MODE=record` emits; no live Droid run produced them.
+The replayed findings come from the recordings in `seed/fixtures/investigations/`, one per txnRef: 1068, 1421, 1468, 1793, 1971, 2044, 2231, 2251, 2540, 2830, 3093, 3209, 3510, 3884, 3955, 4177, 4363, 5041, 5428, 5557, 5620, 5908, 5986, 6065, 6294, 6390, 660001, 660002, 660003, 770002, 770003, INV-1003, INV-1010, INV-1015, INV-1029, INV-1032, INV-1037, INV-1050, INV-1052, INV-1062, INV-1074, INV-1077, INV-1078, INV-1086, INV-1096, INV-1099, INV-1116, INV-1121, INV-1130, INV-1138, INV-1140 and INV-1163.
 
 No live model produced a finding in this run.
 <!-- honesty:end -->

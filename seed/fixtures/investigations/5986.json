@@ -1,0 +1,209 @@
+{
+  "recorded": true,
+  "note": "Recorded from a live Droid run in WORKER_MODE=record. Replayed verbatim when the worker runs offline.",
+  "finding": {
+    "finding": "Transaction 5986 is explained by a documented truck swap, not a different driver. Derrick Osborne (driver 35) moved from truck 16 to truck 31 on October 23 while truck 16 underwent tire replacement. Truck 31 was at the station around the purchase time; truck 16 remained stationary. The receipt retained the original unit 16 identification.",
+    "evidence": [
+      {
+        "source": "swap_log.txt",
+        "ref": "2026-10-23 reassignment",
+        "quote": "2026-10-23  Osborne, Derrick (drv 35)     16    31    unit 16 in shop: tire replacement; moved to unit 31 through 2026-10-27"
+      },
+      {
+        "source": "find_trips_near",
+        "ref": "Truck 31, station proximity within the requested time window; distance in meters",
+        "quote": "[\"31\",\"2026-10-23T14:05:00.000Z\",28.851188908133167]"
+      },
+      {
+        "source": "receipts/5986.txt",
+        "ref": "Card, unit, driver and transaction reference",
+        "quote": "FLEET CARD   ****1016   UNIT 16   DRIVER 35\nAUTH 80B7F0   REF 5986"
+      },
+      {
+        "source": "telematics/83.csv",
+        "ref": "Line 639, truck 16 near transaction time",
+        "quote": "16,2026-10-23T14:00:00Z,29.42419,-98.49369,false,176105.2"
+      },
+      {
+        "source": "telematics/83.csv",
+        "ref": "Lines 1369–1370, truck 31 stopped at station",
+        "quote": "31,2026-10-23T14:05:00Z,29.68075,-97.64742,true,330404.6\n31,2026-10-23T14:20:00Z,29.68044,-97.64733,true,330404.6"
+      }
+    ],
+    "recommendation": "clear",
+    "confidence": 0.99,
+    "status": "ok",
+    "model": "droid",
+    "durationMs": 16177,
+    "tokenUsage": {
+      "input": 1052,
+      "output": 858
+    }
+  },
+  "steps": [
+    {
+      "type": "note",
+      "at": "2026-10-24T20:32:36.886Z",
+      "text": "live droid run (record) for 5986"
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:40.238Z",
+      "name": "Script",
+      "toolUseId": "call_alacPrk9tRi7BLJk5RnvIkjK",
+      "input": {
+        "script": "text(await tools.ToolSearch({query:\"select:elastic___find_trips_near\"}));\n"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:40.279Z",
+      "name": "ToolSearch",
+      "toolUseId": "525217dc-9a9c-42fc-8d01-1926b9a61736-1",
+      "input": {
+        "query": "select:elastic___find_trips_near"
+      }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:40.281Z",
+      "toolUseId": "525217dc-9a9c-42fc-8d01-1926b9a61736-1",
+      "toolName": "ToolSearch",
+      "content": "Loaded 1 tool(s): elastic___find_trips_near. Call them from a later Script at the `tools.<path>` shown in their declarations, which follow in a system reminder. A path can differ from the listed name; for example, `server__tool` becomes `tools.server.tool`.",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:40.290Z",
+      "toolUseId": "call_alacPrk9tRi7BLJk5RnvIkjK",
+      "toolName": "Script",
+      "content": "[{\"type\":\"text\",\"text\":\"Loaded 1 tool(s): elastic___find_trips_near. Call them from a later Script at the `tools.<path>` shown in their declarations, which follow in a system reminder. A path can differ from the listed name; for example, `server__tool` becomes `tools.server.tool`.\"},{\"type\":\"text\",\"text\":\"[Script completed · 0.0 s elapsed · 1 call · log: /Users/anudeepbonagiri/.factory/artifacts/scripts/1a54c2e2-ec6e-424c-8731-0dc29bdf6bb7/call_alacPrk9tRi7BLJk5RnvIkjK.log]\"}]",
+      "isError": false
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:42.177Z",
+      "name": "Script",
+      "toolUseId": "call_Klo3HQjIwc06fzRo8WVWPoL6",
+      "input": {
+        "script": "text(await tools.elastic.find_trips_near({point_wkt:\"POINT(-97.6475 29.6805)\",radius_m:3000,since:\"2026-10-23T13:57:57Z\",until:\"2026-10-23T14:17:57Z\"}));\n"
+      }
+    },
+    {
+      "type": "note",
+      "at": "2026-10-24T20:32:42.185Z",
+      "text": "permission proceed once: Script:script"
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:42.212Z",
+      "name": "elastic___find_trips_near",
+      "toolUseId": "4b075353-3d27-4d0b-b91b-6cb8f513f4c6-1",
+      "input": {
+        "point_wkt": "POINT(-97.6475 29.6805)",
+        "radius_m": 3000,
+        "since": "2026-10-23T13:57:57Z",
+        "until": "2026-10-23T14:17:57Z"
+      }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:42.353Z",
+      "toolUseId": "4b075353-3d27-4d0b-b91b-6cb8f513f4c6-1",
+      "toolName": "elastic___find_trips_near",
+      "content": "{\"results\":[{\"type\":\"query\",\"data\":{\"esql\":\"FROM telematics_log\\n| WHERE at >= \\\"2026-10-23T13:57:57Z\\\" AND at <= \\\"2026-10-23T14:17:57Z\\\"\\n| EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(\\\"POINT(-97.6475 29.6805)\\\"))\\n| WHERE dist_m < 3000\\n| SORT dist_m ASC\\n| KEEP truck_id, at, dist_m\\n| LIMIT 20\"},\"tool_result_id\":\"FI5o4e\"},{\"tool_result_id\":\"hkClQd\",\"type\":\"esql_results\",\"data\":{\"source\":\"esql\",\"query\":\"FROM telematics_log\\n| WHERE at >= \\\"2026-10-23T13:57:57Z\\\" AND at <= \\\"2026-10-23T14:17:57Z\\\"\\n| EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(\\\"POINT(-97.6475 29.6805)\\\"))\\n| WHERE dist_m < 3000\\n| SORT dist_m ASC\\n| KEEP truck_id, at, dist_m\\n| LIMIT 20\",\"columns\":[{\"name\":\"truck_id\",\"type\":\"keyword\"},{\"name\":\"at\",\"type\":\"date\"},{\"name\":\"dist_m\",\"type\":\"double\"}],\"values\":[[\"31\",\"2026-10-23T14:05:00.000Z\",28.851188908133167],[\"31\",\"2026-10-23T14:03:47.000Z\",30.268075393785082],[\"19\",\"2026-10-23T14:05:00.000Z\",393.5058617913592]]}}]}",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:42.383Z",
+      "toolUseId": "call_Klo3HQjIwc06fzRo8WVWPoL6",
+      "toolName": "Script",
+      "content": "[{\"type\":\"text\",\"text\":\"{\\\"results\\\":[{\\\"type\\\":\\\"query\\\",\\\"data\\\":{\\\"esql\\\":\\\"FROM telematics_log\\\\n| WHERE at >= \\\\\\\"2026-10-23T13:57:57Z\\\\\\\" AND at <= \\\\\\\"2026-10-23T14:17:57Z\\\\\\\"\\\\n| EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(\\\\\\\"POINT(-97.6475 29.6805)\\\\\\\"))\\\\n| WHERE dist_m < 3000\\\\n| SORT dist_m ASC\\\\n| KEEP truck_id, at, dist_m\\\\n| LIMIT 20\\\"},\\\"tool_result_id\\\":\\\"FI5o4e\\\"},{\\\"tool_result_id\\\":\\\"hkClQd\\\",\\\"type\\\":\\\"esql_results\\\",\\\"data\\\":{\\\"source\\\":\\\"esql\\\",\\\"query\\\":\\\"FROM telematics_log\\\\n| WHERE at >= \\\\\\\"2026-10-23T13:57:57Z\\\\\\\" AND at <= \\\\\\\"2026-10-23T14:17:57Z\\\\\\\"\\\\n| EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(\\\\\\\"POINT(-97.6475 29.6805)\\\\\\\"))\\\\n| WHERE dist_m < 3000\\\\n| SORT dist_m ASC\\\\n| KEEP truck_id, at, dist_m\\\\n| LIMIT 20\\\",\\\"columns\\\":[{\\\"name\\\":\\\"truck_id\\\",\\\"type\\\":\\\"keyword\\\"},{\\\"name\\\":\\\"at\\\",\\\"type\\\":\\\"date\\\"},{\\\"name\\\":\\\"dist_m\\\",\\\"type\\\":\\\"double\\\"}],\\\"values\\\":[[\\\"31\\\",\\\"2026-10-23T14:05:00.000Z\\\",28.851188908133167],[\\\"31\\\",\\\"2026-10-23T14:03:47.000Z\\\",30.268075393785082],[\\\"19\\\",\\\"2026-10-23T14:05:00.000Z\\\",393.5058617913592]]}}]}\"},{\"type\":\"text\",\"text\":\"[Script completed · 0.2 s elapsed · 1 call · log: /Users/anudeepbonagiri/.factory/artifacts/scripts/1a54c2e2-ec6e-424c-8731-0dc29bdf6bb7/call_Klo3HQjIwc06fzRo8WVWPoL6.log]\"}]",
+      "isError": false
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:44.994Z",
+      "name": "Script",
+      "toolUseId": "call_covbdlKUCKvUSTbdlfFciVQp",
+      "input": {
+        "script": "const base=\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence\";\nconst paths=[\"receipts/5986.txt\",\"swap_log.txt\"];\nconst results=await Promise.allSettled(paths.map(p=>tools.Read({file_path:base+\"/\"+p})));\nresults.forEach((r,i)=>text({source:paths[i],result:r.status===\"fulfilled\"?r.value:String(r.reason)}));\ntext(await tools.Grep({path:base+\"/telematics/83.csv\",pattern:\"^(truck_id|16,|31,|19,)\",output_mode:\"content\"}));\n"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:45.037Z",
+      "name": "Read",
+      "toolUseId": "cea43396-6ae2-4306-9e5a-783d1776bbcd-1",
+      "input": {
+        "file_path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/receipts/5986.txt"
+      }
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:45.038Z",
+      "name": "Read",
+      "toolUseId": "cea43396-6ae2-4306-9e5a-783d1776bbcd-2",
+      "input": {
+        "file_path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/swap_log.txt"
+      }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:45.047Z",
+      "toolUseId": "cea43396-6ae2-4306-9e5a-783d1776bbcd-2",
+      "toolName": "Read",
+      "content": "Read /Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/swap_log.txt: lines 1-16 (16 lines, 1.4 KiB); the file holds the bytes",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:45.049Z",
+      "toolUseId": "cea43396-6ae2-4306-9e5a-783d1776bbcd-1",
+      "toolName": "Read",
+      "content": "Read /Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/receipts/5986.txt: lines 1-10 (10 lines, 228 B); the file holds the bytes",
+      "isError": false
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-24T20:32:45.052Z",
+      "name": "Grep",
+      "toolUseId": "cea43396-6ae2-4306-9e5a-783d1776bbcd-5",
+      "input": {
+        "path": "/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv",
+        "pattern": "^(truck_id|16,|31,|19,)",
+        "output_mode": "content"
+      }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:45.064Z",
+      "toolUseId": "cea43396-6ae2-4306-9e5a-783d1776bbcd-5",
+      "toolName": "Grep",
+      "content": "[{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":630,\"text\":\"16,2026-10-23T05:00:00Z,29.42399,-98.4934,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":631,\"text\":\"16,2026-10-23T06:00:00Z,29.42382,-98.49332,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":632,\"text\":\"16,2026-10-23T07:00:00Z,29.42407,-98.4937,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":633,\"text\":\"16,2026-10-23T08:00:00Z,29.42427,-98.49333,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":634,\"text\":\"16,2026-10-23T09:00:00Z,29.42392,-98.49388,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":635,\"text\":\"16,2026-10-23T10:00:00Z,29.42437,-98.49342,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":636,\"text\":\"16,2026-10-23T11:00:00Z,29.42384,-98.49386,false,176105.2\",\"kind\":\"match\"},{\"path\":\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\",\"line\":637,\"text\":\"16,2026-10-23T12:00:00Z,29.42416,-98.49375,false,176105.2\",\"kind\":\"match\"},\"[... truncated 128 items]\"]",
+      "isError": false
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-24T20:32:45.074Z",
+      "toolUseId": "call_covbdlKUCKvUSTbdlfFciVQp",
+      "toolName": "Script",
+      "content": "[{\"type\":\"text\",\"text\":\"{\\\"source\\\":\\\"receipts/5986.txt\\\",\\\"result\\\":\\\"PILOT 1126, LULING TX\\\\n1715 S Magnolia Ave, Luling TX 78648\\\\n2026-10-23 09:07 CDT\\\\nPUMP 11   DIESEL #2\\\\nGALLONS      61.500\\\\nPRICE/GAL    $3.440\\\\nTOTAL        $211.56\\\\nFLEET CARD   ****1016   UNIT 16   DRIVER 35\\\\nAUTH 80B7F0   REF 5986\\\\n\\\"}\\n{\\\"source\\\":\\\"swap_log.txt\\\",\\\"result\\\":\\\"DISPATCH LOG - UNIT SWAPS (San Antonio desk, all terminals)\\\\ndate        driver                        from  to    reason\\\\n\\\\n2026-07-10  Burks, Clayton (drv 22)       15    9     unit 15 in shop: ac service; moved to unit 9 through 2026-07-13\\\\n2026-07-14  Burks, Clayton (drv 22)       9     15    unit 15 back from shop; driver returns to own unit\\\\n2026-07-27  Watkins, Jerome (drv 10)      30    14    unit 30 in shop: oil service; moved to unit 14 through 2026-07-30\\\\n2026-07-31  Watkins, Jerome (drv 10)      14    30    unit 30 back from shop; driver returns to own unit\\\\n2026-08-26  Ortiz, Ramon (drv 23)         17    22    unit 17 in shop: brake job (PO-1026); moved to unit 22 through 2026-08-31\\\\n2026-09-01  Ortiz, Ramon (drv 23)         22    17    unit 17 back from shop; driver returns to own unit\\\\n2026-09-09  Whitaker, Carl (drv 6)        35    27    unit 35 in shop: ac service; moved to unit 27 through 2026-09-14\\\\n2026-09-15  Whitaker, Carl (drv 6)        27    35    unit 35 back from shop; driver returns to own unit\\\\n2026-10-12  Garza, Alejandro (drv 11)     6     13    unit 6 in shop: alignment; moved to unit 13 through 2026-10-13\\\\n2026-10-14  Garza, Alejandro (drv 11)     13    6     unit 6 back from shop; driver returns to own unit\\\\n2026-10-23  Osborne, Derrick (drv 35)     16    31    unit 16 in shop: tire replacement; moved to unit 31 through 2026-10-27\\\\n2026-10-28  Osborne, Derrick (drv 35)     31    16    unit 16 back from shop; driver returns to own unit\\\\n\\\"}\\n[{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":630,\\\"text\\\":\\\"16,2026-10-23T05:00:00Z,29.42399,-98.4934,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":631,\\\"text\\\":\\\"16,2026-10-23T06:00:00Z,29.42382,-98.49332,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":632,\\\"text\\\":\\\"16,2026-10-23T07:00:00Z,29.42407,-98.4937,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":633,\\\"text\\\":\\\"16,2026-10-23T08:00:00Z,29.42427,-98.49333,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":634,\\\"text\\\":\\\"16,2026-10-23T09:00:00Z,29.42392,-98.49388,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":635,\\\"text\\\":\\\"16,2026-10-23T10:00:00Z,29.42437,-98.49342,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":636,\\\"text\\\":\\\"16,2026-10-23T11:00:00Z,29.42384,-98.49386,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":637,\\\"text\\\":\\\"16,2026-10-23T12:00:00Z,29.42416,-98.49375,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":638,\\\"text\\\":\\\"16,2026-10-23T13:00:00Z,29.42419,-98.49365,false,176105.2\\\",\\\"kind\\\":\\\"match\\\"},{\\\"path\\\":\\\"/Users/anudeepbonagiri/dev/hackathons/dispatch-ledger/seed/fixtures/evidence/telematics/83.csv\\\",\\\"line\\\":639,\\\"text\\\":\\\"16,2026-10-23T14:00:00Z,29.42419,-98.49369,false,176105.2\\\",\\\"kind\\\":\\\"mat",
+      "isError": false
+    },
+    {
+      "type": "assistant",
+      "at": "2026-10-24T20:32:54.229Z",
+      "text": "{\"finding\":\"Transaction 5986 is explained by a documented truck swap, not a different driver. Derrick Osborne (driver 35) moved from truck 16 to truck 31 on October 23 while truck 16 underwent tire replacement. Truck 31 was at the station around the purchase time; truck 16 remained stationary. The receipt retained the original unit 16 identification.\",\"evidence\":[{\"source\":\"swap_log.txt\",\"ref\":\"2026-10-23 reassignment\",\"quote\":\"2026-10-23  Osborne, Derrick (drv 35)     16    31    unit 16 in shop: tire replacement; moved to unit 31 through 2026-10-27\"},{\"source\":\"find_trips_near\",\"ref\":\"Truck 31, station proximity within the requested time window; distance in meters\",\"quote\":\"[\\\"31\\\",\\\"2026-10-23T14:05:00.000Z\\\",28.851188908133167]\"},{\"source\":\"receipts/5986.txt\",\"ref\":\"Card, unit, driver and transaction reference\",\"quote\":\"FLEET CARD   ****1016   UNIT 16   DRIVER 35\\nAUTH 80B7F0   REF 5986\"},{\"source\":\"telematics/83.csv\",\"ref\":\"Line 639, truck 16 near transaction time\",\"quote\":\"16,2026-10-23T14:00:00Z,29.42419,-98.49369,false,176105.2\"},{\"source\":\"telematics/83.csv\",\"ref\":\"Lines 1369–1370, truck 31 stopped at station\",\"quote\":\"31,2026-10-23T14:05:00Z,29.68075,-97.64742,true,330404.6\\n31,2026-10-23T14:20:00Z,29.68044,-97.64733,true,330404.6\"}],\"recommendation\":\"clear\",\"confidence\":0.99}"
+    },
+    {
+      "type": "result",
+      "at": "2026-10-24T20:32:54.241Z",
+      "subtype": "success",
+      "durationMs": 16177,
+      "success": true
+    }
+  ],
+  "recordedAt": "2026-10-24T20:32:55.681Z"
+}
