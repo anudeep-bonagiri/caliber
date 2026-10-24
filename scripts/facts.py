@@ -154,9 +154,10 @@ def main() -> int:
             except json.JSONDecodeError:
                 continue
             cost["tasks"] += 1
-            cost["inputTokens"] += int(e.get("inputTokens", 0))
-            cost["outputTokens"] += int(e.get("outputTokens", 0))
-            cost["durationMs"] += int(e.get("durationMs", 0))
+            tu = e.get("tokenUsage") or {}
+            cost["inputTokens"] += int(tu.get("inputTokens", 0) or 0)
+            cost["outputTokens"] += int(tu.get("outputTokens", 0) or 0)
+            cost["durationMs"] += int(e.get("durationMs", 0) or 0)
 
     facts = {
         "asOf": datetime.now(timezone.utc).isoformat(timespec="seconds"),
