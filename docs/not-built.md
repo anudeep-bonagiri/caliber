@@ -12,5 +12,5 @@
 - A controller inbox beyond ASI:One and the terminal twin (no email, no Slack).
 - Horizontal scale. One module, one worker (concurrency 2), one local server.
 - A hard sandbox around Droid. Session options disable write and execute tools and the permission handler cancels anything write-like, but Droid's `Read` can address any path; in the live run it probed for instruction files above the evidence folder (none existed). A read-only mount or OS sandbox is the real boundary and is not built.
-- CRS live calls until the sandbox collection arrives: endpoint paths, request bodies and response fields are placeholders; the vendor check replays hand-shaped fixtures labelled as such.
+- CRS live calls until the sandbox collection arrives: endpoint paths, request bodies and response fields are placeholders; the vendor check replays hand-authored fixtures labelled as such. The CRS hit has not been produced by the sandbox yet; the hit vendor's check is a hand-authored fixture labelled FIXTURE on the card and in every evidence row.
 - Nessie live transfers until a key arrives: payments settle with labelled `offline-<txnRef>` ids.
