@@ -188,7 +188,7 @@ describe('2. the clock and the kernel', () => {
     expect(hold.status).toBe('open');
     expect(hold.cents).toBe(980_000n);
     expect(hold.requestedBy.isEqual(w.h.moduleIdentity), DB_REQUESTED).toBe(true);
-    expect(w.rows.tasks('INV-1077').map(t => t.kind)).toEqual(['investigate']);
+    expect(w.rows.tasks('INV-1077').map(t => t.kind)).toEqual(['investigate', 'vendor_check']); // Task 16: a bank-change hold is also vetted
     expect(snapshot()).toEqual(before); // day 41 still untouched
   });
 
