@@ -1,5 +1,5 @@
-import { useMemo } from 'react';
-import type { AgentTask, Hold, MatchResult } from '../../../module_bindings/types';
+import { useEffect, useMemo, useState } from 'react';
+import type { AgentTask, Hold, MatchResult, Payment } from '../../../module_bindings/types';
 import { Panel, Pill, Src, Empty, Kv, JsonBlock, statusTone } from './ui';
 import { parseJson, parseSteps, type Brief, type BriefEvidence, type Finding, type Step } from '../lib/types';
 import { dollars, isoShort, pct, codeLabel, identityHex } from '../lib/format';
@@ -19,6 +19,16 @@ export function badgeFor(task: AgentTask | undefined, finding: Finding | undefin
   return undefined;
 }
 
+// A worker that is claiming tasks touches agent_task rows; if none changed in
+// this window, an open task is not going to be picked up on its own.
+const WORKER_IDLE_MS = 60_000;
+
+function latestTaskMillis(tasks: readonly AgentTask[]): number {
+  let best = 0n;
+  for (const t of tasks) if (t.updatedAt.microsSinceUnixEpoch > best) best = t.updatedAt.microsSinceUnixEpoch;
+  return Number(best / 1000n);
+}
+
 function pickTask(tasks: readonly AgentTask[], txnRef: string, kind: string): AgentTask | undefined {
   let best: AgentTask | undefined;
   for (const t of tasks) {
@@ -32,11 +42,13 @@ export function Investigation({
   hold,
   tasks,
   matches,
+  payment,
   ready,
 }: {
   hold: Hold | undefined;
   tasks: readonly AgentTask[];
   matches: readonly MatchResult[];
+  payment: Payment | undefined;
   ready: boolean;
 }) {
   const task = useMemo(() => (hold ? pickTask(tasks, hold.txnRef, 'investigate') : undefined), [tasks, hold]);
@@ -55,6 +67,18 @@ export function Investigation({
     return f && Object.keys(f).length ? f : undefined;
   }, [task]);
   const badge = badgeFor(task, finding);
+
+  // Re-evaluate worker liveness on a timer only while the selected task waits.
+  const waiting = task?.status === 'open';
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    if (!waiting) return;
+    setNow(Date.now());
+    const t = window.setInterval(() => setNow(Date.now()), 5000);
+    return () => window.clearInterval(t);
+  }, [waiting]);
+  const lastTaskChange = useMemo(() => latestTaskMillis(tasks), [tasks]);
+  const workerIdle = waiting && now - lastTaskChange > WORKER_IDLE_MS;
 
   const taskId = task ? `agent_task ${task.id}` : '';
 
@@ -84,6 +108,19 @@ export function Investigation({
         <div className="flex flex-col gap-3">
           <BriefView hold={hold} brief={brief} task={task} match={match} />
 
+          {payment ? (
+            <p className="text-[12px] text-text" title={`payment ${payment.txnRef}`}>
+              <span className="text-release">Paid:</span>{' '}
+              <Src id={`payment ${payment.txnRef}`} className="text-release">
+                {dollars(payment.cents)}
+              </Src>{' '}
+              on day <Src id={`payment ${payment.txnRef}`}>{payment.day}</Src>, released by{' '}
+              <Src id={`payment ${payment.txnRef}`} mono={false}>
+                {payment.releasedRole}
+              </Src>
+            </p>
+          ) : null}
+
           <Section label={task ? `steps (${taskId})` : 'steps'}>
             {!task ? (
               <p className="text-[11.5px] text-faint">
@@ -95,7 +132,9 @@ export function Investigation({
               <p className="flex items-center gap-2 text-[11.5px] text-faint">
                 {task.status === 'claimed' ? <span className="spinner" aria-hidden /> : null}
                 {task.status === 'open'
-                  ? 'Task is open. Waiting for the worker to claim it.'
+                  ? workerIdle
+                    ? 'Task is open. No worker is claiming tasks right now; holds are still raised by the kernel.'
+                    : 'Task is open. Waiting for the worker to claim it.'
                   : task.status === 'claimed'
                     ? `Claimed by ${identityHex(task.claimedBy ?? undefined).slice(0, 8) || 'worker'}. Steps land when the investigation is recorded.`
                     : 'No steps were recorded.'}

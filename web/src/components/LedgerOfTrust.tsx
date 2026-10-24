@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { AuditEvent, DayTotal, Hold } from '../../../module_bindings/types';
+import type { AuditEvent, DayTotal, Hold, Payment } from '../../../module_bindings/types';
 import { Panel, Pill, Src, Empty } from './ui';
 import { dollars, clockTime } from '../lib/format';
 import { useFlash } from '../lib/useFlash';
@@ -23,12 +23,14 @@ export function LedgerOfTrust({
   totals,
   holds,
   events,
+  payments,
   ready,
   today,
 }: {
   totals: readonly DayTotal[];
   holds: readonly Hold[];
   events: readonly AuditEvent[];
+  payments: readonly Payment[];
   ready: boolean;
   today: number | undefined;
 }) {
@@ -37,6 +39,22 @@ export function LedgerOfTrust({
     () => (today === undefined ? 0 : holds.reduce((n, h) => n + (h.day === today && h.question ? 1 : 0), 0)),
     [holds, today],
   );
+  const paid = useMemo(() => {
+    let autoCount = 0;
+    let autoCents = 0n;
+    let ctrlCount = 0;
+    let ctrlCents = 0n;
+    for (const p of payments) {
+      if (p.releasedRole === 'controller') {
+        ctrlCount++;
+        ctrlCents += p.cents;
+      } else if (p.releasedRole === 'kernel' || p.releasedRole === 'rule') {
+        autoCount++;
+        autoCents += p.cents;
+      }
+    }
+    return { autoCount, autoCents, ctrlCount, ctrlCents };
+  }, [payments]);
   const feed = useMemo(() => {
     const copy = [...events];
     copy.sort((a, b) => (a.id === b.id ? 0 : a.id > b.id ? -1 : 1));
@@ -60,9 +78,31 @@ export function LedgerOfTrust({
     >
       <div className="border-b border-edge px-3 py-2">
         <p className="text-[11.5px] leading-snug text-muted">Checks the kernel re-performed. Plain code, run again at every gate. None of this is a model's opinion.</p>
-        <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-5">
-          <Counter label="auto-paid today" value={total ? String(total.autoPaidCount) : '0'} src={`${dt}.auto_paid_count`} tone="release" />
-          <Counter label="auto-paid dollars" value={dollars(total?.autoPaidCents ?? 0n, true)} src={`${dt}.auto_paid_cents`} tone="release" />
+        <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3 2xl:grid-cols-6">
+          <Counter
+            label="auto-paid today"
+            value={total ? String(total.autoPaidCount) : '0'}
+            src={`${dt}.auto_paid_count`}
+            tone="release"
+            sub={<Src id="count of payment rows with released_role kernel or rule">{paid.autoCount}</Src>}
+            subLabel="all days"
+          />
+          <Counter
+            label="auto-paid dollars today"
+            value={dollars(total?.autoPaidCents ?? 0n, true)}
+            src={`${dt}.auto_paid_cents`}
+            tone="release"
+            sub={<Src id="sum of payment.cents with released_role kernel or rule">{dollars(paid.autoCents, true)}</Src>}
+            subLabel="all days"
+          />
+          <Counter
+            label="released by controller"
+            value={String(paid.ctrlCount)}
+            src="count of payment rows with released_role controller, all days"
+            tone="release"
+            sub={<Src id="sum of payment.cents with released_role controller, all days">{dollars(paid.ctrlCents, true)}</Src>}
+            subLabel="all days"
+          />
           <Counter label="holds today" value={total ? String(total.holdCount) : '0'} src={`${dt}.hold_count`} tone="hold" />
           <Counter label="auto-rejected duplicates" value={total ? String(total.rejectedCount) : '0'} src={`${dt}.rejected_count`} tone="refused" />
           <Counter label="questions asked" value={String(questions)} src={`hold rows with day ${today ?? '?'} and a question`} tone="hold" />
@@ -154,7 +194,21 @@ function actionColor(action: string): string {
   }
 }
 
-function Counter({ label, value, src, tone }: { label: string; value: string; src: string; tone: 'release' | 'hold' | 'refused' }) {
+function Counter({
+  label,
+  value,
+  src,
+  tone,
+  sub,
+  subLabel,
+}: {
+  label: string;
+  value: string;
+  src: string;
+  tone: 'release' | 'hold' | 'refused';
+  sub?: React.ReactNode;
+  subLabel?: string;
+}) {
   const color = tone === 'release' ? 'text-release' : tone === 'hold' ? 'text-hold' : 'text-refused';
   return (
     <div className="rounded-sm border border-edge bg-panel-2 px-2.5 py-1.5">
@@ -162,6 +216,12 @@ function Counter({ label, value, src, tone }: { label: string; value: string; sr
       <div className={`num text-[18px] font-semibold leading-tight ${color}`}>
         <Src id={src}>{value}</Src>
       </div>
+      {sub !== undefined ? (
+        <div className="mt-0.5 text-[10.5px] text-faint">
+          {subLabel ? `${subLabel} ` : ''}
+          <span className="text-muted">{sub}</span>
+        </div>
+      ) : null}
     </div>
   );
 }

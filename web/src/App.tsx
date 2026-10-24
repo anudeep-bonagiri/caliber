@@ -21,6 +21,7 @@ export default function App() {
   const [totals] = useTable(tables.dayTotal);
   const [events, eventsReady] = useTable(tables.auditEvent);
   const [matches] = useTable(tables.matchResult);
+  const [payments] = useTable(tables.payment);
 
   const moduleIdentity = useModuleIdentity();
   const [codeFilter, setCodeFilter] = useState('');
@@ -56,6 +57,9 @@ export default function App() {
     if (best && best.txnRef !== selected) setSelectedRaw(best.txnRef);
   }, [holds, selectedHold, codeFilter, pinned, selected]);
 
+  const paymentsByRef = useMemo(() => new Map(payments.map(p => [p.txnRef, p])), [payments]);
+  const selectedPayment = selected ? paymentsByRef.get(selected) : undefined;
+
   const codesInQueue = useMemo(() => Array.from(new Set(holds.map(h => h.code))), [holds]);
 
   const modelOffline = useMemo(() => {
@@ -74,17 +78,17 @@ export default function App() {
         <div className="flex min-h-0 flex-col gap-2 xl:col-span-4 xl:row-span-1">
           <DayClock day={day} />
           <div className="min-h-[260px] flex-1 xl:min-h-0 [&>section]:h-full">
-            <Queue holds={holds} ready={holdsReady} codeFilter={codeFilter} selected={selected} onSelect={setSelected} moduleIdentity={moduleIdentity} />
+            <Queue holds={holds} ready={holdsReady} codeFilter={codeFilter} selected={selected} onSelect={setSelected} moduleIdentity={moduleIdentity} payments={paymentsByRef} />
           </div>
         </div>
         <div className="min-h-[320px] xl:col-span-8 xl:row-span-1 xl:min-h-0 [&>section]:h-full">
-          <Investigation hold={selectedHold} tasks={tasks} matches={matches} ready={tasksReady} />
+          <Investigation hold={selectedHold} tasks={tasks} matches={matches} payment={selectedPayment} ready={tasksReady} />
         </div>
         <div className="min-h-[260px] xl:col-span-4 xl:min-h-0 [&>section]:h-full">
           <Rules rules={rules} ready={rulesReady} today={today} />
         </div>
         <div className="min-h-[320px] xl:col-span-8 xl:min-h-0 [&>section]:h-full">
-          <LedgerOfTrust totals={totals} holds={holds} events={events} ready={eventsReady} today={today} />
+          <LedgerOfTrust totals={totals} holds={holds} events={events} payments={payments} ready={eventsReady} today={today} />
         </div>
         <div className="min-h-[260px] xl:col-span-12 xl:min-h-0 [&>section]:h-full">
           <Charts />

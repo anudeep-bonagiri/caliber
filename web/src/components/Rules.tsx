@@ -17,6 +17,8 @@ function scopeText(scope: RuleScope): string {
   return parts.length ? parts.join(', ') : 'unscoped';
 }
 
+const CONSUMED_PREFIX = 'one_time rule consumed by';
+
 const ORDER: Record<string, number> = { candidate: 0, approved: 1, expired: 2, rejected: 3 };
 
 export function Rules({ rules, ready, today }: { rules: readonly Rule[]; ready: boolean; today: number | undefined }) {
@@ -67,6 +69,7 @@ function RuleRow({ r, flash, today }: { r: Rule; flash: boolean; today: number |
   const candidate = r.status === 'candidate';
   const inWindow = today !== undefined && today >= r.validFromDay && today <= r.validToDay;
   const id = `rule ${r.id}`;
+  const consumedBy = r.status === 'expired' && r.reason.startsWith(CONSUMED_PREFIX) ? r.reason.slice(CONSUMED_PREFIX.length).trim() : undefined;
   return (
     <li className={`border-b border-edge/60 px-3 py-2 ${flash ? 'flash' : ''} ${candidate ? 'bg-candidate-dim/40 shadow-[inset_2px_0_0_var(--candidate)]' : ''}`}>
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -84,9 +87,15 @@ function RuleRow({ r, flash, today }: { r: Rule; flash: boolean; today: number |
           <Pill tone="neutral" title={`${id}.uses`}>
             {r.uses.replace(/_/g, ' ')}
           </Pill>
-          <Pill tone={statusTone(r.status)} title={`${id}.status`}>
-            {candidate ? 'candidate, waiting for the controller' : r.status}
-          </Pill>
+          {consumedBy !== undefined ? (
+            <Pill tone="neutral" title={`one-time rule, consumed by ${consumedBy}`}>
+              used
+            </Pill>
+          ) : (
+            <Pill tone={statusTone(r.status)} title={`${id}.status`}>
+              {candidate ? 'candidate, waiting for the controller' : r.status}
+            </Pill>
+          )}
         </span>
       </div>
       <div className="mt-1 flex flex-wrap gap-x-4 gap-y-0.5 text-[11px] text-muted">

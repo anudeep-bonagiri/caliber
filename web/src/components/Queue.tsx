@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import type { Hold } from '../../../module_bindings/types';
+import type { Hold, Payment } from '../../../module_bindings/types';
 import { Panel, Pill, Src, Empty, statusTone } from './ui';
 import { dollars, identityHex, codeLabel, plural } from '../lib/format';
 import { RESOLVED_HOLD_STATUSES } from '../lib/types';
@@ -36,6 +36,7 @@ export function Queue({
   selected,
   onSelect,
   moduleIdentity,
+  payments,
 }: {
   holds: readonly Hold[];
   ready: boolean;
@@ -43,6 +44,7 @@ export function Queue({
   selected: string | null;
   onSelect: (txnRef: string) => void;
   moduleIdentity: string | undefined;
+  payments: ReadonlyMap<string, Payment>;
 }) {
   const [showResolved, setShowResolved] = useState(false);
 
@@ -132,6 +134,7 @@ export function Queue({
                   selected={selected === h.txnRef}
                   flash={flashing.has(h.txnRef)}
                   role={requesterRole(h, moduleIdentity)}
+                  releasedRole={h.status === 'released' || h.status === 'cleared_by_rule' ? payments.get(h.txnRef)?.releasedRole : undefined}
                   onSelect={onSelect}
                 />
               ))}
@@ -148,12 +151,14 @@ function HoldRow({
   selected,
   flash,
   role,
+  releasedRole,
   onSelect,
 }: {
   h: Hold;
   selected: boolean;
   flash: boolean;
   role: 'kernel' | 'agent';
+  releasedRole?: string;
   onSelect: (txnRef: string) => void;
 }) {
   const question = h.question ?? undefined;
@@ -183,6 +188,11 @@ function HoldRow({
           <Pill tone={statusTone(h.status)} title={`hold ${h.txnRef}.status`}>
             {h.status.replace(/_/g, ' ')}
           </Pill>
+          {releasedRole ? (
+            <Pill tone="release" title={`payment ${h.txnRef}.released_role`}>
+              by {releasedRole}
+            </Pill>
+          ) : null}
         </span>
       </div>
       {question && !RESOLVED_HOLD_STATUSES.has(h.status) ? (

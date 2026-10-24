@@ -16,7 +16,7 @@ npm run typecheck
 
 ## How it connects
 
-`src/stdb.ts` builds one `DbConnection.builder()` from `../module_bindings` with the anonymous token cached in `localStorage` under `${uri}/${db}/auth_token`. `src/main.tsx` wraps the app in `SpacetimeDBProvider` from `spacetimedb/react`. `src/App.tsx` calls `useTable(tables.x)` once per public table (`business_day`, `hold`, `agent_task`, `rule`, `day_total`, `audit_event`, `match_result`); each call registers its own subscription and re-renders on every committed transaction. The top bar reads `useSpacetimeDB()` for the connection state and identity.
+`src/stdb.ts` builds one `DbConnection.builder()` from `../module_bindings` with the anonymous token cached in `localStorage` under `${uri}/${db}/auth_token`. `src/main.tsx` wraps the app in `SpacetimeDBProvider` from `spacetimedb/react`. `src/App.tsx` calls `useTable(tables.x)` once per public table (`business_day`, `hold`, `agent_task`, `rule`, `day_total`, `audit_event`, `match_result`, `payment`); each call registers its own subscription and re-renders on every committed transaction. The top bar reads `useSpacetimeDB()` for the connection state and identity.
 
 The module identity, used to label a hold's requester as `kernel` or `agent`, comes from `GET {uri}/v1/database/{db}` at load.
 
