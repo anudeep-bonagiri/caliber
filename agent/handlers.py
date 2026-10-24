@@ -16,11 +16,11 @@ import os
 import unicodedata
 
 from . import formatting as fmt
-from . import intents, ledger
+from . import intents, ledger, reads
 from .ledger import BadReference, LedgerError, LedgerRefused
 
 LAST_REF: dict[str, str] = {}   # sender -> last txnRef discussed
-TOTAL_DAYS = 92
+TOTAL_DAYS = reads.TOTAL_DAYS
 
 MAX_ANSWER = 1000
 MAX_NOTE = 500      # call-back notes, payment rejection reasons, rule rejection reasons
@@ -146,25 +146,17 @@ def _holds(sender_id: str) -> str:
     return fmt.format_holds(rows)
 
 
-def _why(ref: str) -> str:
-    holds = ledger.sql(f"SELECT * FROM hold WHERE txn_ref = {ledger.quote(ref)}")
-    if not holds:
-        return f"No hold for {ref}."
-    tasks = ledger.sql(f"SELECT * FROM agent_task WHERE txn_ref = {ledger.quote(ref)}")
-    investigate = [t for t in tasks if t.get("kind") == "investigate"]
-    task = max(investigate, key=lambda t: int(t.get("id") or 0)) if investigate else None
-    return fmt.format_why(holds[0], task)
+# `why` and `status` live in reads.py (shared with the investigator agent, Task 18).
+_why = reads.why
+_status = reads.status
 
 
-def _status(prefix: str = "") -> str:
-    days = ledger.sql("SELECT * FROM business_day WHERE id = 1")
-    day = days[0] if days else None
-    total = None
-    if day is not None:
-        n = int(day.get("day") or 0)
-        totals = ledger.sql(f"SELECT * FROM day_total WHERE day = {n}")
-        total = totals[0] if totals else None
-    return prefix + fmt.format_status(day, total, TOTAL_DAYS)
+def remember(sender_id: str, ref: str) -> str:
+    """Record the hold a sender is discussing (used when `why` is answered by the investigator instead of here),
+    so a later free-text line still lands as the answer to the right hold. Validates the reference first."""
+    ref = ledger.check_txn_ref(ref)
+    LAST_REF[sender_id] = ref
+    return ref
 
 
 def _confirm(action: str, ref: str | None, note: str | None = None) -> str:

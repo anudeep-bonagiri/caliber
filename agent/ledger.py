@@ -1,4 +1,5 @@
-"""HTTP client for the Dispatch Ledger SpacetimeDB module, holding the controller identity.
+"""HTTP client for the Dispatch Ledger SpacetimeDB module. Signs as the controller by default, as the
+read-only `reader` inside `ledger.using("reader")` (the investigator agent, Task 18).
 
 Writes go through `try_*` procedures (`call_try`, which report refusals in the body) or reducers
 (`call`, which refuse with HTTP 530); reads go through SQL (`sql`). Both are plain HTTP against
@@ -17,6 +18,8 @@ from __future__ import annotations
 
 import os
 import re
+from contextlib import contextmanager
+from contextvars import ContextVar
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -35,6 +38,38 @@ INT_TYPES = {"U8", "U16", "U32", "U64", "U128", "U256", "I8", "I16", "I32", "I64
 
 # Tests replace this with an httpx.MockTransport. None means the real network.
 _transport: httpx.BaseTransport | None = None
+
+# Which identity signs the next call. The controller seat is the default. The investigator (Task 18)
+# runs its reads and its forwarded refusals as `reader`, whose token is STDB_READER_TOKEN; when that
+# token is absent the reader falls back to anonymous (no Authorization header), and the reply says so.
+# A context variable so the terminal twin can run both identities in one process without leaking the
+# reader's choice into the controller's calls; asyncio.to_thread copies the context.
+IDENTITIES = {"controller": "STDB_CONTROLLER_TOKEN", "reader": "STDB_READER_TOKEN"}
+_identity: ContextVar[str] = ContextVar("ledger_identity", default="controller")
+
+
+@contextmanager
+def using(identity: str):
+    """Run the enclosed calls as `identity` ("controller" or "reader")."""
+    if identity not in IDENTITIES:
+        raise ValueError(f"unknown ledger identity {identity}")
+    token = _identity.set(identity)
+    try:
+        yield
+    finally:
+        _identity.reset(token)
+
+
+def current_identity() -> str:
+    return _identity.get()
+
+
+def identity_label() -> str:
+    """What the current identity reads as: "controller", "reader", or "anonymous" when the reader token is absent."""
+    ident = _identity.get()
+    if ident == "reader" and not os.getenv("STDB_READER_TOKEN"):
+        return "anonymous"
+    return ident
 
 
 class LedgerError(RuntimeError):
@@ -80,8 +115,13 @@ def opt(value):
 def _config() -> tuple[str, str, str]:
     uri = os.getenv("STDB_URI", "").rstrip("/")
     db = os.getenv("STDB_DB", "")
-    token = os.getenv("STDB_CONTROLLER_TOKEN", "")
-    missing = [k for k, v in (("STDB_URI", uri), ("STDB_DB", db), ("STDB_CONTROLLER_TOKEN", token)) if not v]
+    ident = _identity.get()
+    token_env = IDENTITIES[ident]
+    token = os.getenv(token_env, "")
+    required = [("STDB_URI", uri), ("STDB_DB", db)]
+    if ident == "controller":
+        required.append((token_env, token))   # the reader may run anonymous; the controller never
+    missing = [k for k, v in required if not v]
     if missing:
         raise LedgerError("missing in .env: " + ", ".join(missing))
     return uri, db, token
@@ -89,7 +129,9 @@ def _config() -> tuple[str, str, str]:
 
 def _post(path: str, **kwargs) -> httpx.Response:
     uri, db, token = _config()
-    headers = {"Authorization": f"Bearer {token}", **kwargs.pop("headers", {})}
+    headers = {**kwargs.pop("headers", {})}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
     url = f"{uri}/v1/database/{db}{path}"
     try:
         with httpx.Client(timeout=TIMEOUT, transport=_transport) as client:
@@ -109,7 +151,7 @@ def call(reducer: str, *args) -> None:
     if r.status_code == 530:
         raise LedgerRefused(body or "refused without a message")
     if r.status_code in (401, 403):
-        raise LedgerError(f"controller token rejected (HTTP {r.status_code})")
+        raise LedgerError(f"{_identity.get()} token rejected (HTTP {r.status_code})")
     if r.status_code == 404:
         raise LedgerError(f"no such reducer or database: {reducer} (HTTP 404)")
     raise LedgerError(f"{reducer}: HTTP {r.status_code} {body[:200]}")
@@ -122,7 +164,7 @@ def call_try(name: str, *args) -> tuple[bool, str]:
     if r.status_code == 530:  # still a reducer-style throw, keep the same handling
         raise LedgerRefused(r.text.strip() or "refused without a message")
     if r.status_code in (401, 403):
-        raise LedgerError(f"controller token rejected (HTTP {r.status_code})")
+        raise LedgerError(f"{_identity.get()} token rejected (HTTP {r.status_code})")
     if r.status_code == 404:
         raise LedgerError(f"no such procedure or database: {name} (HTTP 404)")
     if r.status_code != 200:

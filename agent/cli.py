@@ -1,4 +1,4 @@
-"""Terminal front door, same handler as the uAgent. Works with no internet.
+"""Terminal front door, same handlers as the two uAgents. Works with no internet.
 
     python -m agent.cli "what needs me"
     python -m agent.cli            (interactive)
@@ -8,15 +8,30 @@ from __future__ import annotations
 
 import sys
 
+from . import handlers, intents, investigate
 from .handlers import handle
 
 SENDER = "cli"
 
 
+def answer(line: str) -> str:
+    """The same split as the two uAgents: `why` and `status` come from the investigator's handler module as the
+    reader identity and carry the "investigator:" prefix; everything else is the controller's."""
+    it = intents.parse(line)
+    if investigate.answers(it):
+        if it.name == "why":
+            try:
+                handlers.remember(SENDER, it.ref or "")
+            except Exception:
+                pass    # the investigator reports the bad reference
+        return investigate.attribute(investigate.handle(SENDER, line))
+    return handle(SENDER, line)
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     if argv:
-        print(handle(SENDER, " ".join(argv)))
+        print(answer(" ".join(argv)))
         return 0
     print("Dispatch Ledger controller. Type help, or quit to leave.")
     while True:
@@ -29,7 +44,7 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         if not line.strip():
             continue
-        print(handle(SENDER, line))
+        print(answer(line))
 
 
 if __name__ == "__main__":

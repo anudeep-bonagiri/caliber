@@ -1,5 +1,9 @@
 """The controller seat on ASI:One: a Fetch.ai uAgent (mailbox) that runs the shared handler.
 
+Task 18: `why <id>` and `status` are forwarded to the investigator agent (agent/investigator.py) over
+agent-to-agent chat and relayed back prefixed "investigator:"; after 8 s the controller answers from the
+ledger itself, prefixed "investigator did not answer in time; from the ledger directly:".
+
 Run from the repo root or this folder:  python agent/agent.py
 Open the Agent Inspector link it prints, Connect, Mailbox, Finish. Then paste agent/README.md
 into the Agentverse profile. AGENT_SEED fixes the address; never change it after registering.
@@ -9,6 +13,7 @@ from __future__ import annotations
 
 import asyncio
 import inspect
+import logging
 import os
 import sys
 from datetime import datetime, timezone
@@ -30,9 +35,11 @@ from uagents_core.contrib.protocols.chat import (  # noqa: E402
     chat_protocol_spec,
 )
 
-from agent.handlers import handle  # noqa: E402
-
 load_dotenv(ROOT / ".env")
+
+from agent import handlers, intents, peers  # noqa: E402
+from agent.handlers import handle  # noqa: E402
+from agent.relay import Relay  # noqa: E402
 
 AGENT_NAME = "dispatch-ledger-controller"
 README = str(Path(__file__).resolve().parent / "README.md")
@@ -59,6 +66,10 @@ def build_agent() -> Agent:
             "The fleet controller's seat for Dispatch Ledger, an autonomous accounts-payable clerk for a "
             "simulated trucking carrier. Lists holds, explains findings, takes answers and approvals."
         )
+    # Task 18: the investigator peer, reached on 127.0.0.1 when both agents run on this laptop.
+    resolver = peers.resolver_for(peers.investigator_address(), os.getenv("INVESTIGATOR_PORT", "8012"))
+    if resolver is not None and "resolve" in params:
+        kwargs["resolve"] = resolver
     return Agent(**kwargs)
 
 
@@ -75,6 +86,23 @@ def reply(text: str) -> ChatMessage:
     )
 
 
+# ---- Task 18: `why` and `status` are the investigator's. The controller forwards them and relays the answer.
+INVESTIGATOR = peers.investigator_address()
+LOG = logging.getLogger(AGENT_NAME)
+
+
+async def _send(address: str, text: str, channel) -> None:
+    # `channel` is the uagents context of the user's own message: the reply rides that user's session.
+    await channel.send(address, reply(text))
+
+
+async def _fallback(user: str, text: str) -> str:
+    return await asyncio.to_thread(handle, user, text)
+
+
+relay = Relay(INVESTIGATOR, _send, _fallback, log=LOG.info)
+
+
 @agent.on_event("startup")
 async def on_start(ctx: Context):
     port = os.getenv("AGENT_PORT", "8000")
@@ -82,6 +110,11 @@ async def on_start(ctx: Context):
     ctx.logger.info(f"{AGENT_NAME} address {agent.address}")
     ctx.logger.info(f"Agent Inspector: {inspector}")
     ctx.logger.info(f"ledger {os.getenv('STDB_URI')} db {os.getenv('STDB_DB')} model {'on' if os.getenv('ASI_ONE_API_KEY') else 'off (regex + last-hold fallback)'}")
+    if INVESTIGATOR:
+        path = "local 127.0.0.1" if peers.peer_path() == "local" else "mailbox"
+        ctx.logger.info(f"investigator {INVESTIGATOR} (why and status forwarded; peer path {path}; timeout 8 s)")
+    else:
+        ctx.logger.info("no investigator configured (INVESTIGATOR_ADDRESS or INVESTIGATOR_SEED); why and status answered here")
 
 
 @chat.on_message(ChatMessage)
@@ -90,7 +123,22 @@ async def on_chat(ctx: Context, sender: str, msg: ChatMessage):
     text = " ".join(c.text for c in msg.content if isinstance(c, TextContent)).strip()
     if not text:
         return  # bare start-session or end-session marker
+    it = intents.parse(text)
+    route = relay.route(sender, it.name if it else None)
+    if route == "investigator_reply":
+        # The investigator's answer. Relayed to the user who asked, never parsed as a command.
+        ctx.logger.info(f"investigator replied: {text[:80]}")
+        await relay.on_investigator_reply(text, ctx.session)
+        return
     ctx.logger.info(f"{sender[:16]}: {text[:120]}")
+    if route == "forward":
+        if it.name == "why":
+            try:
+                handlers.remember(sender, it.ref or "")   # a later free-text line still answers this hold
+            except Exception as e:                      # a bad reference: let the investigator say so
+                ctx.logger.info(f"forwarding why with a bad reference: {e}")
+        await relay.forward(sender, text, ctx.session, ctx)
+        return
     try:
         answer = await asyncio.to_thread(handle, sender, text)
     except Exception as e:  # the handler already maps ledger errors; this is a last net
