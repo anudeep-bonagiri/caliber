@@ -121,7 +121,7 @@ SENTENCE = re.compile(r"(?<=[.!?])\s+")
 
 def check_prose(name: str, block: str) -> list[str]:
     errors = []
-    if "—" in block:
+    if "\u2014" in block:  # em dash, written as an escape so the CI scan does not trip on this file
         errors.append(f"{name}: em dash in the honesty block")
     for sentence in SENTENCE.split(block.replace("\n", " ")):
         if re.search(r"autonom", sentence, re.I):

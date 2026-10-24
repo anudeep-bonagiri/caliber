@@ -19,7 +19,7 @@ The spoken answer is the same at every table. Copied from the Need column of the
 ## Built for the Real World (Microsoft's five criteria)
 
 - Customer understanding: Cruze sells to fleets, and 91.5% of US carriers run 10 trucks or fewer (American Trucking Associations industry figure, not from our facts file). In those back offices the AP clerk is the person who matches fuel-card lines against trucks by hand. This is that clerk's job, in code.
-- Measurable usefulness: precision 1.0 and recall 1.0 against a hidden answer key of 58 rows (52 planted exceptions and 6 decoys) over 7944 transactions. 7886 payments, $1,083,630.52, auto-paid by the kernel or a rule. 9 payments, $37,547.00, released by the controller. 6 of 6 decoys cleared after exactly one controller answer. 0 planted exceptions cleared by a rule.
+- Measurable usefulness: precision 1.0 and recall 1.0 against a hidden answer key of 58 rows (52 planted exceptions and 6 decoys) over 7944 transactions. 7886 payments, $1,083,630.52, auto-paid by the kernel or a rule. 9 payments, $37,547.00, released by the controller. 6 of 6 decoys cleared after exactly one controller answer. 0 planted exceptions cleared by a rule. Droid cost from the recorded live run of 2026-10-24 (52 investigations): per investigation 1,033 input tokens, 1,354 output tokens and 70,386 cache tokens (cacheCreationTokens plus cacheReadTokens), 25.6 s.
 - Path to production: segregation of duties is enforced in the reducers, so the agent cannot approve and the requester of a release cannot approve it. Rules are scoped and expire. The answer key is hidden from every agent. Replay mode runs the whole month with no network.
 - Responsible design: the agent never reads the answer key. Every tool call is written to the ledger with its investigation. The controller approves every rule and every release. Nothing on people is ever sent to CRS; the check is on the vendor business only.
 - End-to-end: clock, hold, investigate, vendor check, ask, rule, pay, settle. Vendor check and settle were built this afternoon; sandbox and mock bank.
@@ -29,6 +29,8 @@ The spoken answer is the same at every table. Copied from the Need column of the
 **Why not Convex / Moss / Coinbase / Visa?** Each one would be a second tool for a need we already fill. Convex is a second database and overlaps SpacetimeDB. Moss is a second retrieval layer and overlaps Elastic. Coinbase x402 is a second payment rail and overlaps Nessie, and a carrier pays by ACH. Visa is consumer shopping with no API.
 
 **Is CRS pulling anyone's credit?** No. Business credit, public records and OFAC on the vendor entity only. No consumer credit, no driver or person data is ever sent.
+
+**What happens on a hit?** The hold stays open and the controller rejects the vendor by hand from ASI:One or the terminal, with the audit row. There is no auto-reject rule: rules only ever clear, and the module refuses rules on bank-change holds (context/DECISIONS.md, D-1).
 
 ## The finance person
 
@@ -40,7 +42,7 @@ The spoken answer is the same at every table. Copied from the Need column of the
 
 **Can it learn?** Only through you. One answer becomes one rule with a scope (driver, truck, card or vendor) and an expiry. The database backtests the rule against every past match before it will even store it, and refuses it if it would have cleared anything you had confirmed as a real exception.
 
-**What happens when the model is down?** The same holds, raised by the same code. The investigator's card says "scripted stand-in, not a model" or "replayed" instead of "live". No money moves differently.
+**What happens when the model is down?** The same holds, raised by the same code. The investigator's card says "scripted stand-in, not a model" or "replayed from a recording made 2026-10-24 by droid live run" instead of "live". A rate limit or server error leaves the hold open as "deferred", never a silent replay. No money moves differently.
 
 **Would you hire it?** For the first seat, matching and coding, yes, under these limits. For the controller's seat, no, and it is built so it cannot take it.
 
@@ -48,7 +50,7 @@ The spoken answer is the same at every table. Copied from the Need column of the
 
 **Why SpacetimeDB?** The permission model is the database. Roles are a table, every reducer checks the caller's identity first, the business-day clock is a scheduled reducer inside the same module, and the dashboard, the worker and the chat agent are all just identities writing to one world. No API layer to bypass.
 
-**What does Droid touch?** A read-only evidence folder (receipts, contracts, invoices, swap log, telematics CSVs) and two Elastic ES|QL tools over MCP. Autonomy is Off, Execute, Edit, Create and ApplyPatch are disabled by id, the permission handler cancels anything that is not an MCP tool call, and there is a 90 second abort. The options block is pasted in the README.
+**What does Droid touch?** A read-only evidence folder (receipts, contracts, invoices, swap log, telematics CSVs) and two Elastic ES|QL tools over MCP. Autonomy is Off, Execute, Edit, Create and ApplyPatch are disabled by id (plus any edit or execute tool `listTools()` reports as allowed), the permission handler cancels anything write-like and lets MCP and read confirmations proceed once, and there is a 90 second abort. The options block is pasted in the README.
 
 **How is the output validated?** zod schema with a closed recommendation set (clear, hold, hold_and_ask; there is no pay), string caps, and evidence references that must resolve to a fixture file or a tool name.
 

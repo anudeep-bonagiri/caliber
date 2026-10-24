@@ -2,16 +2,18 @@
 
 **The money does not move until the code has matched the line, and the agent can never approve what it proposed.**
 
-An autonomous accounts-payable clerk for a 40-truck carrier. It matches every fuel, toll and maintenance charge against telematics and contracts in plain code, pays clean lines, holds the rest, hands each hold to an investigator (Factory's Droid over Elastic Agent Builder tools when keys are present; recorded or scripted findings offline, labelled as such), asks the fleet controller one question when it cannot decide (in ASI:One, or in the terminal twin that runs the same code), and turns the answer into a scoped rule that the database backtests before it is stored. All state and every permission check live in one SpacetimeDB module.
+Links: dashboard (local, see Run it), video (to come), Agentverse profile (pending registration, see Agent addresses).
 
-Links: dashboard (local, see Run it), video (to come), Agentverse profile (to come).
-
-> Simulated carrier. Sandbox money. Every figure on screen and in this file is read from the ledger or from `docs/FACTS.json`. Not for operational use.
+> Simulated carrier with a published answer key. No real money: settlement goes to Capital One's Nessie mock bank. Every figure on screen and in this file is read from the ledger or from `docs/FACTS.json`. Not for operational use.
 
 ![tag:innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3)
 ![tag:hackathon](https://img.shields.io/badge/hackathon-5F43F1)
 
-## Principles
+## What it does
+
+An autonomous accounts-payable clerk for a 40-truck carrier. It matches every fuel, toll and maintenance charge against telematics and contracts in plain code, pays clean lines, holds the rest, hands each hold to an investigator (Factory's Droid over Elastic Agent Builder tools when keys are present; the recordings of that live run offline, labelled as such), asks the fleet controller one question when it cannot decide (in ASI:One, or in the terminal twin that runs the same code), and turns the answer into a scoped rule that the database backtests before it is stored. All state and every permission check live in one SpacetimeDB module.
+
+### Principles
 
 - **Code first.** The kernel (`spacetimedb/src/kernel.ts`) is pure TypeScript with integer cents. It never calls a model.
 - **Agents for judgment.** Droid investigates and recommends. Its output type has no `pay`.
@@ -19,11 +21,7 @@ Links: dashboard (local, see Run it), video (to come), Agentverse profile (to co
 - **Ask once.** A controller answer becomes a rule with a scope and an expiry. The database backtests it before it is stored and refuses any rule that would clear a confirmed exception.
 - **Audit-ready.** Every action is an `audit_event` row with the actor's role. Refusals persist when the action goes through the `try_*` procedures, which is how the agent, the scripts and the demo call the module; a reducer refusal rolls back with its transaction and only the caller sees the message.
 
-## Seats it fills
-
-The AP clerk who matches and codes bills. It asks the fleet controller, who approves payments, and never sits in that seat.
-
-## Hold 2231, the worked case
+### Hold 2231, the worked case
 
 | | |
 | --- | --- |
@@ -31,13 +29,13 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 | Card | FC-1017, assigned to truck 17 |
 | Telematics | Truck 17 parked at the San Antonio terminal, engine off, 96 miles away |
 | Kernel | `location_mismatch` (threshold 25 miles). Hold raised, task opened |
-| Investigator | Recorded finding (hand-written in the shape of a record-mode run, labelled `replayed`): `find_trips_near` names truck 22 at the pump within the window; `swap_log.txt` line 8: Ortiz moved to unit 22, unit 17 in the shop. Every quote is verified against its source file or tool result before it is written |
-| Question to the controller | Did Ramon Ortiz drive truck 22 that day while truck 17 was in the shop? |
-| Answer | Yes, swapped trucks that week |
+| Investigator | Recorded from a live Droid run on 2026-10-24 and replayed offline with the badge `replayed`: `find_trips_near` names truck 22 at the pump within the window; `swap_log.txt` line 8: Ortiz moved to unit 22, unit 17 in the shop. Every quote is verified against its source file or tool result before it is written. Recommendation `hold_and_ask`, confidence 0.97 |
+| Question to the controller | Can Ramon Ortiz or the San Antonio dispatcher confirm that Ortiz used FC-1017 to fuel truck 22 for transaction 2231 while truck 17 was in the shop under PO-1026? |
+| Answer | Yes. Ortiz drove relief unit 22 that week while unit 17 was in the shop, per the swap log |
 | Rule | `location_mismatch`, scope driver 23, days 41 to 46, one-time. Backtest by the module: would clear 1 past row, 0 confirmed exceptions |
 | Verdict | The controller approves the rule (ASI:One at the table; `scripts/controller_sim.py` in the measured run, which reads only the public tables and the dispatcher's swap log); the kernel re-runs and clears 2231; the payment row is written with role `rule` |
 
-## What is measured
+### What is measured
 
 `scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-24T21:13:08+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
 
@@ -64,40 +62,88 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 | Droid cost per investigation, from the recorded live run of 2026-10-24, 52 investigations | 1,033 input tokens, 1,354 output tokens, 70,386 cache tokens (cacheCreationTokens plus cacheReadTokens), 25.6 s; 2,016,204 Factory credits for the 52 |
 | Droid cost of the six decoy re-recordings (2026-10-24, now the fixtures) | 6,529 input tokens, 7,036 output tokens, 420,407 cache tokens (cacheCreationTokens plus cacheReadTokens) in total; 196,074 Factory credits |
 
-The whole cycle runs in about ten seconds.
+The whole offline cycle runs in about ten seconds.
 
-## How it works
+### How it works
 
 1. `seed/generate.py` renders the company and plants 52 exceptions and 6 decoys, writing `seed/fixtures/answer_key.json`. In the demo path only `scripts/facts.py` reads the key; the generator's own mirror and the seed tests read it to prove the generator, and nothing in `spacetimedb/`, `worker/`, `agent/` or `web/` can.
 2. `scripts/load_fixtures.ts` loads the rows through `seed_*` reducers as the seed identity (SpacetimeDB).
 3. `advance_day`, a scheduled reducer, ticks every 2 seconds and runs `matchDay`: the kernel evaluates every row dated that day and writes `match_result`, then a `payment` or a `hold` plus an `agent_task` (SpacetimeDB).
-4. `worker/` holds the agent identity, claims tasks with a version-locked `claim_task`, and runs Droid with scoped tools over the evidence folder and the Elastic MCP endpoint when `FACTORY_API_KEY` is set; offline it replays the two hand-written recordings and writes a deterministic stand-in for every other task, labelled `scripted stand-in, not a model` on the card (Factory, Elastic).
+4. `worker/` holds the agent identity, claims tasks with a version-locked `claim_task`, and runs Droid with scoped tools over the evidence folder and the Elastic MCP endpoint when `FACTORY_API_KEY` is set; offline it replays the 52 recordings of the 2026-10-24 live run (the six decoys re-recorded the same day so the investigator asks instead of clearing) and writes a deterministic stand-in for any task without a recording, labelled `scripted stand-in, not a model` on the card (Factory, Elastic).
 5. The controller talks to a uAgent on ASI:One: list holds, ask why, answer, approve a rule, approve a payment. Each is a `try_*` procedure call with the controller token (Fetch.ai).
 6. `create_rule` backtests inside the database; `approve_rule` re-runs the kernel on the source transaction; the dashboard, subscribed anonymously to the public tables, shows all of it live (SpacetimeDB).
 
+## Seats it fills
+
+The AP clerk who matches and codes bills. It asks the fleet controller, who approves payments, and never sits in that seat.
+
+## What is real and what is simulated
+
+Is the company real? No. It is generated by us, with a published answer key.
+
+<!-- honesty:start -->
+What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. In the measured run of 2026-10-24T21:13:08+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card. The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role. Not built: `docs/not-built.md`. Everything fails toward no money moving.
+<!-- honesty:end -->
+
+The 47 replayed findings are the recordings in `seed/fixtures/investigations/`, each written by `WORKER_MODE=record` from a live Droid run on 2026-10-24 and carrying `recordedAt`; the card says "replayed from a recording made 2026-10-24 by droid live run". The previous six decoy recordings, which recommended `clear` without a question, are kept under `seed/fixtures/investigations/_v1/` and are not served.
+
 ## Where Droid runs
 
-See `worker/README.md` for the `createSession` options block quoted from the code and the tool ids confirmed from the SDK types. In short: `cwd` is the read-only evidence folder, `autonomyLevel: Off`, `disabledToolIds` for Execute, Edit, Create and ApplyPatch, a `permissionHandler` that allows only MCP tool calls, `mcpServers` pointing at `{KIBANA_URL}/api/agent_builder/mcp`, a 90 second `AbortController`, and a JSON schema output whose `recommendation` is one of `clear`, `hold`, `hold_and_ask`.
+`worker/src/droid.ts`, the `createSession` options block quoted verbatim from the code between its `BEGIN` and `END` comments:
+
+```ts
+  // BEGIN createSession options (quoted verbatim in README.md)
+  return {
+    cwd: opts.evidenceDir,                                   // seed/fixtures/evidence; read-only by the OS, not by Droid
+    autonomyLevel: AutonomyLevel.Off,                        // every action asks the handler
+    disabledToolIds,                                         // ['Execute', 'Edit', 'Create', 'ApplyPatch'] plus listTools() edit/execute ids; subtractive, no allowlist in TS
+    systemPrompt: { type: 'preset' as const, preset: 'droid' as const, append: SYSTEM_PROMPT_APPEND },
+    mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and ELASTIC_API_KEY are set
+    permissionHandler({ toolUses, options }: RequestPermissionRequestParams) {
+      // Subtractive: anything that writes, executes, escalates or asks a human is cancelled; MCP tool calls and
+      // read-only confirmations proceed once. Read and Grep need no confirmation at all in autonomy Off.
+      const WRITE_LIKE = new Set<string>([
+        ToolConfirmationType.Edit, ToolConfirmationType.Execute, ToolConfirmationType.Create, ToolConfirmationType.ApplyPatch,
+        ToolConfirmationType.AskUser, ToolConfirmationType.ExitSpecMode, ToolConfirmationType.RecommendMission,
+        ToolConfirmationType.ProposeMission, ToolConfirmationType.StartMissionRun,
+        ToolConfirmationType.SandboxViolation, ToolConfirmationType.DroidShieldViolation,
+      ]);
+      const details = toolUses.flatMap(u => (u.details.type === ToolConfirmationType.Script ? u.details.calls.map(c => c.confirmation) : [u.details]));
+      const blocked = details.length === 0 || details.some(d => WRITE_LIKE.has(d.type as string));
+      const want = blocked ? ToolConfirmationOutcome.Cancel : ToolConfirmationOutcome.ProceedOnce;
+      const names = toolUses.map(u => `${u.toolUse?.name ?? '?'}:${u.details.type}`).join(', ');
+      opts.steps?.push({ type: 'note', at: nowIso(), text: `permission ${want === ToolConfirmationOutcome.Cancel ? 'cancelled' : 'proceed once'}: ${names}` });
+      return options.some(o => o.value === want) ? want : ToolConfirmationOutcome.Cancel;
+    },
+    abortSignal: ac.signal,                                  // 90 s AbortController; there is no timeout option
+  };
+  // END createSession options
+```
+
+The prompt is streamed with `session.stream(prompt, { outputFormat: { type: OutputFormatType.JsonSchema, schema: FINDING_SCHEMA } })`; the `result` message carries `structuredOutput`, `tokenUsage` and `durationMs`, and every `tool_call`, `tool_result` and `assistant` message is kept as a step the dashboard renders. The structured output goes through a zod gate (`worker/src/finding.ts`) whose `recommendation` is one of `clear`, `hold`, `hold_and_ask` and nothing else, and every evidence quote is checked against its file or tool result before the write.
+
+`session.listTools()` on 2026-10-24 returned these ids (`docs/evidence/droid_listTools_2026-10-24.txt`); the ones marked disabled are off for every session, and the worker adds any allowed tool in the `edit` or `execute` category to `disabledToolIds` on startup:
+
+```
+ApplyPatch (disabled), AskUser (disabled), ConnectApp (disabled), CreateAutomation (disabled), DeleteAutomation (disabled), DismissHandoffItems (disabled), EditAutomation (disabled), elastic___contract_rate_for_vendor, elastic___find_trips_near, elastic___platform_context_engine_install_automation_template, elastic___platform_core_execute_esql, elastic___platform_core_execute_workflow, elastic___platform_core_generate_esql, elastic___platform_core_generate_workflow, elastic___platform_core_get_document_by_id, elastic___platform_core_get_index_mapping, elastic___platform_core_get_workflow_execution_status, elastic___platform_core_index_explorer, elastic___platform_core_list_indices, elastic___platform_core_list_inference_endpoints, elastic___platform_core_list_workflow_executions, elastic___platform_core_product_documentation, elastic___platform_core_resume_workflow_execution, elastic___platform_core_search, elastic___platform_workflows_get_connectors, elastic___platform_workflows_get_examples, elastic___platform_workflows_get_step_definitions, elastic___platform_workflows_get_trigger_definitions, elastic___platform_workflows_get_workflow, elastic___platform_workflows_validate_workflow, elastic___platform_workflows_workflow_execute_step, EndFeatureRun (disabled), Execute (disabled), ExitSpecMode (disabled), FetchUrl (disabled), GenerateDroid (disabled), GenerateImage (disabled), Glob, Grep, ListAutomations (disabled), ListAutomationTemplates (disabled), Loop (disabled), LS, ProposeMission (disabled), Read, ReadAutomation (disabled), RunAutomation (disabled), Script, Skill (disabled), StageSettingsChanges (disabled), StartMissionRun (disabled), Task (disabled), TaskOutput (disabled), TaskStop (disabled), TodoWrite (disabled), ToolSearch, WaitForScript, WebSearch (disabled)
+```
+
+Droid 0.249 runs tools through `Script` and loads MCP tools with `ToolSearch`, so both stay enabled; the handler decides per confirmation inside a script. Honesty note: Droid's `Read` is not confined to `cwd` (in the live run it probed for instruction files above the evidence folder, which do not exist); the OS, not the session options, is the real boundary. See `docs/not-built.md` and `worker/README.md`.
 
 ## Agent addresses
 
+![tag:innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3)
+![tag:hackathon](https://img.shields.io/badge/hackathon-5F43F1)
+
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| dispatch-ledger-controller | to come | `agent1q...` (filled after first run) | the controller's seat on ASI:One | `agent/` |
+| dispatch-ledger-controller | pending registration | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | controller seat (Agentverse mailbox registration pending) | `agent/` |
+
+The address is derived from `AGENT_SEED` and is fixed; it is the one the running agent printed in `logs/agent.log`. The agent speaks the Chat Protocol and runs the same handler as the terminal CLI (`python3 -m agent.cli "..."`). Commands and reply shapes are in `agent/README.md`.
 
 ## Elastic
 
-Indices `telematics_log` (geo_point), `receipts`, `contracts`, `invoices` for a Serverless project; two Agent Builder ES|QL tools, `find_trips_near` and `contract_rate_for_vendor`, exposed to Droid over MCP. Setup, ingest and smoke tests in `elastic/` with a dry-run mode; not yet run against a live project (see context/CLAIMS_AUDIT.md).
-
-## SpacetimeDB
-
-Module in `spacetimedb/src/`. Tables and access in `schema.ts`; reducers, procedures and the kernel driver in `index.ts`; thresholds in `thresholds.ts`. Three identities are minted with `POST /v1/identity` and granted by `grant_role`. The segregation-of-duties check is `checkApprovePayment` in `index.ts`.
-
-## Settlement
-
-Verified live on 2026-10-24: an auto-paid fuel line produced one transfer on the carrier's Nessie account with the id on the payment row and in the audit feed. The mock bank accepts whole-dollar amounts only, so the exact cents and the payee ride in the transfer description.
-
-When a payment row appears (kernel auto-pay, a rule clearing a hold, or a controller approval), the worker's settlement watcher (`worker/src/settle.ts`) makes one call to Capital One's Nessie per payment: a transfer from the carrier's Checking account to the payee (the invoice's vendor, or a single fuel-and-tolls payee for card and toll payments) described as `txn_ref <ref>`. It writes the returned transfer id with `record_settlement(txnRef, bankTxnId)`, an agent-only reducer that refuses without a payment row or when the payment is already settled, sets `payment.bank_txn_id` and adds a `settle` audit row the dashboard shows as "paid, bank id <id>". Live settlement needs `NESSIE_API_KEY`, `WORKER_MODE` other than `replay`, and the accounts `scripts/nessie_seed.py` writes to `seed/fixtures/nessie_accounts.json`; otherwise the id is `offline-<txnRef>` and the Queue says "settlement offline". The worker can settle a payment but never create one. Nessie is a mock bank: no money moves, and a bank id proves only that the mock recorded the transfer.
+Four indices on a Serverless project: `telematics_log` (`geo_point` pings), `receipts` and `contracts` (with `semantic_text`), `invoices` (`elastic/mappings/`). Two Agent Builder ES|QL tools, `find_trips_near` and `contract_rate_for_vendor` (`elastic/tools/`), created over the API by `elastic/setup_agent.py` and exposed to Droid over the MCP endpoint `{KIBANA_URL}/api/agent_builder/mcp`. Ingest, tool creation and the `_execute` smoke test ran against the live project on 2026-10-24 (context/PROJECT_STATUS.md, 13:55 entry), and all 52 recorded investigations contain an `elastic___find_trips_near` or `elastic___contract_rate_for_vendor` tool call answered over MCP. Elastic is not the system of record and not the dashboard's data source.
 
 ## Vendor checks
 
@@ -107,11 +153,21 @@ On a `vendor_bank_change` hold, and on a vendor's first invoice, nothing inside 
 - public records: liens, judgments, bankruptcy (`crs:public_records`)
 - OFAC screen (`crs:ofac`)
 
-Only the vendor's business name goes out. No consumer credit, no driver or person data is ever sent. The result is rule-based, not a model: clean on all three suggests approve, which writes `hold` with the question "Vendor check clean: approve with a call-back note?"; any hit or failed call suggests escalate (an OFAC match suggests reject), which writes `hold_and_ask` with "Vendor has <reasons>; reject or call back?". The agent never rejects on its own, and `approve_payment` still demands a call-back note on a bank-change hold.
+Only the vendor's business name goes out. No consumer credit, no driver or person data is ever sent. The result is rule-based, not a model: clean on all three suggests approve, which writes `hold` with the question "Vendor check clean: approve with a call-back note?"; any hit or failed call suggests escalate (an OFAC match suggests reject), which writes `hold_and_ask` with "Vendor has <reasons>; reject or call back?". The agent never rejects on its own, and `approve_payment` still demands a call-back note on a bank-change hold. A vendor with a hit is rejected by the controller by hand, from ASI:One or the terminal, with the audit row; there is no auto-reject rule, because rules only ever clear and the module refuses rules on bank-change holds (context/DECISIONS.md, D-1).
 
-Live calls need `CRS_USERNAME` and `CRS_PASSWORD` and `WORKER_MODE` of `live` or `record` (the Droid key does not gate them); `record` also writes the raw responses to `seed/fixtures/vendor_checks/<vendorId>.json`. Without them the worker replays that file, labelled `replayed`, or writes a stand-in that says "Scripted stand-in, not a vendor check" with recommendation escalate and confidence 0. `CRS_DRY_RUN=1` prints the requests with credentials redacted and sends nothing. `CRS_FIXTURE_VARIANT=hit` replays `3.hit.json` instead of `3.json`. The dashboard shows a "Vendor check" block under the investigation with the three rows, the recommendation and a live, replayed or stand-in badge.
+Live calls need `CRS_USERNAME` and `CRS_PASSWORD` and `WORKER_MODE` of `live` or `record` (the Droid key does not gate them); `record` also writes the raw responses to `seed/fixtures/vendor_checks/<vendorId>.json`. Without them the worker replays that file (a recorded sandbox response is labelled `replayed`; the hand-shaped vendor 3 files carry an amber "hand-shaped fixture, not sandbox data" badge on the card, never `replayed`), or writes a stand-in that says "Scripted stand-in, not a vendor check" with recommendation escalate and confidence 0. `CRS_DRY_RUN=1` prints the requests with credentials redacted and sends nothing. `CRS_FIXTURE_VARIANT=hit` replays `3.hit.json` instead of `3.json`. The dashboard shows a "Vendor check" block under the investigation with the three rows, the recommendation and a live, replayed or stand-in badge.
 
-Sandbox caveat: the CRS account is a sandbox, so a live answer is sandbox data, not a real report on a real company, and the two vendor 3 fixtures are hand-shaped examples of a response, not recorded ones. The three endpoint paths and request bodies are pending the sandbox collection: they sit in `CRS_ENDPOINTS` in `worker/src/crs.ts`, marked `TODO(crs-sandbox)`.
+Sandbox caveat: the CRS account is a sandbox, so a live answer is sandbox data, not a real report on a real company, and the two vendor 3 fixtures are hand-shaped examples of a response, not recorded ones; the card and the trust panel say so. The three endpoint paths and request bodies are pending the sandbox collection: they sit in `CRS_ENDPOINTS` in `worker/src/crs.ts`, marked `TODO(crs-sandbox)`.
+
+## Settlement
+
+Verified live on 2026-10-24: an auto-paid fuel line produced one transfer on the carrier's Nessie account with the id on the payment row and in the audit feed. The mock bank accepts whole-dollar amounts only, so the exact cents and the payee ride in the transfer description.
+
+When a payment row appears (kernel auto-pay, a rule clearing a hold, or a controller approval), the worker's settlement watcher (`worker/src/settle.ts`) makes one call to Capital One's Nessie per payment: a transfer from the carrier's Checking account to the payee (the invoice's vendor, or a single fuel-and-tolls payee for card and toll payments) described as `txn_ref <ref>`. It writes the returned transfer id with `record_settlement(txnRef, bankTxnId)`, an agent-only reducer that refuses without a payment row or when the payment is already settled, sets `payment.bank_txn_id` and adds a `settle` audit row the dashboard shows as "paid, bank id <id>". Live settlement needs `NESSIE_API_KEY`, `WORKER_MODE` other than `replay`, and the accounts `scripts/nessie_seed.py` writes to `seed/fixtures/nessie_accounts.json`; otherwise the id is `offline-<txnRef>` and the Queue says "settlement offline". The worker can settle a payment but never create one. Nessie is a mock bank: no money moves, and a bank id proves only that the mock recorded the transfer.
+
+## SpacetimeDB
+
+Module in `spacetimedb/src/`. Tables and access in `schema.ts`; reducers, procedures and the kernel driver in `index.ts`; thresholds in `thresholds.ts`. Three identities are minted with `POST /v1/identity` and granted by `grant_role`: `seed` loads fixtures, `agent` is the worker and can never approve, `controller` is the ASI:One agent and the terminal CLI. The segregation-of-duties check is `checkApprovePayment` in `index.ts`: the role check runs first, then the requester check (whoever raised the hold cannot release it), then the call-back note on a bank change. `audit_event` has no update or delete reducer.
 
 ## Run it
 
@@ -134,7 +190,9 @@ agent/.venv/bin/python -m agent.cli "what needs me"
 python3 scripts/facts.py
 ```
 
-## Environment variables
+`scripts/full_run.sh` is the measured cycle (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, facts); `scripts/rehearse.sh` walks the judging runbook from a cold start.
+
+### Environment variables
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
@@ -152,26 +210,24 @@ python3 scripts/facts.py
 
 `scripts/demo_up.sh` exports every model key as empty on purpose so the offline run cannot make a paid call.
 
-## Repo map
+### Repo map
 
 | Path | What |
 | --- | --- |
 | `spacetimedb/` | the module: schema, kernel, reducers, procedures, tests |
 | `module_bindings/` | generated client bindings, committed |
-| `worker/` | Droid investigator, replay, rule drafting |
+| `worker/` | Droid investigator, replay, rule drafting, vendor check, settlement |
 | `agent/` | uAgent for ASI:One and its terminal twin |
 | `web/` | read-only live dashboard |
 | `elastic/` | mappings, ingest, Agent Builder tools and agent |
-| `seed/` | generator, planted errors, answer key, evidence |
-| `scripts/` | demo_up, clock, inject, facts, load_fixtures, mint_identities |
-| `docs/` | CONTRACT.md, FACTS.json, not-built.md, notability/ |
-| `context/` | PROJECT_STATUS.md, JUDGE_QA.md, CLAIMS_AUDIT.md |
+| `seed/` | generator, planted errors, answer key, evidence, recorded investigations |
+| `scripts/` | demo_up, full_run, rehearse, clock, inject, facts, honesty, load_fixtures, mint_identities |
+| `docs/` | CONTRACT.md, FACTS.json, RESULTS.md, RUNBOOK.md, DEVPOST.md, not-built.md, evidence/ |
+| `context/` | PROJECT_STATUS.md, DECISIONS.md, JUDGE_QA.md, CLAIMS_AUDIT.md |
 
-## What is real and what is simulated
+## Not built
 
-<!-- honesty:start -->
-What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. In the measured run of 2026-10-24T21:13:08+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card. The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role. Not built: `docs/not-built.md`. Everything fails toward no money moving.
-<!-- honesty:end -->
+"Not built" is a complete answer. The list is in [`docs/not-built.md`](docs/not-built.md): no real connectors, no payment execution beyond the mock bank, no OCR, no hard sandbox around Droid, CRS live calls pending the sandbox collection, and the rest.
 
 ## Team
 
