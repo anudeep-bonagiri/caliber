@@ -3,7 +3,7 @@
 ![tag:innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3)
 ![tag:hackathon](https://img.shields.io/badge/hackathon-5F43F1)
 
-The read-only investigator for Caliber (repo and ledger name: dispatch-ledger), an autonomous accounts-payable clerk for a simulated trucking carrier. It explains any hold and reports the day clock, reading the public tables and the stored finding of the one SpacetimeDB module that holds the carrier's whole state. It holds a `reader` identity: the database refuses it on every payment, answer and rule call, writes that refusal to the audit trail with the reader's role, and this agent relays the refusal word for word. The controller agent (`dispatch-ledger-controller`) forwards `why` and `status` to this agent and relays the answer prefixed `investigator:`. The agent that explains cannot pay.
+The read-only investigator for Caliber (repo and ledger name: dispatch-ledger), an autonomous accounts-payable clerk for a simulated trucking carrier. It explains any hold and reports the day clock, reading the public tables and the stored finding of the one SpacetimeDB module that holds the carrier's whole state. It holds a `reader` identity: the database refuses it on every payment, answer and rule call, writes that refusal to the audit trail with the reader's role, and this agent relays the refusal word for word. The controller agent (`caliber-controller`) forwards `why` and `status` to this agent and relays the answer prefixed `investigator:`. The agent that explains cannot pay.
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
