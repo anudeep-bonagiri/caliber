@@ -149,6 +149,10 @@ def test_answer_key_counts(fx):
     for r in key:
         by[(r["code"], r["expected"])] = by.get((r["code"], r["expected"]), 0) + 1
     for code, n in PLANTED.items():
+        if code == "vendor_bank_change":
+            # D-3: one bank-change vendor carries a hit in its fixture and is expected to be rejected
+            assert by[(code, "hold")] == n - 1 and by[(code, "reject")] == 1, code
+            continue
         expected = "auto_reject" if code == "duplicate_toll" else "hold"
         assert by[(code, expected)] == n, code
     assert by[("location_mismatch", "clear_after_question")] == 6
@@ -180,7 +184,32 @@ def test_fixed_bank_change_invoice(fx):
     vendor = next(v for v in fx["vendors"] if v["id"] == 3)
     assert vendor["bankChangedDay"] == 42
     row = next(r for r in fx["answer_key"] if r["txnRef"] == "INV-1077")
-    assert row["code"] == "vendor_bank_change"
+    assert row["code"] == "vendor_bank_change" and row["expected"] == "hold"
+
+
+def test_bank_change_hit_vendor(fx):
+    # D-3: vendor 1 (Alamo Fleet Service) is the hit vendor; its bank-change invoice is expected to be rejected and
+    # the hand-authored fixtures tell a coherent story: clean first invoice, judgment filed before the bank change.
+    rows = [r for r in fx["answer_key"] if r["code"] == "vendor_bank_change"]
+    hits = [r for r in rows if r["expected"] == "reject"]
+    assert len(hits) == 1 and hits[0]["txnRef"] == "INV-1032" and "judgment" in hits[0]["note"]
+    inv = next(i for i in fx["invoices"] if i["id"] == "INV-1032")
+    vendor = next(v for v in fx["vendors"] if v["id"] == inv["vendorId"])
+    assert vendor["id"] == 1 and vendor["bankChangedDay"] == 18 and inv["receivedDay"] == 19
+    first = min(i["receivedDay"] for i in fx["invoices"] if i["vendorId"] == 1)
+    vc = FIXTURES / "vendor_checks"
+    hit = json.loads((vc / "1.bank_change.json").read_text())
+    clean = json.loads((vc / "1.json").read_text())
+    assert hit["recorded"] is False and clean["recorded"] is False
+    assert "hand-authored" in hit["note"] and "CRS sandbox pending" in hit["note"]
+    import datetime
+    filed = datetime.date.fromisoformat(hit["responses"]["public_records"]["judgments"][0]["filedDate"])
+    assert simcal.date_for_day(first) < filed < simcal.date_for_day(vendor["bankChangedDay"])
+    assert clean["responses"]["public_records"]["judgments"] == [] and clean["responses"]["ofac"]["result"] == "NO_MATCH"
+    for name in ("3.json", "5.json"):
+        f = json.loads((vc / name).read_text())
+        assert f["recorded"] is False and f["responses"]["ofac"]["matches"] == [] and f["responses"]["public_records"]["judgments"] == []
+    assert not (vc / "3.hit.json").exists()
 
 
 def test_location_mismatch_constraints(fx):

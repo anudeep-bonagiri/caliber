@@ -42,6 +42,7 @@ STANDING = {
 SHORT = [(2, "tire_replacement", 4, 3), (4, "dpf_clean", 2, 1), (1, "alignment", 2, 1), (5, "tire_replacement", 3, 2), (3, "ac_service", 2, 1)]
 BANK = [  # vendor, item, qty, bankChangedDay (vendor 3 is INV-1077 from the brief)
     (3, "brake_job", 4, 42), (1, "tire_replacement", 10, 18), (5, "dpf_clean", 12, 71)]
+HIT_VENDOR = 1  # D-3: the bank-change vendor whose hand-authored CRS check carries a hit (Alamo Fleet Service, INV-1032)
 NON_PO_ITEMS = ["shop_supplies", "filters", "coolant", "wiper_blades", "def_fluid", "shop_labor"]
 FEES = [1250, 1875, 2450, 3125, 3750, 4500]
 TOTAL_INVOICES = 180
@@ -294,8 +295,13 @@ def build_maintenance(seed: int, company: Company, decoy_po_truck: int = DECOY1[
             key.append({"txnRef": i["id"], "code": "duplicate_invoice", "expected": "hold",
                         "note": f"same vendor and amount as {o['id']} ({o['poId']}) {i['receivedDay'] - o['receivedDay']} days earlier, now under {i['poId']}"})
         elif i["_tag"] == "vendor_bank_change":
-            key.append({"txnRef": i["id"], "code": "vendor_bank_change", "expected": "hold",
-                        "note": f"{v.name} changed remit-to bank on day {v.bankChangedDay} (ending {v.previousBankLast4} to {v.bankLast4}); invoice of {i['cents']} cents received day {i['receivedDay']}"})
+            # D-3: the vendor in HIT_VENDOR carries a public-records judgment in its hand-authored bank-change vendor
+            # check (seed/fixtures/vendor_checks/<id>.bank_change.json), so the controller rejects that invoice; the
+            # other two are clean and are approved with a call-back note. The key says which, the fixtures say why.
+            hit = i["vendorId"] == HIT_VENDOR
+            key.append({"txnRef": i["id"], "code": "vendor_bank_change", "expected": "reject" if hit else "hold",
+                        "note": f"{v.name} changed remit-to bank on day {v.bankChangedDay} (ending {v.previousBankLast4} to {v.bankLast4}); invoice of {i['cents']} cents received day {i['receivedDay']}"
+                                + ("; the bank-change vendor check carries a judgment, so the controller rejects" if hit else "")})
         elif i["_tag"] == "short_received":
             po = i["_po"]
             key.append({"txnRef": i["id"], "code": "short_received", "expected": "hold",

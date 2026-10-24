@@ -331,8 +331,8 @@
   },
   {
     "code": "vendor_bank_change",
-    "expected": "hold",
-    "note": "Alamo Fleet Service changed remit-to bank on day 18 (ending 2214 to 4471); invoice of 545000 cents received day 19",
+    "expected": "reject",
+    "note": "Alamo Fleet Service changed remit-to bank on day 18 (ending 2214 to 4471); invoice of 545000 cents received day 19; the bank-change vendor check carries a judgment, so the controller rejects",
     "txnRef": "INV-1032"
   },
   {
