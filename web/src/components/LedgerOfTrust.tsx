@@ -63,13 +63,23 @@ export function LedgerOfTrust({
     let live = 0;
     let replayed = 0;
     let none = 0;
+    const vc = { live: 0, replayed: 0, handShaped: 0, none: 0 };
     for (const t of tasks) {
-      if (t.kind !== 'investigate' || t.status !== 'investigated') continue;
-      if (t.source === 'live') live++;
-      else if (t.source === 'replayed') replayed++;
-      else if (t.source === 'none') none++;
+      if (t.status !== 'investigated') continue;
+      if (t.kind === 'investigate') {
+        if (t.source === 'live') live++;
+        else if (t.source === 'replayed') replayed++;
+        else if (t.source === 'none') none++;
+      } else if (t.kind === 'vendor_check') {
+        let status = '';
+        try { status = String((JSON.parse(t.findingJson || '{}') as { status?: string }).status ?? ''); } catch { status = ''; }
+        if (t.source === 'live') vc.live++;
+        else if (status === 'hand_shaped') vc.handShaped++;
+        else if (t.source === 'replayed') vc.replayed++;
+        else vc.none++;
+      }
     }
-    return { live, replayed, none };
+    return { live, replayed, none, vc };
   }, [tasks]);
   const feed = useMemo(() => {
     const copy = [...events];
@@ -136,7 +146,11 @@ export function LedgerOfTrust({
           <Src id="agent_task.source = none" className={provenance.none > 0 ? 'text-refused' : 'text-muted'}>
             {provenance.none}
           </Src>{' '}
-          scripted stand-in
+          scripted stand-in. Vendor checks:{' '}
+          <Src id="agent_task (vendor_check).source = live" className="text-release">{provenance.vc.live}</Src> live,{' '}
+          <Src id="agent_task (vendor_check).source = replayed, finding.status = replayed" className="text-candidate">{provenance.vc.replayed}</Src> recorded replay,{' '}
+          <Src id="agent_task (vendor_check).finding.status = hand_shaped" className={provenance.vc.handShaped > 0 ? 'text-hold' : 'text-muted'}>{provenance.vc.handShaped}</Src> hand-shaped fixture,{' '}
+          <Src id="agent_task (vendor_check).source = none" className={provenance.vc.none > 0 ? 'text-refused' : 'text-muted'}>{provenance.vc.none}</Src> stand-in
         </div>
       </div>
       <div className="scroll min-h-0 flex-1 overflow-y-auto">

@@ -4,7 +4,7 @@ import { Panel, Pill, Src, Empty, Kv, JsonBlock, CallbackRequiredPill, statusTon
 import { parseJson, parseSteps, type Brief, type BriefEvidence, type Finding, type Step } from '../lib/types';
 import { dollars, isoShort, pct, codeLabel, identityHex } from '../lib/format';
 
-export type Badge = { label: string; tone: 'release' | 'candidate' | 'refused'; title: string };
+export type Badge = { label: string; tone: 'release' | 'candidate' | 'refused' | 'hold'; title: string };
 
 export function badgeFor(task: AgentTask | undefined, finding: Finding | undefined): Badge | undefined {
   if (!task || task.status === 'open' || task.status === 'claimed') return undefined;
@@ -443,6 +443,7 @@ type VendorFinding = {
   status?: string;
   model?: string;
   question_for_controller?: string;
+  fixtureNote?: string;
 };
 type VendorBriefShape = { trigger?: string; vendor?: { id?: number; name?: string; bankChangedDay?: number } };
 
@@ -455,8 +456,11 @@ const VENDOR_SOURCES: Array<{ source: string; label: string }> = [
 export function vendorBadgeFor(task: AgentTask, finding: VendorFinding | undefined): Badge | undefined {
   if (task.status === 'open' || task.status === 'claimed') return undefined;
   const title = `agent_task ${task.id}.source = ${task.source}, finding.status = ${finding?.status ?? 'none'}`;
+  if (finding?.status === 'hand_shaped') {
+    return { label: 'hand-shaped fixture, not sandbox data', tone: 'hold', title: `${title}. The fixture file was written by hand in the shape of a sandbox response; no CRS call produced these values.` };
+  }
   if (task.source === 'live') return { label: 'live', tone: 'release', title };
-  if (task.source === 'replayed') return { label: 'replayed', tone: 'candidate', title };
+  if (task.source === 'replayed') return { label: 'replayed', tone: 'candidate', title: `${title}. Recorded sandbox response replayed verbatim.` };
   return { label: 'stand-in, not a vendor check', tone: 'refused', title };
 }
 
@@ -506,6 +510,11 @@ function VendorCheckView({ task }: { task: AgentTask }) {
             {finding.finding ? (
               <p className="text-[12px] leading-snug text-text" title={src}>
                 {finding.finding}
+              </p>
+            ) : null}
+            {finding.fixtureNote ? (
+              <p className="text-[11px] leading-snug text-hold" title={`${src}.fixtureNote`}>
+                Fixture note: {finding.fixtureNote}
               </p>
             ) : null}
             <ul className="flex flex-col gap-1">

@@ -57,7 +57,9 @@ export const VendorCheckFindingSchema = z
     recommendation: z.enum(VENDOR_RECOMMENDATIONS),
     reasons: z.array(z.string().min(1).max(200)).max(10),
     confidence: z.number().min(0).max(1),
-    status: z.enum(['ok', 'replayed', 'no_fixture']).default('ok'),
+    status: z.enum(['ok', 'replayed', 'hand_shaped', 'no_fixture']).default('ok'),
+    // the fixture's own caveat sentence when the replay is a hand-shaped file, printed on the card
+    fixtureNote: z.string().max(300).optional(),
     model: z.string().max(80).optional(),
     question_for_controller: z.string().max(QUESTION_MAX).optional(),
   })
@@ -138,8 +140,9 @@ const HIT_LABEL: Record<string, string> = {
 export interface AssessMeta {
   status: VendorCheckFinding['status'];
   model: string;
-  // appended to each evidence ref, e.g. "replayed from vendor_checks/3.json"
+  // appended to each evidence ref, e.g. "replayed from vendor_checks/3.json" or "hand-shaped fixture"
   refSuffix?: string;
+  fixtureNote?: string;
 }
 
 // Rules, not a model. OFAC match -> reject (suggested only). Any other hit or a failed call -> escalate.
@@ -179,7 +182,8 @@ export function assessVendor(brief: VendorBrief, summaries: CrsSummary[], meta: 
       : recommendation === 'reject'
         ? 'OFAC match: the agent suggests reject, a controller decides.'
         : 'Needs a person: reject or call back.';
-  const finding = `Vendor ${v.id} ${v.name} (${trig}, ${brief.txnRef}). Business credit: ${line('business_credit')}. Public records: ${line('public_records')}. OFAC: ${line('ofac')}. ${verdict}`.slice(0, 1000);
+  const prefix = meta.status === 'hand_shaped' ? 'Hand-shaped fixture, not sandbox data. ' : '';
+  const finding = `${prefix}Vendor ${v.id} ${v.name} (${trig}, ${brief.txnRef}). Business credit: ${line('business_credit')}. Public records: ${line('public_records')}. OFAC: ${line('ofac')}. ${verdict}`.slice(0, 1000);
   const { question } = mapRecommendation(recommendation, reasons);
   return VendorCheckFindingSchema.parse({
     finding,
@@ -190,6 +194,7 @@ export function assessVendor(brief: VendorBrief, summaries: CrsSummary[], meta: 
     status: meta.status,
     model: meta.model,
     question_for_controller: question,
+    ...(meta.fixtureNote ? { fixtureNote: meta.fixtureNote } : {}),
   });
 }
 
@@ -240,10 +245,21 @@ export function replayVendor(brief: VendorBrief, fixturesDir: string, variant?: 
   const summaries: CrsSummary[] = CRS_CALLS.map(c =>
     fx.responses[c] === undefined ? { call: c, endpoint: endpointLabel(c), ok: false, hits: [], summary: 'not in the fixture', raw: null, error: 'not in the fixture' } : summarizeRaw(c, fx.responses[c]),
   );
-  const finding = assessVendor(brief, summaries, { status: 'replayed', model: 'crs-replay', refSuffix: `replayed from ${rel}` });
+  // A recorded sandbox response replays as `replayed`; a hand-shaped file is labelled as such on every
+  // surface: finding status, each evidence ref, the finding text and a step note. Nothing reads as sandbox data.
+  const handShaped = !fx.recorded;
+  const fixtureNote = handShaped
+    ? ((fx as { note?: string }).note ?? 'hand-shaped fixture: shape of a sandbox response, not real data').slice(0, 300)
+    : undefined;
+  const finding = assessVendor(brief, summaries, {
+    status: handShaped ? 'hand_shaped' : 'replayed',
+    model: handShaped ? 'hand-shaped fixture' : 'crs-replay',
+    refSuffix: handShaped ? 'hand-shaped fixture' : `replayed from ${rel}`,
+    fixtureNote,
+  });
   const steps: Step[] = [
     ...summaries.map(s => note(`${SOURCE_OF[s.call]} ${s.endpoint}: ${s.ok ? `${s.hits.length} hit(s)` : s.summary}`)),
-    ...(fx.recorded ? [] : [note(`fixture ${rel} is hand-shaped, not a recorded sandbox response`)]),
+    ...(handShaped ? [note(`hand-shaped fixture ${rel}, not sandbox data: ${fixtureNote}`)] : []),
     note(`replayed from ${rel}`),
   ];
   return outcome(finding, steps, 'replayed');

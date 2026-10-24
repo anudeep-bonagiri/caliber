@@ -219,9 +219,11 @@ export function redact(v: unknown): unknown {
   return v;
 }
 
+// Human label for a call. The endpoint config (method and path) is internal and may still carry TODO
+// placeholders until the sandbox collection arrives; it is never shown on a card or in an evidence ref.
+const CALL_LABEL: Record<CrsCall, string> = { business_credit: 'business credit', public_records: 'public records', ofac: 'OFAC screen' };
 export function endpointLabel(call: CrsCall): string {
-  const e = CRS_ENDPOINTS[call];
-  return `${e.method} ${e.path}`;
+  return CALL_LABEL[call];
 }
 
 function printRequest(log: (m: string) => void, method: string, url: string, body: unknown, bearer: boolean): void {

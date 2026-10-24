@@ -89,6 +89,17 @@ describe('replay', () => {
 });
 
 describe('recorded-run labels', () => {
+  it('rewords the recording\'s own "live droid run" note at replay time and leaves the file alone', () => {
+    const fx = loadFixture(FIXTURES, '2231')!;
+    const before = JSON.stringify(fx);
+    const out = replayOrStandIn(brief({ txnRef: '2231' }), FIXTURES, EVIDENCE);
+    const notes = out.steps.filter(s => s.type === 'note').map(s => (s as { text: string }).text);
+    expect(notes.some(n => /^live droid run/i.test(n))).toBe(false);
+    expect(notes[0]).toBe('recorded droid run (2026-10-24) for 2231');
+    expect(JSON.stringify(loadFixture(FIXTURES, '2231'))).toBe(before);
+    expect(fs.readFileSync(path.join(FIXTURES, '2231.json'), 'utf8')).toContain('live droid run (record) for 2231');
+  });
+
   it('carries recordedAt and recordedBy from a live-recorded fixture and says so in a note', () => {
     const out = replayOrStandIn(brief({ txnRef: '2231' }), FIXTURES, EVIDENCE);
     expect(out.finding.recordedAt).toBe('2026-10-24T21:07:04.498Z');

@@ -80,8 +80,15 @@ export function replayFixture(fixture: Fixture, brief: Pick<Brief, 'txnRef' | 'e
   const verified = verifyEvidence(checked, { evidenceDir, brief, steps: fixture.steps });
   const recordedBy = fixtureRecordedBy(fixture);
   const finding: Finding = { ...verified.finding, status: 'replayed', recordedAt: fixture.recordedAt.slice(0, 40), recordedBy };
+  // The recording's own first note says "live droid run (record) for <ref>". On a replayed card that word
+  // invites a misread, so it is reworded here; the fixture file itself is never changed.
+  const replayedSteps: Step[] = fixture.steps.map(s =>
+    s.type === 'note' && LIVE_STEP.test(s.text)
+      ? { ...s, text: `recorded droid run (${recordingDate(fixture.recordedAt)}) for ${brief.txnRef}` }
+      : s,
+  );
   const steps: Step[] = [
-    ...fixture.steps,
+    ...replayedSteps,
     ...verified.notes.map((text): Step => ({ type: 'note', at: nowIso(), text })),
     { type: 'note', at: nowIso(), text: `replayed from fixtures/investigations/${brief.txnRef}.json` },
     { type: 'note', at: nowIso(), text: `replayed from a recording made ${recordingDate(fixture.recordedAt)} by ${recordedBy}` },

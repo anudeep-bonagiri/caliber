@@ -102,15 +102,46 @@ describe('replay', () => {
   it('replays the clean fixture as approve -> hold with the call-back question', async () => {
     const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant: '' });
     expect(out.source).toBe('replayed');
-    expect(out.finding.status).toBe('replayed');
+    // 3.json is hand-shaped (recorded: false): the status says so on every surface
+    expect(out.finding.status).toBe('hand_shaped');
     expect(out.finding.recommendation).toBe('approve');
     expect(out.recommendation).toBe('hold');
     expect(out.question).toBe(APPROVE_QUESTION);
     expect(out.finding.evidence.map(e => e.source)).toEqual(['crs:business_credit', 'crs:public_records', 'crs:ofac']);
     expect(out.finding.evidence[1].quote).toBe('no liens, no judgments, no bankruptcies on file');
     expect(out.finding.evidence[2].quote).toMatch(/^OFAC no match/);
-    expect(out.finding.evidence.every(e => e.ref.includes('replayed from vendor_checks/3.json'))).toBe(true);
+    expect(out.finding.evidence.map(e => e.ref)).toEqual([
+      'business credit (hand-shaped fixture)',
+      'public records (hand-shaped fixture)',
+      'OFAC screen (hand-shaped fixture)',
+    ]);
+    expect(out.finding.finding.startsWith('Hand-shaped fixture, not sandbox data. ')).toBe(true);
+    expect(out.finding.fixtureNote).toMatch(/not real data/);
+    expect(out.finding.model).toBe('hand-shaped fixture');
+    expect(out.steps.some(s => s.type === 'note' && s.text.startsWith('hand-shaped fixture vendor_checks/3.json, not sandbox data:'))).toBe(true);
     expect(out.steps.at(-1)).toMatchObject({ type: 'note', text: 'replayed from vendor_checks/3.json' });
+  });
+
+  it('never lets an endpoint placeholder reach a card: no "/TODO-" in any finding, ref, quote or step', async () => {
+    for (const variant of ['', 'hit']) {
+      const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant });
+      expect(JSON.stringify(out)).not.toContain('/TODO-');
+      expect(JSON.stringify(out)).not.toMatch(/POST \//);
+    }
+    const stand = await handleVendorCheck(brief({ vendor: { id: 99, name: 'Nobody Inc', bankChangedDay: 1 } }), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant: '' });
+    expect(JSON.stringify(stand)).not.toContain('/TODO-');
+  });
+
+  it('a recorded fixture (recorded: true) replays as replayed with the file named in each ref', async () => {
+    const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'vc-recorded-'));
+    const src = JSON.parse(fs.readFileSync(path.join(env().fixturesDir, '3.json'), 'utf8'));
+    fs.writeFileSync(path.join(tmp, '3.json'), JSON.stringify({ ...src, recorded: true, recordedAt: '2026-10-24T20:00:00Z', note: 'recorded from the sandbox' }));
+    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: { ...env(), fixturesDir: tmp }, fetch: noFetch, variant: '' });
+    expect(out.finding.status).toBe('replayed');
+    expect(out.finding.fixtureNote).toBeUndefined();
+    expect(out.finding.evidence.every(e => e.ref.endsWith('(replayed from vendor_checks/3.json)'))).toBe(true);
+    expect(out.finding.finding.startsWith('Vendor 3')).toBe(true);
+    expect(out.steps.some(s => s.type === 'note' && /hand-shaped/.test(s.text))).toBe(false);
   });
 
   it('replays the hit fixture as hold_and_ask with the reasons in the question', async () => {
