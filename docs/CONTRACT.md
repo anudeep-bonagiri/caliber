@@ -73,7 +73,7 @@ Card transactions are plain numbers as strings (`"2231"`), tolls are `T` plus a 
  "model": "droid", "durationMs": 23810, "tokenUsage": {"input": 0, "output": 0}}
 ```
 
-`recommendation` is one of `clear`, `hold`, `hold_and_ask`. There is no `pay`. `status` is `ok`, `replayed`, `timeout` or `no_fixture`. `agent_task.source` is `live`, `replayed` or `none`.
+`recommendation` inside `finding_json` is one of `clear`, `hold`, `hold_and_ask`. There is no `pay`. The `recommendation` argument of `record_investigation` carries the task outcome and additionally allows `done` (a `draft_rule` task finished) and `timeout` (no finding could be produced in time); the reducer refuses anything else and refuses a task that is not in status `claimed` by the caller. Controller text fields are bounded by the module: answers up to 1000 characters, call-back notes and reasons up to 500, none may be blank. `status` is `ok`, `replayed`, `timeout` or `no_fixture`. `agent_task.source` is `live`, `replayed` or `none`.
 
 `rule.scope_json`: `{"driverId": 23}` or `{"truckIds": [17, 22]}` or `{"cardId": "FC-02"}` or `{"vendorId": 3}`; at least one key. The kernel applies a rule only when `condition` equals the code it is about to raise, the day is inside `[valid_from_day, valid_to_day]`, and every scope key present matches the row.
 

@@ -3,12 +3,13 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import 'dotenv/config';
+import dotenv from 'dotenv';
 import { Timestamp } from 'spacetimedb';
 import { DbConnection } from '../module_bindings/index.ts';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
+dotenv.config({ path: resolve(root, '.env') });
 const argIdx = process.argv.indexOf('--fixtures');
 const FIX = resolve(root, argIdx > 0 ? process.argv[argIdx + 1] : 'seed/fixtures');
 const URI = process.env.STDB_URI ?? 'http://127.0.0.1:3100';

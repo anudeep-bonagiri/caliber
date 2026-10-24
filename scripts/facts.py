@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+OPTION_COLS = {"rule_id", "question", "answer", "callback_note", "approved_by", "claimed_by", "claimed_at", "po_id"}
 EXCEPTION_CODES = ["location_mismatch", "capacity_exceeded", "rate_variance", "duplicate_toll",
                    "duplicate_invoice", "vendor_bank_change", "short_received"]
 
@@ -34,6 +35,10 @@ def sql(uri: str, db: str, query: str) -> list[dict]:
                 v = v["some"]
             elif isinstance(v, dict) and "none" in v:
                 v = None
+            elif isinstance(v, list) and len(v) == 2 and v[0] == 1 and v[1] == [] and k in OPTION_COLS:
+                v = None
+            elif isinstance(v, list) and len(v) == 2 and v[0] == 0 and k in OPTION_COLS:
+                v = v[1]
             elif isinstance(v, list) and len(v) == 1 and k in ("at", "decided_at", "updated_at", "created_at", "claimed_at", "actor", "requested_by", "released_by", "created_by", "approved_by", "claimed_by"):
                 v = v[0]
             row[k] = v

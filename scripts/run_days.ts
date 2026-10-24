@@ -1,7 +1,10 @@
 // Advances the simulated calendar day by day through step_day (seed or controller token) and reports timing.
 // Usage: npx tsx scripts/run_days.ts [--until 92] [--token-env STDB_SEED_TOKEN]
-import 'dotenv/config';
+import dotenv from 'dotenv';
 import { DbConnection } from '../module_bindings/index.ts';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+dotenv.config({ path: resolve(dirname(fileURLToPath(import.meta.url)), '..', '.env') });
 
 const until = Number(process.argv[process.argv.indexOf('--until') + 1] || 92);
 const tokenEnv = process.argv.includes('--token-env') ? process.argv[process.argv.indexOf('--token-env') + 1] : 'STDB_SEED_TOKEN';

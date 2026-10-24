@@ -36,7 +36,7 @@ spacetime login --token "$SEED_TOKEN" >/dev/null 2>&1
 
 step "3/7 publish the module (fresh data)"
 ( cd spacetimedb && [ -d node_modules ] || npm install --silent )
-( cd spacetimedb && spacetime publish dispatch-ledger --module-path . --server local3100 --delete-data always --yes 2>&1 | tail -2 )
+( cd spacetimedb && spacetime publish dispatch-ledger --module-path . --server local3100 --delete-data=always --yes 2>&1 | tail -2 )
 
 step "4/7 agent and controller identities"
 python3 scripts/mint_identities.py --uri "$STDB_URI" --db "$STDB_DB"

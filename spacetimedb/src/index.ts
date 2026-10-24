@@ -465,6 +465,7 @@ export const recordInvestigation = spacetimedb.reducer(
     const row = ctx.db.agentTask.id.find(id);
     if (!row) refuse(ctx, String(id), 'no such task');
     if (!row.claimedBy || !row.claimedBy.isEqual(ctx.sender)) refuse(ctx, String(id), 'task not claimed by caller');
+    if (row.status !== 'claimed') refuse(ctx, String(id), `task is ${row.status}`);
     if (!['clear', 'hold', 'hold_and_ask', 'timeout', 'done'].includes(recommendation)) refuse(ctx, String(id), `bad recommendation ${recommendation}`);
     if (stepsJson.length > 200_000 || findingJson.length > 50_000) refuse(ctx, String(id), 'payload too large');
     const status = recommendation === 'timeout' ? 'timeout' : 'investigated';
@@ -545,12 +546,20 @@ export const createRule = spacetimedb.reducer(
 // ---------------------------------------------------------------------------
 // controller actions (the ASI:One agent and the demo laptop)
 // ---------------------------------------------------------------------------
-function checkAnswerQuestion(ctx: Ctx, txnRef: string): Refusal {
+const MAX_TEXT = 1000;
+const MAX_NOTE = 500;
+function textLimit(text: string | undefined, max: number, what: string): Refusal {
+  if (text === undefined) return null;
+  if (text.trim().length === 0) return `${what} is empty`;
+  if (text.length > max) return `${what} is longer than ${max} characters`;
+  return null;
+}
+function checkAnswerQuestion(ctx: Ctx, txnRef: string, text?: string): Refusal {
   const r = checkRole(ctx, 'controller'); if (r) return r;
   const h = ctx.db.hold.txnRef.find(txnRef);
   if (!h) return 'no such hold';
   if (h.status === 'released' || h.status === 'rejected' || h.status === 'cleared_by_rule') return `hold already ${h.status}`;
-  return null;
+  return textLimit(text, MAX_TEXT, 'answer');
 }
 function performAnswerQuestion(ctx: Ctx, txnRef: string, text: string) {
   const h = ctx.db.hold.txnRef.find(txnRef)!;
@@ -567,9 +576,9 @@ function performAnswerQuestion(ctx: Ctx, txnRef: string, text: string) {
   audit(ctx, 'answer_question', txnRef, text.slice(0, 200));
 }
 export const answerQuestion = spacetimedb.reducer({ txnRef: t.string(), text: t.string() }, (ctx, { txnRef, text }) =>
-  guard(ctx, txnRef, checkAnswerQuestion(ctx, txnRef), () => performAnswerQuestion(ctx, txnRef, text)));
+  guard(ctx, txnRef, checkAnswerQuestion(ctx, txnRef, text), () => performAnswerQuestion(ctx, txnRef, text)));
 export const tryAnswerQuestion = spacetimedb.procedure({ txnRef: t.string(), text: t.string() }, Outcome, (ctx, { txnRef, text }) =>
-  attempt(ctx, txnRef, tx => checkAnswerQuestion(tx, txnRef), tx => performAnswerQuestion(tx, txnRef, text)));
+  attempt(ctx, txnRef, tx => checkAnswerQuestion(tx, txnRef, text), tx => performAnswerQuestion(tx, txnRef, text)));
 
 function checkApproveRule(ctx: Ctx, id: bigint): Refusal {
   const r = checkRole(ctx, 'controller'); if (r) return r;
@@ -627,7 +636,7 @@ function checkApprovePayment(ctx: Ctx, txnRef: string, callbackNote: string | un
   if (ctx.db.payment.txnRef.find(txnRef)) return 'already paid';
   const needsNote = h.code === 'vendor_bank_change' || bankChangeActive(ctx, txnRef, h.cents);
   if (needsNote && (!callbackNote || callbackNote.trim().length < 8)) return 'call-back note required for a bank change';
-  return null;
+  return textLimit(callbackNote, MAX_NOTE, 'call-back note');
 }
 function performApprovePayment(ctx: Ctx, txnRef: string, callbackNote: string | undefined) {
   const h = ctx.db.hold.txnRef.find(txnRef)!;
@@ -640,12 +649,12 @@ export const approvePayment = spacetimedb.reducer({ txnRef: t.string(), callback
 export const tryApprovePayment = spacetimedb.procedure({ txnRef: t.string(), callbackNote: t.option(t.string()) }, Outcome, (ctx, { txnRef, callbackNote }) =>
   attempt(ctx, txnRef, tx => checkApprovePayment(tx, txnRef, callbackNote), tx => performApprovePayment(tx, txnRef, callbackNote)));
 
-function checkRejectPayment(ctx: Ctx, txnRef: string): Refusal {
+function checkRejectPayment(ctx: Ctx, txnRef: string, reason?: string): Refusal {
   const r = checkRole(ctx, 'controller'); if (r) return r;
   const h = ctx.db.hold.txnRef.find(txnRef);
   if (!h) return 'no such hold';
   if (!APPROVABLE.includes(h.status)) return `hold is ${h.status}`;
-  return null;
+  return textLimit(reason, MAX_NOTE, 'reason');
 }
 function performRejectPayment(ctx: Ctx, txnRef: string, reason: string) {
   const h = ctx.db.hold.txnRef.find(txnRef)!;
@@ -653,9 +662,9 @@ function performRejectPayment(ctx: Ctx, txnRef: string, reason: string) {
   audit(ctx, 'reject_payment', txnRef, reason);
 }
 export const rejectPayment = spacetimedb.reducer({ txnRef: t.string(), reason: t.string() }, (ctx, { txnRef, reason }) =>
-  guard(ctx, txnRef, checkRejectPayment(ctx, txnRef), () => performRejectPayment(ctx, txnRef, reason)));
+  guard(ctx, txnRef, checkRejectPayment(ctx, txnRef, reason), () => performRejectPayment(ctx, txnRef, reason)));
 export const tryRejectPayment = spacetimedb.procedure({ txnRef: t.string(), reason: t.string() }, Outcome, (ctx, { txnRef, reason }) =>
-  attempt(ctx, txnRef, tx => checkRejectPayment(tx, txnRef), tx => performRejectPayment(tx, txnRef, reason)));
+  attempt(ctx, txnRef, tx => checkRejectPayment(tx, txnRef, reason), tx => performRejectPayment(tx, txnRef, reason)));
 
 // A judge scenario: insert one fuel transaction into the current day and run the kernel on it.
 // The caller is recorded as the hold's requester, so the same controller cannot approve what it injected.
