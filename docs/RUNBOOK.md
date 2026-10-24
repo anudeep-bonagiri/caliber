@@ -64,7 +64,7 @@ Terminal B makes no paid call and needs no internet: the keys are empty, and a s
 - [ ] WiFi off on the demo laptop: run every beat from Terminal B. Everything except ASI:One must work.
 - [ ] `.env` on the demo laptop only. `grep -c -E '^(STDB_SEED_TOKEN|STDB_AGENT_TOKEN|STDB_CONTROLLER_TOKEN|AGENT_SEED)=.+' .env` prints `4`. On 2026-10-24 it printed `3`: `AGENT_SEED` is missing. Add it once (`openssl rand -hex 32`) and never change it; it fixes the agent's address.
 - [ ] Agentverse mailbox connected: start A1, open the Inspector link it logs, Connect, Mailbox, Finish. Paste `agent/README.md` into the profile and put the real address in its table.
-- [ ] Second laptop logged into ASI:One with a chat to `@dispatch-ledger-controller` open; `status` gets a reply.
+- [ ] Second laptop logged into ASI:One with a chat to `@caliber-controller` open; `status` gets a reply.
 - [ ] One full 92-day run, then `python3 scripts/facts.py` once, then read `docs/FACTS.md`. Those are the only numbers you may say. At the table `facts.py` would overwrite `docs/FACTS.json` and `web/public/FACTS.json` with whatever day the clock is on.
 - [ ] Notability screenshots in `docs/notability/` with `captions.md`, the same in the Devpost gallery.
 - [ ] Screen recordings of moment one and moment two on the desktop, played once, sound off. Last fallback.

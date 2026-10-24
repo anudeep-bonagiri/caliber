@@ -41,7 +41,7 @@ from agent import handlers, intents, peers  # noqa: E402
 from agent.handlers import handle  # noqa: E402
 from agent.relay import Relay  # noqa: E402
 
-AGENT_NAME = "dispatch-ledger-controller"
+AGENT_NAME = "caliber-controller"
 README = str(Path(__file__).resolve().parent / "README.md")
 TAGS = ["innovationlab", "hackathon"]
 

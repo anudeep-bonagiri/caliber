@@ -19,8 +19,8 @@ Anudeep does these clicks once per agent. Each address is fixed by its seed in `
 
 ## The two-line ASI:One check (Task 18)
 
-1. In a chat with `dispatch-ledger-controller`, type `why 2231`. The reply starts `investigator:`; it came from the investigator agent over agent-to-agent chat and was relayed. (If it starts `investigator did not answer in time; from the ledger directly:` the hop took over 8 seconds; the rows are the same.)
-2. In a chat with `dispatch-investigator`, type `approve 2231`. The reply is `investigator: refused by the ledger: reader may not do this (needs controller)`. The dashboard's Ledger of trust shows a red `refused` row with actor `reader` and ref `2231`; so does `SELECT actor_role, action, ref, detail FROM audit_event WHERE actor_role = 'reader'`.
+1. In a chat with `caliber-controller`, type `why 2231`. The reply starts `investigator:`; it came from the investigator agent over agent-to-agent chat and was relayed. (If it starts `investigator did not answer in time; from the ledger directly:` the hop took over 8 seconds; the rows are the same.)
+2. In a chat with `caliber-investigator`, type `approve 2231`. The reply is `investigator: refused by the ledger: reader may not do this (needs controller)`. The dashboard's Ledger of trust shows a red `refused` row with actor `reader` and ref `2231`; so does `SELECT actor_role, action, ref, detail FROM audit_event WHERE actor_role = 'reader'`.
 
 ## Cal Hacks submission agent
 

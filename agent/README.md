@@ -1,4 +1,4 @@
-# Dispatch Ledger Controller
+# Caliber Controller
 
 ![tag:innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3)
 ![tag:hackathon](https://img.shields.io/badge/hackathon-5F43F1)
@@ -7,8 +7,8 @@ The fleet controller's seat for Caliber (repo and ledger name: dispatch-ledger),
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| Dispatch Ledger Controller | `@dispatch-ledger-controller` | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | Holds the `controller` identity: lists holds, explains findings, takes answers, approvals and rejections, drives the simulated clock | [agent/](https://github.com/anudeep-bonagiri/dispatch-ledger/tree/main/agent) |
-| Dispatch Investigator | `@dispatch-investigator` | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | Holds the read-only `reader` identity: answers `why <id>` and `status`; every payment, answer or rule call it is asked for is refused by the ledger and recorded with its role | [agent/investigator.py](https://github.com/anudeep-bonagiri/dispatch-ledger/blob/main/agent/investigator.py) |
+| Caliber Controller | `@caliber-controller` | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | Holds the `controller` identity: lists holds, explains findings, takes answers, approvals and rejections, drives the simulated clock | [agent/](https://github.com/anudeep-bonagiri/dispatch-ledger/tree/main/agent) |
+| Caliber Investigator | `@caliber-investigator` | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | Holds the read-only `reader` identity: answers `why <id>` and `status`; every payment, answer or rule call it is asked for is refused by the ledger and recorded with its role | [agent/investigator.py](https://github.com/anudeep-bonagiri/dispatch-ledger/blob/main/agent/investigator.py) |
 
 Two agents, one split the database already enforces: the agent that explains a hold cannot pay it. `why <id>` and `status` are the investigator's; the controller forwards them over agent-to-agent chat and relays the answer prefixed `investigator:` (after 8 seconds it answers from the ledger itself, prefixed `investigator did not answer in time; from the ledger directly:`). Sent straight to the investigator, `approve 2231` comes back `investigator: refused by the ledger: reader may not do this (needs controller)`, and that refusal is an `audit_event` row with `actor_role reader`.
 

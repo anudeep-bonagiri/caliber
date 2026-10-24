@@ -39,7 +39,7 @@ from uagents_core.contrib.protocols.chat import (  # noqa: E402
 
 from agent import investigate, ledger, peers  # noqa: E402
 
-AGENT_NAME = "dispatch-investigator"
+AGENT_NAME = "caliber-investigator"
 README = str(Path(__file__).resolve().parent / "INVESTIGATOR_README.md")
 TAGS = ["innovationlab", "hackathon"]
 DEFAULT_PORT = "8012"   # 8000 is an ssh forward on the demo laptop, 8011 the controller agent
