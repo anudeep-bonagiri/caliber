@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { Hold, Payment } from '../../../module_bindings/types';
-import { Panel, Pill, Src, Empty, statusTone } from './ui';
+import { Panel, Pill, Src, Empty, CallbackRequiredPill, statusTone } from './ui';
 import { dollars, identityHex, codeLabel, plural } from '../lib/format';
 import { RESOLVED_HOLD_STATUSES } from '../lib/types';
 import { useFlash } from '../lib/useFlash';
@@ -182,6 +182,7 @@ function HoldRow({
           day <Src id={`hold ${h.txnRef} day`}>{h.day}</Src>
         </span>
         <span className="ml-auto flex items-center gap-1.5">
+          {h.code === 'vendor_bank_change' ? <CallbackRequiredPill /> : null}
           <Pill tone="neutral" title={`hold ${h.txnRef}.requested_by ${identityHex(h.requestedBy).slice(0, 12)}`}>
             {role}
           </Pill>

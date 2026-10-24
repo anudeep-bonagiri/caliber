@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { AgentTask, Hold, MatchResult, Payment } from '../../../module_bindings/types';
-import { Panel, Pill, Src, Empty, Kv, JsonBlock, statusTone } from './ui';
+import { Panel, Pill, Src, Empty, Kv, JsonBlock, CallbackRequiredPill, statusTone } from './ui';
 import { parseJson, parseSteps, type Brief, type BriefEvidence, type Finding, type Step } from '../lib/types';
 import { dollars, isoShort, pct, codeLabel, identityHex } from '../lib/format';
 
@@ -81,22 +81,27 @@ export function Investigation({
   const workerIdle = waiting && now - lastTaskChange > WORKER_IDLE_MS;
 
   const taskId = task ? `agent_task ${task.id}` : '';
+  const needsCallback = hold?.code === 'vendor_bank_change';
+  const releasedNote = hold && hold.status === 'released' && hold.callbackNote ? hold.callbackNote : undefined;
 
   return (
     <Panel
       title={hold ? <>Investigation of <span className="num text-text">{hold.txnRef}</span></> : 'Investigation'}
       aside={
-        task ? (
+        task || needsCallback ? (
           <>
-            {badge ? (
+            {needsCallback ? <CallbackRequiredPill /> : null}
+            {task && badge ? (
               <Pill tone={badge.tone} title={badge.title}>
                 {badge.label}
               </Pill>
             ) : null}
-            <Pill tone={statusTone(task.status)} title={`${taskId}.status`}>
-              {task.status === 'claimed' ? <span className="spinner" aria-hidden /> : null}
-              {task.status}
-            </Pill>
+            {task ? (
+              <Pill tone={statusTone(task.status)} title={`${taskId}.status`}>
+                {task.status === 'claimed' ? <span className="spinner" aria-hidden /> : null}
+                {task.status}
+              </Pill>
+            ) : null}
           </>
         ) : null
       }
@@ -119,6 +124,17 @@ export function Investigation({
                 {payment.releasedRole}
               </Src>
             </p>
+          ) : null}
+
+          {releasedNote ? (
+            <div className="rounded-sm border border-release/40 bg-release-dim px-3 py-1.5">
+              <div className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-release">Call-back note</div>
+              <p className="mt-0.5 text-[12px] text-text">
+                <Src id={`hold ${hold.txnRef}.callback_note`} mono={false}>
+                  {releasedNote}
+                </Src>
+              </p>
+            </div>
           ) : null}
 
           <Section label={task ? `steps (${taskId})` : 'steps'}>
@@ -166,7 +182,7 @@ export function Investigation({
                   {hold.answer}
                 </p>
               ) : null}
-              {hold.callbackNote ? (
+              {hold.callbackNote && !releasedNote ? (
                 <p className="mt-1 text-[11.5px] text-muted" title={`hold ${hold.txnRef}.callback_note`}>
                   call-back note: {hold.callbackNote}
                 </p>

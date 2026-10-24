@@ -88,7 +88,7 @@ export default function App() {
           <Rules rules={rules} ready={rulesReady} today={today} />
         </div>
         <div className="min-h-[320px] xl:col-span-8 xl:min-h-0 [&>section]:h-full">
-          <LedgerOfTrust totals={totals} holds={holds} events={events} payments={payments} ready={eventsReady} today={today} />
+          <LedgerOfTrust totals={totals} holds={holds} events={events} payments={payments} tasks={tasks} ready={eventsReady} today={today} />
         </div>
         <div className="min-h-[260px] xl:col-span-12 xl:min-h-0 [&>section]:h-full">
           <Charts />

@@ -46,6 +46,18 @@ export function Pill({ tone = 'neutral', title, children, dot }: { tone?: Tone; 
   );
 }
 
+export const CALLBACK_REQUIRED_TITLE =
+  'approve_payment refuses this hold without a call-back note of 8 or more characters; the vendor changed its bank account within 7 days';
+
+/** Moment two: a vendor_bank_change hold cannot be released without a call-back note. */
+export function CallbackRequiredPill() {
+  return (
+    <Pill tone="hold" title={CALLBACK_REQUIRED_TITLE}>
+      call-back required
+    </Pill>
+  );
+}
+
 /** Wraps a figure with its source row id (guardrail G17). */
 export function Src({ id, children, className = '', mono = true }: { id: string; children: ReactNode; className?: string; mono?: boolean }) {
   return (

@@ -8,7 +8,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 export PATH="$HOME/.local/bin:$PATH"
-export FACTORY_API_KEY= ANTHROPIC_API_KEY= ELASTIC_API_KEY= ELASTICSEARCH_URL= KIBANA_URL= ASI_ONE_API_KEY=
+export FACTORY_API_KEY="" ANTHROPIC_API_KEY="" ELASTIC_API_KEY="" ELASTICSEARCH_URL="" KIBANA_URL="" ASI_ONE_API_KEY=""
 export WORKER_MODE=replay
 export STDB_URI=http://127.0.0.1:3100 STDB_DB=dispatch-ledger
 mkdir -p .spacetime logs

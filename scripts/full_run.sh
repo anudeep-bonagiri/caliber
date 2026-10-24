@@ -7,7 +7,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 export PATH="$HOME/.local/bin:$PATH"
-export FACTORY_API_KEY= ANTHROPIC_API_KEY= ELASTIC_API_KEY= ASI_ONE_API_KEY=
+export FACTORY_API_KEY="" ANTHROPIC_API_KEY="" ELASTIC_API_KEY="" ASI_ONE_API_KEY=""
 export WORKER_MODE=replay
 mkdir -p logs
 T0=$(date +%s)
@@ -52,4 +52,5 @@ python3 scripts/controller_sim.py --rounds 30 --sleep 2 | tail -4
 
 step "facts"
 python3 scripts/facts.py | sed -n '5,40p'
+python3 scripts/honesty.py
 printf '\ntotal %ss\n' "$(( $(date +%s) - T0 ))"

@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { AuditEvent, DayTotal, Hold, Payment } from '../../../module_bindings/types';
+import type { AgentTask, AuditEvent, DayTotal, Hold, Payment } from '../../../module_bindings/types';
 import { Panel, Pill, Src, Empty } from './ui';
 import { dollars, clockTime } from '../lib/format';
 import { useFlash } from '../lib/useFlash';
@@ -24,6 +24,7 @@ export function LedgerOfTrust({
   holds,
   events,
   payments,
+  tasks,
   ready,
   today,
 }: {
@@ -31,6 +32,7 @@ export function LedgerOfTrust({
   holds: readonly Hold[];
   events: readonly AuditEvent[];
   payments: readonly Payment[];
+  tasks: readonly AgentTask[];
   ready: boolean;
   today: number | undefined;
 }) {
@@ -55,6 +57,20 @@ export function LedgerOfTrust({
     }
     return { autoCount, autoCents, ctrlCount, ctrlCents };
   }, [payments]);
+  // Honesty pass: how many recorded investigations came from a model, a
+  // replay of a recorded run, or the scripted fallback (source = none).
+  const provenance = useMemo(() => {
+    let live = 0;
+    let replayed = 0;
+    let none = 0;
+    for (const t of tasks) {
+      if (t.kind !== 'investigate' || t.status !== 'investigated') continue;
+      if (t.source === 'live') live++;
+      else if (t.source === 'replayed') replayed++;
+      else if (t.source === 'none') none++;
+    }
+    return { live, replayed, none };
+  }, [tasks]);
   const feed = useMemo(() => {
     const copy = [...events];
     copy.sort((a, b) => (a.id === b.id ? 0 : a.id > b.id ? -1 : 1));
@@ -114,6 +130,14 @@ export function LedgerOfTrust({
         ) : (
           <div className="mt-1 text-[10.5px] text-faint">No day_total row for day {today ?? '?'} yet.</div>
         )}
+        <div className="mt-1 text-[10.5px] text-faint">
+          Investigations: <Src id="agent_task.source = live" className="text-release">{provenance.live}</Src> live,{' '}
+          <Src id="agent_task.source = replayed" className="text-candidate">{provenance.replayed}</Src> replayed,{' '}
+          <Src id="agent_task.source = none" className={provenance.none > 0 ? 'text-refused' : 'text-muted'}>
+            {provenance.none}
+          </Src>{' '}
+          scripted stand-in
+        </div>
       </div>
       <div className="scroll min-h-0 flex-1 overflow-y-auto">
         {!ready && events.length === 0 ? (

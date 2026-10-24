@@ -1,0 +1,14 @@
+# Blanked keys in the offline demo scripts look like "FACTORY_API_KEY= ANTHROPIC_API_KEY=" to the generic rule.
+[extend]
+useDefault = true
+
+[allowlist]
+regexTarget = "line"
+description = "empty exports that blank every model key for the offline demo"
+regexes = [
+  '''[A-Z_]+_API_KEY=(""|'')?\s+[A-Z_]+_(API_KEY|URL|MODE)=''',
+  '''FACTORY_API_KEY= REDACTED''',
+]
+paths = [
+  '''logs/.*''',
+]
