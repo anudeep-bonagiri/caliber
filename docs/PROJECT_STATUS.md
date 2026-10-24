@@ -256,6 +256,13 @@ Honesty notes. TASKS.md calls the dashboard's audit panel `audit_feed`; there is
 
 Waits on Anudeep's clicks: Inspector Connect, Mailbox, Finish for `dispatch-investigator` (link in `logs/investigator.log`), profile README from `agent/INVESTIGATOR_README.md`, tags innovationlab and hackathon; then the two-line ASI:One check in `agent/CONNECT.md` (`why 2231` to the controller starts `investigator:`; `approve 2231` to the investigator is `investigator: refused by the ledger: reader may not do this (needs controller)`). README tables still say "pending registration" in the Handle column until then.
 
+## 2026-10-24 14:57 PDT Director: Task 18 accepted
+
+- Reran by the director after builder-18's ALL DONE: `agent.cli "why 2231"` and `"status"` answer with the `investigator:` prefix from the reader identity; `try_approve_payment` with the reader token returns `[false, "reader may not do this (needs controller)"]` and leaves `audit_event` row 12707 `refused / reader / 2231`; agent tests 138, module tests 64; the module diff is the single `reader` entry in `grant_role`; no agent or controller token is referenced on the investigator path (test asserts it); both agent tables carry both addresses with byte-exact badges; no em dash in the touched files.
+- Acceptance wording: TASKS.md says `audit_feed`; the module exposes the public `audit_event` table, which is what the dashboard's Ledger of trust reads, so the refusal shows there. Acceptable.
+- Waits on Anudeep: Connect, Mailbox, Finish for `dispatch-investigator` (Inspector link in logs/investigator.log), profile paste of agent/INVESTIGATOR_README.md with both tags, then the two-line ASI:One check in agent/CONNECT.md; the mailbox round trip is measured after that (local path is 0.04 to 0.05 s).
+- Side effect: `mint_identities.py` ran twice during step 7, so .env now holds new agent and controller tokens while the running worker still uses the earlier agent identity (its role is intact). The next `demo_up.sh` or `full_run.sh` re-mints everything, so nothing to fix.
+
 ## Tried and rejected
 
 | What | Why rejected |
