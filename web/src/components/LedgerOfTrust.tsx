@@ -185,7 +185,7 @@ export function LedgerOfTrust({
                       {e.ref}
                     </td>
                     <td className="max-w-[28rem] truncate px-2 py-1 pr-3 text-muted" title={`${id}.detail: ${e.detail}`}>
-                      {e.detail}
+                      {e.action === 'settle' ? `paid, ${e.detail}` : e.detail}
                     </td>
                   </tr>
                 );
@@ -204,6 +204,7 @@ function actionColor(action: string): string {
     case 'approve_payment':
     case 'approve_rule':
     case 'cleared_by_rule':
+    case 'settle':
       return 'text-release';
     case 'hold':
     case 'hold_recoded':

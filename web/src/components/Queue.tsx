@@ -135,6 +135,7 @@ export function Queue({
                   flash={flashing.has(h.txnRef)}
                   role={requesterRole(h, moduleIdentity)}
                   releasedRole={h.status === 'released' || h.status === 'cleared_by_rule' ? payments.get(h.txnRef)?.releasedRole : undefined}
+                  payment={payments.get(h.txnRef)}
                   onSelect={onSelect}
                 />
               ))}
@@ -152,6 +153,7 @@ function HoldRow({
   flash,
   role,
   releasedRole,
+  payment,
   onSelect,
 }: {
   h: Hold;
@@ -159,6 +161,7 @@ function HoldRow({
   flash: boolean;
   role: 'kernel' | 'agent';
   releasedRole?: string;
+  payment?: Payment;
   onSelect: (txnRef: string) => void;
 }) {
   const question = h.question ?? undefined;
@@ -194,6 +197,7 @@ function HoldRow({
               by {releasedRole}
             </Pill>
           ) : null}
+          {payment ? <SettlementPill p={payment} /> : null}
         </span>
       </div>
       {question && !RESOLVED_HOLD_STATUSES.has(h.status) ? (
@@ -204,5 +208,29 @@ function HoldRow({
         </div>
       ) : null}
     </li>
+  );
+}
+
+// Resolved rows only: the bank id record_settlement wrote, or the offline marker when no bank was called.
+function SettlementPill({ p }: { p: Payment }) {
+  const src = `payment ${p.txnRef}.bank_txn_id`;
+  if (p.bankTxnId === undefined) {
+    return (
+      <Pill tone="neutral" title={`${src} is empty`}>
+        awaiting settlement
+      </Pill>
+    );
+  }
+  if (p.bankTxnId.startsWith('offline-')) {
+    return (
+      <Pill tone="neutral" title={`${src} ${p.bankTxnId}`}>
+        settlement offline
+      </Pill>
+    );
+  }
+  return (
+    <Pill tone="release" title={`${src} ${p.bankTxnId}`}>
+      settled {p.bankTxnId.length > 12 ? `${p.bankTxnId.slice(0, 8)}...` : p.bankTxnId}
+    </Pill>
   );
 }

@@ -91,6 +91,24 @@ Indices `telematics_log` (geo_point), `receipts`, `contracts`, `invoices` for a 
 
 Module in `spacetimedb/src/`. Tables and access in `schema.ts`; reducers, procedures and the kernel driver in `index.ts`; thresholds in `thresholds.ts`. Three identities are minted with `POST /v1/identity` and granted by `grant_role`. The segregation-of-duties check is `checkApprovePayment` in `index.ts`.
 
+## Settlement
+
+When a payment row appears (kernel auto-pay, a rule clearing a hold, or a controller approval), the worker's settlement watcher (`worker/src/settle.ts`) makes one call to Capital One's Nessie per payment: a transfer from the carrier's Checking account to the payee (the invoice's vendor, or a single fuel-and-tolls payee for card and toll payments) described as `txn_ref <ref>`. It writes the returned transfer id with `record_settlement(txnRef, bankTxnId)`, an agent-only reducer that refuses without a payment row or when the payment is already settled, sets `payment.bank_txn_id` and adds a `settle` audit row the dashboard shows as "paid, bank id <id>". Live settlement needs `NESSIE_API_KEY`, `WORKER_MODE` other than `replay`, and the accounts `scripts/nessie_seed.py` writes to `seed/fixtures/nessie_accounts.json`; otherwise the id is `offline-<txnRef>` and the Queue says "settlement offline". The worker can settle a payment but never create one. Nessie is a mock bank: no money moves, and a bank id proves only that the mock recorded the transfer.
+
+## Vendor checks
+
+On a `vendor_bank_change` hold, and on a vendor's first invoice, nothing inside the carrier's data can say whether the vendor is who it claims to be. The module inserts an `agent_task` of kind `vendor_check` for both, and the worker (`worker/src/vendor_check.ts`, client in `worker/src/crs.ts`) asks the CRS Credit API three things about the business:
+
+- business credit (`crs:business_credit`)
+- public records: liens, judgments, bankruptcy (`crs:public_records`)
+- OFAC screen (`crs:ofac`)
+
+Only the vendor's business name goes out. No consumer credit, no driver or person data is ever sent. The result is rule-based, not a model: clean on all three suggests approve, which writes `hold` with the question "Vendor check clean: approve with a call-back note?"; any hit or failed call suggests escalate (an OFAC match suggests reject), which writes `hold_and_ask` with "Vendor has <reasons>; reject or call back?". The agent never rejects on its own, and `approve_payment` still demands a call-back note on a bank-change hold.
+
+Live calls need `CRS_USERNAME` and `CRS_PASSWORD` and `WORKER_MODE` of `live` or `record` (the Droid key does not gate them); `record` also writes the raw responses to `seed/fixtures/vendor_checks/<vendorId>.json`. Without them the worker replays that file, labelled `replayed`, or writes a stand-in that says "Scripted stand-in, not a vendor check" with recommendation escalate and confidence 0. `CRS_DRY_RUN=1` prints the requests with credentials redacted and sends nothing. `CRS_FIXTURE_VARIANT=hit` replays `3.hit.json` instead of `3.json`. The dashboard shows a "Vendor check" block under the investigation with the three rows, the recommendation and a live, replayed or stand-in badge.
+
+Sandbox caveat: the CRS account is a sandbox, so a live answer is sandbox data, not a real report on a real company, and the two vendor 3 fixtures are hand-shaped examples of a response, not recorded ones. The three endpoint paths and request bodies are pending the sandbox collection: they sit in `CRS_ENDPOINTS` in `worker/src/crs.ts`, marked `TODO(crs-sandbox)`.
+
 ## Run it
 
 Tests first:

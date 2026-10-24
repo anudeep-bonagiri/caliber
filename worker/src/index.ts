@@ -1,6 +1,7 @@
 // Entry point: load env, connect as the agent identity, subscribe, run the loop until SIGINT or SIGTERM.
-import { loadDotEnv, nowIso, parseConfig } from './config.js';
+import { loadDotEnv, nowIso, parseConfig, parseNessieConfig } from './config.js';
 import { WorkerLoop } from './loop.js';
+import { startSettlement } from './settle.js';
 import { connect, subscribe } from './stdb.js';
 
 const log = (msg: string) => console.log(`${nowIso()} ${msg}`);
@@ -18,13 +19,14 @@ async function main(): Promise<void> {
 
   const loop = new WorkerLoop({ conn, cfg, log, identityHex });
   loop.start();
+  const settlement = startSettlement({ conn, nessie: parseNessieConfig(), workerMode: cfg.requestedMode, log });
 
   let shuttingDown = false;
   const shutdown = async (signal: string) => {
     if (shuttingDown) return;
     shuttingDown = true;
     log(`${signal} received; waiting up to ${loop.stopBoundMs()} ms for in-flight terminal writes`);
-    await loop.stop();
+    await Promise.all([loop.stop(), settlement.stop()]);
     conn.disconnect();
     process.exit(0);
   };
