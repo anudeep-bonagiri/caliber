@@ -138,8 +138,9 @@ Droid 0.249 runs tools through `Script` and loads MCP tools with `ToolSearch`, s
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
 | dispatch-ledger-controller | pending registration | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | controller seat (Agentverse mailbox registration pending) | `agent/` |
+| dispatch-investigator | pending registration | pending registration (printed by the running agent in `logs/investigator.log`) | read-only investigator (`reader` identity; answers `why <id>` and `status`) | `agent/investigator.py` |
 
-The address is derived from `AGENT_SEED` and is fixed; it is the one the running agent printed in `logs/agent.log`. The agent speaks the Chat Protocol and runs the same handler as the terminal CLI (`python3 -m agent.cli "..."`). Commands and reply shapes are in `agent/README.md`.
+The addresses are derived from `AGENT_SEED` and `INVESTIGATOR_SEED` and are fixed; the controller's is the one the running agent printed in `logs/agent.log`. Both agents speak the Chat Protocol and run the same handlers as the terminal CLI (`python3 -m agent.cli "..."`). The agent that explains cannot pay: the reader role is refused by `approve_payment` and the refusal is an audit row. Commands and reply shapes are in `agent/README.md` and `agent/INVESTIGATOR_README.md`.
 
 ## Elastic
 

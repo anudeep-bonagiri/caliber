@@ -9,7 +9,7 @@ The spoken answer is the same at every table. Copied from the Need column of the
 - SpacetimeDB: A ledger where the agent physically cannot move money and every action is attributable.
 - Factory Droid: Reading evidence a kernel cannot: receipts, contracts, the swap log, and deciding what to ask.
 - Elastic: Finding the one telematics row or contract line that answers "was the truck there" and "what is the rate".
-- Fetch.ai: The controller must be able to answer and approve from wherever they are, in plain language.
+- Fetch.ai: The controller must be able to answer and approve from wherever they are, in plain language; a read-only investigator agent, so the agent that explains cannot pay.
 - CRS: When a vendor changes bank details or appears for the first time, internal data cannot tell you if the vendor is who they say.
 - Capital One Nessie: An approved payment has to land somewhere, and the audit row needs the bank's transaction id.
 - Anthropic: Rule drafting and the two-sentence explanation need a model with a strict JSON schema.
