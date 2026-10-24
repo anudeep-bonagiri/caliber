@@ -2,6 +2,8 @@
 # Build and serve the demo month with no model calls and no network.
 #   scripts/demo_up.sh            start everything (server, module, identities, fixtures, worker in replay, web)
 #   scripts/demo_up.sh --no-web   skip the web dev server
+#   scripts/demo_up.sh --inbox    load company data only and start the inbox file connector (scripts/ingest_watch.py);
+#                                 transactions arrive when the three sample files are dropped into inbox/
 # Every model key is exported empty on purpose: a variable that is set, even to nothing, wins over .env,
 # so the offline run cannot make a paid call by accident.
 set -euo pipefail
@@ -12,6 +14,14 @@ export FACTORY_API_KEY="" ANTHROPIC_API_KEY="" ELASTIC_API_KEY="" ELASTICSEARCH_
 export WORKER_MODE=replay
 export STDB_URI=http://127.0.0.1:3100 STDB_DB=dispatch-ledger
 mkdir -p .spacetime logs
+WEB=1; INBOX=0
+for a in "$@"; do
+  case "$a" in
+    --no-web) WEB=0 ;;
+    --inbox) INBOX=1 ;;
+    *) echo "unknown option $a (--no-web, --inbox)"; exit 2 ;;
+  esac
+done
 
 step() { printf '\n==> %s\n' "$*"; }
 
@@ -76,20 +86,25 @@ if [ ! -d node_modules ]; then
   if [ -f package-lock.json ]; then npm ci --silent; else npm install --silent; fi
 fi
 ( cd scripts && [ -d node_modules ] || npm install --silent )
-( cd scripts && npx tsx load_fixtures.ts )
+if [ "$INBOX" = 1 ]; then
+  ( cd scripts && npx tsx load_fixtures.ts --skip-transactions )
+else
+  ( cd scripts && npx tsx load_fixtures.ts )
+fi
 
 step "6/7 worker in replay mode (logs/worker.log)"
 pkill -f "worker/src/index.ts" 2>/dev/null || true
 pkill -f "tsx src/index.ts" 2>/dev/null || true
 pkill -f "vite --host 127.0.0.1 --port 5173" 2>/dev/null || true
 pkill -f "agent/agent.py" 2>/dev/null || true
+pkill -f "scripts/ingest_watch.py" 2>/dev/null || true
 sleep 1
 if [ -f worker/package.json ]; then
   ( cd worker && [ -d node_modules ] || npm install --silent )
   ( cd worker && nohup npm start > ../logs/worker.log 2>&1 & )
 fi
 
-if [ "${1:-}" != "--no-web" ] && [ -f web/package.json ]; then
+if [ "$WEB" = 1 ] && [ -f web/package.json ]; then
   step "7/7 web dashboard (logs/web.log)"
   ( cd web && [ -d node_modules ] || npm install --silent )
   ( cd web && nohup npm run dev -- --host 127.0.0.1 --port 5173 > ../logs/web.log 2>&1 & )
@@ -100,6 +115,20 @@ if [ ! -x agent/.venv/bin/python ] && [ -f agent/requirements.txt ]; then
   step "agent venv (agent/.venv missing)"
   echo "warning: this step needs the network the first time; run demo_up.sh once before Wi-Fi goes off"
   python3 -m venv agent/.venv && agent/.venv/bin/pip install -q -r agent/requirements.txt
+fi
+
+if [ "$INBOX" = 1 ]; then
+  step "inbox file connector (logs/ingest.log); API connectors not built"
+  mkdir -p inbox
+  nohup python3 scripts/ingest_watch.py > logs/ingest.log 2>&1 &
+  for i in $(seq 1 20); do grep -q "watching" logs/ingest.log 2>/dev/null && break; sleep 0.25; done
+  cat <<EOF
+  Drop the sample files to bring the transactions in (each lands in inbox/done/ when ingested):
+    cp seed/fixtures/inbox/fuel_card_wex_sample.csv inbox/
+    cp seed/fixtures/inbox/toll_statement_sample.csv inbox/
+    cp seed/fixtures/inbox/maintenance_invoices_sample.csv inbox/
+  Rows dated on or before today are matched at once; later rows wait for their day. tail -f logs/ingest.log
+EOF
 fi
 
 cat <<EOF
