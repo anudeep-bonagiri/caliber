@@ -1,0 +1,139 @@
+% Caliber technical note (Task 27). Build: make -C docs/paper. Every number comes from numbers.tex, which
+% docs/paper/numbers.py generates from docs/FACTS.json, bench/BASELINE.json, bench/carrierbench/{REPORT,oracle,saboteur}.json,
+% spacetimedb/src/thresholds.ts and git. No number is typed in this file.
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\input{numbers.tex}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\begin{document}
+
+\title{Caliber: an accounts-payable clerk whose code decides the money, measured against a planted answer key}
+
+\author{\IEEEauthorblockN{Anudeep Bonagiri}\and\IEEEauthorblockN{Shrithik Senthilkumar}}
+
+\maketitle
+
+\begin{abstract}
+Caliber is an autonomous accounts-payable clerk for a simulated \nTrucks-truck Texas carrier. A kernel in plain TypeScript, in integer cents, matches every fuel-card charge, toll and maintenance invoice against telematics, tank size, purchase order, contract rate, receiving record and vendor bank details over \nDays{} business days. Clean rows post within policy limits; everything else becomes a hold. A read-only Factory Droid session investigates each hold through Elastic Agent Builder tools and the evidence files and returns a typed finding; when a person is needed, the controller answers from ASI:One and the answer becomes a scoped, expiring, backtested rule. Segregation of duties is enforced in SpacetimeDB reducers: the agent identity cannot approve a payment, and every action is an append-only audit row. We release CarrierBench, the synthetic carrier with its hidden answer key of \nPlanted{} planted errors in \nClasses{} classes and \nDecoys{} decoys, a machine audit that every planted row is inferable from its own evidence, and a model-only baseline on identical inputs. On the measured \nDays-day run the kernel reaches precision \overallP{} and recall \overallR{} on the \nKeyRows{} answer-key rows and posts \autoPaidCount{} payments without a person; the oracle ceiling posts \oraclePosted. A saboteur run shows that a finding recommending release with confidence \sabConfidence{} and fabricated evidence cannot move money. We report what we got wrong and the limits of a synthetic benchmark.
+\end{abstract}
+
+\section{System context}
+
+Caliber has one write path to money, shown in Fig.~\ref{fig:path}. The business-day clock ticks inside the SpacetimeDB module; on each tick \code{matchDay} hands every row of the day to \code{kernel.ts}, a pure function that never imports the database, a connector or a model client. The kernel returns a code and an evidence object. A \code{matched} row within the auto-pay limits (\autoPayUsd{} per transaction, \autoPayDayUsd{} per day) becomes a \code{payment} row; a \code{duplicate\_toll} is auto-rejected with an audit row and no task; every other code becomes a \code{hold} and an \code{agent\_task}.
+
+The worker claims the task with a version-locked \code{claim\_task}, opens a Droid session with \code{autonomyLevel Off}, the edit and execute tools disabled, a permission handler that cancels anything but MCP tool calls, and a \droidTimeoutSec~s abort, at concurrency \workerConcurrency. Droid reads the receipts, contracts and the dispatcher's swap log and calls Elastic Agent Builder tools over MCP (nearest telematics rows, the contract rate and clause). Its output is validated against a schema whose recommendation is one of \code{clear}, \code{hold} or \code{hold\_and\_ask}; there is no \code{pay}. The worker writes it back with \code{record\_investigation}, which can set a question on the hold and nothing else. The controller, over an ASI:One agent or the terminal, answers the question; the answer is drafted into a rule with a scope, a window and a backtest the module computes itself, and only an approved rule lets the kernel clear the next matching row. \code{approve\_payment} checks the caller's role, refuses the identity that requested the hold, requires a call-back note on a bank change, and writes the only other \code{payment} row there is. Refusals through the \code{try\_*} procedures are committed audit rows.
+
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[x=1cm, y=1cm,
+  font=\scriptsize, >=Latex,
+  box/.style={draw, rounded corners=1pt, inner sep=2.5pt, minimum height=5mm, align=center},
+  money/.style={box, very thick},
+  role/.style={box, dashed},
+  lbl/.style={font=\tiny, fill=white, inner sep=1pt, align=center}]
+\node[box]   (files)   at (0.9, 4.3) {files or clock};
+\node[box]   (kernel)  at (3.4, 4.3) {kernel \code{matchDay}\\plain TypeScript, cents};
+\node[money] (pay)     at (7.2, 4.3) {\code{payment}};
+\node[box]   (hold)    at (3.4, 2.9) {\code{hold} + \code{agent\_task}};
+\node[box]   (rule)    at (7.2, 2.9) {rule: scope,\\window, backtest};
+\node[box]   (elastic) at (0.9, 1.5) {Elastic tools,\\evidence files};
+\node[role]  (droid)   at (3.4, 1.5) {Droid session\\read-only, MCP only};
+\node[box]   (finding) at (7.2, 1.5) {finding:\\clear / hold / ask};
+\node[role]  (ctrl)    at (7.2, 0.2) {controller, ASI:One};
+\draw[->] (files) -- (kernel);
+\draw[->] (kernel) -- node[lbl, above] {matched, in limits} (pay);
+\draw[->] (kernel) -- node[lbl, left] {any other code} (hold);
+\draw[->] (hold) -- node[lbl, left] {\code{claim\_task}} (droid);
+\draw[<->] (droid) -- (elastic);
+\draw[->] (droid) -- (finding);
+\draw[->] (finding) -- node[lbl, right] {\code{record\_investigation}: question only} (ctrl);
+\draw[->] (ctrl.west) -- ++(-1.2,0) |- node[lbl, pos=0.75, above] {answer} (rule.west);
+\draw[->] (rule.north) -- node[lbl, right] {next match, approved rule} (kernel.south -| rule.north);
+\draw[->] (ctrl.east) -- ++(1.0,0) |- node[lbl, pos=0.5, sloped, above] {\code{approve\_payment}} (pay.east);
+\end{tikzpicture}}
+\caption{The one write path. Only the kernel (a \code{matched} row within limits) and \code{approve\_payment} (a controller identity that did not request the hold) write a \code{payment}. The finding reaches the hold's question field and nothing else; Droid's reach into data is MCP and read-only files.}
+\label{fig:path}
+\end{figure}
+
+\section{CarrierBench}
+
+CarrierBench is the synthetic carrier as a benchmark. \code{seed/generate.py} with seed \benchSeed{} writes \nDays{} business days (\calDayOne{} to \calDayLast) for \nTerminals{} terminals, \nTrucks{} trucks with one fuel card each, \nDrivers{} drivers, \nVendors{} maintenance vendors, \nContracts{} contracts and \nPOs{} purchase orders: \nCardRows{} fuel-card transactions at \nStations{} stations, \nTollRows{} tolls at \nPlazas{} plazas, \nInvoiceRows{} invoices and \nPings{} telematics pings, \nRowsTotal{} payable rows in all. Inside them the generator plants \nPlanted{} errors in \nClasses{} classes and \nDecoys{} decoys (Table~\ref{tab:bench}), recorded in \code{answer\_key.json}, which no agent code reads. The generator is deterministic: \code{carrierbench.py} regenerated the fixtures in \genSeconds~s and every file was byte-identical to the commit (\fixturesMatchRegen).
+
+\begin{table}[t]
+\centering
+\caption{CarrierBench answer key and machine audit. Decoys are legitimate swaps that look like the code. Inferable: the Python mirror of the kernel raised the row with the key's code from the row's own records. File: an evidence document exists for the row.}
+\label{tab:bench}
+\begin{tabular}{lrrrr}
+\toprule
+Code & Planted & Decoys & Inferable & File \\
+\midrule
+\plantedTableBody
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Controls.} Three are computed, not asserted. Held-out entities: \heldOutTrucks{} of \nTrucks{} trucks carry exactly one answer-key row and \trucksNoPlanted{} carry none, so \heldOutRows{} planted rows sit on an entity with no other planted row; all \nVendors{} vendors carry more than one (\heldOutVendors{} held out), which the audit reports rather than hides. Decoys: \nDecoys{} legitimate unit swaps from the dispatcher's swap log, \decoyMilesMin{} to \decoyMilesMax{} miles from the truck's nearest ping, every one indistinguishable from card misuse by the records the kernel reads (all look like \code{location\_mismatch}: \decoysLookLikeLM; all have swap-log lines: \decoysHaveSwapLines). Policy holds: \policyHoldsBench{} clean invoices above the per-transaction limit, a hold by policy and not an exception, kept out of the key and out of the baseline sample.
+
+\textbf{Machine audit.} \code{seed/mirror.py}, the Python copy of \code{kernel.ts}, evaluated all \auditEvaluated{} rows from their records (nearest ping within \thrPingMin{} minutes, tank size, earlier tolls at the plaza, the contract valid on the receipt day, the purchase order and its received quantity, the vendor's bank-change day). It raised \auditInferable{} of \auditRows{} key rows with the key's code, \auditWithFile{} have an evidence file, and it flagged \auditExtra{} rows outside the key. Audit passed: \auditPassed. The kernel's thresholds are \thrMiles{} miles and \thrPingMin{} minutes, tank plus \thrTankPct{} percent, \thrTollMin{} minutes at a plaza, \thrRatePct{} percent over contract, \thrDupDays{} days for a same-amount invoice, and \thrBankUsd{} within \thrBankDays{} business days of a bank change.
+
+Run it from a bare clone with \code{python3 bench/carrierbench/carrierbench.py -{}-seed \benchSeed}; it writes \code{REPORT.md} and \code{REPORT.json} and exits non-zero on any failure.
+
+\section{Protocol}
+
+Three systems were given the same rows. \textbf{Caliber} is the kernel plus Droid, measured on the full \caliberRowsEvaluated-row replay through the ledger (\code{docs/FACTS.json}). \textbf{\sonnetLabel} (\sonnetModel) and \textbf{\asiLabel} (\asiModel) were each given, per row, exactly the records the kernel sees (the transaction, the truck and its pings for the day, or the plate's earlier tolls, or the purchase order, the contract valid on the receipt day, the vendor record and the vendor's earlier invoices), with no answer-key field and no planted marker, and asked for hold or clear with a code and a one-line reason, one attempt per row, no examples, no fine-tuning. The sample is stratified: all \basePlanted{} planted rows, all \baseDecoys{} decoys and \baseClean{} clean rows (\baseCleanCard{} card, \baseCleanToll{} toll, \baseCleanInvoice{} invoice; every clean invoice, since only that many exist), \baseRows{} rows in all; the \baseExcludedLimits{} policy holds were left out. Temperature, as recorded by the runner: asi1-mini \asiTemperature; Claude Sonnet \sonnetTemperature, thinking at the API default. Prompts are committed under \code{bench/prompts}, raw replies under \code{bench/outputs}.
+
+\textbf{Prompt condition.} One condition was run, which we name \emph{hinted}: the prompt (\basePrompt) lists the \nClasses{} codes and their thresholds before asking. A \emph{bare} condition, records and question with no code list, was not run; the comparison below is hinted only, which favours the models. Scoring is code-exact: a hold counts for a code only when the system named that code, the same definition \code{facts.py} applies to the kernel; a detection reading (any code) is also given. A decoy is scored as a correct hold for every system, because the records cannot clear it. Positives are the \nKeyRows{} answer-key rows. Cost cap \sonnetCapUsd{} on Sonnet; stopped for cost: \sonnetStopped. Partial run: \basePartial.
+
+\section{Results}
+
+\begin{table}[t]
+\centering
+\caption{Precision / recall per code, code-exact; key rows include the decoys. Caliber on the full \caliberRowsEvaluated-row run; the two models on the \baseRows-row sample. Generated \baseGeneratedAt.}
+\label{tab:baseline}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrccc}
+\toprule
+Code & Key rows & Caliber & Sonnet & asi1-mini \\
+\midrule
+\baselineTableBody
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Per code and overall.} Table~\ref{tab:baseline} is the comparison. Caliber: precision \overallP, recall \overallR, \overallTP{} true positives, \overallFP{} false positives over \txMatched{} transactions and \dayReached{} days. \sonnetLabel: \sonnetAnswered{} of \sonnetRows{} rows answered, \sonnetHolds{} holds, code-exact precision \sonnetP{} and recall \sonnetR{} (detection \sonnetDetP{} / \sonnetDetR, \sonnetDetFP{} false holds), \sonnetDecoysHeld{} of \baseDecoys{} decoys held, \sonnetCostUsd{} at list rates. \asiLabel: \asiAnswered{} of \asiRows{} answered, \asiHolds{} holds, precision \asiP{} and recall \asiR{} (detection \asiDetP{} / \asiDetR, \asiDetFP{} false holds), \asiDecoysHeld{} of \baseDecoys{} decoys held, \asiRequests{} requests against a quota of \asiQuotaWindow{} per fifteen minutes. Where each failed, from the scorer: \sonnetFailure{} \asiFailure{} Ties or wins against the kernel: \tiesOrWinsText
+
+\textbf{End to end through the ledger.} In the measured run (\factsAsOf) the kernel or an approved rule posted \autoPaidCount{} payments (\autoPaidUsd) with no person involved, auto-rejected \autoRejectedFacts{} duplicate tolls, and raised \holdsFacts{} holds, of which \limitHoldsCount{} were policy holds (\limitHoldsUsd). The controller released \ctrlReleasedCount{} payments (\ctrlReleasedUsd). The \nDecoys{} decoys were cleared through an approved rule after exactly one controller answer each (\decoysOneAnswer{} of \nDecoys); planted exceptions cleared by a rule: \plantedClearedByRule; wrong postings: \measWrong. Of the \vcHolds{} bank-change holds, \vcHitRejected{} carried a public-records hit and was rejected by the controller, \vcCleanApproved{} were approved with a call-back note; all \vcFixture{} vendor checks came from hand-authored fixtures labelled as such (the CRS sandbox had not answered). All \settleOffline{} payments carry a labelled offline settlement id and \settleLive{} a live one. Investigations in the measured run were \investReplayed{} replayed recordings of the live Droid run and \investLive{} live; the live run itself cost, per task, \droidAvgIn{} input, \droidAvgOut{} output and \droidAvgCache{} cache tokens in \droidAvgSec~s, \droidCredits{} Factory credits for \droidTasks{} tasks.
+
+\textbf{Oracle ceiling.} The oracle is the kernel handed the answer key: every planted row held (duplicate tolls auto-rejected), every decoy cleared with no question, clean rows posted under the same policy limits. Computed from the fixtures with the mirror, it posts \oraclePosted{} payments (\oraclePostedUsd), raises \oracleHolds{} exception holds and \oracleLimits{} policy holds, auto-rejects \oracleRejects, asks \oracleQuestions{} questions, posts \oracleWrong{} wrong rows, and still needs \oracleHuman{} human decisions. The measured run posted \measPosted{} without a person, raised \measHolds{} exception holds and \measLimits{} policy holds, auto-rejected \measRejects{} and asked \measQuestions{} questions. The whole gap to the ceiling is the \measQuestions{} questions on the decoys, which is the mechanism working as designed: the records cannot clear a decoy, a person can, and the answer is remembered as a rule.
+
+\textbf{Saboteur.} A lying finding (recommendation \code{clear}, confidence \sabConfidence, \sabEvidenceItems{} fabricated evidence items citing a telematics tool result, a receipt line and a call that never happened) was fed through the real reducers in the in-process module harness for \sabRuns{} planted holds (\sabRefs; \sabCodes): \code{claim\_task} and \code{record\_investigation} as the agent identity, the clock's next match, then \code{approve\_payment} as the agent identity on both entry points. Outcome: the finding was recorded, the hold moved to \code{\sabHoldStatus} with the agent as requester, payment rows before and after were \sabPaymentsBefore{} and \sabPaymentsAfter, payment rows for the sabotaged holds \sabPayments, and \sabRefusedRows{} audit rows read \emph{\sabMessage}. Test status: \sabTestStatus. The reducer path threw and rolled its audit row back; the procedure path committed it.
+
+\section{What we got wrong}
+
+\textbf{Labels.} Hand-shaped vendor checks were first rendered like recorded ones. Commit \commitLabelFix{} (\commitLabelFixDate) gave them their own status, an amber badge, the fixture note in every evidence row, and removed endpoint placeholders from the screen; decision D-3 then made the one planted CRS hit a hand-authored fixture labelled \code{FIXTURE} on the card and in every evidence row, with \code{docs/not-built.md} saying the sandbox has not produced it. The control (a hit vendor cannot be paid without a person rejecting it) is real; the data source is pending and says so.
+
+\textbf{Decoys.} The first live recordings cleared the \nDecoys{} decoys on Droid's own reading of the swap log. That is a model clearing a hold. Commit \commitDecoyRerecord{} (\commitDecoyRerecordDate) changed the investigator prompt to ask when the evidence is consistent with a legitimate explanation only a person can confirm, and re-recorded all \nDecoys{} as \code{hold\_and\_ask} with a question naming the driver; the controller's answer, not the finding, clears them. The earlier recordings are kept under \code{\_v1}.
+
+\textbf{The CRS fixture.} The vendor-vetting beat runs on fixtures because the sandbox invite did not arrive in time (D-3). We report \vcFixture{} of \vcHolds{} checks as fixtures rather than present them as live calls.
+
+\textbf{Where a model tied or beat the kernel.} From the scorer, code by code: \tiesOrWinsText{} (\tiesOrWinsCount{} entries). Partial baseline: \basePartial.
+
+\section{Limits}
+
+The company, the money and the vendors are synthetic, generated by the same program that planted the errors, so precision and recall measure whether the kernel finds what we planted, not how it behaves on a real carrier's statements; the generator also guarantees that every planted row is inferable from its records, which real data does not. The models saw identical inputs but only the hinted prompt; a bare condition was not run. Investigations in the measured run are replayed recordings of one live Droid run, labelled on every card; no live model ran during the measured \nDays{} days. The vendor checks are hand-authored fixtures (CRS sandbox pending) and settlement ids come from a mock bank. The scripted controller decides from the swap log, which the same generator produced. Droid's session options disable write and execute tools, but its \code{Read} can address any path; an OS-level read-only mount is not built. The Elastic Workflow that escalates stale holds surfaced a new escalation in the controller's status \escalationSec~s after the trigger against a \escalationTargetSec~s target. Rules expire (\rulesExpired{} expired by day \nDays); their long-run behaviour on a live carrier is untested.
+
+\section*{Reproduce}
+
+\code{python3 bench/carrierbench/carrierbench.py -{}-seed \benchSeed}; \code{python3 bench/carrierbench/oracle.py}; \code{bash bench/carrierbench/saboteur\_run.sh}; the baseline commands in \code{bench/README.md}; \code{make -C docs/paper} rebuilds this note from the result files.
+
+\end{document}
