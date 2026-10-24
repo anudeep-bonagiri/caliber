@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: root bindings dependency
+        run: npm ci
       - name: kernel tests
         working-directory: spacetimedb
         run: npm ci && npx vitest run
