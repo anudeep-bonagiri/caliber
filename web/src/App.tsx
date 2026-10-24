@@ -9,6 +9,7 @@ import { Rules } from './components/Rules';
 import { LedgerOfTrust } from './components/LedgerOfTrust';
 import { Charts } from './components/Charts';
 import { useModuleIdentity } from './lib/useModuleIdentity';
+import { RESOLVED_HOLD_STATUSES } from './lib/types';
 
 export default function App() {
   // One live subscription per public table. useTable registers the SQL
@@ -23,24 +24,37 @@ export default function App() {
 
   const moduleIdentity = useModuleIdentity();
   const [codeFilter, setCodeFilter] = useState('');
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelectedRaw] = useState<string | null>(null);
+  const [pinned, setPinned] = useState(false);
+  const setSelected = (txnRef: string) => {
+    setPinned(true);
+    setSelectedRaw(txnRef);
+  };
 
   const day = days[0];
   const today = day?.day;
 
   const selectedHold = useMemo(() => (selected ? holds.find(h => h.txnRef === selected) : undefined), [holds, selected]);
 
-  // Select the newest open hold when nothing is selected so the investigation
-  // panel is never blank while the clock runs.
+  // Until the judge clicks a hold, follow the newest open one so the
+  // investigation panel shows what the worker is doing right now.
   useEffect(() => {
-    if (selectedHold) return;
+    if (pinned && selectedHold) return;
     let best: (typeof holds)[number] | undefined;
+    let bestOpen = false;
     for (const h of holds) {
       if (codeFilter && h.code !== codeFilter) continue;
+      const open = !RESOLVED_HOLD_STATUSES.has(h.status);
+      if (open && !bestOpen) {
+        best = h;
+        bestOpen = true;
+        continue;
+      }
+      if (open !== bestOpen) continue;
       if (!best || h.updatedAt.microsSinceUnixEpoch > best.updatedAt.microsSinceUnixEpoch) best = h;
     }
-    if (best) setSelected(best.txnRef);
-  }, [holds, selectedHold, codeFilter]);
+    if (best && best.txnRef !== selected) setSelectedRaw(best.txnRef);
+  }, [holds, selectedHold, codeFilter, pinned, selected]);
 
   const codesInQueue = useMemo(() => Array.from(new Set(holds.map(h => h.code))), [holds]);
 
@@ -56,8 +70,8 @@ export default function App() {
   return (
     <div className="flex h-full min-h-screen flex-col bg-bg text-text">
       <TopBar codeFilter={codeFilter} onCodeFilter={setCodeFilter} codesInQueue={codesInQueue} modelOffline={modelOffline} />
-      <main className="grid flex-1 grid-cols-1 gap-3 p-3 xl:min-h-[calc(100vh-45px)] xl:grid-cols-12 xl:grid-rows-[minmax(380px,5fr)_minmax(300px,4fr)_320px]">
-        <div className="flex min-h-0 flex-col gap-3 xl:col-span-4 xl:row-span-1">
+      <main className="grid flex-1 grid-cols-1 gap-2 p-2 xl:min-h-[calc(100vh-45px)] xl:grid-cols-12 xl:grid-rows-[minmax(340px,5fr)_minmax(280px,4fr)_290px]">
+        <div className="flex min-h-0 flex-col gap-2 xl:col-span-4 xl:row-span-1">
           <DayClock day={day} />
           <div className="min-h-[260px] flex-1 xl:min-h-0 [&>section]:h-full">
             <Queue holds={holds} ready={holdsReady} codeFilter={codeFilter} selected={selected} onSelect={setSelected} moduleIdentity={moduleIdentity} />

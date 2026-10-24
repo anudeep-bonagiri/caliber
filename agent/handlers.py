@@ -1,5 +1,8 @@
 """`handle(sender_id, text) -> str`: the one entry point the uAgent and the CLI share.
 
+Every controller action goes through the module's `try_*` procedures, so a refusal comes back as
+`[false, message]` and is kept in audit_event; the reply shows that message verbatim after "Refused: ".
+
 Per sender it remembers the last transaction discussed, so a bare free-text line with no model key
 still lands as the answer to the right hold.
 """
@@ -65,23 +68,23 @@ def _dispatch(sender_id: str, it: intents.Intent) -> str:
     if name == "rules":
         return fmt.format_rules(ledger.sql("SELECT * FROM rule"))
     if name == "pause":
-        ledger.call("set_clock", True)
+        ledger.call_try("try_set_clock", True)
         return _confirm("set_clock", None, "clock paused")
     if name == "resume":
-        ledger.call("set_clock", False)
+        ledger.call_try("try_set_clock", False)
         return _confirm("set_clock", None, "clock running")
     if name == "step":
-        ledger.call("step_day")
+        ledger.call_try("try_step_day")
         return _status(prefix="Stepped one day. ")
     if name == "approve_rule":
         rid = ledger.check_rule_id(it.ref or "")
-        ledger.call("approve_rule", rid)
+        ledger.call_try("try_approve_rule", rid)
         return _confirm("approve_rule", str(rid))
     if name == "reject_rule":
         rid = ledger.check_rule_id(it.ref or "")
         if not it.text:
             return f"reject rule {rid} needs a reason: reject rule {rid} <reason>"
-        ledger.call("reject_rule", rid, it.text)
+        ledger.call_try("try_reject_rule", rid, it.text)
         return _confirm("reject_rule", str(rid))
 
     ref = ledger.check_txn_ref(it.ref or "")
@@ -91,15 +94,15 @@ def _dispatch(sender_id: str, it: intents.Intent) -> str:
     if name == "answer":
         if not it.text:
             return f"answer {ref} needs the text of your answer."
-        ledger.call("answer_question", ref, it.text)
+        ledger.call_try("try_answer_question", ref, it.text)
         return _confirm("answer_question", ref) + "\nThe worker will draft a rule from this answer; check `rules` shortly."
     if name == "approve":
-        ledger.call("approve_payment", ref, ledger.opt(it.text))
+        ledger.call_try("try_approve_payment", ref, ledger.opt(it.text))
         return _confirm("approve_payment", ref)
     if name == "reject":
         if not it.text:
             return f"reject {ref} needs a reason: reject {ref} <reason>"
-        ledger.call("reject_payment", ref, it.text)
+        ledger.call_try("try_reject_payment", ref, it.text)
         return _confirm("reject_payment", ref)
     return fmt.HELP
 

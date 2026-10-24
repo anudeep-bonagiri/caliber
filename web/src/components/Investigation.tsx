@@ -169,6 +169,7 @@ function Section({ label, children }: { label: string; children: React.ReactNode
 }
 
 const KNOWN = new Set([
+  'txnRef', 'kind', 'code', 'cents', 'day', 'date',
   'truckId', 'driverId', 'driverName', 'plate', 'cardId', 'stationName', 'stationLat', 'stationLon',
   'nearestPing', 'distanceMiles', 'thresholdMiles', 'gallons', 'merchant',
 ]);

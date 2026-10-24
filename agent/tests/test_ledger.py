@@ -54,6 +54,21 @@ def mock(handler):
     ledger._transport = httpx.MockTransport(handler)
 
 
+def test_call_try_ok_and_false_body():
+    mock(lambda req: httpx.Response(200, json=[True, "ok"]))
+    assert ledger.call_try("try_set_clock", True) == (True, "ok")
+    mock(lambda req: httpx.Response(200, json=[False, "hold is released"]))
+    with pytest.raises(ledger.LedgerRefused) as e:
+        ledger.call_try("try_approve_payment", "9901", {"none": []})
+    assert str(e.value) == "hold is released"
+    mock(lambda req: httpx.Response(530, text="thrown anyway"))
+    with pytest.raises(ledger.LedgerRefused, match="thrown anyway"):
+        ledger.call_try("try_step_day")
+    mock(lambda req: httpx.Response(200, text="not json"))
+    with pytest.raises(ledger.LedgerError, match="non-JSON"):
+        ledger.call_try("try_step_day")
+
+
 def test_sql_decodes_positional_option_identity_timestamp_and_bigint():
     seen = {}
 

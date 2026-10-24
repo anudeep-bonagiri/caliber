@@ -1,0 +1,12 @@
+[project]
+name = "dispatch-ledger-seed"
+version = "0.1.0"
+description = "Deterministic synthetic-company generator and answer key for Dispatch Ledger"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

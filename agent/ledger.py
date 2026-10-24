@@ -1,6 +1,7 @@
 """HTTP client for the Dispatch Ledger SpacetimeDB module, holding the controller identity.
 
-Writes go through reducers (`call`), reads through SQL (`sql`). Both are plain HTTP against
+Writes go through `try_*` procedures (`call_try`, which report refusals in the body) or reducers
+(`call`, which refuse with HTTP 530); reads go through SQL (`sql`). Both are plain HTTP against
 `{STDB_URI}/v1/database/{STDB_DB}`; see docs/CONTRACT.md "HTTP API".
 
 Row encodings confirmed against the local SpacetimeDB 2.13 SQL endpoint (2026-10-24):
@@ -112,6 +113,30 @@ def call(reducer: str, *args) -> None:
     if r.status_code == 404:
         raise LedgerError(f"no such reducer or database: {reducer} (HTTP 404)")
     raise LedgerError(f"{reducer}: HTTP {r.status_code} {body[:200]}")
+
+
+def call_try(name: str, *args) -> tuple[bool, str]:
+    """Call a `try_*` procedure. It answers HTTP 200 with `[true, "ok"]` or `[false, "<refusal>"]` and writes
+    every refusal to audit_event as a persistent row. Raises LedgerRefused(message) when ok is false."""
+    r = _post(f"/call/{name}", json=list(args), headers={"Content-Type": "application/json"})
+    if r.status_code == 530:  # still a reducer-style throw, keep the same handling
+        raise LedgerRefused(r.text.strip() or "refused without a message")
+    if r.status_code in (401, 403):
+        raise LedgerError(f"controller token rejected (HTTP {r.status_code})")
+    if r.status_code == 404:
+        raise LedgerError(f"no such procedure or database: {name} (HTTP 404)")
+    if r.status_code != 200:
+        raise LedgerError(f"{name}: HTTP {r.status_code} {r.text.strip()[:200]}")
+    try:
+        body = r.json()
+    except ValueError as e:
+        raise LedgerError(f"{name}: non-JSON body {r.text.strip()[:120]}") from e
+    if not (isinstance(body, list) and len(body) == 2 and isinstance(body[0], bool)):
+        raise LedgerError(f"{name}: unexpected body {str(body)[:120]}")
+    ok, message = body[0], str(body[1])
+    if not ok:
+        raise LedgerRefused(message or "refused without a message")
+    return ok, message
 
 
 def sql(query: str) -> list[dict]:

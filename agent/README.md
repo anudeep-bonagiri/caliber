@@ -24,7 +24,7 @@ The fleet controller's seat for Dispatch Ledger, an autonomous accounts-payable 
 | `pause`, `resume`, `step` | Control the simulated clock |
 | `help` | This list |
 
-Confirmations echo the audit row, for example `approve_payment 2231 written to audit_event by controller (event 41, day 41)`. Refusals read `Refused: requester cannot approve`.
+Every action calls the module's `try_*` procedure (`try_approve_payment`, `try_reject_payment`, `try_answer_question`, `try_approve_rule`, `try_reject_rule`, `try_set_clock`, `try_step_day`) with the controller token. Confirmations echo the audit row, for example `approve_payment 2231 written to audit_event by controller (event 41, day 41)`. A refusal comes back from the database as `[false, "<message>"]`, is kept as an `audit_event` row with `action = refused`, and reads here as `Refused: requester cannot approve`. The controller who injected a test transaction is its requester and cannot approve it; that is the segregation of duties working.
 
 ## Run it
 

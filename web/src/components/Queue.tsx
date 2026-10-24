@@ -6,7 +6,7 @@ import { RESOLVED_HOLD_STATUSES } from '../lib/types';
 import { useFlash } from '../lib/useFlash';
 
 export function requesterRole(h: Hold, moduleIdentity: string | undefined): 'kernel' | 'agent' {
-  if (moduleIdentity) return identityHex(h.requestedBy) === moduleIdentity ? 'kernel' : 'agent';
+  if (moduleIdentity && identityHex(h.requestedBy) === moduleIdentity) return 'kernel';
   return h.reason.startsWith('kernel') ? 'kernel' : 'agent';
 }
 

@@ -1,7 +1,7 @@
 // Where Droid runs. Verified against @factory/droid-sdk 0.10.0 type declarations (see README, "Where Droid runs").
 // The SDK is imported lazily so replay mode never loads it and never needs the droid CLI on PATH.
 import fs from 'node:fs';
-import type { DroidResultMessage, DroidStreamMessage } from '@factory/droid-sdk/node';
+import type { DroidResultMessage, DroidStreamMessage, RequestPermissionRequestParams } from '@factory/droid-sdk/node';
 import { nowIso } from './config.js';
 import { FINDING_SCHEMA } from './finding.js';
 import type { Step } from './replay.js';
@@ -56,7 +56,7 @@ function sessionOptions(sdk: Sdk, opts: DroidOptions, disabledToolIds: string[],
     disabledToolIds,                                         // ['Execute', 'Edit', 'Create', 'ApplyPatch'] plus listTools() edit/execute ids; subtractive, no allowlist in TS
     systemPrompt: { type: 'preset' as const, preset: 'droid' as const, append: SYSTEM_PROMPT_APPEND },
     mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and ELASTIC_API_KEY are set
-    permissionHandler({ toolUses, options }: Parameters<NonNullable<Parameters<Sdk['createSession']>[0]>['permissionHandler']>>[0]) {
+    permissionHandler({ toolUses, options }: RequestPermissionRequestParams) {
       const details = toolUses.flatMap(u => (u.details.type === ToolConfirmationType.Script ? u.details.calls.map(c => c.confirmation) : [u.details]));
       const onlyMcp = details.length > 0 && details.every(d => d.type === ToolConfirmationType.McpTool);
       const want = onlyMcp ? ToolConfirmationOutcome.ProceedOnce : ToolConfirmationOutcome.Cancel;

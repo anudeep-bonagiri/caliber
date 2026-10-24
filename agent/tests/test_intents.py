@@ -59,6 +59,10 @@ class FakeLedger:
     def call(self, reducer, *args):
         self.calls.append((reducer, list(args)))
 
+    def call_try(self, name, *args):
+        self.calls.append((name, list(args)))
+        return True, "ok"
+
     def sql(self, query):
         self.queries.append(query)
         for name, rows in self.tables.items():
@@ -89,6 +93,7 @@ AUDIT = {"id": 41, "day": 41, "actor_role": "controller", "action": "approve_pay
 def fake(monkeypatch):
     f = FakeLedger()
     monkeypatch.setattr(ledger, "call", f.call)
+    monkeypatch.setattr(ledger, "call_try", f.call_try)
     monkeypatch.setattr(ledger, "sql", f.sql)
     monkeypatch.delenv("ASI_ONE_API_KEY", raising=False)
     handlers.LAST_REF.clear()
@@ -157,22 +162,43 @@ def test_injection_in_txn_ref_never_reaches_sql_or_reducers(fake):
 def test_approve_calls_reducer_with_option_note_and_echoes_audit(fake):
     fake.tables["audit_event"] = [dict(AUDIT, id=40, action="hold"), AUDIT]
     out = handlers.handle("u1", "approve 2231")
-    assert fake.calls == [("approve_payment", ["2231", {"none": []}])]
+    assert fake.calls == [("try_approve_payment", ["2231", {"none": []}])]
     assert out == "approve_payment 2231 written to audit_event by controller (event 41, day 41)"
     assert "action = 'approve_payment' AND ref = '2231'" in fake.queries[-1]
 
     fake.tables["audit_event"] = [dict(AUDIT, id=42, detail="spoke to Ramon")]
     out = handlers.handle("u1", "approve 2231 spoke to Ramon")
-    assert fake.calls[-1] == ("approve_payment", ["2231", {"some": "spoke to Ramon"}])
+    assert fake.calls[-1] == ("try_approve_payment", ["2231", {"some": "spoke to Ramon"}])
     assert out == "approve_payment 2231 written to audit_event by controller (event 42, day 41, spoke to Ramon)"
 
 
 def test_refusal_shows_reducer_message_verbatim(fake, monkeypatch):
-    def refuse(reducer, *args):
+    def refuse(name, *args):
         raise ledger.LedgerRefused("call-back note required for a bank change")
 
-    monkeypatch.setattr(ledger, "call", refuse)
+    monkeypatch.setattr(ledger, "call_try", refuse)
     assert handlers.handle("u1", "approve INV-1077") == "Refused: call-back note required for a bank change"
+
+
+def test_try_procedure_false_body_becomes_refused_reply(monkeypatch):
+    """The real transport path: try_approve_payment answers 200 [false, msg]; the reply is 'Refused: msg'."""
+    import httpx
+
+    monkeypatch.setenv("STDB_URI", "http://ledger.test")
+    monkeypatch.setenv("STDB_DB", "dispatch-ledger")
+    monkeypatch.setenv("STDB_CONTROLLER_TOKEN", "tok")
+    monkeypatch.delenv("ASI_ONE_API_KEY", raising=False)
+    seen = {}
+
+    def transport(request: httpx.Request):
+        if request.url.path.endswith("/call/try_approve_payment"):
+            seen["json"] = json.loads(request.content)
+            return httpx.Response(200, json=[False, "requester cannot approve"])
+        return httpx.Response(200, json=[{"schema": {"elements": []}, "rows": []}])
+
+    monkeypatch.setattr(ledger, "_transport", httpx.MockTransport(transport))
+    assert handlers.handle("u1", "approve 9901") == "Refused: requester cannot approve"
+    assert seen["json"] == ["9901", {"none": []}]
 
 
 def test_ledger_error_is_reported_not_raised(fake, monkeypatch):
@@ -187,24 +213,24 @@ def test_reject_requires_reason(fake):
     assert "needs a reason" in handlers.handle("u1", "reject 2231")
     assert fake.calls == []
     handlers.handle("u1", "reject 2231 card cloned")
-    assert fake.calls == [("reject_payment", ["2231", "card cloned"])]
+    assert fake.calls == [("try_reject_payment", ["2231", "card cloned"])]
 
 
 def test_answer_calls_answer_question(fake):
     fake.tables["audit_event"] = [dict(AUDIT, id=50, action="answer_question", detail="yes")]
     out = handlers.handle("u1", "answer 2231 yes he drove 22")
-    assert fake.calls == [("answer_question", ["2231", "yes he drove 22"])]
+    assert fake.calls == [("try_answer_question", ["2231", "yes he drove 22"])]
     assert out.startswith("answer_question 2231 written to audit_event by controller (event 50")
 
 
 def test_rule_intents(fake):
     fake.tables["audit_event"] = [dict(AUDIT, id=60, action="approve_rule", ref="1", detail="location_mismatch {}")]
     out = handlers.handle("u1", "approve rule 1")
-    assert fake.calls == [("approve_rule", [1])]
+    assert fake.calls == [("try_approve_rule", [1])]
     assert out.startswith("approve_rule 1 written to audit_event by controller (event 60")
     assert "needs a reason" in handlers.handle("u1", "reject rule 2")
     handlers.handle("u1", "reject rule 2 too broad")
-    assert fake.calls[-1] == ("reject_rule", [2, "too broad"])
+    assert fake.calls[-1] == ("try_reject_rule", [2, "too broad"])
     assert "not a rule id" in handlers.handle("u1", "approve rule 1 OR 1=1")
     assert len(fake.calls) == 2
 
@@ -237,12 +263,12 @@ def test_pause_resume_step(fake):
     fake.tables["audit_event"] = [{"id": 5, "day": 0, "actor_role": "controller", "action": "set_clock", "ref": "0", "detail": "paused"}]
     fake.tables["business_day"] = [{"id": 1, "day": 1, "date": "2026-07-02", "paused": True, "tick_micros": 2000000}]
     out = handlers.handle("u1", "pause")
-    assert fake.calls == [("set_clock", [True])]
+    assert fake.calls == [("try_set_clock", [True])]
     assert out.startswith("set_clock 0 written to audit_event by controller (event 5, day 0, paused). clock paused")
     handlers.handle("u1", "resume")
-    assert fake.calls[-1] == ("set_clock", [False])
+    assert fake.calls[-1] == ("try_set_clock", [False])
     out = handlers.handle("u1", "step")
-    assert fake.calls[-1] == ("step_day", [])
+    assert fake.calls[-1] == ("try_step_day", [])
     assert out.startswith("Stepped one day. Day 1 of 92")
 
 
@@ -259,7 +285,7 @@ def test_free_text_without_key_answers_last_discussed_hold_per_sender(fake):
     assert handlers.handle("u1", "yes he drove truck 22") == fmt.HELP          # nothing discussed yet
     handlers.handle("u1", "why 2231")
     out = handlers.handle("u1", "yes he drove truck 22 while 17 was in the shop")
-    assert fake.calls == [("answer_question", ["2231", "yes he drove truck 22 while 17 was in the shop"])]
+    assert fake.calls == [("try_answer_question", ["2231", "yes he drove truck 22 while 17 was in the shop"])]
     assert out.startswith("answer_question 2231 written to audit_event")
     assert handlers.handle("u2", "me too") == fmt.HELP                            # other sender has no context
 
@@ -278,7 +304,7 @@ def test_free_text_with_key_makes_one_model_call(fake, monkeypatch):
     assert len(calls) == 1
     assert calls[0][0] == "k"
     assert "2231 (location_mismatch): Did Ramon Ortiz drive truck 22" in calls[0][1][0]["content"]
-    assert fake.calls == [("answer_question", ["2231", "Ramon did drive 22 that day, 17 was in the shop"])]
+    assert fake.calls == [("try_answer_question", ["2231", "Ramon did drive 22 that day, 17 was in the shop"])]
 
 
 def test_model_failure_falls_back_to_last_hold(fake, monkeypatch):
@@ -291,7 +317,7 @@ def test_model_failure_falls_back_to_last_hold(fake, monkeypatch):
     monkeypatch.setattr(intents, "_chat_completion", boom)
     handlers.LAST_REF["u1"] = "2231"
     handlers.handle("u1", "confirmed with the driver")
-    assert fake.calls == [("answer_question", ["2231", "confirmed with the driver"])]
+    assert fake.calls == [("try_answer_question", ["2231", "confirmed with the driver"])]
 
 
 def test_model_output_with_injection_ref_is_rejected(fake, monkeypatch):
