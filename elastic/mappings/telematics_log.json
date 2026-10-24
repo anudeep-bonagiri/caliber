@@ -1,0 +1,12 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "at": {"type": "date"},
+    "at_ms": {"type": "long"},
+    "truck_id": {"type": "keyword"},
+    "day": {"type": "integer"},
+    "location": {"type": "geo_point"},
+    "engine_on": {"type": "boolean"},
+    "odometer": {"type": "float"}
+  }
+}

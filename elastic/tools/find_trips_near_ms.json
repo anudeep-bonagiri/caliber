@@ -1,0 +1,15 @@
+{
+  "id": "find_trips_near_ms",
+  "type": "esql",
+  "tags": ["dispatch"],
+  "description": "Same as find_trips_near but the time window is given as epoch milliseconds (since_ms, until_ms) instead of ISO dates. Use this when find_trips_near rejects the date parameters. Returns truck_id, the ping time and the distance in meters, nearest first.",
+  "configuration": {
+    "query": "FROM telematics_log | WHERE at_ms >= ?since_ms AND at_ms <= ?until_ms | EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(?point_wkt)) | WHERE dist_m < ?radius_m | SORT dist_m ASC | KEEP truck_id, at, dist_m | LIMIT 20",
+    "params": {
+      "point_wkt": {"type": "string", "description": "WKT point, longitude first: POINT(-98.49 29.42)"},
+      "radius_m": {"type": "float", "description": "Radius in meters, e.g. 3000"},
+      "since_ms": {"type": "float", "description": "Window start as epoch milliseconds UTC, e.g. 1787833800000"},
+      "until_ms": {"type": "float", "description": "Window end as epoch milliseconds UTC, e.g. 1787839200000"}
+    }
+  }
+}

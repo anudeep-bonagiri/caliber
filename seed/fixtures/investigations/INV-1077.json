@@ -1,0 +1,84 @@
+{
+  "recorded": true,
+  "note": "RECORDED investigation for moment two (vendor bank change), hand-written in the shape WORKER_MODE=record emits. Replayed verbatim by the worker in replay mode and labelled status 'replayed', source 'replayed'. Nothing here is produced at demo time by a model.",
+  "finding": {
+    "finding": "Invoice INV-1077 from vendor 3 bills $9,800.00 for a brake job against PO-1017 at the contract rate, and the quantity matches receiving. The vendor record shows the bank account on file changed two business days before the invoice arrived, which is inside the 7 day window, so the invoice itself is clean but the payee is not yet confirmed.",
+    "evidence": [
+      {
+        "source": "invoices/INV-1077.txt",
+        "ref": "line 3",
+        "quote": "PO-1017  brake_job  qty 4  @ $2,450.00  total $9,800.00"
+      },
+      {
+        "source": "contract_rate_for_vendor",
+        "ref": "vendor 3 brake_job on day 44",
+        "quote": "rate_cents=245000 clause=\"Brake service per axle, parts and labor, net 30\""
+      },
+      {
+        "source": "kernel",
+        "ref": "evidence.daysSinceChange",
+        "quote": "bank account changed on day 42, invoice received day 44, threshold 7 days"
+      }
+    ],
+    "recommendation": "hold",
+    "question_for_controller": "Call Gulf Coast Diesel on the number on file, not the one on the invoice, and record who confirmed the new account before releasing $9,800.00.",
+    "confidence": 0.91,
+    "status": "ok",
+    "model": "droid",
+    "durationMs": 17240,
+    "tokenUsage": { "input": 12210, "output": 640 }
+  },
+  "steps": [
+    {
+      "type": "note",
+      "at": "2026-10-23T21:31:40.000Z",
+      "text": "live droid run (record) for INV-1077"
+    },
+    {
+      "type": "assistant",
+      "at": "2026-10-23T21:31:43.100Z",
+      "text": "The kernel raised vendor_bank_change: the payee's bank details changed inside the window before a payment over $5,000. I will confirm the invoice matches its PO and the contract rate, then report what the controller must verify out of band."
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-23T21:31:43.800Z",
+      "name": "Read",
+      "toolUseId": "toolu_01_read_invoice_1077",
+      "input": { "path": "invoices/INV-1077.txt" }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-23T21:31:44.050Z",
+      "toolUseId": "toolu_01_read_invoice_1077",
+      "toolName": "Read",
+      "content": "INVOICE INV-1077\nGulf Coast Diesel (vendor 3)\nPO-1017  brake_job  qty 4  @ $2,450.00  total $9,800.00\nRemit to: account ending 7731 (updated)\n",
+      "isError": false
+    },
+    {
+      "type": "tool_call",
+      "at": "2026-10-23T21:31:45.200Z",
+      "name": "contract_rate_for_vendor",
+      "toolUseId": "toolu_02_contract_rate_1077",
+      "input": { "vendor_id": "3", "item": "brake_job", "on": 44 }
+    },
+    {
+      "type": "tool_result",
+      "at": "2026-10-23T21:31:47.600Z",
+      "toolUseId": "toolu_02_contract_rate_1077",
+      "toolName": "contract_rate_for_vendor",
+      "content": "[{\"rate_cents\":245000,\"clause\":\"Brake service per axle, parts and labor, net 30\"}]",
+      "isError": false
+    },
+    {
+      "type": "assistant",
+      "at": "2026-10-23T21:31:50.900Z",
+      "text": "The unit price equals the contract rate and the quantity equals receiving, so the invoice is clean on its face. The remit-to account on the invoice is new and matches the bank change the kernel flagged. I cannot verify a bank account from documents; this needs a call-back on a known number. Recommendation: hold."
+    },
+    {
+      "type": "result",
+      "at": "2026-10-23T21:31:51.400Z",
+      "text": "structured output returned"
+    }
+  ],
+  "recordedAt": "2026-10-23T21:31:51.400Z"
+}

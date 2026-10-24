@@ -1,0 +1,38 @@
+[
+ {
+  "id": "C-003-BRK",
+  "vendorId": 3,
+  "item": "brake_job",
+  "rateCents": 48500,
+  "validFromDay": 1,
+  "validToDay": 92,
+  "clause": "Section 4.2: Brake job (per axle, parts and labor) is billed at a flat $485.00. Rate changes require 30 days written notice."
+ },
+ {
+  "id": "C-003-OIL",
+  "vendorId": 3,
+  "item": "oil_change",
+  "rateCents": 21900,
+  "validFromDay": 1,
+  "validToDay": 92,
+  "clause": "Section 4.1: Full-synthetic oil change billed at $219.00 per service."
+ },
+ {
+  "id": "C-003-BRK-OLD",
+  "vendorId": 3,
+  "item": "brake_job",
+  "rateCents": 46000,
+  "validFromDay": -120,
+  "validToDay": 0,
+  "clause": "Superseded schedule: brake job $460.00 (expired before the simulated quarter)."
+ },
+ {
+  "id": "C-005-TIRE",
+  "vendorId": 5,
+  "item": "tire",
+  "rateCents": 38900,
+  "validFromDay": 1,
+  "validToDay": 92,
+  "clause": "Tires: $389.00 per steer tire installed and balanced."
+ }
+]

@@ -1,0 +1,15 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "invoice_id": {"type": "keyword"},
+    "vendor_id": {"type": "keyword"},
+    "po_id": {"type": "keyword"},
+    "received_day": {"type": "integer"},
+    "item": {"type": "keyword"},
+    "qty": {"type": "float"},
+    "unit_cents": {"type": "long"},
+    "cents": {"type": "long"},
+    "doc_ref": {"type": "keyword"},
+    "body": {"type": "text"}
+  }
+}

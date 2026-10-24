@@ -1,0 +1,14 @@
+{
+  "id": "contract_rate_for_vendor",
+  "type": "esql",
+  "tags": ["dispatch"],
+  "description": "The contracted rate in cents and the governing clause for one vendor and one item (for example brake_job, tire, oil_change) on a given business day. Returns at most one contract that was valid on that day. Use it to check an invoice line against the contract.",
+  "configuration": {
+    "query": "FROM contracts | WHERE vendor_id == ?vendor_id AND item == ?item AND valid_from <= ?on AND valid_to >= ?on | KEEP contract_id, rate_cents, clause | LIMIT 1",
+    "params": {
+      "vendor_id": {"type": "string", "description": "Vendor id as a string, e.g. \"3\""},
+      "item": {"type": "string", "description": "Contract item code, e.g. brake_job"},
+      "on": {"type": "integer", "description": "Business day number (1 = 2026-07-01, weekdays only), e.g. 44"}
+    }
+  }
+}

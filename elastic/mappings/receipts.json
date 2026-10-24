@@ -1,0 +1,19 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "txn_ref": {"type": "keyword"},
+    "truck_id": {"type": "keyword"},
+    "driver_id": {"type": "keyword"},
+    "card_id": {"type": "keyword"},
+    "station": {"type": "keyword"},
+    "station_location": {"type": "geo_point"},
+    "merchant": {"type": "keyword"},
+    "at": {"type": "date"},
+    "at_ms": {"type": "long"},
+    "day": {"type": "integer"},
+    "gallons": {"type": "float"},
+    "cents": {"type": "long"},
+    "body": {"type": "text"},
+    "body_semantic": {"type": "semantic_text", "inference_id": ".jina-embeddings-v5-text-small"}
+  }
+}

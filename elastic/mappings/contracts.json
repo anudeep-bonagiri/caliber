@@ -1,0 +1,14 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "contract_id": {"type": "keyword"},
+    "vendor_id": {"type": "keyword"},
+    "item": {"type": "keyword"},
+    "rate_cents": {"type": "long"},
+    "valid_from": {"type": "integer"},
+    "valid_to": {"type": "integer"},
+    "clause": {"type": "text"},
+    "body": {"type": "text"},
+    "clause_semantic": {"type": "semantic_text", "inference_id": ".jina-embeddings-v5-text-small"}
+  }
+}

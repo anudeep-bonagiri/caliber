@@ -1,0 +1,15 @@
+{
+  "id": "find_trips_near",
+  "type": "esql",
+  "tags": ["dispatch"],
+  "description": "Trucks that pinged within radius_m meters of a WKT point (POINT(lon lat)) between since and until. Returns truck_id, the ping time and the distance in meters, nearest first. Use it to check which truck was physically at a fuel station or toll plaza when a charge was made.",
+  "configuration": {
+    "query": "FROM telematics_log | WHERE at >= ?since AND at <= ?until | EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(?point_wkt)) | WHERE dist_m < ?radius_m | SORT dist_m ASC | KEEP truck_id, at, dist_m | LIMIT 20",
+    "params": {
+      "point_wkt": {"type": "string", "description": "WKT point, longitude first: POINT(-98.49 29.42)"},
+      "radius_m": {"type": "float", "description": "Radius in meters, e.g. 3000"},
+      "since": {"type": "date", "description": "ISO-8601 start, e.g. 2026-08-27T12:30:00Z"},
+      "until": {"type": "date", "description": "ISO-8601 end, e.g. 2026-08-27T14:00:00Z"}
+    }
+  }
+}
