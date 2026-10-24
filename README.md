@@ -39,16 +39,29 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 
 ## What is measured
 
-All numbers below are written by `scripts/facts.py` into `docs/FACTS.json`. See `docs/FACTS.md` for the current table.
+All numbers below are written by `scripts/facts.py` into `docs/FACTS.json` and `docs/RESULTS.md`; nothing is typed by hand. Last run 2026-10-24T18:38:38+00:00, 7944 transactions over 92 business days.
 
-| Metric | Where it comes from |
+| Code | Planted | Raised | Precision | Recall |
+| --- | --- | --- | --- | --- |
+| location_mismatch | 20 | 20 | 1.0 | 1.0 |
+| capacity_exceeded | 6 | 6 | 1.0 | 1.0 |
+| rate_variance | 9 | 9 | 1.0 | 1.0 |
+| duplicate_toll | 11 | 11 | 1.0 | 1.0 |
+| duplicate_invoice | 4 | 4 | 1.0 | 1.0 |
+| vendor_bank_change | 3 | 3 | 1.0 | 1.0 |
+| short_received | 5 | 5 | 1.0 | 1.0 |
+
+| Metric | Result |
 | --- | --- |
-| Recall on planted exceptions | holds raised with the planted code, over the answer key |
-| Precision | true positives over everything raised with an exception code |
-| Decoys cleared with one answer | hold status `cleared_by_rule` with exactly one controller answer and one approved rule |
-| Planted exceptions cleared by a rule | must be zero |
-| Policy holds (`limit`) | reported separately; they are correct behaviour, not exceptions |
-| Refusals in the audit trail | `audit_event` rows with action `refused`, by role |
+| Overall precision and recall on 58 planted exceptions | 1.0 and 1.0 |
+| Decoys (legitimate unit swaps) cleared through an approved rule after exactly one controller answer | 6 of 6 |
+| Planted exceptions cleared by a rule | 0 |
+| Policy holds from the auto-pay limit (correct behaviour, not exceptions) | 6 |
+| Auto-paid by the kernel or a rule | 7886 payments, $1,083,630.52 |
+| Released by the controller | 9 payments, $37,547.00 |
+| Investigations by source in the offline run | {'none': 45, 'replayed': 2} |
+
+The whole cycle (publish with empty data, load fixtures, 92 days, scripted controller pass, facts) runs in about ten seconds with `scripts/full_run.sh`.
 
 ## How it works
 

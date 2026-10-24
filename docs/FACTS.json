@@ -1,0 +1,1178 @@
+{
+  "asOf": "2026-10-24T18:38:38+00:00",
+  "autoPaid": {
+    "cents": 108363052,
+    "count": 7886
+  },
+  "byCode": [
+    {
+      "code": "location_mismatch",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 20,
+      "precision": 1.0,
+      "raised": 20,
+      "recall": 1.0,
+      "truePositives": 20
+    },
+    {
+      "code": "capacity_exceeded",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 6,
+      "precision": 1.0,
+      "raised": 6,
+      "recall": 1.0,
+      "truePositives": 6
+    },
+    {
+      "code": "rate_variance",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 9,
+      "precision": 1.0,
+      "raised": 9,
+      "recall": 1.0,
+      "truePositives": 9
+    },
+    {
+      "code": "duplicate_toll",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 11,
+      "precision": 1.0,
+      "raised": 11,
+      "recall": 1.0,
+      "truePositives": 11
+    },
+    {
+      "code": "duplicate_invoice",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 4,
+      "precision": 1.0,
+      "raised": 4,
+      "recall": 1.0,
+      "truePositives": 4
+    },
+    {
+      "code": "vendor_bank_change",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 3,
+      "precision": 1.0,
+      "raised": 3,
+      "recall": 1.0,
+      "truePositives": 3
+    },
+    {
+      "code": "short_received",
+      "falsePositives": 0,
+      "missed": [],
+      "planted": 5,
+      "precision": 1.0,
+      "raised": 5,
+      "recall": 1.0,
+      "truePositives": 5
+    }
+  ],
+  "byDay": [
+    {
+      "autoPaid": 77,
+      "autoPaidCents": 772788,
+      "autoRejected": 0,
+      "day": 1,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 77
+    },
+    {
+      "autoPaid": 88,
+      "autoPaidCents": 1045412,
+      "autoRejected": 0,
+      "day": 2,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 89
+    },
+    {
+      "autoPaid": 78,
+      "autoPaidCents": 1000631,
+      "autoRejected": 0,
+      "day": 3,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 78
+    },
+    {
+      "autoPaid": 97,
+      "autoPaidCents": 1139805,
+      "autoRejected": 0,
+      "day": 4,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 98
+    },
+    {
+      "autoPaid": 57,
+      "autoPaidCents": 784634,
+      "autoRejected": 0,
+      "day": 5,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 57
+    },
+    {
+      "autoPaid": 107,
+      "autoPaidCents": 1602931,
+      "autoRejected": 0,
+      "day": 6,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 107
+    },
+    {
+      "autoPaid": 91,
+      "autoPaidCents": 1209930,
+      "autoRejected": 0,
+      "day": 7,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 92
+    },
+    {
+      "autoPaid": 85,
+      "autoPaidCents": 1279336,
+      "autoRejected": 0,
+      "day": 8,
+      "exceptions": 2,
+      "holds": 2,
+      "txns": 86
+    },
+    {
+      "autoPaid": 94,
+      "autoPaidCents": 1371825,
+      "autoRejected": 0,
+      "day": 9,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 95
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1189671,
+      "autoRejected": 0,
+      "day": 10,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 87
+    },
+    {
+      "autoPaid": 73,
+      "autoPaidCents": 922492,
+      "autoRejected": 0,
+      "day": 11,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 73
+    },
+    {
+      "autoPaid": 80,
+      "autoPaidCents": 1033013,
+      "autoRejected": 0,
+      "day": 12,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 80
+    },
+    {
+      "autoPaid": 74,
+      "autoPaidCents": 871384,
+      "autoRejected": 1,
+      "day": 13,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 75
+    },
+    {
+      "autoPaid": 63,
+      "autoPaidCents": 937028,
+      "autoRejected": 0,
+      "day": 14,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 64
+    },
+    {
+      "autoPaid": 74,
+      "autoPaidCents": 974619,
+      "autoRejected": 0,
+      "day": 15,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 74
+    },
+    {
+      "autoPaid": 75,
+      "autoPaidCents": 1194643,
+      "autoRejected": 0,
+      "day": 16,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 75
+    },
+    {
+      "autoPaid": 76,
+      "autoPaidCents": 920604,
+      "autoRejected": 1,
+      "day": 17,
+      "exceptions": 2,
+      "holds": 1,
+      "txns": 78
+    },
+    {
+      "autoPaid": 84,
+      "autoPaidCents": 1271485,
+      "autoRejected": 0,
+      "day": 18,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 85
+    },
+    {
+      "autoPaid": 65,
+      "autoPaidCents": 888095,
+      "autoRejected": 0,
+      "day": 19,
+      "exceptions": 2,
+      "holds": 2,
+      "txns": 66
+    },
+    {
+      "autoPaid": 102,
+      "autoPaidCents": 1474447,
+      "autoRejected": 0,
+      "day": 20,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 102
+    },
+    {
+      "autoPaid": 85,
+      "autoPaidCents": 1270828,
+      "autoRejected": 0,
+      "day": 21,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 86
+    },
+    {
+      "autoPaid": 111,
+      "autoPaidCents": 1221648,
+      "autoRejected": 0,
+      "day": 22,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 112
+    },
+    {
+      "autoPaid": 79,
+      "autoPaidCents": 857026,
+      "autoRejected": 0,
+      "day": 23,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 79
+    },
+    {
+      "autoPaid": 105,
+      "autoPaidCents": 1255499,
+      "autoRejected": 0,
+      "day": 24,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 105
+    },
+    {
+      "autoPaid": 79,
+      "autoPaidCents": 1132114,
+      "autoRejected": 0,
+      "day": 25,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 79
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1456555,
+      "autoRejected": 0,
+      "day": 26,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 88
+    },
+    {
+      "autoPaid": 83,
+      "autoPaidCents": 1145246,
+      "autoRejected": 0,
+      "day": 27,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 83
+    },
+    {
+      "autoPaid": 89,
+      "autoPaidCents": 1078826,
+      "autoRejected": 0,
+      "day": 28,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 89
+    },
+    {
+      "autoPaid": 78,
+      "autoPaidCents": 1044717,
+      "autoRejected": 0,
+      "day": 29,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 78
+    },
+    {
+      "autoPaid": 93,
+      "autoPaidCents": 1278041,
+      "autoRejected": 0,
+      "day": 30,
+      "exceptions": 2,
+      "holds": 2,
+      "txns": 95
+    },
+    {
+      "autoPaid": 83,
+      "autoPaidCents": 1150332,
+      "autoRejected": 0,
+      "day": 31,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 84
+    },
+    {
+      "autoPaid": 99,
+      "autoPaidCents": 1306910,
+      "autoRejected": 0,
+      "day": 32,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 99
+    },
+    {
+      "autoPaid": 88,
+      "autoPaidCents": 1656657,
+      "autoRejected": 0,
+      "day": 33,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 88
+    },
+    {
+      "autoPaid": 72,
+      "autoPaidCents": 1044749,
+      "autoRejected": 0,
+      "day": 34,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 72
+    },
+    {
+      "autoPaid": 75,
+      "autoPaidCents": 1046553,
+      "autoRejected": 0,
+      "day": 35,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 76
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1116362,
+      "autoRejected": 0,
+      "day": 36,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 88
+    },
+    {
+      "autoPaid": 73,
+      "autoPaidCents": 873284,
+      "autoRejected": 0,
+      "day": 37,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 74
+    },
+    {
+      "autoPaid": 77,
+      "autoPaidCents": 1220105,
+      "autoRejected": 0,
+      "day": 38,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 77
+    },
+    {
+      "autoPaid": 72,
+      "autoPaidCents": 888170,
+      "autoRejected": 0,
+      "day": 39,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 72
+    },
+    {
+      "autoPaid": 75,
+      "autoPaidCents": 995209,
+      "autoRejected": 0,
+      "day": 40,
+      "exceptions": 1,
+      "holds": 2,
+      "txns": 77
+    },
+    {
+      "autoPaid": 85,
+      "autoPaidCents": 1283427,
+      "autoRejected": 0,
+      "day": 41,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 85
+    },
+    {
+      "autoPaid": 85,
+      "autoPaidCents": 1187729,
+      "autoRejected": 0,
+      "day": 42,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 85
+    },
+    {
+      "autoPaid": 60,
+      "autoPaidCents": 820403,
+      "autoRejected": 0,
+      "day": 43,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 61
+    },
+    {
+      "autoPaid": 93,
+      "autoPaidCents": 1167952,
+      "autoRejected": 1,
+      "day": 44,
+      "exceptions": 3,
+      "holds": 2,
+      "txns": 96
+    },
+    {
+      "autoPaid": 96,
+      "autoPaidCents": 1248852,
+      "autoRejected": 0,
+      "day": 45,
+      "exceptions": 0,
+      "holds": 1,
+      "txns": 97
+    },
+    {
+      "autoPaid": 63,
+      "autoPaidCents": 887871,
+      "autoRejected": 0,
+      "day": 46,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 63
+    },
+    {
+      "autoPaid": 55,
+      "autoPaidCents": 897042,
+      "autoRejected": 0,
+      "day": 47,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 55
+    },
+    {
+      "autoPaid": 86,
+      "autoPaidCents": 1143353,
+      "autoRejected": 0,
+      "day": 48,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 87
+    },
+    {
+      "autoPaid": 79,
+      "autoPaidCents": 1124918,
+      "autoRejected": 0,
+      "day": 49,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 80
+    },
+    {
+      "autoPaid": 71,
+      "autoPaidCents": 1396074,
+      "autoRejected": 0,
+      "day": 50,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 71
+    },
+    {
+      "autoPaid": 95,
+      "autoPaidCents": 1342487,
+      "autoRejected": 0,
+      "day": 51,
+      "exceptions": 2,
+      "holds": 2,
+      "txns": 96
+    },
+    {
+      "autoPaid": 83,
+      "autoPaidCents": 1131581,
+      "autoRejected": 0,
+      "day": 52,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 83
+    },
+    {
+      "autoPaid": 68,
+      "autoPaidCents": 885235,
+      "autoRejected": 1,
+      "day": 53,
+      "exceptions": 2,
+      "holds": 1,
+      "txns": 70
+    },
+    {
+      "autoPaid": 76,
+      "autoPaidCents": 1087536,
+      "autoRejected": 0,
+      "day": 54,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 77
+    },
+    {
+      "autoPaid": 90,
+      "autoPaidCents": 1062515,
+      "autoRejected": 0,
+      "day": 55,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 90
+    },
+    {
+      "autoPaid": 102,
+      "autoPaidCents": 1292699,
+      "autoRejected": 1,
+      "day": 56,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 103
+    },
+    {
+      "autoPaid": 100,
+      "autoPaidCents": 1415176,
+      "autoRejected": 0,
+      "day": 57,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 101
+    },
+    {
+      "autoPaid": 112,
+      "autoPaidCents": 1440248,
+      "autoRejected": 0,
+      "day": 58,
+      "exceptions": 0,
+      "holds": 1,
+      "txns": 113
+    },
+    {
+      "autoPaid": 82,
+      "autoPaidCents": 995860,
+      "autoRejected": 0,
+      "day": 59,
+      "exceptions": 0,
+      "holds": 1,
+      "txns": 83
+    },
+    {
+      "autoPaid": 85,
+      "autoPaidCents": 1343128,
+      "autoRejected": 0,
+      "day": 60,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 85
+    },
+    {
+      "autoPaid": 90,
+      "autoPaidCents": 1293729,
+      "autoRejected": 0,
+      "day": 61,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 90
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1150408,
+      "autoRejected": 1,
+      "day": 62,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 88
+    },
+    {
+      "autoPaid": 89,
+      "autoPaidCents": 1236827,
+      "autoRejected": 0,
+      "day": 63,
+      "exceptions": 1,
+      "holds": 2,
+      "txns": 91
+    },
+    {
+      "autoPaid": 101,
+      "autoPaidCents": 1434669,
+      "autoRejected": 0,
+      "day": 64,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 101
+    },
+    {
+      "autoPaid": 88,
+      "autoPaidCents": 1043756,
+      "autoRejected": 0,
+      "day": 65,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 89
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1339760,
+      "autoRejected": 0,
+      "day": 66,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 87
+    },
+    {
+      "autoPaid": 91,
+      "autoPaidCents": 1499026,
+      "autoRejected": 0,
+      "day": 67,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 91
+    },
+    {
+      "autoPaid": 82,
+      "autoPaidCents": 1121138,
+      "autoRejected": 0,
+      "day": 68,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 83
+    },
+    {
+      "autoPaid": 101,
+      "autoPaidCents": 1368179,
+      "autoRejected": 0,
+      "day": 69,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 101
+    },
+    {
+      "autoPaid": 115,
+      "autoPaidCents": 1252721,
+      "autoRejected": 1,
+      "day": 70,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 116
+    },
+    {
+      "autoPaid": 104,
+      "autoPaidCents": 1511407,
+      "autoRejected": 0,
+      "day": 71,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 105
+    },
+    {
+      "autoPaid": 65,
+      "autoPaidCents": 952383,
+      "autoRejected": 0,
+      "day": 72,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 65
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1108101,
+      "autoRejected": 1,
+      "day": 73,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 88
+    },
+    {
+      "autoPaid": 93,
+      "autoPaidCents": 1108364,
+      "autoRejected": 0,
+      "day": 74,
+      "exceptions": 2,
+      "holds": 2,
+      "txns": 94
+    },
+    {
+      "autoPaid": 66,
+      "autoPaidCents": 962701,
+      "autoRejected": 0,
+      "day": 75,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 66
+    },
+    {
+      "autoPaid": 98,
+      "autoPaidCents": 1196103,
+      "autoRejected": 0,
+      "day": 76,
+      "exceptions": 2,
+      "holds": 2,
+      "txns": 100
+    },
+    {
+      "autoPaid": 90,
+      "autoPaidCents": 1432303,
+      "autoRejected": 0,
+      "day": 77,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 91
+    },
+    {
+      "autoPaid": 95,
+      "autoPaidCents": 1499516,
+      "autoRejected": 0,
+      "day": 78,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 95
+    },
+    {
+      "autoPaid": 105,
+      "autoPaidCents": 1376937,
+      "autoRejected": 0,
+      "day": 79,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 105
+    },
+    {
+      "autoPaid": 99,
+      "autoPaidCents": 1252454,
+      "autoRejected": 0,
+      "day": 80,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 99
+    },
+    {
+      "autoPaid": 88,
+      "autoPaidCents": 1396605,
+      "autoRejected": 0,
+      "day": 81,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 88
+    },
+    {
+      "autoPaid": 97,
+      "autoPaidCents": 1289849,
+      "autoRejected": 0,
+      "day": 82,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 98
+    },
+    {
+      "autoPaid": 88,
+      "autoPaidCents": 1110315,
+      "autoRejected": 0,
+      "day": 83,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 88
+    },
+    {
+      "autoPaid": 64,
+      "autoPaidCents": 836166,
+      "autoRejected": 1,
+      "day": 84,
+      "exceptions": 2,
+      "holds": 1,
+      "txns": 66
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1283296,
+      "autoRejected": 0,
+      "day": 85,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 88
+    },
+    {
+      "autoPaid": 93,
+      "autoPaidCents": 1292258,
+      "autoRejected": 0,
+      "day": 86,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 93
+    },
+    {
+      "autoPaid": 87,
+      "autoPaidCents": 1265927,
+      "autoRejected": 0,
+      "day": 87,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 87
+    },
+    {
+      "autoPaid": 69,
+      "autoPaidCents": 1010558,
+      "autoRejected": 0,
+      "day": 88,
+      "exceptions": 1,
+      "holds": 2,
+      "txns": 71
+    },
+    {
+      "autoPaid": 88,
+      "autoPaidCents": 1036769,
+      "autoRejected": 1,
+      "day": 89,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 89
+    },
+    {
+      "autoPaid": 111,
+      "autoPaidCents": 1370646,
+      "autoRejected": 0,
+      "day": 90,
+      "exceptions": 1,
+      "holds": 1,
+      "txns": 112
+    },
+    {
+      "autoPaid": 92,
+      "autoPaidCents": 1543659,
+      "autoRejected": 0,
+      "day": 91,
+      "exceptions": 0,
+      "holds": 0,
+      "txns": 92
+    },
+    {
+      "autoPaid": 106,
+      "autoPaidCents": 1708832,
+      "autoRejected": 1,
+      "day": 92,
+      "exceptions": 1,
+      "holds": 0,
+      "txns": 107
+    }
+  ],
+  "complete": true,
+  "controllerReleased": {
+    "cents": 3754700,
+    "count": 9
+  },
+  "dayReached": 92,
+  "decoyRows": [
+    {
+      "answers": 1,
+      "backtest": {
+        "computedBy": "module",
+        "confirmedExceptionsCovered": 0,
+        "n": 1,
+        "openHoldsCovered": 1,
+        "sampleRefs": [
+          "1421"
+        ],
+        "trueExceptionsCleared": 0,
+        "window": {
+          "fromDay": 8,
+          "toDay": 13
+        },
+        "workerPreview": {
+          "computedAt": "2026-10-24T18:38:06.110Z",
+          "confirmedExceptionsCovered": 0,
+          "n": 1,
+          "openHoldsCovered": 1,
+          "trueExceptionsCleared": 0,
+          "window": {
+            "fromDay": 8,
+            "toDay": 13
+          },
+          "wouldClear": 1
+        },
+        "wouldClear": 1
+      },
+      "clearedByRule": true,
+      "draftTasks": 1,
+      "questions": 1,
+      "raised": true,
+      "ruleId": 1,
+      "status": "cleared_by_rule",
+      "txnRef": "1421"
+    },
+    {
+      "answers": 1,
+      "backtest": {
+        "computedBy": "module",
+        "confirmedExceptionsCovered": 0,
+        "n": 1,
+        "openHoldsCovered": 1,
+        "sampleRefs": [
+          "2044"
+        ],
+        "trueExceptionsCleared": 0,
+        "window": {
+          "fromDay": 19,
+          "toDay": 24
+        },
+        "workerPreview": {
+          "computedAt": "2026-10-24T18:38:06.158Z",
+          "confirmedExceptionsCovered": 0,
+          "n": 1,
+          "openHoldsCovered": 1,
+          "trueExceptionsCleared": 0,
+          "window": {
+            "fromDay": 19,
+            "toDay": 24
+          },
+          "wouldClear": 1
+        },
+        "wouldClear": 1
+      },
+      "clearedByRule": true,
+      "draftTasks": 1,
+      "questions": 1,
+      "raised": true,
+      "ruleId": 2,
+      "status": "cleared_by_rule",
+      "txnRef": "2044"
+    },
+    {
+      "answers": 1,
+      "backtest": {
+        "computedBy": "module",
+        "confirmedExceptionsCovered": 0,
+        "n": 1,
+        "openHoldsCovered": 1,
+        "sampleRefs": [
+          "2231"
+        ],
+        "trueExceptionsCleared": 0,
+        "window": {
+          "fromDay": 41,
+          "toDay": 46
+        },
+        "workerPreview": {
+          "computedAt": "2026-10-24T18:38:06.275Z",
+          "confirmedExceptionsCovered": 0,
+          "n": 1,
+          "openHoldsCovered": 1,
+          "trueExceptionsCleared": 0,
+          "window": {
+            "fromDay": 41,
+            "toDay": 46
+          },
+          "wouldClear": 1
+        },
+        "wouldClear": 1
+      },
+      "clearedByRule": true,
+      "draftTasks": 1,
+      "questions": 1,
+      "raised": true,
+      "ruleId": 3,
+      "status": "cleared_by_rule",
+      "txnRef": "2231"
+    },
+    {
+      "answers": 1,
+      "backtest": {
+        "computedBy": "module",
+        "confirmedExceptionsCovered": 0,
+        "n": 1,
+        "openHoldsCovered": 1,
+        "sampleRefs": [
+          "3955"
+        ],
+        "trueExceptionsCleared": 0,
+        "window": {
+          "fromDay": 51,
+          "toDay": 56
+        },
+        "workerPreview": {
+          "computedAt": "2026-10-24T18:38:06.335Z",
+          "confirmedExceptionsCovered": 0,
+          "n": 1,
+          "openHoldsCovered": 1,
+          "trueExceptionsCleared": 0,
+          "window": {
+            "fromDay": 51,
+            "toDay": 56
+          },
+          "wouldClear": 1
+        },
+        "wouldClear": 1
+      },
+      "clearedByRule": true,
+      "draftTasks": 1,
+      "questions": 1,
+      "raised": true,
+      "ruleId": 4,
+      "status": "cleared_by_rule",
+      "txnRef": "3955"
+    },
+    {
+      "answers": 1,
+      "backtest": {
+        "computedBy": "module",
+        "confirmedExceptionsCovered": 0,
+        "n": 1,
+        "openHoldsCovered": 1,
+        "sampleRefs": [
+          "5428"
+        ],
+        "trueExceptionsCleared": 0,
+        "window": {
+          "fromDay": 74,
+          "toDay": 79
+        },
+        "workerPreview": {
+          "computedAt": "2026-10-24T18:38:06.434Z",
+          "confirmedExceptionsCovered": 0,
+          "n": 1,
+          "openHoldsCovered": 1,
+          "trueExceptionsCleared": 0,
+          "window": {
+            "fromDay": 74,
+            "toDay": 79
+          },
+          "wouldClear": 1
+        },
+        "wouldClear": 1
+      },
+      "clearedByRule": true,
+      "draftTasks": 1,
+      "questions": 1,
+      "raised": true,
+      "ruleId": 5,
+      "status": "cleared_by_rule",
+      "txnRef": "5428"
+    },
+    {
+      "answers": 1,
+      "backtest": {
+        "computedBy": "module",
+        "confirmedExceptionsCovered": 0,
+        "n": 1,
+        "openHoldsCovered": 1,
+        "sampleRefs": [
+          "5986"
+        ],
+        "trueExceptionsCleared": 0,
+        "window": {
+          "fromDay": 83,
+          "toDay": 88
+        },
+        "workerPreview": {
+          "computedAt": "2026-10-24T18:38:06.486Z",
+          "confirmedExceptionsCovered": 0,
+          "n": 1,
+          "openHoldsCovered": 1,
+          "trueExceptionsCleared": 0,
+          "window": {
+            "fromDay": 83,
+            "toDay": 88
+          },
+          "wouldClear": 1
+        },
+        "wouldClear": 1
+      },
+      "clearedByRule": true,
+      "draftTasks": 1,
+      "questions": 1,
+      "raised": true,
+      "ruleId": 6,
+      "status": "cleared_by_rule",
+      "txnRef": "5986"
+    }
+  ],
+  "decoys": 6,
+  "decoysCleared": 6,
+  "decoysClearedWithOneAnswer": 6,
+  "investigations": {
+    "bySource": {
+      "none": 45,
+      "replayed": 2
+    },
+    "byStatus": {
+      "investigated": 47
+    }
+  },
+  "limitHolds": {
+    "cents": 1678900,
+    "count": 6
+  },
+  "overall": {
+    "falsePositives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "truePositives": 58
+  },
+  "plantedClearedByRule": [],
+  "plantedExceptions": 58,
+  "refusals": {
+    "byRole": {},
+    "count": 0
+  },
+  "rules": {
+    "expired": 6
+  },
+  "transactionsMatched": 7944,
+  "unreviewedPlanted": [],
+  "worker_cost": {
+    "durationMs": 0,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "tasks": 0
+  }
+}
