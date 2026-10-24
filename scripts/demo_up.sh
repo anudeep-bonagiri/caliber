@@ -70,6 +70,11 @@ step "4/7 agent and controller identities"
 python3 scripts/mint_identities.py --uri "$STDB_URI" --db "$STDB_DB"
 
 step "5/7 fixtures"
+# module_bindings/index.ts resolves the spacetimedb package from the repo root; a fresh clone has no root node_modules.
+if [ ! -d node_modules ]; then
+  echo "root dependencies missing; installing (needs the network the first time)"
+  if [ -f package-lock.json ]; then npm ci --silent; else npm install --silent; fi
+fi
 ( cd scripts && [ -d node_modules ] || npm install --silent )
 ( cd scripts && npx tsx load_fixtures.ts )
 
@@ -89,6 +94,12 @@ if [ "${1:-}" != "--no-web" ] && [ -f web/package.json ]; then
   ( cd web && [ -d node_modules ] || npm install --silent )
   ( cd web && nohup npm run dev -- --host 127.0.0.1 --port 5173 > ../logs/web.log 2>&1 & )
   echo "dashboard: http://127.0.0.1:5173"
+fi
+
+if [ ! -x agent/.venv/bin/python ] && [ -f agent/requirements.txt ]; then
+  step "agent venv (agent/.venv missing)"
+  echo "warning: this step needs the network the first time; run demo_up.sh once before Wi-Fi goes off"
+  python3 -m venv agent/.venv && agent/.venv/bin/pip install -q -r agent/requirements.txt
 fi
 
 cat <<EOF

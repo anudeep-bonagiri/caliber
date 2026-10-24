@@ -172,7 +172,7 @@ Module in `spacetimedb/src/`. Tables and access in `schema.ts`; reducers, proced
 
 ## Run it
 
-Tests first:
+Tests first. The root `npm ci` is the first step; `scripts/demo_up.sh` performs it and creates `agent/.venv` when either is missing, which needs the network the first time:
 
 ```
 npm ci && (cd spacetimedb && npm ci && npx vitest run)

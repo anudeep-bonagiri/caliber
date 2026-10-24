@@ -44,8 +44,8 @@ Every action calls the module's `try_*` procedure (`try_approve_payment`, `try_r
 ## Run it
 
 ```
-cd agent && uv venv .venv && uv pip install -p .venv/bin/python -r requirements.txt
-cd .. && agent/.venv/bin/python -m agent.cli "what needs me"     # terminal, no internet needed
+python3 -m venv agent/.venv && agent/.venv/bin/pip install -r agent/requirements.txt   # from the repo root; demo_up.sh does this when agent/.venv is missing
+agent/.venv/bin/python -m agent.cli "what needs me"     # terminal, no internet needed
 agent/.venv/bin/python agent/agent.py                             # the controller uAgent; open the Inspector link, Connect, Mailbox
 INVESTIGATOR_PORT=8012 agent/.venv/bin/python agent/investigator.py  # the investigator uAgent, same Connect steps
 ```

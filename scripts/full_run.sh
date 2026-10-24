@@ -50,6 +50,16 @@ scripts/as_agent.sh approve INV-1077
 step "controller pass"
 python3 scripts/controller_sim.py --rounds 30 --sleep 2 | tail -4
 
+step "waiting for settlement (bank_txn_id on every payment row)"
+unsettled=1
+for i in $(seq 1 90); do
+  unsettled=$(curl -s -X POST http://127.0.0.1:3100/v1/database/dispatch-ledger/sql -d "SELECT txn_ref, bank_txn_id FROM payment" | python3 -c 'import sys,json; print(sum(1 for r in json.load(sys.stdin)[0]["rows"] if r[1][0] == 1))' || echo 1)
+  if [ "$unsettled" = "0" ]; then break; fi
+  if [ $((i % 10)) -eq 0 ]; then echo "unsettled payments: $unsettled"; fi
+  sleep 1
+done
+echo "unsettled payments after wait: $unsettled"
+
 step "facts"
 python3 scripts/facts.py | sed -n '5,40p'
 python3 scripts/honesty.py

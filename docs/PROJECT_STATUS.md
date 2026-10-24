@@ -304,6 +304,26 @@ README "Run it" gaps found:
 
 Checks: elastic suite 28 passed after the fix; `git status` clean apart from this entry and the test; no key printed anywhere in this entry or in logs/builder_w.log (identities only, which are public addresses).
 
+## 2026-10-24 15:22 PDT Builder-W: cold-start gaps closed (job 10)
+
+Changes, one per gap found in job 9:
+
+- `scripts/demo_up.sh`: before step 5, installs the root dependencies when `node_modules` is missing (`npm ci --silent` with a lockfile, `npm install --silent` without) with a step line that says it needs the network the first time; before the Ready block, creates `agent/.venv` (`python3 -m venv` plus `pip install -q -r agent/requirements.txt`) when it is missing, with a step line and the warning "this step needs the network the first time; run demo_up.sh once before Wi-Fi goes off".
+- `scripts/full_run.sh`: new step "waiting for settlement" after the controller pass, polling `SELECT txn_ref, bank_txn_id FROM payment` once a second for up to 90 s until no row lacks a bank id, printing the count every 10 s; `facts.py` and `honesty.py` run only after it.
+- `README.md` "Run it": one sentence that the root `npm ci` is the first step and that demo_up performs it and creates `agent/.venv` when missing (network the first time). `agent/README.md`: the venv line is now `python3 -m venv` from the repo root, same as README.md. Nothing else in either README changed; `honesty.py` reports no change.
+
+Verification on a fresh clone in /private/tmp (33a4c82 plus these edits):
+
+| Step | Observed |
+| --- | --- |
+| `scripts/demo_up.sh --no-web` straight after `git clone`, no manual step | exit 0, 19 s wall (includes the root install and the agent venv; the 403 branch fired and moved the server to the clone's data dir as designed). Lines seen: `root dependencies missing; installing (needs the network the first time)`, `==> agent venv (agent/.venv missing)`, the warning, `Ready. The clock is paused on day 0.` |
+| `scripts/full_run.sh` | exit 0, 24 s wall; `unsettled payments: 831` at the 10 s mark, `unsettled payments after wait: 0`, facts at 24 s; `Settlement: 0 payments carry a live Nessie transfer id, 7895 a labelled offline id, 0 unsettled` |
+| `diff docs/FACTS.json` clone vs committed | identical except `asOf` |
+| twin check | `agent/.venv/bin/python -m agent.cli "why 2231"` from the venv demo_up created: `investigator: 2231  location_mismatch  $412.00  day 41  status cleared_by_rule` |
+| teardown and restore | clone processes stopped and clone deleted; real checkout `scripts/demo_up.sh` (with web) exit 0, 5 s, no install steps fired (deps present); investigator on 8012 then controller on 8011, addresses unchanged; dashboard on 5173; `clock.sh status` day 0 paused; `agent.cli "status"` = `investigator: Day 0 of 92 (2026-07-01), clock paused, tick 2 s. Nothing settled today yet.`; `agent.cli "why 2231"` = `investigator: No hold for 2231.` |
+
+Not touched: vendor-check fixtures, answer key, thresholds. The Wi-Fi-off repeat stays on the night-before checklist; it must follow one demo_up with the network on so the installs are already there.
+
 ## Tried and rejected
 
 | What | Why rejected |
