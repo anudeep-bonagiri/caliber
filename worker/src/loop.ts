@@ -8,6 +8,7 @@ import { handleInvestigate } from './investigate.js';
 import { handleDraftRule, type BacktestRow } from './rules.js';
 import { STAND_IN_PREFIX, standInFinding, type Step } from './replay.js';
 import { claim, claimedTasksOf, createRule, holdStatus, onOpenTask, openTasks, recordInvestigation, type Conn, type CreateRuleArgs, type RecordArgs } from './stdb.js';
+import { handleVendorCheckTask } from './vendor_check.js';
 
 export type Log = (msg: string) => void;
 export type Sleep = (ms: number) => Promise<void>;
@@ -357,6 +358,8 @@ export class WorkerLoop {
 
   private async handle(task: AgentTask, signal: AbortSignal): Promise<RecordArgs> {
     const { conn, cfg, log } = this.deps;
+    // Task 16: vendor_check briefs carry vendor fields only (no evidence object), so they dispatch before parseBrief.
+    if (task.kind === 'vendor_check') return handleVendorCheckTask(task, { mode: cfg.requestedMode, log: m => log(`task ${task.id}: ${m}`), signal });
     const brief = parseBrief(task.briefJson);
     const tlog = (m: string) => log(`task ${task.id}: ${m}`);
     if (task.kind === 'draft_rule') {

@@ -39,7 +39,7 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 
 ## What is measured
 
-`scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-24T20:35:56+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
+`scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-24T20:49:34+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
 
 | Code | Planted | Raised | Precision | Recall |
 | --- | --- | --- | --- | --- |
@@ -143,6 +143,8 @@ python3 scripts/facts.py
 | `ELASTICSEARCH_URL`, `ELASTIC_API_KEY`, `KIBANA_URL` | live only | Serverless project and Agent Builder MCP |
 | `ANTHROPIC_API_KEY` | optional | rule drafting and explanations; templates otherwise |
 | `ASI_ONE_API_KEY`, `AGENT_SEED`, `AGENT_PORT` | agent | ASI:One free-text classification and the agent's address |
+| `CRS_USERNAME`, `CRS_PASSWORD` | live only | CRS sandbox login for the vendor check (business entity only; nothing on people) |
+| `NESSIE_API_KEY`, `NESSIE_BASE` | live only | Capital One Nessie mock bank; one transfer per approved payment, `offline-<txnRef>` without a key |
 
 `scripts/demo_up.sh` exports every model key as empty on purpose so the offline run cannot make a paid call.
 
@@ -164,7 +166,7 @@ python3 scripts/facts.py
 ## What is real and what is simulated
 
 <!-- honesty:start -->
-What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. In the measured run of 2026-10-24T20:35:56+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card. The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role. Not built: `docs/not-built.md`. Everything fails toward no money moving.
+What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. In the measured run of 2026-10-24T20:49:34+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card. The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role. Not built: `docs/not-built.md`. Everything fails toward no money moving.
 <!-- honesty:end -->
 
 ## Team

@@ -498,7 +498,14 @@ export const recordInvestigation = spacetimedb.reducer(
     ctx.db.agentTask.id.update({ ...row, status, version: row.version + 1, stepsJson, findingJson, source, updatedAt: ctx.timestamp });
 
     const h = ctx.db.hold.txnRef.find(row.txnRef);
-    if (h && h.status === 'open') {
+    // Two tasks can land on one hold (investigate and vendor_check). The investigation owns the question:
+    // a vendor check only asks when nobody has asked yet, and an investigation may replace a vendor check's question.
+    const isVendorCheck = row.kind === 'vendor_check';
+    const canAsk = h != null && h.answer === undefined && h.status !== 'released' && h.status !== 'rejected' && h.status !== 'cleared_by_rule'
+      && (h.status === 'open' || (!isVendorCheck && h.status === 'awaiting_controller'));
+    if (h && isVendorCheck && canAsk && h.question === undefined && (recommendation === 'hold_and_ask' || recommendation === 'hold') && question) {
+      ctx.db.hold.txnRef.update({ ...h, question, status: 'awaiting_controller', actor: ctx.sender, updatedAt: ctx.timestamp });
+    } else if (h && !isVendorCheck && canAsk) {
       if (recommendation === 'hold_and_ask' && question) {
         ctx.db.hold.txnRef.update({ ...h, question, status: 'awaiting_controller', actor: ctx.sender, updatedAt: ctx.timestamp });
       } else if (recommendation === 'clear') {

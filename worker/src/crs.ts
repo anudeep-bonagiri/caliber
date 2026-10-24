@@ -235,9 +235,12 @@ function pick(o: unknown, dotted: string): unknown {
 }
 
 let tokenCache: { key: string; token: string; expiresAt: number } | undefined;
+// parallel calls share one login request
+let tokenInflight: { key: string; promise: Promise<string> } | undefined;
 
 export function resetCrsTokenCache(): void {
   tokenCache = undefined;
+  tokenInflight = undefined;
 }
 
 function timeoutSignal(env: CrsEnv, signal?: AbortSignal): AbortSignal {
@@ -257,6 +260,16 @@ export async function login(opts: CrsOptions = {}): Promise<string> {
   if (!env.username || !env.password) throw new Error('CRS_USERNAME and CRS_PASSWORD are required for a live CRS call');
   const key = `${env.baseUrl}\u0000${env.username}`;
   if (tokenCache && tokenCache.key === key && tokenCache.expiresAt > Date.now()) return tokenCache.token;
+  if (tokenInflight && tokenInflight.key === key) return tokenInflight.promise;
+  const promise = fetchToken(env, key, opts).finally(() => {
+    if (tokenInflight?.promise === promise) tokenInflight = undefined;
+  });
+  tokenInflight = { key, promise };
+  return promise;
+}
+
+async function fetchToken(env: CrsEnv, key: string, opts: CrsOptions): Promise<string> {
+  const url = `${env.baseUrl}${CRS_LOGIN.path}`;
   const res = await (opts.fetch ?? fetch)(url, {
     method: CRS_LOGIN.method,
     headers: { 'content-type': 'application/json', accept: 'application/json' },

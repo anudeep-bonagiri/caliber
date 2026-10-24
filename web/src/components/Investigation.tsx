@@ -9,6 +9,9 @@ export type Badge = { label: string; tone: 'release' | 'candidate' | 'refused'; 
 export function badgeFor(task: AgentTask | undefined, finding: Finding | undefined): Badge | undefined {
   if (!task || task.status === 'open' || task.status === 'claimed') return undefined;
   const st = finding?.status;
+  if (st === 'deferred') {
+    return { label: 'deferred, investigator unavailable', tone: 'candidate', title: `finding.status = deferred: the investigator answered 429 or 5xx twice; the hold stays open and no stand-in was written (agent_task ${task.id})` };
+  }
   if (task.source === 'none' || st === 'timeout' || st === 'no_fixture') {
     return { label: 'scripted stand-in, not a model', tone: 'refused', title: `agent_task ${task.id}.source = ${task.source}, finding.status = ${st ?? 'none'}` };
   }
@@ -53,6 +56,7 @@ export function Investigation({
 }) {
   const task = useMemo(() => (hold ? pickTask(tasks, hold.txnRef, 'investigate') : undefined), [tasks, hold]);
   const draft = useMemo(() => (hold ? pickTask(tasks, hold.txnRef, 'draft_rule') : undefined), [tasks, hold]);
+  const vendorTask = useMemo(() => (hold ? pickTask(tasks, hold.txnRef, 'vendor_check') : undefined), [tasks, hold]);
   const match = useMemo(() => (hold ? matches.find(m => m.txnRef === hold.txnRef) : undefined), [matches, hold]);
 
   const brief = useMemo<Brief>(() => {
@@ -167,6 +171,8 @@ export function Investigation({
               <FindingView finding={finding} taskId={taskId} />
             )}
           </Section>
+
+          {vendorTask ? <VendorCheckView task={vendorTask} /> : null}
 
           {hold.question || hold.answer ? (
             <Section label="controller exchange">
@@ -420,5 +426,132 @@ function FindingView({ finding, taskId }: { finding: Finding; taskId: string }) 
         </p>
       ) : null}
     </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Task 16: vendor check (CRS business credit, public records, OFAC). Shapes are local because the
+// finding differs from an investigation finding: recommendation is approve | reject | escalate.
+// ---------------------------------------------------------------------------
+type VendorEvidence = { source?: string; ref?: string; quote?: string };
+type VendorFinding = {
+  finding?: string;
+  evidence?: VendorEvidence[];
+  recommendation?: string;
+  reasons?: string[];
+  confidence?: number;
+  status?: string;
+  model?: string;
+  question_for_controller?: string;
+};
+type VendorBriefShape = { trigger?: string; vendor?: { id?: number; name?: string; bankChangedDay?: number } };
+
+const VENDOR_SOURCES: Array<{ source: string; label: string }> = [
+  { source: 'crs:business_credit', label: 'business credit' },
+  { source: 'crs:public_records', label: 'public records' },
+  { source: 'crs:ofac', label: 'OFAC screen' },
+];
+
+export function vendorBadgeFor(task: AgentTask, finding: VendorFinding | undefined): Badge | undefined {
+  if (task.status === 'open' || task.status === 'claimed') return undefined;
+  const title = `agent_task ${task.id}.source = ${task.source}, finding.status = ${finding?.status ?? 'none'}`;
+  if (task.source === 'live') return { label: 'live', tone: 'release', title };
+  if (task.source === 'replayed') return { label: 'replayed', tone: 'candidate', title };
+  return { label: 'stand-in, not a vendor check', tone: 'refused', title };
+}
+
+function VendorCheckView({ task }: { task: AgentTask }) {
+  const src = `agent_task ${task.id}.finding_json`;
+  const brief = useMemo(() => parseJson<VendorBriefShape>(task.briefJson, {}), [task]);
+  const finding = useMemo<VendorFinding | undefined>(() => {
+    if (!task.findingJson || task.findingJson === '{}') return undefined;
+    const f = parseJson<VendorFinding | null>(task.findingJson, null);
+    return f && Object.keys(f).length ? f : undefined;
+  }, [task]);
+  const badge = vendorBadgeFor(task, finding);
+  const rec = finding?.recommendation;
+  const recTone = rec === 'approve' ? 'release' : rec === 'reject' ? 'refused' : 'hold';
+  const v = brief.vendor;
+  const trigger = brief.trigger === 'bank_change' ? 'bank change' : brief.trigger === 'first_invoice' ? 'first invoice' : brief.trigger;
+
+  return (
+    <Section label={`vendor check (agent_task ${task.id})`}>
+      <div className="rounded-sm border border-edge bg-panel-2 px-3 py-2">
+        <div className="flex flex-wrap items-center gap-2 text-[11.5px] text-muted">
+          <span className="text-[12.5px] font-medium text-text">Vendor check</span>
+          {v ? (
+            <Src id={`agent_task ${task.id}.brief_json`} mono={false}>
+              vendor {v.id}
+              {v.name ? ` ${v.name}` : ''}
+            </Src>
+          ) : null}
+          {trigger ? <span title={`agent_task ${task.id}.brief_json.trigger`}>on {trigger}</span> : null}
+          {badge ? (
+            <Pill tone={badge.tone} title={badge.title}>
+              {badge.label}
+            </Pill>
+          ) : null}
+          <Pill tone={statusTone(task.status)} title={`agent_task ${task.id}.status`}>
+            {task.status === 'claimed' ? <span className="spinner" aria-hidden /> : null}
+            {task.status}
+          </Pill>
+        </div>
+
+        {!finding ? (
+          <p className="mt-1.5 text-[11.5px] text-faint">
+            {task.status === 'open' ? 'Task is open. Waiting for the worker to claim it.' : task.status === 'claimed' ? 'Claimed. The CRS result lands when the check is recorded.' : 'No vendor check finding recorded.'}
+          </p>
+        ) : (
+          <div className="mt-1.5 flex flex-col gap-1.5">
+            {finding.finding ? (
+              <p className="text-[12px] leading-snug text-text" title={src}>
+                {finding.finding}
+              </p>
+            ) : null}
+            <ul className="flex flex-col gap-1">
+              {VENDOR_SOURCES.map(({ source, label }) => {
+                const i = finding.evidence?.findIndex(e => e.source === source) ?? -1;
+                const e = i >= 0 ? finding.evidence![i] : undefined;
+                return (
+                  <li key={source} className="rounded-sm border border-edge bg-bg px-2 py-1" title={e ? `${src}.evidence[${i}]` : `${src}.evidence`}>
+                    <div className="flex flex-wrap items-baseline gap-x-2">
+                      <span className="num text-[10.5px] text-candidate">{source}</span>
+                      <span className="text-[10.5px] text-faint">{label}</span>
+                    </div>
+                    <div className={`font-mono text-[11.5px] ${e ? 'text-text' : 'text-faint'}`}>{e?.quote || 'no result'}</div>
+                    {e?.ref ? <div className="mt-0.5 text-[10.5px] text-muted">{e.ref}</div> : null}
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11.5px] text-muted">
+              {rec ? (
+                <span>
+                  recommends{' '}
+                  <Pill tone={recTone} title={`${src}.recommendation`}>
+                    {rec}
+                  </Pill>
+                </span>
+              ) : null}
+              {finding.confidence !== undefined ? (
+                <span>
+                  confidence <Src id={`${src}.confidence`}>{pct(finding.confidence)}</Src>
+                </span>
+              ) : null}
+              {finding.status ? <span title={`${src}.status`}>status {finding.status}</span> : null}
+            </div>
+            {finding.reasons?.length ? (
+              <ul className="list-disc pl-4 text-[11.5px] text-text" title={`${src}.reasons`}>
+                {finding.reasons.map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
+              </ul>
+            ) : null}
+            {rec && rec !== 'approve' ? <p className="text-[11px] text-muted">The agent never rejects on its own; a controller decides.</p> : null}
+          </div>
+        )}
+        <p className="mt-1.5 text-[10.5px] text-faint">No consumer credit, no driver or person data is ever sent.</p>
+      </div>
+    </Section>
   );
 }

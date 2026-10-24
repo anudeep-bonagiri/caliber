@@ -1,0 +1,27 @@
+{
+  "note": "Shape of a sandbox response, not real data; replace with recorded responses. Clean variant for vendor 3 (Gulf Coast Diesel, the INV-1077 vendor): no liens, no judgments, no bankruptcies, OFAC no match. Field names are a guess until the CRS sandbox collection arrives.",
+  "recorded": false,
+  "recordedAt": "2026-10-24T00:00:00Z",
+  "vendor": { "id": 3, "name": "Gulf Coast Diesel" },
+  "responses": {
+    "business_credit": {
+      "businessName": "GULF COAST DIESEL",
+      "matchFound": true,
+      "riskClass": "LOW",
+      "creditScore": 71,
+      "yearsOnFile": 12,
+      "derogatoryIndicators": []
+    },
+    "public_records": {
+      "businessName": "GULF COAST DIESEL",
+      "liens": [],
+      "judgments": [],
+      "bankruptcies": []
+    },
+    "ofac": {
+      "searchedName": "GULF COAST DIESEL",
+      "result": "NO_MATCH",
+      "matches": []
+    }
+  }
+}

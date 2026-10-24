@@ -1,0 +1,42 @@
+{
+  "note": "Shape of a sandbox response, not real data; replace with recorded responses. Hit variant for vendor 3 (Gulf Coast Diesel, the INV-1077 vendor): one OFAC potential match and one judgment. Every name, court and number here is invented. Select it with CRS_FIXTURE_VARIANT=hit; 3.json is preferred otherwise.",
+  "recorded": false,
+  "recordedAt": "2026-10-24T00:00:00Z",
+  "vendor": { "id": 3, "name": "Gulf Coast Diesel" },
+  "responses": {
+    "business_credit": {
+      "businessName": "GULF COAST DIESEL",
+      "matchFound": true,
+      "riskClass": "MEDIUM",
+      "creditScore": 48,
+      "yearsOnFile": 12,
+      "derogatoryIndicators": []
+    },
+    "public_records": {
+      "businessName": "GULF COAST DIESEL",
+      "liens": [],
+      "judgments": [
+        {
+          "caseNumber": "EXAMPLE-2025-CV-0000",
+          "court": "Example County Civil Court",
+          "amount": 18450,
+          "filedDate": "2025-11-03",
+          "status": "open"
+        }
+      ],
+      "bankruptcies": []
+    },
+    "ofac": {
+      "searchedName": "GULF COAST DIESEL",
+      "result": "POTENTIAL_MATCH",
+      "matches": [
+        {
+          "name": "GULF COAST DIESEL TRADING (EXAMPLE ENTRY)",
+          "score": 0.88,
+          "list": "SDN",
+          "program": "EXAMPLE"
+        }
+      ]
+    }
+  }
+}
