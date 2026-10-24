@@ -371,3 +371,13 @@ def test_dollars_is_exact():
     import connectors
     assert connectors.dollars(41200) == "412.00" and connectors.dollars(550) == "5.50" and connectors.dollars(5) == "0.05"
     assert connectors.dollars(980000) == "9800.00"
+
+
+def test_day41_fuel_sample_is_that_day_slice_of_the_full_file(fx):
+    import connectors
+    header, rows = _read_csv(connectors.DAY_FILE)
+    full_header, full_rows = _read_csv(connectors.CARD_FILE)
+    assert header == full_header == connectors.CARD_HEADER
+    day41 = [r for r in full_rows if r[1] == "2026-08-26"]
+    assert rows == day41 and len(rows) == sum(1 for c in fx["card_txns"] if c["day"] == 41)
+    assert any(r[0] == "2231" for r in rows)

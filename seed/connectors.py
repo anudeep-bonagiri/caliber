@@ -17,6 +17,11 @@ import simcal as cal
 CARD_FILE = "fuel_card_wex_sample.csv"
 TOLL_FILE = "toll_statement_sample.csv"
 INVOICE_FILE = "maintenance_invoices_sample.csv"
+# One business day's fuel-card export (the day the demo opens on): the same layout, only that day's rows. Dropping it
+# at day 41 matches a day's worth of rows (about 60) instead of 2,434, which is what a daily WEX export looks like and
+# what the dashboard can render within a second (Task 24).
+DEMO_DAY = 41
+DAY_FILE = f"fuel_card_wex_day{DEMO_DAY}_sample.csv"
 
 CARD_HEADER = ["transaction_id", "posting_date", "transaction_time_utc", "card_number", "driver_id",
                "merchant_name", "site_name", "site_lat", "site_lon", "gallons", "total_amount"]
@@ -48,6 +53,10 @@ def write_inbox(out: Path, card_rows: list[dict], toll_rows: list[dict], invoice
         [c["id"], cal.iso_date(c["day"]), c["at"], c["cardId"], c["driverId"], c["merchant"], c["stationName"],
          c["stationLat"], c["stationLon"], c["gallons"], dollars(c["cents"])]
         for c in card_rows])
+    _write(d / DAY_FILE, CARD_HEADER, [
+        [c["id"], cal.iso_date(c["day"]), c["at"], c["cardId"], c["driverId"], c["merchant"], c["stationName"],
+         c["stationLat"], c["stationLon"], c["gallons"], dollars(c["cents"])]
+        for c in card_rows if c["day"] == DEMO_DAY])
     _write(d / TOLL_FILE, TOLL_HEADER, [
         [t["id"], cal.iso_date(t["day"]), t["at"], t["plate"], t["plazaId"], t["plazaName"], dollars(t["cents"])]
         for t in toll_rows])

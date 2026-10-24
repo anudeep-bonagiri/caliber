@@ -27,6 +27,8 @@ Re-dropping a file is safe: every id already on file is counted as skipped and n
 | `gallons` | `card_txn.gallons` | one decimal |
 | `total_amount` | `card_txn.cents` | dollars with exactly two decimals, converted to integer cents exactly |
 
+A fourth sample, `fuel_card_wex_day41_sample.csv`, is the same layout with only business day 41's rows (61 rows, including 2231): a daily export, what a carrier's card provider sends each morning. Dropping it at day 41 matches a day's rows in about a second; dropping the full 5,607-row file at day 41 matches 2,434 rows at once and the dashboard takes about 20 seconds to render the burst. The full file is for the reproducibility check, the one-day file for the opening beat.
+
 ## Layout 2: toll statement, `toll_statement_sample.csv`
 
 | Column | Module field | Notes |
