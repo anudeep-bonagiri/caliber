@@ -371,7 +371,7 @@ Notes for the director:
 
 ## 2026-10-24 15:52 PDT Builder-W: Task 21, the inbox file connector (job 12)
 
-Commits 9e... see `git log`: module (ingest_rows, ingest_log, matchDay split into matchCardRow, matchTollRow, matchInvoiceRow, 7 module tests, bindings regenerated), generator (connector samples), scripts (watcher, --inbox, --skip-transactions), web and docs (top bar, CONNECTORS.md, runbook), plus this entry. Every commit carries the D-4 trailer. Label everywhere: "file connector; API connectors not built".
+Commits f874476 (module), 42b9a45 (generator), be9ec78 (scripts), be9d107 (web and docs), 0e3e6e0 (runbook measurement and this entry): module (ingest_rows, ingest_log, matchDay split into matchCardRow, matchTollRow, matchInvoiceRow, 7 module tests, bindings regenerated), generator (connector samples), scripts (watcher, --inbox, --skip-transactions), web and docs (top bar, CONNECTORS.md, runbook), plus this entry. Every commit carries the D-4 trailer. Label everywhere: "file connector; API connectors not built".
 
 What was built:
 
