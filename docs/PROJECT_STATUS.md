@@ -363,6 +363,12 @@ Notes for the director:
 - When the sandbox invite lands, `WORKER_MODE=record` writes `<id>.json` (recorded: true). For vendor 1 the hand-authored `1.bank_change.json` still wins on the bank-change trigger until it is deleted or replaced by a recorded file of that name; D-3 says the fixture is replaced at that moment, so this is one manual step to remember, written here.
 - `docs/DEVPOST.md` not touched. Its line 35 "Vendor check and settle were built this afternoon; sandbox and mock bank" stays true; if the CRS paragraph in the Devpost text claims a sandbox hit, it should read "the hit is a hand-authored fixture labelled FIXTURE; sandbox call pending".
 
+## 2026-10-24 15:40 PDT Director: D-3 fixture, Caliber rename and Devpost accepted
+
+- Reran after builder-W's job 11 and builder-C's rename: docs/FACTS.json `vendorChecks` shows 3 bank-change holds, 1 hit rejected by the controller, 2 clean approved with a call-back note, source fixture for all 3, `matchesKey: true`; overall precision 1.0, recall 1.0, 58 true positives; the answer key differs from this morning only in INV-1032 (`expected: reject`); every vendor-check fixture is marked hand-authored with the sandbox-pending note; `FIXTURE_SOURCE` in worker/src/vendor_check.ts is the exact string Anudeep set; worker 107 and seed 25 tests green; checkout at day 0 paused with worker, dashboard and both agents up, and the agents already answer as Caliber.
+- Devpost (docs/DEVPOST.md) corrected by the director: the Capital One track loses its "only if Task 17 is green" qualifier (Task 17 passed at 14:24), and the end-to-end line now says the vendor check runs on hand-authored fixtures labelled FIXTURE with the CRS sandbox call pending, and that settlement is live into the Nessie mock bank. Anudeep re-pastes those two lines only.
+- Open: CRS invite (the one manual step when it lands is to replace seed/fixtures/vendor_checks/1.bank_change.json with the recorded response); Agentverse Connect for both agents, then the ASI:One acceptance run by the director; 9 PM decision on keeping CRS selected if no live call by then.
+
 ## Tried and rejected
 
 | What | Why rejected |
