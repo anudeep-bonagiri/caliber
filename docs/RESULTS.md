@@ -1,6 +1,6 @@
 # Results
 
-Run date: 2026-10-24T21:13:08+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
+Run date: 2026-10-24T22:25:41+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
 
 | Metric | Result | Target |
 | --- | --- | --- |
@@ -11,6 +11,7 @@ Run date: 2026-10-24T21:13:08+00:00. Rerun: `scripts/full_run.sh` (fresh publish
 | Planted exceptions cleared by a rule | 0 | 0 |
 | Duplicate tolls auto-rejected without a task | 11 | 11 |
 | Days replayed | 92 | 92 |
+| Bank-change holds: hit rejected / clean approved with call-back | 1 / 2 of 3 | 1 / 2 of 3 |
 | Policy holds (auto-pay limit) | 6 | reported, not scored |
 
 ## Hard negatives
@@ -25,6 +26,16 @@ The six decoys are legitimate unit swaps recorded in the dispatcher's swap log. 
 | 3955 | True | True | 1 | 4 | 1 | 0 | True |
 | 5428 | True | True | 1 | 5 | 1 | 0 | True |
 | 5986 | True | True | 1 | 6 | 1 | 0 | True |
+
+## Vendor checks
+
+Bank-change holds and the CRS vendor check behind each decision. `fixture` means a hand-authored file in the shape of a sandbox response, labelled FIXTURE on the card and in every evidence row; the CRS sandbox has not produced these values (context/DECISIONS.md, D-3).
+
+| Hold | Check source | Evidence rows | Hit | Controller action | Call-back note | Hold status | Key expects |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| INV-1032 | fixture | 3 | a judgment (Example County Civil Court, $23,750.00, filed 2026-07-20, open) | reject_payment | False | rejected | reject |
+| INV-1077 | fixture | 3 | none | approve_payment | True | released | hold |
+| INV-1138 | fixture | 3 | none | approve_payment | True | released | hold |
 
 ## Cost
 
@@ -42,7 +53,7 @@ Decoy re-record, the six decoy recordings re-recorded live on 2026-10-24 (now th
 <!-- honesty:start -->
 ## Provenance
 
-In the measured run of 2026-10-24T21:13:08+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card.
+In the measured run of 2026-10-24T22:25:41+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card.
 
 The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role.
 

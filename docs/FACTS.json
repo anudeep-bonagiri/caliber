@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-24T21:13:08+00:00",
+  "asOf": "2026-10-24T22:25:41+00:00",
   "autoPaid": {
     "cents": 108363052,
     "count": 7886
@@ -908,8 +908,8 @@
   ],
   "complete": true,
   "controllerReleased": {
-    "cents": 3754700,
-    "count": 9
+    "cents": 3209700,
+    "count": 8
   },
   "dayReached": 92,
   "decoyRows": [
@@ -1164,11 +1164,66 @@
   },
   "settlement": {
     "liveBankIds": 0,
-    "offlineIds": 7895,
+    "offlineIds": 7894,
     "unsettled": 0
   },
   "transactionsMatched": 7944,
   "unreviewedPlanted": [],
+  "vendorChecks": {
+    "bankChangeHolds": 3,
+    "bySource": {
+      "fixture": 3
+    },
+    "cleanApprovedWithCallback": 2,
+    "matchesKey": true,
+    "rows": [
+      {
+        "callbackNote": false,
+        "checkSource": "fixture",
+        "controllerAction": "reject_payment",
+        "evidenceRows": 3,
+        "evidenceSources": [
+          "fixture:hand-authored (CRS sandbox pending)"
+        ],
+        "expected": "reject",
+        "hit": true,
+        "hitReasons": [
+          "a judgment (Example County Civil Court, $23,750.00, filed 2026-07-20, open)"
+        ],
+        "holdStatus": "rejected",
+        "txnRef": "INV-1032"
+      },
+      {
+        "callbackNote": true,
+        "checkSource": "fixture",
+        "controllerAction": "approve_payment",
+        "evidenceRows": 3,
+        "evidenceSources": [
+          "fixture:hand-authored (CRS sandbox pending)"
+        ],
+        "expected": "hold",
+        "hit": false,
+        "hitReasons": [],
+        "holdStatus": "released",
+        "txnRef": "INV-1077"
+      },
+      {
+        "callbackNote": true,
+        "checkSource": "fixture",
+        "controllerAction": "approve_payment",
+        "evidenceRows": 3,
+        "evidenceSources": [
+          "fixture:hand-authored (CRS sandbox pending)"
+        ],
+        "expected": "hold",
+        "hit": false,
+        "hitReasons": [],
+        "holdStatus": "released",
+        "txnRef": "INV-1138"
+      }
+    ],
+    "withHitRejected": 1
+  },
   "worker_cost": {
     "decoyRerecord": {
       "avg": {
