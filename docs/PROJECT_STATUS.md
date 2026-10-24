@@ -324,6 +324,45 @@ Verification on a fresh clone in /private/tmp (33a4c82 plus these edits):
 
 Not touched: vendor-check fixtures, answer key, thresholds. The Wi-Fi-off repeat stays on the night-before checklist; it must follow one demo_up with the network on so the installs are already there.
 
+## 2026-10-24 15:32 PDT Builder-W: the hit-to-rejection beat runs offline, labelled FIXTURE (job 11, D-3)
+
+Commits a302f06, d93fb06, 69ccdbb, 0999eee, a5e18f8 and the two below, each with the D-4 trailer.
+
+What changed:
+
+- Fixtures (`seed/fixtures/vendor_checks/`): `1.json` clean, `1.bank_change.json` with one public-records judgment (Example County Civil Court, $23,750.00, filed 2026-07-20, between vendor 1's first invoice on day 9 and its bank change on day 18), `3.json` clean, `5.json` clean; `3.hit.json` deleted. Every file: `note: "hand-authored in the shape of a sandbox response; CRS sandbox pending"`, `recorded: false`, no `recordedAt`. Every name, court and number is invented and says so.
+- `worker/src/crs.ts`: `vendorFixtureFile(dir, vendorId, trigger)` prefers `<id>.<trigger>.json` over `<id>.json` and picks up nothing else (the old "first `<id>.*.json` on disk" fallback is gone, so a stray hit file can never serve a first-invoice check). `CRS_FIXTURE_VARIANT` removed: the trigger does the selection and there is no hit variant any more.
+- `worker/src/vendor_check.ts`: source enum widened with `fixture:hand-authored (CRS sandbox pending)`; a hand-authored file produces evidence rows with that source and the CRS call name as the ref (`business credit`, `public records`, `OFAC screen`), finding status `fixture` (replaces `hand_shaped`), model `hand-authored fixture`, finding text prefixed "Hand-authored fixture (CRS sandbox pending), not sandbox data.", step notes `fixture:hand-authored (CRS sandbox pending) business credit: 1 hit(s)` and `fixture vendor_checks/1.bank_change.json`. A recorded response (`recorded: true`) keeps crs:* sources, `replayed from <file>` refs and status `replayed`; the stand-in path is unchanged.
+- `scripts/controller_sim.py`: a bank-change hold is decided from its `vendor_check` task row only: hit (recommendation reject or escalate with evidence rows and reasons) means `try_reject_payment` with "Vendor check hit: <reasons from the finding>. Bank-detail change not accepted; invoice rejected pending resolution with the vendor."; clean means approve with the call-back note as before; a check still open or claimed defers the hold to the next round; a stand-in (no evidence rows) is not a hit. It reads `hold`, `match_result` and `agent_task` rows and the swap log; it never opens the answer key (grep: the only mention is the docstring saying so).
+- Generator (`seed/maintenance.py`): `HIT_VENDOR = 1`; the key row for that vendor's bank-change invoice gets `expected: "reject"` and a note naming the judgment. Regenerated with `--seed 42` twice: `git diff --stat seed/fixtures` showed only `answer_key.json` (4 lines) and the vendor_checks files; the key's md5 was identical across the two runs. `pytest seed`: 25 passed (new `test_bank_change_hit_vendor` checks the key row, the fixture story dates and that `3.hit.json` is gone).
+- `scripts/facts.py`: `expected: reject` counts as planted; new `vendorChecks` block (bank-change holds, hit rejected, clean approved with call-back, source per check, matches key, one row per hold) in FACTS.json, a line in FACTS.md and a table in RESULTS.md.
+- Dashboard: `vendorBadgeFor` renders status `fixture` as `FIXTURE` (amber, hover "hand-authored fixture; CRS sandbox pending; no CRS call produced these values"), a recorded response as `REPLAYED (recorded live)`, live and stand-in unchanged; evidence rows match by crs:* source or by the call name in the ref, and show the fixture source in amber; the trust line says "fixture". `npm run build` green.
+- Docs: `docs/not-built.md`, `context/CLAIMS_AUDIT.md` row 25 ("fixture, labelled"), README "Vendor checks" (the two paragraphs that described `3.hit.json`, `CRS_FIXTURE_VARIANT` and the "hand-shaped" badge were false after this change, so both were rewritten; the rest of the README is untouched apart from the Caliber title below), `docs/RUNBOOK.md` beats 02:45 and 03:10 say "hand-authored fixture, sandbox pending" out loud and never "live"; section 3 gains step 0 (demo_up with the network on, Wi-Fi off, demo_up again); new section 3b "Sunday 7:00 AM".
+- Caliber (director addition): README title line `# Caliber` with the first sentence "Caliber, an autonomous accounts-payable clerk for a trucking carrier (repo and ledger name: dispatch-ledger)"; runbook beats 00:00 and 04:45 say Caliber. No other prose mention existed in these two files; identifiers unchanged.
+
+Run (`scripts/full_run.sh`, 25 s, exit 0):
+
+| Check | Observed |
+| --- | --- |
+| facts | `Overall precision 1.0, recall 1.0`; `Decoys cleared through an approved rule: 6 of 6 (6 with exactly one controller answer)`; `Planted exceptions cleared by a rule: 0`; `Vendor checks: 3 bank-change holds; 1 with a hit rejected by the controller, 2 clean approved with a call-back note; check source {'fixture': 3}; outcomes match the key: True` |
+| INV-1032 | hold `rejected`; audit row `controller reject_payment INV-1032` with detail `Vendor check hit: a judgment (Example County Civil Court, $23,750.00, filed 2026-07-20, open). Bank-detail change not accepted; invoice rejected pending resolution with the vendor.` |
+| INV-1077, INV-1138 | hold `released`, callback_note "Called Gulf Coast Diesel ..." and "Called Border Fleet Repair ..."; audit `controller approve_payment` with the note |
+| vendor_check tasks | all 8 recorded; the 6 with a fixture (vendors 1, 3, 5 on first invoice and bank change) carry exactly 3 evidence rows each with source `fixture:hand-authored (CRS sandbox pending)` and refs `business credit`, `public records`, `OFAC screen`; vendors 2 and 4 (first invoice) are stand-ins with 0 rows; zero "/TODO-" strings in any finding or steps json |
+| controller_sim | `{"answered": 6, "rejected": 39, "released": 8, "rules_approved": 6, "refused": 0}` (38 rejections before plus INV-1032; 8 releases: 6 limit holds plus the two clean bank changes) |
+| dashboard (Playwright, read-only, three clicks) | INV-1032, INV-1077 and INV-1138 cards each show the `FIXTURE` chip with the hover text above, three fixture-sourced rows, no `REPLAYED` in the vendor-check block; zero `REPLAYED (recorded live)` chips on the page; no "/TODO-"; trust line "Vendor checks: 0 live, 0 recorded replay, 6 fixture, 2 stand-in"; page title already "Caliber" (builder-C) |
+| worker | typecheck clean; 107 tests passed (22 in vendor_check.test.ts) |
+| web | typecheck clean; `vite build` green |
+| honesty.py | "no change" |
+| em dashes | none in any tracked md, ts, tsx, py, sh or json file |
+| screenshot | `docs/evidence/dashboard/08-fixture-card-INV-1032-rejected.png` with its caption |
+
+Notes for the director:
+
+- Status enum choice: `fixture` (not `hand_shaped`). The chip, the trust line and the source string all say fixture, so one word everywhere.
+- `CRS_FIXTURE_VARIANT` removed rather than kept; its only use was the deleted `3.hit.json`.
+- When the sandbox invite lands, `WORKER_MODE=record` writes `<id>.json` (recorded: true). For vendor 1 the hand-authored `1.bank_change.json` still wins on the bank-change trigger until it is deleted or replaced by a recorded file of that name; D-3 says the fixture is replaced at that moment, so this is one manual step to remember, written here.
+- `docs/DEVPOST.md` not touched. Its line 35 "Vendor check and settle were built this afternoon; sandbox and mock bank" stays true; if the CRS paragraph in the Devpost text claims a sandbox hit, it should read "the hit is a hand-authored fixture labelled FIXTURE; sandbox call pending".
+
 ## Tried and rejected
 
 | What | Why rejected |
