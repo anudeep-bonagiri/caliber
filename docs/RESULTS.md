@@ -1,6 +1,6 @@
 # Results
 
-Run date: 2026-10-24T18:43:05+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
+Run date: 2026-10-24T19:05:22+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
 
 | Metric | Result | Target |
 | --- | --- | --- |

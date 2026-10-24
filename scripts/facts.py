@@ -47,6 +47,13 @@ def sql(uri: str, db: str, query: str) -> list[dict]:
     return rows
 
 
+def _strip_clock(bt):
+    """The worker's preview carries a wall-clock stamp; the facts file must be identical between runs."""
+    if isinstance(bt, dict) and isinstance(bt.get("workerPreview"), dict):
+        bt["workerPreview"] = {k: v for k, v in bt["workerPreview"].items() if k != "computedAt"}
+    return bt
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--uri", default=os.environ.get("STDB_URI", "http://127.0.0.1:3100"))
@@ -111,7 +118,7 @@ def main() -> int:
             "questions": 1 if (h and h.get("question")) else 0, "answers": 1 if (h and h.get("answer")) else 0,
             "draftTasks": len(drafts), "clearedByRule": bool(h and h["status"] == "cleared_by_rule"),
             "ruleId": rule["id"] if rule else None,
-            "backtest": json.loads(rule["backtest_json"]) if rule else None,
+            "backtest": _strip_clock(json.loads(rule["backtest_json"])) if rule else None,
         })
     decoys_cleared = sum(1 for r in decoy_rows if r["clearedByRule"])
     decoys_one_answer = sum(1 for r in decoy_rows if r["clearedByRule"] and r["answers"] == 1 and r["draftTasks"] == 1)
