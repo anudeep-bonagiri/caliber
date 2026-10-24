@@ -47,8 +47,8 @@ def hold_2231_window(card_txns_path: Path, txn_ref: str = "2231") -> dict[str, A
         for row in load_json(card_txns_path):
             if str(row.get("id")) == txn_ref and row.get("stationLat") is not None and row.get("at"):
                 at = parse_iso(row["at"])
-                since = (at - timedelta(minutes=45)).strftime("%Y-%m-%dT%H:%M:%SZ")
-                until = (at + timedelta(minutes=45)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                since = (at - timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                until = (at + timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
                 return {
                     "source": str(card_txns_path),
                     "point_wkt": f"POINT({float(row['stationLon'])} {float(row['stationLat'])})",

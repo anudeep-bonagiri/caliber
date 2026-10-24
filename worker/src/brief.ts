@@ -138,7 +138,7 @@ export function buildPrompt(brief: Brief, evidenceDir: string): string {
   if (present.length === 0) lines.push('- (no evidence files are present for this transaction)');
   for (const f of present) lines.push(`- ${f.rel}: ${f.meaning}`);
   lines.push('');
-  lines.push('Tools that may also be available: find_trips_near(point_wkt, radius_m, since, until) lists trucks that pinged near a WKT point (longitude first, POINT(lon lat)); contract_rate_for_vendor(vendor_id, item, on) returns the contracted rate.');
+  lines.push('Tools that may also be available: find_trips_near(point_wkt, radius_m, since, until) lists trucks that pinged near a WKT point (longitude first, POINT(lon lat)); use a window of 10 minutes either side of the transaction time and a radius of 3000 m; contract_rate_for_vendor(vendor_id, item, on) returns the contracted rate.');
   lines.push('');
   lines.push('Rules: do not modify or create files. Quote evidence exactly; every evidence entry must name its source as a file path from the list above or the tool name you called. Do not invent numbers.');
   lines.push('Recommend clear only when the evidence explains the exception fully. Recommend hold_and_ask with one precise question when a person must confirm. Recommend hold otherwise. You can never recommend paying; payment is a controller decision.');
