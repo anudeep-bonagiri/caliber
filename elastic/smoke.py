@@ -174,6 +174,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--ms", action="store_true", help="also execute find_trips_near_ms")
     p.add_argument("--card-txns", type=Path, default=DEFAULT_CARD_TXNS, help="card_txns.json to read txn 2231 from")
     p.add_argument("--skip-mcp", action="store_true")
+    p.add_argument("--skip-tools", action="store_true", help="probe MCP only (used for the scoped-key 200 vs 403 proof)")
     p.add_argument("--mcp-key-env", default=None,
                    help="env var holding the key for the MCP probe (default ELASTIC_MCP_API_KEY when set, else ELASTIC_API_KEY)")
     args = p.parse_args(argv)
@@ -188,6 +189,18 @@ def main(argv: list[str] | None = None) -> int:
 
     window = hold_2231_window(args.card_txns)
     print(f"Hold 2231 window from {window['source']}: lat {window['lat']} lon {window['lon']} {window['start']} .. {window['end']}")
+
+    if args.skip_tools:
+        key_env = args.mcp_key_env or ("ELASTIC_MCP_API_KEY" if os.environ.get("ELASTIC_MCP_API_KEY") else "ELASTIC_API_KEY")
+        mcp_key = os.environ.get(key_env) or None
+        if not mcp_key and not args.dry_run:
+            check(f"MCP probe with the key in {key_env}: that variable is unset, nothing probed", False)
+        else:
+            print(f"Probing MCP at {settings.kibana_url}{MCP_PATH} with the key in {key_env}...")
+            check(f"MCP initialize + tools/list exposes all four tools (key {key_env})", probe_mcp(client, ALL_TOOLS, mcp_key))
+        failed = [n for n, ok in results if not ok]
+        print(f"\n{len(results) - len(failed)}/{len(results)} checks passed")
+        return 1 if failed else 0
 
     print("Executing find_trips_near...")
     trips_params = {"lat": window["lat"], "lon": window["lon"], "radius_m": RADIUS_M, "start": window["start"], "end": window["end"]}
@@ -234,8 +247,11 @@ def main(argv: list[str] | None = None) -> int:
     if not args.skip_mcp:
         key_env = args.mcp_key_env or ("ELASTIC_MCP_API_KEY" if os.environ.get("ELASTIC_MCP_API_KEY") else "ELASTIC_API_KEY")
         mcp_key = os.environ.get(key_env) or None
-        print(f"Probing MCP at {settings.kibana_url}{MCP_PATH} with the key in {key_env}...")
-        check(f"MCP initialize + tools/list exposes all four tools (key {key_env})", probe_mcp(client, ALL_TOOLS, mcp_key))
+        if args.mcp_key_env and not mcp_key and not args.dry_run:
+            check(f"MCP probe with the key in {key_env}: that variable is unset, nothing probed", False)
+        else:
+            print(f"Probing MCP at {settings.kibana_url}{MCP_PATH} with the key in {key_env}...")
+            check(f"MCP initialize + tools/list exposes all four tools (key {key_env})", probe_mcp(client, ALL_TOOLS, mcp_key))
 
     failed = [n for n, ok in results if not ok]
     print()

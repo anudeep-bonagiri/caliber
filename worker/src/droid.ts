@@ -109,7 +109,7 @@ function sessionOptions(sdk: Sdk, opts: DroidOptions, disabledToolIds: string[],
     autonomyLevel: AutonomyLevel.Off,                        // every action asks the handler
     disabledToolIds,                                         // ['Execute', 'Edit', 'Create', 'ApplyPatch'] plus listTools() edit/execute ids; subtractive, no allowlist in TS
     systemPrompt: { type: 'preset' as const, preset: 'droid' as const, append: SYSTEM_PROMPT_APPEND },
-    mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and ELASTIC_API_KEY are set
+    mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and a key are set; the key is ELASTIC_MCP_API_KEY (least privilege) when present, else ELASTIC_API_KEY
     permissionHandler({ toolUses, options }: RequestPermissionRequestParams) {
       // Subtractive: anything that writes, executes, escalates or asks a human is cancelled; MCP tool calls and
       // read-only confirmations proceed once. Read and Grep need no confirmation at all in autonomy Off.

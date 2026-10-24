@@ -36,6 +36,9 @@ const EnvSchema = z.object({
   ANTHROPIC_API_KEY: z.string().default(''),
   KIBANA_URL: z.string().default(''),
   ELASTIC_API_KEY: z.string().default(''),
+  // Task 26.1: the least-privilege key for Droid's MCP entry (read on six indices, Agent Builder read).
+  // When unset, the project key is used and elasticKeySource says so.
+  ELASTIC_MCP_API_KEY: z.string().default(''),
   EVIDENCE_DIR: z.string().default(path.join(REPO_ROOT, 'seed', 'fixtures', 'evidence')),
   FIXTURES_DIR: z.string().default(path.join(REPO_ROOT, 'seed', 'fixtures', 'investigations')),
   COST_LOG: z.string().default(path.join(WORKER_DIR, 'cost_log.jsonl')),
@@ -56,7 +59,9 @@ export interface Config {
   factoryApiKey: string;
   anthropicApiKey: string;
   kibanaUrl: string;
+  // The key Droid's MCP server entry sends (droid.ts): ELASTIC_MCP_API_KEY when set, else ELASTIC_API_KEY.
   elasticApiKey: string;
+  elasticKeySource?: 'ELASTIC_MCP_API_KEY' | 'ELASTIC_API_KEY';
   evidenceDir: string;
   fixturesDir: string;
   costLog: string;
@@ -81,7 +86,8 @@ export function parseConfig(env: NodeJS.ProcessEnv = process.env): Config {
     factoryApiKey: e.FACTORY_API_KEY,
     anthropicApiKey: e.ANTHROPIC_API_KEY,
     kibanaUrl: e.KIBANA_URL,
-    elasticApiKey: e.ELASTIC_API_KEY,
+    elasticApiKey: e.ELASTIC_MCP_API_KEY.trim() !== '' ? e.ELASTIC_MCP_API_KEY : e.ELASTIC_API_KEY,
+    elasticKeySource: e.ELASTIC_MCP_API_KEY.trim() !== '' ? 'ELASTIC_MCP_API_KEY' : 'ELASTIC_API_KEY',
     evidenceDir: path.resolve(e.EVIDENCE_DIR),
     fixturesDir: path.resolve(e.FIXTURES_DIR),
     costLog: path.resolve(e.COST_LOG),
