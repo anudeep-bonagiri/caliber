@@ -23,10 +23,10 @@ The oracle ceiling and the saboteur run are beside it:
 
 ```sh
 python3 bench/carrierbench/oracle.py                     # writes bench/carrierbench/oracle.json, under a second
-cd spacetimedb && npm ci && npx vitest run src/saboteur.test.ts   # writes bench/carrierbench/saboteur.json, under a second after install
+(cd spacetimedb && npm ci) && bash bench/carrierbench/saboteur_run.sh   # writes bench/carrierbench/saboteur.json, under a second after install
 ```
 
-The oracle is the kernel handed the answer key (every planted row held, every decoy cleared with no question, clean rows posted under the same auto-pay limits), computed from the fixtures with the mirror; it is the end-to-end ceiling the measured run is compared against. The saboteur test feeds a lying finding (recommendation clear, confidence 0.99, fabricated evidence) through the real reducers in the in-process module harness and asserts that `approve_payment` as the agent identity is refused, that no payment row exists, that the hold is still a person's decision, and that the refusal is an audit row. It lives at `spacetimedb/src/saboteur.test.ts` because the module's vitest config includes `src/**/*.test.ts` only; its output is written here.
+The oracle is the kernel handed the answer key (every planted row held, every decoy cleared with no question, clean rows posted under the same auto-pay limits), computed from the fixtures with the mirror; it is the end-to-end ceiling the measured run is compared against. The saboteur test feeds a lying finding (recommendation clear, confidence 0.99, fabricated evidence) through the real reducers in the in-process module harness and asserts that `approve_payment` as the agent identity is refused, that no payment row exists, that the hold is still a person's decision, and that the refusal is an audit row. It lives at `spacetimedb/src/saboteur.test.ts` because the module's vitest config includes `src/**/*.test.ts` only, and it imports only vitest and the harness (the module tsconfig has no node types and `spacetime publish` typechecks that folder), so `saboteur_run.sh` carries the observed rows out through vitest's JSON reporter and writes them here.
 
 ## Run the model-only baseline from a bare clone
 
