@@ -202,6 +202,19 @@ Job 4 (director follow-up, 14:30). docs/RUNBOOK.md beats 00:45, 01:00 and 01:10 
 
 Tried and rejected this shift: putting the ASI mock inside `classify` (would have broken the three tests that monkeypatch `_chat_completion` and count calls), so the switch sits in `_chat_completion` itself; reading cost from worker/cost_log.jsonl with a time filter (the stray live runs interleave with the re-records by the second), so facts reads only committed evidence files.
 
+## 2026-10-24 14:26 PDT Director: round one review and Task 17 acceptance
+
+Three builders ran as separate terminal sessions on disjoint files (briefs in context/briefs/). Every commit below was reviewed against its acceptance check by the director before acceptance; the checks were rerun, not read.
+
+Accepted:
+- builder-13 (8e004e1, ed10bce, 91c9694): all 52 recordings are now `hold_and_ask` with a question (the six decoys re-recorded live, 2231 asks about Ramon Ortiz and PO-1026); full offline cycle precision 1.0, recall 1.0, 6 of 6 decoys with one answer, 0 planted by rule, 13 s; worker 106 tests, agent 115 tests green with and without the key (ASI_MOCK=1 in conftest); no `head` pipe in any script; cost quoted as input, output and cache (1,033 / 1,354 / 70,386 per task from the recorded run); README headings in the judged order; Devpost track list exact; claims audit renumbered. Incident, builder-13's report: the previous builder's live worker was still running when the ledger was advanced for the re-record and made about 25 unplanned live Droid investigations (worker/cost_log.jsonl, excluded from facts); caused by a director message landing late.
+- builder-17 (0328507): Nessie refuses the documented body and stores whole numbers only, so transfers send exact integer cents with the unit in the description; nothing rounds; rate cap NESSIE_MAX_PER_SECOND (default 5) tested; 20 settle tests; labels "paid, bank id <id>" and "settlement: offline".
+- builder-W (85aba06, de3d124, 548864d, ef3d6eb, 2fac596): record_settlement module test (33 module tests); docs/VIDEO.md to the current product; agent/README.md with the logged address and agent/CONNECT.md; dashboard audit with four screenshots; honesty fixes from that audit (hand-shaped vendor checks badged "hand-shaped fixture, not sandbox data", no endpoint placeholders rendered, trust panel counts vendor checks by provenance, replayed cards no longer show "live droid run"). Builder-W's commits carry no co-author trailer, citing Anudeep's standing rule for his repos; unconfirmed by the director.
+
+Task 17 acceptance, run by the director on the day-44 rehearsal ledger at 14:24 with the worker restarted as `WORKER_MODE=live FACTORY_API_KEY= ANTHROPIC_API_KEY= NESSIE_MAX_PER_SECOND=20 npm start` (settlement live, Droid forced to replay, no paid model calls): `agent.cli "approve 1068"` as controller; `payment.bank_txn_id` = c3dd62f9-ca20-4e3d-9095-c3a7865e7583 after 0.81 s; audit rows `approve_payment / controller` then `settle / agent / bank id c3dd...`; `GET /transfers/<id>` in the sandbox shows amount 28855, status pending, description "txn_ref 1068 payee ... amount $288.55 (amount field in cents)". The offline half of the check was shown by the 21:10Z full run (offline-<ref> ids, 3,640 payments). Pass. Caveat: the sandbox carrier account also holds about 7,244 whole-dollar transfers from the earlier live worker; only transfers after 21:24Z carry exact cents.
+
+Open: builder-13 job 4 (runbook 2231 wording, worker/README handler description) in progress; builder-W job 7 (live dashboard re-check of the new badges, stepping the clock past day 44) in progress; Agentverse Connect click, CRS sandbox invite and the Devpost paste remain on Anudeep.
+
 ## Tried and rejected
 
 | What | Why rejected |
