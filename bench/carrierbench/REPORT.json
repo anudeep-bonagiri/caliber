@@ -1,0 +1,1724 @@
+{
+  "audit": {
+    "byCode": {
+      "capacity_exceeded": {
+        "inferable": 6,
+        "rows": 6,
+        "withEvidenceFile": 6
+      },
+      "duplicate_invoice": {
+        "inferable": 4,
+        "rows": 4,
+        "withEvidenceFile": 4
+      },
+      "duplicate_toll": {
+        "inferable": 11,
+        "rows": 11,
+        "withEvidenceFile": 11
+      },
+      "location_mismatch": {
+        "inferable": 20,
+        "rows": 20,
+        "withEvidenceFile": 20
+      },
+      "rate_variance": {
+        "inferable": 9,
+        "rows": 9,
+        "withEvidenceFile": 9
+      },
+      "short_received": {
+        "inferable": 5,
+        "rows": 5,
+        "withEvidenceFile": 5
+      },
+      "vendor_bank_change": {
+        "inferable": 3,
+        "rows": 3,
+        "withEvidenceFile": 3
+      }
+    },
+    "failures": [],
+    "inferable": 58,
+    "keyRowsNotFlagged": [],
+    "mirrorFlagged": 58,
+    "mirrorFlaggedNotInKey": [],
+    "mirrorWrongCode": [],
+    "passed": true,
+    "rows": [
+      {
+        "cents": 57698,
+        "day": 22,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/2251.txt",
+        "evidenceInputs": {
+          "gallons": 169.5,
+          "pingsForTruck": 4076,
+          "tankGal": 120
+        },
+        "evidenceUsed": {
+          "capacityLimitGal": 132.0,
+          "tankGal": 120
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "capacity_exceeded",
+        "kind": "card",
+        "mirrorCode": "capacity_exceeded",
+        "txnRef": "2251"
+      },
+      {
+        "cents": 93358,
+        "day": 36,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/3093.txt",
+        "evidenceInputs": {
+          "gallons": 272.1,
+          "pingsForTruck": 3756,
+          "tankGal": 200
+        },
+        "evidenceUsed": {
+          "capacityLimitGal": 220.0,
+          "tankGal": 200
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "capacity_exceeded",
+        "kind": "card",
+        "mirrorCode": "capacity_exceeded",
+        "txnRef": "3093"
+      },
+      {
+        "cents": 51112,
+        "day": 43,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/3510.txt",
+        "evidenceInputs": {
+          "gallons": 141.9,
+          "pingsForTruck": 4045,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "capacityLimitGal": 110.0,
+          "tankGal": 100
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "capacity_exceeded",
+        "kind": "card",
+        "mirrorCode": "capacity_exceeded",
+        "txnRef": "3510"
+      },
+      {
+        "cents": 41098,
+        "day": 76,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/5557.txt",
+        "evidenceInputs": {
+          "gallons": 123.9,
+          "pingsForTruck": 4145,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "capacityLimitGal": 110.0,
+          "tankGal": 100
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "capacity_exceeded",
+        "kind": "card",
+        "mirrorCode": "capacity_exceeded",
+        "txnRef": "5557"
+      },
+      {
+        "cents": 46473,
+        "day": 82,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/5908.txt",
+        "evidenceInputs": {
+          "gallons": 129.2,
+          "pingsForTruck": 3876,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "capacityLimitGal": 110.0,
+          "tankGal": 100
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "capacity_exceeded",
+        "kind": "card",
+        "mirrorCode": "capacity_exceeded",
+        "txnRef": "5908"
+      },
+      {
+        "cents": 133729,
+        "day": 90,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/6390.txt",
+        "evidenceInputs": {
+          "gallons": 374.8,
+          "pingsForTruck": 3909,
+          "tankGal": 250
+        },
+        "evidenceUsed": {
+          "capacityLimitGal": 275.0,
+          "tankGal": 250
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "capacity_exceeded",
+        "kind": "card",
+        "mirrorCode": "capacity_exceeded",
+        "txnRef": "6390"
+      },
+      {
+        "cents": 67925,
+        "day": 21,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1037.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 0,
+          "contractId": 9,
+          "contractRateCents": 33900,
+          "earlierInvoicesSameVendor": 7,
+          "poId": "PO-1001",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "daysApart": 11,
+          "duplicateOf": "INV-1016"
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_invoice",
+        "kind": "invoice",
+        "mirrorCode": "duplicate_invoice",
+        "txnRef": "INV-1037"
+      },
+      {
+        "cents": 57000,
+        "day": 30,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1050.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 42,
+          "contractId": 18,
+          "contractRateCents": 52500,
+          "earlierInvoicesSameVendor": 6,
+          "poId": "PO-1016",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "daysApart": 18,
+          "duplicateOf": "INV-1020"
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_invoice",
+        "kind": "invoice",
+        "mirrorCode": "duplicate_invoice",
+        "txnRef": "INV-1050"
+      },
+      {
+        "cents": 36925,
+        "day": 30,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1052.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 71,
+          "contractId": 34,
+          "contractRateCents": 36800,
+          "earlierInvoicesSameVendor": 16,
+          "poId": "PO-1014",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "daysApart": 9,
+          "duplicateOf": "INV-1038"
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_invoice",
+        "kind": "invoice",
+        "mirrorCode": "duplicate_invoice",
+        "txnRef": "INV-1052"
+      },
+      {
+        "cents": 222625,
+        "day": 76,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1140.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 18,
+          "contractId": 1,
+          "contractRateCents": 54500,
+          "earlierInvoicesSameVendor": 26,
+          "poId": "PO-1018",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "daysApart": 14,
+          "duplicateOf": "INV-1114"
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_invoice",
+        "kind": "invoice",
+        "mirrorCode": "duplicate_invoice",
+        "txnRef": "INV-1140"
+      },
+      {
+        "cents": 975,
+        "day": 13,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T1314.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 6,
+          "plate": "TX-1012",
+          "plazaId": "TXTAG-SH130-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T1313",
+          "minutesApart": 8
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T1314"
+      },
+      {
+        "cents": 1150,
+        "day": 17,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T1368.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 6,
+          "plate": "TX-1001",
+          "plazaId": "NTTA-PGBT-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T1367",
+          "minutesApart": 7
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T1368"
+      },
+      {
+        "cents": 850,
+        "day": 44,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T1973.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 24,
+          "plate": "TX-1027",
+          "plazaId": "TXTAG-SH130-04"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T1972",
+          "minutesApart": 7
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T1973"
+      },
+      {
+        "cents": 650,
+        "day": 53,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T2139.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 30,
+          "plate": "TX-1009",
+          "plazaId": "TXTAG-SH45N-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T2137",
+          "minutesApart": 7
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T2139"
+      },
+      {
+        "cents": 1850,
+        "day": 56,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T2195.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 28,
+          "plate": "TX-1032",
+          "plazaId": "NTTA-DNT-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T2194",
+          "minutesApart": 3
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T2195"
+      },
+      {
+        "cents": 575,
+        "day": 62,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T2380.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 31,
+          "plate": "TX-1013",
+          "plazaId": "TXTAG-SH45SE-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T2379",
+          "minutesApart": 7
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T2380"
+      },
+      {
+        "cents": 425,
+        "day": 70,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T2598.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 29,
+          "plate": "TX-1040",
+          "plazaId": "TXTAG-SH71-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T2597",
+          "minutesApart": 8
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T2598"
+      },
+      {
+        "cents": 575,
+        "day": 73,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T2667.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 77,
+          "plate": "TX-1011",
+          "plazaId": "TXTAG-SH45SE-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T2666",
+          "minutesApart": 7
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T2667"
+      },
+      {
+        "cents": 625,
+        "day": 84,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T2956.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 84,
+          "plate": "TX-1014",
+          "plazaId": "NTTA-MCLB-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T2955",
+          "minutesApart": 6
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T2956"
+      },
+      {
+        "cents": 1150,
+        "day": 89,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T3067.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 39,
+          "plate": "TX-1026",
+          "plazaId": "NTTA-PGBT-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T3066",
+          "minutesApart": 2
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T3067"
+      },
+      {
+        "cents": 650,
+        "day": 92,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/tolls/T3152.txt",
+        "evidenceInputs": {
+          "earlierTollsSamePlate": 96,
+          "plate": "TX-1033",
+          "plazaId": "TXTAG-SH45N-01"
+        },
+        "evidenceUsed": {
+          "duplicateOf": "T3149",
+          "minutesApart": 9
+        },
+        "expected": "auto_reject",
+        "inferableFromEvidence": true,
+        "keyCode": "duplicate_toll",
+        "kind": "toll",
+        "mirrorCode": "duplicate_toll",
+        "txnRef": "T3152"
+      },
+      {
+        "cents": 28855,
+        "day": 2,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/1068.txt",
+        "evidenceInputs": {
+          "gallons": 80.6,
+          "pingsForTruck": 3756,
+          "tankGal": 200
+        },
+        "evidenceUsed": {
+          "deltaMin": 11,
+          "distanceMiles": 168.2,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "1068"
+      },
+      {
+        "cents": 22207,
+        "day": 8,
+        "decoy": true,
+        "evidenceFile": "seed/fixtures/evidence/receipts/1421.txt",
+        "evidenceInputs": {
+          "gallons": 59.6,
+          "pingsForTruck": 4122,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 29,
+          "distanceMiles": 66.1,
+          "engineOn": false
+        },
+        "expected": "clear_after_question",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "1421"
+      },
+      {
+        "cents": 61267,
+        "day": 8,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/1468.txt",
+        "evidenceInputs": {
+          "gallons": 169.2,
+          "pingsForTruck": 4003,
+          "tankGal": 250
+        },
+        "evidenceUsed": {
+          "deltaMin": 12,
+          "distanceMiles": 162.6,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "1468"
+      },
+      {
+        "cents": 23574,
+        "day": 14,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/1793.txt",
+        "evidenceInputs": {
+          "gallons": 66.8,
+          "pingsForTruck": 3820,
+          "tankGal": 150
+        },
+        "evidenceUsed": {
+          "deltaMin": 21,
+          "distanceMiles": 195.1,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "1793"
+      },
+      {
+        "cents": 24368,
+        "day": 17,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/1971.txt",
+        "evidenceInputs": {
+          "gallons": 70.9,
+          "pingsForTruck": 4083,
+          "tankGal": 120
+        },
+        "evidenceUsed": {
+          "deltaMin": 23,
+          "distanceMiles": 185.5,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "1971"
+      },
+      {
+        "cents": 16314,
+        "day": 19,
+        "decoy": true,
+        "evidenceFile": "seed/fixtures/evidence/receipts/2044.txt",
+        "evidenceInputs": {
+          "gallons": 46.8,
+          "pingsForTruck": 4109,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 8,
+          "distanceMiles": 56.4,
+          "engineOn": false
+        },
+        "expected": "clear_after_question",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "2044"
+      },
+      {
+        "cents": 41200,
+        "day": 41,
+        "decoy": true,
+        "evidenceFile": "seed/fixtures/evidence/receipts/2231.txt",
+        "evidenceInputs": {
+          "gallons": 120.0,
+          "pingsForTruck": 3784,
+          "tankGal": 150
+        },
+        "evidenceUsed": {
+          "deltaMin": 12,
+          "distanceMiles": 97.2,
+          "engineOn": false
+        },
+        "expected": "clear_after_question",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "2231"
+      },
+      {
+        "cents": 36930,
+        "day": 26,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/2540.txt",
+        "evidenceInputs": {
+          "gallons": 100.0,
+          "pingsForTruck": 3600,
+          "tankGal": 200
+        },
+        "evidenceUsed": {
+          "deltaMin": 16,
+          "distanceMiles": 138.5,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "2540"
+      },
+      {
+        "cents": 17715,
+        "day": 31,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/2830.txt",
+        "evidenceInputs": {
+          "gallons": 47.8,
+          "pingsForTruck": 4008,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 21,
+          "distanceMiles": 107.1,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "2830"
+      },
+      {
+        "cents": 15833,
+        "day": 37,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/3209.txt",
+        "evidenceInputs": {
+          "gallons": 46.5,
+          "pingsForTruck": 4040,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 6,
+          "distanceMiles": 181.9,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "3209"
+      },
+      {
+        "cents": 78009,
+        "day": 49,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/3884.txt",
+        "evidenceInputs": {
+          "gallons": 231.0,
+          "pingsForTruck": 3909,
+          "tankGal": 250
+        },
+        "evidenceUsed": {
+          "deltaMin": 21,
+          "distanceMiles": 186.3,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "3884"
+      },
+      {
+        "cents": 14257,
+        "day": 51,
+        "decoy": true,
+        "evidenceFile": "seed/fixtures/evidence/receipts/3955.txt",
+        "evidenceInputs": {
+          "gallons": 41.3,
+          "pingsForTruck": 3990,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 12,
+          "distanceMiles": 58.1,
+          "engineOn": false
+        },
+        "expected": "clear_after_question",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "3955"
+      },
+      {
+        "cents": 31560,
+        "day": 54,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/4177.txt",
+        "evidenceInputs": {
+          "gallons": 90.9,
+          "pingsForTruck": 3993,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 6,
+          "distanceMiles": 194.7,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "4177"
+      },
+      {
+        "cents": 18593,
+        "day": 57,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/4363.txt",
+        "evidenceInputs": {
+          "gallons": 50.8,
+          "pingsForTruck": 3996,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 17,
+          "distanceMiles": 69.2,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "4363"
+      },
+      {
+        "cents": 16543,
+        "day": 68,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/5041.txt",
+        "evidenceInputs": {
+          "gallons": 46.6,
+          "pingsForTruck": 3694,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 14,
+          "distanceMiles": 106.8,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "5041"
+      },
+      {
+        "cents": 22795,
+        "day": 74,
+        "decoy": true,
+        "evidenceFile": "seed/fixtures/evidence/receipts/5428.txt",
+        "evidenceInputs": {
+          "gallons": 62.4,
+          "pingsForTruck": 3845,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 20,
+          "distanceMiles": 48.5,
+          "engineOn": false
+        },
+        "expected": "clear_after_question",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "5428"
+      },
+      {
+        "cents": 31949,
+        "day": 77,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/5620.txt",
+        "evidenceInputs": {
+          "gallons": 90.1,
+          "pingsForTruck": 3705,
+          "tankGal": 120
+        },
+        "evidenceUsed": {
+          "deltaMin": 15,
+          "distanceMiles": 138.4,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "5620"
+      },
+      {
+        "cents": 21156,
+        "day": 83,
+        "decoy": true,
+        "evidenceFile": "seed/fixtures/evidence/receipts/5986.txt",
+        "evidenceInputs": {
+          "gallons": 61.5,
+          "pingsForTruck": 3725,
+          "tankGal": 150
+        },
+        "evidenceUsed": {
+          "deltaMin": 7,
+          "distanceMiles": 53.9,
+          "engineOn": false
+        },
+        "expected": "clear_after_question",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "5986"
+      },
+      {
+        "cents": 14457,
+        "day": 84,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/6065.txt",
+        "evidenceInputs": {
+          "gallons": 43.0,
+          "pingsForTruck": 4045,
+          "tankGal": 100
+        },
+        "evidenceUsed": {
+          "deltaMin": 11,
+          "distanceMiles": 120.6,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "6065"
+      },
+      {
+        "cents": 39161,
+        "day": 88,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/receipts/6294.txt",
+        "evidenceInputs": {
+          "gallons": 110.5,
+          "pingsForTruck": 3766,
+          "tankGal": 120
+        },
+        "evidenceUsed": {
+          "deltaMin": 17,
+          "distanceMiles": 171.6,
+          "engineOn": false
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "location_mismatch",
+        "kind": "card",
+        "mirrorCode": "location_mismatch",
+        "txnRef": "6294"
+      },
+      {
+        "cents": 42850,
+        "day": 4,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1003.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 0,
+          "contractId": 9,
+          "contractRateCents": 33900,
+          "earlierInvoicesSameVendor": 2,
+          "poId": "PO-1001",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 35595,
+          "contractId": 9,
+          "contractRateCents": 33900
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1003"
+      },
+      {
+        "cents": 117750,
+        "day": 9,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1015.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 71,
+          "contractId": 28,
+          "contractRateCents": 49800,
+          "earlierInvoicesSameVendor": 3,
+          "poId": "PO-1020",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 52290,
+          "contractId": 28,
+          "contractRateCents": 49800
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1015"
+      },
+      {
+        "cents": 42225,
+        "day": 18,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1029.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 0,
+          "contractId": 21,
+          "contractRateCents": 34500,
+          "earlierInvoicesSameVendor": 5,
+          "poId": "PO-1013",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 36225,
+          "contractId": 21,
+          "contractRateCents": 34500
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1029"
+      },
+      {
+        "cents": 148250,
+        "day": 40,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1074.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 0,
+          "contractId": 10,
+          "contractRateCents": 135500,
+          "earlierInvoicesSameVendor": 16,
+          "poId": "PO-1007",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 142275,
+          "contractId": 10,
+          "contractRateCents": 135500
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1074"
+      },
+      {
+        "cents": 145100,
+        "day": 44,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1078.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 18,
+          "contractId": 1,
+          "contractRateCents": 54500,
+          "earlierInvoicesSameVendor": 11,
+          "poId": "PO-1018",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 57225,
+          "contractId": 1,
+          "contractRateCents": 54500
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1078"
+      },
+      {
+        "cents": 37450,
+        "day": 48,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1086.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 71,
+          "contractId": 30,
+          "contractRateCents": 29900,
+          "earlierInvoicesSameVendor": 22,
+          "poId": "PO-1022",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 31395,
+          "contractId": 30,
+          "contractRateCents": 29900
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1086"
+      },
+      {
+        "cents": 137825,
+        "day": 51,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1096.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 42,
+          "contractId": 18,
+          "contractRateCents": 52500,
+          "earlierInvoicesSameVendor": 23,
+          "poId": "PO-1016",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 55125,
+          "contractId": 18,
+          "contractRateCents": 52500
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1096"
+      },
+      {
+        "cents": 146725,
+        "day": 63,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1116.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 42,
+          "contractId": 15,
+          "contractRateCents": 59600,
+          "earlierInvoicesSameVendor": 27,
+          "poId": "PO-1011",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 62580,
+          "contractId": 15,
+          "contractRateCents": 59600
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1116"
+      },
+      {
+        "cents": 37875,
+        "day": 71,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1130.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 18,
+          "contractId": 3,
+          "contractRateCents": 32800,
+          "earlierInvoicesSameVendor": 23,
+          "poId": "PO-1019",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "allowedUnitCents": 34440,
+          "contractId": 3,
+          "contractRateCents": 32800
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "rate_variance",
+        "kind": "invoice",
+        "mirrorCode": "rate_variance",
+        "txnRef": "INV-1130"
+      },
+      {
+        "cents": 149400,
+        "day": 7,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1010.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 71,
+          "contractId": 28,
+          "contractRateCents": 49800,
+          "earlierInvoicesSameVendor": 2,
+          "poId": "PO-1005",
+          "poReceivedQty": 2
+        },
+        "evidenceUsed": {
+          "poQty": 3,
+          "proposedPartialCents": 99600,
+          "receivedQty": 2
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "short_received",
+        "kind": "invoice",
+        "mirrorCode": "short_received",
+        "txnRef": "INV-1010"
+      },
+      {
+        "cents": 207600,
+        "day": 35,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1062.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 0,
+          "contractId": 8,
+          "contractRateCents": 51900,
+          "earlierInvoicesSameVendor": 12,
+          "poId": "PO-1025",
+          "poReceivedQty": 3
+        },
+        "evidenceUsed": {
+          "poQty": 4,
+          "proposedPartialCents": 155700,
+          "receivedQty": 3
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "short_received",
+        "kind": "invoice",
+        "mirrorCode": "short_received",
+        "txnRef": "INV-1062"
+      },
+      {
+        "cents": 103400,
+        "day": 53,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1099.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 0,
+          "contractId": 24,
+          "contractRateCents": 51700,
+          "earlierInvoicesSameVendor": 17,
+          "poId": "PO-1027",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "poQty": 2,
+          "proposedPartialCents": 51700,
+          "receivedQty": 1
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "short_received",
+        "kind": "invoice",
+        "mirrorCode": "short_received",
+        "txnRef": "INV-1099"
+      },
+      {
+        "cents": 49000,
+        "day": 65,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1121.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 18,
+          "contractId": 6,
+          "contractRateCents": 24500,
+          "earlierInvoicesSameVendor": 21,
+          "poId": "PO-1028",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "poQty": 2,
+          "proposedPartialCents": 24500,
+          "receivedQty": 1
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "short_received",
+        "kind": "invoice",
+        "mirrorCode": "short_received",
+        "txnRef": "INV-1121"
+      },
+      {
+        "cents": 83800,
+        "day": 85,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1163.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 42,
+          "contractId": 19,
+          "contractRateCents": 41900,
+          "earlierInvoicesSameVendor": 35,
+          "poId": "PO-1030",
+          "poReceivedQty": 1
+        },
+        "evidenceUsed": {
+          "poQty": 2,
+          "proposedPartialCents": 41900,
+          "receivedQty": 1
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "short_received",
+        "kind": "invoice",
+        "mirrorCode": "short_received",
+        "txnRef": "INV-1163"
+      },
+      {
+        "cents": 545000,
+        "day": 19,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1032.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 18,
+          "contractId": 1,
+          "contractRateCents": 54500,
+          "earlierInvoicesSameVendor": 4,
+          "poId": "PO-1024",
+          "poReceivedQty": 10
+        },
+        "evidenceUsed": {
+          "bankChangedDay": 18,
+          "daysSinceChange": 1
+        },
+        "expected": "reject",
+        "inferableFromEvidence": true,
+        "keyCode": "vendor_bank_change",
+        "kind": "invoice",
+        "mirrorCode": "vendor_bank_change",
+        "txnRef": "INV-1032"
+      },
+      {
+        "cents": 980000,
+        "day": 44,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1077.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 42,
+          "contractId": 17,
+          "contractRateCents": 245000,
+          "earlierInvoicesSameVendor": 15,
+          "poId": "PO-1026",
+          "poReceivedQty": 4
+        },
+        "evidenceUsed": {
+          "bankChangedDay": 42,
+          "daysSinceChange": 2
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "vendor_bank_change",
+        "kind": "invoice",
+        "mirrorCode": "vendor_bank_change",
+        "txnRef": "INV-1077"
+      },
+      {
+        "cents": 550800,
+        "day": 74,
+        "decoy": false,
+        "evidenceFile": "seed/fixtures/evidence/invoices/INV-1138.txt",
+        "evidenceInputs": {
+          "bankChangedDay": 71,
+          "contractId": 32,
+          "contractRateCents": 45900,
+          "earlierInvoicesSameVendor": 31,
+          "poId": "PO-1029",
+          "poReceivedQty": 12
+        },
+        "evidenceUsed": {
+          "bankChangedDay": 71,
+          "daysSinceChange": 3
+        },
+        "expected": "hold",
+        "inferableFromEvidence": true,
+        "keyCode": "vendor_bank_change",
+        "kind": "invoice",
+        "mirrorCode": "vendor_bank_change",
+        "txnRef": "INV-1138"
+      }
+    ],
+    "rowsAudited": 58,
+    "rowsEvaluatedByMirror": 7944,
+    "swapLog": "seed/fixtures/evidence/swap_log.txt",
+    "withEvidenceFile": 58
+  },
+  "command": "python3 bench/carrierbench/carrierbench.py --seed 42",
+  "controls": {
+    "decoys": {
+      "allHaveSwapLogLines": true,
+      "allLookLikeLocationMismatch": true,
+      "count": 6,
+      "definition": "a legitimate unit swap recorded in the dispatcher's swap log; the records the kernel reads cannot distinguish it from card misuse, so the right behaviour is hold, ask once, clear through a rule",
+      "rows": [
+        {
+          "day": 8,
+          "distanceMiles": 66.1,
+          "driver": "Clayton Burks",
+          "driverId": 22,
+          "mirrorCode": "location_mismatch",
+          "swapLogLines": 2,
+          "truckId": 15,
+          "txnRef": "1421"
+        },
+        {
+          "day": 19,
+          "distanceMiles": 56.4,
+          "driver": "Jerome Watkins",
+          "driverId": 10,
+          "mirrorCode": "location_mismatch",
+          "swapLogLines": 2,
+          "truckId": 30,
+          "txnRef": "2044"
+        },
+        {
+          "day": 41,
+          "distanceMiles": 97.2,
+          "driver": "Ramon Ortiz",
+          "driverId": 23,
+          "mirrorCode": "location_mismatch",
+          "swapLogLines": 2,
+          "truckId": 17,
+          "txnRef": "2231"
+        },
+        {
+          "day": 51,
+          "distanceMiles": 58.1,
+          "driver": "Carl Whitaker",
+          "driverId": 6,
+          "mirrorCode": "location_mismatch",
+          "swapLogLines": 2,
+          "truckId": 35,
+          "txnRef": "3955"
+        },
+        {
+          "day": 74,
+          "distanceMiles": 48.5,
+          "driver": "Alejandro Garza",
+          "driverId": 11,
+          "mirrorCode": "location_mismatch",
+          "swapLogLines": 2,
+          "truckId": 6,
+          "txnRef": "5428"
+        },
+        {
+          "day": 83,
+          "distanceMiles": 53.9,
+          "driver": "Derrick Osborne",
+          "driverId": 35,
+          "mirrorCode": "location_mismatch",
+          "swapLogLines": 2,
+          "truckId": 16,
+          "txnRef": "5986"
+        }
+      ]
+    },
+    "heldOut": {
+      "definition": "an entity (truck for card and toll rows, vendor for invoices) that carries exactly one answer-key row; a system that learned an entity's pattern from one planted row has nothing else on that entity to learn from",
+      "plantedRowsOnHeldOutEntities": [
+        "1468",
+        "1793",
+        "1971",
+        "2251",
+        "2540",
+        "2830",
+        "4177",
+        "4363",
+        "5041",
+        "5620",
+        "5908",
+        "6294",
+        "T1973",
+        "T2139",
+        "T2195",
+        "T2380",
+        "T2598",
+        "T2956",
+        "T3152"
+      ],
+      "plantedRowsOnHeldOutEntitiesCount": 19,
+      "plantedRowsPerTruck": {
+        "1": 2,
+        "11": 2,
+        "12": 3,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "19": 1,
+        "2": 1,
+        "20": 1,
+        "21": 2,
+        "23": 1,
+        "24": 1,
+        "26": 3,
+        "27": 1,
+        "28": 1,
+        "29": 1,
+        "3": 1,
+        "30": 1,
+        "32": 1,
+        "33": 1,
+        "34": 1,
+        "35": 1,
+        "39": 1,
+        "40": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "9": 1
+      },
+      "plantedRowsPerVendor": {
+        "1": 5,
+        "2": 4,
+        "3": 5,
+        "4": 2,
+        "5": 5
+      },
+      "trucksTotal": 40,
+      "trucksWithExactlyOnePlantedRow": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        23,
+        24,
+        27,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        35,
+        39,
+        40
+      ],
+      "trucksWithExactlyOnePlantedRowCount": 25,
+      "trucksWithNoPlantedRow": 10,
+      "vendorsTotal": 5,
+      "vendorsWithExactlyOnePlantedRow": [],
+      "vendorsWithExactlyOnePlantedRowCount": 0,
+      "vendorsWithNoPlantedRow": 0
+    },
+    "policyHolds": {
+      "count": 6,
+      "dailyCapCents": 4000000,
+      "definition": "clean rows above the per-transaction auto-pay limit or past the daily cap; a hold by policy, not an exception, and not in the answer key",
+      "perTransactionCapCents": 250000,
+      "refs": [
+        "INV-1075",
+        "INV-1080",
+        "INV-1106",
+        "INV-1109",
+        "INV-1117",
+        "INV-1171"
+      ]
+    },
+    "thresholds": {
+      "AUTO_PAY_DAY_MAX_CENTS": 4000000,
+      "AUTO_PAY_MAX_CENTS": 250000,
+      "BANK_CHANGE_DAYS": 7,
+      "BANK_CHANGE_MIN_CENTS": 500000,
+      "INVOICE_DUP_DAYS": 30,
+      "LOCATION_MILES": 25,
+      "PING_WINDOW_MIN": 30,
+      "RATE_VARIANCE": 0.05,
+      "TANK_FACTOR": 1.1,
+      "TOLL_DUP_MIN": 10
+    }
+  },
+  "counts": {
+    "answerKeyRows": 58,
+    "calendar": {
+      "day1": "2026-07-01",
+      "dayLast": "2026-11-05"
+    },
+    "cleanRows": 7886,
+    "contracts": 34,
+    "days": 92,
+    "decoyRefs": [
+      "1421",
+      "2044",
+      "2231",
+      "3955",
+      "5428",
+      "5986"
+    ],
+    "decoys": 6,
+    "drivers": 48,
+    "errorClasses": 7,
+    "expectedOutcomes": {
+      "auto_reject": 11,
+      "clear_after_question": 6,
+      "hold": 40,
+      "reject": 1
+    },
+    "fuelCards": 40,
+    "plantedByCode": {
+      "capacity_exceeded": 6,
+      "duplicate_invoice": 4,
+      "duplicate_toll": 11,
+      "location_mismatch": 14,
+      "rate_variance": 9,
+      "short_received": 5,
+      "vendor_bank_change": 3
+    },
+    "plantedTotal": 52,
+    "purchaseOrders": 30,
+    "rows": {
+      "card": 5607,
+      "invoice": 180,
+      "toll": 2157,
+      "total": 7944
+    },
+    "stations": 46,
+    "telematicsPings": 155457,
+    "terminals": 6,
+    "tollPlazas": 14,
+    "trucks": 40,
+    "vendors": 5
+  },
+  "fixtures": {
+    "allMatchCommit": true,
+    "allMatchRegenerated": true,
+    "files": [
+      {
+        "committed": "cc9b36576bdfaf6e0e18e4235872ac44",
+        "file": "seed/fixtures/answer_key.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "cc9b36576bdfaf6e0e18e4235872ac44",
+        "workingTree": "cc9b36576bdfaf6e0e18e4235872ac44"
+      },
+      {
+        "committed": "81ba60a2a462c07ebc0f8066a5c1d376",
+        "file": "seed/fixtures/card_txns.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "81ba60a2a462c07ebc0f8066a5c1d376",
+        "workingTree": "81ba60a2a462c07ebc0f8066a5c1d376"
+      },
+      {
+        "committed": "a9b6dc4a57b9ec6d965fba8833a10b37",
+        "file": "seed/fixtures/contracts.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "a9b6dc4a57b9ec6d965fba8833a10b37",
+        "workingTree": "a9b6dc4a57b9ec6d965fba8833a10b37"
+      },
+      {
+        "committed": "50a6e03f24bbb9ab1d16f0fd855d16e1",
+        "file": "seed/fixtures/drivers.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "50a6e03f24bbb9ab1d16f0fd855d16e1",
+        "workingTree": "50a6e03f24bbb9ab1d16f0fd855d16e1"
+      },
+      {
+        "committed": "05177da871d9dfa08380284d4d5b234a",
+        "file": "seed/fixtures/invoices.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "05177da871d9dfa08380284d4d5b234a",
+        "workingTree": "05177da871d9dfa08380284d4d5b234a"
+      },
+      {
+        "committed": "c7c1c0422d8255e5357cff67af5848c2",
+        "file": "seed/fixtures/pos.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "c7c1c0422d8255e5357cff67af5848c2",
+        "workingTree": "c7c1c0422d8255e5357cff67af5848c2"
+      },
+      {
+        "committed": "575936bede911406506ae0e47565324d",
+        "file": "seed/fixtures/summary.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "575936bede911406506ae0e47565324d",
+        "workingTree": "575936bede911406506ae0e47565324d"
+      },
+      {
+        "committed": "01b25d3d62c3a153c5e26778b6a0d1af",
+        "file": "seed/fixtures/terminals.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "01b25d3d62c3a153c5e26778b6a0d1af",
+        "workingTree": "01b25d3d62c3a153c5e26778b6a0d1af"
+      },
+      {
+        "committed": "5e527b7bc5e1f29b9f24260cd675f789",
+        "file": "seed/fixtures/toll_txns.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "5e527b7bc5e1f29b9f24260cd675f789",
+        "workingTree": "5e527b7bc5e1f29b9f24260cd675f789"
+      },
+      {
+        "committed": "fce729a00d94a9efa8339c83fac3943f",
+        "file": "seed/fixtures/trip_pings.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "fce729a00d94a9efa8339c83fac3943f",
+        "workingTree": "fce729a00d94a9efa8339c83fac3943f"
+      },
+      {
+        "committed": "861b4b8e162f17f88e280380482b0ece",
+        "file": "seed/fixtures/trucks.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "861b4b8e162f17f88e280380482b0ece",
+        "workingTree": "861b4b8e162f17f88e280380482b0ece"
+      },
+      {
+        "committed": "0be9ff02a40fe656e84fc07eed79d058",
+        "file": "seed/fixtures/vendors.json",
+        "matchesCommit": true,
+        "matchesRegenerated": true,
+        "regenerated": "0be9ff02a40fe656e84fc07eed79d058",
+        "workingTree": "0be9ff02a40fe656e84fc07eed79d058"
+      }
+    ],
+    "generator": "seed/generate.py",
+    "generatorSeconds": 2.74,
+    "regenerated": true,
+    "seed": 42
+  },
+  "generatedAt": "2026-10-24T23:24:14+00:00",
+  "name": "CarrierBench",
+  "secondsTotal": 5.13
+}
