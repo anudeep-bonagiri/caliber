@@ -1,0 +1,48 @@
+{
+  "calendar": {
+    "day_1": "2026-07-01",
+    "day_92": "2026-11-05",
+    "decoy_day_41": "2026-08-26"
+  },
+  "counts": {
+    "answer_key_rows": 58,
+    "card_txns": 5607,
+    "contracts": 34,
+    "drivers": 48,
+    "invoices": 180,
+    "pos": 30,
+    "terminals": 6,
+    "toll_txns": 2157,
+    "trip_pings": 155457,
+    "trucks": 40,
+    "vendors": 5
+  },
+  "decoys": 6,
+  "dollars_per_day": {
+    "auto_paid_max": 17088.32,
+    "auto_paid_min": 7727.88,
+    "auto_pay_day_cap": 40000.0,
+    "posted_max": 22939.02,
+    "posted_min": 7727.88
+  },
+  "limit_hold_refs": [
+    "INV-1075",
+    "INV-1080",
+    "INV-1106",
+    "INV-1109",
+    "INV-1117",
+    "INV-1171"
+  ],
+  "limit_holds": 6,
+  "planted": {
+    "capacity_exceeded": 6,
+    "duplicate_invoice": 4,
+    "duplicate_toll": 11,
+    "location_mismatch": 14,
+    "rate_variance": 9,
+    "short_received": 5,
+    "vendor_bank_change": 3
+  },
+  "seed": 42,
+  "trip_pings_file": "trip_pings.json"
+}

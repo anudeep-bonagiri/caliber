@@ -16,4 +16,4 @@ case "${1:-}" in
 esac
 echo
 echo "audit trail (last refusal):"
-curl -s -X POST "$STDB_URI/v1/database/$STDB_DB/sql" -d "SELECT action, actor_role, ref, detail FROM audit_event WHERE action = 'refused'" | python3 -c 'import sys,json; r=json.load(sys.stdin)[0]; rows=r["rows"]; print(rows[-1] if rows else "none")'
+curl -s -X POST "$STDB_URI/v1/database/$STDB_DB/sql" -d "SELECT id, action, actor_role, ref, detail FROM audit_event WHERE action = 'refused'" | python3 -c 'import sys,json; r=json.load(sys.stdin)[0]; rows=sorted(r["rows"], key=lambda x: x[0]); print(rows[-1][1:] if rows else "none")'

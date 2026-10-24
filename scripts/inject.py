@@ -47,7 +47,7 @@ def post(url, body, token=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--truck", type=int, required=True)
-    ap.add_argument("--driver", type=int, default=0, help="driver id (default: the truck id, which matches the seed's assignment for trucks 1..40)")
+    ap.add_argument("--driver", type=int, default=0, help="driver id (default: the driver assigned to the truck in seed/fixtures/drivers.json)")
     ap.add_argument("--gallons", type=float, required=True)
     ap.add_argument("--lat", type=float)
     ap.add_argument("--lon", type=float)
@@ -89,7 +89,15 @@ def main():
 
     txn_id = args.id or str(random.randint(900000, 999999))
     cents = round(args.gallons * args.price * 100)
-    driver = args.driver or args.truck
+    driver = args.driver
+    if not driver:
+        drivers_file = ROOT / "seed/fixtures/drivers.json"
+        if drivers_file.exists():
+            for d in json.loads(drivers_file.read_text()):
+                if d.get("truckId") == args.truck:
+                    driver = d["id"]
+                    break
+        driver = driver or args.truck
     row = {
         "id": txn_id,
         "card_id": f"FC-{1000 + args.truck}",

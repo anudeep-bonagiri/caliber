@@ -1,0 +1,350 @@
+[
+  {
+    "code": "capacity_exceeded",
+    "expected": "hold",
+    "note": "169.5 gallons on a 120 gallon tank (limit 132)",
+    "txnRef": "2251"
+  },
+  {
+    "code": "capacity_exceeded",
+    "expected": "hold",
+    "note": "272.1 gallons on a 200 gallon tank (limit 220)",
+    "txnRef": "3093"
+  },
+  {
+    "code": "capacity_exceeded",
+    "expected": "hold",
+    "note": "141.9 gallons on a 100 gallon tank (limit 110)",
+    "txnRef": "3510"
+  },
+  {
+    "code": "capacity_exceeded",
+    "expected": "hold",
+    "note": "123.9 gallons on a 100 gallon tank (limit 110)",
+    "txnRef": "5557"
+  },
+  {
+    "code": "capacity_exceeded",
+    "expected": "hold",
+    "note": "129.2 gallons on a 100 gallon tank (limit 110)",
+    "txnRef": "5908"
+  },
+  {
+    "code": "capacity_exceeded",
+    "expected": "hold",
+    "note": "374.8 gallons on a 250 gallon tank (limit 275)",
+    "txnRef": "6390"
+  },
+  {
+    "code": "duplicate_invoice",
+    "expected": "hold",
+    "note": "same vendor and amount as INV-1016 (PO-1021) 11 days earlier, now under PO-1001",
+    "txnRef": "INV-1037"
+  },
+  {
+    "code": "duplicate_invoice",
+    "expected": "hold",
+    "note": "same vendor and amount as INV-1020 (PO-1023) 18 days earlier, now under PO-1016",
+    "txnRef": "INV-1050"
+  },
+  {
+    "code": "duplicate_invoice",
+    "expected": "hold",
+    "note": "same vendor and amount as INV-1038 (PO-1017) 9 days earlier, now under PO-1014",
+    "txnRef": "INV-1052"
+  },
+  {
+    "code": "duplicate_invoice",
+    "expected": "hold",
+    "note": "same vendor and amount as INV-1114 (PO-1010) 14 days earlier, now under PO-1018",
+    "txnRef": "INV-1140"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH130-01 for TX-1012 8 minutes after T1313",
+    "txnRef": "T1314"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at NTTA-PGBT-01 for TX-1001 7 minutes after T1367",
+    "txnRef": "T1368"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH130-04 for TX-1027 7 minutes after T1972",
+    "txnRef": "T1973"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH45N-01 for TX-1009 7 minutes after T2137",
+    "txnRef": "T2139"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at NTTA-DNT-01 for TX-1032 3 minutes after T2194",
+    "txnRef": "T2195"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH45SE-01 for TX-1013 7 minutes after T2379",
+    "txnRef": "T2380"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH71-01 for TX-1040 8 minutes after T2597",
+    "txnRef": "T2598"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH45SE-01 for TX-1011 7 minutes after T2666",
+    "txnRef": "T2667"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at NTTA-MCLB-01 for TX-1014 6 minutes after T2955",
+    "txnRef": "T2956"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at NTTA-PGBT-01 for TX-1026 2 minutes after T3066",
+    "txnRef": "T3067"
+  },
+  {
+    "code": "duplicate_toll",
+    "expected": "auto_reject",
+    "note": "second charge at TXTAG-SH45N-01 for TX-1033 9 minutes after T3149",
+    "txnRef": "T3152"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Love's 420, Seguin TX while truck 12 sat at the Laredo yard engine off, 168 miles away",
+    "txnRef": "1068"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "clear_after_question",
+    "note": "legitimate swap: Clayton Burks drove relief unit 9 days 8-9 while unit 15 was in the shop (ac_service); he kept using card FC-1015; see swap_log.txt",
+    "txnRef": "1421"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Pilot 1115, Waco TX while truck 19 sat at the Houston yard engine off, 163 miles away",
+    "txnRef": "1468"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Love's 228, Pleasanton TX while truck 24 sat at the Houston yard engine off, 195 miles away",
+    "txnRef": "1793"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Pilot 1126, Luling TX while truck 20 sat at the Laredo yard engine off, 186 miles away",
+    "txnRef": "1971"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "clear_after_question",
+    "note": "legitimate swap: Jerome Watkins drove relief unit 14 days 19-22 while unit 30 was in the shop (oil_service); he kept using card FC-1030; see swap_log.txt",
+    "txnRef": "2044"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "clear_after_question",
+    "note": "legitimate swap: Ramon Ortiz drove relief unit 22 days 41-44 while unit 17 was in the shop (brake job); he kept using card FC-1017; see swap_log.txt",
+    "txnRef": "2231"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Stripes 1183, Refugio TX while truck 28 sat at the Austin yard engine off, 138 miles away",
+    "txnRef": "2540"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Shell Travel Center, Giddings TX while truck 34 sat at the San Antonio yard engine off, 107 miles away",
+    "txnRef": "2830"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Love's 402, Brenham TX while truck 11 sat at the Dallas yard engine off, 182 miles away",
+    "txnRef": "3209"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Love's 851, Austin TX while truck 21 sat at the Dallas yard engine off, 186 miles away",
+    "txnRef": "3884"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "clear_after_question",
+    "note": "legitimate swap: Carl Whitaker drove relief unit 27 days 51-54 while unit 35 was in the shop (ac_service); he kept using card FC-1035; see swap_log.txt",
+    "txnRef": "3955"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Pilot 1178, Robstown TX while truck 7 sat at the Houston yard engine off, 195 miles away",
+    "txnRef": "4177"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Stripes 1150, Three Rivers TX while truck 23 sat at the San Antonio yard engine off, 69 miles away",
+    "txnRef": "4363"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Stripes 1204, Freer TX while truck 29 sat at the San Antonio yard engine off, 107 miles away",
+    "txnRef": "5041"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "clear_after_question",
+    "note": "legitimate swap: Alejandro Garza drove relief unit 13 days 74-75 while unit 6 was in the shop (alignment); he kept using card FC-1006; see swap_log.txt",
+    "txnRef": "5428"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Stripes 1183, Refugio TX while truck 3 sat at the Austin yard engine off, 138 miles away",
+    "txnRef": "5620"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "clear_after_question",
+    "note": "legitimate swap: Derrick Osborne drove relief unit 31 days 83-85 while unit 16 was in the shop (tire_replacement); he kept using card FC-1016; see swap_log.txt",
+    "txnRef": "5986"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Flying J 758, Encinal TX while truck 26 sat at the Corpus Christi yard engine off, 121 miles away",
+    "txnRef": "6065"
+  },
+  {
+    "code": "location_mismatch",
+    "expected": "hold",
+    "note": "card used at Love's 244, Beeville TX while truck 2 sat at the Houston yard engine off, 172 miles away",
+    "txnRef": "6294"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "oil_service billed at 40400 cents against contract 9 rate 33900 (19.2 percent over)",
+    "txnRef": "INV-1003"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "tire_replacement billed at 58250 cents against contract 28 rate 49800 (17.0 percent over)",
+    "txnRef": "INV-1015"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "oil_service billed at 42225 cents against contract 21 rate 34500 (22.4 percent over)",
+    "txnRef": "INV-1029"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "brake_job billed at 148250 cents against contract 10 rate 135500 (9.4 percent over)",
+    "txnRef": "INV-1074"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "tire_replacement billed at 70675 cents against contract 1 rate 54500 (29.7 percent over)",
+    "txnRef": "INV-1078"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "oil_service billed at 37450 cents against contract 30 rate 29900 (25.3 percent over)",
+    "txnRef": "INV-1086"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "dpf_clean billed at 67350 cents against contract 18 rate 52500 (28.3 percent over)",
+    "txnRef": "INV-1096"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "tire_replacement billed at 72425 cents against contract 15 rate 59600 (21.5 percent over)",
+    "txnRef": "INV-1116"
+  },
+  {
+    "code": "rate_variance",
+    "expected": "hold",
+    "note": "oil_service billed at 37875 cents against contract 3 rate 32800 (15.5 percent over)",
+    "txnRef": "INV-1130"
+  },
+  {
+    "code": "short_received",
+    "expected": "hold",
+    "note": "billed 3 but PO-1005 shows 2 received; partial 99600 cents",
+    "txnRef": "INV-1010"
+  },
+  {
+    "code": "short_received",
+    "expected": "hold",
+    "note": "billed 4 but PO-1025 shows 3 received; partial 155700 cents",
+    "txnRef": "INV-1062"
+  },
+  {
+    "code": "short_received",
+    "expected": "hold",
+    "note": "billed 2 but PO-1027 shows 1 received; partial 51700 cents",
+    "txnRef": "INV-1099"
+  },
+  {
+    "code": "short_received",
+    "expected": "hold",
+    "note": "billed 2 but PO-1028 shows 1 received; partial 24500 cents",
+    "txnRef": "INV-1121"
+  },
+  {
+    "code": "short_received",
+    "expected": "hold",
+    "note": "billed 2 but PO-1030 shows 1 received; partial 41900 cents",
+    "txnRef": "INV-1163"
+  },
+  {
+    "code": "vendor_bank_change",
+    "expected": "hold",
+    "note": "Alamo Fleet Service changed remit-to bank on day 18 (ending 2214 to 4471); invoice of 545000 cents received day 19",
+    "txnRef": "INV-1032"
+  },
+  {
+    "code": "vendor_bank_change",
+    "expected": "hold",
+    "note": "Gulf Coast Diesel changed remit-to bank on day 42 (ending 5518 to 7730); invoice of 980000 cents received day 44",
+    "txnRef": "INV-1077"
+  },
+  {
+    "code": "vendor_bank_change",
+    "expected": "hold",
+    "note": "Border Fleet Repair changed remit-to bank on day 71 (ending 3367 to 8823); invoice of 550800 cents received day 74",
+    "txnRef": "INV-1138"
+  }
+]

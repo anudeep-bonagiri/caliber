@@ -46,6 +46,11 @@ step "5/7 fixtures"
 ( cd scripts && npx tsx load_fixtures.ts )
 
 step "6/7 worker in replay mode (logs/worker.log)"
+pkill -f "worker/src/index.ts" 2>/dev/null || true
+pkill -f "tsx src/index.ts" 2>/dev/null || true
+pkill -f "vite --host 127.0.0.1 --port 5173" 2>/dev/null || true
+pkill -f "agent/agent.py" 2>/dev/null || true
+sleep 1
 if [ -f worker/package.json ]; then
   ( cd worker && [ -d node_modules ] || npm install --silent )
   ( cd worker && nohup npm start > ../logs/worker.log 2>&1 & )
@@ -56,6 +61,11 @@ if [ "${1:-}" != "--no-web" ] && [ -f web/package.json ]; then
   ( cd web && [ -d node_modules ] || npm install --silent )
   ( cd web && nohup npm run dev -- --host 127.0.0.1 --port 5173 > ../logs/web.log 2>&1 & )
   echo "dashboard: http://127.0.0.1:5173"
+fi
+
+if grep -q '^AGENT_SEED=.\+' .env && [ -d agent/.venv ]; then
+  step "ASI:One agent (logs/agent.log); open the Agent Inspector link it prints the first time"
+  ( nohup agent/.venv/bin/python agent/agent.py > logs/agent.log 2>&1 & )
 fi
 
 cat <<EOF

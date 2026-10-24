@@ -1,18 +1,23 @@
 {
   "recorded": true,
-  "note": "RECORDED investigation for moment two (vendor bank change), hand-written in the shape WORKER_MODE=record emits. Replayed verbatim by the worker in replay mode and labelled status 'replayed', source 'replayed'. Nothing here is produced at demo time by a model.",
+  "note": "RECORDED investigation for moment two (vendor bank change), hand-written in the shape WORKER_MODE=record emits (no live Droid run produced it). Replayed verbatim by the worker in replay mode and labelled status 'replayed', source 'replayed'. Nothing here is produced at demo time by a model.",
   "finding": {
-    "finding": "Invoice INV-1077 from vendor 3 bills $9,800.00 for a brake job against PO-1017 at the contract rate, and the quantity matches receiving. The vendor record shows the bank account on file changed two business days before the invoice arrived, which is inside the 7 day window, so the invoice itself is clean but the payee is not yet confirmed.",
+    "finding": "Invoice INV-1077 from Gulf Coast Diesel bills $9,800.00 for a brake job on unit 17 against PO-1026 at the contract rate, and the quantity matches receiving. The invoice itself says the remit-to account was updated on 2026-08-27, two business days before it arrived, which is inside the 7 day window, so the invoice is clean but the payee is not yet confirmed.",
     "evidence": [
       {
         "source": "invoices/INV-1077.txt",
-        "ref": "line 3",
-        "quote": "PO-1017  brake_job  qty 4  @ $2,450.00  total $9,800.00"
+        "ref": "line 7",
+        "quote": "Brake job (per axle)                     qty   4 x  $2,450.00 =   $9,800.00"
+      },
+      {
+        "source": "invoices/INV-1077.txt",
+        "ref": "line 12",
+        "quote": "NOTE: remit-to account updated on 2026-08-27. Please update your records."
       },
       {
         "source": "contract_rate_for_vendor",
         "ref": "vendor 3 brake_job on day 44",
-        "quote": "rate_cents=245000 clause=\"Brake service per axle, parts and labor, net 30\""
+        "quote": "{\"rate_cents\":245000,\"clause\":\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included.\",\"contract_id\":\"17\"}"
       },
       {
         "source": "kernel",
@@ -26,13 +31,16 @@
     "status": "ok",
     "model": "droid",
     "durationMs": 17240,
-    "tokenUsage": { "input": 12210, "output": 640 }
+    "tokenUsage": {
+      "input": 12210,
+      "output": 640
+    }
   },
   "steps": [
     {
       "type": "note",
       "at": "2026-10-23T21:31:40.000Z",
-      "text": "live droid run (record) for INV-1077"
+      "text": "hand-written recorded investigation for INV-1077 (shape of a record-mode run)"
     },
     {
       "type": "assistant",
@@ -44,14 +52,16 @@
       "at": "2026-10-23T21:31:43.800Z",
       "name": "Read",
       "toolUseId": "toolu_01_read_invoice_1077",
-      "input": { "path": "invoices/INV-1077.txt" }
+      "input": {
+        "path": "invoices/INV-1077.txt"
+      }
     },
     {
       "type": "tool_result",
       "at": "2026-10-23T21:31:44.050Z",
       "toolUseId": "toolu_01_read_invoice_1077",
       "toolName": "Read",
-      "content": "INVOICE INV-1077\nGulf Coast Diesel (vendor 3)\nPO-1017  brake_job  qty 4  @ $2,450.00  total $9,800.00\nRemit to: account ending 7731 (updated)\n",
+      "content": "GULF COAST DIESEL\nHouston, TX\nINVOICE INV-1077\nDate received: 2026-08-31 (business day 44)\nCustomer PO: PO-1026   Unit: 17\n\nBrake job (per axle)                     qty   4 x  $2,450.00 =   $9,800.00\n\nTOTAL DUE $9,800.00\nRemit to account ending 7730\nTerms: net 15\nNOTE: remit-to account updated on 2026-08-27. Please update your records.\n",
       "isError": false
     },
     {
@@ -59,14 +69,18 @@
       "at": "2026-10-23T21:31:45.200Z",
       "name": "contract_rate_for_vendor",
       "toolUseId": "toolu_02_contract_rate_1077",
-      "input": { "vendor_id": "3", "item": "brake_job", "on": 44 }
+      "input": {
+        "vendor_id": "3",
+        "item": "brake_job",
+        "on": 44
+      }
     },
     {
       "type": "tool_result",
       "at": "2026-10-23T21:31:47.600Z",
       "toolUseId": "toolu_02_contract_rate_1077",
       "toolName": "contract_rate_for_vendor",
-      "content": "[{\"rate_cents\":245000,\"clause\":\"Brake service per axle, parts and labor, net 30\"}]",
+      "content": "[{\"rate_cents\":245000,\"clause\":\"Rate covers pads, drums or rotors, hardware and labor for one axle, with wheel-end inspection included.\",\"contract_id\":\"17\"}]",
       "isError": false
     },
     {
@@ -77,7 +91,9 @@
     {
       "type": "result",
       "at": "2026-10-23T21:31:51.400Z",
-      "text": "structured output returned"
+      "subtype": "success",
+      "durationMs": 17240,
+      "success": true
     }
   ],
   "recordedAt": "2026-10-23T21:31:51.400Z"

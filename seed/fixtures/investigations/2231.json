@@ -1,43 +1,46 @@
 {
   "recorded": true,
-  "note": "RECORDED investigation for the story case, hand-written in the shape WORKER_MODE=record emits. Replayed verbatim by the worker in replay mode and labelled status 'replayed', source 'replayed'. Nothing here is produced at demo time by a model.",
+  "note": "RECORDED investigation for the story case, hand-written in the shape WORKER_MODE=record emits (no live Droid run produced it). Replayed verbatim by the worker in replay mode and labelled status 'replayed', source 'replayed'. Nothing here is produced at demo time by a model.",
   "finding": {
-    "finding": "The card assigned to truck 17 was used at Love's 412 in Schulenburg while truck 17's nearest ping was 96.3 miles away in San Antonio and truck 22 was 41 m from the pump. The dispatcher swap log shows Ramon Ortiz moved to unit 22 on 08/26 because unit 17 was in the shop, so the fuel went into a company truck driven by the card's driver.",
+    "finding": "The card assigned to truck 17 was used at Love's 412 in Schulenburg while truck 17's nearest ping was 97.2 miles away at the San Antonio yard and truck 22 was 41 m from the pump four minutes earlier. The dispatcher swap log shows Ramon Ortiz moved to unit 22 on 2026-08-26 because unit 17 was in the shop for a brake job, so the fuel went into a company truck driven by the card's driver.",
     "evidence": [
       {
         "source": "find_trips_near",
-        "ref": "truck 22 @ 2026-08-26T13:07Z",
-        "quote": "truck_id=22 at=2026-08-26T13:07:00Z dist_m=41"
+        "ref": "truck 22 @ 2026-08-26T12:42:59Z",
+        "quote": "{\"truck_id\":\"22\",\"at\":\"2026-08-26T12:42:59Z\",\"dist_m\":41}"
       },
       {
         "source": "swap_log.txt",
-        "ref": "line 14",
-        "quote": "08/26 Ortiz R. -> unit 22 (17 in shop)"
+        "ref": "line 8",
+        "quote": "unit 17 in shop: brake job (PO-1026); moved to unit 22 through 2026-08-31"
       },
       {
         "source": "kernel",
         "ref": "evidence.distanceMiles",
-        "quote": "96.3 miles from the nearest ping of truck 17, threshold 25"
+        "quote": "97.2 miles from the nearest ping of truck 17, threshold 25"
       }
     ],
     "recommendation": "hold_and_ask",
-    "question_for_controller": "Did Ramon Ortiz drive truck 22 on this day while truck 17 was in the shop?",
+    "question_for_controller": "Did Ramon Ortiz drive truck 22 on 2026-08-26 while truck 17 was in the shop?",
     "confidence": 0.86,
     "status": "ok",
     "model": "droid",
     "durationMs": 23810,
-    "tokenUsage": { "input": 18422, "output": 912 }
+    "tokenUsage": {
+      "input": 18422,
+      "output": 912
+    }
   },
   "steps": [
     {
       "type": "note",
       "at": "2026-10-23T21:14:02.000Z",
-      "text": "live droid run (record) for 2231"
+      "text": "hand-written recorded investigation for 2231 (shape of a record-mode run)"
     },
     {
       "type": "assistant",
       "at": "2026-10-23T21:14:06.410Z",
-      "text": "The kernel says card FC-1017 for truck 17 bought 120 gallons at Love's 412 in Schulenburg while truck 17's nearest ping was 96.3 miles away. I will check which company trucks were near the station at the time, then look at the swap log."
+      "text": "The kernel says card FC-1017 for truck 17 bought 120 gallons at Love's 412 in Schulenburg while truck 17's nearest ping was 97.2 miles away. I will check which company trucks were near the station at the time, then look at the swap log."
     },
     {
       "type": "tool_call",
@@ -47,8 +50,8 @@
       "input": {
         "point_wkt": "POINT(-96.9036 29.6816)",
         "radius_m": 3000,
-        "since": "2026-08-26T12:35:00Z",
-        "until": "2026-08-26T13:35:00Z"
+        "since": "2026-08-26T12:17:00Z",
+        "until": "2026-08-26T13:17:00Z"
       }
     },
     {
@@ -56,13 +59,13 @@
       "at": "2026-10-23T21:14:09.880Z",
       "toolUseId": "toolu_01_find_trips_near_2231",
       "toolName": "find_trips_near",
-      "content": "[{\"truck_id\":\"22\",\"at\":\"2026-08-26T13:07:00Z\",\"dist_m\":41},{\"truck_id\":\"22\",\"at\":\"2026-08-26T12:52:00Z\",\"dist_m\":1880}]",
+      "content": "[{\"truck_id\":\"22\",\"at\":\"2026-08-26T12:42:59Z\",\"dist_m\":41},{\"truck_id\":\"22\",\"at\":\"2026-08-26T12:55:00Z\",\"dist_m\":44}]",
       "isError": false
     },
     {
       "type": "assistant",
       "at": "2026-10-23T21:14:12.300Z",
-      "text": "Truck 22 was 41 m from the pump at 13:07. Truck 17 was not near the station. Checking the swap log for a reassignment on 08/26."
+      "text": "Truck 22 was 41 m from the pump at 12:42. Truck 17 was not near the station. Checking the swap log for a reassignment on 2026-08-26."
     },
     {
       "type": "tool_call",
@@ -70,7 +73,7 @@
       "name": "Grep",
       "toolUseId": "toolu_02_grep_swap_log_2231",
       "input": {
-        "pattern": "08/26",
+        "pattern": "2026-08-26",
         "path": "swap_log.txt"
       }
     },
@@ -79,13 +82,13 @@
       "at": "2026-10-23T21:14:13.150Z",
       "toolUseId": "toolu_02_grep_swap_log_2231",
       "toolName": "Grep",
-      "content": "swap_log.txt:14:08/26 Ortiz R. -> unit 22 (17 in shop)",
+      "content": "8:2026-08-26  Ortiz, Ramon (drv 23)         17    22    unit 17 in shop: brake job (PO-1026); moved to unit 22 through 2026-08-31",
       "isError": false
     },
     {
       "type": "assistant",
       "at": "2026-10-23T21:14:19.720Z",
-      "text": "Line 14 of the swap log records Ramon Ortiz moving to unit 22 on 08/26 because unit 17 was in the shop. That explains the card use: the driver kept his card and fueled the unit he was actually driving. A person should confirm the swap before the payment is released, so I recommend hold_and_ask."
+      "text": "Line 8 of the swap log records Ramon Ortiz moving to unit 22 on 2026-08-26 because unit 17 was in the shop. That explains the card use: the driver kept his card and fueled the unit he was actually driving. A person should confirm the swap before the payment is released, so I recommend hold_and_ask."
     },
     {
       "type": "result",

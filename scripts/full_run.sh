@@ -36,12 +36,13 @@ step "92 days"
 ( cd scripts && npx tsx run_days.ts --until 92 | tail -2 )
 
 step "waiting for investigations"
-for i in $(seq 1 120); do
-  left=$(curl -s -X POST http://127.0.0.1:3100/v1/database/dispatch-ledger/sql -d "SELECT status FROM agent_task WHERE status = 'open'" | python3 -c 'import sys,json; print(len(json.load(sys.stdin)[0]["rows"]))')
-  [ "$left" = "0" ] && break
+left=1
+for i in $(seq 1 180); do
+  left=$(curl -s -X POST http://127.0.0.1:3100/v1/database/dispatch-ledger/sql -d "SELECT status FROM agent_task WHERE status = 'open'" | python3 -c 'import sys,json; print(len(json.load(sys.stdin)[0]["rows"]))' || echo 1)
+  if [ "$left" = "0" ]; then break; fi
   sleep 1
 done
-echo "open tasks: $left"
+echo "open tasks after wait: $left"
 
 step "controller pass"
 python3 scripts/controller_sim.py --rounds 30 --sleep 2 | tail -4
