@@ -127,7 +127,7 @@ async def on_chat(ctx: Context, sender: str, msg: ChatMessage):
     route = relay.route(sender, it.name if it else None)
     if route == "investigator_reply":
         # The investigator's answer. Relayed to the user who asked, never parsed as a command.
-        ctx.logger.info(f"investigator replied: {text[:80]}")
+        ctx.logger.info(f"investigator replied: {text[:80].replace(chr(10), ' | ')}")
         await relay.on_investigator_reply(text, ctx.session)
         return
     ctx.logger.info(f"{sender[:16]}: {text[:120]}")

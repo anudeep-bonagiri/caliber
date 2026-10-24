@@ -7,7 +7,7 @@ The read-only investigator for Dispatch Ledger, an autonomous accounts-payable c
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| Dispatch Investigator | `@dispatch-investigator` | pending (printed by the running agent) | Holds the `reader` identity: answers `why <id>` and `status`; every write it is asked for is refused by the ledger and recorded | [agent/investigator.py](https://github.com/anudeep-bonagiri/dispatch-ledger/blob/main/agent/investigator.py) |
+| Dispatch Investigator | `@dispatch-investigator` | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | Holds the `reader` identity: answers `why <id>` and `status`; every write it is asked for is refused by the ledger and recorded | [agent/investigator.py](https://github.com/anudeep-bonagiri/dispatch-ledger/blob/main/agent/investigator.py) |
 
 ## Commands
 

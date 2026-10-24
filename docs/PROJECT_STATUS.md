@@ -232,6 +232,30 @@ Checks: SQL counts before and after each step; page text searched with the brows
 
 Job 8 addendum (day 74): the vendor 5 bank-change invoice is INV-1138 on day 74 (bank change day 71), so the clock was stepped two days past the brief's 72. The restarted worker processed its vendor_check as a stand-in because no fixture exists for vendor 5: the card reads "stand-in, not a vendor check" with three "no result" rows, "recommends escalate, confidence 0%, status no_fixture", no "/TODO-" text on the page, and the trust line counts it ("Vendor checks: 0 live, 2 recorded replay, 0 hand-shaped fixture, 6 stand-in"). Verdict: honest. The hand-shaped badge path itself is covered by the worker tests (vendor 3 fixtures) and was not exercised on the live ledger in this session. The INV-1077 remnant (old finding JSON with "POST /TODO-" refs) is accepted because demo_up.sh rebuilds the ledger before judging. Ledger left paused at day 74.
 
+## 2026-10-24 14:53 PDT Builder-18: investigator agent (Task 18)
+
+Second uAgent `dispatch-investigator`, read-only by database role. Commits 7c7f577 (module), f1eae32 (agents), the docs commit after it, and this one. Log: `logs/builder_18.log`.
+
+| Check | Command | Observed |
+| --- | --- | --- |
+| Module tests | `cd spacetimedb && npx vitest run` | 64 passed (module.test.ts 37, new describe 8: reader refused by approve_payment, answer_question, approve_rule, reject_payment, claim_task, record_investigation, create_rule; try_approve_payment by the reader returns `[false, "reader may not do this (needs controller)"]` and leaves an audit_event row with actor_role reader) |
+| Bindings | `npm run generate` then `git diff --stat module_bindings/` | no diff (role is free text) |
+| Agent tests | `agent/.venv/bin/pytest -q agent/tests` | 138 passed (23 new in test_investigator.py: reader identity on the wire, forwarded refusal verbatim, relay forward and timeout, investigator reply never a command, cli prefix) |
+| Publish, data kept | `cd spacetimedb && npm run publish:local` | `Updated database with name: dispatch-ledger`; business_day still day 74 paused, audit_event count 12698 before and after |
+| Reader identity | `python3 scripts/mint_identities.py` twice | first run `reader: <hex>` and `INVESTIGATOR_SEED: generated (not shown)`; second run `reader: <hex> (reused from .env, role granted again)`; STDB_READER_TOKEN, STDB_READER_IDENTITY, INVESTIGATOR_SEED present in .env (grep -c, 1 each) |
+| Terminal twin | `agent/.venv/bin/python -m agent.cli "why 2231"` | `investigator: 2231  location_mismatch  $412.00  day 41  status cleared_by_rule`, Finding, two Evidence lines, Recommendation hold_and_ask (confidence 0.97), Answer on file, `source: replayed` |
+| Terminal twin | `agent/.venv/bin/python -m agent.cli "status"` | `investigator: Day 74 of 92 (2026-10-12), clock paused, tick 0.5 s. Today: 94 transactions, 92 auto-paid ($10,855.69), 2 held, 0 rejected.` |
+| Reader refusal | `curl .../call/try_approve_payment` with the reader token, `["2231", {"none": []}]` | `[false,"reader may not do this (needs controller)"]` |
+| Refusal on the record | `SELECT id, day, actor_role, action, ref, detail FROM audit_event WHERE actor_role = 'reader'` | id 12705 (the curl) and 12706 (`approve 2231` sent to the running investigator agent on 8012): day 74, reader, refused, 2231, `reader may not do this (needs controller)` |
+| Round trip | signed ChatMessage envelope to the controller's `/submit` on 8011, forwarded to the investigator, reply relayed | 0.04 to 0.05 s, 4 runs, logged as `investigator round trip 0.05 s` in `logs/agent.log`; investigator log shows `agent1qt278cr9lu: why 2231` |
+| Processes | `lsof -iTCP:8011 -iTCP:8012` | investigator pid 29289 on 8012 (`logs/investigator.log`), controller restarted on 8011 (`logs/agent.log`), controller address unchanged `agent1qt278...y5yge`; investigator address `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` (printed by the agent, now in both agent tables) |
+
+Path in use: local. Both agents are mailbox agents, but on the demo laptop they resolve each other to `http://127.0.0.1:<port>/submit` through a local-first resolver (`agent/peers.py`); every other destination (ASI:One users) goes through the normal global resolver. `AGENT_PEER_PATH=mailbox` forces the Agentverse path. The mailbox path could not be measured: the investigator's mailbox does not exist until Anudeep clicks Connect for it, so a message routed through Agentverse has nowhere to land. The 8 s fallback (`investigator did not answer in time; from the ledger directly:`) is covered by the mock tests, not seen live.
+
+Honesty notes. TASKS.md calls the dashboard's audit panel `audit_feed`; there is no view of that name in the module, the panel subscribes to the public `audit_event` table, and that is where the reader's refusal row appears. Runbook beat 01:00 is `what needs me`, which the controller answers itself, so no `investigator:` prefix was written into that row (the brief asked for one on 01:00 and 01:10); 01:10 carries it. The runbook's 00:00 and 00:45 Terminal B fallbacks (`agent.cli "status"` and `"why 2231"`) now print with the `investigator:` prefix too; those rows were outside this brief and still read correctly. `mint_identities.py` was run twice, so the agent and controller identities were minted twice; the earlier identities keep their roles and the running worker (started before) is unaffected.
+
+Waits on Anudeep's clicks: Inspector Connect, Mailbox, Finish for `dispatch-investigator` (link in `logs/investigator.log`), profile README from `agent/INVESTIGATOR_README.md`, tags innovationlab and hackathon; then the two-line ASI:One check in `agent/CONNECT.md` (`why 2231` to the controller starts `investigator:`; `approve 2231` to the investigator is `investigator: refused by the ledger: reader may not do this (needs controller)`). README tables still say "pending registration" in the Handle column until then.
+
 ## Tried and rejected
 
 | What | Why rejected |
