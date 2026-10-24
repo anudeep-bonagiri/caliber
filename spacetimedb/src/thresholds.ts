@@ -9,12 +9,13 @@ export const T = {
   BANK_CHANGE_DAYS: 7,
   BANK_CHANGE_MIN_CENTS: 500_000n,
   AUTO_PAY_MAX_CENTS: 250_000n,
-  AUTO_PAY_DAY_MAX_CENTS: 6_000_000n,
+  AUTO_PAY_DAY_MAX_CENTS: 4_000_000n,
   TOTAL_DAYS: 92,
 } as const;
 
-// Conditions a rule may never clear. Checked in the reducer, not in a prompt.
-export const FORBIDDEN_RULE_CONDITIONS = ['capacity_exceeded', 'vendor_bank_change', 'duplicate_toll'] as const;
+// The only conditions a rule may clear. Checked in the reducer, not in a prompt.
+// capacity_exceeded, vendor_bank_change, duplicate_toll, duplicate_invoice, short_received and po_mismatch can never be ruled away.
+export const RULE_CONDITIONS = ['location_mismatch', 'rate_variance'] as const;
 
 // Exception codes the kernel can raise. 'matched' is clean, 'limit' is a policy hold, not an exception.
 export const CODES = [
@@ -27,5 +28,6 @@ export const CODES = [
   'duplicate_invoice',
   'vendor_bank_change',
   'short_received',
+  'po_mismatch',
 ] as const;
 export type Code = (typeof CODES)[number];

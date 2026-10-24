@@ -1,0 +1,25 @@
+{
+  "name": "dispatch-ledger-worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Dispatch Ledger worker: claims investigation tasks, runs Droid (or replays recorded findings), drafts and backtests rules. Holds the agent identity only; it can never approve anything.",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@factory/droid-sdk": "0.10.0",
+    "spacetimedb": "2.13.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "~5.6.2",
+    "vitest": "^3.2.4"
+  }
+}

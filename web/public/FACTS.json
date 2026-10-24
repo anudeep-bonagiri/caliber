@@ -1,0 +1,26 @@
+{
+  "asOf": "sample, replace with scripts/facts.py output",
+  "byCode": [
+    { "code": "location_mismatch", "planted": 14, "raised": 20, "truePositives": 14, "precision": 0.7, "recall": 1.0 },
+    { "code": "capacity_exceeded", "planted": 6, "raised": 6, "truePositives": 6, "precision": 1.0, "recall": 1.0 },
+    { "code": "rate_variance", "planted": 8, "raised": 9, "truePositives": 8, "precision": 0.889, "recall": 1.0 },
+    { "code": "duplicate_toll", "planted": 7, "raised": 7, "truePositives": 7, "precision": 1.0, "recall": 1.0 },
+    { "code": "duplicate_invoice", "planted": 5, "raised": 5, "truePositives": 5, "precision": 1.0, "recall": 1.0 },
+    { "code": "vendor_bank_change", "planted": 3, "raised": 3, "truePositives": 3, "precision": 1.0, "recall": 1.0 },
+    { "code": "short_received", "planted": 9, "raised": 10, "truePositives": 9, "precision": 0.9, "recall": 1.0 }
+  ],
+  "byDay": [
+    { "day": 1, "date": "2026-07-01", "exceptions": 2, "autoPaid": 55, "byCode": { "location_mismatch": 1, "short_received": 1 } },
+    { "day": 2, "date": "2026-07-02", "exceptions": 0, "autoPaid": 58 },
+    { "day": 3, "date": "2026-07-03", "exceptions": 1, "autoPaid": 61, "byCode": { "rate_variance": 1 } },
+    { "day": 4, "date": "2026-07-06", "exceptions": 3, "autoPaid": 57, "byCode": { "location_mismatch": 2, "duplicate_toll": 1 } },
+    { "day": 5, "date": "2026-07-07", "exceptions": 0, "autoPaid": 60 },
+    { "day": 6, "date": "2026-07-08", "exceptions": 1, "autoPaid": 59, "byCode": { "capacity_exceeded": 1 } },
+    { "day": 7, "date": "2026-07-09", "exceptions": 2, "autoPaid": 56, "byCode": { "location_mismatch": 1, "duplicate_invoice": 1 } },
+    { "day": 8, "date": "2026-07-10", "exceptions": 0, "autoPaid": 62 },
+    { "day": 9, "date": "2026-07-13", "exceptions": 1, "autoPaid": 58, "byCode": { "vendor_bank_change": 1 } },
+    { "day": 10, "date": "2026-07-14", "exceptions": 2, "autoPaid": 57, "byCode": { "short_received": 1, "rate_variance": 1 } },
+    { "day": 11, "date": "2026-07-15", "exceptions": 0, "autoPaid": 60 },
+    { "day": 12, "date": "2026-07-16", "exceptions": 1, "autoPaid": 59, "byCode": { "location_mismatch": 1 } }
+  ]
+}

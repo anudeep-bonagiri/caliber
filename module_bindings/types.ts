@@ -143,6 +143,12 @@ export const MatchResult = __t.object("MatchResult", {
 });
 export type MatchResult = __Infer<typeof MatchResult>;
 
+export const Outcome = __t.object("Outcome", {
+  ok: __t.bool(),
+  message: __t.string(),
+});
+export type Outcome = __Infer<typeof Outcome>;
+
 export const Payment = __t.object("Payment", {
   txnRef: __t.string(),
   cents: __t.i64(),

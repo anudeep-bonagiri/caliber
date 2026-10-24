@@ -1,23 +1,34 @@
 // Dispatch Ledger module. One shared room: all state and every permission check live here.
-// Three roles (seed, agent, controller). Every reducer: requireRole, the change, audit.
+// Three roles (seed, agent, controller). Every action: check, the change, audit.
+//
+// Two entry points per controller action:
+//   - a reducer (`approve_payment`): used by SDK clients; a refusal throws SenderError and the
+//     transaction rolls back, so the caller sees the message but nothing is written.
+//   - a procedure (`try_approve_payment`): runs the same check in its own committed transaction,
+//     so a refusal leaves an `audit_event` row with action 'refused' and returns {ok:false, message}.
+//     The ASI:One agent and the demo scripts use these so refusals are visible in the ledger.
 import { SenderError, t, type InferSchema, type ReducerCtx } from 'spacetimedb/server';
 import { ScheduleAt } from 'spacetimedb';
 import spacetimedb, {
   agentTask, businessDay, cardTxn, contract, dayTimer, driver, hold, invoice, matchResult, payment,
   po, rule, terminal, tollTxn, tripPing, truck, vendor,
 } from './schema';
-import { T, FORBIDDEN_RULE_CONDITIONS } from './thresholds';
+import { T, RULE_CONDITIONS } from './thresholds';
 import { dateForDay } from './calendar';
 import {
-  autoPayDecision, evaluateCardTxn, evaluateInvoice, evaluateToll,
-  type PingIn, type RuleIn, type TollIn, type InvoiceIn, type Verdict,
+  autoPayDecision, evaluateCardTxn, evaluateInvoice, evaluateToll, isEarlierInvoice, isEarlierToll, ruleCovers,
+  type PingIn, type RuleIn, type RuleScope, type TollIn, type InvoiceIn, type Verdict,
 } from './kernel';
 
 export { default } from './schema';
 
 type Ctx = ReducerCtx<InferSchema<typeof spacetimedb>>;
+type Refusal = string | null;
+type Identity = Ctx['sender'];
 
 const TICK_MICROS = 2_000_000n;
+const APPROVABLE = ['open', 'awaiting_controller', 'answered'];
+const Outcome = t.object('Outcome', { ok: t.bool(), message: t.string() });
 
 // ---------------------------------------------------------------------------
 // roles and audit
@@ -37,15 +48,40 @@ function audit(ctx: Ctx, action: string, ref: string, detail: string) {
   });
 }
 
+function checkRole(ctx: Ctx, ...allowed: string[]): Refusal {
+  const r = roleOf(ctx);
+  return allowed.includes(r) ? null : `${r} may not do this (needs ${allowed.join(' or ')})`;
+}
+
+// Reducer path: audit then throw (the audit row rolls back with the transaction; the message reaches the caller).
+function guard(ctx: Ctx, ref: string, refusal: Refusal, perform: () => void) {
+  if (refusal) {
+    audit(ctx, 'refused', ref, refusal);
+    throw new SenderError(refusal);
+  }
+  perform();
+}
+
 function refuse(ctx: Ctx, ref: string, why: string): never {
   audit(ctx, 'refused', ref, why);
   throw new SenderError(why);
 }
 
 function requireRole(ctx: Ctx, ref: string, ...allowed: string[]) {
-  const r = roleOf(ctx);
-  if (!allowed.includes(r)) refuse(ctx, ref, `${r} may not do this (needs ${allowed.join(' or ')})`);
-  return r;
+  const r = checkRole(ctx, ...allowed);
+  if (r) refuse(ctx, ref, r);
+}
+
+// Procedure path: the refusal is written in a committed transaction and returned, never thrown.
+type TxRunner = { withTx<R>(body: (tx: Ctx) => R): R };
+function attempt(ctx: TxRunner, ref: string, check: (tx: Ctx) => Refusal, perform: (tx: Ctx) => void) {
+  const result = ctx.withTx(tx => {
+    const r = check(tx);
+    if (r) { audit(tx, 'refused', ref, r); return r; }
+    perform(tx);
+    return null;
+  });
+  return result ? { ok: false, message: result } : { ok: true, message: 'ok' };
 }
 
 // ---------------------------------------------------------------------------
@@ -146,12 +182,15 @@ export const resetSim = spacetimedb.reducer(ctx => {
 // ---------------------------------------------------------------------------
 // the clock
 // ---------------------------------------------------------------------------
-export const setClock = spacetimedb.reducer({ paused: t.bool() }, (ctx, { paused }) => {
-  requireRole(ctx, 'clock', 'seed', 'controller');
+function performSetClock(ctx: Ctx, paused: boolean) {
   const d = ctx.db.businessDay.id.find(1)!;
   ctx.db.businessDay.id.update({ ...d, paused });
   audit(ctx, 'set_clock', String(d.day), paused ? 'paused' : 'running');
-});
+}
+export const setClock = spacetimedb.reducer({ paused: t.bool() }, (ctx, { paused }) =>
+  guard(ctx, 'clock', checkRole(ctx, 'seed', 'controller'), () => performSetClock(ctx, paused)));
+export const trySetClock = spacetimedb.procedure({ paused: t.bool() }, Outcome, (ctx, { paused }) =>
+  attempt(ctx, 'clock', tx => checkRole(tx, 'seed', 'controller'), tx => performSetClock(tx, paused)));
 
 export const setTickMicros = spacetimedb.reducer({ micros: t.u64() }, (ctx, { micros }) => {
   requireRole(ctx, 'clock', 'seed', 'controller');
@@ -164,10 +203,10 @@ export const setTickMicros = spacetimedb.reducer({ micros: t.u64() }, (ctx, { mi
 });
 
 // Advance exactly one business day, paused or not. For tests and the demo "step" control.
-export const stepDay = spacetimedb.reducer(ctx => {
-  requireRole(ctx, 'clock', 'seed', 'controller');
-  advance(ctx);
-});
+export const stepDay = spacetimedb.reducer(ctx =>
+  guard(ctx, 'clock', checkRole(ctx, 'seed', 'controller'), () => advance(ctx)));
+export const tryStepDay = spacetimedb.procedure(Outcome, ctx =>
+  attempt(ctx, 'clock', tx => checkRole(tx, 'seed', 'controller'), tx => advance(tx)));
 
 // Scheduled: only the database itself may call it.
 export const advanceDay = spacetimedb.reducer({ onSchedule: dayTimer }, { timer: dayTimer.rowType }, (ctx, _args) => {
@@ -188,21 +227,33 @@ function advance(ctx: Ctx) {
 
 function expireRules(ctx: Ctx, day: number) {
   for (const r of ctx.db.rule.status.filter('approved')) {
-    if (r.validToDay < day) ctx.db.rule.id.update({ ...r, status: 'expired' });
+    if (r.validToDay < day) ctx.db.rule.id.update({ ...r, status: 'expired', reason: `expired on day ${day}` });
   }
 }
 
 // ---------------------------------------------------------------------------
 // the kernel, applied to one day. Internal: nobody can replay a day from outside.
 // ---------------------------------------------------------------------------
+function parseScope(json: string): RuleScope {
+  try {
+    const s = JSON.parse(json) as Record<string, unknown>;
+    const out: RuleScope = {};
+    if (typeof s.driverId === 'number') out.driverId = s.driverId;
+    if (Array.isArray(s.truckIds)) out.truckIds = s.truckIds.filter((x): x is number => typeof x === 'number');
+    if (typeof s.cardId === 'string') out.cardId = s.cardId;
+    if (typeof s.vendorId === 'number') out.vendorId = s.vendorId;
+    return out;
+  } catch {
+    return {};
+  }
+}
+
 function approvedRules(ctx: Ctx): RuleIn[] {
   const out: RuleIn[] = [];
   for (const r of ctx.db.rule.status.filter('approved')) {
-    let scope = {};
-    try { scope = JSON.parse(r.scopeJson); } catch { scope = {}; }
-    out.push({ id: r.id, condition: r.condition, scope, validFromDay: r.validFromDay, validToDay: r.validToDay });
+    out.push({ id: r.id, condition: r.condition, scope: parseScope(r.scopeJson), validFromDay: r.validFromDay, validToDay: r.validToDay });
   }
-  return out;
+  return out.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 }
 
 function pingsFor(ctx: Ctx, truckId: number, day: number): PingIn[] {
@@ -213,7 +264,11 @@ function pingsFor(ctx: Ctx, truckId: number, day: number): PingIn[] {
   return out;
 }
 
-function evaluateCard(ctx: Ctx, c: typeof cardTxn.rowType.type, rules: RuleIn[]): Verdict {
+type CardRow = typeof cardTxn.rowType.type;
+type TollRow = typeof tollTxn.rowType.type;
+type InvoiceRow = typeof invoice.rowType.type;
+
+function evaluateCard(ctx: Ctx, c: CardRow, rules: RuleIn[]): Verdict {
   const tr = ctx.db.truck.id.find(c.truckId);
   const pings = pingsFor(ctx, c.truckId, c.day);
   const drv = ctx.db.driver.id.find(c.driverId);
@@ -228,38 +283,37 @@ function evaluateCard(ctx: Ctx, c: typeof cardTxn.rowType.type, rules: RuleIn[])
   return v;
 }
 
-function evaluateTollRow(ctx: Ctx, tl: typeof tollTxn.rowType.type): Verdict {
+function evaluateTollRow(ctx: Ctx, tl: TollRow): Verdict {
+  const me: TollIn = { id: tl.id, plate: tl.plate, truckId: tl.truckId, atMicros: tl.at.microsSinceUnixEpoch, day: tl.day, plazaId: tl.plazaId, plazaName: tl.plazaName, cents: tl.cents };
   const earlier: TollIn[] = [];
   for (const e of ctx.db.tollTxn.plate.filter(tl.plate)) {
-    if (e.at.microsSinceUnixEpoch <= tl.at.microsSinceUnixEpoch && e.id !== tl.id) {
-      earlier.push({ id: e.id, plate: e.plate, truckId: e.truckId, atMicros: e.at.microsSinceUnixEpoch, day: e.day, plazaId: e.plazaId, plazaName: e.plazaName, cents: e.cents });
-    }
+    const row: TollIn = { id: e.id, plate: e.plate, truckId: e.truckId, atMicros: e.at.microsSinceUnixEpoch, day: e.day, plazaId: e.plazaId, plazaName: e.plazaName, cents: e.cents };
+    if (e.id !== tl.id && isEarlierToll(row, me)) earlier.push(row);
   }
-  const v = evaluateToll(
-    { id: tl.id, plate: tl.plate, truckId: tl.truckId, atMicros: tl.at.microsSinceUnixEpoch, day: tl.day, plazaId: tl.plazaId, plazaName: tl.plazaName, cents: tl.cents },
-    earlier
-  );
+  const v = evaluateToll(me, earlier);
   v.evidence = { ...v.evidence, atMicros: tl.at.microsSinceUnixEpoch.toString(), date: dateForDay(tl.day) };
   return v;
 }
 
-function evaluateInvoiceRow(ctx: Ctx, inv: typeof invoice.rowType.type, rules: RuleIn[]): Verdict {
+function evaluateInvoiceRow(ctx: Ctx, inv: InvoiceRow, rules: RuleIn[]): Verdict {
+  const me: InvoiceIn = { id: inv.id, vendorId: inv.vendorId, poId: inv.poId, receivedDay: inv.receivedDay, item: inv.item, qty: inv.qty, unitCents: inv.unitCents, cents: inv.cents, docRef: inv.docRef };
   const p = inv.poId ? ctx.db.po.id.find(inv.poId) : undefined;
   const vend = ctx.db.vendor.id.find(inv.vendorId);
+  // The contract valid on the receipt day; the most recently started one wins, lowest id breaks ties.
   let ct: typeof contract.rowType.type | undefined;
   if (p) {
     for (const c of ctx.db.contract.vendorId.filter(inv.vendorId)) {
-      if (c.item === p.item && c.validFromDay <= inv.receivedDay && c.validToDay >= inv.receivedDay) { ct = c; break; }
+      if (c.item !== p.item || c.validFromDay > inv.receivedDay || c.validToDay < inv.receivedDay) continue;
+      if (!ct || c.validFromDay > ct.validFromDay || (c.validFromDay === ct.validFromDay && c.id < ct.id)) ct = c;
     }
   }
   const earlier: InvoiceIn[] = [];
   for (const e of ctx.db.invoice.vendorId.filter(inv.vendorId)) {
-    if (e.id !== inv.id && e.receivedDay <= inv.receivedDay) {
-      earlier.push({ id: e.id, vendorId: e.vendorId, poId: e.poId, receivedDay: e.receivedDay, item: e.item, qty: e.qty, unitCents: e.unitCents, cents: e.cents, docRef: e.docRef });
-    }
+    const row: InvoiceIn = { id: e.id, vendorId: e.vendorId, poId: e.poId, receivedDay: e.receivedDay, item: e.item, qty: e.qty, unitCents: e.unitCents, cents: e.cents, docRef: e.docRef };
+    if (e.id !== inv.id && isEarlierInvoice(row, me)) earlier.push(row);
   }
   const v = evaluateInvoice(
-    { id: inv.id, vendorId: inv.vendorId, poId: inv.poId, receivedDay: inv.receivedDay, item: inv.item, qty: inv.qty, unitCents: inv.unitCents, cents: inv.cents, docRef: inv.docRef },
+    me,
     p ? { id: p.id, vendorId: p.vendorId, truckId: p.truckId, item: p.item, qty: p.qty, unitCents: p.unitCents, receivedQty: p.receivedQty } : undefined,
     ct ? { id: ct.id, vendorId: ct.vendorId, item: ct.item, rateCents: ct.rateCents, validFromDay: ct.validFromDay, validToDay: ct.validToDay } : undefined,
     vend ? { id: vend.id, name: vend.name, bankChangedDay: vend.bankChangedDay } : undefined,
@@ -270,13 +324,12 @@ function evaluateInvoiceRow(ctx: Ctx, inv: typeof invoice.rowType.type, rules: R
   return v;
 }
 
-function bumpDay(ctx: Ctx, day: number, f: (t: typeof dayTotal_t) => typeof dayTotal_t) {
-  const cur = ctx.db.dayTotal.day.find(day) ?? { day, autoPaidCents: 0n, autoPaidCount: 0, holdCount: 0, rejectedCount: 0, txnCount: 0 };
-  const next = f(cur);
-  if (ctx.db.dayTotal.day.find(day)) ctx.db.dayTotal.day.update(next); else ctx.db.dayTotal.insert(next);
-}
 type DayTotalRow = { day: number; autoPaidCents: bigint; autoPaidCount: number; holdCount: number; rejectedCount: number; txnCount: number };
-declare const dayTotal_t: DayTotalRow;
+function bumpDay(ctx: Ctx, day: number, f: (t: DayTotalRow) => DayTotalRow) {
+  const cur = ctx.db.dayTotal.day.find(day);
+  const next = f(cur ?? { day, autoPaidCents: 0n, autoPaidCount: 0, holdCount: 0, rejectedCount: 0, txnCount: 0 });
+  if (cur) ctx.db.dayTotal.day.update(next); else ctx.db.dayTotal.insert(next);
+}
 
 const QUESTION_HINT: Record<string, string> = {
   location_mismatch: 'Was this card used by a different truck or driver that day?',
@@ -284,20 +337,21 @@ const QUESTION_HINT: Record<string, string> = {
   duplicate_invoice: 'Which PO is the real one?',
   short_received: 'Pay the received quantity only, or wait for the rest?',
   vendor_bank_change: 'Call the vendor on a known number and record who confirmed the new account.',
+  po_mismatch: 'Which PO does this invoice belong to?',
   capacity_exceeded: '',
   limit: 'Approve this payment above the auto-pay limit?',
 };
 
 // Writes the outcome of one verdict: match_result, then payment or hold (+ task), with audit.
-function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: number, v: Verdict, rematch = false) {
-  const evidenceJson = JSON.stringify(v.evidence);
+// `requester` is who caused this evaluation (the database for the clock, the caller for an injected row).
+function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: number, v: Verdict, opts: { rematch?: boolean; requester?: Identity } = {}) {
   const existing = ctx.db.matchResult.txnRef.find(txnRef);
-  const row = { txnRef, kind, code: v.code, cents, day, evidenceJson, ruleId: v.ruleId, decidedAt: ctx.timestamp };
+  const row = { txnRef, kind, code: v.code, cents, day, evidenceJson: JSON.stringify(v.evidence), ruleId: v.ruleId, decidedAt: ctx.timestamp };
   if (existing) ctx.db.matchResult.txnRef.update(row); else ctx.db.matchResult.insert(row);
-  bumpDay(ctx, day, t => ({ ...t, txnCount: rematch ? t.txnCount : t.txnCount + 1 }));
+  if (!opts.rematch) bumpDay(ctx, day, t => ({ ...t, txnCount: t.txnCount + 1 }));
 
   if (v.code === 'duplicate_toll') {
-    bumpDay(ctx, day, t => ({ ...t, rejectedCount: t.rejectedCount + 1 }));
+    if (existing?.code !== 'duplicate_toll') bumpDay(ctx, day, t => ({ ...t, rejectedCount: t.rejectedCount + 1 }));
     audit(ctx, 'auto_reject', txnRef, `duplicate_toll of ${String(v.evidence.duplicateOf)}`);
     return;
   }
@@ -314,7 +368,11 @@ function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: numb
       if (h && h.status !== 'released') {
         ctx.db.hold.txnRef.update({ ...h, status: 'cleared_by_rule', ruleId: v.ruleId, actor: ctx.sender, updatedAt: ctx.timestamp });
       }
-      audit(ctx, v.ruleId ? 'cleared_by_rule' : 'auto_pay', txnRef, v.ruleId ? `rule ${v.ruleId}` : `${cents} cents`);
+      if (v.ruleId !== undefined) {
+        const r = ctx.db.rule.id.find(v.ruleId);
+        if (r && r.uses === 'one_time') ctx.db.rule.id.update({ ...r, status: 'expired', reason: `one_time rule consumed by ${txnRef}` });
+      }
+      audit(ctx, v.ruleId !== undefined ? 'cleared_by_rule' : 'auto_pay', txnRef, v.ruleId !== undefined ? `rule ${v.ruleId}` : `${cents} cents`);
       return;
     }
     v = { code: 'limit', evidence: { ...v.evidence, limitReason: cents > T.AUTO_PAY_MAX_CENTS ? 'per_transaction' : 'daily_cap' } };
@@ -325,7 +383,7 @@ function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: numb
   const h = ctx.db.hold.txnRef.find(txnRef);
   if (!h) {
     ctx.db.hold.insert({
-      txnRef, kind, code: v.code, cents, day, requestedBy: ctx.identity, reason: `kernel: ${v.code}`,
+      txnRef, kind, code: v.code, cents, day, requestedBy: opts.requester ?? ctx.identity, reason: `kernel: ${v.code}`,
       question: undefined, answer: undefined, callbackNote: undefined, status: 'open', ruleId: undefined, actor: ctx.sender, updatedAt: ctx.timestamp,
     });
     bumpDay(ctx, day, t => ({ ...t, holdCount: t.holdCount + 1 }));
@@ -334,7 +392,7 @@ function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: numb
     ctx.db.hold.txnRef.update({ ...h, code: v.code, actor: ctx.sender, updatedAt: ctx.timestamp });
     audit(ctx, 'hold_recoded', txnRef, `${h.code} -> ${v.code}`);
   }
-  if (!rematch && v.code !== 'limit') {
+  if (!opts.rematch && v.code !== 'limit') {
     const brief = { txnRef, kind, code: v.code, cents: cents.toString(), day, date: dateForDay(day), evidence: v.evidence, questionHint: QUESTION_HINT[v.code] ?? '' };
     ctx.db.agentTask.insert({
       id: 0n, txnRef, kind: 'investigate', status: 'open', version: 0, claimedBy: undefined, claimedAt: undefined,
@@ -343,39 +401,49 @@ function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: numb
   }
 }
 
+const byTime = <R extends { id: string; at: { microsSinceUnixEpoch: bigint } }>(a: R, b: R) =>
+  a.at.microsSinceUnixEpoch < b.at.microsSinceUnixEpoch ? -1 : a.at.microsSinceUnixEpoch > b.at.microsSinceUnixEpoch ? 1 : a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+
 function matchDay(ctx: Ctx, day: number) {
   const rules = approvedRules(ctx);
-  for (const c of ctx.db.cardTxn.day.filter(day)) {
+  for (const c of [...ctx.db.cardTxn.day.filter(day)].sort(byTime)) {
     if (ctx.db.matchResult.txnRef.find(c.id)) continue; // re-running a day is a no-op
     settle(ctx, c.id, 'card', c.cents, day, evaluateCard(ctx, c, rules));
   }
-  for (const tl of ctx.db.tollTxn.day.filter(day)) {
+  for (const tl of [...ctx.db.tollTxn.day.filter(day)].sort(byTime)) {
     if (ctx.db.matchResult.txnRef.find(tl.id)) continue;
     settle(ctx, tl.id, 'toll', tl.cents, day, evaluateTollRow(ctx, tl));
   }
-  for (const inv of ctx.db.invoice.receivedDay.filter(day)) {
+  for (const inv of [...ctx.db.invoice.receivedDay.filter(day)].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     if (ctx.db.matchResult.txnRef.find(inv.id)) continue;
     settle(ctx, inv.id, 'invoice', inv.cents, day, evaluateInvoiceRow(ctx, inv, rules));
   }
 }
 
 // Re-evaluate one transaction with the rules approved now (so the demo does not wait for the next tick).
+function checkRematch(ctx: Ctx, txnRef: string): Refusal {
+  const h = ctx.db.hold.txnRef.find(txnRef);
+  if (h && (h.status === 'released' || h.status === 'rejected')) return `hold already ${h.status}`;
+  if (!ctx.db.cardTxn.id.find(txnRef) && !ctx.db.tollTxn.id.find(txnRef) && !ctx.db.invoice.id.find(txnRef)) return 'no such transaction';
+  return null;
+}
 function rematchOne(ctx: Ctx, txnRef: string) {
   const rules = approvedRules(ctx);
   const c = ctx.db.cardTxn.id.find(txnRef);
-  if (c) { settle(ctx, c.id, 'card', c.cents, c.day, evaluateCard(ctx, c, rules), true); return; }
+  if (c) { settle(ctx, c.id, 'card', c.cents, c.day, evaluateCard(ctx, c, rules), { rematch: true }); return; }
   const tl = ctx.db.tollTxn.id.find(txnRef);
-  if (tl) { settle(ctx, tl.id, 'toll', tl.cents, tl.day, evaluateTollRow(ctx, tl), true); return; }
+  if (tl) { settle(ctx, tl.id, 'toll', tl.cents, tl.day, evaluateTollRow(ctx, tl), { rematch: true }); return; }
   const inv = ctx.db.invoice.id.find(txnRef);
-  if (inv) { settle(ctx, inv.id, 'invoice', inv.cents, inv.receivedDay, evaluateInvoiceRow(ctx, inv, rules), true); return; }
-  refuse(ctx, txnRef, 'no such transaction');
+  if (inv) { settle(ctx, inv.id, 'invoice', inv.cents, inv.receivedDay, evaluateInvoiceRow(ctx, inv, rules), { rematch: true }); return; }
 }
-
-export const rematch = spacetimedb.reducer({ txnRef: t.string() }, (ctx, { txnRef }) => {
-  requireRole(ctx, txnRef, 'controller', 'seed');
+function performRematch(ctx: Ctx, txnRef: string) {
   rematchOne(ctx, txnRef);
   audit(ctx, 'rematch', txnRef, '');
-});
+}
+export const rematch = spacetimedb.reducer({ txnRef: t.string() }, (ctx, { txnRef }) =>
+  guard(ctx, txnRef, checkRole(ctx, 'controller') ?? checkRematch(ctx, txnRef), () => performRematch(ctx, txnRef)));
+export const tryRematch = spacetimedb.procedure({ txnRef: t.string() }, Outcome, (ctx, { txnRef }) =>
+  attempt(ctx, txnRef, tx => checkRole(tx, 'controller') ?? checkRematch(tx, txnRef), tx => performRematch(tx, txnRef)));
 
 // ---------------------------------------------------------------------------
 // agent reducers (the worker). Version-locked claim makes two workers safe.
@@ -389,7 +457,7 @@ export const claimTask = spacetimedb.reducer({ id: t.u64(), version: t.u32() }, 
   audit(ctx, 'claim_task', String(id), row.txnRef);
 });
 
-// The worker writes back what Droid did and found. recommendation: clear | hold | hold_and_ask | timeout
+// The worker writes back what Droid did and found. recommendation: clear | hold | hold_and_ask | timeout | done
 export const recordInvestigation = spacetimedb.reducer(
   { id: t.u64(), stepsJson: t.string(), findingJson: t.string(), recommendation: t.string(), question: t.option(t.string()), source: t.string() },
   (ctx, { id, stepsJson, findingJson, recommendation, question, source }) => {
@@ -417,95 +485,186 @@ export const recordInvestigation = spacetimedb.reducer(
   }
 );
 
+// The module computes the backtest itself from match_result and hold. The worker's numbers are a preview only.
+function backtest(ctx: Ctx, condition: string, scope: RuleScope, fromDay: number, toDay: number) {
+  const probe: RuleIn = { id: 0n, condition, scope, validFromDay: fromDay, validToDay: toDay };
+  let n = 0, open = 0, confirmed = 0;
+  const refs: string[] = [];
+  const consider = (txnRef: string, day: number, evidenceJson: string) => {
+    let ev: Record<string, unknown> = {};
+    try { ev = JSON.parse(evidenceJson); } catch { ev = {}; }
+    const facts = {
+      day,
+      driverId: typeof ev.driverId === 'number' ? ev.driverId : undefined,
+      truckId: typeof ev.truckId === 'number' ? ev.truckId : undefined,
+      cardId: typeof ev.cardId === 'string' ? ev.cardId : undefined,
+      vendorId: typeof ev.vendorId === 'number' ? ev.vendorId : undefined,
+    };
+    if (!ruleCovers(probe, condition, facts)) return;
+    n += 1;
+    refs.push(txnRef);
+    const h = ctx.db.hold.txnRef.find(txnRef);
+    if (h?.status === 'rejected') confirmed += 1;
+    else if (h && APPROVABLE.includes(h.status)) open += 1;
+  };
+  // rows still flagged with this code, plus holds that carry the code (their match_result may have changed)
+  const seen = new Set<string>();
+  for (const m of ctx.db.matchResult.code.filter(condition)) { seen.add(m.txnRef); consider(m.txnRef, m.day, m.evidenceJson); }
+  for (const h of ctx.db.hold.code.filter(condition)) {
+    if (seen.has(h.txnRef)) continue;
+    const m = ctx.db.matchResult.txnRef.find(h.txnRef);
+    if (m) consider(h.txnRef, h.day, m.evidenceJson);
+  }
+  return { n, wouldClear: n, openHoldsCovered: open, confirmedExceptionsCovered: confirmed, trueExceptionsCleared: confirmed,
+    window: { fromDay, toDay }, sampleRefs: refs.slice(0, 12), computedBy: 'module' };
+}
+
 export const createRule = spacetimedb.reducer(
   { sourceTxnRef: t.string(), scopeJson: t.string(), condition: t.string(), backtestJson: t.string(), uses: t.string(), validFromDay: t.i32(), validToDay: t.i32(), reason: t.string() },
   (ctx, { sourceTxnRef, scopeJson, condition, backtestJson, uses, validFromDay, validToDay, reason }) => {
     requireRole(ctx, sourceTxnRef, 'agent');
-    if ((FORBIDDEN_RULE_CONDITIONS as readonly string[]).includes(condition)) refuse(ctx, sourceTxnRef, `rules may not target ${condition}`);
-    if (!['one_time', 'standing'].includes(uses)) refuse(ctx, sourceTxnRef, `uses must be one_time or standing`);
+    if (!(RULE_CONDITIONS as readonly string[]).includes(condition)) refuse(ctx, sourceTxnRef, `rules may not target ${condition}`);
+    if (!['one_time', 'standing'].includes(uses)) refuse(ctx, sourceTxnRef, 'uses must be one_time or standing');
     if (validToDay < validFromDay) refuse(ctx, sourceTxnRef, 'rule window is empty');
     if (validToDay - validFromDay > 92) refuse(ctx, sourceTxnRef, 'rule window too long');
-    let scope: Record<string, unknown> = {};
-    try { scope = JSON.parse(scopeJson); } catch { refuse(ctx, sourceTxnRef, 'scopeJson is not JSON'); }
-    const scoped = ['driverId', 'truckIds', 'cardId', 'vendorId'].some(k => scope[k] !== undefined && scope[k] !== null && !(Array.isArray(scope[k]) && (scope[k] as unknown[]).length === 0));
+    const scope = parseScope(scopeJson);
+    const scoped = scope.driverId !== undefined || (scope.truckIds && scope.truckIds.length > 0) || scope.cardId !== undefined || scope.vendorId !== undefined;
     if (!scoped) refuse(ctx, sourceTxnRef, 'rule must be scoped to a driver, truck, card or vendor');
-    let backtest: { trueExceptionsCleared?: number } = {};
-    try { backtest = JSON.parse(backtestJson); } catch { refuse(ctx, sourceTxnRef, 'backtestJson is not JSON'); }
-    if ((backtest.trueExceptionsCleared ?? 0) > 0) refuse(ctx, sourceTxnRef, 'rule would clear a confirmed exception');
+    const bt = backtest(ctx, condition, scope, validFromDay, validToDay);
+    if (bt.trueExceptionsCleared > 0) refuse(ctx, sourceTxnRef, `rule would clear ${bt.trueExceptionsCleared} confirmed exception(s)`);
+    let preview: unknown = null;
+    try { preview = JSON.parse(backtestJson); } catch { preview = null; }
     const inserted = ctx.db.rule.insert({
-      id: 0n, sourceTxnRef, scopeJson, condition, action: 'clear', backtestJson, status: 'candidate', uses, validFromDay, validToDay,
-      createdBy: ctx.sender, approvedBy: undefined, reason, createdAt: ctx.timestamp,
+      id: 0n, sourceTxnRef, scopeJson: JSON.stringify(scope), condition, action: 'clear', backtestJson: JSON.stringify({ ...bt, workerPreview: preview }),
+      status: 'candidate', uses, validFromDay, validToDay, createdBy: ctx.sender, approvedBy: undefined, reason, createdAt: ctx.timestamp,
     });
-    audit(ctx, 'create_rule', String(inserted.id), `${condition} for ${sourceTxnRef}`);
+    audit(ctx, 'create_rule', String(inserted.id), `${condition} ${JSON.stringify(scope)} days ${validFromDay}-${validToDay}; backtest n=${bt.n} confirmed=${bt.confirmedExceptionsCovered}`);
   }
 );
 
 // ---------------------------------------------------------------------------
-// controller reducers (the ASI:One agent and the demo laptop)
+// controller actions (the ASI:One agent and the demo laptop)
 // ---------------------------------------------------------------------------
-export const answerQuestion = spacetimedb.reducer({ txnRef: t.string(), text: t.string() }, (ctx, { txnRef, text }) => {
-  requireRole(ctx, txnRef, 'controller');
+function checkAnswerQuestion(ctx: Ctx, txnRef: string): Refusal {
+  const r = checkRole(ctx, 'controller'); if (r) return r;
   const h = ctx.db.hold.txnRef.find(txnRef);
-  if (!h) refuse(ctx, txnRef, 'no such hold');
-  if (h.status === 'released' || h.status === 'rejected') refuse(ctx, txnRef, `hold already ${h.status}`);
+  if (!h) return 'no such hold';
+  if (h.status === 'released' || h.status === 'rejected' || h.status === 'cleared_by_rule') return `hold already ${h.status}`;
+  return null;
+}
+function performAnswerQuestion(ctx: Ctx, txnRef: string, text: string) {
+  const h = ctx.db.hold.txnRef.find(txnRef)!;
   ctx.db.hold.txnRef.update({ ...h, answer: text, status: 'answered', actor: ctx.sender, updatedAt: ctx.timestamp });
   const mr = ctx.db.matchResult.txnRef.find(txnRef);
-  const brief = { txnRef, kind: h.kind, code: h.code, cents: h.cents.toString(), day: h.day, question: h.question ?? '', answer: text, evidence: mr ? JSON.parse(mr.evidenceJson) : {} };
+  let evidence: unknown = {};
+  try { evidence = mr ? JSON.parse(mr.evidenceJson) : {}; } catch { evidence = {}; }
+  const brief = { txnRef, kind: h.kind, code: h.code, cents: h.cents.toString(), day: h.day, date: dateForDay(h.day), question: h.question ?? '', answer: text, evidence };
   const day = currentDay(ctx);
   ctx.db.agentTask.insert({
     id: 0n, txnRef, kind: 'draft_rule', status: 'open', version: 0, claimedBy: undefined, claimedAt: undefined,
     briefJson: JSON.stringify(brief), stepsJson: '[]', findingJson: '', source: 'none', createdDay: day, createdAt: ctx.timestamp, updatedAt: ctx.timestamp,
   });
   audit(ctx, 'answer_question', txnRef, text.slice(0, 200));
-});
+}
+export const answerQuestion = spacetimedb.reducer({ txnRef: t.string(), text: t.string() }, (ctx, { txnRef, text }) =>
+  guard(ctx, txnRef, checkAnswerQuestion(ctx, txnRef), () => performAnswerQuestion(ctx, txnRef, text)));
+export const tryAnswerQuestion = spacetimedb.procedure({ txnRef: t.string(), text: t.string() }, Outcome, (ctx, { txnRef, text }) =>
+  attempt(ctx, txnRef, tx => checkAnswerQuestion(tx, txnRef), tx => performAnswerQuestion(tx, txnRef, text)));
 
-export const approveRule = spacetimedb.reducer({ id: t.u64() }, (ctx, { id }) => {
-  requireRole(ctx, String(id), 'controller');
-  const r = ctx.db.rule.id.find(id);
-  if (!r) refuse(ctx, String(id), 'no such rule');
-  if (r.status !== 'candidate') refuse(ctx, String(id), `rule is ${r.status}`);
-  if (r.createdBy.isEqual(ctx.sender)) refuse(ctx, String(id), 'author cannot approve own rule');
+function checkApproveRule(ctx: Ctx, id: bigint): Refusal {
+  const r = checkRole(ctx, 'controller'); if (r) return r;
+  const rule_ = ctx.db.rule.id.find(id);
+  if (!rule_) return 'no such rule';
+  if (rule_.status !== 'candidate') return `rule is ${rule_.status}`;
+  if (rule_.createdBy.isEqual(ctx.sender)) return 'author cannot approve own rule';
+  return null;
+}
+function performApproveRule(ctx: Ctx, id: bigint) {
+  const r = ctx.db.rule.id.find(id)!;
   ctx.db.rule.id.update({ ...r, status: 'approved', approvedBy: ctx.sender });
   audit(ctx, 'approve_rule', String(id), `${r.condition} ${r.scopeJson}`);
-  if (ctx.db.cardTxn.id.find(r.sourceTxnRef) || ctx.db.invoice.id.find(r.sourceTxnRef)) rematchOne(ctx, r.sourceTxnRef);
-});
+  if (checkRematch(ctx, r.sourceTxnRef) === null) rematchOne(ctx, r.sourceTxnRef);
+}
+export const approveRule = spacetimedb.reducer({ id: t.u64() }, (ctx, { id }) =>
+  guard(ctx, String(id), checkApproveRule(ctx, id), () => performApproveRule(ctx, id)));
+export const tryApproveRule = spacetimedb.procedure({ id: t.u64() }, Outcome, (ctx, { id }) =>
+  attempt(ctx, String(id), tx => checkApproveRule(tx, id), tx => performApproveRule(tx, id)));
 
-export const rejectRule = spacetimedb.reducer({ id: t.u64(), reason: t.string() }, (ctx, { id, reason }) => {
-  requireRole(ctx, String(id), 'controller');
-  const r = ctx.db.rule.id.find(id);
-  if (!r) refuse(ctx, String(id), 'no such rule');
+function checkRejectRule(ctx: Ctx, id: bigint): Refusal {
+  const r = checkRole(ctx, 'controller'); if (r) return r;
+  const rule_ = ctx.db.rule.id.find(id);
+  if (!rule_) return 'no such rule';
+  if (rule_.status !== 'candidate') return `rule is ${rule_.status}`;
+  return null;
+}
+function performRejectRule(ctx: Ctx, id: bigint, reason: string) {
+  const r = ctx.db.rule.id.find(id)!;
   ctx.db.rule.id.update({ ...r, status: 'rejected', reason });
   audit(ctx, 'reject_rule', String(id), reason);
-});
+}
+export const rejectRule = spacetimedb.reducer({ id: t.u64(), reason: t.string() }, (ctx, { id, reason }) =>
+  guard(ctx, String(id), checkRejectRule(ctx, id), () => performRejectRule(ctx, id, reason)));
+export const tryRejectRule = spacetimedb.procedure({ id: t.u64(), reason: t.string() }, Outcome, (ctx, { id, reason }) =>
+  attempt(ctx, String(id), tx => checkRejectRule(tx, id), tx => performRejectRule(tx, id, reason)));
 
-export const approvePayment = spacetimedb.reducer({ txnRef: t.string(), callbackNote: t.option(t.string()) }, (ctx, { txnRef, callbackNote }) => {
-  requireRole(ctx, txnRef, 'controller');
+// A bank change is re-checked at approval time, not only at receipt: a vendor whose account changed
+// within the window before today still needs a call-back note on any payment over the threshold.
+function bankChangeActive(ctx: Ctx, txnRef: string, cents: bigint): boolean {
+  if (cents <= T.BANK_CHANGE_MIN_CENTS) return false;
+  const inv = ctx.db.invoice.id.find(txnRef);
+  if (!inv) return false;
+  const v = ctx.db.vendor.id.find(inv.vendorId);
+  if (!v || v.bankChangedDay <= 0) return false;
+  const since = currentDay(ctx) - v.bankChangedDay;
+  return since >= 0 && since <= T.BANK_CHANGE_DAYS;
+}
+function checkApprovePayment(ctx: Ctx, txnRef: string, callbackNote: string | undefined): Refusal {
+  const r = checkRole(ctx, 'controller'); if (r) return r;
   const h = ctx.db.hold.txnRef.find(txnRef);
-  if (!h) refuse(ctx, txnRef, 'no such hold');
-  if (h.status === 'released') refuse(ctx, txnRef, 'already released');
-  if (h.requestedBy.isEqual(ctx.sender)) refuse(ctx, txnRef, 'requester cannot approve');
-  if (h.code === 'vendor_bank_change' && (!callbackNote || callbackNote.trim().length < 8)) refuse(ctx, txnRef, 'call-back note required for a bank change');
-  if (ctx.db.payment.txnRef.find(txnRef)) refuse(ctx, txnRef, 'already paid');
+  if (!h) return 'no such hold';
+  if (!APPROVABLE.includes(h.status)) return `hold is ${h.status}`;
+  if (h.requestedBy.isEqual(ctx.sender)) return 'requester cannot approve';
+  if (ctx.db.payment.txnRef.find(txnRef)) return 'already paid';
+  const needsNote = h.code === 'vendor_bank_change' || bankChangeActive(ctx, txnRef, h.cents);
+  if (needsNote && (!callbackNote || callbackNote.trim().length < 8)) return 'call-back note required for a bank change';
+  return null;
+}
+function performApprovePayment(ctx: Ctx, txnRef: string, callbackNote: string | undefined) {
+  const h = ctx.db.hold.txnRef.find(txnRef)!;
   ctx.db.hold.txnRef.update({ ...h, status: 'released', callbackNote, actor: ctx.sender, updatedAt: ctx.timestamp });
   ctx.db.payment.insert({ txnRef, cents: h.cents, day: currentDay(ctx), releasedBy: ctx.sender, releasedRole: 'controller', at: ctx.timestamp });
   audit(ctx, 'approve_payment', txnRef, callbackNote ?? '');
-});
+}
+export const approvePayment = spacetimedb.reducer({ txnRef: t.string(), callbackNote: t.option(t.string()) }, (ctx, { txnRef, callbackNote }) =>
+  guard(ctx, txnRef, checkApprovePayment(ctx, txnRef, callbackNote), () => performApprovePayment(ctx, txnRef, callbackNote)));
+export const tryApprovePayment = spacetimedb.procedure({ txnRef: t.string(), callbackNote: t.option(t.string()) }, Outcome, (ctx, { txnRef, callbackNote }) =>
+  attempt(ctx, txnRef, tx => checkApprovePayment(tx, txnRef, callbackNote), tx => performApprovePayment(tx, txnRef, callbackNote)));
 
-export const rejectPayment = spacetimedb.reducer({ txnRef: t.string(), reason: t.string() }, (ctx, { txnRef, reason }) => {
-  requireRole(ctx, txnRef, 'controller');
+function checkRejectPayment(ctx: Ctx, txnRef: string): Refusal {
+  const r = checkRole(ctx, 'controller'); if (r) return r;
   const h = ctx.db.hold.txnRef.find(txnRef);
-  if (!h) refuse(ctx, txnRef, 'no such hold');
-  if (h.status === 'released') refuse(ctx, txnRef, 'already released');
+  if (!h) return 'no such hold';
+  if (!APPROVABLE.includes(h.status)) return `hold is ${h.status}`;
+  return null;
+}
+function performRejectPayment(ctx: Ctx, txnRef: string, reason: string) {
+  const h = ctx.db.hold.txnRef.find(txnRef)!;
   ctx.db.hold.txnRef.update({ ...h, status: 'rejected', reason, actor: ctx.sender, updatedAt: ctx.timestamp });
   audit(ctx, 'reject_payment', txnRef, reason);
-});
+}
+export const rejectPayment = spacetimedb.reducer({ txnRef: t.string(), reason: t.string() }, (ctx, { txnRef, reason }) =>
+  guard(ctx, txnRef, checkRejectPayment(ctx, txnRef), () => performRejectPayment(ctx, txnRef, reason)));
+export const tryRejectPayment = spacetimedb.procedure({ txnRef: t.string(), reason: t.string() }, Outcome, (ctx, { txnRef, reason }) =>
+  attempt(ctx, txnRef, tx => checkRejectPayment(tx, txnRef), tx => performRejectPayment(tx, txnRef, reason)));
 
 // A judge scenario: insert one fuel transaction into the current day and run the kernel on it.
+// The caller is recorded as the hold's requester, so the same controller cannot approve what it injected.
 export const injectCardTxn = spacetimedb.reducer({ row: cardTxn.rowType }, (ctx, { row }) => {
-  requireRole(ctx, row.id, 'seed', 'controller');
+  requireRole(ctx, row.id, 'controller');
   if (ctx.db.cardTxn.id.find(row.id)) refuse(ctx, row.id, 'txn id exists');
   const day = currentDay(ctx);
-  ctx.db.cardTxn.insert({ ...row, day });
+  const inserted = { ...row, day };
+  ctx.db.cardTxn.insert(inserted);
   audit(ctx, 'inject', row.id, `truck ${row.truckId} ${row.gallons} gal`);
-  settle(ctx, row.id, 'card', row.cents, day, evaluateCard(ctx, { ...row, day }, approvedRules(ctx)));
+  settle(ctx, row.id, 'card', row.cents, day, evaluateCard(ctx, inserted, approvedRules(ctx)), { requester: ctx.sender });
 });

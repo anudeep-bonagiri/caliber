@@ -1,0 +1,56 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  kernel-and-worker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: kernel tests
+        working-directory: spacetimedb
+        run: npm ci && npx vitest run
+      - name: worker tests
+        working-directory: worker
+        run: |
+          if [ -f package.json ]; then npm ci && npm run typecheck --if-present && npx vitest run; fi
+      - name: web build
+        working-directory: web
+        run: |
+          if [ -f package.json ]; then npm ci && npm run build; fi
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: seed tests
+        run: |
+          python -m pip install -q pytest
+          if [ -f seed/requirements.txt ]; then python -m pip install -q -r seed/requirements.txt; fi
+          if [ -d seed/tests ]; then python -m pytest -q seed; fi
+      - name: agent tests
+        run: |
+          if [ -f agent/requirements.txt ]; then python -m pip install -q -r agent/requirements.txt; fi
+          if [ -d agent/tests ]; then python -m pytest -q agent; fi
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: no em dashes in prose or source
+        run: |
+          set -e
+          files=$(git ls-files '*.md' '*.ts' '*.tsx' '*.py' '*.sh' ':!module_bindings/**' ':!**/fixtures/**')
+          [ -n "$files" ] || { echo "scan touched zero files"; exit 1; }
+          if grep -nP '\x{2014}' $files; then echo "em dash found"; exit 1; fi
+          echo "scanned $(echo $files | wc -w) files"

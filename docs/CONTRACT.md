@@ -11,7 +11,9 @@ Every component talks to one SpacetimeDB module. This file is the agreed shape o
 | `controller` | `agent/` (ASI:One) and the demo laptop CLI | `set_clock`, `set_tick_micros`, `step_day`, `answer_question`, `approve_rule`, `reject_rule`, `approve_payment`, `reject_payment`, `rematch`, `inject_card_txn` |
 | anonymous | dashboard | read public tables only |
 
-`approve_payment` additionally refuses when `hold.requested_by` equals the caller, and refuses `vendor_bank_change` holds without a call-back note of at least 8 characters. `approve_rule` refuses the rule's author. Every refusal is an `audit_event` row with `action = 'refused'` before the `SenderError` is thrown (HTTP 530, message in the body).
+`approve_payment` additionally refuses when `hold.requested_by` equals the caller, refuses holds that are not `open`, `awaiting_controller` or `answered`, and refuses without a call-back note of at least 8 characters when the hold code is `vendor_bank_change` or the invoice's vendor changed its bank account within the last 7 days (re-checked at approval time). `approve_rule` refuses the rule's author. `rematch` and `inject_card_txn` are controller only; a hold raised by an injected transaction records the injecting controller as `requested_by`, so that controller cannot approve it.
+
+**Two entry points per controller action.** Reducers (`approve_payment`, `reject_payment`, `answer_question`, `approve_rule`, `reject_rule`, `set_clock`, `step_day`, `rematch`) throw `SenderError` on refusal: HTTP 530 with the message in the body, and the whole transaction, including the audit row, rolls back. Procedures with the same arguments and a `try_` prefix (`try_approve_payment`, `try_reject_payment`, `try_answer_question`, `try_approve_rule`, `try_reject_rule`, `try_set_clock`, `try_step_day`, `try_rematch`) run the identical check inside a committed transaction and return `[ok, message]` with HTTP 200, so a refusal leaves a persistent `audit_event` row (`action = 'refused'`, `actor_role` = the caller's role, `detail` = the message). The ASI:One agent, the CLI and the demo scripts use the `try_` procedures; SDK clients may use either.
 
 Tokens live in `.env` at the repo root (gitignored): `STDB_URI`, `STDB_DB`, `STDB_SEED_TOKEN`, `STDB_AGENT_TOKEN`, `STDB_CONTROLLER_TOKEN` plus the matching `*_IDENTITY` hex strings. Mint more with `POST {STDB_URI}/v1/identity` (no body) which returns `{identity, token}`.
 
@@ -27,7 +29,8 @@ SQL and subscription names are snake_case (`agent_task`, `txn_ref`). Generated c
 - `agent_task.status`: `open` -> `claimed` -> `investigated` | `timeout`. `kind` is `investigate` or `draft_rule`.
 - `hold.status`: `open` -> `awaiting_controller` -> `answered` -> `cleared_by_rule` | `released` | `rejected`. A `limit` hold goes `open` -> `released` | `rejected`.
 - `rule.status`: `candidate` -> `approved` | `rejected`; `approved` -> `expired` once `valid_to_day` passes.
-- `match_result.code`: `matched`, `limit`, `location_mismatch`, `capacity_exceeded`, `rate_variance`, `duplicate_toll`, `duplicate_invoice`, `vendor_bank_change`, `short_received`.
+- `match_result.code`: `matched`, `limit`, `location_mismatch`, `capacity_exceeded`, `rate_variance`, `duplicate_toll`, `duplicate_invoice`, `vendor_bank_change`, `short_received`, `po_mismatch` (invoice names a PO that does not exist, belongs to another vendor, or is for another item).
+- `rule.uses`: `one_time` rules are consumed (status `expired`, reason says by which transaction) the first time they clear a row; `standing` rules run until `valid_to_day`.
 
 ### Transaction references
 
@@ -74,21 +77,21 @@ Card transactions are plain numbers as strings (`"2231"`), tolls are `T` plus a 
 
 `rule.scope_json`: `{"driverId": 23}` or `{"truckIds": [17, 22]}` or `{"cardId": "FC-02"}` or `{"vendorId": 3}`; at least one key. The kernel applies a rule only when `condition` equals the code it is about to raise, the day is inside `[valid_from_day, valid_to_day]`, and every scope key present matches the row.
 
-`rule.backtest_json` (computed by the worker from public tables only; the answer key is never read):
+`rule.backtest_json` is computed by the module itself inside `create_rule` from `match_result` and `hold` (the worker's own numbers are stored under `workerPreview` for comparison; the answer key is never read by anything but `scripts/facts.py`):
 
 ```json
 {"n": 3, "wouldClear": 3, "openHoldsCovered": 1, "confirmedExceptionsCovered": 0, "trueExceptionsCleared": 0,
  "window": {"fromDay": 41, "toDay": 46}, "computedAt": "ISO-8601"}
 ```
 
-`confirmedExceptionsCovered` counts holds with `status = 'rejected'` (the controller confirmed the exception) that the rule would have cleared. `create_rule` refuses any rule whose `trueExceptionsCleared` is above zero, any unscoped rule, and any rule on `capacity_exceeded`, `vendor_bank_change` or `duplicate_toll`.
+`confirmedExceptionsCovered` counts holds with `status = 'rejected'` (the controller confirmed the exception) that the rule would have cleared. `create_rule` refuses any rule whose module-computed `trueExceptionsCleared` is above zero, any unscoped rule, and any condition other than `location_mismatch` or `rate_variance` (the allowlist `RULE_CONDITIONS` in thresholds.ts).
 
 `match_result.evidence_json`: the kernel's evidence object (see the brief above). Every number shown in the UI comes from here or from a row.
 
 ## HTTP API (used by `agent/` and `scripts/`)
 
-- Call: `POST {STDB_URI}/v1/database/{STDB_DB}/call/{snake_case_reducer}` with `Authorization: Bearer <token>` and a JSON array of arguments in declaration order. Option arguments are `{"some": value}` or `{"none": []}`. Identity arguments are `{"__identity__": "<hex>"}`. `u64` and `i64` are JSON numbers. 200 means committed; 530 means the reducer threw and the body is the message; 401 or 403 is a bad token; 404 is a wrong database name.
-- SQL: `POST {STDB_URI}/v1/database/{STDB_DB}/sql` with the query as plain text in the body. Response is `[{"schema": {"elements": [{"name": {"some": "col"}, ...}]}, "rows": [[...], ...]}]`. Option values come back as `{"some": v}` or `{"none": []}`; identities as `{"__identity__": hex}`; timestamps as `{"__timestamp_micros_since_unix_epoch__": n}`. Anonymous callers see only public tables.
+- Call: `POST {STDB_URI}/v1/database/{STDB_DB}/call/{snake_case_name}` (reducer or procedure) with `Authorization: Bearer <token>` and a JSON array of arguments in declaration order. Row-typed arguments (for example the `row` of `inject_card_txn`) use snake_case field names over HTTP (`card_id`, `truck_id`), a timestamp field is `{"__timestamp_micros_since_unix_epoch__": micros}`. A procedure returns its value as JSON: the `try_` procedures return `[true, "ok"]` or `[false, "<refusal>"]`. Option arguments are `{"some": value}` or `{"none": []}`. Identity arguments are `{"__identity__": "0x<hex>"}` (the `0x` prefix is required; verified against 2.13.0). `u64` and `i64` are JSON numbers. 200 means committed; 530 means the reducer threw and the body is the message; 401 or 403 is a bad token; 404 is a wrong database name.
+- SQL: `POST {STDB_URI}/v1/database/{STDB_DB}/sql` with the query as plain text in the body. Response is `[{"schema": {"elements": [{"name": {"some": "col"}, ...}]}, "rows": [[...], ...]}]`. Observed encodings on 2.13.0 (verified against the live endpoint): a timestamp column comes back as a one-element array of micros `[1792864101673923]`, an identity as a one-element array `["0x<hex>"]`, `u64`/`i64` as plain numbers (use arbitrary precision when parsing), and option columns as `[0, value]` for some and `[1, []]` for none (verified). Anonymous callers see only public tables.
 - Reducer names over HTTP, CLI and SQL are snake_case (`approve_payment`); client bindings expose them camelCase (`conn.reducers.approvePayment({ txnRef, callbackNote })`).
 
 ## Reducer signatures (argument order matters over HTTP)
@@ -99,19 +102,19 @@ Card transactions are plain numbers as strings (`"2231"`), tolls are `T` plus a 
 | `seed_terminals` .. `seed_invoices` | `rows: Row[]` (one reducer per table, 500 rows per call) |
 | `vendor_bank_change` | `vendorId: u32`, `bankLast4: string`, `day: i32` |
 | `reset_sim` | none |
-| `set_clock` | `paused: bool` |
+| `set_clock` / `try_set_clock` | `paused: bool` |
 | `set_tick_micros` | `micros: u64` (minimum 100000) |
-| `step_day` | none |
-| `rematch` | `txnRef: string` |
+| `step_day` / `try_step_day` | none |
+| `rematch` / `try_rematch` | `txnRef: string` (controller only) |
 | `claim_task` | `id: u64`, `version: u32` |
 | `record_investigation` | `id: u64`, `stepsJson: string`, `findingJson: string`, `recommendation: string`, `question: string?`, `source: string` |
 | `create_rule` | `sourceTxnRef: string`, `scopeJson: string`, `condition: string`, `backtestJson: string`, `uses: string`, `validFromDay: i32`, `validToDay: i32`, `reason: string` |
-| `answer_question` | `txnRef: string`, `text: string` |
-| `approve_rule` | `id: u64` |
-| `reject_rule` | `id: u64`, `reason: string` |
-| `approve_payment` | `txnRef: string`, `callbackNote: string?` |
-| `reject_payment` | `txnRef: string`, `reason: string` |
-| `inject_card_txn` | `row: CardTxn` (day is overwritten with the current day) |
+| `answer_question` / `try_answer_question` | `txnRef: string`, `text: string` |
+| `approve_rule` / `try_approve_rule` | `id: u64` |
+| `reject_rule` / `try_reject_rule` | `id: u64`, `reason: string` |
+| `approve_payment` / `try_approve_payment` | `txnRef: string`, `callbackNote: string?` |
+| `reject_payment` / `try_reject_payment` | `txnRef: string`, `reason: string` |
+| `inject_card_txn` | `row: CardTxn` (controller only; day is overwritten with the current day; the caller becomes the hold's requester) |
 
 `answer_question` also inserts an `agent_task` with `kind = draft_rule`. `approve_rule` re-runs the kernel on the rule's source transaction immediately, so the hold clears without waiting for the next tick.
 

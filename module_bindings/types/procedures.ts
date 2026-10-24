@@ -6,5 +6,29 @@
 import { type Infer as __Infer } from "spacetimedb";
 
 // Import all procedure arg schemas
+import * as TryAnswerQuestionProcedure from "../try_answer_question_procedure";
+import * as TryApprovePaymentProcedure from "../try_approve_payment_procedure";
+import * as TryApproveRuleProcedure from "../try_approve_rule_procedure";
+import * as TryRejectPaymentProcedure from "../try_reject_payment_procedure";
+import * as TryRejectRuleProcedure from "../try_reject_rule_procedure";
+import * as TryRematchProcedure from "../try_rematch_procedure";
+import * as TrySetClockProcedure from "../try_set_clock_procedure";
+import * as TryStepDayProcedure from "../try_step_day_procedure";
 
+export type TryAnswerQuestionArgs = __Infer<typeof TryAnswerQuestionProcedure.params>;
+export type TryAnswerQuestionResult = __Infer<typeof TryAnswerQuestionProcedure.returnType>;
+export type TryApprovePaymentArgs = __Infer<typeof TryApprovePaymentProcedure.params>;
+export type TryApprovePaymentResult = __Infer<typeof TryApprovePaymentProcedure.returnType>;
+export type TryApproveRuleArgs = __Infer<typeof TryApproveRuleProcedure.params>;
+export type TryApproveRuleResult = __Infer<typeof TryApproveRuleProcedure.returnType>;
+export type TryRejectPaymentArgs = __Infer<typeof TryRejectPaymentProcedure.params>;
+export type TryRejectPaymentResult = __Infer<typeof TryRejectPaymentProcedure.returnType>;
+export type TryRejectRuleArgs = __Infer<typeof TryRejectRuleProcedure.params>;
+export type TryRejectRuleResult = __Infer<typeof TryRejectRuleProcedure.returnType>;
+export type TryRematchArgs = __Infer<typeof TryRematchProcedure.params>;
+export type TryRematchResult = __Infer<typeof TryRematchProcedure.returnType>;
+export type TrySetClockArgs = __Infer<typeof TrySetClockProcedure.params>;
+export type TrySetClockResult = __Infer<typeof TrySetClockProcedure.returnType>;
+export type TryStepDayArgs = __Infer<typeof TryStepDayProcedure.params>;
+export type TryStepDayResult = __Infer<typeof TryStepDayProcedure.returnType>;
 

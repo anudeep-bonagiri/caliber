@@ -92,6 +92,13 @@ export interface RuleIn {
   validFromDay: number;
   validToDay: number;
 }
+export interface RuleFacts {
+  day: number;
+  driverId?: number;
+  truckId?: number;
+  cardId?: string;
+  vendorId?: number;
+}
 
 const toRad = (deg: number) => (deg * Math.PI) / 180;
 
@@ -104,27 +111,24 @@ export function haversineMiles(lat1: number, lon1: number, lat2: number, lon2: n
   return 2 * R * Math.asin(Math.min(1, Math.sqrt(a)));
 }
 
+// Nearest ping by raw microsecond distance; minutes are derived only for the evidence.
 export function nearestPing(pings: readonly PingIn[], atMicros: bigint, windowMin: number) {
   const window = BigInt(windowMin) * 60_000_000n;
-  let best: { ping: PingIn; deltaMin: number } | null = null;
+  let best: { ping: PingIn; delta: bigint } | null = null;
   for (const p of pings) {
     const delta = p.atMicros > atMicros ? p.atMicros - atMicros : atMicros - p.atMicros;
     if (delta > window) continue;
-    const deltaMin = Number(delta / 60_000_000n);
-    if (!best || deltaMin < best.deltaMin) best = { ping: p, deltaMin };
+    if (!best || delta < best.delta) best = { ping: p, delta };
   }
-  return best;
+  return best ? { ping: best.ping, deltaMin: Number(best.delta / 60_000_000n) } : null;
 }
 
-export function ruleCovers(
-  rule: RuleIn,
-  code: string,
-  facts: { day: number; driverId?: number; truckId?: number; cardId?: string; vendorId?: number }
-): boolean {
+export function ruleCovers(rule: RuleIn, code: string, facts: RuleFacts): boolean {
   if (rule.condition !== code) return false;
   if (facts.day < rule.validFromDay || facts.day > rule.validToDay) return false;
   const s = rule.scope ?? {};
-  const hasScope = s.driverId !== undefined || (s.truckIds && s.truckIds.length) || s.cardId !== undefined || s.vendorId !== undefined;
+  const hasScope =
+    s.driverId !== undefined || (s.truckIds && s.truckIds.length) || s.cardId !== undefined || s.vendorId !== undefined;
   if (!hasScope) return false; // an unscoped rule never applies
   if (s.driverId !== undefined && s.driverId !== facts.driverId) return false;
   if (s.truckIds && s.truckIds.length && (facts.truckId === undefined || !s.truckIds.includes(facts.truckId))) return false;
@@ -133,9 +137,11 @@ export function ruleCovers(
   return true;
 }
 
-function firstCoveringRule(rules: readonly RuleIn[], code: string, facts: Parameters<typeof ruleCovers>[2]) {
-  for (const r of rules) if (ruleCovers(r, code, facts)) return r;
-  return undefined;
+// Lowest rule id wins when several approved rules cover the same row.
+function firstCoveringRule(rules: readonly RuleIn[], code: string, facts: RuleFacts) {
+  let best: RuleIn | undefined;
+  for (const r of rules) if (ruleCovers(r, code, facts) && (!best || r.id < best.id)) best = r;
+  return best;
 }
 
 // Rule 1 and 2: fuel capacity, then fuel location (with approved-rule lookup).
@@ -169,7 +175,7 @@ export function evaluateCardTxn(
   }
 
   const near = nearestPing(pings, txn.atMicros, T.PING_WINDOW_MIN);
-  const facts = { day: txn.day, driverId: txn.driverId, truckId: txn.truckId, cardId: txn.cardId };
+  const facts: RuleFacts = { day: txn.day, driverId: txn.driverId, truckId: txn.truckId, cardId: txn.cardId };
   if (!near) {
     const rule = firstCoveringRule(rules, 'location_mismatch', facts);
     const ev = { ...base, nearestPing: null, reason: `no ping within ${T.PING_WINDOW_MIN} minutes` };
@@ -199,7 +205,13 @@ export function evaluateCardTxn(
   return { code: 'matched', evidence: ev };
 }
 
-// Rule 3: toll duplicate. `earlier` holds the same plate's tolls that happened before this one.
+// A toll is "earlier" if it happened strictly before, or at the same instant with a smaller id,
+// so exactly one of two simultaneous tolls is the later one.
+export function isEarlierToll(e: TollIn, txn: TollIn): boolean {
+  return e.atMicros < txn.atMicros || (e.atMicros === txn.atMicros && e.id < txn.id);
+}
+
+// Rule 3: toll duplicate.
 export function evaluateToll(txn: TollIn, earlier: readonly TollIn[]): Verdict {
   const window = BigInt(T.TOLL_DUP_MIN) * 60_000_000n;
   const base: Evidence = {
@@ -211,20 +223,26 @@ export function evaluateToll(txn: TollIn, earlier: readonly TollIn[]): Verdict {
     cents: txn.cents.toString(),
     day: txn.day,
   };
+  let dup: TollIn | undefined;
   for (const e of earlier) {
-    if (e.id === txn.id || e.plazaId !== txn.plazaId) continue;
+    if (e.id === txn.id || e.plazaId !== txn.plazaId || !isEarlierToll(e, txn)) continue;
     const delta = txn.atMicros - e.atMicros;
-    if (delta >= 0n && delta <= window) {
-      return {
-        code: 'duplicate_toll',
-        evidence: { ...base, duplicateOf: e.id, minutesApart: Number(delta / 60_000_000n), windowMin: T.TOLL_DUP_MIN },
-      };
-    }
+    if (delta <= window && (!dup || e.atMicros > dup.atMicros)) dup = e;
+  }
+  if (dup) {
+    return {
+      code: 'duplicate_toll',
+      evidence: { ...base, duplicateOf: dup.id, minutesApart: Number((txn.atMicros - dup.atMicros) / 60_000_000n), windowMin: T.TOLL_DUP_MIN },
+    };
   }
   return { code: 'matched', evidence: base };
 }
 
-// Rules 4, 5, 6: invoice against PO, contract, vendor bank change, duplicates.
+export function isEarlierInvoice(e: InvoiceIn, inv: InvoiceIn): boolean {
+  return e.receivedDay < inv.receivedDay || (e.receivedDay === inv.receivedDay && e.id < inv.id);
+}
+
+// Rules 4, 5, 6: vendor bank change, duplicates, PO integrity, contract rate, receiving.
 export function evaluateInvoice(
   inv: InvoiceIn,
   po: PoIn | undefined,
@@ -257,9 +275,9 @@ export function evaluateInvoice(
   }
 
   for (const e of earlierSameVendor) {
-    if (e.id === inv.id) continue;
+    if (e.id === inv.id || !isEarlierInvoice(e, inv)) continue;
     const apart = inv.receivedDay - e.receivedDay;
-    if (e.cents === inv.cents && (e.poId ?? '') !== (inv.poId ?? '') && apart >= 0 && apart <= T.INVOICE_DUP_DAYS) {
+    if (e.cents === inv.cents && (e.poId ?? '') !== (inv.poId ?? '') && apart <= T.INVOICE_DUP_DAYS) {
       return {
         code: 'duplicate_invoice',
         evidence: { ...base, duplicateOf: e.id, otherPoId: e.poId ?? null, daysApart: apart, windowDays: T.INVOICE_DUP_DAYS },
@@ -267,32 +285,43 @@ export function evaluateInvoice(
     }
   }
 
+  if (inv.poId && !po) return { code: 'po_mismatch', evidence: { ...base, reason: 'PO not found' } };
+  if (po && po.vendorId !== inv.vendorId) return { code: 'po_mismatch', evidence: { ...base, reason: 'PO belongs to another vendor', poVendorId: po.vendorId } };
+  if (po && po.item !== inv.item) return { code: 'po_mismatch', evidence: { ...base, reason: 'PO item differs', poItem: po.item } };
+
+  let ruleId: bigint | undefined;
+  let rateEvidence: Evidence = {};
   if (po) {
-    if (contract) {
-      const limit = (contract.rateCents * BigInt(Math.round((1 + T.RATE_VARIANCE) * 10_000))) / 10_000n;
-      if (inv.unitCents > limit) {
-        const facts = { day: inv.receivedDay, vendorId: inv.vendorId, truckId: po.truckId };
-        const rule = firstCoveringRule(rules, 'rate_variance', facts);
-        const ev = {
-          ...base,
-          contractId: contract.id,
-          contractRateCents: contract.rateCents.toString(),
-          allowedUnitCents: limit.toString(),
-          variancePct: Number((((Number(inv.unitCents) - Number(contract.rateCents)) / Number(contract.rateCents)) * 100).toFixed(1)),
-        };
-        if (rule) return { code: 'matched', evidence: { ...ev, clearedBy: 'rule', ruleId: rule.id.toString() }, ruleId: rule.id };
-        return { code: 'rate_variance', evidence: ev };
-      }
+    // Price: against the contract valid on the receipt day when one exists, otherwise against the PO.
+    const reference = contract
+      ? { kind: 'contract', id: String(contract.id), rateCents: contract.rateCents }
+      : { kind: 'po', id: po.id, rateCents: po.unitCents };
+    const limit = (reference.rateCents * BigInt(Math.round((1 + T.RATE_VARIANCE) * 10_000))) / 10_000n;
+    if (inv.unitCents > limit) {
+      const facts: RuleFacts = { day: inv.receivedDay, vendorId: inv.vendorId, truckId: po.truckId };
+      const rule = firstCoveringRule(rules, 'rate_variance', facts);
+      rateEvidence = {
+        referenceKind: reference.kind,
+        referenceId: reference.id,
+        contractId: contract?.id ?? null,
+        contractRateCents: reference.rateCents.toString(),
+        allowedUnitCents: limit.toString(),
+        variancePct: Number((((Number(inv.unitCents) - Number(reference.rateCents)) / Number(reference.rateCents)) * 100).toFixed(1)),
+      };
+      if (!rule) return { code: 'rate_variance', evidence: { ...base, ...rateEvidence } };
+      ruleId = rule.id;
+      rateEvidence = { ...rateEvidence, clearedBy: 'rule', ruleId: rule.id.toString() };
     }
     if (inv.qty > po.receivedQty) {
-      const partial = BigInt(Math.round(po.receivedQty)) * inv.unitCents;
+      // Quantity at three decimals so a fractional receipt does not round before the multiply.
+      const partial = (BigInt(Math.round(po.receivedQty * 1000)) * inv.unitCents) / 1000n;
       return {
         code: 'short_received',
-        evidence: { ...base, poQty: po.qty, receivedQty: po.receivedQty, proposedPartialCents: partial.toString() },
+        evidence: { ...base, ...rateEvidence, poQty: po.qty, receivedQty: po.receivedQty, proposedPartialCents: partial.toString() },
       };
     }
   }
-  return { code: 'matched', evidence: base };
+  return { code: 'matched', evidence: { ...base, ...rateEvidence }, ruleId };
 }
 
 // Rule 7: auto-pay limits. A clean row above the per-transaction cap, or one that would push the day

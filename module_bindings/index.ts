@@ -62,6 +62,14 @@ import StepDayReducer from "./step_day_reducer";
 import VendorBankChangeReducer from "./vendor_bank_change_reducer";
 
 // Import all procedure arg schemas
+import * as TryAnswerQuestionProcedure from "./try_answer_question_procedure";
+import * as TryApprovePaymentProcedure from "./try_approve_payment_procedure";
+import * as TryApproveRuleProcedure from "./try_approve_rule_procedure";
+import * as TryRejectPaymentProcedure from "./try_reject_payment_procedure";
+import * as TryRejectRuleProcedure from "./try_reject_rule_procedure";
+import * as TryRematchProcedure from "./try_rematch_procedure";
+import * as TrySetClockProcedure from "./try_set_clock_procedure";
+import * as TryStepDayProcedure from "./try_step_day_procedure";
 
 // Import all table schema definitions
 import AgentTaskRow from "./agent_task_table";
@@ -226,6 +234,14 @@ const reducersSchema = __reducers(
 
 /** The schema information for all procedures in this module. This is defined the same way as the procedures would have been defined in the server. */
 const proceduresSchema = __procedures(
+  __procedureSchema("try_answer_question", TryAnswerQuestionProcedure.params, TryAnswerQuestionProcedure.returnType),
+  __procedureSchema("try_approve_payment", TryApprovePaymentProcedure.params, TryApprovePaymentProcedure.returnType),
+  __procedureSchema("try_approve_rule", TryApproveRuleProcedure.params, TryApproveRuleProcedure.returnType),
+  __procedureSchema("try_reject_payment", TryRejectPaymentProcedure.params, TryRejectPaymentProcedure.returnType),
+  __procedureSchema("try_reject_rule", TryRejectRuleProcedure.params, TryRejectRuleProcedure.returnType),
+  __procedureSchema("try_rematch", TryRematchProcedure.params, TryRematchProcedure.returnType),
+  __procedureSchema("try_set_clock", TrySetClockProcedure.params, TrySetClockProcedure.returnType),
+  __procedureSchema("try_step_day", TryStepDayProcedure.params, TryStepDayProcedure.returnType),
 );
 
 /** The remote SpacetimeDB module schema, both runtime and type information. */
