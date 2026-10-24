@@ -96,10 +96,11 @@ Module in `spacetimedb/src/`. Tables and access in `schema.ts`; reducers, proced
 Tests first:
 
 ```
-cd spacetimedb && npm install && npx vitest run
-cd ../worker && npm install && npm test
-cd ../seed && python3 -m pytest
-cd ../agent && python3 -m pytest
+npm ci && (cd spacetimedb && npm ci && npx vitest run)
+(cd worker && npm ci && npm test)
+python3 -m venv seed/.venv && seed/.venv/bin/pip install -r seed/requirements.txt && seed/.venv/bin/python -m pytest -q seed
+python3 -m venv agent/.venv && agent/.venv/bin/pip install -r agent/requirements.txt && agent/.venv/bin/python -m pytest -q agent
+python3 -m venv elastic/.venv && elastic/.venv/bin/pip install -r elastic/requirements.txt && elastic/.venv/bin/python -m pytest -q elastic
 ```
 
 Then the demo month, no model calls, no network:
@@ -107,7 +108,7 @@ Then the demo month, no model calls, no network:
 ```
 scripts/demo_up.sh
 scripts/clock.sh run
-python3 -m agent.cli "what needs me"
+agent/.venv/bin/python -m agent.cli "what needs me"
 python3 scripts/facts.py
 ```
 

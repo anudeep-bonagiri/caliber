@@ -36,7 +36,35 @@ spacetime login --token "$SEED_TOKEN" >/dev/null 2>&1
 
 step "3/7 publish the module (fresh data)"
 ( cd spacetimedb && [ -d node_modules ] || npm install --silent )
-( cd spacetimedb && spacetime publish dispatch-ledger --module-path . --server local3100 --delete-data=always --yes 2>&1 | tail -2 )
+publish() { ( cd spacetimedb && spacetime publish dispatch-ledger --module-path . --server local3100 --delete-data=always --yes 2>&1 ); }
+OUT=$(publish) || true
+if printf '%s' "$OUT" | grep -q "403 Forbidden"; then
+  # A database with this name already exists on 127.0.0.1:3100 and belongs to another identity
+  # (another checkout published it). The demo owns the server, so restart it on this checkout's own data dir.
+  echo "database owned by another identity; restarting the local server from $ROOT/.spacetime/data"
+  pkill -f "listen-addr 127.0.0.1:3100" 2>/dev/null || true
+  sleep 1
+  rm -rf "$ROOT/.spacetime/data"
+  nohup spacetime start --listen-addr 127.0.0.1:3100 --data-dir "$ROOT/.spacetime/data" > logs/spacetimedb.log 2>&1 &
+  for i in $(seq 1 40); do curl -sf "$STDB_URI/v1/ping" >/dev/null 2>&1 && break; sleep 0.5; done
+  # a fresh server issues fresh identities: mint the seed again and log the CLI in with it
+  SEED=$(curl -s -X POST "$STDB_URI/v1/identity")
+  TOKEN=$(printf '%s' "$SEED" | python3 -c 'import sys,json;print(json.load(sys.stdin)["token"])')
+  IDENT=$(printf '%s' "$SEED" | python3 -c 'import sys,json;print(json.load(sys.stdin)["identity"])')
+  python3 - "$TOKEN" "$IDENT" <<'PY'
+import sys, re
+from pathlib import Path
+tok, ident = sys.argv[1], sys.argv[2]
+p = Path('.env'); s = p.read_text()
+s = re.sub(r'^STDB_SEED_TOKEN=.*$', f'STDB_SEED_TOKEN={tok}', s, flags=re.M)
+s = re.sub(r'^STDB_SEED_IDENTITY=.*$', f'STDB_SEED_IDENTITY={ident}', s, flags=re.M)
+p.write_text(s)
+PY
+  spacetime login --token "$TOKEN" >/dev/null 2>&1
+  OUT=$(publish)
+fi
+printf '%s\n' "$OUT" | tail -2
+printf '%s' "$OUT" | grep -q "database with name" || { echo "publish failed"; exit 1; }
 
 step "4/7 agent and controller identities"
 python3 scripts/mint_identities.py --uri "$STDB_URI" --db "$STDB_DB"
