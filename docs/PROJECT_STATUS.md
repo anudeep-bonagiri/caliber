@@ -458,3 +458,28 @@ Checks, each run after the edits:
 | Agent names | `grep -rn "dispatch-ledger" agent/*.py` | only agent/agent.py:44 AGENT_NAME, unchanged; investigator AGENT_NAME unchanged |
 
 Not done by builder-C, by design: the running controller and investigator agents were not restarted, so their live replies and Agentverse descriptions still show "Dispatch Ledger" until the director restarts them after builder-W finishes. demo_up.sh, full_run.sh and rehearse.sh were not run. README.md and docs/RUNBOOK.md still say "Dispatch Ledger" pending builder-W's commit.
+
+## 2026-10-24 16:06 PDT Builder-23: harness vocabulary (Task 23), BLOCKED on the deck; builder-W's lines applied
+
+Brief: context/briefs/2026-10-24_1550_task23_harness.md. `context/hyphenate-harness-deck.pdf` was absent at 15:36 and stayed absent through 30 polls at 60 s (logs/builder_23.log, one line each five minutes, last at 16:05). The acceptance check requires every term quoted from the deck with a slide number, so the README section "The harness", the JUDGE_QA block "In the harness deck's words" and any not-built lines for deck concepts are not written. Nothing is invented in their place.
+
+Prepared for the moment the deck lands, each anchor verified with `grep -n`:
+
+| Our term | File and symbol | Hit |
+| --- | --- | --- |
+| what decides | `spacetimedb/src/kernel.ts`, imports only `./thresholds` | kernel.ts:3 |
+| what refuses | `checkApprovePayment` in `spacetimedb/src/index.ts`; `requireRole`; `role` table in `schema.ts` | index.ts:663, index.ts:70, schema.ts:11 |
+| what remembers | `rule` table (`scopeJson`, `validFromDay`, `validToDay`, `backtestJson`, `approvedBy`); `createRule` refuses when the backtest would clear a confirmed exception; `approvedRules` feeds the kernel | schema.ts:198, index.ts:556, index.ts:568, index.ts:251 |
+| what is boxed | `worker/src/droid.ts` `BEGIN createSession options` block; `reader` in the allowed roles | droid.ts:106, index.ts:101 |
+| what proves | `seed/fixtures/answer_key.json`, `docs/FACTS.md`; `bench/BASELINE.md` does not exist yet, so the entry will say "baseline pending" | both present; bench/ has code but no BASELINE.md |
+
+Done this round, on the director's instruction (cross-session messages 15:5x), from builder-W's "Lines for builder-23's files" in the 15:52 entry, verbatim:
+
+- README.md: subsection "Connectors" under "What is real and what is simulated"; the "Or start with data arriving" line after the demo month block in "Run it"; the two "Agent addresses" rows renamed `caliber-controller` and `caliber-investigator` (commit 7c4e59d), addresses byte-identical in the diff.
+- docs/not-built.md: first bullet replaced with the file-connector wording.
+- context/JUDGE_QA.md: "Where does the data come from?" under "The finance person".
+- README.md had two uncommitted timestamp lines from builder-W's facts run (22:25:41 to 22:47:43); restored to HEAD with `git checkout -- README.md` before editing, per the director, so README matches the committed FACTS files.
+
+Checks: `ls scripts/ingest_watch.py docs/CONNECTORS.md seed/fixtures/inbox/fuel_card_wex_sample.csv` all present; `grep -n ingestRows spacetimedb/src/index.ts` hits :500; `grep -n -- --inbox scripts/demo_up.sh scripts/full_run.sh` hits both; `grep -nP '\x{2014}'` over the three files: empty. Not run: demo_up.sh, full_run.sh, rehearse.sh. Not touched: scripts/facts.py, elastic/, bench/, agent/ (other builders' uncommitted work).
+
+Next: relaunch builder-23 when the deck is in `context/`; steps 3 to 7 of the brief remain.

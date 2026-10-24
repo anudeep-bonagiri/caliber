@@ -2,7 +2,7 @@
 
 "Not built" is a complete answer. Say it without a wince.
 
-- Real connectors. There is no fuel-card, toll-authority, telematics or accounting integration. Every row comes from `seed/generate.py` with seed 42 and a published answer key.
+- Real connectors. One file connector exists (`scripts/ingest_watch.py`, three CSV layouts in `docs/CONNECTORS.md`); there is no WEX, toll-authority, telematics or accounting API integration. Every row comes from `seed/generate.py` with seed 42 and a published answer key, whether it is loaded as a fixture or dropped as a file.
 - Payment execution. A `payment` row is the end of the line. Nothing moves money to a bank.
 - OCR or document extraction. Receipts and invoices are rendered as text from the same generator that made the rows; the kernel reads rows, not documents. The optional fine-tuning benchmark (Task 14 in the plan) was not attempted.
 - Multi-entity, multi-currency, tax. One carrier, US dollars, cents as integers.

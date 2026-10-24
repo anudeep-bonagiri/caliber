@@ -89,6 +89,10 @@ What is live: the module, the kernel, the clock, the roles and refusals, the das
 
 The 47 replayed findings are the recordings in `seed/fixtures/investigations/`, each written by `WORKER_MODE=record` from a live Droid run on 2026-10-24 and carrying `recordedAt`; the card says "replayed from a recording made 2026-10-24 by droid live run". The previous six decoy recordings, which recommended `clear` without a question, are kept under `seed/fixtures/investigations/_v1/` and are not served.
 
+### Connectors
+
+One connector exists, a file connector: `scripts/ingest_watch.py` watches `inbox/` for a WEX-style fuel-card CSV, a toll statement CSV and a maintenance invoice CSV (layouts in `docs/CONNECTORS.md`) and hands the rows to the `ingest_rows` reducer, which matches them through the same path the clock uses. The three sample files in `seed/fixtures/inbox/` carry the full seeded dataset, so `scripts/full_run.sh --inbox` reproduces the seeded facts apart from timestamps. API connectors are not built.
+
 ## Where Droid runs
 
 `worker/src/droid.ts`, the `createSession` options block quoted verbatim from the code between its `BEGIN` and `END` comments:
@@ -139,8 +143,8 @@ Droid 0.249 runs tools through `Script` and loads MCP tools with `ToolSearch`, s
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| dispatch-ledger-controller | pending registration | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | controller seat (Agentverse mailbox registration pending) | `agent/` |
-| dispatch-investigator | pending registration | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | read-only investigator (`reader` identity; answers `why <id>` and `status`) | `agent/investigator.py` |
+| caliber-controller | pending registration | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | controller seat (Agentverse mailbox registration pending) | `agent/` |
+| caliber-investigator | pending registration | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | read-only investigator (`reader` identity; answers `why <id>` and `status`) | `agent/investigator.py` |
 
 The addresses are derived from `AGENT_SEED` and `INVESTIGATOR_SEED` and are fixed; they are the ones the running agents printed in `logs/agent.log` and `logs/investigator.log`. Both agents speak the Chat Protocol and run the same handlers as the terminal CLI (`python3 -m agent.cli "..."`). The agent that explains cannot pay: the reader role is refused by `approve_payment` and the refusal is an audit row. Commands and reply shapes are in `agent/README.md` and `agent/INVESTIGATOR_README.md`.
 
@@ -192,6 +196,8 @@ scripts/clock.sh run
 agent/.venv/bin/python -m agent.cli "what needs me"
 python3 scripts/facts.py
 ```
+
+Or start with data arriving: `scripts/demo_up.sh --inbox`, then `cp seed/fixtures/inbox/fuel_card_wex_sample.csv inbox/`; hold 2231 appears about one second after the copy once the clock is on day 41.
 
 `scripts/full_run.sh` is the measured cycle (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, facts); `scripts/rehearse.sh` walks the judging runbook from a cold start.
 
