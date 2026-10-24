@@ -42,6 +42,7 @@ import CreateRuleReducer from "./create_rule_reducer";
 import GrantRoleReducer from "./grant_role_reducer";
 import InjectCardTxnReducer from "./inject_card_txn_reducer";
 import RecordInvestigationReducer from "./record_investigation_reducer";
+import RecordSettlementReducer from "./record_settlement_reducer";
 import RejectPaymentReducer from "./reject_payment_reducer";
 import RejectRuleReducer from "./reject_rule_reducer";
 import RematchReducer from "./rematch_reducer";
@@ -212,6 +213,7 @@ const reducersSchema = __reducers(
   __reducerSchema("grant_role", GrantRoleReducer),
   __reducerSchema("inject_card_txn", InjectCardTxnReducer),
   __reducerSchema("record_investigation", RecordInvestigationReducer),
+  __reducerSchema("record_settlement", RecordSettlementReducer),
   __reducerSchema("reject_payment", RejectPaymentReducer),
   __reducerSchema("reject_rule", RejectRuleReducer),
   __reducerSchema("rematch", RematchReducer),

@@ -361,7 +361,7 @@ function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: numb
     const decision = autoPayDecision(cents, total);
     if (decision === 'pay') {
       if (!ctx.db.payment.txnRef.find(txnRef)) {
-        ctx.db.payment.insert({ txnRef, cents, day, releasedBy: ctx.sender, releasedRole: v.ruleId ? 'rule' : 'kernel', at: ctx.timestamp });
+        ctx.db.payment.insert({ txnRef, cents, day, releasedBy: ctx.sender, releasedRole: v.ruleId ? 'rule' : 'kernel', at: ctx.timestamp, bankTxnId: undefined });
         bumpDay(ctx, day, t => ({ ...t, autoPaidCents: t.autoPaidCents + cents, autoPaidCount: t.autoPaidCount + 1 }));
       }
       const h = ctx.db.hold.txnRef.find(txnRef);
@@ -398,7 +398,26 @@ function settle(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: numb
       id: 0n, txnRef, kind: 'investigate', status: 'open', version: 0, claimedBy: undefined, claimedAt: undefined,
       briefJson: JSON.stringify(brief), stepsJson: '[]', findingJson: '', source: 'none', createdDay: day, createdAt: ctx.timestamp, updatedAt: ctx.timestamp,
     });
+    // Task 16: a vendor whose bank details changed is vetted against external records (business credit,
+    // public records, OFAC). Nothing about drivers or people is ever sent; the brief carries vendor fields only.
+    if (v.code === 'vendor_bank_change') vendorCheckTask(ctx, txnRef, kind, cents, day, 'bank_change', v.evidence);
   }
+}
+
+function vendorCheckTask(ctx: Ctx, txnRef: string, kind: string, cents: bigint, day: number, trigger: string, evidence: Record<string, unknown>) {
+  const vendorId = typeof evidence.vendorId === 'number' ? evidence.vendorId : undefined;
+  if (vendorId === undefined) return;
+  for (const t of ctx.db.agentTask.txnRef.filter(txnRef)) if (t.kind === 'vendor_check') return;
+  const vend = ctx.db.vendor.id.find(vendorId);
+  const brief = {
+    txnRef, kind, code: 'vendor_check', trigger, cents: cents.toString(), day, date: dateForDay(day),
+    vendor: { id: vendorId, name: vend?.name ?? '', bankChangedDay: vend?.bankChangedDay ?? 0 },
+    questionHint: 'Vendor check: approve with a call-back note, or reject?',
+  };
+  ctx.db.agentTask.insert({
+    id: 0n, txnRef, kind: 'vendor_check', status: 'open', version: 0, claimedBy: undefined, claimedAt: undefined,
+    briefJson: JSON.stringify(brief), stepsJson: '[]', findingJson: '', source: 'none', createdDay: day, createdAt: ctx.timestamp, updatedAt: ctx.timestamp,
+  });
 }
 
 const byTime = <R extends { id: string; at: { microsSinceUnixEpoch: bigint } }>(a: R, b: R) =>
@@ -416,7 +435,14 @@ function matchDay(ctx: Ctx, day: number) {
   }
   for (const inv of [...ctx.db.invoice.receivedDay.filter(day)].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
     if (ctx.db.matchResult.txnRef.find(inv.id)) continue;
-    settle(ctx, inv.id, 'invoice', inv.cents, day, evaluateInvoiceRow(ctx, inv, rules));
+    const v = evaluateInvoiceRow(ctx, inv, rules);
+    settle(ctx, inv.id, 'invoice', inv.cents, day, v);
+    // a vendor's first invoice is vetted too, whatever the kernel decided about the invoice itself
+    let earlier = false;
+    for (const e of ctx.db.invoice.vendorId.filter(inv.vendorId)) {
+      if (e.id !== inv.id && (e.receivedDay < inv.receivedDay || (e.receivedDay === inv.receivedDay && e.id < inv.id))) { earlier = true; break; }
+    }
+    if (!earlier) vendorCheckTask(ctx, inv.id, 'invoice', inv.cents, day, 'first_invoice', { vendorId: inv.vendorId });
   }
 }
 
@@ -641,9 +667,21 @@ function checkApprovePayment(ctx: Ctx, txnRef: string, callbackNote: string | un
 function performApprovePayment(ctx: Ctx, txnRef: string, callbackNote: string | undefined) {
   const h = ctx.db.hold.txnRef.find(txnRef)!;
   ctx.db.hold.txnRef.update({ ...h, status: 'released', callbackNote, actor: ctx.sender, updatedAt: ctx.timestamp });
-  ctx.db.payment.insert({ txnRef, cents: h.cents, day: currentDay(ctx), releasedBy: ctx.sender, releasedRole: 'controller', at: ctx.timestamp });
+  ctx.db.payment.insert({ txnRef, cents: h.cents, day: currentDay(ctx), releasedBy: ctx.sender, releasedRole: 'controller', at: ctx.timestamp, bankTxnId: undefined });
   audit(ctx, 'approve_payment', txnRef, callbackNote ?? '');
 }
+
+// Settlement (Task 17). The worker records the mock bank's transfer id on an existing payment. There is no
+// path here to create a payment: a settlement with no payment row is refused, so G3 holds.
+export const recordSettlement = spacetimedb.reducer({ txnRef: t.string(), bankTxnId: t.string() }, (ctx, { txnRef, bankTxnId }) => {
+  requireRole(ctx, txnRef, 'agent');
+  const p = ctx.db.payment.txnRef.find(txnRef);
+  if (!p) refuse(ctx, txnRef, 'no payment to settle');
+  if (p.bankTxnId !== undefined) refuse(ctx, txnRef, `already settled as ${p.bankTxnId}`);
+  if (bankTxnId.trim().length === 0 || bankTxnId.length > 120) refuse(ctx, txnRef, 'bank transaction id must be 1 to 120 characters');
+  ctx.db.payment.txnRef.update({ ...p, bankTxnId });
+  audit(ctx, 'settle', txnRef, `bank id ${bankTxnId}`);
+});
 export const approvePayment = spacetimedb.reducer({ txnRef: t.string(), callbackNote: t.option(t.string()) }, (ctx, { txnRef, callbackNote }) =>
   guard(ctx, txnRef, checkApprovePayment(ctx, txnRef, callbackNote), () => performApprovePayment(ctx, txnRef, callbackNote)));
 export const tryApprovePayment = spacetimedb.procedure({ txnRef: t.string(), callbackNote: t.option(t.string()) }, Outcome, (ctx, { txnRef, callbackNote }) =>

@@ -148,6 +148,8 @@ export const payment = table({ name: 'payment', public: true }, {
   releasedBy: t.identity(),
   releasedRole: t.string(),
   at: t.timestamp(),
+  // the mock bank's transfer id once the worker has settled the payment (Task 17); 'offline-<txnRef>' in replay
+  bankTxnId: t.option(t.string()),
 });
 
 export const dayTotal = table({ name: 'day_total', public: true }, {

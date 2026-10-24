@@ -156,6 +156,7 @@ export const Payment = __t.object("Payment", {
   releasedBy: __t.identity(),
   releasedRole: __t.string(),
   at: __t.timestamp(),
+  bankTxnId: __t.option(__t.string()),
 });
 export type Payment = __Infer<typeof Payment>;
 

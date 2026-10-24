@@ -17,4 +17,5 @@ export default __t.row({
   releasedBy: __t.identity().name("released_by"),
   releasedRole: __t.string().name("released_role"),
   at: __t.timestamp(),
+  bankTxnId: __t.option(__t.string()).name("bank_txn_id"),
 });

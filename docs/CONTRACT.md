@@ -26,7 +26,7 @@ SQL and subscription names are snake_case (`agent_task`, `txn_ref`). Generated c
 
 ### Status machines
 
-- `agent_task.status`: `open` -> `claimed` -> `investigated` | `timeout`. `kind` is `investigate` or `draft_rule`.
+- `agent_task.status`: `open` -> `claimed` -> `investigated` | `timeout`. `kind` is `investigate`, `draft_rule` or `vendor_check` (Task 16: inserted for every `vendor_bank_change` hold and for a vendor's first invoice; its `brief_json` carries `vendor: {id, name, bankChangedDay}` and `trigger: bank_change | first_invoice`, never anything about a person).
 - `hold.status`: `open` -> `awaiting_controller` -> `answered` -> `cleared_by_rule` | `released` | `rejected`. A `limit` hold goes `open` -> `released` | `rejected`.
 - `rule.status`: `candidate` -> `approved` | `rejected`; `approved` -> `expired` once `valid_to_day` passes.
 - `match_result.code`: `matched`, `limit`, `location_mismatch`, `capacity_exceeded`, `rate_variance`, `duplicate_toll`, `duplicate_invoice`, `vendor_bank_change`, `short_received`, `po_mismatch` (invoice names a PO that does not exist, belongs to another vendor, or is for another item).
@@ -115,6 +115,7 @@ Card transactions are plain numbers as strings (`"2231"`), tolls are `T` plus a 
 | `approve_payment` / `try_approve_payment` | `txnRef: string`, `callbackNote: string?` |
 | `reject_payment` / `try_reject_payment` | `txnRef: string`, `reason: string` |
 | `inject_card_txn` | `row: CardTxn` (controller only; day is overwritten with the current day; the caller becomes the hold's requester) |
+| `record_settlement` | `txnRef: string`, `bankTxnId: string` (agent only; refuses when no `payment` row exists or it is already settled; writes `payment.bank_txn_id`, audit action `settle`) |
 
 `answer_question` also inserts an `agent_task` with `kind = draft_rule`. `approve_rule` re-runs the kernel on the rule's source transaction immediately, so the hold clears without waiting for the next tick.
 
