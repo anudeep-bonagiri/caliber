@@ -61,9 +61,12 @@ describe('replay', () => {
     const out = replayOrStandIn(brief({ txnRef: '2231' }), FIXTURES, EVIDENCE);
     expect(out.source).toBe('replayed');
     expect(out.finding.status).toBe('replayed');
-    expect(out.finding.recommendation).toBe('clear');
-    expect(out.finding.confidence).toBe(0.99);
+    // the decoy is a legitimate unit swap only a person can confirm: the recording asks, it does not clear
+    expect(out.finding.recommendation).toBe('hold_and_ask');
+    expect(out.finding.question_for_controller).toMatch(/^Can Ramon Ortiz .*truck 22 .*\?$/);
+    expect(out.finding.confidence).toBe(0.97);
     expect(out.finding.evidence.some(e => e.source === 'swap_log.txt')).toBe(true);
+    expect(out.finding.evidence.some(e => e.source === 'find_trips_near')).toBe(true);
     expect(out.steps.at(-2)).toMatchObject({ type: 'note', text: 'replayed from fixtures/investigations/2231.json' });
     expect(out.steps.some(s => s.type === 'tool_call' && s.name === 'elastic___find_trips_near')).toBe(true);
   });
@@ -88,7 +91,7 @@ describe('replay', () => {
 describe('recorded-run labels', () => {
   it('carries recordedAt and recordedBy from a live-recorded fixture and says so in a note', () => {
     const out = replayOrStandIn(brief({ txnRef: '2231' }), FIXTURES, EVIDENCE);
-    expect(out.finding.recordedAt).toBe('2026-10-24T20:27:35.748Z');
+    expect(out.finding.recordedAt).toBe('2026-10-24T21:07:04.498Z');
     expect(out.finding.recordedBy).toBe('droid live run');
     expect(out.steps.at(-1)).toMatchObject({ type: 'note', text: 'replayed from a recording made 2026-10-24 by droid live run' });
   });

@@ -154,7 +154,7 @@ export function buildPrompt(brief: Brief, evidenceDir: string): string {
   lines.push('Work in this order: first call the MCP tool elastic___find_trips_near(point_wkt, radius_m, since, until) with the station as a WKT point (longitude first, POINT(lon lat)), radius_m 3000, and a window of 10 minutes either side of the transaction time, to see which company trucks were at the pump; then Read or Grep the evidence files listed above (the swap log explains unit reassignments); for invoices call elastic___contract_rate_for_vendor(vendor_id, item, on) with the business day. Name the tool as find_trips_near or contract_rate_for_vendor in your evidence source.');
   lines.push('');
   lines.push('Rules: do not modify or create files. Quote evidence exactly; every evidence entry must name its source as a file path from the list above or the tool name you called. Do not invent numbers.');
-  lines.push('Recommend clear only when the evidence explains the exception fully. Recommend hold_and_ask with one precise question when a person must confirm. Recommend hold otherwise. You can never recommend paying; payment is a controller decision.');
+  lines.push('Recommend clear only when the evidence explains the exception fully and no person needs to confirm anything. When the evidence is consistent with a legitimate explanation that only a person can confirm (a unit swap, a shop day, a reassignment), recommend hold_and_ask with a one-sentence question naming the person or record to check. Recommend hold otherwise. You can never recommend paying; payment is a controller decision.');
   lines.push('Return the structured finding when you are done.');
   return lines.join('\n');
 }
