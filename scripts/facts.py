@@ -113,7 +113,8 @@ def main() -> int:
 
     key = json.loads(Path(args.key).read_text())
     key_by_ref = {k["txnRef"]: k for k in key}
-    planted = [k for k in key if k["expected"] in ("hold", "auto_reject")]
+    # expected: hold (controller decides), reject (the vendor check carries a hit, D-3), auto_reject (duplicate tolls)
+    planted = [k for k in key if k["expected"] in ("hold", "reject", "auto_reject")]
     decoys = [k for k in key if k["expected"] == "clear_after_question"]
 
     mr = sql(args.uri, args.db, "SELECT * FROM match_result")
@@ -185,6 +186,54 @@ def main() -> int:
     settle_offline = sum(1 for p in payments if isinstance(p.get("bank_txn_id"), str) and p["bank_txn_id"].startswith("offline-"))
     settle_none = len(payments) - settle_live - settle_offline
     refused_by_role = dict(Counter(a["actor_role"] for a in refused))
+
+    # Vendor checks on bank-change holds (Task 16, D-3): what the worker recorded, what the controller did, and the
+    # provenance of each check, read from the task row and the audit trail. The hit is read from the finding the
+    # worker wrote, never from the key; the key's expected outcome is compared beside it.
+    def vc_source(t: dict | None) -> str:
+        if t is None:
+            return "none"
+        try:
+            st = json.loads(t.get("finding_json") or "{}").get("status")
+        except json.JSONDecodeError:
+            st = None
+        if t["source"] == "live":
+            return "live"
+        if st == "fixture":
+            return "fixture"
+        if st == "replayed" or t["source"] == "replayed":
+            return "recorded"
+        return "stand-in"
+    actions_by_ref: dict[str, list[dict]] = {}
+    for a in audit:
+        actions_by_ref.setdefault(a["ref"], []).append(a)
+    vendor_rows = []
+    for h in holds:
+        if h["code"] != "vendor_bank_change":
+            continue
+        t = next((x for x in tasks if x["txn_ref"] == h["txn_ref"] and x["kind"] == "vendor_check"), None)
+        try:
+            f = json.loads(t.get("finding_json") or "{}") if t else {}
+        except json.JSONDecodeError:
+            f = {}
+        hit = bool(f.get("evidence")) and f.get("recommendation") in ("reject", "escalate") and bool(f.get("reasons"))
+        acts = [a["action"] for a in actions_by_ref.get(h["txn_ref"], []) if a["actor_role"] == "controller" and a["action"] in ("approve_payment", "reject_payment")]
+        vendor_rows.append({
+            "txnRef": h["txn_ref"], "holdStatus": h["status"], "checkSource": vc_source(t),
+            "evidenceRows": len(f.get("evidence") or []), "evidenceSources": sorted({e.get("source") for e in (f.get("evidence") or [])}),
+            "hit": hit, "hitReasons": f.get("reasons") if hit else [],
+            "controllerAction": acts[-1] if acts else None,
+            "callbackNote": bool(h.get("callback_note")),
+            "expected": key_by_ref.get(h["txn_ref"], {}).get("expected"),
+        })
+    vendor_summary = {
+        "bankChangeHolds": len(vendor_rows),
+        "withHitRejected": sum(1 for r in vendor_rows if r["hit"] and r["holdStatus"] == "rejected" and r["controllerAction"] == "reject_payment"),
+        "cleanApprovedWithCallback": sum(1 for r in vendor_rows if not r["hit"] and r["holdStatus"] == "released" and r["controllerAction"] == "approve_payment" and r["callbackNote"]),
+        "bySource": dict(Counter(r["checkSource"] for r in vendor_rows)),
+        "matchesKey": all((r["expected"] == "reject") == (r["holdStatus"] == "rejected") for r in vendor_rows),
+        "rows": vendor_rows,
+    }
     task_sources = dict(Counter(t["source"] for t in tasks if t["kind"] == "investigate"))
     task_status = dict(Counter(t["status"] for t in tasks if t["kind"] == "investigate"))
 
@@ -228,6 +277,7 @@ def main() -> int:
         "controllerReleased": {"count": len(controller_paid), "cents": sum(int(p["cents"]) for p in controller_paid)},
         "refusals": {"count": len(refused), "byRole": refused_by_role},
         "settlement": {"liveBankIds": settle_live, "offlineIds": settle_offline, "unsettled": settle_none},
+        "vendorChecks": vendor_summary,
         "investigations": {"bySource": task_sources, "byStatus": task_status},
         "rules": dict(Counter(r["status"] for r in rules)),
         "byDay": by_day,
@@ -255,6 +305,9 @@ def main() -> int:
            f"Released by the controller: {facts['controllerReleased']['count']} payments, ${facts['controllerReleased']['cents']/100:,.2f}.",
            f"Refusals recorded in the audit trail: {len(refused)} ({refused_by_role}).",
            f"Settlement: {settle_live} payments carry a live Nessie transfer id, {settle_offline} a labelled offline id, {settle_none} unsettled.",
+           f"Vendor checks: {vendor_summary['bankChangeHolds']} bank-change holds; {vendor_summary['withHitRejected']} with a hit rejected by the controller, "
+           f"{vendor_summary['cleanApprovedWithCallback']} clean approved with a call-back note; check source {vendor_summary['bySource']} "
+           f"(fixture means hand-authored, CRS sandbox pending); outcomes match the key: {vendor_summary['matchesKey']}.",
            f"Investigations by source: {task_sources}; by status: {task_status}."]
     md += cost_lines(cost) + [""]
     if unreviewed:
@@ -273,6 +326,7 @@ def main() -> int:
         f"| Planted exceptions cleared by a rule | {len(planted_cleared_by_rule)} | 0 |",
         f"| Duplicate tolls auto-rejected without a task | {sum(1 for m in mr if m['code'] == 'duplicate_toll')} | 11 |",
         f"| Days replayed | {facts['dayReached']} | 92 |",
+        f"| Bank-change holds: hit rejected / clean approved with call-back | {vendor_summary['withHitRejected']} / {vendor_summary['cleanApprovedWithCallback']} of {vendor_summary['bankChangeHolds']} | 1 / 2 of 3 |",
         f"| Policy holds (auto-pay limit) | {len(limit_holds)} | reported, not scored |",
         "", "## Hard negatives", "",
         "The six decoys are legitimate unit swaps recorded in the dispatcher's swap log. Under the kernel they are indistinguishable from card misuse until the controller answers.", "",
@@ -281,6 +335,11 @@ def main() -> int:
     for r in decoy_rows:
         bt = r["backtest"] or {}
         results.append(f"| {r['txnRef']} | {r['raised']} | {bool(r['questions'])} | {r['answers']} | {r['ruleId']} | {bt.get('n')} | {bt.get('confirmedExceptionsCovered')} | {r['clearedByRule']} |")
+    results += ["", "## Vendor checks", "",
+        "Bank-change holds and the CRS vendor check behind each decision. `fixture` means a hand-authored file in the shape of a sandbox response, labelled FIXTURE on the card and in every evidence row; the CRS sandbox has not produced these values (context/DECISIONS.md, D-3).", "",
+        "| Hold | Check source | Evidence rows | Hit | Controller action | Call-back note | Hold status | Key expects |", "| --- | --- | --- | --- | --- | --- | --- | --- |"]
+    for r in vendor_rows:
+        results.append(f"| {r['txnRef']} | {r['checkSource']} | {r['evidenceRows']} | {'; '.join(r['hitReasons']) if r['hit'] else 'none'} | {r['controllerAction']} | {r['callbackNote']} | {r['holdStatus']} | {r['expected']} |")
     results += ["", "## Cost", "",
         "Token counts are the SDK's `tokenUsage` per investigation. Input, output and cache are reported as three numbers; cache (cacheCreationTokens plus cacheReadTokens) is never folded into input.", ""]
     results += cost_lines(cost)

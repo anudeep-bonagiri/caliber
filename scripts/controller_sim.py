@@ -6,8 +6,11 @@ the public tables and the dispatcher's swap log in the evidence folder. It never
 
 For every hold waiting on the controller it decides from the swap log whether a location mismatch was a
 legitimate unit swap (answer yes, which lets the worker draft a scoped rule) or card misuse (reject).
-Other exception codes are rejected with a reason. Bank-change holds are released with a call-back note.
-Policy holds (`limit`) are released. Candidate rules are approved. It loops until nothing is pending.
+Other exception codes are rejected with a reason. A bank-change hold is decided from the vendor check the worker
+recorded on its `vendor_check` task: a check with a hit (recommendation reject or escalate, with evidence rows) is
+rejected with a reason that names the hit from the finding text; a clean check is released with a call-back note.
+A bank-change hold waits while its vendor check is still in flight. Policy holds (`limit`) are released.
+Candidate rules are approved. It loops until nothing is pending.
 
 Usage: python scripts/controller_sim.py [--rounds 30] [--sleep 3] [--dry-run]
 """
@@ -116,6 +119,42 @@ def dollars(cents) -> str:
     return f"${int(cents) / 100:,.2f}"
 
 
+def vendor_check_for(tasks: list[dict], ref: str) -> dict | None:
+    """The recorded vendor_check task for a hold, or None while it is open or claimed (or was never created)."""
+    for t in tasks:
+        if t["txn_ref"] == ref and t["kind"] == "vendor_check":
+            return t if t["status"] == "investigated" else None
+    return None
+
+
+def vendor_hit(task: dict | None) -> list[str]:
+    """The hit reasons from the vendor check finding, read from the task row only. Empty means clean or no check.
+    A stand-in (no evidence rows) is not a hit: it leaves the decision to the call-back path."""
+    if not task:
+        return []
+    try:
+        f = json.loads(task.get("finding_json") or "{}")
+    except json.JSONDecodeError:
+        return []
+    if f.get("recommendation") in ("reject", "escalate") and f.get("evidence") and f.get("reasons"):
+        return [str(r) for r in f["reasons"]]
+    return []
+
+
+def decide_bank_change(ref: str, ev: dict, tasks: list[dict], act) -> str | None:
+    """Returns 'rejected', 'released', or None when the vendor check is still in flight or the call was refused."""
+    vc = vendor_check_for(tasks, ref)
+    if vc is None and any(t["txn_ref"] == ref and t["kind"] == "vendor_check" for t in tasks):
+        return None  # vendor check in flight; decide next round
+    hits = vendor_hit(vc)
+    if hits:
+        reason = f"Vendor check hit: {'; '.join(hits)}. Bank-detail change not accepted; invoice rejected pending resolution with the vendor."
+        ok, _ = act("try_reject_payment", ref, reason[:500])
+        return "rejected" if ok else None
+    ok, _ = act("try_approve_payment", ref, {"some": f"Called {ev.get('vendorName', 'the vendor')} on the number on file; new account confirmed by the AR desk."})
+    return "released" if ok else None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--rounds", type=int, default=30)
@@ -143,7 +182,8 @@ def main() -> int:
     for rnd in range(1, args.rounds + 1):
         holds = sql("SELECT * FROM hold")
         mr = {m["txn_ref"]: m for m in sql("SELECT * FROM match_result")}
-        pending_tasks = [t for t in sql("SELECT * FROM agent_task") if t["status"] in ("open", "claimed")]
+        all_tasks = sql("SELECT * FROM agent_task")
+        pending_tasks = [t for t in all_tasks if t["status"] in ("open", "claimed")]
         did = 0
 
         for h in holds:
@@ -176,8 +216,8 @@ def main() -> int:
                     ok, _ = act("try_reject_payment", ref, f"PO reference does not match: {ev.get('reason', '')}.")
                     if ok: acted["rejected"] += 1; decided.add(ref); did += 1
                 elif code == "vendor_bank_change":
-                    ok, _ = act("try_approve_payment", ref, {"some": f"Called {ev.get('vendorName', 'the vendor')} on the number on file; new account confirmed by the AR desk."})
-                    if ok: acted["released"] += 1; decided.add(ref); did += 1
+                    outcome = decide_bank_change(ref, ev, all_tasks, act)
+                    if outcome: acted[outcome] += 1; decided.add(ref); did += 1
                 elif code == "capacity_exceeded":
                     ok, _ = act("try_reject_payment", ref, f"{ev.get('gallons')} gal exceeds the tank limit of {ev.get('capacityLimitGal')} gal.")
                     if ok: acted["rejected"] += 1; decided.add(ref); did += 1
@@ -196,8 +236,8 @@ def main() -> int:
                 ok, _ = act("try_reject_payment", ref, f"{ev.get('gallons')} gal exceeds the tank limit of {ev.get('capacityLimitGal')} gal; no question to ask.")
                 if ok: acted["rejected"] += 1; decided.add(ref); did += 1
             elif status == "open" and code == "vendor_bank_change" and not any(t["txn_ref"] == ref for t in pending_tasks):
-                ok, _ = act("try_approve_payment", ref, {"some": f"Called {ev.get('vendorName', 'the vendor')} on the number on file; new account confirmed by the AR desk."})
-                if ok: acted["released"] += 1; decided.add(ref); did += 1
+                outcome = decide_bank_change(ref, ev, all_tasks, act)
+                if outcome: acted[outcome] += 1; decided.add(ref); did += 1
             elif status == "open" and code == "limit":
                 ok, msg = act("try_approve_payment", ref, {"none": []})
                 if not ok and "call-back" in msg:
