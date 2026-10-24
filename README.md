@@ -53,7 +53,7 @@ All numbers below are written by `scripts/facts.py` into `docs/FACTS.json` and `
 
 | Metric | Result |
 | --- | --- |
-| Overall precision and recall on 58 planted exceptions | 1.0 and 1.0 |
+| Overall precision and recall on the 58 answer-key rows (52 planted exceptions and 6 decoys) | 1.0 and 1.0 |
 | Decoys (legitimate unit swaps) cleared through an approved rule after exactly one controller answer | 6 of 6 |
 | Planted exceptions cleared by a rule | 0 |
 | Policy holds from the auto-pay limit (correct behaviour, not exceptions) | 6 |
