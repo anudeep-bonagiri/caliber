@@ -224,7 +224,7 @@ function SettlementPill({ p }: { p: Payment }) {
   if (p.bankTxnId.startsWith('offline-')) {
     return (
       <Pill tone="neutral" title={`${src} ${p.bankTxnId}`}>
-        settlement offline
+        settlement: offline
       </Pill>
     );
   }

@@ -63,6 +63,68 @@ Decisions:
 - Agentverse mailbox: not connected yet; the ASI:One scripted session waits on the Connect click.
 - Port 8000 is held by an ssh forward on this laptop; the agent runs on 8011.
 
+## 2026-10-24 13:58 PDT Director start-of-shift review
+
+Run by the director, not the builder. No builder launched yet.
+
+Verified green:
+- `scripts/check_env.sh`: the five offline variables and all seven live keys present; `NESSIE_API_KEY`, `CRS_USERNAME`, `CRS_PASSWORD` absent. Booleans only, no values printed.
+- Task 8.0, fresh live run on 2251 (capacity_exceeded) through the worker's own `handleInvestigate` in live mode, nothing written to the ledger: `source: live`, `subtype: success`, 19.8 s, tokenUsage 989 in and 973 out. Stream: 8 `tool_call`, 8 `tool_result`, 1 `assistant`, 1 `result` whose `structuredOutput` passed `FindingSchema`. Tool calls: `Script`, `ToolSearch`, `elastic___find_trips_near`, `Read` three times. No `Execute`, `Edit`, `Create` or `ApplyPatch`. One permission prompt (`Script`), proceeded once. Recommendation `hold`, no question, as the spec requires for this code. Matches the recorded 2251 entry (989 in, 1076 out, 20.6 s), so the 13:55 log holds.
+- Tests on the working tree: module 56 (27 kernel, 29 module harness), worker 99 and typecheck clean, seed 24. Agent: 113 pass, 1 fail (below).
+- Forbidden patterns: no reducer deletes from `audit_event`; `payment` rows are inserted only by the kernel match path and `approve_payment`, and `record_settlement` only updates `bank_txn_id` on an existing row; no key or token printed by worker, agent or scripts; none of the 52 recorded investigations nor the record log mentions `answer_key`.
+
+Defects and corrections:
+- `agent/tests/test_intents.py::test_extract_json_shapes` fails locally: it calls `classify(api_key=None)` expecting `None`, but `classify` falls back to `ASI_ONE_API_KEY` from `.env` and made a real `asi1-mini` call during the test. Green in CI only because CI has no key. Fix the test to clear the variable, or make an explicit `None` mean off.
+- `scripts/rehearse.sh` pipes CLI output into `head` on seven lines under `set -euo pipefail`; the judging-table scripts (`demo_up`, `full_run`, `clock`, `as_agent`) are clean.
+- All six decoy recordings (1421, 2044, 2231, 3955, 5428, 5986) recommend `clear` with no question; the other 46 are `hold_and_ask`. The worker then opens the hold with the generic question "Agent recommends release. Approve the payment?", while runbook beats 01:00 and 01:10 still quote "Q: Did Ramon Ortiz drive truck 22 ...". One of the two must change. The 6 of 6 one-answer result in the full run is unaffected.
+- The cost log carries `cacheCreationTokens` (about 48,000 per task) and `factoryCredits` beside the 989 input tokens. The "1,033 in tokens per task" line above excludes cache tokens; RESULTS.md and the Devpost text should quote credits or say "excluding cache".
+
+Claimed in the 13:55 entry, not re-run by the director: Elastic ingest counts and the 3 of 3 tool smoke (the MCP tool did answer in the fresh run, so the endpoint is live); the full offline cycle numbers (the demo ledger was in use at day 92); the dashboard's vendor-check block, deferred label and settlement ids (not viewed); anything on ASI:One (mailbox not connected).
+
+Blocked, and on whom:
+- Task 16 live calls: CRS sandbox invite and Postman collection. On CRS; chase at the booth.
+- Task 17 live transfer: `NESSIE_API_KEY`. On Anudeep (GitHub sign-in at nessieisreal.com).
+- Task 10.4: the Agentverse mailbox Connect click; agent listens on 8011 because 8000 holds an ssh forward. On Anudeep.
+- Decision 16.7 (standing "any OFAC hit, reject" rule): director recommends cut; G6 forbids rules on bank-change holds and the controller rejects from ASI:One anyway. On Anudeep.
+
+## 2026-10-24 14:13 PDT Builder: Task 17 Nessie live
+
+Builder-17, brief context/briefs/2026-10-24_1415_task17.md. Ledger not touched; no worker started or stopped. Everything below was run from a fresh request today, with the key read from .env and never printed.
+
+The three facts from the probe (worker/tools/nessie_probe.mts, 123 cents, carrier to the fuel-and-tolls payee):
+1. Request body. The documented shape {medium, payee_id, amount, transaction_date, description} is refused with HTTP 400: "3 validation errors for TransferCreate: status field required; medium extra fields not permitted; payee_id extra fields not permitted". The compact shape {amount, transaction_date, status, description} is accepted with HTTP 201. There is no field for the payee at all (payee_id alone is also refused), so the payee account id rides in the description.
+2. Decimal amount. Nessie validates amount as an integer. A decimal is accepted with 201 and then stored floored: 1.23 lands as 1 and 1.99 lands as 1. A string "1.23" is refused ("value is not a valid integer"). An integer such as 98012 is stored exactly. Decision, approved by the director at 14:11: the amount field carries integer cents, the only encoding this server stores exactly, and the description names the payee, the dollar figure and the unit: txn_ref 2231 payee <account> amount $412.37 (amount field in cents). Nothing is rounded anywhere in nessie.ts; a non-integer cents value throws (exactCents). The transfer the fixed client sent stored amount 123 and reads back as 123 on GET /transfers/{id}.
+3. Id field. The POST response is {code: 201, message: "Transfer created", objectCreated: {_id, amount, status, transaction_date, description}}; the id is objectCreated._id. GET /transfers/{id} returns the same record with the id under "id".
+
+Mock-bank caveats learned on the way: balances never move (carrier still 10000000 after transfers with status pending and status completed); the server at api.nessieisreal.com answers only over https, http refuses the connection; the carrier account already lists 7244 transfers from the earlier live worker run, all with whole-dollar amounts (for example amount 393 for $392.93), because they were sent before this fix. Those bank records are inexact and should not be quoted as audit evidence; a fresh ledger run after this commit writes exact ones.
+
+Latency and volume: one compact POST took 261 to 789 ms across seven probes, about 320 ms typical; the first transfer in a process pays one extra 400 (about 300 ms) before the client switches shape. A full run creates about 7,900 payment rows. With 4 in flight and no cap the watcher would clear that in about 10.5 minutes; with the new NESSIE_MAX_PER_SECOND cap at its default of 5 it takes about 26 minutes (7,900 / 5 = 1,580 s). The kernel writes roughly 86 payments per business day, which the cap clears in about 17 s per day tick, so a worker that runs live alongside the replay keeps up; a worker started after the replay faces the full backlog. GET /accounts/{carrier}/transfers (7,244 rows) took 6.1 s and is not used by the worker.
+
+Idempotency, read in settle.ts: enqueue dedups on the busy set; settleOne re-reads the payment row and skips one that already carries bank_txn_id; a transfer whose record_settlement write fails is kept in the unrecorded map and re-recorded on the next sweep, never re-sent (test "re-records the same bank id after a failed write instead of transferring twice"); a 4xx refusal is not retried. Added: RateLimiter (slots 1000/maxPerSecond ms apart, shared across the 4 settlers, a retry takes a fresh slot), parseMaxPerSecond reading NESSIE_MAX_PER_SECOND (default 5; non-positive or non-numeric values throw), and the start log line now states the cap. The one-transfer-per-payment rule is unchanged.
+
+Checks, each as run and observed:
+- scripts/check_env.sh: NESSIE_API_KEY true, NESSIE_BASE true.
+- readAccounts(seed/fixtures/nessie_accounts.json): ok, carrier, fuelTolls and vendors 1 to 5. The file is already committed in 2035dae (the brief's "untracked" note was stale); it holds sandbox account ids only, no secret, so it stays committed.
+- GET /accounts/{id} for all 7 ids: 200 each, 280 to 450 ms.
+- npx tsx tools/nessie_probe.mts (before the fix): 400 then 201, body amount 1 for 123 cents; after the fix: 400 then 201, body and stored amount 123, id bc346c74-3e56-4498-9ed2-991d419379c3, 643 ms over 2 requests.
+- worker: npm run typecheck clean. npx vitest run: 101 pass, 2 fail. Both failures are in test/replay.test.ts and read seed/fixtures/investigations/2231.json, which another session re-recorded on disk at 14:07 (recommendation hold_and_ask, recordedAt 21:07:04Z; the committed file at a87192e says clear and 20:27:35Z and passes). Not mine to touch; the six decoy fixtures 1421, 2044, 2231, 3955, 5428, 5986 are all modified and uncommitted in the working tree.
+- web: npm run build, built in 1.03 s. Labels: Queue.tsx resolved rows show "settled <id>" for a bank id and "settlement: offline" for an offline one (colon added to match TASKS 17.3); LedgerOfTrust.tsx audit feed shows "paid, bank id <id>" for a bank id and now "paid, settlement: offline (offline-<txnRef>)" for an offline one, so a stand-in id never reads as a bank id. Nothing else from Nessie is rendered: no balances, customers or account numbers anywhere in web/src.
+- Step 4: spacetimedb/src/module.test.ts has no record_settlement refusal test. Assigned by the director to another builder (module.test.ts only). The reducer itself (index.ts 683 to 691) refuses "no payment to settle" when the payment row is missing and "already settled" when bank_txn_id is set.
+
+Claimed, not verified here: the ledger-level acceptance (approve 2231 from ASI:One, id in the audit feed within 2 s) was not run; the ledger belongs to builder-13 until released. The dashboard labels were checked in source and by build, not viewed in a browser.
+
+Hand-off for the director's ledger run. Start the worker from worker/ with
+    WORKER_MODE=live npm start
+reading .env with STDB_URI, STDB_DB, STDB_AGENT_TOKEN, NESSIE_API_KEY set, and optionally NESSIE_BASE, NESSIE_ACCOUNTS, NESSIE_MAX_PER_SECOND. Settlement is live when WORKER_MODE is live or record and NESSIE_API_KEY is non-empty; replay, or an empty key, writes offline ids. FACTORY_API_KEY empty forces investigations to replay but leaves settlement live. The first log line reads "settlement: live through Nessie (mock bank), at most 5 transfers per second, 4 in flight". Timing note for the 2 second check: a new payment is picked up on insert and takes one slot in the shared queue, so start the live worker before the replay (or let the backlog drain) rather than approving 2231 into a queue of thousands of unsettled kernel payments. Then:
+    curl -s -X POST http://127.0.0.1:3100/v1/database/dispatch-ledger/sql -d "SELECT txn_ref, cents, bank_txn_id FROM payment WHERE txn_ref = '2231'"
+    curl -s -X POST http://127.0.0.1:3100/v1/database/dispatch-ledger/sql -d "SELECT action, ref, detail FROM audit_event WHERE ref = '2231' AND action = 'settle'"
+The first shows bank_txn_id as a Nessie uuid (or offline-2231 offline), the second the audit row "bank id <id>".
+
+Settlement paragraph for README (builder-13 owns README.md; text to hand over):
+Settlement. When a payment row appears, written by the kernel within its limits or by approve_payment, the worker sends one transfer from the carrier's account to the payee's account at Capital One's Nessie mock bank (POST /accounts/{carrier}/transfers) and writes the returned transfer id onto the payment through the record_settlement reducer, which only the agent identity may call and which refuses when no payment row exists, so settlement can never create a payment. The bank record carries the ledger's txn_ref, the payee account and the exact amount: Nessie stores whole numbers only, so the amount field carries cents and the description states the unit and the dollar figure. The audit feed shows "paid, bank id <id>". Offline, or without a key, the id is offline-<txn_ref> and the feed says "settlement: offline". Nessie is a sandbox: no money moves, balances do not change, and the id proves only that the call was made and answered.
+
+Files changed: worker/src/nessie.ts, worker/src/settle.ts, worker/test/settle.test.ts, worker/tools/nessie_probe.mts (new), web/src/components/Queue.tsx, web/src/components/LedgerOfTrust.tsx, .env.example, this file, logs/builder_17.log.
+
 ## Tried and rejected
 
 | What | Why rejected |

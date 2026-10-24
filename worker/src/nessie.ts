@@ -4,9 +4,11 @@
 //
 // Two request shapes. The documented one sends {medium, payee_id, amount (dollars), transaction_date,
 // description}. The server answering at api.nessieisreal.com on 2026-10-24 rejected medium and payee_id as
-// "extra fields not permitted", required `status`, and validated `amount` as an integer. On that refusal the
-// client switches to the compact shape for the rest of the process and carries the payee and the exact dollar
-// amount in the description, so the bank record still names both.
+// "extra fields not permitted", required `status`, and validated `amount` as an integer: a decimal is accepted
+// with 201 and then stored floored (1.99 lands as 1), a string is refused. On that refusal the client switches
+// to the compact shape for the rest of the process and sends the amount as integer cents, the only encoding
+// that server stores exactly, with the payee account, the dollar figure and the unit in the description so the
+// bank record names all three. Nothing is rounded anywhere in this file.
 
 export type NessieErrorKind = 'config' | 'http' | 'network' | 'timeout' | 'bad_response';
 
@@ -62,6 +64,14 @@ export function dollarString(cents: bigint | number): string {
   return centsToDollars(cents).toFixed(2);
 }
 
+// The compact shape's integer amount: cents, unchanged. A non-integer number of cents is a caller bug, not
+// something to round quietly on the way to a bank.
+export function exactCents(cents: bigint | number): number {
+  if (typeof cents === 'bigint') return Number(cents);
+  if (!Number.isInteger(cents)) throw new NessieError('config', `amount must be whole cents, got ${cents}`);
+  return cents;
+}
+
 const EXTRA_FIELDS = /extra fields not permitted/i;
 
 export class NessieClient implements Bank {
@@ -104,10 +114,10 @@ export class NessieClient implements Bank {
       }
     }
     return this.post(path, {
-      amount: Math.round(centsToDollars(a.cents)),
+      amount: exactCents(a.cents),
       transaction_date: date,
       status: 'pending',
-      description: `${a.description} payee ${a.toAccount} amount $${dollarString(a.cents)}`,
+      description: `${a.description} payee ${a.toAccount} amount $${dollarString(a.cents)} (amount field in cents)`,
     });
   }
 

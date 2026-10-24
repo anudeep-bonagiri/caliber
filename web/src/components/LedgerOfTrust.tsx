@@ -185,7 +185,7 @@ export function LedgerOfTrust({
                       {e.ref}
                     </td>
                     <td className="max-w-[28rem] truncate px-2 py-1 pr-3 text-muted" title={`${id}.detail: ${e.detail}`}>
-                      {e.action === 'settle' ? `paid, ${e.detail}` : e.detail}
+                      {e.action === 'settle' ? settleLabel(e.detail) : e.detail}
                     </td>
                   </tr>
                 );
@@ -196,6 +196,13 @@ export function LedgerOfTrust({
       </div>
     </Panel>
   );
+}
+
+// record_settlement writes "bank id <id>". An offline-<txnRef> id means no bank was called, and the feed says so
+// rather than letting a stand-in read as a bank id.
+function settleLabel(detail: string): string {
+  const m = /^bank id (offline-\S+)$/.exec(detail);
+  return m ? `paid, settlement: offline (${m[1]})` : `paid, ${detail}`;
 }
 
 function actionColor(action: string): string {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { NessieClient, NessieError, centsToDollars, createdId, type Bank, type TransferArgs } from '../src/nessie.js';
-import { SETTLE_CONCURRENCY, SettlementWatcher, offlineId, payeeFor, resolveSettleMode, type NessieAccounts, type SettleLedger, type SettleMode, type SettlePayment } from '../src/settle.js';
+import { NessieClient, NessieError, centsToDollars, createdId, exactCents, type Bank, type TransferArgs } from '../src/nessie.js';
+import { DEFAULT_MAX_PER_SECOND, RateLimiter, SETTLE_CONCURRENCY, SettlementWatcher, offlineId, parseMaxPerSecond, payeeFor, resolveSettleMode, type NessieAccounts, type SettleLedger, type SettleMode, type SettlePayment } from '../src/settle.js';
 
 const ACCOUNTS: NessieAccounts = { carrierAccountId: 'acct-carrier', fuelTollsAccountId: 'acct-fuel', vendors: { '3': 'acct-v3', '5': 'acct-v5' } };
 
@@ -166,6 +166,68 @@ describe('settlement watcher', () => {
   });
 });
 
+describe('rate limit', () => {
+  // A virtual clock: sleep() advances it, so the slots the limiter hands out are observable without waiting.
+  function clock() {
+    let t = 0;
+    const sleeps: number[] = [];
+    return { now: () => t, sleep: async (ms: number) => void (sleeps.push(ms), (t += ms)), sleeps };
+  }
+
+  it('spaces bank calls at NESSIE_MAX_PER_SECOND across the concurrent settlers without dropping any', async () => {
+    const rows = Array.from({ length: 6 }, (_, i) => ({ txnRef: String(i + 1), cents: 100n }));
+    const { ledger, writes } = fakeLedger(rows);
+    const c = clock();
+    const { bank, calls } = fakeBank();
+    const w = new SettlementWatcher({ ledger, mode: live(bank), log: () => {}, sleep: c.sleep, now: c.now, sweepMs: 0, maxPerSecond: 2 });
+    w.start();
+    await w.idle();
+    expect(calls).toHaveLength(6);
+    expect(writes).toHaveLength(6);
+    // Six calls at 2 per second: the first goes at once, the other five each wait one 500 ms slot.
+    expect(c.sleeps).toEqual([500, 500, 500, 500, 500]);
+  });
+
+  it('on the real clock, consecutive bank calls are at least one slot apart', async () => {
+    const rows = Array.from({ length: 5 }, (_, i) => ({ txnRef: String(i + 1), cents: 100n }));
+    const { ledger, writes } = fakeLedger(rows);
+    const { bank } = fakeBank();
+    const at: number[] = [];
+    const timed: Bank = { transfer: a => (at.push(performance.now()), bank.transfer(a)) };
+    const w = new SettlementWatcher({ ledger, mode: live(timed), log: () => {}, sweepMs: 0, maxPerSecond: 50 });
+    const t0 = performance.now();
+    w.start();
+    await w.idle();
+    expect(writes).toHaveLength(5);
+    at.sort((a, b) => a - b);
+    for (let i = 1; i < at.length; i++) expect(at[i] - at[i - 1]).toBeGreaterThanOrEqual(15);
+    expect(performance.now() - t0).toBeGreaterThanOrEqual(75);
+  });
+
+  it('a retry takes a fresh slot too', async () => {
+    const { ledger } = fakeLedger([{ txnRef: '7', cents: 100n }]);
+    const c = clock();
+    const { bank, calls } = fakeBank([new NessieError('network', 'reset')]);
+    const w = new SettlementWatcher({ ledger, mode: live(bank), log: () => {}, sleep: c.sleep, now: c.now, sweepMs: 0, maxPerSecond: 1 });
+    expect(await w.settleOne({ txnRef: '7', cents: 100n })).toBe('settled');
+    expect(calls).toHaveLength(2);
+    expect(c.now()).toBeGreaterThanOrEqual(1000);
+  });
+
+  it('limiter and env parsing', async () => {
+    const c = clock();
+    const l = new RateLimiter(4, c.now, c.sleep);
+    await l.take();
+    await l.take();
+    await l.take();
+    expect(c.now()).toBe(500);
+    expect(parseMaxPerSecond({})).toBe(DEFAULT_MAX_PER_SECOND);
+    expect(parseMaxPerSecond({ NESSIE_MAX_PER_SECOND: ' 2.5 ' })).toBe(2.5);
+    expect(() => parseMaxPerSecond({ NESSIE_MAX_PER_SECOND: '0' })).toThrow(/positive/);
+    expect(() => parseMaxPerSecond({ NESSIE_MAX_PER_SECOND: 'fast' })).toThrow(/positive/);
+  });
+});
+
 describe('settle mode', () => {
   const n = { apiKey: 'k', base: 'https://api.nessieisreal.com', accountsFile: '/nope.json' };
   it('is offline without a key, in replay, or without seeded accounts', () => {
@@ -203,7 +265,7 @@ describe('nessie client', () => {
     ]);
     const c = new NessieClient({ apiKey: 'SECRET', base: 'https://x.test', fetchImpl: f, today: () => '2026-10-24' });
     expect(await c.transfer({ fromAccount: 'a1', toAccount: 'a2', cents: 41237n, description: 'txn_ref 2231' })).toBe('tr-2');
-    expect(seen[1].body).toEqual({ amount: 412, transaction_date: '2026-10-24', status: 'pending', description: 'txn_ref 2231 payee a2 amount $412.37' });
+    expect(seen[1].body).toEqual({ amount: 41237, transaction_date: '2026-10-24', status: 'pending', description: 'txn_ref 2231 payee a2 amount $412.37 (amount field in cents)' });
     expect(await c.transfer({ fromAccount: 'a1', toAccount: 'a2', cents: 100n, description: 'txn_ref 2' })).toBe('tr-3');
     expect(seen).toHaveLength(3);
   });
@@ -222,6 +284,9 @@ describe('nessie client', () => {
   it('converts cents exactly and parses created ids', () => {
     expect(centsToDollars(98012n)).toBe(980.12);
     expect(centsToDollars(5n)).toBe(0.05);
+    expect(exactCents(98012n)).toBe(98012);
+    expect(exactCents(123)).toBe(123);
+    expect(() => exactCents(1.5)).toThrow(/whole cents/);
     expect(createdId('{"_id":"x"}')).toBe('x');
     expect(createdId('{"objectCreated":{}}')).toBeUndefined();
   });

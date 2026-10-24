@@ -9,7 +9,37 @@ import { recordSettlement, type Conn } from './stdb.js';
 
 export const SETTLE_CONCURRENCY = 4;
 export const SWEEP_MS = 60_000;
+export const DEFAULT_MAX_PER_SECOND = 5;
 const RETRY_DELAY_MS = 1_000;
+
+// NESSIE_MAX_PER_SECOND caps bank calls across the concurrent settlers; a full live run is about 7,900 transfers.
+export function parseMaxPerSecond(env: NodeJS.ProcessEnv = process.env): number {
+  const raw = (env.NESSIE_MAX_PER_SECOND ?? '').trim();
+  if (!raw) return DEFAULT_MAX_PER_SECOND;
+  const n = Number(raw);
+  if (!Number.isFinite(n) || n <= 0) throw new Error(`NESSIE_MAX_PER_SECOND must be a positive number, got "${raw}"`);
+  return n;
+}
+
+// Hands out send slots 1000/maxPerSecond ms apart. A caller takes the next free slot and waits for it; nothing is
+// dropped or merged, so one payment still means exactly one transfer.
+export class RateLimiter {
+  private nextAt = 0;
+  constructor(
+    readonly maxPerSecond: number,
+    private readonly now: () => number = Date.now,
+    private readonly sleep: (ms: number) => Promise<void> = ms => new Promise(r => setTimeout(r, ms)),
+  ) {
+    if (!(maxPerSecond > 0)) throw new Error('maxPerSecond must be positive');
+  }
+
+  async take(): Promise<void> {
+    const t = this.now();
+    const slot = Math.max(t, this.nextAt);
+    this.nextAt = slot + 1000 / this.maxPerSecond;
+    if (slot > t) await this.sleep(slot - t);
+  }
+}
 
 export interface SettlePayment {
   txnRef: string;
@@ -84,7 +114,9 @@ export interface WatcherDeps {
   mode: SettleMode;
   log: (m: string) => void;
   sleep?: (ms: number) => Promise<void>;
+  now?: () => number;
   sweepMs?: number;
+  maxPerSecond?: number;
 }
 
 export class SettlementWatcher {
@@ -93,6 +125,7 @@ export class SettlementWatcher {
   private readonly log: (m: string) => void;
   private readonly sleep: (ms: number) => Promise<void>;
   private readonly sweepMs: number;
+  private readonly limiter: RateLimiter;
   private readonly queue: SettlePayment[] = [];
   private readonly busy = new Set<string>();
   // Bank ids already returned whose record_settlement did not land: re-record these, never transfer twice.
@@ -107,10 +140,15 @@ export class SettlementWatcher {
     this.log = d.log;
     this.sleep = d.sleep ?? (ms => new Promise(r => setTimeout(r, ms)));
     this.sweepMs = d.sweepMs ?? SWEEP_MS;
+    this.limiter = new RateLimiter(d.maxPerSecond ?? DEFAULT_MAX_PER_SECOND, d.now ?? Date.now, this.sleep);
   }
 
   start(): void {
-    this.log(this.mode.kind === 'live' ? 'settlement: live through Nessie (mock bank)' : `settlement: offline (${this.mode.reason}); writing offline-<txnRef> ids`);
+    this.log(
+      this.mode.kind === 'live'
+        ? `settlement: live through Nessie (mock bank), at most ${this.limiter.maxPerSecond} transfers per second, ${SETTLE_CONCURRENCY} in flight`
+        : `settlement: offline (${this.mode.reason}); writing offline-<txnRef> ids`,
+    );
     this.ledger.onPayment(p => this.enqueue(p));
     this.sweep();
     if (this.sweepMs > 0) {
@@ -204,6 +242,7 @@ export class SettlementWatcher {
     const args = { fromAccount: this.mode.accounts.carrierAccountId, toAccount, cents: p.cents, description: `txn_ref ${p.txnRef}` };
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
+        await this.limiter.take();
         return await this.mode.bank.transfer(args);
       } catch (err) {
         const retryable = (err as { retryable?: boolean })?.retryable !== false;
@@ -241,7 +280,7 @@ export function connLedger(conn: Conn): SettleLedger {
 }
 
 export function startSettlement(o: { conn: Conn; nessie: NessieConfig; workerMode: WorkerMode; log: (m: string) => void }): SettlementWatcher {
-  const w = new SettlementWatcher({ ledger: connLedger(o.conn), mode: resolveSettleMode(o.nessie, o.workerMode), log: o.log });
+  const w = new SettlementWatcher({ ledger: connLedger(o.conn), mode: resolveSettleMode(o.nessie, o.workerMode), log: o.log, maxPerSecond: parseMaxPerSecond() });
   w.start();
   return w;
 }
