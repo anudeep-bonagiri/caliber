@@ -1,0 +1,37 @@
+{
+  "note": "hand-authored in the shape of a sandbox response; CRS sandbox pending",
+  "recorded": false,
+  "vendor": {
+    "id": 1,
+    "name": "Alamo Fleet Service"
+  },
+  "responses": {
+    "business_credit": {
+      "businessName": "ALAMO FLEET SERVICE",
+      "matchFound": true,
+      "riskClass": "MEDIUM",
+      "creditScore": 52,
+      "yearsOnFile": 9,
+      "derogatoryIndicators": []
+    },
+    "public_records": {
+      "businessName": "ALAMO FLEET SERVICE",
+      "liens": [],
+      "judgments": [
+        {
+          "caseNumber": "EXAMPLE-2026-CV-0000",
+          "court": "Example County Civil Court",
+          "amount": 23750,
+          "filedDate": "2026-07-20",
+          "status": "open"
+        }
+      ],
+      "bankruptcies": []
+    },
+    "ofac": {
+      "searchedName": "ALAMO FLEET SERVICE",
+      "result": "NO_MATCH",
+      "matches": []
+    }
+  }
+}

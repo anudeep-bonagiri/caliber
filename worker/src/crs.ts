@@ -79,7 +79,7 @@ function recordHits(kind: string, list: unknown): CrsHit[] {
 }
 
 // The three calls. Paths and bodies are placeholders until the collection lands; the hit extractors read the
-// hand-shaped fixture format in seed/fixtures/vendor_checks/ and must be re-checked against recorded responses.
+// hand-authored fixture format in seed/fixtures/vendor_checks/ and must be re-checked against recorded responses.
 export const CRS_ENDPOINTS: Record<CrsCall, EndpointConfig> = {
   business_credit: {
     method: 'POST',
@@ -88,7 +88,7 @@ export const CRS_ENDPOINTS: Record<CrsCall, EndpointConfig> = {
     // TODO(crs-sandbox): business credit request body (the report may also want address or state; the vendor table
     // has neither today, so add only business fields, never a person).
     body: q => ({ businessName: q.name }),
-    // TODO(crs-sandbox): field names below follow the hand-shaped fixture, not a recorded response.
+    // TODO(crs-sandbox): field names below follow the hand-authored fixture, not a recorded response.
     hits: raw => {
       const o = asObj(raw);
       const out: CrsHit[] = [];
@@ -116,7 +116,7 @@ export const CRS_ENDPOINTS: Record<CrsCall, EndpointConfig> = {
     path: '/TODO-public-records',
     // TODO(crs-sandbox): public records request body.
     body: q => ({ businessName: q.name }),
-    // TODO(crs-sandbox): field names below follow the hand-shaped fixture, not a recorded response.
+    // TODO(crs-sandbox): field names below follow the hand-authored fixture, not a recorded response.
     hits: raw => {
       const o = asObj(raw);
       return [...recordHits('lien', o.liens), ...recordHits('judgment', o.judgments), ...recordHits('bankruptcy', o.bankruptcies)];
@@ -137,7 +137,7 @@ export const CRS_ENDPOINTS: Record<CrsCall, EndpointConfig> = {
     path: '/TODO-ofac-screen',
     // TODO(crs-sandbox): OFAC request body. The business name only.
     body: q => ({ name: q.name }),
-    // TODO(crs-sandbox): field names below follow the hand-shaped fixture, not a recorded response.
+    // TODO(crs-sandbox): field names below follow the hand-authored fixture, not a recorded response.
     hits: raw => {
       const o = asObj(raw);
       return asArr(o.matches).map(m => {
@@ -305,7 +305,7 @@ export interface VendorCheckFixture {
   responses: Partial<Record<CrsCall, unknown>>;
 }
 
-// WORKER_MODE=record: merge one raw response into <fixturesDir>/<vendorId>.json. A hand-shaped file is replaced,
+// WORKER_MODE=record: merge one raw response into <fixturesDir>/<vendorId>.json. A hand-authored file is replaced,
 // never mixed with recorded responses.
 export function recordRaw(fixturesDir: string, q: VendorQuery, call: CrsCall, raw: unknown): string | undefined {
   if (!SAFE_ID(q.id)) return undefined;
@@ -383,24 +383,19 @@ export function ofacScreen(name: string, opts: CrsOptions & { vendorId?: number 
   return callEndpoint('ofac', { name, id: opts.vendorId ?? -1 }, opts);
 }
 
-// Replay: <vendorId>.json is preferred; CRS_FIXTURE_VARIANT=hit (or any name) picks <vendorId>.<variant>.json first
-// when present; failing both, the first <vendorId>.<variant>.json on disk is used.
-export function vendorFixtureFile(fixturesDir: string, vendorId: number, variant?: string): string | undefined {
+// Replay: <vendorId>.<trigger>.json (trigger is bank_change or first_invoice) is preferred over <vendorId>.json, so
+// a vendor can be clean on its first invoice and carry a hit on its bank change. Nothing else on disk is picked up:
+// a file that matches neither name is never a fixture by accident. CRS_FIXTURE_VARIANT is gone (D-3).
+export function vendorFixtureFile(fixturesDir: string, vendorId: number, trigger?: string): string | undefined {
   if (!SAFE_ID(vendorId)) return undefined;
   const candidates: string[] = [];
-  if (variant && /^[a-z0-9_-]{1,20}$/i.test(variant)) candidates.push(`${vendorId}.${variant}.json`);
+  if (trigger && /^[a-z_]{1,20}$/.test(trigger)) candidates.push(`${vendorId}.${trigger}.json`);
   candidates.push(`${vendorId}.json`);
   for (const c of candidates) {
     const f = path.join(fixturesDir, c);
     if (fs.existsSync(f)) return f;
   }
-  let others: string[] = [];
-  try {
-    others = fs.readdirSync(fixturesDir).filter(f => f.startsWith(`${vendorId}.`) && f.endsWith('.json')).sort();
-  } catch {
-    others = [];
-  }
-  return others.length ? path.join(fixturesDir, others[0]) : undefined;
+  return undefined;
 }
 
 export function loadVendorFixture(file: string): VendorCheckFixture {

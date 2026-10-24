@@ -4,8 +4,10 @@
 // is ever sent.
 //
 // Order: live CRS (CRS_USERNAME set and WORKER_MODE live or record), else replay of
-// seed/fixtures/vendor_checks/<vendorId>.json, else a labelled stand-in. The agent never rejects on its own: every
-// outcome leaves the hold for a controller.
+// seed/fixtures/vendor_checks/<vendorId>.<trigger>.json or <vendorId>.json, else a labelled stand-in. A fixture file
+// that is not a recorded sandbox response (recorded: true) is hand-authored, and every surface says so: evidence
+// source `fixture:hand-authored (CRS sandbox pending)`, finding status `fixture`, the finding text, a step note and
+// the FIXTURE chip on the card (D-3). The agent never rejects on its own: every outcome leaves the hold for a controller.
 import { z } from 'zod';
 import { nowIso, type WorkerMode } from './config.js';
 import {
@@ -27,7 +29,10 @@ import {
 import type { Step } from './replay.js';
 import type { RecordArgs } from './stdb.js';
 
-export const VENDOR_CHECK_SOURCES = ['crs:business_credit', 'crs:public_records', 'crs:ofac'] as const;
+// The source of a hand-authored fixture's evidence rows. The CRS call name moves into `ref` for those rows.
+export const FIXTURE_SOURCE = 'fixture:hand-authored (CRS sandbox pending)' as const;
+export const FIXTURE_NOTE_DEFAULT = 'hand-authored in the shape of a sandbox response; CRS sandbox pending';
+export const VENDOR_CHECK_SOURCES = ['crs:business_credit', 'crs:public_records', 'crs:ofac', FIXTURE_SOURCE] as const;
 export type VendorCheckSource = (typeof VENDOR_CHECK_SOURCES)[number];
 export const VENDOR_RECOMMENDATIONS = ['approve', 'reject', 'escalate'] as const;
 export type VendorRecommendation = (typeof VENDOR_RECOMMENDATIONS)[number];
@@ -57,8 +62,9 @@ export const VendorCheckFindingSchema = z
     recommendation: z.enum(VENDOR_RECOMMENDATIONS),
     reasons: z.array(z.string().min(1).max(200)).max(10),
     confidence: z.number().min(0).max(1),
-    status: z.enum(['ok', 'replayed', 'hand_shaped', 'no_fixture']).default('ok'),
-    // the fixture's own caveat sentence when the replay is a hand-shaped file, printed on the card
+    // ok: live call; replayed: recorded sandbox response; fixture: hand-authored file; no_fixture: stand-in
+    status: z.enum(['ok', 'replayed', 'fixture', 'no_fixture']).default('ok'),
+    // the fixture's own caveat sentence when the replay is a hand-authored file, printed on the card
     fixtureNote: z.string().max(300).optional(),
     model: z.string().max(80).optional(),
     question_for_controller: z.string().max(QUESTION_MAX).optional(),
@@ -140,9 +146,13 @@ const HIT_LABEL: Record<string, string> = {
 export interface AssessMeta {
   status: VendorCheckFinding['status'];
   model: string;
-  // appended to each evidence ref, e.g. "replayed from vendor_checks/3.json" or "hand-shaped fixture"
+  // appended to each evidence ref for live and recorded rows, e.g. "replayed from vendor_checks/3.json"
   refSuffix?: string;
   fixtureNote?: string;
+}
+
+function isFixture(meta: AssessMeta): boolean {
+  return meta.status === 'fixture';
 }
 
 // Rules, not a model. OFAC match -> reject (suggested only). Any other hit or a failed call -> escalate.
@@ -168,9 +178,11 @@ export function assessVendor(brief: VendorBrief, summaries: CrsSummary[], meta: 
   const recommendation: VendorRecommendation = reject ? 'reject' : reasons.length ? 'escalate' : 'approve';
   const confidence = !allOk ? 0.4 : recommendation === 'approve' ? 0.9 : 0.8;
 
+  // Hand-authored fixture rows carry the fixture source and the CRS call name as the ref; live and recorded rows
+  // keep the crs:* source and the call name plus provenance in the ref.
   const evidence = summaries.map(s => ({
-    source: SOURCE_OF[s.call],
-    ref: `${s.endpoint}${meta.refSuffix ? ` (${meta.refSuffix})` : ''}`.slice(0, 200),
+    source: isFixture(meta) ? FIXTURE_SOURCE : SOURCE_OF[s.call],
+    ref: (isFixture(meta) ? s.endpoint : `${s.endpoint}${meta.refSuffix ? ` (${meta.refSuffix})` : ''}`).slice(0, 200),
     quote: s.summary.slice(0, 400),
   }));
   const v = brief.vendor;
@@ -182,7 +194,7 @@ export function assessVendor(brief: VendorBrief, summaries: CrsSummary[], meta: 
       : recommendation === 'reject'
         ? 'OFAC match: the agent suggests reject, a controller decides.'
         : 'Needs a person: reject or call back.';
-  const prefix = meta.status === 'hand_shaped' ? 'Hand-shaped fixture, not sandbox data. ' : '';
+  const prefix = isFixture(meta) ? 'Hand-authored fixture (CRS sandbox pending), not sandbox data. ' : '';
   const finding = `${prefix}Vendor ${v.id} ${v.name} (${trig}, ${brief.txnRef}). Business credit: ${line('business_credit')}. Public records: ${line('public_records')}. OFAC: ${line('ofac')}. ${verdict}`.slice(0, 1000);
   const { question } = mapRecommendation(recommendation, reasons);
   return VendorCheckFindingSchema.parse({
@@ -220,7 +232,6 @@ export interface VendorCheckDeps {
   // injectable for tests
   env?: CrsEnv;
   fetch?: typeof fetch;
-  variant?: string;
 }
 
 function note(text: string): Step {
@@ -237,37 +248,35 @@ async function runCalls(brief: VendorBrief, opts: CrsOptions): Promise<CrsSummar
   return Promise.all([businessCredit(name, id, opts), publicRecords(name, id, opts), ofacScreen(name, { ...opts, vendorId: id })]);
 }
 
-export function replayVendor(brief: VendorBrief, fixturesDir: string, variant?: string): VendorCheckOutcome | undefined {
-  const file = vendorFixtureFile(fixturesDir, brief.vendor.id, variant);
+export function replayVendor(brief: VendorBrief, fixturesDir: string): VendorCheckOutcome | undefined {
+  const file = vendorFixtureFile(fixturesDir, brief.vendor.id, brief.trigger);
   if (!file) return undefined;
   const fx = loadVendorFixture(file);
   const rel = `vendor_checks/${file.split(/[\\/]/).pop()}`;
   const summaries: CrsSummary[] = CRS_CALLS.map(c =>
     fx.responses[c] === undefined ? { call: c, endpoint: endpointLabel(c), ok: false, hits: [], summary: 'not in the fixture', raw: null, error: 'not in the fixture' } : summarizeRaw(c, fx.responses[c]),
   );
-  // A recorded sandbox response replays as `replayed`; a hand-shaped file is labelled as such on every
-  // surface: finding status, each evidence ref, the finding text and a step note. Nothing reads as sandbox data.
-  const handShaped = !fx.recorded;
-  const fixtureNote = handShaped
-    ? ((fx as { note?: string }).note ?? 'hand-shaped fixture: shape of a sandbox response, not real data').slice(0, 300)
-    : undefined;
+  // A recorded sandbox response (recorded: true) replays as `replayed`. Anything else is a hand-authored file and is
+  // labelled on every surface: finding status `fixture`, the fixture source on each evidence row, the finding text
+  // and a step note. Nothing reads as sandbox data.
+  const fixture = !fx.recorded;
+  const fixtureNote = fixture ? ((fx as { note?: string }).note ?? FIXTURE_NOTE_DEFAULT).slice(0, 300) : undefined;
   const finding = assessVendor(brief, summaries, {
-    status: handShaped ? 'hand_shaped' : 'replayed',
-    model: handShaped ? 'hand-shaped fixture' : 'crs-replay',
-    refSuffix: handShaped ? 'hand-shaped fixture' : `replayed from ${rel}`,
+    status: fixture ? 'fixture' : 'replayed',
+    model: fixture ? 'hand-authored fixture' : 'crs-replay',
+    refSuffix: fixture ? undefined : `replayed from ${rel}`,
     fixtureNote,
   });
   const steps: Step[] = [
-    ...summaries.map(s => note(`${SOURCE_OF[s.call]} ${s.endpoint}: ${s.ok ? `${s.hits.length} hit(s)` : s.summary}`)),
-    ...(handShaped ? [note(`hand-shaped fixture ${rel}, not sandbox data: ${fixtureNote}`)] : []),
-    note(`replayed from ${rel}`),
+    ...summaries.map(s => note(`${fixture ? FIXTURE_SOURCE : SOURCE_OF[s.call]} ${s.endpoint}: ${s.ok ? `${s.hits.length} hit(s)` : s.summary}`)),
+    ...(fixture ? [note(`hand-authored fixture ${rel}; CRS sandbox pending: ${fixtureNote}`)] : []),
+    note(fixture ? `fixture ${rel}` : `replayed from ${rel}`),
   ];
   return outcome(finding, steps, 'replayed');
 }
 
 export async function handleVendorCheck(brief: VendorBrief, deps: VendorCheckDeps): Promise<VendorCheckOutcome> {
   const env = deps.env ?? crsEnvFrom(process.env, deps.mode);
-  const variant = deps.variant ?? process.env.CRS_FIXTURE_VARIANT;
   const { log } = deps;
   const steps: Step[] = [note(`vendor check for vendor ${brief.vendor.id} (${brief.trigger}); business fields only, no person data`)];
   const opts: CrsOptions = { env, log, signal: deps.signal, fetch: deps.fetch };
@@ -287,13 +296,13 @@ export async function handleVendorCheck(brief: VendorBrief, deps: VendorCheckDep
   }
 
   try {
-    const r = replayVendor(brief, env.fixturesDir, variant);
+    const r = replayVendor(brief, env.fixturesDir);
     if (r) return { ...r, steps: [...steps, ...r.steps] };
   } catch (err) {
     log(`vendor check fixture for vendor ${brief.vendor.id} rejected: ${(err as Error).message}`);
     steps.push(note(`fixture rejected: ${(err as Error).message}`));
   }
-  steps.push(note(`scripted stand-in: no fixture at vendor_checks/${brief.vendor.id}.json`));
+  steps.push(note(`scripted stand-in: no fixture at vendor_checks/${brief.vendor.id}.${brief.trigger}.json or vendor_checks/${brief.vendor.id}.json`));
   return outcome(standInVendorFinding(brief), steps, 'none');
 }
 

@@ -9,6 +9,8 @@ import { WorkerLoop } from '../src/loop.js';
 import type { Conn, RecordArgs } from '../src/stdb.js';
 import {
   APPROVE_QUESTION,
+  FIXTURE_NOTE_DEFAULT,
+  FIXTURE_SOURCE,
   STAND_IN_PREFIX,
   VendorCheckFindingSchema,
   handleVendorCheck,
@@ -57,13 +59,14 @@ const noFetch = (() => {
 
 describe('vendor check finding schema', () => {
   const base = { finding: 'x', evidence: [] as unknown[], recommendation: 'approve', reasons: [], confidence: 0.9 };
-  it('accepts the three CRS sources', () => {
-    for (const source of ['crs:business_credit', 'crs:public_records', 'crs:ofac']) {
+  it('accepts the three CRS sources and the hand-authored fixture source', () => {
+    expect(FIXTURE_SOURCE).toBe('fixture:hand-authored (CRS sandbox pending)');
+    for (const source of ['crs:business_credit', 'crs:public_records', 'crs:ofac', FIXTURE_SOURCE]) {
       expect(VendorCheckFindingSchema.safeParse({ ...base, evidence: [{ source, ref: 'r', quote: 'q' }] }).success).toBe(true);
     }
   });
   it('rejects any other source', () => {
-    for (const source of ['kernel', 'swap_log.txt', 'crs:consumer_credit', 'find_trips_near', '']) {
+    for (const source of ['kernel', 'swap_log.txt', 'crs:consumer_credit', 'find_trips_near', 'fixture', 'fixture:hand-authored', '']) {
       expect(VendorCheckFindingSchema.safeParse({ ...base, evidence: [{ source, ref: 'r', quote: 'q' }] }).success).toBe(false);
     }
   });
@@ -93,42 +96,86 @@ describe('mapping to record_investigation', () => {
 });
 
 describe('replay', () => {
-  it('prefers <vendorId>.json over a variant file', () => {
-    expect(path.basename(vendorFixtureFile(FIXTURES, 3)!)).toBe('3.json');
-    expect(path.basename(vendorFixtureFile(FIXTURES, 3, 'hit')!)).toBe('3.hit.json');
+  it('prefers <vendorId>.<trigger>.json over <vendorId>.json and picks up nothing else', () => {
+    expect(path.basename(vendorFixtureFile(FIXTURES, 1, 'bank_change')!)).toBe('1.bank_change.json');
+    expect(path.basename(vendorFixtureFile(FIXTURES, 1, 'first_invoice')!)).toBe('1.json');
+    expect(path.basename(vendorFixtureFile(FIXTURES, 1)!)).toBe('1.json');
+    expect(path.basename(vendorFixtureFile(FIXTURES, 3, 'bank_change')!)).toBe('3.json');
+    expect(path.basename(vendorFixtureFile(FIXTURES, 5, 'bank_change')!)).toBe('5.json');
     expect(vendorFixtureFile(FIXTURES, 999)).toBeUndefined();
+    expect(vendorFixtureFile(FIXTURES, 1, '../1')).toBe(path.join(FIXTURES, '1.json'));
+    // no hit variant file exists any more; a stray <id>.<something>.json is not picked up by a different trigger
+    expect(fs.existsSync(path.join(FIXTURES, '3.hit.json'))).toBe(false);
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'vc-stray-'));
+    fs.copyFileSync(path.join(FIXTURES, '1.bank_change.json'), path.join(dir, '8.bank_change.json'));
+    expect(vendorFixtureFile(dir, 8, 'first_invoice')).toBeUndefined();
+    expect(vendorFixtureFile(dir, 8)).toBeUndefined();
   });
 
-  it('replays the clean fixture as approve -> hold with the call-back question', async () => {
-    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant: '' });
+  it('the three fixtures the run uses all carry the hand-authored note and no recorded flag', () => {
+    for (const f of ['1.json', '1.bank_change.json', '3.json', '5.json']) {
+      const fx = JSON.parse(fs.readFileSync(path.join(FIXTURES, f), 'utf8'));
+      expect(fx.note).toBe(FIXTURE_NOTE_DEFAULT);
+      expect(fx.recorded).not.toBe(true);
+    }
+  });
+
+  it('replays the clean vendor 3 fixture as approve -> hold with the call-back question, labelled FIXTURE on every surface', async () => {
+    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch });
     expect(out.source).toBe('replayed');
-    // 3.json is hand-shaped (recorded: false): the status says so on every surface
-    expect(out.finding.status).toBe('hand_shaped');
+    // 3.json is hand-authored (no recorded: true): the status says so on every surface
+    expect(out.finding.status).toBe('fixture');
     expect(out.finding.recommendation).toBe('approve');
     expect(out.recommendation).toBe('hold');
     expect(out.question).toBe(APPROVE_QUESTION);
-    expect(out.finding.evidence.map(e => e.source)).toEqual(['crs:business_credit', 'crs:public_records', 'crs:ofac']);
+    expect(out.finding.evidence).toHaveLength(3);
+    expect(out.finding.evidence.every(e => e.source === FIXTURE_SOURCE)).toBe(true);
+    expect(out.finding.evidence.map(e => e.ref)).toEqual(['business credit', 'public records', 'OFAC screen']);
     expect(out.finding.evidence[1].quote).toBe('no liens, no judgments, no bankruptcies on file');
     expect(out.finding.evidence[2].quote).toMatch(/^OFAC no match/);
-    expect(out.finding.evidence.map(e => e.ref)).toEqual([
-      'business credit (hand-shaped fixture)',
-      'public records (hand-shaped fixture)',
-      'OFAC screen (hand-shaped fixture)',
-    ]);
-    expect(out.finding.finding.startsWith('Hand-shaped fixture, not sandbox data. ')).toBe(true);
-    expect(out.finding.fixtureNote).toMatch(/not real data/);
-    expect(out.finding.model).toBe('hand-shaped fixture');
-    expect(out.steps.some(s => s.type === 'note' && s.text.startsWith('hand-shaped fixture vendor_checks/3.json, not sandbox data:'))).toBe(true);
-    expect(out.steps.at(-1)).toMatchObject({ type: 'note', text: 'replayed from vendor_checks/3.json' });
+    expect(out.finding.finding.startsWith('Hand-authored fixture (CRS sandbox pending), not sandbox data. ')).toBe(true);
+    expect(out.finding.fixtureNote).toBe(FIXTURE_NOTE_DEFAULT);
+    expect(out.finding.model).toBe('hand-authored fixture');
+    expect(out.steps.some(s => s.type === 'note' && s.text.startsWith(`hand-authored fixture vendor_checks/3.json; CRS sandbox pending: ${FIXTURE_NOTE_DEFAULT}`))).toBe(true);
+    expect(out.steps.some(s => s.type === 'note' && s.text.startsWith(`${FIXTURE_SOURCE} business credit: 0 hit(s)`))).toBe(true);
+    expect(out.steps.at(-1)).toMatchObject({ type: 'note', text: 'fixture vendor_checks/3.json' });
+    expect(JSON.stringify(out)).not.toMatch(/replayed from/);
+  });
+
+  it('vendor 1 is clean on its first invoice and carries a judgment on its bank change (D-3)', async () => {
+    const v1 = { id: 1, name: 'Alamo Fleet Service', bankChangedDay: 18 };
+    const first = await handleVendorCheck(brief({ txnRef: 'INV-1012', trigger: 'first_invoice', day: 9, cents: '150000', vendor: v1 }), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch });
+    expect(first.finding.status).toBe('fixture');
+    expect(first.finding.recommendation).toBe('approve');
+    expect(first.steps.at(-1)).toMatchObject({ type: 'note', text: 'fixture vendor_checks/1.json' });
+    const change = await handleVendorCheck(brief({ txnRef: 'INV-1032', trigger: 'bank_change', day: 19, cents: '545000', vendor: v1 }), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch });
+    expect(change.source).toBe('replayed');
+    expect(change.finding.status).toBe('fixture');
+    expect(change.finding.recommendation).toBe('escalate');
+    expect(change.recommendation).toBe('hold_and_ask');
+    expect(change.finding.reasons).toEqual(['a judgment (Example County Civil Court, $23,750.00, filed 2026-07-20, open)']);
+    expect(change.question).toBe('Vendor has a judgment (Example County Civil Court, $23,750.00, filed 2026-07-20, open); reject or call back?');
+    expect(change.finding.question_for_controller).toBe(change.question);
+    expect(change.finding.evidence.every(e => e.source === FIXTURE_SOURCE)).toBe(true);
+    expect(change.finding.evidence[1].quote).toMatch(/^no liens, 1 judgment, no bankruptcies on file: judgment Example County Civil Court/);
+    expect(change.finding.evidence[2].quote).toMatch(/^OFAC no match/);
+    expect(change.steps.at(-1)).toMatchObject({ type: 'note', text: 'fixture vendor_checks/1.bank_change.json' });
   });
 
   it('never lets an endpoint placeholder reach a card: no "/TODO-" in any finding, ref, quote or step', async () => {
-    for (const variant of ['', 'hit']) {
-      const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant });
+    const briefs = [
+      brief(),
+      brief({ txnRef: 'INV-1032', vendor: { id: 1, name: 'Alamo Fleet Service', bankChangedDay: 18 } }),
+      brief({ txnRef: 'INV-1012', trigger: 'first_invoice', vendor: { id: 1, name: 'Alamo Fleet Service', bankChangedDay: 18 } }),
+      brief({ txnRef: 'INV-1138', vendor: { id: 5, name: 'Border Fleet Repair', bankChangedDay: 71 } }),
+    ];
+    for (const b of briefs) {
+      const out = await handleVendorCheck(b, { mode: 'replay', log: () => {}, env: env(), fetch: noFetch });
       expect(JSON.stringify(out)).not.toContain('/TODO-');
       expect(JSON.stringify(out)).not.toMatch(/POST \//);
+      expect(out.finding.status).toBe('fixture');
     }
-    const stand = await handleVendorCheck(brief({ vendor: { id: 99, name: 'Nobody Inc', bankChangedDay: 1 } }), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant: '' });
+    const stand = await handleVendorCheck(brief({ vendor: { id: 99, name: 'Nobody Inc', bankChangedDay: 1 } }), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch });
     expect(JSON.stringify(stand)).not.toContain('/TODO-');
   });
 
@@ -136,28 +183,19 @@ describe('replay', () => {
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'vc-recorded-'));
     const src = JSON.parse(fs.readFileSync(path.join(env().fixturesDir, '3.json'), 'utf8'));
     fs.writeFileSync(path.join(tmp, '3.json'), JSON.stringify({ ...src, recorded: true, recordedAt: '2026-10-24T20:00:00Z', note: 'recorded from the sandbox' }));
-    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: { ...env(), fixturesDir: tmp }, fetch: noFetch, variant: '' });
+    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: { ...env(), fixturesDir: tmp }, fetch: noFetch });
     expect(out.finding.status).toBe('replayed');
     expect(out.finding.fixtureNote).toBeUndefined();
+    expect(out.finding.model).toBe('crs-replay');
+    expect(out.finding.evidence.map(e => e.source)).toEqual(['crs:business_credit', 'crs:public_records', 'crs:ofac']);
     expect(out.finding.evidence.every(e => e.ref.endsWith('(replayed from vendor_checks/3.json)'))).toBe(true);
     expect(out.finding.finding.startsWith('Vendor 3')).toBe(true);
-    expect(out.steps.some(s => s.type === 'note' && /hand-shaped/.test(s.text))).toBe(false);
-  });
-
-  it('replays the hit fixture as hold_and_ask with the reasons in the question', async () => {
-    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant: 'hit' });
-    expect(out.source).toBe('replayed');
-    expect(out.finding.recommendation).toBe('escalate');
-    expect(out.recommendation).toBe('hold_and_ask');
-    expect(out.finding.reasons).toHaveLength(2);
-    expect(out.finding.reasons[0]).toMatch(/^a judgment \(Example County Civil Court, \$18,450\.00/);
-    expect(out.finding.reasons[1]).toMatch(/^an OFAC potential match \(GULF COAST DIESEL TRADING/);
-    expect(out.question).toMatch(/^Vendor has a judgment .*; an OFAC potential match .*; reject or call back\?$/);
-    expect(out.finding.question_for_controller).toBe(out.question);
+    expect(JSON.stringify(out)).not.toMatch(/hand-authored|fixture:/);
+    expect(out.steps.at(-1)).toMatchObject({ type: 'note', text: 'replayed from vendor_checks/3.json' });
   });
 
   it('writes a terminal row the reducer accepts', async () => {
-    const out = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch, variant: 'hit' });
+    const out = await handleVendorCheck(brief({ txnRef: 'INV-1032', vendor: { id: 1, name: 'Alamo Fleet Service', bankChangedDay: 18 } }), { mode: 'replay', log: () => {}, env: env(), fetch: noFetch });
     const r = vendorRecord(9n, out);
     expect(r).toMatchObject({ id: 9n, recommendation: 'hold_and_ask', source: 'replayed', question: out.question });
     expect(VendorCheckFindingSchema.parse(JSON.parse(r.findingJson)).recommendation).toBe('escalate');
@@ -187,7 +225,6 @@ describe('dry run', () => {
       log: m => logs.push(m),
       env: env({ dryRun: true, username: 'crs-user@example.test', password: 'hunter2-sandbox', mode: 'live' }),
       fetch: noFetch,
-      variant: '',
     });
     const printed = logs.join('\n');
     expect(printed).toContain('CRS dry run (no network): POST https://crs.test/api/users/login');
@@ -245,8 +282,8 @@ describe('live path (mocked fetch)', () => {
   });
 
   it('does not call CRS without credentials or in replay mode', async () => {
-    const a = await handleVendorCheck(brief(), { mode: 'live', log: () => {}, env: env({ mode: 'live' }), fetch: noFetch, variant: '' });
-    const b = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env({ username: 'u', password: 'p' }), fetch: noFetch, variant: '' });
+    const a = await handleVendorCheck(brief(), { mode: 'live', log: () => {}, env: env({ mode: 'live' }), fetch: noFetch });
+    const b = await handleVendorCheck(brief(), { mode: 'replay', log: () => {}, env: env({ username: 'u', password: 'p' }), fetch: noFetch });
     expect([a.source, b.source]).toEqual(['replayed', 'replayed']);
   });
 
@@ -254,7 +291,7 @@ describe('live path (mocked fetch)', () => {
     await expect(login({ env: env({ username: 'only-user' }), fetch: noFetch })).rejects.toThrow('CRS_USERNAME and CRS_PASSWORD are required');
   });
 
-  it('a hand-shaped fixture is replaced, not merged, when recording', () => {
+  it('a hand-authored fixture is replaced, not merged, when recording', () => {
     fs.writeFileSync(path.join(tmp, '7.json'), JSON.stringify({ recorded: false, responses: { ofac: { stale: true } } }));
     recordRaw(tmp, { id: 7, name: 'V' }, 'business_credit', { matchFound: true });
     expect(Object.keys(JSON.parse(fs.readFileSync(path.join(tmp, '7.json'), 'utf8')).responses)).toEqual(['business_credit']);
@@ -263,10 +300,9 @@ describe('live path (mocked fetch)', () => {
 
 describe('loop dispatch', () => {
   it('routes kind vendor_check to the vendor check and writes one terminal row', async () => {
-    const prev = { dir: process.env.CRS_FIXTURES_DIR, dry: process.env.CRS_DRY_RUN, v: process.env.CRS_FIXTURE_VARIANT, u: process.env.CRS_USERNAME };
+    const prev = { dir: process.env.CRS_FIXTURES_DIR, dry: process.env.CRS_DRY_RUN, u: process.env.CRS_USERNAME };
     process.env.CRS_FIXTURES_DIR = FIXTURES;
     delete process.env.CRS_DRY_RUN;
-    delete process.env.CRS_FIXTURE_VARIANT;
     delete process.env.CRS_USERNAME;
     try {
       const written: RecordArgs[] = [];
@@ -285,7 +321,7 @@ describe('loop dispatch', () => {
       expect(written[0]).toMatchObject({ id: 11n, recommendation: 'hold', source: 'replayed', question: APPROVE_QUESTION });
       expect(JSON.parse(written[0].findingJson).recommendation).toBe('approve');
     } finally {
-      for (const [k, v] of [['CRS_FIXTURES_DIR', prev.dir], ['CRS_DRY_RUN', prev.dry], ['CRS_FIXTURE_VARIANT', prev.v], ['CRS_USERNAME', prev.u]] as const) {
+      for (const [k, v] of [['CRS_FIXTURES_DIR', prev.dir], ['CRS_DRY_RUN', prev.dry], ['CRS_USERNAME', prev.u]] as const) {
         if (v === undefined) delete process.env[k];
         else process.env[k] = v;
       }

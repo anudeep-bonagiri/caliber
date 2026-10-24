@@ -1,0 +1,29 @@
+{
+  "note": "hand-authored in the shape of a sandbox response; CRS sandbox pending",
+  "recorded": false,
+  "vendor": {
+    "id": 5,
+    "name": "Border Fleet Repair"
+  },
+  "responses": {
+    "business_credit": {
+      "businessName": "BORDER FLEET REPAIR",
+      "matchFound": true,
+      "riskClass": "LOW",
+      "creditScore": 64,
+      "yearsOnFile": 7,
+      "derogatoryIndicators": []
+    },
+    "public_records": {
+      "businessName": "BORDER FLEET REPAIR",
+      "liens": [],
+      "judgments": [],
+      "bankruptcies": []
+    },
+    "ofac": {
+      "searchedName": "BORDER FLEET REPAIR",
+      "result": "NO_MATCH",
+      "matches": []
+    }
+  }
+}
