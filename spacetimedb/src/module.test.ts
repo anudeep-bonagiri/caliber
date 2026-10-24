@@ -491,3 +491,57 @@ describe('6. injection: the injecting controller cannot approve its own hold', (
     expect(w.rows.hold('9002')).toBeFalsy();
   });
 });
+
+describe('7. settlement: record_settlement writes a bank id onto an existing payment and nothing else', () => {
+  // Task 17 acceptance: "record_settlement with no matching payment is refused in a test".
+  it('agent only: controller, seed and anonymous are refused by role', () => {
+    const w = makeWorld();
+    w.stepTo(41); // T1041 auto-pays on day 41
+    const { run, mod } = w;
+    const args = { txnRef: 'T1041', bankTxnId: 'nessie-1' };
+    expect(() => run(w.anon, ctx => mod.recordSettlement(ctx, args))).toThrow('anonymous may not do this (needs agent)');
+    expect(() => run(w.controller, ctx => mod.recordSettlement(ctx, args))).toThrow('controller may not do this (needs agent)');
+    expect(() => run(w.publisher, ctx => mod.recordSettlement(ctx, args))).toThrow('seed may not do this (needs agent)');
+    expect(w.rows.payment('T1041')?.bankTxnId).toBeUndefined();
+  });
+
+  it('no payment row: refused, so there is no path from a settlement to a payment (G3)', () => {
+    const w = makeWorld();
+    w.stepTo(41);
+    expect(w.rows.payment('2231')).toBeFalsy(); // 2231 is a hold, not a payment
+    expect(() => w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: '2231', bankTxnId: 'nessie-2' }))).toThrow('no payment to settle');
+    expect(() => w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: 'NOPE', bankTxnId: 'nessie-3' }))).toThrow('no payment to settle');
+    expect(w.rows.payment('2231')).toBeFalsy();
+  });
+
+  it('a successful call writes bank_txn_id once and an audit row with action settle', () => {
+    const w = makeWorld();
+    w.stepTo(41);
+    const before = w.rows.payment('T1041')!;
+    expect(before.bankTxnId).toBeUndefined();
+    w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: 'T1041', bankTxnId: 'nessie-abc-123' }));
+    const after = w.rows.payment('T1041')!;
+    expect(after.bankTxnId).toBe('nessie-abc-123');
+    expect(after.cents).toBe(before.cents);
+    expect(after.releasedRole).toBe(before.releasedRole);
+    const settles = [...w.h.db.auditEvent.iter()].filter(a => a.action === 'settle');
+    expect(settles).toHaveLength(1);
+    expect(settles[0].ref).toBe('T1041');
+    expect(settles[0].actorRole).toBe('agent');
+    expect(settles[0].detail).toContain('nessie-abc-123');
+    // a second settlement of the same payment is refused and leaves the first id in place
+    expect(() => w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: 'T1041', bankTxnId: 'nessie-other' })))
+      .toThrow('already settled as nessie-abc-123');
+    expect(w.rows.payment('T1041')?.bankTxnId).toBe('nessie-abc-123');
+    expect([...w.h.db.auditEvent.iter()].filter(a => a.action === 'settle')).toHaveLength(1);
+  });
+
+  it('an empty or over-long bank id is refused', () => {
+    const w = makeWorld();
+    w.stepTo(41);
+    expect(() => w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: 'T1041', bankTxnId: '   ' }))).toThrow('bank transaction id must be 1 to 120 characters');
+    expect(() => w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: 'T1041', bankTxnId: 'x'.repeat(121) }))).toThrow('bank transaction id must be 1 to 120 characters');
+    w.run(w.agent, ctx => w.mod.recordSettlement(ctx, { txnRef: 'T1041', bankTxnId: 'x'.repeat(120) }));
+    expect(w.rows.payment('T1041')?.bankTxnId).toHaveLength(120);
+  });
+});
