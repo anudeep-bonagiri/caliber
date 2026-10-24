@@ -2,7 +2,7 @@
 
 **The money does not move until the code has matched the line, and the agent can never approve what it proposed.**
 
-An autonomous accounts-payable clerk for a 40-truck carrier. It matches every fuel, toll and maintenance charge against telematics and contracts in plain code, pays clean lines, holds the rest, investigates each hold with Factory's Droid over Elastic Agent Builder tools, asks the fleet controller one question through ASI:One when it cannot decide, and turns the answer into a scoped, backtested rule. All state and every permission check live in one SpacetimeDB module.
+An autonomous accounts-payable clerk for a 40-truck carrier. It matches every fuel, toll and maintenance charge against telematics and contracts in plain code, pays clean lines, holds the rest, hands each hold to an investigator (Factory's Droid over Elastic Agent Builder tools when keys are present; recorded or scripted findings offline, labelled as such), asks the fleet controller one question when it cannot decide (in ASI:One, or in the terminal twin that runs the same code), and turns the answer into a scoped rule that the database backtests before it is stored. All state and every permission check live in one SpacetimeDB module.
 
 Links: dashboard (local, see Run it), video (to come), Agentverse profile (to come).
 
@@ -17,7 +17,7 @@ Links: dashboard (local, see Run it), video (to come), Agentverse profile (to co
 - **Agents for judgment.** Droid investigates and recommends. Its output type has no `pay`.
 - **No agent is trusted.** Three identities (seed, agent, controller) in a `role` table; every reducer checks the caller first; the agent cannot approve, and the requester of a release cannot approve it either.
 - **Ask once.** A controller answer becomes a rule with a scope and an expiry. The database backtests it before it is stored and refuses any rule that would clear a confirmed exception.
-- **Audit-ready.** Every action, and every refusal, is an `audit_event` row with the actor's role.
+- **Audit-ready.** Every action is an `audit_event` row with the actor's role. Refusals persist when the action goes through the `try_*` procedures, which is how the agent, the scripts and the demo call the module; a reducer refusal rolls back with its transaction and only the caller sees the message.
 
 ## Seats it fills
 
@@ -31,15 +31,15 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 | Card | FC-1017, assigned to truck 17 |
 | Telematics | Truck 17 parked at the San Antonio terminal, engine off, 96 miles away |
 | Kernel | `location_mismatch` (threshold 25 miles). Hold raised, task opened |
-| Investigator | `find_trips_near` over MCP: truck 22 at the pump within the window. `swap_log.txt`: Ortiz moved to unit 22, unit 17 in the shop |
+| Investigator | Recorded finding (hand-written in the shape of a record-mode run, labelled `replayed`): `find_trips_near` names truck 22 at the pump within the window; `swap_log.txt` line 8: Ortiz moved to unit 22, unit 17 in the shop. Every quote is verified against its source file or tool result before it is written |
 | Question to the controller | Did Ramon Ortiz drive truck 22 that day while truck 17 was in the shop? |
 | Answer | Yes, swapped trucks that week |
 | Rule | `location_mismatch`, scope driver 23, days 41 to 46, one-time. Backtest by the module: would clear 1 past row, 0 confirmed exceptions |
-| Verdict | Controller approves the rule in ASI:One; the kernel re-runs and clears 2231; the payment row is written with role `rule` |
+| Verdict | The controller approves the rule (ASI:One at the table; `scripts/controller_sim.py` in the measured run, which reads only the public tables and the dispatcher's swap log); the kernel re-runs and clears 2231; the payment row is written with role `rule` |
 
 ## What is measured
 
-All numbers below are written by `scripts/facts.py` into `docs/FACTS.json` and `docs/RESULTS.md`; nothing is typed by hand. Last run 2026-10-24T18:38:38+00:00, 7944 transactions over 92 business days.
+`scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-24T18:43:05+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
 
 | Code | Planted | Raised | Precision | Recall |
 | --- | --- | --- | --- | --- |
@@ -59,16 +59,17 @@ All numbers below are written by `scripts/facts.py` into `docs/FACTS.json` and `
 | Policy holds from the auto-pay limit (correct behaviour, not exceptions) | 6 |
 | Auto-paid by the kernel or a rule | 7886 payments, $1,083,630.52 |
 | Released by the controller | 9 payments, $37,547.00 |
+| Refusals in the audit trail, by role | {'agent': 1} |
 | Investigations by source in the offline run | {'none': 45, 'replayed': 2} |
 
-The whole cycle (publish with empty data, load fixtures, 92 days, scripted controller pass, facts) runs in about ten seconds with `scripts/full_run.sh`.
+The whole cycle runs in about ten seconds.
 
 ## How it works
 
-1. `seed/generate.py` renders the company and plants 52 exceptions and 6 decoys, writing `seed/fixtures/answer_key.json`. Only `scripts/facts.py` reads the key.
+1. `seed/generate.py` renders the company and plants 52 exceptions and 6 decoys, writing `seed/fixtures/answer_key.json`. In the demo path only `scripts/facts.py` reads the key; the generator's own mirror and the seed tests read it to prove the generator, and nothing in `spacetimedb/`, `worker/`, `agent/` or `web/` can.
 2. `scripts/load_fixtures.ts` loads the rows through `seed_*` reducers as the seed identity (SpacetimeDB).
 3. `advance_day`, a scheduled reducer, ticks every 2 seconds and runs `matchDay`: the kernel evaluates every row dated that day and writes `match_result`, then a `payment` or a `hold` plus an `agent_task` (SpacetimeDB).
-4. `worker/` holds the agent identity, claims tasks with a version-locked `claim_task`, and runs Droid with scoped tools over the evidence folder and the Elastic MCP endpoint, or replays recorded findings offline (Factory, Elastic).
+4. `worker/` holds the agent identity, claims tasks with a version-locked `claim_task`, and runs Droid with scoped tools over the evidence folder and the Elastic MCP endpoint when `FACTORY_API_KEY` is set; offline it replays the two hand-written recordings and writes a deterministic stand-in for every other task, labelled `scripted stand-in, not a model` on the card (Factory, Elastic).
 5. The controller talks to a uAgent on ASI:One: list holds, ask why, answer, approve a rule, approve a payment. Each is a `try_*` procedure call with the controller token (Fetch.ai).
 6. `create_rule` backtests inside the database; `approve_rule` re-runs the kernel on the source transaction; the dashboard, subscribed anonymously to the public tables, shows all of it live (SpacetimeDB).
 
@@ -84,7 +85,7 @@ See `worker/README.md` for the `createSession` options block quoted from the cod
 
 ## Elastic
 
-Indices `telematics_log` (geo_point), `receipts`, `contracts`, `invoices` on a Serverless project; two Agent Builder ES|QL tools, `find_trips_near` and `contract_rate_for_vendor`, exposed to Droid over MCP. Setup and smoke tests in `elastic/`.
+Indices `telematics_log` (geo_point), `receipts`, `contracts`, `invoices` for a Serverless project; two Agent Builder ES|QL tools, `find_trips_near` and `contract_rate_for_vendor`, exposed to Droid over MCP. Setup, ingest and smoke tests in `elastic/` with a dry-run mode; not yet run against a live project (see context/CLAIMS_AUDIT.md).
 
 ## SpacetimeDB
 
@@ -141,7 +142,7 @@ python3 scripts/facts.py
 | `docs/` | CONTRACT.md, FACTS.json, not-built.md, notability/ |
 | `context/` | PROJECT_STATUS.md, JUDGE_QA.md, CLAIMS_AUDIT.md |
 
-## Status and honesty
+## What is real and what is simulated
 
 What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. Not built: `docs/not-built.md`. Everything fails toward no money moving.
 

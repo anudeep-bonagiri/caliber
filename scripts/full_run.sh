@@ -44,6 +44,9 @@ for i in $(seq 1 180); do
 done
 echo "open tasks after wait: $left"
 
+step "segregation of duties: the agent identity asks to approve INV-1077"
+scripts/as_agent.sh approve INV-1077
+
 step "controller pass"
 python3 scripts/controller_sim.py --rounds 30 --sleep 2 | tail -4
 

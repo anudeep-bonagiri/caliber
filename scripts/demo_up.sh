@@ -63,11 +63,6 @@ if [ "${1:-}" != "--no-web" ] && [ -f web/package.json ]; then
   echo "dashboard: http://127.0.0.1:5173"
 fi
 
-if grep -q '^AGENT_SEED=.\+' .env && [ -d agent/.venv ]; then
-  step "ASI:One agent (logs/agent.log); open the Agent Inspector link it prints the first time"
-  ( nohup agent/.venv/bin/python agent/agent.py > logs/agent.log 2>&1 & )
-fi
-
 cat <<EOF
 
 Ready. The clock is paused on day 0.
@@ -75,6 +70,7 @@ Ready. The clock is paused on day 0.
   scripts/clock.sh pause      stop on the current day
   scripts/clock.sh step       advance one day
   scripts/clock.sh tick 500000   faster ticks (0.5 s)
-  python3 -m agent.cli "what needs me"   the controller's terminal (same code as the ASI:One agent)
+  agent/.venv/bin/python -m agent.cli "what needs me"   the controller's terminal (same code as the ASI:One agent)
+  agent/.venv/bin/python agent/agent.py               the ASI:One seat (needs AGENT_SEED in .env; start it once, by hand)
   python3 scripts/facts.py    recompute docs/FACTS.json from the ledger
 EOF

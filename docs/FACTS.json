@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-24T18:38:38+00:00",
+  "asOf": "2026-10-24T18:43:05+00:00",
   "autoPaid": {
     "cents": 108363052,
     "count": 7886
@@ -929,7 +929,7 @@
           "toDay": 13
         },
         "workerPreview": {
-          "computedAt": "2026-10-24T18:38:06.110Z",
+          "computedAt": "2026-10-24T18:43:02.632Z",
           "confirmedExceptionsCovered": 0,
           "n": 1,
           "openHoldsCovered": 1,
@@ -966,7 +966,7 @@
           "toDay": 24
         },
         "workerPreview": {
-          "computedAt": "2026-10-24T18:38:06.158Z",
+          "computedAt": "2026-10-24T18:43:02.683Z",
           "confirmedExceptionsCovered": 0,
           "n": 1,
           "openHoldsCovered": 1,
@@ -1003,7 +1003,7 @@
           "toDay": 46
         },
         "workerPreview": {
-          "computedAt": "2026-10-24T18:38:06.275Z",
+          "computedAt": "2026-10-24T18:43:02.789Z",
           "confirmedExceptionsCovered": 0,
           "n": 1,
           "openHoldsCovered": 1,
@@ -1040,7 +1040,7 @@
           "toDay": 56
         },
         "workerPreview": {
-          "computedAt": "2026-10-24T18:38:06.335Z",
+          "computedAt": "2026-10-24T18:43:02.851Z",
           "confirmedExceptionsCovered": 0,
           "n": 1,
           "openHoldsCovered": 1,
@@ -1077,7 +1077,7 @@
           "toDay": 79
         },
         "workerPreview": {
-          "computedAt": "2026-10-24T18:38:06.434Z",
+          "computedAt": "2026-10-24T18:43:02.947Z",
           "confirmedExceptionsCovered": 0,
           "n": 1,
           "openHoldsCovered": 1,
@@ -1114,7 +1114,7 @@
           "toDay": 88
         },
         "workerPreview": {
-          "computedAt": "2026-10-24T18:38:06.486Z",
+          "computedAt": "2026-10-24T18:43:02.999Z",
           "confirmedExceptionsCovered": 0,
           "n": 1,
           "openHoldsCovered": 1,
@@ -1161,8 +1161,10 @@
   "plantedClearedByRule": [],
   "plantedExceptions": 58,
   "refusals": {
-    "byRole": {},
-    "count": 0
+    "byRole": {
+      "agent": 1
+    },
+    "count": 1
   },
   "rules": {
     "expired": 6

@@ -134,7 +134,7 @@ All in `seed/fixtures/`, JSON arrays, keys exactly as the module columns (camelC
 | `contracts.json` | `id, vendorId, item, rateCents, validFromDay, validToDay, clause` |
 | `pos.json` | `id, vendorId, truckId, item, qty, unitCents, receivedQty, issuedDay` |
 | `invoices.json` | `id, vendorId, poId (string or null), receivedDay, item, qty, unitCents, cents, docRef` |
-| `answer_key.json` | `[{"txnRef", "code", "expected": "hold" \| "auto_reject" \| "clear_after_question", "note"}]`. Read only by `scripts/facts.py`. |
+| `answer_key.json` | `[{"txnRef", "code", "expected": "hold" \| "auto_reject" \| "clear_after_question", "note"}]`. Read only by `scripts/facts.py` in the demo path (the generator's mirror and seed tests read it to verify the generator). |
 | `evidence/` | what the investigator may open: `receipts/<txnRef>.txt`, `contracts/<id>.txt`, `invoices/<id>.txt`, `swap_log.txt`, `telematics/<day>.csv` |
 | `investigations/<txnRef>.json` | recorded findings for replay mode: `{"finding": <finding_json>, "steps": <steps_json>, "recordedAt": "ISO"}` |
 
