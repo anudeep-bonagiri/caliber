@@ -1,67 +1,33 @@
-# Video script, 3:30
+# Video script, 3:30 to 4:00
 
-One cut serves Cal Hacks and Fetch.ai (3 to 5 minutes). Opens on the moment. Every number spoken is read from docs/FACTS.json; fill the brackets after the final run. Screen recording of the dashboard on the left, ASI:One on a phone or second laptop on the right. No slides until 2:40.
+One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and CRS (the sandbox call visible). It opens on the moment. Every number spoken is read off a screen element or from docs/FACTS.md; nothing is from memory. Left of frame: the dashboard. Right of frame: ASI:One on the second laptop (or the terminal twin, which runs the same handler). Beats that depend on a live service carry "[if green, else replay]" with the replay line under them.
 
-## 0:00 to 0:35 The moment
+| Time | Shot | Say | On screen | Source of every number |
+| --- | --- | --- | --- | --- |
+| 0:00 | Dashboard, clock paused on day 41, queue shows hold 2231 selected | "Business day 41. A fuel card assigned to truck 17 buys 120 gallons in Schulenburg. The truck's own telematics say it is parked in San Antonio, engine off, far outside the 25 mile threshold. Nothing paid. The kernel held the line and opened a task." | Day clock "Day 41 of 92". Queue row 2231 with its dollars. Investigation header: truck, driver, station, distance vs threshold | Dollars, gallons and miles: the Investigation panel header |
+| 0:25 | Investigation panel, steps | "The investigator is Factory's Droid, read-only, with one way into data: two Elastic Agent Builder tools over MCP. It asked which trucks pinged at that pump in a ten-minute window. Truck 22. It read the dispatcher's swap log. Then it wrote one question for a person." | Steps: `elastic___find_trips_near` call and result naming truck 22, Read of swap_log.txt, the finding, the `replayed` badge with "recording made 2026-10-24 by droid live run" | Truck id: the tool_result row. Badge text: the card |
+| 0:50 | ASI:One chat on the second laptop | Type `what needs me`. "That is the controller's seat, a Fetch.ai agent on Agentverse. It lists what is waiting." Type `why 2231`. "Same finding, two evidence quotes with their source." Read the question off the card, then type the answer: `answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.` | ASI:One replies: the Needs you list, the why block, the confirmation "answer_question 2231 written to audit_event by controller" | Reply text as displayed |
+| 0:50 alt | [if green, else replay] If the Agentverse mailbox is not connected: the terminal twin, A3 window | Same three lines through `agent/.venv/bin/python -m agent.cli "..."`. Say "same handler, other front door; the mailbox is the only thing not wired on this laptop." | Same replies in the terminal | Same |
+| 1:15 | Rules panel, then ASI:One | "The answer is not a payment. The worker drafts a rule: driver 23, a six-day window, one time. The database backtests it before it will store it." Type `rules`, read the id, type `approve rule <n>`. "The kernel re-runs the same code with the rule in place and clears the hold. The payment is written by the rule, not by anyone's opinion." | Rules panel: the candidate rule with "Would have cleared N past rows; M were confirmed exceptions"; after approval the pill reads `used`. Queue: 2231 moves to resolved as `cleared by rule`, released by rule | N and M: the rule card. Rule id: the `rules` reply |
+| 1:45 | Terminal A3, then the audit feed | Run `scripts/as_agent.sh approve INV-1077`. "The worker that runs the investigator holds the agent identity. It asked to approve. The database said no, and wrote that down with its role on it." | `[false,"agent may not do this (needs controller)"]`; audit feed red row `refused`, actor `agent`, ref INV-1077 | The row itself |
+| 2:05 | Queue, INV-1077 selected (day 44 on screen; step the clock there before this beat) | "Vendor three changed its bank account two business days before a nine thousand eight hundred dollar invoice. Hard hold. The vendor check ran against CRS: business credit, public records, OFAC, on the business only, nothing on people." [if green, else replay] "Sandbox." | Investigation panel: `call-back required` pill; Vendor check block with three evidence rows sourced crs:business_credit, crs:public_records, crs:ofac; badge `live` or `replayed` | Dollars: the queue row. Sources: the three rows |
+| 2:05 alt | replay | "The vendor check is replaying a sandbox-shaped result today; the three rows and their sources are what the live call returns." | Same block with the `replayed` badge | Same |
+| 2:20 | ASI:One | Type `approve INV-1077`. "No call-back note, no payment." Type `approve INV-1077 Called Gulf Coast Diesel on the number on file; new account confirmed by M. Reyes.` | "Refused: call-back note required for a bank change", then "approve_payment INV-1077 written to audit_event by controller" | Reply text |
+| 2:30 | Ledger of trust, audit feed and the released row | [if green, else replay] "The payment lands in the mock bank. One transfer, one id, written back onto the payment row." Point at the `settle` row: "paid, bank id ..." and the resolved row "settled <id>". | Audit feed `settle` row with the Nessie id; Queue resolved row `settled <id>`; counter "released by controller" moves | The id on screen |
+| 2:30 alt | replay | "Offline the same row carries a labelled offline id, so nothing on this screen pretends to be a bank." | Resolved row "settlement offline" | Same |
+| 2:50 | Clock running at 0.5 s tick, then docs/FACTS.md on screen | "Ninety-two business days, seven thousand nine hundred forty-four transactions, in seconds. We planted 52 exceptions across seven classes and six legitimate truck swaps that look like fraud. Precision 1.0, recall 1.0. All six decoys cleared with one answer each. Zero planted exceptions cleared by a rule. The script that computes those numbers is the only program in the demo allowed to read the answer key." | Counters climbing; then the FACTS.md table | docs/FACTS.md: transactions 7944; planted 52 plus 6 decoys; precision 1.0; recall 1.0; decoys 6 of 6; planted cleared by rule 0 |
+| 3:15 | Three stills, five seconds each | "One SpacetimeDB module is the shared room: roles are a table, the clock is a scheduled reducer, the agent cannot approve, every action and every refusal is an audit row." "Droid on a trigger, autonomy off, write tools disabled by id, only MCP and reads allowed, ninety second abort, output schema with no pay." "The company is generated by us with a published key. The controls are real. The not-built list is in the repo." | README principles; worker/README.md options block; docs/not-built.md | None |
+| 3:35 | Dashboard, clock paused | "Dispatch Ledger. The money does not move until the code has matched the line, and the agent can never approve what it proposed. Repo, Agentverse address and the facts file are in the description." | Dashboard | None |
 
-Screen: dashboard, clock paused on day 41, queue shows hold 2231.
+Fetch.ai cut: keep every beat; the 0:50 beat must be the live ASI:One chat, so record it only after the mailbox is connected. CRS cut: the 2:05 beat must show the live call; if the sandbox is not green by recording time, record the replay line and say "sandbox replay" on screen, never "live".
 
-"Business day 41. A fuel card assigned to truck 17 buys 120 gallons in Schulenburg, four hundred twelve dollars. The truck's own telematics say it is parked in San Antonio, engine off, 96 miles away. Nothing paid. The kernel held the line and opened a task."
+Numbers in this script come from docs/FACTS.md dated 2026-10-24T21:10:26+00:00. If facts.py is rerun before recording, re-read the table and change the spoken numbers to match.
 
-Screen: investigation panel fills: tool_call find_trips_near, tool_result truck 22, Grep swap_log.txt, finding, the question.
+## Never say (from docs/RUNBOOK.md, section 7)
 
-"The investigator asked Elastic which trucks pinged near that pump. Truck 22. It read the dispatcher's swap log: Ortiz moved to unit 22, unit 17 in the shop. So it asks one question."
-
-## 0:35 to 1:25 The controller's seat, in ASI:One
-
-Screen: ASI:One chat.
-
-Type: what needs me. Reply lists 2231 with the question.
-Type: why 2231. Reply shows the finding and two evidence quotes with their source.
-Type: yes, Ortiz swapped to 22 that week, 17 was in the shop.
-
-"That answer is not a payment. It becomes a draft rule: driver 23, days 41 to 46, one time. The database backtests it before it will store it: [N] past rows would clear, [0] were confirmed exceptions."
-
-Type: approve rule 1.
-
-Screen: dashboard, the hold flips to cleared by rule, the payment row appears with role rule, the rule board shows the backtest line.
-
-"The kernel re-runs the same code with the rule in place and clears the hold. The payment is written by the rule, not by anyone's opinion."
-
-## 1:25 to 2:00 The refusal
-
-Screen: terminal. Run the agent-token call:
-
-```
-scripts/as_agent.sh approve INV-1077
-```
-
-Reply: Refused: agent may not do this (needs controller). Dashboard audit feed shows the red refused row with role agent.
-
-"The worker that runs the investigator holds the agent identity. It asked to approve. The database said no, and wrote that down with its role on it. The same check refuses whoever proposed a release from approving it."
-
-Screen: ASI:One. Type: approve INV-1077. Reply: Refused: call-back note required for a bank change.
-Type: approve INV-1077 spoke to Gulf Coast Diesel on the number on file, confirmed by M. Reyes.
-Reply: approve_payment INV-1077 written to audit_event by controller.
-
-"A vendor changed its bank account two days before a nine thousand eight hundred dollar invoice. No note, no payment."
-
-## 2:00 to 2:40 The month
-
-Screen: clock running at a fast tick, counters climbing, queue grouping by code; then docs/FACTS.md.
-
-"Ninety-two business days, about [transactionsMatched] transactions, in under four minutes. We planted 52 exceptions across seven classes and six legitimate swaps that look like fraud. Recall [recall], precision [precision]. All six decoys cleared with one answer each. Zero planted exceptions cleared by a rule. [refusals.count] refusals in the audit trail. The script that computes those numbers is the only program allowed to read the answer key."
-
-## 2:40 to 3:15 How it is built
-
-Slides, three of them.
-
-1. One SpacetimeDB module: the shared room. Roles are a table, the clock is a scheduled reducer, every door is an identity. Dashboard, worker and chat agent are writers to one world.
-2. Droid on a trigger: autonomy off, four tools disabled by id, only MCP calls allowed, 90 second abort, output schema with no pay. Elastic Agent Builder ES|QL tools over MCP. Options block in the README.
-3. What is real and what is simulated. The company is generated by us with a published key. The controls are real. Not built list in the repo.
-
-## 3:15 to 3:30 Close
-
-Screen: the dashboard, clock paused.
-
-"Dispatch Ledger. The money does not move until the code has matched the line, and the agent can never approve what it proposed. Repo, Agentverse address and the facts file are in the description."
+- Never say "rule 1". The rule id keeps counting across resets; read `<n>` from `rules`.
+- `what needs me` lists every hold still waiting, oldest days included, because no one answered them during the run. Point at the 2231 line.
+- The CLI `rules` reply prints a used rule as `expired`; the Rules panel shows it as `used`. Both mean the one-time rule cleared 2231.
+- Inject only on day 44 or day 42. Those are the days truck 29 sits at San Antonio with the engine off in every ping.
+- No dollar amount or distance from memory. The Investigation panel and the terminal print them; read them off the screen.
+- Never say "live" for a replayed finding, a sandbox-shaped vendor check, or an offline settlement id. The badge on the card is the word to use.
