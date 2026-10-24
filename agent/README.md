@@ -7,9 +7,21 @@ The fleet controller's seat for Dispatch Ledger, an autonomous accounts-payable 
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| Dispatch Ledger Controller | `@dispatch-ledger-controller` | `agent1q...` | Holds the `controller` identity: lists holds, explains findings, takes answers, approvals and rejections, drives the simulated clock | [agent/](https://github.com/anudeep-bonagiri/dispatch-ledger/tree/main/agent) |
+| Dispatch Ledger Controller | `@dispatch-ledger-controller` | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | Holds the `controller` identity: lists holds, explains findings, takes answers, approvals and rejections, drives the simulated clock | [agent/](https://github.com/anudeep-bonagiri/dispatch-ledger/tree/main/agent) |
 
 ## Commands
+
+Five commands cover the whole workflow; each with one example as typed in ASI:One.
+
+| Command | Example | Reply shape |
+| --- | --- | --- |
+| `what needs me` | `what needs me` | `Needs you (3):` then one line per hold: `2231  $412.00  location_mismatch  day 41  Q: <the investigator's question>` |
+| `why <id>` | `why 2231` | The hold line, `Finding: ...`, up to two `Evidence: "..." (source, ref)` lines, `Recommendation: ...`, `Question: ...`, `source: live | replayed | scripted stand-in` |
+| `answer <id> <text>` | `answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.` | `answer_question 2231 written to audit_event by controller (event <n>, day 41, ...)` |
+| `approve rule <n>` | `approve rule 7` (read `<n>` from `rules`) | `approve_rule 7 written to audit_event by controller (event <n>, day 41, location_mismatch {"driverId":23})` |
+| `approve <id> [note]` | `approve INV-1077 Called Gulf Coast Diesel on the number on file; new account confirmed by M. Reyes.` | `approve_payment INV-1077 written to audit_event by controller (event <n>, day 44, <note>)`; without a note on a bank change: `Refused: call-back note required for a bank change` |
+
+Everything else the seat understands:
 
 | Say | What happens |
 | --- | --- |
