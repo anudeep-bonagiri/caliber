@@ -503,3 +503,61 @@ Done this round, on the director's instruction (cross-session messages 15:5x), f
 Checks: `ls scripts/ingest_watch.py docs/CONNECTORS.md seed/fixtures/inbox/fuel_card_wex_sample.csv` all present; `grep -n ingestRows spacetimedb/src/index.ts` hits :500; `grep -n -- --inbox scripts/demo_up.sh scripts/full_run.sh` hits both; `grep -nP '\x{2014}'` over the three files: empty. Not run: demo_up.sh, full_run.sh, rehearse.sh. Not touched: scripts/facts.py, elastic/, bench/, agent/ (other builders' uncommitted work).
 
 Next: relaunch builder-23 when the deck is in `context/`; steps 3 to 7 of the brief remain.
+
+## 2026-10-24 17:20 PDT Builder-26: Elastic alignment (Task 26)
+
+Rubric photo context/elastic-criteria.jpg: absent at start and at 17:20, so the four lines are quoted from TASKS.md (depth and creativity of the ES implementation; use of JINA embeddings; use of Agent Builder AND Workflows; Serverless). Jd Armada confirmed to the director that Workflows is GA on Serverless Elasticsearch projects, no toggle.
+
+Commits: 9378983 (26.1 tools and 26.2 semantic tools), e6b4f70 (26.1 key path, worker fallback), 24c4687 (26.3 Workflow, mirror, escalations, agent status line), e87732b (26.2 recording, elastic README, screenshots). This entry is the fifth.
+
+### Checks, as run
+
+| Step | Command | Observed |
+| --- | --- | --- |
+| 26.1 baseline | `cd elastic && .venv/bin/python smoke.py` (before changes) | 3/3 PASS; the old `at` date params already worked |
+| 26.1 mapping | `PUT telematics_log/_mapping {"@timestamp":{"type":"alias","path":"at"}}` | acknowledged; 154,846 pings untouched, no re-ingest (alias, not rename; `mappings/telematics_log.json` carries it for fresh projects) |
+| 26.1 ES\|QL | `POST /_query` with `WHERE @timestamp >= ?start AND @timestamp <= ?end`, `TO_GEOPOINT(CONCAT("POINT(", TO_STRING(?lon), " ", TO_STRING(?lat), ")"))` | 2 rows, truck 22 first, 13.98 m |
+| 26.1 upsert | `.venv/bin/python setup_agent.py` | find_trips_near updated, contract_rate_for_vendor updated, find_contract_clause created, find_receipt_text created, agent dispatch-investigator updated |
+| 26.1 smoke | `.venv/bin/python smoke.py` | 5/5 PASS: truck 22 first (13.98 m); rate 245000; brake_job clause first (score 0.776); receipt 2231 (score 0.738); MCP tools/list 26 tools incl. all four |
+| 26.1 key | `.venv/bin/python make_mcp_key.py` | HTTP 400 `creating derived api keys requires an explicit role descriptor that is empty`; Serverless will not derive a privileged key from an API key. WAITING Anudeep (Kibana UI; docs/evidence/elastic/scoped_key_request.md has the click path and the role descriptor JSON; `pbpaste \| make_mcp_key.py --write-from-stdin` stores it; `smoke.py --mcp-key-env ELASTIC_MCP_API_KEY` is the 200 proof, a second key without the application block is the 403 proof). The 200 vs 403 proof is therefore NOT run yet |
+| 26.1 worker | `cd worker && npm run typecheck && npm test` | clean; 107 passed. config.ts: `elasticApiKey` = ELASTIC_MCP_API_KEY when set else ELASTIC_API_KEY, `elasticKeySource` says which; droid.ts header unchanged in shape |
+| 26.2 tests | `cd elastic && .venv/bin/python -m pytest -q tests` | 32 passed (3 updated for the new params, 2 added: semantic tools match the JINA fields, @timestamp alias) |
+| 26.2 recording | `cd worker && ELASTIC_MCP_API_KEY= npx tsx tools/rerecord_one.mts INV-1003` | source live; tool_calls Read x4, elastic___contract_rate_for_vendor, elastic___find_contract_clause (question "What does the oil_service unit rate cover, and when does a surcharge or change order require approval?...", 2145-char result), Grep; evidence cites find_contract_clause with the contract 9 clause; tokenUsage in 1144 out 1571; durationMs 34745; recordedAt 2026-10-24T23:09:39Z; FindingSchema passes. The recording changes INV-1003 from hold_and_ask to hold (director: keep, a planted rate variance with the clause quoted is a hold by the spec's table); the next full run must still show recall 1.0. v1 kept at seed/fixtures/investigations/_v1/INV-1003.json |
+| 26.3 API | `GET {KIBANA_URL}/api/workflows` | 200, Workflows present. Per-id GET/PUT/run routes 404 on this build; bulk POST and DELETE work; runs go through Agent Builder's platform.core.execute_workflow (docs/evidence/elastic/workflows_api_probe.txt) |
+| 26.3 mirror | `.venv/bin/python mirror_holds.py` | day 41, 12 holds, 12 open, 11 open more than 2 business days; holds index 12 docs (anonymous SQL on the public hold and business_day tables; run by hand, the worker does not run it) |
+| 26.3 workflow | `.venv/bin/python setup_workflow.py --run` | validate_workflow valid; id caliber-stale-holds-3; execution 15a56191-f722-4b04-8968-505e12f51d83 (manual) Success 3m 8s, plus 4e40edcc (scheduled trigger fires once on creation) Success 2m 46s; escalations 0 to 6 (holds 1068, 1468, 1421, twice each); first doc 90 s after start. First attempt (d3e135ba) failed at elasticsearch.index because `at` rendered as a JS date string; fixed with `{{ 'now' \| date: '%Y-%m-%dT%H:%M:%SZ' }}` and LIMIT 3 |
+| 26.3 UI | Chrome, Anudeep's Kibana session, `/app/workflows` | nav item present; workflow listed and enabled; editor "No validation errors"; Executions panel two Success rows. Screenshots docs/evidence/elastic/workflows_list_2026-10-24.jpg, workflow_detail_2026-10-24.jpg, workflow_valid_2026-10-24.jpg, workflow_executions_2026-10-24.jpg |
+| 26.3 agent | `agent/.venv/bin/pytest -q agent/tests` | 149 passed (test_escalations.py 10 cases over httpx.MockTransport; tests/conftest.py refuses Elastic network for every test; two exact-string status tests updated for the new last line) |
+| 26.3 restart | pkill investigator, start; pkill controller, start | pids 57836 on 8012, 57884 on 8011; `agent/.venv/bin/python -m agent.cli "status"` ends with "8 escalations, newest: 1468: Here is the brief for the controller: **Held:** Card transaction txn_ref 1468, $..." |
+| 26.3 beat | setup_workflow.py --run --no-wait, then agent.cli status every 5 s | new escalation visible after 63 s (target 30 s, not met: the ai.agent step takes 60 to 80 s per hold because the agent calls the tools before writing) |
+
+### What changed
+
+- `elastic/tools/find_trips_near.json`: params `lat`, `lon` (float), `radius_m` (float), `start`, `end` (date); query over `@timestamp`; no geo_point param.
+- `elastic/tools/find_contract_clause.json` (vendor_id, question) and `elastic/tools/find_receipt_text.json` (txn_ref, question): `MATCH(clause_semantic, ?question)` and `MATCH(body_semantic, ?question)` with `METADATA _score`, both fields `semantic_text` on `.jina-embeddings-v5-text-small`. Receipts have a body field, so the receipt tool was built, not skipped.
+- `elastic/setup_agent.py`: four core tools, agent instructions name the two semantic tools. `elastic/smoke.py`: five checks, `--mcp-key-env`, `--skip-tools`.
+- `elastic/make_mcp_key.py`: role descriptors `{"caliber_droid_mcp": {"cluster": [], "indices": [{"names": ["receipts","contracts","telematics_log","invoices","holds","escalations"], "privileges": ["read","view_index_metadata"]}], "applications": [{"application": "kibana-.kibana", "privileges": ["feature_agentBuilder.read","feature_actions.read"], "resources": ["space:default"]}]}}`, key name caliber-droid-mcp; the only .env writer (one line).
+- `elastic/workflows/stale_holds.yaml` (caliber-stale-holds): scheduled 1h + manual with input min_age_bd (default 2); esql over holds, foreach, ai.agent dispatch-investigator, elasticsearch.index into escalations {hold_ref, code, cents, day, age_bd, min_age_bd, brief, at, workflow_run, workflow, agent_id, source}. `elastic/setup_workflow.py`, `elastic/mirror_holds.py`, `elastic/mappings/holds.json`, `elastic/mappings/escalations.json`.
+- `agent/reads.py`: status reply ends with "N escalations, newest: <hold_ref>: <80 chars>" or "escalations: not connected" (unset variables or any error). Scoped key preferred, project key fallback.
+- `worker/src/brief.ts`: invoice instruction names elastic___find_contract_clause after contract_rate_for_vendor; MCP_SOURCES gains the two semantic tools. `worker/tools/rerecord_one.mts`.
+- CRS and Nessie untouched. thresholds.ts, kernel.ts untouched.
+
+### Blocked
+
+- Scoped key creation and the 200 vs 403 proof: WAITING Anudeep (Kibana UI login). Everything else runs on the project key with the fallback in place.
+
+### Tried and rejected
+
+- Deriving the scoped key from ELASTIC_API_KEY over `POST /_security/api_key` and over Kibana's `/api/security/api_key` (404): Serverless refuses derived keys with privileges.
+- `execution.startedAt` as the escalation timestamp: renders as a JavaScript date string that the date field rejects; Liquid `'now' | date` works.
+- Root-level `inputs:` in the workflow YAML: the API accepted it, the editor flagged "inputs must be defined under a manual trigger"; moved under the manual trigger.
+
+### README "Elastic" section (verbatim, for builder-23)
+
+## Elastic
+
+Four indices on a Serverless project (`my-elasticsearch-project-b5e003`): `telematics_log` (154,846 `geo_point` pings with `@timestamp`), `receipts` and `contracts` (with JINA `semantic_text`), `invoices` (`elastic/mappings/`). Depth: four hand-written ES|QL tools in Agent Builder (`elastic/tools/`), two exact (`find_trips_near` with date params and a point built in the query from lat and lon, `contract_rate_for_vendor`) and two semantic (`find_contract_clause`, `find_receipt_text`), created over the API by `elastic/setup_agent.py`, executed by `elastic/smoke.py`, and reached by Droid over the MCP endpoint `{KIBANA_URL}/api/agent_builder/mcp` under a least-privilege key (`elastic/make_mcp_key.py`: read on six indices plus Agent Builder read, nothing else). JINA: `clause_semantic` and `body_semantic` are `semantic_text` fields on `.jina-embeddings-v5-text-small`, and the two semantic tools run `MATCH(...)` against them with the investigator's plain-language question; the recorded INV-1003 investigation (`seed/fixtures/investigations/INV-1003.json`) contains the live `elastic___find_contract_clause` call and quotes the clause it returned. Agent Builder and Workflows: the agent `dispatch-investigator` owns the four tools, and the Workflow `caliber-stale-holds` (`elastic/workflows/stale_holds.yaml`, registered by `elastic/setup_workflow.py`, scheduled hourly plus a manual trigger) reads the `holds` index that `elastic/mirror_holds.py` copies from the ledger, asks the agent for a brief on every hold open more than two business days, and writes it to the `escalations` index that the controller agent's `status` reply reads (`agent/reads.py`). Serverless: everything above ran on the Serverless project on 2026-10-24 (context/PROJECT_STATUS.md, 17:20 entry; screenshots in docs/evidence/elastic/). Elastic is not the system of record and not the dashboard's data source.
+
+### JUDGE_QA block (verbatim, for builder-23)
+
+**Elastic Workflows?** One Workflow, `caliber-stale-holds` (`elastic/workflows/stale_holds.yaml`): every hour, and on demand, it finds holds open more than two business days in the `holds` index, has the Agent Builder agent write a one-paragraph brief per hold with the ES|QL tools, and indexes each brief into `escalations`; the controller agent's `status` reply ends with "N escalations, newest: ...". It ran on the Serverless project on 2026-10-24 (two executions, six briefs); a new brief shows in `status` about a minute after the trigger, not 30 seconds, because the agent calls the tools before writing. The scoped MCP key waits on a Kibana UI step; until then Droid uses the project key.
