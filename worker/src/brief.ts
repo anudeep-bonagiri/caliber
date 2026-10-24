@@ -109,6 +109,19 @@ function describeEvidence(brief: Brief): string[] {
     lines.push('Nearest ping of this truck: none inside the window');
   }
   if (ev.distanceMiles !== undefined) lines.push(`Distance station to ping: ${ev.distanceMiles} miles (threshold ${ev.thresholdMiles} miles)`);
+  const atMicros = (ev as Record<string, unknown>).atMicros;
+  if (typeof atMicros === 'string' && /^\d+$/.test(atMicros)) {
+    const ms = Number(BigInt(atMicros) / 1000n);
+    const iso = (t: number) => new Date(t).toISOString().replace(/\.\d{3}Z$/, 'Z');
+    lines.push(`Transaction time (UTC): ${iso(ms)}`);
+    if (ev.stationLat !== undefined && ev.stationLon !== undefined) {
+      lines.push(`Ready-made first call: elastic___find_trips_near with point_wkt "POINT(${ev.stationLon} ${ev.stationLat})", radius_m 3000, since "${iso(ms - 10 * 60_000)}", until "${iso(ms + 10 * 60_000)}"`);
+    }
+  }
+  if (brief.kind === 'invoice' && ev.vendorId !== undefined) {
+    const item = (ev as Record<string, unknown>).item;
+    lines.push(`Ready-made call: elastic___contract_rate_for_vendor with vendor_id "${ev.vendorId}", item "${typeof item === 'string' ? item : ''}", on ${brief.day}`);
+  }
   if (ev.vendorId !== undefined) lines.push(`Vendor: ${ev.vendorId}${ev.vendorName ? ` ${ev.vendorName}` : ''}`);
   if (ev.reason) lines.push(`Kernel note: ${ev.reason}`);
   // any other scalar the kernel recorded, so nothing the UI shows is hidden from the investigator
@@ -138,7 +151,7 @@ export function buildPrompt(brief: Brief, evidenceDir: string): string {
   if (present.length === 0) lines.push('- (no evidence files are present for this transaction)');
   for (const f of present) lines.push(`- ${f.rel}: ${f.meaning}`);
   lines.push('');
-  lines.push('Tools that may also be available: find_trips_near(point_wkt, radius_m, since, until) lists trucks that pinged near a WKT point (longitude first, POINT(lon lat)); use a window of 10 minutes either side of the transaction time and a radius of 3000 m; contract_rate_for_vendor(vendor_id, item, on) returns the contracted rate.');
+  lines.push('Work in this order: first call the MCP tool elastic___find_trips_near(point_wkt, radius_m, since, until) with the station as a WKT point (longitude first, POINT(lon lat)), radius_m 3000, and a window of 10 minutes either side of the transaction time, to see which company trucks were at the pump; then Read or Grep the evidence files listed above (the swap log explains unit reassignments); for invoices call elastic___contract_rate_for_vendor(vendor_id, item, on) with the business day. Name the tool as find_trips_near or contract_rate_for_vendor in your evidence source.');
   lines.push('');
   lines.push('Rules: do not modify or create files. Quote evidence exactly; every evidence entry must name its source as a file path from the list above or the tool name you called. Do not invent numbers.');
   lines.push('Recommend clear only when the evidence explains the exception fully. Recommend hold_and_ask with one precise question when a person must confirm. Recommend hold otherwise. You can never recommend paying; payment is a controller decision.');

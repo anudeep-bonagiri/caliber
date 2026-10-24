@@ -8,10 +8,20 @@ import type { Step } from './replay.js';
 
 // Subtractive restriction: ids seen in the SDK's tool-controls example plus whatever listTools() reports
 // in the edit or execute categories on first run. There is no allowlist in the TypeScript SDK.
-export const BASE_DISABLED_TOOL_IDS = ['Execute', 'Edit', 'Create', 'ApplyPatch'] as const;
+export const BASE_DISABLED_TOOL_IDS = [
+  'Execute', 'Edit', 'Create', 'ApplyPatch',
+  // seen in listTools() on 2026-10-24: anything that leaves the evidence folder, changes state or spawns work
+  'WebSearch', 'FetchUrl', 'ConnectApp', 'StageSettingsChanges', 'TodoWrite', 'ListAutomations', 'ListAutomationTemplates', 'ReadAutomation',
+  'Skill', 'Task',
+] as const;
+
+// Droid 0.249 executes tool calls through `Script` (a batch of `tools.<name>(...)` calls) and loads MCP tools
+// with `ToolSearch`. Disabling them disables every tool, so they are never added to the disabled list; the
+// permission handler still cancels any write-like call inside a script.
+export const SUBSTRATE_TOOL_IDS = ['Script', 'ToolSearch', 'WaitForScript', 'Read', 'Grep', 'Glob', 'LS'] as const;
 
 export const SYSTEM_PROMPT_APPEND =
-  'You investigate one accounts-payable exception. Find the explanation if the evidence holds one. Never recommend paying.';
+  'You investigate one accounts-payable exception. Use your tools: call the MCP tools and read the evidence files before you conclude; never answer from the brief alone. Find the explanation if the evidence holds one. Never recommend paying.';
 
 export interface DroidOptions {
   evidenceDir: string;
@@ -23,6 +33,8 @@ export interface DroidOptions {
   log?: (msg: string) => void;
   // the loop's task signal; aborting it aborts the session too
   signal?: AbortSignal;
+  // permission decisions are appended here as note steps so the dashboard shows them
+  steps?: Step[];
 }
 
 export interface DroidRun {
@@ -59,9 +71,19 @@ function sessionOptions(sdk: Sdk, opts: DroidOptions, disabledToolIds: string[],
     systemPrompt: { type: 'preset' as const, preset: 'droid' as const, append: SYSTEM_PROMPT_APPEND },
     mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and ELASTIC_API_KEY are set
     permissionHandler({ toolUses, options }: RequestPermissionRequestParams) {
+      // Subtractive: anything that writes, executes, escalates or asks a human is cancelled; MCP tool calls and
+      // read-only confirmations proceed once. Read and Grep need no confirmation at all in autonomy Off.
+      const WRITE_LIKE = new Set<string>([
+        ToolConfirmationType.Edit, ToolConfirmationType.Execute, ToolConfirmationType.Create, ToolConfirmationType.ApplyPatch,
+        ToolConfirmationType.AskUser, ToolConfirmationType.ExitSpecMode, ToolConfirmationType.RecommendMission,
+        ToolConfirmationType.ProposeMission, ToolConfirmationType.StartMissionRun,
+        ToolConfirmationType.SandboxViolation, ToolConfirmationType.DroidShieldViolation,
+      ]);
       const details = toolUses.flatMap(u => (u.details.type === ToolConfirmationType.Script ? u.details.calls.map(c => c.confirmation) : [u.details]));
-      const onlyMcp = details.length > 0 && details.every(d => d.type === ToolConfirmationType.McpTool);
-      const want = onlyMcp ? ToolConfirmationOutcome.ProceedOnce : ToolConfirmationOutcome.Cancel;
+      const blocked = details.length === 0 || details.some(d => WRITE_LIKE.has(d.type as string));
+      const want = blocked ? ToolConfirmationOutcome.Cancel : ToolConfirmationOutcome.ProceedOnce;
+      const names = toolUses.map(u => `${u.toolUse?.name ?? '?'}:${u.details.type}`).join(', ');
+      opts.steps?.push({ type: 'note', at: nowIso(), text: `permission ${want === ToolConfirmationOutcome.Cancel ? 'cancelled' : 'proceed once'}: ${names}` });
       return options.some(o => o.value === want) ? want : ToolConfirmationOutcome.Cancel;
     },
     abortSignal: ac.signal,                                  // 90 s AbortController; there is no timeout option
@@ -113,6 +135,7 @@ export async function investigate(brief: string, steps: Step[], opts: DroidOptio
   const onOuterAbort = () => ac.abort();
   if (opts.signal?.aborted) ac.abort();
   else opts.signal?.addEventListener('abort', onOuterAbort, { once: true });
+  opts = { ...opts, steps };
   let session = await sdk.createSession(sessionOptions(sdk, opts, currentDisabledToolIds(), ac));
   try {
     if (!listedOnce) {
@@ -120,7 +143,9 @@ export async function investigate(brief: string, steps: Step[], opts: DroidOptio
       const tools = await session.listTools();
       log(`droid tools: ${tools.map(t => `${t.id}${t.allowed ? '' : ' (disabled)'}`).join(', ')}`);
       const extra = tools
-        .filter(t => (t.category === 'edit' || t.category === 'execute') && t.allowed && !(BASE_DISABLED_TOOL_IDS as readonly string[]).includes(t.id))
+        .filter(t => (t.category === 'edit' || t.category === 'execute') && t.allowed
+          && !(BASE_DISABLED_TOOL_IDS as readonly string[]).includes(t.id)
+          && !(SUBSTRATE_TOOL_IDS as readonly string[]).includes(t.id))
         .map(t => t.id);
       learnedWriteToolIds = extra;
       if (extra.length) {

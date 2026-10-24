@@ -174,7 +174,7 @@ export function verifyEvidence(finding: Finding, ctx: VerifyContext): Verified {
     }
     if ((MCP_SOURCES as readonly string[]).includes(e.source)) {
       const prefix = quote.slice(0, TOOL_QUOTE_PREFIX);
-      if (prefix && toolResults.some(s => s.toolName === e.source && normalizeWs(s.content ?? '').includes(prefix))) return true;
+      if (prefix && toolResults.some(s => (s.toolName ?? '').replace(/^elastic___/, '') === e.source && normalizeWs(s.content ?? '').includes(prefix))) return true;
       notes.push(`evidence dropped: no ${e.source} tool_result contains the quote`);
       return false;
     }

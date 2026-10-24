@@ -181,6 +181,17 @@ def main() -> int:
                 elif code == "capacity_exceeded":
                     ok, _ = act("try_reject_payment", ref, f"{ev.get('gallons')} gal exceeds the tank limit of {ev.get('capacityLimitGal')} gal.")
                     if ok: acted["rejected"] += 1; decided.add(ref); did += 1
+            elif status == "open" and code == "location_mismatch" and not any(t["txn_ref"] == ref for t in pending_tasks):
+                # the investigator held without asking; the controller still decides from the swap log
+                s = swap_for(swaps, int(ev.get("driverId", -1)), int(h["day"]))
+                if s:
+                    text = (f"Yes. {s['name']} drove relief unit {s['reliefUnit']} that week while unit {s['ownUnit']} "
+                            f"was in the shop, per the swap log entry of {s['date']}. He kept his own fuel card.")
+                    ok, _ = act("try_answer_question", ref, text)
+                    if ok: acted["answered"] += 1; decided.add(ref); did += 1
+                else:
+                    ok, _ = act("try_reject_payment", ref, "Card misuse: the truck was not at the station and the swap log shows no reassignment for this driver.")
+                    if ok: acted["rejected"] += 1; decided.add(ref); did += 1
             elif status == "open" and code == "capacity_exceeded":
                 ok, _ = act("try_reject_payment", ref, f"{ev.get('gallons')} gal exceeds the tank limit of {ev.get('capacityLimitGal')} gal; no question to ask.")
                 if ok: acted["rejected"] += 1; decided.add(ref); did += 1
