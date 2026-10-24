@@ -19,3 +19,11 @@ Findings are in context/PROJECT_STATUS.md under "Builder-W: dashboard honesty au
 | 06-replayed-card-after-restart-3884.png | Hold 3884 (day 49, investigated by the restarted worker): `replayed` badge, first note "recorded droid run (2026-10-24) for 3884", then "replayed from a recording made 2026-10-24 by droid live run"; no "live droid run (record)" text anywhere on the page |
 
 No new vendor_check task arrived between day 45 and the day-60 cap: the remaining planted bank change is vendor 5 (Border Fleet Repair) on day 71, so the amber "hand-shaped fixture" badge could not be observed on a fresh card in this run. The two vendor checks counted as "recorded replay" are INV-1077 and its earlier twin, written by the old code before the restart; their stored refs still contain "POST /TODO-..." and will render that text if a judge selects INV-1077 until the ledger is rebuilt (full_run.sh) or the clock passes day 71.
+
+## Vendor 5 bank change (job 8, 2026-10-24 14:32 PDT, ledger at day 74)
+
+| File | What it shows |
+| --- | --- |
+| 07-vendor5-bank-change-INV-1138-day74.png | INV-1138 (Border Fleet Repair, $5,508.00, bank change on day 71, received day 74) processed by the restarted worker: `call-back required` pill, the vendor check block labelled "stand-in, not a vendor check" because no fixture exists for vendor 5, three "no result" rows, "recommends escalate, confidence 0%, status no_fixture", no "/TODO-" text on the page; trust line "Vendor checks: 0 live, 2 recorded replay, 0 hand-shaped fixture, 6 stand-in" |
+
+The invoice lands on day 74, two days past the number in the brief, so the clock was stepped to 74.

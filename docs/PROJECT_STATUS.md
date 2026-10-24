@@ -215,6 +215,23 @@ Task 17 acceptance, run by the director on the day-44 rehearsal ledger at 14:24 
 
 Open: builder-13 job 4 (runbook 2231 wording, worker/README handler description) in progress; builder-W job 7 (live dashboard re-check of the new badges, stepping the clock past day 44) in progress; Agentverse Connect click, CRS sandbox invite and the Devpost paste remain on Anudeep.
 
+## 2026-10-24 14:28 PDT Builder-W: live re-check after the worker restart (job 7)
+
+Stepped the ledger from day 44 to day 60 with `scripts/clock.sh step`; vendor_check tasks stayed at 7 because the next planted bank change (vendor 5) lands on day 71, past the cap. Screenshots 05 and 06 and captions in docs/evidence/dashboard/.
+
+| Element | What it shows now | Verdict |
+| --- | --- | --- |
+| Trust panel provenance line | "Investigations: 0 live, 34 replayed, 0 scripted stand-in. Vendor checks: 0 live, 2 recorded replay, 0 hand-shaped fixture, 5 stand-in" | honest for tasks written by the new code; the 2 "recorded replay" are INV-1077 and INV-1032's twin written before the restart (status `replayed` in stored JSON) |
+| "/TODO-" strings on the page | 0 with the default selection and with hold 3884 selected | honest; the old INV-1077 finding still stores "POST /TODO-..." refs and would render them if selected until the ledger is rebuilt or day 71 passes |
+| Replayed investigation card (hold 3884, day 49, processed after restart) | first note "recorded droid run (2026-10-24) for 3884", then "replayed from a recording made 2026-10-24 by droid live run"; "live droid run (record)" absent from the page | honest |
+| Hand-shaped vendor-check badge and fixture note | not observable: no vendor_check task was created between day 45 and 60 | not observable in this run |
+| Settlement labels | audit feed `settle` rows "paid, bank id <uuid>" for live Nessie settlements since the restart (1,343 live bank ids in the ledger); resolved queue rows "settled c3dd62f9..." for 1068 and "settlement: offline" for INV-1077 and 2231 (settled before the restart) | honest |
+| Call-back pill, rules board, Simulated carrier line | unchanged from the 14:16 audit | honest |
+
+Checks: SQL counts before and after each step; page text searched with the browser for the strings above; nothing written to the ledger beyond the day steps the director allowed. Not run: full_run.sh, demo_up.sh, rehearse.sh, worker or agent restarts.
+
+Job 8 addendum (day 74): the vendor 5 bank-change invoice is INV-1138 on day 74 (bank change day 71), so the clock was stepped two days past the brief's 72. The restarted worker processed its vendor_check as a stand-in because no fixture exists for vendor 5: the card reads "stand-in, not a vendor check" with three "no result" rows, "recommends escalate, confidence 0%, status no_fixture", no "/TODO-" text on the page, and the trust line counts it ("Vendor checks: 0 live, 2 recorded replay, 0 hand-shaped fixture, 6 stand-in"). Verdict: honest. The hand-shaped badge path itself is covered by the worker tests (vendor 3 fixtures) and was not exercised on the live ledger in this session. The INV-1077 remnant (old finding JSON with "POST /TODO-" refs) is accepted because demo_up.sh rebuilds the ledger before judging. Ledger left paused at day 74.
+
 ## Tried and rejected
 
 | What | Why rejected |
