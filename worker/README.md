@@ -17,7 +17,7 @@ May:
 May not:
 
 - Approve or reject a payment or a rule. The reducers refuse the agent role and refuse an author approving its own rule.
-- Write, create, edit or execute anything through Droid. `Execute`, `Edit`, `Create` and `ApplyPatch` are disabled by id, autonomy is `Off`, and the permission handler cancels every confirmation that is not an MCP tool call.
+- Write, create, edit or execute anything through Droid. `Execute`, `Edit`, `Create` and `ApplyPatch` are disabled by id, autonomy is `Off`, and the permission handler is subtractive: it cancels edit, execute, create, apply_patch, ask_user, mission and violation confirmations and proceeds once otherwise (MCP tool calls and read-only confirmations). `Script` and `ToolSearch` stay enabled because Droid 0.249 routes every tool through `Script` and loads MCP tools with `ToolSearch`; the handler decides per confirmation inside a script.
 - Read `seed/fixtures/answer_key.json`. The backtest uses `match_result` and `hold` only.
 - Send a finding to the database that did not pass the zod schema in `src/finding.ts`. There is no `pay` recommendation.
 
@@ -53,9 +53,10 @@ The sentence after the label comes from `src/explain.ts`: a template built from 
 
 ## Where Droid runs
 
-`src/droid.ts`, verified against the `.d.ts` files shipped in `@factory/droid-sdk@0.10.0` (`dist/node.d.mts` and `dist/index-*.d.mts`). The session options block, quoted verbatim from the code:
+`src/droid.ts`, verified against the `.d.ts` files shipped in `@factory/droid-sdk@0.10.0` (`dist/node.d.mts` and `dist/index-*.d.mts`). The session options block, quoted verbatim from the code between its `BEGIN` and `END` comments (the handler is subtractive: anything that writes, executes, escalates or asks a human is cancelled; MCP tool calls and read-only confirmations proceed once, and each decision is written as a step note):
 
 ```ts
+  // BEGIN createSession options (quoted verbatim in README.md)
   return {
     cwd: opts.evidenceDir,                                   // seed/fixtures/evidence; read-only by the OS, not by Droid
     autonomyLevel: AutonomyLevel.Off,                        // every action asks the handler
@@ -63,16 +64,27 @@ The sentence after the label comes from `src/explain.ts`: a template built from 
     systemPrompt: { type: 'preset' as const, preset: 'droid' as const, append: SYSTEM_PROMPT_APPEND },
     mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and ELASTIC_API_KEY are set
     permissionHandler({ toolUses, options }: RequestPermissionRequestParams) {
+      // Subtractive: anything that writes, executes, escalates or asks a human is cancelled; MCP tool calls and
+      // read-only confirmations proceed once. Read and Grep need no confirmation at all in autonomy Off.
+      const WRITE_LIKE = new Set<string>([
+        ToolConfirmationType.Edit, ToolConfirmationType.Execute, ToolConfirmationType.Create, ToolConfirmationType.ApplyPatch,
+        ToolConfirmationType.AskUser, ToolConfirmationType.ExitSpecMode, ToolConfirmationType.RecommendMission,
+        ToolConfirmationType.ProposeMission, ToolConfirmationType.StartMissionRun,
+        ToolConfirmationType.SandboxViolation, ToolConfirmationType.DroidShieldViolation,
+      ]);
       const details = toolUses.flatMap(u => (u.details.type === ToolConfirmationType.Script ? u.details.calls.map(c => c.confirmation) : [u.details]));
-      const onlyMcp = details.length > 0 && details.every(d => d.type === ToolConfirmationType.McpTool);
-      const want = onlyMcp ? ToolConfirmationOutcome.ProceedOnce : ToolConfirmationOutcome.Cancel;
+      const blocked = details.length === 0 || details.some(d => WRITE_LIKE.has(d.type as string));
+      const want = blocked ? ToolConfirmationOutcome.Cancel : ToolConfirmationOutcome.ProceedOnce;
+      const names = toolUses.map(u => `${u.toolUse?.name ?? '?'}:${u.details.type}`).join(', ');
+      opts.steps?.push({ type: 'note', at: nowIso(), text: `permission ${want === ToolConfirmationOutcome.Cancel ? 'cancelled' : 'proceed once'}: ${names}` });
       return options.some(o => o.value === want) ? want : ToolConfirmationOutcome.Cancel;
     },
     abortSignal: ac.signal,                                  // 90 s AbortController; there is no timeout option
   };
+  // END createSession options
 ```
 
-`SYSTEM_PROMPT_APPEND` is `You investigate one accounts-payable exception. Find the explanation if the evidence holds one. Never recommend paying.` `mcpServers` is `[{ type: 'http', name: 'elastic', url: `${KIBANA_URL}/api/agent_builder/mcp`, headers: [{ name: 'Authorization', value: `ApiKey ${ELASTIC_API_KEY}` }] }]` when both variables are set and `[]` otherwise. The prompt is streamed with `session.stream(prompt, { outputFormat: { type: OutputFormatType.JsonSchema, schema: FINDING_SCHEMA } })`; the final message carries `structuredOutput`, `subtype`, `tokenUsage` and `durationMs`. `tokenUsage` and `durationMs` are appended to `worker/cost_log.jsonl` (gitignored).
+`SYSTEM_PROMPT_APPEND` is `You investigate one accounts-payable exception. Use your tools: call the MCP tools and read the evidence files before you conclude; never answer from the brief alone. Find the explanation if the evidence holds one. Never recommend paying.` `mcpServers` is `[{ type: 'http', name: 'elastic', url: `${KIBANA_URL}/api/agent_builder/mcp`, headers: [{ name: 'Authorization', value: `ApiKey ${ELASTIC_API_KEY}` }] }]` when both variables are set and `[]` otherwise. The prompt is streamed with `session.stream(prompt, { outputFormat: { type: OutputFormatType.JsonSchema, schema: FINDING_SCHEMA } })`; the final message carries `structuredOutput`, `subtype`, `tokenUsage` and `durationMs`. `tokenUsage` and `durationMs` are appended to `worker/cost_log.jsonl` (gitignored).
 
 The SDK is imported lazily inside `investigate()`, so replay mode never loads it and does not need the `droid` CLI on PATH.
 
