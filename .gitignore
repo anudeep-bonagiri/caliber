@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.seed_identity.json
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.log
+worker/cost_log.jsonl
+.spacetime/
