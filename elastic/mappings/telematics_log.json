@@ -2,6 +2,7 @@
   "dynamic": "strict",
   "properties": {
     "at": {"type": "date"},
+    "@timestamp": {"type": "alias", "path": "at"},
     "at_ms": {"type": "long"},
     "truck_id": {"type": "keyword"},
     "day": {"type": "integer"},

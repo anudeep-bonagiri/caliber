@@ -18,6 +18,7 @@ import mirror  # noqa: E402
 import plant  # noqa: E402
 from company import build_company  # noqa: E402
 from maintenance import build_maintenance  # noqa: E402
+from connectors import write_inbox  # noqa: E402
 from render_docs import render_all  # noqa: E402
 from sim import simulate  # noqa: E402
 
@@ -75,6 +76,8 @@ def generate(seed: int, out: Path) -> dict:
     dump(out / "pos.json", [{k: p[k] for k in ["id", "vendorId", "truckId", "item", "qty", "unitCents", "receivedQty", "issuedDay"]} for p in pos])
     dump(out / "invoices.json", [{k: i[k] for k in ["id", "vendorId", "poId", "receivedDay", "item", "qty", "unitCents", "cents", "docRef"]} for i in invoices])
     dump(out / "answer_key.json", key)
+    # Task 21: the same rows in connector format for the inbox file connector (docs/CONNECTORS.md)
+    write_inbox(out, card_rows, toll_rows, invoices)
 
     # ---- evidence
     receipt_rows = [dict(r, _price=x["_price"]) for r, x in zip(card_rows, cards)]

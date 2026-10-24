@@ -4,19 +4,25 @@
     python smoke.py               # execute both tools, then probe MCP initialize + tools/list
     python smoke.py --ms          # also execute find_trips_near_ms with epoch millis
 
-Checks (Task 7 "complete when"):
-  1. find_trips_near with hold 2231's station and window returns truck 22 first.
+Checks (Task 7 "complete when", extended by Task 26):
+  1. find_trips_near with hold 2231's station (lat, lon floats) and a ten-minute window (start, end as
+     ISO-8601 date params) returns truck 22 first.
   2. contract_rate_for_vendor for vendor 3 brake_job on day 44 returns a rate.
-  3. The MCP endpoint answers initialize and lists both tools.
+  3. find_contract_clause (semantic MATCH over the JINA clause_semantic field) for vendor 3 returns the
+     brake contract first for a plain-language question.
+  4. find_receipt_text (semantic MATCH over the JINA body_semantic field) for txn 2231 returns its receipt.
+  5. The MCP endpoint answers initialize and lists all four tools.
 
 The 2231 station and window come from seed/fixtures/card_txns.json when it exists
 (txn id 2231: stationLat, stationLon, at), otherwise from the literals in the spec.
+--mcp-key-env NAME probes MCP with a different key (default ELASTIC_MCP_API_KEY when set, else ELASTIC_API_KEY).
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import timedelta
 from pathlib import Path
@@ -28,7 +34,8 @@ from ingest import iso_to_ms, parse_iso
 DEFAULT_CARD_TXNS = REPO_ROOT / "seed" / "fixtures" / "card_txns.json"
 
 # Spec literals for hold 2231 (used when card_txns.json is not there yet).
-FALLBACK_POINT_WKT = "POINT(-96.9036 29.6816)"
+FALLBACK_LAT = 29.6816
+FALLBACK_LON = -96.9036
 FALLBACK_SINCE = "2026-08-27T12:30:00Z"
 FALLBACK_UNTIL = "2026-08-27T14:00:00Z"
 RADIUS_M = 3000
@@ -37,25 +44,39 @@ EXPECTED_TRUCK = "22"
 VENDOR_ID = "3"
 ITEM = "brake_job"
 ON_DAY = 44
+CLAUSE_QUESTION = "what does the brake rate include and when is a change order needed"
+EXPECTED_CLAUSE_ITEM = "brake_job"
+RECEIPT_TXN = "2231"
+RECEIPT_QUESTION = "how many gallons were pumped and at which pump"
+
+ALL_TOOLS = ["find_trips_near", "contract_rate_for_vendor", "find_contract_clause", "find_receipt_text"]
 
 MCP_PROTOCOL = "2025-03-26"
 
 
 def hold_2231_window(card_txns_path: Path, txn_ref: str = "2231") -> dict[str, Any]:
-    """Point and window for the 2231 smoke call: fixture row when present, spec literals otherwise."""
+    """Point and window for the 2231 smoke call: fixture row when present, spec literals otherwise.
+
+    `lat`/`lon` are floats (Jd's answer: no geo_point param, the query builds the point) and `start`/`end`
+    are ISO-8601 strings for the two `date` params. `point_wkt` is kept for the epoch-millis fallback tool.
+    """
     if card_txns_path.exists():
         for row in load_json(card_txns_path):
             if str(row.get("id")) == txn_ref and row.get("stationLat") is not None and row.get("at"):
                 at = parse_iso(row["at"])
                 since = (at - timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
                 until = (at + timedelta(minutes=10)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                lat, lon = float(row["stationLat"]), float(row["stationLon"])
                 return {
                     "source": str(card_txns_path),
-                    "point_wkt": f"POINT({float(row['stationLon'])} {float(row['stationLat'])})",
-                    "since": since,
-                    "until": until,
+                    "lat": lat,
+                    "lon": lon,
+                    "point_wkt": f"POINT({lon} {lat})",
+                    "start": since,
+                    "end": until,
                 }
-    return {"source": "spec literals", "point_wkt": FALLBACK_POINT_WKT, "since": FALLBACK_SINCE, "until": FALLBACK_UNTIL}
+    return {"source": "spec literals", "lat": FALLBACK_LAT, "lon": FALLBACK_LON,
+            "point_wkt": f"POINT({FALLBACK_LON} {FALLBACK_LAT})", "start": FALLBACK_SINCE, "end": FALLBACK_UNTIL}
 
 
 def execute_tool(client: Client, tool_id: str, params: dict[str, Any], dry_rows: list[dict[str, Any]]) -> tuple[Any, list[dict[str, Any]]]:
@@ -99,9 +120,12 @@ def parse_mcp_body(resp: Any) -> dict[str, Any] | None:
         return None
 
 
-def probe_mcp(client: Client, expected_tools: list[str]) -> bool:
+def probe_mcp(client: Client, expected_tools: list[str], api_key: str | None = None) -> bool:
+    """initialize, notifications/initialized, tools/list. `api_key` overrides the key in the headers (scoped key)."""
     url_path = MCP_PATH
     headers = client.settings.mcp_headers()
+    if api_key:
+        headers = {**headers, "Authorization": f"ApiKey {api_key}"}
 
     init = {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {
         "protocolVersion": MCP_PROTOCOL,
@@ -150,6 +174,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--ms", action="store_true", help="also execute find_trips_near_ms")
     p.add_argument("--card-txns", type=Path, default=DEFAULT_CARD_TXNS, help="card_txns.json to read txn 2231 from")
     p.add_argument("--skip-mcp", action="store_true")
+    p.add_argument("--mcp-key-env", default=None,
+                   help="env var holding the key for the MCP probe (default ELASTIC_MCP_API_KEY when set, else ELASTIC_API_KEY)")
     args = p.parse_args(argv)
 
     settings = Settings.from_env(dry_run=args.dry_run)
@@ -161,11 +187,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[{'PASS' if ok else 'FAIL'}] {name}")
 
     window = hold_2231_window(args.card_txns)
-    print(f"Hold 2231 window from {window['source']}: {window['point_wkt']} {window['since']} .. {window['until']}")
+    print(f"Hold 2231 window from {window['source']}: lat {window['lat']} lon {window['lon']} {window['start']} .. {window['end']}")
 
     print("Executing find_trips_near...")
-    trips_params = {"point_wkt": window["point_wkt"], "radius_m": RADIUS_M, "since": window["since"], "until": window["until"]}
-    dry_rows = [{"truck_id": "22", "at": "2026-08-27T13:05:00.000Z", "dist_m": 47.1}]
+    trips_params = {"lat": window["lat"], "lon": window["lon"], "radius_m": RADIUS_M, "start": window["start"], "end": window["end"]}
+    dry_rows = [{"truck_id": "22", "@timestamp": "2026-08-27T13:05:00.000Z", "dist_m": 47.1}]
     resp, rows = execute_tool(client, "find_trips_near", trips_params, dry_rows)
     first = str(rows[0].get("truck_id")) if rows else None
     date_trouble = (not resp.ok) or (resp.ok and not rows)
@@ -175,7 +201,7 @@ def main(argv: list[str] | None = None) -> int:
         if date_trouble and not args.ms:
             print("  date version returned nothing; trying find_trips_near_ms (register it with setup_agent.py --include-ms)")
         ms_params = {"point_wkt": window["point_wkt"], "radius_m": RADIUS_M,
-                     "since_ms": iso_to_ms(window["since"]), "until_ms": iso_to_ms(window["until"])}
+                     "since_ms": iso_to_ms(window["start"]), "until_ms": iso_to_ms(window["end"])}
         print("Executing find_trips_near_ms...")
         _, ms_rows = execute_tool(client, "find_trips_near_ms", ms_params, dry_rows)
         ms_first = str(ms_rows[0].get("truck_id")) if ms_rows else None
@@ -188,10 +214,28 @@ def main(argv: list[str] | None = None) -> int:
     rate = crows[0].get("rate_cents") if crows else None
     check(f"contract_rate_for_vendor vendor {VENDOR_ID} {ITEM} day {ON_DAY} returns a rate (got {rate})", rate is not None)
 
+    print("Executing find_contract_clause (semantic, JINA clause_semantic)...")
+    clause_params = {"vendor_id": VENDOR_ID, "question": CLAUSE_QUESTION}
+    _, clause_rows = execute_tool(client, "find_contract_clause", clause_params,
+                                  [{"contract_id": "17", "item": "brake_job", "rate_cents": 245000, "valid_from": 1, "valid_to": 92,
+                                    "clause": "Rate covers pads ...", "_score": 0.77}])
+    clause_item = clause_rows[0].get("item") if clause_rows else None
+    check(f"find_contract_clause vendor {VENDOR_ID} ranks the {EXPECTED_CLAUSE_ITEM} clause first (got {clause_item})",
+          clause_item == EXPECTED_CLAUSE_ITEM)
+
+    print("Executing find_receipt_text (semantic, JINA body_semantic)...")
+    receipt_params = {"txn_ref": RECEIPT_TXN, "question": RECEIPT_QUESTION}
+    _, rrows = execute_tool(client, "find_receipt_text", receipt_params,
+                            [{"txn_ref": "2231", "truck_id": "17", "station": "Love's 412", "gallons": 120.0, "cents": 41200,
+                              "body": "PUMP 12 ...", "_score": 0.73}])
+    receipt_ref = str(rrows[0].get("txn_ref")) if rrows else None
+    check(f"find_receipt_text txn {RECEIPT_TXN} returns its receipt body (got {receipt_ref})", receipt_ref == RECEIPT_TXN)
+
     if not args.skip_mcp:
-        print(f"Probing MCP at {settings.kibana_url}{MCP_PATH}...")
-        expected = ["find_trips_near", "contract_rate_for_vendor"]
-        check("MCP initialize + tools/list exposes both tools", probe_mcp(client, expected))
+        key_env = args.mcp_key_env or ("ELASTIC_MCP_API_KEY" if os.environ.get("ELASTIC_MCP_API_KEY") else "ELASTIC_API_KEY")
+        mcp_key = os.environ.get(key_env) or None
+        print(f"Probing MCP at {settings.kibana_url}{MCP_PATH} with the key in {key_env}...")
+        check(f"MCP initialize + tools/list exposes all four tools (key {key_env})", probe_mcp(client, ALL_TOOLS, mcp_key))
 
     failed = [n for n, ok in results if not ok]
     print()

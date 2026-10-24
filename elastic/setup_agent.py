@@ -20,7 +20,7 @@ from typing import Any
 from common import AGENT_BUILDER_PATH, ELASTIC_DIR, MCP_PATH, Client, Settings, load_json
 
 TOOLS_DIR = ELASTIC_DIR / "tools"
-CORE_TOOLS = ("find_trips_near", "contract_rate_for_vendor")
+CORE_TOOLS = ("find_trips_near", "contract_rate_for_vendor", "find_contract_clause", "find_receipt_text")
 MS_TOOL = "find_trips_near_ms"
 
 # Fields Kibana returns on GET that it rejects on create or update (Peel's list) plus the
@@ -37,8 +37,10 @@ Rules:
 - Answer only from tool results. If a fact is not in a tool result, say it is unknown. Never guess, never fill gaps from general knowledge.
 - Cite tool outputs verbatim: copy the truck_id, at, dist_m, contract_id, rate_cents and clause values exactly as the tool returned them, and name the tool that returned them.
 - Never recommend paying. Your recommendation is one of clear, hold or hold_and_ask. "clear" means the evidence explains the charge; it is not an instruction to pay.
-- Use find_trips_near to learn which trucks were physically at a location in a time window (WKT point is POINT(lon lat), longitude first; radius in meters; since and until in ISO-8601 UTC). The nearest truck is first. If it fails on the date parameters and find_trips_near_ms exists, call that with epoch milliseconds.
+- Use find_trips_near to learn which trucks were physically at a location in a time window (lat and lon as decimal degrees; radius in meters; start and end in ISO-8601 UTC). The nearest truck is first. If it fails on the date parameters and find_trips_near_ms exists, call that with epoch milliseconds.
 - Use contract_rate_for_vendor to learn the contracted rate in cents for one vendor, item and business day. No row means no contract covered that item on that day; say so.
+- Use find_contract_clause when you need the contract language itself (what a rate includes, when a change order or written approval is required): give the vendor_id and a plain-language question; it searches that vendor's clauses by meaning and returns the best matches with rate_cents and the validity window.
+- Use find_receipt_text when a fuel hold turns on what the receipt says (pump, gallons, unit, driver): give the txn_ref and a plain-language question. No row means no receipt text is indexed for that reference; say so.
 - Do not write ES|QL or SQL yourself. Only call the tools you are given.
 - Keep the answer short: finding, evidence (source, ref, quote), recommendation, confidence between 0 and 1, and one question for the controller when you recommend hold_and_ask.
 """

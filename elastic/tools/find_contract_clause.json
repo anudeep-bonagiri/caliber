@@ -1,0 +1,13 @@
+{
+  "id": "find_contract_clause",
+  "type": "esql",
+  "tags": ["dispatch"],
+  "description": "Semantic search over one vendor's contract clauses. Ask a plain-language question (for example \"what does the brake rate include and when is a change order needed\") and get the clauses of that vendor's contracts that answer it best, with the item, rate in cents and the business-day validity window. Uses the JINA embedding of each clause (clause_semantic), so wording does not have to match. Use it when a rate or an invoice line needs the governing contract language, not just the number.",
+  "configuration": {
+    "query": "FROM contracts METADATA _score | WHERE vendor_id == ?vendor_id AND MATCH(clause_semantic, ?question) | SORT _score DESC | KEEP contract_id, item, rate_cents, valid_from, valid_to, clause, _score | LIMIT 3",
+    "params": {
+      "vendor_id": {"type": "string", "description": "Vendor id as a string, e.g. \"3\""},
+      "question": {"type": "string", "description": "Plain-language question about the contract terms, e.g. \"what does the brake rate include and when is a change order needed\""}
+    }
+  }
+}

@@ -295,3 +295,79 @@ def test_po_references_are_consistent(fx):
             continue
         po = pos[i["poId"]]
         assert po["vendorId"] == i["vendorId"] and po["item"] == i["item"], i["id"]
+
+
+# ---------------------------------------------------------------- Task 21: inbox connector samples
+def _day_for_date(d):
+    import datetime
+    n, cur = 0, datetime.date(2026, 7, 1)
+    while cur <= d:
+        if cur.weekday() < 5:
+            n += 1
+        cur += datetime.timedelta(days=1)
+    return n
+
+
+def _cents(text: str) -> int:
+    from decimal import Decimal
+    whole, _, frac = text.partition(".")
+    assert len(frac) == 2, text
+    return int(Decimal(text) * 100)
+
+
+def _read_csv(name):
+    import csv
+    with (FIXTURES / "inbox" / name).open(newline="") as f:
+        rows = list(csv.reader(f))
+    return rows[0], rows[1:]
+
+
+def test_inbox_samples_carry_the_full_dataset_exactly(fx):
+    import connectors
+    import datetime
+    trucks = {t["id"]: t for t in fx["trucks"]}
+    by_card = {t["fuelCardId"]: t["id"] for t in trucks.values()}
+    by_plate = {t["plate"]: t["id"] for t in trucks.values()}
+
+    header, rows = _read_csv(connectors.CARD_FILE)
+    assert header == connectors.CARD_HEADER
+    cards = {c["id"]: c for c in fx["card_txns"]}
+    assert len(rows) == len(cards) == 5607 and len({r[0] for r in rows}) == len(rows)
+    for r in rows:
+        c = cards[r[0]]
+        assert _day_for_date(datetime.date.fromisoformat(r[1])) == c["day"]
+        assert r[2] == c["at"] and r[3] == c["cardId"] and int(r[4]) == c["driverId"]
+        assert by_card[r[3]] == c["truckId"]
+        assert r[5] == c["merchant"] and r[6] == c["stationName"]
+        assert float(r[7]) == c["stationLat"] and float(r[8]) == c["stationLon"] and float(r[9]) == c["gallons"]
+        assert _cents(r[10]) == c["cents"]
+
+    header, rows = _read_csv(connectors.TOLL_FILE)
+    assert header == connectors.TOLL_HEADER
+    tolls = {t["id"]: t for t in fx["toll_txns"]}
+    assert len(rows) == len(tolls) == 2157 and len({r[0] for r in rows}) == len(rows)
+    for r in rows:
+        t = tolls[r[0]]
+        assert _day_for_date(datetime.date.fromisoformat(r[1])) == t["day"]
+        assert r[2] == t["at"] and r[3] == t["plate"] and by_plate[r[3]] == t["truckId"]
+        assert r[4] == t["plazaId"] and r[5] == t["plazaName"] and _cents(r[6]) == t["cents"]
+
+    header, rows = _read_csv(connectors.INVOICE_FILE)
+    assert header == connectors.INVOICE_HEADER
+    invs = {i["id"]: i for i in fx["invoices"]}
+    assert len(rows) == len(invs) == 180 and len({r[0] for r in rows}) == len(rows)
+    for r in rows:
+        i = invs[r[0]]
+        assert int(r[1]) == i["vendorId"] and (r[2] or None) == i["poId"]
+        assert _day_for_date(datetime.date.fromisoformat(r[3])) == i["receivedDay"]
+        assert r[4] == i["item"] and float(r[5]) == i["qty"]
+        assert _cents(r[6]) == i["unitCents"] and _cents(r[7]) == i["cents"] and r[8] == i["docRef"]
+    # no file names a truck or a business day: the module resolves the truck, the watcher derives the day
+    for h in (connectors.CARD_HEADER, connectors.TOLL_HEADER, connectors.INVOICE_HEADER):
+        assert not any("truck" in col or col == "day" for col in h)
+
+
+def test_dollars_is_exact():
+    import connectors
+    assert connectors.dollars(41200) == "412.00" and connectors.dollars(550) == "5.50" and connectors.dollars(5) == "0.05"
+    assert connectors.dollars(980000) == "9800.00"

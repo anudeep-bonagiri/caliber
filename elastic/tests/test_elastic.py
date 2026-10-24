@@ -22,9 +22,11 @@ import smoke  # noqa: E402
 
 MAPPINGS = ("telematics_log", "receipts", "contracts", "invoices")
 TOOLS = {
-    "find_trips_near": {"point_wkt", "radius_m", "since", "until"},
+    "find_trips_near": {"lat", "lon", "radius_m", "start", "end"},
     "find_trips_near_ms": {"point_wkt", "radius_m", "since_ms", "until_ms"},
     "contract_rate_for_vendor": {"vendor_id", "item", "on"},
+    "find_contract_clause": {"vendor_id", "question"},
+    "find_receipt_text": {"txn_ref", "question"},
 }
 
 
@@ -97,14 +99,38 @@ def test_tool_files_parse_with_expected_params(tool_id, params):
 
 
 def test_find_trips_near_query_matches_spec():
+    # Task 26.1 (Jd Armada's answers): date params compared against @timestamp with ISO strings, and no
+    # geo_point param: lat and lon are floats and the query builds the point with TO_GEOPOINT(CONCAT(...)).
     body = json.loads((ELASTIC_DIR / "tools" / "find_trips_near.json").read_text())
     assert body["configuration"]["query"] == (
-        "FROM telematics_log | WHERE at >= ?since AND at <= ?until "
-        "| EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(?point_wkt)) "
-        "| WHERE dist_m < ?radius_m | SORT dist_m ASC | KEEP truck_id, at, dist_m | LIMIT 20"
+        "FROM telematics_log | WHERE @timestamp >= ?start AND @timestamp <= ?end "
+        '| EVAL dist_m = ST_DISTANCE(location, TO_GEOPOINT(CONCAT("POINT(", TO_STRING(?lon), " ", TO_STRING(?lat), ")"))) '
+        "| WHERE dist_m < ?radius_m | SORT dist_m ASC | KEEP truck_id, @timestamp, dist_m | LIMIT 20"
     )
-    assert body["configuration"]["params"]["since"]["type"] == "date"
-    assert body["configuration"]["params"]["radius_m"]["type"] == "float"
+    params = body["configuration"]["params"]
+    assert params["start"]["type"] == "date" and params["end"]["type"] == "date"
+    assert params["lat"]["type"] == "float" and params["lon"]["type"] == "float"
+    assert params["radius_m"]["type"] == "float"
+    assert "geo_point" not in json.dumps(params)
+
+
+def test_semantic_tools_match_the_jina_fields():
+    # Task 26.2: JINA exercised, not just mapped. Both semantic tools MATCH the semantic_text field that the
+    # mapping binds to .jina-embeddings-v5-text-small, scoped to one vendor or one receipt.
+    clause = json.loads((ELASTIC_DIR / "tools" / "find_contract_clause.json").read_text())["configuration"]["query"]
+    assert "MATCH(clause_semantic, ?question)" in clause and "vendor_id == ?vendor_id" in clause and "METADATA _score" in clause
+    receipt = json.loads((ELASTIC_DIR / "tools" / "find_receipt_text.json").read_text())["configuration"]["query"]
+    assert "MATCH(body_semantic, ?question)" in receipt and "txn_ref == ?txn_ref" in receipt
+    contracts = json.loads((ELASTIC_DIR / "mappings" / "contracts.json").read_text())["properties"]
+    receipts = json.loads((ELASTIC_DIR / "mappings" / "receipts.json").read_text())["properties"]
+    assert contracts["clause_semantic"]["inference_id"] == ".jina-embeddings-v5-text-small"
+    assert receipts["body_semantic"]["inference_id"] == ".jina-embeddings-v5-text-small"
+
+
+def test_telematics_timestamp_is_an_alias_of_at():
+    props = json.loads((ELASTIC_DIR / "mappings" / "telematics_log.json").read_text())["properties"]
+    assert props["@timestamp"] == {"type": "alias", "path": "at"}
+    assert props["at"]["type"] == "date"
 
 
 def test_ms_variant_uses_at_ms_and_not_at_dates():
@@ -265,11 +291,12 @@ def test_agent_body_instructions():
 
 def test_smoke_window_from_fixture_and_fallback(tmp_path):
     w = smoke.hold_2231_window(ELASTIC_DIR / "sample" / "card_txns.json")
+    assert (w["lat"], w["lon"]) == (29.6816, -96.9036)
     assert w["point_wkt"] == "POINT(-96.9036 29.6816)"
-    assert w["since"] == "2026-08-27T13:02:00Z" and w["until"] == "2026-08-27T13:22:00Z"  # ten-minute window each side, matching smoke.py and the brief
+    assert w["start"] == "2026-08-27T13:02:00Z" and w["end"] == "2026-08-27T13:22:00Z"  # ten-minute window each side, matching smoke.py and the brief
     fb = smoke.hold_2231_window(tmp_path / "missing.json")
-    assert fb == {"source": "spec literals", "point_wkt": "POINT(-96.9036 29.6816)",
-                  "since": "2026-08-27T12:30:00Z", "until": "2026-08-27T14:00:00Z"}
+    assert fb == {"source": "spec literals", "lat": 29.6816, "lon": -96.9036, "point_wkt": "POINT(-96.9036 29.6816)",
+                  "start": "2026-08-27T12:30:00Z", "end": "2026-08-27T14:00:00Z"}
 
 
 def test_smoke_dry_run(no_elastic_env, capsys):

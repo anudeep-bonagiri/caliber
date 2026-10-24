@@ -1,0 +1,13 @@
+{
+  "id": "find_receipt_text",
+  "type": "esql",
+  "tags": ["dispatch"],
+  "description": "Semantic search inside one fuel receipt. Give the card transaction reference (txn_ref) and a plain-language question (for example \"how many gallons were pumped and at which pump\") and get the receipt body that answers it, with truck, station, gallons and cents. Uses the JINA embedding of the receipt text (body_semantic). Returns nothing when no receipt text was indexed for that reference; say so.",
+  "configuration": {
+    "query": "FROM receipts METADATA _score | WHERE txn_ref == ?txn_ref AND MATCH(body_semantic, ?question) | SORT _score DESC | KEEP txn_ref, truck_id, driver_id, station, at, gallons, cents, body, _score | LIMIT 1",
+    "params": {
+      "txn_ref": {"type": "string", "description": "Card transaction reference as a string, e.g. \"2231\""},
+      "question": {"type": "string", "description": "Plain-language question about the receipt, e.g. \"how many gallons were pumped and at which pump\""}
+    }
+  }
+}
