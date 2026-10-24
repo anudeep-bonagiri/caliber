@@ -10,7 +10,12 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "spacetimedb": ["./node_modules/spacetimedb"],
+      "spacetimedb/*": ["./node_modules/spacetimedb/*"]
+    }
   },
   "include": ["src/**/*.ts", "test/**/*.ts", "../module_bindings/**/*.ts"]
 }

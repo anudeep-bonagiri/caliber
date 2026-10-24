@@ -47,7 +47,7 @@ describe('explain', () => {
   });
 
   it('rejects model prose that contains digits not in the evidence and falls back', async () => {
-    const e = await explain(brief, { ask: async () => 'Truck 17 fueled 120 gallons 96.3 miles from its ping. The card was also used 3 times last week.' });
+    const e = await explain(brief, { ask: async () => 'Truck 17 fueled 120 gallons 96.3 miles from its ping. The station is about 155 km from the yard.' });
     expect(e.source).toBe('template');
   });
 

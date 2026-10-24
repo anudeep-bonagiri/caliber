@@ -11,6 +11,8 @@ const FIXTURES = path.resolve(__dirname, '..', '..', 'seed', 'fixtures', 'invest
 let tmp: string;
 beforeAll(() => {
   tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'dl-replay-'));
+  // the 2231 fixture cites swap_log.txt; the file check runs when the evidence dir exists
+  fs.writeFileSync(path.join(tmp, 'swap_log.txt'), '08/27 Ortiz R. -> unit 22 (17 in shop)\n');
 });
 afterAll(() => fs.rmSync(tmp, { recursive: true, force: true }));
 

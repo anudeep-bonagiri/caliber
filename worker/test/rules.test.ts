@@ -97,7 +97,7 @@ describe('handleDraftRule', () => {
 
   it('creates a candidate rule and records done when the backtest is clean', async () => {
     const calls: unknown[] = [];
-    const cleanHolds = { ...holds, '2250': 'open' };
+    const cleanHolds: Record<string, string> = { ...holds, '2250': 'open' };
     const r = await handleDraftRule(base, { matchResults: () => rows, holdStatus: ref => cleanHolds[ref], createRule: async a => void calls.push(a) });
     expect(calls).toHaveLength(1);
     expect(calls[0]).toMatchObject({ sourceTxnRef: '2231', condition: 'location_mismatch', uses: 'one_time', validFromDay: 41, validToDay: 46, scopeJson: '{"driverId":23}' });
@@ -108,7 +108,7 @@ describe('handleDraftRule', () => {
 
   it('falls back to the deterministic window when the model answer is invalid', async () => {
     const calls: Array<{ validToDay: number; uses: string }> = [];
-    const cleanHolds = { ...holds, '2250': 'open' };
+    const cleanHolds: Record<string, string> = { ...holds, '2250': 'open' };
     await handleDraftRule(base, { matchResults: () => rows, holdStatus: ref => cleanHolds[ref], createRule: async a => void calls.push(a), ask: async () => '{"uses":"standing","toDay":999}' });
     expect(calls[0]).toMatchObject({ uses: 'one_time', validToDay: 46 });
   });

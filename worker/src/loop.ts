@@ -1,6 +1,6 @@
 // The claim loop. Polls the client cache (open tasks arrive by subscription), claims with the version lock,
 // dispatches by kind under a concurrency limit, and guarantees a terminal write for every claimed task.
-import type { AgentTask } from '../../module_bindings/index.js';
+import type { AgentTask } from '../../module_bindings/types.js';
 import { parseBrief } from './brief.js';
 import { isPaused, nowIso, type Config } from './config.js';
 import { handleInvestigate } from './investigate.js';

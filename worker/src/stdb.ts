@@ -1,6 +1,7 @@
 // SpacetimeDB connection for the agent identity. Subscriptions feed a client cache the loop and the
 // backtest read from; the three agent reducers are wrapped here and nowhere else.
-import { DbConnection, type AgentTask } from '../../module_bindings/index.js';
+import { DbConnection } from '../../module_bindings/index.js';
+import type { AgentTask } from '../../module_bindings/types.js';
 import type { Config } from './config.js';
 
 export type Conn = DbConnection;
