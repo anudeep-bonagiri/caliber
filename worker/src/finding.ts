@@ -25,7 +25,12 @@ export type EvidenceRef = z.infer<typeof EvidenceRefSchema>;
 export const RECOMMENDATIONS = ['clear', 'hold', 'hold_and_ask'] as const;
 export type Recommendation = (typeof RECOMMENDATIONS)[number];
 
-export const FINDING_STATUSES = ['ok', 'replayed', 'timeout', 'no_fixture'] as const;
+// 'deferred': the live investigator was unavailable (rate limit or server error, twice); nothing stood in for it.
+export const FINDING_STATUSES = ['ok', 'replayed', 'timeout', 'no_fixture', 'deferred'] as const;
+
+// Who made a replayed recording: a live Droid run in WORKER_MODE=record, or a person writing the fixture by hand.
+export const RECORDED_BY = ['droid live run', 'hand-written'] as const;
+export type RecordedBy = (typeof RECORDED_BY)[number];
 
 export const FindingSchema = z
   .object({
@@ -38,6 +43,9 @@ export const FindingSchema = z
     model: z.string().max(80).optional(),
     durationMs: z.number().int().nonnegative().optional(),
     tokenUsage: z.object({ input: z.number().int().nonnegative(), output: z.number().int().nonnegative() }).strict().optional(),
+    // set by replay only: when the fixture was recorded and by what
+    recordedAt: z.string().max(40).optional(),
+    recordedBy: z.enum(RECORDED_BY).optional(),
   })
   .strict();
 export type Finding = z.infer<typeof FindingSchema>;

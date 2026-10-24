@@ -43,6 +43,46 @@ export interface DroidRun {
   disabledToolIds: string[];
 }
 
+// ---------------------------------------------------------------------------
+// Failure classification (Task 8.7). A rate limit or server error from the Factory API is retried once and then
+// deferred; it never falls through to a replayed fixture. The SDK carries no HTTP status field (ErrorEvent has
+// `message` and `errorType` only), so the status is read from the message text, and a result with subtype
+// `error_during_execution` counts as an API error even when the message names no status.
+// ---------------------------------------------------------------------------
+export type DroidApiFailureKind = 'rate_limit' | 'server';
+
+export interface DroidApiFailure {
+  kind: DroidApiFailureKind;
+  // short label used in the deferred finding, e.g. `HTTP 429 rate limit`
+  reason: string;
+}
+
+export const RETRY_BACKOFF_MS: Record<DroidApiFailureKind, number> = { rate_limit: 5_000, server: 2_000 };
+
+export class DroidApiError extends Error {
+  readonly kind: DroidApiFailureKind;
+  readonly reason: string;
+  constructor(message: string, failure: DroidApiFailure) {
+    super(message);
+    this.name = 'DroidApiError';
+    this.kind = failure.kind;
+    this.reason = failure.reason;
+  }
+}
+
+const RATE_LIMIT = /\b429\b|rate[ _-]?limit|too many requests/i;
+const SERVER_STATUS = /\b(5\d\d)\b/;
+const SERVER_WORDS = /internal server error|bad gateway|service unavailable|gateway time-?out|overloaded/i;
+
+export function classifyDroidFailure(message: string, subtype?: string): DroidApiFailure | undefined {
+  if (RATE_LIMIT.test(message)) return { kind: 'rate_limit', reason: 'HTTP 429 rate limit' };
+  const code = SERVER_STATUS.exec(message)?.[1];
+  if (code) return { kind: 'server', reason: `HTTP ${code} server error` };
+  if (SERVER_WORDS.test(message)) return { kind: 'server', reason: 'HTTP 5xx server error' };
+  if (subtype === 'error_during_execution') return { kind: 'server', reason: 'API error during execution' };
+  return undefined;
+}
+
 // Tool ids learned from session.listTools() once per process; extends the disabled list for later sessions.
 let learnedWriteToolIds: string[] | undefined;
 let listedOnce = false;
@@ -126,7 +166,7 @@ export function appendCostLog(file: string | undefined, entry: Record<string, un
 }
 
 // Run one investigation. Every stream message is captured into `steps`. Throws on SDK failure; the caller
-// decides between the recorded fixture and the stand-in.
+// classifies it (classifyDroidFailure) and retries, defers, or falls back.
 export async function investigate(brief: string, steps: Step[], opts: DroidOptions): Promise<DroidRun> {
   const log = opts.log ?? (() => {});
   const sdk: Sdk = await import('@factory/droid-sdk/node');

@@ -1,5 +1,5 @@
 // SpacetimeDB connection for the agent identity. Subscriptions feed a client cache the loop and the
-// backtest read from; the three agent reducers are wrapped here and nowhere else.
+// backtest read from; the agent reducers are wrapped here and nowhere else.
 import { DbConnection } from '../../module_bindings/index.js';
 import type { AgentTask } from '../../module_bindings/types.js';
 import type { Config } from './config.js';
@@ -14,6 +14,8 @@ export const SUBSCRIPTIONS = [
   'SELECT * FROM hold',
   'SELECT * FROM rule',
   'SELECT * FROM business_day',
+  // settle.ts: every payment row, so unsettled ones (bank_txn_id none) can be sent to the bank
+  'SELECT * FROM payment',
 ] as const;
 
 export interface Connected {
@@ -139,4 +141,10 @@ export function holdStatus(conn: Conn, txnRef: string): string | undefined {
 
 export function currentDay(conn: Conn): number | undefined {
   return conn.db.businessDay.id.find(1)?.day;
+}
+
+// Agent only. Refuses without a payment row ('no payment to settle') or when it is already settled
+// ('already settled as <id>'); settle.ts treats the second refusal as success.
+export function recordSettlement(conn: Conn, txnRef: string, bankTxnId: string): Promise<void> {
+  return conn.reducers.recordSettlement({ txnRef, bankTxnId });
 }

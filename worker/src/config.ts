@@ -93,6 +93,22 @@ export function parseConfig(env: NodeJS.ProcessEnv = process.env): Config {
   };
 }
 
+// Settlement through Capital One's Nessie mock bank. Kept apart from Config so the loop's config stays as is.
+// Live settlement needs a key and WORKER_MODE other than replay; settle.ts decides, this only parses.
+export interface NessieConfig {
+  apiKey: string;
+  base: string;
+  accountsFile: string;
+}
+
+export function parseNessieConfig(env: NodeJS.ProcessEnv = process.env): NessieConfig {
+  return {
+    apiKey: (env.NESSIE_API_KEY ?? '').trim(),
+    base: ((env.NESSIE_BASE ?? '').trim() || 'https://api.nessieisreal.com').replace(/\/+$/, ''),
+    accountsFile: path.resolve((env.NESSIE_ACCOUNTS ?? '').trim() || path.join(REPO_ROOT, 'seed', 'fixtures', 'nessie_accounts.json')),
+  };
+}
+
 // G15: a PAUSE file next to the worker stops claiming. Checked every loop iteration, never cached.
 export function isPaused(cfg: Pick<Config, 'pauseFile'>): boolean {
   try {

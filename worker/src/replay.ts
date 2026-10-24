@@ -5,7 +5,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { nowIso } from './config.js';
 import { centsToDollars, type Brief } from './brief.js';
-import { FindingSchema, parseFinding, verifyEvidence, type EvidenceRef, type Finding } from './finding.js';
+import { FindingSchema, parseFinding, verifyEvidence, type EvidenceRef, type Finding, type RecordedBy } from './finding.js';
 
 export const STAND_IN_PREFIX = 'Scripted stand-in, not a model.';
 
@@ -78,13 +78,32 @@ export function replayFixture(fixture: Fixture, brief: Pick<Brief, 'txnRef' | 'e
   const requireFiles = fs.existsSync(evidenceDir);
   const checked = parseFinding(fixture.finding, evidenceDir, { requireFiles });
   const verified = verifyEvidence(checked, { evidenceDir, brief, steps: fixture.steps });
-  const finding: Finding = { ...verified.finding, status: 'replayed' };
+  const recordedBy = fixtureRecordedBy(fixture);
+  const finding: Finding = { ...verified.finding, status: 'replayed', recordedAt: fixture.recordedAt.slice(0, 40), recordedBy };
   const steps: Step[] = [
     ...fixture.steps,
     ...verified.notes.map((text): Step => ({ type: 'note', at: nowIso(), text })),
     { type: 'note', at: nowIso(), text: `replayed from fixtures/investigations/${brief.txnRef}.json` },
+    { type: 'note', at: nowIso(), text: `replayed from a recording made ${recordingDate(fixture.recordedAt)} by ${recordedBy}` },
   ];
   return { finding, steps, source: 'replayed' };
+}
+
+// 'droid live run' when the fixture says it came from one: its note mentions a live Droid run, or its first
+// steps carry the `live droid run (record|live) for <txnRef>` note that liveRun writes. Anything else was
+// written by hand. The `recorded` flag is not trusted on its own; hand-written fixtures have set it too.
+const LIVE_NOTE = /live droid run/i;
+const LIVE_STEP = /^live droid run \((record|live)\) for /i;
+export function fixtureRecordedBy(fixture: Pick<Fixture, 'note' | 'steps'>): RecordedBy {
+  if (fixture.note && LIVE_NOTE.test(fixture.note)) return 'droid live run';
+  if (fixture.steps.some(s => s.type === 'note' && LIVE_STEP.test(s.text))) return 'droid live run';
+  return 'hand-written';
+}
+
+// The calendar date of an ISO timestamp (UTC), or the raw text when it does not parse.
+function recordingDate(recordedAt: string): string {
+  const t = Date.parse(recordedAt);
+  return Number.isNaN(t) ? recordedAt.slice(0, 40) : new Date(t).toISOString().slice(0, 10);
 }
 
 // The deterministic stand-in: states the kernel code and the key numbers, recommends by code, never invents.
@@ -152,7 +171,8 @@ export function standIn(brief: Brief): InvestigationOutcome {
   };
 }
 
-// Replay when a fixture exists, otherwise the stand-in. Used in replay mode and as the live fallback.
+// Replay when a fixture exists, otherwise the stand-in. Used in replay mode and after a live abort, timeout or
+// unusable output; never after a rate limit or server error (those are retried once, then deferred).
 export function replayOrStandIn(brief: Brief, fixturesDir: string, evidenceDir: string, log: (msg: string) => void = () => {}): InvestigationOutcome {
   let fixture: Fixture | undefined;
   try {
