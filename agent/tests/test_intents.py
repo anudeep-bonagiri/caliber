@@ -329,11 +329,28 @@ def test_model_output_with_injection_ref_is_rejected(fake, monkeypatch):
     assert fake.calls == []
 
 
-def test_extract_json_shapes():
+def test_extract_json_shapes(monkeypatch):
     assert intents._extract_json('{"intent": "holds"}') == {"intent": "holds"}
     assert intents._extract_json('Sure: {"intent": "status", "txnRef": null, "text": null}')["intent"] == "status"
     assert intents._extract_json("no json here") == {}
+    # no key anywhere (argument or environment) means no model call and None
+    monkeypatch.delenv("ASI_ONE_API_KEY", raising=False)
     assert intents.classify("x", [], api_key=None) is None
+
+
+def test_asi_mock_never_touches_the_network(monkeypatch):
+    """With ASI_MOCK=1 (the whole test run, see conftest.py) the model path returns the canned reply and
+    httpx.post is never called, whether or not a real key is present."""
+    assert intents.mock_enabled()
+
+    def boom(*a, **k):
+        raise AssertionError("httpx.post was called under ASI_MOCK=1")
+
+    monkeypatch.setattr(intents.httpx, "post", boom)
+    monkeypatch.setenv("ASI_ONE_API_KEY", "real-looking-key")
+    out = intents.classify("x", [])
+    assert out == intents.Intent("status", ref=None, text=None, via="model")
+    assert intents._chat_completion("k", []) == intents.MOCK_REPLY
 
 
 def test_dollars():

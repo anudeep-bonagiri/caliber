@@ -39,7 +39,7 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 
 ## What is measured
 
-`scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-24T20:49:34+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
+`scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-24T21:13:08+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
 
 | Code | Planted | Raised | Precision | Recall |
 | --- | --- | --- | --- | --- |
@@ -61,6 +61,8 @@ The AP clerk who matches and codes bills. It asks the fleet controller, who appr
 | Released by the controller | 9 payments, $37,547.00 |
 | Refusals in the audit trail, by role | {'agent': 1} |
 | Investigations by source in the offline run | {'replayed': 47} |
+| Droid cost per investigation, from the recorded live run of 2026-10-24, 52 investigations | 1,033 input tokens, 1,354 output tokens, 70,386 cache tokens (cacheCreationTokens plus cacheReadTokens), 25.6 s; 2,016,204 Factory credits for the 52 |
+| Droid cost of the six decoy re-recordings (2026-10-24, now the fixtures) | 6,529 input tokens, 7,036 output tokens, 420,407 cache tokens (cacheCreationTokens plus cacheReadTokens) in total; 196,074 Factory credits |
 
 The whole cycle runs in about ten seconds.
 
@@ -168,7 +170,7 @@ python3 scripts/facts.py
 ## What is real and what is simulated
 
 <!-- honesty:start -->
-What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. In the measured run of 2026-10-24T20:49:34+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card. The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role. Not built: `docs/not-built.md`. Everything fails toward no money moving.
+What is live: the module, the kernel, the clock, the roles and refusals, the dashboard subscriptions, the controller agent against the local database, the rule backtest. What is simulated: the company, the money, the vendors. What is replayed or scripted in the offline demo: the investigator's findings, labelled on every card. In the measured run of 2026-10-24T21:13:08+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card. The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role. Not built: `docs/not-built.md`. Everything fails toward no money moving.
 <!-- honesty:end -->
 
 ## Team

@@ -18,6 +18,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+RECORD_LOG = ROOT / "docs/evidence/cost_log_live_record_2026-10-24.jsonl"
+DECOY_LOG = ROOT / "docs/evidence/cost_log_decoy_rerecord_2026-10-24.jsonl"
 OPTION_COLS = {"rule_id", "question", "answer", "callback_note", "approved_by", "claimed_by", "claimed_at", "po_id", "bank_txn_id"}
 EXCEPTION_CODES = ["location_mismatch", "capacity_exceeded", "rate_variance", "duplicate_toll",
                    "duplicate_invoice", "vendor_bank_change", "short_received"]
@@ -45,6 +47,53 @@ def sql(uri: str, db: str, query: str) -> list[dict]:
             row[k] = v
         rows.append(row)
     return rows
+
+
+def cost_summary(log: Path) -> dict:
+    """Totals and per-task averages from one cost log. Cache is cacheCreationTokens plus cacheReadTokens and is
+    reported beside input and output, never added to either. factoryCredits is summed when the SDK reported it."""
+    t = {"tasks": 0, "inputTokens": 0, "outputTokens": 0, "cacheTokens": 0, "cacheCreationTokens": 0,
+         "cacheReadTokens": 0, "thinkingTokens": 0, "factoryCredits": 0, "durationMs": 0}
+    if not log.exists():
+        return {"tasks": 0, "total": t, "avg": None, "cacheLabel": "cacheCreationTokens plus cacheReadTokens"}
+    for line in log.read_text().splitlines():
+        try:
+            e = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        tu = e.get("tokenUsage") or {}
+        t["tasks"] += 1
+        t["inputTokens"] += int(tu.get("inputTokens", 0) or 0)
+        t["outputTokens"] += int(tu.get("outputTokens", 0) or 0)
+        t["cacheCreationTokens"] += int(tu.get("cacheCreationTokens", 0) or 0)
+        t["cacheReadTokens"] += int(tu.get("cacheReadTokens", 0) or 0)
+        t["thinkingTokens"] += int(tu.get("thinkingTokens", 0) or 0)
+        t["factoryCredits"] += int(tu.get("factoryCredits", 0) or 0)
+        t["durationMs"] += int(e.get("durationMs", 0) or 0)
+    t["cacheTokens"] = t["cacheCreationTokens"] + t["cacheReadTokens"]
+    n = t["tasks"]
+    avg = {k: round(v / n) for k, v in t.items() if k != "tasks"} if n else None
+    return {"tasks": n, "total": t, "avg": avg, "cacheLabel": "cacheCreationTokens plus cacheReadTokens"}
+
+
+def cost_lines(cost: dict) -> list[str]:
+    """The cost block as prose lines, three token numbers kept apart."""
+    pt = cost["perTask"]
+    out = []
+    if pt["avg"]:
+        a, tt = pt["avg"], pt["total"]
+        out.append(f"Droid cost, {cost['label']}: per task on average {a['inputTokens']:,} input tokens, "
+                   f"{a['outputTokens']:,} output tokens and {a['cacheTokens']:,} cache tokens (cacheCreationTokens plus cacheReadTokens), "
+                   f"{a['durationMs']/1000:.1f} s; totals {tt['inputTokens']:,} input, {tt['outputTokens']:,} output, "
+                   f"{tt['cacheTokens']:,} cache tokens"
+                   + (f", {tt['factoryCredits']:,} Factory credits" if tt["factoryCredits"] else "") + ".")
+    d = cost.get("decoyRerecord") or {}
+    if d.get("avg"):
+        tt = d["total"]
+        out.append(f"Decoy re-record, {d['label']}: {tt['tasks']} tasks, totals {tt['inputTokens']:,} input, {tt['outputTokens']:,} output, "
+                   f"{tt['cacheTokens']:,} cache tokens (cacheCreationTokens plus cacheReadTokens)"
+                   + (f", {tt['factoryCredits']:,} Factory credits" if tt["factoryCredits"] else "") + ".")
+    return out
 
 
 def _strip_clock(bt):
@@ -148,19 +197,19 @@ def main() -> int:
                        "holds": t["hold_count"], "autoRejected": t["rejected_count"], "txns": t["txn_count"]})
 
     unreviewed = [k["txnRef"] for k in planted if k["txnRef"] not in raised]
-    cost = {"tasks": 0, "inputTokens": 0, "outputTokens": 0, "durationMs": 0}
-    cost_log = ROOT / "worker/cost_log.jsonl"
-    if cost_log.exists():
-        for line in cost_log.read_text().splitlines():
-            try:
-                e = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            cost["tasks"] += 1
-            tu = e.get("tokenUsage") or {}
-            cost["inputTokens"] += int(tu.get("inputTokens", 0) or 0)
-            cost["outputTokens"] += int(tu.get("outputTokens", 0) or 0)
-            cost["durationMs"] += int(e.get("durationMs", 0) or 0)
+    # Cost comes from the committed record of the live run, never from worker/cost_log.jsonl (gitignored, and it
+    # also holds probes and stray runs). Input, output and cache are three separate numbers; cache is never
+    # folded into input. Cache = cacheCreationTokens + cacheReadTokens, the SDK's two cache counters.
+    cost = {
+        "label": "from the recorded live run of 2026-10-24, 52 investigations",
+        "source": str(RECORD_LOG.relative_to(ROOT)),
+        "perTask": cost_summary(RECORD_LOG),
+        "decoyRerecord": {
+            "label": "the six decoy recordings re-recorded live on 2026-10-24 (now the fixtures for 1421, 2044, 2231, 3955, 5428, 5986)",
+            "source": str(DECOY_LOG.relative_to(ROOT)),
+            **cost_summary(DECOY_LOG),
+        },
+    }
 
     facts = {
         "asOf": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -206,7 +255,8 @@ def main() -> int:
            f"Released by the controller: {facts['controllerReleased']['count']} payments, ${facts['controllerReleased']['cents']/100:,.2f}.",
            f"Refusals recorded in the audit trail: {len(refused)} ({refused_by_role}).",
            f"Settlement: {settle_live} payments carry a live Nessie transfer id, {settle_offline} a labelled offline id, {settle_none} unsettled.",
-           f"Investigations by source: {task_sources}; by status: {task_status}.", ""]
+           f"Investigations by source: {task_sources}; by status: {task_status}."]
+    md += cost_lines(cost) + [""]
     if unreviewed:
         md.append(f"Unreviewed planted rows (the run is not complete): {unreviewed}")
     (out / "FACTS.md").write_text("\n".join(md) + "\n")
@@ -231,6 +281,9 @@ def main() -> int:
     for r in decoy_rows:
         bt = r["backtest"] or {}
         results.append(f"| {r['txnRef']} | {r['raised']} | {bool(r['questions'])} | {r['answers']} | {r['ruleId']} | {bt.get('n')} | {bt.get('confirmedExceptionsCovered')} | {r['clearedByRule']} |")
+    results += ["", "## Cost", "",
+        "Token counts are the SDK's `tokenUsage` per investigation. Input, output and cache are reported as three numbers; cache (cacheCreationTokens plus cacheReadTokens) is never folded into input.", ""]
+    results += cost_lines(cost)
     results += ["", "## History", "",
         "- First full run (fixtures from 11:18): duplicate_invoice precision 0.5 because recurring same-amount invoices under alternating POs collided with the planted duplicates. Fixed in the generator, not the kernel.",
         "- A facts bug counted every option-typed `rule_id` as set (SQL encodes none as `[1, []]`); fixed before the second run.",
@@ -238,7 +291,7 @@ def main() -> int:
         "", "## Caveat", "",
         "The company, the money and the vendors are synthetic, generated by seed/generate.py with seed 42, and the planted errors come from the same generator that made the clean rows. "
         "Recall and precision therefore measure whether the kernel finds what we planted, not how it would behave on a real carrier's statements. "
-        "Investigations in this run are scripted stand-ins or hand-written recordings, labelled as such; no live model produced a finding. "
+        "Investigations in this run replay the recordings of the live Droid run of 2026-10-24 (six decoys re-recorded the same day), labelled replayed on every card; no live model ran during the measured run. "
         "The scripted controller (scripts/controller_sim.py) decides from the dispatcher's swap log in the evidence folder, which is what a human controller would consult; it never reads the answer key, but the swap log is produced by the same generator, so the decoy result shows the mechanism works, not that a human would judge the same way.", ""]
     (out / "RESULTS.md").write_text("\n".join(results) + "\n")
     print("\n".join(md))

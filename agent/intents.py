@@ -1,6 +1,9 @@
 """Turns one chat line into an Intent: regex fast paths first, then one ASI:One call for free text.
 
 Nothing here touches the database. The handler validates references before any SQL.
+
+ASI_MOCK=1 (set by agent/conftest.py for the test run) replaces the one HTTP call with a deterministic canned
+classification, so no test can reach asi1.ai even when ASI_ONE_API_KEY is in .env.
 """
 
 from __future__ import annotations
@@ -124,7 +127,17 @@ def _pending_block(awaiting: list[dict]) -> str:
     return "\n".join(lines)
 
 
+# The canned reply the mock returns: a status request, which the handler can always serve.
+MOCK_REPLY = '{"intent": "status", "txnRef": null, "text": null}'
+
+
+def mock_enabled() -> bool:
+    return os.getenv("ASI_MOCK", "") == "1"
+
+
 def _chat_completion(api_key: str, messages: list[dict]) -> str:
+    if mock_enabled():
+        return MOCK_REPLY
     r = httpx.post(
         ASI_URL,
         headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},

@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-10-24T20:49:34+00:00",
+  "asOf": "2026-10-24T21:13:08+00:00",
   "autoPaid": {
     "cents": 108363052,
     "count": 7886
@@ -1162,12 +1162,67 @@
   "rules": {
     "expired": 6
   },
+  "settlement": {
+    "liveBankIds": 0,
+    "offlineIds": 7895,
+    "unsettled": 0
+  },
   "transactionsMatched": 7944,
   "unreviewedPlanted": [],
   "worker_cost": {
-    "durationMs": 1330401,
-    "inputTokens": 53739,
-    "outputTokens": 70433,
-    "tasks": 52
+    "decoyRerecord": {
+      "avg": {
+        "cacheCreationTokens": 25840,
+        "cacheReadTokens": 44228,
+        "cacheTokens": 70068,
+        "durationMs": 19505,
+        "factoryCredits": 32679,
+        "inputTokens": 1088,
+        "outputTokens": 1173,
+        "thinkingTokens": 250
+      },
+      "cacheLabel": "cacheCreationTokens plus cacheReadTokens",
+      "label": "the six decoy recordings re-recorded live on 2026-10-24 (now the fixtures for 1421, 2044, 2231, 3955, 5428, 5986)",
+      "source": "docs/evidence/cost_log_decoy_rerecord_2026-10-24.jsonl",
+      "tasks": 6,
+      "total": {
+        "cacheCreationTokens": 155041,
+        "cacheReadTokens": 265366,
+        "cacheTokens": 420407,
+        "durationMs": 117032,
+        "factoryCredits": 196074,
+        "inputTokens": 6529,
+        "outputTokens": 7036,
+        "tasks": 6,
+        "thinkingTokens": 1499
+      }
+    },
+    "label": "from the recorded live run of 2026-10-24, 52 investigations",
+    "perTask": {
+      "avg": {
+        "cacheCreationTokens": 31423,
+        "cacheReadTokens": 38963,
+        "cacheTokens": 70386,
+        "durationMs": 25585,
+        "factoryCredits": 38773,
+        "inputTokens": 1033,
+        "outputTokens": 1354,
+        "thinkingTokens": 449
+      },
+      "cacheLabel": "cacheCreationTokens plus cacheReadTokens",
+      "tasks": 52,
+      "total": {
+        "cacheCreationTokens": 1634006,
+        "cacheReadTokens": 2026091,
+        "cacheTokens": 3660097,
+        "durationMs": 1330401,
+        "factoryCredits": 2016204,
+        "inputTokens": 53739,
+        "outputTokens": 70433,
+        "tasks": 52,
+        "thinkingTokens": 23337
+      }
+    },
+    "source": "docs/evidence/cost_log_live_record_2026-10-24.jsonl"
   }
 }
