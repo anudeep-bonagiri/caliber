@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 
-HELP = """Dispatch Ledger controller. Commands:
+HELP = """Caliber controller. Commands:
   what needs me          holds waiting on you (also: holds, queue)
   why <txnRef>           the investigator's finding and evidence for one hold
   answer <txnRef> <text> answer the investigator's question (free text also works)

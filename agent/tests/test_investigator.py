@@ -313,4 +313,4 @@ def test_cli_other_commands_stay_the_controllers(fake):
     assert not out.startswith("investigator:")
     assert fake.identities[0] == "controller"
     assert fake.calls == [("try_approve_payment", ["2231", {"none": []}])]
-    assert cli.answer("help").startswith("Dispatch Ledger controller.")
+    assert cli.answer("help").startswith("Caliber controller.")

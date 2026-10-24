@@ -33,7 +33,7 @@ export function TopBar({
   return (
     <header className="flex flex-wrap items-center gap-x-4 gap-y-2 border-b border-edge bg-panel px-4 py-2">
       <div className="flex items-baseline gap-2">
-        <span className="text-[15px] font-semibold tracking-tight text-text">Dispatch Ledger</span>
+        <span className="text-[15px] font-semibold tracking-tight text-text">Caliber</span>
         <span className="text-[11px] text-faint">accounts payable, read only</span>
       </div>
       <div className="flex items-center gap-2">

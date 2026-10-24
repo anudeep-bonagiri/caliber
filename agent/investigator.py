@@ -62,7 +62,7 @@ def build_agent() -> Agent:
         kwargs["metadata"] = {"is_public": "True", "tags": TAGS}
     if "description" in params:
         kwargs["description"] = (
-            "The read-only investigator for Dispatch Ledger, an autonomous accounts-payable clerk for a simulated "
+            "The read-only investigator for Caliber, an autonomous accounts-payable clerk for a simulated "
             "trucking carrier. Explains any hold (why <id>) and reports the day clock (status). Holds a reader "
             "identity the database refuses on every payment, answer and rule call."
         )

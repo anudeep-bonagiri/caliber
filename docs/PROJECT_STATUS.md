@@ -332,3 +332,51 @@ Not touched: vendor-check fixtures, answer key, thresholds. The Wi-Fi-off repeat
 | `spacetime login` with GitHub for the local demo | Needs a browser and ties the publisher to a cloud identity; the demo mints a local identity with `POST /v1/identity` and logs the CLI in with that token |
 | Worker-side backtest scored against the answer key | Agent code must never read the key; the module backtests against confirmed controller decisions instead |
 | A pause button in the dashboard | Vite inlines env vars into the bundle, which would ship the controller token; pause is a terminal or ASI:One command |
+
+## 2026-10-24 15:45 PDT Builder-C: product name Caliber
+
+Brief: context/briefs/2026-10-24_1535_rename_caliber.md. Every judge-facing mention of the product in builder-C's files now reads Caliber. "Dispatch Ledger" survives only where it is an identifier or belongs to another builder.
+
+Hit list from `grep -rn "Dispatch Ledger"` (md, py, ts, tsx, html; node_modules, PROJECT_STATUS and briefs excluded), classified:
+
+| File:line | Classification | Done by |
+| --- | --- | --- |
+| web/src/components/TopBar.tsx:36 | rename, dashboard header | builder-C, now "Caliber"; the "Simulated carrier" line below is untouched |
+| web/index.html:7 | rename, browser tab title | builder-C |
+| web/README.md:1 | rename, prose heading | builder-C |
+| elastic/README.md:1 | rename, prose heading, carries "(repo and ledger name: dispatch-ledger)" at first mention | builder-C |
+| docs/VIDEO.md:20 | rename, closing voice line | builder-C |
+| agent/README.md:6 | rename, profile prose, carries the first-mention parenthetical | builder-C |
+| agent/README.md:1 and :10 | keep, agent display name "Dispatch Ledger Controller" in the H1 and the Name column; the brief freezes name, handle and address columns | none |
+| agent/INVESTIGATOR_README.md:6 | rename, profile prose, carries the first-mention parenthetical | builder-C |
+| agent/agent.py:66 | rename, Agentverse `description` string (prose, not the `name`, seed or port) | builder-C |
+| agent/investigator.py:65 | rename, Agentverse `description` string | builder-C |
+| agent/formatting.py:7 | rename, HELP reply text | builder-C |
+| agent/cli.py:36 | rename, CLI banner | builder-C |
+| agent/tests/test_investigator.py:316 | rename, expected string for the help reply | builder-C |
+| agent/ledger.py:1 | keep, module docstring naming the `dispatch-ledger` SpacetimeDB module; outside the brief's "reply and help text" scope | none |
+| agent/__init__.py:1 | keep, package docstring, not in builder-C's file list | none |
+| README.md:1 | rename, builder-W's job | builder-W |
+| docs/RUNBOOK.md:15 and :33 | rename, builder-W's job | builder-W |
+| CLAUDE.md:3 | keep, director instructions, frozen | none |
+| context/BUILD_SPEC.md:5 | keep, frozen spec; it already says "Working name: Dispatch Ledger (change it)" | none |
+| seed/generate.py:1 | keep, seed/** frozen, docstring | none |
+| scripts/nessie_seed.py:6 and :108 | keep, scripts/** frozen; the Nessie customer and account are named "Dispatch Ledger Carrier" and a rename would create a second customer in the mock bank | none |
+| spacetimedb/src/index.ts:1 and module.test.ts:1 | keep, module code frozen, comments name the `dispatch-ledger` module | none |
+| elastic/setup_agent.py:32 | keep for now, not in builder-C's list; it is the Elastic Agent Builder instruction text ("the investigator inside Dispatch Ledger") and a judge opening the agent in Kibana would see it. Director's call; changing it means re-running setup_agent.py against Serverless | director |
+| elastic/common.py:1 | keep, docstring, not in builder-C's list | none |
+
+No file in my list contained a lowercase "dispatch ledger" variant. context/JUDGE_QA.md, docs/CONTRACT.md and worker/README.md do not name the product and were left alone.
+
+Identifiers that stay "dispatch-ledger" on purpose: the repo name, the SpacetimeDB database name, `AGENT_NAME = "dispatch-ledger-controller"` (agent/agent.py:44) and `AGENT_NAME = "dispatch-investigator"` (agent/investigator.py:42), the `@dispatch-ledger-controller` and `@dispatch-investigator` handles and their `agent1q...` addresses, module and package names, file paths, and the history above this entry.
+
+Checks, each run after the edits:
+
+| Check | Command | Observed |
+| --- | --- | --- |
+| Agent tests | `agent/.venv/bin/pytest -q` | 191 passed in 8.33s |
+| Dashboard build | `cd web && npm run build` | built in 1.09s, dist/index.html 0.60 kB |
+| Em dashes | `grep -nP '\x{2014}'` over the 12 touched files | empty |
+| Agent names | `grep -rn "dispatch-ledger" agent/*.py` | only agent/agent.py:44 AGENT_NAME, unchanged; investigator AGENT_NAME unchanged |
+
+Not done by builder-C, by design: the running controller and investigator agents were not restarted, so their live replies and Agentverse descriptions still show "Dispatch Ledger" until the director restarts them after builder-W finishes. demo_up.sh, full_run.sh and rehearse.sh were not run. README.md and docs/RUNBOOK.md still say "Dispatch Ledger" pending builder-W's commit.

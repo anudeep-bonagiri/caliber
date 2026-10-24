@@ -63,7 +63,7 @@ def build_agent() -> Agent:
         kwargs["metadata"] = {"is_public": "True", "tags": TAGS}
     if "description" in params:
         kwargs["description"] = (
-            "The fleet controller's seat for Dispatch Ledger, an autonomous accounts-payable clerk for a "
+            "The fleet controller's seat for Caliber, an autonomous accounts-payable clerk for a "
             "simulated trucking carrier. Lists holds, explains findings, takes answers and approvals."
         )
     # Task 18: the investigator peer, reached on 127.0.0.1 when both agents run on this laptop.

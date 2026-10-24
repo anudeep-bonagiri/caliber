@@ -1,4 +1,4 @@
-# Dispatch Ledger dashboard
+# Caliber dashboard
 
 Read-only operations console for the simulated carrier. It subscribes to the public tables of the `dispatch-ledger` SpacetimeDB module with an anonymous identity and never calls a reducer. Approvals, answers and the clock are driven from ASI:One or the terminal.
 

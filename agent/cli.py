@@ -33,7 +33,7 @@ def main(argv: list[str] | None = None) -> int:
     if argv:
         print(answer(" ".join(argv)))
         return 0
-    print("Dispatch Ledger controller. Type help, or quit to leave.")
+    print("Caliber controller. Type help, or quit to leave.")
     while True:
         try:
             line = input("controller> ")

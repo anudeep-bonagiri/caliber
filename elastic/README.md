@@ -1,4 +1,4 @@
-# Elastic layer for Dispatch Ledger
+# Elastic layer for Caliber (repo and ledger name: dispatch-ledger)
 
 Elastic Cloud Serverless holds the evidence the investigator may touch: telematics pings, fuel receipts, vendor contracts and invoices. Two hand-written ES|QL tools live in Elastic Agent Builder, and the worker's Droid session reaches them over the Agent Builder MCP endpoint. Nothing here writes ES|QL at runtime; the queries are fixed in `tools/*.json`.
 

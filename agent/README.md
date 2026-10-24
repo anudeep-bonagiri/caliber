@@ -3,7 +3,7 @@
 ![tag:innovationlab](https://img.shields.io/badge/innovationlab-3D8BD3)
 ![tag:hackathon](https://img.shields.io/badge/hackathon-5F43F1)
 
-The fleet controller's seat for Dispatch Ledger, an autonomous accounts-payable clerk for a simulated trucking carrier. The carrier's whole state (business day clock, fuel card and toll transactions, invoices, holds, rules, payments and the audit trail) lives in one SpacetimeDB module. A matching kernel pays clean transactions by itself, a Droid investigator works the exceptions and asks one question when it needs one, and this agent is where the controller answers it. Every reply is read from ledger rows, every approval is a reducer call that the database checks for role and segregation of duties, and every refusal shows the reducer's own message. No agent moves money on its own.
+The fleet controller's seat for Caliber (repo and ledger name: dispatch-ledger), an autonomous accounts-payable clerk for a simulated trucking carrier. The carrier's whole state (business day clock, fuel card and toll transactions, invoices, holds, rules, payments and the audit trail) lives in one SpacetimeDB module. A matching kernel pays clean transactions by itself, a Droid investigator works the exceptions and asks one question when it needs one, and this agent is where the controller answers it. Every reply is read from ledger rows, every approval is a reducer call that the database checks for role and segregation of duties, and every refusal shows the reducer's own message. No agent moves money on its own.
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
