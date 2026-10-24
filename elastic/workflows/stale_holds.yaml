@@ -1,0 +1,69 @@
+name: caliber-stale-holds
+description: >
+  Caliber stale-hold escalation. Every hour (and on demand for the demo) read the `holds` index, which
+  elastic/mirror_holds.py copies from the ledger's public hold table, find holds still open after more than
+  min_age_bd business days, ask the Agent Builder agent dispatch-investigator for a one-paragraph brief per hold
+  using its ES|QL tools, and write each brief into the `escalations` index that the controller agent's `status`
+  reply reads. Nothing here moves money or changes a hold; it only writes briefs.
+enabled: true
+tags:
+  - caliber
+  - calhacks
+triggers:
+  - type: scheduled
+    with:
+      every: "1h"
+  - type: manual
+    inputs:
+      - name: min_age_bd
+        type: number
+        default: 2
+        description: Escalate holds open for more than this many business days (the kernel's default is 2).
+steps:
+  - name: find_stale_holds
+    type: elasticsearch.esql.query
+    with:
+      format: json
+      query: >
+        FROM holds
+        | WHERE is_open == true AND age_bd > {{ inputs.min_age_bd | default: 2 }}
+        | SORT age_bd DESC, cents DESC
+        | KEEP txn_ref, kind, code, cents, opened_day, current_day, age_bd, status, reason, question
+        | LIMIT 3
+  - name: brief_each_hold
+    type: foreach
+    foreach: "{{ steps.find_stale_holds.output.values | json }}"
+    steps:
+      - name: write_brief
+        type: ai.agent
+        agent-id: dispatch-investigator
+        with:
+          message: >
+            A hold in Caliber (an accounts-payable clerk for a simulated trucking carrier) has been open for
+            {{ foreach.item[6] }} business days with no answer from the controller. Write a one-paragraph brief
+            for the controller: what is held, why, what the evidence tools show, and the one question that would
+            close it. Use the tools you have (find_trips_near, contract_rate_for_vendor, find_contract_clause,
+            find_receipt_text) before writing; cite tool outputs verbatim; never recommend paying.
+            Hold: txn_ref {{ foreach.item[0] }}, kind {{ foreach.item[1] }}, code {{ foreach.item[2] }},
+            amount cents {{ foreach.item[3] }}, opened business day {{ foreach.item[4] }}, current business day
+            {{ foreach.item[5] }}, status {{ foreach.item[7] }}. Kernel reason: {{ foreach.item[8] }}.
+            Open question to the controller: {{ foreach.item[9] }}.
+      - name: index_escalation
+        type: elasticsearch.index
+        with:
+          index: escalations
+          id: "{{ foreach.item[0] }}-{{ execution.id }}"
+          refresh: "true"
+          document:
+            hold_ref: "{{ foreach.item[0] }}"
+            code: "{{ foreach.item[2] }}"
+            cents: "{{ foreach.item[3] }}"
+            day: "{{ foreach.item[5] }}"
+            age_bd: "{{ foreach.item[6] }}"
+            min_age_bd: "{{ inputs.min_age_bd | default: 2 }}"
+            brief: "{{ steps.write_brief.output.message }}"
+            at: "{{ 'now' | date: '%Y-%m-%dT%H:%M:%SZ' }}"
+            workflow_run: "{{ execution.id }}"
+            workflow: caliber-stale-holds
+            agent_id: dispatch-investigator
+            source: workflow

@@ -1,0 +1,20 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "txn_ref": {"type": "keyword"},
+    "kind": {"type": "keyword"},
+    "code": {"type": "keyword"},
+    "cents": {"type": "long"},
+    "opened_day": {"type": "integer"},
+    "current_day": {"type": "integer"},
+    "age_bd": {"type": "integer"},
+    "status": {"type": "keyword"},
+    "is_open": {"type": "boolean"},
+    "reason": {"type": "text"},
+    "question": {"type": "text"},
+    "answer": {"type": "text"},
+    "updated_at": {"type": "date"},
+    "mirrored_at": {"type": "date"},
+    "source": {"type": "keyword"}
+  }
+}

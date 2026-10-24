@@ -253,10 +253,12 @@ def test_status_reads_business_day_and_day_total(fake):
     fake.tables["business_day"] = [{"id": 1, "day": 41, "date": "2026-08-27", "paused": True, "tick_micros": 2000000}]
     fake.tables["day_total"] = [{"day": 41, "auto_paid_cents": 1421000, "auto_paid_count": 12, "hold_count": 3, "rejected_count": 1, "txn_count": 16}]
     out = handlers.handle("u1", "status")
-    assert out == "Day 41 of 92 (2026-08-27), clock paused, tick 2 s. Today: 16 transactions, 12 auto-paid ($14,210.00), 3 held, 1 rejected."
+    # Task 26.3: the reply ends with the escalations line; with no Elastic variables set it says so, never silent.
+    assert out == ("Day 41 of 92 (2026-08-27), clock paused, tick 2 s. Today: 16 transactions, 12 auto-paid ($14,210.00), 3 held, 1 rejected."
+                   "\nescalations: not connected")
     assert "WHERE day = 41" in fake.queries[1]
     fake.tables["day_total"] = []
-    assert handlers.handle("u1", "day").endswith("Nothing settled today yet.")
+    assert handlers.handle("u1", "day").endswith("Nothing settled today yet.\nescalations: not connected")
 
 
 def test_pause_resume_step(fake):

@@ -1,0 +1,26 @@
+Workflows API probe on Serverless project my-elasticsearch-project-b5e003, 2026-10-24 15:53 to 16:30 PDT
+Headers: Authorization: ApiKey <ELASTIC_API_KEY>, kbn-xsrf: true, Content-Type: application/json (key never logged)
+
+GET  /api/workflows                                   -> 200 {"page":1,"size":100,"total":0,"results":[]}   (feature present; Jd Armada confirms Workflows is GA on Serverless, no workflows:ui:enabled toggle)
+GET  /api/kibana/settings                             -> 404 Not Found (no Advanced Settings API on this project; not needed)
+POST /api/workflows {}                                -> 400 "expected array" at path ["workflows"]  (bulk create body)
+POST /api/workflows {"workflows":[{"yaml":"..."}]}    -> 200 {"created":[{"id":"<name slug>","enabled":...,"valid":true,...}],"failed":[]}
+     the id is the name slug; recreating a deleted name yields <slug>-1, <slug>-2
+GET  /api/workflows/{id}                              -> 404
+PUT  /api/workflows/{id} {"yaml"}                     -> 404
+PUT  /api/workflows {"workflows":[{"id","yaml"}]}     -> 404
+POST /api/workflows/{id}/run {"inputs":{}}            -> 404   (also /execute, /_run: 404)
+POST /api/workflowExecutions                          -> 404 ; GET /api/workflowExecutions -> 404 ; GET /api/workflowExecutions/{id} -> 302
+DELETE /api/workflows {"ids":[...]}                   -> 200 {"total":n,"deleted":n,"failures":[]}
+
+Agent Builder tools that drive it (POST /api/agent_builder/tools/_execute):
+  platform.workflows.validate_workflow {yaml}         -> {"result":{"valid":true,"diagnostics":[],"notChecked":[...]}}
+  platform.core.execute_workflow {workflowId, inputs?, waitForCompletion}
+                                                      -> {"execution":{"execution_id","status":"completed","workflow_id","started_at","finished_at","workflow_name","output"}}
+                                                      -> error "Workflow '<id>' is disabled and cannot be executed." when enabled: false
+  platform.core.get_workflow_execution_status {executionId}
+  platform.workflows.get_step_definitions {stepType}  (ai.agent: agent-id, with.message, with.schema; elasticsearch.esql.query: with.query, format; elasticsearch.index: index, id, document, refresh; foreach: foreach, steps)
+  platform.workflows.get_trigger_definitions          (scheduled: with.every "1h" or rrule; manual)
+
+Consequence for elastic/setup_workflow.py: upsert = list by name, delete when the stored yaml differs, create; run through platform.core.execute_workflow.
+UI: {KIBANA_URL}/app/workflows lists the workflow (screenshot workflows_list_2026-10-24.jpg); Executions tab shows the runs.

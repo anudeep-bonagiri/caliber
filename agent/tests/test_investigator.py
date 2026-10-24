@@ -66,7 +66,8 @@ def test_why_is_the_shared_read_as_the_reader(fake):
 def test_status_as_the_reader_and_anonymous_footer(fake, monkeypatch):
     fake.tables["business_day"] = [{"id": 1, "day": 41, "date": "2026-08-27", "paused": True, "tick_micros": 2000000}]
     fake.tables["day_total"] = []
-    assert investigate.handle(USER, "status") == "Day 41 of 92 (2026-08-27), clock paused, tick 2 s. Nothing settled today yet."
+    assert investigate.handle(USER, "status") == ("Day 41 of 92 (2026-08-27), clock paused, tick 2 s. Nothing settled today yet."
+                                                  "\nescalations: not connected")
     monkeypatch.delenv("STDB_READER_TOKEN")
     out = investigate.handle(USER, "status")
     assert out.endswith("\nread as anonymous")

@@ -1,0 +1,17 @@
+{
+  "dynamic": "strict",
+  "properties": {
+    "hold_ref": {"type": "keyword"},
+    "code": {"type": "keyword"},
+    "cents": {"type": "long"},
+    "day": {"type": "integer"},
+    "age_bd": {"type": "integer"},
+    "min_age_bd": {"type": "integer"},
+    "brief": {"type": "text"},
+    "at": {"type": "date"},
+    "workflow_run": {"type": "keyword"},
+    "workflow": {"type": "keyword"},
+    "agent_id": {"type": "keyword"},
+    "source": {"type": "keyword"}
+  }
+}
