@@ -545,3 +545,61 @@ describe('7. settlement: record_settlement writes a bank id onto an existing pay
     expect(w.rows.payment('T1041')?.bankTxnId).toHaveLength(120);
   });
 });
+
+describe('8. the reader role: the identity that explains cannot pay', () => {
+  // Task 18. The investigator agent holds a `reader` identity. It reads public views and the stored
+  // finding; every money, rule and worker reducer refuses it on the role check, before anything else.
+  let w: World;
+  let reader: ReturnType<typeof jwt>;
+  beforeEach(() => {
+    w = makeWorld();
+    reader = jwt('investigator-1');
+    w.grant(reader, 'reader');
+    w.stepTo(41); // hold 2231 and its open task exist
+  });
+
+  it('grant_role accepts reader and records it', () => {
+    expect(w.h.db.role.identity.find(w.identityOf(reader))?.role).toBe('reader');
+    expect(w.rows.audits('grant_role').map(e => e.detail)).toContain('reader');
+  });
+
+  it('every controller reducer refuses the reader on the role check', () => {
+    const { run, mod } = w;
+    expect(() => run(reader, ctx => mod.approvePayment(ctx, { txnRef: '2231', callbackNote: undefined }))).toThrow('reader may not do this (needs controller)');
+    expect(() => run(reader, ctx => mod.answerQuestion(ctx, { txnRef: '2231', text: 'Ortiz drove truck 22 that day.' }))).toThrow('reader may not do this (needs controller)');
+    expect(() => run(reader, ctx => mod.approveRule(ctx, { id: 1n }))).toThrow('reader may not do this (needs controller)');
+    expect(() => run(reader, ctx => mod.rejectPayment(ctx, { txnRef: '2231', reason: 'card was cloned' }))).toThrow('reader may not do this (needs controller)');
+    expect(w.rows.hold('2231')?.status).toBe('open');
+    expect(w.rows.payment('2231')).toBeFalsy();
+  });
+
+  it('every agent reducer refuses the reader on the role check', () => {
+    const { run, mod } = w;
+    const task = w.rows.tasks('2231')[0];
+    expect(() => run(reader, ctx => mod.claimTask(ctx, { id: task.id, version: task.version }))).toThrow('reader may not do this (needs agent)');
+    expect(() => run(reader, ctx => mod.recordInvestigation(ctx, {
+      id: task.id, stepsJson: '[]', findingJson: '{}', recommendation: 'clear', question: undefined, source: 'live',
+    }))).toThrow('reader may not do this (needs agent)');
+    expect(() => run(reader, ctx => mod.createRule(ctx, {
+      sourceTxnRef: '2231', scopeJson: '{"driverId":23}', condition: 'location_mismatch', backtestJson: '{}',
+      uses: 'one_time', validFromDay: 41, validToDay: 46, reason: 'driver swapped trucks',
+    }))).toThrow('reader may not do this (needs agent)');
+    expect(w.h.db.agentTask.id.find(task.id)?.status).toBe('open');
+    expect(w.rows.rules()).toHaveLength(0);
+  });
+
+  it('try_approve_payment by the reader returns [false, message] and leaves an audit row with actor_role reader', () => {
+    const before = w.rows.audits('refused').length;
+    const out = w.mod.tryApprovePayment(w.h.procedureContext(reader), { txnRef: '2231', callbackNote: undefined });
+    expect(out).toEqual({ ok: false, message: 'reader may not do this (needs controller)' });
+    const refused = w.rows.audits('refused');
+    expect(refused).toHaveLength(before + 1);
+    const row = refused[refused.length - 1];
+    expect(row.actorRole).toBe('reader');
+    expect(row.ref).toBe('2231');
+    expect(row.detail).toBe('reader may not do this (needs controller)');
+    expect(row.actor.isEqual(w.identityOf(reader))).toBe(true);
+    expect(w.rows.hold('2231')?.status).toBe('open');
+    expect(w.rows.payment('2231')).toBeFalsy();
+  });
+});

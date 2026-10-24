@@ -98,7 +98,7 @@ export const init = spacetimedb.init(ctx => {
 
 export const grantRole = spacetimedb.reducer({ identity: t.identity(), role: t.string() }, (ctx, { identity, role: r }) => {
   requireRole(ctx, identity.toHexString(), 'seed');
-  if (!['seed', 'agent', 'controller'].includes(r)) refuse(ctx, identity.toHexString(), `unknown role ${r}`);
+  if (!['seed', 'agent', 'controller', 'reader'].includes(r)) refuse(ctx, identity.toHexString(), `unknown role ${r}`);
   const existing = ctx.db.role.identity.find(identity);
   if (existing) ctx.db.role.identity.update({ ...existing, role: r });
   else ctx.db.role.insert({ identity, role: r });
