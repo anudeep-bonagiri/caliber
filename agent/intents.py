@@ -5,6 +5,7 @@ Nothing here touches the database. The handler validates references before any S
 
 from __future__ import annotations
 
+import difflib
 import json
 import os
 import re
@@ -15,6 +16,7 @@ import httpx
 ASI_URL = "https://api.asi1.ai/v1/chat/completions"
 ASI_MODEL = os.getenv("ASI_ONE_MODEL", "asi1-mini")
 ASI_TIMEOUT = 8.0
+MAX_CLASSIFY_CHARS = 2000   # cap on the user text sent to the classifier
 
 INTENTS = {
     "holds", "why", "answer", "approve_rule", "reject_rule", "approve", "reject",
@@ -80,6 +82,27 @@ def parse(text: str) -> Intent | None:
     return None
 
 
+# ---- command look-alikes ----
+
+COMMAND_WORDS = ("approve", "reject", "why", "answer", "rules", "status", "pause", "resume", "step", "help")
+
+
+def looks_like_command(text: str) -> bool:
+    """True when an unparsed line starts like a command ("approve" with no ref, "aprove 2231", "rejected").
+
+    Such a line is a mistyped command, never free text, so it must not become the answer to a hold.
+    """
+    words = (text or "").strip().lower().split(maxsplit=1)
+    if not words:
+        return False
+    word = re.sub(r"[^a-z]+$", "", words[0])
+    if not word:
+        return False
+    if any(word.startswith(c) for c in COMMAND_WORDS):
+        return True
+    return bool(difflib.get_close_matches(word, COMMAND_WORDS + ("rule",), n=1, cutoff=0.8))
+
+
 # ---- free text: one ASI:One call ----
 
 SYSTEM = """You route one message from a trucking fleet controller to exactly one intent for an autonomous accounts-payable clerk.
@@ -138,7 +161,7 @@ def classify(text: str, awaiting: list[dict], api_key: str | None = None) -> Int
     try:
         raw = _chat_completion(api_key, [
             {"role": "system", "content": SYSTEM + "\n\n" + _pending_block(awaiting)},
-            {"role": "user", "content": text},
+            {"role": "user", "content": (text or "")[:MAX_CLASSIFY_CHARS]},
         ])
     except Exception:
         return None

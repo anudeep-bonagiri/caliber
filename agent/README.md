@@ -34,6 +34,6 @@ cd .. && agent/.venv/bin/python -m agent.cli "what needs me"     # terminal, no 
 agent/.venv/bin/python agent/agent.py                             # the uAgent; open the Inspector link, Connect, Mailbox
 ```
 
-Environment (repo root `.env`): `STDB_URI`, `STDB_DB`, `STDB_CONTROLLER_TOKEN`, `AGENT_SEED`, `AGENT_PORT`, and optionally `ASI_ONE_API_KEY` for free-text routing through `asi1-mini`. Without the key, free text is taken as the answer to the hold you last discussed.
+Environment (repo root `.env`): `STDB_URI`, `STDB_DB`, `STDB_CONTROLLER_TOKEN`, `AGENT_SEED`, `AGENT_PORT`, and optionally `ASI_ONE_API_KEY` for free-text routing through `asi1-mini`. Without the key, free text is taken as the answer to the hold you last discussed. A line that starts like a command but does not parse (`aprove 2231`, a bare `answer`) gets the help text, never stored as an answer. Text is bounded before any call, matching the module: answers up to 1000 characters, call-back notes and reasons up to 500, control characters other than newline dropped; at most 2000 characters go to the classifier.
 
 Simulated carrier. Sandbox money. Not for operational use.

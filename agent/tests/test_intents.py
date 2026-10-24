@@ -341,3 +341,105 @@ def test_dollars():
     assert fmt.dollars("28000") == "$280.00"
     assert fmt.dollars(-150) == "-$1.50"
     assert fmt.dollars(None) == "$?"
+
+
+# ---- text bounds (module limits: answer 1000, note and reasons 500) ----
+
+@pytest.mark.parametrize("command,reducer,limit,what,expected_arg", [
+    ("answer 2231 {}", "try_answer_question", 1000, "answer", lambda body: body),
+    ("approve 2231 {}", "try_approve_payment", 500, "call-back note", lambda body: {"some": body}),
+    ("reject 2231 {}", "try_reject_payment", 500, "reason", lambda body: body),
+    ("reject rule 2 {}", "try_reject_rule", 500, "reason", lambda body: body),
+])
+def test_text_bound_at_limit_and_one_over(fake, command, reducer, limit, what, expected_arg):
+    at = "x" * limit
+    handlers.handle("u1", command.format(at))
+    assert fake.calls == [(reducer, [2 if "rule" in command else "2231", expected_arg(at)])]
+
+    out = handlers.handle("u1", command.format("x" * (limit + 1)))
+    assert out == f"Refused: {what} is longer than {limit} characters"
+    assert len(fake.calls) == 1        # nothing sent for the over-long text
+
+
+def test_text_bound_counts_like_the_module(fake):
+    """The module counts JavaScript string length, so an emoji is two characters."""
+    out = handlers.handle("u1", "reject 2231 " + "x" * 499 + "\U0001F69A")
+    assert out == "Refused: reason is longer than 500 characters"
+    assert fake.calls == []
+
+
+def test_control_characters_are_stripped_except_newline(fake):
+    handlers.handle("u1", "answer 2231 yes\x00 he\x1b[31m drove\r\n22\tthat\x7f day")
+    assert fake.calls == [("try_answer_question", ["2231", "yes he[31m drove\n22that day"])]
+    assert handlers.bound_text("  a\x07b\n\x85c  ", 10, "answer") == "ab\nc"
+
+
+def test_blank_after_cleanup_is_refused_before_any_call(fake):
+    assert handlers.handle("u1", "reject 2231 \x01\x02") == "Refused: reason is empty"
+    assert handlers.handle("u1", "approve 2231 \x1b") == "Refused: call-back note is empty"
+    assert fake.calls == []
+    with pytest.raises(handlers.TextRefused, match="answer is empty"):
+        handlers.bound_text(" \t\n ", 1000, "answer")
+
+
+def test_long_free_text_fallback_answer_is_bounded(fake):
+    handlers.LAST_REF["u1"] = "2231"
+    out = handlers.handle("u1", "he did " + "x" * 1000)
+    assert out == "Refused: answer is longer than 1000 characters"
+    assert fake.calls == []
+
+
+def test_classifier_input_is_capped_and_its_text_is_bounded(fake, monkeypatch):
+    monkeypatch.setenv("ASI_ONE_API_KEY", "k")
+    fake.tables["hold"] = [HOLD_BANK]
+    sent = []
+
+    def completion(api_key, messages):
+        sent.append(messages[1]["content"])
+        return json.dumps({"intent": "approve", "txnRef": "INV-1077", "text": "n" * 501})
+
+    monkeypatch.setattr(intents, "_chat_completion", completion)
+    out = handlers.handle("u1", "go ahead, I called them " + "z" * 5000)
+    assert len(sent[0]) == 2000
+    assert out == "Refused: call-back note is longer than 500 characters"
+    assert fake.calls == []
+
+    monkeypatch.setattr(intents, "_chat_completion",
+                        lambda k, m: json.dumps({"intent": "approve", "txnRef": "INV-1077", "text": "called\x00 Maria"}))
+    handlers.handle("u1", "go ahead, I called Maria")
+    assert fake.calls == [("try_approve_payment", ["INV-1077", {"some": "called Maria"}])]
+
+
+# ---- mistyped commands never become answers ----
+
+@pytest.mark.parametrize("text", [
+    "approve", "reject", "why", "answer", "answer 2231", "aprove 2231", "rejct 2231 bad", "approved it",
+    "statsu", "rules please", "pause now", "resum", "step 3", "helpp", "Approve2231",
+])
+def test_mistyped_command_is_help_not_an_answer(fake, text):
+    fake.tables["hold"] = [HOLD_AWAITING]
+    handlers.LAST_REF["u1"] = "2231"
+    assert intents.looks_like_command(text)
+    assert handlers.handle("u1", text) == fmt.HELP
+    assert fake.calls == []
+
+
+def test_mistyped_command_skips_the_classifier_one_hold_default(fake, monkeypatch):
+    monkeypatch.setenv("ASI_ONE_API_KEY", "k")
+    fake.tables["hold"] = [HOLD_AWAITING]          # exactly one awaiting hold
+    seen = []
+
+    def completion(api_key, messages):
+        seen.append(messages)
+        return '{"intent": "answer", "txnRef": null, "text": null}'
+
+    monkeypatch.setattr(intents, "_chat_completion", completion)
+    assert handlers.handle("u1", "aprove 2231") == fmt.HELP
+    assert seen == [] and fake.calls == []
+    handlers.handle("u1", "yes Ramon drove 22")    # real free text still takes the default
+    assert fake.calls == [("try_answer_question", ["2231", "yes Ramon drove 22"])]
+
+
+@pytest.mark.parametrize("text", ["yes he drove truck 22", "confirmed with the driver", "hello there", "the vendor confirmed", "go ahead and pay it"])
+def test_ordinary_free_text_is_not_a_command(text):
+    assert not intents.looks_like_command(text)

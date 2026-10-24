@@ -4,12 +4,16 @@ Every controller action goes through the module's `try_*` procedures, so a refus
 `[false, message]` and is kept in audit_event; the reply shows that message verbatim after "Refused: ".
 
 Per sender it remembers the last transaction discussed, so a bare free-text line with no model key
-still lands as the answer to the right hold.
+still lands as the answer to the right hold. A line that looks like a mistyped command never does.
+
+Controller text is bounded here, before any network call, with the same limits the module enforces
+(docs/CONTRACT.md): answers up to 1000 characters, call-back notes and reasons up to 500, none blank.
 """
 
 from __future__ import annotations
 
 import os
+import unicodedata
 
 from . import formatting as fmt
 from . import intents, ledger
@@ -17,6 +21,28 @@ from .ledger import BadReference, LedgerError, LedgerRefused
 
 LAST_REF: dict[str, str] = {}   # sender -> last txnRef discussed
 TOTAL_DAYS = 92
+
+MAX_ANSWER = 1000
+MAX_NOTE = 500      # call-back notes, payment rejection reasons, rule rejection reasons
+
+
+class TextRefused(ValueError):
+    """Controller text the module would refuse; reported as "Refused: ..." without calling it."""
+
+
+def _js_length(text: str) -> int:
+    """Length as the module counts it (JavaScript string length, UTF-16 code units)."""
+    return len(text.encode("utf-16-le")) // 2
+
+
+def bound_text(text: str | None, max_len: int, what: str) -> str:
+    """Drop control characters other than newline, strip, refuse blank or over-long text."""
+    cleaned = "".join(ch for ch in (text or "") if ch == "\n" or unicodedata.category(ch) != "Cc").strip()
+    if not cleaned:
+        raise TextRefused(f"{what} is empty")
+    if _js_length(cleaned) > max_len:
+        raise TextRefused(f"{what} is longer than {max_len} characters")
+    return cleaned
 
 
 def handle(sender_id: str, text: str) -> str:
@@ -28,7 +54,7 @@ def handle(sender_id: str, text: str) -> str:
         return _dispatch(sender_id, intent)
     except BadReference as e:
         return str(e)
-    except LedgerRefused as e:
+    except (LedgerRefused, TextRefused) as e:
         return fmt.refused(str(e))
     except LedgerError as e:
         return f"Ledger error: {e}"
@@ -41,6 +67,8 @@ def _awaiting() -> list[dict]:
 
 
 def _free_text(sender_id: str, text: str) -> intents.Intent:
+    if intents.looks_like_command(text):
+        return intents.Intent("help")
     awaiting = _awaiting() if os.getenv("ASI_ONE_API_KEY") else []
     intent = intents.classify(text, awaiting)
     if intent is not None:
@@ -84,7 +112,7 @@ def _dispatch(sender_id: str, it: intents.Intent) -> str:
         rid = ledger.check_rule_id(it.ref or "")
         if not it.text:
             return f"reject rule {rid} needs a reason: reject rule {rid} <reason>"
-        ledger.call_try("try_reject_rule", rid, it.text)
+        ledger.call_try("try_reject_rule", rid, bound_text(it.text, MAX_NOTE, "reason"))
         return _confirm("reject_rule", str(rid))
 
     ref = ledger.check_txn_ref(it.ref or "")
@@ -94,15 +122,16 @@ def _dispatch(sender_id: str, it: intents.Intent) -> str:
     if name == "answer":
         if not it.text:
             return f"answer {ref} needs the text of your answer."
-        ledger.call_try("try_answer_question", ref, it.text)
+        ledger.call_try("try_answer_question", ref, bound_text(it.text, MAX_ANSWER, "answer"))
         return _confirm("answer_question", ref) + "\nThe worker will draft a rule from this answer; check `rules` shortly."
     if name == "approve":
-        ledger.call_try("try_approve_payment", ref, ledger.opt(it.text))
+        note = bound_text(it.text, MAX_NOTE, "call-back note") if it.text else None
+        ledger.call_try("try_approve_payment", ref, ledger.opt(note))
         return _confirm("approve_payment", ref)
     if name == "reject":
         if not it.text:
             return f"reject {ref} needs a reason: reject {ref} <reason>"
-        ledger.call_try("try_reject_payment", ref, it.text)
+        ledger.call_try("try_reject_payment", ref, bound_text(it.text, MAX_NOTE, "reason"))
         return _confirm("reject_payment", ref)
     return fmt.HELP
 
