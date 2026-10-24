@@ -456,11 +456,12 @@ const VENDOR_SOURCES: Array<{ source: string; label: string }> = [
 export function vendorBadgeFor(task: AgentTask, finding: VendorFinding | undefined): Badge | undefined {
   if (task.status === 'open' || task.status === 'claimed') return undefined;
   const title = `agent_task ${task.id}.source = ${task.source}, finding.status = ${finding?.status ?? 'none'}`;
-  if (finding?.status === 'hand_shaped') {
-    return { label: 'hand-shaped fixture, not sandbox data', tone: 'hold', title: `${title}. The fixture file was written by hand in the shape of a sandbox response; no CRS call produced these values.` };
+  // D-3: a hand-authored file is FIXTURE, never REPLAYED; only a recorded sandbox response (recorded: true) replays.
+  if (finding?.status === 'fixture') {
+    return { label: 'FIXTURE', tone: 'hold', title: `${title}. hand-authored fixture; CRS sandbox pending; no CRS call produced these values` };
   }
   if (task.source === 'live') return { label: 'live', tone: 'release', title };
-  if (task.source === 'replayed') return { label: 'replayed', tone: 'candidate', title: `${title}. Recorded sandbox response replayed verbatim.` };
+  if (task.source === 'replayed' || finding?.status === 'replayed') return { label: 'REPLAYED (recorded live)', tone: 'candidate', title: `${title}. Recorded sandbox response replayed verbatim.` };
   return { label: 'stand-in, not a vendor check', tone: 'refused', title };
 }
 
@@ -519,12 +520,14 @@ function VendorCheckView({ task }: { task: AgentTask }) {
             ) : null}
             <ul className="flex flex-col gap-1">
               {VENDOR_SOURCES.map(({ source, label }) => {
-                const i = finding.evidence?.findIndex(e => e.source === source) ?? -1;
+                // live and recorded rows carry the crs:* source; hand-authored fixture rows carry the fixture source
+                // with the call name in the ref, so match on either
+                const i = finding.evidence?.findIndex(e => e.source === source || (e.ref ?? '').toLowerCase().startsWith(label.toLowerCase())) ?? -1;
                 const e = i >= 0 ? finding.evidence![i] : undefined;
                 return (
                   <li key={source} className="rounded-sm border border-edge bg-bg px-2 py-1" title={e ? `${src}.evidence[${i}]` : `${src}.evidence`}>
                     <div className="flex flex-wrap items-baseline gap-x-2">
-                      <span className="num text-[10.5px] text-candidate">{source}</span>
+                      <span className={`num text-[10.5px] ${e?.source && e.source !== source ? 'text-hold' : 'text-candidate'}`}>{e?.source ?? source}</span>
                       <span className="text-[10.5px] text-faint">{label}</span>
                     </div>
                     <div className={`font-mono text-[11.5px] ${e ? 'text-text' : 'text-faint'}`}>{e?.quote || 'no result'}</div>

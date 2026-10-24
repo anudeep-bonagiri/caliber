@@ -63,7 +63,7 @@ export function LedgerOfTrust({
     let live = 0;
     let replayed = 0;
     let none = 0;
-    const vc = { live: 0, replayed: 0, handShaped: 0, none: 0 };
+    const vc = { live: 0, replayed: 0, fixture: 0, none: 0 };
     for (const t of tasks) {
       if (t.status !== 'investigated') continue;
       if (t.kind === 'investigate') {
@@ -74,7 +74,7 @@ export function LedgerOfTrust({
         let status = '';
         try { status = String((JSON.parse(t.findingJson || '{}') as { status?: string }).status ?? ''); } catch { status = ''; }
         if (t.source === 'live') vc.live++;
-        else if (status === 'hand_shaped') vc.handShaped++;
+        else if (status === 'fixture') vc.fixture++;
         else if (t.source === 'replayed') vc.replayed++;
         else vc.none++;
       }
@@ -149,7 +149,7 @@ export function LedgerOfTrust({
           scripted stand-in. Vendor checks:{' '}
           <Src id="agent_task (vendor_check).source = live" className="text-release">{provenance.vc.live}</Src> live,{' '}
           <Src id="agent_task (vendor_check).source = replayed, finding.status = replayed" className="text-candidate">{provenance.vc.replayed}</Src> recorded replay,{' '}
-          <Src id="agent_task (vendor_check).finding.status = hand_shaped" className={provenance.vc.handShaped > 0 ? 'text-hold' : 'text-muted'}>{provenance.vc.handShaped}</Src> hand-shaped fixture,{' '}
+          <Src id="agent_task (vendor_check).finding.status = fixture" className={provenance.vc.fixture > 0 ? 'text-hold' : 'text-muted'}>{provenance.vc.fixture}</Src> fixture,{' '}
           <Src id="agent_task (vendor_check).source = none" className={provenance.vc.none > 0 ? 'text-refused' : 'text-muted'}>{provenance.vc.none}</Src> stand-in
         </div>
       </div>
