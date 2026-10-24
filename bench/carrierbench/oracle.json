@@ -1,0 +1,195 @@
+{
+  "command": "python3 bench/carrierbench/oracle.py",
+  "fixtures": "seed/fixtures",
+  "gap": {
+    "autoRejected": {
+      "measured": 11,
+      "oracle": 11
+    },
+    "exceptionHolds": {
+      "measured": 47,
+      "oracle": 41
+    },
+    "policyHolds": {
+      "measured": 6,
+      "oracle": 6
+    },
+    "postedWithoutAPerson": {
+      "measured": 7886,
+      "note": "the measured count includes the decoys cleared by an approved rule (releasedRole rule)",
+      "oracle": 7886
+    },
+    "questionsAsked": {
+      "measured": 6,
+      "oracle": 0
+    },
+    "wrongPostings": {
+      "measured": 0,
+      "oracle": 0
+    }
+  },
+  "generatedAt": "2026-10-24T23:25:17+00:00",
+  "measured": {
+    "asOf": "2026-10-24T22:25:41+00:00",
+    "autoPaid": {
+      "cents": 108363052,
+      "count": 7886
+    },
+    "autoRejected": 11,
+    "controllerReleased": {
+      "cents": 3209700,
+      "count": 8
+    },
+    "decoys": 6,
+    "decoysClearedWithOneAnswer": 6,
+    "exceptionHolds": 47,
+    "overall": {
+      "falsePositives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "truePositives": 58
+    },
+    "plantedClearedByRule": 0,
+    "policyHolds": {
+      "cents": 1678900,
+      "count": 6
+    },
+    "questionsAsked": 6,
+    "refusals": {
+      "byRole": {
+        "agent": 1
+      },
+      "count": 1
+    },
+    "rowsEvaluated": 7944,
+    "rulesApproved": 6,
+    "source": "docs/FACTS.json"
+  },
+  "oracle": {
+    "autoRejected": {
+      "cents": 9475,
+      "count": 11
+    },
+    "byCode": [
+      {
+        "code": "location_mismatch",
+        "decoysClearedWithoutQuestion": 6,
+        "falsePositives": 0,
+        "planted": 20,
+        "precision": 1.0,
+        "raised": 14,
+        "recall": 1.0,
+        "truePositives": 20
+      },
+      {
+        "code": "capacity_exceeded",
+        "decoysClearedWithoutQuestion": 0,
+        "falsePositives": 0,
+        "planted": 6,
+        "precision": 1.0,
+        "raised": 6,
+        "recall": 1.0,
+        "truePositives": 6
+      },
+      {
+        "code": "rate_variance",
+        "decoysClearedWithoutQuestion": 0,
+        "falsePositives": 0,
+        "planted": 9,
+        "precision": 1.0,
+        "raised": 9,
+        "recall": 1.0,
+        "truePositives": 9
+      },
+      {
+        "code": "duplicate_toll",
+        "decoysClearedWithoutQuestion": 0,
+        "falsePositives": 0,
+        "planted": 11,
+        "precision": 1.0,
+        "raised": 11,
+        "recall": 1.0,
+        "truePositives": 11
+      },
+      {
+        "code": "duplicate_invoice",
+        "decoysClearedWithoutQuestion": 0,
+        "falsePositives": 0,
+        "planted": 4,
+        "precision": 1.0,
+        "raised": 4,
+        "recall": 1.0,
+        "truePositives": 4
+      },
+      {
+        "code": "vendor_bank_change",
+        "decoysClearedWithoutQuestion": 0,
+        "falsePositives": 0,
+        "planted": 3,
+        "precision": 1.0,
+        "raised": 3,
+        "recall": 1.0,
+        "truePositives": 3
+      },
+      {
+        "code": "short_received",
+        "decoysClearedWithoutQuestion": 0,
+        "falsePositives": 0,
+        "planted": 5,
+        "precision": 1.0,
+        "raised": 5,
+        "recall": 1.0,
+        "truePositives": 5
+      }
+    ],
+    "definition": "the kernel handed the answer key: planted rows held (duplicate tolls auto-rejected), decoys cleared with no question, clean rows posted under the same auto-pay limits; nothing is learned, nothing is asked",
+    "exceptionHolds": {
+      "byCode": {
+        "capacity_exceeded": 6,
+        "duplicate_invoice": 4,
+        "location_mismatch": 14,
+        "rate_variance": 9,
+        "short_received": 5,
+        "vendor_bank_change": 3
+      },
+      "cents": 4771807,
+      "count": 41
+    },
+    "humanDecisionsRequired": 47,
+    "maxDayAutoPaidCents": 1708832,
+    "overall": {
+      "falsePositives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "truePositives": 58
+    },
+    "policyHolds": {
+      "cents": 1678900,
+      "count": 6,
+      "refs": [
+        "INV-1075",
+        "INV-1080",
+        "INV-1106",
+        "INV-1109",
+        "INV-1117",
+        "INV-1171"
+      ]
+    },
+    "posted": {
+      "cents": 108363052,
+      "count": 7886,
+      "decoysIncluded": 6
+    },
+    "questionsAsked": 0,
+    "rowsEvaluated": 7944,
+    "rulesNeeded": 0,
+    "wrongHolds": {
+      "count": 0,
+      "refs": []
+    },
+    "wrongPostings": {
+      "count": 0,
+      "refs": []
+    }
+  }
+}
