@@ -8,9 +8,9 @@
 //     so a refusal leaves an `audit_event` row with action 'refused' and returns {ok:false, message}.
 //     The ASI:One agent and the demo scripts use these so refusals are visible in the ledger.
 import { SenderError, t, type InferSchema, type ReducerCtx } from 'spacetimedb/server';
-import { ScheduleAt } from 'spacetimedb';
+import { ScheduleAt, Timestamp } from 'spacetimedb';
 import spacetimedb, {
-  agentTask, businessDay, cardTxn, contract, dayTimer, driver, hold, invoice, matchResult, payment,
+  agentTask, businessDay, cardTxn, contract, dayTimer, driver, hold, ingestLog, invoice, matchResult, payment,
   po, rule, terminal, tollTxn, tripPing, truck, vendor,
 } from './schema';
 import { T, RULE_CONDITIONS } from './thresholds';
@@ -423,28 +423,149 @@ function vendorCheckTask(ctx: Ctx, txnRef: string, kind: string, cents: bigint, 
 const byTime = <R extends { id: string; at: { microsSinceUnixEpoch: bigint } }>(a: R, b: R) =>
   a.at.microsSinceUnixEpoch < b.at.microsSinceUnixEpoch ? -1 : a.at.microsSinceUnixEpoch > b.at.microsSinceUnixEpoch ? 1 : a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
 
+// One row through the kernel. These three are the only way a card, toll or invoice row becomes a match_result,
+// a payment or a hold: advance_day calls them for the day's rows and ingest_rows calls them for rows that arrive
+// on or after their day (Task 21). Each returns false when the row was already matched (re-running is a no-op).
+const byId = <R extends { id: string }>(a: R, b: R) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+function matchCardRow(ctx: Ctx, c: CardRow, rules: RuleIn[]): boolean {
+  if (ctx.db.matchResult.txnRef.find(c.id)) return false;
+  settle(ctx, c.id, 'card', c.cents, c.day, evaluateCard(ctx, c, rules));
+  return true;
+}
+function matchTollRow(ctx: Ctx, tl: TollRow): boolean {
+  if (ctx.db.matchResult.txnRef.find(tl.id)) return false;
+  settle(ctx, tl.id, 'toll', tl.cents, tl.day, evaluateTollRow(ctx, tl));
+  return true;
+}
+function matchInvoiceRow(ctx: Ctx, inv: InvoiceRow, rules: RuleIn[]): boolean {
+  if (ctx.db.matchResult.txnRef.find(inv.id)) return false;
+  const v = evaluateInvoiceRow(ctx, inv, rules);
+  settle(ctx, inv.id, 'invoice', inv.cents, inv.receivedDay, v);
+  // a vendor's first invoice is vetted too, whatever the kernel decided about the invoice itself
+  let earlier = false;
+  for (const e of ctx.db.invoice.vendorId.filter(inv.vendorId)) {
+    if (e.id !== inv.id && (e.receivedDay < inv.receivedDay || (e.receivedDay === inv.receivedDay && e.id < inv.id))) { earlier = true; break; }
+  }
+  if (!earlier) vendorCheckTask(ctx, inv.id, 'invoice', inv.cents, inv.receivedDay, 'first_invoice', { vendorId: inv.vendorId });
+  return true;
+}
+
 function matchDay(ctx: Ctx, day: number) {
   const rules = approvedRules(ctx);
-  for (const c of [...ctx.db.cardTxn.day.filter(day)].sort(byTime)) {
-    if (ctx.db.matchResult.txnRef.find(c.id)) continue; // re-running a day is a no-op
-    settle(ctx, c.id, 'card', c.cents, day, evaluateCard(ctx, c, rules));
-  }
-  for (const tl of [...ctx.db.tollTxn.day.filter(day)].sort(byTime)) {
-    if (ctx.db.matchResult.txnRef.find(tl.id)) continue;
-    settle(ctx, tl.id, 'toll', tl.cents, day, evaluateTollRow(ctx, tl));
-  }
-  for (const inv of [...ctx.db.invoice.receivedDay.filter(day)].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
-    if (ctx.db.matchResult.txnRef.find(inv.id)) continue;
-    const v = evaluateInvoiceRow(ctx, inv, rules);
-    settle(ctx, inv.id, 'invoice', inv.cents, day, v);
-    // a vendor's first invoice is vetted too, whatever the kernel decided about the invoice itself
-    let earlier = false;
-    for (const e of ctx.db.invoice.vendorId.filter(inv.vendorId)) {
-      if (e.id !== inv.id && (e.receivedDay < inv.receivedDay || (e.receivedDay === inv.receivedDay && e.id < inv.id))) { earlier = true; break; }
-    }
-    if (!earlier) vendorCheckTask(ctx, inv.id, 'invoice', inv.cents, day, 'first_invoice', { vendorId: inv.vendorId });
-  }
+  for (const c of [...ctx.db.cardTxn.day.filter(day)].sort(byTime)) matchCardRow(ctx, c, rules);
+  for (const tl of [...ctx.db.tollTxn.day.filter(day)].sort(byTime)) matchTollRow(ctx, tl);
+  for (const inv of [...ctx.db.invoice.receivedDay.filter(day)].sort(byId)) matchInvoiceRow(ctx, inv, rules);
 }
+
+// ---------------------------------------------------------------------------
+// Task 21: the inbox file connector. scripts/ingest_watch.py parses a dropped CSV (docs/CONNECTORS.md) and sends
+// its rows here in batches. Rows are inserted like the seed_* reducers do (an existing id is skipped, nothing is
+// overwritten), then every inserted row dated on or before the current business day goes through matchCardRow,
+// matchTollRow or matchInvoiceRow, the same path advance_day uses, so holds, auto-pay limits and duplicate
+// auto-rejects apply unchanged; rows dated later wait in their table for the clock. A file never names a truck:
+// the truck comes from the card number or the plate. An unknown card, plate or vendor, a bad day or a malformed
+// row refuses the whole batch and nothing is written. Label everywhere: file connector; API connectors not built.
+// ---------------------------------------------------------------------------
+const INGEST_KINDS = ['card', 'toll', 'invoice'];
+const INGEST_BATCH_MAX = 1000;
+type J = Record<string, unknown>;
+function jStr(ctx: Ctx, r: J, k: string, ref: string): string {
+  const v = r[k];
+  if (typeof v !== 'string' || v === '') refuse(ctx, ref, `${k} missing`);
+  return v;
+}
+function jNum(ctx: Ctx, r: J, k: string, ref: string): number {
+  const v = r[k];
+  if (typeof v !== 'number' || !Number.isFinite(v)) refuse(ctx, ref, `${k} is not a number`);
+  return v;
+}
+function jInt(ctx: Ctx, r: J, k: string, ref: string): number {
+  const v = jNum(ctx, r, k, ref);
+  if (!Number.isInteger(v)) refuse(ctx, ref, `${k} is not an integer`);
+  return v;
+}
+function jBig(ctx: Ctx, r: J, k: string, ref: string): bigint {
+  const v = r[k];
+  if (typeof v === 'number' && Number.isInteger(v)) return BigInt(v);
+  if (typeof v === 'string' && /^-?\d{1,18}$/.test(v)) return BigInt(v);
+  refuse(ctx, ref, `${k} is not an integer`);
+}
+function jDay(ctx: Ctx, r: J, k: string, ref: string): number {
+  const d = jInt(ctx, r, k, ref);
+  if (d < 1 || d > T.TOTAL_DAYS) refuse(ctx, ref, `${k} ${d} is outside 1 to ${T.TOTAL_DAYS}`);
+  return d;
+}
+const byDayTime = <R extends { id: string; day: number; at: { microsSinceUnixEpoch: bigint } }>(a: R, b: R) => a.day - b.day || byTime(a, b);
+
+export const ingestRows = spacetimedb.reducer({ fileName: t.string(), kind: t.string(), batchJson: t.string() }, (ctx, { fileName, kind, batchJson }) => {
+  requireRole(ctx, fileName, 'seed');
+  if (!INGEST_KINDS.includes(kind)) refuse(ctx, fileName, `unknown kind ${kind} (card, toll or invoice)`);
+  let batch: unknown;
+  try { batch = JSON.parse(batchJson); } catch { refuse(ctx, fileName, 'batch is not JSON'); }
+  if (!Array.isArray(batch)) refuse(ctx, fileName, 'batch is not a JSON array');
+  if (batch.length > INGEST_BATCH_MAX) refuse(ctx, fileName, `batch over ${INGEST_BATCH_MAX} rows`);
+  const today = currentDay(ctx);
+  const byCard = new Map<string, number>();
+  const byPlate = new Map<string, number>();
+  for (const tr of ctx.db.truck.iter()) { byCard.set(tr.fuelCardId, tr.id); byPlate.set(tr.plate, tr.id); }
+
+  let skipped = 0;
+  const cards: CardRow[] = [];
+  const tolls: TollRow[] = [];
+  const invs: InvoiceRow[] = [];
+  for (const raw of batch) {
+    if (raw === null || typeof raw !== 'object' || Array.isArray(raw)) refuse(ctx, fileName, 'row is not an object');
+    const r = raw as J;
+    const id = jStr(ctx, r, 'id', fileName);
+    if (kind === 'card') {
+      if (ctx.db.cardTxn.id.find(id)) { skipped++; continue; }
+      const cardId = jStr(ctx, r, 'cardId', id);
+      const truckId = byCard.get(cardId);
+      if (truckId === undefined) refuse(ctx, id, `unknown card ${cardId}`);
+      const row: CardRow = {
+        id, cardId, truckId, driverId: jInt(ctx, r, 'driverId', id), at: new Timestamp(jBig(ctx, r, 'atMicros', id)), day: jDay(ctx, r, 'day', id),
+        stationName: jStr(ctx, r, 'stationName', id), stationLat: jNum(ctx, r, 'stationLat', id), stationLon: jNum(ctx, r, 'stationLon', id),
+        gallons: jNum(ctx, r, 'gallons', id), cents: jBig(ctx, r, 'cents', id), merchant: jStr(ctx, r, 'merchant', id),
+      };
+      ctx.db.cardTxn.insert(row);
+      cards.push(row);
+    } else if (kind === 'toll') {
+      if (ctx.db.tollTxn.id.find(id)) { skipped++; continue; }
+      const plate = jStr(ctx, r, 'plate', id);
+      const truckId = byPlate.get(plate);
+      if (truckId === undefined) refuse(ctx, id, `unknown plate ${plate}`);
+      const row: TollRow = {
+        id, plate, truckId, at: new Timestamp(jBig(ctx, r, 'atMicros', id)), day: jDay(ctx, r, 'day', id),
+        plazaId: jStr(ctx, r, 'plazaId', id), plazaName: jStr(ctx, r, 'plazaName', id), cents: jBig(ctx, r, 'cents', id),
+      };
+      ctx.db.tollTxn.insert(row);
+      tolls.push(row);
+    } else {
+      if (ctx.db.invoice.id.find(id)) { skipped++; continue; }
+      const vendorId = jInt(ctx, r, 'vendorId', id);
+      if (!ctx.db.vendor.id.find(vendorId)) refuse(ctx, id, `unknown vendor ${vendorId}`);
+      const poRaw = r.poId;
+      const poId = poRaw === null || poRaw === undefined || poRaw === '' ? undefined : jStr(ctx, r, 'poId', id);
+      const row: InvoiceRow = {
+        id, vendorId, poId, receivedDay: jDay(ctx, r, 'receivedDay', id), item: jStr(ctx, r, 'item', id), qty: jNum(ctx, r, 'qty', id),
+        unitCents: jBig(ctx, r, 'unitCents', id), cents: jBig(ctx, r, 'cents', id), docRef: jStr(ctx, r, 'docRef', id),
+      };
+      ctx.db.invoice.insert(row);
+      invs.push(row);
+    }
+  }
+
+  // Rows already due are matched now, in the order advance_day would have used; later rows wait for the clock.
+  const rules = approvedRules(ctx);
+  let matched = 0;
+  for (const c of cards.filter(c => c.day <= today).sort(byDayTime)) if (matchCardRow(ctx, c, rules)) matched++;
+  for (const tl of tolls.filter(tl => tl.day <= today).sort(byDayTime)) if (matchTollRow(ctx, tl)) matched++;
+  for (const inv of invs.filter(inv => inv.receivedDay <= today).sort((a, b) => a.receivedDay - b.receivedDay || byId(a, b))) if (matchInvoiceRow(ctx, inv, rules)) matched++;
+
+  const waiting = batch.length - skipped - matched;
+  ctx.db.ingestLog.insert({ id: 0n, at: ctx.timestamp, fileName, kind, rows: batch.length, skipped, matched, actor: ctx.sender });
+  audit(ctx, 'ingest', fileName, `${kind}: ${batch.length} rows, ${skipped} skipped (already on file), ${matched} matched now, ${waiting} waiting for their day; file connector`);
+});
 
 // Re-evaluate one transaction with the rules approved now (so the demo does not wait for the next tick).
 function checkRematch(ctx: Ctx, txnRef: string): Refusal {

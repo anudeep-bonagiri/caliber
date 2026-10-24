@@ -6,7 +6,7 @@
 // error propagates to the test. Procedures take `h.procedureContext(auth)` instead and commit their
 // own transactions, so a refusal there leaves an audit row and returns `{ ok: false, message }`.
 import { beforeEach, describe, expect, it } from 'vitest';
-import { makeWorld, cardRow, jwt, type World } from './test_helpers';
+import { makeWorld, cardRow, jwt, EL_PASO, SCHULENBURG, type World } from './test_helpers';
 
 const DB_REQUESTED = 'requested by the database identity';
 
@@ -601,5 +601,119 @@ describe('8. the reader role: the identity that explains cannot pay', () => {
     expect(row.actor.isEqual(w.identityOf(reader))).toBe(true);
     expect(w.rows.hold('2231')?.status).toBe('open');
     expect(w.rows.payment('2231')).toBeFalsy();
+  });
+});
+
+describe('9. ingest_rows: the inbox file connector matches through the same path as the clock (Task 21)', () => {
+  let w: World;
+  const FILE = 'fuel_card_wex_sample.csv';
+  // the batch shape scripts/ingest_watch.py sends: no truck id (resolved from the card), micros as a string
+  const far = (w: World) => ({
+    id: '7001', cardId: 'FC-1017', driverId: 23, atMicros: w.ts(41, 13, 10).microsSinceUnixEpoch.toString(), day: 41,
+    stationName: 'Petro El Paso', stationLat: EL_PASO.lat, stationLon: EL_PASO.lon, gallons: 100, cents: 35000, merchant: 'PETRO',
+  });
+  const atPump = (w: World) => ({
+    id: '7002', cardId: 'FC-1022', driverId: 24, atMicros: w.ts(41, 13, 10).microsSinceUnixEpoch.toString(), day: 41,
+    stationName: "Love's 412, Schulenburg TX", stationLat: SCHULENBURG.lat, stationLon: SCHULENBURG.lon, gallons: 80, cents: 30000, merchant: 'LOVES #412',
+  });
+  const ingest = (auth: Parameters<World['run']>[0], kind: string, rows: object[], fileName = FILE) =>
+    w.run(auth, ctx => w.mod.ingestRows(ctx, { fileName, kind, batchJson: JSON.stringify(rows) }));
+  const logs = () => [...w.h.db.ingestLog.iter()];
+  beforeEach(() => {
+    w = makeWorld();
+    w.stepTo(41);
+  });
+
+  it('seed only: anonymous, agent, controller and reader are refused by role and nothing is written', () => {
+    for (const [auth, who] of [[w.anon, 'anonymous'], [w.agent, 'agent'], [w.controller, 'controller']] as const) {
+      expect(() => ingest(auth, 'card', [far(w)])).toThrow(`${who} may not do this (needs seed)`);
+    }
+    expect(w.h.db.cardTxn.id.find('7001')).toBeFalsy();
+    expect(logs()).toHaveLength(0);
+  });
+
+  it('a batch dropped on the current day raises the expected hold and pays the clean row under the limits', () => {
+    ingest(w.publisher, 'card', [far(w), atPump(w)]);
+    // the far row: truck 17 sat at San Antonio engine off, the card was used in El Paso
+    expect(w.rows.match('7001')?.code).toBe('location_mismatch');
+    expect(w.rows.hold('7001')?.status).toBe('open');
+    expect(w.rows.tasks('7001').map(t => t.kind)).toEqual(['investigate']);
+    expect(w.h.db.cardTxn.id.find('7001')?.truckId).toBe(17); // resolved from FC-1017, never read from the file
+    // the clean row: truck 22 pinged at the pump
+    expect(w.rows.match('7002')?.code).toBe('matched');
+    expect(w.rows.payment('7002')?.releasedRole).toBe('kernel');
+    expect(w.rows.hold('7002')).toBeFalsy();
+    expect(w.rows.dayTotal(41)?.txnCount).toBe(5); // 3 seeded rows on day 41 plus these two
+    const log = logs();
+    expect(log).toHaveLength(1);
+    expect(log[0]).toMatchObject({ fileName: FILE, kind: 'card', rows: 2, skipped: 0, matched: 2 });
+    expect(log[0].actor.isEqual(w.identityOf(w.publisher))).toBe(true);
+    const audit = w.rows.audits('ingest');
+    expect(audit).toHaveLength(1);
+    expect(audit[0].ref).toBe(FILE);
+    expect(audit[0].detail).toBe('card: 2 rows, 0 skipped (already on file), 2 matched now, 0 waiting for their day; file connector');
+  });
+
+  it('re-dropping the same batch skips every row and writes nothing new', () => {
+    ingest(w.publisher, 'card', [far(w), atPump(w)]);
+    const before = { cards: [...w.h.db.cardTxn.iter()].length, payments: [...w.h.db.payment.iter()].length, holds: [...w.h.db.hold.iter()].length, tasks: [...w.h.db.agentTask.iter()].length };
+    ingest(w.publisher, 'card', [far(w), atPump(w)]);
+    expect([...w.h.db.cardTxn.iter()].length).toBe(before.cards);
+    expect([...w.h.db.payment.iter()].length).toBe(before.payments);
+    expect([...w.h.db.hold.iter()].length).toBe(before.holds);
+    expect([...w.h.db.agentTask.iter()].length).toBe(before.tasks);
+    expect(logs()[logs().length - 1]).toMatchObject({ rows: 2, skipped: 2, matched: 0 });
+  });
+
+  it('a row dated after today waits for its day and is matched by the clock, in order', () => {
+    const later = { ...far(w), id: '7003', atMicros: w.ts(44, 9, 0).microsSinceUnixEpoch.toString(), day: 44 };
+    ingest(w.publisher, 'card', [later]);
+    expect(w.h.db.cardTxn.id.find('7003')?.day).toBe(44);
+    expect(w.rows.match('7003')).toBeFalsy();
+    expect(logs()[logs().length - 1]).toMatchObject({ rows: 1, skipped: 0, matched: 0 });
+    w.stepTo(43);
+    expect(w.rows.match('7003')).toBeFalsy();
+    w.stepTo(44);
+    expect(w.rows.match('7003')?.code).toBe('location_mismatch');
+    expect(w.rows.hold('7003')?.day).toBe(44);
+  });
+
+  it('a row dated before today is matched at once against its own day', () => {
+    const earlier = { ...atPump(w), id: '7004', atMicros: w.ts(40, 13, 10).microsSinceUnixEpoch.toString(), day: 40 };
+    ingest(w.publisher, 'card', [earlier]);
+    expect(w.rows.match('7004')?.code).toBe('location_mismatch'); // no truck 22 ping on day 40
+    expect(w.rows.hold('7004')?.day).toBe(40);
+    expect(w.rows.dayTotal(40)?.txnCount).toBe(1);
+  });
+
+  it('an unknown card, plate or vendor refuses the whole batch and nothing in it is written', () => {
+    expect(() => ingest(w.publisher, 'card', [atPump(w), { ...far(w), cardId: 'FC-9999' }])).toThrow('unknown card FC-9999');
+    expect(w.h.db.cardTxn.id.find('7002')).toBeFalsy();
+    const toll = { id: 'T7001', plate: 'TX-0000', atMicros: w.ts(41, 9, 0).microsSinceUnixEpoch.toString(), day: 41, plazaId: 'P-7', plazaName: 'SH-130 Plaza 7', cents: 350 };
+    expect(() => ingest(w.publisher, 'toll', [toll], 'toll_statement_sample.csv')).toThrow('unknown plate TX-0000');
+    const inv = { id: 'INV-7001', vendorId: 99, poId: null, receivedDay: 41, item: 'brake_job', qty: 1, unitCents: 24500, cents: 24500, docRef: 'invoices/INV-7001.txt' };
+    expect(() => ingest(w.publisher, 'invoice', [inv], 'maintenance_invoices_sample.csv')).toThrow('unknown vendor 99');
+    expect(() => ingest(w.publisher, 'fuel', [far(w)])).toThrow('unknown kind fuel');
+    expect(() => w.run(w.publisher, ctx => w.mod.ingestRows(ctx, { fileName: FILE, kind: 'card', batchJson: 'not json' }))).toThrow('batch is not JSON');
+    expect(() => ingest(w.publisher, 'card', [{ ...far(w), day: 93 }])).toThrow('day 93 is outside 1 to 92');
+    expect(() => ingest(w.publisher, 'card', [{ ...far(w), cents: 12.5 }])).toThrow('cents is not an integer');
+    expect(logs()).toHaveLength(0);
+  });
+
+  it('tolls and invoices take the same path: the second toll minutes after the first is auto-rejected, the invoice is matched', () => {
+    const t1 = { id: 'T7001', plate: 'TX-1022', atMicros: w.ts(41, 10, 0).microsSinceUnixEpoch.toString(), day: 41, plazaId: 'P-9', plazaName: 'SH-130 Plaza 9', cents: 350 };
+    const t2 = { ...t1, id: 'T7002', atMicros: w.ts(41, 10, 3).microsSinceUnixEpoch.toString() };
+    ingest(w.publisher, 'toll', [t2, t1], 'toll_statement_sample.csv'); // out of order in the file; matched in time order
+    expect(w.h.db.tollTxn.id.find('T7001')?.truckId).toBe(22);
+    expect(w.rows.match('T7001')?.code).toBe('matched');
+    expect(w.rows.match('T7002')?.code).toBe('duplicate_toll');
+    expect(w.rows.payment('T7002')).toBeFalsy();
+    expect(w.rows.audits('auto_reject').some(a => a.ref === 'T7002')).toBe(true);
+    const inv = { id: 'INV-7001', vendorId: 3, poId: 'PO-3001', receivedDay: 41, item: 'brake_job', qty: 40, unitCents: 24500, cents: 980000, docRef: 'invoices/INV-7001.txt' };
+    ingest(w.publisher, 'invoice', [inv], 'maintenance_invoices_sample.csv');
+    expect(w.h.db.invoice.id.find('INV-7001')?.poId).toBe('PO-3001');
+    expect(w.rows.match('INV-7001')).toBeTruthy();
+    expect(w.rows.tasks('INV-7001').map(t => t.kind)).toContain('vendor_check'); // the vendor's first invoice is vetted
+    expect(logs().map(l => l.kind)).toEqual(['toll', 'invoice']);
   });
 });

@@ -118,6 +118,18 @@ export const Hold = __t.object("Hold", {
 });
 export type Hold = __Infer<typeof Hold>;
 
+export const IngestLog = __t.object("IngestLog", {
+  id: __t.u64(),
+  at: __t.timestamp(),
+  fileName: __t.string(),
+  kind: __t.string(),
+  rows: __t.u32(),
+  skipped: __t.u32(),
+  matched: __t.u32(),
+  actor: __t.identity(),
+});
+export type IngestLog = __Infer<typeof IngestLog>;
+
 export const Invoice = __t.object("Invoice", {
   id: __t.string(),
   vendorId: __t.u32(),

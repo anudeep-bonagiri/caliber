@@ -223,6 +223,18 @@ export const auditEvent = table({ name: 'audit_event', public: true }, {
   detail: t.string(),
 });
 
+// Task 21: one row per batch the inbox file connector handed to `ingest_rows` (public; counts only, no money fields).
+export const ingestLog = table({ name: 'ingest_log', public: true }, {
+  id: t.u64().primaryKey().autoInc(),
+  at: t.timestamp(),
+  fileName: t.string(),
+  kind: t.string(),
+  rows: t.u32(),
+  skipped: t.u32(),
+  matched: t.u32(),
+  actor: t.identity(),
+});
+
 const spacetimedb = schema({
   role,
   businessDay,
@@ -244,6 +256,7 @@ const spacetimedb = schema({
   hold,
   rule,
   auditEvent,
+  ingestLog,
 });
 
 export default spacetimedb;

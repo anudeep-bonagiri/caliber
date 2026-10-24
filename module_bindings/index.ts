@@ -40,6 +40,7 @@ import ApproveRuleReducer from "./approve_rule_reducer";
 import ClaimTaskReducer from "./claim_task_reducer";
 import CreateRuleReducer from "./create_rule_reducer";
 import GrantRoleReducer from "./grant_role_reducer";
+import IngestRowsReducer from "./ingest_rows_reducer";
 import InjectCardTxnReducer from "./inject_card_txn_reducer";
 import RecordInvestigationReducer from "./record_investigation_reducer";
 import RecordSettlementReducer from "./record_settlement_reducer";
@@ -78,6 +79,7 @@ import AuditEventRow from "./audit_event_table";
 import BusinessDayRow from "./business_day_table";
 import DayTotalRow from "./day_total_table";
 import HoldRow from "./hold_table";
+import IngestLogRow from "./ingest_log_table";
 import MatchResultRow from "./match_result_table";
 import PaymentRow from "./payment_table";
 import RuleRow from "./rule_table";
@@ -156,6 +158,17 @@ const tablesSchema = __schema({
       { name: 'hold_txn_ref_key', constraint: 'unique', columns: ['txnRef'] },
     ],
   }, HoldRow),
+  ingestLog: __table({
+    name: 'ingest_log',
+    indexes: [
+      { accessor: 'id', name: 'ingest_log_id_idx_btree', algorithm: 'btree', columns: [
+        'id',
+      ] },
+    ],
+    constraints: [
+      { name: 'ingest_log_id_key', constraint: 'unique', columns: ['id'] },
+    ],
+  }, IngestLogRow),
   matchResult: __table({
     name: 'match_result',
     indexes: [
@@ -211,6 +224,7 @@ const reducersSchema = __reducers(
   __reducerSchema("claim_task", ClaimTaskReducer),
   __reducerSchema("create_rule", CreateRuleReducer),
   __reducerSchema("grant_role", GrantRoleReducer),
+  __reducerSchema("ingest_rows", IngestRowsReducer),
   __reducerSchema("inject_card_txn", InjectCardTxnReducer),
   __reducerSchema("record_investigation", RecordInvestigationReducer),
   __reducerSchema("record_settlement", RecordSettlementReducer),
