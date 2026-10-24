@@ -404,6 +404,24 @@ Lines for builder-23's files (README.md, docs/not-built.md, context/JUDGE_QA.md)
 
 Restore: `scripts/demo_up.sh` (seeded, with web) exit 0; investigator on 8012 then controller on 8011, addresses unchanged; day 0 paused; `agent.cli "status"` = `investigator: Day 0 of 92 (2026-07-01), clock paused, tick 2 s. Nothing settled today yet.` The generated `docs/FACTS.*` and `web/public/FACTS.json` my runs rewrote were restored to HEAD (builder-22 owns their committed values). The `inbox/` folder was removed after the beat.
 
+## 2026-10-24 16:10 PDT Director: ASI:One acceptance for Tasks 10 and 18, run live
+
+Run by the director in Anudeep's browser from fresh conversations opened with Agentverse "Chat with Agent", against the day-41 inbox staging (fuel file only), both agents connected on Agentverse (Active, ASI Available, Mailbox).
+
+Task 10, every line passes:
+- `what needs me` listed 12 holds with 2231 first and its recorded question; reply about 4 s after send.
+- `why 2231` showed the finding, the find_trips_near quote, the swap-log quote, recommendation hold_and_ask, the question, source replayed.
+- `answer 2231 Yes. Ortiz drove unit 22 ...` wrote audit_event 4903; the worker drafted rule 1 (driver 23, days 41 to 46, one_time, "would have cleared 1 of 1 past rows; 0 were true exceptions").
+- `approve rule 1` wrote event 4907; the rule cleared 2231 at once (event 4908 cleared_by_rule, payment released by rule, settled offline-2231). `approve 2231` was then refused "hold is cleared_by_rule", the correct answer; `approve 1068` wrote approve_payment event 4911.
+- Agent replies took 2 to 5 s each; the exchange was 91 s wall clock with the director's scripted 8 to 10 s waits between lines, so the human exchange is under 60 s.
+
+Task 18, failed on the first pass, fixed, passes on the second:
+- Defect: ASI:One prepends the mention ("@caliber-controller ...") to every message, so the regex intents missed, `why 2231` went down the free-text path and was answered by the controller itself without the investigator relay, and `approve 2231` sent to the investigator answered "I answer why and status" instead of the ledger's refusal. Fixed by builder-18 (5cb6c77: strip leading mentions at every front door, 30 tests).
+- Second pass: `why 2231` in the controller chat came back "investigator: 2231 location_mismatch ..." with the finding and both evidence quotes (relayed; logs show the forward and a 0.04 s round trip); `approve 2231` in the investigator chat came back "investigator: refused by the ledger: reader may not do this (needs controller)", and audit_event 5087 is `refused / reader / 2231`.
+- Both agents are listed on Agentverse under their caliber names with both tags; the README table carries both addresses.
+
+Remaining on the Fetch.ai row: the Cal Hacks submission-agent registration (Anudeep), and a measured mailbox round trip between the two agents (AGENT_PEER_PATH=mailbox) for the record; the local path is what runs.
+
 ## Tried and rejected
 
 | What | Why rejected |
