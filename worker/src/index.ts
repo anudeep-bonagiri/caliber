@@ -16,14 +16,14 @@ async function main(): Promise<void> {
   await subscribe(conn);
   log(`subscriptions applied: ${[...conn.db.agentTask.iter()].filter(t => t.status === 'open').length} open task(s), ${conn.db.matchResult.count()} match_result row(s), ${conn.db.hold.count()} hold(s), ${conn.db.rule.count()} rule(s)`);
 
-  const loop = new WorkerLoop({ conn, cfg, log });
+  const loop = new WorkerLoop({ conn, cfg, log, identityHex });
   loop.start();
 
   let shuttingDown = false;
   const shutdown = async (signal: string) => {
     if (shuttingDown) return;
     shuttingDown = true;
-    log(`${signal} received; finishing in-flight tasks`);
+    log(`${signal} received; waiting up to ${loop.stopBoundMs()} ms for in-flight terminal writes`);
     await loop.stop();
     conn.disconnect();
     process.exit(0);

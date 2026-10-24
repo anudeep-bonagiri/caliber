@@ -64,6 +64,18 @@ describe('replay', () => {
     expect(out.steps.some(s => s.type === 'tool_call' && s.name === 'find_trips_near')).toBe(true);
   });
 
+  it('drops fixture evidence that does not match its source and fails closed without an evidence dir', () => {
+    const missing = path.join(tmp, 'absent');
+    const out = replayOrStandIn(brief({ txnRef: '2231' }), FIXTURES, missing);
+    expect(out.source).toBe('replayed');
+    // swap_log.txt cannot be verified without the evidence tree; the kernel ref exists in the brief
+    expect(out.finding.evidence.some(e => e.source === 'swap_log.txt')).toBe(false);
+    expect(out.finding.evidence.some(e => e.source === 'kernel' && e.ref === 'evidence.distanceMiles')).toBe(true);
+    const notes = out.steps.filter(s => s.type === 'note').map(s => (s as { text: string }).text);
+    expect(notes.some(t => t.startsWith('evidence dropped: swap_log.txt unverifiable'))).toBe(true);
+    expect(out.steps.at(-1)).toMatchObject({ type: 'note', text: 'replayed from fixtures/investigations/2231.json' });
+  });
+
   it('refuses a txnRef that is not a plain reference', () => {
     expect(loadFixture(FIXTURES, '../answer_key')).toBeUndefined();
   });

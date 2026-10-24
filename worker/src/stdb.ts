@@ -8,6 +8,8 @@ export type Conn = DbConnection;
 
 export const SUBSCRIPTIONS = [
   "SELECT * FROM agent_task WHERE status = 'open'",
+  // tasks left claimed by a previous run of this identity are recovered at startup
+  "SELECT * FROM agent_task WHERE status = 'claimed'",
   'SELECT * FROM match_result',
   'SELECT * FROM hold',
   'SELECT * FROM rule',
@@ -65,6 +67,14 @@ export function subscribe(conn: Conn, timeoutMs = 15_000): Promise<void> {
 
 export function openTasks(conn: Conn): AgentTask[] {
   return [...conn.db.agentTask.iter()].filter(t => t.status === 'open').sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+}
+
+// Tasks in status `claimed` whose claimer is this identity. The reducer accepts record_investigation from the
+// claimer while the task is claimed, so a restart can finish what a previous process left behind.
+export function claimedTasksOf(conn: Conn, identityHex: string): AgentTask[] {
+  return [...conn.db.agentTask.iter()]
+    .filter(t => t.status === 'claimed' && t.claimedBy !== undefined && t.claimedBy.toHexString() === identityHex)
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 }
 
 export function onOpenTask(conn: Conn, cb: (task: AgentTask) => void): void {

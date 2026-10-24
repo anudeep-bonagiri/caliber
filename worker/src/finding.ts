@@ -70,7 +70,8 @@ export class FindingError extends Error {
 }
 
 export interface ParseOptions {
-  // When false, file sources are not checked against the disk. Replay uses this when EVIDENCE_DIR is absent.
+  // When false, file sources are not resolved against the disk here. Replay uses this when EVIDENCE_DIR is absent;
+  // verifyEvidence then drops every file-sourced item (fail closed).
   requireFiles?: boolean;
 }
 
@@ -107,4 +108,92 @@ export function parseFinding(raw: unknown, evidenceDir: string, opts: ParseOptio
   }
   if (issues.length) throw new FindingError(`finding rejected: ${issues.join('; ')}`, issues);
   return f;
+}
+
+// ---------------------------------------------------------------------------
+// Evidence verification. parseFinding checks shape; this checks every evidence item against its source and
+// drops the ones that do not hold up, with a note per drop. The finding itself is kept.
+// ---------------------------------------------------------------------------
+export const TOOL_QUOTE_PREFIX = 12;
+export const UNVERIFIED_CONFIDENCE_CAP = 0.3;
+
+export interface VerifyContext {
+  evidenceDir: string;
+  // the task brief; kernel refs are resolved against brief.evidence
+  brief: { evidence: Record<string, unknown> };
+  // the steps of the run that produced the finding; tool quotes are checked against its tool_result entries
+  steps: ReadonlyArray<{ type: string; toolName?: string; content?: string; isError?: boolean }>;
+}
+
+export interface Verified {
+  finding: Finding;
+  notes: string[];
+}
+
+export function normalizeWs(s: string): string {
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// True when `ref` is `evidence.<key>[.<key>...]` and that path exists in the brief's evidence object.
+export function kernelRefExists(ref: string, evidence: Record<string, unknown>): boolean {
+  const parts = ref.trim().split('.');
+  if (parts[0] !== 'evidence' || parts.length < 2 || parts.some(p => p === '')) return false;
+  let cur: unknown = evidence;
+  for (const p of parts.slice(1)) {
+    if (cur === null || typeof cur !== 'object' || !Object.prototype.hasOwnProperty.call(cur, p)) return false;
+    cur = (cur as Record<string, unknown>)[p];
+  }
+  return cur !== undefined;
+}
+
+export function verifyEvidence(finding: Finding, ctx: VerifyContext): Verified {
+  const notes: string[] = [];
+  const dirPresent = fs.existsSync(ctx.evidenceDir);
+  const files = new Map<string, string | undefined>();
+  const readSource = (source: string): string | undefined => {
+    if (!files.has(source)) {
+      const full = resolveEvidenceFile(source, ctx.evidenceDir);
+      let text: string | undefined;
+      try {
+        text = full ? normalizeWs(fs.readFileSync(full, 'utf8')) : undefined;
+      } catch {
+        text = undefined;
+      }
+      files.set(source, text);
+    }
+    return files.get(source);
+  };
+  const toolResults = ctx.steps.filter(s => s.type === 'tool_result' && !s.isError);
+
+  const kept = finding.evidence.filter(e => {
+    const quote = normalizeWs(e.quote);
+    if (e.source === 'kernel') {
+      if (kernelRefExists(e.ref, ctx.brief.evidence)) return true;
+      notes.push(`evidence dropped: kernel ref ${e.ref || '(empty)'} is not a key in the brief evidence`);
+      return false;
+    }
+    if ((MCP_SOURCES as readonly string[]).includes(e.source)) {
+      const prefix = quote.slice(0, TOOL_QUOTE_PREFIX);
+      if (prefix && toolResults.some(s => s.toolName === e.source && normalizeWs(s.content ?? '').includes(prefix))) return true;
+      notes.push(`evidence dropped: no ${e.source} tool_result contains the quote`);
+      return false;
+    }
+    // file source; fail closed when the evidence tree is absent
+    if (!dirPresent) {
+      notes.push(`evidence dropped: ${e.source} unverifiable, evidence directory ${ctx.evidenceDir} is absent`);
+      return false;
+    }
+    const text = readSource(e.source);
+    if (quote && text !== undefined && text.includes(quote)) return true;
+    notes.push(`evidence dropped: quote not found in ${e.source}`);
+    return false;
+  });
+
+  if (kept.length === finding.evidence.length) return { finding, notes };
+  let confidence = finding.confidence;
+  if (kept.length === 0 && finding.evidence.length > 0) {
+    confidence = Math.min(confidence, UNVERIFIED_CONFIDENCE_CAP);
+    notes.push(`no evidence item could be verified; confidence capped at ${UNVERIFIED_CONFIDENCE_CAP}`);
+  }
+  return { finding: { ...finding, evidence: kept, confidence }, notes };
 }

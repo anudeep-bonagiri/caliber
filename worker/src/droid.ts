@@ -21,6 +21,8 @@ export interface DroidOptions {
   costLog?: string;
   txnRef?: string;
   log?: (msg: string) => void;
+  // the loop's task signal; aborting it aborts the session too
+  signal?: AbortSignal;
 }
 
 export interface DroidRun {
@@ -108,6 +110,9 @@ export async function investigate(brief: string, steps: Step[], opts: DroidOptio
   const sdk: Sdk = await import('@factory/droid-sdk/node');
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), opts.timeoutMs);
+  const onOuterAbort = () => ac.abort();
+  if (opts.signal?.aborted) ac.abort();
+  else opts.signal?.addEventListener('abort', onOuterAbort, { once: true });
   let session = await sdk.createSession(sessionOptions(sdk, opts, currentDisabledToolIds(), ac));
   try {
     if (!listedOnce) {
@@ -143,6 +148,7 @@ export async function investigate(brief: string, steps: Step[], opts: DroidOptio
     return { result, aborted: ac.signal.aborted, disabledToolIds: currentDisabledToolIds() };
   } finally {
     clearTimeout(timer);
+    opts.signal?.removeEventListener('abort', onOuterAbort);
     await session.close().catch(() => {});
   }
 }

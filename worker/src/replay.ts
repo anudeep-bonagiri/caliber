@@ -5,7 +5,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { nowIso } from './config.js';
 import { centsToDollars, type Brief } from './brief.js';
-import { FindingSchema, parseFinding, type EvidenceRef, type Finding } from './finding.js';
+import { FindingSchema, parseFinding, verifyEvidence, type EvidenceRef, type Finding } from './finding.js';
 
 export const STAND_IN_PREFIX = 'Scripted stand-in, not a model.';
 
@@ -71,15 +71,18 @@ export function loadFixture(fixturesDir: string, txnRef: string): Fixture | unde
   return parsed.data;
 }
 
-// Replay a recorded fixture. Evidence file refs are checked when EVIDENCE_DIR exists; when the evidence
-// tree has not been generated yet the check is skipped and that is logged by the caller.
-export function replayFixture(fixture: Fixture, txnRef: string, evidenceDir: string): InvestigationOutcome {
+// Replay a recorded fixture. Every evidence item is checked against its source (file text, the fixture's own
+// tool results, the brief's kernel evidence) and dropped with a note when it does not hold up. When EVIDENCE_DIR
+// is absent the check fails closed: file-sourced items are dropped as unverifiable.
+export function replayFixture(fixture: Fixture, brief: Pick<Brief, 'txnRef' | 'evidence'>, evidenceDir: string): InvestigationOutcome {
   const requireFiles = fs.existsSync(evidenceDir);
   const checked = parseFinding(fixture.finding, evidenceDir, { requireFiles });
-  const finding: Finding = { ...checked, status: 'replayed' };
+  const verified = verifyEvidence(checked, { evidenceDir, brief, steps: fixture.steps });
+  const finding: Finding = { ...verified.finding, status: 'replayed' };
   const steps: Step[] = [
     ...fixture.steps,
-    { type: 'note', at: nowIso(), text: `replayed from fixtures/investigations/${txnRef}.json` },
+    ...verified.notes.map((text): Step => ({ type: 'note', at: nowIso(), text })),
+    { type: 'note', at: nowIso(), text: `replayed from fixtures/investigations/${brief.txnRef}.json` },
   ];
   return { finding, steps, source: 'replayed' };
 }
@@ -159,8 +162,8 @@ export function replayOrStandIn(brief: Brief, fixturesDir: string, evidenceDir: 
   }
   if (fixture) {
     try {
-      if (!fs.existsSync(evidenceDir)) log(`evidence dir ${evidenceDir} is absent; replayed evidence refs were not checked against files`);
-      return replayFixture(fixture, brief.txnRef, evidenceDir);
+      if (!fs.existsSync(evidenceDir)) log(`evidence dir ${evidenceDir} is absent; file-sourced evidence in the fixture is dropped as unverifiable`);
+      return replayFixture(fixture, brief, evidenceDir);
     } catch (err) {
       log(`fixture for ${brief.txnRef} rejected: ${(err as Error).message}`);
     }

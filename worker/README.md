@@ -31,7 +31,11 @@ May not:
 | `record` | Same as live, then `{finding, steps, recordedAt}` is written to `seed/fixtures/investigations/<txnRef>.json`. |
 | `replay` | The fixture for the transaction is read and written back with `finding.status = 'replayed'`, `source = 'replayed'`, plus a steps entry `replayed from fixtures/investigations/<txnRef>.json`. |
 
-Any live failure (abort at the time limit, SDK error, structured output that fails the schema) falls back to the fixture when one exists, and to the stand-in otherwise. A task that still has no terminal write when `TASK_TIMEOUT_MS + TASK_GRACE_MS` elapses is written with `recommendation = 'timeout'` and `finding.status = 'timeout'`, so the dashboard never shows a spinner forever.
+Any live failure (abort at the time limit, SDK error, structured output that fails the schema) falls back to the fixture when one exists, and to the stand-in otherwise. A task that still has no result when `TASK_TIMEOUT_MS + TASK_GRACE_MS` elapses has its handler aborted (the Droid session and any later `create_rule` call are cut off), and the scripted stand-in is built from the brief and written with `recommendation = 'timeout'`, `source = 'none'` and `finding.status = 'timeout'`, so the dashboard never shows a spinner forever.
+
+Terminal writes are retried up to 5 times (250 ms doubling, capped at 4 s). A refusal containing `task is ` means a terminal write already committed (for example a reply lost after the server applied it) and counts as success; nothing overwrites it. Before the call, `steps_json` is fitted under 180,000 characters (tool results capped at 4,000, then the middle cut with a note, keeping the first 10 and last 20 steps) and `finding_json` under 45,000. On SIGINT or SIGTERM the loop waits up to `TASK_TIMEOUT_MS + TASK_GRACE_MS + 20 s` for in-flight writes; on startup it also subscribes to claimed tasks and finishes any still claimed by its own identity.
+
+Every evidence item is checked against its source before the write and dropped with a step note when it does not hold up: a file quote must appear in the file (whitespace normalised), a `kernel` ref must be a key path in the brief's evidence (`evidence.distanceMiles`), and a tool quote's first 12 characters must appear in a `tool_result` of that tool. With `EVIDENCE_DIR` absent, file-sourced items are dropped as unverifiable. If every item is dropped the finding stays, with confidence capped at 0.3.
 
 `draft_rule` tasks never call Droid in any mode. See "Rules" below.
 
@@ -136,4 +140,4 @@ Pause without stopping: `touch worker/PAUSE`. The file is checked on every loop 
 | `src/rules.ts` | rule drafting and backtest |
 | `src/investigate.ts` | live, record, replay, stand-in orchestration for one task |
 | `src/index.ts` | entry |
-| `test/` | vitest: finding gate, explain digit check, backtest and negative answers, replay and stand-in |
+| `test/` | vitest: finding gate and evidence checks, explain digit check, backtest and negative answers, replay and stand-in, loop (retries, timeout stand-in, payload fitting, recovery) |

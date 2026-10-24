@@ -5,12 +5,14 @@ import type { Config } from './config.js';
 import { nowIso } from './config.js';
 import { investigate as runDroid } from './droid.js';
 import { explain, withExplanation, type ExplainDeps } from './explain.js';
-import { parseFinding, type Finding } from './finding.js';
+import { parseFinding, verifyEvidence, type Finding } from './finding.js';
 import { recordFixture, replayOrStandIn, type InvestigationOutcome, type Step } from './replay.js';
 
 export interface InvestigateDeps {
   cfg: Pick<Config, 'mode' | 'evidenceDir' | 'fixturesDir' | 'taskTimeoutMs' | 'kibanaUrl' | 'elasticApiKey' | 'costLog' | 'anthropicApiKey'>;
   log: (msg: string) => void;
+  // aborted by the loop at its outer timeout; the live run stops and no fixture is recorded after it fires
+  signal?: AbortSignal;
   // injectable for tests
   droid?: typeof runDroid;
   explainDeps?: ExplainDeps;
@@ -33,13 +35,14 @@ async function liveRun(brief: Brief, deps: InvestigateDeps): Promise<Investigati
     costLog: cfg.costLog,
     txnRef: brief.txnRef,
     log,
+    signal: deps.signal,
   });
   if (run.aborted) throw new Error('droid aborted at the time limit');
   const r = run.result;
   if (!r) throw new Error('droid stream ended without a result message');
   if (r.subtype !== 'success') throw new Error(`droid result ${r.subtype}${r.error ? `: ${r.error.message}` : ''}`);
   const raw = r.structuredOutput;
-  const finding = parseFinding(
+  const parsed = parseFinding(
     {
       ...(typeof raw === 'object' && raw !== null ? raw : {}),
       status: 'ok',
@@ -49,6 +52,10 @@ async function liveRun(brief: Brief, deps: InvestigateDeps): Promise<Investigati
     },
     cfg.evidenceDir,
   );
+  const verified = verifyEvidence(parsed, { evidenceDir: cfg.evidenceDir, brief, steps });
+  for (const text of verified.notes) steps.push({ type: 'note', at: nowIso(), text });
+  const finding = verified.finding;
+  if (deps.signal?.aborted) throw new Error('investigation aborted by the loop timeout');
   if (cfg.mode === 'record') {
     const file = recordFixture(cfg.fixturesDir, brief.txnRef, finding, steps);
     if (file) log(`recorded fixture ${file}`);
@@ -63,6 +70,7 @@ export async function handleInvestigate(brief: Brief, deps: InvestigateDeps): Pr
     try {
       outcome = await liveRun(brief, deps);
     } catch (err) {
+      if (deps.signal?.aborted) throw err;
       log(`live run for ${brief.txnRef} failed, falling back: ${(err as Error).message}`);
     }
   }
