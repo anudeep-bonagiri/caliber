@@ -263,6 +263,47 @@ Waits on Anudeep's clicks: Inspector Connect, Mailbox, Finish for `dispatch-inve
 - Waits on Anudeep: Connect, Mailbox, Finish for `dispatch-investigator` (Inspector link in logs/investigator.log), profile paste of agent/INVESTIGATOR_README.md with both tags, then the two-line ASI:One check in agent/CONNECT.md; the mailbox round trip is measured after that (local path is 0.04 to 0.05 s).
 - Side effect: `mint_identities.py` ran twice during step 7, so .env now holds new agent and controller tokens while the running worker still uses the earlier agent identity (its role is intact). The next `demo_up.sh` or `full_run.sh` re-mints everything, so nothing to fix.
 
+## 2026-10-24 15:12 PDT Builder-W: cold-start repeat at HEAD 2c2b864, network on (job 9)
+
+Fresh `git clone` of the repo at 2c2b864 into /private/tmp (nothing copied in), run on this laptop with Wi-Fi on. The Wi-Fi-off repeat stays on the night-before checklist; nothing in this run made a network call except `npm ci` and `pip install`.
+
+| Step | Observed |
+| --- | --- |
+| `scripts/check_env.sh` in the clone | `.env missing at <clone>/.env`, exit 1 (expected) |
+| `scripts/demo_up.sh --no-web`, first attempt | exit 1 after 5 s at step 5/7 fixtures: `ERR_MODULE_NOT_FOUND: Cannot find package 'spacetimedb' imported from module_bindings/index.ts`. The bindings resolve `spacetimedb` from the repo root `node_modules`, which only the README's "Tests first" line (`npm ci` at the root) installs. demo_up installs `spacetimedb/`, `scripts/` and `worker/` deps but not the root. The 403 branch also fired (the server held the real checkout's database) and restarted the server on the clone's data dir, as designed. |
+| root `npm ci`, then `scripts/demo_up.sh --no-web` from a wiped clone server | exit 0, 6 s wall (server start, publish, identities incl. a reader token and a generated INVESTIGATOR_SEED, 155,457 pings and the rest of the fixtures, worker `loop started`) |
+| `scripts/full_run.sh` | exit 0, 13 s wall; 92 days in 1 s; open tasks after wait 0; `Overall precision 1.0, recall 1.0` |
+| `diff docs/FACTS.json` clone vs committed | at 13 s: identical except `asOf` and the settlement counters (`offlineIds 3529, unsettled 4366` vs committed `7895, 0`). The worker was still writing offline ids; after about 30 s `unsettled` reached 0 and a rerun of `facts.py` produced a file identical to the committed one except `asOf`. full_run computes facts before settlement has drained; the committed file was made after the drain. |
+| README "Tests first" block, literally | module 64 passed, worker 106 passed, seed 24 passed, agent 138 passed, elastic 27 passed and 1 failed: `test_smoke_window_from_fixture_and_fallback` expected the old 45-minute window (12:27 to 13:57); `smoke.py` has used ten minutes since commit 5626c72 (mine) and the test was not updated then. Same failure in the real checkout, so it is a stale assertion, not a cold-start gap. Fixed in this commit (13:02 to 13:22); elastic suite now 28 passed. 28 s wall for the whole block. |
+| Task 18 twin check in the clone | `agent/.venv/bin/python -m agent.cli "why 2231"` after the clone's `mint_identities.py` wrote a reader token: `investigator: 2231  location_mismatch  $412.00  day 41  status cleared_by_rule`, Finding, two Evidence lines, `Recommendation: hold_and_ask (confidence 0.97)`, `source: replayed`. `status` also carries the `investigator:` prefix. Pass. |
+| `scripts/rehearse.sh` in the clone | exit 0, 29 s wall; paused on day 41 and on day 44 on command; `Needs you (23)` with the 2231 line; `why 2231` as above with `status awaiting_controller`; answer, `approve rule 1`, `hold 2231 now: cleared_by_rule`; as_agent `[false,"agent may not do this (needs controller)"]`; INV-1077 refused without a note then approved with the call-back note; kernel verdict `capacity_exceeded` for truck 29. |
+| Teardown | clone server, worker and agents stopped; clone deleted. Real checkout: `scripts/demo_up.sh` (with web) exit 0, 6 s, server on the real `.spacetime/data`, reader identity reused and granted again, dashboard on 5173 (the stale vite from the morning was stopped first so the port was free); investigator started on 8012 then controller on 8011, addresses unchanged (`agent1qvwvlc...nrxaqh`, `agent1qt278...y5yge`), logs/investigator.log and logs/agent.log; `clock.sh status` day 0 paused; `agent.cli "status"` = `investigator: Day 0 of 92 (2026-07-01), clock paused, tick 2 s. Nothing settled today yet.`; `agent.cli "why 2231"` = `investigator: No hold for 2231.` Left paused at day 0. |
+
+The target, line by line, against the clone's ledger after full_run:
+
+| Target line | Result | Observed |
+| --- | --- | --- |
+| 92 days under 4 minutes, pausable on any day | pass | 92 days in 1 s inside full_run; rehearse paused on day 41 and day 44 |
+| 52 planted raised, recall 1.0, precision at or above 0.95 from `facts.py`; duplicates auto-rejected without a task | pass | precision 1.0, recall 1.0 on all seven codes; audit `seed auto_reject` 11 (the duplicate tolls) with no task; the 4 duplicate invoices are holds rejected by the controller |
+| Every exception has a finding, labelled live or replayed | pass | 47 investigate tasks for the 47 non-limit holds (the 6 `limit` holds are approval holds, not planted exceptions), every one with a finding, `source replayed`, `recordedBy droid live run`; 0 live (no keys in the clone) |
+| From a fresh ASI:One conversation: list, why, answer, approve rule, approve payment, each an `audit_event` row with the controller identity | pass through the terminal twin and controller_sim, ASI:One itself not run | audit rows by controller: answer_question 6, approve_rule 6, approve_payment 9, reject_payment 38; the ASI:One conversation waits on the Agentverse Connect click (Anudeep) |
+| `approve_payment` with the agent token refused, refusal in the audit trail | pass | audit `('agent','refused') 1`: `INV-1077  agent may not do this (needs controller)` |
+| 6 decoys clear after exactly one answer each through an approved backtested rule; no planted exception cleared by a rule | pass | cleared_by_rule set equals the six decoy refs; one `answer_question` row per decoy; six one_time rules with backtest `{"n":1,"wouldClear":1,"openHoldsCovered":1,"confirmedExceptionsCovered":0,...}`; planted cleared by rule 0 (FACTS.md) |
+| Every `vendor_bank_change` hold carries a CRS vendor check as evidence rows, labelled; one planted vendor has a hit and is rejected, one is clean and approved with a call-back note | fail (partial) | three vendor_bank_change holds. INV-1077 carries the three rows `crs:business_credit`, `crs:public_records`, `crs:ofac` labelled `hand_shaped` ("Shape of a sandbox response, not real data"). INV-1032 and INV-1138 have a vendor_check task with status `no_fixture` and no evidence rows. No hold has a hit; all three were approved with a call-back note by controller_sim. The hit fixture `3.hit.json` is never selected in the run. Known since Task 16 (CRS sandbox pending); recorded here as the literal result. |
+| Every approved payment has a Nessie id on its `payment` row and in the audit feed; offline writes a labelled fake id | pass (after the 30 s drain) | 7,895 payments, 7,895 `offline-<txnRef>` ids, 0 unsettled; 7,895 `agent settle` audit rows such as `bank id offline-1000` |
+| README sections and `docs/not-built.md` | pass | all six headings present once each; both Fetch badges in agent/README.md; docs/not-built.md exists |
+| Devpost draft with every 13.4 track and none of the dropped ones | pass (draft) | docs/DEVPOST.md "Tracks to tag" and "Do not select" lists match 13.4 word for word; the Devpost page itself is Anudeep's paste |
+
+README "Run it" gaps found:
+
+1. `scripts/demo_up.sh` alone on a fresh clone fails at the fixtures step until `npm ci` has run at the repo root. The README orders the test block first, so following it literally works, but "Run it" should say the root install is required, or demo_up should run it (one line, `[ -d node_modules ] || npm ci --silent` at the root). Not changed here; director's call.
+2. `demo_up.sh` prints `agent/.venv/bin/python -m agent.cli ...` in its Ready block but never creates `agent/.venv`; only the README test block does. Same fix shape as above.
+3. README.md creates the agent venv with `python3 -m venv`; agent/README.md says `uv venv`. Both work; one should be chosen.
+4. `scripts/full_run.sh` runs `facts.py` before the worker has finished settling (about 30 s for 7,895 payments), so the settlement line of a freshly produced FACTS.json differs from the committed one until `facts.py` is rerun. A wait on `payment` rows with no `bank_txn_id`, like the existing wait on open tasks, would make the one-command number stable.
+5. The elastic test was red on a clean clone (fixed in this commit, see above).
+
+Checks: elastic suite 28 passed after the fix; `git status` clean apart from this entry and the test; no key printed anywhere in this entry or in logs/builder_w.log (identities only, which are public addresses).
+
 ## Tried and rejected
 
 | What | Why rejected |

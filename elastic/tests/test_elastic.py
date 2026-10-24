@@ -266,7 +266,7 @@ def test_agent_body_instructions():
 def test_smoke_window_from_fixture_and_fallback(tmp_path):
     w = smoke.hold_2231_window(ELASTIC_DIR / "sample" / "card_txns.json")
     assert w["point_wkt"] == "POINT(-96.9036 29.6816)"
-    assert w["since"] == "2026-08-27T12:27:00Z" and w["until"] == "2026-08-27T13:57:00Z"
+    assert w["since"] == "2026-08-27T13:02:00Z" and w["until"] == "2026-08-27T13:22:00Z"  # ten-minute window each side, matching smoke.py and the brief
     fb = smoke.hold_2231_window(tmp_path / "missing.json")
     assert fb == {"source": "spec literals", "point_wkt": "POINT(-96.9036 29.6816)",
                   "since": "2026-08-27T12:30:00Z", "until": "2026-08-27T14:00:00Z"}
