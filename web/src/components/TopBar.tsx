@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
-import { useSpacetimeDB } from 'spacetimedb/react';
+import { useEffect, useMemo, useRef } from 'react';
+import { useSpacetimeDB, useTable } from 'spacetimedb/react';
+import { tables } from '../../../module_bindings';
 import { Pill } from './ui';
 import { identityHex } from '../lib/format';
 import { EXCEPTION_CODES } from '../lib/types';
@@ -17,6 +18,19 @@ export function TopBar({
   modelOffline: boolean;
 }) {
   const { isActive, identity, connectionError } = useSpacetimeDB();
+  // Task 21: what the inbox file connector brought in, read from the public ingest_log table (one row per batch).
+  const [ingests] = useTable(tables.ingestLog);
+  const ingested = useMemo(() => {
+    const files = new Set<string>();
+    let rows = 0;
+    const ids: string[] = [];
+    for (const r of ingests) {
+      files.add(r.fileName);
+      rows += r.rows;
+      ids.push(String(r.id));
+    }
+    return { files: files.size, rows, ids };
+  }, [ingests]);
   const everConnected = useRef(false);
   useEffect(() => {
     if (isActive) everConnected.current = true;
@@ -47,6 +61,15 @@ export function TopBar({
           }
         >
           {state.label}
+        </Pill>
+        <Pill
+          tone={ingested.files > 0 ? 'candidate' : 'hold'}
+          title={ingested.ids.length ? `ingest_log ${ingested.ids.join(', ')}: ${ingested.files} distinct file_name, sum of rows` : 'ingest_log (no rows): nothing has been dropped into inbox/ in this run'}
+        >
+          {ingested.files} files ingested today, {ingested.rows.toLocaleString('en-US')} rows
+        </Pill>
+        <Pill tone="hold" title="scripts/ingest_watch.py reads CSV files dropped into inbox/ and hands the rows to the ingest_rows reducer; there is no WEX, toll-authority or accounting API integration (docs/not-built.md)">
+          file connector; API connectors not built
         </Pill>
         {modelOffline ? (
           <Pill tone="refused" title="The most recent investigated agent_task has source = none. Findings are scripted stand-ins until a model is back.">
