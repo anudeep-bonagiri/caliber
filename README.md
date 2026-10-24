@@ -93,6 +93,8 @@ Module in `spacetimedb/src/`. Tables and access in `schema.ts`; reducers, proced
 
 ## Settlement
 
+Verified live on 2026-10-24: an auto-paid fuel line produced one transfer on the carrier's Nessie account with the id on the payment row and in the audit feed. The mock bank accepts whole-dollar amounts only, so the exact cents and the payee ride in the transfer description.
+
 When a payment row appears (kernel auto-pay, a rule clearing a hold, or a controller approval), the worker's settlement watcher (`worker/src/settle.ts`) makes one call to Capital One's Nessie per payment: a transfer from the carrier's Checking account to the payee (the invoice's vendor, or a single fuel-and-tolls payee for card and toll payments) described as `txn_ref <ref>`. It writes the returned transfer id with `record_settlement(txnRef, bankTxnId)`, an agent-only reducer that refuses without a payment row or when the payment is already settled, sets `payment.bank_txn_id` and adds a `settle` audit row the dashboard shows as "paid, bank id <id>". Live settlement needs `NESSIE_API_KEY`, `WORKER_MODE` other than `replay`, and the accounts `scripts/nessie_seed.py` writes to `seed/fixtures/nessie_accounts.json`; otherwise the id is `offline-<txnRef>` and the Queue says "settlement offline". The worker can settle a payment but never create one. Nessie is a mock bank: no money moves, and a bank id proves only that the mock recorded the transfer.
 
 ## Vendor checks

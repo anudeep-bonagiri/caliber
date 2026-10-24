@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OPTION_COLS = {"rule_id", "question", "answer", "callback_note", "approved_by", "claimed_by", "claimed_at", "po_id"}
+OPTION_COLS = {"rule_id", "question", "answer", "callback_note", "approved_by", "claimed_by", "claimed_at", "po_id", "bank_txn_id"}
 EXCEPTION_CODES = ["location_mismatch", "capacity_exceeded", "rate_variance", "duplicate_toll",
                    "duplicate_invoice", "vendor_bank_change", "short_received"]
 
@@ -132,6 +132,9 @@ def main() -> int:
     auto_paid = [p for p in payments if p["released_role"] in ("kernel", "rule")]
     controller_paid = [p for p in payments if p["released_role"] == "controller"]
     refused = [a for a in audit if a["action"] == "refused"]
+    settle_live = sum(1 for p in payments if isinstance(p.get("bank_txn_id"), str) and not p["bank_txn_id"].startswith("offline-"))
+    settle_offline = sum(1 for p in payments if isinstance(p.get("bank_txn_id"), str) and p["bank_txn_id"].startswith("offline-"))
+    settle_none = len(payments) - settle_live - settle_offline
     refused_by_role = dict(Counter(a["actor_role"] for a in refused))
     task_sources = dict(Counter(t["source"] for t in tasks if t["kind"] == "investigate"))
     task_status = dict(Counter(t["status"] for t in tasks if t["kind"] == "investigate"))
@@ -175,6 +178,7 @@ def main() -> int:
         "autoPaid": {"count": len(auto_paid), "cents": sum(int(p["cents"]) for p in auto_paid)},
         "controllerReleased": {"count": len(controller_paid), "cents": sum(int(p["cents"]) for p in controller_paid)},
         "refusals": {"count": len(refused), "byRole": refused_by_role},
+        "settlement": {"liveBankIds": settle_live, "offlineIds": settle_offline, "unsettled": settle_none},
         "investigations": {"bySource": task_sources, "byStatus": task_status},
         "rules": dict(Counter(r["status"] for r in rules)),
         "byDay": by_day,
@@ -201,6 +205,7 @@ def main() -> int:
            f"Auto-paid by the kernel or a rule: {facts['autoPaid']['count']} payments, ${facts['autoPaid']['cents']/100:,.2f}.",
            f"Released by the controller: {facts['controllerReleased']['count']} payments, ${facts['controllerReleased']['cents']/100:,.2f}.",
            f"Refusals recorded in the audit trail: {len(refused)} ({refused_by_role}).",
+           f"Settlement: {settle_live} payments carry a live Nessie transfer id, {settle_offline} a labelled offline id, {settle_none} unsettled.",
            f"Investigations by source: {task_sources}; by status: {task_status}.", ""]
     if unreviewed:
         md.append(f"Unreviewed planted rows (the run is not complete): {unreviewed}")
