@@ -55,6 +55,17 @@ APPROVE = re.compile(r"^approve\s+(?:hold\s+|payment\s+)?(\S+)(?:\s+(.+))?$", re
 REJECT = re.compile(r"^reject\s+(?:hold\s+|payment\s+)?(\S+)(?:\s+(.+))?$", re.I | re.S)
 
 
+# ASI:One prepends the mention to every message it delivers: "@caliber-controller why 2231" or
+# "@agent1q<58 chars> what needs me". Leading mentions (one or more, each followed by whitespace or the end)
+# are dropped before parsing; a mention inside a sentence is left alone, it is the controller's own text.
+MENTIONS = re.compile(r"^(?:@[\w.-]+(?:\s+|$))+")
+
+
+def strip_mentions(text: str) -> str:
+    """Drop leading @handle or @agent1q... mentions. "@caliber-controller why 2231" -> "why 2231"."""
+    return MENTIONS.sub("", (text or "").strip(), count=1).strip()
+
+
 def _clean(s: str | None) -> str | None:
     if s is None:
         return None

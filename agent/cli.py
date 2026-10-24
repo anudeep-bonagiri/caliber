@@ -17,6 +17,7 @@ SENDER = "cli"
 def answer(line: str) -> str:
     """The same split as the two uAgents: `why` and `status` come from the investigator's handler module as the
     reader identity and carry the "investigator:" prefix; everything else is the controller's."""
+    line = intents.strip_mentions(line)   # the same front door rule as the two uAgents
     it = intents.parse(line)
     if investigate.answers(it):
         if it.name == "why":

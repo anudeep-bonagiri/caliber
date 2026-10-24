@@ -41,7 +41,7 @@ def answers(intent: intents.Intent | None) -> bool:
 
 def handle(sender_id: str, text: str) -> str:
     """Un-prefixed reply text. Front doors call attribute() on it."""
-    text = (text or "").strip()
+    text = intents.strip_mentions(text)   # ASI:One prepends "@caliber-investigator " to every line
     it = intents.parse(text)
     if it is None:
         return ONLY

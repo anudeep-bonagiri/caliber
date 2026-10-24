@@ -120,9 +120,11 @@ async def on_start(ctx: Context):
 @chat.on_message(ChatMessage)
 async def on_chat(ctx: Context, sender: str, msg: ChatMessage):
     await ctx.send(sender, ChatAcknowledgement(timestamp=datetime.now(timezone.utc), acknowledged_msg_id=msg.msg_id))
-    text = " ".join(c.text for c in msg.content if isinstance(c, TextContent)).strip()
-    if not text:
+    raw = " ".join(c.text for c in msg.content if isinstance(c, TextContent)).strip()
+    if not raw:
         return  # bare start-session or end-session marker
+    # ASI:One delivers "@caliber-controller why 2231"; the command starts after the mention.
+    text = intents.strip_mentions(raw)
     it = intents.parse(text)
     route = relay.route(sender, it.name if it else None)
     if route == "investigator_reply":
@@ -130,7 +132,7 @@ async def on_chat(ctx: Context, sender: str, msg: ChatMessage):
         ctx.logger.info(f"investigator replied: {text[:80].replace(chr(10), ' | ')}")
         await relay.on_investigator_reply(text, ctx.session)
         return
-    ctx.logger.info(f"{sender[:16]}: {text[:120]}")
+    ctx.logger.info(f"{sender[:16]}: {raw[:120]}" + (f" -> {text[:60]}" if text != raw else ""))
     if route == "forward":
         if it.name == "why":
             try:

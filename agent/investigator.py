@@ -37,7 +37,7 @@ from uagents_core.contrib.protocols.chat import (  # noqa: E402
     chat_protocol_spec,
 )
 
-from agent import investigate, ledger, peers  # noqa: E402
+from agent import intents, investigate, ledger, peers  # noqa: E402
 
 AGENT_NAME = "caliber-investigator"
 README = str(Path(__file__).resolve().parent / "INVESTIGATOR_README.md")
@@ -100,10 +100,12 @@ async def on_start(ctx: Context):
 @chat.on_message(ChatMessage)
 async def on_chat(ctx: Context, sender: str, msg: ChatMessage):
     await ctx.send(sender, ChatAcknowledgement(timestamp=datetime.now(timezone.utc), acknowledged_msg_id=msg.msg_id))
-    text = " ".join(c.text for c in msg.content if isinstance(c, TextContent)).strip()
-    if not text:
+    raw = " ".join(c.text for c in msg.content if isinstance(c, TextContent)).strip()
+    if not raw:
         return  # bare start-session or end-session marker
-    ctx.logger.info(f"{sender[:16]}: {text[:120]}")
+    # ASI:One delivers "@caliber-investigator approve 2231"; the command starts after the mention.
+    text = intents.strip_mentions(raw)
+    ctx.logger.info(f"{sender[:16]}: {raw[:120]}" + (f" -> {text[:60]}" if text != raw else ""))
     try:
         answer = await asyncio.to_thread(investigate.handle, sender, text)
     except Exception as e:  # the handler already maps ledger errors; this is a last net

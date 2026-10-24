@@ -46,7 +46,7 @@ def bound_text(text: str | None, max_len: int, what: str) -> str:
 
 
 def handle(sender_id: str, text: str) -> str:
-    text = (text or "").strip()
+    text = intents.strip_mentions(text)   # ASI:One prepends "@caliber-controller " to every line
     intent = intents.parse(text)
     try:
         if intent is None:
