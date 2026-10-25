@@ -4,7 +4,7 @@ Caliber, an autonomous accounts-payable clerk for a trucking carrier (repo and l
 
 **The money does not move until the code has matched the line, and the agent can never approve what it proposed.**
 
-Links: dashboard (local, see Run it), video (to come), Agentverse profile (pending registration, see Agent addresses).
+Links: site https://caliber.compare, dashboard (local, see Run it), video (to come), Agentverse profiles `@caliber-controller` and `@caliber-investigator` (see Agent addresses).
 
 > Simulated carrier with a published answer key. No real money: settlement goes to Capital One's Nessie mock bank. Every figure on screen and in this file is read from the ledger or from `docs/FACTS.json`. Not for operational use.
 
