@@ -436,7 +436,7 @@ Waiting on Anudeep: the record cue for the two real takes (staged at day 41, fal
 
 Director's remaining list after the takes: final `scripts/full_run.sh`, then facts.py (adds the baseline block), regenerate FACTS, RESULTS and web facts, confirm the cards and README numbers still match, restore day 0.
 
-## 2026-10-24 20:40 PDT Builder-B: council items 3 and 5a (Task 28)
+## 2026-10-24 20:13 PDT Builder-B: council items 3 and 5a (Task 28)
 
 Item 3, sender allowlist on the controller seat:
 - `agent/handlers.py`: `WRITE_INTENTS` (answer, approve, reject, approve_rule, reject_rule, pause, resume, step: every intent that reaches a `try_` procedure) and `handle(sender, text, may_write, on_refused)`. The gate runs after the intent is resolved, so free text that would land as an answer is gated too, and before any ledger call. A refused sender gets exactly `not authorised for this seat`; with `ASI_ALLOWED_SENDERS` empty or unset everyone is refused and the reply adds a second line saying the list is empty. Reads (`what needs me`, `why`, `status`, `rules`, `help`) stay open; `why` and `status` still go to the investigator for anyone. The terminal twin (`agent/cli.py`) is not gated: it holds the controller token itself.
@@ -451,7 +451,7 @@ Item 5a, the hop line:
 - Expected strings updated in agent/tests/test_investigator.py (deterministic clock), agent/README.md, agent/INVESTIGATOR_README.md, and the CONNECT.md two-line check and session table.
 - Check: `agent/.venv/bin/pytest -q agent/tests/test_investigator.py` 24 passed; full `agent/.venv/bin/pytest -q` 275 passed.
 
-Not restarted (builder-W holds the agents staged). The live controller (pid 95094 at 20:40) runs the old code: no allowlist, no hop line, until builder-W re-stages. Only the controller needs a restart; the investigator's code is unchanged. From the repo root, after the director adds `ASI_ALLOWED_SENDERS` to `.env`:
+Not restarted (builder-W holds the agents staged). The live controller (pid 95094 at 20:13) runs the old code: no allowlist, no hop line, until builder-W re-stages. Only the controller needs a restart; the investigator's code is unchanged. From the repo root, after the director adds `ASI_ALLOWED_SENDERS` to `.env`:
 `kill 95094` (or the current pid from `ps -eo pid,command | grep agent/agent.py`), then `nohup agent/.venv/bin/python agent/agent.py >> logs/agent.log 2>&1 &`. The startup log should read `writes allowed for 1 sender(s) in ASI_ALLOWED_SENDERS`.
 
 ## Tried and rejected
