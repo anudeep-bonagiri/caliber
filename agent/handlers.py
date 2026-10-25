@@ -8,6 +8,11 @@ still lands as the answer to the right hold. A line that looks like a mistyped c
 
 Controller text is bounded here, before any network call, with the same limits the module enforces
 (docs/CONTRACT.md): answers up to 1000 characters, call-back notes and reasons up to 500, none blank.
+
+The seat on ASI:One is open to anyone who finds it, so every write is gated on the sender (Task 28 item 3):
+`may_write=False` refuses any intent in WRITE_INTENTS, including free text that resolves to an answer, with
+exactly NOT_AUTHORISED and before any ledger call. Reads stay open. The uAgent decides `may_write` from
+ASI_ALLOWED_SENDERS; the terminal twin holds the controller token itself and always may.
 """
 
 from __future__ import annotations
@@ -24,6 +29,25 @@ TOTAL_DAYS = reads.TOTAL_DAYS
 
 MAX_ANSWER = 1000
 MAX_NOTE = 500      # call-back notes, payment rejection reasons, rule rejection reasons
+
+# Every intent that reaches a try_ procedure. Everything else (holds, why, status, rules, help) is a read.
+WRITE_INTENTS = {"answer", "approve", "reject", "approve_rule", "reject_rule", "pause", "resume", "step"}
+NOT_AUTHORISED = "not authorised for this seat"
+NOBODY_ALLOWED = "No ASI:One sender may write to this seat yet: ASI_ALLOWED_SENDERS is empty."
+
+
+def allowed_senders() -> set[str]:
+    """ASI_ALLOWED_SENDERS from .env: comma-separated agent1q... addresses. Empty means nobody may write."""
+    return {a.strip() for a in os.getenv("ASI_ALLOWED_SENDERS", "").split(",") if a.strip()}
+
+
+def may_write(sender_id: str) -> bool:
+    return sender_id in allowed_senders()
+
+
+def not_authorised() -> str:
+    """The refusal reply: exactly NOT_AUTHORISED, plus one line saying so when the allowlist is empty."""
+    return NOT_AUTHORISED if allowed_senders() else f"{NOT_AUTHORISED}\n{NOBODY_ALLOWED}"
 
 
 class TextRefused(ValueError):
@@ -45,12 +69,17 @@ def bound_text(text: str | None, max_len: int, what: str) -> str:
     return cleaned
 
 
-def handle(sender_id: str, text: str) -> str:
+def handle(sender_id: str, text: str, may_write: bool = True, on_refused=None) -> str:
+    """`on_refused(intent_name)` is called when a write is refused for the sender, so the seat can log it."""
     text = intents.strip_mentions(text)   # ASI:One prepends "@caliber-controller " to every line
     intent = intents.parse(text)
     try:
         if intent is None:
             intent = _free_text(sender_id, text)
+        if not may_write and intent.name in WRITE_INTENTS:
+            if on_refused is not None:
+                on_refused(intent.name)
+            return not_authorised()
         return _dispatch(sender_id, intent)
     except BadReference as e:
         return str(e)

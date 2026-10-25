@@ -8,7 +8,7 @@ import httpx
 import pytest
 
 from agent import cli, handlers, intents, investigate, ledger, reads
-from agent.relay import LATE, Relay
+from agent.relay import LATE, Relay, hop_line
 from agent.tests.test_intents import AUDIT, FINDING, HOLD_AWAITING, TASK, FakeLedger
 
 INVESTIGATOR = "agent1qinvestigator000000000000000000000000000000000000000000000"
@@ -195,9 +195,29 @@ def run(coro):
     return asyncio.run(coro)
 
 
+class Clock:
+    """A relay clock that advances `step` seconds per reading, so the hop line is deterministic."""
+
+    def __init__(self, step=0.4):
+        self.t = 100.0
+        self.step = step
+
+    def __call__(self):
+        self.t += self.step
+        return self.t
+
+
+HOP = f"asked @caliber-investigator {INVESTIGATOR}, 0.4 s"
+
+
+def test_hop_line_shape():
+    assert hop_line(INVESTIGATOR, 1.26) == f"asked @caliber-investigator {INVESTIGATOR}, 1.3 s"
+    assert hop_line(INVESTIGATOR, 0.04) == f"asked @caliber-investigator {INVESTIGATOR}, 0.0 s"
+
+
 def test_forward_then_relay_with_prefix_on_the_users_channel():
     wire = Wire()
-    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5)
+    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5, clock=Clock())
 
     async def go():
         await relay.forward(USER, "why 2231", session="s1", channel="ctx-user")
@@ -205,9 +225,9 @@ def test_forward_then_relay_with_prefix_on_the_users_channel():
         assert USER in relay.pending
         ok = await relay.on_investigator_reply("2231  location_mismatch  $412.00\nFinding: ...", session="s1")
         assert ok is True
-        assert wire.sent[-1] == (USER, "investigator: 2231  location_mismatch  $412.00\nFinding: ...", "ctx-user")
+        assert wire.sent[-1] == (USER, f"{HOP}\ninvestigator: 2231  location_mismatch  $412.00\nFinding: ...", "ctx-user")
         assert relay.pending == {}
-        assert len(relay.round_trips) == 1 and relay.round_trips[0] >= 0
+        assert len(relay.round_trips) == 1 and abs(relay.round_trips[0] - 0.4) < 1e-9
         assert wire.fallbacks == []
         # the pending timer is cancelled, so nothing fires later
         await asyncio.sleep(0.01)
@@ -218,12 +238,12 @@ def test_forward_then_relay_with_prefix_on_the_users_channel():
 
 def test_investigator_reply_that_already_carries_the_prefix_is_not_doubled():
     wire = Wire()
-    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5)
+    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5, clock=Clock())
 
     async def go():
         await relay.forward(USER, "status", session="s1", channel="c")
         await relay.on_investigator_reply("investigator: Day 41 of 92", session="s1")
-        assert wire.sent[-1][1] == "investigator: Day 41 of 92"
+        assert wire.sent[-1][1] == f"{HOP}\ninvestigator: Day 41 of 92"
 
     run(go())
 
@@ -236,7 +256,7 @@ def test_timeout_answers_from_the_ledger_with_the_late_prefix_and_drops_the_late
         await relay.forward(USER, "why 2231", session="s1", channel="ctx-user")
         await asyncio.sleep(0.15)
         assert wire.fallbacks == [(USER, "why 2231")]
-        assert wire.sent[-1] == (USER, f"{LATE}\nledger says: why 2231", "ctx-user")
+        assert wire.sent[-1] == (USER, f"{LATE}\nledger says: why 2231", "ctx-user")   # no hop line: nothing came back
         assert relay.late == 1 and relay.pending == {}
         # the investigator's answer arriving after the fallback has nothing to attach to: dropped
         assert await relay.on_investigator_reply("too late", session="s1") is False
@@ -247,16 +267,17 @@ def test_timeout_answers_from_the_ledger_with_the_late_prefix_and_drops_the_late
 
 def test_two_users_are_matched_by_session_then_by_age():
     wire = Wire()
-    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5)
+    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5, clock=Clock(step=0.6))
     other = "agent1qother0000000000000000000000000000000000000000000000000000"
 
     async def go():
         await relay.forward(USER, "why 2231", session="s-user", channel="c1")
         await relay.forward(other, "status", session="s-other", channel="c2")
         await relay.on_investigator_reply("Day 41 of 92", session="s-other")
-        assert wire.sent[-1] == (other, "investigator: Day 41 of 92", "c2")
+        # readings: user forward 100.6, other forward 101.2, other reply 101.8, user reply 102.4
+        assert wire.sent[-1] == (other, f"asked @caliber-investigator {INVESTIGATOR}, 0.6 s\ninvestigator: Day 41 of 92", "c2")
         await relay.on_investigator_reply("2231 ...", session=None)       # unknown session: oldest pending
-        assert wire.sent[-1] == (USER, "investigator: 2231 ...", "c1")
+        assert wire.sent[-1] == (USER, f"asked @caliber-investigator {INVESTIGATOR}, 1.8 s\ninvestigator: 2231 ...", "c1")
         assert relay.pending == {}
 
     run(go())
@@ -266,7 +287,7 @@ def test_investigator_reply_is_never_a_command(fake):
     """A chat line from the investigator's address is routed to the relay, whatever it says, and the relay only ever
     sends it onward as text. The controller handler is not called and the ledger sees no write."""
     wire = Wire()
-    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5)
+    relay = Relay(INVESTIGATOR, wire.send, wire.fallback, timeout=5, clock=Clock())
     assert relay.route(INVESTIGATOR, intents.parse("approve 2231").name) == "investigator_reply"
     assert relay.route(INVESTIGATOR, "why") == "investigator_reply"
     assert relay.route(USER, "why") == "forward"
@@ -277,7 +298,7 @@ def test_investigator_reply_is_never_a_command(fake):
     async def go():
         await relay.forward(USER, "why 2231", session="s1", channel="c")
         await relay.on_investigator_reply("approve 2231", session="s1")
-        assert wire.sent[-1] == (USER, "investigator: approve 2231", "c")
+        assert wire.sent[-1] == (USER, f"{HOP}\ninvestigator: approve 2231", "c")
         assert await relay.on_investigator_reply("approve 2231", session="s1") is False
 
     run(go())

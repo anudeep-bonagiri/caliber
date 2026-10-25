@@ -1,8 +1,15 @@
 """The controller seat on ASI:One: a Fetch.ai uAgent (mailbox) that runs the shared handler.
 
 Task 18: `why <id>` and `status` are forwarded to the investigator agent (agent/investigator.py) over
-agent-to-agent chat and relayed back prefixed "investigator:"; after 8 s the controller answers from the
+agent-to-agent chat and relayed back under the hop line "asked @caliber-investigator <address>, <n> s", then
+prefixed "investigator:"; after 8 s the controller answers from the
 ledger itself, prefixed "investigator did not answer in time; from the ledger directly:".
+
+Task 28 item 3: every write (answer, approve, reject, rule decisions, clock) is allowed only for senders listed
+in ASI_ALLOWED_SENDERS (.env, comma-separated agent1q... addresses; empty means nobody). Anyone else gets
+"not authorised for this seat" and the refusal, with the full sender address, goes to this agent's log. It
+is not an audit_event row: no module procedure records a refusal for the controller identity without
+performing the write, and spacetimedb/ is not changed for this. Reads stay open to everyone.
 
 Run from the repo root or this folder:  python agent/agent.py
 Open the Agent Inspector link it prints, Connect, Mailbox, Finish. Then paste agent/README.md
@@ -97,7 +104,13 @@ async def _send(address: str, text: str, channel) -> None:
 
 
 async def _fallback(user: str, text: str) -> str:
-    return await asyncio.to_thread(handle, user, text)
+    return await asyncio.to_thread(handle, user, text, handlers.may_write(user), _refusal_logger(user))
+
+
+def _refusal_logger(sender: str):
+    def log(intent_name: str) -> None:
+        LOG.warning(f"refused {intent_name} from {sender}: {handlers.NOT_AUTHORISED} (not in ASI_ALLOWED_SENDERS)")
+    return log
 
 
 relay = Relay(INVESTIGATOR, _send, _fallback, log=LOG.info)
@@ -115,6 +128,9 @@ async def on_start(ctx: Context):
         ctx.logger.info(f"investigator {INVESTIGATOR} (why and status forwarded; peer path {path}; timeout 8 s)")
     else:
         ctx.logger.info("no investigator configured (INVESTIGATOR_ADDRESS or INVESTIGATOR_SEED); why and status answered here")
+    n = len(handlers.allowed_senders())
+    ctx.logger.info(f"writes allowed for {n} sender(s) in ASI_ALLOWED_SENDERS" if n else
+                    "ASI_ALLOWED_SENDERS is empty: every write is refused (not authorised for this seat); reads stay open")
 
 
 @chat.on_message(ChatMessage)
@@ -142,7 +158,7 @@ async def on_chat(ctx: Context, sender: str, msg: ChatMessage):
         await relay.forward(sender, text, ctx.session, ctx)
         return
     try:
-        answer = await asyncio.to_thread(handle, sender, text)
+        answer = await asyncio.to_thread(handle, sender, text, handlers.may_write(sender), _refusal_logger(sender))
     except Exception as e:  # the handler already maps ledger errors; this is a last net
         ctx.logger.error(f"handler failed: {e}")
         answer = f"Refused: {str(e)[:200]}"

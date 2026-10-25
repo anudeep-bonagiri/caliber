@@ -22,6 +22,11 @@ from .investigate import PREFIX, attribute
 
 TIMEOUT_S = 8.0
 LATE = "investigator did not answer in time; from the ledger directly:"
+HANDLE = "@caliber-investigator"
+
+
+def hop_line(address: str, seconds: float) -> str:
+    return f"asked {HANDLE} {address}, {seconds:.1f} s"
 
 Send = Callable[[str, str, Any], Awaitable[Any]]
 Fallback = Callable[[str, str], Awaitable[str]]
@@ -101,7 +106,7 @@ class Relay:
         elapsed = self.clock() - p.started
         self.round_trips.append(elapsed)
         self.log(f"investigator round trip {elapsed:.2f} s for {p.user[:16]}")
-        await self.send(p.user, attribute(text), p.channel)
+        await self.send(p.user, f"{hop_line(self.investigator, elapsed)}\n{attribute(text)}", p.channel)
         return True
 
     def _match(self, session: Any) -> Pending | None:
@@ -115,4 +120,4 @@ class Relay:
         return self.pending.pop(user)
 
 
-__all__ = ["Relay", "Pending", "PREFIX", "LATE", "TIMEOUT_S"]
+__all__ = ["Relay", "Pending", "PREFIX", "LATE", "HANDLE", "TIMEOUT_S", "hop_line"]

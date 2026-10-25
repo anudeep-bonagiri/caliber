@@ -19,8 +19,12 @@ Anudeep does these clicks once per agent. Each address is fixed by its seed in `
 
 ## The two-line ASI:One check (Task 18)
 
-1. In a chat with `caliber-controller`, type `why 2231`. The reply starts `investigator:`; it came from the investigator agent over agent-to-agent chat and was relayed. (If it starts `investigator did not answer in time; from the ledger directly:` the hop took over 8 seconds; the rows are the same.)
+1. In a chat with `caliber-controller`, type `why 2231`. The reply's first line is `asked @caliber-investigator agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh, <round trip> s` and the second starts `investigator:`; it came from the investigator agent over agent-to-agent chat and was relayed. (If it starts `investigator did not answer in time; from the ledger directly:` the hop took over 8 seconds; the rows are the same.)
 2. In a chat with `caliber-investigator`, type `approve 2231`. The reply is `investigator: refused by the ledger: reader may not do this (needs controller)`. The dashboard's Ledger of trust shows a red `refused` row with actor `reader` and ref `2231`; so does `SELECT actor_role, action, ref, detail FROM audit_event WHERE actor_role = 'reader'`.
+
+## Who may write
+
+Only the ASI:One senders in `ASI_ALLOWED_SENDERS` (repo root `.env`, comma-separated `agent1q...`) can answer, approve, reject, decide rules or move the clock; anyone else gets `not authorised for this seat`. Empty means nobody. To find your own sender address, send `approve 2231` from your ASI:One account once: `logs/agent.log` prints `refused approve from agent1q...: not authorised for this seat (not in ASI_ALLOWED_SENDERS)` with the full address. Put it in `.env` and restart the controller.
 
 ## Cal Hacks submission agent
 
@@ -32,8 +36,8 @@ Start a stopwatch at the first keystroke. Task 10 says the whole exchange is und
 
 | Order | Type | Expected reply shape (from `agent/handlers.py` and `agent/formatting.py`) |
 | --- | --- | --- |
-| 1 | `status` | `investigator: Day <d> of 92 (<date>), clock paused|running, tick <n> s. Today: <n> transactions, <n> auto-paid ($...), <n> held, <n> rejected.` (relayed from the investigator) |
-| 2 | `why 2231` | `investigator:` then the hold line, `Finding: ...`, two `Evidence:` lines, `Recommendation: ...`, `Question: ...`, `source: replayed` (or `live` when the worker is live); answered by the investigator agent and relayed |
+| 1 | `status` | `asked @caliber-investigator agent1q..., <round trip> s`, then `investigator: Day <d> of 92 (<date>), clock paused|running, tick <n> s. Today: <n> transactions, <n> auto-paid ($...), <n> held, <n> rejected.` (relayed from the investigator) |
+| 2 | `why 2231` | `asked @caliber-investigator agent1q..., <round trip> s`, then `investigator:` and the hold line, `Finding: ...`, two `Evidence:` lines, `Recommendation: ...`, `Question: ...`, `source: replayed` (or `live` when the worker is live); answered by the investigator agent and relayed |
 | 3 | `answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.` | `answer_question 2231 written to audit_event by controller (event <n>, day 41, ...)` |
 | 4 | `rules` then `approve rule <n>` | `Rules (<k>):` with the candidate rule and its backtest line; then `approve_rule <n> written to audit_event by controller (...)` |
 | 5 | `approve 2231` | `Refused: hold is cleared_by_rule` (the rule already cleared and paid it; that refusal is correct and is itself an audit row). For a payment that needs a release, use `approve INV-1077 <call-back note of 8+ characters>` on day 44 and read `approve_payment INV-1077 written to audit_event by controller (...)` |

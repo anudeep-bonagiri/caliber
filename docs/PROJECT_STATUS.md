@@ -436,6 +436,24 @@ Waiting on Anudeep: the record cue for the two real takes (staged at day 41, fal
 
 Director's remaining list after the takes: final `scripts/full_run.sh`, then facts.py (adds the baseline block), regenerate FACTS, RESULTS and web facts, confirm the cards and README numbers still match, restore day 0.
 
+## 2026-10-24 20:40 PDT Builder-B: council items 3 and 5a (Task 28)
+
+Item 3, sender allowlist on the controller seat:
+- `agent/handlers.py`: `WRITE_INTENTS` (answer, approve, reject, approve_rule, reject_rule, pause, resume, step: every intent that reaches a `try_` procedure) and `handle(sender, text, may_write, on_refused)`. The gate runs after the intent is resolved, so free text that would land as an answer is gated too, and before any ledger call. A refused sender gets exactly `not authorised for this seat`; with `ASI_ALLOWED_SENDERS` empty or unset everyone is refused and the reply adds a second line saying the list is empty. Reads (`what needs me`, `why`, `status`, `rules`, `help`) stay open; `why` and `status` still go to the investigator for anyone. The terminal twin (`agent/cli.py`) is not gated: it holds the controller token itself.
+- `agent/agent.py`: `on_chat` and the relay fallback pass `handlers.may_write(sender)`; a refusal is logged as `refused <intent> from <full agent1q address>: not authorised for this seat (not in ASI_ALLOWED_SENDERS)`; startup logs how many senders may write.
+- Audit row: not written. No module procedure records a refusal for the controller identity without performing the write (`try_*` procedures audit `refused` only when their own check fails, and the controller passes the role check); `try_answer_question` was ruled out by the brief; spacetimedb/** is frozen for this lane. The refusal is in logs/agent.log only. JUDGE_QA and Devpost must say "agent log", not "audit row", for this refusal.
+- `.env.example` gains `ASI_ALLOWED_SENDERS` with a comment. `.env` has no such line (grep count 0), so once the controller restarts on this code every ASI:One write is refused until the director adds it.
+- Sender address: not found. Every log and session transcript holds only the 16-character prefix `agent1qtly3w7yc4` (agent.py logged `sender[:16]`; logs/agent.log has since been rotated). After the restart, send `approve 2231` once from Anudeep's ASI:One account: logs/agent.log prints the full address on the refusal line; put it in `.env` as `ASI_ALLOWED_SENDERS=<address>` and restart the controller again. agent/CONNECT.md "Who may write" has these steps.
+- Check: `agent/.venv/bin/pytest -q agent/tests/test_allowlist.py` 33 passed, with the ledger mocked at the httpx transport: an allowed sender writes through each of the 8 write paths; an unknown sender gets the exact text on 9 write lines and on a free-text answer with zero HTTP requests; the 5 reads work for both senders; empty and unset allowlists refuse everyone.
+
+Item 5a, the hop line:
+- `agent/relay.py`: a relayed `why` or `status` reply now opens `asked @caliber-investigator <its agent1q address>, <round trip> s` (one decimal, the relay's own monotonic clock from forward to reply), then the `investigator:` text. The 8 s fallback keeps its `investigator did not answer in time; from the ledger directly:` prefix and has no hop line.
+- Expected strings updated in agent/tests/test_investigator.py (deterministic clock), agent/README.md, agent/INVESTIGATOR_README.md, and the CONNECT.md two-line check and session table.
+- Check: `agent/.venv/bin/pytest -q agent/tests/test_investigator.py` 24 passed; full `agent/.venv/bin/pytest -q` 275 passed.
+
+Not restarted (builder-W holds the agents staged). The live controller (pid 95094 at 20:40) runs the old code: no allowlist, no hop line, until builder-W re-stages. Only the controller needs a restart; the investigator's code is unchanged. From the repo root, after the director adds `ASI_ALLOWED_SENDERS` to `.env`:
+`kill 95094` (or the current pid from `ps -eo pid,command | grep agent/agent.py`), then `nohup agent/.venv/bin/python agent/agent.py >> logs/agent.log 2>&1 &`. The startup log should read `writes allowed for 1 sender(s) in ASI_ALLOWED_SENDERS`.
+
 ## Tried and rejected
 
 | What | Why rejected |
