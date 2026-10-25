@@ -2,11 +2,13 @@
 
 One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and the sponsor tracks. It opens on the moment in the order the council set: the investigator agent is refused when asked to pay, the controller's approval becomes a bank id, then the hold-to-rule story, then the proof. Staging, typed lines and pauses: docs/video/moment-script.md. Every number below is read off the screen or from docs/FACTS.md and bench/BASELINE.md (runs of 2026-10-25); nothing is from memory. Three dry jokes, no more.
 
-## Intro, 30 seconds, recorded on camera before the demo
+## Intro, 35 to 40 seconds, recorded on camera before the demo
 
-Say: "I'm Anudeep, and this is Sreesanth. I run Cruze, a fleet software company. Every carrier we work with has one person in the back office matching fuel-card statements, toll bills and repair invoices by eye, about eighty-five lines a day, and nobody checks them against the truck. So misuse and duplicate billing get paid. None of our carriers would let software pay a bill on its own, and they are right not to. So we built one that can't."
+Say: "I'm Anudeep, this is Sreesanth. I run Cruze, a fleet software company, and every carrier we work with has the same person in the back office: one bookkeeper matching fuel-card statements, toll bills and repair invoices by eye, about eighty-five lines a day, and nobody checks them against where the truck actually was. Shell says fleets lose up to five percent of their fuel spend to misuse. For a forty-truck carrier that is close to a hundred thousand dollars a year, while tolls just rose thirteen percent and repairs nine. None of these carriers would let software pay a bill on its own, and they are right. So we built one that can't."
 
-Cut straight to the demo. The demo's first line names the product; the intro never does, so the two do not repeat.
+Cut straight to the demo. The demo's first line names the product; the intro never does, so the two do not repeat. To land at 30 seconds, drop the clause "while tolls just rose thirteen percent and repairs nine".
+
+Sources for the intro: "up to five percent of fuel spend" is Shell Fleet Solutions (shell.us, Shell Fleet Solutions quarterly trends); "a hundred thousand dollars a year" is derived: 40 trucks times about 100,000 miles a year times ATRI's 2025 fuel cost of $0.482 per mile is about $1.9 million of fuel, and 5 percent of that is about $96,000; "tolls up thirteen percent and repairs nine" is ATRI's 2026 Analysis of the Operational Costs of Trucking (2025 data: tolls up 13.2 percent, repair and maintenance up 8.6 percent, total $2.336 per mile). "About eighty-five lines a day" is this carrier's own volume, 7,944 rows over 92 business days.
 
 [0:00] ASI:One, the @caliber-investigator chat, the console beside it on day 41.
 Say: "This is Caliber, an accounts-payable clerk. This is its investigator agent on ASI:One. It can read the whole ledger. Watch it get asked to pay."
