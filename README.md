@@ -48,12 +48,12 @@ Same 558 rows (all 52 planted errors, all 6 decoys, 500 clean rows), same record
 | System | Precision | Recall | False holds | Model calls per paid line | Cost for the 558 rows | Median per row |
 | --- | --- | --- | --- | --- | --- | --- |
 | Caliber kernel | 1.00 | 1.00 | 0 | 0 | $0, plain code | 41 business days in 0.2 s |
-| Caliber on a hold (Droid, recorded live run) | not a classifier | | | 1 per hold, 52 holds | 2,016,204 Factory credits | 25.6 s per hold |
+| Caliber on a hold (Droid, recorded live run) | not a classifier | | | 1 per hold, 52 holds | 2,016,204 Factory credits, about $5.44 at Factory's rate | 25.6 s per hold |
 | Claude Sonnet 5.5 alone | 1.00 | 1.00 | 0 | 1 | $6.38 | 3.0 s |
 | Claude Opus 5.5 alone, default effort | 0.81 | 1.00 | 14 | 1 | $12.85 | 3.5 s |
 | asi1-mini alone, free plan | 0.31 | 0.81 | 101 | 1 | $0 on the free plan | 9.1 s, paced to the quota |
 
-At this carrier's volume (7,944 rows a quarter) the model-alone clerks cost about $91 (Sonnet) and $183 (Opus) a quarter at list; the kernel costs nothing per line and spends Droid credits on the holds only. A kernel decision is an audit row with its source rows on it; a model's hold-or-clear answer is a sentence. Caveats: synthetic rows from our own generator, a hinted prompt, the kernel measured on the full run and the models on the sample, each model at its API default effort (Sonnet high, Opus medium).
+At this carrier's volume (7,944 rows a quarter) the model-alone clerks cost about $91 (Sonnet) and $183 (Opus) a quarter at list; the kernel costs nothing per line and spends about $5.44 of Droid credits on the 52 holds. A kernel decision is an audit row with its source rows on it; a model's hold-or-clear answer is a sentence. Caveats: synthetic rows from our own generator, a hinted prompt, the kernel measured on the full run and the models on the sample, each model at its API default effort (Sonnet high, Opus medium).
 
 | Code | Planted | Raised | Precision | Recall |
 | --- | --- | --- | --- | --- |

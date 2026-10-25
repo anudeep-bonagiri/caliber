@@ -30,7 +30,7 @@ Answer: It learns only from your answer. One answer becomes one rule with a scop
 
 Need: Reading evidence a kernel cannot: receipts, contracts, the swap log, and deciding what to ask.
 Where: `worker/src/droid.ts`, `sessionOptions` (line 101).
-Number: 25.6 s per investigation on average in the recorded live run (FACTS line: "Droid cost, from the recorded live run of 2026-10-24, 52 investigations: per task on average 1,033 input tokens, 1,354 output tokens and 70,386 cache tokens (cacheCreationTokens plus cacheReadTokens), 25.6 s; totals 53,739 input, 70,433 output, 3,660,097 cache tokens, 2,016,204 Factory credits.").
+Number: 25.6 s per investigation on average in the recorded live run (FACTS line: "Droid cost, from the recorded live run of 2026-10-24, 52 investigations: per task on average 1,033 input tokens, 1,354 output tokens and 70,386 cache tokens (cacheCreationTokens plus cacheReadTokens), 25.6 s; totals 53,739 input, 70,433 output, 3,660,097 cache tokens, 2,016,204 Factory credits.") The credits are about $5.44 at Factory's rate..
 They will ask: Was that live, and what can Droid touch?
 Answer: At the table, no: the worker runs in replay with every key empty, and each card says it replays the recording made 2026-10-24 by the live Droid run. Live, Droid gets the evidence folder and the Elastic tools over MCP, with autonomy Off, Execute, Edit, Create and ApplyPatch disabled by id, a permission handler that cancels anything write-like, and a timed abort; its output schema has no pay, and a zod gate checks every quote against its source before the write. A hard OS sandbox around its Read tool: Not built.
 
