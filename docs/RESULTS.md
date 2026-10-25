@@ -1,6 +1,6 @@
 # Results
 
-Run date: 2026-10-24T22:25:41+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
+Run date: 2026-10-25T00:22:27+00:00. Rerun: `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, scripted controller pass, then this file).
 
 | Metric | Result | Target |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Decoy re-record, the six decoy recordings re-recorded live on 2026-10-24 (now th
 <!-- honesty:start -->
 ## Provenance
 
-In the measured run of 2026-10-24T22:25:41+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card.
+In the measured run of 2026-10-25T00:22:27+00:00, 0 investigations were produced by a live model, 47 replayed recorded findings, and 0 were scripted stand-ins, each labelled on its card.
 
 The audit trail recorded 1 refusal through the `try_*` procedures in that run, all by the agent role.
 

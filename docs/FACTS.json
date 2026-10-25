@@ -1,8 +1,332 @@
 {
-  "asOf": "2026-10-24T22:25:41+00:00",
+  "asOf": "2026-10-25T00:22:27+00:00",
   "autoPaid": {
     "cents": 108363052,
     "count": 7886
+  },
+  "baseline": {
+    "cost": {
+      "asi1Quota": {
+        "paceSeconds": 9.1,
+        "per15min": 100,
+        "perDay": 1000
+      },
+      "asi1Requests": 561,
+      "asi1Tokens": {
+        "input": 2393406,
+        "output": 66383
+      },
+      "costCapUsd": 15.0,
+      "sonnetRates": {
+        "input": 2.0,
+        "output": 10.0
+      },
+      "sonnetRatesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
+      "sonnetStoppedForCost": false,
+      "sonnetTokens": {
+        "input": 2358546,
+        "output": 166183
+      },
+      "sonnetUsd": 6.3789
+    },
+    "failures": {
+      "asi1": "asi1-mini missed 4 of 6 capacity_exceeded, 1 of 9 rate_variance, 2 of 4 duplicate_invoice, 2 of 3 vendor_bank_change; held with the wrong code 2 capacity_exceeded; held 101 clean rows (holds by code that did not match a planted row: 82 as duplicate_toll, 8 as location_mismatch, 8 as vendor_bank_change, 5 as duplicate_invoice); 1 row had no parseable answer (1 unparsed), counted as not held.",
+      "sonnet": "Claude Sonnet failed on nothing in this sample."
+    },
+    "footnotes": [
+      "Positives are the 58 answer-key rows: 52 planted exceptions and 6 decoys. A decoy is a legitimate unit swap that the records on file cannot distinguish from card misuse, so hold is the correct decision for every system: the kernel held and asked, then cleared through an approved rule after one controller answer; a model that says hold on a decoy is counted correct; a model that says clear on a decoy is counted exactly as it scores, a miss.",
+      "Code-exact scoring (the table): a hold counts for a code only when the system named that code; a hold with a wrong or missing code is a false positive for the code it named and a miss for the planted code. This is the definition docs/FACTS.json uses for the kernel.",
+      "Caliber's figures are the measured 92-day run over all 7,944 transactions (docs/FACTS.json); the models saw a 558-row sample holding every planted row and decoy plus 500 clean rows, so recall is directly comparable and the kernel's precision was tested on about fourteen times as many clean rows.",
+      "Synthetic data from the same generator as the clean rows (seed/generate.py, seed 42); every system was given identical inputs; no fine-tuning, no examples, one prompt, one attempt per row. The result measures whether each system finds what we planted, not how it behaves on a real carrier's statements.",
+      "Claude Sonnet: no temperature was sent because Claude Sonnet 5.5 returns 400 for a non-default temperature; thinking and effort were left at the API defaults. asi1-mini: temperature 0.",
+      "Parsing: the first complete JSON object in a reply is the decision, for both models; a reply with no complete object counts as not held. Raw replies are on disk unchanged under bench/outputs."
+    ],
+    "generatedAt": "2026-10-25T00:12:27+00:00",
+    "modelIds": {
+      "asi1": [
+        "asi1-mini"
+      ],
+      "sonnet": [
+        "claude-sonnet-5-5"
+      ]
+    },
+    "partial": {
+      "asi1": false,
+      "caliber": false,
+      "sonnet": false
+    },
+    "sample": {
+      "clean": {
+        "card": 174,
+        "invoice": 153,
+        "toll": 173
+      },
+      "cleanAvailable": {
+        "card": 5581,
+        "invoice": 153,
+        "toll": 2146
+      },
+      "cleanTotal": 500,
+      "decoys": 6,
+      "excludedLimitHolds": [
+        "INV-1075",
+        "INV-1080",
+        "INV-1106",
+        "INV-1109",
+        "INV-1117",
+        "INV-1171"
+      ],
+      "planted": 52,
+      "seed": 42,
+      "total": 558
+    },
+    "source": "bench/BASELINE.json",
+    "table": [
+      {
+        "asi1": {
+          "falsePositives": 8,
+          "precision": 0.7143,
+          "raised": 28,
+          "recall": 1.0,
+          "truePositives": 20
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 20,
+          "recall": 1.0,
+          "truePositives": 20
+        },
+        "code": "location_mismatch",
+        "planted": 20,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 20,
+          "recall": 1.0,
+          "truePositives": 20
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 0,
+          "precision": null,
+          "raised": 0,
+          "recall": 0.0,
+          "truePositives": 0
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 6,
+          "recall": 1.0,
+          "truePositives": 6
+        },
+        "code": "capacity_exceeded",
+        "planted": 6,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 6,
+          "recall": 1.0,
+          "truePositives": 6
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 8,
+          "recall": 0.8889,
+          "truePositives": 8
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 9,
+          "recall": 1.0,
+          "truePositives": 9
+        },
+        "code": "rate_variance",
+        "planted": 9,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 9,
+          "recall": 1.0,
+          "truePositives": 9
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 82,
+          "precision": 0.1183,
+          "raised": 93,
+          "recall": 1.0,
+          "truePositives": 11
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 11,
+          "recall": 1.0,
+          "truePositives": 11
+        },
+        "code": "duplicate_toll",
+        "planted": 11,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 11,
+          "recall": 1.0,
+          "truePositives": 11
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 5,
+          "precision": 0.2857,
+          "raised": 7,
+          "recall": 0.5,
+          "truePositives": 2
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 4,
+          "recall": 1.0,
+          "truePositives": 4
+        },
+        "code": "duplicate_invoice",
+        "planted": 4,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 4,
+          "recall": 1.0,
+          "truePositives": 4
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 8,
+          "precision": 0.1111,
+          "raised": 9,
+          "recall": 0.3333,
+          "truePositives": 1
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 3,
+          "recall": 1.0,
+          "truePositives": 3
+        },
+        "code": "vendor_bank_change",
+        "planted": 3,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 3,
+          "recall": 1.0,
+          "truePositives": 3
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 5,
+          "recall": 1.0,
+          "truePositives": 5
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 5,
+          "recall": 1.0,
+          "truePositives": 5
+        },
+        "code": "short_received",
+        "planted": 5,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "raised": 5,
+          "recall": 1.0,
+          "truePositives": 5
+        }
+      },
+      {
+        "asi1": {
+          "falsePositives": 103,
+          "precision": 0.3133,
+          "recall": 0.8103,
+          "truePositives": 47
+        },
+        "caliber": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "truePositives": 58
+        },
+        "code": "overall",
+        "planted": 58,
+        "sonnet": {
+          "falsePositives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "truePositives": 58
+        }
+      }
+    ],
+    "tiesOrWins": [
+      {
+        "code": "location_mismatch",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "capacity_exceeded",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "rate_variance",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "duplicate_toll",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "duplicate_invoice",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "vendor_bank_change",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "short_received",
+        "model": "Claude Sonnet",
+        "tie": true
+      },
+      {
+        "code": "short_received",
+        "model": "asi1-mini",
+        "tie": true
+      },
+      {
+        "code": "overall",
+        "model": "Claude Sonnet",
+        "tie": true
+      }
+    ]
   },
   "byCode": [
     {
