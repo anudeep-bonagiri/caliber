@@ -408,25 +408,78 @@ def test_long_free_text_fallback_answer_is_bounded(fake):
     assert fake.calls == []
 
 
-def test_classifier_input_is_capped_and_its_text_is_bounded(fake, monkeypatch):
+def test_classifier_input_is_capped_and_a_model_routed_approve_is_only_echoed(fake, monkeypatch):
     monkeypatch.setenv("ASI_ONE_API_KEY", "k")
     fake.tables["hold"] = [HOLD_BANK]
     sent = []
 
     def completion(api_key, messages):
         sent.append(messages[1]["content"])
-        return json.dumps({"intent": "approve", "txnRef": "INV-1077", "text": "n" * 501})
+        return json.dumps({"intent": "approve", "txnRef": "INV-1077", "text": "called Maria"})
 
     monkeypatch.setattr(intents, "_chat_completion", completion)
     out = handlers.handle("u1", "go ahead, I called them " + "z" * 5000)
     assert len(sent[0]) == 2000
-    assert out == "Refused: call-back note is longer than 500 characters"
+    assert out == ("I read that as: approve INV-1077 called Maria\n"
+                   f"{handlers.NEEDS_TYPED} To proceed, type exactly: approve INV-1077 called Maria")
     assert fake.calls == []
 
-    monkeypatch.setattr(intents, "_chat_completion",
-                        lambda k, m: json.dumps({"intent": "approve", "txnRef": "INV-1077", "text": "called\x00 Maria"}))
-    handlers.handle("u1", "go ahead, I called Maria")
+    # the typed command takes the regex path, bounded as before
+    handlers.handle("u1", "approve INV-1077 called\x00 Maria")
     assert fake.calls == [("try_approve_payment", ["INV-1077", {"some": "called Maria"}])]
+    assert handlers.handle("u1", "approve INV-1077 " + "n" * 501) == "Refused: call-back note is longer than 500 characters"
+    assert len(fake.calls) == 1
+
+
+# ---- a model's reading of free text never moves money or decides a rule ----
+
+@pytest.mark.parametrize("reply,echo", [
+    ('{"intent": "approve", "txnRef": "2231", "text": null}', "approve 2231"),
+    ('{"intent": "approve", "txnRef": "INV-1077", "text": "called Maria"}', "approve INV-1077 called Maria"),
+    ('{"intent": "reject", "txnRef": "2231", "text": "card cloned"}', "reject 2231 card cloned"),
+    ('{"intent": "reject", "txnRef": "2231", "text": null}', "reject 2231 <reason>"),
+    ('{"intent": "approve_rule", "txnRef": "3", "text": null}', "approve rule 3"),
+    ('{"intent": "reject_rule", "txnRef": "#3", "text": "too broad"}', "reject rule 3 too broad"),
+])
+def test_model_routed_money_and_rule_intents_never_write(fake, monkeypatch, reply, echo):
+    monkeypatch.setenv("ASI_ONE_API_KEY", "k")
+    fake.tables["hold"] = [HOLD_AWAITING]
+    handlers.LAST_REF["u1"] = "2231"
+    monkeypatch.setattr(intents, "_chat_completion", lambda k, m: reply)
+    for text in ["please do not approve 2231", "go ahead and pay it", "I approve 2231", "sure, reject it, the card was cloned"]:
+        out = handlers.handle("u1", text)
+        assert out == f"I read that as: {echo}\n{handlers.NEEDS_TYPED} To proceed, type exactly: {echo}", text
+    assert fake.calls == []
+
+
+def test_model_routed_money_intent_without_a_reference_asks_for_the_command(fake, monkeypatch):
+    monkeypatch.setenv("ASI_ONE_API_KEY", "k")
+    fake.tables["hold"] = [HOLD_AWAITING]
+    monkeypatch.setattr(intents, "_chat_completion", lambda k, m: '{"intent": "approve", "txnRef": null, "text": null}')
+    out = handlers.handle("u1", "go ahead and pay it")
+    assert out.startswith(handlers.NEEDS_TYPED) and "approve <txnRef>" in out
+    assert fake.calls == []
+
+
+def test_model_routed_answer_still_writes_and_the_typed_command_still_writes(fake, monkeypatch):
+    monkeypatch.setenv("ASI_ONE_API_KEY", "k")
+    fake.tables["hold"] = [HOLD_AWAITING]
+    monkeypatch.setattr(intents, "_chat_completion", lambda k, m: '{"intent": "answer", "txnRef": "2231", "text": null}')
+    handlers.handle("u1", "Ramon did drive 22 that day")
+    assert fake.calls == [("try_answer_question", ["2231", "Ramon did drive 22 that day"])]
+    handlers.handle("u1", "approve 2231")        # the regex fast path is not a model reading
+    assert fake.calls[-1] == ("try_approve_payment", ["2231", {"none": []}])
+
+
+def test_model_routed_money_intent_from_a_stranger_is_still_refused_and_recorded(fake, monkeypatch):
+    monkeypatch.setenv("ASI_ONE_API_KEY", "k")
+    fake.tables["hold"] = [HOLD_AWAITING]
+    monkeypatch.setattr(intents, "_chat_completion", lambda k, m: '{"intent": "approve", "txnRef": "2231", "text": null}')
+    refused = []
+    out = handlers.handle("stranger", "go ahead and pay it", False, refused.append)
+    assert out == handlers.NOT_AUTHORISED or out.startswith(handlers.NOT_AUTHORISED)
+    assert refused == ["approve"]
+    assert fake.calls == []
 
 
 # ---- mistyped commands never become answers ----

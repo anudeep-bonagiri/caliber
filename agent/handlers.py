@@ -36,6 +36,13 @@ WRITE_INTENTS = {"answer", "approve", "reject", "approve_rule", "reject_rule", "
 NOT_AUTHORISED = "not authorised for this seat"
 NOBODY_ALLOWED = "No ASI:One sender may write to this seat yet: ASI_ALLOWED_SENDERS is empty."
 
+# Money and rule intents that the asi1-mini classifier may read out of free text but never execute: a model output
+# does not pick a payment or a rule. The reply quotes the exact command; the typed line takes the regex fast path
+# and the same gates. Free-text answers are not in this set: an answer is the controller's own words, kept verbatim,
+# and becomes a rule candidate that still needs `approve rule <n>`.
+CONFIRM_INTENTS = {"approve", "reject", "approve_rule", "reject_rule"}
+NEEDS_TYPED = "Money and rule decisions are never taken from a model's reading of free text."
+
 
 def allowed_senders() -> set[str]:
     """ASI_ALLOWED_SENDERS from .env: comma-separated agent1q... addresses. Empty means nobody may write."""
@@ -98,6 +105,8 @@ def handle(sender_id: str, text: str, may_write: bool = True, on_refused=None) -
                 except Exception:   # recording the refusal never changes the reply
                     pass
             return answer
+        if intent.via == "model" and intent.name in CONFIRM_INTENTS:
+            return needs_typed(intent)
         return _dispatch(sender_id, intent)
     except BadReference as e:
         return str(e)
@@ -105,6 +114,24 @@ def handle(sender_id: str, text: str, may_write: bool = True, on_refused=None) -
         return fmt.refused(str(e))
     except LedgerError as e:
         return f"Ledger error: {e}"
+
+
+def typed_command(it: intents.Intent) -> str:
+    """The exact command line for a model-proposed money or rule intent, references validated first."""
+    if it.name in ("approve_rule", "reject_rule"):
+        head = f"{'approve' if it.name == 'approve_rule' else 'reject'} rule {ledger.check_rule_id(it.ref or '')}"
+    else:
+        head = f"{it.name} {ledger.check_txn_ref(it.ref or '')}"
+    tail = it.text or ("<reason>" if it.name in ("reject", "reject_rule") else "")
+    return f"{head} {tail}".strip()
+
+
+def needs_typed(it: intents.Intent) -> str:
+    """The reply for a model-routed money or rule intent: what was read, and the command to type. No call is made."""
+    if not (it.ref or "").strip():
+        return f"{NEEDS_TYPED} Type it with the reference: approve <txnRef> [note], reject <txnRef> <reason>, approve rule <n>."
+    cmd = typed_command(it)
+    return f"I read that as: {cmd}\n{NEEDS_TYPED} To proceed, type exactly: {cmd}"
 
 
 # ---- free text ----
