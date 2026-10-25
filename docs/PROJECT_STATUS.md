@@ -868,3 +868,33 @@ Technical note (PDF, 4 pages): CarrierBench (7,944 rows, 52 planted errors, 6 de
 ### Blocked
 
 - Nothing. README "Measurement" and the Devpost gallery line above are for the director to apply (README is builder-23's; docs/DEVPOST.md is not in my file list).
+
+## 2026-10-24 17:24 PDT Builder-25: fifteen-second cards (Task 25)
+
+`docs/CARDS.md` written: eleven cards in the brief's order (kernel; reducers and SoD; rule memory; Droid; Elastic tools and Workflow; CRS; Nessie; the two agents; answer key; model-only baseline; inbox connector), each exactly five lines (Need, Where, Number, They will ask, Answer), with a header naming the rehearsers (Anudeep and Shrithik, 3 AM), the one rule (no number that is not on the page) and the FACTS run the numbers come from (quoted FACTS header line, 2026-10-24T22:25:41+00:00). Log: `logs/builder_25.log`.
+
+### Checks, as run
+
+| Check | Result |
+| --- | --- |
+| Card structure | 11 cards, each 5 lines in label order (python split on `## `, labels asserted) |
+| Where lines | 11 of 11 `grep -n` hits at the stated line: `kernel.ts` `evaluateCardTxn` 148; `index.ts` `checkApprovePayment` 784 and `backtest` 644; `droid.ts` `sessionOptions` 101; `setup_agent.py` `upsert` 84; `vendor_check.ts` `assessVendor` 160; `settle.ts` `startSettlement` 282; `handlers.py` `handle` 48; `generate.py` `generate` 47; `score.py` `score_model` 47; `ingest_watch.py` `process` 206 |
+| Number lines | 10 quoted FACTS lines, all `grep -F` verbatim in `docs/FACTS.md`; two cards (Elastic, inbox) say "No number." and name the observable (the replayed `elastic___find_trips_near` step on 2231's card; hold 2231 appearing after the day 41 CSV drop under the connector chip) |
+| Other names in answers | all exist: `advanceDay`, `ingestRows`, `createRule`, `recordSettlement`, `approvePayment`, `tryApprovePayment` in `index.ts`; `audit_event` in `schema.ts`; `reader` role; `elastic/workflows/stale_holds.yaml` (`caliber-stale-holds`); `elastic/tools/find_trips_near.json`; `agent/investigator.py`; `bench/BASELINE.md`; `docs/FACTS.json`; `scripts/facts.py` |
+| Em dash | `grep -nP '\x{2014}'` on `docs/CARDS.md`: none |
+| Digits outside Number and Where lines | "3 AM" (header, as the brief words it); dates 2026-10-24 (in FACTS.md); the quoted FACTS header timestamp; "seed 42" (in the RESULTS.md caveat). asi1-mini is written as "the ASI:One mini model" so no other digit appears |
+| "Not built." endings | reducers (production identity), Droid (OS sandbox), Elastic (escalation inside the planned beat; status shows it about a minute after a manual trigger), CRS (live sandbox call), Nessie (exact-cent transfers), agents (email or Slack inbox), inbox (API connectors). Kernel, rule memory, answer key and baseline cards have no Not built line because nothing on them is pending |
+
+### Observations for the director
+
+- `docs/FACTS.md` has no model-only baseline block. `scripts/facts.py` gained `baseline_block` in d1a6f3e, but FACTS.md was last written at 22:25:41Z, before `bench/BASELINE.json` existed. The baseline card therefore quotes the kernel's "Overall precision 1.0, recall 1.0." line and sends the reader to `bench/BASELINE.md` for the model figures. One `python3 scripts/facts.py` against a running module would add the block; then the card's Number line can quote a Sonnet or asi1-mini line directly. Not done here: the brief forbids starting processes and the only file touched is `docs/CARDS.md`.
+- The Elastic card's Need line is the TASKS.md Need column verbatim, which still names the escalation beat; the Answer says the brief lands about a minute after a manual trigger (JUDGE_QA), so the card does not promise the planned window.
+- The runbook section 6 Factory and Elastic lines say "two Elastic tools"; README and JUDGE_QA now say four. The cards say "the hand-written ES|QL tools" without a count so they do not contradict either. Worth aligning the runbook when it is next edited.
+
+### Tried and rejected
+
+| Tried | Rejected because |
+| --- | --- |
+| Quoting a `bench/BASELINE.md` line on the baseline card's Number line | The acceptance check says every number traces to a FACTS.md line; BASELINE.md is not FACTS.md |
+| Writing "asi1-mini" in the baseline and agents answers | The brief's digit rule allows only years, days and ids that appear in FACTS.md or RESULTS.md; neither file names the model |
+| Naming guardrail and decision ids (G and D numbers) in answers | Same digit rule; the cards say "context/DECISIONS.md" and describe the control instead |
