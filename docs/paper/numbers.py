@@ -32,7 +32,7 @@ ROOT = HERE.parents[1]
 CODES = ["location_mismatch", "capacity_exceeded", "rate_variance", "duplicate_toll", "duplicate_invoice",
          "vendor_bank_change", "short_received"]
 # commits named in "what we got wrong"; the hash is an identifier, the script verifies it and reads its date and subject
-COMMITS = {"commitLabelFix": "2fac596", "commitDecoyRerecord": "8e004e1"}
+COMMITS = {"commitLabelFix": "aef1ed0", "commitDecoyRerecord": "e3ade6e"}
 
 MAP: list[dict] = []
 

@@ -1464,44 +1464,44 @@
  },
  {
   "macro": "commitLabelFix",
-  "value": "2fac596",
+  "value": "aef1ed0",
   "source": "git",
-  "where": "git rev-parse --short 2fac596",
-  "raw": "2fac596"
+  "where": "git rev-parse --short aef1ed0",
+  "raw": "aef1ed0"
  },
  {
   "macro": "commitLabelFixDate",
   "value": "2026-10-24 14:21",
   "source": "git",
-  "where": "git log -1 --format=%ad 2fac596",
+  "where": "git log -1 --format=%ad aef1ed0",
   "raw": "2026-10-24 14:21"
  },
  {
   "macro": "commitLabelFixSubject",
   "value": "Honesty fixes: hand-shaped vendor checks carry status hand\\_shaped, an amber badge, the fixture note and label-only refs ",
   "source": "git",
-  "where": "git log -1 --format=%s 2fac596",
+  "where": "git log -1 --format=%s aef1ed0",
   "raw": "Honesty fixes: hand-shaped vendor checks carry status hand\\_shaped, an amber badge, the fixture note and label-only refs "
  },
  {
   "macro": "commitDecoyRerecord",
-  "value": "8e004e1",
+  "value": "e3ade6e",
   "source": "git",
-  "where": "git rev-parse --short 8e004e1",
-  "raw": "8e004e1"
+  "where": "git rev-parse --short e3ade6e",
+  "raw": "e3ade6e"
  },
  {
   "macro": "commitDecoyRerecordDate",
   "value": "2026-10-24 14:13",
   "source": "git",
-  "where": "git log -1 --format=%ad 8e004e1",
+  "where": "git log -1 --format=%ad e3ade6e",
   "raw": "2026-10-24 14:13"
  },
  {
   "macro": "commitDecoyRerecordSubject",
   "value": "Decoys re-recorded live: Droid asks instead of clearing on the six unit-swap decoys",
   "source": "git",
-  "where": "git log -1 --format=%s 8e004e1",
+  "where": "git log -1 --format=%s e3ade6e",
   "raw": "Decoys re-recorded live: Droid asks instead of clearing on the six unit-swap decoys"
  }
 ]

@@ -11,7 +11,7 @@ Read-only, against the running web app at http://localhost:5173 and the ledger a
 
 Findings are in docs/PROJECT_STATUS.md under "Builder-W: dashboard honesty audit".
 
-## After the worker restart with 2fac596 (job 7, 2026-10-24 14:28 PDT, ledger at day 60)
+## After the worker restart with aef1ed0 (job 7, 2026-10-24 14:28 PDT, ledger at day 60)
 
 | File | What it shows |
 | --- | --- |

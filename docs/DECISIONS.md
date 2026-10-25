@@ -24,7 +24,7 @@ Numbered, dated, append-only. Each entry: the decision, why, the consequence. Pa
 
 - Decision: every commit from a builder or from the director ends with `Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>`. Anudeep's general no-trailer rule for his repos does not apply here.
 - Why: Cal Hacks 13.0 is cohosted by Anthropic and has a Factory agent track; AI-assisted commits are expected, and a git log that hides them would contradict the honesty files.
-- Consequence: builder briefs keep the trailer line; the three builder-W commits made without it (85aba06, de3d124, 548864d) stay as they are, since rewriting pushed history would be worse than the omission, and this entry records it.
+- Consequence: builder briefs keep the trailer line; the three builder-W commits made without it (49cbf1b, 85e749c, 3421e8c) stay as they are, since rewriting pushed history would be worse than the omission, and this entry records it.
 - Addendum (2026-10-24 20:25 PDT): the trailer names the model that made the commit. Sessions started after Anudeep switched the default model at about 20:00 run Claude Opus 5.5 and write `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`; earlier commits name Claude Fable 5.1.
 
 ## D-5 (2026-10-24 15:45 PDT) Tasks 21 to 25: close the two half-met winner traits
