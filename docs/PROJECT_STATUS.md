@@ -502,7 +502,19 @@ key_readers: OK, no agent, worker, module or web code reads the answer key
 - After the final run: `python3 scripts/facts.py` will add `rulesPlanted`. A nonzero `planted` does not by itself mean a planted row was cleared (a consumed one_time rule still covers its window); `plantedClearedByRule` remains the claim. Check one card on the dashboard shows the chip.
 - Commit trailer: the brief and D-4 say "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` to keep the attribution true. Change D-4 or tell me if you want it otherwise.
 
-### Tried and rejected
+### 2026-10-24 21:08 PDT Director: council lanes reviewed, a home-folder leak redacted, two sessions lost to limits and sleep
+
+Accepted after re-checking each claim: lane A (aa7f6f7; D-6 logged), lane B (6a8202b, 3dd449f; allowlist and hop line; the audit row was not possible without a module change and is now builder-B2's), lane C2 (549697e; Droid table, item 8 hit list), lane D (9d21d37, with five director amendments: INV-1075 for the controller-approval beat because 1068 does not exist on the day-41 staging; the derived Inspiration figures deleted, since APQC's per-invoice cost does not apply to statement lines and 92 business days is not a quarter; caliber.compare in the Devpost fields; the runbook opens on "/"; gallery-00 first), builder-C3 (53d73f4; the consistency fixes, both README quotes of the options block identical to droid.ts, worker 111 tests).
+
+Found by lane C2 and fixed by the director: recording 770003 (committed in a87192e) carried the text of the laptop's ~/AGENTS.md, a note for another product with its API base URL and no key, because Droid's Read is not confined to the evidence folder. Redacted in e2243e1; the read itself stays recorded. The repo is private; the text remains in the history of a87192e, and whether to rewrite that history before the repo goes public is Anudeep's decision.
+
+Lost time: the laptop slept at about 20:36 on battery (37 percent at 20:58), which cut builder-B2 off mid-response; it was resumed. Builder-26 (17:35) and builder-W (about 18:35) hit the Fable usage limit and stopped silently; builder-26 was switched to Opus and resumed on gallery-08; builder-W is replaced by builder-S (stage manager, brief 2026-10-24_2105) and receives no further messages. `caffeinate -i` holds off idle sleep until about 4 AM; it cannot prevent sleep when the lid closes.
+
+Domain: caliber.compare is registered and resolves to the registrar's parking page; README links and the Devpost draft carry it; it must be forwarded or deployed before submission.
+
+In flight: builder-B2 (seat refusal audit row, deadline 1 AM), builder-29 (customer view in a worktree on port 5174, hard cut 4 AM), builder-26 (gallery-08), builder-S (waiting for its first job). The takes wait on Anudeep and on builder-B2, because the next take staging republishes the module and restarts the agents.
+
+## Tried and rejected
 - Nesting the per-rule counts inside the existing FACTS `rules` field: it is a status counter (`{"expired": 6}`) and anything summing its values would break; a sibling key keeps that field unchanged.
 - Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
 - First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
