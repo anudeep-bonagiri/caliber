@@ -41,6 +41,20 @@ An autonomous accounts-payable clerk for a 40-truck carrier. It matches every fu
 
 `scripts/facts.py` writes `docs/FACTS.json`, `docs/FACTS.md` and `docs/RESULTS.md` from the public tables and the answer key; the tables below are copied from that output and say when. Last run 2026-10-25T00:22:27+00:00, 7944 transactions over 92 business days, produced by `scripts/full_run.sh` (fresh publish, fixtures, worker in replay, 92 days, the agent identity asking to approve INV-1077, the scripted controller pass, facts).
 
+#### Benchmark at a glance
+
+Same 558 rows (all 52 planted errors, all 6 decoys, 500 clean rows), same records, one attempt per row, the prompt listing the codes and thresholds; the kernel's line is the full 7,944-row run. Costs are Anthropic list rates; latency is the median per row from the committed outputs in `bench/outputs/`.
+
+| System | Precision | Recall | False holds | Model calls per paid line | Cost for the 558 rows | Median per row |
+| --- | --- | --- | --- | --- | --- | --- |
+| Caliber kernel | 1.00 | 1.00 | 0 | 0 | $0, plain code | 41 business days in 0.2 s |
+| Caliber on a hold (Droid, recorded live run) | not a classifier | | | 1 per hold, 52 holds | 2,016,204 Factory credits | 25.6 s per hold |
+| Claude Sonnet 5.5 alone | 1.00 | 1.00 | 0 | 1 | $6.38 | 3.0 s |
+| Claude Opus 5.5 alone, default effort | 0.81 | 1.00 | 14 | 1 | $12.85 | 3.5 s |
+| asi1-mini alone, free plan | 0.31 | 0.81 | 101 | 1 | $0 on the free plan | 9.1 s, paced to the quota |
+
+At this carrier's volume (7,944 rows a quarter) the model-alone clerks cost about $91 (Sonnet) and $183 (Opus) a quarter at list; the kernel costs nothing per line and spends Droid credits on the holds only. A kernel decision is an audit row with its source rows on it; a model's hold-or-clear answer is a sentence. Caveats: synthetic rows from our own generator, a hinted prompt, the kernel measured on the full run and the models on the sample, each model at its API default effort (Sonnet high, Opus medium).
+
 | Code | Planted | Raised | Precision | Recall |
 | --- | --- | --- | --- | --- |
 | location_mismatch | 20 | 20 | 1.0 | 1.0 |
