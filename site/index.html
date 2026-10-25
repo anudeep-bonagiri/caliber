@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caliber</title>
+<meta name="description" content="Caliber: an autonomous accounts-payable clerk for a trucking carrier that cannot pay itself. Built at Cal Hacks 13.0.">
+<link rel="canonical" href="https://caliber.compare/">
+<meta property="og:title" content="Caliber">
+<meta property="og:description" content="The AP clerk that can't pay itself. Code decides. The investigator explains. The controller approves. The ledger refuses everything else.">
+<meta property="og:image" content="https://caliber.compare/gallery-00.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#F7F5F0; --card:#FBFAF7; --ink:#1A1D21; --secondary:#5B6470; --hairline:#E3DFD6; --brass:#9C7A17; }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 40px 0 8px; }
+  .mark { font-family:'IBM Plex Mono', ui-monospace, Menlo, monospace; font-weight:500; font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--brass); }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height:1.1; margin: 10px 0 10px; font-weight:600; letter-spacing:-.01em; }
+  .lede { font-size: clamp(18px, 2.4vw, 21px); color:var(--secondary); margin:0 0 18px; max-width: 42em; }
+  .chip { display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--secondary); border:1px solid var(--hairline); border-radius:999px; padding:4px 11px; background:var(--card); }
+  .principle { font-size: clamp(17px, 2.2vw, 20px); color:var(--brass); font-weight:500; margin: 26px 0 6px; }
+  figure { margin: 22px 0 0; }
+  figure img { width:100%; height:auto; display:block; border:1px solid var(--hairline); border-radius:10px; background:#fff; }
+  figcaption { font-size:13.5px; color:var(--secondary); margin-top:8px; }
+  section { padding: 34px 0 6px; border-top:1px solid var(--hairline); margin-top:34px; }
+  h2 { font-size: 15px; letter-spacing:.12em; text-transform:uppercase; color:var(--secondary); font-weight:600; margin:0 0 14px; }
+  p { margin: 0 0 14px; max-width: 46em; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--hairline); border-radius:10px; overflow:hidden; font-size:15.5px; }
+  th, td { text-align:left; vertical-align:top; padding:10px 12px; border-top:1px solid var(--hairline); }
+  thead th { border-top:0; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--secondary); font-weight:600; }
+  td.t { font-family:'IBM Plex Mono', monospace; font-size:14px; white-space:nowrap; color:var(--brass); width: 9ch; }
+  td.n { font-family:'IBM Plex Mono', monospace; font-size:14.5px; white-space:nowrap; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap:12px; }
+  .box { background:var(--card); border:1px solid var(--hairline); border-radius:10px; padding:14px 16px; }
+  .box b { display:block; margin-bottom:4px; }
+  ul { padding-left: 1.2em; margin: 0 0 14px; max-width: 46em; }
+  li { margin: 4px 0; }
+  code { font-family:'IBM Plex Mono', monospace; font-size: .92em; background:var(--card); border:1px solid var(--hairline); border-radius:5px; padding:1px 5px; }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 3px; }
+  .links a { display:inline-block; margin: 0 14px 8px 0; }
+  footer { padding: 30px 0 48px; color:var(--secondary); font-size:14px; border-top:1px solid var(--hairline); margin-top:34px; }
+  .wrapx { overflow-x:auto; }
+  @media (max-width: 560px) { td.t { white-space: normal; width:auto; } table { font-size:14.5px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">Caliber</div>
+    <h1>The AP clerk that can't pay itself.</h1>
+    <p class="lede">Caliber checks every fuel, toll and repair charge against where the truck was and what the contract said, holds what doesn't match, and asks you once.</p>
+    <span class="chip">Cal Hacks 13.0, October 2026. Simulated carrier. Every figure on this page is read from the measured run.</span>
+    <p class="principle">Code decides. The investigator explains. The controller approves. The ledger refuses everything else.</p>
+    <figure>
+      <img src="gallery-00.png" width="1800" height="1200" alt="The controller's Today screen in Caliber: a held fuel charge for truck 17 with the question in brass, a two-point map, the receipt quote and the learned rule">
+      <figcaption>The controller's screen on business day 41. The card sentence is built from the ledger's own match row, not from model prose. The map is two points and the ledger's distance.</figcaption>
+    </figure>
+  </header>
+
+  <section>
+    <h2>What it does</h2>
+    <p>An autonomous accounts-payable clerk for a 40-truck Texas carrier. A kernel written in plain TypeScript, in integer cents, matches every fuel-card charge, toll and maintenance invoice against telematics, tank size, the PO, the contract rate valid that day, receiving records and the vendor's bank details. Clean rows pay themselves within limits and settle at the bank with a transaction id. Anything else becomes a hold.</p>
+    <p>A read-only Droid session investigates the hold by reading receipts, contracts and the swap log, and by calling two Elastic Agent Builder tools over MCP, and returns a typed finding. When the finding needs a human, the controller is asked on ASI:One, answers in plain language, and the answer becomes a scoped, expiring rule that the database backtests before it is stored and the kernel applies next time.</p>
+    <p>Segregation of duties is enforced in the database: the agent identity cannot approve a payment, and every action is an append-only audit row.</p>
+    <div class="grid">
+      <div class="box"><b>Code first.</b> Money moves on a three-way match in plain code, never on a model's opinion.</div>
+      <div class="box"><b>No agent is trusted.</b> The investigator holds a read-only identity. Send it <code>approve</code> and the reducer refuses, and the refusal is an audit row.</div>
+      <div class="box"><b>Ask once.</b> One answer becomes one rule with a scope and an expiry, backtested against every past match before it is stored.</div>
+      <div class="box"><b>Audit-ready.</b> Every number on every screen traces to a row. The audit table has no update or delete.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>One business day, timed</h2>
+    <div class="wrapx">
+    <table>
+      <thead><tr><th>Time</th><th>What happened</th></tr></thead>
+      <tbody>
+        <tr><td class="t">0 s</td><td>The day-41 fuel-card export (61 rows, the shape a card provider sends each morning) lands in the inbox folder. The file connector hands it to the ledger.</td></tr>
+        <tr><td class="t">about 2 s</td><td>The kernel matches each row. Clean rows auto-pay within limits. Hold 2231 opens: card FC-1017, assigned to truck 17, bought 120 gallons ($412.00) at Love's 412 in Schulenburg, while truck 17's nearest ping, 13 minutes earlier, was 97 miles away with the engine off.</td></tr>
+        <tr><td class="t">19.0 s</td><td>The Droid finding comes back as typed JSON: truck 22 was at the pump, driven by the same driver, Ramon Ortiz, while truck 17 was in the shop. Only a person can confirm the card use. Recommendation: hold and ask.</td></tr>
+        <tr><td class="t"></td><td>On ASI:One the controller types <code>why 2231</code>, reads the evidence, and answers: <code>answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.</code></td></tr>
+        <tr><td class="t">about 2 s</td><td>The worker drafts a rule from the answer, scoped to the driver, days 41 to 46, one use, backtested: would have cleared 1 of 1 past rows, 0 of them confirmed exceptions. <code>approve rule 1</code>. The rule clears 2231 and is used up. It never asks that twice.</td></tr>
+        <tr><td class="t">0.81 s</td><td>A controller approval becomes a bank transaction. The reducer checks role and segregation of duties, writes the payment row, and the mock bank's transfer id lands on the audit row 0.81 s after the command.</td></tr>
+        <tr><td class="t"></td><td>Someone tries <code>approve 2231</code> from the agent's own token. The database refuses: <code>agent may not do this (needs controller)</code>. That refusal is an audit row too.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Measured, not claimed</h2>
+    <p>The carrier is synthetic, generated with a published generator and a hidden answer key of 52 planted errors in 7 classes plus 6 decoys. Nothing in the module, worker, agents or web can read the key. The facts script reads the public tables and the key, and writes the figures below.</p>
+    <div class="wrapx">
+    <table>
+      <thead><tr><th>Over the 92-day replay, 7,944 transactions</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Auto-paid by the kernel or a rule</td><td class="n">7,886 payments, $1,083,630.52</td></tr>
+        <tr><td>Released by the controller</td><td class="n">8 payments, $32,097.00</td></tr>
+        <tr><td>52 planted errors in 7 classes</td><td class="n">precision 1.00, recall 1.00</td></tr>
+        <tr><td>6 decoys</td><td class="n">6 of 6 cleared by a rule after exactly one answer</td></tr>
+        <tr><td>Planted exceptions cleared by a rule</td><td class="n">0</td></tr>
+        <tr><td>Refusals recorded in the audit trail</td><td class="n">1, by the agent role</td></tr>
+        <tr><td>Droid, 52 live investigations recorded 2026-10-24</td><td class="n">25.6 s each on average</td></tr>
+        <tr><td>Claude Sonnet 5.5 alone, same 558 rows, prompt lists the codes</td><td class="n">precision 1.00, recall 1.00, $6.38 at list</td></tr>
+        <tr><td>asi1-mini alone, same rows and prompt</td><td class="n">precision 0.31, recall 0.81, 101 clean rows held</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:14px">The kernel made no model call for the 7,886 lines it paid. A model-alone clerk spends tokens on every line, and its hold-or-clear answer is a sentence, not an audit row. Full method, protocol and limits are in the <a href="caliber.pdf">technical note</a> (4 pages).</p>
+  </section>
+
+  <section>
+    <h2>Not built, and we say so</h2>
+    <ul>
+      <li>Real connectors beyond one file connector. No WEX, toll-authority, telematics or accounting API.</li>
+      <li>A real bank. Settlement is Capital One's Nessie mock bank, one transfer per approved payment.</li>
+      <li>OCR. Receipts and invoices are rendered as text from the same generator that made the rows.</li>
+      <li>Production identity, a hard sandbox around Droid's read tool, live vendor-credit calls (the vendor check replays hand-authored fixtures, labelled as such on every card), an email or Slack inbox.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where to find it</h2>
+    <p class="links">
+      <a href="https://agentverse.ai/agents/details/agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge/profile">@caliber-controller on Agentverse</a>
+      <a href="https://agentverse.ai/agents/details/agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh/profile">@caliber-investigator on Agentverse</a>
+      <a href="https://asi1.ai/">Talk to them on ASI:One</a>
+      <a href="https://github.com/anudeep-bonagiri/caliber">Code on GitHub</a>
+      <a href="caliber.pdf">Technical note (PDF)</a>
+    </p>
+    <p>Built with SpacetimeDB (the ledger, the clock and the reducers), Factory's Droid SDK (the investigator), Elastic Agent Builder (the evidence tools over MCP), Fetch.ai uAgents on Agentverse (the two seats on ASI:One) and Capital One Nessie (settlement).</p>
+  </section>
+
+  <footer>
+    Caliber, by Anudeep Bonagiri and Shrithik Senthilkumar at Cal Hacks 13.0, Berkeley, October 2026. The carrier, the vendors and the bank are simulated. The controls are not.
+  </footer>
+</div>
+</body>
+</html>

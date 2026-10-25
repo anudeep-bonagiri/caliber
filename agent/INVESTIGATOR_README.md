@@ -7,7 +7,7 @@ The read-only investigator for Caliber (repo and ledger name: dispatch-ledger), 
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| Caliber Investigator | `@caliber-investigator` | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | Holds the `reader` identity: answers `why <id>` and `status`; every write it is asked for is refused by the ledger and recorded | [agent/investigator.py](https://github.com/anudeep-bonagiri/dispatch-ledger/blob/main/agent/investigator.py) |
+| Caliber Investigator | `@caliber-investigator` | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | Holds the `reader` identity: answers `why <id>` and `status`; every write it is asked for is refused by the ledger and recorded | [agent/investigator.py](https://github.com/anudeep-bonagiri/caliber/blob/main/agent/investigator.py) |
 
 ## Commands
 

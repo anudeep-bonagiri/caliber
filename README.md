@@ -1,6 +1,6 @@
 # Caliber
 
-Caliber, an autonomous accounts-payable clerk for a trucking carrier (repo and ledger name: dispatch-ledger).
+Caliber, an autonomous accounts-payable clerk for a trucking carrier (repo caliber; the ledger and the local folder keep the name dispatch-ledger).
 
 **The money does not move until the code has matched the line, and the agent can never approve what it proposed.**
 
