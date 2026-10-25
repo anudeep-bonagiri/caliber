@@ -4,7 +4,7 @@ One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and the sponsor tracks. It o
 
 ## Intro, 35 to 40 seconds, recorded on camera before the demo
 
-Say: "I'm Anudeep, this is Sreesanth. I run Cruze, a fleet software company, and every carrier we work with has the same person in the back office: one bookkeeper matching fuel-card statements, toll bills and repair invoices by eye, about eighty-five lines a day, and nobody checks them against where the truck actually was. Shell says fleets lose up to five percent of their fuel spend to misuse. For a forty-truck carrier that is close to a hundred thousand dollars a year, while tolls just rose thirteen percent and repairs nine. None of these carriers would let software pay a bill on its own, and they are right. So we built one that can't."
+Say: "I'm Anudeep, this is Sreesanth. I spend my days with trucking carriers, and every one of them has the same person in the back office: one bookkeeper matching fuel-card statements, toll bills and repair invoices by eye, about eighty-five lines a day, and nobody checks them against where the truck actually was. Shell says fleets lose up to five percent of their fuel spend to misuse. For a forty-truck carrier that is close to a hundred thousand dollars a year, while tolls just rose thirteen percent and repairs nine. None of them would let software pay a bill on its own, and they are right. So we built one that can't."
 
 Cut straight to the demo. The demo's first line names the product; the intro never does, so the two do not repeat. To land at 30 seconds, drop the clause "while tolls just rose thirteen percent and repairs nine".
 
