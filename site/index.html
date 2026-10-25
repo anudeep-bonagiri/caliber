@@ -43,6 +43,9 @@
   code { font-family:'IBM Plex Mono', monospace; font-size: .92em; background:var(--card); border:1px solid var(--hairline); border-radius:5px; padding:1px 5px; }
   a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 3px; }
   .links a { display:inline-block; margin: 0 14px 8px 0; }
+  .cta { display:inline-flex; align-items:center; gap:10px; margin: 18px 0 6px; padding: 12px 20px; background: var(--ink); color: var(--paper); border-radius: 10px; font-weight: 600; text-decoration: none; font-size: 16px; border: 1px solid var(--ink); }
+  .cta:hover { background: var(--brass); border-color: var(--brass); color: var(--ink); }
+  .cta small { font-weight: 400; color: inherit; opacity: .8; }
   footer { padding: 30px 0 48px; color:var(--secondary); font-size:14px; border-top:1px solid var(--hairline); margin-top:34px; }
   .wrapx { overflow-x:auto; }
   @media (max-width: 560px) { td.t { white-space: normal; width:auto; } table { font-size:14.5px; } }
@@ -56,6 +59,7 @@
     <p class="lede">Caliber checks every fuel, toll and repair charge against where the truck was and what the contract said, holds what doesn't match, and asks you once.</p>
     <span class="chip">Cal Hacks 13.0, October 2026. Simulated carrier. Every figure on this page is read from the measured run.</span>
     <p class="principle">Code decides. The investigator explains. The controller approves. The ledger refuses everything else.</p>
+    <a class="cta" href="caliber.pdf">Read our technical findings <small>(PDF, 4 pages)</small></a>
     <figure>
       <img src="gallery-00.png" width="1800" height="1200" alt="The controller's Today screen in Caliber: a held fuel charge for truck 17 with the question in brass, a two-point map, the receipt quote and the learned rule">
       <figcaption>The controller's screen on business day 41. The card sentence is built from the ledger's own match row, not from model prose. The map is two points and the ledger's distance.</figcaption>
