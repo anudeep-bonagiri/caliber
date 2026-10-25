@@ -371,277 +371,6 @@ Notes for the director:
 - Devpost (docs/DEVPOST.md) corrected by the director: the Capital One track loses its "only if Task 17 is green" qualifier (Task 17 passed at 14:24), and the end-to-end line now says the vendor check runs on hand-authored fixtures labelled FIXTURE with the CRS sandbox call pending, and that settlement is live into the Nessie mock bank. Anudeep re-pastes those two lines only.
 - Open: CRS invite (the one manual step when it lands is to replace seed/fixtures/vendor_checks/1.bank_change.json with the recorded response); Agentverse Connect for both agents, then the ASI:One acceptance run by the director; 9 PM decision on keeping CRS selected if no live call by then.
 
-## 2026-10-24 15:52 PDT Builder-W: Task 21, the inbox file connector (job 12)
-
-Commits f874476 (module), 42b9a45 (generator), be9ec78 (scripts), be9d107 (web and docs), 0e3e6e0 (runbook measurement and this entry): module (ingest_rows, ingest_log, matchDay split into matchCardRow, matchTollRow, matchInvoiceRow, 7 module tests, bindings regenerated), generator (connector samples), scripts (watcher, --inbox, --skip-transactions), web and docs (top bar, CONNECTORS.md, runbook), plus this entry. Every commit carries the D-4 trailer. Label everywhere: "file connector; API connectors not built".
-
-What was built:
-
-- `spacetimedb/src/index.ts`: reducer `ingest_rows(fileName, kind, batchJson)` for the seed role. Inserts card, toll or invoice rows like the seed reducers (existing ids are skipped and counted, nothing is overwritten), resolves the truck from the card number or the plate (a file never names a truck), refuses the whole batch on an unknown card, plate or vendor, a day outside 1 to 92, a non-integer amount or malformed JSON, then matches every inserted row dated on or before the current day through `matchCardRow`, `matchTollRow`, `matchInvoiceRow`, which are now the only three functions that turn a row into a match_result, payment or hold; `advance_day` calls the same three per day. Rows dated later wait in their table for the clock. One public `ingest_log` row per batch {id, at, fileName, kind, rows, skipped, matched, actor} and one `ingest` audit row. No new money path: G3 holds, auto-pay limits and duplicate auto-rejects apply unchanged (module tests 9.x: a dropped batch on day 41 raises the El Paso hold and pays the pump row; a re-drop skips both; a day-44 row waits until the clock reaches 44; a day-40 row is matched at once against day 40; unknown card, plate, vendor, kind, bad JSON, day 93 and a fractional amount are refused with nothing written; a second toll three minutes after the first is auto-rejected and an invoice gets its first-invoice vendor check). Module suite 71 passed. `module_bindings/` regenerated (ingest_log_table.ts, ingest_rows_reducer.ts); worker suite 107 passed on the new bindings; web typecheck and build green.
-- `seed/connectors.py` (new) called from `generate.py`: writes `seed/fixtures/inbox/fuel_card_wex_sample.csv` (5,607 rows), `toll_statement_sample.csv` (2,157) and `maintenance_invoices_sample.csv` (180) in the layouts of `docs/CONNECTORS.md`: dollars with exactly two decimals, business dates, no truck and no day column. `pytest seed` 27 passed, including a round-trip of every row against the JSON fixtures and the byte-identical-twice check, which now covers the three files. `git diff --stat seed/fixtures` after regeneration: only the three new files.
-- `scripts/ingest_watch.py` (new, stdlib only): polls `inbox/` every 0.5 s, treats a file as complete when its size is unchanged between polls, parses with `csv` and `Decimal`, derives the day from the posting date (weekdays from 2026-07-01), sends batches of 500 to `ingest_rows` with the seed token from .env (never printed), moves the file to `inbox/done/<timestamp>-<name>` or `inbox/failed/` with the reason logged, and prints one line per file with rows, skipped, matched now and waiting. `/inbox/` is gitignored (root only; the first pattern `inbox/` also hid `seed/fixtures/inbox` and was corrected before the commit landed).
-- `scripts/load_fixtures.ts --skip-transactions`; `scripts/demo_up.sh --inbox` (company data only, starts the watcher with `logs/ingest.log`, prints the three `cp` lines); `scripts/full_run.sh --inbox` (same, then drops the three samples and waits for `ingest_log` to show 3 files and 7,944 rows before the 92 days). Both scripts now parse their options in a loop (`--no-web --inbox`, `--keep-worker --inbox`).
-- `web/src/components/TopBar.tsx`: "N files ingested today, M rows" from `ingest_log` (distinct file_name, sum of rows) with the hover `ingest_log <ids>`, next to the chip "file connector; API connectors not built". Nothing else in web changed.
-- `docs/CONNECTORS.md` (new): the three layouts, column to module field, units, what is rejected and where. `docs/RUNBOOK.md`: beat "00:15 alt" (the drop at day 41, measured) and the B1 row with the drop command pre-typed.
-
-Acceptance run:
-
-| Step | Observed |
-| --- | --- |
-| 1. seeded `scripts/full_run.sh` | exit 0, 25 s; precision 1.0, recall 1.0; Vendor checks line as in job 11 |
-| 2. `scripts/full_run.sh --inbox` | exit 0, 28 s; `ingest_log: 3 files, 7944 rows`; watcher: fuel 5,607 rows in 12 batches 0.25 s, invoices 180 rows 1 batch 0.03 s, tolls 2,157 rows 5 batches 0.11 s, all "0 matched now, waiting for their day" (dropped at day 0); then the same 92 days |
-| diff of the two FACTS.json (same facts.py, builder-22's working copy) | identical except `asOf` |
-| 3. demo beat | `scripts/demo_up.sh --inbox` 4 s (fixtures line: `invoice, card_txn, toll_txn: skipped (--skip-transactions ...)`), `run_days.ts --until 41` 0.2 s, 0 holds before the drop; `cp` of the fuel file to `inbox/`: hold 2231 (`location_mismatch`, day 41) in the `hold` table 0.99 s after the copy (the hold row, not the screen: with the full 5,607-row file the page catches up after about 20 s under the burst, so the demo drops the day-41 export, 61 rows, which renders within about a second; see the job 13 entry); watcher line `5607 rows in 12 batches, 0 skipped, 2434 matched now, 3173 waiting for their day; 0.31 s`; 12 holds after the drop (10 location_mismatch, 2 capacity_exceeded, the card holds through day 41) |
-| dashboard (Playwright read) | top bar pill `1 files ingested today, 5,607 rows` with hover `ingest_log 1, 2, ... 12: 1 distinct file_name, sum of rows`; chip `file connector; API connectors not built` with its hover; `Day 41 of 92`; 2231 under LOCATION MISMATCH; no "/TODO-" |
-| 4. restore | below |
-
-Lines for builder-23's files (README.md, docs/not-built.md, context/JUDGE_QA.md), for the director to apply:
-
-- README, a new short section "Connectors" or a line under "What is real and what is simulated": "One connector exists, a file connector: `scripts/ingest_watch.py` watches `inbox/` for a WEX-style fuel-card CSV, a toll statement CSV and a maintenance invoice CSV (layouts in `docs/CONNECTORS.md`) and hands the rows to the `ingest_rows` reducer, which matches them through the same path the clock uses. The three sample files in `seed/fixtures/inbox/` carry the full seeded dataset, so `scripts/full_run.sh --inbox` reproduces the seeded facts apart from timestamps. API connectors are not built."
-- README "Run it", after the demo month block: "Or start with data arriving: `scripts/demo_up.sh --inbox`, then `cp seed/fixtures/inbox/fuel_card_wex_sample.csv inbox/`; hold 2231 appears about one second after the copy once the clock is on day 41."
-- docs/not-built.md, replace the first bullet's wording: "Real connectors. One file connector exists (`scripts/ingest_watch.py`, three CSV layouts in `docs/CONNECTORS.md`); there is no WEX, toll-authority, telematics or accounting API integration. Every row comes from `seed/generate.py` with seed 42 and a published answer key, whether it is loaded as a fixture or dropped as a file."
-- JUDGE_QA, one Q: "Where does the data come from? A file connector: CSV exports dropped in a folder, parsed by a 60-line watcher and handed to one reducer that matches them exactly as the clock does. API connectors are not built; the label on the dashboard says so."
-
-Restore: `scripts/demo_up.sh` (seeded, with web) exit 0; investigator on 8012 then controller on 8011, addresses unchanged; day 0 paused; `agent.cli "status"` = `investigator: Day 0 of 92 (2026-07-01), clock paused, tick 2 s. Nothing settled today yet.` The generated `docs/FACTS.*` and `web/public/FACTS.json` my runs rewrote were restored to HEAD (builder-22 owns their committed values). The `inbox/` folder was removed after the beat.
-
-## 2026-10-24 16:10 PDT Director: ASI:One acceptance for Tasks 10 and 18, run live
-
-Run by the director in Anudeep's browser from fresh conversations opened with Agentverse "Chat with Agent", against the day-41 inbox staging (fuel file only), both agents connected on Agentverse (Active, ASI Available, Mailbox).
-
-Task 10, every line passes:
-- `what needs me` listed 12 holds with 2231 first and its recorded question; reply about 4 s after send.
-- `why 2231` showed the finding, the find_trips_near quote, the swap-log quote, recommendation hold_and_ask, the question, source replayed.
-- `answer 2231 Yes. Ortiz drove unit 22 ...` wrote audit_event 4903; the worker drafted rule 1 (driver 23, days 41 to 46, one_time, "would have cleared 1 of 1 past rows; 0 were true exceptions").
-- `approve rule 1` wrote event 4907; the rule cleared 2231 at once (event 4908 cleared_by_rule, payment released by rule, settled offline-2231). `approve 2231` was then refused "hold is cleared_by_rule", the correct answer; `approve 1068` wrote approve_payment event 4911.
-- Agent replies took 2 to 5 s each; the exchange was 91 s wall clock with the director's scripted 8 to 10 s waits between lines, so the human exchange is under 60 s.
-
-Task 18, failed on the first pass, fixed, passes on the second:
-- Defect: ASI:One prepends the mention ("@caliber-controller ...") to every message, so the regex intents missed, `why 2231` went down the free-text path and was answered by the controller itself without the investigator relay, and `approve 2231` sent to the investigator answered "I answer why and status" instead of the ledger's refusal. Fixed by builder-18 (5cb6c77: strip leading mentions at every front door, 30 tests).
-- Second pass: `why 2231` in the controller chat came back "investigator: 2231 location_mismatch ..." with the finding and both evidence quotes (relayed; logs show the forward and a 0.04 s round trip); `approve 2231` in the investigator chat came back "investigator: refused by the ledger: reader may not do this (needs controller)", and audit_event 5087 is `refused / reader / 2231`.
-- Both agents are listed on Agentverse under their caliber names with both tags; the README table carries both addresses.
-
-Remaining on the Fetch.ai row: the Cal Hacks submission-agent registration (Anudeep), and a measured mailbox round trip between the two agents (AGENT_PEER_PATH=mailbox) for the record; the local path is what runs.
-
-## 2026-10-24 17:25 PDT Director: round two accepted (Tasks 21, 22, 25, 26, 27), what waits on Anudeep
-
-Reviewed and accepted, with the checks rerun by the director where they could be:
-- Task 21 inbox connector (builder-W, 8 commits): one match path for the clock and the connector; inbox run reproduces the seeded facts except asOf; day-41 export sample added after the full-file drop was measured to stall the page about 20 s (hold row within 1 s, page about 2 s with the 61-row file); 71 module and 107 worker tests.
-- Task 22 model-only baseline (builder-22, d1a6f3e): Claude Sonnet 5.5 ties the kernel on every code and overall (1.00 / 1.00, 58 of 58, 0 false holds, $6.38 for 558 rows); asi1-mini 0.31 / 0.81 code-exact, 101 clean rows held; one prompt condition, hinted (codes and thresholds named). README line applied inside a new "Measurement" section; Devpost lines filled. The FACTS baseline block emits on the next facts.py run, which the director runs against the final full run, not the staged ledger.
-- Task 25 cards (builder-25, 89f0782): 11 cards, every Where grep hit at the stated line, every number quoted from FACTS.md.
-- Task 26 Elastic (builder-26, 5 commits): tools rebuilt to Jd's answers, two JINA semantic tools called live (INV-1003 re-recorded), the stale-holds Workflow with two Success executions and six escalation documents, status reply with the escalation count (63 s measured from trigger to chat, target 30 s not met), smoke 5 of 5 rerun by the director; the scoped key waits on Anudeep (docs/evidence/elastic/scoped_key_request.md).
-- Task 27 technical note (builder-27, 6 commits): docs/paper/caliber.pdf, 4 pages, one-command build, 187-row number-to-source map; CarrierBench audit 58 of 58 inferable; oracle ceiling posts the same 7,886 payments with 0 wrong postings, the only gap being six questions on the decoys; saboteur finding produces 0 payments and 2 refusal rows.
-- Stale figure corrected: README, JUDGE_QA and DEVPOST said 9 controller releases and $37,547; FACTS says 8 and $32,097.00.
-
-Waiting on Anudeep: the record cue for the two real takes (staged at day 41, fallback clip done); devpost.com site permission for the Chrome extension or a self-paste of docs/DEVPOST_FULL.md; the scoped Elastic key; context/hyphenate-harness-deck.pdf (Task 23 blocked at its 30-minute mark, lines committed in 6352ba4); context/elastic-criteria.jpg; the 9 PM call on keeping CRS selected with FIXTURE labels.
-
-Director's remaining list after the takes: final `scripts/full_run.sh`, then facts.py (adds the baseline block), regenerate FACTS, RESULTS and web facts, confirm the cards and README numbers still match, restore day 0.
-
-## 2026-10-24 20:13 PDT Builder-B: council items 3 and 5a (Task 28)
-
-Item 3, sender allowlist on the controller seat:
-- `agent/handlers.py`: `WRITE_INTENTS` (answer, approve, reject, approve_rule, reject_rule, pause, resume, step: every intent that reaches a `try_` procedure) and `handle(sender, text, may_write, on_refused)`. The gate runs after the intent is resolved, so free text that would land as an answer is gated too, and before any ledger call. A refused sender gets exactly `not authorised for this seat`; with `ASI_ALLOWED_SENDERS` empty or unset everyone is refused and the reply adds a second line saying the list is empty. Reads (`what needs me`, `why`, `status`, `rules`, `help`) stay open; `why` and `status` still go to the investigator for anyone. The terminal twin (`agent/cli.py`) is not gated: it holds the controller token itself.
-- `agent/agent.py`: `on_chat` and the relay fallback pass `handlers.may_write(sender)`; a refusal is logged as `refused <intent> from <full agent1q address>: not authorised for this seat (not in ASI_ALLOWED_SENDERS)`; startup logs how many senders may write.
-- Audit row: not written. No module procedure records a refusal for the controller identity without performing the write (`try_*` procedures audit `refused` only when their own check fails, and the controller passes the role check); `try_answer_question` was ruled out by the brief; spacetimedb/** is frozen for this lane. The refusal is in logs/agent.log only. JUDGE_QA and Devpost must say "agent log", not "audit row", for this refusal.
-- `.env.example` gains `ASI_ALLOWED_SENDERS` with a comment. `.env` has no such line (grep count 0), so once the controller restarts on this code every ASI:One write is refused until the director adds it.
-- Sender address: not found. Every log and session transcript holds only the 16-character prefix `agent1qtly3w7yc4` (agent.py logged `sender[:16]`; logs/agent.log has since been rotated). After the restart, send `approve 2231` once from Anudeep's ASI:One account: logs/agent.log prints the full address on the refusal line; put it in `.env` as `ASI_ALLOWED_SENDERS=<address>` and restart the controller again. agent/CONNECT.md "Who may write" has these steps.
-- Check: `agent/.venv/bin/pytest -q agent/tests/test_allowlist.py` 33 passed, with the ledger mocked at the httpx transport: an allowed sender writes through each of the 8 write paths; an unknown sender gets the exact text on 9 write lines and on a free-text answer with zero HTTP requests; the 5 reads work for both senders; empty and unset allowlists refuse everyone.
-
-Item 5a, the hop line:
-- `agent/relay.py`: a relayed `why` or `status` reply now opens `asked @caliber-investigator <its agent1q address>, <round trip> s` (one decimal, the relay's own monotonic clock from forward to reply), then the `investigator:` text. The 8 s fallback keeps its `investigator did not answer in time; from the ledger directly:` prefix and has no hop line.
-- Expected strings updated in agent/tests/test_investigator.py (deterministic clock), agent/README.md, agent/INVESTIGATOR_README.md, and the CONNECT.md two-line check and session table.
-- Check: `agent/.venv/bin/pytest -q agent/tests/test_investigator.py` 24 passed; full `agent/.venv/bin/pytest -q` 275 passed.
-
-Not restarted (builder-W holds the agents staged). The live controller (pid 95094 at 20:13) runs the old code: no allowlist, no hop line, until builder-W re-stages. Only the controller needs a restart; the investigator's code is unchanged. From the repo root, after the director adds `ASI_ALLOWED_SENDERS` to `.env`:
-`kill 95094` (or the current pid from `ps -eo pid,command | grep agent/agent.py`), then `nohup agent/.venv/bin/python agent/agent.py >> logs/agent.log 2>&1 &`. The startup log should read `writes allowed for 1 sender(s) in ASI_ALLOWED_SENDERS`.
-
-## 2026-10-24 20:13 PDT Builder-A: council item 1, backtest provenance (Task 28)
-
-Brief: context/briefs/2026-10-24_1830_lane_a_backtest.md. No worker, dashboard, agent or ledger was started or touched; facts.py was not run against the ledger.
-
-### Checks, as run
-- `cd worker && npx vitest run test/rules.test.ts`: 20 passed, of which 4 are the new describe `backtest provenance` in `worker/test/rules.test.ts`: (a) `backtest` takes exactly a rule, `BacktestRow`s and a hold-status lookup, and `src/rules.ts` imports only zod, ./brief, ./config, ./finding, ./replay, with no `answer_key`, `node:fs` or `readFile` outside comments; (b) `src/loop.ts` wires `matchResults: () => matchResultRows(conn)` (iterates `conn.db.matchResult.iter()`) and `holdStatus: ref => holdStatus(conn, ref)`, which `src/stdb.ts` reads from `conn.db.hold.txnRef.find`; (c) no file in `worker/src` names `answer_key` outside comments; (d) rows tagged `planted: true, expected: 'hold'` give the identical backtest, and only `rejected` counts as a confirmed exception (open, awaiting_controller, answered, released, cleared_by_rule and none count 0). Full worker suite: 7 files, 111 passed; `npm run typecheck` clean.
-- `bash bench/carrierbench/key_readers.sh` (new; scans tracked and untracked .ts, .tsx and .py files; exits 1 on any reader outside scripts/facts.py, seed/ and bench/): exit 0. Output:
-
-```
-Allowed readers (score against the key):
-  bench/carrierbench/carrierbench.py
-  bench/carrierbench/oracle.py
-  bench/common.py
-  bench/sample.py
-  bench/score.py
-  scripts/facts.py
-  seed/generate.py
-  seed/maintenance.py
-  seed/mirror.py
-  seed/plant.py
-  seed/tests/test_seed.py
-Mentions outside the allowed readers (each must be a comment, a label or a test that asserts the key is absent):
-  web/src/components/Charts.tsx:147 [label] Precision and recall by code <span className="text-faint">(FACTS.byCode, against seed/fixtures/answer_key.json)</span>
-  web/src/components/Rules.tsx:19 [label] const BENCHMARK_TITLE = 'scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent';
-  worker/src/rules.ts:3 [comment] // The answer key (seed/fixtures/answer_key.json) is never read here. Only public tables are used.
-  worker/test/replay.test.ts:87 [absence test] expect(loadFixture(FIXTURES, '../answer_key')).toBeUndefined();
-  worker/test/rules.test.ts:130 [absence test] expect(code(rules)).not.toMatch(/answer_key|node:fs|readFile/);
-  worker/test/rules.test.ts:143 [absence test] expect(code(read(f)), f).not.toMatch(/answer_key/);
-key_readers: OK, no agent, worker, module or web code reads the answer key
-```
-
-- `python3 scripts/facts.py --self-test`: "facts self-test OK", exit 0. New pure function `planted_by_rule` (mirrors `ruleCovers` in spacetimedb/src/kernel.ts and the row set of the module's `backtest()`: match_result rows with the code, plus holds with the code whose match_result changed), checked on an in-memory fixture of 3 rules, 7 match_result rows and 2 holds. `python3 -m pytest -q bench/test_facts_baseline.py`: 2 passed.
-- `cd web && npm run build`: built; `npm run typecheck`: exit 0.
-
-### What changed
-- `scripts/facts.py`: one new FACTS key, `rulesPlanted` = `{source, byRuleId: {<rule id>: {sourceTxnRef, condition, covered, planted, plantedRefs, backtestN, plantedInBacktest}}}`, written to docs/FACTS.json and web/public/FACTS.json by the existing writer, plus one FACTS.md line. Every other field is unchanged. `covered`/`planted` are over the rule's window and scope at the end of the run; `plantedInBacktest` scores exactly the rows of the module's backtest at create_rule time (its `sampleRefs`), and is null when that list is truncated (n above 12).
-- `web/src/components/Rules.tsx`: production line "Would have cleared N past rows; M were confirmed exceptions" unchanged, from backtest_json. Below it, only when /FACTS.json carries `rulesPlanted.byRuleId[<id>]` with the same sourceTxnRef and condition as the row (a FACTS file from another run cannot label the wrong rule), a BENCHMARK chip and "P planted rows among them" (when `plantedInBacktest` matches the card's N) or "P planted rows among the C its window and scope cover at the end of the run" (otherwise), hover "scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent". The committed FACTS has no `rulesPlanted` yet, so the chip is hidden until the director regenerates FACTS on the final run.
-- `README.md` "What is real and what is simulated", one sentence after the company line (outside the honesty markers, which scripts/honesty.py writes); `worker/README.md` "Rules", one paragraph after step 5.
-
-### For the director
-- Exact sentence for docs/DEVPOST_FULL.md line 47 (lane D owns it), replacing "a hidden answer key the agent never reads": "a hidden answer key that no agent or worker code reads; only scripts/facts.py and the bench score against it, and the rule backtest counts controller-resolved holds, never the key".
-- D-6 proposal for context/DECISIONS.md:
-  - Decision: the rule backtest is production logic and reads only `match_result` and `hold` rows; a confirmed exception is a hold the controller rejected. The answer key is read only by scripts/facts.py and bench/. A planted count appears on a rule card only under a BENCHMARK chip, from `FACTS.rulesPlanted`, computed by facts.py.
-  - Why: the council read "planted true exceptions" on the rule card (G7 wording) as the agent scoring itself against the key. It never did (worker/src/rules.ts and the module's backtest() take ledger rows only), but the card and the Devpost sentence did not separate what a production clerk would see from what the benchmark measures.
-  - Consequence: G7's "how many of those are planted true exceptions" reads "how many were confirmed exceptions (controller-rejected holds)"; the planted count is benchmark-labelled; `bench/carrierbench/key_readers.sh` and the `backtest provenance` test are the checks; DEVPOST line 47 takes the sentence above.
-- After the final run: `python3 scripts/facts.py` will add `rulesPlanted`. A nonzero `planted` does not by itself mean a planted row was cleared (a consumed one_time rule still covers its window); `plantedClearedByRule` remains the claim. Check one card on the dashboard shows the chip.
-- Commit trailer: the brief and D-4 say "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` to keep the attribution true. Change D-4 or tell me if you want it otherwise.
-
-### 2026-10-24 21:08 PDT Director: council lanes reviewed, a home-folder leak redacted, two sessions lost to limits and sleep
-
-Accepted after re-checking each claim: lane A (aa7f6f7; D-6 logged), lane B (6a8202b, 3dd449f; allowlist and hop line; the audit row was not possible without a module change and is now builder-B2's), lane C2 (549697e; Droid table, item 8 hit list), lane D (9d21d37, with five director amendments: INV-1075 for the controller-approval beat because 1068 does not exist on the day-41 staging; the derived Inspiration figures deleted, since APQC's per-invoice cost does not apply to statement lines and 92 business days is not a quarter; caliber.compare in the Devpost fields; the runbook opens on "/"; gallery-00 first), builder-C3 (53d73f4; the consistency fixes, both README quotes of the options block identical to droid.ts, worker 111 tests).
-
-Found by lane C2 and fixed by the director: recording 770003 (committed in a87192e) carried the text of the laptop's ~/AGENTS.md, a note for another product with its API base URL and no key, because Droid's Read is not confined to the evidence folder. Redacted in e2243e1; the read itself stays recorded. The repo is private; the text remains in the history of a87192e, and whether to rewrite that history before the repo goes public is Anudeep's decision.
-
-Lost time: the laptop slept at about 20:36 on battery (37 percent at 20:58), which cut builder-B2 off mid-response; it was resumed. Builder-26 (17:35) and builder-W (about 18:35) hit the Fable usage limit and stopped silently; builder-26 was switched to Opus and resumed on gallery-08; builder-W is replaced by builder-S (stage manager, brief 2026-10-24_2105) and receives no further messages. `caffeinate -i` holds off idle sleep until about 4 AM; it cannot prevent sleep when the lid closes.
-
-Domain: caliber.compare is registered and resolves to the registrar's parking page; README links and the Devpost draft carry it; it must be forwarded or deployed before submission.
-
-In flight: builder-B2 (seat refusal audit row, deadline 1 AM), builder-29 (customer view in a worktree on port 5174, hard cut 4 AM), builder-26 (gallery-08), builder-S (waiting for its first job). The takes wait on Anudeep and on builder-B2, because the next take staging republishes the module and restarts the agents.
-
-## Tried and rejected
-- Nesting the per-rule counts inside the existing FACTS `rules` field: it is a status counter (`{"expired": 6}`) and anything summing its values would break; a sibling key keeps that field unchanged.
-- Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
-- First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
-
-## 2026-10-24 20:20 PDT Builder-C2: council items 6 and 8 (Task 28)
-
-Brief: context/briefs/2026-10-24_1830_lane_c_results.md. Log: logs/builder_c2.log. Every number below is in bench/carrierbench/droid_table.json, written by `python3 bench/carrierbench/droid_table.py` (standard library, no keys, under a second), which also rewrites the section "## Droid investigator, 52 recorded runs" appended at the end of docs/RESULTS.md (nothing above it changed; `git diff docs/RESULTS.md` has 0 removed lines, the honesty block untouched).
-
-### Item 6, the table (current fixtures, 52 runs)
-
-| Measure | Value |
-| --- | --- |
-| Recommendations | clear 0, hold 1 (INV-1003), hold_and_ask 51 |
-| MCP calls per run (elastic___) | mean 1, min 1, max 2; distribution 1: 51 runs, 2: 1 run; find_trips_near 31, contract_rate_for_vendor 21, find_contract_clause 1 |
-| Read / Grep / Glob per run | Read mean 3.8 (min 1, max 11); Grep mean 0.5 (0 to 1); Glob mean 0.2 (0 to 2) |
-| Permission handler decisions | 52 in 52 runs, all `permission proceed once: Script:script`; Cancel 0; 52 of 52 were for a Script that called an MCP tool |
-| Cost, live record log (52) | input mean 1,033.4, median 1,045, min 966, max 1,058; output mean 1,354.5, median 1,390.5, 858 to 2,195; cache mean 70,386.5, median 64,875, 31,954 to 113,496; durationMs mean 25,584.6, median 26,082, 14,662 to 42,054 |
-| Cost, decoy re-record log (6) | input mean 1,088.2; output mean 1,172.7; cache mean 70,067.8; durationMs mean 19,505.3 (full min, median, max in RESULTS) |
-| listTools() | 58 ids: 31 allowed (24 Elastic MCP, 7 built-in: Glob, Grep, LS, Read, Script, ToolSearch, WaitForScript), 27 disabled |
-
-Re-recordings, reported separately: 1421, 2044, 2231, 3955, 5428, 5986 and INV-1003 (recordedAt differs from the copy in `_v1/`). Originals: clear 6, hold_and_ask 1; now: hold 1, hold_and_ask 6. INV-1003's re-record (23:09Z) has no line in either cost log; its own finding.tokenUsage (input 1,144, output 1,571, durationMs 34,745) is shown and labelled as such.
-
-BENCHMARK, scored against the answer key by the script, never by the agent: 44 of 46 hold_and_ask questions on keyed rows name the planted person or record (0.957). Rule, written in the JSON and in RESULTS: decoys need the driver's name (key note, confirmed against swap_log.txt) or the relief unit; fuel holds need the card's unit ("truck N", "unit N") or that unit's fuel card id; invoice classes need the vendor name, a PO, or an invoice id from the invoice or the key note. Misses: 3510 and 5908 (capacity_exceeded; neither names truck 26 / FC-1026 or truck 39 / FC-1039). Stricter reading: only 4 of 20 fuel holds name the unit number itself (all 14 planted location_mismatch questions name the card, none the truck); 6 of 6 decoys name both driver and relief unit. Unscored: 660001, 660002, 660003, 770002, 770003 (rehearsal injections, not in the key). No question: INV-1003 (hold).
-
-### Read under autonomy Off: the finding
-
-`autonomyLevel: AutonomyLevel.Off` is in every commit of worker/src/droid.ts (29e002f 11:07 PDT onward, before the 13:22 PDT record run; checked with `git show <c>:worker/src/droid.ts` per commit). In 52 of 52 recordings a Read tool_call has a succeeding tool_result (not isError); first three 1068, 1421, 1468. 197 Read calls, 184 ok, 13 error; 143 of them reached no permission decision at all (130 returned content) and the other 54 sat inside a Script the handler approved for its MCP call. No permission note names Read. So the handler is consulted for MCP calls only; Read never asks.
-
-Two corrections that follow, both outside my files:
-1. Reads outside the evidence folder: 10 attempted in 3209 and 770003, and 1 succeeded: **770003 read `~/AGENTS.md`** (the laptop's home folder), and the committed fixture `seed/fixtures/investigations/770003.json` (since a87192e) carries that file's text inside a Script tool_result: an unrelated InsForge project note for another product, including its API base URL. No key in it (checked with a token-pattern scan, nothing printed). The repo goes public on Sunday; this needs the director's decision (redact that tool_result in the fixture, or re-record 770003) before then. Also the README's honesty note, line 143, says the probed instruction files "do not exist"; one did.
-2. The inline comment `// every action asks the handler` on `autonomyLevel` in worker/src/droid.ts, quoted verbatim in README "Where Droid runs", is contradicted by the recordings (and by the handler's own comment, "Read and Grep need no confirmation at all in autonomy Off"). Suggested: `// Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking`.
-
-### Item 8, MCP consistency
-
-The spec's mcpServers block (context/BUILD_SPEC.md line 343) lists Elastic only; worker/src/droid.ts builds exactly one entry (`name: 'elastic'`) or none. The CRS MCP server appears only in TASKS 16.5 as an option never taken (the worker calls CRS directly). Grep of docs/DEVPOST_FULL.md, README.md (including "Where Droid runs"), docs/CARDS.md and context/JUDGE_QA.md for two MCP servers, a second mcpServers entry, a CRS MCP server or mcp.crscreditapi.com: **no hits**. Related wording the recordings contradict, for the director to apply (I edited none of these). Line numbers are at HEAD 92c32d5; other lanes have DEVPOST_FULL.md and JUDGE_QA.md open, so match on the quoted text (in the working tree at 20:22 the DEVPOST lines were 68, 90, 181, 154 and the JUDGE_QA line 63):
-
-| File:line | Now | Replacement |
-| --- | --- | --- |
-| docs/DEVPOST_FULL.md:68 | "a `permissionHandler` that allows only MCP tool calls" | "a `permissionHandler` that cancels anything write-like and approves MCP calls once (Read, Grep and Glob run without asking)" |
-| docs/DEVPOST_FULL.md:90 | "a boxed agent with MCP-only reach" | "a boxed agent with one MCP server (Elastic) and read-only file tools" |
-| docs/DEVPOST_FULL.md:179 | "box an investigator to read-only with MCP as its only reach into data" | "box an investigator to read-only, with the Elastic MCP server as its only reach beyond the evidence folder" |
-| docs/DEVPOST_FULL.md:152 | "the three MCP source tags" | "the Elastic MCP source tags" (I could not confirm a count of three in web/src) |
-| README.md:143 | "(... probed for instruction files above the evidence folder, which do not exist)" | "(in one recorded run, 770003, it read `~/AGENTS.md` above the evidence folder; nine other probes found nothing)" |
-| context/BUILD_SPEC.md:14 | "a `permissionHandler` that cancels everything except MCP tool calls" | add: "Read, Grep, Glob and LS never reach the handler under autonomy Off (bench/carrierbench/droid_table.json)" |
-
-No change needed: docs/CARDS.md:35 ("the Elastic tools over MCP"), context/JUDGE_QA.md:57 (one MCP server named; but it says "two Elastic ES|QL tools" while DEVPOST says four tools, two ES|QL and two semantic, and the recordings call three: find_trips_near, contract_rate_for_vendor, find_contract_clause).
-
-### Checks
-- `python3 bench/carrierbench/droid_table.py` from a fresh `git clone` in the scratchpad: JSON and RESULTS section identical to the working tree.
-- RESULTS section rendered from the table dict only; rerun is idempotent (replaces the section, nothing else).
-- Em-dash count 0 in docs/RESULTS.md, the script, the JSON and bench/README.md.
-- `scripts/facts.py` rewrites docs/RESULTS.md whole (line 409), so the next full run drops this section; bench/README.md says to rerun the script after it. Wiring it into scripts/full_run.sh is the director's call (not my file).
-- Commit trailer: the brief says "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` (same as Builder-A's entry above).
-
-## 2026-10-24 20:21 PDT Builder-D: council items 2, 4, 7 and the demo order (Task 28)
-
-Brief: context/briefs/2026-10-24_1830_lane_d_docs.md, plus the director's five amendments sent mid-run (INV-1075 for beat (b), Inspiration figures deleted, caliber.compare, the "/" beat, gallery-00). No worker, dashboard, agent or ledger was started or touched; no script in the never-run list was run. Log: logs/builder_d.log.
-
-### Checks, as run
-- Item 2: `grep -n '\[FACTS\]\|\[BASELINE\]\|\[was' docs/DEVPOST_FULL.md` hit only the header note naming the markers (reworded); the page body had none. The verbatim baseline paragraph appears twice (`grep -c` 2), in "What we got wrong" and in the Proof bullet, as the brief says; delete one at paste time if the page reads repetitive. `grep -c '1,800\|95,000'` 0.
-- Item 4: 7 bullets under "How we built it" (SpacetimeDB, kernel, Droid, Elastic, uAgents, rules, proof), CRS, Nessie and Anthropic folded into "Also in the path", ingest and engineering into "Ingest and engineering". Elastic bullet names find_trips_near and contract_rate_for_vendor as ES|QL and find_contract_clause and find_receipt_text as semantic on JINA. Both agent1q addresses next to the handles (copied from agent/README.md). Track table: Hyphenate row plus seven one-line tracks. Deleted: the SpacetimeDB no-prize challenge, the Money Maxer phrase, "What we learned" item 3. Paste-time checklist kept, plus the caliber.compare parking-page line.
-- Item 7: five JUDGE_QA answers (planted at runtime, what the kernel buys, the issuer auto-draft, two agents, ASI:One allowlist), each at most three sentences ending with a file name. "planted" checked in code: `grep -c planted spacetimedb/src/index.ts spacetimedb/src/kernel.ts` 0 and 0; worker/src/rules.ts names the key only in its comment; seed/fixtures/summary.json carries planted counts but nothing in scripts/, worker/src, spacetimedb/src, agent/ or web/src loads it. Builder-B logged item 3 green at 20:13 (6a8202b, 33 allowlist tests), so the ASI:One question gets the allowlist and "not authorised for this seat", with the caveat that the refusal goes to the agent log, not audit_event (builder-B: the module is frozen).
-- not-built: the dispute path bullet (issuer dispute window, credit memo, statement reconciliation). Its two stale Nessie lines ("Nothing moves money to a bank", "until a key arrives") contradicted Task 17 and the key now in .env (`grep -c -E '^NESSIE_API_KEY=.+' .env` 1); rewritten to the mock bank and to the measured run's 0 live ids from FACTS.
-- Demo order: VIDEO.md 0:00 `approve 2231` to @caliber-investigator (reply and the `reader` refusal row), 0:15 `approve INV-1075` (reply read from agent/handlers.py and agent/formatting.py, settle row `paid, bank id <id>` read from web/src/components/LedgerOfTrust.tsx), 0:30 `scripts/clock.sh step` to day 42 plus `(cd elastic && .venv/bin/python setup_workflow.py --run --no-wait)`, 0:40 to 1:35 the 2231 story, 1:40 `status` with the escalation count. moment-script.md staging: the exact worker line (live settlement because index.ts passes requestedMode; Droid replay because config.ts forces replay on an empty Factory key), ASI_ALLOWED_SENDERS for the recording account, day-41 fuel sample plus the invoice file dropped off camera, then mirror_holds.py. RUNBOOK section 1: "/" beat (Task 29, else /console), then the same order with B1 staging `run_days.ts --until 41` first; section 6 Elastic gains line 6, the Workflow trigger. Em-dash scan of all six files: 0.
-
-### Also changed, for consistency (say if unwanted)
-- Devpost line 47 takes lane A's sentence verbatim; "0 of them planted errors" in the What-it-does row and "how many of those are planted errors" in the Rules bullet now say confirmed exceptions, matching the card and worker/README "Rules".
-- RUNBOOK: section 6 Elastic line 2 (two tools) now four tools; Hyphenate line 5 (money does not move) now the mock bank; section 4 restages day 41 after reset; section 5 gains the `not authorised for this seat` row. VIDEO.md: the vendor beat says FIXTURE, not `replayed`, to match runbook 02:45; the tail is retimed to end near 3:25 after the separate agent-refusal and settlement beats were folded into 0:00 and 0:15; the clock-running FACTS shot is marked as a separate replay staging, because with settlement live every auto-paid row is a Nessie transfer; FACTS date updated to the 00:22:27Z run.
-
-### Sentences I could not source, or that need a decision
-- Inspiration: the derived sentence was deleted, not replaced. FACTS has no fuel spend, so the 2 to 5 percent range has no base; 92 business days runs 2026-07-01 to 2026-11-05 (seed/simcal.py), not a quarter; APQC's figure is per invoice, and most of the 7,944 transactions are statement lines. The cited external figures (ATA, 91.5 percent, Shell, APQC) stay with their sources; they are not in FACTS.
-- The verbatim paragraph says "the 52 planted rows"; bench/BASELINE.md scores 58 key rows (52 planted plus 6 decoys). Sonnet matched on all 58, so the sentence is true, but the denominator differs from the table.
-- "about 63 s" is builder-26's single measurement (17:20 entry); the beat waits for the count to move rather than for a clock.
-- The Devpost What-it-does row still cites `approve 1068` with 0.81 s, a measured past run; the demo now uses INV-1075. Remeasure on INV-1075 during the take or keep the row as the past measurement.
-- The "/" beat describes Task 29 from the director's message (sentence card, question, mini-map, `Answer in ASI:One`); I have not seen the screen.
-- Commit trailer: like builders A and B, this session runs on Claude Opus 5.5, so the commit carries that name instead of D-4's Fable 5.1.
-
-## 2026-10-24 20:58 PDT Builder-C3: consistency fixes (Task 28)
-
-Brief: context/briefs/2026-10-24_2100_c3_consistency.md. Log: logs/builder_c3.log. No process started or stopped; no script in the never-run list was run. Every replacement below was applied by exact match and asserted to match once.
-
-### Checks, as run
-- Step 1, docs/DEVPOST_FULL.md: builder-C2's four replacements (permission handler wording in the Droid bullet; "one MCP server (Elastic) and read-only file tools" in the Cal Hacks row; "the Elastic MCP server as its only reach beyond the evidence folder" in the Factory feedback; "the Elastic MCP source tags" in gallery-02). The baseline paragraph: `grep -c` 1, kept in "What we got wrong"; the Proof bullet now ends "The model-only baseline is in `bench/BASELINE.md` and under "What we got wrong" below." The D-6 sentence was already verbatim at line 47 ("What it does", where the draft describes the key): `grep -c` 1, unchanged. `git diff --stat` 5 insertions, 5 deletions.
-- Step 2, the Read finding: README.md:143 takes C2's replacement; docs/not-built.md "hard sandbox" bullet replaces "(none existed)" with the 770003 read of `~/AGENTS.md`, the redaction in e2243e1 (the read stays recorded) and nine other probes finding nothing; context/JUDGE_QA.md:63 and context/CLAIMS_AUDIT.md row 14 (verdict column) say the same in one clause each; JUDGE_QA:63 now names four Agent Builder tools, two ES|QL (find_trips_near, contract_rate_for_vendor) and two semantic on JINA (find_contract_clause, find_receipt_text), the recordings calling three (droid_table.json `mcpCallsByTool`: 31, 21, 1; ten outside reads attempted, one succeeded). docs/CARDS.md Droid card unchanged: it claims no read-only boundary and already says the OS sandbox around Read is Not built. `git grep` for "none existed", "which do not exist", "two Elastic ES|QL" in the touched files: 0.
-- Step 3: worker/src/droid.ts, the `autonomyLevel` comment only, now `// Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking`. Both README quotes had also drifted on the `mcpServers` comment (they still said "KIBANA_URL and ELASTIC_API_KEY"); the whole BEGIN to END block was re-synced in both. `diff <(sed -n '/BEGIN createSession options/,/END createSession options/p' worker/src/droid.ts) <(same on README.md)`: empty; same on worker/README.md: empty. `cd worker && npm run typecheck`: exit 0; `npx vitest run`: 7 files, 111 tests passed.
-- Step 4: context/BUILD_SPEC.md:14 ends "Read, Grep, Glob and LS never reach the handler under autonomy Off (bench/carrierbench/droid_table.json)."
-- Step 5: scripts/full_run.sh runs `python3 bench/carrierbench/droid_table.py` under its own step line right after facts.py, before honesty.py. `bash -n`: ok. The script alone, twice: exit 0, "benchmark 44 of 46"; md5 of docs/RESULTS.md and droid_table.json unchanged, `git status` clean on both (idempotent on the redacted 770003 fixture too).
-- Em-dash count 0 in all twelve files in the brief's list.
-
-### For the director (outside my lines, not edited)
-- context/CLAIMS_AUDIT.md row 14's Claim column still reads "only MCP tool calls allowed"; the recordings show Read, Grep, Glob and LS run without asking. The brief allowed one clause, so the claim text is yours to soften.
-- context/BUILD_SPEC.md:340 quotes the old comment `// every action asks the handler` in its options sketch; context/IDEA_RANKING.md:134 says "a permission handler that allows only MCP tool calls"; context/TASKS.md:289 says "MCP-only reach". None is judge-facing; left as written.
-
-## 2026-10-24 21:00 PDT Builder-B2: council item 3, seat refusal audit row (Task 28)
-
-Brief: context/briefs/2026-10-24_2030_lane_b2_seat_audit.md. Log: logs/builder_b2.log. No module published, no worker, dashboard or agent started, stopped or restarted.
-
-### What changed
-- `spacetimedb/src/index.ts`: one procedure, `try_record_seat_refusal(sender: string)`, after `try_reject_payment`. It runs through the existing `attempt` (committed transaction) with `checkRole(tx, 'controller')`; any other caller gets the normal `<role> may not do this (needs controller)` and its normal `refused` row with ref `controller seat`. For the controller it writes exactly one `audit_event` row: action `seat_refused`, ref `controller seat`, detail `not authorised for this seat: <sender>`, the sender with control characters removed, trimmed and cut to 120 characters, and returns `[true, "recorded"]`. Nothing else is read or written. Bindings regenerated (`module_bindings/try_record_seat_refusal_procedure.ts` new, `index.ts` and `types/procedures.ts` +5 lines).
-- `agent/ledger.py`: `record_seat_refusal(sender)` calls `call_try("try_record_seat_refusal", sender)` inside `using("controller")`, so it is signed with the controller token even from a reader context.
-- `agent/handlers.py`: `seat_refusal(sender, log)` is the uAgent's `on_refused`: it logs the existing refusal line with the full sender, then calls `ledger.record_seat_refusal`; any exception is logged as `seat refusal for <sender> not recorded in audit_event: <error>`. `handle()` now decides the reply first, then calls `on_refused` inside its own try, so neither a failed record nor a broken callback changes the reply.
-- `agent/agent.py`: `_refusal_logger(sender)` returns `handlers.seat_refusal(sender, LOG.warning)`; docstring updated. `agent/README.md` line 42 now says the refusal is an `audit_event` row with `action = seat_refused` (it said agent log only).
-
-### Checks, as run
-- `cd spacetimedb && npx tsc --noEmit -p tsconfig.json`: exit 0.
-- `npx vitest run`: 3 files, 75 passed; module.test.ts 47, including the new describe "10. try_record_seat_refusal" (3 tests): the controller records one row with actor_role controller, action seat_refused, ref controller seat and the sender in detail, and the audit table grows by exactly one; agent, reader, seed and anonymous get `<role> may not do this (needs controller)`, zero seat_refused rows, four `refused` rows in that role order; a 300-character sender with a newline and a BEL is stored as 120 characters with no control characters.
-- `npm run generate`: "Generate finished successfully".
-- `agent/.venv/bin/pytest -q agent/tests/test_allowlist.py`: 38 passed (was 33). With the mock transport: each of the 9 refused write lines makes exactly one HTTP request, to `try_record_seat_refusal`, with body `[<full sender>]`, and no write call; allowed senders and the 5 reads make no such call; empty and unset allowlists make the one record call; the record carries `Bearer <controller token>` even inside `ledger.using("reader")`; a `[false, ...]` body, an HTTP 500 and a connect error each leave the reply exactly `not authorised for this seat` and log the failure; a raising callback leaves the reply unchanged.
-- `agent/.venv/bin/pytest -q`: 280 passed (was 275).
-- Em dashes added: 0 (`git diff | grep -c` on every touched file).
-
-### For builder-W (now builder-S, per e760262)
-- The row appears live only after the module is republished (demo_up does it) and the controller agent is restarted on this code. Until both happen nothing changes live: the running controller has the old code, and a new controller against the old module would log `no such procedure` with the reply unchanged.
-
-### For the director
-- JUDGE_QA and Devpost can now say "an audit row" for a refused ASI:One sender (action `seat_refused`), once the module is republished and the controller restarted. Builder-B's "agent log, not audit row" note is superseded.
-- context/PROJECT_STATUS.md:517 is a top-level `## Tried and rejected` heading inside builder-A's entry (its list is builder-A's); I left it and inserted this entry before the main table's heading after builder-C3.
-
-## Tried and rejected
-
-| What | Why rejected |
-| --- | --- |
-| Private `agent_task` table with the worker subscribing | Clients cannot subscribe to private tables in 2.13; made operational tables public and kept company data private |
-| `spacetime login` with GitHub for the local demo | Needs a browser and ties the publisher to a cloud identity; the demo mints a local identity with `POST /v1/identity` and logs the CLI in with that token |
-| Worker-side backtest scored against the answer key | Agent code must never read the key; the module backtests against confirmed controller decisions instead |
-| A pause button in the dashboard | Vite inlines env vars into the bundle, which would ship the controller token; pause is a terminal or ASI:One command |
-
 ## 2026-10-24 15:45 PDT Builder-C: product name Caliber
 
 Brief: context/briefs/2026-10-24_1535_rename_caliber.md. Every judge-facing mention of the product in builder-C's files now reads Caliber. "Dispatch Ledger" survives only where it is an identifier or belongs to another builder.
@@ -690,6 +419,39 @@ Checks, each run after the edits:
 
 Not done by builder-C, by design: the running controller and investigator agents were not restarted, so their live replies and Agentverse descriptions still show "Dispatch Ledger" until the director restarts them after builder-W finishes. demo_up.sh, full_run.sh and rehearse.sh were not run. README.md and docs/RUNBOOK.md still say "Dispatch Ledger" pending builder-W's commit.
 
+## 2026-10-24 15:52 PDT Builder-W: Task 21, the inbox file connector (job 12)
+
+Commits f874476 (module), 42b9a45 (generator), be9ec78 (scripts), be9d107 (web and docs), 0e3e6e0 (runbook measurement and this entry): module (ingest_rows, ingest_log, matchDay split into matchCardRow, matchTollRow, matchInvoiceRow, 7 module tests, bindings regenerated), generator (connector samples), scripts (watcher, --inbox, --skip-transactions), web and docs (top bar, CONNECTORS.md, runbook), plus this entry. Every commit carries the D-4 trailer. Label everywhere: "file connector; API connectors not built".
+
+What was built:
+
+- `spacetimedb/src/index.ts`: reducer `ingest_rows(fileName, kind, batchJson)` for the seed role. Inserts card, toll or invoice rows like the seed reducers (existing ids are skipped and counted, nothing is overwritten), resolves the truck from the card number or the plate (a file never names a truck), refuses the whole batch on an unknown card, plate or vendor, a day outside 1 to 92, a non-integer amount or malformed JSON, then matches every inserted row dated on or before the current day through `matchCardRow`, `matchTollRow`, `matchInvoiceRow`, which are now the only three functions that turn a row into a match_result, payment or hold; `advance_day` calls the same three per day. Rows dated later wait in their table for the clock. One public `ingest_log` row per batch {id, at, fileName, kind, rows, skipped, matched, actor} and one `ingest` audit row. No new money path: G3 holds, auto-pay limits and duplicate auto-rejects apply unchanged (module tests 9.x: a dropped batch on day 41 raises the El Paso hold and pays the pump row; a re-drop skips both; a day-44 row waits until the clock reaches 44; a day-40 row is matched at once against day 40; unknown card, plate, vendor, kind, bad JSON, day 93 and a fractional amount are refused with nothing written; a second toll three minutes after the first is auto-rejected and an invoice gets its first-invoice vendor check). Module suite 71 passed. `module_bindings/` regenerated (ingest_log_table.ts, ingest_rows_reducer.ts); worker suite 107 passed on the new bindings; web typecheck and build green.
+- `seed/connectors.py` (new) called from `generate.py`: writes `seed/fixtures/inbox/fuel_card_wex_sample.csv` (5,607 rows), `toll_statement_sample.csv` (2,157) and `maintenance_invoices_sample.csv` (180) in the layouts of `docs/CONNECTORS.md`: dollars with exactly two decimals, business dates, no truck and no day column. `pytest seed` 27 passed, including a round-trip of every row against the JSON fixtures and the byte-identical-twice check, which now covers the three files. `git diff --stat seed/fixtures` after regeneration: only the three new files.
+- `scripts/ingest_watch.py` (new, stdlib only): polls `inbox/` every 0.5 s, treats a file as complete when its size is unchanged between polls, parses with `csv` and `Decimal`, derives the day from the posting date (weekdays from 2026-07-01), sends batches of 500 to `ingest_rows` with the seed token from .env (never printed), moves the file to `inbox/done/<timestamp>-<name>` or `inbox/failed/` with the reason logged, and prints one line per file with rows, skipped, matched now and waiting. `/inbox/` is gitignored (root only; the first pattern `inbox/` also hid `seed/fixtures/inbox` and was corrected before the commit landed).
+- `scripts/load_fixtures.ts --skip-transactions`; `scripts/demo_up.sh --inbox` (company data only, starts the watcher with `logs/ingest.log`, prints the three `cp` lines); `scripts/full_run.sh --inbox` (same, then drops the three samples and waits for `ingest_log` to show 3 files and 7,944 rows before the 92 days). Both scripts now parse their options in a loop (`--no-web --inbox`, `--keep-worker --inbox`).
+- `web/src/components/TopBar.tsx`: "N files ingested today, M rows" from `ingest_log` (distinct file_name, sum of rows) with the hover `ingest_log <ids>`, next to the chip "file connector; API connectors not built". Nothing else in web changed.
+- `docs/CONNECTORS.md` (new): the three layouts, column to module field, units, what is rejected and where. `docs/RUNBOOK.md`: beat "00:15 alt" (the drop at day 41, measured) and the B1 row with the drop command pre-typed.
+
+Acceptance run:
+
+| Step | Observed |
+| --- | --- |
+| 1. seeded `scripts/full_run.sh` | exit 0, 25 s; precision 1.0, recall 1.0; Vendor checks line as in job 11 |
+| 2. `scripts/full_run.sh --inbox` | exit 0, 28 s; `ingest_log: 3 files, 7944 rows`; watcher: fuel 5,607 rows in 12 batches 0.25 s, invoices 180 rows 1 batch 0.03 s, tolls 2,157 rows 5 batches 0.11 s, all "0 matched now, waiting for their day" (dropped at day 0); then the same 92 days |
+| diff of the two FACTS.json (same facts.py, builder-22's working copy) | identical except `asOf` |
+| 3. demo beat | `scripts/demo_up.sh --inbox` 4 s (fixtures line: `invoice, card_txn, toll_txn: skipped (--skip-transactions ...)`), `run_days.ts --until 41` 0.2 s, 0 holds before the drop; `cp` of the fuel file to `inbox/`: hold 2231 (`location_mismatch`, day 41) in the `hold` table 0.99 s after the copy (the hold row, not the screen: with the full 5,607-row file the page catches up after about 20 s under the burst, so the demo drops the day-41 export, 61 rows, which renders within about a second; see the job 13 entry); watcher line `5607 rows in 12 batches, 0 skipped, 2434 matched now, 3173 waiting for their day; 0.31 s`; 12 holds after the drop (10 location_mismatch, 2 capacity_exceeded, the card holds through day 41) |
+| dashboard (Playwright read) | top bar pill `1 files ingested today, 5,607 rows` with hover `ingest_log 1, 2, ... 12: 1 distinct file_name, sum of rows`; chip `file connector; API connectors not built` with its hover; `Day 41 of 92`; 2231 under LOCATION MISMATCH; no "/TODO-" |
+| 4. restore | below |
+
+Lines for builder-23's files (README.md, docs/not-built.md, context/JUDGE_QA.md), for the director to apply:
+
+- README, a new short section "Connectors" or a line under "What is real and what is simulated": "One connector exists, a file connector: `scripts/ingest_watch.py` watches `inbox/` for a WEX-style fuel-card CSV, a toll statement CSV and a maintenance invoice CSV (layouts in `docs/CONNECTORS.md`) and hands the rows to the `ingest_rows` reducer, which matches them through the same path the clock uses. The three sample files in `seed/fixtures/inbox/` carry the full seeded dataset, so `scripts/full_run.sh --inbox` reproduces the seeded facts apart from timestamps. API connectors are not built."
+- README "Run it", after the demo month block: "Or start with data arriving: `scripts/demo_up.sh --inbox`, then `cp seed/fixtures/inbox/fuel_card_wex_sample.csv inbox/`; hold 2231 appears about one second after the copy once the clock is on day 41."
+- docs/not-built.md, replace the first bullet's wording: "Real connectors. One file connector exists (`scripts/ingest_watch.py`, three CSV layouts in `docs/CONNECTORS.md`); there is no WEX, toll-authority, telematics or accounting API integration. Every row comes from `seed/generate.py` with seed 42 and a published answer key, whether it is loaded as a fixture or dropped as a file."
+- JUDGE_QA, one Q: "Where does the data come from? A file connector: CSV exports dropped in a folder, parsed by a 60-line watcher and handed to one reducer that matches them exactly as the clock does. API connectors are not built; the label on the dashboard says so."
+
+Restore: `scripts/demo_up.sh` (seeded, with web) exit 0; investigator on 8012 then controller on 8011, addresses unchanged; day 0 paused; `agent.cli "status"` = `investigator: Day 0 of 92 (2026-07-01), clock paused, tick 2 s. Nothing settled today yet.` The generated `docs/FACTS.*` and `web/public/FACTS.json` my runs rewrote were restored to HEAD (builder-22 owns their committed values). The `inbox/` folder was removed after the beat.
+
 ## 2026-10-24 16:06 PDT Builder-23: harness vocabulary (Task 23), BLOCKED on the deck; builder-W's lines applied
 
 Brief: context/briefs/2026-10-24_1550_task23_harness.md. `context/hyphenate-harness-deck.pdf` was absent at 15:36 and stayed absent through 30 polls at 60 s (logs/builder_23.log, one line each five minutes, last at 16:05). The acceptance check requires every term quoted from the deck with a slide number, so the README section "The harness", the JUDGE_QA block "In the harness deck's words" and any not-built lines for deck concepts are not written. Nothing is invented in their place.
@@ -715,7 +477,25 @@ Checks: `ls scripts/ingest_watch.py docs/CONNECTORS.md seed/fixtures/inbox/fuel_
 
 Next: relaunch builder-23 when the deck is in `context/`; steps 3 to 7 of the brief remain.
 
-## 2026-10-24 17:20 PDT Builder-26: Elastic alignment (Task 26)
+## 2026-10-24 16:10 PDT Director: ASI:One acceptance for Tasks 10 and 18, run live
+
+Run by the director in Anudeep's browser from fresh conversations opened with Agentverse "Chat with Agent", against the day-41 inbox staging (fuel file only), both agents connected on Agentverse (Active, ASI Available, Mailbox).
+
+Task 10, every line passes:
+- `what needs me` listed 12 holds with 2231 first and its recorded question; reply about 4 s after send.
+- `why 2231` showed the finding, the find_trips_near quote, the swap-log quote, recommendation hold_and_ask, the question, source replayed.
+- `answer 2231 Yes. Ortiz drove unit 22 ...` wrote audit_event 4903; the worker drafted rule 1 (driver 23, days 41 to 46, one_time, "would have cleared 1 of 1 past rows; 0 were true exceptions").
+- `approve rule 1` wrote event 4907; the rule cleared 2231 at once (event 4908 cleared_by_rule, payment released by rule, settled offline-2231). `approve 2231` was then refused "hold is cleared_by_rule", the correct answer; `approve 1068` wrote approve_payment event 4911.
+- Agent replies took 2 to 5 s each; the exchange was 91 s wall clock with the director's scripted 8 to 10 s waits between lines, so the human exchange is under 60 s.
+
+Task 18, failed on the first pass, fixed, passes on the second:
+- Defect: ASI:One prepends the mention ("@caliber-controller ...") to every message, so the regex intents missed, `why 2231` went down the free-text path and was answered by the controller itself without the investigator relay, and `approve 2231` sent to the investigator answered "I answer why and status" instead of the ledger's refusal. Fixed by builder-18 (5cb6c77: strip leading mentions at every front door, 30 tests).
+- Second pass: `why 2231` in the controller chat came back "investigator: 2231 location_mismatch ..." with the finding and both evidence quotes (relayed; logs show the forward and a 0.04 s round trip); `approve 2231` in the investigator chat came back "investigator: refused by the ledger: reader may not do this (needs controller)", and audit_event 5087 is `refused / reader / 2231`.
+- Both agents are listed on Agentverse under their caliber names with both tags; the README table carries both addresses.
+
+Remaining on the Fetch.ai row: the Cal Hacks submission-agent registration (Anudeep), and a measured mailbox round trip between the two agents (AGENT_PEER_PATH=mailbox) for the record; the local path is what runs.
+
+## 2026-10-24 16:13 PDT Builder-26: Elastic alignment (Task 26) (heading time corrected from 17:20: the builder-26 log hours from 16:06 on were hand-typed; git commit times are 15:46 to 16:13)
 
 Rubric photo context/elastic-criteria.jpg: absent at start and at 17:20, so the four lines are quoted from TASKS.md (depth and creativity of the ES implementation; use of JINA embeddings; use of Agent Builder AND Workflows; Serverless). Jd Armada confirmed to the director that Workflows is GA on Serverless Elasticsearch projects, no toggle.
 
@@ -765,70 +545,13 @@ Commits: 9378983 (26.1 tools and 26.2 semantic tools), e6b4f70 (26.1 key path, w
 
 ### README "Elastic" section (verbatim, for builder-23)
 
-## Elastic
+### Elastic
 
 Four indices on a Serverless project (`my-elasticsearch-project-b5e003`): `telematics_log` (154,846 `geo_point` pings with `@timestamp`), `receipts` and `contracts` (with JINA `semantic_text`), `invoices` (`elastic/mappings/`). Depth: four hand-written ES|QL tools in Agent Builder (`elastic/tools/`), two exact (`find_trips_near` with date params and a point built in the query from lat and lon, `contract_rate_for_vendor`) and two semantic (`find_contract_clause`, `find_receipt_text`), created over the API by `elastic/setup_agent.py`, executed by `elastic/smoke.py`, and reached by Droid over the MCP endpoint `{KIBANA_URL}/api/agent_builder/mcp` under a least-privilege key (`elastic/make_mcp_key.py`: read on six indices plus Agent Builder read, nothing else). JINA: `clause_semantic` and `body_semantic` are `semantic_text` fields on `.jina-embeddings-v5-text-small`, and the two semantic tools run `MATCH(...)` against them with the investigator's plain-language question; the recorded INV-1003 investigation (`seed/fixtures/investigations/INV-1003.json`) contains the live `elastic___find_contract_clause` call and quotes the clause it returned. Agent Builder and Workflows: the agent `dispatch-investigator` owns the four tools, and the Workflow `caliber-stale-holds` (`elastic/workflows/stale_holds.yaml`, registered by `elastic/setup_workflow.py`, scheduled hourly plus a manual trigger) reads the `holds` index that `elastic/mirror_holds.py` copies from the ledger, asks the agent for a brief on every hold open more than two business days, and writes it to the `escalations` index that the controller agent's `status` reply reads (`agent/reads.py`). Serverless: everything above ran on the Serverless project on 2026-10-24 (context/PROJECT_STATUS.md, 17:20 entry; screenshots in docs/evidence/elastic/). Elastic is not the system of record and not the dashboard's data source.
 
 ### JUDGE_QA block (verbatim, for builder-23)
 
 **Elastic Workflows?** One Workflow, `caliber-stale-holds` (`elastic/workflows/stale_holds.yaml`): every hour, and on demand, it finds holds open more than two business days in the `holds` index, has the Agent Builder agent write a one-paragraph brief per hold with the ES|QL tools, and indexes each brief into `escalations`; the controller agent's `status` reply ends with "N escalations, newest: ...". It ran on the Serverless project on 2026-10-24 (two executions, six briefs); a new brief shows in `status` about a minute after the trigger, not 30 seconds, because the agent calls the tools before writing. The scoped MCP key waits on a Kibana UI step; until then Droid uses the project key.
-
-## 2026-10-24 17:15 PDT Builder-22: model-only baseline (Task 22)
-
-Brief: context/briefs/2026-10-24_1550_task22_baseline.md. Acceptance: bench/BASELINE.md and the FACTS baseline block exist from one committed run with prompts and raw outputs on disk, and the README line quotes the table. The run is committed (bench/**); the FACTS block is wired in scripts/facts.py and emits only when bench/BASELINE.json exists; facts.py was not run against the ledger (builder-W owns it). The README line is below for the director to apply.
-
-What was run (one committed run, 2026-10-24, 15:46 to 17:08 PDT):
-
-- Sample (bench/sample.py, seed 42): all 52 planted rows, all 6 decoys, 500 clean rows: 174 card, 173 toll, 153 invoice (every clean invoice there is), clean card and toll rows spread over all 92 days, invoices over 81 days. The 6 auto-pay limit holds were excluded (policy holds, not exceptions). bench/sample.json.
-- Inputs (bench/inputs.py): per row, the rows index.ts hands the kernel: the transaction; for cards the truck (plate, tank) and the truck's pings for that business day (pingsFor loads the day, the kernel's rule then uses the 30-minute window); for tolls every earlier toll for the plate; for invoices the PO with received quantity, the contract valid on the receipt day selected the way index.ts selects it, the vendor record with bankChangedDay, and the vendor's earlier invoices. Fields allow-listed; a walk asserts no code, expected, note, planted, finding or txnRef key. 558 files under bench/inputs.
-- Prompt (bench/prompts/hold_or_clear.txt): one prompt for both models, the payables policy with the seven codes and the kernel's thresholds (copied as prose, thresholds.ts untouched), a guide to the record fields, and the JSON shape. The policy is in the prompt because a clerk would have it; without it the test would measure threshold guessing.
-- Models (bench/baseline.py, over httpx; no Anthropic SDK exists in any project venv, agent/.venv used): Claude Sonnet, requested and accepted id claude-sonnet-5-5, concurrency 4, no temperature sent (Claude Sonnet 5.5 returns 400 for a non-default temperature), thinking and effort at API defaults, max_tokens 4096; asi1-mini, temperature 0, one request at a time paced to 9.1 s (free plan 100 per 15 minutes, 1,000 per day), 561 requests today, 3 rows retried once, every row ended 200. Every raw response under bench/outputs/<model>/<id>.json plus _meta.json.
-- Scoring (bench/score.py): positives are the 58 key rows, decoys count as correct holds for every system; code-exact is the headline (same definition as docs/FACTS.json), detection (any code) beside it; the first complete JSON object in a reply is the decision, no object means not held; Caliber read from docs/FACTS.json, never recomputed.
-
-The table (precision / recall, code-exact), bench/BASELINE.md:
-
-| Code | Planted | Caliber P / R | Claude Sonnet P / R | asi1-mini P / R |
-| --- | --- | --- | --- | --- |
-| location_mismatch | 20 | 1.00 / 1.00 | 1.00 / 1.00 | 0.71 / 1.00 |
-| capacity_exceeded | 6 | 1.00 / 1.00 | 1.00 / 1.00 | n/a / 0.00 |
-| rate_variance | 9 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 0.89 |
-| duplicate_toll | 11 | 1.00 / 1.00 | 1.00 / 1.00 | 0.12 / 1.00 |
-| duplicate_invoice | 4 | 1.00 / 1.00 | 1.00 / 1.00 | 0.29 / 0.50 |
-| vendor_bank_change | 3 | 1.00 / 1.00 | 1.00 / 1.00 | 0.11 / 0.33 |
-| short_received | 5 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 |
-| overall | 58 | 1.00 / 1.00 | 1.00 / 1.00 | 0.31 / 0.81 |
-
-Detection (any code): Caliber 1.00 / 1.00 over 7,944 rows, 0 false holds; Claude Sonnet 1.00 / 1.00 over 558 rows, 58 holds, 0 false holds, 6 of 6 decoys held; asi1-mini 0.33 / 0.84, 150 holds, 101 clean rows held, 6 of 6 decoys held.
-
-Where each model failed:
-
-- Claude Sonnet failed on nothing in this sample. It tied the kernel on every code and overall. This is what the table says and the README line says it.
-- asi1-mini missed 4 of 6 capacity_exceeded (and held 2 more under the wrong code), 1 of 9 rate_variance, 2 of 4 duplicate_invoice, 2 of 3 vendor_bank_change; held 101 clean rows, 82 of them as duplicate_toll (it treats any earlier charge at the same plaza as a duplicate), 8 as location_mismatch, 8 as vendor_bank_change, 5 as duplicate_invoice; 22 replies wrote their JSON and then kept reasoning (read by the first object), 1 reply (T1706, a clean toll) was cut off before a complete object and counts as not held.
-
-Cost: Anthropic $6.38 for 558 rows (2,358,546 input, 166,183 output tokens including thinking) at list rates $2 per million input and $10 per million output (Anthropic first-party API list prices, platform.claude.com pricing as cached in the Claude API reference 2026-10-06); cap $15, not reached. asi1-mini: free plan, 561 of 1,000 daily requests used, 2,393,406 prompt and 66,383 completion tokens.
-
-Partial: nothing. Both models answered every row of the sample (asi1-mini 557 parseable of 558).
-
-What this does and does not show: on the kernel's own inputs with the policy stated, the current Sonnet reproduces the kernel's verdicts on this synthetic sample, at $0.011 a row and about 3 to 5 s a row, with a free-text reason that nothing checks. The kernel costs no tokens, is deterministic, is tested on all 7,944 rows, and is the thing the reducers and the audit trail are built around; the baseline does not change the architecture claim (code decides money), it removes the claim that the model cannot do the matching. A smaller model given the same inputs and policy held one clean row in five.
-
-README line, ready to paste (director applies; README.md is builder-23's file):
-
-**Model baseline.** On a 558-row sample (all 52 planted errors, all 6 decoys, 500 clean rows) given the same records the kernel reads, Claude Sonnet 5.5 alone tied the kernel on every code: precision 1.00, recall 1.00, 58 of 58 held, 0 false holds. asi1-mini alone scored precision 0.31, recall 0.81 (0.33 / 0.84 counting any hold), holding 101 clean rows, 82 of them as duplicate tolls. Caveat: synthetic data from the same generator as the clean rows, identical inputs, no fine-tuning; the kernel's precision was measured on all 7,944 rows, the models' on the sample; the kernel is plain code with no model call, the Sonnet run cost $6.38. Table, prompt and raw outputs: `bench/BASELINE.md`.
-
-Checks, each run after the edits:
-
-| Check | Command | Observed |
-| --- | --- | --- |
-| Sample | `agent/.venv/bin/python bench/sample.py` | 52 planted, 6 decoys, 500 clean (174/173/153), 558 rows |
-| Inputs | `agent/.venv/bin/python bench/inputs.py` | 558 files, forbidden-key walk passed |
-| Sonnet run | `agent/.venv/bin/python bench/baseline.py --model sonnet` | 558 saved, $6.38, stopped for cost: False |
-| asi1 run | `agent/.venv/bin/python bench/baseline.py --model asi1` | 558 saved, 561 requests today of 1000 |
-| Score | `agent/.venv/bin/python bench/score.py` | BASELINE.json and BASELINE.md written, table above |
-| facts.py block | `agent/.venv/bin/python -m pytest -q bench/test_facts_baseline.py` | 2 passed (block emitted from a fixture, nothing emitted without the file) |
-| Key leak | `grep -rl "sk-ant\|Bearer \|x-api-key" bench/outputs` | 0 files |
-| Em dashes | `grep -rnP '\x{2014}'` over bench sources, prompt, BASELINE.md, facts.py | none |
-
-Not done, by design: facts.py was not run (builder-W owns the ledger), so docs/FACTS.json and FACTS.md do not yet carry the baseline block; the next facts.py run adds it. README.md untouched. No process started or stopped. Tried and rejected: the earlier JSON extractor took the span from the first brace to the last, which broke on 23 asi1-mini replies that kept writing after their object; replaced by a first-complete-object read, applied to both models from the saved raw text, raw files unchanged.
 
 ## 2026-10-24 17:13 PDT Builder-27: technical note (Task 27)
 
@@ -1052,7 +775,7 @@ Generated by docs/paper/numbers.py into docs/paper/numbers_map.json; the PDF con
 
 ### README "Measurement" section (verbatim, for the director to apply)
 
-## Measurement
+### Measurement
 
 The technical note [docs/paper/caliber.pdf](docs/paper/caliber.pdf) (IEEE two-column, 4 pages, authors Anudeep Bonagiri and Shrithik Senthilkumar) puts the measurement in one place; `make -C docs/paper` rebuilds it from `docs/paper/caliber.tex`, and every number in it is generated into `numbers.tex` by `docs/paper/numbers.py` from `docs/FACTS.json`, `bench/BASELINE.json` and `bench/carrierbench/*.json`, none typed. CarrierBench (`python3 bench/carrierbench/carrierbench.py --seed 42`, how to run it in `bench/README.md`) is the synthetic carrier as a benchmark: 7,944 payable rows over 92 business days with 52 planted errors in 7 classes and 6 decoys, regenerated byte for byte from seed 42 (checked), with a machine audit in which the kernel's Python mirror raised 58 of 58 answer-key rows from the row's own evidence and nothing outside the key. The model-only baseline (`bench/BASELINE.md`) gave Claude Sonnet and asi1-mini exactly the records the kernel sees for 558 rows, one hinted prompt, and scored them against the answer key: code-exact precision / recall Caliber 1.00 / 1.00, Claude Sonnet 1.00 / 1.00, asi1-mini 0.31 / 0.81 (synthetic data from the same generator, identical inputs, no fine-tuning; ties or wins against the kernel: Claude Sonnet tied the kernel on 8 of 8 rows of the table (location_mismatch, capacity_exceeded, rate_variance, duplicate_toll, duplicate_invoice, vendor_bank_change, short_received, overall); asi1-mini tied the kernel on 1 of 8 rows of the table (short_received); no model beat it on any code). The oracle run (`bench/carrierbench/oracle.py`), the kernel handed the answer key, posts 7,886 payments without a person and still needs 47 human decisions; the measured run posts the same 7,886 and differs from the ceiling only by the 6 questions asked on the decoys. The saboteur run (`spacetimedb/src/saboteur.test.ts`, output in `bench/carrierbench/saboteur.json`) feeds a finding that recommends release at confidence 0.99 with fabricated evidence through the real reducers for 2 planted holds: `approve_payment` as the agent identity is refused on both entry points, 0 payment rows are created, the hold stays `awaiting_controller`, and the 2 refusals are audit rows.
 
@@ -1079,6 +802,63 @@ Technical note (PDF, 4 pages): CarrierBench (7,944 rows, 52 planted errors, 6 de
 ### Blocked
 
 - Nothing. README "Measurement" and the Devpost gallery line above are for the director to apply (README is builder-23's; docs/DEVPOST.md is not in my file list).
+
+## 2026-10-24 17:15 PDT Builder-22: model-only baseline (Task 22)
+
+Brief: context/briefs/2026-10-24_1550_task22_baseline.md. Acceptance: bench/BASELINE.md and the FACTS baseline block exist from one committed run with prompts and raw outputs on disk, and the README line quotes the table. The run is committed (bench/**); the FACTS block is wired in scripts/facts.py and emits only when bench/BASELINE.json exists; facts.py was not run against the ledger (builder-W owns it). The README line is below for the director to apply.
+
+What was run (one committed run, 2026-10-24, 15:46 to 17:08 PDT):
+
+- Sample (bench/sample.py, seed 42): all 52 planted rows, all 6 decoys, 500 clean rows: 174 card, 173 toll, 153 invoice (every clean invoice there is), clean card and toll rows spread over all 92 days, invoices over 81 days. The 6 auto-pay limit holds were excluded (policy holds, not exceptions). bench/sample.json.
+- Inputs (bench/inputs.py): per row, the rows index.ts hands the kernel: the transaction; for cards the truck (plate, tank) and the truck's pings for that business day (pingsFor loads the day, the kernel's rule then uses the 30-minute window); for tolls every earlier toll for the plate; for invoices the PO with received quantity, the contract valid on the receipt day selected the way index.ts selects it, the vendor record with bankChangedDay, and the vendor's earlier invoices. Fields allow-listed; a walk asserts no code, expected, note, planted, finding or txnRef key. 558 files under bench/inputs.
+- Prompt (bench/prompts/hold_or_clear.txt): one prompt for both models, the payables policy with the seven codes and the kernel's thresholds (copied as prose, thresholds.ts untouched), a guide to the record fields, and the JSON shape. The policy is in the prompt because a clerk would have it; without it the test would measure threshold guessing.
+- Models (bench/baseline.py, over httpx; no Anthropic SDK exists in any project venv, agent/.venv used): Claude Sonnet, requested and accepted id claude-sonnet-5-5, concurrency 4, no temperature sent (Claude Sonnet 5.5 returns 400 for a non-default temperature), thinking and effort at API defaults, max_tokens 4096; asi1-mini, temperature 0, one request at a time paced to 9.1 s (free plan 100 per 15 minutes, 1,000 per day), 561 requests today, 3 rows retried once, every row ended 200. Every raw response under bench/outputs/<model>/<id>.json plus _meta.json.
+- Scoring (bench/score.py): positives are the 58 key rows, decoys count as correct holds for every system; code-exact is the headline (same definition as docs/FACTS.json), detection (any code) beside it; the first complete JSON object in a reply is the decision, no object means not held; Caliber read from docs/FACTS.json, never recomputed.
+
+The table (precision / recall, code-exact), bench/BASELINE.md:
+
+| Code | Planted | Caliber P / R | Claude Sonnet P / R | asi1-mini P / R |
+| --- | --- | --- | --- | --- |
+| location_mismatch | 20 | 1.00 / 1.00 | 1.00 / 1.00 | 0.71 / 1.00 |
+| capacity_exceeded | 6 | 1.00 / 1.00 | 1.00 / 1.00 | n/a / 0.00 |
+| rate_variance | 9 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 0.89 |
+| duplicate_toll | 11 | 1.00 / 1.00 | 1.00 / 1.00 | 0.12 / 1.00 |
+| duplicate_invoice | 4 | 1.00 / 1.00 | 1.00 / 1.00 | 0.29 / 0.50 |
+| vendor_bank_change | 3 | 1.00 / 1.00 | 1.00 / 1.00 | 0.11 / 0.33 |
+| short_received | 5 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 |
+| overall | 58 | 1.00 / 1.00 | 1.00 / 1.00 | 0.31 / 0.81 |
+
+Detection (any code): Caliber 1.00 / 1.00 over 7,944 rows, 0 false holds; Claude Sonnet 1.00 / 1.00 over 558 rows, 58 holds, 0 false holds, 6 of 6 decoys held; asi1-mini 0.33 / 0.84, 150 holds, 101 clean rows held, 6 of 6 decoys held.
+
+Where each model failed:
+
+- Claude Sonnet failed on nothing in this sample. It tied the kernel on every code and overall. This is what the table says and the README line says it.
+- asi1-mini missed 4 of 6 capacity_exceeded (and held 2 more under the wrong code), 1 of 9 rate_variance, 2 of 4 duplicate_invoice, 2 of 3 vendor_bank_change; held 101 clean rows, 82 of them as duplicate_toll (it treats any earlier charge at the same plaza as a duplicate), 8 as location_mismatch, 8 as vendor_bank_change, 5 as duplicate_invoice; 22 replies wrote their JSON and then kept reasoning (read by the first object), 1 reply (T1706, a clean toll) was cut off before a complete object and counts as not held.
+
+Cost: Anthropic $6.38 for 558 rows (2,358,546 input, 166,183 output tokens including thinking) at list rates $2 per million input and $10 per million output (Anthropic first-party API list prices, platform.claude.com pricing as cached in the Claude API reference 2026-10-06); cap $15, not reached. asi1-mini: free plan, 561 of 1,000 daily requests used, 2,393,406 prompt and 66,383 completion tokens.
+
+Partial: nothing. Both models answered every row of the sample (asi1-mini 557 parseable of 558).
+
+What this does and does not show: on the kernel's own inputs with the policy stated, the current Sonnet reproduces the kernel's verdicts on this synthetic sample, at $0.011 a row and about 3 to 5 s a row, with a free-text reason that nothing checks. The kernel costs no tokens, is deterministic, is tested on all 7,944 rows, and is the thing the reducers and the audit trail are built around; the baseline does not change the architecture claim (code decides money), it removes the claim that the model cannot do the matching. A smaller model given the same inputs and policy held one clean row in five.
+
+README line, ready to paste (director applies; README.md is builder-23's file):
+
+**Model baseline.** On a 558-row sample (all 52 planted errors, all 6 decoys, 500 clean rows) given the same records the kernel reads, Claude Sonnet 5.5 alone tied the kernel on every code: precision 1.00, recall 1.00, 58 of 58 held, 0 false holds. asi1-mini alone scored precision 0.31, recall 0.81 (0.33 / 0.84 counting any hold), holding 101 clean rows, 82 of them as duplicate tolls. Caveat: synthetic data from the same generator as the clean rows, identical inputs, no fine-tuning; the kernel's precision was measured on all 7,944 rows, the models' on the sample; the kernel is plain code with no model call, the Sonnet run cost $6.38. Table, prompt and raw outputs: `bench/BASELINE.md`.
+
+Checks, each run after the edits:
+
+| Check | Command | Observed |
+| --- | --- | --- |
+| Sample | `agent/.venv/bin/python bench/sample.py` | 52 planted, 6 decoys, 500 clean (174/173/153), 558 rows |
+| Inputs | `agent/.venv/bin/python bench/inputs.py` | 558 files, forbidden-key walk passed |
+| Sonnet run | `agent/.venv/bin/python bench/baseline.py --model sonnet` | 558 saved, $6.38, stopped for cost: False |
+| asi1 run | `agent/.venv/bin/python bench/baseline.py --model asi1` | 558 saved, 561 requests today of 1000 |
+| Score | `agent/.venv/bin/python bench/score.py` | BASELINE.json and BASELINE.md written, table above |
+| facts.py block | `agent/.venv/bin/python -m pytest -q bench/test_facts_baseline.py` | 2 passed (block emitted from a fixture, nothing emitted without the file) |
+| Key leak | `grep -rl "sk-ant\|Bearer \|x-api-key" bench/outputs` | 0 files |
+| Em dashes | `grep -rnP '\x{2014}'` over bench sources, prompt, BASELINE.md, facts.py | none |
+
+Not done, by design: facts.py was not run (builder-W owns the ledger), so docs/FACTS.json and FACTS.md do not yet carry the baseline block; the next facts.py run adds it. README.md untouched. No process started or stopped. Tried and rejected: the earlier JSON extractor took the span from the first brace to the last, which broke on 23 asi1-mini replies that kept writing after their object; replaced by a first-complete-object read, applied to both models from the saved raw text, raw files unchanged.
 
 ## 2026-10-24 17:24 PDT Builder-25: fifteen-second cards (Task 25)
 
@@ -1109,3 +889,223 @@ Technical note (PDF, 4 pages): CarrierBench (7,944 rows, 52 planted errors, 6 de
 | Quoting a `bench/BASELINE.md` line on the baseline card's Number line | The acceptance check says every number traces to a FACTS.md line; BASELINE.md is not FACTS.md |
 | Writing "asi1-mini" in the baseline and agents answers | The brief's digit rule allows only years, days and ids that appear in FACTS.md or RESULTS.md; neither file names the model |
 | Naming guardrail and decision ids (G and D numbers) in answers | Same digit rule; the cards say "context/DECISIONS.md" and describe the control instead |
+
+## 2026-10-24 17:25 PDT Director: round two accepted (Tasks 21, 22, 25, 26, 27), what waits on Anudeep
+
+Reviewed and accepted, with the checks rerun by the director where they could be:
+- Task 21 inbox connector (builder-W, 8 commits): one match path for the clock and the connector; inbox run reproduces the seeded facts except asOf; day-41 export sample added after the full-file drop was measured to stall the page about 20 s (hold row within 1 s, page about 2 s with the 61-row file); 71 module and 107 worker tests.
+- Task 22 model-only baseline (builder-22, d1a6f3e): Claude Sonnet 5.5 ties the kernel on every code and overall (1.00 / 1.00, 58 of 58, 0 false holds, $6.38 for 558 rows); asi1-mini 0.31 / 0.81 code-exact, 101 clean rows held; one prompt condition, hinted (codes and thresholds named). README line applied inside a new "Measurement" section; Devpost lines filled. The FACTS baseline block emits on the next facts.py run, which the director runs against the final full run, not the staged ledger.
+- Task 25 cards (builder-25, 89f0782): 11 cards, every Where grep hit at the stated line, every number quoted from FACTS.md.
+- Task 26 Elastic (builder-26, 5 commits): tools rebuilt to Jd's answers, two JINA semantic tools called live (INV-1003 re-recorded), the stale-holds Workflow with two Success executions and six escalation documents, status reply with the escalation count (63 s measured from trigger to chat, target 30 s not met), smoke 5 of 5 rerun by the director; the scoped key waits on Anudeep (docs/evidence/elastic/scoped_key_request.md).
+- Task 27 technical note (builder-27, 6 commits): docs/paper/caliber.pdf, 4 pages, one-command build, 187-row number-to-source map; CarrierBench audit 58 of 58 inferable; oracle ceiling posts the same 7,886 payments with 0 wrong postings, the only gap being six questions on the decoys; saboteur finding produces 0 payments and 2 refusal rows.
+- Stale figure corrected: README, JUDGE_QA and DEVPOST said 9 controller releases and $37,547; FACTS says 8 and $32,097.00.
+
+Waiting on Anudeep: the record cue for the two real takes (staged at day 41, fallback clip done); devpost.com site permission for the Chrome extension or a self-paste of docs/DEVPOST_FULL.md; the scoped Elastic key; context/hyphenate-harness-deck.pdf (Task 23 blocked at its 30-minute mark, lines committed in 6352ba4); context/elastic-criteria.jpg; the 9 PM call on keeping CRS selected with FIXTURE labels.
+
+Director's remaining list after the takes: final `scripts/full_run.sh`, then facts.py (adds the baseline block), regenerate FACTS, RESULTS and web facts, confirm the cards and README numbers still match, restore day 0.
+
+## 2026-10-24 20:13 PDT Builder-B: council items 3 and 5a (Task 28)
+
+Item 3, sender allowlist on the controller seat:
+- `agent/handlers.py`: `WRITE_INTENTS` (answer, approve, reject, approve_rule, reject_rule, pause, resume, step: every intent that reaches a `try_` procedure) and `handle(sender, text, may_write, on_refused)`. The gate runs after the intent is resolved, so free text that would land as an answer is gated too, and before any ledger call. A refused sender gets exactly `not authorised for this seat`; with `ASI_ALLOWED_SENDERS` empty or unset everyone is refused and the reply adds a second line saying the list is empty. Reads (`what needs me`, `why`, `status`, `rules`, `help`) stay open; `why` and `status` still go to the investigator for anyone. The terminal twin (`agent/cli.py`) is not gated: it holds the controller token itself.
+- `agent/agent.py`: `on_chat` and the relay fallback pass `handlers.may_write(sender)`; a refusal is logged as `refused <intent> from <full agent1q address>: not authorised for this seat (not in ASI_ALLOWED_SENDERS)`; startup logs how many senders may write.
+- Audit row: not written. No module procedure records a refusal for the controller identity without performing the write (`try_*` procedures audit `refused` only when their own check fails, and the controller passes the role check); `try_answer_question` was ruled out by the brief; spacetimedb/** is frozen for this lane. The refusal is in logs/agent.log only. JUDGE_QA and Devpost must say "agent log", not "audit row", for this refusal.
+- `.env.example` gains `ASI_ALLOWED_SENDERS` with a comment. `.env` has no such line (grep count 0), so once the controller restarts on this code every ASI:One write is refused until the director adds it.
+- Sender address: not found. Every log and session transcript holds only the 16-character prefix `agent1qtly3w7yc4` (agent.py logged `sender[:16]`; logs/agent.log has since been rotated). After the restart, send `approve 2231` once from Anudeep's ASI:One account: logs/agent.log prints the full address on the refusal line; put it in `.env` as `ASI_ALLOWED_SENDERS=<address>` and restart the controller again. agent/CONNECT.md "Who may write" has these steps.
+- Check: `agent/.venv/bin/pytest -q agent/tests/test_allowlist.py` 33 passed, with the ledger mocked at the httpx transport: an allowed sender writes through each of the 8 write paths; an unknown sender gets the exact text on 9 write lines and on a free-text answer with zero HTTP requests; the 5 reads work for both senders; empty and unset allowlists refuse everyone.
+
+Item 5a, the hop line:
+- `agent/relay.py`: a relayed `why` or `status` reply now opens `asked @caliber-investigator <its agent1q address>, <round trip> s` (one decimal, the relay's own monotonic clock from forward to reply), then the `investigator:` text. The 8 s fallback keeps its `investigator did not answer in time; from the ledger directly:` prefix and has no hop line.
+- Expected strings updated in agent/tests/test_investigator.py (deterministic clock), agent/README.md, agent/INVESTIGATOR_README.md, and the CONNECT.md two-line check and session table.
+- Check: `agent/.venv/bin/pytest -q agent/tests/test_investigator.py` 24 passed; full `agent/.venv/bin/pytest -q` 275 passed.
+
+Not restarted (builder-W holds the agents staged). The live controller (pid 95094 at 20:13) runs the old code: no allowlist, no hop line, until builder-W re-stages. Only the controller needs a restart; the investigator's code is unchanged. From the repo root, after the director adds `ASI_ALLOWED_SENDERS` to `.env`:
+`kill 95094` (or the current pid from `ps -eo pid,command | grep agent/agent.py`), then `nohup agent/.venv/bin/python agent/agent.py >> logs/agent.log 2>&1 &`. The startup log should read `writes allowed for 1 sender(s) in ASI_ALLOWED_SENDERS`.
+
+## 2026-10-24 20:13 PDT Builder-A: council item 1, backtest provenance (Task 28)
+
+Brief: context/briefs/2026-10-24_1830_lane_a_backtest.md. No worker, dashboard, agent or ledger was started or touched; facts.py was not run against the ledger.
+
+### Checks, as run
+- `cd worker && npx vitest run test/rules.test.ts`: 20 passed, of which 4 are the new describe `backtest provenance` in `worker/test/rules.test.ts`: (a) `backtest` takes exactly a rule, `BacktestRow`s and a hold-status lookup, and `src/rules.ts` imports only zod, ./brief, ./config, ./finding, ./replay, with no `answer_key`, `node:fs` or `readFile` outside comments; (b) `src/loop.ts` wires `matchResults: () => matchResultRows(conn)` (iterates `conn.db.matchResult.iter()`) and `holdStatus: ref => holdStatus(conn, ref)`, which `src/stdb.ts` reads from `conn.db.hold.txnRef.find`; (c) no file in `worker/src` names `answer_key` outside comments; (d) rows tagged `planted: true, expected: 'hold'` give the identical backtest, and only `rejected` counts as a confirmed exception (open, awaiting_controller, answered, released, cleared_by_rule and none count 0). Full worker suite: 7 files, 111 passed; `npm run typecheck` clean.
+- `bash bench/carrierbench/key_readers.sh` (new; scans tracked and untracked .ts, .tsx and .py files; exits 1 on any reader outside scripts/facts.py, seed/ and bench/): exit 0. Output:
+
+```
+Allowed readers (score against the key):
+  bench/carrierbench/carrierbench.py
+  bench/carrierbench/oracle.py
+  bench/common.py
+  bench/sample.py
+  bench/score.py
+  scripts/facts.py
+  seed/generate.py
+  seed/maintenance.py
+  seed/mirror.py
+  seed/plant.py
+  seed/tests/test_seed.py
+Mentions outside the allowed readers (each must be a comment, a label or a test that asserts the key is absent):
+  web/src/components/Charts.tsx:147 [label] Precision and recall by code <span className="text-faint">(FACTS.byCode, against seed/fixtures/answer_key.json)</span>
+  web/src/components/Rules.tsx:19 [label] const BENCHMARK_TITLE = 'scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent';
+  worker/src/rules.ts:3 [comment] // The answer key (seed/fixtures/answer_key.json) is never read here. Only public tables are used.
+  worker/test/replay.test.ts:87 [absence test] expect(loadFixture(FIXTURES, '../answer_key')).toBeUndefined();
+  worker/test/rules.test.ts:130 [absence test] expect(code(rules)).not.toMatch(/answer_key|node:fs|readFile/);
+  worker/test/rules.test.ts:143 [absence test] expect(code(read(f)), f).not.toMatch(/answer_key/);
+key_readers: OK, no agent, worker, module or web code reads the answer key
+```
+
+- `python3 scripts/facts.py --self-test`: "facts self-test OK", exit 0. New pure function `planted_by_rule` (mirrors `ruleCovers` in spacetimedb/src/kernel.ts and the row set of the module's `backtest()`: match_result rows with the code, plus holds with the code whose match_result changed), checked on an in-memory fixture of 3 rules, 7 match_result rows and 2 holds. `python3 -m pytest -q bench/test_facts_baseline.py`: 2 passed.
+- `cd web && npm run build`: built; `npm run typecheck`: exit 0.
+
+### What changed
+- `scripts/facts.py`: one new FACTS key, `rulesPlanted` = `{source, byRuleId: {<rule id>: {sourceTxnRef, condition, covered, planted, plantedRefs, backtestN, plantedInBacktest}}}`, written to docs/FACTS.json and web/public/FACTS.json by the existing writer, plus one FACTS.md line. Every other field is unchanged. `covered`/`planted` are over the rule's window and scope at the end of the run; `plantedInBacktest` scores exactly the rows of the module's backtest at create_rule time (its `sampleRefs`), and is null when that list is truncated (n above 12).
+- `web/src/components/Rules.tsx`: production line "Would have cleared N past rows; M were confirmed exceptions" unchanged, from backtest_json. Below it, only when /FACTS.json carries `rulesPlanted.byRuleId[<id>]` with the same sourceTxnRef and condition as the row (a FACTS file from another run cannot label the wrong rule), a BENCHMARK chip and "P planted rows among them" (when `plantedInBacktest` matches the card's N) or "P planted rows among the C its window and scope cover at the end of the run" (otherwise), hover "scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent". The committed FACTS has no `rulesPlanted` yet, so the chip is hidden until the director regenerates FACTS on the final run.
+- `README.md` "What is real and what is simulated", one sentence after the company line (outside the honesty markers, which scripts/honesty.py writes); `worker/README.md` "Rules", one paragraph after step 5.
+
+### For the director
+- Exact sentence for docs/DEVPOST_FULL.md line 47 (lane D owns it), replacing "a hidden answer key the agent never reads": "a hidden answer key that no agent or worker code reads; only scripts/facts.py and the bench score against it, and the rule backtest counts controller-resolved holds, never the key".
+- D-6 proposal for context/DECISIONS.md:
+  - Decision: the rule backtest is production logic and reads only `match_result` and `hold` rows; a confirmed exception is a hold the controller rejected. The answer key is read only by scripts/facts.py and bench/. A planted count appears on a rule card only under a BENCHMARK chip, from `FACTS.rulesPlanted`, computed by facts.py.
+  - Why: the council read "planted true exceptions" on the rule card (G7 wording) as the agent scoring itself against the key. It never did (worker/src/rules.ts and the module's backtest() take ledger rows only), but the card and the Devpost sentence did not separate what a production clerk would see from what the benchmark measures.
+  - Consequence: G7's "how many of those are planted true exceptions" reads "how many were confirmed exceptions (controller-rejected holds)"; the planted count is benchmark-labelled; `bench/carrierbench/key_readers.sh` and the `backtest provenance` test are the checks; DEVPOST line 47 takes the sentence above.
+- After the final run: `python3 scripts/facts.py` will add `rulesPlanted`. A nonzero `planted` does not by itself mean a planted row was cleared (a consumed one_time rule still covers its window); `plantedClearedByRule` remains the claim. Check one card on the dashboard shows the chip.
+- Commit trailer: the brief and D-4 say "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` to keep the attribution true. Change D-4 or tell me if you want it otherwise.
+
+## 2026-10-24 20:20 PDT Builder-C2: council items 6 and 8 (Task 28)
+
+Brief: context/briefs/2026-10-24_1830_lane_c_results.md. Log: logs/builder_c2.log. Every number below is in bench/carrierbench/droid_table.json, written by `python3 bench/carrierbench/droid_table.py` (standard library, no keys, under a second), which also rewrites the section "## Droid investigator, 52 recorded runs" appended at the end of docs/RESULTS.md (nothing above it changed; `git diff docs/RESULTS.md` has 0 removed lines, the honesty block untouched).
+
+### Item 6, the table (current fixtures, 52 runs)
+
+| Measure | Value |
+| --- | --- |
+| Recommendations | clear 0, hold 1 (INV-1003), hold_and_ask 51 |
+| MCP calls per run (elastic___) | mean 1, min 1, max 2; distribution 1: 51 runs, 2: 1 run; find_trips_near 31, contract_rate_for_vendor 21, find_contract_clause 1 |
+| Read / Grep / Glob per run | Read mean 3.8 (min 1, max 11); Grep mean 0.5 (0 to 1); Glob mean 0.2 (0 to 2) |
+| Permission handler decisions | 52 in 52 runs, all `permission proceed once: Script:script`; Cancel 0; 52 of 52 were for a Script that called an MCP tool |
+| Cost, live record log (52) | input mean 1,033.4, median 1,045, min 966, max 1,058; output mean 1,354.5, median 1,390.5, 858 to 2,195; cache mean 70,386.5, median 64,875, 31,954 to 113,496; durationMs mean 25,584.6, median 26,082, 14,662 to 42,054 |
+| Cost, decoy re-record log (6) | input mean 1,088.2; output mean 1,172.7; cache mean 70,067.8; durationMs mean 19,505.3 (full min, median, max in RESULTS) |
+| listTools() | 58 ids: 31 allowed (24 Elastic MCP, 7 built-in: Glob, Grep, LS, Read, Script, ToolSearch, WaitForScript), 27 disabled |
+
+Re-recordings, reported separately: 1421, 2044, 2231, 3955, 5428, 5986 and INV-1003 (recordedAt differs from the copy in `_v1/`). Originals: clear 6, hold_and_ask 1; now: hold 1, hold_and_ask 6. INV-1003's re-record (23:09Z) has no line in either cost log; its own finding.tokenUsage (input 1,144, output 1,571, durationMs 34,745) is shown and labelled as such.
+
+BENCHMARK, scored against the answer key by the script, never by the agent: 44 of 46 hold_and_ask questions on keyed rows name the planted person or record (0.957). Rule, written in the JSON and in RESULTS: decoys need the driver's name (key note, confirmed against swap_log.txt) or the relief unit; fuel holds need the card's unit ("truck N", "unit N") or that unit's fuel card id; invoice classes need the vendor name, a PO, or an invoice id from the invoice or the key note. Misses: 3510 and 5908 (capacity_exceeded; neither names truck 26 / FC-1026 or truck 39 / FC-1039). Stricter reading: only 4 of 20 fuel holds name the unit number itself (all 14 planted location_mismatch questions name the card, none the truck); 6 of 6 decoys name both driver and relief unit. Unscored: 660001, 660002, 660003, 770002, 770003 (rehearsal injections, not in the key). No question: INV-1003 (hold).
+
+### Read under autonomy Off: the finding
+
+`autonomyLevel: AutonomyLevel.Off` is in every commit of worker/src/droid.ts (29e002f 11:07 PDT onward, before the 13:22 PDT record run; checked with `git show <c>:worker/src/droid.ts` per commit). In 52 of 52 recordings a Read tool_call has a succeeding tool_result (not isError); first three 1068, 1421, 1468. 197 Read calls, 184 ok, 13 error; 143 of them reached no permission decision at all (130 returned content) and the other 54 sat inside a Script the handler approved for its MCP call. No permission note names Read. So the handler is consulted for MCP calls only; Read never asks.
+
+Two corrections that follow, both outside my files:
+1. Reads outside the evidence folder: 10 attempted in 3209 and 770003, and 1 succeeded: **770003 read `~/AGENTS.md`** (the laptop's home folder), and the committed fixture `seed/fixtures/investigations/770003.json` (since a87192e) carries that file's text inside a Script tool_result: an unrelated InsForge project note for another product, including its API base URL. No key in it (checked with a token-pattern scan, nothing printed). The repo goes public on Sunday; this needs the director's decision (redact that tool_result in the fixture, or re-record 770003) before then. Also the README's honesty note, line 143, says the probed instruction files "do not exist"; one did.
+2. The inline comment `// every action asks the handler` on `autonomyLevel` in worker/src/droid.ts, quoted verbatim in README "Where Droid runs", is contradicted by the recordings (and by the handler's own comment, "Read and Grep need no confirmation at all in autonomy Off"). Suggested: `// Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking`.
+
+### Item 8, MCP consistency
+
+The spec's mcpServers block (context/BUILD_SPEC.md line 343) lists Elastic only; worker/src/droid.ts builds exactly one entry (`name: 'elastic'`) or none. The CRS MCP server appears only in TASKS 16.5 as an option never taken (the worker calls CRS directly). Grep of docs/DEVPOST_FULL.md, README.md (including "Where Droid runs"), docs/CARDS.md and context/JUDGE_QA.md for two MCP servers, a second mcpServers entry, a CRS MCP server or mcp.crscreditapi.com: **no hits**. Related wording the recordings contradict, for the director to apply (I edited none of these). Line numbers are at HEAD 92c32d5; other lanes have DEVPOST_FULL.md and JUDGE_QA.md open, so match on the quoted text (in the working tree at 20:22 the DEVPOST lines were 68, 90, 181, 154 and the JUDGE_QA line 63):
+
+| File:line | Now | Replacement |
+| --- | --- | --- |
+| docs/DEVPOST_FULL.md:68 | "a `permissionHandler` that allows only MCP tool calls" | "a `permissionHandler` that cancels anything write-like and approves MCP calls once (Read, Grep and Glob run without asking)" |
+| docs/DEVPOST_FULL.md:90 | "a boxed agent with MCP-only reach" | "a boxed agent with one MCP server (Elastic) and read-only file tools" |
+| docs/DEVPOST_FULL.md:179 | "box an investigator to read-only with MCP as its only reach into data" | "box an investigator to read-only, with the Elastic MCP server as its only reach beyond the evidence folder" |
+| docs/DEVPOST_FULL.md:152 | "the three MCP source tags" | "the Elastic MCP source tags" (I could not confirm a count of three in web/src) |
+| README.md:143 | "(... probed for instruction files above the evidence folder, which do not exist)" | "(in one recorded run, 770003, it read `~/AGENTS.md` above the evidence folder; nine other probes found nothing)" |
+| context/BUILD_SPEC.md:14 | "a `permissionHandler` that cancels everything except MCP tool calls" | add: "Read, Grep, Glob and LS never reach the handler under autonomy Off (bench/carrierbench/droid_table.json)" |
+
+No change needed: docs/CARDS.md:35 ("the Elastic tools over MCP"), context/JUDGE_QA.md:57 (one MCP server named; but it says "two Elastic ES|QL tools" while DEVPOST says four tools, two ES|QL and two semantic, and the recordings call three: find_trips_near, contract_rate_for_vendor, find_contract_clause).
+
+### Checks
+- `python3 bench/carrierbench/droid_table.py` from a fresh `git clone` in the scratchpad: JSON and RESULTS section identical to the working tree.
+- RESULTS section rendered from the table dict only; rerun is idempotent (replaces the section, nothing else).
+- Em-dash count 0 in docs/RESULTS.md, the script, the JSON and bench/README.md.
+- `scripts/facts.py` rewrites docs/RESULTS.md whole (line 409), so the next full run drops this section; bench/README.md says to rerun the script after it. Wiring it into scripts/full_run.sh is the director's call (not my file).
+- Commit trailer: the brief says "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` (same as Builder-A's entry above).
+
+## 2026-10-24 20:21 PDT Builder-D: council items 2, 4, 7 and the demo order (Task 28)
+
+Brief: context/briefs/2026-10-24_1830_lane_d_docs.md, plus the director's five amendments sent mid-run (INV-1075 for beat (b), Inspiration figures deleted, caliber.compare, the "/" beat, gallery-00). No worker, dashboard, agent or ledger was started or touched; no script in the never-run list was run. Log: logs/builder_d.log.
+
+### Checks, as run
+- Item 2: `grep -n '\[FACTS\]\|\[BASELINE\]\|\[was' docs/DEVPOST_FULL.md` hit only the header note naming the markers (reworded); the page body had none. The verbatim baseline paragraph appears twice (`grep -c` 2), in "What we got wrong" and in the Proof bullet, as the brief says; delete one at paste time if the page reads repetitive. `grep -c '1,800\|95,000'` 0.
+- Item 4: 7 bullets under "How we built it" (SpacetimeDB, kernel, Droid, Elastic, uAgents, rules, proof), CRS, Nessie and Anthropic folded into "Also in the path", ingest and engineering into "Ingest and engineering". Elastic bullet names find_trips_near and contract_rate_for_vendor as ES|QL and find_contract_clause and find_receipt_text as semantic on JINA. Both agent1q addresses next to the handles (copied from agent/README.md). Track table: Hyphenate row plus seven one-line tracks. Deleted: the SpacetimeDB no-prize challenge, the Money Maxer phrase, "What we learned" item 3. Paste-time checklist kept, plus the caliber.compare parking-page line.
+- Item 7: five JUDGE_QA answers (planted at runtime, what the kernel buys, the issuer auto-draft, two agents, ASI:One allowlist), each at most three sentences ending with a file name. "planted" checked in code: `grep -c planted spacetimedb/src/index.ts spacetimedb/src/kernel.ts` 0 and 0; worker/src/rules.ts names the key only in its comment; seed/fixtures/summary.json carries planted counts but nothing in scripts/, worker/src, spacetimedb/src, agent/ or web/src loads it. Builder-B logged item 3 green at 20:13 (6a8202b, 33 allowlist tests), so the ASI:One question gets the allowlist and "not authorised for this seat", with the caveat that the refusal goes to the agent log, not audit_event (builder-B: the module is frozen).
+- not-built: the dispute path bullet (issuer dispute window, credit memo, statement reconciliation). Its two stale Nessie lines ("Nothing moves money to a bank", "until a key arrives") contradicted Task 17 and the key now in .env (`grep -c -E '^NESSIE_API_KEY=.+' .env` 1); rewritten to the mock bank and to the measured run's 0 live ids from FACTS.
+- Demo order: VIDEO.md 0:00 `approve 2231` to @caliber-investigator (reply and the `reader` refusal row), 0:15 `approve INV-1075` (reply read from agent/handlers.py and agent/formatting.py, settle row `paid, bank id <id>` read from web/src/components/LedgerOfTrust.tsx), 0:30 `scripts/clock.sh step` to day 42 plus `(cd elastic && .venv/bin/python setup_workflow.py --run --no-wait)`, 0:40 to 1:35 the 2231 story, 1:40 `status` with the escalation count. moment-script.md staging: the exact worker line (live settlement because index.ts passes requestedMode; Droid replay because config.ts forces replay on an empty Factory key), ASI_ALLOWED_SENDERS for the recording account, day-41 fuel sample plus the invoice file dropped off camera, then mirror_holds.py. RUNBOOK section 1: "/" beat (Task 29, else /console), then the same order with B1 staging `run_days.ts --until 41` first; section 6 Elastic gains line 6, the Workflow trigger. Em-dash scan of all six files: 0.
+
+### Also changed, for consistency (say if unwanted)
+- Devpost line 47 takes lane A's sentence verbatim; "0 of them planted errors" in the What-it-does row and "how many of those are planted errors" in the Rules bullet now say confirmed exceptions, matching the card and worker/README "Rules".
+- RUNBOOK: section 6 Elastic line 2 (two tools) now four tools; Hyphenate line 5 (money does not move) now the mock bank; section 4 restages day 41 after reset; section 5 gains the `not authorised for this seat` row. VIDEO.md: the vendor beat says FIXTURE, not `replayed`, to match runbook 02:45; the tail is retimed to end near 3:25 after the separate agent-refusal and settlement beats were folded into 0:00 and 0:15; the clock-running FACTS shot is marked as a separate replay staging, because with settlement live every auto-paid row is a Nessie transfer; FACTS date updated to the 00:22:27Z run.
+
+### Sentences I could not source, or that need a decision
+- Inspiration: the derived sentence was deleted, not replaced. FACTS has no fuel spend, so the 2 to 5 percent range has no base; 92 business days runs 2026-07-01 to 2026-11-05 (seed/simcal.py), not a quarter; APQC's figure is per invoice, and most of the 7,944 transactions are statement lines. The cited external figures (ATA, 91.5 percent, Shell, APQC) stay with their sources; they are not in FACTS.
+- The verbatim paragraph says "the 52 planted rows"; bench/BASELINE.md scores 58 key rows (52 planted plus 6 decoys). Sonnet matched on all 58, so the sentence is true, but the denominator differs from the table.
+- "about 63 s" is builder-26's single measurement (17:20 entry); the beat waits for the count to move rather than for a clock.
+- The Devpost What-it-does row still cites `approve 1068` with 0.81 s, a measured past run; the demo now uses INV-1075. Remeasure on INV-1075 during the take or keep the row as the past measurement.
+- The "/" beat describes Task 29 from the director's message (sentence card, question, mini-map, `Answer in ASI:One`); I have not seen the screen.
+- Commit trailer: like builders A and B, this session runs on Claude Opus 5.5, so the commit carries that name instead of D-4's Fable 5.1.
+
+## 2026-10-24 20:58 PDT Builder-C3: consistency fixes (Task 28)
+
+Brief: context/briefs/2026-10-24_2100_c3_consistency.md. Log: logs/builder_c3.log. No process started or stopped; no script in the never-run list was run. Every replacement below was applied by exact match and asserted to match once.
+
+### Checks, as run
+- Step 1, docs/DEVPOST_FULL.md: builder-C2's four replacements (permission handler wording in the Droid bullet; "one MCP server (Elastic) and read-only file tools" in the Cal Hacks row; "the Elastic MCP server as its only reach beyond the evidence folder" in the Factory feedback; "the Elastic MCP source tags" in gallery-02). The baseline paragraph: `grep -c` 1, kept in "What we got wrong"; the Proof bullet now ends "The model-only baseline is in `bench/BASELINE.md` and under "What we got wrong" below." The D-6 sentence was already verbatim at line 47 ("What it does", where the draft describes the key): `grep -c` 1, unchanged. `git diff --stat` 5 insertions, 5 deletions.
+- Step 2, the Read finding: README.md:143 takes C2's replacement; docs/not-built.md "hard sandbox" bullet replaces "(none existed)" with the 770003 read of `~/AGENTS.md`, the redaction in e2243e1 (the read stays recorded) and nine other probes finding nothing; context/JUDGE_QA.md:63 and context/CLAIMS_AUDIT.md row 14 (verdict column) say the same in one clause each; JUDGE_QA:63 now names four Agent Builder tools, two ES|QL (find_trips_near, contract_rate_for_vendor) and two semantic on JINA (find_contract_clause, find_receipt_text), the recordings calling three (droid_table.json `mcpCallsByTool`: 31, 21, 1; ten outside reads attempted, one succeeded). docs/CARDS.md Droid card unchanged: it claims no read-only boundary and already says the OS sandbox around Read is Not built. `git grep` for "none existed", "which do not exist", "two Elastic ES|QL" in the touched files: 0.
+- Step 3: worker/src/droid.ts, the `autonomyLevel` comment only, now `// Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking`. Both README quotes had also drifted on the `mcpServers` comment (they still said "KIBANA_URL and ELASTIC_API_KEY"); the whole BEGIN to END block was re-synced in both. `diff <(sed -n '/BEGIN createSession options/,/END createSession options/p' worker/src/droid.ts) <(same on README.md)`: empty; same on worker/README.md: empty. `cd worker && npm run typecheck`: exit 0; `npx vitest run`: 7 files, 111 tests passed.
+- Step 4: context/BUILD_SPEC.md:14 ends "Read, Grep, Glob and LS never reach the handler under autonomy Off (bench/carrierbench/droid_table.json)."
+- Step 5: scripts/full_run.sh runs `python3 bench/carrierbench/droid_table.py` under its own step line right after facts.py, before honesty.py. `bash -n`: ok. The script alone, twice: exit 0, "benchmark 44 of 46"; md5 of docs/RESULTS.md and droid_table.json unchanged, `git status` clean on both (idempotent on the redacted 770003 fixture too).
+- Em-dash count 0 in all twelve files in the brief's list.
+
+### For the director (outside my lines, not edited)
+- context/CLAIMS_AUDIT.md row 14's Claim column still reads "only MCP tool calls allowed"; the recordings show Read, Grep, Glob and LS run without asking. The brief allowed one clause, so the claim text is yours to soften.
+- context/BUILD_SPEC.md:340 quotes the old comment `// every action asks the handler` in its options sketch; context/IDEA_RANKING.md:134 says "a permission handler that allows only MCP tool calls"; context/TASKS.md:289 says "MCP-only reach". None is judge-facing; left as written.
+
+## 2026-10-24 21:00 PDT Builder-B2: council item 3, seat refusal audit row (Task 28)
+
+Brief: context/briefs/2026-10-24_2030_lane_b2_seat_audit.md. Log: logs/builder_b2.log. No module published, no worker, dashboard or agent started, stopped or restarted.
+
+### What changed
+- `spacetimedb/src/index.ts`: one procedure, `try_record_seat_refusal(sender: string)`, after `try_reject_payment`. It runs through the existing `attempt` (committed transaction) with `checkRole(tx, 'controller')`; any other caller gets the normal `<role> may not do this (needs controller)` and its normal `refused` row with ref `controller seat`. For the controller it writes exactly one `audit_event` row: action `seat_refused`, ref `controller seat`, detail `not authorised for this seat: <sender>`, the sender with control characters removed, trimmed and cut to 120 characters, and returns `[true, "recorded"]`. Nothing else is read or written. Bindings regenerated (`module_bindings/try_record_seat_refusal_procedure.ts` new, `index.ts` and `types/procedures.ts` +5 lines).
+- `agent/ledger.py`: `record_seat_refusal(sender)` calls `call_try("try_record_seat_refusal", sender)` inside `using("controller")`, so it is signed with the controller token even from a reader context.
+- `agent/handlers.py`: `seat_refusal(sender, log)` is the uAgent's `on_refused`: it logs the existing refusal line with the full sender, then calls `ledger.record_seat_refusal`; any exception is logged as `seat refusal for <sender> not recorded in audit_event: <error>`. `handle()` now decides the reply first, then calls `on_refused` inside its own try, so neither a failed record nor a broken callback changes the reply.
+- `agent/agent.py`: `_refusal_logger(sender)` returns `handlers.seat_refusal(sender, LOG.warning)`; docstring updated. `agent/README.md` line 42 now says the refusal is an `audit_event` row with `action = seat_refused` (it said agent log only).
+
+### Checks, as run
+- `cd spacetimedb && npx tsc --noEmit -p tsconfig.json`: exit 0.
+- `npx vitest run`: 3 files, 75 passed; module.test.ts 47, including the new describe "10. try_record_seat_refusal" (3 tests): the controller records one row with actor_role controller, action seat_refused, ref controller seat and the sender in detail, and the audit table grows by exactly one; agent, reader, seed and anonymous get `<role> may not do this (needs controller)`, zero seat_refused rows, four `refused` rows in that role order; a 300-character sender with a newline and a BEL is stored as 120 characters with no control characters.
+- `npm run generate`: "Generate finished successfully".
+- `agent/.venv/bin/pytest -q agent/tests/test_allowlist.py`: 38 passed (was 33). With the mock transport: each of the 9 refused write lines makes exactly one HTTP request, to `try_record_seat_refusal`, with body `[<full sender>]`, and no write call; allowed senders and the 5 reads make no such call; empty and unset allowlists make the one record call; the record carries `Bearer <controller token>` even inside `ledger.using("reader")`; a `[false, ...]` body, an HTTP 500 and a connect error each leave the reply exactly `not authorised for this seat` and log the failure; a raising callback leaves the reply unchanged.
+- `agent/.venv/bin/pytest -q`: 280 passed (was 275).
+- Em dashes added: 0 (`git diff | grep -c` on every touched file).
+
+### For builder-W (now builder-S, per e760262)
+- The row appears live only after the module is republished (demo_up does it) and the controller agent is restarted on this code. Until both happen nothing changes live: the running controller has the old code, and a new controller against the old module would log `no such procedure` with the reply unchanged.
+
+### For the director
+- JUDGE_QA and Devpost can now say "an audit row" for a refused ASI:One sender (action `seat_refused`), once the module is republished and the controller restarted. Builder-B's "agent log, not audit row" note is superseded.
+- context/PROJECT_STATUS.md:517 is a top-level `## Tried and rejected` heading inside builder-A's entry (its list is builder-A's); I left it and inserted this entry before the main table's heading after builder-C3.
+
+## 2026-10-24 21:08 PDT Director: council lanes reviewed, a home-folder leak redacted, two sessions lost to limits and sleep
+
+Accepted after re-checking each claim: lane A (aa7f6f7; D-6 logged), lane B (6a8202b, 3dd449f; allowlist and hop line; the audit row was not possible without a module change and is now builder-B2's), lane C2 (549697e; Droid table, item 8 hit list), lane D (9d21d37, with five director amendments: INV-1075 for the controller-approval beat because 1068 does not exist on the day-41 staging; the derived Inspiration figures deleted, since APQC's per-invoice cost does not apply to statement lines and 92 business days is not a quarter; caliber.compare in the Devpost fields; the runbook opens on "/"; gallery-00 first), builder-C3 (53d73f4; the consistency fixes, both README quotes of the options block identical to droid.ts, worker 111 tests).
+
+Found by lane C2 and fixed by the director: recording 770003 (committed in a87192e) carried the text of the laptop's ~/AGENTS.md, a note for another product with its API base URL and no key, because Droid's Read is not confined to the evidence folder. Redacted in e2243e1; the read itself stays recorded. The repo is private; the text remains in the history of a87192e, and whether to rewrite that history before the repo goes public is Anudeep's decision.
+
+Lost time: the laptop slept at about 20:36 on battery (37 percent at 20:58), which cut builder-B2 off mid-response; it was resumed. Builder-26 (17:35) and builder-W (about 18:35) hit the Fable usage limit and stopped silently; builder-26 was switched to Opus and resumed on gallery-08; builder-W is replaced by builder-S (stage manager, brief 2026-10-24_2105) and receives no further messages. `caffeinate -i` holds off idle sleep until about 4 AM; it cannot prevent sleep when the lid closes.
+
+Domain: caliber.compare is registered and resolves to the registrar's parking page; README links and the Devpost draft carry it; it must be forwarded or deployed before submission.
+
+In flight: builder-B2 (seat refusal audit row, deadline 1 AM), builder-29 (customer view in a worktree on port 5174, hard cut 4 AM), builder-26 (gallery-08), builder-S (waiting for its first job). The takes wait on Anudeep and on builder-B2, because the next take staging republishes the module and restarts the agents.
+
+### Tried and rejected
+- Nesting the per-rule counts inside the existing FACTS `rules` field: it is a status counter (`{"expired": 6}`) and anything summing its values would break; a sibling key keeps that field unchanged.
+- Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
+- First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
+
+## Tried and rejected
+
+| What | Why rejected |
+| --- | --- |
+| Private `agent_task` table with the worker subscribing | Clients cannot subscribe to private tables in 2.13; made operational tables public and kept company data private |
+| `spacetime login` with GitHub for the local demo | Needs a browser and ties the publisher to a cloud identity; the demo mints a local identity with `POST /v1/identity` and logs the CLI in with that token |
+| Worker-side backtest scored against the answer key | Agent code must never read the key; the module backtests against confirmed controller decisions instead |
+| A pause button in the dashboard | Vite inlines env vars into the bundle, which would ship the controller token; pause is a terminal or ASI:One command |
