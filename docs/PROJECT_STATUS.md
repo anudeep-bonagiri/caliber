@@ -422,6 +422,20 @@ Task 18, failed on the first pass, fixed, passes on the second:
 
 Remaining on the Fetch.ai row: the Cal Hacks submission-agent registration (Anudeep), and a measured mailbox round trip between the two agents (AGENT_PEER_PATH=mailbox) for the record; the local path is what runs.
 
+## 2026-10-24 17:25 PDT Director: round two accepted (Tasks 21, 22, 25, 26, 27), what waits on Anudeep
+
+Reviewed and accepted, with the checks rerun by the director where they could be:
+- Task 21 inbox connector (builder-W, 8 commits): one match path for the clock and the connector; inbox run reproduces the seeded facts except asOf; day-41 export sample added after the full-file drop was measured to stall the page about 20 s (hold row within 1 s, page about 2 s with the 61-row file); 71 module and 107 worker tests.
+- Task 22 model-only baseline (builder-22, d1a6f3e): Claude Sonnet 5.5 ties the kernel on every code and overall (1.00 / 1.00, 58 of 58, 0 false holds, $6.38 for 558 rows); asi1-mini 0.31 / 0.81 code-exact, 101 clean rows held; one prompt condition, hinted (codes and thresholds named). README line applied inside a new "Measurement" section; Devpost lines filled. The FACTS baseline block emits on the next facts.py run, which the director runs against the final full run, not the staged ledger.
+- Task 25 cards (builder-25, 89f0782): 11 cards, every Where grep hit at the stated line, every number quoted from FACTS.md.
+- Task 26 Elastic (builder-26, 5 commits): tools rebuilt to Jd's answers, two JINA semantic tools called live (INV-1003 re-recorded), the stale-holds Workflow with two Success executions and six escalation documents, status reply with the escalation count (63 s measured from trigger to chat, target 30 s not met), smoke 5 of 5 rerun by the director; the scoped key waits on Anudeep (docs/evidence/elastic/scoped_key_request.md).
+- Task 27 technical note (builder-27, 6 commits): docs/paper/caliber.pdf, 4 pages, one-command build, 187-row number-to-source map; CarrierBench audit 58 of 58 inferable; oracle ceiling posts the same 7,886 payments with 0 wrong postings, the only gap being six questions on the decoys; saboteur finding produces 0 payments and 2 refusal rows.
+- Stale figure corrected: README, JUDGE_QA and DEVPOST said 9 controller releases and $37,547; FACTS says 8 and $32,097.00.
+
+Waiting on Anudeep: the record cue for the two real takes (staged at day 41, fallback clip done); devpost.com site permission for the Chrome extension or a self-paste of docs/DEVPOST_FULL.md; the scoped Elastic key; context/hyphenate-harness-deck.pdf (Task 23 blocked at its 30-minute mark, lines committed in 6352ba4); context/elastic-criteria.jpg; the 9 PM call on keeping CRS selected with FIXTURE labels.
+
+Director's remaining list after the takes: final `scripts/full_run.sh`, then facts.py (adds the baseline block), regenerate FACTS, RESULTS and web facts, confirm the cards and README numbers still match, restore day 0.
+
 ## Tried and rejected
 
 | What | Why rejected |
