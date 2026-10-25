@@ -1101,6 +1101,447 @@ In flight: builder-B2 (seat refusal audit row, deadline 1 AM), builder-29 (custo
 - Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
 - First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
 
+## 2026-10-24 21:25 PDT Builder-29: customer view (Task 29)
+
+Brief: context/briefs/2026-10-24_2030_task29_customer_view.md. Log: logs/builder_29.log. Built in a worktree (`../dispatch-ledger-task29`, branch `task29-customer-view`, dev server on 5174), rebased on master 0c50cfb, fast-forwarded into master at 224be4e on the director's "merge go"; worktree removed. Ledger writes only inside the director's windows (window 1, window 2, window 2b, window 1 re-stage, the seeded probe window), each logged and released.
+
+### What changed
+- Routing (`web/src/main.tsx`): "/console" and "/console/" render the existing `App`; every other path renders the customer view. No router dependency. On /console a `#event-<id>` hash is retried every 200 ms for 15 s, because audit rows arrive over the subscription after the browser has tried the fragment.
+- Customer view (`web/src/customer/`): `CustomerApp.tsx` (same public tables, anonymous identity, no token, no reducer call), `Screens.tsx` (header, Today, What Caliber has learned, Activity, footer), `model.ts` (every sentence, built from row fields), `MiniMap.tsx` (inline SVG, equirectangular frame around the midpoint, `distanceMiles` from the evidence, not recomputed), `CopyCommand.tsx` (navigator.clipboard with a textarea fallback, "Copied" confirmation), `carrier.ts` (`CARRIER_NAME = 'Mesquite Freight'`, the controller agent URL, Central time zone, brass), `customer.css` (plain CSS scoped under `.cv`; paper, ink, secondary, hairline and brass as specified).
+- Hold card sentences: one template per code (location_mismatch, capacity_exceeded, rate_variance, duplicate_invoice, short_received, vendor_bank_change, po_mismatch, limit) and a generic fallback, from `match_result.evidence_json` and the hold row only (G13). The question is the stored `hold.question`, verbatim. The receipt card renders the quote of the stored investigation's `receipts/...` evidence item; no evidence file is fetched (G12, D-7). "replay of a recorded investigation" shows when the task's source or finding status is `replayed`.
+- Learned: rule sentences from the `rule` row (driver and vendor names from match_result evidence), "You approved this on <date>" from the `approve_rule` audit row, "It would have cleared N earlier charges" from `backtest_json.wouldClear`, candidates with "Proposed from your answer on <date>" and the copy command `approve rule <id>`, used and expired rules grayed. An answered hold whose rule is not drafted yet shows at once as "You answered the question about charge <id> on <date>. Caliber is turning your answer into a rule for you to approve."
+- Activity (director's polish, two rounds): claim rows dropped; a finished investigation reads by its outcome ("Caliber looked into charge 2231 and is holding it for you with a question."); a run of three or more investigations on one day is one line ("Caliber looked into 13 charges; 11 asked you a question."); a day's automatic payments and their settlements are one line ("Paid 84 charges automatically ($12,422.27); recorded offline, no bank called.", or "paid through the bank", or both counts); a finished rule-drafting task (recommendation `done`) reads "Caliber finished working on your answer about charge <id>." because `done` also covers the no-rule case in worker/src/rules.ts; payments you approved, rule payments, answers, rules, refusals and settlements of non-automatic payments stay single lines. Unknown actions read "Something was recorded in the ledger." Every line links to /console#event-<id>.
+- Console, three changes only. (a) `Charts.tsx`: a BENCHMARK chip and the caption "Scored against the published answer key by scripts/facts.py, never by the agent." (b) Brass rule, my reading: the console has no #9C7A17; its brass is the amber `--hold` (#f0a63a), used for the PAUSED pill, holds-today and questions counters, the queue total, the day progress bar, three TopBar pills, the single-series bar fill and focus borders. The rule "brass only on the PAUSED pill when no hold is open" is implemented as a `.quiet` class on App's root when no hold has an open status (open, awaiting_controller, answered), which remaps `--hold` and `--hold-dim` to the muted grey; the PAUSED pill sits in a `.keep-brass` span that restores the amber. `Charts.tsx`'s single-series fill became `var(--hold)` so it follows. With a hold open the console is unchanged. (c) `LedgerOfTrust.tsx`: `id="event-<id>"` on each audit row, no visual change.
+- `web/index.html`: `<link rel="canonical" href="https://caliber.compare/">`; title was already "Caliber".
+- Dependencies: `@fontsource-variable/inter` and `@fontsource/ibm-plex-mono`, the only new ones; they bundle the woff2 files into dist so the view renders in its fonts with no network (Task 12 offline mode). `vite.config.ts` now skips `manualChunks` for SSR builds, which only the vocabulary test uses.
+- Vocabulary test: `npm run test:vocab` (`web/src/customer/vocabulary.check.tsx`), an SSR build of the file and node, no test runner added. It renders each screen with fixture rows (every hold code, every audit action including refusals and an unknown action whose detail is made of the forbidden words) and scans the text; 43 checks, all ok, including the 2231 sentence, the verbatim question, the copy command, the feed collapsing and the Learned sentences.
+- `docs/images/gallery-00.png` and its caption in `docs/images/captions.md`, placed before builder-26's gallery-08 (the file arrived with the rebase; no conflict).
+
+### Checks, as run
+1. Read-aloud. Final capture (seeded probe window, day 41, 2231 awaiting, after the 2044 answer), Playwright `innerText` of the Today section, verbatim:
+
+```
+TODAY
+Needs you
+$17,950.80
+20 charges waiting
+Oldest waiting 39 business days
+Paid for you today
+$12,422.27
+84 charges paid automatically
+Caught this quarter
+$18,400.55
+21 charges stopped, 2 duplicate tolls turned down
+Charge 2231, Aug 26
+$412.00
+
+Fuel card FC-1017 (Truck 17) paid $412.00 for 120 gallons at Love's 412, Schulenburg TX on Aug 26. Truck 17's GPS at that time put it 97.2 miles away with the engine off.
+
+CALIBER ASKS
+
+Can Ramon Ortiz or the San Antonio dispatcher confirm that Ortiz used FC-1017 to fuel truck 22 for transaction 2231 while truck 17 was in the shop under PO-1026?
+
+the pump
+Truck 17 at 8:00 AM
+97.2 miles
+RECEIPT
+FLEET CARD   ****1017   UNIT 17   DRIVER 23
+AUTH 07CEF1   REF 2231
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 2231
+Copy command
+Charge INV-1074, Aug 25
+$1,482.50
+
+Lone Star Tire billed $1,482.50 on invoice INV-1074 for 1 x brake job at $1,482.50 each. The contract rate is $1,355.00, so this is 9.4% higher.
+
+CALIBER ASKS
+
+Can you provide an approved quote or change order agreeing to Lone Star Tire's $1,482.50 brake-job unit price for PO-1007, unit 13?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1074
+Copy command
+Charge 3209, Aug 20
+$158.33
+
+Fuel card FC-1011 (Truck 11) paid $158.33 for 46.5 gallons at Love's 402, Brenham TX on Aug 20. Truck 11's GPS at that time put it 181.9 miles away with the engine off.
+
+CALIBER ASKS
+
+Which truck and driver actually used FC-1011 for transaction 3209 at Love's 402 on August 20, and what record confirms that identification?
+
+the pump
+Truck 11 at 4:00 PM
+181.9 miles
+RECEIPT
+FLEET CARD   ****1011   UNIT 11   DRIVER 8
+AUTH 72546D   REF 3209
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 3209
+Copy command
+Charge 3093, Aug 19
+$933.58
+
+Fuel card FC-1012 (Truck 12) paid $933.58 for 272.1 gallons at Stripes 1204, Freer TX on Aug 19. Truck 12's tank holds 200 gallons, so the most it can take in one fill is 220 gallons.
+
+CALIBER ASKS
+
+Were transaction 3093's 272.1 gallons split between trucks 12 and 20, and what documented gallon allocation supports that split?
+
+RECEIPT
+GALLONS      272.100
+PRICE/GAL    $3.431
+TOTAL        $933.58
+FLEET CARD   ****1012   UNIT 12   DRIVER 12
+AUTH 0CAF00   REF 3093
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 3093
+Copy command
+Charge INV-1062, Aug 18
+$2,076.00
+
+Lone Star Tire billed $2,076.00 for 4 x tire replacement on purchase order PO-1025. Only 3 of 4 have been received. Paying for what arrived would be $1,557.00.
+
+CALIBER ASKS
+
+Can maintenance provide a signed work order confirming whether the fourth tire on PO-1025 was supplied and mounted or remains outstanding?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1062
+Copy command
+Charge 2830, Aug 12
+$177.15
+
+Fuel card FC-1034 (Truck 34) paid $177.15 for 47.8 gallons at Shell Travel Center, Giddings TX on Aug 12. Truck 34's GPS at that time put it 107.1 miles away with the engine off.
+
+CALIBER ASKS
+
+Who physically used card FC-1034 for transaction 2830 at Shell Giddings on August 12 at 13:21 CDT, and which truck received the fuel?
+
+the pump
+Truck 34 at 1:00 PM
+107.1 miles
+RECEIPT
+2026-08-12 13:21 CDT
+PUMP 11   DIESEL #2
+GALLONS      47.800
+PRICE/GAL    $3.706
+TOTAL        $177.15
+FLEET CARD   ****1034   UNIT 34   DRIVER 15
+AUTH 371822   REF 2830
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 2830
+Copy command
+Charge INV-1052, Aug 11
+$369.25
+
+Border Fleet Repair sent invoice INV-1052 for $369.25 on Aug 11. It matches invoice INV-1038, same amount from 9 days earlier, under a different purchase order.
+
+CALIBER ASKS
+
+Can you provide the approved service records linking INV-1052 and INV-1038 to PO-1014 or PO-1017, identifying whether they cover the same A/C job or separate jobs?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1052
+Copy command
+Charge INV-1050, Aug 11
+$570.00
+
+Gulf Coast Diesel sent invoice INV-1050 for $570.00 on Aug 11. It matches invoice INV-1020, same amount from 18 days earlier, under a different purchase order.
+
+CALIBER ASKS
+
+Which PO, PO-1016 or PO-1023, has a signed completion record showing Unit 8's DPF cleaning was distinct from the work billed on INV-1020?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1050
+Copy command
+Charge 2540, Aug 5
+$369.30
+
+Fuel card FC-1028 (Truck 28) paid $369.30 for 100 gallons at Stripes 1183, Refugio TX on Aug 5. Truck 28's GPS at that time put it 138.5 miles away with the engine off.
+
+CALIBER ASKS
+
+Which driver and truck actually used card FC-1028 for transaction 2540 at Stripes 1183 on August 5, and what record confirms that assignment?
+
+the pump
+Truck 28 at 3:00 PM
+138.5 miles
+RECEIPT
+TOTAL        $369.30
+FLEET CARD   ****1028   UNIT 28   DRIVER 36
+AUTH 3E69CE   REF 2540
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 2540
+Copy command
+Charge 2251, Jul 30
+$576.98
+
+Fuel card FC-1005 (Truck 5) paid $576.98 for 169.5 gallons at Buc-ee's, New Braunfels TX on Jul 30. Truck 5's tank holds 120 gallons, so the most it can take in one fill is 132 gallons.
+
+CALIBER ASKS
+
+Can you provide documentation identifying which tanks or equipment received the 169.5 gallons on receipt 2251, given truck 5's recorded 120-gallon capacity?
+
+RECEIPT
+GALLONS      169.500
+PRICE/GAL    $3.404
+TOTAL        $576.98
+FLEET CARD   ****1005   UNIT 5   DRIVER 13
+AUTH 7BCCA9   REF 2251
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 2251
+Copy command
+Charge INV-1037, Jul 29
+$679.25
+
+Lone Star Tire sent invoice INV-1037 for $679.25 on Jul 29. It matches invoice INV-1016, same amount from 11 days earlier, under a different purchase order.
+
+CALIBER ASKS
+
+Can you provide the inspection sheet identifying whether PO-1001 or PO-1021 authorized the service billed on INV-1037 and whether it represents work distinct from INV-1016?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1037
+Copy command
+Charge INV-1032, Jul 27
+$5,450.00
+
+Alamo Fleet Service sent invoice INV-1032 for $5,450.00. Their bank details changed 1 day before the invoice arrived.
+
+CALIBER ASKS
+
+Can you call Alamo Fleet Service on its previously verified number and record the name and role of the person confirming the new account ending 4471?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1032
+Copy command
+Charge INV-1029, Jul 24
+$422.25
+
+Metroplex Truck Center billed $422.25 on invoice INV-1029 for 1 x oil service at $422.25 each. The contract rate is $345.00, so this is 22.4% higher.
+
+CALIBER ASKS
+
+Can you provide an approved quote, change order, or written agreement authorizing the $422.25 oil-service unit price for PO-1013 / INV-1029?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1029
+Copy command
+Charge 1971, Jul 23
+$243.68
+
+Fuel card FC-1020 (Truck 20) paid $243.68 for 70.9 gallons at Pilot 1126, Luling TX on Jul 23. Truck 20's GPS at that time put it 185.5 miles away with the engine off.
+
+CALIBER ASKS
+
+Which truck and driver actually received the fuel charged to FC-1020 at Pilot 1126 on July 23, 2026, at 16:23 CDT?
+
+the pump
+Truck 20 at 4:00 PM
+185.5 miles
+RECEIPT
+2026-07-23 16:23 CDT
+PUMP 04   DIESEL #2
+GALLONS      70.900
+PRICE/GAL    $3.437
+TOTAL        $243.68
+FLEET CARD   ****1020   UNIT 20   DRIVER 29
+AUTH 8336E4   REF 1971
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 1971
+Copy command
+Charge 1793, Jul 20
+$235.74
+
+Fuel card FC-1024 (Truck 24) paid $235.74 for 66.8 gallons at Love's 228, Pleasanton TX on Jul 20. Truck 24's GPS at that time put it 195.1 miles away with the engine off.
+
+CALIBER ASKS
+
+Who physically used card FC-1024 for transaction 1793 at Love's 228 on July 20 at 11:21 CDT, and which truck was fueled?
+
+the pump
+Truck 24 at 11:00 AM
+195.1 miles
+RECEIPT
+FLEET CARD   ****1024   UNIT 24   DRIVER 26
+AUTH 748ADD   REF 1793
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 1793
+Copy command
+Charge INV-1015, Jul 13
+$1,177.50
+
+Border Fleet Repair billed $1,177.50 on invoice INV-1015 for 2 x tire replacement at $582.50 each. The contract rate is $498.00, so this is 17% higher.
+
+CALIBER ASKS
+
+Can you provide the maintenance manager's written approval, dated before the PO-1020 work order opened, agreeing to Border Fleet Repair's $582.50-per-tire price on INV-1015?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1015
+Copy command
+Charge 1468, Jul 10
+$612.67
+
+Fuel card FC-1019 (Truck 19) paid $612.67 for 169.2 gallons at Pilot 1115, Waco TX on Jul 10. Truck 19's GPS at that time put it 162.6 miles away with the engine off.
+
+CALIBER ASKS
+
+Which truck and driver actually used card FC-1019 for transaction 1468 at Pilot 1115 on July 10 at 14:12 CDT, and what dispatch or fueling record confirms that use?
+
+the pump
+Truck 19 at 2:00 PM
+162.6 miles
+RECEIPT
+FLEET CARD   ****1019   UNIT 19   DRIVER 28
+AUTH 742F0A   REF 1468
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 1468
+Copy command
+Charge 1421, Jul 10
+$222.07
+
+Fuel card FC-1015 (Truck 15) paid $222.07 for 59.6 gallons at Stripes 1150, Three Rivers TX on Jul 10. Truck 15's GPS at that time put it 66.1 miles away with the engine off.
+
+CALIBER ASKS
+
+Can Clayton Burks or the San Antonio dispatcher confirm that he used FC-1015 to fuel truck 9 at Stripes 1150 on July 10 while truck 15 was in the shop?
+
+the pump
+Truck 15 at 8:00 AM
+66.1 miles
+RECEIPT
+FLEET CARD   ****1015   UNIT 15   DRIVER 22
+AUTH 542767   REF 1421
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 1421
+Copy command
+Charge INV-1010, Jul 9
+$1,494.00
+
+Border Fleet Repair billed $1,494.00 for 3 x tire replacement on purchase order PO-1005. Only 2 of 3 have been received. Paying for what arrived would be $996.00.
+
+CALIBER ASKS
+
+For PO-1005, unit 27, does the signed work order confirm that the third invoiced tire was supplied and mounted but omitted from receiving, or is it still outstanding?
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer INV-1010
+Copy command
+Charge 1068, Jul 2
+$288.55
+
+Fuel card FC-1012 (Truck 12) paid $288.55 for 80.6 gallons at Love's 420, Seguin TX on Jul 2. Truck 12's GPS at that time put it 168.2 miles away with the engine off.
+
+CALIBER ASKS
+
+Which truck and driver actually received the fuel charged to FC-1012 for transaction 1068 at Love's 420 on July 2 at 09:11 CDT?
+
+the pump
+Truck 12 at 9:00 AM
+168.2 miles
+RECEIPT
+TOTAL        $288.55
+FLEET CARD   ****1012   UNIT 12   DRIVER 12
+AUTH B77FB0   REF 1068
+
+replay of a recorded investigation
+
+Answer in ASI:One
+answer 1068
+Copy command
+```
+
+2. Answer flow (window 1, about 21:02): `agent/.venv/bin/python -m agent.cli "answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log."` exited 0 in 185 ms (audit event 309, day 41). On "/" (in-page MutationObserver, Date.now() on the same machine) the 2231 card was gone at +165 ms and the Learned sentence ("You answered the question about charge 2231 on Aug 26. Caliber is turning your answer into a rule for you to approve.") was present at +165 ms, no reload. Within 8 s Learned read "Proposed from your answer on Aug 26: When Ramon Ortiz fuels a truck other than the one on the card, pay the charge. Good from Aug 26 to Sep 2, for one charge only. It would have cleared 1 earlier charge. Approve it in ASI:One: approve rule 1". Measured with the clock paused; the customer view under a running clock was not measured on its own (it shares the dev-build lag below in all likelihood, but that is not measured).
+3. Quiet state: on a ledger with no hold awaiting (live staging at day 41 before any match), Playwright scan of every element's computed color, background, drawn borders, outline, box-shadow, SVG fill and stroke for rgb(156, 122, 23): 0 hits. With holds awaiting, brass appears only on the Needs you tile, the question text and the map line and its label.
+4. 11.2 on /console, two pages, 0.5 s tick, from day 0. Window 2 (21:04) ran the flow, but my first watcher polled the pages from node and lagged, so its evidence was discarded and the window re-staged. Window 2b (21:07), in-page recorder stamping the first moment each page showed each milestone; ledger time is the first `audit_event.at` of the milestone; lag is page minus ledger:
+
+| milestone | ledger (PDT) | page 1 | page 2 | page 1 vs page 2 |
+| --- | --- | --- | --- | --- |
+| 2231 hold appears | 21:08:33.471 | +33.351 s | +33.419 s | 68 ms |
+| investigation recorded | 21:08:33.493 | +33.417 s | +33.504 s | 87 ms |
+| answer row (agent.cli, event 6894) | 21:08:41.929 | +26.410 s | +26.479 s | 69 ms |
+| rule 1 on the board (create_rule) | 21:08:41.952 | +26.455 s | +26.572 s | 117 ms |
+| approve rule 1 (agent.cli, event 6898) | 21:08:50.911 | +17.608 s | +17.690 s | 82 ms |
+| 2231 cleared by rule | 21:08:50.911 | +17.608 s | +17.690 s | 82 ms |
+| day 92 | 21:09:20.472 | +33.676 s | +33.447 s | 229 ms |
+
+Pages agreed within 229 ms on milestones and 636 ms on day changes; 0 reloads; 0 page errors. Accepted by the director as 11.2 passing; the lag behind the ledger is a finding (Task 30).
+5. Offline: full loads of "/" and "/console" requested only 127.0.0.1:5174 (and 5173, 4179, 5175 in the other runs) and 127.0.0.1:3100 (HTTP and WebSocket). No other host.
+6. 390 by 844: `document.documentElement.scrollWidth` 390 on the quiet ledger, with 2231 open, with 45 cards at day 92, and after the merge on 5173.
+7. G12: `npm run typecheck` 0 errors, `npm run build` green, vocabulary test green (all checks ok). Bundle grep over dist: STDB_CONTROLLER_TOKEN 0, STDB_AGENT_TOKEN 0, the controller token's first 12 characters (read from .env inside the script, never printed) 0; "Bearer" 1 file, the spacetimedb SDK chunk `spacetimedb-DSpAYoqM.js`, byte-identical to master's build, the SDK's own websocket-token request header. Accepted by the director.
+8. gallery-00.png: 1800 by 1200, Today with the 2231 card (the Truck 22 question), Learned with the Jerome Watkins rule from decoy 2044 (agent.cli answer, event 16043; approve rule 1, event 16047; rule 1 used once on 2044). Captured three times; the last one is committed.
+- Routing: "/" customer view, "/console" and "/console/" console, on the dev server and on `vite preview` (4179, 5175). `/console#event-<id>` from the customer feed: the row exists and is scrolled into its panel.
+- After the merge: `cd web && npm install` (fonts); 5173 served "/" as the customer view and "/console" as the console with no restart, no console errors, Inter and IBM Plex Mono loaded.
+
+### Lag probe (seeded window, 21:14), one light page per server, same 0.5 s run, day 0 to 41, paused at 21:14:58.5 (ledger day 41 at 21:14:58.2)
+
+| server | near day 10 | near day 20 | day 41 | days drawn |
+| --- | --- | --- | --- | --- |
+| :5173 master, Vite dev | day 14 +11.7 s | day 23 +19.0 s | +32.7 s (32.4 s after the pause) | 11 of 41 |
+| :5174 task29, Vite dev | day 13 +10.3 s | day 21 +17.9 s | +32.8 s (32.5 s after the pause) | 11 of 41 |
+| :5175 task29, production build via vite preview | day 10 +0.0 s | day 20 +0.1 s | +0.1 s | 41 of 41 |
+
+"Near day N" is the first day at or after N that the page drew (the dev pages repaint about every 6 s and skip days). Master and Task 29 lag alike, so Task 29 adds no regression; the production build in the same browser at the same time kept up, so laptop load did not cause it. The dev build is the cause; Task 30 serves a production build at the table.
+
+### Tried and rejected
+- Polling the two /console pages from node for 11.2: each DOM read waited behind the dev build's backlog, a milestone could scroll out of the 300-row feed before a poll landed, and page 2 never saw 2231. Replaced by a recorder inside each page.
+- Muting the console's amber by passing a "no open hold" prop into each panel: five components touched for one rule. A CSS variable override on App's root changes two lines and leaves the panels alone.
+- A test runner (vitest) for the vocabulary test: a new dependency; an SSR build with the Vite already installed does the same.
+- Sorting hold cards oldest first: on the staged ledger the 2231 card fell below older invoices, so cards are newest first.
+- "Caliber finished drafting a rule from your answer" for recommendation `done`: worker/src/rules.ts also uses `done` when no rule was drafted.
+
 ## Tried and rejected
 
 | What | Why rejected |
