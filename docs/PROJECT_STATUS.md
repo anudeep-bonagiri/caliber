@@ -1665,6 +1665,15 @@ Checks run: bench/score.py (exit 0), facts.py --baseline-only and the FACTS diff
 | Fitting the six-column table by dropping the spaces around the slash and 1 pt column padding | Computed to about the column width with no margin; resizebox scales the generated cells to the column exactly and leaves numbers.py's cell format alone. |
 | Logging progress from a shell watcher over bench/outputs/opus/ | baseline.py already knows the row count and spend at each row; a --progress-log flag (every 100 rows) is one place and exact. |
 
+## 2026-10-25 06:15 PDT Director: Task 31 verified; repo renamed; caliber.compare live; Discord feed launched; builder-S gone
+
+- Task 31 (builder-31, commit 85362ea) verified green: bench/outputs/opus/ holds 558 rows, _meta.json records claude-opus-5-5, no temperature, API default thinking and effort, $12.85 at list, no cap stop; `git show` of docs/FACTS.md touched only the Model-only baseline section and the header line is unchanged; the PDF is 4 pages (mdls); README line 98 and the Devpost "What we got wrong" paragraph carry the identical Opus sentence. Result: Opus 5.5 alone recall 1.00, precision 0.81 (14 clean rows held, 10 as rate_variance); Sonnet 5.5 alone stays 1.00 / 1.00. Pushed.
+- Repo renamed on GitHub to anudeep-bonagiri/caliber (private); remote updated; links replaced in README, both Devpost drafts and both agent READMEs. The database and the local folder keep the name dispatch-ledger until the folder rename at the restage (the SpacetimeDB data dir is inside the repo at .spacetime/data, so the whole stack stops for the rename).
+- caliber.compare: DNS was Porkbun parking. A static landing page (site/index.html, the gallery image, the technical note) is deployed on Vercel as project caliber; Anudeep set two A records to 76.76.21.21; HTTPS served at 05:56 with a certificate; www and the http redirect work; the Opus row was added and redeployed at 06:05. The page says the carrier is simulated and that the live public demo is the two agents on ASI:One.
+- Task 32 (Discord feed, outbound only, from the public audit table) launched as builder-32 at 05:58 after the freeze, as the smallest honest form of Anudeep's "Discord integration" ask; the webhook URL is in .env (present, never printed; it was pasted into chat, so it should be regenerated after judging). A two-way Discord seat is not built.
+- Builder-S's session ended on its own (pid 28538 gone, no log line after 21:26). The restage goes to builder-S2 from the renamed folder: context/briefs/2026-10-25_0615_builder_s2_restage.md.
+- Still waiting on Anudeep's one `pause` line to @caliber-controller in ASI:One for the allowlist; the controller mailbox logged its eighth Agentverse 503 since 05:15, intermittent, with successful Almanac registrations between them.
+
 ## Tried and rejected
 
 | What | Why rejected |
