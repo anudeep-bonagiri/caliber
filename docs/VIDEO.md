@@ -1,9 +1,15 @@
-# Video script, locked 2026-10-25 07:55 PDT, 4:00 to 4:30 read aloud
+# Video script, locked 2026-10-25 08:20 PDT: 30 s intro on camera plus the demo, about 4:30 in all
 
 One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and the sponsor tracks. It opens on the moment in the order the council set: the investigator agent is refused when asked to pay, the controller's approval becomes a bank id, then the hold-to-rule story, then the proof. Staging, typed lines and pauses: docs/video/moment-script.md. Every number below is read off the screen or from docs/FACTS.md and bench/BASELINE.md (runs of 2026-10-25); nothing is from memory. Three dry jokes, no more.
 
+## Intro, 30 seconds, recorded on camera before the demo
+
+Say: "I'm Anudeep, and this is Sreesanth. I run Cruze, a fleet software company. Every carrier we work with has one person in the back office matching fuel-card statements, toll bills and repair invoices by eye, about eighty-five lines a day, and nobody checks them against the truck. So misuse and duplicate billing get paid. None of our carriers would let software pay a bill on its own, and they are right not to. So we built one that can't."
+
+Cut straight to the demo. The demo's first line names the product; the intro never does, so the two do not repeat.
+
 [0:00] ASI:One, the @caliber-investigator chat, the console beside it on day 41.
-Say: "I run Cruze, a fleet company, and none of our carriers would let software pay a bill. So we built one that can't. This is Caliber, an accounts-payable clerk. This is its investigator agent on ASI:One. It can read the whole ledger. Watch it get asked to pay."
+Say: "This is Caliber, an accounts-payable clerk. This is its investigator agent on ASI:One. It can read the whole ledger. Watch it get asked to pay."
 Type: approve 2231
 Say: "Refused by the database, which wrote down who asked: role reader. The agent that explains cannot pay."
 
