@@ -42,6 +42,17 @@
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
+/* Task 29: with no hold open the console's amber (its brass) is muted everywhere except the PAUSED pill. */
+.quiet {
+  --hold: var(--muted);
+  --hold-dim: rgba(141, 158, 174, 0.12);
+  --flash: rgba(141, 158, 174, 0.18);
+}
+.quiet .keep-brass {
+  --hold: #f0a63a;
+  --hold-dim: rgba(240, 166, 58, 0.14);
+}
+
 html, body, #root { height: 100%; }
 body {
   background: var(--bg);

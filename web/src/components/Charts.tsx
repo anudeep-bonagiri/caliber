@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { Panel, Empty, Src } from './ui';
+import { Panel, Empty, Src, Pill } from './ui';
 import { EXCEPTION_CODES, type Facts, type FactsByCode, type FactsByDay } from '../lib/types';
 import { codeLabel } from '../lib/format';
 
@@ -19,7 +19,11 @@ const CODE_COLORS: Record<string, string> = {
 };
 const PRECISION = '#3987e5';
 const RECALL = '#199e70';
-const SINGLE = '#f0a63a';
+// The hold amber as a variable so the quiet state (no hold open) can mute it.
+const SINGLE = 'var(--hold)';
+
+// Task 29 / D-6: this panel is the benchmark, not the clerk. The agent never sees the answer key.
+const BENCHMARK_CAPTION = 'Scored against the published answer key by scripts/facts.py, never by the agent.';
 
 type LoadState = { kind: 'loading' } | { kind: 'missing' } | { kind: 'error'; message: string } | { kind: 'ready'; facts: Facts };
 
@@ -79,10 +83,15 @@ export function Charts() {
 
   const asOf = state.kind === 'ready' ? state.facts.asOf : undefined;
   const aside = (
-    <span className="text-faint" title={label}>
-      {label}
-      {asOf ? <span className="ml-2 num">as of {asOf}</span> : null}
-    </span>
+    <>
+      <Pill tone="neutral" title={BENCHMARK_CAPTION}>
+        benchmark
+      </Pill>
+      <span className="text-faint" title={label}>
+        {label}
+        {asOf ? <span className="ml-2 num">as of {asOf}</span> : null}
+      </span>
+    </>
   );
 
   const body =
@@ -204,8 +213,9 @@ export function Charts() {
     );
 
   return (
-    <Panel title="Planted vs raised" aside={aside} bodyClassName="min-h-[240px]">
-      {body}
+    <Panel title="Planted vs raised" aside={aside} bodyClassName="flex min-h-[240px] flex-col">
+      <p className="px-3 pt-2 text-[11px] text-muted">{BENCHMARK_CAPTION}</p>
+      <div className="min-h-0 flex-1">{body}</div>
     </Panel>
   );
 }

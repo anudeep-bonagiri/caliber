@@ -10,13 +10,15 @@ export function DayClock({ day }: { day: BusinessDay | undefined }) {
       title="Day clock"
       aside={
         day ? (
-          <Pill
-            tone={day.paused ? 'hold' : 'release'}
-            dot
-            title="No pause button here. The controller pauses or resumes from ASI:One or the terminal (set_clock). This page cannot write to the ledger."
-          >
-            {day.paused ? 'paused' : 'running'}
-          </Pill>
+          <span className={day.paused ? 'keep-brass' : ''}>
+            <Pill
+              tone={day.paused ? 'hold' : 'release'}
+              dot
+              title="No pause button here. The controller pauses or resumes from ASI:One or the terminal (set_clock). This page cannot write to the ledger."
+            >
+              {day.paused ? 'paused' : 'running'}
+            </Pill>
+          </span>
         ) : null
       }
       bodyClassName="flex flex-col justify-between px-3 py-3"

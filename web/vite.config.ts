@@ -6,7 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 // the bare specifier "spacetimedb". dedupe makes Vite resolve that import from
 // web/node_modules instead of walking up from module_bindings/, and fs.allow
 // lets the dev server read files outside web/.
-export default defineConfig({
+// The SSR build is only the vocabulary test (npm run test:vocab), where node_modules stay external.
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react(), tailwindcss()],
   resolve: { dedupe: ['spacetimedb', 'react', 'react-dom'] },
   server: { port: 5173, fs: { allow: ['..'] } },
@@ -14,8 +15,8 @@ export default defineConfig({
     target: 'es2022',
     rollupOptions: {
       output: {
-        manualChunks: { recharts: ['recharts'], spacetimedb: ['spacetimedb', 'spacetimedb/react'] },
+        manualChunks: isSsrBuild ? undefined : { recharts: ['recharts'], spacetimedb: ['spacetimedb', 'spacetimedb/react'] },
       },
     },
   },
-});
+}));

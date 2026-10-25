@@ -177,6 +177,7 @@ export function LedgerOfTrust({
                 return (
                   <tr
                     key={String(e.id)}
+                    id={`event-${e.id}`}
                     className={`border-b border-edge/50 align-top ${flashing.has(String(e.id)) ? 'flash' : ''} ${
                       refused ? 'bg-refused-dim/60 shadow-[inset_2px_0_0_var(--refused)]' : ''
                     }`}

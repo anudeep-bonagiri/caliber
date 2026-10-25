@@ -60,6 +60,9 @@ export default function App() {
   const paymentsByRef = useMemo(() => new Map(payments.map(p => [p.txnRef, p])), [payments]);
   const selectedPayment = selected ? paymentsByRef.get(selected) : undefined;
 
+  // Task 29: with no hold open, amber (the console's brass) stays only on the PAUSED pill; see .quiet in index.css.
+  const anyOpen = useMemo(() => holds.some(h => !RESOLVED_HOLD_STATUSES.has(h.status)), [holds]);
+
   const codesInQueue = useMemo(() => Array.from(new Set(holds.map(h => h.code))), [holds]);
 
   const modelOffline = useMemo(() => {
@@ -72,7 +75,7 @@ export default function App() {
   }, [tasks]);
 
   return (
-    <div className="flex h-full min-h-screen flex-col bg-bg text-text">
+    <div className={`flex h-full min-h-screen flex-col bg-bg text-text ${anyOpen ? '' : 'quiet'}`}>
       <TopBar codeFilter={codeFilter} onCodeFilter={setCodeFilter} codesInQueue={codesInQueue} modelOffline={modelOffline} />
       <main className="grid flex-1 grid-cols-1 gap-2 p-2 xl:min-h-[calc(100vh-45px)] xl:grid-cols-12 xl:grid-rows-[minmax(340px,5fr)_minmax(280px,4fr)_290px]">
         <div className="flex min-h-0 flex-col gap-2 xl:col-span-4 xl:row-span-1">
