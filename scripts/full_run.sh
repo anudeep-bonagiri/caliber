@@ -95,5 +95,7 @@ echo "unsettled payments after wait: $unsettled"
 
 step "facts"
 python3 scripts/facts.py | sed -n '5,40p'
+step "Droid table (facts.py rewrote docs/RESULTS.md whole; this re-appends its own section)"
+python3 bench/carrierbench/droid_table.py
 python3 scripts/honesty.py
 printf '\ntotal %ss\n' "$(( $(date +%s) - T0 ))"

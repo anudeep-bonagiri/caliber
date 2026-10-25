@@ -580,6 +580,22 @@ Brief: context/briefs/2026-10-24_1830_lane_d_docs.md, plus the director's five a
 - The "/" beat describes Task 29 from the director's message (sentence card, question, mini-map, `Answer in ASI:One`); I have not seen the screen.
 - Commit trailer: like builders A and B, this session runs on Claude Opus 5.5, so the commit carries that name instead of D-4's Fable 5.1.
 
+## 2026-10-24 20:58 PDT Builder-C3: consistency fixes (Task 28)
+
+Brief: context/briefs/2026-10-24_2100_c3_consistency.md. Log: logs/builder_c3.log. No process started or stopped; no script in the never-run list was run. Every replacement below was applied by exact match and asserted to match once.
+
+### Checks, as run
+- Step 1, docs/DEVPOST_FULL.md: builder-C2's four replacements (permission handler wording in the Droid bullet; "one MCP server (Elastic) and read-only file tools" in the Cal Hacks row; "the Elastic MCP server as its only reach beyond the evidence folder" in the Factory feedback; "the Elastic MCP source tags" in gallery-02). The baseline paragraph: `grep -c` 1, kept in "What we got wrong"; the Proof bullet now ends "The model-only baseline is in `bench/BASELINE.md` and under "What we got wrong" below." The D-6 sentence was already verbatim at line 47 ("What it does", where the draft describes the key): `grep -c` 1, unchanged. `git diff --stat` 5 insertions, 5 deletions.
+- Step 2, the Read finding: README.md:143 takes C2's replacement; docs/not-built.md "hard sandbox" bullet replaces "(none existed)" with the 770003 read of `~/AGENTS.md`, the redaction in e2243e1 (the read stays recorded) and nine other probes finding nothing; context/JUDGE_QA.md:63 and context/CLAIMS_AUDIT.md row 14 (verdict column) say the same in one clause each; JUDGE_QA:63 now names four Agent Builder tools, two ES|QL (find_trips_near, contract_rate_for_vendor) and two semantic on JINA (find_contract_clause, find_receipt_text), the recordings calling three (droid_table.json `mcpCallsByTool`: 31, 21, 1; ten outside reads attempted, one succeeded). docs/CARDS.md Droid card unchanged: it claims no read-only boundary and already says the OS sandbox around Read is Not built. `git grep` for "none existed", "which do not exist", "two Elastic ES|QL" in the touched files: 0.
+- Step 3: worker/src/droid.ts, the `autonomyLevel` comment only, now `// Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking`. Both README quotes had also drifted on the `mcpServers` comment (they still said "KIBANA_URL and ELASTIC_API_KEY"); the whole BEGIN to END block was re-synced in both. `diff <(sed -n '/BEGIN createSession options/,/END createSession options/p' worker/src/droid.ts) <(same on README.md)`: empty; same on worker/README.md: empty. `cd worker && npm run typecheck`: exit 0; `npx vitest run`: 7 files, 111 tests passed.
+- Step 4: context/BUILD_SPEC.md:14 ends "Read, Grep, Glob and LS never reach the handler under autonomy Off (bench/carrierbench/droid_table.json)."
+- Step 5: scripts/full_run.sh runs `python3 bench/carrierbench/droid_table.py` under its own step line right after facts.py, before honesty.py. `bash -n`: ok. The script alone, twice: exit 0, "benchmark 44 of 46"; md5 of docs/RESULTS.md and droid_table.json unchanged, `git status` clean on both (idempotent on the redacted 770003 fixture too).
+- Em-dash count 0 in all twelve files in the brief's list.
+
+### For the director (outside my lines, not edited)
+- context/CLAIMS_AUDIT.md row 14's Claim column still reads "only MCP tool calls allowed"; the recordings show Read, Grep, Glob and LS run without asking. The brief allowed one clause, so the claim text is yours to soften.
+- context/BUILD_SPEC.md:340 quotes the old comment `// every action asks the handler` in its options sketch; context/IDEA_RANKING.md:134 says "a permission handler that allows only MCP tool calls"; context/TASKS.md:289 says "MCP-only reach". None is judge-facing; left as written.
+
 ## Tried and rejected
 
 | What | Why rejected |

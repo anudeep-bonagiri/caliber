@@ -107,10 +107,10 @@ The technical note [docs/paper/caliber.pdf](docs/paper/caliber.pdf) (IEEE two-co
   // BEGIN createSession options (quoted verbatim in README.md)
   return {
     cwd: opts.evidenceDir,                                   // seed/fixtures/evidence; read-only by the OS, not by Droid
-    autonomyLevel: AutonomyLevel.Off,                        // every action asks the handler
+    autonomyLevel: AutonomyLevel.Off,                        // Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking
     disabledToolIds,                                         // ['Execute', 'Edit', 'Create', 'ApplyPatch'] plus listTools() edit/execute ids; subtractive, no allowlist in TS
     systemPrompt: { type: 'preset' as const, preset: 'droid' as const, append: SYSTEM_PROMPT_APPEND },
-    mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and ELASTIC_API_KEY are set
+    mcpServers,                                              // Elastic Agent Builder MCP only when KIBANA_URL and a key are set; the key is ELASTIC_MCP_API_KEY (least privilege) when present, else ELASTIC_API_KEY
     permissionHandler({ toolUses, options }: RequestPermissionRequestParams) {
       // Subtractive: anything that writes, executes, escalates or asks a human is cancelled; MCP tool calls and
       // read-only confirmations proceed once. Read and Grep need no confirmation at all in autonomy Off.
@@ -140,7 +140,7 @@ The prompt is streamed with `session.stream(prompt, { outputFormat: { type: Outp
 ApplyPatch (disabled), AskUser (disabled), ConnectApp (disabled), CreateAutomation (disabled), DeleteAutomation (disabled), DismissHandoffItems (disabled), EditAutomation (disabled), elastic___contract_rate_for_vendor, elastic___find_trips_near, elastic___platform_context_engine_install_automation_template, elastic___platform_core_execute_esql, elastic___platform_core_execute_workflow, elastic___platform_core_generate_esql, elastic___platform_core_generate_workflow, elastic___platform_core_get_document_by_id, elastic___platform_core_get_index_mapping, elastic___platform_core_get_workflow_execution_status, elastic___platform_core_index_explorer, elastic___platform_core_list_indices, elastic___platform_core_list_inference_endpoints, elastic___platform_core_list_workflow_executions, elastic___platform_core_product_documentation, elastic___platform_core_resume_workflow_execution, elastic___platform_core_search, elastic___platform_workflows_get_connectors, elastic___platform_workflows_get_examples, elastic___platform_workflows_get_step_definitions, elastic___platform_workflows_get_trigger_definitions, elastic___platform_workflows_get_workflow, elastic___platform_workflows_validate_workflow, elastic___platform_workflows_workflow_execute_step, EndFeatureRun (disabled), Execute (disabled), ExitSpecMode (disabled), FetchUrl (disabled), GenerateDroid (disabled), GenerateImage (disabled), Glob, Grep, ListAutomations (disabled), ListAutomationTemplates (disabled), Loop (disabled), LS, ProposeMission (disabled), Read, ReadAutomation (disabled), RunAutomation (disabled), Script, Skill (disabled), StageSettingsChanges (disabled), StartMissionRun (disabled), Task (disabled), TaskOutput (disabled), TaskStop (disabled), TodoWrite (disabled), ToolSearch, WaitForScript, WebSearch (disabled)
 ```
 
-Droid 0.249 runs tools through `Script` and loads MCP tools with `ToolSearch`, so both stay enabled; the handler decides per confirmation inside a script. Honesty note: Droid's `Read` is not confined to `cwd` (in the live run it probed for instruction files above the evidence folder, which do not exist); the OS, not the session options, is the real boundary. See `docs/not-built.md` and `worker/README.md`.
+Droid 0.249 runs tools through `Script` and loads MCP tools with `ToolSearch`, so both stay enabled; the handler decides per confirmation inside a script. Honesty note: Droid's `Read` is not confined to `cwd` (in one recorded run, 770003, it read `~/AGENTS.md` above the evidence folder; nine other probes found nothing); the OS, not the session options, is the real boundary. See `docs/not-built.md` and `worker/README.md`.
 
 ## Agent addresses
 
