@@ -475,10 +475,10 @@ export function activitySentence(e: AuditEvent, lk: Lookups): string {
     case 'set_tick':
       return 'The day clock speed changed.';
     case 'claim_task':
-      return `Caliber started looking into charge ${e.detail}.`;
+      return `Caliber started looking into ${refWord(e.detail, lk)}.`;
     case 'record_investigation': {
-      const txn = e.detail.split(' ')[0];
-      return `Caliber finished looking into charge ${txn}.`;
+      const { txnRef, recommendation } = investigationOf(e);
+      return `Caliber looked into ${refWord(txnRef, lk)} ${OUTCOME[recommendation] ?? 'and finished'}.`;
     }
     case 'rematch':
       return `Charge ${ref} was checked again.`;
@@ -497,6 +497,55 @@ export function activitySentence(e: AuditEvent, lk: Lookups): string {
     default:
       return 'Something was recorded in the ledger.';
   }
+}
+
+// record_investigation writes "<txnRef> <recommendation> (<source>)".
+function investigationOf(e: AuditEvent): { txnRef: string; recommendation: string } {
+  const [txnRef = e.ref, recommendation = ''] = e.detail.split(' ');
+  return { txnRef, recommendation };
+}
+
+const OUTCOME: Record<string, string> = {
+  hold_and_ask: 'and is holding it for you with a question',
+  hold: 'and is holding it',
+  clear: 'and found nothing wrong',
+  timeout: "but couldn't finish; it stays held",
+};
+const NEEDS_YOU = new Set(['hold_and_ask']);
+
+function refWord(ref: string, lk: Lookups): string {
+  const kind = lk.holds.get(ref)?.kind;
+  return kind === 'invoice' ? `invoice ${ref}` : kind === 'toll' ? `toll ${ref}` : `charge ${ref}`;
+}
+
+export type ActivityLine = { id: bigint; day: number; text: string };
+
+const COLLAPSE_AT = 3;
+
+/**
+ * The feed, newest first. Claim rows are dropped (a finished investigation follows each one); a run of three or
+ * more investigations on one day becomes one line that links to the newest of them. Everything else is one line.
+ */
+export function activityLines(events: readonly AuditEvent[], lk: Lookups): ActivityLine[] {
+  const feed = events.filter(e => e.action !== 'claim_task').sort((a, b) => (a.id === b.id ? 0 : a.id > b.id ? -1 : 1));
+  const out: ActivityLine[] = [];
+  for (let i = 0; i < feed.length; ) {
+    const e = feed[i];
+    let j = i;
+    if (e.action === 'record_investigation') while (j + 1 < feed.length && feed[j + 1].action === 'record_investigation' && feed[j + 1].day === e.day) j++;
+    const run = feed.slice(i, j + 1);
+    if (run.length >= COLLAPSE_AT) {
+      const kinds = new Set(run.map(r => lk.holds.get(investigationOf(r).txnRef)?.kind ?? 'card'));
+      const unit = kinds.size === 1 && kinds.has('invoice') ? 'invoice' : kinds.size === 1 && kinds.has('toll') ? 'toll' : 'charge';
+      const asks = run.filter(r => NEEDS_YOU.has(investigationOf(r).recommendation)).length;
+      const need = asks === 0 ? 'none need you' : asks === 1 ? '1 needs you' : `${asks} need you`;
+      out.push({ id: e.id, day: e.day, text: `Caliber looked into ${plural(run.length, unit)}; ${need}.` });
+    } else {
+      for (const r of run) out.push({ id: r.id, day: r.day, text: activitySentence(r, lk) });
+    }
+    i = j + 1;
+  }
+  return out;
 }
 
 function refusedSentence(e: AuditEvent, lk: Lookups): string {

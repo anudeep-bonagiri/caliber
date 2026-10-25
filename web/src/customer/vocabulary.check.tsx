@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { Identity, Timestamp } from 'spacetimedb';
 import type { AgentTask, AuditEvent, Hold, IngestLog, MatchResult, Payment, Rule } from '../../../module_bindings/types';
 import { ActivityScreen, CustomerPage, Footer, Header, LearnedScreen, TodayScreen, type LedgerRows } from './Screens';
-import { activitySentence, forbiddenIn, holdSentence, lookupsFrom, namesFrom, evidenceOf } from './model';
+import { activityLines, activitySentence, forbiddenIn, holdSentence, lookupsFrom, namesFrom, evidenceOf } from './model';
 
 const ts = (n: number) => new Timestamp(BigInt(1_792_900_000_000_000 + n * 1_000_000));
 const ME = new Identity('c200156ae89e7de689727fce31542a6474a86db1c60d8a9623f6be2c186d2a1d');
@@ -186,6 +186,19 @@ const unknown = activitySentence(events[events.length - 1], lk);
 check('unknown action is neutral', unknown === 'Something was recorded in the ledger.', unknown);
 check('refused, investigator', activitySentence(events.find(e => e.action === 'refused')!, lk) === 'The investigator tried to approve a payment. Only you can.');
 check('ingest', activitySentence(events.find(e => e.action === 'ingest')!, lk) === 'A fuel-card file arrived: 61 charges.');
+// Feed: claims dropped, one investigation phrased by its outcome, a run of three or more collapsed into one line.
+const lines = activityLines(events, lk);
+check('feed drops claim rows', !lines.some(l => /started looking into/.test(l.text)));
+check('feed: single investigation outcome', lines.some(l => l.text === 'Caliber looked into charge 2231 and is holding it for you with a question.'), lines.map(l => l.text).find(t => t.includes('looked into')) ?? '');
+const run: AuditEvent[] = [
+  ['INV-1040', 'hold_and_ask'], ['INV-1051', 'clear'], ['INV-1060', 'hold_and_ask'], ['INV-1077', 'hold'],
+].map(([ref, rec], i) => ({ id: BigInt(500 + i), at: ts(500 + i), day: 41, actor: MOD, actorRole: 'agent', action: 'record_investigation', ref: String(10 + i), detail: `${ref} ${rec} (replayed)` }));
+const claims: AuditEvent[] = run.map(r => ({ ...r, id: r.id + 100n, action: 'claim_task', detail: r.detail.split(' ')[0] }));
+const collapsed = activityLines([...run, ...claims, events[9]], lk);
+check('feed: run of 4 collapses to one line', collapsed.length === 2 && collapsed[0].text === 'Caliber looked into 4 invoices; 2 need you.' && collapsed[0].id === 603n - 100n, collapsed.map(l => `${l.id}:${l.text}`).join(' | '));
+const two = activityLines(run.slice(0, 2), lk);
+check('feed: run of 2 stays as lines', two.length === 2 && two[0].text === 'Caliber looked into invoice INV-1051 and found nothing wrong.', two.map(l => l.text).join(' | '));
+
 const learned = text(screens[3][1]);
 check('learned: approved rule', learned.includes('When Ramon Ortiz fuels a truck other than the one on the card, pay the charge. Good from Aug 26 to Sep 1.'), learned.slice(0, 300));
 check('learned: approved on', learned.includes('You approved this on Aug 26.'));

@@ -5,7 +5,7 @@ import { CopyCommand } from './CopyCommand';
 import { MiniMap, hasMapPoints } from './MiniMap';
 import {
   CAUGHT_DEFINITION,
-  activitySentence,
+  activityLines,
   dayDate,
   evidenceOf,
   findingOf,
@@ -246,7 +246,7 @@ export function ActivityScreen({ rows }: { rows: LedgerRows }) {
   const { events, holds, payments, rules, ingests } = rows;
   const [limit, setLimit] = useState(FEED_STEP);
   const lk = useMemo(() => lookupsFrom(holds, payments, rules, ingests), [holds, payments, rules, ingests]);
-  const feed = useMemo(() => [...events].sort((a, b) => (a.id === b.id ? 0 : a.id > b.id ? -1 : 1)), [events]);
+  const feed = useMemo(() => activityLines(events, lk), [events, lk]);
   return (
     <section className="cv-activity" aria-labelledby="cv-activity-h">
       <h2 id="cv-activity-h" className="cv-h2">Activity</h2>
@@ -260,7 +260,7 @@ export function ActivityScreen({ rows }: { rows: LedgerRows }) {
                 <a href={`/console#event-${e.id}`} className="cv-feed-line">
                   <span className="cv-feed-day">{dayDate(e.day)}</span>
                   <span className="cv-feed-text">
-                    <Prose text={activitySentence(e, lk)} />
+                    <Prose text={e.text} />
                   </span>
                 </a>
               </li>
