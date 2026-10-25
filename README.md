@@ -47,7 +47,7 @@ Same 558 rows (all 52 planted errors, all 6 decoys, 500 clean rows), same record
 
 | System | Precision | Recall | False holds | Model calls per paid line | Cost for the 558 rows | Median per row |
 | --- | --- | --- | --- | --- | --- | --- |
-| Caliber kernel | 1.00 | 1.00 | 0 | 0 | $0, plain code | 41 business days in **0.2 s **|
+| Caliber kernel | 1.00 | 1.00 | 0 | 0 | $0, plain code | 41 business days in **0.2 s**|
 | Caliber on a hold (Droid, recorded live run) | not a classifier | | | 1 per hold, 52 holds | 2,016,204 Factory credits, (~$5.44) | 25.6 s per hold |
 | Claude Sonnet 5.5 alone | 1.00 | 1.00 | 0 | 1 | $6.38 | 3.0 s |
 | Claude Opus 5.5 alone, default effort | 0.81 | 1.00 | 14 | 1 | $12.85 | 3.5 s |
