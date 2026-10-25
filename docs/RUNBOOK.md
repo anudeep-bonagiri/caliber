@@ -73,7 +73,7 @@ Terminal B makes no paid call and needs no internet: the keys are empty, and a s
 - [ ] Rehearse the 00:15 to 00:35 run twice: at a 0.5 s tick, day 41 arrives about twenty seconds after `run`.
 - [ ] Measured times: `demo_up.sh` ____ s, `run_days.ts --until 40` ____ s, uAgent mailbox ready ____ s.
 
-Boot, in order, before the first judge: `scripts/demo_up.sh` (ends `Ready. The clock is paused on day 0.` and prints `dashboard: http://127.0.0.1:5173`), then A1, then wait fifteen seconds and send `status` from ASI:One. `demo_up.sh` wipes the data and writes new agent and controller tokens into `.env`, so anything started before it must be restarted after it.
+Boot, in order, before the first judge: `scripts/demo_up.sh` (prints `dashboard: http://127.0.0.1:5173 (customer view) and http://127.0.0.1:5173/console` and ends `Ready. The clock is paused on day 0.`; the web step is a production build served by `vite preview`, not the dev server, which trails the ledger by up to 33 s at the 0.5 s tick, Task 30; after `scripts/facts.py`, run `demo_up.sh` again for the console charts to change), then A1, then wait fifteen seconds and send `status` from ASI:One. `demo_up.sh` wipes the data and writes new agent and controller tokens into `.env`, so anything started before it must be restarted after it.
 
 ## 3b. Sunday 7:00 AM
 
@@ -110,7 +110,7 @@ Injected rows come back: on day 44 of the next replay the kernel matches them ag
 
 ```
 (cd worker && WORKER_MODE=replay FACTORY_API_KEY= ANTHROPIC_API_KEY= nohup npm start > ../logs/worker.log 2>&1 &)
-pkill -f 'tsx src/index.ts'; lsof -ti :5173 | xargs kill     # before re-running demo_up.sh
+pkill -f 'tsx src/index.ts'; lsof -ti :5173 | xargs kill     # before re-running demo_up.sh (stops the vite preview server)
 ```
 
 ## 6. Sponsor tables

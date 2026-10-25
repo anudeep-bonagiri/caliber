@@ -194,7 +194,7 @@ python3 -m venv agent/.venv && agent/.venv/bin/pip install -r agent/requirements
 python3 -m venv elastic/.venv && elastic/.venv/bin/pip install -r elastic/requirements.txt && elastic/.venv/bin/python -m pytest -q elastic
 ```
 
-Then the demo month, no model calls, no network:
+Then the demo month, no model calls, no network. `demo_up.sh` builds the web app and serves the production build with `vite preview` on http://127.0.0.1:5173 ("/" the controller's view, "/console" the dashboard); the Vite dev server trails the ledger at the demo's 0.5 s tick, so the table never runs it:
 
 ```
 scripts/demo_up.sh

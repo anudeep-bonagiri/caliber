@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build and serve the demo month with no model calls and no network.
 #   scripts/demo_up.sh            start everything (server, module, identities, fixtures, worker in replay, web)
-#   scripts/demo_up.sh --no-web   skip the web dev server
+#   scripts/demo_up.sh --no-web   skip the web server (a production build served by vite preview)
 #   scripts/demo_up.sh --inbox    load company data only and start the inbox file connector (scripts/ingest_watch.py);
 #                                 transactions arrive when the three sample files are dropped into inbox/
 # Every model key is exported empty on purpose: a variable that is set, even to nothing, wins over .env,
@@ -95,7 +95,7 @@ fi
 step "6/7 worker in replay mode (logs/worker.log)"
 pkill -f "worker/src/index.ts" 2>/dev/null || true
 pkill -f "tsx src/index.ts" 2>/dev/null || true
-pkill -f "vite --host 127.0.0.1 --port 5173" 2>/dev/null || true
+pkill -f "vite.*--port 5173" 2>/dev/null || true
 pkill -f "agent/agent.py" 2>/dev/null || true
 pkill -f "scripts/ingest_watch.py" 2>/dev/null || true
 sleep 1
@@ -105,10 +105,16 @@ if [ -f worker/package.json ]; then
 fi
 
 if [ "$WEB" = 1 ] && [ -f web/package.json ]; then
-  step "7/7 web dashboard (logs/web.log)"
+  step "7/7 web dashboard, production build (logs/web.log)"
+  # A production build, not the dev server: under the 0.5 s tick the dev build trails the ledger by up to 33 s
+  # (Task 30, D-8). VITE_ variables are read at build time, so they are passed to the build from STDB_URI/STDB_DB.
+  # web/public/FACTS.json is copied into dist here; after scripts/facts.py, run this script again to show new charts.
   ( cd web && [ -d node_modules ] || npm install --silent )
-  ( cd web && nohup npm run dev -- --host 127.0.0.1 --port 5173 > ../logs/web.log 2>&1 & )
-  echo "dashboard: http://127.0.0.1:5173"
+  ( cd web && VITE_STDB_URI="$STDB_URI" VITE_STDB_DB="$STDB_DB" npm run build > ../logs/web.log 2>&1 ) || { echo "web build failed; see logs/web.log"; exit 1; }
+  ( cd web && nohup npx vite preview --host 127.0.0.1 --port 5173 --strictPort >> ../logs/web.log 2>&1 & )
+  for i in $(seq 1 40); do curl -sf http://127.0.0.1:5173/ >/dev/null 2>&1 && break; sleep 0.25; done
+  curl -sf http://127.0.0.1:5173/console >/dev/null || { echo "web server did not start; see logs/web.log"; exit 1; }
+  echo "dashboard: http://127.0.0.1:5173 (customer view) and http://127.0.0.1:5173/console"
 fi
 
 if [ ! -x agent/.venv/bin/python ] && [ -f agent/requirements.txt ]; then
