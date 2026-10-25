@@ -1,0 +1,3073 @@
+{
+  "generatedBy": "bench/carrierbench/droid_table.py",
+  "sources": {
+    "recordings": "seed/fixtures/investigations",
+    "originals": "seed/fixtures/investigations/_v1",
+    "cost": [
+      "docs/evidence/cost_log_live_record_2026-10-24.jsonl",
+      "docs/evidence/cost_log_decoy_rerecord_2026-10-24.jsonl"
+    ],
+    "listTools": "docs/evidence/droid_listTools_2026-10-24.txt",
+    "autonomy": "worker/src/droid.ts"
+  },
+  "current": {
+    "runs": 52,
+    "recommendation": {
+      "clear": 0,
+      "hold": 1,
+      "hold_and_ask": 51
+    },
+    "mcpCallsPerRun": {
+      "n": 52,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1,
+      "max": 2,
+      "total": 53,
+      "distribution": {
+        "1": 51,
+        "2": 1
+      }
+    },
+    "mcpCallsByTool": {
+      "elastic___contract_rate_for_vendor": 21,
+      "elastic___find_contract_clause": 1,
+      "elastic___find_trips_near": 31
+    },
+    "runsWithAtLeastOneMcpCall": 52,
+    "fileToolCallsPerRun": {
+      "Read": {
+        "n": 52,
+        "mean": 3.8,
+        "median": 4.0,
+        "min": 1,
+        "max": 11,
+        "total": 197,
+        "distribution": {
+          "1": 1,
+          "2": 10,
+          "3": 6,
+          "4": 30,
+          "5": 1,
+          "6": 2,
+          "10": 1,
+          "11": 1
+        }
+      },
+      "Grep": {
+        "n": 52,
+        "mean": 0.5,
+        "median": 1.0,
+        "min": 0,
+        "max": 1,
+        "total": 27,
+        "distribution": {
+          "0": 25,
+          "1": 27
+        }
+      },
+      "Glob": {
+        "n": 52,
+        "mean": 0.2,
+        "median": 0.0,
+        "min": 0,
+        "max": 2,
+        "total": 13,
+        "distribution": {
+          "0": 41,
+          "1": 9,
+          "2": 2
+        }
+      }
+    },
+    "permission": {
+      "proceedOncePerRun": {
+        "n": 52,
+        "mean": 1,
+        "median": 1.0,
+        "min": 1,
+        "max": 1,
+        "total": 52,
+        "distribution": {
+          "1": 52
+        }
+      },
+      "cancelledTotal": 0,
+      "noteTexts": {
+        "permission proceed once: Script:script": 52
+      },
+      "decisionsCoveringAnMcpCall": 52,
+      "innerCallsCovered": {
+        "Grep": 1,
+        "Read": 54,
+        "elastic___contract_rate_for_vendor": 21,
+        "elastic___find_contract_clause": 1,
+        "elastic___find_trips_near": 31
+      }
+    }
+  },
+  "rerecordings": {
+    "txnRefs": [
+      "1421",
+      "2044",
+      "2231",
+      "3955",
+      "5428",
+      "5986",
+      "INV-1003"
+    ],
+    "current": {
+      "runs": 7,
+      "recommendation": {
+        "clear": 0,
+        "hold": 1,
+        "hold_and_ask": 6
+      },
+      "mcpCallsPerRun": {
+        "n": 7,
+        "mean": 1.1,
+        "median": 1,
+        "min": 1,
+        "max": 2,
+        "total": 8,
+        "distribution": {
+          "1": 6,
+          "2": 1
+        }
+      },
+      "mcpCallsByTool": {
+        "elastic___contract_rate_for_vendor": 1,
+        "elastic___find_contract_clause": 1,
+        "elastic___find_trips_near": 6
+      },
+      "runsWithAtLeastOneMcpCall": 7,
+      "fileToolCallsPerRun": {
+        "Read": {
+          "n": 7,
+          "mean": 2.4,
+          "median": 2,
+          "min": 2,
+          "max": 4,
+          "total": 17,
+          "distribution": {
+            "2": 5,
+            "3": 1,
+            "4": 1
+          }
+        },
+        "Grep": {
+          "n": 7,
+          "mean": 1,
+          "median": 1,
+          "min": 1,
+          "max": 1,
+          "total": 7,
+          "distribution": {
+            "1": 7
+          }
+        },
+        "Glob": {
+          "n": 7,
+          "mean": 0,
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "total": 0,
+          "distribution": {
+            "0": 7
+          }
+        }
+      },
+      "permission": {
+        "proceedOncePerRun": {
+          "n": 7,
+          "mean": 1,
+          "median": 1,
+          "min": 1,
+          "max": 1,
+          "total": 7,
+          "distribution": {
+            "1": 7
+          }
+        },
+        "cancelledTotal": 0,
+        "noteTexts": {
+          "permission proceed once: Script:script": 7
+        },
+        "decisionsCoveringAnMcpCall": 7,
+        "innerCallsCovered": {
+          "Read": 3,
+          "elastic___contract_rate_for_vendor": 1,
+          "elastic___find_contract_clause": 1,
+          "elastic___find_trips_near": 6
+        }
+      }
+    },
+    "v1": {
+      "runs": 7,
+      "recommendation": {
+        "clear": 6,
+        "hold": 0,
+        "hold_and_ask": 1
+      },
+      "mcpCallsPerRun": {
+        "n": 7,
+        "mean": 1,
+        "median": 1,
+        "min": 1,
+        "max": 1,
+        "total": 7,
+        "distribution": {
+          "1": 7
+        }
+      },
+      "mcpCallsByTool": {
+        "elastic___contract_rate_for_vendor": 1,
+        "elastic___find_trips_near": 6
+      },
+      "runsWithAtLeastOneMcpCall": 7,
+      "fileToolCallsPerRun": {
+        "Read": {
+          "n": 7,
+          "mean": 3,
+          "median": 2,
+          "min": 2,
+          "max": 7,
+          "total": 21,
+          "distribution": {
+            "2": 5,
+            "4": 1,
+            "7": 1
+          }
+        },
+        "Grep": {
+          "n": 7,
+          "mean": 1,
+          "median": 1,
+          "min": 1,
+          "max": 1,
+          "total": 7,
+          "distribution": {
+            "1": 7
+          }
+        },
+        "Glob": {
+          "n": 7,
+          "mean": 0,
+          "median": 0,
+          "min": 0,
+          "max": 0,
+          "total": 0,
+          "distribution": {
+            "0": 7
+          }
+        }
+      },
+      "permission": {
+        "proceedOncePerRun": {
+          "n": 7,
+          "mean": 1,
+          "median": 1,
+          "min": 1,
+          "max": 1,
+          "total": 7,
+          "distribution": {
+            "1": 7
+          }
+        },
+        "cancelledTotal": 0,
+        "noteTexts": {
+          "permission proceed once: Script:script": 7
+        },
+        "decisionsCoveringAnMcpCall": 7,
+        "innerCallsCovered": {
+          "Read": 3,
+          "elastic___contract_rate_for_vendor": 1,
+          "elastic___find_trips_near": 6
+        }
+      }
+    },
+    "recordedAt": {
+      "1421": {
+        "v1": "2026-10-24T20:23:12.282Z",
+        "current": "2026-10-24T21:07:35.705Z"
+      },
+      "2044": {
+        "v1": "2026-10-24T20:24:38.289Z",
+        "current": "2026-10-24T21:07:57.948Z"
+      },
+      "2231": {
+        "v1": "2026-10-24T20:27:35.748Z",
+        "current": "2026-10-24T21:07:04.498Z"
+      },
+      "3955": {
+        "v1": "2026-10-24T20:29:26.534Z",
+        "current": "2026-10-24T21:08:21.033Z"
+      },
+      "5428": {
+        "v1": "2026-10-24T20:31:37.593Z",
+        "current": "2026-10-24T21:08:41.618Z"
+      },
+      "5986": {
+        "v1": "2026-10-24T20:32:55.681Z",
+        "current": "2026-10-24T21:09:03.949Z"
+      },
+      "INV-1003": {
+        "v1": "2026-10-24T20:22:52.492Z",
+        "current": "2026-10-24T23:09:39.798Z"
+      }
+    },
+    "notInCostLog": [
+      {
+        "txnRef": "INV-1003",
+        "input": 1144,
+        "output": 1571,
+        "durationMs": 34745
+      }
+    ]
+  },
+  "readUnderAutonomyOff": {
+    "autonomyLevelOffInDroidTs": true,
+    "recordingsWithSucceededRead": 52,
+    "firstThree": [
+      "1068",
+      "1421",
+      "1468"
+    ],
+    "readCalls": 197,
+    "readResultsOk": 184,
+    "readResultsError": 13,
+    "permissionNotesNamingRead": 0,
+    "readsInsideAPermittedScript": 54,
+    "readsWithNoPermissionDecision": 143,
+    "readsWithNoPermissionDecisionOk": 130,
+    "recordingsWithOkReadAndNoPermissionDecision": 52,
+    "readsOutsideEvidenceFolder": {
+      "attempted": 10,
+      "succeeded": 1,
+      "recordings": [
+        "3209",
+        "770003"
+      ],
+      "paths": [
+        "/Users/AGENTS.md",
+        "~/AGENTS.md",
+        "~/dev/AGENTS.md",
+        "~/dev/hackathons/AGENTS.md",
+        "~/dev/hackathons/dispatch-ledger/AGENTS.md",
+        "~/dev/hackathons/dispatch-ledger/seed/AGENTS.md",
+        "~/dev/hackathons/dispatch-ledger/seed/fixtures/AGENTS.md"
+      ],
+      "succeededPaths": [
+        "770003: ~/AGENTS.md"
+      ]
+    }
+  },
+  "cost": {
+    "live record": {
+      "file": "docs/evidence/cost_log_live_record_2026-10-24.jsonl",
+      "tasks": 52,
+      "txnRefs": [
+        "1068",
+        "INV-1003",
+        "1421",
+        "INV-1010",
+        "1468",
+        "INV-1015",
+        "1793",
+        "1971",
+        "INV-1029",
+        "2044",
+        "INV-1032",
+        "INV-1037",
+        "2251",
+        "2540",
+        "INV-1050",
+        "INV-1052",
+        "2830",
+        "INV-1062",
+        "3093",
+        "3209",
+        "INV-1074",
+        "2231",
+        "3510",
+        "770002",
+        "770003",
+        "INV-1077",
+        "INV-1078",
+        "3884",
+        "INV-1086",
+        "3955",
+        "INV-1096",
+        "INV-1099",
+        "4177",
+        "4363",
+        "INV-1116",
+        "INV-1121",
+        "5041",
+        "5428",
+        "INV-1130",
+        "5557",
+        "INV-1138",
+        "5620",
+        "INV-1140",
+        "5908",
+        "5986",
+        "6065",
+        "INV-1163",
+        "6390",
+        "6294",
+        "660001",
+        "660002",
+        "660003"
+      ],
+      "inputTokens": {
+        "n": 52,
+        "mean": 1033.4,
+        "median": 1045.0,
+        "min": 966,
+        "max": 1058,
+        "total": 53739
+      },
+      "outputTokens": {
+        "n": 52,
+        "mean": 1354.5,
+        "median": 1390.5,
+        "min": 858,
+        "max": 2195,
+        "total": 70433
+      },
+      "cacheTokens": {
+        "n": 52,
+        "mean": 70386.5,
+        "median": 64875.0,
+        "min": 31954,
+        "max": 113496,
+        "total": 3660097
+      },
+      "durationMs": {
+        "n": 52,
+        "mean": 25584.6,
+        "median": 26082.0,
+        "min": 14662,
+        "max": 42054,
+        "total": 1330401
+      }
+    },
+    "decoy re-record": {
+      "file": "docs/evidence/cost_log_decoy_rerecord_2026-10-24.jsonl",
+      "tasks": 6,
+      "txnRefs": [
+        "2231",
+        "1421",
+        "2044",
+        "3955",
+        "5428",
+        "5986"
+      ],
+      "inputTokens": {
+        "n": 6,
+        "mean": 1088.2,
+        "median": 1089.5,
+        "min": 1083,
+        "max": 1093,
+        "total": 6529
+      },
+      "outputTokens": {
+        "n": 6,
+        "mean": 1172.7,
+        "median": 1204.0,
+        "min": 1070,
+        "max": 1222,
+        "total": 7036
+      },
+      "cacheTokens": {
+        "n": 6,
+        "mean": 70067.8,
+        "median": 57728.5,
+        "min": 55330,
+        "max": 134259,
+        "total": 420407
+      },
+      "durationMs": {
+        "n": 6,
+        "mean": 19505.3,
+        "median": 19681.5,
+        "min": 17810,
+        "max": 20542,
+        "total": 117032
+      }
+    }
+  },
+  "listTools": {
+    "file": "docs/evidence/droid_listTools_2026-10-24.txt",
+    "total": 58,
+    "allowed": [
+      "Glob",
+      "Grep",
+      "LS",
+      "Read",
+      "Script",
+      "ToolSearch",
+      "WaitForScript",
+      "elastic___contract_rate_for_vendor",
+      "elastic___find_trips_near",
+      "elastic___platform_context_engine_install_automation_template",
+      "elastic___platform_core_execute_esql",
+      "elastic___platform_core_execute_workflow",
+      "elastic___platform_core_generate_esql",
+      "elastic___platform_core_generate_workflow",
+      "elastic___platform_core_get_document_by_id",
+      "elastic___platform_core_get_index_mapping",
+      "elastic___platform_core_get_workflow_execution_status",
+      "elastic___platform_core_index_explorer",
+      "elastic___platform_core_list_indices",
+      "elastic___platform_core_list_inference_endpoints",
+      "elastic___platform_core_list_workflow_executions",
+      "elastic___platform_core_product_documentation",
+      "elastic___platform_core_resume_workflow_execution",
+      "elastic___platform_core_search",
+      "elastic___platform_workflows_get_connectors",
+      "elastic___platform_workflows_get_examples",
+      "elastic___platform_workflows_get_step_definitions",
+      "elastic___platform_workflows_get_trigger_definitions",
+      "elastic___platform_workflows_get_workflow",
+      "elastic___platform_workflows_validate_workflow",
+      "elastic___platform_workflows_workflow_execute_step"
+    ],
+    "disabled": [
+      "ApplyPatch",
+      "AskUser",
+      "ConnectApp",
+      "CreateAutomation",
+      "DeleteAutomation",
+      "DismissHandoffItems",
+      "EditAutomation",
+      "EndFeatureRun",
+      "Execute",
+      "ExitSpecMode",
+      "FetchUrl",
+      "GenerateDroid",
+      "GenerateImage",
+      "ListAutomationTemplates",
+      "ListAutomations",
+      "Loop",
+      "ProposeMission",
+      "ReadAutomation",
+      "RunAutomation",
+      "Skill",
+      "StageSettingsChanges",
+      "StartMissionRun",
+      "Task",
+      "TaskOutput",
+      "TaskStop",
+      "TodoWrite",
+      "WebSearch"
+    ],
+    "allowedMcp": [
+      "elastic___contract_rate_for_vendor",
+      "elastic___find_trips_near",
+      "elastic___platform_context_engine_install_automation_template",
+      "elastic___platform_core_execute_esql",
+      "elastic___platform_core_execute_workflow",
+      "elastic___platform_core_generate_esql",
+      "elastic___platform_core_generate_workflow",
+      "elastic___platform_core_get_document_by_id",
+      "elastic___platform_core_get_index_mapping",
+      "elastic___platform_core_get_workflow_execution_status",
+      "elastic___platform_core_index_explorer",
+      "elastic___platform_core_list_indices",
+      "elastic___platform_core_list_inference_endpoints",
+      "elastic___platform_core_list_workflow_executions",
+      "elastic___platform_core_product_documentation",
+      "elastic___platform_core_resume_workflow_execution",
+      "elastic___platform_core_search",
+      "elastic___platform_workflows_get_connectors",
+      "elastic___platform_workflows_get_examples",
+      "elastic___platform_workflows_get_step_definitions",
+      "elastic___platform_workflows_get_trigger_definitions",
+      "elastic___platform_workflows_get_workflow",
+      "elastic___platform_workflows_validate_workflow",
+      "elastic___platform_workflows_workflow_execute_step"
+    ],
+    "allowedNonMcp": [
+      "Glob",
+      "Grep",
+      "LS",
+      "Read",
+      "Script",
+      "ToolSearch",
+      "WaitForScript"
+    ]
+  },
+  "benchmark": {
+    "label": "BENCHMARK: scored against seed/fixtures/answer_key.json by bench/carrierbench/droid_table.py, never by the agent",
+    "rule": "A hold_and_ask question names the planted person or record when it contains, case-insensitively, at least one identifier of the row the key plants. location_mismatch decoy (expected clear_after_question): the driver's name from the key note and the swap log (full name or surname) or the relief unit (\"truck N\" or \"unit N\"). location_mismatch and capacity_exceeded holds: the unit the card is assigned to (\"truck N\", \"trucks N and M\", \"unit N\", from card_txns.json) or that unit's fuel card id (trucks.json). Invoice classes (rate_variance, short_received, duplicate_invoice, vendor_bank_change): the vendor name (vendors.json), the invoice's PO or any PO in the key note, or the invoice id or any invoice id in the key note. Rows not in the key are reported unscored. A recording that recommends hold or clear asks no question and is outside the denominator.",
+    "questionsScored": 46,
+    "named": 44,
+    "share": 0.957,
+    "byClass": {
+      "capacity_exceeded": {
+        "questions": 6,
+        "named": 4,
+        "misses": [
+          "3510",
+          "5908"
+        ]
+      },
+      "duplicate_invoice": {
+        "questions": 4,
+        "named": 4,
+        "misses": []
+      },
+      "location_mismatch": {
+        "questions": 14,
+        "named": 14,
+        "misses": []
+      },
+      "location_mismatch (decoy)": {
+        "questions": 6,
+        "named": 6,
+        "misses": []
+      },
+      "rate_variance": {
+        "questions": 8,
+        "named": 8,
+        "misses": []
+      },
+      "short_received": {
+        "questions": 5,
+        "named": 5,
+        "misses": []
+      },
+      "vendor_bank_change": {
+        "questions": 3,
+        "named": 3,
+        "misses": []
+      }
+    },
+    "misses": [
+      {
+        "txnRef": "3510",
+        "code": "capacity_exceeded",
+        "question": "Can you obtain documentation showing which tanks or equipment received the 141.9 gallons on receipt 3510 and their capacities?",
+        "identifiers": {
+          "unit": [
+            "truck 26",
+            "unit 26"
+          ],
+          "card": [
+            "FC-1026"
+          ]
+        }
+      },
+      {
+        "txnRef": "5908",
+        "code": "capacity_exceeded",
+        "question": "Which units or tanks received the 129.2 gallons on receipt 5908, and how many gallons went into each?",
+        "identifiers": {
+          "unit": [
+            "truck 39",
+            "unit 39"
+          ],
+          "card": [
+            "FC-1039"
+          ]
+        }
+      }
+    ],
+    "stricter": {
+      "fuelHoldsNamingTheUnitNumber": 4,
+      "fuelHolds": 20,
+      "decoysNamingDriverAndUnit": 6,
+      "decoys": 6
+    },
+    "unscoredNotInKey": [
+      {
+        "txnRef": "660001",
+        "question": "Can dispatch confirm which truck and driver used FC-1029 for transaction 660001 at Pilot 1126 on 2026-11-05 at 18:00 UTC, including whether truck 18 was authorized to use it?"
+      },
+      {
+        "txnRef": "660002",
+        "question": "Who used FC-1029 for transaction 660002 on November 5, and was that use authorized for truck 18?"
+      },
+      {
+        "txnRef": "660003",
+        "question": "Can dispatch confirm which driver and truck used FC-1029 for transaction 660003 on November 5, and whether that use was authorized?"
+      },
+      {
+        "txnRef": "770002",
+        "question": "Which truck and driver used FC-1029 for transaction 770002 at Pilot 1126 on August 31, and what receipt or dispatch record confirms that attribution?"
+      },
+      {
+        "txnRef": "770003",
+        "question": "Can you provide receipt-backed confirmation of whether transaction 770003 was an authorized combined fill on FC-1029, identifying the gallons dispensed to each truck?"
+      }
+    ],
+    "noQuestion": [
+      {
+        "txnRef": "INV-1003",
+        "recommendation": "hold"
+      }
+    ],
+    "rows": [
+      {
+        "txnRef": "1068",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually received the fuel charged to FC-1012 for transaction 1068 at Love's 420 on July 2 at 09:11 CDT?",
+        "identifiers": {
+          "unit": [
+            "truck 12",
+            "unit 12"
+          ],
+          "card": [
+            "FC-1012"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "1421",
+        "code": "location_mismatch",
+        "expected": "clear_after_question",
+        "question": "Can Clayton Burks or the San Antonio dispatcher confirm that he used FC-1015 to fuel truck 9 at Stripes 1150 on July 10 while truck 15 was in the shop?",
+        "identifiers": {
+          "driver": [
+            "Clayton Burks",
+            "Burks"
+          ],
+          "unit": [
+            "truck 9",
+            "unit 9"
+          ]
+        },
+        "matched": [
+          "driver",
+          "unit"
+        ],
+        "named": true,
+        "swapLogConfirmsDriverAndUnit": true
+      },
+      {
+        "txnRef": "1468",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually used card FC-1019 for transaction 1468 at Pilot 1115 on July 10 at 14:12 CDT, and what dispatch or fueling record confirms that use?",
+        "identifiers": {
+          "unit": [
+            "truck 19",
+            "unit 19"
+          ],
+          "card": [
+            "FC-1019"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "1793",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Who physically used card FC-1024 for transaction 1793 at Love's 228 on July 20 at 11:21 CDT, and which truck was fueled?",
+        "identifiers": {
+          "unit": [
+            "truck 24",
+            "unit 24"
+          ],
+          "card": [
+            "FC-1024"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "1971",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually received the fuel charged to FC-1020 at Pilot 1126 on July 23, 2026, at 16:23 CDT?",
+        "identifiers": {
+          "unit": [
+            "truck 20",
+            "unit 20"
+          ],
+          "card": [
+            "FC-1020"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "2044",
+        "code": "location_mismatch",
+        "expected": "clear_after_question",
+        "question": "Can Jerome Watkins or the San Antonio dispatch desk confirm that he used FC-1030 to fuel truck 14 for transaction 2044 on 2026-07-27 while truck 30 was in the shop?",
+        "identifiers": {
+          "driver": [
+            "Jerome Watkins",
+            "Watkins"
+          ],
+          "unit": [
+            "truck 14",
+            "unit 14"
+          ]
+        },
+        "matched": [
+          "driver",
+          "unit"
+        ],
+        "named": true,
+        "swapLogConfirmsDriverAndUnit": true
+      },
+      {
+        "txnRef": "2231",
+        "code": "location_mismatch",
+        "expected": "clear_after_question",
+        "question": "Can Ramon Ortiz or the San Antonio dispatcher confirm that Ortiz used FC-1017 to fuel truck 22 for transaction 2231 while truck 17 was in the shop under PO-1026?",
+        "identifiers": {
+          "driver": [
+            "Ramon Ortiz",
+            "Ortiz"
+          ],
+          "unit": [
+            "truck 22",
+            "unit 22"
+          ]
+        },
+        "matched": [
+          "driver",
+          "unit"
+        ],
+        "named": true,
+        "swapLogConfirmsDriverAndUnit": true
+      },
+      {
+        "txnRef": "2251",
+        "code": "capacity_exceeded",
+        "expected": "hold",
+        "question": "Can you provide documentation identifying which tanks or equipment received the 169.5 gallons on receipt 2251, given truck 5's recorded 120-gallon capacity?",
+        "identifiers": {
+          "unit": [
+            "truck 5",
+            "unit 5"
+          ],
+          "card": [
+            "FC-1005"
+          ]
+        },
+        "matched": [
+          "unit"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "2540",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which driver and truck actually used card FC-1028 for transaction 2540 at Stripes 1183 on August 5, and what record confirms that assignment?",
+        "identifiers": {
+          "unit": [
+            "truck 28",
+            "unit 28"
+          ],
+          "card": [
+            "FC-1028"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "2830",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Who physically used card FC-1034 for transaction 2830 at Shell Giddings on August 12 at 13:21 CDT, and which truck received the fuel?",
+        "identifiers": {
+          "unit": [
+            "truck 34",
+            "unit 34"
+          ],
+          "card": [
+            "FC-1034"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "3093",
+        "code": "capacity_exceeded",
+        "expected": "hold",
+        "question": "Were transaction 3093's 272.1 gallons split between trucks 12 and 20, and what documented gallon allocation supports that split?",
+        "identifiers": {
+          "unit": [
+            "truck 12",
+            "unit 12"
+          ],
+          "card": [
+            "FC-1012"
+          ]
+        },
+        "matched": [
+          "unit"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "3209",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually used FC-1011 for transaction 3209 at Love's 402 on August 20, and what record confirms that identification?",
+        "identifiers": {
+          "unit": [
+            "truck 11",
+            "unit 11"
+          ],
+          "card": [
+            "FC-1011"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "3510",
+        "code": "capacity_exceeded",
+        "expected": "hold",
+        "question": "Can you obtain documentation showing which tanks or equipment received the 141.9 gallons on receipt 3510 and their capacities?",
+        "identifiers": {
+          "unit": [
+            "truck 26",
+            "unit 26"
+          ],
+          "card": [
+            "FC-1026"
+          ]
+        },
+        "matched": [],
+        "named": false
+      },
+      {
+        "txnRef": "3884",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually used FC-1021 for transaction 3884 at Love's 851 on September 7, 2026 at 14:21 CDT?",
+        "identifiers": {
+          "unit": [
+            "truck 21",
+            "unit 21"
+          ],
+          "card": [
+            "FC-1021"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "3955",
+        "code": "location_mismatch",
+        "expected": "clear_after_question",
+        "question": "Can Carl Whitaker or the San Antonio dispatch desk confirm that he carried FC-1035 to truck 27 during the September 9 reassignment and used it for transaction 3955?",
+        "identifiers": {
+          "driver": [
+            "Carl Whitaker",
+            "Whitaker"
+          ],
+          "unit": [
+            "truck 27",
+            "unit 27"
+          ]
+        },
+        "matched": [
+          "driver",
+          "unit"
+        ],
+        "named": true,
+        "swapLogConfirmsDriverAndUnit": true
+      },
+      {
+        "txnRef": "4177",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually received the fuel charged to FC-1007 at Pilot 1178 on September 14 at 17:06 CDT, and what record supports that identification?",
+        "identifiers": {
+          "unit": [
+            "truck 7",
+            "unit 7"
+          ],
+          "card": [
+            "FC-1007"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "4363",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually used card FC-1023 for transaction 4363 at Stripes 1150 on September 17, and what dispatch or fueling record confirms that assignment?",
+        "identifiers": {
+          "unit": [
+            "truck 23",
+            "unit 23"
+          ],
+          "card": [
+            "FC-1023"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "5041",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which driver and truck actually used FC-1029 for transaction 5041 at Stripes 1204 on October 2, 2026, at 09:14 CDT?",
+        "identifiers": {
+          "unit": [
+            "truck 29",
+            "unit 29"
+          ],
+          "card": [
+            "FC-1029"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "5428",
+        "code": "location_mismatch",
+        "expected": "clear_after_question",
+        "question": "Can Alejandro Garza or the dispatcher responsible for the 2026-10-12 swap confirm that he retained FC-1006 and used it to fuel truck 13 for transaction 5428?",
+        "identifiers": {
+          "driver": [
+            "Alejandro Garza",
+            "Garza"
+          ],
+          "unit": [
+            "truck 13",
+            "unit 13"
+          ]
+        },
+        "matched": [
+          "driver",
+          "unit"
+        ],
+        "named": true,
+        "swapLogConfirmsDriverAndUnit": true
+      },
+      {
+        "txnRef": "5557",
+        "code": "capacity_exceeded",
+        "expected": "hold",
+        "question": "What documentation explains how the 123.9 gallons on receipt 5557 were allocated, given unit 1's recorded 100-gallon tank capacity?",
+        "identifiers": {
+          "unit": [
+            "truck 1",
+            "unit 1"
+          ],
+          "card": [
+            "FC-1001"
+          ]
+        },
+        "matched": [
+          "unit"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "5620",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually received the fuel charged to FC-1003 at Stripes 1183 on October 15 at 10:15 CDT, and what record confirms that assignment?",
+        "identifiers": {
+          "unit": [
+            "truck 3",
+            "unit 3"
+          ],
+          "card": [
+            "FC-1003"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "5908",
+        "code": "capacity_exceeded",
+        "expected": "hold",
+        "question": "Which units or tanks received the 129.2 gallons on receipt 5908, and how many gallons went into each?",
+        "identifiers": {
+          "unit": [
+            "truck 39",
+            "unit 39"
+          ],
+          "card": [
+            "FC-1039"
+          ]
+        },
+        "matched": [],
+        "named": false
+      },
+      {
+        "txnRef": "5986",
+        "code": "location_mismatch",
+        "expected": "clear_after_question",
+        "question": "Can Derrick Osborne or the San Antonio dispatcher confirm that he used FC-1016 to fuel truck 31 at Pilot 1126 on October 23 while truck 16 was in the shop?",
+        "identifiers": {
+          "driver": [
+            "Derrick Osborne",
+            "Osborne"
+          ],
+          "unit": [
+            "truck 31",
+            "unit 31"
+          ]
+        },
+        "matched": [
+          "driver",
+          "unit"
+        ],
+        "named": true,
+        "swapLogConfirmsDriverAndUnit": true
+      },
+      {
+        "txnRef": "6065",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually used FC-1026 for receipt 6065 at Flying J 758 on October 26 at 12:11 CDT?",
+        "identifiers": {
+          "unit": [
+            "truck 26",
+            "unit 26"
+          ],
+          "card": [
+            "FC-1026"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "6294",
+        "code": "location_mismatch",
+        "expected": "hold",
+        "question": "Which truck and driver actually received the fuel on receipt 6294, and what record confirms their authorized use of FC-1002?",
+        "identifiers": {
+          "unit": [
+            "truck 2",
+            "unit 2"
+          ],
+          "card": [
+            "FC-1002"
+          ]
+        },
+        "matched": [
+          "card"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "6390",
+        "code": "capacity_exceeded",
+        "expected": "hold",
+        "question": "Can you obtain a documented allocation or corrected fuel ticket explaining how the 374.800 gallons on receipt 6390 were dispensed given truck 21's 250-gallon tank capacity?",
+        "identifiers": {
+          "unit": [
+            "truck 21",
+            "unit 21"
+          ],
+          "card": [
+            "FC-1021"
+          ]
+        },
+        "matched": [
+          "unit"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1010",
+        "code": "short_received",
+        "expected": "hold",
+        "question": "For PO-1005, unit 27, does the signed work order confirm that the third invoiced tire was supplied and mounted but omitted from receiving, or is it still outstanding?",
+        "identifiers": {
+          "vendor": [
+            "Border Fleet Repair"
+          ],
+          "po": [
+            "PO-1005"
+          ],
+          "invoice": [
+            "INV-1010"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1015",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide the maintenance manager's written approval, dated before the PO-1020 work order opened, agreeing to Border Fleet Repair's $582.50-per-tire price on INV-1015?",
+        "identifiers": {
+          "vendor": [
+            "Border Fleet Repair"
+          ],
+          "po": [
+            "PO-1020"
+          ],
+          "invoice": [
+            "INV-1015"
+          ]
+        },
+        "matched": [
+          "vendor",
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1029",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide an approved quote, change order, or written agreement authorizing the $422.25 oil-service unit price for PO-1013 / INV-1029?",
+        "identifiers": {
+          "vendor": [
+            "Metroplex Truck Center"
+          ],
+          "po": [
+            "PO-1013"
+          ],
+          "invoice": [
+            "INV-1029"
+          ]
+        },
+        "matched": [
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1032",
+        "code": "vendor_bank_change",
+        "expected": "reject",
+        "question": "Can you call Alamo Fleet Service on its previously verified number and record the name and role of the person confirming the new account ending 4471?",
+        "identifiers": {
+          "vendor": [
+            "Alamo Fleet Service"
+          ],
+          "po": [
+            "PO-1024"
+          ],
+          "invoice": [
+            "INV-1032"
+          ]
+        },
+        "matched": [
+          "vendor"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1037",
+        "code": "duplicate_invoice",
+        "expected": "hold",
+        "question": "Can you provide the inspection sheet identifying whether PO-1001 or PO-1021 authorized the service billed on INV-1037 and whether it represents work distinct from INV-1016?",
+        "identifiers": {
+          "vendor": [
+            "Lone Star Tire"
+          ],
+          "po": [
+            "PO-1001",
+            "PO-1021"
+          ],
+          "invoice": [
+            "INV-1016",
+            "INV-1037"
+          ]
+        },
+        "matched": [
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1050",
+        "code": "duplicate_invoice",
+        "expected": "hold",
+        "question": "Which PO, PO-1016 or PO-1023, has a signed completion record showing Unit 8's DPF cleaning was distinct from the work billed on INV-1020?",
+        "identifiers": {
+          "vendor": [
+            "Gulf Coast Diesel"
+          ],
+          "po": [
+            "PO-1016",
+            "PO-1023"
+          ],
+          "invoice": [
+            "INV-1020",
+            "INV-1050"
+          ]
+        },
+        "matched": [
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1052",
+        "code": "duplicate_invoice",
+        "expected": "hold",
+        "question": "Can you provide the approved service records linking INV-1052 and INV-1038 to PO-1014 or PO-1017, identifying whether they cover the same A/C job or separate jobs?",
+        "identifiers": {
+          "vendor": [
+            "Border Fleet Repair"
+          ],
+          "po": [
+            "PO-1014",
+            "PO-1017"
+          ],
+          "invoice": [
+            "INV-1038",
+            "INV-1052"
+          ]
+        },
+        "matched": [
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1062",
+        "code": "short_received",
+        "expected": "hold",
+        "question": "Can maintenance provide a signed work order confirming whether the fourth tire on PO-1025 was supplied and mounted or remains outstanding?",
+        "identifiers": {
+          "vendor": [
+            "Lone Star Tire"
+          ],
+          "po": [
+            "PO-1025"
+          ],
+          "invoice": [
+            "INV-1062"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1074",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide an approved quote or change order agreeing to Lone Star Tire's $1,482.50 brake-job unit price for PO-1007, unit 13?",
+        "identifiers": {
+          "vendor": [
+            "Lone Star Tire"
+          ],
+          "po": [
+            "PO-1007"
+          ],
+          "invoice": [
+            "INV-1074"
+          ]
+        },
+        "matched": [
+          "vendor",
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1077",
+        "code": "vendor_bank_change",
+        "expected": "hold",
+        "question": "Who at Gulf Coast Diesel confirmed account ending 7730 during a callback to a previously verified vendor phone number?",
+        "identifiers": {
+          "vendor": [
+            "Gulf Coast Diesel"
+          ],
+          "po": [
+            "PO-1026"
+          ],
+          "invoice": [
+            "INV-1077"
+          ]
+        },
+        "matched": [
+          "vendor"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1078",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide the maintenance manager's written approval authorizing $706.75 per tire for PO-1018, issued before the work order was opened?",
+        "identifiers": {
+          "vendor": [
+            "Alamo Fleet Service"
+          ],
+          "po": [
+            "PO-1018"
+          ],
+          "invoice": [
+            "INV-1078"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1086",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide any dated quote, PO amendment, or approval establishing agreement with Border Fleet Repair to the $374.50 oil-service unit price for PO-1022?",
+        "identifiers": {
+          "vendor": [
+            "Border Fleet Repair"
+          ],
+          "po": [
+            "PO-1022"
+          ],
+          "invoice": [
+            "INV-1086"
+          ]
+        },
+        "matched": [
+          "vendor",
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1096",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide a carrier-approved quote or PO amendment for PO-1016 agreeing to $673.50 per DPF clean instead of the contracted $525.00?",
+        "identifiers": {
+          "vendor": [
+            "Gulf Coast Diesel"
+          ],
+          "po": [
+            "PO-1016"
+          ],
+          "invoice": [
+            "INV-1096"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1099",
+        "code": "short_received",
+        "expected": "hold",
+        "question": "For PO-1027, does the service/flow-test report show that the second filter remains pending, or that it failed testing and the carrier declined replacement?",
+        "identifiers": {
+          "vendor": [
+            "Metroplex Truck Center"
+          ],
+          "po": [
+            "PO-1027"
+          ],
+          "invoice": [
+            "INV-1099"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1116",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Can you provide the maintenance manager\u2019s written approval of $724.25 per tire for PO-1011, dated before the work order opened?",
+        "identifiers": {
+          "vendor": [
+            "Gulf Coast Diesel"
+          ],
+          "po": [
+            "PO-1011"
+          ],
+          "invoice": [
+            "INV-1116"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1121",
+        "code": "short_received",
+        "expected": "hold",
+        "question": "Can maintenance confirm whether the second alignment on PO-1028 remains outstanding or was completed but not recorded, with the completion record and required before-and-after report supporting that confirmation?",
+        "identifiers": {
+          "vendor": [
+            "Alamo Fleet Service"
+          ],
+          "po": [
+            "PO-1028"
+          ],
+          "invoice": [
+            "INV-1121"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1130",
+        "code": "rate_variance",
+        "expected": "hold",
+        "question": "Is there a PO amendment or other written agreement approving the $378.75 oil-service rate for INV-1130 under PO-1019, and can you provide it?",
+        "identifiers": {
+          "vendor": [
+            "Alamo Fleet Service"
+          ],
+          "po": [
+            "PO-1019"
+          ],
+          "invoice": [
+            "INV-1130"
+          ]
+        },
+        "matched": [
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1138",
+        "code": "vendor_bank_change",
+        "expected": "hold",
+        "question": "Who at Border Fleet Repair confirmed account ending 8823 during a callback to a previously verified vendor phone number?",
+        "identifiers": {
+          "vendor": [
+            "Border Fleet Repair"
+          ],
+          "po": [
+            "PO-1029"
+          ],
+          "invoice": [
+            "INV-1138"
+          ]
+        },
+        "matched": [
+          "vendor"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1140",
+        "code": "duplicate_invoice",
+        "expected": "hold",
+        "question": "Can you provide the signed work order establishing whether PO-1018 or PO-1010 supports INV-1140 as a separate tire-replacement job from INV-1114?",
+        "identifiers": {
+          "vendor": [
+            "Alamo Fleet Service"
+          ],
+          "po": [
+            "PO-1010",
+            "PO-1018"
+          ],
+          "invoice": [
+            "INV-1114",
+            "INV-1140"
+          ]
+        },
+        "matched": [
+          "po",
+          "invoice"
+        ],
+        "named": true
+      },
+      {
+        "txnRef": "INV-1163",
+        "code": "short_received",
+        "expected": "hold",
+        "question": "Is the second $419 A/C service on PO-1030 completed, still pending, or billed in error, and what shop record supports that status?",
+        "identifiers": {
+          "vendor": [
+            "Gulf Coast Diesel"
+          ],
+          "po": [
+            "PO-1030"
+          ],
+          "invoice": [
+            "INV-1163"
+          ]
+        },
+        "matched": [
+          "po"
+        ],
+        "named": true
+      }
+    ]
+  },
+  "perRun": [
+    {
+      "txnRef": "1068",
+      "recordedAt": "2026-10-24T20:22:46.499Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually received the fuel charged to FC-1012 for transaction 1068 at Love's 420 on July 2 at 09:11 CDT?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 24076,
+      "findingTokenUsage": {
+        "input": 1049,
+        "output": 1452
+      }
+    },
+    {
+      "txnRef": "1421",
+      "recordedAt": "2026-10-24T21:07:35.705Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can Clayton Burks or the San Antonio dispatcher confirm that he used FC-1015 to fuel truck 9 at Stripes 1150 on July 10 while truck 15 was in the shop?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 20340,
+      "findingTokenUsage": {
+        "input": 1089,
+        "output": 1119
+      }
+    },
+    {
+      "txnRef": "1468",
+      "recordedAt": "2026-10-24T20:23:32.574Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually used card FC-1019 for transaction 1468 at Pilot 1115 on July 10 at 14:12 CDT, and what dispatch or fueling record confirms that use?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 17292,
+      "findingTokenUsage": {
+        "input": 1055,
+        "output": 1040
+      }
+    },
+    {
+      "txnRef": "1793",
+      "recordedAt": "2026-10-24T20:24:01.398Z",
+      "recommendation": "hold_and_ask",
+      "question": "Who physically used card FC-1024 for transaction 1793 at Love's 228 on July 20 at 11:21 CDT, and which truck was fueled?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 25661,
+      "findingTokenUsage": {
+        "input": 1053,
+        "output": 1619
+      }
+    },
+    {
+      "txnRef": "1971",
+      "recordedAt": "2026-10-24T20:24:17.115Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually received the fuel charged to FC-1020 at Pilot 1126 on July 23, 2026, at 16:23 CDT?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 27528,
+      "findingTokenUsage": {
+        "input": 1054,
+        "output": 1764
+      }
+    },
+    {
+      "txnRef": "2044",
+      "recordedAt": "2026-10-24T21:07:57.948Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can Jerome Watkins or the San Antonio dispatch desk confirm that he used FC-1030 to fuel truck 14 for transaction 2044 on 2026-07-27 while truck 30 was in the shop?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 19733,
+      "findingTokenUsage": {
+        "input": 1083,
+        "output": 1202
+      }
+    },
+    {
+      "txnRef": "2231",
+      "recordedAt": "2026-10-24T21:07:04.498Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can Ramon Ortiz or the San Antonio dispatcher confirm that Ortiz used FC-1017 to fuel truck 22 for transaction 2231 while truck 17 was in the shop under PO-1026?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 18977,
+      "findingTokenUsage": {
+        "input": 1084,
+        "output": 1206
+      }
+    },
+    {
+      "txnRef": "2251",
+      "recordedAt": "2026-10-24T20:25:26.275Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide documentation identifying which tanks or equipment received the 169.5 gallons on receipt 2251, given truck 5's recorded 120-gallon capacity?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 3,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 20569,
+      "findingTokenUsage": {
+        "input": 989,
+        "output": 1076
+      }
+    },
+    {
+      "txnRef": "2540",
+      "recordedAt": "2026-10-24T20:25:37.000Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which driver and truck actually used card FC-1028 for transaction 2540 at Stripes 1183 on August 5, and what record confirms that assignment?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 5,
+        "Grep": 0,
+        "Glob": 2
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 28378,
+      "findingTokenUsage": {
+        "input": 1056,
+        "output": 1669
+      }
+    },
+    {
+      "txnRef": "2830",
+      "recordedAt": "2026-10-24T20:26:23.496Z",
+      "recommendation": "hold_and_ask",
+      "question": "Who physically used card FC-1034 for transaction 2830 at Shell Giddings on August 12 at 13:21 CDT, and which truck received the fuel?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 24748,
+      "findingTokenUsage": {
+        "input": 1053,
+        "output": 1567
+      }
+    },
+    {
+      "txnRef": "3093",
+      "recordedAt": "2026-10-24T20:26:52.763Z",
+      "recommendation": "hold_and_ask",
+      "question": "Were transaction 3093's 272.1 gallons split between trucks 12 and 20, and what documented gallon allocation supports that split?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 3,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26343,
+      "findingTokenUsage": {
+        "input": 989,
+        "output": 1236
+      }
+    },
+    {
+      "txnRef": "3209",
+      "recordedAt": "2026-10-24T20:27:12.965Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually used FC-1011 for transaction 3209 at Love's 402 on August 20, and what record confirms that identification?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 10,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 23678,
+      "findingTokenUsage": {
+        "input": 1052,
+        "output": 1578
+      }
+    },
+    {
+      "txnRef": "3510",
+      "recordedAt": "2026-10-24T20:27:40.992Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you obtain documentation showing which tanks or equipment received the 141.9 gallons on receipt 3510 and their capacities?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 18400,
+      "findingTokenUsage": {
+        "input": 980,
+        "output": 983
+      }
+    },
+    {
+      "txnRef": "3884",
+      "recordedAt": "2026-10-24T20:29:07.975Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually used FC-1021 for transaction 3884 at Love's 851 on September 7, 2026 at 14:21 CDT?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 25250,
+      "findingTokenUsage": {
+        "input": 1046,
+        "output": 1498
+      }
+    },
+    {
+      "txnRef": "3955",
+      "recordedAt": "2026-10-24T21:08:21.033Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can Carl Whitaker or the San Antonio dispatch desk confirm that he carried FC-1035 to truck 27 during the September 9 reassignment and used it for transaction 3955?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 20542,
+      "findingTokenUsage": {
+        "input": 1090,
+        "output": 1222
+      }
+    },
+    {
+      "txnRef": "4177",
+      "recordedAt": "2026-10-24T20:30:14.824Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually received the fuel charged to FC-1007 at Pilot 1178 on September 14 at 17:06 CDT, and what record supports that identification?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26501,
+      "findingTokenUsage": {
+        "input": 1053,
+        "output": 1431
+      }
+    },
+    {
+      "txnRef": "4363",
+      "recordedAt": "2026-10-24T20:30:30.331Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually used card FC-1023 for transaction 4363 at Stripes 1150 on September 17, and what dispatch or fueling record confirms that assignment?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 3,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 23884,
+      "findingTokenUsage": {
+        "input": 1054,
+        "output": 1100
+      }
+    },
+    {
+      "txnRef": "5041",
+      "recordedAt": "2026-10-24T20:31:16.742Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which driver and truck actually used FC-1029 for transaction 5041 at Stripes 1204 on October 2, 2026, at 09:14 CDT?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 29608,
+      "findingTokenUsage": {
+        "input": 1057,
+        "output": 1647
+      }
+    },
+    {
+      "txnRef": "5428",
+      "recordedAt": "2026-10-24T21:08:41.618Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can Alejandro Garza or the dispatcher responsible for the 2026-10-12 swap confirm that he retained FC-1006 and used it to fuel truck 13 for transaction 5428?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 3,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 17810,
+      "findingTokenUsage": {
+        "input": 1093,
+        "output": 1070
+      }
+    },
+    {
+      "txnRef": "5557",
+      "recordedAt": "2026-10-24T20:32:01.207Z",
+      "recommendation": "hold_and_ask",
+      "question": "What documentation explains how the 123.9 gallons on receipt 5557 were allocated, given unit 1's recorded 100-gallon tank capacity?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 3,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 19677,
+      "findingTokenUsage": {
+        "input": 979,
+        "output": 865
+      }
+    },
+    {
+      "txnRef": "5620",
+      "recordedAt": "2026-10-24T20:32:32.887Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually received the fuel charged to FC-1003 at Stripes 1183 on October 15 at 10:15 CDT, and what record confirms that assignment?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 6,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 23113,
+      "findingTokenUsage": {
+        "input": 1054,
+        "output": 1405
+      }
+    },
+    {
+      "txnRef": "5908",
+      "recordedAt": "2026-10-24T20:32:54.249Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which units or tanks received the 129.2 gallons on receipt 5908, and how many gallons went into each?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 18275,
+      "findingTokenUsage": {
+        "input": 986,
+        "output": 995
+      }
+    },
+    {
+      "txnRef": "5986",
+      "recordedAt": "2026-10-24T21:09:03.949Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can Derrick Osborne or the San Antonio dispatcher confirm that he used FC-1016 to fuel truck 31 at Pilot 1126 on October 23 while truck 16 was in the shop?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 19630,
+      "findingTokenUsage": {
+        "input": 1090,
+        "output": 1217
+      }
+    },
+    {
+      "txnRef": "6065",
+      "recordedAt": "2026-10-24T20:33:32.704Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually used FC-1026 for receipt 6065 at Flying J 758 on October 26 at 12:11 CDT?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 34141,
+      "findingTokenUsage": {
+        "input": 1048,
+        "output": 1729
+      }
+    },
+    {
+      "txnRef": "6294",
+      "recordedAt": "2026-10-24T20:34:17.744Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver actually received the fuel on receipt 6294, and what record confirms their authorized use of FC-1002?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 42054,
+      "findingTokenUsage": {
+        "input": 1052,
+        "output": 2195
+      }
+    },
+    {
+      "txnRef": "6390",
+      "recordedAt": "2026-10-24T20:33:57.354Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you obtain a documented allocation or corrected fuel ticket explaining how the 374.800 gallons on receipt 6390 were dispensed given truck 21's 250-gallon tank capacity?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 19175,
+      "findingTokenUsage": {
+        "input": 984,
+        "output": 956
+      }
+    },
+    {
+      "txnRef": "660001",
+      "recordedAt": "2026-10-24T20:34:25.917Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can dispatch confirm which truck and driver used FC-1029 for transaction 660001 at Pilot 1126 on 2026-11-05 at 18:00 UTC, including whether truck 18 was authorized to use it?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 25486,
+      "findingTokenUsage": {
+        "input": 1035,
+        "output": 1244
+      }
+    },
+    {
+      "txnRef": "660002",
+      "recordedAt": "2026-10-24T20:34:41.068Z",
+      "recommendation": "hold_and_ask",
+      "question": "Who used FC-1029 for transaction 660002 on November 5, and was that use authorized for truck 18?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 1,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 20424,
+      "findingTokenUsage": {
+        "input": 1032,
+        "output": 1025
+      }
+    },
+    {
+      "txnRef": "660003",
+      "recordedAt": "2026-10-24T20:34:49.277Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can dispatch confirm which driver and truck used FC-1029 for transaction 660003 on November 5, and whether that use was authorized?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 2,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 19893,
+      "findingTokenUsage": {
+        "input": 1032,
+        "output": 994
+      }
+    },
+    {
+      "txnRef": "770002",
+      "recordedAt": "2026-10-24T20:28:06.901Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which truck and driver used FC-1029 for transaction 770002 at Pilot 1126 on August 31, and what receipt or dispatch record confirms that attribution?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 3,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 28350,
+      "findingTokenUsage": {
+        "input": 1035,
+        "output": 1548
+      }
+    },
+    {
+      "txnRef": "770003",
+      "recordedAt": "2026-10-24T20:28:10.364Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide receipt-backed confirmation of whether transaction 770003 was an authorized combined fill on FC-1029, identifying the gallons dispensed to each truck?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___find_trips_near": 1
+      },
+      "fileToolCalls": {
+        "Read": 11,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___find_trips_near"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26331,
+      "findingTokenUsage": {
+        "input": 966,
+        "output": 1455
+      }
+    },
+    {
+      "txnRef": "INV-1003",
+      "recordedAt": "2026-10-24T23:09:39.798Z",
+      "recommendation": "hold",
+      "question": null,
+      "mcpCalls": 2,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1,
+        "elastic___find_contract_clause": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "Read",
+        "Read",
+        "Read",
+        "elastic___contract_rate_for_vendor",
+        "elastic___find_contract_clause"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 34745,
+      "findingTokenUsage": {
+        "input": 1144,
+        "output": 1571
+      }
+    },
+    {
+      "txnRef": "INV-1010",
+      "recordedAt": "2026-10-24T20:23:17.009Z",
+      "recommendation": "hold_and_ask",
+      "question": "For PO-1005, unit 27, does the signed work order confirm that the third invoiced tire was supplied and mounted but omitted from receiving, or is it still outstanding?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 27363,
+      "findingTokenUsage": {
+        "input": 1033,
+        "output": 1442
+      }
+    },
+    {
+      "txnRef": "INV-1015",
+      "recordedAt": "2026-10-24T20:23:46.400Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide the maintenance manager's written approval, dated before the PO-1020 work order opened, agreeing to Border Fleet Repair's $582.50-per-tire price on INV-1015?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26626,
+      "findingTokenUsage": {
+        "input": 1058,
+        "output": 1432
+      }
+    },
+    {
+      "txnRef": "INV-1029",
+      "recordedAt": "2026-10-24T20:24:27.125Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide an approved quote, change order, or written agreement authorizing the $422.25 oil-service unit price for PO-1013 / INV-1029?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 22817,
+      "findingTokenUsage": {
+        "input": 1045,
+        "output": 1313
+      }
+    },
+    {
+      "txnRef": "INV-1032",
+      "recordedAt": "2026-10-24T20:25:02.985Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you call Alamo Fleet Service on its previously verified number and record the name and role of the person confirming the new account ending 4471?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "Read",
+        "Read",
+        "Read",
+        "elastic___contract_rate_for_vendor"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 32469,
+      "findingTokenUsage": {
+        "input": 1039,
+        "output": 1666
+      }
+    },
+    {
+      "txnRef": "INV-1037",
+      "recordedAt": "2026-10-24T20:25:05.108Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide the inspection sheet identifying whether PO-1001 or PO-1021 authorized the service billed on INV-1037 and whether it represents work distinct from INV-1016?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 24011,
+      "findingTokenUsage": {
+        "input": 1024,
+        "output": 1407
+      }
+    },
+    {
+      "txnRef": "INV-1050",
+      "recordedAt": "2026-10-24T20:25:56.101Z",
+      "recommendation": "hold_and_ask",
+      "question": "Which PO, PO-1016 or PO-1023, has a signed completion record showing Unit 8's DPF cleaning was distinct from the work billed on INV-1020?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "Read",
+        "Read",
+        "Read",
+        "elastic___contract_rate_for_vendor"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26864,
+      "findingTokenUsage": {
+        "input": 1021,
+        "output": 1376
+      }
+    },
+    {
+      "txnRef": "INV-1052",
+      "recordedAt": "2026-10-24T20:26:16.444Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide the approved service records linking INV-1052 and INV-1038 to PO-1014 or PO-1017, identifying whether they cover the same A/C job or separate jobs?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 36750,
+      "findingTokenUsage": {
+        "input": 1011,
+        "output": 1886
+      }
+    },
+    {
+      "txnRef": "INV-1062",
+      "recordedAt": "2026-10-24T20:26:46.691Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can maintenance provide a signed work order confirming whether the fourth tire on PO-1025 was supplied and mounted or remains outstanding?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 27433,
+      "findingTokenUsage": {
+        "input": 1031,
+        "output": 1354
+      }
+    },
+    {
+      "txnRef": "INV-1074",
+      "recordedAt": "2026-10-24T20:27:20.257Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide an approved quote or change order agreeing to Lone Star Tire's $1,482.50 brake-job unit price for PO-1007, unit 13?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 24126,
+      "findingTokenUsage": {
+        "input": 1045,
+        "output": 1266
+      }
+    },
+    {
+      "txnRef": "INV-1077",
+      "recordedAt": "2026-10-24T20:28:39.296Z",
+      "recommendation": "hold_and_ask",
+      "question": "Who at Gulf Coast Diesel confirmed account ending 7730 during a callback to a previously verified vendor phone number?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 28847,
+      "findingTokenUsage": {
+        "input": 1022,
+        "output": 1317
+      }
+    },
+    {
+      "txnRef": "INV-1078",
+      "recordedAt": "2026-10-24T20:28:39.714Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide the maintenance manager's written approval authorizing $706.75 per tire for PO-1018, issued before the work order was opened?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26493,
+      "findingTokenUsage": {
+        "input": 1058,
+        "output": 1292
+      }
+    },
+    {
+      "txnRef": "INV-1086",
+      "recordedAt": "2026-10-24T20:29:16.091Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide any dated quote, PO amendment, or approval establishing agreement with Border Fleet Repair to the $374.50 oil-service unit price for PO-1022?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 33892,
+      "findingTokenUsage": {
+        "input": 1043,
+        "output": 1711
+      }
+    },
+    {
+      "txnRef": "INV-1096",
+      "recordedAt": "2026-10-24T20:29:45.192Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide a carrier-approved quote or PO amendment for PO-1016 agreeing to $673.50 per DPF clean instead of the contracted $525.00?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 2
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26300,
+      "findingTokenUsage": {
+        "input": 1039,
+        "output": 1266
+      }
+    },
+    {
+      "txnRef": "INV-1099",
+      "recordedAt": "2026-10-24T20:30:03.276Z",
+      "recommendation": "hold_and_ask",
+      "question": "For PO-1027, does the service/flow-test report show that the second filter remains pending, or that it failed testing and the carrier declined replacement?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 33227,
+      "findingTokenUsage": {
+        "input": 1017,
+        "output": 1452
+      }
+    },
+    {
+      "txnRef": "INV-1116",
+      "recordedAt": "2026-10-24T20:30:43.949Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide the maintenance manager\u2019s written approval of $724.25 per tire for PO-1011, dated before the work order opened?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 25982,
+      "findingTokenUsage": {
+        "input": 1057,
+        "output": 1194
+      }
+    },
+    {
+      "txnRef": "INV-1121",
+      "recordedAt": "2026-10-24T20:31:06.174Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can maintenance confirm whether the second alignment on PO-1028 remains outstanding or was completed but not recorded, with the completion record and required before-and-after report supporting that confirmation?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 32724,
+      "findingTokenUsage": {
+        "input": 999,
+        "output": 1642
+      }
+    },
+    {
+      "txnRef": "INV-1130",
+      "recordedAt": "2026-10-24T20:31:38.715Z",
+      "recommendation": "hold_and_ask",
+      "question": "Is there a PO amendment or other written agreement approving the $378.75 oil-service rate for INV-1130 under PO-1019, and can you provide it?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Grep"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 29897,
+      "findingTokenUsage": {
+        "input": 1047,
+        "output": 1470
+      }
+    },
+    {
+      "txnRef": "INV-1138",
+      "recordedAt": "2026-10-24T20:32:06.741Z",
+      "recommendation": "hold_and_ask",
+      "question": "Who at Border Fleet Repair confirmed account ending 8823 during a callback to a previously verified vendor phone number?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 0,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 26182,
+      "findingTokenUsage": {
+        "input": 1017,
+        "output": 1255
+      }
+    },
+    {
+      "txnRef": "INV-1140",
+      "recordedAt": "2026-10-24T20:32:36.385Z",
+      "recommendation": "hold_and_ask",
+      "question": "Can you provide the signed work order establishing whether PO-1018 or PO-1010 supports INV-1140 as a separate tire-replacement job from INV-1114?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 6,
+        "Grep": 1,
+        "Glob": 1
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 32296,
+      "findingTokenUsage": {
+        "input": 1041,
+        "output": 1590
+      }
+    },
+    {
+      "txnRef": "INV-1163",
+      "recordedAt": "2026-10-24T20:33:34.792Z",
+      "recommendation": "hold_and_ask",
+      "question": "Is the second $419 A/C service on PO-1030 completed, still pending, or billed in error, and what shop record supports that status?",
+      "mcpCalls": 1,
+      "mcpByTool": {
+        "elastic___contract_rate_for_vendor": 1
+      },
+      "fileToolCalls": {
+        "Read": 4,
+        "Grep": 1,
+        "Glob": 0
+      },
+      "permissionProceedOnce": 1,
+      "permissionCancelled": 0,
+      "permissionCovered": [
+        "elastic___contract_rate_for_vendor",
+        "Read",
+        "Read",
+        "Read"
+      ],
+      "permissionDecisionsCoveringMcp": 1,
+      "findingDurationMs": 35359,
+      "findingTokenUsage": {
+        "input": 1001,
+        "output": 1604
+      }
+    }
+  ]
+}

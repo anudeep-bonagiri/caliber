@@ -507,6 +507,56 @@ key_readers: OK, no agent, worker, module or web code reads the answer key
 - Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
 - First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
 
+## 2026-10-24 20:20 PDT Builder-C2: council items 6 and 8 (Task 28)
+
+Brief: context/briefs/2026-10-24_1830_lane_c_results.md. Log: logs/builder_c2.log. Every number below is in bench/carrierbench/droid_table.json, written by `python3 bench/carrierbench/droid_table.py` (standard library, no keys, under a second), which also rewrites the section "## Droid investigator, 52 recorded runs" appended at the end of docs/RESULTS.md (nothing above it changed; `git diff docs/RESULTS.md` has 0 removed lines, the honesty block untouched).
+
+### Item 6, the table (current fixtures, 52 runs)
+
+| Measure | Value |
+| --- | --- |
+| Recommendations | clear 0, hold 1 (INV-1003), hold_and_ask 51 |
+| MCP calls per run (elastic___) | mean 1, min 1, max 2; distribution 1: 51 runs, 2: 1 run; find_trips_near 31, contract_rate_for_vendor 21, find_contract_clause 1 |
+| Read / Grep / Glob per run | Read mean 3.8 (min 1, max 11); Grep mean 0.5 (0 to 1); Glob mean 0.2 (0 to 2) |
+| Permission handler decisions | 52 in 52 runs, all `permission proceed once: Script:script`; Cancel 0; 52 of 52 were for a Script that called an MCP tool |
+| Cost, live record log (52) | input mean 1,033.4, median 1,045, min 966, max 1,058; output mean 1,354.5, median 1,390.5, 858 to 2,195; cache mean 70,386.5, median 64,875, 31,954 to 113,496; durationMs mean 25,584.6, median 26,082, 14,662 to 42,054 |
+| Cost, decoy re-record log (6) | input mean 1,088.2; output mean 1,172.7; cache mean 70,067.8; durationMs mean 19,505.3 (full min, median, max in RESULTS) |
+| listTools() | 58 ids: 31 allowed (24 Elastic MCP, 7 built-in: Glob, Grep, LS, Read, Script, ToolSearch, WaitForScript), 27 disabled |
+
+Re-recordings, reported separately: 1421, 2044, 2231, 3955, 5428, 5986 and INV-1003 (recordedAt differs from the copy in `_v1/`). Originals: clear 6, hold_and_ask 1; now: hold 1, hold_and_ask 6. INV-1003's re-record (23:09Z) has no line in either cost log; its own finding.tokenUsage (input 1,144, output 1,571, durationMs 34,745) is shown and labelled as such.
+
+BENCHMARK, scored against the answer key by the script, never by the agent: 44 of 46 hold_and_ask questions on keyed rows name the planted person or record (0.957). Rule, written in the JSON and in RESULTS: decoys need the driver's name (key note, confirmed against swap_log.txt) or the relief unit; fuel holds need the card's unit ("truck N", "unit N") or that unit's fuel card id; invoice classes need the vendor name, a PO, or an invoice id from the invoice or the key note. Misses: 3510 and 5908 (capacity_exceeded; neither names truck 26 / FC-1026 or truck 39 / FC-1039). Stricter reading: only 4 of 20 fuel holds name the unit number itself (all 14 planted location_mismatch questions name the card, none the truck); 6 of 6 decoys name both driver and relief unit. Unscored: 660001, 660002, 660003, 770002, 770003 (rehearsal injections, not in the key). No question: INV-1003 (hold).
+
+### Read under autonomy Off: the finding
+
+`autonomyLevel: AutonomyLevel.Off` is in every commit of worker/src/droid.ts (29e002f 11:07 PDT onward, before the 13:22 PDT record run; checked with `git show <c>:worker/src/droid.ts` per commit). In 52 of 52 recordings a Read tool_call has a succeeding tool_result (not isError); first three 1068, 1421, 1468. 197 Read calls, 184 ok, 13 error; 143 of them reached no permission decision at all (130 returned content) and the other 54 sat inside a Script the handler approved for its MCP call. No permission note names Read. So the handler is consulted for MCP calls only; Read never asks.
+
+Two corrections that follow, both outside my files:
+1. Reads outside the evidence folder: 10 attempted in 3209 and 770003, and 1 succeeded: **770003 read `~/AGENTS.md`** (the laptop's home folder), and the committed fixture `seed/fixtures/investigations/770003.json` (since a87192e) carries that file's text inside a Script tool_result: an unrelated InsForge project note for another product, including its API base URL. No key in it (checked with a token-pattern scan, nothing printed). The repo goes public on Sunday; this needs the director's decision (redact that tool_result in the fixture, or re-record 770003) before then. Also the README's honesty note, line 143, says the probed instruction files "do not exist"; one did.
+2. The inline comment `// every action asks the handler` on `autonomyLevel` in worker/src/droid.ts, quoted verbatim in README "Where Droid runs", is contradicted by the recordings (and by the handler's own comment, "Read and Grep need no confirmation at all in autonomy Off"). Suggested: `// Off: MCP calls ask the handler; Read, Grep, Glob, LS run without asking`.
+
+### Item 8, MCP consistency
+
+The spec's mcpServers block (context/BUILD_SPEC.md line 343) lists Elastic only; worker/src/droid.ts builds exactly one entry (`name: 'elastic'`) or none. The CRS MCP server appears only in TASKS 16.5 as an option never taken (the worker calls CRS directly). Grep of docs/DEVPOST_FULL.md, README.md (including "Where Droid runs"), docs/CARDS.md and context/JUDGE_QA.md for two MCP servers, a second mcpServers entry, a CRS MCP server or mcp.crscreditapi.com: **no hits**. Related wording the recordings contradict, for the director to apply (I edited none of these). Line numbers are at HEAD 92c32d5; other lanes have DEVPOST_FULL.md and JUDGE_QA.md open, so match on the quoted text (in the working tree at 20:22 the DEVPOST lines were 68, 90, 181, 154 and the JUDGE_QA line 63):
+
+| File:line | Now | Replacement |
+| --- | --- | --- |
+| docs/DEVPOST_FULL.md:68 | "a `permissionHandler` that allows only MCP tool calls" | "a `permissionHandler` that cancels anything write-like and approves MCP calls once (Read, Grep and Glob run without asking)" |
+| docs/DEVPOST_FULL.md:90 | "a boxed agent with MCP-only reach" | "a boxed agent with one MCP server (Elastic) and read-only file tools" |
+| docs/DEVPOST_FULL.md:179 | "box an investigator to read-only with MCP as its only reach into data" | "box an investigator to read-only, with the Elastic MCP server as its only reach beyond the evidence folder" |
+| docs/DEVPOST_FULL.md:152 | "the three MCP source tags" | "the Elastic MCP source tags" (I could not confirm a count of three in web/src) |
+| README.md:143 | "(... probed for instruction files above the evidence folder, which do not exist)" | "(in one recorded run, 770003, it read `~/AGENTS.md` above the evidence folder; nine other probes found nothing)" |
+| context/BUILD_SPEC.md:14 | "a `permissionHandler` that cancels everything except MCP tool calls" | add: "Read, Grep, Glob and LS never reach the handler under autonomy Off (bench/carrierbench/droid_table.json)" |
+
+No change needed: docs/CARDS.md:35 ("the Elastic tools over MCP"), context/JUDGE_QA.md:57 (one MCP server named; but it says "two Elastic ES|QL tools" while DEVPOST says four tools, two ES|QL and two semantic, and the recordings call three: find_trips_near, contract_rate_for_vendor, find_contract_clause).
+
+### Checks
+- `python3 bench/carrierbench/droid_table.py` from a fresh `git clone` in the scratchpad: JSON and RESULTS section identical to the working tree.
+- RESULTS section rendered from the table dict only; rerun is idempotent (replaces the section, nothing else).
+- Em-dash count 0 in docs/RESULTS.md, the script, the JSON and bench/README.md.
+- `scripts/facts.py` rewrites docs/RESULTS.md whole (line 409), so the next full run drops this section; bench/README.md says to rerun the script after it. Wiring it into scripts/full_run.sh is the director's call (not my file).
+- Commit trailer: the brief says "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` (same as Builder-A's entry above).
+
 ## Tried and rejected
 
 | What | Why rejected |

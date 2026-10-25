@@ -44,6 +44,17 @@ What it does: a stratified sample of 558 rows (all 52 planted, all 6 decoys, 500
 
 Expected runtime and cost, from the committed run (`bench/BASELINE.md`, "Run facts"): Claude Sonnet runs concurrently and finishes in minutes, priced from the response usage at list rates with a hard stop at $15; asi1-mini is paced to the free plan (100 requests per 15 minutes, 1,000 per day), so 558 rows take about 85 minutes. `baseline.py` skips rows that already have an ok output, so a stopped run resumes. `score.py` rewrites `BASELINE.md` and `BASELINE.json` from the raw replies on disk.
 
+## Run the Droid investigator table from a bare clone
+
+Python 3.12 or newer, standard library only, no keys, no network. One command:
+
+```sh
+git clone <repo> && cd dispatch-ledger
+python3 bench/carrierbench/droid_table.py
+```
+
+Reads the 52 recordings in `seed/fixtures/investigations/` (and the originals in `_v1/` of the 7 that were re-recorded), the two cost logs and `droid_listTools_2026-10-24.txt` in `docs/evidence/`, and `worker/src/droid.ts` for the autonomy setting. Writes `bench/carrierbench/droid_table.json` and rewrites the section "Droid investigator, 52 recorded runs" at the end of `docs/RESULTS.md` from it; `--no-results` writes the JSON only. Under a second. The BENCHMARK block (do the controller questions name the planted person or record) is the only part that reads `seed/fixtures/answer_key.json`; the script is the scorer, the agent never sees the key. `scripts/facts.py` rewrites `docs/RESULTS.md` whole, so run this after a full run to put the section back.
+
 ## Prompt condition
 
 One prompt was run: the hinted condition. `bench/prompts/hold_or_clear.txt` names the seven codes and their thresholds (25 miles and 30 minutes, tank plus 10 percent, 10 minutes, 30 days, 5 percent, the received quantity, $5,000 within 7 business days) before asking hold or clear. A bare condition, in which the model is given the records and the question with no code list, was not run; the note in `docs/paper/caliber.pdf` says so and reports the hinted condition only.
