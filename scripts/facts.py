@@ -6,6 +6,7 @@ which this script writes. It is the only program in the demo path that reads see
 (the generator's mirror and the seed tests read it to verify the generator).
 
 Usage: python scripts/facts.py [--uri http://127.0.0.1:3100] [--db dispatch-ledger] [--key seed/fixtures/answer_key.json]
+       python scripts/facts.py --self-test   (checks planted_by_rule on an in-memory fixture; touches nothing)
 Reads public tables anonymously over the SQL endpoint.
 """
 import argparse
@@ -153,13 +154,117 @@ def baseline_block(path: Path) -> tuple[dict | None, list[str]]:
     return block, lines
 
 
+def _num(v):
+    return v if isinstance(v, (int, float)) and not isinstance(v, bool) else None
+
+
+def _rule_covers(scope: dict, condition: str, from_day: int, to_day: int, code: str, day: int, ev: dict) -> bool:
+    """Mirror of ruleCovers in spacetimedb/src/kernel.ts, for scoring only."""
+    if condition != code or day < from_day or day > to_day:
+        return False
+    trucks = scope.get("truckIds") or []
+    if scope.get("driverId") is None and not trucks and scope.get("cardId") is None and scope.get("vendorId") is None:
+        return False
+    if scope.get("driverId") is not None and scope["driverId"] != _num(ev.get("driverId")):
+        return False
+    if trucks and _num(ev.get("truckId")) not in trucks:
+        return False
+    if scope.get("cardId") is not None and scope["cardId"] != (ev.get("cardId") if isinstance(ev.get("cardId"), str) else None):
+        return False
+    if scope.get("vendorId") is not None and scope["vendorId"] != _num(ev.get("vendorId")):
+        return False
+    return True
+
+
+def planted_by_rule(rules: list[dict], mr: list[dict], holds: list[dict], planted_refs: set[str]) -> dict:
+    """Benchmark only: per rule id, the rows its condition, window and scope cover (the same row set the module's
+    backtest() in create_rule walks: match_result rows with the code, plus holds with the code) and how many of
+    those are planted in the answer key. The rule card shows the planted count only under the BENCHMARK chip;
+    the production backtest never sees the key."""
+    mr_by_ref = {m["txn_ref"]: m for m in mr}
+
+    def ev_of(m: dict) -> dict:
+        try:
+            ev = json.loads(m.get("evidence_json") or "{}")
+        except json.JSONDecodeError:
+            ev = {}
+        return ev if isinstance(ev, dict) else {}
+
+    out = {}
+    for r in rules:
+        try:
+            scope = json.loads(r.get("scope_json") or "{}")
+        except json.JSONDecodeError:
+            scope = {}
+        cond, lo, hi = r["condition"], r["valid_from_day"], r["valid_to_day"]
+        covered, seen = [], set()
+        for m in mr:
+            if m["code"] != cond:
+                continue
+            seen.add(m["txn_ref"])
+            if _rule_covers(scope, cond, lo, hi, m["code"], m["day"], ev_of(m)):
+                covered.append(m["txn_ref"])
+        for h in holds:
+            if h["code"] != cond or h["txn_ref"] in seen or h["txn_ref"] not in mr_by_ref:
+                continue
+            if _rule_covers(scope, cond, lo, hi, h["code"], h["day"], ev_of(mr_by_ref[h["txn_ref"]])):
+                covered.append(h["txn_ref"])
+        hits = sorted(ref for ref in covered if ref in planted_refs)
+        # The card's "would have cleared N past rows" is the module's backtest at create_rule time, which lists its
+        # rows in sampleRefs (first 12). When that list is complete, score exactly those rows; otherwise None.
+        try:
+            bt = json.loads(r.get("backtest_json") or "{}")
+        except json.JSONDecodeError:
+            bt = {}
+        refs = bt.get("sampleRefs") if isinstance(bt, dict) else None
+        complete = isinstance(refs, list) and isinstance(bt.get("n"), int) and len(refs) == bt["n"]
+        out[str(r["id"])] = {"sourceTxnRef": r["source_txn_ref"], "condition": cond, "covered": len(covered),
+                             "planted": len(hits), "plantedRefs": hits,
+                             "backtestN": bt.get("n") if complete else None,
+                             "plantedInBacktest": sum(1 for ref in refs if ref in planted_refs) if complete else None}
+    return out
+
+
+def self_test() -> int:
+    ev = lambda **k: json.dumps(k)
+    rules = [{"id": 7, "source_txn_ref": "2231", "condition": "location_mismatch", "scope_json": ev(driverId=23), "valid_from_day": 41, "valid_to_day": 46,
+              "backtest_json": ev(n=2, sampleRefs=["2231", "2240"])},
+             {"id": 8, "source_txn_ref": "3000", "condition": "rate_variance", "scope_json": ev(vendorId=3), "valid_from_day": 10, "valid_to_day": 20,
+              "backtest_json": ev(n=13, sampleRefs=["3001"])},
+             {"id": 9, "source_txn_ref": "4000", "condition": "location_mismatch", "scope_json": "{}", "valid_from_day": 0, "valid_to_day": 92,
+              "backtest_json": "not json"}]
+    mr = [{"txn_ref": "2231", "code": "location_mismatch", "day": 41, "evidence_json": ev(driverId=23, truckId=17)},
+          {"txn_ref": "2240", "code": "location_mismatch", "day": 43, "evidence_json": ev(driverId=23, truckId=17)},
+          {"txn_ref": "2250", "code": "location_mismatch", "day": 50, "evidence_json": ev(driverId=23)},  # outside window
+          {"txn_ref": "2270", "code": "location_mismatch", "day": 42, "evidence_json": ev(driverId=99)},  # other driver
+          {"txn_ref": "2280", "code": "clean", "day": 44, "evidence_json": ev(driverId=23)},  # cleared since; hold keeps the code
+          {"txn_ref": "3001", "code": "rate_variance", "day": 12, "evidence_json": ev(vendorId=3)},
+          {"txn_ref": "3002", "code": "rate_variance", "day": 15, "evidence_json": ev(vendorId=4)}]
+    holds = [{"txn_ref": "2280", "code": "location_mismatch", "day": 44}, {"txn_ref": "2240", "code": "location_mismatch", "day": 43}]
+    got = planted_by_rule(rules, mr, holds, {"2240", "2280", "2270", "3002"})
+    want = {"7": {"sourceTxnRef": "2231", "condition": "location_mismatch", "covered": 3, "planted": 2, "plantedRefs": ["2240", "2280"],
+                  "backtestN": 2, "plantedInBacktest": 1},
+            "8": {"sourceTxnRef": "3000", "condition": "rate_variance", "covered": 1, "planted": 0, "plantedRefs": [],
+                  "backtestN": None, "plantedInBacktest": None},
+            "9": {"sourceTxnRef": "4000", "condition": "location_mismatch", "covered": 0, "planted": 0, "plantedRefs": [],
+                  "backtestN": None, "plantedInBacktest": None}}
+    if got != want:
+        print(f"facts self-test FAIL\n got  {json.dumps(got, sort_keys=True)}\n want {json.dumps(want, sort_keys=True)}")
+        return 1
+    print("facts self-test OK: planted_by_rule covers window, scope and code-changed holds, scores the backtest rows only when sampleRefs is complete; unscoped rules cover nothing")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--uri", default=os.environ.get("STDB_URI", "http://127.0.0.1:3100"))
     ap.add_argument("--db", default=os.environ.get("STDB_DB", "dispatch-ledger"))
     ap.add_argument("--key", default=str(ROOT / "seed/fixtures/answer_key.json"))
     ap.add_argument("--out", default=str(ROOT / "docs"))
+    ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
+    if args.self_test:
+        return self_test()
 
     key = json.loads(Path(args.key).read_text())
     key_by_ref = {k["txnRef"]: k for k in key}
@@ -330,6 +435,8 @@ def main() -> int:
         "vendorChecks": vendor_summary,
         "investigations": {"bySource": task_sources, "byStatus": task_status},
         "rules": dict(Counter(r["status"] for r in rules)),
+        "rulesPlanted": {"source": "scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent",
+                         "byRuleId": planted_by_rule(rules, mr, holds, {k["txnRef"] for k in planted})},
         "byDay": by_day,
         "worker_cost": cost,
         "unreviewedPlanted": unreviewed,
@@ -361,7 +468,9 @@ def main() -> int:
            f"Vendor checks: {vendor_summary['bankChangeHolds']} bank-change holds; {vendor_summary['withHitRejected']} with a hit rejected by the controller, "
            f"{vendor_summary['cleanApprovedWithCallback']} clean approved with a call-back note; check source {vendor_summary['bySource']} "
            f"(fixture means hand-authored, CRS sandbox pending); outcomes match the key: {vendor_summary['matchesKey']}.",
-           f"Investigations by source: {task_sources}; by status: {task_status}."]
+           f"Investigations by source: {task_sources}; by status: {task_status}.",
+           "Planted rows each rule's window and scope cover (benchmark, against the key; the rule backtest never reads it): "
+           + (", ".join(f"rule {i} {v['planted']} of {v['covered']}" for i, v in sorted(facts["rulesPlanted"]["byRuleId"].items(), key=lambda kv: int(kv[0]))) or "no rules") + "."]
     md += cost_lines(cost) + [""]
     if unreviewed:
         md.append(f"Unreviewed planted rows (the run is not complete): {unreviewed}")

@@ -454,6 +454,59 @@ Item 5a, the hop line:
 Not restarted (builder-W holds the agents staged). The live controller (pid 95094 at 20:13) runs the old code: no allowlist, no hop line, until builder-W re-stages. Only the controller needs a restart; the investigator's code is unchanged. From the repo root, after the director adds `ASI_ALLOWED_SENDERS` to `.env`:
 `kill 95094` (or the current pid from `ps -eo pid,command | grep agent/agent.py`), then `nohup agent/.venv/bin/python agent/agent.py >> logs/agent.log 2>&1 &`. The startup log should read `writes allowed for 1 sender(s) in ASI_ALLOWED_SENDERS`.
 
+## 2026-10-24 20:13 PDT Builder-A: council item 1, backtest provenance (Task 28)
+
+Brief: context/briefs/2026-10-24_1830_lane_a_backtest.md. No worker, dashboard, agent or ledger was started or touched; facts.py was not run against the ledger.
+
+### Checks, as run
+- `cd worker && npx vitest run test/rules.test.ts`: 20 passed, of which 4 are the new describe `backtest provenance` in `worker/test/rules.test.ts`: (a) `backtest` takes exactly a rule, `BacktestRow`s and a hold-status lookup, and `src/rules.ts` imports only zod, ./brief, ./config, ./finding, ./replay, with no `answer_key`, `node:fs` or `readFile` outside comments; (b) `src/loop.ts` wires `matchResults: () => matchResultRows(conn)` (iterates `conn.db.matchResult.iter()`) and `holdStatus: ref => holdStatus(conn, ref)`, which `src/stdb.ts` reads from `conn.db.hold.txnRef.find`; (c) no file in `worker/src` names `answer_key` outside comments; (d) rows tagged `planted: true, expected: 'hold'` give the identical backtest, and only `rejected` counts as a confirmed exception (open, awaiting_controller, answered, released, cleared_by_rule and none count 0). Full worker suite: 7 files, 111 passed; `npm run typecheck` clean.
+- `bash bench/carrierbench/key_readers.sh` (new; scans tracked and untracked .ts, .tsx and .py files; exits 1 on any reader outside scripts/facts.py, seed/ and bench/): exit 0. Output:
+
+```
+Allowed readers (score against the key):
+  bench/carrierbench/carrierbench.py
+  bench/carrierbench/oracle.py
+  bench/common.py
+  bench/sample.py
+  bench/score.py
+  scripts/facts.py
+  seed/generate.py
+  seed/maintenance.py
+  seed/mirror.py
+  seed/plant.py
+  seed/tests/test_seed.py
+Mentions outside the allowed readers (each must be a comment, a label or a test that asserts the key is absent):
+  web/src/components/Charts.tsx:147 [label] Precision and recall by code <span className="text-faint">(FACTS.byCode, against seed/fixtures/answer_key.json)</span>
+  web/src/components/Rules.tsx:19 [label] const BENCHMARK_TITLE = 'scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent';
+  worker/src/rules.ts:3 [comment] // The answer key (seed/fixtures/answer_key.json) is never read here. Only public tables are used.
+  worker/test/replay.test.ts:87 [absence test] expect(loadFixture(FIXTURES, '../answer_key')).toBeUndefined();
+  worker/test/rules.test.ts:130 [absence test] expect(code(rules)).not.toMatch(/answer_key|node:fs|readFile/);
+  worker/test/rules.test.ts:143 [absence test] expect(code(read(f)), f).not.toMatch(/answer_key/);
+key_readers: OK, no agent, worker, module or web code reads the answer key
+```
+
+- `python3 scripts/facts.py --self-test`: "facts self-test OK", exit 0. New pure function `planted_by_rule` (mirrors `ruleCovers` in spacetimedb/src/kernel.ts and the row set of the module's `backtest()`: match_result rows with the code, plus holds with the code whose match_result changed), checked on an in-memory fixture of 3 rules, 7 match_result rows and 2 holds. `python3 -m pytest -q bench/test_facts_baseline.py`: 2 passed.
+- `cd web && npm run build`: built; `npm run typecheck`: exit 0.
+
+### What changed
+- `scripts/facts.py`: one new FACTS key, `rulesPlanted` = `{source, byRuleId: {<rule id>: {sourceTxnRef, condition, covered, planted, plantedRefs, backtestN, plantedInBacktest}}}`, written to docs/FACTS.json and web/public/FACTS.json by the existing writer, plus one FACTS.md line. Every other field is unchanged. `covered`/`planted` are over the rule's window and scope at the end of the run; `plantedInBacktest` scores exactly the rows of the module's backtest at create_rule time (its `sampleRefs`), and is null when that list is truncated (n above 12).
+- `web/src/components/Rules.tsx`: production line "Would have cleared N past rows; M were confirmed exceptions" unchanged, from backtest_json. Below it, only when /FACTS.json carries `rulesPlanted.byRuleId[<id>]` with the same sourceTxnRef and condition as the row (a FACTS file from another run cannot label the wrong rule), a BENCHMARK chip and "P planted rows among them" (when `plantedInBacktest` matches the card's N) or "P planted rows among the C its window and scope cover at the end of the run" (otherwise), hover "scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent". The committed FACTS has no `rulesPlanted` yet, so the chip is hidden until the director regenerates FACTS on the final run.
+- `README.md` "What is real and what is simulated", one sentence after the company line (outside the honesty markers, which scripts/honesty.py writes); `worker/README.md` "Rules", one paragraph after step 5.
+
+### For the director
+- Exact sentence for docs/DEVPOST_FULL.md line 47 (lane D owns it), replacing "a hidden answer key the agent never reads": "a hidden answer key that no agent or worker code reads; only scripts/facts.py and the bench score against it, and the rule backtest counts controller-resolved holds, never the key".
+- D-6 proposal for context/DECISIONS.md:
+  - Decision: the rule backtest is production logic and reads only `match_result` and `hold` rows; a confirmed exception is a hold the controller rejected. The answer key is read only by scripts/facts.py and bench/. A planted count appears on a rule card only under a BENCHMARK chip, from `FACTS.rulesPlanted`, computed by facts.py.
+  - Why: the council read "planted true exceptions" on the rule card (G7 wording) as the agent scoring itself against the key. It never did (worker/src/rules.ts and the module's backtest() take ledger rows only), but the card and the Devpost sentence did not separate what a production clerk would see from what the benchmark measures.
+  - Consequence: G7's "how many of those are planted true exceptions" reads "how many were confirmed exceptions (controller-rejected holds)"; the planted count is benchmark-labelled; `bench/carrierbench/key_readers.sh` and the `backtest provenance` test are the checks; DEVPOST line 47 takes the sentence above.
+- After the final run: `python3 scripts/facts.py` will add `rulesPlanted`. A nonzero `planted` does not by itself mean a planted row was cleared (a consumed one_time rule still covers its window); `plantedClearedByRule` remains the claim. Check one card on the dashboard shows the chip.
+- Commit trailer: the brief and D-4 say "Claude Fable 5.1"; this session runs on Claude Opus 5.5, so the commit carries `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` to keep the attribution true. Change D-4 or tell me if you want it otherwise.
+
+### Tried and rejected
+- Nesting the per-rule counts inside the existing FACTS `rules` field: it is a status counter (`{"expired": 6}`) and anything summing its values would break; a sibling key keeps that field unchanged.
+- Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
+- First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
+
 ## Tried and rejected
 
 | What | Why rejected |

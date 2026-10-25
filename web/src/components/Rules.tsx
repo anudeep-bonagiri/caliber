@@ -4,6 +4,19 @@ import { Panel, Pill, Src, Empty, statusTone } from './ui';
 import { parseJson, type Backtest, type RuleScope } from '../lib/types';
 import { codeLabel } from '../lib/format';
 import { useFlash } from '../lib/useFlash';
+import { useFacts } from './Charts';
+
+// Benchmark only (council item 1): scripts/facts.py scores each rule against the answer key and writes the
+// count to FACTS.json. The rule's own backtest_json never sees the key; this chip is the only place it shows.
+interface RulePlanted {
+  sourceTxnRef: string;
+  condition: string;
+  covered: number;
+  planted: number;
+  backtestN: number | null;
+  plantedInBacktest: number | null;
+}
+const BENCHMARK_TITLE = 'scored against seed/fixtures/answer_key.json by scripts/facts.py, never by the agent';
 
 function scopeText(scope: RuleScope): string {
   const parts: string[] = [];
@@ -30,6 +43,8 @@ export function Rules({ rules, ready, today }: { rules: readonly Rule[]; ready: 
   const keys = useMemo(() => rules.map(r => String(r.id)), [rules]);
   const flashing = useFlash(keys);
   const candidates = rules.filter(r => r.status === 'candidate').length;
+  const facts = useFacts();
+  const planted = facts.kind === 'ready' ? (facts.facts as { rulesPlanted?: { byRuleId?: Record<string, RulePlanted> } }).rulesPlanted?.byRuleId : undefined;
 
   return (
     <Panel
@@ -55,7 +70,7 @@ export function Rules({ rules, ready, today }: { rules: readonly Rule[]; ready: 
       ) : (
         <ul>
           {sorted.map(r => (
-            <RuleRow key={String(r.id)} r={r} flash={flashing.has(String(r.id))} today={today} />
+            <RuleRow key={String(r.id)} r={r} flash={flashing.has(String(r.id))} today={today} planted={planted?.[String(r.id)]} />
           ))}
         </ul>
       )}
@@ -63,12 +78,14 @@ export function Rules({ rules, ready, today }: { rules: readonly Rule[]; ready: 
   );
 }
 
-function RuleRow({ r, flash, today }: { r: Rule; flash: boolean; today: number | undefined }) {
+function RuleRow({ r, flash, today, planted }: { r: Rule; flash: boolean; today: number | undefined; planted: RulePlanted | undefined }) {
   const scope = parseJson<RuleScope>(r.scopeJson, {});
   const bt = parseJson<Backtest>(r.backtestJson, {});
   const candidate = r.status === 'candidate';
   const inWindow = today !== undefined && today >= r.validFromDay && today <= r.validToDay;
   const id = `rule ${r.id}`;
+  // A FACTS file from another run can carry the same rule id for a different rule; show nothing then.
+  const bench = planted && planted.sourceTxnRef === r.sourceTxnRef && planted.condition === r.condition ? planted : undefined;
   const consumedBy = r.status === 'expired' && r.reason.startsWith(CONSUMED_PREFIX) ? r.reason.slice(CONSUMED_PREFIX.length).trim() : undefined;
   return (
     <li className={`border-b border-edge/60 px-3 py-2 ${flash ? 'flash' : ''} ${candidate ? 'bg-candidate-dim/40 shadow-[inset_2px_0_0_var(--candidate)]' : ''}`}>
@@ -117,6 +134,23 @@ function RuleRow({ r, flash, today }: { r: Rule; flash: boolean; today: number |
           </span>
         ) : null}
       </div>
+      {bench ? (
+        <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[11px] text-muted">
+          <Pill tone="neutral" title={BENCHMARK_TITLE}>
+            benchmark
+          </Pill>
+          {bench.plantedInBacktest !== null && bench.backtestN === (bt.n ?? bt.wouldClear) ? (
+            <span title={BENCHMARK_TITLE}>
+              <Src id={`FACTS.rulesPlanted.byRuleId.${r.id}.plantedInBacktest`}>{bench.plantedInBacktest}</Src> planted rows among them
+            </span>
+          ) : (
+            <span title={BENCHMARK_TITLE}>
+              <Src id={`FACTS.rulesPlanted.byRuleId.${r.id}.planted`}>{bench.planted}</Src> planted rows among the{' '}
+              <Src id={`FACTS.rulesPlanted.byRuleId.${r.id}.covered`}>{bench.covered}</Src> its window and scope cover at the end of the run
+            </span>
+          )}
+        </div>
+      ) : null}
       {r.reason ? (
         <div className="mt-0.5 text-[11px] leading-snug text-muted" title={`${id}.reason`}>
           {r.reason}

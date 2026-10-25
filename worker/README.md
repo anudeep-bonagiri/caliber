@@ -123,6 +123,8 @@ A `draft_rule` task arrives when the controller answers a question (`answer_ques
 4. Backtest over the client cache: every `match_result` with that code, inside the window, whose evidence matches the scope. `n = wouldClear = count`; `openHoldsCovered` counts holds in `open`, `awaiting_controller` or `answered`; `confirmedExceptionsCovered = trueExceptionsCleared` counts holds in `rejected`.
 5. If `trueExceptionsCleared > 0` the worker records `hold` with the counts and does not call `create_rule`. Otherwise it calls `create_rule` (the module recomputes the backtest itself and may refuse) and records `done` with "Drafted rule for controller approval" and the counts.
 
+The backtest counts only `match_result` rows and the controller's resolutions on `hold` (a confirmed exception is a hold the controller rejected); no worker code reads `seed/fixtures/answer_key.json` (test `backtest provenance` in `test/rules.test.ts`). The key is read by `scripts/facts.py` and `bench/` only, and a planted count appears on a rule card only under the BENCHMARK chip, from `FACTS.rulesPlanted`.
+
 ## Run it
 
 ```sh

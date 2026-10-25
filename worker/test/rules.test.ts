@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import type { Brief } from '../src/brief.js';
 import { backtest, decideDraft, handleDraftRule, isNegativeAnswer, type BacktestRow } from '../src/rules.js';
@@ -111,5 +113,46 @@ describe('handleDraftRule', () => {
     const cleanHolds: Record<string, string> = { ...holds, '2250': 'open' };
     await handleDraftRule(base, { matchResults: () => rows, holdStatus: ref => cleanHolds[ref], createRule: async a => void calls.push(a), ask: async () => '{"uses":"standing","toDay":999}' });
     expect(calls[0]).toMatchObject({ uses: 'one_time', validToDay: 46 });
+  });
+});
+
+// Council item 1 (Task 28): the backtest reads match_result and hold rows only, never the answer key.
+describe('backtest provenance', () => {
+  const SRC = path.resolve(__dirname, '..', 'src');
+  const read = (f: string) => fs.readFileSync(path.join(SRC, f), 'utf8');
+  const code = (text: string) => text.split('\n').filter(l => !/^\s*(\/\/|\*|\/\*)/.test(l)).join('\n');
+
+  it('takes only a rule, match_result rows and a hold status lookup', () => {
+    expect(backtest.length).toBe(3);
+    const rules = read('rules.ts');
+    const imports = [...rules.matchAll(/^import .* from '([^']+)';$/gm)].map(m => m[1]);
+    expect(imports.sort()).toEqual(['./brief.js', './config.js', './finding.js', './replay.js', 'zod']);
+    expect(code(rules)).not.toMatch(/answer_key|node:fs|readFile/);
+  });
+
+  it('is wired to conn.db.matchResult and conn.db.hold in the worker loop', () => {
+    const loop = read('loop.ts');
+    expect(loop).toContain('matchResults: () => matchResultRows(conn),');
+    expect(loop).toContain('holdStatus: ref => holdStatus(conn, ref),');
+    expect(loop).toMatch(/function matchResultRows\(conn: Conn\): BacktestRow\[\] \{[\s\S]*?for \(const r of conn\.db\.matchResult\.iter\(\)\)/);
+    expect(read('stdb.ts')).toMatch(/export function holdStatus\(conn: Conn, txnRef: string\): string \| undefined \{\s*return conn\.db\.hold\.txnRef\.find\(txnRef\)\?\.status;/);
+  });
+
+  it('no worker source file reads the answer key', () => {
+    for (const f of fs.readdirSync(SRC).filter(n => n.endsWith('.ts'))) {
+      expect(code(read(f)), f).not.toMatch(/answer_key/);
+    }
+  });
+
+  it('counts as confirmed only holds the controller rejected, whatever else a row carries', () => {
+    const scope = { condition: 'location_mismatch', scope: { driverId: 23 }, validFromDay: 41, validToDay: 46 };
+    const tagged: BacktestRow[] = rows.map(r => ({ ...r, evidence: { ...r.evidence, planted: true, expected: 'hold' } }));
+    const plain = backtest(scope, rows, ref => holds[ref]);
+    const withTags = backtest(scope, tagged, ref => holds[ref]);
+    expect({ ...withTags, computedAt: '' }).toEqual({ ...plain, computedAt: '' });
+    for (const status of ['open', 'awaiting_controller', 'answered', 'released', 'cleared_by_rule', undefined]) {
+      expect(backtest(scope, rows, () => status).confirmedExceptionsCovered).toBe(0);
+    }
+    expect(backtest(scope, rows, () => 'rejected').confirmedExceptionsCovered).toBe(3);
   });
 });
