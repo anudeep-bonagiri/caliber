@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0147,
+  "durationMs": 5813,
+  "httpStatus": 200,
+  "id": "INV-1012",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "The listed unit price of 31500 matches contract 2, but the invoice bills 33950 cents for qty 1, an effective unit price about 7.8% above contract; quantity, bank-change and duplicate checks pass."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStAsKEAgTGAI4AUIIdGhpbmtpbmcSDE23luCtfgKOhLG3bBoMpdkLjSCD7LVwbzumIjDQT2VtkFXvTR+ZIian7J3y9NsCYTm8kOhcmGFR7bKLR+opkEdWuEbRXQSFRkqEZVQq0QpOzGpoAnUHaCGUTVf2rHpSwzDKl+5pvKsHeeFzdzaXuoSBM72m18Hq7tyfS5uKuLfwJkwVvN8Gih7RrlUD0njYKiBj8pt/ayvZY2SMjtdKIILmPj2fzuHb4xdcgQ1adx3oBw4AxJ70J5LLQozjubUoormcglDlojp78cgt7B2viZ4zwcn9q2p0+88JZD20wWIUb91XSFN/Fm3D3JoXoh7CddmrWklkJXXR08EsI4sO2LvOMX1xvlFuUPvRY2pVpFNWH3EDywY5DMfK7ydczp+cVyPsmGsiMW/GBbnUfKNW0ioOae0jXYhvKKlTIaEV7qTFOgHcJlgS3Nrr6jvGVSmkvNcNtT4nT18Iim9CKZUaqrbcvGSjPxelTaBbv8+IUf3MqFpYYJkUilJsoq8rpVmin8rwXHul6Xsr9Mxp9lX/UytgsboA051IDaT4tJxirq7jqrTK6MEOc4s2R06F9XUkEhBXScWyyJdkvssft+ubbDfDm8e28sBfQPTkGhRRA0KP0xNVNkOxyc5HSM1+mRb49gmpkZNoRMt3GBynOGRjZWbCyeijgTxrrzPMWDKwC6RzP3mVrsfu0ObzSMttvaL+k9Fs63d0ESV0YSx8nC9ogYM1C4JyY/hASZ/S/p28Vd9jpW35/EJHxUdWisDGuSkxd9uHQlqPeLzCdyyelrqmkz8j+Pp6sOOFl0cl5pQ0eDqILoJeSEfApHvbozVQb7LpfGBxoaxM8vHdA52LII7bAR/v2rFwbyMchmNlQ/9UTicw29W7CvGKhrKTXfmlOfk38H+fLMEZp0XADH5QjWAONMZdCiie2ex8JNWX2/rXdXartcilYJEQ9viKIDKmHz7jJ7t1+1YslODXRA3WBAKjKZMvqRxkf25g+K53WVN4COuFxbzuRYv2ROVgnTi7hfsIC3qTzMF0iPmS/1AW0arRH+myV+p0yD3UlsPkAOMpUCTEkc4FBSpqj/0z5Hc5qAGcV6bM0qJ7dbW5mYJRlgU3gfchdf6R2XlAXnVi9feYC/bWam98/RwbSwf8zuSxsOuZCxYGJdBjPdZIkpXicxO5gEIjOmoC9nDgWLDwBh4MhKc0NCkm3rNrF/95wNhXV/uUsD2KdzipDRSgJw01m1Al9iUOPR4p4ybO6P/xXIYXA0ISIK5lHi5TF1Ru/lnoGzr/cECW0tObqIgJOyvVueMGwOh5Kqk3JBOP/KD/SBsvg2LpyH/XL3k3MKFrHpex6MIQZcHOfnTuxZhTkn2wYPXdke5QGNUbb1ayt49GYS1ELxkUZO8mV7X04GxG2XVm4xpnXj8Wq5xu5qJLPxslBdR1mX/w3e/JqCM0wdyZiadtcIBubTC8qNQN9+BLsycubybgi6nA6EqAYD/QPEx9sJsS7wAV1e+yy9sekoDEclnt7/IKl3SMyNGqMjdCmoOZq5hKbmzx+OA8Z87dKkW824skrzXIpLqqZaWDufpVB3qAHg9cuNibH/Azrjsgs135W4b30wvBXQGjCwqS3XjDA9a9MKRNq1/hpiKnn9K7tI3EBlZGgZZzHbjSDlYREei3cyzFfuON0GmHrb11c04WrRjVmRFJ6YIuOC4SZ9dfOBHsGfeu0V/vSoatOOYivhcYQw0uRpLXRGxk7GE2pYMVbuDyobCcJKQ7OASSdktt8Zw9DarpXK8I2Iq1YQ3zbQJzssyrPfAXzYUm0cbrD9bah4K4V8cVAnotH4W7N2seit1DGpBJL1alrQLUlbq360tLmDEnP0xZ0PBmXX6G3zdFU85LPODRTxl2g9ayufnkMD5SbLTspPHFtsgV046flBuJp2C2MRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"The listed unit price of 31500 matches contract 2, but the invoice bills 33950 cents for qty 1, an effective unit price about 7.8% above contract; quantity, bank-change and duplicate checks pass.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygrBFG1yodoofQ2GCu",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1390,
+      "output_tokens": 457,
+      "output_tokens_details": {
+        "thinking_tokens": 359
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"The listed unit price of 31500 matches contract 2, but the invoice bills 33950 cents for qty 1, an effective unit price about 7.8% above contract; quantity, bank-change and duplicate checks pass.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1390,
+    "output_tokens": 457,
+    "output_tokens_details": {
+      "thinking_tokens": 359
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

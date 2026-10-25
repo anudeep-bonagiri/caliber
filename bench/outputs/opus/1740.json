@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023112,
+  "durationMs": 3188,
+  "httpStatus": 200,
+  "id": "1740",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged about 0.01 miles from the Hillsboro station at 15:53:36, about 2 minutes before the purchase, and stayed stopped there through 16:05; 48.7 gallons is within the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3AYKEAgTGAI4AUIIdGhpbmtpbmcSDILo5ZQAwcIjeCHAOhoMkrCl7XjAmWf8pLCgIjDFc0DDswWQNe6n/vomgZQACW6cIV8Bv3Yv2DedXmIFyibobxxGXP/m1EGvC0x/Tugq+QWKY9BKWuppYaIweCTXXHj0oKgiqi9CCgFo9OpEJ33pA99rhUnAPSbyuIssggK6P1NyVM5aYL8b5eBR/2UwdVj4YSkZ/JnBdTHMZl7xz7tRaBBjU52Nsj+5o8NX6VNanEOlzsltjhJuzP5G1RDATihp1lkvwZyCg8OEk9dP4l+zzlObBYjp0AYlq2b9T9VbquEbxMkIQTeozxebBU8oxiNlq62hcwdkp8Pzvd3TLuSUn8Vc6X3jeUb+ffwNYh1jlcCbcSeMbWPjUSF2aiVCA60TmwfsAxDSlavbIljW+WI/poeuSCUqGKfgmnOfHleAQjFS7mR+3mQTbZukvSiDGeDR3B8SP/v/0J5c0rsVXmO2b7heIDZIMYzQLXN0Oyue0AL6JAHKYujGL5lE/4PbvQ8fu6zlqW2jTIVyMcj9dflXh9w84nfj2NbBHGUbGc/f0/HXSpNMwPupOTIc0dYWlagMPtsTRgPZ/4N/JmE6lV4IsSDlWDY8GfiJ7x/l0tvuI6IC/jW8rGfJm8+4yaGuKEKLjSQwUTRliZ4gFutwhgP8qBd85B2PM7Atv9pS0Pu/bwrMUNVcf9uwyidGf2fBX877Y37vdnAvdRdWY0QIaadbeWWCFxmJECe7TgVBtP02nmvp8VDNx4whupyLkmlR+RmKlLYYzp7Su9S9ksuat/mhVk6A/ybW11sbJheASy4znFvoiatTydmnXrZOv96rzVA/IO2eELTGqtW39/KkkGi5YZrACowlk9woPT7X/kJq0YADGa9vaZ/B7IEpugpGNQP7r7meI0c9l8SQiRhvcOF5aYKBvRHT4zOBx1I4PRcY1BUqOiNg0EEHFAFC2FS+sBB6srWm0JqAiK40nHjrOAIV3XEAxLtNqcHwQiBVazJst2F0y9jI1LwEdXXy2gG4crWnFQmsSHJm1rGpaKxXc+EWSy7DUkS6yMzOea90DFKLZSzFhE8uiYD63tjwW35sqym6iqnm+Ep+CqJlGAi1enXEXKP5mtwQDkJspBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged about 0.01 miles from the Hillsboro station at 15:53:36, about 2 minutes before the purchase, and stayed stopped there through 16:05; 48.7 gallons is within the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzJPnk9B9rNPxFcvSxj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4523,
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "thinking_tokens": 139
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged about 0.01 miles from the Hillsboro station at 15:53:36, about 2 minutes before the purchase, and stayed stopped there through 16:05; 48.7 gallons is within the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4523,
+    "output_tokens": 251,
+    "output_tokens_details": {
+      "thinking_tokens": 139
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02584,
+  "durationMs": 7038,
+  "httpStatus": 200,
+  "id": "INV-1113",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 52500 matches the contract rate, qty 2 does not exceed received qty 2, 105000 is under the 500000 bank-change threshold, and the only earlier 105000 invoice within 30 days (INV-1059) cites the same PO-1016, not a different one, so no hold rule applies; note that PO-1016 (qty 2) has now been billed repeatedly, which may warrant a cumulative-billing review outside these rules."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 52500 matches the contract rate, qty 2 does not exceed received qty 2, 105000 is under the 500000 bank-change threshold, and the only earlier 105000 invoice within 30 days (INV-1059) cites the same PO-1016, not a different one, so no hold rule applies; note that PO-1016 (qty 2) has now been billed repeatedly, which may warrant a cumulative-billing review outside these rules.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyq4twnLoxLVwDkNQQS",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3595,
+      "output_tokens": 573,
+      "output_tokens_details": {
+        "thinking_tokens": 406
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 52500 matches the contract rate, qty 2 does not exceed received qty 2, 105000 is under the 500000 bank-change threshold, and the only earlier 105000 invoice within 30 days (INV-1059) cites the same PO-1016, not a different one, so no hold rule applies; note that PO-1016 (qty 2) has now been billed repeatedly, which may warrant a cumulative-billing review outside these rules.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3595,
+    "output_tokens": 573,
+    "output_tokens_details": {
+      "thinking_tokens": 406
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

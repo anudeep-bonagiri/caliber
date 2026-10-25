@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.05516,
+  "durationMs": 3142,
+  "httpStatus": 200,
+  "id": "T3134",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1033 toll at NTTA-DNT-01 within 10 minutes; the latest DNT charge was 2026-10-28 and the most recent toll of any kind was 2026-11-04 at SH 45 N, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwYKEAgTGAI4AUIIdGhpbmtpbmcSDHw5jYwaEs1hEcPh1xoMnt4oeIDgaVfioszxIjDWih1cduJc9b7ggghMSHD6lYPBA+xzEJugprpTlh4BMh5t7t05U3cOQ/LbXizgCekqtAVyA5hoPTWIjduXbI52fPbQoUEG83TrXzyxPfP6wOl3ONeO7SModVN+AQDBsmnOxJ1W7ckfvrAVtUcRJNhy9CsviEb3/HXbhX/HnIQZoAFXSEXkAcC61qOhrnlCXBnZH/Rt3QLg9XxdhgV4jpPwLZ6KIcJGk9o17d8zVJZluT+kRvNvb0Y5cWmlUMhUkPCnX8xhH5r9wxpTXwMH95RcH9DToek2s+yhq/xEmCRSP9Y67gTdw3qdSr+75kSP5i0oULRv5WQ73Hs+ffwTHQUkBc103UvM6H2gS9EPCD4E6Xlb3OUImzFTdpZUYYRRRUY/ZG5YFfFMJMpV3yVDlkAN1121Gw2ilVRTuld45ia7e52venb3NGwwXkIJcgZmCAK1hmKxDYReV06TWrj0+373EqRVD1r30aciVxz/zKzZZW1tmXTQa2wmw4zsjDdocJ/hldF6tJn0JHZxa+NQP1BMhJJllHAoyDaN3w/mKTmcAi/1kktv8KiS/swJFWASLSYXb9ug/4UA9ZNdHUqRjGpfo58L+s4xxluuB0viHhmz19CN4PnUnDh2gRG3zKaLHWg8ieuYJQ1NSicb7UIGOPGb6/baT0HzH3l9hz9Avv3AIHiSpdEiyGl1DfB5+sNos/4Uq5pwozYozki3JIWU8qkeJv78jf/skezqFrIaP1r7DfwFo9QDBrz+9nYnAtW46SxBFL5rtQ8vDTKuJERSfGjxuDTjFV0D/rgQ5NT6sV+gZNARD9HwOZbww3pcqUciL1NPENyGEHDfK32SZsAgcf3xZm0gHNnkyopYc9zpC9PTVM7h7IjcJPZvW2bq6gFKTDeAX2ClsEd9TD1NRyAts120Iwx89p4Yfxy+rU+IqJGzNJBVlsFPVIwOaR0rTLNe82jrOZcPAIcZYqsqlM2q/vFwuqZ+RlDGKRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 toll at NTTA-DNT-01 within 10 minutes; the latest DNT charge was 2026-10-28 and the most recent toll of any kind was 2026-11-04 at SH 45 N, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfoeASoGXEgJCyFJaC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 12715,
+      "output_tokens": 215,
+      "output_tokens_details": {
+        "thinking_tokens": 111
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 toll at NTTA-DNT-01 within 10 minutes; the latest DNT charge was 2026-10-28 and the most recent toll of any kind was 2026-11-04 at SH 45 N, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 12715,
+    "output_tokens": 215,
+    "output_tokens_details": {
+      "thinking_tokens": 111
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

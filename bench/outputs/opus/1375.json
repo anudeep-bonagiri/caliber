@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022496,
+  "durationMs": 2825,
+  "httpStatus": 200,
+  "id": "1375",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged about 0.02 miles from the Madisonville Buc-ee's at 15:18:02Z, 3 minutes before the 15:20:49Z purchase, and 22.6 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjwYKEAgTGAI4AUIIdGhpbmtpbmcSDDnI8iRxZFeXfKrJBhoMy89tU76rXpjuy9WPIjB0wZZPEVRYil3CQ9nPJ/1M/zyRDXotppR8U1ejdPaZbBVJuqJ6WGYU4x67LWQvBE0qrAVOpewlm8c5bl7tYzN6MGdAbRNI8zuty7TOi+0oRauCt1da2fvFv8KMeZmnccJL+rq4hqtuXflOMvOpd7uwubyc3ozNss32lo1CL6xE6IY++wieGhr+IpH+LLweRbWf4X9gRft+fOK4tDz0llVq+SlTAIWejH71f84+nbj+AWY5gCLIF0aZKeK+fAPAaCKErY7lQmGGjSlz/t7PCRb/xYtEnr2OSXGxP6wTSRgxljjvxIuvYT9HT47vFcNsYnW7+VTZkFg6vYnQvG230i4DVxcQVqJpsfmBony+bnhqb3fk7IsS/S/gDNP8egpB6ktnjXxADD5AsA1SKmlzWW0q/u4zNpRTPBAEioPhtp9s3P9wheFpUQdgKP3zcLg5DKSI734rQq6QQkS+SgtJfxae+33abbR+bILz/hZ5iRQmaRPAUgYNpPWkQY4fPb/Kq48OQHEtXJJmE4Vld5+0/0U7I/UnK9Bw4/uS8ZzVcJOjTQtGwVI82z2N67Yp9qBVtT8keDBLcWtteLLddRBECnciydzJxQpV6kTe0DBwA3LNDkuTYekhAHKdtu04W51P/jFxubxpPd3ir7nZRk5Qj/VvpiC0fJKBbcRm3HuyBT8zx3dcaSGfXnS0aHXsmaV1cl5wdWMaIfXO6M7ezqucGLRujigDNxHFHjwk0agHYuBCYJmi/BtHQ+kZHim09JwKxVsDosPzpkA8+LAzM+t5j17bMAcJJ9wAIrMpzn7ZTyKd7ibsYap6Jb3RePKmnxPUtALRuX0sBMZa21aXYbYqjDpQrFEUGXPY/sO+EO4NM1y4FkgT23gff4Fw2y07IOh8UEprW2K9Qr4mgI8X+fSM3yf6gqke4lucV/gMpxDsmYNgjbQ9yELc+Tfb4/KAB/0N3dSjMnopgnlkaz1LKnUM2JMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39 pinged about 0.02 miles from the Madisonville Buc-ee's at 15:18:02Z, 3 minutes before the 15:20:49Z purchase, and 22.6 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDLygw4SYbMfg5JH1W",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4524,
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39 pinged about 0.02 miles from the Madisonville Buc-ee's at 15:18:02Z, 3 minutes before the 15:20:49Z purchase, and 22.6 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4524,
+    "output_tokens": 220,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

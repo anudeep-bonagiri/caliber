@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023672,
+  "durationMs": 8836,
+  "httpStatus": 200,
+  "id": "INV-1040",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "No listed rule is literally triggered (3 billed vs 3 received, $532.00 matches contract 20, bank unchanged, no same-amount invoice under a different PO), but PO-1008's 3 received units were already invoiced on INV-1005 (day 5, $1,608.50), so paying INV-1040 would bill 6 against 3 received. Confirm whether INV-1040 replaces INV-1005 and pay only the unbilled received quantity, which is currently 0."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"No listed rule is literally triggered (3 billed vs 3 received, $532.00 matches contract 20, bank unchanged, no same-amount invoice under a different PO), but PO-1008's 3 received units were already invoiced on INV-1005 (day 5, $1,608.50), so paying INV-1040 would bill 6 against 3 received. Confirm whether INV-1040 replaces INV-1005 and pay only the unbilled received quantity, which is currently 0.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzA5c8ZyFAd45T6An1c",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1893,
+      "output_tokens": 805,
+      "output_tokens_details": {
+        "thinking_tokens": 624
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"No listed rule is literally triggered (3 billed vs 3 received, $532.00 matches contract 20, bank unchanged, no same-amount invoice under a different PO), but PO-1008's 3 received units were already invoiced on INV-1005 (day 5, $1,608.50), so paying INV-1040 would bill 6 against 3 received. Confirm whether INV-1040 replaces INV-1005 and pay only the unbilled received quantity, which is currently 0.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1893,
+    "output_tokens": 805,
+    "output_tokens_details": {
+      "thinking_tokens": 624
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

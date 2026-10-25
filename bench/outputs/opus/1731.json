@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027416,
+  "durationMs": 3263,
+  "httpStatus": 200,
+  "id": "1731",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged about 0.02 miles from Love's 412 at 14:20:51, under 5 minutes before the 14:25:36 purchase, and 32.5 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5QYKEAgTGAI4AUIIdGhpbmtpbmcSDLH0QGR1bsAcwCgrGBoMwhPI8gDuuICYqzYlIjA9jBE56LU3HJ+5+EC4lgwrbnW+vC8u2um2487zwqZ3bc515exywvJUtau1+h0JEroqggYG2VP0tcWSrnds07dpu1/247SPNLnMqxs84ldAfENmb47SX9eGPR9YJUZUrpNYM4DOosELB637hJzmOJSbwhLGR2wAzwF0g9s/+0u3Nv/NjmvZzEn6sXkbeNyJs6V91Ze+raG+fj7CIZSe4Iij9Vcfi29ife3dkScn8b218boRU9QYsGTA0esuvkIkg/ZemgO+GNj3gkoFSxX1zlkh138lpNNPW1JgVJCLKSJI9vcP11tDB5RDmlJZyCh0T9DJLiTBrD8tC/l03sFE7UfcKmNkfO1DVWT4Teg0qqKwfBJzC/0aopNtA6Y9JemEFXtsAlrk+iqBvNTquUwYWLHH4l1osT2/nCjSUMyQyXvX7+usdfVPE9jXPAvMvKCqKEdKund/PpaDItAHn0ccSycAtUpc+92CBrs43grKMHoS81t1pnuSls4ihhuWrUufGULnFAGhXZmaOL6jrdkipY6nLympkd6pXwVajpeR8S6LB6Hx5dSXzJf7xUrABTp5oMmjyCPgfxnrfZTmM0bgG1UYejRnGm1+M8uSumQeVCAPwYbAAH0gXVOmM5Ayxa0QZHoNq1AUbXe4OFbn4JEXBM26K9fjkjZjV6HP02if29akvKzzYkVLmxqwFgkjsGAFTunUNhEM6rpIHgmRdoV+rERzSzUzCWP2tUHb+t8ahR6xP3R0F0OD1zYwmZ8AjUHWH9KxgDQUBZnKm0mSGINdR2VRQGh9vUBOOVWSPaPS5P2arDTYSV11QjQR+PuHYntGsPubckjl0jM+vcVKzgeOxdsEGSm19vQGUSUF0ctTSoevVSwYLOMHk87C8PhItdyflIN8di+jyJaLMpZxJsWxSC5T8Gk3KIUyLIc1ZfNKo/0t4UD0bC6uMyQXAcAzPdJHsfPpyjfE4OE64U5iAfXt/iSsGQ4b7R2pKT1wsDM2cVGHnvijkE1lokHpbWIEgUNqi6ZS4vUR1CtCvi05UWUyg3WGBqyzQPS+OTL1Z6qxxwB5OtUd50QEpZdWDCwjBPEU7p84jakghhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39 pinged about 0.02 miles from Love's 412 at 14:20:51, under 5 minutes before the 14:25:36 purchase, and 32.5 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz98YxPemu46WQ7Eci3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5619,
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "thinking_tokens": 145
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39 pinged about 0.02 miles from Love's 412 at 14:20:51, under 5 minutes before the 14:25:36 purchase, and 32.5 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5619,
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "thinking_tokens": 145
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

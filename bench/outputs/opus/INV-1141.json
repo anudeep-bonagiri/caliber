@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022684,
+  "durationMs": 4715,
+  "httpStatus": 200,
+  "id": "INV-1141",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price matches the 54,500-cent contract rate; billed qty 4 equals PO-1010 received qty 4; the only same-amount invoice in the prior 30 days (INV-1110, day 60) cites the same PO-1010; the 218,000-cent total is under the 500,000-cent bank-change threshold and the bank change on day 18 is long past."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmAkKEAgTGAI4AUIIdGhpbmtpbmcSDB/jO5mJNfINndul0xoMNGLLxwB1vGbSyRm2IjDAPpjFD5+0HVkuprHdXfLQBDJo4D0fiPqXKS2U3rHTODpR651TfOW6BE2llRKwa5sqtQhbZjjsg+b5cdQd6TLhvwd8QSvbJf0aT2eu8P7hcfxLY0K6Po4MEkgISwxNhkokN4wLVWk7IypWXt1ZGclFFK5EL9ddf63x/6htYHsQyHVFSrGnRBBUTQp6paqxmLHtNl6W0VNsxGsCeL1QFIxHXlf50byF7W9Ut04EnUtKzkwwO9bTFmW3hdnezlEzLjQ8U70yQIWHDS+tbumyuTH8HWbxmilBNy9IcRoHGKvAHoPQ6k8y3sKTD0K+WXFF6kYLnPTsQwNQuucvaF1+PTB0SxSWtDcOZK7LMj6fUKVxR7X6tDit9os6oNKCfHJixNNH45JvTpOyfXcI3sQo2TlqcqWR5mt7m7FIDVAkk219vdq42xPPJYfJp1VdaTwZZgUCWqxECFzj1elAliJtsq6x9PcyAYOR2WXRXQ1FHDzXarRSLKWKPiNC4FuHRYAapwQ+4UIa0FTuM8K2+aZrKR3vdEjOwiaw61NNi0Ym5l1MgouMYPSPvmNyMAylQEKS0Pn7XgmE+D1M85HP13CAiL743N9OY9q1yhlI7g8dPc5ccnohEDGLDyyKER69bcHY0rTdESN50ocWf3oCtfuU/HNubn//HF2dMpKA/iewnm5ELkYuS/mi63pfa7zzBFlMN8ZAzAKDZpTcp+1xK+rUM1tDB5hNcNqf8GwQU7QIKWz9UPElePVeDdu0rPnl0gmkm1/Wfrg89FhXfGMunwFynFPw94dCw9E6lAULb0ScmIgQ0Mjcu8fGmT39NjGRPW5s+MAkRCfzcQ5T1H+SnwgaL0yzilkKfa2hGSTEzJ930S77bfCPtKtTwYc6J0ZtZxvNzPXQzI3vlXruSDel8TMFqoLzp7640s2jSCHqODQFiYWxblr3SYvlM5xnnHWrRLdCyQArWC87ZP/10DRjRKOCXtveRMXRu3lqFCHuJwZrlLObNc/0DE2eXLobKvdDDv/fp/OQrnZZGbvZlMV+gigtOLBYlm6b52r/mc2qb8Q9u8z+GINpXVaDX4u4jUlTzd1UbOM76zmWRAUFssp4oovYVBjrI0M2EHIswEX5S33nOddxBx1mzMl2n/O0lMl8XgixRIosydlhnLBmhFLninskiVJ8I5M7XmGPodIqjq+aJEcrTol1inW8UAiPoQJwkDLl3SeDKcqUWAtu4ynCyLSG4UsFi/tXNXyoIWI1refYUwaDHey/6PT3v7EBibVynC+XL016hrDrdVJgGUKD/9d/EVhqJfjR5lmQqW/8IgXUTF1fctg/9csit9TFV6GtXG+OQ4aN2cRjkJmefOHjVw1Sfqct4oa0rj7FQqkN6KMD1fLiK7XuyC68ucpEHIZltJLstnlkX2BgTKhHq4/ez/Xn5YFjiSJR5mEyZUJLvTRTXTK/vyzn0dC+pMxcVNUaZ03vuSCQeXUlGbJYfioLFZ1KZ2Akw9zJl9pPAqMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches the 54,500-cent contract rate; billed qty 4 equals PO-1010 received qty 4; the only same-amount invoice in the prior 30 days (INV-1110, day 60) cites the same PO-1010; the 218,000-cent total is under the 500,000-cent bank-change threshold and the bank change on day 18 is long past.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzrwdELKLtaS7ngjCr",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3676,
+      "output_tokens": 399,
+      "output_tokens_details": {
+        "thinking_tokens": 264
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches the 54,500-cent contract rate; billed qty 4 equals PO-1010 received qty 4; the only same-amount invoice in the prior 30 days (INV-1110, day 60) cites the same PO-1010; the 218,000-cent total is under the 500,000-cent bank-change threshold and the bank change on day 18 is long past.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3676,
+    "output_tokens": 399,
+    "output_tokens_details": {
+      "thinking_tokens": 264
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

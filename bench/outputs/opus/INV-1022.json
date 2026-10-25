@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020672,
+  "durationMs": 7504,
+  "httpStatus": 200,
+  "id": "INV-1022",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Billed 77,350 cents for qty 2 works out to 38,675 cents per unit, more than 5% above the 36,800 contract rate (limit 38,640); the stated unitCents of 36,800 does not match the billed total, and PO-1014 (received qty 2) was already billed by INV-1008, so confirm before any payment."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Billed 77,350 cents for qty 2 works out to 38,675 cents per unit, more than 5% above the 36,800 contract rate (limit 38,640); the stated unitCents of 36,800 does not match the billed total, and PO-1014 (received qty 2) was already billed by INV-1008, so confirm before any payment.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz9FSCUJj59g9MuYq7W",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1813,
+      "output_tokens": 671,
+      "output_tokens_details": {
+        "thinking_tokens": 530
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Billed 77,350 cents for qty 2 works out to 38,675 cents per unit, more than 5% above the 36,800 contract rate (limit 38,640); the stated unitCents of 36,800 does not match the billed total, and PO-1014 (received qty 2) was already billed by INV-1008, so confirm before any payment.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1813,
+    "output_tokens": 671,
+    "output_tokens_details": {
+      "thinking_tokens": 530
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

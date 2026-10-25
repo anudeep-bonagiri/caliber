@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02252,
+  "durationMs": 4861,
+  "httpStatus": 200,
+  "id": "INV-1135",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: $315.00 is below the $328.00 contract rate; qty 1 matches 1 received on PO-1019; the only same-amount invoice in the prior 30 days (INV-1120, day 65) cites the same PO; the bank change was on day 18 and the invoice is under $5,000. Note: PO-1019 (qty 1) has been billed many times, so a reuse review is suggested."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoQkKEAgTGAI4AUIIdGhpbmtpbmcSDDDjoja2lAJrft902RoMfeifGzFSsvq37sNrIjAVefIYNrPFnQ6r/KCVTG500dbxP9Ckw6VBB27BpxLpQW+OnlHKNoTfjKiwrghXpjkqvgjmmqc6SfH+5gGP9pJfCRMoxXVjF9FcQnXETXurk2cdjDBG/BvcKN2PysXyO9oK2iQ7F3oNVAx3yj5y8WupRAvTWOtkF8hLuDPxUTVOo3fwoeKQJK6ImKx+43pG1JpZRdfH3Mm/MT/d3qmjBFkU+Q2wPm5XUevTJqCnIRxI9jHm6Ct8ZtGeUNxRpUVB3oiDQ6glGaWajdPe+pusOCs//iHkG+IlTo0aGqgczfChxh5s7Fy0Xgtt//mWjr0SnM0yB7KGGTouLMnkSeh5FTt9JIB2f7KcV1oY0pZrChucAVcoDzTGOwibOIpijdC6T5m24A9QN4arkcVTqMztZKmKnq0iWmfHtU+sEmofklfH53lA31R4b2Zdj4eIMH6BmSlBzvIbKlgfEjjjFezkJE8/8zIZ23Bp/3C+0A5iH3KxdoL4q2BE67F/bHUOLpEP1nJ0553UCsUPHw2KphHj98XQ/WbitI/4OKhb/aw09XVNvIgoFct/oeFPJLbIInp7FC5OETbOjxvUmU4y2hRJ7ckJAm2nUbsbwAQBKCWkcJ7V0r70FQtC4wPM3cwJwo7Fyp28Hi9bn9/477Uij/948dYsUEVtjNkoBTQEiQl63LvLsky7k+XLyHMzjTBpOYVgz+K3taHAerlQiLT/trQBXPGG4T2tol8neRTR/CEEWr8M2BupFH3puLhcn94DdgSmfwxLPIq7tZ59T8DBVJa9m1opqr/dFAcb6+0h7cdTF5Xxa51qQeKnCFQTEC0KM46fw0/Kv+c+trGmURQPPYDgbWuUO3lLWhbIhueU8gvR+Ef2ZabXxPF2Oa5xQ+kfpyKw0tQ3YcCBBHxdAwwhthn5w/VTNiOmaIIzM4CDwDJhMmx0TTpbdxAoq3dkdabqYc4kXE5kk2Tv0c9o6YQv2MJIUBzr7ONsyXkd6RFIaVqP052b6m8wSrQLeb/Gjn4NtI6k5zTEz1MS8ySXossx1tYPceGqSBaKDvvJNIa7D1PTZzk3tkeGb2OC41snz6fvF+MctZ+mSIePWgnWFi5Ngo9BAxFvkqWbJ0xHal6TUnSzb1AYdSaN5lviO4tsMBi7Ci+bzEfe4M+2foM9YrTQyP0w/dKea831UuG/2QRe9VOYcwHqgjLXsP6wQHs9fcqFYHPlVwYAIfuYIKYXYQ71nXcdImZovEFC3P32Abu2E4F/OkPCLhOoq7Vp9f8mQS1Q8uPbLgvp88UvI5TIhOF2dsI2Maj9er44qU1LAPPU3S9j8tPFKVu2LEz/WJ0npJ+a3soJx+80BUCaP1J1Yh+NwTgbo4LKWNClCThYy0Plj8FemL0IU3zLdYQ8nML1qM1vM3aSsY2JbdW+qJOrTBK9mwGoDMuXi2RNjD/C0aezgjpn9o9WeEky9JZab7IVPS12pQz+bH3cLmQPTH9Moq8TXav9sRYEWECRYz14lqAnBYlAlks0gL0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: $315.00 is below the $328.00 contract rate; qty 1 matches 1 received on PO-1019; the only same-amount invoice in the prior 30 days (INV-1120, day 65) cites the same PO; the bank change was on day 18 and the invoice is under $5,000. Note: PO-1019 (qty 1) has been billed many times, so a reuse review is suggested.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxD1HrurKnkwMt4iTK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3500,
+      "output_tokens": 426,
+      "output_tokens_details": {
+        "thinking_tokens": 275
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: $315.00 is below the $328.00 contract rate; qty 1 matches 1 received on PO-1019; the only same-amount invoice in the prior 30 days (INV-1120, day 65) cites the same PO; the bank change was on day 18 and the invoice is under $5,000. Note: PO-1019 (qty 1) has been billed many times, so a reuse review is suggested.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3500,
+    "output_tokens": 426,
+    "output_tokens_details": {
+      "thinking_tokens": 275
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

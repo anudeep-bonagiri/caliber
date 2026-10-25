@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027076,
+  "durationMs": 2692,
+  "httpStatus": 200,
+  "id": "T3000",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1032 toll at Mountain Creek Lake Bridge within 10 minutes of 2026-10-28T16:38:37Z; the most recent earlier charge for this plate was on 2026-10-19, so T3000 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlQYKEAgTGAI4AUIIdGhpbmtpbmcSDMGDD3pFM3MY2dKxsRoMjpdGhntc25ZCUsk8IjCTZbJC6p1K1Wjc1N7zxHtw+BvsoH6gqxEwwF3zauj6J2VliFvN85zDot6rLTnhAZUqsgWc/U/raKXYsBk5g47AJLmfry15fmrniSF3HfdY/85xSvvDCo4dO+vffjVgfz8R9z0PfvJO7AbCS0s4COq2Ggy42MeqxiS3Xv8NTBvFPTkP4EmUyscjfA2mNQ8E9WHO0ka9nDxW0SUizixIVQYVfgpaqgNYzYCBB5LG1Aub66xV2rk0utMWt8jVigYy9iymI+48hG0ZBpfkOisTA68cS2WHx+i775+8++cmMSf2VX3VwmkAmmjc7AbILUcDGeqs8SnrJtTG7ETFK9l5gvdHF4ca6QrPgcOqTKgXHFMSwgLbd8HiGDIH2G6sNqR5ErgufaKbOMIgNe2t2xWDB6xexU31ocd/zTVbBIwvzJyLoW8pKAjjGs9fy0p64KXRbQAR4oKPHGBG8VTPjFiJQEonmfCTUFyGFYuzk89rEcSPzABbOujp+ROXXf0bxfS6/RfRQgC6gXbYbggzS5KlWYWqRRSkGIC2oKEl8CmjadXuERA1UeX+X3W6LJbW6VLlRMMFfprQYqchmaPDq24Mt/uBYiMO5CPFVdjrUIo9G7ejw5OV/gJlkTzYccKimBQWxtms2zr7CuymPDROchBC3tEkLl2pIG1sxY0+FedCDTL75J7SeQkMp9q+UOdLjvxd6hi6884pJjYnuA3pI22ehjLBq551wJHG2Oi24TVUOQp8zCWfagcQgJKVCYvHcXPgrYbapJHIsVarVvLFh+GDKc058ptot2TvGtpzKajl+UVL7qXvs9jWUTM+8me/vBYL0DtWNTJPXZhxxiiZR1h03Qg9WDDHEscmrrWlsOd8mBR1vw9nVY2yG2G9QtmiaLeyCwWZmKKj5imhteI61nMOtxxPMJmlRKtw/eUT4TAWL3Kg5DOkkrpi5dkI/8D9ugRWobG0VOuLen7ZbY++xnmnOOhaHGo5BeMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1032 toll at Mountain Creek Lake Bridge within 10 minutes of 2026-10-28T16:38:37Z; the most recent earlier charge for this plate was on 2026-10-19, so T3000 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyi6aT8w6CfVnfVsGaA",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5789,
+      "output_tokens": 196,
+      "output_tokens_details": {
+        "thinking_tokens": 92
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1032 toll at Mountain Creek Lake Bridge within 10 minutes of 2026-10-28T16:38:37Z; the most recent earlier charge for this plate was on 2026-10-19, so T3000 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5789,
+    "output_tokens": 196,
+    "output_tokens_details": {
+      "thinking_tokens": 92
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

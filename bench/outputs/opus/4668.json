@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02248,
+  "durationMs": 3182,
+  "httpStatus": 200,
+  "id": "4668",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 8 pinged about 0.02 miles from the Huntsville Flying J at 14:21:32, about 3 minutes before the purchase, and 27.1 gallons is within the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3AYKEAgTGAI4AUIIdGhpbmtpbmcSDOZe+UWVyOFDeZNuyhoMEGs73aSUStLy+5ykIjA/8T0qkB/RIx2oIUjXbo1dEWogQ0B9gIl1V6jS7pDUCxa7gOUjeuexKf0hXaKahYsq+QWz2CBmv4y0pwiruPTCWeFbtnyeFkxpe9LmtXXkISM2l6CXLyjFHGaQHwtKJDBWCCoSpcTG7gtf3B2YoSdaMBFbIaVLUGZlLpIBgjnfQvOMgjY0EqemmaJU3F4S9xlnnXJFC7Nj6wvivF/pyEmuuOmd6G2ZFWer6C6seeQmELa7AsX18NM4SQ8YeCg4zmmtBwg7NPqyjHMu5qiGVJoNbAXd2VefUaYen/qUBagHq3NbrMaeGlMoVmge95CNiWoKHZ+dzBVN2Fj0suiajuTHTCGxTV1aLvrRxOyGFOrLj7c+0vqBtJcMeTadOWLpf7E+zovqUTeZfbu6MTSXfaQxAQ2vL/6BI676ecWarW93jLbaD1NVIVstCfNpTR+uu6Ii2pW8007fed1IfBQs/6z2BoUO4Szt2gRU73W6mUglZjCkWo74x/E+LdAu4499EFgARfay6VK95wL4C0EqiSdOtIU44wHVJF50ot7ENObOj9pIf85r3DBMH/+VQ5uh2MApykAUXZS7VrBZJold5dhrC5DWJxgb5BrEJIvpJxHbybQXdM+zBgzyWHNen97LCtyvCp8Cn1L+/VGAUVBfaI7jIlvHFPg0BrL+G6U1zQuBGKFZARqdcTlsXUlI/I8S4uz3Ud8GFuBDVbOW7uOYIcpFXbsPTsaegwAnx6bkHYLSgOHvQvC8C+/+Eg1CA82MIFBbwm+dvzCWutTgIR2mhJgAe4JFl3wIqFhMnc6fD62j9KwwreLmRc/4oB9/8NB/Db5OA4CNU3fYeAsp48P4iHSuAt5/lqgOEbK5HzrbYulPaq9N0quiIXP8/iMmMgZEycTrnt3G3sD0MIlmBHETkJrFIsibHRBP6Asy8/SfVQKCZudMw8ptFBPvBO6CyvTjQ+QFwXnkFa5qOOBeeAbSSDoSgUbzj63u0rww9s8gvnuW324ykDDcKwebIbLkDTiJxDZJ5MOK2Xw3G/86lRjsNUTlI9yTnSI9TLEpuMq2Ha+8WXvLHQe2Pg11gmWAmxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged about 0.02 miles from the Huntsville Flying J at 14:21:32, about 3 minutes before the purchase, and 27.1 gallons is within the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzJLa1xYVF2FmfncBUH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4380,
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "thinking_tokens": 145
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged about 0.02 miles from the Huntsville Flying J at 14:21:32, about 3 minutes before the purchase, and 27.1 gallons is within the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4380,
+    "output_tokens": 248,
+    "output_tokens_details": {
+      "thinking_tokens": 145
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

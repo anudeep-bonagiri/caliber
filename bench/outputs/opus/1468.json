@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016968,
+  "durationMs": 3313,
+  "httpStatus": 200,
+  "id": "1468",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "At 19:00Z, 12 minutes before the 19:12Z purchase at Pilot 1115 in Waco, truck 19 pinged in Houston, about 160 miles away; it sat parked with the engine off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1019."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsQYKEAgTGAI4AUIIdGhpbmtpbmcSDBoR3jftDT3jlUkSZxoMDcweNiXyoz/SCrXYIjDz0Vl3vBZbjxVs0mdRBGPnltmtlXtbFurQAmzg4DngvF77nfuUEA5+d95PFpCwaqsqzgWRgT3iV8EHFISdYPLRLziqs/BW/y6ZBZEi/QokvJ+HrNGrdIwsUZuSs3DbOxKMuEZVc6K40GLQIdALPLA2kpoBkObmH8dRg01cQUXT7l257jlkvy4z54p7QtsvQu2Mzys9HhQvEb8/+OtIzlWc6zOVYLlYvCPUv6rkTUP74MiFAOZk7HBEuNWX0kwwo7/zWUtSFFVceU6WLM4TiDqa02WJ/tO7aEWGGpu8P5BEx2Ha4R1EKUtejLMgnr6XBw9pc1/N1Zp5o6qEpYJER6t82wFy/7LKPXXGPoMWs/jFSdtCFXyykVxDHMCETx0e/vneu81u2/xKzaYWvv7vepIWs5FpLsjDiuG4dFkIZRJRRyeZGmQ7aGnRk1MHnyHUsxLUpHNEK5AZ/b4IlldDK2jFcbFarD8zqXoEIPyv7ggG3UX7Ah5kER8qQEWQ9vEehQgNLIOm1U9eEwv43TDxLBiDw4sRlqtPkRLHQ3QmOD7J0IubokXGFzbv0MSSI49EaxwycQqarwRv5sxsiZe5lVoJJb+wGswGCLOJ/kQ4J8E+mKN6ALGpnMoBixCjHqlt+AeZvkNafytunHzpkxx7CDWNSy0EtzRcLvcgBsBRKMB4Ja61RNRI60cv9nfW95LErMNuXXBIVx48EpscBbkfsloFDwAaCJSoOmNw+HaNLdUCSqKeKzZ4ErG2HB6iZMXq1KFghH+ZmDTVIRxd/P23ytPaXN7peukzsQ+9ZWbVvgfpP19gfEL5d3OfdpoNPxxCVI884ic/EmLvgS8YUA9MonbmU7J88rfHpTG6B7agBL+tssbHT4Dn+cMOXhV/XbQ6SbgUKuSvAcWtBNU72rbnVYJ7wE8I58o37q5Ng2D/8lqYJxUUQ4CYWuu5pTd4BPrEUaEu3vNy9jz7qKow3h6bit645xphJOS9rdZ+4AFsn/3ZqYuCtM8EbLXjgpkoHB/VUTRgGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At 19:00Z, 12 minutes before the 19:12Z purchase at Pilot 1115 in Waco, truck 19 pinged in Houston, about 160 miles away; it sat parked with the engine off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1019.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyo7jHtcDThpwwkQJrc",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "thinking_tokens": 117
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At 19:00Z, 12 minutes before the 19:12Z purchase at Pilot 1115 in Waco, truck 19 pinged in Houston, about 160 miles away; it sat parked with the engine off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1019.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 250,
+    "output_tokens_details": {
+      "thinking_tokens": 117
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

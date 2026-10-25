@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025168,
+  "durationMs": 4346,
+  "httpStatus": 200,
+  "id": "5595",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at the Pleasanton Love's 228 station about one minute before the purchase, parked within a fraction of a mile, and 63.9 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzQYKEAgTGAI4AUIIdGhpbmtpbmcSDJ3iNCT32y8Jw4vuCxoMvs8pv/uKqvTS7uibIjALP8qW4ESn9JPLrfGOHSZdIl9vEKZmQz8/gNiapnSvS/9Wnv6XCq+7r0uHTrfebIQq6gU4Ijbv/lkEj/5CWMkrCev7xOcBslK4k0CCQfCoNpEnO6WWKLcpoV9OaGMsG1ChudJ0DgawYChiqbD25SEnqD4vsa0wKQHIoDNZ2VzBLObRFmG4RDNrCCwcIZ/pk/CzEnLSTNo/Cj2mKaOeLIbnQQAtqV4o9v0n+G7yGlwx0dvPOjYDlJ9A7NnNhlIJFA24465kOA5cX3Og7R+dGNZ/g9lGikPTWQ1fxIswdqUeQ9tF76JcjFDUdVRBb1daDGNl5hNGMLHlzSQJ1811TX9rTUHtuT9X3oc26uC9fVfm8WRl6g5QrShcKgZTcQRSlVwNzGewuC3djeqHU6wzz+CL2VMYltP1RAObf+aEyToeZufKZ3XiYILIgcsL1eJ4P45hKWydY1geCcP11k4mTjObS24joGJaNEnNvcIpSplZHT/xKFpHSM9xh+pJziicv3sB5Oa7JDGevkTKV/8DkgnkEu+UxgOvSobyipOjJAurnZg1btR1LlSMhXrOszFlYk3KRa3k5q2JuVeeYRWVKUIHQRvadnJrR2POZaNZxzMUFwpMaHAa+5FfRzYEWIju/OxyGbRsyhPM0fq0q7DZqLrAmi1HDLphxcFTzNpEkwh7f6nk5yze9seSeCg063oMlLish1nBvMcsXBbgkDNkwqsC2Uih3eKgOWOvZ0eXpQZgBF5I+MnSC69VXP3f/RuQAqTdqRFiuhQuhNcACfC6JIJv2jTngEZBHn4LM+zU6WummC9g7xYDO6nzqytCC23Rm9EGDeeTnPjyhynJLXsdsarkfsO8gC766Q1LCbBY18a/bCHXKfQO/7BzoCitTDe2x6rqLLXo88OFBQjIvmAwmpbslnJQIOeMC9+Xf/mBfF/yewotttwIoTr3pj7A0bddahSKgr/IdiiaI/9PAq/A/Yc3LD1XEL6oXKoqcFLskiw/hq4N49zEtRfFoj1LN5tO1jDgW6P7/PUF12J7EtacA+cXzdxWAz15xgtutAgTkhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged at the Pleasanton Love's 228 station about one minute before the purchase, parked within a fraction of a mile, and 63.9 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3EVE9vK5ATS9dsDMW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5182,
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "thinking_tokens": 124
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged at the Pleasanton Love's 228 station about one minute before the purchase, parked within a fraction of a mile, and 63.9 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5182,
+    "output_tokens": 222,
+    "output_tokens_details": {
+      "thinking_tokens": 124
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

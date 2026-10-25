@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.033304,
+  "durationMs": 7182,
+  "httpStatus": 200,
+  "id": "2105",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged within about 0.03 mi of TA Dallas South at 13:05Z and 13:20Z, within 30 minutes of the 13:10Z purchase, and 48 gal is within the 132 gal limit (120 gal tank + 10%), so no hold code applies; note for dispatch that the truck shows at the station at 13:05Z only five minutes after an engine-off ping about 4 mi away at the yard with no odometer change, which no payables rule covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuQsKEAgTGAI4AUIIdGhpbmtpbmcSDMAS53fW5JRzKMCIsxoM3usQsdw47JQDq/YYIjCrnL6BjTOm/K35IGd+r0RgrdBuB8YiU/jabyFzoV1Xjh7fQ+469J2fxrggJLOlH4Qq1goEDY+hOsjJHBIau3XF+OvlAO1v1geE+hvDjwyVvR1Plpxfl1Br3V9TCBWvgcpnNQDG5w2gKKKtUW6FrCDxqqLL9f3c+X4EEWnMg8zil70O0xS84XfGVpODm0CCzYNKC9ko4G6XWLuUfr6gekYnRWBviLLSjQl+681lC8aTxlwhtGTQU3O1omZtpXdwexYzbms28KreZLA5EgV5J/dJzu5LZtsGcsdozqirzdP82qfDKHiSyuyXKRzRmUtHPo1LXUlPzfzbFIdiOpfrVUargov/2Ps06/+121R8ZL2yCVXZPPl9vUBOiBwjNhA8FWm/M49t02fQn/k9yQb1exanPli3k8bLaTlDsCUIdTtw3fMFR8Zmj7fIOT82w1bzY4DN0Op0UXqx5S1blMKvGbTxY+20RrBZWZ/3o3+vPGup94UJiXoqKm+euexCojddtQ+xj1anTT3KaRq4QTLFjs+eFwFlEgxFD0B1nO6g5NiFQSn8oX/xytgirqnXaRxmFTcTAq+6zyp4P5fEiyhjZYkrlKjjAFjI9WSchW1gsM0jttFlaIX1j/2gcoQUbqg0+lMLSVMEFDB5uRdOvY5OOkeZyWD/ip14TuyxjYUcpyeoPwWi66IbFoy0fq8AQAcUKPQHJOGaasJA4aH1sRofZIlsG5ohE8R2QY9O2ZLDXhRYwQbEYtkJMo45B4L8K+TZ3wiS9P9wTeHtW7EN8Xa8jh0NeVg2sSS1P0E6l4YH2M34Pg1ypVmrSYRl14ok3okw7rDOeyf0mKvJtvJ9EKJ8dcfquqmHH8QYyMcChH6I8C/lbEa1mpEjyvWloBSLdP4kz4fLbBIi3Z2OeEm7LfqhgF/TlU38YKMQem4IFg51FXZXeykECc7g2oiO+pVopicU0XXwVl34DfO/IF6oc4gU+A2hb8sPK3+iUcEVAcVxKl7eMfyfrcyP25HJTLIDdBaiRlXvmBKQxNMB9T7y4ToBAtgBPOKP6Rn6NnotstPjatQwi0LcpwcPYNorEdsuojKIib2BZzprb/mSK8BmSoZTzfjaqYuVS8G2ZpTBNA5jxnPrUe+I5GaIyn7jlGJ3pu+VMEL24FA7wk8ZEMyphpYkgXcK8Ab6aMQv0U59tNRTxgXUOa843t+V5ftvAlOzEpIHNXzXLmKKm0GKmpNpe/1VHZ28KWQh7FJdzKvbjWqk70UtjUn8HltF3Ug/Jq4PxlNYglxQ11gCeSLk8AELPPAkzFmao7p4rD1uUhGETOEwnhmV9isZG5akitAUpA1M5bZ6qeHTHHR7TbD1YKF+clmx9xnHgiV5iDJO/wCwoT2n2c/Tajx3e0bZLODbgGTbJ0T1v512F/yMTOjOJvLbv8v/VT8ShDHe2SXSfCjjO94oscYGKD8RAOOtUnRZEBPXG4Yh65ZaGsAzAQ0/taaXicxVHTsvRUPrmCBYgdyXfNMNKu+Vu5r4F58okFhLzzZ9RUAjXF2yd4zMMKUw9G/xZSm7LkqE7QST3i83Ba2gu92mJ4an7QyRiSk2Tb11jfHG75DdhU8Pr/7eaeGKXHjE+mEZ5lHXu6viadfbWbbTHw+0BSXyxXqnuGZsVeOKtDGlMnflPMOfAmSVHaiC+Kw5skZvhXR8a6pNHkBGBhz2q/qI7h4obDBuo9s1qL4goPMIFFw2RQk5AsR8zQvUkMvkzCf7qQv5ZDA6TLn5l7o8NMejAnWKB9eOwRL9ngHDGQ9avnkTX/GY2M4ftcU231+maUSCn9PTvIHJNjCb2hSEDUGCXwT2t4dK5nFT8aYcu28xPYvNEjwEWt8jxhM+RUXyZ4Ebxu8Ib6jDBFfLCLL1GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged within about 0.03 mi of TA Dallas South at 13:05Z and 13:20Z, within 30 minutes of the 13:10Z purchase, and 48 gal is within the 132 gal limit (120 gal tank + 10%), so no hold code applies; note for dispatch that the truck shows at the station at 13:05Z only five minutes after an engine-off ping about 4 mi away at the yard with no odometer change, which no payables rule covers.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhdCAfUhpwnFEzLqcp",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5551,
+      "output_tokens": 555,
+      "output_tokens_details": {
+        "thinking_tokens": 375
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged within about 0.03 mi of TA Dallas South at 13:05Z and 13:20Z, within 30 minutes of the 13:10Z purchase, and 48 gal is within the 132 gal limit (120 gal tank + 10%), so no hold code applies; note for dispatch that the truck shows at the station at 13:05Z only five minutes after an engine-off ping about 4 mi away at the yard with no odometer change, which no payables rule covers.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5551,
+    "output_tokens": 555,
+    "output_tokens_details": {
+      "thinking_tokens": 375
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

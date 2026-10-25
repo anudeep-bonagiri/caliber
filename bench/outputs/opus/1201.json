@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028576,
+  "durationMs": 3551,
+  "httpStatus": 200,
+  "id": "1201",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 8's nearest ping (15:25:00Z, 4 min 20 s after the purchase) puts it about 0.03 mi from Pilot 1126 Luling with the odometer stopped, and 63.7 gal is under the 132 gal limit (120 gal tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwcKEAgTGAI4AUIIdGhpbmtpbmcSDJ04WyVCGMmkBCFlgBoMzLhgvtkFSYlJOqKfIjBVIqcwwEruY/r04k3B3kH9+P4SP+PB2tOfZxuQjH2KBQuvVF+eBoVZn+qLFi7kQT4qtAYQ7k/vPIoy3Bj92ZX3rMIgYBmPmiKnxvRjEXi7koY1Rog9FDipQ/OM1798uCrrfCOmcpjl2KFTBp6h2JHjTlJmpQdllI0YxV3y7NW5uzNWhMeG+KxRyuub3g7X6fsNO/ELrJFReHzvcWsECP32EUIbtP8TUv1vydYtDPnw0wkvRhKo0DBJ4g9hTY883Jf1COFlkSrnPKQ//H6OKPwBwPiyHFI/dXtUtN99m4q99KdCYLOi5oCO+N6jd0gqEehjRllTv1soXOYS4E5jWxwuBokeU638SjDidV+o5ugPckjxcqZEYFQiU08TBqEz+/CeT6FrlWuWN/ioqJVrXE4vSttkd/74PmQL37q/kJxgVKHpWePgneIBBuRU4+JeXgRJ0Sei6gN5hvC9kqV29eFBI8wUI/fs81DCm+KlusCNtleI/9UNWS8ZzHPzEAVWx1Z+0vgMpwWpkpurr1BzoRagpjQGy8Tb0EZVNuCPEYA8aBIIdtWg/konNvrVI1TY9PabwZUbWF8VkFkSFvB0uOH6zCzUSK5yDgms+88/N3gAiooPzm1d1WiGvzZ1etE5nv8Dtl/r0fjOKW+S11uUdruru0fn5ENoxlvkvSFjg92YfYzGwJ3bzIt5AHHxodZbdqMW3XSVOhdlKTkbi6mJEgcTc+S+BcZl0q813dO622/psclSIO1eH4GaIVEfTyoJd/UTUBxkYSOHpldBmZ5PAMMxUG8xc8qmDTbfGJxB2YV6ZKsMT5zS0a6Qv7T0ttXP78sgOurViGUu+kK3gm3/7BTjSbuXaQwXl43gYVZ6n+T4TQZI5KWvpUQFZ+A25tt/NNhL+ShGf3X6iqQU9eanaiU/aYoWCFlqGEL9luyAOV7BH6kZ1M1yqFaV+qEpjSboAA3u0pZ+oOYNU57VFyMgDAPlEI5+ZbFq0T9KduZCNYfY8msBZW+I4EBaxYHU69e+5H3wWO+7iWEPw4YWWRTX1/ZitUiz9RC7iKnTL1spCo6f6Z+7U3IW2w4ryttBLlwJkU8WGWoSaYJno1ESw03iseoNLQSyzZHRmIpFA09Yd9KvQ5JUBdgYLMwwbdcDgaLcHKwCDZrU3OxmGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Truck 8's nearest ping (15:25:00Z, 4 min 20 s after the purchase) puts it about 0.03 mi from Pilot 1126 Luling with the odometer stopped, and 63.7 gal is under the 132 gal limit (120 gal tank plus 10%), so no hold rule applies.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7hVoBeMaUPaBjg2RW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5619,
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 177
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Truck 8's nearest ping (15:25:00Z, 4 min 20 s after the purchase) puts it about 0.03 mi from Pilot 1126 Luling with the odometer stopped, and 63.7 gal is under the 132 gal limit (120 gal tank plus 10%), so no hold rule applies.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5619,
+    "output_tokens": 305,
+    "output_tokens_details": {
+      "thinking_tokens": 177
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

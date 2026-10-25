@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02402,
+  "durationMs": 2779,
+  "httpStatus": 200,
+  "id": "2413",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged about 0.01 mi from the Wharton station at 18:35:00Z, 15 seconds after the purchase, and 22.9 gal is within the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvwYKEAgTGAI4AUIIdGhpbmtpbmcSDF6bYQfaXbOr2IjD3RoMiTlgIDMHj41EIIfmIjAJRGai42Q+qnW1s0p2Qq7PP1Nzm3xIKyLONjOgKjj3T/+XqDTPua6DUnI3fyj33LAq3AVFN9w1o27LC2lnKKHuHkdtPIFUCj3L5yQkcfYsLUn9txB5RffNblcBbEL0KqIqndwUS2x9EC/xPexq7Pu9XUFDjbmoDQQ6ktMU6p+ORcPEUv91mev/+LxXBNhpRcqw9mUJGLQUzsfMP77zrpVNfIDA580sl6D6bYTrGBlp/ZRkB8feLjcUwlf8QjHyiEKTj7f4SRfeloWOAr79gfPpJxCbtp8PtCtiUK9z0i1mrMfogH6hF6ekqAKabbd27A6RwPJ/W9x8IlWNi0TSwZfzUVibC8AAjS95fmveuz5MCe8FsgY5WUuaryk2WrRFSya5idVxJy60NhbI4H9kkm/CaJEDOMbRRgzNqQuojQzTnceQ4iJ7WdHsw0U4Atro2llF3fEmr5Uy8Gyxds4+ObI0Xg4z0ewQ2uDjc9U33sHbSffds6Omj4uMmZhkwBUWR+YTcYwDef71bqPhblnv4Ae+k/iV388p/PUjeVGpaMVINt0t8RGxa744oda5y1Cmt+9qnnZLLU3XKXDTiFrykMVkiKQFMLMVSA8vUYy/nU6L/jMCBtrwQRiycmlmMAwukqhKisN6rjsrUNWocPvtXHHpxX9Gj4wTnwo7OdVqqXJFpa1wURCeP2bJX1ly4Fvup1UwiwZmGwvfI4jTtmrHF+yBg4HpPyfeGkj49GCiPmtbUnOIf8AGCazSh4ePC/YSj83/Ll5oNKtRccS4G/+yPCDIXsIVE7/JTzkxRFonp3Dv+hdYjxcBs7ckTdq+25qRV7xR80Sxd3lCtsdvt6S6fOEyIpEu63/GERu91oTK45D9y38+H1X8LQBpF/8vlfyi6n5WL84lAKxw3qxysv9RyV7/uwbfl0+N6Jp4W0KV/FlJccflYPViSeEfOyd2wCPbrvD3FSbK59TDlbaeuStp+sdSOmUY/AKwP8zvpN1vtcpUxPBtYI+kpJZTY4cM8tH2+pjwvttCwJOfTVV6JMOykkEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.01 mi from the Wharton station at 18:35:00Z, 15 seconds after the purchase, and 22.9 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynLZBiNdDYaHnzbnvQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4890,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 128
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.01 mi from the Wharton station at 18:35:00Z, 15 seconds after the purchase, and 22.9 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4890,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 128
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

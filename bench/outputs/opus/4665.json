@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022452,
+  "durationMs": 3624,
+  "httpStatus": 200,
+  "id": "4665",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 14:15:00Z ping, 53 seconds after the purchase, puts truck 19 at Pilot 299 in Corsicana (under 0.1 mi from the station). The 71.7 gal purchase is well under the 275 gal limit (250 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwcKEAgTGAI4AUIIdGhpbmtpbmcSDP+MDMbCMrJAcLOEqhoM53WNF31j1Z0pmYG7IjClaRopmrHXzr3nmKd5lcEZLoEcmlYswH8kawqO+EGiKoOuwFQjUzNlS7oi1ceX46sqxAZM9Xhx6VuGqMRgHDiW7+fPGPei9XPM5pDjypLYhoTD8nT/yqNKyjuxrdb1UgjnHpFMBCLy9reQM1NHOflb7U746IUCmTrwNbnRszTQs1otcwoU5O1dV1Rdv9MJWZ+fjcZLdv9a/u9gWHF8P3Y0H4dq70bJn6VPT3LzwURgek72QCu7rH03Gj7i87FswIC6EmE+ECPb1UM+3KTIioiet8TdTJ+f2i7tJzgFnr3oZr88gRMmess7BASRFDuXCwgaqH3SQIgb9kfm3wBW3K2SKRf7u+uhTTbOsopkEqfcOjuedGHHlAK47Rsx5Kw1P4118EeI99yxlsJ+NmSzR2DSwAixkf9Z1ngnfKm/BrtfBfnaKQdn5FxASHPBhAbdLKLsfagLMubASN8apQzMDTZUXNa2x00YvpcwQOU/Hucc/leGqydY1BO/2qbAkJ6UuWgK/0SvG10FLWEa4OnPN6gZtlnzhDycYvPjpHdXdoQlUhezHL5l8Fv/SVdj1VoL8xh20q9XCi8ZyUVBfMJyujy02YgtE+E0Iq9Z3V4s4tAORzhdoEAzNBOYqIP7iGCOfEwhuowlF/eMpJCZQETHmOfnG2h/Gz/7dKQm3+qWUyMScniOdXECt9EkPyI/rVU+eY8kHkPkw2YLmELHhwLxwGzRsqXuO8gxTLnUfcU74wdIN+/9xD9LTcYqhCYqcqIsAugSe5CZbD50uxigf+muDDr8pbxqsxc36q9ILy58dBb+s0+RqvO2XrJIipo6ePzf0SdJZ6aiA4t0FSQcSL3ACPxmsYm1CHQG39YbQAUU8qKDZiN9v/VeQj+f8/lI0iaGdHmcwD4gfzE9gkB+1mwnql54x93MAZHv9NvltpNf2T05ygbfJmcH7AEJNuCppcqzw8NTtDkAeods7aH2EUtgdUkGyDOC1ZHpp2+Drc3G7GfGY0Oe2OcuyJUA5/QYLQgQw4NdtxlGL9066PfNH3Xv/q7HRLmuhFCPNLDTdpDza3g70islyeB8pmbrWHVlGRrHqCzFEEZCQXNxgPCjWxbT37AGQ9HLWBcV2cwoQDT2BeKhdIYAiXhkxiDA7gkiPwup7Gt1cvF8ZkoWkQrjGA1nwjEeIcJ5hw1vKRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 14:15:00Z ping, 53 seconds after the purchase, puts truck 19 at Pilot 299 in Corsicana (under 0.1 mi from the station). The 71.7 gal purchase is well under the 275 gal limit (250 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygoK6m9YWzYh5cRrg5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4158,
+      "output_tokens": 291,
+      "output_tokens_details": {
+        "thinking_tokens": 180
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 14:15:00Z ping, 53 seconds after the purchase, puts truck 19 at Pilot 299 in Corsicana (under 0.1 mi from the station). The 71.7 gal purchase is well under the 275 gal limit (250 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4158,
+    "output_tokens": 291,
+    "output_tokens_details": {
+      "thinking_tokens": 180
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

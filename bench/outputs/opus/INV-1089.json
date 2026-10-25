@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014684,
+  "durationMs": 3155,
+  "httpStatus": 200,
+  "id": "INV-1089",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy trigger: no earlier vendor invoice for 4,282 cents, no contract or PO to compare against, and the amount is under 5,000 dollars with the bank change on day 18, long before receipt on day 50."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/QcKEAgTGAI4AUIIdGhpbmtpbmcSDKpZnLR3j05N0t7UuRoMYKDk0d4jqDWz7dk5IjBngInmIXD15jwO7HRb+tCxYUPH9jzZM8naCcxYlfwaNt9Da6yh9GTNgd5H+XaJNVoqmgfgZwMfVRwgMp5flmenzUwXhhtwZOCcUQ5OM384xGOf2C0S7c+g3vxdocC6PjbtT9Fo2JHuOvN3FIKodAZBicSPqEyzmoW+WxpGnWoeH/gMdXvTSPDQ2osdLLyulO0IiTnBJ8yF/9qSj07W1AlhLcJCzYDCM9wjWrGGjqxXMbDeUBe/hRkJT0Bd5n6B79v5Mqj2zwezsD7oVNx49kuG5wnvMAOh+nj+hi7sw0WZok8iC6SHiWUQhYbsypEYxKmrCWhJRBDfH0pvMuD23GT5yrqmib/vWso9pT3Ed06zkrqdmx8n5oLvkqmcj060ZgxB28ptcu/Sq6rz98g6gregz40sD8gZcFUZFSXuNqKYm95f5kXSyfZowa497q0dq2oiiW355N+hdXKhrckpy0nrJnVrfqHZk0Ov3KqrZI0YSBR1+lpGqrrwX8XHY6xYX96ykiEPYtNAdYN8L80AiJLR6b6u+smeNoaXeONmd4gFnmRNF6jgDMwIzMuS5mMow6PCF0Ukm5C32M34q2Q2flpEAt1U23zOU/gVif/Xt589LaYEurdKkxJev2xB0dpI1ohHZuI5A0rUzX8Ysr8fwedtyyV2F34z3jUYI3jGkkJnuIcRciHOsCdqEcHlhylahAnAj0bFsTLKYYRbOoDqble3sKpXwRSKhyN0bW+TTkzVaenjNchgB7JZFLSwxFXA7KZJd2Mc+kY2rCAJ1iFN0urVWTVpudSpVbLJsqqmDE2OSQLzhJA/BUXoNlCOmtYlprJEMqHUvBNHgK5lXQtaEzyFep89ohfimAtBiVgHkRC7AL6YKFl9X/1HT8Uih/h1B40BCEKPbGT0pgdtHAi4pvzCHbbhPwBiaTxEnmCXqaVYQj7yJLohG6LcOV5UWMYLuAIjCwBOouqzF7+n0FMg4FY8L+gK6kOK93ADgACncLM/t+03c84bG0T6DNem3iEgAQJGd8Fu0dw7XJ0lGvfmEBJz8lJqyh7UIj4r80JEHxB6x7ko+3tyJ/jkLM1tjKra9V0Umiza+mj6oLJt1hCYV20i5IwDmjGmwreqchJfV6vjb90oRUJY6w4Q24xQjOhU5FzBKQ5ScFhzcbVAvD7l4SMb9WaJCbvmL99qxIXMKsj/dr2L6pXPPZNgt5Oz8ulEswnnb3yoQqQTU8D0S0QUmkzN6y8uCKQ2P3lNu805I9QB3Xd2zv+0qneNhJYsZgU/wJqMFHWtv13ziKuY+P+TGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No policy trigger: no earlier vendor invoice for 4,282 cents, no contract or PO to compare against, and the amount is under 5,000 dollars with the bank change on day 18, long before receipt on day 50.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2CXPKMwBDic7Hr5qB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2326,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 176
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No policy trigger: no earlier vendor invoice for 4,282 cents, no contract or PO to compare against, and the amount is under 5,000 dollars with the bank change on day 18, long before receipt on day 50.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2326,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 176
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024188,
+  "durationMs": 4174,
+  "httpStatus": 200,
+  "id": "5557",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "capacity_exceeded",
+    "decision": "hold",
+    "reason": "The purchase was 123.9 gallons, above truck 1's 110-gallon limit (100-gallon tank plus 10%); location is fine, since the truck pinged at the Austin station at 15:23:11, four minutes before the purchase."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AUKEAgTGAI4AUIIdGhpbmtpbmcSDHyJ68aAHqEBeiJAvhoMowPGj33VhPwPMJisIjB8tV/mUPFqrcIF2hKOPxMGI4Z6Z+2JyIwn41oxxtXLrzXh8gbUGHv+ZypFjCm1H3MqmQWUi/nkOz2p9pVUB6kz2lyjRaLKkEw6RMz/qiveSVRO7MXlXLPhPT1w6z7oO9fwsLlRKmWQZ4wqOk6XQrOV0Ziu+vU3HgSDUnrQ0CR428QISXoLOg1P1tLECr3OKH/DmePC00oXSBDeM443YA+BgjlC4+A/2t2aKLWzDTLffzTXY7QrgRxBqL7kb2wujfQuss56IBD1c4tm/hsiblOD/AWWWpGmpy0HR0y9JfrlmD5BmnYdKzKNCfMM/NnwEeD8DKM1AixreQBtMVQE9ArS4Om2vtF9QyI+KsYgAdGGHYLSuZfxK868a6KLyfiGK6wspTFohFOAvrzu2P7R/rz8dR9SoCHBxkB+ZI0BW+kjUwh4UkCJqICqBXsi2fcJxQmiqQXFmJ7tkFEleDQww3agXbIv/WqBbtSPBB+0G88Wgj9erwnW2TjuWIcEcVp+8v+jj83SrBmkSefRyVtfUB0IdYlBfDjF99gkFdmonhf6OL5b6lEHoCszetNIL0++mzQG+Vyg6cv9ZcJUoprHiOU9BiShMR/uAW3lvNjum58RyEyV7437odhnslshIL1rmHtkZk1KkooHecVkyBmC7J6iv/JeqUMWgU1kttCmbAAxfDipHNN+toLrxcNqH4LTsWMo+k7rhFIoUImEdCsamC0E1QyEhTKCuNm+vDySDxcMY7NZaHVPMDTvOojHYjWD2NgrZ4JVz3AigIiL67CgRvqcM3kxj04K+WY32V2fuzDuc214GzHGeS8gjZyZfGTEb+eafENMQPFhieaA6X/HFXVMNMN7y2eCpzfMN/RmhKI8oA+tp4U2ccYYT+GM/ftu1EUvXRvyL149YDy84ldU25TIQaEGGp/udCfCfKgLuIlPjQKznUvhn8cBgzsYARgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"capacity_exceeded\", \"reason\": \"The purchase was 123.9 gallons, above truck 1's 110-gallon limit (100-gallon tank plus 10%); location is fine, since the truck pinged at the Austin station at 15:23:11, four minutes before the purchase.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz5P5TjqX8Prm7Sus7u",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5102,
+      "output_tokens": 189,
+      "output_tokens_details": {
+        "thinking_tokens": 81
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"capacity_exceeded\", \"reason\": \"The purchase was 123.9 gallons, above truck 1's 110-gallon limit (100-gallon tank plus 10%); location is fine, since the truck pinged at the Austin station at 15:23:11, four minutes before the purchase.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5102,
+    "output_tokens": 189,
+    "output_tokens_details": {
+      "thinking_tokens": 81
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02342,
+  "durationMs": 6461,
+  "httpStatus": 200,
+  "id": "INV-1082",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: INV-1082 matches contract rate 36800, PO-1017 qty and received qty (1), and no other 36800 invoice in 30 days under a different PO (INV-1070 uses the same PO-1017); bank change on day 71 is after receipt and the amount is under 500,000 cents. Note that PO-1017 (qty 1) has already been billed by INV-1038 and INV-1070, which policy does not cover but is worth reviewing."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsAsKEAgTGAI4AUIIdGhpbmtpbmcSDOIAqH7LNXOOjODfThoMB7f37XFsAJvPs6BqIjDP1lTln3ynny8y7C3SD8RRRfyzo53Forca+aLYV8VZ1bYFO5a8yfe9MM0sscHB+hcqzQq6CyCR9GNufP1ucGCSfF0SGNoSB7d9mqad2QRxBZz14CiD3qNB9l2CqFk/eAg4zRTCvcFHfKq5z+dpWKm2r6Di9QDxnY5Fq5QQuIqNkiyThNtw1EBjEKQ00iSrMwLJryXgEPpSQPjXHeaqzYCZvK6SlNHC1noZQVmtqAA+/vou3SJmCqAcusZVgBqhoT+eyhMYo0dh2Y405q348gjrKs4XsptxlwVxFcRaFsSHgvh4O2qIINZ94pFnz0tXLDv9FvcqFuKMy5lYKH3FL/yVTd8Isy6Ab+xEjvCM3Ue96iO2XqPuOyuKM8aKN28H8M4WB3ua+z9O8JONSJ3WgCL1qCxmURD52WVaK72LEWjHZnWZOCleZsBYgIcARrV7Y7ankqV2LS3G9SHoj/dEri79dhKzckwnFl07GMPbnt+KOkBvoZ/S17K+5hI/PTXCYQEvrOdg5C/rdkGuSUk7zKvKqz24aOEqOiMbShoCKE7gXEuuCYE0585tY35fVCzPhOrytVnPaf80BiFSYG9MivDOoMq5pxuZJIcetSUvIqSOs4sk4+4ZKlGPs5xoMvjI1nnmpjp44yax1/v6Pqmw70ijvsVXLFUlDpbhNFEU9eeY/TygvNYs9qCOa5SvSPRzU4ZbRE3+QIECzdG7aSiJveGhA1yAlK6FNXhqUD3MQGEknSpfVs1ku7hpXP/3byldEiRwlTYb7gwm3nA/GRj0tccAg2SwmDfOeQr/K0NMmN2n4YSQUWZ7udtJcTbN44LfKis27c6oDn4w3xTFyxLLB11aiVGD1OWRJyZwD4vL3/2nPaR9Uq0nG2/fK7QiMdd/LUlBicle7zboXBk2+nEZA3R7YzZbEqAyrUpV/u/1BYLDI0QPvrZyKzpsFUWYltadyp19p4pvLXQ/wWor2HNH126XgI78sh/mXtUIL9o6sU/+aPBLcASgnYRM/2ibhvVXzAWy18rYllpOK1/kB4Pk9W7jQoLeiCC/89Tcyi6m3ighmMx+3WJaR7VOXi4L2CU8IweEPg2MQKfgLfGcVd5mnsPAkpWV7tlyeTlAw4xf2jgp2w8NYmvkaSbWoBVqYYx7MUl1QnRymJr0J6asnaOie8vfcHlogYILLo00EIj3PflioN3UfrGfeJ0MBufc5oKBDUbgIlXzS0gqKN0c4Dva4rA3IFVEuPYPnyASTFWyCpJekKUTiRRPomzhbaNtvKxrFjKruQPkzUXYjycZsAdiDabuG5MQ/yv8Rl/Wbz/rmPgqvzyzcbSaH1hhbyXiRkEYPEUSdifbU7MnPJiH6CwS9v/AR5kh6fWeCTx7kuizSwfKUGXwqUp5QU+VLwtgUHNaXFJiPGx2b7E7KhgbG0UyfApG0+I/+HqQSMv9FQtrrwVHBF+U+SZwEPyY1dP/eyXNEfxH844VEmn+gd+aalxChE6Huhuw0eD+2uTvL2CkxuUJ8xw3t9SjFNQFHw3Ja1U0J0uBPVd1uQF6V0U5wb1u4B7rJhS5LedAVwi5X8oCPp5Il79oRNtmbsESIwxFlmCFKpfdmZVDfsyPGRO7MdLZFrQIpsvao2IWP4dMYf2R8Y1MuA3bu+DJYqXOtZsCh0z+WD78q0J68+JlIHytAZOFpqTQ7r8nz5OrS3R0gMos2wbt2e1g1QNIyjjRWA23mLQh/GaLHtjJwc5E5z9Iasqa40UK+lpHDp5r4Jr1bPK+hf0SmXzdkSW/Ts2+vNt6r+nBM4Sd382Fev5Tc0Vko+k5GpAJweN2v2ZIDmTG3ymBl3z8oa8bwlHXNJjhwwSC394ghNi0ZWMubuk77fMJhpK7BOKOGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: INV-1082 matches contract rate 36800, PO-1017 qty and received qty (1), and no other 36800 invoice in 30 days under a different PO (INV-1070 uses the same PO-1017); bank change on day 71 is after receipt and the amount is under 500,000 cents. Note that PO-1017 (qty 1) has already been billed by INV-1038 and INV-1070, which policy does not cover but is worth reviewing.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxZpgdgffK15ENzBKt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3140,
+      "output_tokens": 543,
+      "output_tokens_details": {
+        "thinking_tokens": 373
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: INV-1082 matches contract rate 36800, PO-1017 qty and received qty (1), and no other 36800 invoice in 30 days under a different PO (INV-1070 uses the same PO-1017); bank change on day 71 is after receipt and the amount is under 500,000 cents. Note that PO-1017 (qty 1) has already been billed by INV-1038 and INV-1070, which policy does not cover but is worth reviewing.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3140,
+    "output_tokens": 543,
+    "output_tokens_details": {
+      "thinking_tokens": 373
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

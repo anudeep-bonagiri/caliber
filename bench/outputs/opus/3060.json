@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026772,
+  "durationMs": 2772,
+  "httpStatus": 200,
+  "id": "3060",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "At 15:31:13Z, about 4 minutes before the purchase, truck 14 pinged essentially at the Temple Flying J (well within 25 miles), and 36.9 gallons is under the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnwYKEAgTGAI4AUIIdGhpbmtpbmcSDKFUx2my1mbuw0D8OhoMv0/vApHL20W1w2f7IjBVu2I2Xm5hwKfD8i/4KDZMxWonNlcazBC7qqQAwCWRB5j/jExpUdLXlAiIV02SpakqvAWANlPyO/bxN0ZAf3suDzGyRMb7athjKxiKPlXSxsjogWqqa9H+QbAWxPr8eQq4+LC6xjf0nDK8LLY4r6NTRjs7w0MBU8c9C/X2hJM6GK2qb/X8ZmyT1sH/L3iqSqJeAH1pY6YNVWV/HAO6mOSojmNFWMpDql/4zk+b+aFTV9hnrPP0ic7Ej1uziVcOFdIENXwQoxZhwmc2Y3lrRupXqNOCSBBkLmLAi3kE2oMiRol5+krGfVkJtuA03WE7cuC/5Dw7JRDTDHE4WO2lzBLNUD22YqbF+rmJooTBxNkuOGMFpCVFCvNjKjgTjDfwyKKeQC/DS97E6KS6DNlQYSnSwRIN5lKYZJoccq6E6M2YsZ0U6qMJgeOj+AcuQzWM/tw7QBF/rjpIg/HB7UXz4n++EZF6B1RVM45sSvdd9cjzO2hX7z5EsgbAAY6NnrUZGfpzl6DIzeEmERSxmkevycYCMmkyCmWzuyIGzuj5MWeA/s/D03PecOZ/VAWs2YHI66xR0QrPeWGxL3OygrrLt94CpGaAB/5Iu5SdEzqSN8WYLUdoCLvTuuN1D57cat/VL3WtA/QhZtaJOc5VBm3JjI9tmWXl06Wm+pb+mflPOceXZc/pZeqpAoRqYrsn8Xoftyywe29ml+k1qFUxRtRP3XblFIKuxYakeqW4vlGbSebC+M1vgg1FphARWNBjhou6blT3eeSIUAd+9zaKF0J8ZQYcv96uh2p5FcP07Z+ykYzjLMIPRzjAVD0w+tXyLH3hPyzfO6g310dnEk19wv9xx2zzX2PYfCvLlQ/g+zeOuQuoW0wD1Oakn2y71zBhcHHiSCQUHwRKGVJ893iq4KAuY8dJ0l2k/1fCK7j2Ne0hwb4zKOYWLH5fI0XAVcIt+2qUvkQbyOuhLzmx6yi+9qkNcDC/V+ItahkLMlmzEDxt9xu9GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"At 15:31:13Z, about 4 minutes before the purchase, truck 14 pinged essentially at the Temple Flying J (well within 25 miles), and 36.9 gallons is under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzECbBoPVqt8YnVtgGf",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5618,
+      "output_tokens": 215,
+      "output_tokens_details": {
+        "thinking_tokens": 109
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"At 15:31:13Z, about 4 minutes before the purchase, truck 14 pinged essentially at the Temple Flying J (well within 25 miles), and 36.9 gallons is under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5618,
+    "output_tokens": 215,
+    "output_tokens_details": {
+      "thinking_tokens": 109
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026296,
+  "durationMs": 8401,
+  "httpStatus": 200,
+  "id": "INV-1085",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule is triggered, but PO-1007 (qty 1, received 1) has already been billed by INV-1011, INV-1043, INV-1069 and INV-1074, which the rules don't catch (same-PO repeats fall outside duplicate_invoice and each invoice bills only qty 1), so AP should confirm this isn't a repeat billing before paying. Rule checks: unit price 135500 equals contract 10's rate; billed qty 1 equals received qty 1; the earlier same-amount invoices in the 30-day window (INV-1043, INV-1069) cite the same PO-1007; t"
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No policy rule is triggered, but PO-1007 (qty 1, received 1) has already been billed by INV-1011, INV-1043, INV-1069 and INV-1074, which the rules don't catch (same-PO repeats fall outside duplicate_invoice and each invoice bills only qty 1), so AP should confirm this isn't a repeat billing before paying. Rule checks: unit price 135500 equals contract 10's rate; billed qty 1 equals received qty 1; the earlier same-amount invoices in the 30-day window (INV-1043, INV-1069) cite the same PO-1007; the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyk2H2svNFzDVVkbFTu",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2819,
+      "output_tokens": 751,
+      "output_tokens_details": {
+        "thinking_tokens": 518
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No policy rule is triggered, but PO-1007 (qty 1, received 1) has already been billed by INV-1011, INV-1043, INV-1069 and INV-1074, which the rules don't catch (same-PO repeats fall outside duplicate_invoice and each invoice bills only qty 1), so AP should confirm this isn't a repeat billing before paying. Rule checks: unit price 135500 equals contract 10's rate; billed qty 1 equals received qty 1; the earlier same-amount invoices in the 30-day window (INV-1043, INV-1069) cite the same PO-1007; the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2819,
+    "output_tokens": 751,
+    "output_tokens_details": {
+      "thinking_tokens": 518
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

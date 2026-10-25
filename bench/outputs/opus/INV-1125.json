@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0241,
+  "durationMs": 5032,
+  "httpStatus": 200,
+  "id": "INV-1125",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 245000 matches the contract rate, qty 1 equals PO-1012 received qty, no earlier vendor invoice for 248750 in the prior 30 days, and the amount is under 500000 so the day-42 bank change doesn't apply. Note for review: the total is 3750 above qty x unit, and PO-1012 (qty 1) was already invoiced as INV-1007, INV-1058 and INV-1076."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wkKEAgTGAI4AUIIdGhpbmtpbmcSDHXamy2IfGJnqX5XqhoMIFLL93khsQJDxEsyIjCevP44XBbr6YdN/nIJuQeIvxBb+oLhu2ZP20T6aQnI6IJ7T7F5aR79nwg7tq9L3b0q8AhFw7JO4coPBze1jxCUQg/CKi2T28Z/OxViS++SZGVDgIxvE0/c6mZIzPIAFlpR8jeECP5wpzXR1fQYyf/degKaAUOm0FkTIUOKCoAvYMSq4tjQpQBsztVu0jutqibvQTsvsrSFOBuxfIW8DBDEAB8hfI1vvhk4F4C7/SsowgiZ+Z8KPGdxL8bbawxsx/3b/y4wnOngxPr4Ml3JbSK24TH3Olhgv5zWRMc0KjOOANMGYgnPdi1VGhpigiMTnCVdcMvRBsrV+Keep9OKQWhtXVeV+LD7Ct0dONg12D8Cb20hzPnnIN4ZDNZqZ5bUIBvQwi10KzM5rT3gU8BWPahaGR8MIU+Vv/U1Qz2u0XLzCeP4LX8wRltlUxQa84r23NW0iZTZ2TEvXt6uEcYZif9kufb3d2DMV2TdaXvCxPrJiZeWo/RF25wHYRzLMLqnNUz0QZH97SCcYSLYbCxQriMEzLGnkCqgT6rDd8ShpUnZiDs82Yi4IinaZAj+uH+QOKoVIvfFJYDt23R1nH2R5Tq0DQFhrN8b0Wxu1ApL1UHJ29gRtbWrNKEiKb2h3YY4pPbcdsl+sadahVugezR7MNxtAJ36UGYqCMuaWgAYrvmLJS7e7cz02xu04SIlOv+cz9gFE673ClNEBodHGXrH4Y+5Fxr505Wz5JScqT+ajrGKD2TvNFmNOkZDURChDpoZYW2Sk3eurK2HNv8Q75b8T9qE3lY2B+c+TG2Lg/GOJ1EzcHHx8Dk40TAqLfyNmPR551vTjkGoc4PilXqx76KMDEmSUYsG7TKECn2oIBzaDY4f6RTmAVFtjzUtUjxGd/ThYMKKs/GpyGMkXIhhOT3nkPXCzpMtZoOk+IKNnCGxWPEI1mNSuVdtEcgmRWZd0MDWV7uk4gVftdPD+lrVLr6bdYCExbies7EoC2jyy0E1JWntzI777DgIiQkqKNNZcbkrrQxmGYT3JhK/SyFPzq4nLmScGvs7aIdm4bj1ogIBkImoxzC4XDQICG+HSFdxCUD5xc4WzqKcOIZgb20V3uC8HjHzTocev7kt9QKdikotqrOEYuiRPcLyuqxDIvKzR+lvCCCGCuA7DZ5o5b+wJ83DRfBPNgSrkFRmKPufMh2FIeljo5Zl7zN0ElcKeaDKxrZGqJD2JVZQaqyc+D7BDY/LA0/bntB+rrTyz5zxheZSZpEASEi4Ml76lHPg2aOaxxvRXkT3KF6iqFbuNXwFEkmhdwgR8WZMzLtM7SoJnLiMhQSKjagZc0weooQkuZ72UFxKoQMQf+HmoPo5xbwzXHbw+rt7tBP589C/piv/rk9tj0moowIzPpxiqV/bjDH4J2PAFF8Or6NYvZZWoeyiC2cPXeg9uD/WmuS/GET7dao6skzcx0QcSeQ361G7Oe4BBTVRohsXH+XHI51DcfSCahfy0tTbP4GUon9pJEwKrxwRQAiJ9ZXGeHL7lBw9cJTqJ//WGcW8YleJA8l1u9603fjOVIOm++yu73ydZjRQ+6PTBOZfY+2fERgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 245000 matches the contract rate, qty 1 equals PO-1012 received qty, no earlier vendor invoice for 248750 in the prior 30 days, and the amount is under 500000 so the day-42 bank change doesn't apply. Note for review: the total is 3750 above qty x unit, and PO-1012 (qty 1) was already invoiced as INV-1007, INV-1058 and INV-1076.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7xgrcEGwczvyfQaqK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3845,
+      "output_tokens": 436,
+      "output_tokens_details": {
+        "thinking_tokens": 271
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 245000 matches the contract rate, qty 1 equals PO-1012 received qty, no earlier vendor invoice for 248750 in the prior 30 days, and the amount is under 500000 so the day-42 bank change doesn't apply. Note for review: the total is 3750 above qty x unit, and PO-1012 (qty 1) was already invoiced as INV-1007, INV-1058 and INV-1076.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3845,
+    "output_tokens": 436,
+    "output_tokens_details": {
+      "thinking_tokens": 271
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

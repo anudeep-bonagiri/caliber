@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01316,
+  "durationMs": 4520,
+  "httpStatus": 200,
+  "id": "INV-1003",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Unit price 40400 is about 19.2% above the oil_service contract rate of 33900 valid on day 4, well over the 5% limit; also note PO-1001 was already billed on INV-1002 (received qty 1), and the 42850 total does not equal qty 1 x 40400."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wgKEAgTGAI4AUIIdGhpbmtpbmcSDBL2G2E8dcNhzIi3xBoMuqH2ZKCKpQUDOMZFIjC2GhopxfhdTgnUxlefMVJlFckNQC+fUnElFkITUOspHb62/XZrBj8nan/ymVlAgpIq+AcOkxUyYQNySXQLbULqv53v9vOzeGL4igg0wgjxdxbzJbzEdUrUHN75fbvXzN6gVvG383+05nORkuYlJSScWJsZZO70/w3sFdfkaw/jhlY7JQ8qOF66fUWeCl1ufvpDX1J/+ZXJ15PsatW/JnBQt7cAuWjp6klB6tm1Ybi18/VVCd2X2loamRdRdCJAymhRm8kFFzEdnK5ywKIBhnJP8cBVb100mI8es60gic+ulv6fOAPPtekzOmTUTNLAw4AyN/nlGcIr8twMeX8B9Kyxg3DaKq3QlupB1ttX2NIugBESv3cH0Nw3kfftUK+lBOQsoc8D2GAvV+ZK8bW+I3Ct4ybwQ+Vy8GdHyzMYrushcVCFa6JOAj0tcasY5SYOjksWYjV1pw0K2Tx5L0bL10jUZN2++XH/oh65Z0N/8pbu7fdQyCcv7Ca7fqxlq7vtjKDIgCnnKerDNJMf9SOcYErL4ikObbmHyOut/7jo3BtAPGQ1WFVCsnCDRqa5/0A5LAdYghPrd1BosM3aT1oGqL5dJgHPaa2DJ4v7Evm2uFTAFWmMRLEXCon6W4FuMKyMXMGDW/f4k0DBK+M1o8N6p/QSUI/bfKYCOqeDSUSWtXcDWD7lZxseBHyNa+lKWGDNpzbIbsr6IWrpbEUIk1zf1NjYP1fT4nN3+JSkUFpMOVmNe3qz1HtlgB287AYFTVmXABwiMExXDLFe50wsmLKM7jwo5+QBGRon/XjPprzhPyoxtbGeLOM1ViwKNBmeT+tMCWzoMLGiK8+fy+G5sFY8u/rITpWCCKnBLRAvUwZ9JVM7yjUNIRdZNkipSmP3kUQD5xMYdSOTDjXYMSA31VM29ticrN4zhLrkof36dCFXGZTCEmfGiE+9yO2Xa1aydgAlWUqtRQW8F7I3R7FVx5D1HTo36ykUsX4q1rTVbkVGx/Z7RlV3+TKPVj/j0YomWl/thRhDEEATTElKv1XZKCw1CmE8lJR3D7nVM7+tLGaIgQHsWZq16sDU1QlYWx21AIJra9ZXiZFmDLzWNbvVEN0u4mT9eK3kB5LZTuhrN11X0bjp9U//mDDQq3lJGCJC6GUS8UJLIBUHZsz2+QK1BEPbji3T3RIzX+OO+1ii5leSTDfOD7HgRlRN4AiDrcofLzjflNpJYVKySsywSk2BboT1d4zjhOAQ1AC3O5KFBTI+4CBMPKy163GCXX8OuQbHnjlJDdMWDOqsxs2zp9fh3eeebybhiYtjMS+UNlyS3GwQhf8XV7mRmeq3D+j51nnhHKDAD6NjPAXMinRr15699XxjMWgSSuzSlW0mDY+kvlTupsnGoDwOiFKV0U+cgo0o+ZUxbqTHDzqAahUbGC1C4BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 40400 is about 19.2% above the oil_service contract rate of 33900 valid on day 4, well over the 5% limit; also note PO-1001 was already billed on INV-1002 (received qty 1), and the 42850 total does not equal qty 1 x 40400.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7mzv2ze73sbtdsY99",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1555,
+      "output_tokens": 347,
+      "output_tokens_details": {
+        "thinking_tokens": 222
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 40400 is about 19.2% above the oil_service contract rate of 33900 valid on day 4, well over the 5% limit; also note PO-1001 was already billed on INV-1002 (received qty 1), and the 42850 total does not equal qty 1 x 40400.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1555,
+    "output_tokens": 347,
+    "output_tokens_details": {
+      "thinking_tokens": 222
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

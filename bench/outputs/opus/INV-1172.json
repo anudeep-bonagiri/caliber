@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02786,
+  "durationMs": 5191,
+  "httpStatus": 200,
+  "id": "INV-1172",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price matches the contract and PO rate (119,000), billed qty 1 equals received qty 1, and the earlier 119,000-cent invoices in the last 30 days (INV-1118, INV-1132, INV-1159) cite the same PO-1004, so the duplicate rule (different PO) does not apply. The bank change on day 71 does not apply because the amount is under 500,000 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjwoKEAgTGAI4AUIIdGhpbmtpbmcSDB4qv+ucIQ2pLb39NRoMNjOe9dQ1Wn0SaGUbIjCyqfkr3+/11DrKwWu2BfiEnICxOYlZr4ggPd8sa56zDtlxVG/PKEGYppseDZactq0qrAnohFEnvvj2gfPjlUHmZOjKj40fLrBI6Sr4THE/Q1eU7618a2RHBf24hXoQnIzdDn8NtaDEISvS4yZzqR36kmIHzboDS3YFGt8NtthwCPlKGBiZuddzFemmzlDaU9LFjf6DSeoPTDUfloagIT5q1JMO+6oj30u3c/v4wb8SCgBx1sZx59mHic9nQIfnKf83UTstv6Czw0JU8oc9D9U9Zylsc0v5H8yjdoLzjikAXlsXR6HOV3+E0fLocUm1FvVc1bXrtZtb6gWWxgBcAw14BIk0m1icwzk0SUuuF6nzTt1KrQMSfkczcgLg84/TC6AEjt7V1/anN9aEkbOwlAwI4VrqQhq1PbECTI38Ck/4GEIOTNSrqFHxVlaF33ty0qaM6ISrx3Pz5itET/CO7peCR+3v0moqN/vIPHIs3SnavdmJ5q/rb6mQIonkDp4gnzJWDypr6KNp/1znDSZFrrv8PVPJ640DZ8fMQP/M8nz/Aaa+4q8Ha3pp4m7356eUZ2IJQ+j8Z5eYuwcDapqZXtzQ2qrH9a+ObGU8o3HqdVZjrrvKoDdArUEeberYgKW+8buakWPAQXNjHeCCTt2OxyVRajbP5f7vWgUCccV/aMySp5ZKT0DWjsr7lVMR/edOZiO++sNKMKwxN7z2T2L6Z2wpnoupPw1EbCgoe0vK+j/gHvcn2GRovFbJj5ctKCXie+7i4vUA0s4pn35TktdAm3mR3ZDg1Om1XcoJGYYx66ZK05E8abN2xHXfZBVLIyRDBVEPUieXTkzxFzM9Q8z11CqVQoA53BlaiGMmVrFv9hSTw1hUYgkkS63HIN5+do4wVnRVm4MlLfM1uQJNRi+bcSD1TLcImFNNs6IplmOph6nhfZhRsNZQ3EzG9dfiN2rqzLnzYRRLokDzbqy3kxhjljYqHW9ZA9nPLrRH+ogXJLecX7X8T2ED8DGqfbXqqiOk7Z91SKBri3+Pln286Pr8iW8Q4Nfb0jWCdOILETowGs/96MKU9H2ClZH4R36C2wFGD6AS9ZvskJbCNPQEYmdZd/Buo1zdG3ALGNB+eWa8KS1f8FM+eXIPKmWrYc9KVubA/r22iTBfG8372ziEdqa3vZF5omXFFlSKCm5ARR0g/XWMisKMnghDL+sCuQT3rP7cD6lnHNcVNhzHVL/hsJNpwyALnqs8SqT6PCAQcdTVKWVbNiJYilvCh1ZjsjsdHy7ENFa+lvDpKrezfl+Ss6tv8FPac1mJtIjdIZpO+IJxGIO2ephFV9WwmnTfozkX7P4SURTqRjg1y/S4bjHiXb2vQNaLxD8sLj4+3K2N8atiJwHhP7sSx1YYV5MeDy7UJYP3SaN/x9RQZIhPJQhwomm6v2uVJJE6otp51VKQYCeGdb0UC9nxut9qhhfnmFD82i2sgaMmrDYAxnvnlG+kJ1M5NwsaaikWySEKgriNs6ccykEjH1GUL0jqUAd10V6aW5lAHMGhwiftL8KWqtCay9bcfplTfpocbT8rrQuVEnAUD2fz7isLVQjGdJI17vFzo0kz+ZGsSUCqLKyVjzShiq61y+Wsd3NC0YUaIyC+kxtNo9nQ+YD90FmCaIci1JQO6N346xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches the contract and PO rate (119,000), billed qty 1 equals received qty 1, and the earlier 119,000-cent invoices in the last 30 days (INV-1118, INV-1132, INV-1159) cite the same PO-1004, so the duplicate rule (different PO) does not apply. The bank change on day 71 does not apply because the amount is under 500,000 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMEH5q9sM7Kmnogpei",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4645,
+      "output_tokens": 464,
+      "output_tokens_details": {
+        "thinking_tokens": 317
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches the contract and PO rate (119,000), billed qty 1 equals received qty 1, and the earlier 119,000-cent invoices in the last 30 days (INV-1118, INV-1132, INV-1159) cite the same PO-1004, so the duplicate rule (different PO) does not apply. The bank change on day 71 does not apply because the amount is under 500,000 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4645,
+    "output_tokens": 464,
+    "output_tokens_details": {
+      "thinking_tokens": 317
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025284,
+  "durationMs": 2896,
+  "httpStatus": 200,
+  "id": "3143",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 26 pinged at the Waxahachie station (about 0.02 mi away) at 18:40, about 1 minute before the purchase, and 32.3 gal is within its 110-gal limit (100-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStgYKEAgTGAI4AUIIdGhpbmtpbmcSDC2dY/VkG5kE7QfkYBoMSmCZ2MdAJzqxeZulIjCaxQm3yZh+QkGQ5k7EmcMaHbHeBlywexL1/1NVnWI5RxWTDdk4KMgnG7SDZk8MCaUq0wUGOFHkjS9uL1gOk/q3nxrIZWdzORTKfy10Su88m+4vZ0NNEXZqiFX15x3TvkDAyLaYCXBm6NvSTGVKAP6PaDxIy53IKvQHSOvDDXbJXL3zJ7+VGqNF817xFJ1pqdg34yi8QGU9cOsUQvRP5H+RST2HPtuQG9sZjAFW3dY5HISU/7eaghdAW6IL1XbYTyB/GZVz39ypqKRBoS6j0Ly2MJF2XUowvwPUsSoY3zDbmFAopS38qIFSRbZJmAz96MtciANeaw1+mp8rRzmTfGr+4mdbZhAZzUCLbDEXHoY6OImk6aKnjb6kV70t5N4mgSxZuj6BJCwNqSW2h3m6KskEJJjoLE8Yq4krY8mXtn8CgyB9S6wNUcSTfNcDzICVebKEOjbyA6he6b1wy51b3k6Xw9zbA3Xgd0yGwVeH66XhIJ9MeBFfUD0gjWXLwVNkDSdt3VA0iSfVPJmdxmVyYH482FW1bS0sEdIpC6kpkU0e5svtJ7ICH1BOw/RNCPyVoTjoLkJ7MRk11jx1ACBnRkQg+34Jvn7Xd6oUmvtoFF1kGriv4nlDP8pWKD8bpdSDv/QDbW/CDV4pe/5QSN2hZuGFaE8h3mw69zcbDBtrMOuH2YpwbQPeYknsuv29V5pBqIt+ENLQdP4aU+vuDN7roqLed51PY+/FYANZGePJRdFu6KpyZTNnU8jh/LAu2tbkUyTachPhSbZOh7GtrFFFy6cwGQJlQtiDt0GlaDzQh1D6WXL9ysOTTNsOYacfJyDy+6HCMN3c3XGDDbw/q+fo0+O5eUDO+HsG93vM/FuV0hQ2df8U2o8VBdx0pY3qXTZ9HrAxFF4jGEnx+KG7BN9YBaErc9xwlRZWgu1G2BCNRV4c00vapZ/6AmdECsyUSdollvmryJY+mDKgzRmiG8lC0h83erhyNCw1T4HIDT+wK4WKeBdQp8J0XIIu/0GHUwUyjinuu6st894YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged at the Waxahachie station (about 0.02 mi away) at 18:40, about 1 minute before the purchase, and 32.3 gal is within its 110-gal limit (100-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyu9JxDKdnWzq8BuxpB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5256,
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "thinking_tokens": 117
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged at the Waxahachie station (about 0.02 mi away) at 18:40, about 1 minute before the purchase, and 32.3 gal is within its 110-gal limit (100-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5256,
+    "output_tokens": 213,
+    "output_tokens_details": {
+      "thinking_tokens": 117
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

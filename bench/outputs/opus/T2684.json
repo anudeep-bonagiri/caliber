@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.036092,
+  "durationMs": 3820,
+  "httpStatus": 200,
+  "id": "T2684",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1031 at NTTA-MCLB-01 within 10 minutes. The 12:14:18 charge that day was at a different plaza (PGBT-01), and the prior MCLB charge was on 2026-10-07."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5wUKEAgTGAI4AUIIdGhpbmtpbmcSDKiwQaYku6fM+muDPhoM6c2PxxmPsh3QJOyKIjDilKBZeFP9xTwZz4hsFIa+ZmqCQG8VnMlYCyzFRjl9UiwlQfQee3cO+4EaBH+IB5oqhAUVhyWiF8llGOfV+y7wYXuEHGBHsgIJzAJAPMlsNHPih6r0AZ7V8uIVLzhU5B8RgyYS6QdtLorEE2uaBe9rQ8R65QHrbm3for0oqJNrxKQIAt155S9Gyk02WeQ5MAsn8rg3Est567Lp2R45Ltk1JZF2/ha5ER8dJUX80PDAtu1HdCCJ1nYl/XWpOaXpvXvRmMEAfiqdB9qNN1yF3o4iOs4lNVYDZ5DXwe6wcj62rJW5g882A1smsOqo8/ifYmPsH86ZMEcNsaK0MOLdcyvfpzF6hU4KAIzqyDXkhk8c/P4gnsBDywVzSiwOxO7hWkQ58B654fkZjpH7xO9o4vcOpOzu9bBu1HEdwA5CRxepsVD696JL4MgDK6mF1qkcooZHQ7loAo5PIia2gbrJIu7PWjzv6tf948YfdyjK/L36cHrCbfn/VOqHYdbmmw3+DPxaDeUANF6xEQ4nsieGdXiiLjKbrNa0Kvg0HotVZlWQvMfwUUyD6vcGP6LybfVxks8we4LLnnvWUy6B6Rafrc1/tcJ6dzRSZulJpgbc+0rzmZ4gtcdMCfqEdArh3e+0Xofgq/ghbSEi5O+nho46GTzeNZRo9vaa+C22fZoiOmJL3ZuXu4vrZStMfRa6Ho4u1DfsSv4fhr+Xo0cAOFmGdgYBu9Frvp+6GXgvCQ3rHZqwjvNzYE1EPcii+jRoMoemJ9MQLFT4T2OrBaMx+s/er1XWCp07364AutZyhxUpgJl47tz818Ll4GoKIUsSvShT82j8pAvSCUwDEEyU5ixhqnfgh32mrRm/56gkNz3PXWBnpFmi3i/HiAd1et0OIuUlaxZ9Bzt8TLbXDO9Rtehzc6AC6aOo8ey/XxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1031 at NTTA-MCLB-01 within 10 minutes. The 12:14:18 charge that day was at a different plaza (PGBT-01), and the prior MCLB charge was on 2026-10-07.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyq8feU22NLuPQZisqM",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8083,
+      "output_tokens": 188,
+      "output_tokens_details": {
+        "thinking_tokens": 88
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1031 at NTTA-MCLB-01 within 10 minutes. The 12:14:18 charge that day was at a different plaza (PGBT-01), and the prior MCLB charge was on 2026-10-07.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8083,
+    "output_tokens": 188,
+    "output_tokens_details": {
+      "thinking_tokens": 88
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

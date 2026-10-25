@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027236,
+  "durationMs": 5244,
+  "httpStatus": 200,
+  "id": "3901",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 12:35Z ping, about 5 minutes before the 12:39:45Z purchase, puts truck 25 essentially at TA Dallas South (well under 25 mi), and 67.1 gal is within the 220-gal limit (200-gal tank + 10%), so no hold code applies; note for dispatch that the odometer stayed at 331888.3 while the truck moved about 4 mi from its 12:00 position and two pings share the 12:35 timestamp, which may be a telematics glitch."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9wgKEAgTGAI4AUIIdGhpbmtpbmcSDNn1oaQSLMXhLpRL+BoMmeSALN2JFoxEifNzIjB1fv0WxgZ5Yatnntnj87p+2nM7TSomnwBJxqomZsjVCU05CZAPiG3dLu4AluY9ojUqlAh6m2HGmVS39JBPO6XH6VDPV0n779AQpnxJV8Sz3U5KQ5RFxL0lhz7xjU9FRm6hzZxsSn//gU2VH5mMH/uTeMGl218r8wwBQRXeuycZGBRLrnST4jHZH9V49ULPUKM5fJ2ZXgCuxcDBJr5DTjfUQH3+VEcMqzhPDRgL6LejLBlDak9opno3USub+7WbSsgAPkV7zjl6vOY/e5ngrCzLxF/O8mAOzSPPr2u7E0u+IzGaXQli9ysEImfMYpzvTCtLJyYeyKv2D2ZbLkQHMcPAeL6DzOQC+szB6x39aX7KHCVT4RNgzXTGLEO9zAijML3VuHNeSvWV33d0mZx8xv74H58BlO/DLXnm5/fZva04muoVW2sBi4DgWMsMW2zQ55753j34MTPANHaB1xqBTvJhKpV4/8PhkBQXTsbtOszAb+PSmiA1I1ZIO4+1aQBfJYEStRzkj/S4DYVfYx24ppsy8NDsWSwiT6C9ybfZ8EopvzeDodkTFdFju7bYK9WoCnr4nO4Z0hLV1pbMro3H0mA2XKBl/MvdAEbuX9osRJlrH5kCrtnHmRwbINac3x7W+1zJ/rnKYOYtV1MGb2yBb/STvpkSSKG1MafQQ31QdVgQIVN4EU0FuejdlUAp9RYl0xarCmGcD8OGVMhGXWptY6nw+h9QPtO/JsxGA/RyLINjWlp3j21lkvM6sPyYHLsWQzhaeXLHKtxf3uMPxj8G2rfeK38HFxEFWzcDqo+pK4XXWlxOxWaKkmGnH8uo0LKVDEM1y6RqUfj+GBWndO8eFSpW8u3hfgzQ8IZiEePoKtSSSxLwS55uBJVX2WQ5WhKkQkrSmnB8rGMn1EHnnd1nIGgM30KFyBpfjz/IY7ObLvguz68IJYCAqkwdSOnJMXqjTjYs5U6RDuOZstXGAp7U19+sbNmNvEnkljnNy0oHkBmOwOL4hs3kG8bCrAQRXXGan0FuVtwATCqi0TDT/yjan/EJ/Dy8OaHIKZGnhNueXf5YVWXeZHnBVeWyf4tTJlPYE6WBBxllx8QNTfsKPyv+hhZa1Z0+KnvuCIvRRR37WVOzALEL0HnnxZCHBl0x29wsfmfu0AJqniTpdDYhIT/m30C2S0DQ6A8gDF6utf1HAF50qdNP7wgZqj6VZtkfIXHp7F4adbLMemv6A76NRNYSqgumcYgIXihQtgwTSXP0Xg6YMCV9q180lPkQhbk/18YROgSDdZ5/ma/vNfFqD0QOKg0rdkotC8lY+cCVd2N4ypftfxfxvkReR+wQK6DfVNECUb7hEOGuBpqPlQA5ZfJc7n74tUYKcbo6EzUsA/OnWoIXpy90ZxhJho3pMQ2ZI3Wl8GTEPqJAhi+hPeWjY2t7HzQK3ncpTdQB4Tj2c9fQZIiDnCJX6ap5q5kYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 12:35Z ping, about 5 minutes before the 12:39:45Z purchase, puts truck 25 essentially at TA Dallas South (well under 25 mi), and 67.1 gal is within the 220-gal limit (200-gal tank + 10%), so no hold code applies; note for dispatch that the odometer stayed at 331888.3 while the truck moved about 4 mi from its 12:00 position and two pings share the 12:35 timestamp, which may be a telematics glitch.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytCLkArxFZajVdaHdi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4674,
+      "output_tokens": 427,
+      "output_tokens_details": {
+        "thinking_tokens": 246
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 12:35Z ping, about 5 minutes before the 12:39:45Z purchase, puts truck 25 essentially at TA Dallas South (well under 25 mi), and 67.1 gal is within the 220-gal limit (200-gal tank + 10%), so no hold code applies; note for dispatch that the odometer stayed at 331888.3 while the truck moved about 4 mi from its 12:00 position and two pings share the 12:35 timestamp, which may be a telematics glitch.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4674,
+    "output_tokens": 427,
+    "output_tokens_details": {
+      "thinking_tokens": 246
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

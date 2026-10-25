@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02748,
+  "durationMs": 6195,
+  "httpStatus": 200,
+  "id": "INV-1149",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Billed at the 36800-cent contract rate for 1 unit against PO-1017's received quantity of 1. No same-amount invoice under a different PO in the prior 30 days. The amount is under the 500,000-cent bank-change threshold. Note: PO-1017 (qty 1) was already invoiced as INV-1038, INV-1070 and INV-1082; no hold rule covers this, but it may be worth flagging for repeat billing."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwsKEAgTGAI4AUIIdGhpbmtpbmcSDMMpvJYPX+L3kJEycBoMfKc1uq3HHSGh7+ZYIjDE5wFKqzakwqEajF3Cmxm6gkozdlNMD7AxkE4pWZLmQpYyC6E22Jrol9iTAbxZO0cqtArwpCSg9/t4jXXvKxUQm81/mdynBbuYQilJpGG/yd1euLarq83lBT+cjw/nk8upWFH7PvGHjXcD5vY4Cu10d9GCO6efdKUstLmYQABkfhl0lRhArQzhlv4LZyAgs0iPt9kjHwQvIf7nEkwUHRanKscc7MVzwJ8v+UiDQD6XB5CodO2XAbL4um7k8FqQXVRV2uPBrXTwD1GwW+JjQyiYot2qj6Ir+w1tlZbHZFZNNVwE++KIwVUEXOHd98UE+7gktYnrvM3P5aQcMgx9XQGZ7VOq39sa9RY2qy4c4IbNx46cCLImSs2snL/RB4OisiNxFvh7zcU2tewJDD1MAlX9/CbctgCSlg4F4dgCbI0nJXpoK84qBkCB+jTVdZyG4sj/DS+AqFysVNX8tWb6DBhBEbcjCu/UKaUpBAQJjLlrQb/4a9LDUCeQZtZFl++Zlsdjikeky8oBtVCaEgS2itQOwGp9f8dEyKVgmsl1TIvlf2fzZUrCnjDzEd9D8dREnlcUnkE3PZx/NLUlkCBuP0RbunsAQ1zPCwZ6TYI8UYr4Eca7hT/WL7p05YRIFhi8dqvo6aTBQXT5oVk5hg34yqUXs+MbxZypuIMNu3jXNy4tYHWiYrxh9WdFciN2wc3+xHEYXY9OQgp8FXkxJYw42jplhw+sSkIDHA0JqMBhexwMwbIli/2BuaMYXnb3+pHA6byMuZYPzIgl0kKAYHo2q4+25mm6QY+ikOGEMHh1ujThPDX58tGS8rn4GG0bSY6DieZoZFCYSeh8K9Q/zVd7A0PI5liH2NXgmtcU4K3G/mOCS/ymw/JIUKdALvHFCkymnIxPctpTqqDJLc+PYxzZuxmc9X49YPlkIx5WL6C32Ffh0QPZeOBY9y3dBqvk7LGNfqefLETb7GTJsDoEe2pJsK8cB0h/GZnipKj4he4rpC9xXoLtz+mJNGK1mHgqjYpDtMP9bd3gukmRyqLMvzd113r8zrQC2a3hVBuxLnaP1qJeeIXwpc/d4IOVTsZjZybahUo1GgJbZLM60L7LwkE30nZv9ZO/Q4i0vOllgLctwnMXEEKro6ElcFBEaoDbbI6m8VGX8hjvtIzmFx8q3xxuN5eqQYE8vSt5VWV8DIREacVi5CT6rBH6Hd5lQWSlM5kVn96e7oMPOsWhDyZo7B2IEKmP0ChE1g79luVY5fu3CpM2Zwnca/QAMQ7HodrtGfVeNyeRIckB+Dip/F8IhzT6Fe/2UHSVtB2I6RysM7afq5eSAjJzl3TXqILnEy267EXAg1yp9COaOXvSvWv+wOtjoQ00kp6q+BgWYlw/gVn7VRyZsgI5oKsFO2rmBky/0FYwzeF9lqZ3GGRPD9RcXQK39KIzVFu/tOVirT3C9sWhYW9RG7OOtxhBzpQdbKXQal8F3BhmIrE90ygAvm3L8f80qPv1Y3lrJc25yAXWh9n8B9bL14K/tdULirEu82FWYya0jXtZ4kGSFY/s8+CLMJ0KVIF7YEqiP+m88DS2Bvk/92bZgM5BNrwQm27rsH6z9hXzOLQScDPiTH9wvKtCjgR2VJbeJJjBGgcAvRm97yCL1S6pztSWmC9xUS2wqFiD4DnQc6gOvav/rYFmBCDZM+tskFGbHBPz74LKmof9yZPtYjvmVhjC/bNyM3nqNWmnJzxJmChoRymajcY56eROjuNgyR9/GayLIxNR9L5sWiNIuzmoHgLF2AHGZvFSrAKXUPVlMi8n1uBkZcai9eFWixIi0rw8kaXd/MOY6oL7RYO8ccx9+th8E1wWndsYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Billed at the 36800-cent contract rate for 1 unit against PO-1017's received quantity of 1. No same-amount invoice under a different PO in the prior 30 days. The amount is under the 500,000-cent bank-change threshold. Note: PO-1017 (qty 1) was already invoiced as INV-1038, INV-1070 and INV-1082; no hold rule covers this, but it may be worth flagging for repeat billing.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynpD67GB8ZwxNj1HCn",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4225,
+      "output_tokens": 529,
+      "output_tokens_details": {
+        "thinking_tokens": 367
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Billed at the 36800-cent contract rate for 1 unit against PO-1017's received quantity of 1. No same-amount invoice under a different PO in the prior 30 days. The amount is under the 500,000-cent bank-change threshold. Note: PO-1017 (qty 1) was already invoiced as INV-1038, INV-1070 and INV-1082; no hold rule covers this, but it may be worth flagging for repeat billing.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4225,
+    "output_tokens": 529,
+    "output_tokens_details": {
+      "thinking_tokens": 367
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

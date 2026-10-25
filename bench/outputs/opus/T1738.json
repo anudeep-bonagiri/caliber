@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021944,
+  "durationMs": 2602,
+  "httpStatus": 200,
+  "id": "T1738",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1011 toll at TXTAG-SH130-01 Hutto was T1402 on 2026-07-24, weeks before this charge, so it is not a duplicate within 10 minutes and no other hold applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1AUKEAgTGAI4AUIIdGhpbmtpbmcSDAkXOvXIpquTrbzWTRoMLPbxX+J8jxgb5Gh7IjAjqAns9SLP6+452USR2K8IVGsSTbz+vj+J70XA7ZMmfLZzH2orPye5lkBN2U6lYDYq8QQwbA5zG8iwne/+ApWnthpGWXdlPmWBLWcXohFO79xu6f89sU7dr6dv/SmGz4DPtmFxe0YBstjUvlzaMyk9KBOrghAY58nYXxQVp1mQ35PQg11ygGa6A04GzlfhVaWx7trRk2Q92Q0V9znx9O/4nfVQfKf8tfpMdWgcoxVoGjSuf6hq159jeoe8m50P+dhLQqojQ9Alll/AoJWaSLNcJJwF0nctLMVMHPg1b+woAK6qDAb4/u5A1qt+tnVvZA3e8AsD6PgkbrS8kpJEUW5dmxLwu98EjcVdOaqren9uJhIgJplKE2iT+/M3LFHYLnw8DI8jE0PH5NHqdyLJyMP0jC7BXDPARCwc2k8yBrkSzSfcDlcW+prsucoQeDR6MN/7u8+mRguJTRXUpR8Hdy+D+UBaD5TQO5bTXffhsOc25baVlgtI+1KcagfwAt7fBv1mCve6+/O5tZr6ikL3z+dx3GlwqVIWzc9+9zsAdz5CCFxv2rtNv1wzEJ+7k8oXeXjpjEW1C/T0KbzZEFRVULcOX76kqJ0X/wCeupi56l8DMWq4/oOC3w7Uqx60JVLy7yt5Hb3KIdExALUsmkQbpzkYrisnIRY3SckHmlf/iUKhHYol0/ndVDTtdNF6iW92eOVhq4VCzfT/Ahh0OZcCqqo+a5mMV2k48A+qqHtbMy7tzplU0istix/PTDUvUyQmIgtAKq+L3Q2KxrtEVupvIDiMAtjKoKQzCR7FskeAxeSu97958CwJ4J83HjxWGg2SE8QhJW0OlSeUuUnJhtKnErRDB/sOfk+XFa24f4t7BQcIFD/dl+8SL8D94jos54CGtp5nkBZkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1011 toll at TXTAG-SH130-01 Hutto was T1402 on 2026-07-24, weeks before this charge, so it is not a duplicate within 10 minutes and no other hold applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3zinRKGT78owzza5Z",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4611,
+      "output_tokens": 175,
+      "output_tokens_details": {
+        "thinking_tokens": 78
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1011 toll at TXTAG-SH130-01 Hutto was T1402 on 2026-07-24, weeks before this charge, so it is not a duplicate within 10 minutes and no other hold applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4611,
+    "output_tokens": 175,
+    "output_tokens_details": {
+      "thinking_tokens": 78
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

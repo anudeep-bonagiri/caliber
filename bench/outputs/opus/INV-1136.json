@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023292,
+  "durationMs": 5289,
+  "httpStatus": 200,
+  "id": "INV-1136",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 33900 equals the contract rate, billed qty 1 equals PO-1001 received qty 1, no earlier invoice for 38400 cents in the prior 30 days, bank never changed and amount is under $5,000. Note that the 38400-cent total is 4500 above qty x unit; no policy rule covers this, but it may be worth a check."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6AoKEAgTGAI4AUIIdGhpbmtpbmcSDPuIyvfu5MUk++tUPRoMGXeJmuLgR7s8u5EaIjAQ0RczIzXZuH2S4/ECehlNG/y3hnxntNQXW/2N8y5WBuoQ1FDv+tR8YNYYVXg8C9wqhQq3kyv6sflB6fRNpNSF9z6eQDhM93McgV/o6btXqYS02tefrw9XFkhuGD2hRmJU462XpCr/yF68+63bKwJS9Ql1LpU0hRhSY+zSQlCEA8yrZbiaIMTrbJxnGe8e/3y9sF0ASB83TswgjpjiVkoTXw6bKXPbAk3T5embkbtdJTrIfTbRArg/RyJQgVpN0aJZ/WgGaQu5a2ARpYiY4FuCh5EBMdKt9vXNIMOvvph2zaDCgCDlEBhMkdQeFC0UfCcJkQ4qHsPGwPA6P0xG93eKS4F5bjxB7Ac6pvvV8bLqnghVHsqz/3IkCq/3uDB6L7jpca3MfppyERxqmFv7VqVH8tSuislFK42KxSWEcPiTI9WrPXP1+6Tep/zNFEGV8IY9zQUEL/5m506b/Y4RY8zNfrzG55OG9o4BtDKJLtLWRWt1/oWsBgkX9sEtCjgPun4MZiOwTeVh8/QWgvSNct9U2WWMNf2xRs1HfnSnNRh5eKMZkiItv9kbrvBuCRw7dLTZwmPSSoiHe/vlKpgCGn47ecHNiT1c0phdPLuW0fcrtwTlQyutt550EzM1p0Tr7Fj/Bl5JsgVHRKgPlk1vcmprdHt4qHiKh3/aTczkJgbpL/0/c8vmWdnNsAaWjTjORnqcmuf3f2cVU0p6RfyuK5DF9OdeqRhz9WrMOTCwE4GE/t1P+3agUslPcT2Qapfu80qqfAemMo6RLo2slFoigdT6ooozDuGQsXnh4uoYjFyb9kYsM6J67wKfe+Q38+yqgl2o3N9OlQFTBRrcG27S5k89YVkM9zCWNm4dt08yFitqu3Dmue5e8VeDmoa9OPGU65jBPmSRTysJD/bHk3K/hBiTQxv43fFMhg6tWJTUuqofGNy0y6Tvx5lcOZlSj4RK9EJSBHcdfovobt2ZsOWewl1014TxO9QbnymRaulnyGxm1aIt0K1/skvOH3lSNlPfeDkpV3H4ebq1Cs9BPZ7J0O2TIAo4PYqSGoL4giAbayODtpkdfBzQFX51Qtiup+RcEV/BcVNW6wDcrusm1KO3TNh+UrPDO9CYqNtxN5nDb3zSAsDAB/jd+FPgnj581XZ7lpfBa6ZPS4MHJ+MhAMHT+S1fcz+B9lzCeO5lYhXiMmp+Dn70eNKCVB74wBFZnw/U3OdP3HSA+wZfpQ1fSXA4wA2uW/XP99FTPi4SCEWQgUHxOuOuf9FVSsIY9bkadaX7CGxg4NKrRyDFfmYy7jwnN6rqrVkroaAiFO9qQLxqpyQB8kXmMwnMpCSNYwiGankt1v/Bo7iLsnwTsxgTCt0HFGJ2ofD0NYAK1VYoEOLlRmaFDyeDJ3fgKFPM9WSKr51x6T0Nk+97eIc2JAR2OlSWDX0MX7QRBXxrpKLC0Fas++dfuULuDfPCKBQtx4AW0YE9ZDM3s/7Ijugk2q5NfaF191HXW4bKBvxm3vseFDEq0dtGFQKxckiVcE9MUCRftrxdQf0jyq+FB9yEUqUnvR+A149l6qq3rE2Ni3A5j/F2iRTNRDkrGKJn9kIDfmHBkz+58FP7aFtYiMVMBRsMd1/JmvV28E1bvDFes1KWlT92O6a+H0CvfxXLIrcxUol8IT0OfvHLAm9Iha2q2Diog9qt9FADFEeEhERvvhgMBC/5E9kgCKXSop4kwcuv59lSOD7ioAlICQFh8qS8O8jg4JcliLMgKilZs9ddG3/qkeLbQLPdzUrang0GG+VvGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 33900 equals the contract rate, billed qty 1 equals PO-1001 received qty 1, no earlier invoice for 38400 cents in the prior 30 days, bank never changed and amount is under $5,000. Note that the 38400-cent total is 4500 above qty x unit; no policy rule covers this, but it may be worth a check.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMyrgvb73oLyDxQmtm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3413,
+      "output_tokens": 482,
+      "output_tokens_details": {
+        "thinking_tokens": 342
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 33900 equals the contract rate, billed qty 1 equals PO-1001 received qty 1, no earlier invoice for 38400 cents in the prior 30 days, bank never changed and amount is under $5,000. Note that the 38400-cent total is 4500 above qty x unit; no policy rule covers this, but it may be worth a check.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3413,
+    "output_tokens": 482,
+    "output_tokens_details": {
+      "thinking_tokens": 342
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

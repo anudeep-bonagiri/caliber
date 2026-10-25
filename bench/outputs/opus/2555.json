@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.029908,
+  "durationMs": 4969,
+  "httpStatus": 200,
+  "id": "2555",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11's 12:50Z and 13:05Z pings put it within about 0.1 mile of Pilot 405 Laredo, inside the 30-minute window, and 30.9 gallons is under the 110-gallon limit (100-gallon tank plus 10%); no hold rule applies, though the odometer stayed at 165768.7 while the truck moved about 3.5 miles before 12:50Z and two pings share the 12:50Z timestamp, a telematics quirk that does not affect this decision."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6AgKEAgTGAI4AUIIdGhpbmtpbmcSDCB996UpvR5zp+4GwxoMAl2apq5B/e6uluA2IjDjdGFiuilm8cwS6pXzbKtwKIQCEfFMHkTP1A1VMy3FjTCK5gmw3q1XgnpqMMOaw04qhQgzLQ346jSSN2fjp1lIHqt8q/4QOzMIezeNg+OpGa0oUNePFCCmnkYt2E+DoRX8WeWFK1uLhrrzdYRT6zGRnueji8Fw6EMrowQNokV6PARtPLd5kHgQN9oRVFRhgB7Cm06zrBUA+enxYpdQfaCcW9ArZbiHmGovZYOL8GEapU/QcHO7AM8BtYnkN0KRJSHmIjaC90KxdfQk0ZfzRIpF+1P/tp9vD9ZPHMyDuMSgPF2F4y2ZVg4UW6QDqRjFy3uwvmoziCJzfY1cU0ZF7VssLw03m23Hyb+v/oQjcgn21MqqANktvfwe8/QcTWT0fq3DMqlHT77O8i2WGOf3X+GriARHbC9YddvgNGqKhy7s4qNGM+pDr5+JV4dYV1MpofZ04x9HmPkJyN+N4kDH8J9EZ5xIoIWsFH4bbF1fAQFDKUTEz1SBbEqjPAfPVjC7U2IiwSsDsBMXeQtdxSsvSzcVQJ4/x+zg7R0Kp6TfFjr5qwavaFbqAyxc0d4tFUbT/+iNXyNsS0TWYhBi0jeVW63gHTto+TZsS2BCus0qHkzocjiKQdufJmgxqkFb2zOQZreX97W1WBoxJieOCM/s7uIwzhXznJuSiQ/N7jHfIOE8AQcv9VraKwmvliHslzhNBOnsrwddEkNSVdAsz+uz+oAURjRAZei8HvWzwed8crkg4aYYbrY8YXjIMjqt12lJIu6apG4NDsmHwoOJZiYFibesuHYcRXTkHp7soLxIMCS8+Fc+X2zzVy8PfY/lwyfF6qH9X3wkTXtDZCvTp6sTOxM1eKi5t1dbcnHxYEZq3TiImJL1tA+kGfOvTuLZYSMNEAlWG9GM9dcK4S2LF/QQtrU2UMre2RyyoCs62E9F7ubRmmbR4zXo5HBzObvyVq0aUJuJdt7/zlB2azuewlhbhIBAchR0WPhDw41Mjk9k4DQBvXwMpFD5tfkH3hPrBrQLPEMMqilTiSlbpNla9GPzXxrla/+f2YVMrXvSmN7rQqXB7bUDVBjNkIkSJ3H+93gi98OzufrMbiSfQsOMqAduPh9aFcyXDZgE055nlOBlW5BTKBEOen9inFAHMLXOAib2jZZihQsLnIbRKz2CCgQuy1pJ9hSrPG8Waa3/hblQKcCybXnv3vjN/nTMuFPdV5VQ1hfWuZB/kfaPS8Gad1Yk2bqkeiUH4lacVF7UEwYil0CLOR41p1hLruuKoNFMdPosDoYHe/8oD4g/p1fwwxnhJFF9eeAyZurqys8zMIavDVZ53MO9NIYumAOYs3ZhTCb3ZDtGmQIuHyA1AakS5w6nlLgIr5F9cdGVjXELI71gY6ceu1lz60TsHC1vvB+7GQiXIz9va/HUnWIgprZ5EG54w+Z1nCF7w+YPob0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 11's 12:50Z and 13:05Z pings put it within about 0.1 mile of Pilot 405 Laredo, inside the 30-minute window, and 30.9 gallons is under the 110-gallon limit (100-gallon tank plus 10%); no hold rule applies, though the odometer stayed at 165768.7 while the truck moved about 3.5 miles before 12:50Z and two pings share the 12:50Z timestamp, a telematics quirk that does not affect this decision.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhPb7iTF1ybQQ6b7g1",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5397,
+      "output_tokens": 416,
+      "output_tokens_details": {
+        "thinking_tokens": 233
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 11's 12:50Z and 13:05Z pings put it within about 0.1 mile of Pilot 405 Laredo, inside the 30-minute window, and 30.9 gallons is under the 110-gallon limit (100-gallon tank plus 10%); no hold rule applies, though the odometer stayed at 165768.7 while the truck moved about 3.5 miles before 12:50Z and two pings share the 12:50Z timestamp, a telematics quirk that does not affect this decision.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5397,
+    "output_tokens": 416,
+    "output_tokens_details": {
+      "thinking_tokens": 233
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

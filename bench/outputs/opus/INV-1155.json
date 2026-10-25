@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024904,
+  "durationMs": 5357,
+  "httpStatus": 200,
+  "id": "INV-1155",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 51900 matches the contract rate, the billed qty 4 equals PO-1015's received qty 4, the vendor bank details never changed, and the only same-amount invoice in the prior 30 days (INV-1124, day 67) cites the same PO-1015. Worth flagging outside policy: PO-1015 has now been invoiced repeatedly for the same 4 tires, and the total of 207725 is 125 cents above qty x unit (207600)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAoKEAgTGAI4AUIIdGhpbmtpbmcSDOw9TZKCUtLxJL6BIhoM7GGkU53cXrTBf00rIjCgFMrxQE1EPH6bn1toHnSpYJhiVJ83mUGg8L/3rJWMD0pzy3lQgKB1fOwUmttaHXMq6QlxbplvvKexMwEgtMxaD3gxIZoF2zc104HTm0K9CUuS5rt97zboxZDquI56qiME30lCnkgi29P/RJ0W1M2t+/gTHzfMUrk9FXEvWCKqWSFpGmZh6wzF3j/6meMlM5ye4ChgSJYD8IxR6rA0kZo0blB/ZW2cZ8B19bSbMzfJ4OyQyKD3k17u+r5lAUJxMhGTCvk93GheWqT7Wzbwbc4u3mFI3BOYsT4Q+mrufAdd9RjcxY9hKDNBLrnk/BX2wpRYRJVKy3KtEq1arsJqIco/lMx9hJAlFjnLHd54vAh38IcAb6FYwGr2lkWMLwqzgOUx8Ms7FXBMVv/G+oB0LpwBXb/Q5pMhshsXA56Ywfj0BQo0xjWdJtN/KDjsliLvl841Zcu1rLxAxt+C7rluBh1TldsAAZVCceHqgKlg48LCNkRotaiV16db6k7x//2jkizd9wRdx0cynspBw1JmvcXzKwSdux11ynksjvUIOiMvhnjndJJckAoXMUkk7xcFpjz3jWI1vQ2gcfTI2moBGinindbMfYh6k62rumUgdM2CBcWjoSpjJ/rIuh8JUlA8XJwspayMqEbU5JTiGaEElL5jA+qAw8z5fe3JW2qDiJdYbjatY7HlyPfz8OnagPDfpHVmCs+O6QRA3cwjQQ7+tyFLNC5mz/jmlAlCvzWWzecT3DCcu+15niEtZM1qltn2Mgaks/z96j426mKcJSb4K1JZqeh6zVieNK7xqbftw1AorgxQMm+IsIOJi5iIJsUXV1w0pJjdHuUoEjP42xHz25mH6CmrqlZx1WMAdUfbn8cCebNSpLG/v/KVPXSRJha85uXSuchTUR2Y8IYhwWxw6u2lBHYR0WQeIgg/ARJQrXXLL9afM+WiiyhiKh+BdYFbSWa2Jd4wStfdQVtFU9U0mkwTw46jFgDOeVp4myaTCfp5ZaDHJiJnPM8Cb+tJMOPQWmze+zD40QdzqfVJRYpcmXSBbrrO3V6focXDl4gHhlNM3xugnnAGis3dbrJWVoxHqgVpWvg31Ti5crX45eGEeko5c8EHOXKwnwvjPccWYrF8nZT8FZ5YFtttYQUFoCsMc5nRovRXzO2FfbPfdAVbaSpl4WwKVvjrFTjLv3jquGmb+ZxISPqS+Ng4CquIpPG3Fk+EKIxJjW5Ew3QVKdWspdmaxfIheanDUQXYRJnQya+3lrzEx77DGAp1WdXBeq0uCfjioxL8w9z4hTBbvO0f0rkwc281UKad1fXZMuUr8t/7F7bmvn3Ff3Oyw/zju29jUbQYVwcKW/NpD5yeOmHXcXg2IJNwGgXl7BuH0+op52H49NwGSf9VF4A4tX4eGk1DTfoG+oqRw1sq2mPGtXusmzlBRyUzrMq2TE4BE4CGp6o4iPTjrT/JdoG+cxmKxH0FMQQT7msCdTBtozM3wBnKxkVrXiS4zeudpchEjCwt289uzEBYMV/xJxReLfNoPQziSVQYZWCYy9yrOoyJAavueKaQ8fZu0jU0EuTy+Ekw2xuCeVkKibZnqnf2n3ywJ1asfphwFx+4HEOx+RqTK5D/R6fuxeGib/sV5zQGA8Rzn/EajMynrrNAjzIc2wtom2nfWZyfn4Hux2KQYNTuMAnoXc2h7WhR5CLSGL/FrwfcNEqxHEeItjTcrdKuTpE+8CDhh54UYYOT3Hr/8Q5HmPAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches the contract rate, the billed qty 4 equals PO-1015's received qty 4, the vendor bank details never changed, and the only same-amount invoice in the prior 30 days (INV-1124, day 67) cites the same PO-1015. Worth flagging outside policy: PO-1015 has now been invoiced repeatedly for the same 4 tires, and the total of 207725 is 125 cents above qty x unit (207600).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8V6TMZioeXK4u8csQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3751,
+      "output_tokens": 495,
+      "output_tokens_details": {
+        "thinking_tokens": 315
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches the contract rate, the billed qty 4 equals PO-1015's received qty 4, the vendor bank details never changed, and the only same-amount invoice in the prior 30 days (INV-1124, day 67) cites the same PO-1015. Worth flagging outside policy: PO-1015 has now been invoiced repeatedly for the same 4 tires, and the total of 207725 is 125 cents above qty x unit (207600).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3751,
+    "output_tokens": 495,
+    "output_tokens_details": {
+      "thinking_tokens": 315
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

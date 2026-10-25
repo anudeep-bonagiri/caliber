@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02476,
+  "durationMs": 2670,
+  "httpStatus": 200,
+  "id": "T1748",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1030 toll at NTTA-DNT-01 within 10 minutes; the last one at this plaza was on 2026-08-05, and no other hold rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9wUKEAgTGAI4AUIIdGhpbmtpbmcSDAm1PjgrF0MN9cVjVhoMYROJ0atkZUU6FbFhIjDlZkntnX8neE/ciNNiDEE13FkPb9rIktE0C2x2SrzhKh0A/uB5Ulj3omiXYvUivGoqlAWwyLNhkXDzMRQNT8nwIS+J0NrcRgYJ088Y4tgFszLzH3SemzxCkjYPR/KQ1EOFSw1LBSkDnEEnxEYd0pBOR0shu3vPrGjNTFZ6y2fLOG3m7zxdZd5nGjNslS6UHVjx7M8U8n9ugjBXaFWCDqASFDMf+4cRPtgEUl9BPAgn23DEp1EZPKkHmzMAvYMxoY5YEhspnGOajsNd3LDnwnr3t+mgTpOUqrO3T81hARcVFFPsrEBuj2bdjCFKhxfDsarmgl6edPK3fkKiZvEaUFU6I7mnfR6V/GC7wYyJTGwqffobM5XUM78X4Krgs2XPz2WpQ7gN3Vmyop1316BazO/NdLWVNuuYyyot+pJt+BGCg85xSGo12F6j+w8DyKbpiaDDtZgZGdgf8fgqtIaIyyqXVbA2iHq/DJPJ/8S7hXe7F10mg108fP8WWpFBhamOIdos5Gl6v8o4itR0Cj72NY3IKruMkp2y0llkHz98iOrn3cK+XuNsRIa+3Dixcz07bAAr81TaSRgasQy8fkM5iItBp4WjwWfw4ZjvOaCA+kKa3Rg+FfV6RnNhM5B2kLO2JnQtO4tr7M1Fei/lSbFRIUYxoesrQ5QDGvPq6hQhBhPERr6aPE+9+xX5etlS9WmZ7qmgRGP5DnCX88I8DAwx6B0BrJq/51ut4W8alL3fgTm0eR4zYsnzZi8b/T4lZHXar/5nGnmah/m3jQTTH5XZS3Mjcg/5IAZUUkDaEOYM5l7COPuOe2thnmZcdBZNzmrvDx6YicMMrAK3d19tvkv2x/Hajg9pOXCnB6oxhB0x3o8j9I/qevz1HSBESF6EEKis3cZbh2NEeu/WaclQzEwymsw+H+JMOl192j9f+h7ZFxqLnlpN/qsvzzUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1030 toll at NTTA-DNT-01 within 10 minutes; the last one at this plaza was on 2026-08-05, and no other hold rule applies to a toll.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhAPNCJFwDPBQ2Zh8w",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5275,
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "thinking_tokens": 97
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1030 toll at NTTA-DNT-01 within 10 minutes; the last one at this plaza was on 2026-08-05, and no other hold rule applies to a toll.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5275,
+    "output_tokens": 183,
+    "output_tokens_details": {
+      "thinking_tokens": 97
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

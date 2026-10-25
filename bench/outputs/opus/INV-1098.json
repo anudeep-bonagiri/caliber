@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019652,
+  "durationMs": 5404,
+  "httpStatus": 200,
+  "id": "INV-1098",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the effective billed price of 53300 per unit is about 3.1% over the 51700 contract rate, within the 5% limit; qty 1 matches received qty 1; no earlier 53300 invoice from this vendor; bank never changed. Note: the 53300 total does not match the listed 48800 unit price, so AP may want to confirm the line amount."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkAoKEAgTGAI4AUIIdGhpbmtpbmcSDLq+++5x3uho3BvcrxoMPILVVBD1gXOdqP5ZIjAEucVlZiCyDKmkFQA3K3cgMYJj7j/4zcsFpslS7Xb2DHGzIi38pD/ceSU6TRG0k8MqrQk85Y9wXOpdeC9peTjwa/4TkwfOi/Bw4SkNFm+m99kabPH4OhAsvFfHgUZ27TPnCVGcYPbqLjq1pIZ8UCWm8GyUZkQcxM9tX+adkSrwrF6zN77QiAukbtn0uLuiEpliTroCFPCXO1gVxfDbLu37Tfvs7pJ3DDVThhjWwsjSSAgc9dkhOONbWRXIhlgbUZ7k+0WLkl4bK/NaX3G+qusCKmjw4/5qTnL47azW9LEGAQUWFi2mfaJka+J/yNW8eYegaPlqvUygRqtOzF6s//Z7YhHHFJEofclefudMuLq3Vqj80NnKZCuuu2WkpVFrSCFudM0+2pjl7TkbLdfHR9NM3klWsxLzMmvNsInREfnC0GJQvVepRT/CUlx5kPXUElMVsLC7t24qHEkJC0Z2ArZ34f/nqZ0g48bjKf8m6xPMhwrhpe6YrZ47/OejxZc+AMbIDLOmRvqR30QNPTSldCooFJyjIOPxwkuvKevruCfBTeg46W8Eh5xRp//CqzmpVWbT+aFTpQ9XUyDB/is7H6WL7nhg8BOwiPn89yZORdAL0k/nfshLGg223siAPSWrvOSCuC+n/72wekjOo5XkpQW4B916uMMroPy3TT6WqxuuEipVO5yI/k2AvSiUAWqj9SrqXW14b1NlCGFOTEhMS2nhL9rj0/f48y/wlkVhQ6o5CLQ4eqpozvQ6qu93k4jG2x+lCTY8lfLUqKyvt9ff6qnq+RP6o4bx3/u4cRuQaK5UXI1kFaBu9oeFlytVtI5dxcSvK1K0K0SwtITMhZokUxFrLfQmzwX6iGNKS41UpP795g66CZjv6CCwOYmF+pYb0OCCW7x0h41eWchf/j2cdRM9wIvKUNKzkLltENnZBzdDoph1CT0+60NbowNCzpS5ZalGDxGfnfTQmvBtvHThnL1khQ3NKqFIyAESr5Sdrff4SPnRIfU6zc4Q2O59KbRYjB4WN4H/tCWYZ2KYRYWixoPZaDFGA1YcJX6hFl/jJRKlPCNULErpkPK+L62HOwpzLmrPZDmkSUYar1pks/N+Ag1E4W8Nled2Edgc7ktavnWCGPNbaWOLIi7CIcu9uRTwANtFUf+vZY1JLuKBURTzL1C9zPiD4INvDfL0eOwS8QR0RRMZLchoaywZQfkY7oHNY966mCUv45V+2Eh1REbNNjc9dZ9R2o/IhC8SLUTNHdN7rcx0CcP4LiR2fWKiPq7Q4eKdBRrgHEy3B7B+Iw8cp199NNcqYBeHg6u0XKU4mO0V0OhIZgutKkXob12mNRje8LjCFgmia6IXHGmZec5I0EVoK5THjzaFRrZ67PbkIIya7/44uub2dYRicHm+qdTGA3hTNmZQMTtjvdcaPmE9eMqfqE1sZfSozNXa421GYX8tV47F6RM7NiSOvpeFaMWZwtlM9z4b5fQljDRT7Idsr+VbHJeoCknwI3JBgblVGaJ/R5n+5zD8eL3fvghYDsmlWrIzBUHmxebnIeuNyMjMNZFrnUmY+eSbv9l01qrmY2pq+ju2DUABbSYdFnpyEhtPzHdY9bTzyFNFJO7y2t1LbMfjUJmQOSHmtq6eYiBuWQTokVI9Pxno8g2XAblUPANzBJoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the effective billed price of 53300 per unit is about 3.1% over the 51700 contract rate, within the 5% limit; qty 1 matches received qty 1; no earlier 53300 invoice from this vendor; bank never changed. Note: the 53300 total does not match the listed 48800 unit price, so AP may want to confirm the line amount.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz58tSBGCjipkbQEe34",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2743,
+      "output_tokens": 434,
+      "output_tokens_details": {
+        "thinking_tokens": 296
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the effective billed price of 53300 per unit is about 3.1% over the 51700 contract rate, within the 5% limit; qty 1 matches received qty 1; no earlier 53300 invoice from this vendor; bank never changed. Note: the 53300 total does not match the listed 48800 unit price, so AP may want to confirm the line amount.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2743,
+    "output_tokens": 434,
+    "output_tokens_details": {
+      "thinking_tokens": 296
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

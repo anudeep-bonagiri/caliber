@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019352,
+  "durationMs": 3336,
+  "httpStatus": 200,
+  "id": "T2026",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1007 at HCTRA-SHT-W within 10 minutes; the last charge there was on 2026-07-29, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlgcKEAgTGAI4AUIIdGhpbmtpbmcSDHaY9W8550oRC2B71hoMGUW7zWsz3gt+Tnf8IjCA6n9cCQJBZ9zzWzupK4DwuIHu6v4pvMZ9cLTY2WF8MQMDcYEHBo1egs6dFo/LboYqswY0uJZZuS+azzJ8XqtOvCsBVzQav96aoQiWKye2xB9xqFl3vpwgGAMLyJ1FEF8d85Neo11EPRuup9XpBRkp3VIY/oxWlPCgRIGGLUsTppsBae5G/gwbtD/Labi44LLq6LxGNbGi1jJf0AsB8vB6GzjgsgDKJMYuY0FZxW1ijduXz+Any+oCzaCkDE8VjYHuI5G64xOzlgAaWFHRRqukvfyUHpcPxH6/frxFf6uMlPzk8RgShUWEd24pFVUlG/sBB2jZt9SeCYN6nkFvBjMtFVEaatNSXzgsK9SvuU4PVsPg4UqajwajGMRTLj6VUr5lwgaHAOb32mRYCSgCipfOah5Tr4598Kh2WlYLGQTNevlr3N3yBsvUHFfFobOTp5af9v3Gm0sTfjX7V+PeyJsK9eiRn+rxj/2iy1WzElT4OKOc2SwCGJo3hCgRBGkL72yviLQxE60sdOpO6ZDNM1JQybRuk/QV2Mut8pa9kBbSbjlZ6oPT7gSFK2WWnUWPiM1fB+uTbkRKH7L+fSp3GhUBQBZR48vV0rXLZ7XqJPV6QhICb+cfDGlmyP7QytA+ppB5LJPTlbOimdD17F1kYjJHYWIDNdLahDU7qHof9mWB3zJk1C8zdV/Ff0cpX0LjAxHMFj9mWBPN9JISYCMaFm4iIGOIn/Q+PK2hmlCtTuUW3jROQbUWdIY+pVVJvecQMVmm1g+YgaMiRFj3noQW/5PvWHKfvDWWMagw3Gu1D1STSqb0PMnPIAkra81Rubm4AEJYDArc2Knud99euYJ0z7oNXiCbz35vTbmE/rekjGRMH64lzuBIEbmcgwu7v9c3Ri1eUR5LHkyUuf75VJIj3FrhARu+rpbQ3h/G+xybVQvigg31i90ZiU6quA07N1qFeyrlt0w7CSqE/1lmBybAX9RzEcpWVGTcI6uW/ha5o/+Emt8JaqtWrc91cFbztV4F174EANwMU4sH111+3ghi+857zn9Ned5HOJr5XkedxL8oNjGM/dJAyTeP6iST9HdJwO2iMs/wrbMBiNEfLXN5R+Xq1mcbPNKgOyNEDG/ORxS2zONoIzl77m1wTTT1OAi6CYE2zzVAgv0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1007 at HCTRA-SHT-W within 10 minutes; the last charge there was on 2026-07-29, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4gpJ1vw9sPWogvpGo",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3603,
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "thinking_tokens": 170
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1007 at HCTRA-SHT-W within 10 minutes; the last charge there was on 2026-07-29, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3603,
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "thinking_tokens": 170
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

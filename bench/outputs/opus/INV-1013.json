@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012016,
+  "durationMs": 3921,
+  "httpStatus": 200,
+  "id": "INV-1013",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 51900 matches contract 8, billed qty 4 equals received qty 4, no earlier same-amount invoice, and vendor bank never changed. The 1250-cent excess of the 208850 total over qty x unit (207600) is not a hold condition under policy."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQcKEAgTGAI4AUIIdGhpbmtpbmcSDL3ZhXejbTFWApkkhRoMUkle3tHf9qJvaye2IjDBYEoFfhMfvqyBiv/pRBiBf8lnZVN43ONcQg9Xv9r9HzyxfOKEbdoMaxa9xf+KsfgqqgZaQW0newsSXyYI8D9NDGt9k1630sfoxjoXUxPjvZGne9opLQOjKD3sxbK2zPShyUvZVYWfTb9h9uon37liVFDKL7A/O+gER1btNDyhS/+wg0DfIOdXohyzrvlzhLyThaNu4J/b541PoEyucJU0wy+ifBaIUGv7IEED1m1Om9mVT6IBJSBxBhsdWOkw8YPzwN/UsMM/aNW978jVdPsf/PVcCSRcslWm2df1XnB4QZ+LfnAiK8Hm1NLXGZ4rATIOJwPYPg3hz7YUbGJAlojGvO+P4W5AFEsI+njYmwhkk6cQTCNW52WdyN50zxGmg2WJlcO2hCQiNmxmvIGzrpAJMBg7t8D0cMmMdKLkiy8H7l0LPzYx1I7JjsG5ndBCpGe9axRoA5OnYOEXM0mfZIBRfHHQMOxhPiJbLq1oTGiNjUpdNKKeUEvC/z/soUlPxU5swxi9eS7hhu4XtsR/9PHdONHDQa/eIKMp0LAgRSntMIw+NQI2xD1Qdf1J922bBq2DkOQiZgBeCLGtC1HZbQXJbQ7zX4e3Ubz00FkcN/YjkUD9XCjJbgkfZWpSmdxTjIDYT2YKdrI1Gquu/8kt3gBw+gXqglE9Elr/a0jfYC92JV+Mty1tBXyLl5v/bdi6fDvJZTPjT2f4/yLAdWlMMDJ+LyfNG/tyLL49EfkWk3kMWNx9K3wNaXTY5GPr9mbqepC/NK4r6VIAmmx98+I7HLR//VOPDLkkG/RMnsYT3+6ZyGeMCYHimyzmFjfB4X/y23tLJhROuZPGiqrQ1s7mBxsIec7koRDsU3VO2rvO02bAO92NCgc/D9TR9/BO2yUAHfv7AbawB3Zhz2FBWkGHgZUGUrRzs+WPkRwjdPsxCYkfHyHvZVsdt5v53GGT387QwbA6X5Ce5RPEgIHlMwPbxirwy4gd/NGDfuM0lr4AT+qMsBeeDnIg3Hb5RqTn3OusjpjnQebnKOxOhTVcrZoqfMOSlIiyZatqpxyL2DHYQHmETKdtRNM6oXihe7NUOJ3MOgzlbSn7WQb20nWIyi0v/dN0zGPvpRsC/baPm9ZdVrd0jvmx2U2tYo4gv4oh/FUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 51900 matches contract 8, billed qty 4 equals received qty 4, no earlier same-amount invoice, and vendor bank never changed. The 1250-cent excess of the 208850 total over qty x unit (207600) is not a hold condition under policy.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysuZCkDf4iUpYHtZv5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1729,
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "thinking_tokens": 144
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 51900 matches contract 8, billed qty 4 equals received qty 4, no earlier same-amount invoice, and vendor bank never changed. The 1250-cent excess of the 208850 total over qty x unit (207600) is not a hold condition under policy.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1729,
+    "output_tokens": 255,
+    "output_tokens_details": {
+      "thinking_tokens": 144
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

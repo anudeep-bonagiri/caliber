@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025676,
+  "durationMs": 2200,
+  "httpStatus": 200,
+  "id": "T2140",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1036 at SH 45 SE Plaza falls within 10 minutes of 2026-09-11T17:04:19Z; the most recent one there was T1992 on 2026-09-01, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgUKEAgTGAI4AUIIdGhpbmtpbmcSDJavI2m/LsXqFUhBAxoMYb251wwerUd075E+IjCgN46M2KkVgVoCiYo1YW2yBo6EQflaUE5urroKPTrHjOMpwTBgRrF8Mjcw5V3nFZgq6wQHvoS0xuzU5D8a4IbgO+MrOmtnEGiflrqs91dD4eEdrTGGQ+4CqpBrhDU3wQoP7aSIs/vx8vU95ap41ZSgqToYkO6uT886btJnToz3kMKMLsKKYnMImCOSkkWkSnkVTHtoB94LJ8Xi7G/8eo4dqfVesASIxU0FzTWOaHduvUco0191xb26INg7DfqbRMTB72TBqNUsr2NcAtqbkuByWS8Nf2aVnr7lf6dP+IA8RXHNa64ATr0MGZgPSTLXkv/subyXGRGbFTEDtM2MjYMpUaAuluGLKVdwUszW9BW2xrbNqZ4lELdaa4J5i/PxTYtxa5FUbMbQhzQ8o4W9f7nPhIp8iBWTtDg42RLj5XAxsQXpMHDNN1j+He5AsdBp1Ugn+1tg8Xr9NUOhaDg1x9QkRIMaa64cES60xB3bA+qwqIv3LqODV6s0swli0sTlJrK+4p8QmFEkdyAOa7pGpYyEdxwpoVi8bEBdnEhIdREDz/tEFVlHwaEAmr/Bisy5WcLzs2wpqzZu47MIZIix/eSYa+rwIMRBlI81V4Oi3HvTKeyHZtFY6OMpq2qOtpg23NmrsCGlzVZ+ploLMFCXVnobhnajZGNItHOyZVLo3DVEFnWF9BEQvX7HT2vz67eY2lRiswMS2+kdQ6eM1jlehxHVf8UeTkwCeQLoTAejQt2RfOLGJa+kK3DQM6wASYyAKprt29OXZmyefiVd3Kg0z7VwOH8pPDKjE/dQL68o5YJnzXYCrEDriNy0MqGL0EgFpahHa5euwSELXlDppsJMr6Dvdd/KYk1M1uOApqpbV83Zvw0aigwt5s40KUUWR9ZzGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1036 at SH 45 SE Plaza falls within 10 minutes of 2026-09-11T17:04:19Z; the most recent one there was T1992 on 2026-09-01, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7ZpS7W8EQKmrxWtVa",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5574,
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "thinking_tokens": 69
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1036 at SH 45 SE Plaza falls within 10 minutes of 2026-09-11T17:04:19Z; the most recent one there was T1992 on 2026-09-01, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5574,
+    "output_tokens": 169,
+    "output_tokens_details": {
+      "thinking_tokens": 69
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

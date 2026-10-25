@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013228,
+  "durationMs": 3267,
+  "httpStatus": 200,
+  "id": "T1135",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1011 charge at SH 130 Plaza 4 was T1015 on 2026-07-01, days before this 2026-07-08 charge, so it is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlAcKEAgTGAI4AUIIdGhpbmtpbmcSDIIF8NgBjxLNn2l0xBoMGilm5dhlNeMZxCLTIjAbxGIIqTyazbXnWOi/sMNKJL8CHf7TT4qJfAraRkzDWqdCAk5QK0T30xWXQhAEDFIqsQYWBuAm4HaIwe+dvPScWIj/JZsW4+RIinECknvA3cjLW5+bbwfU0oSMEdGKlPKLeyuwSx+VRLFjoQzA28MnFfmU8ZycD6GNNJs+Fqheu8GiPYsLc7HzNxB7GFsNxFJ4xG8T3zFcnNBmRTqyuzrUp6Dz/gYOl1aqhaS1I0pj9cz+9siFKJgMWZnXKHqyIH3XV4U07vuKkIS+93ZNlKBtTILDO2PjZW7HBZt9OT+Y00QbwLkrT2N/j0bIeVgRSInAzV0bJHEOF2JEuqCH5KxBRIIjFx8nj3TvlLaGWuh61pQogDALMfOCm1OHgNG3J5mxpO0emecxKM2HqUrORXME8k9SGIW5jy+YmQ4MBMNXo9sjlPqB3dByrKzEvLJqmOdV+2xzbD070daeOcZZKzpmbSdua4+l4ej6A1owu+OGC1WmDQ5Q5/ct1WSiyRXNA3Rxo9mtIpwxqt88mE4hfroz41BGdrGBk9VGfDxKa0K4g8ppqnjj/w1dGgkaVpPIaTplehIYvpvEfIqq5p9QoSquhnu0qWqdsj2o6/0WAFRxHGn7UKUCCG4sDa/+X/8v56BLYOzVGutDWGYaXyU0xzcsxPdZ17B+E6+jHDpobgBHO+QsRNZJDH2YIiwggLfofGKhuilksydsX6AmO7Zv7l4T/Li9N9x2ATdkUe0qZ/baPClxof7zkZbtmPYD2XsPiq2ua2GUM9m7DW0dMPXA1MpW/4Z5aPxEBsIYhtDqmgkh8Ym/ejroV25vB59eUNDBxwMP76Z3UpNT4Nz/TCr63INfxzb5n2c/28WGIBQ76WCHhYrfAYrv4XSuvRX5a72zV89yrPpBSeoxq2eEdkTBAdNKgk8OqMDmEMI8o/FbV2owzRmtu15KNfz/YWUKxhL/ytsvTp3yfP45JjK7A30eUXDH+maV/gkE5ov161HFAVZ5dxQl9cqtngQozeWKn4V8NkwdW1KUpOj/sEokDMs0VJliDOvpnGefyeMN8DPieivhcW/Vjv8fQLCxWLiU/T2fQh0JmqBjaY12jP0RrLe+VE42Wq4ha0TyG4EjtePTXqxWdqj65BbrGGkTdZ/eN53OdUxd+QFCGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1011 charge at SH 130 Plaza 4 was T1015 on 2026-07-01, days before this 2026-07-08 charge, so it is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7Y2nFjY91jsn1gZjF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2132,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 152
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1011 charge at SH 130 Plaza 4 was T1015 on 2026-07-01, days before this 2026-07-08 charge, so it is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2132,
+    "output_tokens": 235,
+    "output_tokens_details": {
+      "thinking_tokens": 152
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

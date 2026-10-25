@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02486,
+  "durationMs": 2790,
+  "httpStatus": 200,
+  "id": "T2873",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The most recent earlier toll for plate TX-1017 at SH 130 Mainlane Plaza 1 was on 2026-10-20 at 15:40Z, about 22 hours before this charge, so no duplicate falls within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3wUKEAgTGAI4AUIIdGhpbmtpbmcSDFzB7FV7POw/x40p7xoMLHs+6ZDyDfGNBo8aIjBbN6NIMvh+0wHgWJHpaJ2kY6cAxy6hpxUsElzd/YHGmcxeNiLqk3Z9OMAxvYS4rs4q/ARedgmcuIoxnBmVx+vL2D6DMXymkteEYg6cZcHytge89mjCCBpsvUOzasIQP02V+lVlLg+TMyVQtZnqL5YvfJVfeomPobq5wBg2hSC3LDU/9i4O4DOeRHbOaXPgoqAVP++28voB8Uupou+dHSSVjmlZt3xUqjn49hJ+RkjEDMa4Yt+mnz/5ayAI/zWTpthE1x0PYRamvVxfOTev8N1ftU/6jci8mdO3c+/Z2z4iRm+76HC7Ve8GPWKBljBOcUZTRl2dafV+E9dbjWUgTtYDuqFZFfVmzkvi/ryeyKdbFswtoSK+U7ZBNPgTGU46UrxXGGIj4HyRryE1viVJ5nLfvq/6MLDwp+uA2CwH0XKecGexA46a3E29n4mWJEVG/XC5ASQsAADcQd9OsbtXVp1GLZGtg726kcTuFYaKy8sBxp1/rmQQynZxikDVF0cjkTVw3lVOM1uI0hetdEFkkSCRWz70lF/lYRQ2L02ZG4HTc3oylENj970mWjuEKzm1sWbSSdLQBY470+KQbkdWPC04tBg6RtM+h6wkt1tmHDxMuKy16oRZWtUNtrkMBlt6UcqabXprXA9ojpm8jN+MA2BX4lWQP6GnNZcwXIUsr+HJ2wsMKuseqRTJMsayQh63x9APO3DFn+WRM8+GR3xoFTMWaGoVJP3keCfI9t4AsGKHadATuecsootAg8a+xWDHrzXyeGOVyfUunjJbBhsH5MoTy4pZ12Dt2+0EuF807PJMfVLsP9ykTRZQ4xrqHb9NrUJRgOY9Ojmq9LKwZ7QRN5XVGXkbIxwrHjPNnvvd1eEEBDqUjkEJmmDAYmUPoSbIyVdhtLk1P79wqYQMcCPMVggYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier toll for plate TX-1017 at SH 130 Mainlane Plaza 1 was on 2026-10-20 at 15:40Z, about 22 hours before this charge, so no duplicate falls within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzyhSAUbRzm5xVkMC8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 178,
+      "output_tokens_details": {
+        "thinking_tokens": 80
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier toll for plate TX-1017 at SH 130 Mainlane Plaza 1 was on 2026-10-20 at 15:40Z, about 22 hours before this charge, so no duplicate falls within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 178,
+    "output_tokens_details": {
+      "thinking_tokens": 80
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027112,
+  "durationMs": 3101,
+  "httpStatus": 200,
+  "id": "5016",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 26 pinged within about 0.02 miles of the Wharton Stripes at 19:45:00Z, 1.5 minutes before the purchase, and 25 gallons is within its 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/wUKEAgTGAI4AUIIdGhpbmtpbmcSDCHVjnAYWF5EMern5xoMuRT0JHagDo4+0fEuIjB3oBelZLJZJP08JEsogF4VI8toa6YD/p3ziUu33lEBSTtDl31RF+4f3g2+OLZdjv0qnAVp1tO9qxb3LGxwVg+NDNld4RWvMYm3n55brXtAKx5GDGY/ZG+tlo4zzW9oqNX98D5gC7+pgGz1kjkcDS5O70vCg9NhA9Ez1hYtRMEbmSoSF/cx7EHEWXfEmgDTSbP3jv+Up4d8DTBPaS64U8q3xipP96t3cetWT9jeSXKMv2jVErhZlG2zI8ufFpBlANVXs5694+5mJPlsaU15FIVc0fMDkEOhBc5KMSSzPRqnRr4STZgiU+vNGd3MVK7cVrVqKjM1O72i3TwqGn6cgdR+W5Dm6mzGN8FWhjG9SlhUZuxv3PS3ONVciGfuYtrls6Tthw+Xu5072z119e+zWqyMgxtRzowdgv124cZBYOAipC5VSUtstX85I3u3iDm/enTo89xmwBNGQYZ12S5GM4RcTaNXeH75cY9AWruF90+oqTvm4MnGMBRVI/8cBvBG2zY4Epp4NlegP36kkqSuBOAtm/IZeop3alcNLdGFBiQwOZ1QqFQlAJegx34uXmHudQ/+VIb3Bwat+FGXpv6tFWm2IPj7Icoyj6ubJtuxonAXW7+diw4t3gMow0ZzkdDSkr3GobmsNKXNEWIVNTjcUwB6b62HPT9BNsmrs9bfMnhmbUkQobx4IzR4W7sWgwdFxYCAycZ3p+5pA8653Cph6TqX0lT5ceH2WfDMrMb7LNyZjmCcEaP44nJVTeKPU1I3n8zrbQ9q9l0AQbdM6WSFssdn5Sq21R2+euYf87xboIZKPw46Uv/deeldPnOPkDMx3QcjtZWCL36JU8CCnPT+JLHzRpMQMnBnDQ4gYAORME552NQG/7utyYC+xCelH0c8YHKCllIgkC3DKZFDAYGuKDWlVkD6CmXLESCVdOo2RYP30vcqm0YVvei3Y06v53G9yBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged within about 0.02 miles of the Wharton Stripes at 19:45:00Z, 1.5 minutes before the purchase, and 25 gallons is within its 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz9C5ng7c8gqEHy6yQy",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5763,
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "thinking_tokens": 99
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged within about 0.02 miles of the Wharton Stripes at 19:45:00Z, 1.5 minutes before the purchase, and 25 gallons is within its 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5763,
+    "output_tokens": 203,
+    "output_tokens_details": {
+      "thinking_tokens": 99
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

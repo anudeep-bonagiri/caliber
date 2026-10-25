@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02646,
+  "durationMs": 5176,
+  "httpStatus": 200,
+  "id": "3531",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The nearest ping (15:51:27Z, about 5 minutes before the purchase) puts truck 26 essentially at the Freer station, and 37.8 gallons is within the 100-gallon tank plus 10 percent."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiggKEAgTGAI4AUIIdGhpbmtpbmcSDPcD+PNPiCqT4HlRFBoMnGZVBLSlOvrtYXOoIjBmCmxyfDDu/OQnPRhcTcu3aC53rOTqhWHGh1ZOND7cWY8TljDXaSSLRHqI9XNiopUqpwc2H4QstIDtI7hEdTpLNR5tUIaaRwMEoHOdf+1ADgjY4T0zDL8m2cpvtMTciCRawQwpwE9dpoLe8uFG6ub3Bn6fyNoBgfTfK0u19R0/uJSldOG2K0sMEB7uNMSKNg4Fr61l0rcqqYaIWANMKQuxj+eeTpW/r4T5KaCx9yWz83jCUnFzJveApM9mxNvVBJjSNWw77JVwmtRci40Tm/LKJYyY0vcNoKn+TcW0fGBvEZ7Xi4KW16zelAf4WBwTvH+Qhe77KikNPk/ABTzWwfNKpaQlvRSjWjhzKQrtmTsc35ysK7G6jWv4Ftg3uaEsG7xayRPgE6U8pJbMdLrsSF2hxfBaXSMrZ6vTYjbile4uCFoPfgfIULvsI/iMTw03Wm+/AYZAPSeGxS8E5XmSEKbmRUfS3UMlbsB4cBg7suBxr8MBYC6R7srYbPFJ8JOaCMkFcqd86b1Zoe3h4PJHfkSOQtB8B6UcawKdffplVH9talyX7mKS2nn2xsMxn62Ug2FTNPRqVBDshh4SomgxY89Av9v9PbLbU2F9BN4+PS0PMu0wLtUB04u2zMFH7aw5K2iVOAnZs3q1wYW+FhJYErxfqTc4DfrshxBh8otj/8ooLskuPdrqfHZB0ErZvglbk9cOBczezvcCG0pZJ8s7/xn0BAvhoafbpK+6K+YYP8QilIdQizDPJjHC5VrAnE/1luW4BjXzZGJVOic+PwAzpDTSXmKuXsw8fOqhXjrbcpS4gWJq2OaTNO7US8cU4ncwuKpICX8skBakVRBtGAGw32Ug4qnjKh+9r4wvuiJ7J+yCfBrUyoMc+ypV+slEahyMycDlTpSFbYb8dQYgDzN6gRj2IfDlX5CjdIpzwga9vVUygWQUTnH68fXPchuryOZCSDCyoWWuv2QvuWD75bZepd5viznUDPOB3dUUH9yQgTrCAe1J0UmPdTsmq/N2XZOzEz4IBw7QRWho2lyRVBX/c9npf0TI2k1XO1IFPwFwzpCZoO7FpNLHPta9IJpVYfu1BrIx50mfQ2cjEY+l+5WX5mI26lu3O70t9TQ1CzeWfwF03h/rTFRv6vYyFCXOeMQjaIhuo+hgNzZIx/jODpKCM4sPaKLt0dsYWr9djy6FUD9wMN6smz9RwHL2wiYAvXOMNA7ne1dFwRdDQJPfnbiTZ93EQL3uEukVvVP9khkv1RlE4ecUlLTr/+H6syqTKKrNZnNukkMyI4+B3io9rBNAawihag2jRJUBDAEAbBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"The nearest ping (15:51:27Z, about 5 minutes before the purchase) puts truck 26 essentially at the Freer station, and 37.8 gallons is within the 100-gallon tank plus 10 percent.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNhBNdoAX6UMS16BcK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4890,
+      "output_tokens": 345,
+      "output_tokens_details": {
+        "thinking_tokens": 250
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"The nearest ping (15:51:27Z, about 5 minutes before the purchase) puts truck 26 essentially at the Freer station, and 37.8 gallons is within the 100-gallon tank plus 10 percent.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4890,
+    "output_tokens": 345,
+    "output_tokens_details": {
+      "thinking_tokens": 250
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

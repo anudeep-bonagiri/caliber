@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022888,
+  "durationMs": 3418,
+  "httpStatus": 200,
+  "id": "T1648",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The earlier PGBT Irving charges for plate TX-1031 were on Jul 2, Jul 6 and Jul 17. None falls within 10 minutes of this Aug 7 18:46Z charge. The only toll earlier the same day was at a different plaza, SH 130 Hutto at 14:43Z."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlAcKEAgTGAI4AUIIdGhpbmtpbmcSDMo1QRDBQfK8bVkkRxoMFuQozbg9C7WXqFs7IjBa6oZGQRC5/Jxt3+sGkYFbyOd1na66EtN5C8sCtfKoLIlzuzUBtFzQzxEdqMQ+Zo0qsQa0WxQWvcLv8MaEMQKvngqbaZN3bWv4xhYUhSQGn+RhuNSF1gdJK9sL6i6F3iI4V+OPKrMVwbyKrS/GFhFxbBKxy7/MjTFpGC9eW6Vn7AZVmiMCNBxGle0bkRpJfo8zREdHYaTEFu+OrF/XY61vWml3Z7LbWHZEW3AgY0bNNqOfvdRlIbu7wXus6MgFPmhrHvvOTLrj4t70C5bjSX51vXkRKR/MuhwIKY9uqCwSBqT62cClCMdHD1VlfZvSQcckVBGQbHSQDYjjsaT8y1YkRX9v9ZmDqKwpEj+NviMMCHk+MMS0js57WIRrlMnd1bg029+GkZXV+9uSWje2IjSTurXp2DAj36G5OVFto9qOMPt//5DeTncGkAvV6xvHdR/ZGPOn7OXe4HdMU4ZylG+1WZ4CzlEmixCWOT4w5tkuUGfqGGv3fXAvdD+beWpfX04qpQpz4dSEnGH1QD70GPpXYXu4Gg8su3HgBYgUOtKWWeTn9qjvDbFbHgZez6pj7W0kIXqmp0UHo9aVKfZY/GP41vNMtdaL6M3eCcb30xWAoOBQBsfw7bNtmKekYuHRngbwrzrqa4xXBH5y/7xety2hBcmdaythcYYg7JdBqNasbUZIwSkLkvsFd8iwPgMLTNtfxxx1nJ45TepnLDc8iOYsVgZJhNoucluj3pQoGKT1n8R4xdZtK8rCbvjKRD+Y9iUfsHItQ7h4xzf++rUBnhiPBilB4T1VyVC0Y8eIk0NAIoZHU1DbL9/ag5w5ldL+ikEHNzniuxypgqPeoeY+Q61dDQ6Tb4VNGMBTcUPK8b+JoAoPU7JJPi0eVlU4/YLpKcAbT0Mp2ZeQO3pLfofthk+NKgUGIFXl0Q/1H3ICJnuBrmTZQaR+fqGMzyGHtuHeu3d6bXhSTjeayUZxb+Mry+M1KyZYG0q8oT67Vpx3Blq56ABTSjWpWXFqZt6EF89OVpg7ea8C2LPB2SskmfksaZAe5JqDsLuZnb0JqjRnjzu4YftgrVLSzQj7Jkj01itYQWHnJC10D8Isioc+DN33hGBUv0x+QVck7czWcqzaGmHSDHRNq6MqhBl1sZOTdWZXkLXKSDu8GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The earlier PGBT Irving charges for plate TX-1031 were on Jul 2, Jul 6 and Jul 17. None falls within 10 minutes of this Aug 7 18:46Z charge. The only toll earlier the same day was at a different plaza, SH 130 Hutto at 14:43Z.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzE12AhrPxxFqdEL8ye",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4297,
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "thinking_tokens": 164
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The earlier PGBT Irving charges for plate TX-1031 were on Jul 2, Jul 6 and Jul 17. None falls within 10 minutes of this Aug 7 18:46Z charge. The only toll earlier the same day was at a different plaza, SH 130 Hutto at 14:43Z.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4297,
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "thinking_tokens": 164
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

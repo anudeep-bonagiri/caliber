@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014276,
+  "durationMs": 3083,
+  "httpStatus": 200,
+  "id": "INV-1066",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier same-vendor invoice matches 30,984 cents, there is no PO or contract to check rate or quantity against, the invoice is under $5,000, and the bank change on day 42 falls after receipt on day 37."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3QcKEAgTGAI4AUIIdGhpbmtpbmcSDKoIMdr1IxhtMJdeGhoM/gNzn8YcpO8j5bMtIjDe+/S0KyF42ILZeGvYpVKFuIO94IlARg24VJbjfS9Qgtjd5DRK3byn1JLByjwH8e4q+gYZR0UBojCSieTX5XnLFQEGScqoo4dIFbRotSZz0iRoWFssMKNaVSOno5I0WHglM1u5d024oUjLJCABRWJvC9NXuJ0QdLDIYOd3j8ma99BxyvjjGCQCEnvryfUnELkJXJUZprQ6JCsGFHcN1mdnnLwyhScKbiF+PK5SwsK1L4XOwma89QpWAwNy1i1ZRRD814ee8oUhvNPI88CLFTsz2++9kk9tMe1rhMTyZOidriyD1PGH1tjcrhmrlgOtCb8XcjojOn4LfW3uv4PlTKN9G6FMOdqSRX0JRabDqxsbhFaqD22uqEEoz84R1yG2rRtzBYboHwp3NHa42FPwbxxPVBJ37WS3WUFbV8zYxWCklYgr5myTeuXT/lWm2p3X25EoN8roKSxfYRrzv70oHLG9tz2JeYB2MXc+ZqFOrkOO5VeyDiW8zj4I2upzOdpsAWZ9oIBfp5KD+DxRreT2MNf8neded9+b2PnyInkyhXBTWcydRs0xhLh/6LUGlx4xjMPDkfKZbvCiWCEJ/1jXJyfNGvLv1lqj6jE1U/SZ8scJl5FMHR54wdxaBrPqOvM7XRvsTAGgNgeH5IEoqfRcVdxztsuQstsYQYN1R63YRsJR5GVPR3imUGGENXwVR7aJRNofSE8HfVEkPlOBP1bcJ2btUofzid1yNU/op7bQX9uZ+rQBkEw3IX/ZMPAlknUwz2UXzLEBNyIeN9DN3i72YK60NHHXcGrEwYqrdxenHF0ZZg5cE62jD55gOvnaB7f1+hPNb1dwHyTt0lH0L7+6MsmYa9syDCLBitY5MtUVSndN9ErUV4vTvVeAxoYf5aZrUl8AqWX+1lMa5u/caSfr2BVV11M4FTAritao3V3v3JMWdbWqiTXnUWZy5V3q9UFD47txErBBLdCSf6IcYJFsj4mXJ2Aggx5e+tmz8m+QYAvqraP7LvS//v8WNCoxVwourocGnY6JGx/2JyCLasuQBbs5aGuHvGpXNEJ1M3nmzd9xBTDU60wh7DA6bPbxXy9+tvp8j7WkBnRwH7bIrXZRKpDkaO2OZwD1gPzd/XctyDC+I+UlPwnm5HQbD7g0u4J8xqiz7MGBK9NGq7D2s8+UF8QmuyFIuMYJejQVLCT7JOYsn6MAMReLZJRCadSuwatXyEHG0LxhgtiA8ftN+OPeE2NNqvgMOTVqilJd1MyIyxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier same-vendor invoice matches 30,984 cents, there is no PO or contract to check rate or quantity against, the invoice is under $5,000, and the bank change on day 42 falls after receipt on day 37.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3DkaRuPr3vRpZcSve",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2334,
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "thinking_tokens": 158
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier same-vendor invoice matches 30,984 cents, there is no PO or contract to check rate or quantity against, the invoice is under $5,000, and the bank change on day 42 falls after receipt on day 37.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2334,
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "thinking_tokens": 158
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007896,
+  "durationMs": 2331,
+  "httpStatus": 200,
+  "id": "T1248",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for plate TX-1040 was at a different plaza (SH 45 SE Plaza, Creedmoor) five days earlier, so this is not a duplicate and no other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwgUKEAgTGAI4AUIIdGhpbmtpbmcSDDpWkp3BG8iafaL5vRoMf/CidMVEvaKsmd4mIjBMsHrdiDnYtb/tkZI39z2ekg0zLmZLFuCqVBwqOMA3DrY531pk82Bx67Cy2kaN930q3wT0Lc97/rNUhaof5p8VmekiuuO8csmjaG6ph5+P3q7HyZjQrsOF4LvJRu5a9vC+udkdf3DjmPBdfOKOpl8hpujPQUnkI621v/S/9JAn2ajKPnKJwvnhMGNUNDOBMHrFo35f4Zw8xPB99PN0gLY6MGdDKUXkm5qcA8wMzCMn4CqP7eR2GDGF14hAAJP8hYwhifuhyxFcoocxDEmf6UothEe9Sse6SimzNBw8ZDbXPRbYUJAxxf/5q7n1+keJxf6O/iMdDDG74C83MSLzeUdkDbXRt2Enx0p0QrCpHKBAI+sXg2u5qwWveeufY3MrCsTMF4Qexz6zEsjJksVp3ma8cdFSmp1ecxnKhNSn0+Yc/gDUONLeR2vgHb24/XDUsqyG/ikM83CJvxYr3UKgb1huGFV8UoupKWuQMUBn9avuWblv3deTJNXGA5RRzfI5fv1GooEKhJlUH081GP5n8+q8+HEZOIJoGyFbscmOFXIHPrNHtF7DjSyHcXB03i3MGGYXpHylFuL8EAnVqyX1J6V2tqksRpefA0lrwEZ2b55EgLyK+yD0Zqa5fYbshhUud26bhsS1qo3E92Z7inEtaiEIfYJgXsEDnw9CCaVpnZBrWiiV/f46yU+UQHeigclrW85NngStPCrj5sZOtwdi+OcJbXMU6jhU9hr/ZePHGYd/dWph1T0icIN4sjh8MMZ48TDrZ9I2ohDvMqenMOnvDKGavFT+cFiSSzC5mapGEl7TdidlZj+D7PiLsMVVadiOHjVkwuIFErzkrZTP5j63FCrMQbGz/nze8a5VbFCfaQtUgyLhGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1040 was at a different plaza (SH 45 SE Plaza, Creedmoor) five days earlier, so this is not a duplicate and no other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDDo6GXQEu9xSruWfm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1274,
+      "output_tokens": 140,
+      "output_tokens_details": {
+        "thinking_tokens": 55
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1040 was at a different plaza (SH 45 SE Plaza, Creedmoor) five days earlier, so this is not a duplicate and no other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1274,
+    "output_tokens": 140,
+    "output_tokens_details": {
+      "thinking_tokens": 55
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

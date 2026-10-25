@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022584,
+  "durationMs": 2866,
+  "httpStatus": 200,
+  "id": "1837",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 14:50 ping, 3.4 minutes before the purchase, was within about 0.02 miles of the Victoria station, and 55.8 gallons is well under the 220-gallon limit for its 200-gallon tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AYKEAgTGAI4AUIIdGhpbmtpbmcSDOnb1Zovnp8aZJfvLRoML9j5a8owK+SZaG+XIjAkOKTlUSVhN3zpayo4CF3P9BeIBl7ePCvUxWczMhaVkbp4ucHJsMSxCqxas94sXkQq7QX+GO0L07T/s2QgaEapY+zKF0eqB6Ufqkcpm83dtHMPAKju+DPH/TqPnDMiC7WTsRvMsCHhEgiVM+31+WYbEb0/Zt0gmku9PyAocv1bUtObRgqBDU3gHycGP4ARizX2aZXfdtDmsEzbs8rV9dUVrLwx3XdSU35jyR60DbVWUOAgXkcjcMvgnUzYmiBM51oeDBHV+e3HBrjytXVEP7Er+LIDn38dew4ooxsm8L4GMqp4KLcVx6XX+iWHKuSxEozrV6yO3rxzMVeYQVZWIcpqmDuZBpmAyrgN/9qCcFkNqdr+NqaFJHg6QCuHiDgwFQX08hBiXFN9NPMZcny0Hu7byiR7pbj8uVQUrjNBCRVaElhlD3pf+E9+vUg+7hb4pn92OkQDsk+93Wy9uCZNQSx6o8CpxCKIH8LgFGRn8wiJzc3aLAcCB8BpzKh7NcWw4TKHqu6elh01pLEwpg3ydKQGwNJAgJ1WH1RNpS1dT2pI/I3lgZlHO8yap7jCFVX7nhxdx9VB7lIuWoQl1N7nkBKETJdZps0UZ2iLwL6ph551XPP6QFr49w4RHvk67ZIqGpjS/8ssLXzoAny9YhTSY7vuMwIZIfADvcsI9Lli4yE7+QzefpnqEM9KhJVpixNp79KgevzriPVAwwLZ/3H/bmqUTqx35te/f/rmIhVzQM//c7QdFh4F6zVjNZsiYDwy4p1BVpJpCIc0KKIBxmgyQ0iiIpdHwj7vgaFfEAyRNglvY8SFqkwUH3qTH7bSEclwazCM7PDN6eHX53t2FI3rFYIxRdJXava0jeaecPuYUEzz/Uh/HTXV6IVi3ZnAxfNplx4R1wA/MNhQy9CsXGF6aBD/IK0sDUDkvxqTsNnLRPjFaQ7LqQyUG7e70vsgrKgQjg/EWcdVm3BU+suKpczaEZX1VZXRuCXgFv/XofPZ8nRkuXv0XI7KStdV9dGfsiCyU30BDo7tpafgVS1Ebmc8J2ZpsKBsZ9QJMR7p4UanVKMNaxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 14:50 ping, 3.4 minutes before the purchase, was within about 0.02 miles of the Victoria station, and 55.8 gallons is well under the 220-gallon limit for its 200-gallon tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyiQZvcUNGF3BW5RNZt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4526,
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "thinking_tokens": 131
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 14:50 ping, 3.4 minutes before the purchase, was within about 0.02 miles of the Victoria station, and 55.8 gallons is well under the 220-gallon limit for its 200-gallon tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4526,
+    "output_tokens": 224,
+    "output_tokens_details": {
+      "thinking_tokens": 131
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

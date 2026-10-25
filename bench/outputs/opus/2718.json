@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.033412,
+  "durationMs": 8491,
+  "httpStatus": 200,
+  "id": "2718",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 12:00Z ping, 6 minutes before the purchase, puts it about 0.01 miles from Pilot 405 in Laredo, and 24.9 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies. Data note: the odometer stays at 164978.3 from the 11:00Z yard ping (about 3 miles away) to the 12:00Z ping at the station, and 12:00Z has two pings; this is not a policy trigger but is worth passing to telematics."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"The truck's 12:00Z ping, 6 minutes before the purchase, puts it about 0.01 miles from Pilot 405 in Laredo, and 24.9 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies. Data note: the odometer stays at 164978.3 from the 11:00Z yard ping (about 3 miles away) to the 12:00Z ping at the station, and 12:00Z has two pings; this is not a policy trigger but is worth passing to telematics.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFnH12F7MnTu6xXfnE",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4593,
+      "output_tokens": 752,
+      "output_tokens_details": {
+        "thinking_tokens": 550
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"The truck's 12:00Z ping, 6 minutes before the purchase, puts it about 0.01 miles from Pilot 405 in Laredo, and 24.9 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies. Data note: the odometer stays at 164978.3 from the 11:00Z yard ping (about 3 miles away) to the 12:00Z ping at the station, and 12:00Z has two pings; this is not a policy trigger but is worth passing to telematics.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4593,
+    "output_tokens": 752,
+    "output_tokens_details": {
+      "thinking_tokens": 550
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

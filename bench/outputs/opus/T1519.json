@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021404,
+  "durationMs": 3660,
+  "httpStatus": 200,
+  "id": "T1519",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1023 at SH 45 SE Plaza, Creedmoor (TXTAG-SH45SE-01) within 10 minutes; the most recent one there was on 2026-07-28, and the 2026-07-20 15:39:41 charge was on a different day."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6gYKEAgTGAI4AUIIdGhpbmtpbmcSDENXB2bUI6MMKoUKMxoMoYa6sb4LPMqlkBTcIjDo2JG07M94Y2ukTzLrqFpfkTFp8f6BsSKjEeihqoj3Uq/ka6QSWdVKoMsj0+so53gqhwaParraCUiH/cxlmrI6yc+/Ny5O38J2PEuEUzScm8JpkpN/J0n45Zns5C5mxYqlP9H53Kl7GZL3WWpv01omKZhC+Eaigt7/m5qGVamuPDfMx2oRhlXNoDA0w5nhpMEc2MkGJwt6KXnO2kvNR/b53htlWgOsofVnvH6Fa7MaMo3rBiQS4UTqrzPH2Bj0WCEOtfvAYRD/OCjYtOQ7eRiqWTmUhJLjDMupew9cM2djhaH6bQMKy2xZ5xlQRpLDkgLxtsQNZKHF0mDS30l6rFrM8pXc6T25qrMaj310/Oyizauo9iloR2wzvi+9CODI4ptpKvSr8rC15p3OBXGCNkRAJtsvRscGgApZbbWQ101btF6wFWaI1cUDyiO0kd+1iTaJ50b7zZFZ5JHm4zWRR29R4AnSyXZ3KYrg193Jjnq53MKdtc9Mp1oRiCBkw9sn5uHJPMTBTFHLOGVFIRvXSJDSWaqe+Drcd6waLSaw1GKGX3GekgGheyHPDacqPfHIeUuMDVDLNRjDEtlR98yAaBcsOE7/4TcXbrk/hNJOGLiEAJdUFeVpIyaHHfaB7G5PJgEWjqjx53gNq6pR9P9GuM5hYO1SiZ/Ma088b+z8DbmsfWI3NL0/zXB1AY07TZnZKHquvgSCvCqm2lBc/sScQmepjroBzSq/cVsV4IQSCxzYP2eDuDkMUXZSesT2SPBBbraMvQJcEPSJUwfN4nci4LMzzINf5GCLJKPaI1Cal9/LVTMEMJD6sja/b8iGAmVnd8rz/R/ddbg8shsB5knDx/oRQEnrMdrtns9B7NHNV093yMaltP/2BR+t5rFQF3t+xkbWKJaqjgKH2iAhSDC8dbKLbiWRABXt6jAQMJyyA/7uKWhoXjsqRNvdTnKrp7SlktLWNZxbmephcCeu/lz/YBDuf2iPJrq7oMd1LwxrkbA23R1Y8v596Ly1uHl8yl6nR6wvFERnaxECqQ2BjYqNez5dCBf3elT9DwzUYLBl6vvw0852BgwUYgnP2m4XprDxGblmzU38HmhxziNHGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1023 at SH 45 SE Plaza, Creedmoor (TXTAG-SH45SE-01) within 10 minutes; the most recent one there was on 2026-07-28, and the 2026-07-20 15:39:41 charge was on a different day.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz96WRG7w766SGnWSqQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4031,
+      "output_tokens": 264,
+      "output_tokens_details": {
+        "thinking_tokens": 150
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1023 at SH 45 SE Plaza, Creedmoor (TXTAG-SH45SE-01) within 10 minutes; the most recent one there was on 2026-07-28, and the 2026-07-20 15:39:41 charge was on a different day.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4031,
+    "output_tokens": 264,
+    "output_tokens_details": {
+      "thinking_tokens": 150
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01436,
+  "durationMs": 3207,
+  "httpStatus": 200,
+  "id": "INV-1034",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: no earlier invoice matches the 15,216-cent amount, there is no contract or PO to check rate or quantity against, and the amount is under $5,000 with the bank change on day 71, after receipt on day 19."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStggKEAgTGAI4AUIIdGhpbmtpbmcSDIfRdcekEvMmwiKW2RoMfHtZf+nCnpZ/3PDKIjDBzHUPYxfgYEKj6ii033mb1j08DQ4dVtGTLH2n8pQpILLjZ8BlX3VTb0pUcLtkqJUq0webCF4wZzOs4UiV5l8iDtWnFEGYPql1nk/2/mfnXgviFi3QpsvKGaV33YLfs7fvhg3evK5BDspu3571Og+sGWSi3OY4uGHsOu7HC6wrYX++KNalrghOpC3t+QDrHHQkxlrjrbkuxWeNTO2Gf1ePluEUcz98MnXcbRef9qoEWAULQO9+VCH2XS+Pgt5keCnvF+8wnVnhRy0+d3qy4aWtneCPM4vlcGMbG+RBwoswlNCW09sQC9fQJKYG+jVMRPXHOSLxKP+qkuVrFPVxoO5sV0Fz9KrOgsRwPnJknQiCuyVyExxTNM+V4/nB/hKH3RrvPDeigHgjM/B9xaTmZmBA2lyw28AREpkIlSjLCfQpUBUjb15yYUKxgsY/zOFbUojw/LwDdUawf0czA5YY26U9Z88nFfvDRmXH4sMnlzdYX6afxrb8wAdz6MEwLUEoQ64hZ1YtNXHeZccAOXBtiHONbezMBdH0KzSJlDY9muuL1032p/Yh7olNSb6tTXmV7vXPz95d0bqDHbUfOAp+WAZqhmy4nu1LQMqxj6Vx+QdLtDDQ4wnafQvi90jbyOq5Yc/x4dkQkqteplyq+sXTCbsfpFgyb5AXyXVKinYMbP49IjrQc/v3PDWUVInOfKBAXphlUTBPstAJaSrrcFw+1XkMygaiNmCHTJTJ1eSCF85OoODxsh8EOys56bf0ZTCxu1AOBFgrxTDB9L2Zb9Iyz4DRTATKp9ubu8JVlce0LqnAXO5R4kbkKtS+GvWIzhb8UAhYrWQKynI/YHO4fqgro2SJtqFnsJzVbvbKQ/m7PZTlKvxWnEXsCyk5MOlEZdBhWs0UvhKctPY+0zsLc9SbyN0vsjuL4Y/nRiZtdtt5ObJEo398dzU9bd31Dt7SH9v2yHhNGgk5w7CNb+49om5MXfCO3fhBNmhkucsOLB371FMDJA1Sa4jmtVMoMfDmXKO5/XvpadoSUlSU/70Fp0iRiot9H+46zv1MI2rqJGh4f1ThxEKatULjH01ImMWTWD2kWWemwjeG6hFcYyQXvqudzqVCdiDGO9aaWqBxGtvs3VCan/SZZleNGn00yXCzDVw5W7xikoTGROfocQbEsCV6YjzynA9xnZzv9/HUlr1/8SHpCypjtBygONcWzdJrulzD3222IfZ+paYDa7CTL5J1UW6u2AFrLz4raWE16AAglViepcCZR+I5Q8oD1Nwj0lZk1iQ173CRUgUMUstIEeXjyz0Qlnj8rQWuIVlURwDXuaqmEw85kdyxHBMm0aQzDoQj0WyB59dppWMzGBhjlCPgEOtQPlLIm8stGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier invoice matches the 15,216-cent amount, there is no contract or PO to check rate or quantity against, and the amount is under $5,000 with the bank change on day 71, after receipt on day 19.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6f3w8j7zFDvhwdnrX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2160,
+      "output_tokens": 286,
+      "output_tokens_details": {
+        "thinking_tokens": 193
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier invoice matches the 15,216-cent amount, there is no contract or PO to check rate or quantity against, and the amount is under $5,000 with the bank change on day 71, after receipt on day 19.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2160,
+    "output_tokens": 286,
+    "output_tokens_details": {
+      "thinking_tokens": 193
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

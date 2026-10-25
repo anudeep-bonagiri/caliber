@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023432,
+  "durationMs": 4298,
+  "httpStatus": 200,
+  "id": "1928",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 12:36:38Z ping is about 0.02 miles from the Buffalo TX station, within 30 minutes of the 12:41:27Z purchase, and 45.9 gallons is under the 165-gallon limit (150-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QcKEAgTGAI4AUIIdGhpbmtpbmcSDOHcAIlDwOBoBTVCcBoMq3DRE03c3lqapJoiIjAAUYGY7wRMV4vtTb/IFRrMZbnFPOSppy9mToYqHQrqnZezYvDpPxNGA/VUaN827ikqkgcJvSffYkuDPsYUEzxVT/E5ByBBbuO54E70miogl04Lo92o0DnNy1Kvsvedv5aJjzN2T6jPgfvr05n2ldpNtr854Zn9f+/TPWUqX/v4aIm3frgGk1LmaC0PbfM+/TCLxaSR4K6bWpfs9poAkqgi7wM8dar6KySS6kA10+JeBVQ9YzbOGvMx4MCFzwC+PClwuAJpFdzZnwJnXxvPYqzVpC+E1o4yH4yPYmL5IDmG00sYSxTgSLU1yRaOvWoj/c1X16uQfPoTA23O/OCTAmsWcDnAYEgd5TxZ1KkEmhPfoEvqGMXiF6OpcC5cFyIOC2QBzgeEQ5gouAk9qmOFEUj/0bL0sYsQFDRRtaJuqI0cODzRjpB28mTQInD9Qq4qYIauxeWJdCwzTzyFpCaFkLVMx9eik9QHLIg8M/+NtkCUL5775MlidKMiPamk1o14LpYarTUlFAcO5aJrpXlwSi/rGncSnaErKXSFOKspvXDQvFSCTuKvVZNPzmt0B4PoqJd+PLdMs+NMkHg0iofiQfSK66uIAbuvZwNVncGw7myuk3bfW3oV5paeS19yP83H6fFobEPqjqAplX0CMdOUBueEsj1twXhQqaLcnogny4Og5kccvcgeb2qniG6591s70yqgw7Eba0JO1ht7RuhvoDvKaYs1W3CajRZqDAMq/S0APb9MLh1xCeLFOMprXbhPl37zkMSUwMojUY15VTCslr6ZQz5V+bfPC4++Z4N3vkUYPgU4eMZ8zt+ZIeRQEOUsOk0ABmsMPZIOZXmplmHjKISUNgj8lpvwPDPSqIyUs9Xc813alj5lMk7lnCtSojX52U/zfkgM81WwsEx47G9O91cOkrExIqpA5kg5xnTjRbcWXlLKUO+RMfEK+2a/i4ag9urGJwuAIyiyQjNWkutztBkz2dW9L/Mu3spdd7+6FJHJW2m+lYxkiCylqy3py86qWe9LIQrU+cEuFfI/5m3MtB8wqv5iRaLBD6e+w8CGXPL7S1N+ahHPMUuHKvYZS4h/2ScxSsM1AKKDEmHuCCdj+YUFjCSDHNVO03NpPjVaJQt+GM5YBcbmLXQxw9WWVyfmx3DQb1SEpphVc4tBtb1IofCvgbu65ZHDgK1pSXfzVD0HLLSX8+MPrRJt2CPdwkbzZOq+L8M1PGKVuhA+mrFnb3SeOegIgsHBImW6whfIgkaPo2X3hW/wvqFyJowBMmRoI52OnX5XGRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 12:36:38Z ping is about 0.02 miles from the Buffalo TX station, within 30 minutes of the 12:41:27Z purchase, and 45.9 gallons is under the 165-gallon limit (150-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhGtHKGBp3mAFpMVKr",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4158,
+      "output_tokens": 340,
+      "output_tokens_details": {
+        "thinking_tokens": 233
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 12:36:38Z ping is about 0.02 miles from the Buffalo TX station, within 30 minutes of the 12:41:27Z purchase, and 45.9 gallons is under the 165-gallon limit (150-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4158,
+    "output_tokens": 340,
+    "output_tokens_details": {
+      "thinking_tokens": 233
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

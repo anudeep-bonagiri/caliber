@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027528,
+  "durationMs": 3093,
+  "httpStatus": 200,
+  "id": "T2634",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1019 at NTTA-SRT-01 falls within 10 minutes of 2026-10-08T12:26:00Z (the most recent one there was T2362 on 2026-09-24), so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QUKEAgTGAI4AUIIdGhpbmtpbmcSDHnUoLMSAiiJVJUPgRoMJjiu0MFwM3piPdv2IjC5VxAlidBCc1ARtKGbtBL0OdGntW2d/RNmAGH+SBwfhNYhROSDY6vN6uuN9VgmEIkqigVVMs+WMz2zRUba8bqdWltb9+rGxh6IU6HNuoQ1rYSvSjBtNd1HXgubVe3iDXNcEpA6SMYAY1ngL7vORDUqVR0+PJAFGaZ84W3Db//zjizToXf1OmydxwCmYOec/dn5fUoGbJQDM9WoHAmvSveCFdVjPon1YyHVZVD80ruaftwqhnXVs2rcUqHyp0uFaOWLQtnHzAGN3A38R0TjdKV5mSyb9tKUm1ePvZyxOcByY7DZN72DSDDM8wM/BvvbgfpynEYgvvQDLrxB+ThCPRJPmJr+PaYTB5P8I+r1oNDLgI66Pnk/t2yDkZSnK8qLcW7XRq+7/izgByL7jjn56tMARTdoMcl5OipH61byxfq4V4b/5V79S3t+dsQjHUfH7z4Xf9YjtrLmuYTquYz51P0mf0AXeRtoXqOMeo55KzhhqUuXVdt50qYRDGFgsr8uuyl7p9XG6nEZ11fuH5ZSFEau1qr8pbwLBg2JT4LugzJCwFaPP2l2s+vKmpTzY7ywyqt+fylPicV34CJkyT6KKj96cPtbMIXlw86vG4Y+IC2B6oWla8tr164H6U05Xm0gkgtzdhfvQNH71Hz1FLXv2S8M5540WuqUYVTVYE6XXNCtnvhOOlCI2NjGKtfK0Sm5vwxwCosNqt6+gMaJV+5pFihcQpPYSZUNT3IqpT3NeHveSJar16JKPjoCuGEU73Epkfn06dyNy7RUxE+WYeyLyJqofD6r5E1+YvEeUxJ8NnYHqi5ZFOVHlS6WoX/dJLlkFr84nWI75vnH66piX8kFxuT1ihnfOfps5r1jn7uRPJqfJBobkKcLO61j5Dy0KAAbsjshVyOEOyor3U886YvRuFRo4EdJmjgxv3oxy0BnMxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1019 at NTTA-SRT-01 falls within 10 minutes of 2026-10-08T12:26:00Z (the most recent one there was T2362 on 2026-09-24), so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrCBGYG7rHxFzqntX9",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5952,
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 86
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1019 at NTTA-SRT-01 falls within 10 minutes of 2026-10-08T12:26:00Z (the most recent one there was T2362 on 2026-09-24), so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5952,
+    "output_tokens": 186,
+    "output_tokens_details": {
+      "thinking_tokens": 86
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

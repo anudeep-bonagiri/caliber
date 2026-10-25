@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025368,
+  "durationMs": 3208,
+  "httpStatus": 200,
+  "id": "6007",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 38's 16:15:00Z ping, about 2 minutes after the 16:12:51Z purchase, is within 0.1 mi of Pilot 1207 Cypress, and 34.3 gal is under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxQYKEAgTGAI4AUIIdGhpbmtpbmcSDOUGzAMToJ4Wl/+ASRoMH0XSK1d2hba1BeN6IjB2SPbo9UdWex3owHmmBNXVGw3L7J1bKdybGC3lGbO9ZsZv7j93vVhvlC2s4y/aNP0q4gW4DEhabb0KqFagC9kRxiPtFOvHzaBb1K2HgYiVcqrha8Nqlbn/rqWdAKu/8nVzLKx4exrB2EDchB4i4YQSc4keX+LNer5zHoG5CwBAtsJaJ+ocEPBEEFZPQY25UC8TeMEVVGgdhGmoX8LyKPNXNUf2PiwCTfp6mZ1T26VOpexTC+nZrva8F8gd/gKF7HQROznDJ44az2YnI576JX39w0TX42BJ1nESoD8SEaJL1r8hGCrs//bjT1oR4koWQT5nrh3n+phZlvK69gQmyAg8jZk1JuD6As/VEkxbiNnK4JvL7Th7IV5NW9Mk9PZGr1EiVs4Ol0960FZ9cu+qtoYY00hCPYj85aGZ+a9L10FlY9jEANLIYHvHt89EBuiB0fUhh3Vc7bJQQqFcRq4Po3TpKRidv2/wikbaJeGg7y5swNLjjhyp3V+woi/rjJtiaGIRTyB5QTXOsrpIDNT5OHxLTIVVrbVjptHwLpqOb24SkC8VBxDNMYqyvXHqM8LXzD3k3pB8vmNAd/A48NlYsOnCZluHuOqLw9gi8ImFs4rpVWzussfiZZWxFOueVw9anwvv8ZnA0fRoc+WINQBDHhvK0gNkLLvUCYaoZv+/qczJEOjoSYQtnh5pjxcPmXVnTz8OYNYN7D66CqQjQBQARh5kmpo+wfMzVf3+SytCTemJTvHe8JgKMAE1K7TYT7wtr0d5hDV8myLK5jlS2ncXCmZx8TcykwOutnlhhefwjKNbDVpY5VNEe9ucbVMcRjKTuk5sggul5R806gtkYAF/nqBeGkqJOYYYWXZvg12sHqxNFNTUY9b6xgJ1S3dYHwYWQa9iHFUITMqAJKYOOhuUgTDGDCj1u7zotuL6z2UxVAi4TUsGLkkELKeJuTFphDfwuFluiZ18S5dfJQgK7FKthircp+23YQIEXPRNV/Vg0ghbbzcjkRfrqUZ6X6ooce2v90GF348QXPTJMtAdZzghOD9TG0Brxa8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 38's 16:15:00Z ping, about 2 minutes after the 16:12:51Z purchase, is within 0.1 mi of Pilot 1207 Cypress, and 34.3 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAbeePVWDGYyTYSFUG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5182,
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "thinking_tokens": 122
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 38's 16:15:00Z ping, about 2 minutes after the 16:12:51Z purchase, is within 0.1 mi of Pilot 1207 Cypress, and 34.3 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5182,
+    "output_tokens": 232,
+    "output_tokens_details": {
+      "thinking_tokens": 122
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

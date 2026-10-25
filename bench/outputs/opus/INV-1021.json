@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01132,
+  "durationMs": 4402,
+  "httpStatus": 200,
+  "id": "INV-1021",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1021 for 2 tires at 56,800 cents matches the contract rate and PO-1011's received quantity, no earlier vendor invoice is for 113,600 cents, and the vendor's bank change falls on day 42, after this day-14 invoice."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpQcKEAgTGAI4AUIIdGhpbmtpbmcSDDCn8Kqy2RoDfc4OExoMNVD093hSGqs0Jyu7IjA4R72XwTrdIIKZa6Q1WJ/lVu7Rmu1RhxUBDpdMeA8eal5tRMjoD6HtwOi0UKknRsQqwgbK5YQuJO/aPBhd+iO87TINdPj0jO07V0Pp0d+oMpRTDJMgBImqvMXdDoaIe57IPSkRu+HoxXhjDo04YxG7mfdW84TcUabRYgKZnJOlbp9H9oNAM/Kv7z7vMSUbh/ZG/4lADpHcEtMmQvi18cgmoFGZQdosaEnUhSLPBb3WWEzCNsbM9wO6NdJme2IcQOQwNGFVw2MCHukmQFSYXulHPyFBwX7hC7nXJtthBB0jJBJ6+2qDWx3pcVLfYKsLEn/L5f5ozep3tB9NTWo+LpDxspesFEqWX/9b/r6PuMHknhE5S2WqGCcDozWukuxHjFUsc/OTbymijU7LTRzpQ2YF9FJ76uaxbqTkLr5SzDttpz+zAzfuaWvLi4qTFcvBZ9bPj9Axbs5pkSkk4DPh5xz7/QU8SyIY16NHj1/36juvMvshLj1W3osXT2IARlocwvdMPA5eFOvI1Yaznrqdo0QAFrmdwPGXHYDQMFWphBjmordsL+czEiGgMrjRfKAY5ifF1HuMn7wAQkcNlqMfYf+ClIoPkcNJbuXyF/lAFYktIIbOuC8saSZK/twqANhpvLS8Td7gEnKteBQWHwq53x2Gfzl+kv8uQTzUpcztQkIohS6LhWErsrJJ7iAPi6sh5ZwdL7DtzKvcfpTcJt41MUEBtg+sD+ZohCGbeaVegq/YvdmlT3P/iqLhH2vlbX5rdZH2lrbgOw67Ku1XPaddaIEQUnsydexG7J1Jd6BDvks8HfAj189a+GqO1hvDLPPsor8PSyHXePX6k/32sm4NnQx87D1oFvVEXJKatGA9ZrlqSH7Jtw1UDDKbSp6id9sHVH2MtA0CpyYJ67HowTcoWGWv8hfVDjfq3x35qOlDToRmp2k1XiGkTDi9WNsQC81q8ULFIfIQnFT7csUoM1m5CJl/EiNoOZj+7W5QAXqdE/Fr07BkXZbAZ3gBBB9hE0pemip2KoHOB2U/kM4k0crMIo0mDcHMIRFd5Mhw8Zlv+5z6GfiQ4ubhvoYJipVu6EXi4B7OJqRvh+x3pxPxM6DbBfinOqldR4Q4skT3iioKnGI6C9ODukd2P3+4i5ZpAn6YxygthnWPOYn5cgh1uRpXuUS2mLRNI6oYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"INV-1021 for 2 tires at 56,800 cents matches the contract rate and PO-1011's received quantity, no earlier vendor invoice is for 113,600 cents, and the vendor's bank change falls on day 42, after this day-14 invoice.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvE5EFZRwoi29fdK5E",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1570,
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "thinking_tokens": 150
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"INV-1021 for 2 tires at 56,800 cents matches the contract rate and PO-1011's received quantity, no earlier vendor invoice is for 113,600 cents, and the vendor's bank change falls on day 42, after this day-14 invoice.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1570,
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "thinking_tokens": 150
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

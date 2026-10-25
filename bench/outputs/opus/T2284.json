@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018756,
+  "durationMs": 3093,
+  "httpStatus": 200,
+  "id": "T2284",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1017 charge at SH 45 SE Plaza within 10 minutes of 2026-09-21T11:40:17Z; the latest was T2027 on 2026-09-03, so this is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6QYKEAgTGAI4AUIIdGhpbmtpbmcSDFW5qBMtC1Y5IXgxOxoM2wdWgv01+AbVywKeIjCShRyX5LbvugoCHx93j/PQiHv7fWhKlCJ/wSJ0K/s7XpJS1lypLgMZvdHzT2fZAUEqhga7wIea5EEeS3eIvNzAHqaXTDfKGUpCOFkS8UsNCCvXchRDcaLfpulKcsujvuNBP6mWXZJsizQ1TFRqQdXNYKjNLc89yainxjGlMFUtr1GBxLxStYhOqcxVZn1A0s53xU0YKT1KwHxmmHJN1VlThbcs11OeYrGIJOM1rCI4fQloCkxWENl4/RbtsLl7kkROQ/J+ev14Kqal6BkY6ODFpwADNrLKYvxu+FHVI06H7QG8ZmG47OIZYmghwezjUYc+g7mINq/VbTC7YXJ7MsfMT+M/NsKrbEnxDXbxNklEcOvLhoE1mbIpVkPBMCZDFfPGamaahBe3FyUzGq+UoKCf4JqD50omnoZh+lbMBXozPWRL5G52q36HOC/+Jcxw4xTZsGTDuGU1DA9vcefRo5nKmT4wb0KNVMx2kPMsd4jUyiN9pd9+5DGuH9G9XFd+yL5WFJeCY9uus2fdE3puAaEfsXlbP3tNRWPL5jgErFnitS5xQSkgSkKj3+bqP8/NCWzY7bgE0Un0lVk+bmSYaNPRXQOb+vsaprlQbndBd/IdBVQ4blwGxka3TqPGFHOTmXh9yt+b7biJydYdScCUUqlQ7aG0AdyaAo+ae9gdIvozzlKH7/w6+fdkJUYG1JdWsO1bwK3IQuIX0hSsWNTXR4I8Vp/npKZF2M4EtwiIFh+tB4nsZVhMb/RrEX8SWfSap8fxAyyhc4VkaK3/WE8YZQLOT1TCg/K+8AND8J1iwC/70dASKP/hqwO+FFM9W3lTqY/X0Urhg8PD16PihaMY9Aje5K+v0uoFGm2B6FaJhtwG0zFJJiXmb4wiMwbGPWd+Sddh+mDf10+zok956TnY583uUzA48QrOy8/8EFFmv7SMjyPhF+GmURHdmFgFPTJzZZbdQYYMPUIPAI6SVN7xhz52uQX23xnKWuxbkBW9lZin7iF4qaath4/A+oQQVv8oST805PwO637MM/yIv8VUeVSlhQRN36eEghvwE5voXf7d0UBt0UF2x+Qb7Q+DvsFCc9bIcUnoj6st310YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1017 charge at SH 45 SE Plaza within 10 minutes of 2026-09-21T11:40:17Z; the latest was T2027 on 2026-09-03, so this is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzM7aFkNHdBRxXGWstJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3554,
+      "output_tokens": 227,
+      "output_tokens_details": {
+        "thinking_tokens": 133
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1017 charge at SH 45 SE Plaza within 10 minutes of 2026-09-21T11:40:17Z; the latest was T2027 on 2026-09-03, so this is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3554,
+    "output_tokens": 227,
+    "output_tokens_details": {
+      "thinking_tokens": 133
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

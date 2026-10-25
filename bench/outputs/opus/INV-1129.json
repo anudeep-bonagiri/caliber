@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02686,
+  "durationMs": 7997,
+  "httpStatus": 200,
+  "id": "INV-1129",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 54500 matches the contract, qty 4 equals PO-1010 received qty 4, no same-amount invoice in the prior 30 days, and the total is under 500,000 cents with the bank change on day 18. Flag for AP review: PO-1010 (4 tires received) has now been invoiced 4 tires five times (days 20, 33, 60, 62, 71), and the 221125 total is 3125 above 4 x 54500."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 54500 matches the contract, qty 4 equals PO-1010 received qty 4, no same-amount invoice in the prior 30 days, and the total is under 500,000 cents with the bank change on day 18. Flag for AP review: PO-1010 (4 tires received) has now been invoiced 4 tires five times (days 20, 33, 60, 62, 71), and the 221125 total is 3125 above 4 x 54500.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypdo5BR2ZE8mrHvn47",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3250,
+      "output_tokens": 693,
+      "output_tokens_details": {
+        "thinking_tokens": 524
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 54500 matches the contract, qty 4 equals PO-1010 received qty 4, no same-amount invoice in the prior 30 days, and the total is under 500,000 cents with the bank change on day 18. Flag for AP review: PO-1010 (4 tires received) has now been invoiced 4 tires five times (days 20, 33, 60, 62, 71), and the 221125 total is 3125 above 4 x 54500.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3250,
+    "output_tokens": 693,
+    "output_tokens_details": {
+      "thinking_tokens": 524
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

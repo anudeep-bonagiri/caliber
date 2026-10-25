@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014172,
+  "durationMs": 2946,
+  "httpStatus": 200,
+  "id": "T1348",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1023 charge at plaza TXTAG-SH45SE-01 is T1323 on 2026-07-20T15:39:41Z, about two days before this toll, not within 10 minutes, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrAYKEAgTGAI4AUIIdGhpbmtpbmcSDOoiuvnp026x/Hlz7RoMy0O76TM6X5HYy5MIIjDCIzwN+tA+wjwPSyfdTVXxQdw+bcnXxAqYgJETc8M3TKzpB8oXt8TvG37okUBvweIqyQXs4y4tj0T6HBclss5usd3+0eSWXcVvJBxhaMxzzDZPW3RwrkBTCPBbUbmayMWnpP4b5MVxxEMFVDlFjr3GtBviv3HmyEcuZBC1hFRy4zk1b5JKW9TUcjnELqLsS0iUT4abYHPIJryXCvii19q3rlnir5Olog5YKhEgb2wx/SysbN/e0Lz/qwsZLhmixmGXcWIW1+iMyQ58YSvoVaWbrxtzWICpUPb8yJT4JBsQuraOna1B1EumMHi8g3kFPnAS2hjNgDDQPWLz7M/13aWx7nNmrIIghrFmFBSU4g/9Q9UGUY0JzSFAIY10FENUlexGx6kQkHcbLTY8t/3PRnTQP4oRNuWCGyHBsgr96jMvy300D5p24hfkh9IervlMTH2fTnOadAhFtb8gy9uSPi+D4c4OCCdOGfc8QrFLYjTudHI2clgkqGSgFcb1qGRhUFvD/pUXa9ooh3ph35wDuymmUDlj1WmDv2zTDBOWS2zGdCgCF15mIL+kgmPdksdisq7OVSxfpUQUxY4oqJAxVXWM5UzikZLzvLZdHIan0ekP0C49oybxKnA511eYbQ1RoWcDBWf9YrM1cd3Lc/vdZwAiVJxEAOwNiMmtk+tf0Y9FyFjYhQ/t53IFt7wQBxYcnFoi3YzUObJMskx+5QI5+Fma/Ohhavm1Np+20sG+fGLDT5daFG0zeyFDJESYojoT66j0zFjPYPZZSzRvrAEexh0Pj6WqN/v9UnFV1R3hdcVB6BlOQ8Dodv7f2VoFBJNn78G22189HLHDnyjU5klvvUsQPB/2dxGcgkBDo8amGf/yFZsTHh0Pqgi1mDrWJZhUMQtzgvatemlSrE42wR5A5oziUWm/GlduyqrleO1De1knayY9z4NuUoUd3vWIq65cs30Ou73IL9rVysJhEZ8xtkLgUWGU+Nb+vZvAQpHxust2C7Ti+YL7blXYCnbwnhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1023 charge at plaza TXTAG-SH45SE-01 is T1323 on 2026-07-20T15:39:41Z, about two days before this toll, not within 10 minutes, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfKhPo8JbuA1uTyRxR",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2523,
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1023 charge at plaza TXTAG-SH45SE-01 is T1323 on 2026-07-20T15:39:41Z, about two days before this toll, not within 10 minutes, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2523,
+    "output_tokens": 204,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

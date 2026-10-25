@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023896,
+  "durationMs": 3065,
+  "httpStatus": 200,
+  "id": "T2568",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The nearest earlier toll for plate TX-1028 at plaza TXTAG-SH130-01 is T2554 at 2026-10-05T18:54:20Z, about 18 hours before this charge, so this is not a duplicate within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSngYKEAgTGAI4AUIIdGhpbmtpbmcSDL7nElO1speq70a8rBoMcnsze0k68/3QduprIjDDtGTQaAR/QO5DQFu1LAi9RcLS6SutFKyZEH0VLupLhygxxp8ehh14iRM79sY371EquwV/HUXINKg0a/pOyoTCyImH05Rx0HX5OScMBvzqpuoIFC2SMsHAxlhpDEH8KRhPmTl7CpkrQwJT3kE4i3MymdYub8AtJnHp11IUOYjlzzKZtHd8p8untGz5sOFdmSCI5yWl6zZt8ZP5ZcaYP4gMoCCB1/htQFjdg0m/CUA2WkgMdlyEbOoIKE+C/EcrowsCd6jWC3T3vfFRQkHVW8e1GWBRnNUi785XPdfoSRvRaGQ1bibFzjUfooy+z9e/AM+eHshbwH5DYx3C+3zU++rKlP//mhgzCPMVi7c2yS6ivMF9ZkFtvrYbn9gW+kBK55C6TNtneg3uC+inbvUia3sfyW8qqveC5VYPIwxZLuyrEnfFfKmJCKr26jq1xbz0df936LU6AsV9sh/jLQ/mJm2kIcrCcw+SGyM+vaNQpsGkgaXdxN229D0r8qOCJBpwh9PBnMAeE8vd7Erv1wVGFlTE2tC/0i8HZvEDk6mx+cPAqKo99+21YkQIcNPRq/dhg7P3SsSi53XwT3gRH5evrL7epHuC82AVmc5At5RAs7EronNpicIPAe37bKuEDKx0W8hn/9iWOUODddqfr5YG5IzAhJWrAv2UGS56pjgsS6pxZ4df3GJFmF7c9UDCYL8tKKEjktiGsfQ5BRtc4i/a1/VO7QFn27AA9mc48udDx+GoIdsR+MZAfKeVNL7izoVBBFEcmkG63np+/sKr+MkQboC0nd9tgCBhQRoh3/gouXYeF2qJESWokhYsbLOL7aGCO/OfY0vCGNH67fcEnfU5ZffGap3CY/il10RljUzigK54VdIkowFkRAPlAhzcpTeIzVNlp88tq7ZxjpljMNP7wfLl0bL66c1Fqazx0Gvz+24965N8wDu9aC2CCM0w7huBZvQwX1yXJfIu9JeWBnWs4k38132Uttvi1BUxa/TyDdwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The nearest earlier toll for plate TX-1028 at plaza TXTAG-SH130-01 is T2554 at 2026-10-05T18:54:20Z, about 18 hours before this charge, so this is not a duplicate within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKt7rV1WS1wqz2zGxM",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4934,
+      "output_tokens": 208,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The nearest earlier toll for plate TX-1028 at plaza TXTAG-SH130-01 is T2554 at 2026-10-05T18:54:20Z, about 18 hours before this charge, so this is not a duplicate within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4934,
+    "output_tokens": 208,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

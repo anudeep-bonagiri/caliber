@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018248,
+  "durationMs": 4295,
+  "httpStatus": 200,
+  "id": "5620",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 3's nearest ping (15:00Z, 15 min before the purchase) puts it parked in Austin with the engine off and the odometer unchanged all day, about 138 miles from the Refugio station; ask dispatch whether another unit or driver used card FC-1003."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwcKEAgTGAI4AUIIdGhpbmtpbmcSDFSS4TKsf4+5+FbHzxoMBJtxYyKZa9chqyx8IjC2ZgumiznPSESYIlVn5JO2EnhlNHFEkkOmCzg87A56qogJYxn9ysetazdN/hhi65UqyAbO2swgo7UfLpqY1b/WItrNZiGpIubx+Q2Gue+538q42ZmniZWpj28QBgHZh5HhqCu9I16UOK6ylp1SyO4T6rvnwxw289wQRi+2aWo7C/mqcsgWcuqfi01PRXxgHfaVE5wmyxIsAOB1AshQ/+K2/rvaxn4/RHlUNb1D4i/NzWDDE5F6lPWk21ZISwwkLlm2/xlik/cdCA2m16rxsY65YmC+QFFbVwubnI46Vl0E8GeJSM2kGlnrx/ovFVNm7d5JgC8Kvt4X0rSm741XLntOB3ikvS+MJ2zsQ/PG+QhsTwFU1niI2SFwchInBIzL9rbhh5qjYV0+iqtFnseWej3h+TRJAWh1IvEmXWWDVAvkzZnVrBlNxrSV7lc8Q06CxZEkAavNTcliljOYD2ov4vghzEJB8Nqu7I4lULAQBY6mg2oZcvWlkC6hh0GgHfnRm8HXcWEFAOrbUsJSPYcRMCTLMwA9xTRCczJV1G+GLCVyyg8euPdFJ6z+Sn8ajRlPgiU6/GCsAGITpFenxEIBOyPvdJbTmrj6iysvSRlWyWLnvKvHJV9BVnXXLbvPQMXH7eentrPB+aJw89df2efLbk5JeItFlKpT0V5+PY7Jiq+1PTq4WDlSGXc0c0Hy7WqB1gE/ghlKLYUcK2mQKAq6Kgcb31UTNxd+qc2xY9jDBRztpzz1Xt+o0hOVxB8YZHwV8S8sh1NUlNswpt3023L8Il3Eyokav/s58d6fiUY+DFKyulA9YuEwio9hqSQ0WiklSR3I6cUQqm9dxmsM3wCatbvIObsSj3e4UoOOegAjUIRoFMkxtOzGAmpkgA65kf64Ri+o6fJUn9IrwNJ5a+8UebfaDPo21H71eX85AKPRpb4/J+q374HPvwum3u6xHBDOE+UE+IyjTpwV/msoWUhnfLfT3d2hiqqANEpLnr4dsqY31kabpVi2SKVR0ZJvaprWvFaDoCzpGU+h63P3Jdv74pVK5F78IL1LYZyJkJB3Xi68VHB/quXJ13ltz0Gw3C/zDRqBSJ4vVRDG9NjdOFcqhGpufb/CLDHMHATOuryVZ32xYUrDV5wqOl3M+OG0nvLJguwooMHTEHnXaxI9BVSHjNpOXeItJpC9n+7zuqkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 3's nearest ping (15:00Z, 15 min before the purchase) puts it parked in Austin with the engine off and the odometer unchanged all day, about 138 miles from the Refugio station; ask dispatch whether another unit or driver used card FC-1003.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNNRznLvdauf2f6mxC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "thinking_tokens": 191
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 3's nearest ping (15:00Z, 15 min before the purchase) puts it parked in Austin with the engine off and the odometer unchanged all day, about 138 miles from the Refugio station; ask dispatch whether another unit or driver used card FC-1003.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 314,
+    "output_tokens_details": {
+      "thinking_tokens": 191
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

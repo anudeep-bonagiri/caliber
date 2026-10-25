@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0282,
+  "durationMs": 3179,
+  "httpStatus": 200,
+  "id": "5326",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged about 0.02 miles from the Columbus TX station at 15:34:08, within 5 minutes of the 15:39:01 purchase, and 29.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAcKEAgTGAI4AUIIdGhpbmtpbmcSDDp940EK9FCsnq3r1hoMjowJq4w37jWOIezzIjBbURGhoAnK1cyqvgLr1XIi5c14KeZWPX55eo1L+n0d4KewzGd2969niTKJosY0/h8qnQYQs5pp8F8UZIXfny80vgCebsJsGT6/b9UFXAZNRlqyGKx6a3xiKTbET0RwSL3apQPya4A1FgWW73g+8ASaXIRr3cuCy9C/iocmgXtyV67bsPoxBeCcc8Z2M908bwv18DK5124/L1brynJ2c4rHMQiAHfjR8Dej3FKABQKOO0AjIuzFYqBhsepBI/alUZ8MIAaShZWWnYiq4vnIumxhClWjJAxvm5SVqu2KhKcJdFriKRWny8sI/76r+f1kHBJcVHWijxfyI1zOgU7ngPuxbq96dpvTtWJ3LEE4sn2DhJ+JRN04F4F/ghaHbkb18SfJ3Mqm8mqBt1DJErybzyclLLsaD2j1ArVYVEB7QQKmojUEs3uxb82tgA5XR42uvF7c1TI2fE+uoAxeFRxxlbPwW4PO/mQ61GvMSQET4i1b9iiC34vsDcpW76Vl01hAABFA6x8Da3Wzg4XtL+t9S5Gmuy45im/pAoK9ldiwJeRxZBtqicH3SSwNWEoIMc05wqP6F8fulBZpXoOPKTEjdXPNzLFqUM32BG7y6H4roDOrgJUqGxdSB6kmb1JwBByjJ7ah+sZzitui0AEnKGhfKetEKr+4z4EQQNNY/SE1rBvx/4ZsgouyTbejQtE4tYVc/ztI5ttdTlkZoyavEzv9aTuc5M1mWjgVvys2joEhBsAAq7Dd1vxnhVDtDWlX6yl46obe196vchTNfXR6GrYcPR/eoxtd1rvbrDe7UuP95TJcwxzZIoPxHpea6ylkHcftE+sMsDqvV5+5mMSjQMUmxj3VKEnlzShgWRUccbxFnJs5j3hA5pcoiRSgak4EWtGKJYl/GVg8qC1cYLRDzUkkE1RA0JAMbIRdcfGhWrK/f+rvG807Bg5SqcGqlwMIfZWFHt1W7ycZF4FmEM+IGOoLqANjpMX185B5f64NyTDUZQRabHs7rPHwVNnwsRHu5Z9H9M9bTl+xOWMq+NdNzJXgNFfwt/tknXojFXZi7fBFL7xXQXIixVGUMny2Rsbv82KSkjhQlAosCOgp39RHaLBWr2cF2u6VHgO2/K5DREnuQlTOKxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged about 0.02 miles from the Columbus TX station at 15:34:08, within 5 minutes of the 15:39:01 purchase, and 29.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypjc5JPfdiJmVyGwjf",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5765,
+      "output_tokens": 257,
+      "output_tokens_details": {
+        "thinking_tokens": 151
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged about 0.02 miles from the Columbus TX station at 15:34:08, within 5 minutes of the 15:39:01 purchase, and 29.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5765,
+    "output_tokens": 257,
+    "output_tokens_details": {
+      "thinking_tokens": 151
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

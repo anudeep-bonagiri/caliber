@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.03014,
+  "durationMs": 3649,
+  "httpStatus": 200,
+  "id": "T1899",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1010 at plaza TXTAG-SH45N-01 within 10 minutes of 2026-08-26T14:20:51Z; the last one there was T1764 on 2026-08-14."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AYKEAgTGAI4AUIIdGhpbmtpbmcSDJmjvQBlEELl/aEgXRoMeAhWyVby73uIKddxIjCG+bcL+Lmsu7awvAW8N38nLrVwzr27KpGqpZJDFO5tS1V52VIJF6pE1ljMblkgn70qjQYT1Y9DvDUMlCqhu3OE/bebsoAOMg+L32E7jjaSSn0kFp3ZadhE1BETh+tAE+UYOdmp/I3ZpbHCx2ITCByeuf0R1+sjs/44CijDU8q/SlgZttXaDih8QFYJgtoC+FM3TuOQHuoYJkJ+6Zca6ny44XT1Kz5mGn1tw8f+ZeFDyknWUf5AT6iYTjsu6EpGwcX+hCChHdyJLGt2fHkMh3SMoejSyLk0miHhKCHW0kx0mmCQYtfEwn5VGTl0XwiQE7u/TaOF2mXw06QrM2feHSAyvmDTzqiTGM6Sho6oaQrFDg3bHdZ2laIMBL0KOiF3+ox5q7s6yzQcYLfbNTDn5G05im6/SwLX7kF7nM8KR6UCTUcGd9SZMIZdem3siJJqpo3UuDOw7Dw9hOPOTBgBHxOQGxR0ztZdXI/eoUUQ7HsQSwpV5GiWQIVwLoYs1YAm+QCWi5h20IwSOHAl3PVBiplGHDVfzJJYIIu4NZsTsTeq/Yb/vKAwaI9A/AfRSWj5JSvahk3rzbwVN+6A8Xd87KmC0js3texgbJB3YO3XCnbCzvCpOg7db382M1DtQkZ9rjkY7s7Wc3xZg4bNO5d7kVOBWKntTCiwgkOFf7SeV6b9jIYvGmWgmTXKqkB9jSinlyFnPjvBJlN/mTzrJ+YKJTtVCxyF5y2s16Lk0F/tVYKEWNB7+BDtD/mGYyOTDdA5ScXK1q/yNI/3pA8O6ZhhmfICum1YadKiiTjCElDyFMozyPYTsPm/mT3K7HuQRLLu3109li1H4bJ3c4CT2ArkrUQ4w0cnETCuEZ+QX8GYSKxVVl1yKezitt6ae43gRufmE5MJeTZhDTaK2uw4YvCdVKDK/FNBemLJea8t1wjcePXVLpEZbVITbqEpVqZoHlS6gI0V2wRt90qDFSZygNfxlh7UwK1uOY/fEycAox+vf4Nin/6WWVV2P3/ooJ8TRmQ0tWsHMEpF3p9lWHUa6jks2x4odfQru5JaQGnu5Rkdzvb4e9nkwXQFnkORtPTxoeBCSnab/mvMkhA23/IhObtJOuM3GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1010 at plaza TXTAG-SH45N-01 within 10 minutes of 2026-08-26T14:20:51Z; the last one there was T1764 on 2026-08-14.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz1Ua1DRX2qrJmw2AyB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6260,
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "thinking_tokens": 159
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1010 at plaza TXTAG-SH45N-01 within 10 minutes of 2026-08-26T14:20:51Z; the last one there was T1764 on 2026-08-14.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6260,
+    "output_tokens": 255,
+    "output_tokens_details": {
+      "thinking_tokens": 159
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

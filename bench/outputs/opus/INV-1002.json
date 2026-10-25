@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015784,
+  "durationMs": 6052,
+  "httpStatus": 200,
+  "id": "INV-1002",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1002 bills 37025 cents for qty 1, an effective unit price about 9.2% above the 33900-cent oil_service contract rate (id 9), even though the stated unit price is 33900; the total does not equal qty x unit, so confirm the amount against evidence/invoices/INV-1002.txt and pay at most 33900 (no duplicate, quantity matches receipt, bank never changed)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6goKEAgTGAI4AUIIdGhpbmtpbmcSDMR0Xo81Q6gSw0gKjRoMlQ2lJgOQhEdYXRKxIjB1kSN+YUbCmIt6t337bcmNjguvDIMPDpisXUzu3GWM+9pD3INyk3/WCffK4SuVLLEqhwpLNJHosBSI96Kp6oKmRr7V9syGD7dG/zUSStIzXz1zkgCzC5wZuIOnklCifnLP1XBsIB9eefgAHN7+yBkfdKWeZk8xBBqk84Fpvy9v0XStI5fknvBr17x6AthdnmnS2dRNKSBOW/xKumFBe5PD/dx6tceOTXrFGnPNnoP3fS+07Hpaawbt7NsSOgqCwrcEQAgNVjMHO1oqUPAPF1Qt9edf9i7ZVbvaR1vYVmj2VTRfsjUMKQrD+WXeRS6AkRWt1l5oAkVl/8rgbdXqr3QjVhEICwsQb+a8OTHWRTgvKMxcnwnD0pRbbTtxiOSXe87HPZ7AtVJPfdEak3dfcVvTn30Upez1esb//xBERuQ5bZZ9RDvTJhDgoSd0cEGqDYpkxggKmbKqG4BwA6NxtIdWZFWQ19Vlu27koWgjkLt7tqbWg0ZeKoX81DHnGzyaAL7mm8rkNXZn6/TFdntlKIZGl/HovYAtH0vHxQrPArZexUlaYIFzyDAsgqZhljU98KyL+gPv9/3bDOGqnr6gcPKizneRiizT6H0XuredRTdqW+3cpDGhdFxcmJkwpJ/aRFUfCBdPPDgypNIEfSAujGMe9+VIH1kg52i4Yr/FNPw+dhZHsLfDkHIiSqZLkIQrrDIdFn4Jt3xkqrCqFs2QbRKBJKSXET+I6dt/OlpV2wWBYhJ0FqsLejLK73cauziLlAAf3Xg2Trm05nsGIzesO1ylixRpN64GLbxUuXqyKTCoPv8w13TR3WKUjrVyDO7T+oOfLBylMAHfk8Db4ugHv8JJe9ENQwB6bUFrEES6Vjvjxzjly17mLscNDcU0+wP9fI07SuaJHrRqrKKy8vNW8Jq57asQ11DyV+O1xWfcaTaZ5lSdkRVPLtxwXsV8qTpxXfn7nbNrpamH2YXTbeyIUlAMjiTPOgnp9pgokHy/cMVpRwZi7SQcMDg8cWSVcjhUCRwMq1fOOVZ7D0iCzT/YWiXfHfoy/zS6DHvf+PrUJRGQ/Cp+fAJge1+r6zI2y/9iSwWQprqyytNXEr/T5xC35gPl5v5m6aC8GpSuuwTvG7rJyC8tyByLdcsMW591NFMTutmIjQ9bLoSmsIv2C0AyEmkl1R8y2Drv3l7kP3dCN3229mBkPuJdwyW3MDPj9wWaj1DVoUu7XxNDNbpwSHh9qSeYyPhQXILiBejoiVV2vexR4QtYHtE9Duw49/MvBG7zVt9W3sOEeDs2n4ynEA5xXso4GZUIb3R/lST9qudU2F4zPdHwiEyIAHj65qi5Ujov5CVKY3vVFJIpTMZUklFVYsIwcLpvNgCuSJt/32wcd+cRQw3+FI1DgUWnZu9kudUv6+A0FuqqTRmIyPrbdsALjncDIBHv1EHJME5bXBWRDmmo+z9ztPZTSaMhJVc17uiCgebaCOTbSX9tXclDdzB5OydVZbfoSZr8wvkHOPL9LMuqMWIlpFD9/1z7D83y6HOaTPW+h3QbQmZMId9AvSVqz0q+LxIB2kime3z9GPD1xoNQ1yTIaynY20bhdGyD3dtrR3j4sGr/NMaupM7LM2WQ5/o5gFgHgkkI+ULPMR0N3/6+Qu/CG6rsqVsXmA8OgC0R89ID11A7+A7/Uk7iwuDVObx+6kHO0xr/62/90+QN6BtuDyTpyJbb7bGrGXtce3+xefUCuNpN6KA4Jg8YkwQny8S1InuuW6mvsdryHRvXNaUr1vKzythWoNvyS0MYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1002 bills 37025 cents for qty 1, an effective unit price about 9.2% above the 33900-cent oil_service contract rate (id 9), even though the stated unit price is 33900; the total does not equal qty x unit, so confirm the amount against evidence/invoices/INV-1002.txt and pay at most 33900 (no duplicate, quantity matches receipt, bank never changed).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAGducF6n2eYhQfrZH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1471,
+      "output_tokens": 495,
+      "output_tokens_details": {
+        "thinking_tokens": 329
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1002 bills 37025 cents for qty 1, an effective unit price about 9.2% above the 33900-cent oil_service contract rate (id 9), even though the stated unit price is 33900; the total does not equal qty x unit, so confirm the amount against evidence/invoices/INV-1002.txt and pay at most 33900 (no duplicate, quantity matches receipt, bank never changed).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1471,
+    "output_tokens": 495,
+    "output_tokens_details": {
+      "thinking_tokens": 329
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

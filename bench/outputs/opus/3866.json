@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026896,
+  "durationMs": 4147,
+  "httpStatus": 200,
+  "id": "3866",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39's ping at 16:30:07Z, about 4 minutes before the purchase, puts it at the George West Stripes station, and 45.5 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wcKEAgTGAI4AUIIdGhpbmtpbmcSDOmprq8ycjftCQWk9BoMHvyqNp+uVMS8baGkIjAkGh+eBbouAl3fQL+avl4C10shIwNI/M7jSpJZgy80Jg883ke0Pl24H97mKBnCgWcq8AaZoMzM65o+lDKPzcffSoEaMsutm2uYMRieS60BcLARt82QSZOvvBrv2XhPwrN037UCYTqutHyYnq1fi6qNkjUN20xU9q1316IWfY7uvSPmExlg3/MVUzjB3fvERjFwjJFIfCSFb+XweCvCU56lEXkboYbl1838CoE02ozTClMNDfgcovXtJ6pjxdO9FG4FNMbuP07wU9sIKDs5JXrVdnBTNfHtUPOyg/kg0KrMuALrf3SXPTDZOfZjCQDcJiZdjLLkkRoGbhT3w4SvA4NS/Ad7CEaH0U2toWM2sPFWsx5WQmO9KibS+G+erFwVrG7eV2COK9J0Zr6K9FoaLuh127JT9R0tMvQpc/2eNUF+QjMsOGRtxHX+PT53dQSiEWQZrqgxLM5NuP+w70aKIPw0Jfqcgkn/lTrja943YEonmwj/SAenPbXfyE0JrfAlMLYHxgBkT8rcsi1+MkQsnRydu1QJYyM+BXlu+/ogEa29n0ZEJt4m5bjErgwdDstUzmvn6DpOJFvo/ge59vGYOSLptg+NFPSrwaysPPZUo+Nv9PdruCmR1b420OUOQQyVaNr5MgM8QYDpvs0IaG7yuVkk7E8tvK8Qq/ZUt9PUIKpZiskOlCMiG1YM21wxcTtu9Tk04U34e+3PhUCRDjcg5iZCC3hynvxdN3q5M4/XhCX1oOb17Ql6NriIrEu0wiwrUvG9yFYWa38qYssLQnGv+mWDxxvoe8Mf5ILucwA7pLQfbqVKFPHb7dkfNnD7CtV+QW/D//B9TNoD0DVEgisdGtC6hCSfTGFKnFvohGlqDuPVDzy1lXNdpfyd3GhG9pMwX7bZYlrechcPIaw2w2PQoBW/UXdGTd9EsAjlBQ9ZR/pkbUYal9kzV8g0suojd5TpS8Gdkbv96C1wr30NTi9HcB3UeynXl5+tGC8XnnKC05G2EML+FiauY6lpYjYGceoRS/JSEflbysq6Abx58xM6R3koJ4yQQaIc5JHlcXnN/7iFXTpUEBP02Eygs0KIY4qKdOBA1sDibvsBJRBaYfiPoXXOEIkUFLKRQclQaJeBGIY0SNLP/Mjc0BR8wXwqtxXE4yRfNuFQjKD0vJf3wyUP26PAQ5Ysl2Of8Vulntq1zAys9KuNyzlrdcyfRTSD3URJhWwEP2v33ku96IHmdXewxX3H1AApGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39's ping at 16:30:07Z, about 4 minutes before the purchase, puts it at the George West Stripes station, and 45.5 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysAFDUKkZks5WqgHqz",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5109,
+      "output_tokens": 323,
+      "output_tokens_details": {
+        "thinking_tokens": 225
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39's ping at 16:30:07Z, about 4 minutes before the purchase, puts it at the George West Stripes station, and 45.5 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5109,
+    "output_tokens": 323,
+    "output_tokens_details": {
+      "thinking_tokens": 225
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

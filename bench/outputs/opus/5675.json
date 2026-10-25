@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02316,
+  "durationMs": 3539,
+  "httpStatus": 200,
+  "id": "5675",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 14:40:50Z and 14:50:00Z pings put it at the Waco station, well within 25 miles and 30 minutes of the purchase, and 79.8 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AYKEAgTGAI4AUIIdGhpbmtpbmcSDBirnIfHo28vNFQJbhoMpEW7mG4qF2z3zRksIjB/7g6Ks16Z3cI7sBXL6rKyoKS9zXaJjNwrTPX3YX9o5hqQq+ySvxIQ76YOFFbU0tkqmQam0pW4d/w3LtcxcHR98CJWXwSBdw7DzoTtLC46mkpVvrbpV00ZFPbjlUaOV9/gM4s7DF5ol6OrFaDfDe0izGq3CmY++8euKiVBgmuTozfRxPof6G8pjTGJ38CteOuD4DAT6mQz5gEYKCSwq3ZdjKRoT6SJNCAJQ7AKzG67zYCzOIPNWJl8WyP/33uMykQhAGVa0U0cOt5eImiubBpxIEmtBvkdP19TagWfLCr+O37jV+tNRtq/XmBo19uh0O7Tdvwvp9w8xRbFvzmU5KT9bTSifsSJ9qFB835PzbZXmqEoTx7wp45kbsI7U5FHkToLCT0Mib070DY1MY+eTtcN5UVG1XY1bWPyJTVYFA/Zm3HdTkl17VnMSrOgiB+3n25mLMSsGK6IkZa3bR0aBi1egBBxAocibwLwkFQ0SiimaS5wtxTDjMYn12OKAaA9Nl+GxTjbijtmCB6be1EJiimd5C8dXaEtHgZry/3v3b+UPdXHVgJyN8pkwmh73QrOzugrLzd7RF8t99+r1W70w5N2+jWzbNEQnTfkHAySusKllPFhw40SOAGNdmPBcyHWlpHfM08dJgKwpW1guWf/n/8F016lUHwcuc0gQDtcy6G13tyYWzGAGLk8omYk46h5ToelxGtzNw4MxjjvcJnOmHyYfWx2ChX+rG3qSo2iMScnScOSd+TMjnbz0jfF0gXFcjnCn+LRp47VvQKUYHFWg7iq0I6vs/+qSHv8BX9Adg0puSOojNzwIEAZqGD0K4kLyZTXpXa1nJpG/D1kYRpyiUrxGaqbyRMLQckoaJTz7EYCUVytT5vSVGIS9txXhcLtIMs0+8S/SbV7jD9A6w/5hWOHQ9tDej1FesAB/C7y5MwxPAxmZdrh4b2d95LcOuNm6Cq6NwrrEcFCmXmHdeNVWB+ZQlijSo4LtCnot6fcPUmD5NS/BxxUfFJUvUuHyObt70gN7Drm0c5NgpFRh/GrFcY8I5Nu3hbF5Afa9DxR9UM69r0ag9GjhbM6GCBVJvsU6yTc/gyOEmg3y/vNsDRfEhgZS8loEJZ+pE0XcIubGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 14:40:50Z and 14:50:00Z pings put it at the Waco station, well within 25 miles and 30 minutes of the purchase, and 79.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysU2YDha1AGEP72X57",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4525,
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "thinking_tokens": 152
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 14:40:50Z and 14:50:00Z pings put it at the Waco station, well within 25 miles and 30 minutes of the purchase, and 79.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4525,
+    "output_tokens": 253,
+    "output_tokens_details": {
+      "thinking_tokens": 152
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

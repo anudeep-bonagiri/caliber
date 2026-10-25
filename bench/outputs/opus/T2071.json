@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.035652,
+  "durationMs": 2878,
+  "httpStatus": 200,
+  "id": "T2071",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1030 at Dallas North Tollway (NTTA-DNT-01) within 10 minutes; the most recent charge at that plaza was T1898 on 2026-08-26."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0gYKEAgTGAI4AUIIdGhpbmtpbmcSDDYOvkSriWZJb+Y+uhoMSGVOSmMccN2+yYifIjA9RgmIX4m1xZimp10Wpa3La6uwI/jHiwVQ5OfrRtR4bWdDq4fU8BlRYYFV3zFYK/wq7wUm55OM8Qs/0MZGdiZPC0oUIy3jy9+THDiYFK7/GchwjlhRP75aryknMrLxoU/msSASFeREdEDMdH4fq2XqjKLNoHJsIOxv++Mz2QsEikNO8ODtLUs+GfcsRg4lJkZrHMEWrMjR17snWEhsUC1Fhn1B2x0DG/aJvvcDl8Sea2WIS9wY+qEPG7Z8CziZqVNEF55j9X8mfjIMDdRntiOgB70D8su+1uqepGShZyTYRHLmg+vxlqpmzn5O5ZWcF2GJzz7UUT+bm1Dyhd52Hwd3C4hJ2wYj/mSeSb07Iqu5VanfhPt+HyJ5/YXHPRGmNTtHp090tfVJyn+Nn8t1WJ0lTSdp7MZ8g3Dl0gC4Lor65XE6qSuRobnxA29z2RHENMBvMqyFyrLZ/3xl69yyWnSvutIxoqQ+Zub7yljzS0NRnWrjsv/B9YUXwIiRE/05CEaKN2gek43BTx0h+OBwM+hwBfYVWjEVQqKw3tYvSQeZlAVmJwaKGo/x5fw5tRtRQ5n93cuDIINJrxV7/WEC15MuxcHc+/Rr9+TP153V77/kfMe7HhpcSnYyLvkQC0AloOqzvPs6wm1tNjCJa9cynH+Etswc/tQk7wT1BvE+ZGTC/VEXpV/eoLCYZRr7Yayp/y1f8OgQs4MrLCdFN7AWcy46T1rx0wWUIynaz46OPCvdl6yVLXixaOXALJ5c459Dc7tJLV4vZbi1ktacmJlNzz45XeMz13S8w9xjnO34Cuc/VYCAA64kIcN+8kZQ0EBPocnIpytVWTSrckkEQHMr3nPyR44yaHvfXScDg7WEFzls0UCS7q0QihLnuy4oAyBDTx75AB+xehezOKY8G2BAReKc7Ea+t0Io33siSoNcAELzmg4OnclDIXNROdWJUhfCmZkLeCJ59lnGm2EybeYDEWvgezYqpTiHiehcZEDGM6VtzgsBmPJ2YcxYAJ6OIfvF7OgEvgF2LoqTuhEZEEuTIc7cTMECcn+YYg9K1xWoDwzTC2QsGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1030 at Dallas North Tollway (NTTA-DNT-01) within 10 minutes; the most recent charge at that plaza was T1898 on 2026-08-26.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzEc8nizWd1LVhZFXLw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7783,
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "thinking_tokens": 139
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1030 at Dallas North Tollway (NTTA-DNT-01) within 10 minutes; the most recent charge at that plaza was T1898 on 2026-08-26.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7783,
+    "output_tokens": 226,
+    "output_tokens_details": {
+      "thinking_tokens": 139
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

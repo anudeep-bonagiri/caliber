@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022508,
+  "durationMs": 4217,
+  "httpStatus": 200,
+  "id": "T1828",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1022 toll at SH 130 Mainlane Plaza 1 within 10 minutes; the only tolls that morning (13:30:16 and 13:42:27 on 2026-08-20) were at different plazas (SH 130 Plaza 4, SH 45 N), and the last charge at this plaza was T1685 on 2026-08-11."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSywcKEAgTGAI4AUIIdGhpbmtpbmcSDHS4ahr2liSlTSzdmhoMAJb8Ot2TnVBsvU9XIjC9yyfkEnpOjDjoaKQSmxBISgFbuupMuQKWFQPQQ7DRHPJaALTW1WjdGDtbsBWnYcoq6AZ69rFQQS3M5gj3hr0Fyv45NDzShfn4GatdC8VadZB2LEU9ZfNkXJ/kqGd3aLLj3GZ9yWULLnQI9Ds7Ih471CMEyM9Gc02PoSgafCUR9/79xdHsT/axYX1sPvycMMEhJkLsznqHcQfCur8Zzh50Xiczyd5qhtD23Z6JR1QX91MgyWpw4jvt1w22IojHWon1BqLzeQT3HcC/EF7HLYOhIA8fqpStEhy19opkLEsnKxjlU+n6Br2anSXcspqbeNszRT9CfwE3h5VNNytREMgzuCzqJf83GYlC5L4GIqJHaEpq9dZCWmZopAtMDBP0pJvk2ba9UZ90Z/P/ez/FBW/rC7iB/r3lTIYzVL/FyhesD/MCT6EOEPXVGIiDzEE2KmITH54G+P5e/wKtvKmDuFsSACE+yumG2Rmq5ZQE8M+4gUlUXUAuU6KevDbmuW+X6LmPJZtRunsNNV9F2hgvz01GYXEdRTiPhHOcYQ/SEWgdAZ9w7XwdOPdfHR0EzPHO4+fiAW3PMOr0fPH4deO5Fl9jXIPo2dZFU9PLcv/+3hGW4FbWwO98JDumtRFUe95tekeWpw5In1J/1bndcYP2W5BCT4WXem81ea3I5BBAhM/kLUBdeNWNVs1mxuyiSDQDqLrDf/tBT7jr3k56bC3VbFmzLe4xneXDYAStuMYvhDIcng1CrGTy7ndBDxcvQTEI3xPzHa1ofBH0eZ/ee7y8Qe17kffX0nKZodVt9uaYzk7FudR7QEr1aOAur0Uafu5B+N3UiXpRxT4N6Q9Q12IguCFmIbnVfl4/yGWi+v9UffhoeSdds20gkbB4oP4sTPwD1ZPY+0tPj0zWJpj/JjwaqmMs4L4sDyTIoy0ZB126Hle48XYDLAh21ErI1nen1fo71fu5bY0CnkRNSwb8Fr3RZKqH9PBiQ5gHrlecyUSDyPENGRUIc0vGF3h7sI1DDs8YyN7kHeNGgoO64eBfFr9PbPbarzlV71zZAN14Vf85z7zyi9JZUU1BE1YkixLbQVHXc6dLR4Oy6I7TY3uGxB+jTjzwp1BAP8hhDay6fB9ICItLir9TFUZETL59jipSVeLJZkq+bahEbR39uG7l2kop3DSsiXhBU1DRbPFpIBk1wwNQ7FD0RtyIhNg0q9Pn5fInE/LWV6gC3tmb4PEisxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1022 toll at SH 130 Mainlane Plaza 1 within 10 minutes; the only tolls that morning (13:30:16 and 13:42:27 on 2026-08-20) were at different plazas (SH 130 Plaza 4, SH 45 N), and the last charge at this plaza was T1685 on 2026-08-11.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz1WqfyTsuMNbNjxYNw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3917,
+      "output_tokens": 342,
+      "output_tokens_details": {
+        "thinking_tokens": 205
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1022 toll at SH 130 Mainlane Plaza 1 within 10 minutes; the only tolls that morning (13:30:16 and 13:42:27 on 2026-08-20) were at different plazas (SH 130 Plaza 4, SH 45 N), and the last charge at this plaza was T1685 on 2026-08-11.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3917,
+    "output_tokens": 342,
+    "output_tokens_details": {
+      "thinking_tokens": 205
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

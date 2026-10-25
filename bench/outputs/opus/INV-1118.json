@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024576,
+  "durationMs": 6273,
+  "httpStatus": 200,
+  "id": "INV-1118",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price matches contract 31 at 119000 cents, billed qty 1 equals PO-1004 received qty 1, and no other invoice for 119000 cents under a different PO arrived in days 33-62 (INV-1025 is day 16 and cites the same PO). The bank change on day 71 is after receipt and the amount is under 500000 cents. Note: PO-1004 (qty 1) has also been billed by INV-1025 and INV-1081, which policy does not cover; worth a manual look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkQoKEAgTGAI4AUIIdGhpbmtpbmcSDOiyV/nhmR8JWR6h1RoMj86T+ex/ry6f+0Q+IjC2vBk3OnMQEtnRpOt6H/fjEdlqcsD0mlxBzG+xDFIACX+QTN4nino/LplOJPZ4vdsqrgltt0lsCCX+fuErGeHN8+Kv197v1zKgGEkO94ugaf5jtfVFaSGF5WAjsEfzuFAqz5oByny3m/cO/YS9PFJAsxL8dI1XNFV1865E/P88vXDMSeJSCAnwI0uEKKsERROHiJ1QNWVstmf4alherr7HuEnbvoXjrBQf4g2y/vlGkqKBcCoReQwvknOrCfPcHiMwmpdE3XSl5UTMuVAuutla5OyLhkjhVoHOJL/ODZDprQOKMvWl9lg5vSS9rzQMfUge1qzjypJ6AemM9jImgrk2XSfv1juilYhptDIyBa3ttXrvuYajCK9j5vR0TGsYtpHn8Dk6rv8WszJgdlIjtyupcH0WXPMQGfccfP9H5pKVqarJKNWeehtMiRYfSRxh5iJ6LG6TOdNG8b5gv8A92iE7V5hMcM+MgeigWcGbm4wZtVGCte2PaHM2qxJWPzC0Rjo1GayW+S6OVzD5LhULJGovZpUT4hKa09fxFJRrJJvzZYCEl/IWXQLSbBxBfCRWb0sWZZqP7rzWB1+OMSgO0dcytwafSrQ1NWs96bKeLqqzNdtKHSm01LVm32aRTfp9RMZxk7CDoOmh5Of+mpUn/eB2yqcInpkj15YfyTazb0xX+zuyc6eXHHMaIe6+JX5rBjIeDrmnXGkX0jjJGs6fsCre8cwPLiI+6lEANVjyt879KQu3xB5/i6KU5EJuYM2QAJy6Gma03WP9ElcTpBVc2PWEuX6PaixyjqjJoabIET88ocJd0STd1TbD8S0xPKCKhPfbHTYu0gLSlz88KvjbSO9AkGvDhkF+waggw13DOq+7EI0nFMm7Dq4GmXtxjRj7fHSM35XUU+zHLQRhFxrT0obTvaHMc5eX9n08eJnQKh6qQZLCyU6p/feGm4ySXNvx7zaXgTQRLsF/eiUUweO2aNKONzxc8CYjDaQ04uhZjTKLLXjWrT6R+4mCrh3+Xyt03ydqXhmVCX4Daee4AqWHL1W4KWvzCvewtNVhlugQxsoSF8Ge08Gt0qDW+pr+S/sLbOJ6eOJypuDhFGvYVpugVphCLCfBdxF/8q3mEr6yjA/4A1eE+FXtPgI8JBddzuiyltj3nO/9vAGAjsUsmPfmiGctWjW2lochP0ShVMnp52ndHZ2z4hGj3kQRF9LYZecIBEz4n20v7dwBl1rcGgyaa/wFVQUEGsRjog8Kl8ACfKNk7RAnKfvgAodW7d3/7xDRD5eeRzElBslVEaMKnRnV1ULA4gyIIWKSDMxg/KkfTpjoK0THuhYwph1zA9nAlZqNlQ8sZYbeOnQ/TzJ6XHlHgJHPrh81lJtLdVY06w5Xog5DoW/E5SpnHitXva82AfAx7sWpPiHIuZuLHpgxZMTXbIs0Rj0PCtLNCOenlB0ZAFba9WK5VHmYW5u7qZOLBXSI1+IMtab4NP48GzUjN5piCfxHIPeWinmdmKkk8YlApMvIWZ6RmhWbAp7O8guJs+D7nzBhr40UOovkhxHF8YOwysRI+QgECPxtxNiFT6dCACRobcCcTLT0SxCPsCj37QCWZQ63L3l0AZCWdCxNBlHF4Ium/rzxwFd/MiJLoSQ6N0gYy0rP448XyCFtQkfSaNBsce72GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price matches contract 31 at 119000 cents, billed qty 1 equals PO-1004 received qty 1, and no other invoice for 119000 cents under a different PO arrived in days 33-62 (INV-1025 is day 16 and cites the same PO). The bank change on day 71 is after receipt and the amount is under 500000 cents. Note: PO-1004 (qty 1) has also been billed by INV-1025 and INV-1081, which policy does not cover; worth a manual look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4R4Fhwy3T8UELvA9G",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3719,
+      "output_tokens": 485,
+      "output_tokens_details": {
+        "thinking_tokens": 297
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price matches contract 31 at 119000 cents, billed qty 1 equals PO-1004 received qty 1, and no other invoice for 119000 cents under a different PO arrived in days 33-62 (INV-1025 is day 16 and cites the same PO). The bank change on day 71 is after receipt and the amount is under 500000 cents. Note: PO-1004 (qty 1) has also been billed by INV-1025 and INV-1081, which policy does not cover; worth a manual look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3719,
+    "output_tokens": 485,
+    "output_tokens_details": {
+      "thinking_tokens": 297
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

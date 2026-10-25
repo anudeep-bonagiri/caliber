@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027276,
+  "durationMs": 3573,
+  "httpStatus": 200,
+  "id": "5877",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged about 0.03 miles from the New Braunfels Buc-ee's at 15:20:03, about 4 minutes before the purchase, and was stopped there. 26.7 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AYKEAgTGAI4AUIIdGhpbmtpbmcSDMD4tgBQoACohH2iuhoMzGAaIkH+shnJ4AfwIjCc47Om6NwhMAec/RmoQpUeK57oD5D9o+OZ5btBpk4cKPCu2wFigBcMrHiOoJxyO4sqjQa0MMCoXgEpLgKhD6Po7d5JVsZ32pOFpSNccqsq3oiZ8LqXjX6+f/KAC3hcS+yX5FATxiEiRPGWpwAKdhplUiqJZbH0h88sQP7h3YVdn2m7tQlyZS66z37sNq5wWK2fpZ9fWrNMHXvB+EOI82SBxp9txWTgxSf7ifBn1D7mT0eN9hNz0q1qNZAyPAGrcHSKweiGt2V9qG1jT3B/vGZQLUvFbGXcn4o78SDCbvNr997OntklYNp0IIG2g3sQKdsF/MagPqEabrFbTBJYxpw/0N3L/cGaMAeWb0KGUMpyS+IIjZt91cGRAupS5vxSMzeAcBJfjxBoHi2APjjCZoHFx2og2QBptavhuBgy0tQtjhRP0YixqNkefgNhLqsvA6T9odjl3F+/KkD5ShD5slQkPLAoJt3FWFiKf/xAUjciBTZyztK2R+II2oZQ2jYAOF/d+rDSkp8EuOJss/xGrCwkBtWs129zCr6W//mGeh3weIxqZULVl5Oq0fHA6HetL5gMhV+PL1vzADp9OqTrR6Zmb0lBV5JJc099sh/WezY4gvfWpdIwn9Wa4bC9/pcuqJe6t1d0KQXCqSkQj3xMliKRi30anWxrrCoZtubrMz7/ZsFvineDmeZSmvCbDuYnNzTEq/pRay1i5tvn0dhaRQ/g5xuFoSp5D+e8888REz0ZoFgELh9DSWasa8BSxOCsGJmObW4FvJUVs9KJLUZVM0aLXu3ZtmAQF22z1xBtmJKCzBOdbC+1qQAQXhHg/MngCUp7fC8jPiJ5MtkR5JW9YhXsXXIt6MRpf23ntE+OKaRaUZ4zN9NaD8k4lujn5+OE0ZtOzAb/qnWSGo345wRzfPK7V8c9aeuo3d0w78M5PodWbTlsDYep33sV9fSmIUM0PGd4rlrkegABfDAOIjyHlI06eGnkftZBde1Q578r1qCXBvwn2niFJr+CKeNYiQL0wFx9PL0MbvZZgWqeA8KMo2Pvv9Lg4QIUTruZ92mo+SLfQtJpFxeeSh5Atesut/Ho7DkqfX0vd0eOuVI/FpiiqNbnGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.03 miles from the New Braunfels Buc-ee's at 15:20:03, about 4 minutes before the purchase, and was stopped there. 26.7 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDjkQEuwM727L3YC5J",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5474,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 160
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.03 miles from the New Braunfels Buc-ee's at 15:20:03, about 4 minutes before the purchase, and was stopped there. 26.7 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5474,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 160
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

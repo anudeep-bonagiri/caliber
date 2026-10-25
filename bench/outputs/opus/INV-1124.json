@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021492,
+  "durationMs": 5510,
+  "httpStatus": 200,
+  "id": "INV-1124",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 51900 matches contract 8, billed qty 4 equals PO-1015 received qty 4, the vendor bank never changed, and the only same-amount invoice in the prior 30 days (INV-1090, day 50) cites the same PO-1015, not a different one. Outside policy, worth a look: PO-1015 has now been billed four times for the same 4 received tires, and the total is 125 cents more than 4 x 51900."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSswkKEAgTGAI4AUIIdGhpbmtpbmcSDIeFr9MYQFGCIm8u7hoMoVmT/mIvmODgUfD2IjDfdUQhgBWxONc92oYyfQGFxSAgilWDBNsm8GG7wCLpxTNS1YgFwjTltkpzj6N88+wq0AiBGZi4QLTv2zTFSLoLWanssVa1wsA5c7+QK0v9cdvu4suP39Fm3Y5updrwOq5MJ8+TBm0zeDon5+DtIBkUvqup3gN3Jcvu75m2QL03/mzJw98pfocNYdYu6SJZoTHqTRkNQ5EhiElio+cTcKqwfZtnupnimNBc+pzN7OcxWkSYef+mL15Gv+3OoyFvpxSrM9SZLLEu4sQERYmyYEUpSFQurHHX2ijkkf6o/P4/pKRb7TmatkqcfG0FfRyAddClMIfIsdgc0jGViQpuBVRaMjFK0BCDRiugkWzt+j+0KcoHGhTcGIykM4kJ5dn22OX2A0IyKccZxIqbL3+X2a6vMhXWtcl8Xx/cVWOaCkeh0WvWI3kXQD2vdqaFEUdAmmDzhTv8him6bqYaTxZ1U1XEtrlBswQKUKrYf4gpneQJDhgDN0DFijd8D6NJUfYvjzA6kFPhvPIeoyQhaQQ6YN06FAw9KX6nVSGknojXijbbD9XzQ00FKiPC4X9jPXqxJPCSThRltMB/VVFBhFYNFzny42MJKiSy6yq8dbAdM8zPQvYnWQGMi9AhdpCPnFqgR2WnZQtbFRXeYLQwjE6sRReZaspgKjZmdydUrcJzhJOm3PgUE7JHNeqSC8/t9iSW9fhC0lDeIWDO5LBxJunMvEpXccCkUauU3kmDChek5oDDkvHqCBT/FTjgJCq2h0SaQ15bclBRARmA7NN10JLstccPkEYN2M1lIqG8mAGXyxh9OV3CzaZvzzqI8WhxJC6uy+ACjLb0DtqqQEKl4YuWoWg6xNvJN8b8vKWu2kYg3g30EpZtAVHZPEfrSCRLUv5QHlPBPKZVEoZwDYAY1XDSJzFTnMaW5haslTUoMi60N2DCwXmNXT1SmgpmuvqN/TwFc2+swSrfkjqb4bVv1k9vfVryHmTbm4fGYLO85hMC9YPBizgOchD239I4d4tkTEug3mz2agXt4LBVAhigtYkCgpn2VyAx4d0w14iW1FKwbEzEzbDag9rh18HR+s7dJCjytYz/QWxFvjiD6u7JrwWqX/3vTmdO9UMwfDfREbfUDUkwtHqhSmiqk9nHB/KlWG+HI3JeqTMIr7dS3pgVYKA3hwkkT01EmoQ/zs32j6yQtTag4BVr/vj18pTqhOrhJ0Ntj9vtuoCUQGxMFzjIVy3TcDTq3E1zdXMZTNXgungfu5QwCXSO2x241af8LThh2sfP0CA2exZ3K1gUaIhofmc1to+Zsk3jxFqnNElAvuLOkrsqDaxgrBwAnhEmpAWm41cy3xg6LixzIPw1457QxAt7gWzdNqZnjo28keqqdiBW0th+twfEQrT/AdKwMZ/EpZG6em0c0uOb1M3sAIUHXi9BtuCb/Q8j+25cCdsW1pJKnqsPhsXApUIUbncyABDLtkQgnNE6EplRlilN7wkLhdp0JI9qzItMTN4BcnvbnSlyQswFFwAMfRAnewqpe5cAjL6TBRCQp2IYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches contract 8, billed qty 4 equals PO-1015 received qty 4, the vendor bank never changed, and the only same-amount invoice in the prior 30 days (INV-1090, day 50) cites the same PO-1015, not a different one. Outside policy, worth a look: PO-1015 has now been billed four times for the same 4 received tires, and the total is 125 cents more than 4 x 51900.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfYCj7qhDT2fbPsMjK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3163,
+      "output_tokens": 442,
+      "output_tokens_details": {
+        "thinking_tokens": 270
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches contract 8, billed qty 4 equals PO-1015 received qty 4, the vendor bank never changed, and the only same-amount invoice in the prior 30 days (INV-1090, day 50) cites the same PO-1015, not a different one. Outside policy, worth a look: PO-1015 has now been billed four times for the same 4 received tires, and the total is 125 cents more than 4 x 51900.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3163,
+    "output_tokens": 442,
+    "output_tokens_details": {
+      "thinking_tokens": 270
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

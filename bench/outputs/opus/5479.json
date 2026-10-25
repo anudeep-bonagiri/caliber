@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023512,
+  "durationMs": 2959,
+  "httpStatus": 200,
+  "id": "5479",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 22 pinged about 0.02 mi from Stripes 2167 at 13:23:40Z, within 30 minutes of the 13:29:27Z purchase, and 103.2 gal is within the 220 gal limit (200 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgYKEAgTGAI4AUIIdGhpbmtpbmcSDO7/W5ET/lRl99teuxoMy5BwzNb5nueRcTHNIjCYn4RyzL8MbsJ/8HioGSUbTD3ZYfVbUpDPn3fiKpNLjp2JwfmWufKPtlwteHBDbKwq6wVFRlWzv2k9LWLFnqgf7vFLmiz7V4YTiW6gVZ8ON71vw7lOR+RA+jEhirwGCGvh6oisEQE/cy+wW5+z7Xhsqzi9ZNL214wg6pXi6Va6F4TSJO9Hi1rCFxAxFky5Od1TCV3c50LyoPT3TmqotwMQN5x1ArIU8ZqRr2HsxMIl+Qge7SplviZmZlhaomV1O5IDBC4/x9gJrUqAa01HXryUEQKPXi0mYRBeZ6efu2FqgVMvXSchoQUd7oxWVBnK0XQjvtQcYXwH/4V6kGBTR+NmeSltdzszGVxp2h1crFyef5n3u2oN1j6kh0/ctUzuj/aZF6lDMBuhSRn2dk9usrvBjRDlXbI5IazP1k8goVIA4jjDTk8r3ymGIG9tibvAth5mzkgNq6apk/Ac2umjZOe8WDaJau3r8QDvFlJ/3wXnTwXHNjuSszEgiWOgtDPXDDesyZ7WUT6vpCimG4PvJqbCmFbbFTLZ4Y2qxlrHSjKarsITpMXEfEHhJyDby/1U95OvDuqYkc9mQNjGYq2N0Pd7gCL3tAzdrVizjCRhHLhFnKRoaC2HrPTky7TC1j/fPUVAYwz6ZWBY2W3T1F8uOYkQ7nVARY59dt1APL4HBwOeSGgZxC/U6OMoi8jCuwy2qKKzZ+3Ke6Ejm7l2cqOzTUnA9yKHQO+Z+l+q5/joZ0CDsTkwyfHHp/T7agRG973oE6qex9P94TaXDAlQ419S9cJXNYSW50JXQMJaWHmtuXSIc62BqtvNM6QkHz4q/YLd8QUk11PJlDLgvNP+ouRfmL1L7McB9vMttS55SP6+1CplLEZz7OaZ6GZPikmgmxzW0sl5lxt13PCc3mGbBYiojhUB3OvopSeo9E0pGDyyfjichXa2aGDEErPpRwR71OBiQmgHUYUuyLihhpVdeRvb7ZxwlYiTS38MDx1KwH7ZpkvT/I81CD90lGH+NuZU728DeISuTCHdLRq03UHvjZnSNfda8lgjRuI4kwS2ua5hN9QYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 22 pinged about 0.02 mi from Stripes 2167 at 13:23:40Z, within 30 minutes of the 13:29:27Z purchase, and 103.2 gal is within the 220 gal limit (200 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2ydX6uh2NTiQX4GS9",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4673,
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "thinking_tokens": 135
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 22 pinged about 0.02 mi from Stripes 2167 at 13:23:40Z, within 30 minutes of the 13:29:27Z purchase, and 103.2 gal is within the 220 gal limit (200 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4673,
+    "output_tokens": 241,
+    "output_tokens_details": {
+      "thinking_tokens": 135
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

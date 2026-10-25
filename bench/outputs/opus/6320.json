@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028952,
+  "durationMs": 3598,
+  "httpStatus": 200,
+  "id": "6320",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 3 pinged about 0.03 miles from the New Braunfels Buc-ee's at 19:59:22Z and 20:05:00Z, within 30 minutes of the 20:02:44Z purchase, and 63.3 gal is within the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AYKEAgTGAI4AUIIdGhpbmtpbmcSDCOxe0AxjidotwKUJxoMNAaR8WmSofAayJ/WIjDKhQG2IWdL0ni/Fp15QtZhA0+RhIvbAqw+Md4jL7ObOJ6gb/prJOnUI0cDUPi8b5cqmQbHMkTfQJTOkH1nu1dZx7jOqDzwaTcmPpj/M4kIDlezN97/YqO9GXCqyGp6nFA5LAr56vv474ztlSQMcCtLhR4GQDnJlK3/NcTmn6N5MCP9d+kHcxP+Snpb8ya/f+x3GDzx7lcBhYtaJ0A1t+QlniTcGQ7D5fL9ycFKPmw6ogvO6zmxztR/sK4Wx7CJcZEHok+VWdMdMdLDl2MmaMT2me3kwIAVyGUTbpKOrbFT5485Xx/va65vR/voNbMr3JgO+eYEeS22kWF9jfwvHPfONzjCbrrAMcCs1o3vaZ+vP8HQMxCCLZEVjv/JyhFnfmImeHPiXnfw9EEGFxXBLaU9Yb+3epPRcY6NvP2Duqma51QqDpA8YSJKTd1ndPM0dEGfXijnl6rL86CqCPYjYmvhAqb0cn7KtDK7c0a4YOk5v5Qiv33WNNMHvrVeZis0beg+p4e6wih/Q1it2m22TtUoNc30YgjiCuOebjfxPHdL2cnDMndF+66LJyOuFVeWcgg6Lqcqa60GsdpYOtAvtG7JKP+TMbhGBdVPVASaabGGwiH/jlaBoJw05x+6yYgyF3hnwYsAHy5thQ9E6gy+7D8uSfx+n7JH4X5uh9Q5F93TmGpbuh8W4jrqUVAWH/PrAbEmMfmZJuINjsStDrniU+sdWycg5i8NQP1nyaeXfD573vudosjYpWgCcQHHMwinWT6eysFHpfUgDG0vMxYPCfpPVBvaDucGzs0NEbYD5cW2wCVRbX0l0QIHfYzKbjaSvHtMwNxuggdNBGFR1g6NvdeQKIgkU0np+1pim4bNGF/zuVIvY3h6QzOhCjeDpUIpOeo4yWBuCRDxt3SMJ5rWRbbmzKYoSteA4JkQTlvgLo4sua4PTO2ygjY4JXRVpY91Atv9QSwKcErZqi3fzGY8XrcS1VsZqO3ERYOfZIB/Z8oc4brprB6mAXsbtYv1OQNUCT24FVxXfobx2ZHGPQ4PkD3zwZ6pIUBpiV8Hm3t9HodoqIgStCkAu+C4yTze8+oDYhyiinyagobzafbQBfNI2koslTj8qEEs250WFBMTGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 3 pinged about 0.03 miles from the New Braunfels Buc-ee's at 19:59:22Z and 20:05:00Z, within 30 minutes of the 20:02:44Z purchase, and 63.3 gal is within the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytsvW1jokMk2g2StS3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5838,
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "thinking_tokens": 159
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 3 pinged about 0.03 miles from the New Braunfels Buc-ee's at 19:59:22Z and 20:05:00Z, within 30 minutes of the 20:02:44Z purchase, and 63.3 gal is within the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5838,
+    "output_tokens": 280,
+    "output_tokens_details": {
+      "thinking_tokens": 159
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

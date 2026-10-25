@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02506,
+  "durationMs": 6184,
+  "httpStatus": 200,
+  "id": "INV-1131",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 32900 matches contract 16, quantity 1 matches PO-1002's received quantity, no same-amount invoice under a different PO in days 42-71, and the amount is under the 500,000-cent bank-change threshold; note that PO-1002 (qty 1) has also been billed as INV-1055, 1064, 1084, 1094 and 1122, which no hold code covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrQoKEAgTGAI4AUIIdGhpbmtpbmcSDMbv1LJFZ99hes43QRoM0HABjl0YAuuj/3dDIjB+UaIQG4F4xubgR1+hEhHuix+N/dnBl9McIMmWgzWveY+0x7fpe7jAwVJyYDQUaGoqyglF3WkW2A7DLV2z9D97IotRMF7Z2xOpk7EFnC5XjredMNKWoG819eeCbOR4qct6s4yS/CriouDHNoiYe6LPB25UHGXNbDeVkC4uCjP7eIvUb6NGOuqiuIGDfVY5tSHM0lG3sYfYEi0eB99+gcOqh1uavxrSbcBxnsDSQSB7a01iDbc8RMo1wx8rz3OAA2zQ0LnmFmZ2nL3VhJZ8pxIFxsuuuvGcF5/PNvinPzrzZEvFtTAgfwqS/gRKweeK1tN5ijMHfGrRfMBc+FC9rt/rWCE1bHdtYPPvnW5IO33CAHNZFLilwPtPxqhPb979RPRHztORM794FUOt4OpVLuuD4cX1W5OYAGwsit6oXXQIZx7+0VAqmLWtkxJJTfedDvBNUPZHgPmE/EQTVQkyd+0NrpMHkQbYPG7peKu81kpFzMm4BNTKhj4k4z67qTCW6LI18CAlYVi7hWiqwfcvW/c/5yCbopzaXBjh6nej8lZi3qgp4SBCxpypzsjR6MtAWCFm0oj+Qqmz3qltESPCKs/r4mLUIrkvIAxUVCiE0ENY6Lfspg/1tl9XBBzmUt1VSG5es2wnz54WXXXsTs0kjkQHMyynPuDgbxLMC9kaYcLOmzado/1Ui6wauNjHjuI7e3cevuPv59xR9cRdfcjq4gAOeeXybhn1TNWVcA4dibKO/CmhTAEC3m/GM8lLtbr77lqmP45vwOPLOXKQgnPcqsLS5c2ket0H7FZUXTG/mp0cV4HuMkXHeKclLaHRjkjDhLSTUIpst1VjIeI2FFx1uGlu1XC8cKhc+iO7pMoK8mx1lkalLDTTkN0iLYjT4A4bcPUe4euIWHZLewHGxS9xQmsKppvSQwufpOKGzdfu5sGlv2nvL7MQL3axBY317Z+U1jAQVjY9amwj3uVLmWEUfQQPoJ00EOBJF2nyj+60VHpvyOjXQl3FGGtddF2FrPpxK1kkE9besgLueflFI9H8EZYfEXE+IOfv5s1POKUCfRTZT9PI6+A25MMnqA3twmU+jVWggkZCII205PhE+MWKaNn6XkbZIS50U+Qk9baWne9yO5dx29eDZ5ioPMPymIsD+lZmO2GXJwEaysgiUBAyz+pNScSRstQzz2NJXmixhdAW2oVL5c0YBBuXtCHfXACyTkNScCHQW/DSGYNdvGylM76hkg2rK6moSgzKsH+pzSU2/6KR4zW5ahtSbArgWQ0pJk/LsiBW96kF4ZTOzXOacz+J7w8z+iAn400ujhY3/7V2DXTBYhy20Myi7tuxDq2kTEU/RoEbvkwJDN0ltUuoYahBeyi7oF/TOu08bcumBGSl2TVDwotsKP5ZzZMh1fZQ/LkflzaZfdZN139XvwV1SKtK2suoxzxmfIauEMFHv607MxaPIkq/N1lWbCcJTvOpYL9dU10eFGTHoUF4fuQg/IgTCdZG28frLLGD48eZEUT3X4TNB8PbskXJZhsk8fXhFC1LH1at7d5nd8QT/JaFvl5k3noNLRki04DJDYT0TmVMtnQhjBn6udx3ZFd13bYqPeDUfOPnYq6ipLhms9s/qj69DllPG3NS4MrnSmFlfciltCoiKACXcA1OsoN7EKXZoXTIuEOWKQsyL8M+Dtwi97CaAtmALSKkRcT+L2018hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 32900 matches contract 16, quantity 1 matches PO-1002's received quantity, no same-amount invoice under a different PO in days 42-71, and the amount is under the 500,000-cent bank-change threshold; note that PO-1002 (qty 1) has also been billed as INV-1055, 1064, 1084, 1094 and 1122, which no hold code covers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzD2rm8DHrGzHsQmQiV",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4015,
+      "output_tokens": 450,
+      "output_tokens_details": {
+        "thinking_tokens": 306
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 32900 matches contract 16, quantity 1 matches PO-1002's received quantity, no same-amount invoice under a different PO in days 42-71, and the amount is under the 500,000-cent bank-change threshold; note that PO-1002 (qty 1) has also been billed as INV-1055, 1064, 1084, 1094 and 1122, which no hold code covers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4015,
+    "output_tokens": 450,
+    "output_tokens_details": {
+      "thinking_tokens": 306
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

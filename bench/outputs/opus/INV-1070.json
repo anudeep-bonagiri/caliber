@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02044,
+  "durationMs": 5069,
+  "httpStatus": 200,
+  "id": "INV-1070",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No rule applies: unit price 36800 matches contract 34, billed qty 1 matches PO-1017 received qty 1, no earlier vendor invoice for 36800 in days 8-37, and the bank change (day 71) is after receipt on an invoice under $5,000. Note: INV-1038 (day 21, 36925) billed the same PO-1017 for qty 1, which may be a double billing outside the written rules."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QkKEAgTGAI4AUIIdGhpbmtpbmcSDHyPDH3FD990v6cYiRoMzJZ8z8MpCqVyFQhGIjBjpqCRNHz7u0NbZ/987n5OLbkjsTOoDY7AxRmvYjOdtqstEcusE6MH74eLrOTAIPIqkgmwmj5ItUr96EKoJAUAOsK6/aPtgbrxOBnGyTG8TIpiy+7hC0yhfmdupHOMsSS+zzfybRsiqMwFnkQh+7rXiTzRpNP2RHYj0sjUhZZ439iZzgwwJozgIwBCxORqU8kAI+ayKgXKb506qDAbIlYsbHyfEXVPH8CusOB8S2Kmh76OsDVNHxIBa7f+9uHK9DxKGqhvb/oRuI+/2t0/Z9gdW+LeqLt1aEjy3N/2XOhxkUYlYi3meBo3s9lKFKCkN7sUxY0gnpxuShiLYM0ks8ZH3u9Y8K/zjC4BdeTBUnqtNpEMVdcnwCitq6xstkgFAX9TQNLDKpkhPPG1dIPWcvWv+KWE6iKN+NzXyc/me8dM1G4pK+RA1up4wJxSrU4VdOZMe7jvIKMIEPWTwwM2YctFD0lmobn6Cs7y8V9h+/ESrwGbPPcGaXlu5EE7aJ/6u5/692zzk0Pnze3fVZVMxqJXzrL1myTFwBnUoWO0CXGg1PAw9zagP5jzHH6NisxebBQlYdWVgRN7CQNpcXxU7yWzr1wDRuBwzZpoILqkTlx3Dm5x6swwtOD6Ewh1WmL1coq/wEwHUjp7FMD4562H2kCkZTs3+I94uB5KUu9999rDyBpFs7brpNq0eVmTdfP4hbKPMhOan6cWsZYtzaMFM4CpOCXr6ppy4MDgo56gl1r9udvpWeyjT4GR/4Ayhgp+j5cr0H7+SUHX9uHerKPeUym2IT0z7D/AixNQfQsynpUB979KtSgVyEb+tUgldfJG5uu/fibKkwFT9ci7wfQ0ifRWBvdM+5Qj6ePsXI42Q5gSviS1WYBo6Rzz0bDfUTVLgaT6saULn9tdcXlp5f4kaCEiNDwdrqU8bq4pcZTTcLIV2WMoTjlKNDcDo4JXal1yFEUkp6fjThP1VSU2k5sQTAJkDZC7mca91iDeEMBaDdlPIw952WZf9eV8cCRMsgXISeFjaruNTy8Pma4Y3dkRP+1bo3jB7Be3WvqxI80HxEZQvf4G/WLp9VK+5iX16G2ezY9fLCmXl/MmewWK6LVJCIEqe8FdqdBkedFwogDEqwzKlEOGqvybP5Pkm8Y21WeU1BdHa3bzOgS7T85SqGkU3sjWkaQfYqmfTZGDlrBhyvyZzqSAMNdNrw4aMe/+0hgfa9vVm7Nj3D5nlcdg/15+cfMp/3oqDhPzKzsVZUNN/9fSChdBvToFfN68fm2lTQmYPvcsqcS+pU5CJSNMGFyYprtNKbIQiWO4GScDNtLRlhawOFSWZoYuVI7Cz7jnTbBKv1DucboT0d4stqh3cTVZs/qZq2CyukqUc7PY7kOzQBDrDUGs3nI1E3t9GPPART8knxnbUMRvGouf7W2ZPtcJ3iSfYsMZppRJMgNzVPO+tlZyfK/Cg4gNSrxinM5NhM6Gri3n4o/WUKmP23R5ljj8OtUw8EniQmjNzcMd6MxFHRaVHcBKI3a93y72Dxl83ZoTZwc2iN7guOLM9nx+rB6NMkzlvugdDCF7KzLPLORQRxFx8nBiaDiWjf34Qs1Cz24lIJfLyB9ljPKN6oA5odSSUxxykxAKRfMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No rule applies: unit price 36800 matches contract 34, billed qty 1 matches PO-1017 received qty 1, no earlier vendor invoice for 36800 in days 8-37, and the bank change (day 71) is after receipt on an invoice under $5,000. Note: INV-1038 (day 21, 36925) billed the same PO-1017 for qty 1, which may be a double billing outside the written rules.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqiFVGwPkWJ7tzuqbQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2895,
+      "output_tokens": 443,
+      "output_tokens_details": {
+        "thinking_tokens": 284
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No rule applies: unit price 36800 matches contract 34, billed qty 1 matches PO-1017 received qty 1, no earlier vendor invoice for 36800 in days 8-37, and the bank change (day 71) is after receipt on an invoice under $5,000. Note: INV-1038 (day 21, 36925) billed the same PO-1017 for qty 1, which may be a double billing outside the written rules.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2895,
+    "output_tokens": 443,
+    "output_tokens_details": {
+      "thinking_tokens": 284
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

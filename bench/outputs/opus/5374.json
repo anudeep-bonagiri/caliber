@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025928,
+  "durationMs": 3772,
+  "httpStatus": 200,
+  "id": "5374",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 14:05:00Z ping, under 2 minutes before the purchase, puts truck 11 essentially at the Encinal station (under 0.01 mi), and 44.7 gal is well within the 100-gal tank plus 10% (110 gal)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxgYKEAgTGAI4AUIIdGhpbmtpbmcSDCHNRAD4hpAuFyu3TBoMWsQdDkRdtLiR1227IjA2O4fF63/wJ4CTby4PmOH8MD6edRk/wsFnjkLw78uOwU9+vk2xP9fS4dHAi2xKwbEq4wUwNpJuNXWvveM8iH5CsEDAoD0Yc7PB2PJhN4bgc9SJAEP1oj6XofxHpnMs5HQhmI/qJobo11yQ+FIr+IS1Uw4RBYjuX6mBCfnZOU5ORPy6awxT01Wr3U9R3x5ZhuMOzGmFRedBwbRR8EjA7He9xwFL88dV2DjX8gTeVm55SB5aNwmrUx1doFgZ0Mb4ZwNXR0tga50jhv6AjjxnYOwWizSElcqgd5rYsWKxOu8BC+FfS6VUKWIIRbNW6mUEE97A5nWMbqldfdT4szmAo7vrQWg5W3TCs/DuXd/GGB708V9xdveJd7KWSdXV/5DBCG/BOw/ExbychQFxXwWLV62gIKO0nY4n0eYt+rs0+9In9H0fDeDd/b4/Q24TaTEvlszMQLsCVWsY/XrJ+Lft9D4J+PeRYF+NtA96TYKjwNCIPWVpscsf8y16Fs8YAv29xz5IBpwsmLY8oJhbeRETNSpDAIolO9z/wkqc+tZ/z2vfQjuRBPXEn1G1kKEYDniKmOytKzOWNa+UkaPbXxP7BPIKREUGzN4RnZfJaOClhS0VIpzXfoEDSSQpJ8kNdepynjd/Xtyx5zMTz8/0+YV/no9ib6QuizBCF9MkHfnI07fslEdn6tnCoUw2YiaUXq2baRCWufsI/wV8HL8cDYSy94ErGR3ByNCmRjETnBd8T80szKU8DycV8ppACWFwiBjgCfLkr0D2PXOTbWQ+L2mAUQFrnddk5XFQDOFAvY8zUMHbsuGw916V3MrVOGItRP2vTlvoeYrLjIcCriXNA0MES3kEd9Qs+gw5fPC/jYsLB4FEybLVczcxJIKUU33gnHZoaECXHvSfWJs4UsL/3m5os1pYCibzB5G0Z+gg18ZLcsciCOkuhqlOzHs28injqdQQchNx73RwsGim6BUhs4D/1jluYJlVSKrxNOOWq+FZxXEYCsbl/5/WwcxSShkaQd1NGu2hSN6jg/a7rEuw8Hq1qT9BehjH55XmGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 14:05:00Z ping, under 2 minutes before the purchase, puts truck 11 essentially at the Encinal station (under 0.01 mi), and 44.7 gal is well within the 100-gal tank plus 10% (110 gal).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMhg6ZhKdiG1HnXWyU",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5327,
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "thinking_tokens": 131
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 14:05:00Z ping, under 2 minutes before the purchase, puts truck 11 essentially at the Encinal station (under 0.01 mi), and 44.7 gal is well within the 100-gal tank plus 10% (110 gal).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5327,
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 131
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

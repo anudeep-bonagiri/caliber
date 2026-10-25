@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01074,
+  "durationMs": 3146,
+  "httpStatus": 200,
+  "id": "T1118",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1024 at HCTRA-HARDY-01 falls within 10 minutes; the only one, T1007 on 2026-07-01, was six days earlier, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStAYKEAgTGAI4AUIIdGhpbmtpbmcSDNYOV0Crwty2h3g5ZxoMS7evUXy008noR0qCIjCPoe02wNmEPUG3kvmMSanveiQjVeoewZsVMb1S19YuDSWABEuGRcx+OtFuX7IqyFkq0QUeYhlQkjxZ+422r5g6X4ysJK4QEXsmV+mkahNXi6p1yvM8yfEf8JFUyehrL6RSKQxx7rg0YRSRBhBItiVVroVi6bp/+0oANwI6DtP4lc9nJ4yff++G1yPzlxcaicgWTZ2wl/vgc0tVmGd8c0ndKqBTr139AuaYVyxulxjhnzg3DpzAYxAZMc0dvc6kmk41aBLaL+gIjae+zAs4+Fy8A+fWxnuv3YA1Su3Hoap5k9Xe/MO9UGNiGKm6LpiCLTuok8iJc1l462cZtTpYjdpI6/IoDSY/WTDSqHJ2Qd/LPXeyEEXGd5BQDS9Qp42kjVecJrAT/wUgQ3P8R81fKv/7XCVhGF/tRinLDqZzb9+fUzrHBIjYM6j03iQBeYnIcWM9kT+i/8r46fpyYnVAAwHEJsiPzxMwFoY1YYdbAUSTG6dqpQcy+t5CSFWY2k9ijeQhA5WZyhSdbDwikn7pGU6XY1gkgGYQJBbD3jHHuvclm6B9nQHZbYBjZZ6TrdrrHgAe1hJ5sVmD3eDyT1Ru3+5hKCLChO58tg3J0RXL4/wcDCy545xqEFiJWcXSrHMzBMZ44294ARlMrOsuX6uVQh40voghvxFrSzxek4aBj6yYvQVWDnO1d/5MW2olZddwyJxXlG7XxAlMzOXyZSW9fvsu0LIKHGbq8qElINRICCAazc5TR0j62TC9UqaxqPL7/eLTHZb91wC/Z7jTOVmJzVtjVlpAUIwk/pd6PSN3ChQOaLvNHd3RG/6r3wl+Ny1098rULazFy9tKZMZb4ZEa/GZcAvZssAv6INA+UjQ13nKUEnnJ5GDaJQioqG8CZGZhGPm+nmrnxl1BdgUSCQoImh0Jfw6cDCXCEaraJLGm7GnuvkV1b5mrjv/uwqIlaxU5qjw7MGt0qwO6A7JP+3dnZxZvPMfBpHApFcP+F/Jit62RUqoyf6uysRcsOCtEMN8ec0USkXP8GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1024 at HCTRA-HARDY-01 falls within 10 minutes; the only one, T1007 on 2026-07-01, was six days earlier, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynzcAUA91dc4vErY1X",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1630,
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 121
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1024 at HCTRA-HARDY-01 falls within 10 minutes; the only one, T1007 on 2026-07-01, was six days earlier, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1630,
+    "output_tokens": 211,
+    "output_tokens_details": {
+      "thinking_tokens": 121
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

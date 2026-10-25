@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021156,
+  "durationMs": 5798,
+  "httpStatus": 200,
+  "id": "INV-1103",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price $339.00 matches contract 9, the billed qty 2 does not exceed PO-1021's received qty 2, the vendor bank details never changed, and no same-amount invoice under a different PO falls within days 27-56 (INV-1049 and INV-1068 cite the same PO-1021), so no hold code applies; note that PO-1021 has now been billed several times against a 2-unit receipt, which policy does not flag."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxAoKEAgTGAI4AUIIdGhpbmtpbmcSDBfs3ZisNiXm0Gvt5BoM4xy1fEb0Ud9TNRI7IjCr3VoFRflYKsGDT+dm9sh0C4zz0t2aVUrSZ9TdDp1NpdV3ifQkOENtadOda90F2Ysq4QmqNFysrrd8dJZOkY+n/tdRgK+S/XqcF6UB6lwQKeJvrXiA7LI8xDst9a9uW3Y/lg0hIIHE/6m2IvYc/MuQVfzGQc334zjYUeMAsxX8sSZgAcGF8wlLTw10wrqNme+kgOb3aNTkmhCMC5IPKlLfCMBAjjGulaclfg8jb0eVaXXlPrZq/NLl+WcZw/P91fFd5rHA1ntGi62hcB5SD+JnUErMcmLzlKW8zKWziqrx9r9PSiNsEQNkOTkcCNcOooU1HDWcSZWLoYAx2WRZUslzGLIPOsxKu7WPPoyiH60XNX8y5/WyIX+3oRMyaOJisoQLQYba0iiXhMIkk79qqwXee/6VuqrP4NxjFoYPJJ20c5QOguvrwjLUrs1qkXJcOcYNTsnVNVjGeW+x2hHiZyezIHJuWbcoAtmsNN9GUiOers/OJcXcrzdw8Dx3JNCZ1373SamS8xnLRUkGUPmP7Ao6MoOvVrRG/zTOHwoZ60icHi0Z+6yJ7cgAIOmU44vIOT/EgMng2sXtz6nF1PPTjKnZFQ+8Fff3UcSj/6R4TQM0ef3VtLaACb3rTSQ4LNl/AYwifRKPqEMSrYBhbxNf1FkhnO+4YjvI+LFH+XhMO4n4FdzF/jk8OhYLWvj6G4UfPmtpSkXyg5Wv/hvHDluZ0EB4EOrBjia4cdXDSZ07/uF04AE7ZSrl5LvlG6F7fAMgTgOeciE3RzrZ8M8NbyLU59bntz7HiO/D58cgmpMK9cVT+riY7hpDJ0tmU7nc/g5XLAayCle35+4htvsY50dlNn3Tbb2p0/L9mBPPr4Y7HaOpmpIUNA3ZX/LKyj6cdTyUUmXwebDK8MqSLv+f0OwCqFZSviMprih0/pMw3rFf6MXeSmVhkHtV1syor/RP+m8j7HH6P6glnvZxcqerU3zl+16cq+sT8P+y0ov2JGOlPkzKq4Hsyxb8EHb5Frk55mgp3KPww/0ieUapNxFAJTPM/RrhkrMxfJ+1nge4gIALGD/6oB0d4TbaupuLPuhjBXyKNjia/ApFLBfdOfVOoHDiZ0FqUXmCjgpHSmXzZeUqcbKh2TIZYpkSeB6w+ajfxFxoyxa2adPAGFG9sffFXLAucMERJ+TinOyHq8pchtttY3QCIaBv/sfzPomjven6yF8nvBlHMBCOvRIXsnbKkFgjTUeuljIXNOfg/EZOonSft6j5rdODHghRb6XkocM7l5LRZoHhoz79YV6hltP3XIrkRyY5QiQDuUK16HHwkHlw6CbXZYc1Ii6BDucD8NGkcl6RbawOMFF4A1vfoKIHV3Vg/b5+rIdJCX1sbFy4bVgh0I75MH3zmKjddY/8OpEEprWaUptux2IqLvgBcYsCeMY4btL2h/gyjkr6SpaudDhyybV3r2GVN9/S4VbSLlyrkQAKKlbaIPIMd7uwqPxn80vWe2F+akpoMqQQW3rqgqoejbImIOoIqr0+qwZyy6vH1ZVdnksNgoESRYXTi7HB3XgVNtENY45yLA6PFgEl5R3mUNofJMccrMqmikrRAaQRg1nxdh9uNaKh8eLtHG9+B8pza4GAfslIGSEuZ127yZyGAWPwdPpcn7DFfEWx4riDQ7pgdvaickZACyl2lGWRNv621b6/GjR2Mm3N/WMDtUNl7keGP9HmuTbWMRCoNoeZ2lQWcs6e1p3RGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $339.00 matches contract 9, the billed qty 2 does not exceed PO-1021's received qty 2, the vendor bank details never changed, and no same-amount invoice under a different PO falls within days 27-56 (INV-1049 and INV-1068 cite the same PO-1021), so no hold code applies; note that PO-1021 has now been billed several times against a 2-unit receipt, which policy does not flag.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4Fz3SMavk7ermUC7y",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2989,
+      "output_tokens": 460,
+      "output_tokens_details": {
+        "thinking_tokens": 302
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $339.00 matches contract 9, the billed qty 2 does not exceed PO-1021's received qty 2, the vendor bank details never changed, and no same-amount invoice under a different PO falls within days 27-56 (INV-1049 and INV-1068 cite the same PO-1021), so no hold code applies; note that PO-1021 has now been billed several times against a 2-unit receipt, which policy does not flag.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2989,
+    "output_tokens": 460,
+    "output_tokens_details": {
+      "thinking_tokens": 302
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010708,
+  "durationMs": 2466,
+  "httpStatus": 200,
+  "id": "T1442",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1006 at plaza HCTRA-SHT-NW (Sam Houston Tollway NW), so T1442 is not a duplicate and no other hold rule applies to tolls."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/QUKEAgTGAI4AUIIdGhpbmtpbmcSDJOxijLae1XWuSEb6xoMlxlo+Ia6c8OJBB7CIjD1be6HIgywNHIUpFqyQVfMl3gem6ZltA/GOVU/NuMsTfS9mYG7OQrT2I5/uQu0VXkqmgVKvR3QV0cv37uBSvN/QdAW+Ym9x+EKWzUH7sqKki13twOW3p5LNgEtI0Ea9VTm8c0BOOu7zXLjF7s43gD85zJYOB8Kh1OZBJkCTfYffP7NN727VzkZp8h2yUTVcIM9oLX4B8/b1c/R28oKNXJpCt5DVpDq2n961Det3D9Q68DbtMUXsylBMRL3DIzStNL/zt55RNcmd4Mj2mIOD3InwvdqhXC1qgm3Z4eXqka3rc9xY7+aZ6TgARxqxYLhxmuy3q+7mILjL9OskmNNAPD8/jy3Jo+WVjf74WrhLduq+n1bR/HjgZGIMwV26UZ7iW5Ny7/7uife6QpQ2IpVKK9QWwYholRM07EBjthkbTFa6/VQAvrH2+nnq7iToE/aXDlU16jex5mtgT5Y4BeOdVLm/P/tnLUiBUYw1RrnxodqyXugKtpG5hC3xgP19UvDe3s9xcURcvsvU10TC3Y02qdzeYkrRN8t2d4bAejbhua91zlGV5zWGerZhE/omD45kMesP/JG+BeHISPvuAEUoduiN/W2zqVP1bA2XTkvYgdGOKH4AnHwpI9nzhGlyKnxkzL1d7QoScq6QTwh34cAWB4ONlGZq0iaYeXf4IWldBiTJs6b7N6YL3ER0JcKmS2cD5G2B46usu47g0Ft/V+8FemVUecS8o5GjAR48sFxOqZT/F5p88yaKydZ6sFTApz0/faQG0lSsk67605QZvlHTND7Ls8Z2vLLPvwUSw+eC/MKiVnfjmri7aJG/EwtF0yoVAjmRrnNVVT0748VB1CX7RVbGK1pogw6JSCAMIFEzTgtKdcfQBEBth5BYbcT7zJJwRRhrDqNmGdcQwn5HdqJV7IEEhhNeemmEkpNZOENMRTVU2nWUnG+dtL+UAZJx+MYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1006 at plaza HCTRA-SHT-NW (Sam Houston Tollway NW), so T1442 is not a duplicate and no other hold rule applies to tolls.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz94sSi2YbY5JEqFbw3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1772,
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "thinking_tokens": 93
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1006 at plaza HCTRA-SHT-NW (Sam Houston Tollway NW), so T1442 is not a duplicate and no other hold rule applies to tolls.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1772,
+    "output_tokens": 181,
+    "output_tokens_details": {
+      "thinking_tokens": 93
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

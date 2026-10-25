@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0257,
+  "durationMs": 5250,
+  "httpStatus": 200,
+  "id": "2617",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck was at the Waxahachie station when the card was used: its 13:30:53 and 13:45 pings are within about 0.05 mi of the pump, with the odometer unchanged during the stop. The 92.6 gal purchase is well under the 220 gal limit (200 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuQgKEAgTGAI4AUIIdGhpbmtpbmcSDIF+ae4RNo+3BIpH7xoM6/ygsCblsazDjiX8IjB0P3Ci6VoxupTfe7nhuJ+0X0T9WdzzylrMWdmxrO6fxbCmcIoewysVQ9AG1xG/BRsq1genTjVGHGVZICqDVH/1PSLyQ3XNJ058M/Jbjtb3SVFambavkJ3vxQNM4FvKrJYJh70+f7Qy2XY0fKH4I/Cru8eQDtYVv0eTuHRmDmBzCoq+GFzMVeEkio+iBSSfvQYve6fXzoG3Yx3abcubpbZsMa3837//nUdNex7aiE4rTqsNiz/SwJ2ZJTTlMT5Gj36o3RrfgWsG8iLWo7PS4oPGdIxl3PdrMaty9Q80m/F9hae0ojf9iNCunyStQ91/lgTSHGISkFi8gGnHzEdqASQ7gwgMAWD/zg+Ksh9HuFXFCYg81RFoAauYf4Amw/lIovB9Qra5mIaBpzu2vZ8tQSlpaD51R3ub4T+Tezn8pbMAj+2dNyUtD3dvSffnO6CqpPb+t20KuBp8zd9eyHdLuRIw0ratqJvXoW9/SZsSjhZolQC6hOXjTutx4Jpcgbe8nxU8vGg94aj5UzC4RW3L57myARwrNkuMNUOUNqzxhy7CVSGRwxhIrjd9HjOvcwqBsU3pLGo34e6Ww4EflWG3F7t+NY1ih/7V29PiNyyT9jgniVAVwU9Cf4dRLpyio+ykXZaBKPx/Y1EtY7YagVUwxjMm6O8xSKQ8mvcwy3LpI1cNZ2ds8NCLG7BU+9FaJSjJP75xslddGRmyf2HRKQBDpcPk4gZjuyFsB/8gRSAwfTI3z5rsm19dcPbOjmaNzjZFaPTLF/MGIX9FAgNJ/nHV9VHC+jSzXf2Dzg4HmjCME2LFivp/o9d6wFHXHy4HyoTQktDSUTQZ9A++8axDemdaMggOELPGIg0gyy+TXrszGmJOvVAFiK/aj/x+XIk3prsdO8QCrc9K98lesjBo6xzmozUcKZKhBEei6khczP+3t0tHFN/lrAK3IGb5YIZOO0VCEiPZ2LBMoPBivIn9oUWbBHOQ0Y+ZlYRvgaQmbc7rxe8ywhc6XPvHdamoYest031dnpQWiDIOyNvbhCkTLpDuebCIEf776ugKIsm/vBgrnBqSHll3sWK/c/rM6eXckWPE78QTyf6w7t6Gd41Z2YHU/1inW2Lm9h4kWjY9I4WQtXyucEWuIro7A6cke2gJhDllbQXcfStARAWvT1hlttpq0XwHCOXcE1AqCRmIVBBNjWiuq6d2FOrfQErz3fek3ndPgILcuh/cKXu+Z5qmdka9fKOCLvaigLxSSJ0O4+zh05Y4Al3LQ6g1zBL5RTH9CKzYxLYn2cYin8rpO3WtvM9683CFzu1sNm8fREjupN5JqsZe2Q+0WLFO458wJEfIUOZoyV9lF9x5ztEeq1/juRk4k+M29Zoi+freW5uaGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck was at the Waxahachie station when the card was used: its 13:30:53 and 13:45 pings are within about 0.05 mi of the pump, with the odometer unchanged during the stop. The 92.6 gal purchase is well under the 220 gal limit (200 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqqLPT7pqKemWYhV3m",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4525,
+      "output_tokens": 380,
+      "output_tokens_details": {
+        "thinking_tokens": 263
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck was at the Waxahachie station when the card was used: its 13:30:53 and 13:45 pings are within about 0.05 mi of the pump, with the odometer unchanged during the stop. The 92.6 gal purchase is well under the 220 gal limit (200 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4525,
+    "output_tokens": 380,
+    "output_tokens_details": {
+      "thinking_tokens": 263
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026876,
+  "durationMs": 4294,
+  "httpStatus": 200,
+  "id": "5934",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 21 pinged at the New Braunfels Buc-ee's at 14:50:49 and 15:05, within minutes of the 14:53:53 purchase, and 129.8 gallons is under the 275-gallon limit (250-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4QgKEAgTGAI4AUIIdGhpbmtpbmcSDF0H37CPSXaF4lprWxoMOXt2YDEUaJIXO08IIjDEMwH6rxTfTF1MibeXRyaDRDabLyy50q9hbGf0J1LjzG+65hv7S7WBxaaOaCsoIgAq/gcEljYtCIqNr0NCNmVLt3evH+RWhgrNlXogdppP/NK62WDkwO1mWHO1mEG+rzrQguz7xkiH2Hy38515ir2F4UO2RLgfSn1BOTKCMZAebMNhAe/dxRpCFILp+Cx0yR2fZP91OVRCOvU55cZcDWv0qRHB06z+W8R3ZEYh9lGmkf95dHcuXzy62Q98EA+i3LGIwMrzdsCJO31bvEPlekVgdUMpnEME02M3li2b+SGxBjj8Pw4QpedYf2wF3GO+JKmeqKnZM9qmGtlwbBhuEbng5D+GJrkP6kjtNMR1XyaUBp1dc2oaHxTP8QxcBlBzJTWMeJjkZBaCbcnWDwRq9Co+einx79nK8mATjQC5ArdV3X9wkbYOC+GC6RWtamD9lGW1qriOaJXcboAjJogaR6LOE8QYJTll/wVQ5Y6n+k/zw2CKO+Ygl7i4ULVrcXgsrAykbGvYS99qmDjLf+V6Qjo7qY8QiDUPVix3QUMB7khl0shF9FpKnG99Q+Li/rk3NZoiXGagu+Io2h7Yl4sG5DgKtOuXcko1YKcsjZjkcnOHySztGBqWJw7q1JdbS1kdWEaPoUA4lXiRVU+uoT+oeraETonPWC95UdTGkfiJl2vyMAkMSti2EnNwWqaXQiDZvHRw9Cjv6p/6EzMwi/5JwyI+tWmRshWvR4ii8P+YyQNnFw4+rEbmvxI5ehLoVY04y8s0jWSqvcPh8nlcR9tkndEPozw2clqzXMloJ86wKMN2YGy7Qmw50Os/WA7RthtpIC2Sx7Usu9lH1M5wirYbP4vQmQJMHWJIpRlIhpzw0xXctsoAgZhn1CTqGG8g8wyIuH3VqTMZwfGU0cc7y1rBP5RYYdDjxdsdAGdT72fO31hQTApLNxjF5tV1nnanyEKyXndj8YcierIu/47quuTO4SglY4gG5OuDTr4NRXd/0UVYjabQYe3lnermbgBC2/0uN82Br8kdd7V1zfXfGl4KFc8eqoV1mUyrEW8lma3jfrec0S0IVD+jEZQYUfoqLd233pSUg5qONO0Kx3xb7b8aKlCBctPRjd7jXenJgUeiFZmZD7xqAYsoJUV3iiePg1EHMct1bGvh2IyzVjh62giDKFJtzeCX7bn7gOvQbR1MUdyvL3IptmIglSr3k5a4Ucg/ADnSlOGUFD4uLcnDiYeTpb5yn2j8xVRStGBS6DGEbAX0Yppc5R6GtkpiQ4Aapz5er5LTVhDs6ZrbMLwkRLRfiZvS9Qof2CmWcrHYiWWQTv9yjj8bOQxSNW6MRY6ZaEzAtUq0Hi81VOKyBoVu1uQPg7uOGvEMKKRKQJGgxmdI0Kg8outxrA9m1Jd3uVTlop5+mjJThCMKL9X+hQaxivloBjkwexgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 21 pinged at the New Braunfels Buc-ee's at 14:50:49 and 15:05, within minutes of the 14:53:53 purchase, and 129.8 gallons is under the 275-gallon limit (250-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfphusHeopWP1FCTHg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4889,
+      "output_tokens": 366,
+      "output_tokens_details": {
+        "thinking_tokens": 259
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 21 pinged at the New Braunfels Buc-ee's at 14:50:49 and 15:05, within minutes of the 14:53:53 purchase, and 129.8 gallons is under the 275-gallon limit (250-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4889,
+    "output_tokens": 366,
+    "output_tokens_details": {
+      "thinking_tokens": 259
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

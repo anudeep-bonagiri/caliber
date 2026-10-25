@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021996,
+  "durationMs": 6067,
+  "httpStatus": 200,
+  "id": "INV-1127",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 51900 matches contract 8, billed qty 4 equals PO-1015 received qty 4, no same-amount (210725) invoice under another PO in the prior 30 days, and the vendor bank never changed. The total is 3125 cents above 4 x 51900; no policy rule covers that gap, so it is noted but not a hold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStgoKEAgTGAI4AUIIdGhpbmtpbmcSDPGZmqiLp53une0bbBoM0O1tXWPKeQY6fO0YIjABygmNpwFVbtFevUXjV9+W/OHqtbvzniAmb9GpqmazDUNhA0hbGp2DKMYv7gEP8Q4q0wma716XHIukUji1//jDMEIkLKNXoveVooN0YKTcfxw04agdK4GNZdSS65Y0xexpGzLBVH4T7eykQ+RAMUaHdWFFNxrEimxIgE/asyCIyqscZFn0rrwKEOV1s1brVxam054oJL4E27cP0opXKrXuUolp816eXmtEe2xqG0FztlPENy89w023+o1A5nYrtxiZ89nvIknq2Apg+jiXfWWd9LPfYcD1MP/TzXl+JwLOYCzx3Ixgv1fOdkqywyArnMkYrf16DS507yGd3t6cEjptw85JsXAD8CQ9IOKC1HAWebYbBpreGiDEAz1nlBnH4BDKK29feuk8CAzoXokMh6zFl9xPMLxr0Ta3z9dpZouJrD0WI1mssH12lwpF0FD5jTT4xQABryYQCnCdsFweg7QTBCuppnnGvYEzfqOgAiexz3jtueb2f2rJL/taf+H1EpBjv+sed3R6MoLtgjgSh02+4uy5SeBOY5KejEz4qhiN9uEoAnodYWKF7D40LtzrG9aQ1Fe+n8+oRslSBmnD34wW02FZP7Z3PjNDEn2z+rDIZa19xfEHLgiH0v4SW/yPXkOX9MRklIg21A339Up2iuF/poPMAUjx/huxjMo6UThL/oQrh01wM9RimexXmWPbHxdD8ekgshJ/BdaRL0MvSGipvm5+dnn0EEKr7vv4xcCSexHqtXOlsnoYsAwF79JqM3UGCtJk0ITjA6KPQkTc+Yr3aP7LUdoIJSKQSqd6WuMTZBjxjpdiDpBhndfi8xXoM9FiOUuXWQPFSb0OTBuBigG81Ao2otqJtg8cnmVlesuoYcfBimq4s+A8xbMaeGCgtXv1FA1wNqSkvuh0yWonZjrSGgEneUeaU0RBBBinIsP6L3EZrkOPAGK1mv3OvtmwX71udzI8ut7c+glmvf7166X5Olg8OmMZ9iECRQx2f3+fBGR1XTfuTuRmCYeFsqkfx1MgU0fCgFryWHrl9PuK/8+DJp0wpscrK6cSWXvT4jlqkw4QwjxWmOuKXEwbV0vXeBqgMV1lRVHFaTUuH4XeLioAibpT2EXpr99NeJKFSnY9b/qkv9XB6T2oDpmoGvum7BzQBCRSi35Qdr/zD4o12+3UIiMmslApgDoVL+BKm0ClJls/ORDKQerCBQKxvElN786tBAayMpPdBrLcNm7IiIwIryAVqefbcuXGyeF+WDKxXNz6ccTF+tzcdUVrhNLknxn8CD1quqbFiZjPgEgtuH1BJmik7yrIu+LJmkLGJu70HEso+Aqzt3MlZMa0ZK3W+eVNc4RjGIsmWYaA1fHK3AeI/0ZuOz51d2lH1LDcJx+dj7cUaacQtTvcGgTKLazt+5q7+rt55x8yditkjEbSc/Ff5jc6k01/L+/sANu2wURjUFija5rhQEzOqWtnc1i9Y5zS97bPrEpcTp/CvYCPktgPkLpe4/NJ3MA076lvaz2L3H6jcd9kL8jV9MpCb5kpC8NouQQ7BB2qd/DeQj2eLtO4V4QeSJjxImgYYgyKpur4IcbhdlIMWHyQU0lUeR3XkbxJmXIWlRV6CHma2U+rxy5Zhk5H0M6a20gQ5KxsEbjnzgqcJUksuA81Fz/hkQAqUnFHAsN2OVmbIOZZaOsWri05epDBKEpsCI4PsFB7aFnhGFmcZS0WtBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches contract 8, billed qty 4 equals PO-1015 received qty 4, no same-amount (210725) invoice under another PO in the prior 30 days, and the vendor bank never changed. The total is 3125 cents above 4 x 51900; no policy rule covers that gap, so it is noted but not a hold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzBfjApwCr1fhfBae5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3249,
+      "output_tokens": 450,
+      "output_tokens_details": {
+        "thinking_tokens": 314
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches contract 8, billed qty 4 equals PO-1015 received qty 4, no same-amount (210725) invoice under another PO in the prior 30 days, and the vendor bank never changed. The total is 3125 cents above 4 x 51900; no policy rule covers that gap, so it is noted but not a hold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3249,
+    "output_tokens": 450,
+    "output_tokens_details": {
+      "thinking_tokens": 314
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

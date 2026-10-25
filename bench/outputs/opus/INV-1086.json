@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017916,
+  "durationMs": 3233,
+  "httpStatus": 200,
+  "id": "INV-1086",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Unit price 37450 cents is about 25.3% above the contract 30 oil_service rate of 29900 cents valid on day 48, over the 5% limit of 31395 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvQcKEAgTGAI4AUIIdGhpbmtpbmcSDGlfmyv1GGHe3kQK5hoMtxWPGlCtsFfzIqmVIjATEE7MeR/o6iHfJuLR4Q9IfPJ4C5QDe3n0zAvfF3DIILyY+nZ4emvMaXlJyujrJWQq2gY2Y+HfddJmVT3F4M7HZc80fQIgvzyBa4bJSfbjQcT+tXipa5HYMEK8IdZNkjOzHwDlDneSQAa9mozfG4KrmJLtXM3IwIlHgCJl8yABeFNGBO2R1/2W9vDO1J9re6MrvzAxL4Esno5YGqCwRLyPrzpMBdj6Bp+B/V9kFeovBTiWTU/Q1Itgp1DdR7wv5DvEpLHs/qfixoxRMTw8DttxqmBWCr/5tdXOb4ZG8f629Ta1WEmiAKjoWvqjAelKvwkp5mfmgtRneJzRawy/K6KIHjpUSBakAkBI2AOXbyGtaKHmCMo984u4QJlX1ps8o6fLFyGpK5CXC3HaCHxBdfMSjwgkNIKSFAl71a1cvM/N+xopEA5zua7B70IEMqW2/lsAbve5gOV2MHDns5NNyn/IxN2/RheHjJL19BCNzVb07/v70yCenGBybLiODbf6zZHzL6MlEKO8FX1LhhsQk5DgSH+lguBgov7VhSBqt+72Z2SzZ73v1dE8/XqDx/YdG5eaFjIKavtpYMxlMo8LfDDAmO26RzvKRw7O34rzeW6exlR/LbgNCNTyBKP4qp1rCLuETqa9izMLdwyFDyL/aU69hMbPJFXi7MgYhJfXuOvJiR0xutyLaKDt2yYzW0dIzKs7Pd2bX1TVwG19ZVgZZ4NVVuI/RySHHrW+bpAoTjLKkonW25BcIsMmgTxY/K7acCC0mRQH1QkPUfFvZ11vLJySLPoJqXM1920xnlhek3iqtt8eau26XYiLtswngyAQY4aXsQzems3cg6R9rBrG7YyTWjnUr+vLqZadzqMZaZhzObCBG3TFkxgIpqKbSIvQRQA5k0qz2+6f3OJwxzky3tLtNNT+vujXBItci54qeuDOLIJT4uLlYtY6w5WO7lCAhvvbkPmUVM9o1eBZVHfpN0ctKqRJAxY7kOuxT3y22JUyBplKHD/hBooHCIEvN3tB7xXp/40HrVPjemrY+A2KlgjywO3Hbr7uC5n2BcM+55T+Nuf6OmAFxzybWtFeS++BH1SNpi5+A/U3d9TJUT4xAaBqTtA6Z7byCYAafDFSRKV0BsUUM9EJj4x+Hrdpi5FMvOUKjuFTOSQVWMSkM8pHK55JYfp91fO3B3me7GWx6lDN+sID50ciDkRBFSHdB0kYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 37450 cents is about 25.3% above the contract 30 oil_service rate of 29900 cents valid on day 48, over the 5% limit of 31395 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKCLSgLWsE8vD251oo",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3224,
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "thinking_tokens": 165
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 37450 cents is about 25.3% above the contract 30 oil_service rate of 29900 cents valid on day 48, over the 5% limit of 31395 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3224,
+    "output_tokens": 251,
+    "output_tokens_details": {
+      "thinking_tokens": 165
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

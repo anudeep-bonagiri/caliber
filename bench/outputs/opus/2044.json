@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018888,
+  "durationMs": 3932,
+  "httpStatus": 200,
+  "id": "2044",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 30's nearest ping (13:00Z, 8 min after the 12:51Z purchase) puts it about 56 miles away in Dallas, parked with the engine off and the odometer unchanged all day, far beyond 25 miles from Love's 405 in Hillsboro; ask dispatch whether another unit or driver used card FC-1030."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStQcKEAgTGAI4AUIIdGhpbmtpbmcSDKnzLa4Nn/V/9GNVcBoMnZGKm8LjraZ7seGBIjBNEBhSK6Fgwk6krkd+sj8ckMXMQDidVOXe6fsDJklXre4ta8YoWLzluUkWHwGlqHoq0gZ1uDXCHqRril1wNuJwHkZVxDhuhs6SnzXgByIu/xc0o2I0yv+AURrkjblmfeTjU+DPBYfUCNfg2GJVgi7KExiDNYgaS7hdKSCpjoDCs2Z0B+5idlKnt83gIjna2PYpmYDx9NoqcvYPgm9FgRt9zXpT8Z11kpYAyxbCUCHeTc1nII1zK8s0PErD+A1AwbQj2vzYvCB904i2Ei21Xg3K6AA9HnbzwKPI4I/fnYRUgdjX8uFvRF5MNIQyGXJX9M2Hev66cAhJeIP9XYeDO5+vPnznZFd40c/uAcrCXs8JNvMMRsaXYYnNjiyNV2z3ekpELRNoTja/qY9tHPmae3b/Xc2pOFd6G+1wki9To77g6QSYkigQ6qC+TGpfNhT6uzvEp6Vecfu9CxL8RpxPMebljS0G3rmw2lyLS0/6HdJ9arhH85VUiIgyhhrlzPb/5aU6th3jR0oZMZO0vzV1FalVmd6Zu63KjKlbyPXE0/JZztnu6bXS2eWLaUXAC1cdg7MJEiamIjAwKttQrC5YMR8rmT2NFgJcS79WpspP0hwOwaS4ix+eJ6lsjrenX2RxqB+o2e9gOK5ffYnGVXGvRxc9lbJZKXURwYq6IY2CHdxcpb8NYEwdWtIHO0aD7nykhkvm0aGERevi0gbSrzJjYnxUZcYJ1Ic3Te9eC6Ny4vM1K0exSKtKYg6X0HVZ0Ys5W5nNU3VWwPP33gpZvyHitYybMIamyaTNU2D5OGK6DOPCtz/c4H61YzHNoyDHK1tef3vWnhD/4sQ7y2sgVNNj2v1CVwcBz3NFd49sVePYvIBh9pH46vrDHFMMbkYLLhuXnzFBs89KWpRujiDF2oHpZuX+tx3W7HA/Ssed8oMVspc+uC+M9idlSdFPjz0UTuPyR8zxG2bN1BleqjsPcDzNSkYmqhyUhArf9JYUCm5PNMhPrPkSmbXec0vgBB51+3kg0lYNHJQaL2kskO8R+VrKH7PZwuc7q1HKgUYiuuxQ+4V4yvAp/QkgjsDkd6D97iNtSPesVqrZ3DETOLTe4+TRRMOFLPIumrxJ6T9THb4LEvfp7+kFLEGNqHGaM8Y/bkNc2XpynTmVG8ZGpQ7KUnvKCLne4adhmCAaKFByZ5AMnQwu//gWQJ3zGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 30's nearest ping (13:00Z, 8 min after the 12:51Z purchase) puts it about 56 miles away in Dallas, parked with the engine off and the odometer unchanged all day, far beyond 25 miles from Love's 405 in Hillsboro; ask dispatch whether another unit or driver used card FC-1030.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNys9ZnSFLj1LDQxsiqJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2987,
+      "output_tokens": 347,
+      "output_tokens_details": {
+        "thinking_tokens": 199
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 30's nearest ping (13:00Z, 8 min after the 12:51Z purchase) puts it about 56 miles away in Dallas, parked with the engine off and the odometer unchanged all day, far beyond 25 miles from Love's 405 in Hillsboro; ask dispatch whether another unit or driver used card FC-1030.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2987,
+    "output_tokens": 347,
+    "output_tokens_details": {
+      "thinking_tokens": 199
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

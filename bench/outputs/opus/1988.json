@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021924,
+  "durationMs": 2849,
+  "httpStatus": 200,
+  "id": "1988",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 3 pinged essentially at the Pearsall station at 13:45:00Z, 37 seconds after the 13:44:23Z purchase, and was stopped there. The 61.6 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwQYKEAgTGAI4AUIIdGhpbmtpbmcSDG5YN1Zy+VTUUuqdThoMoDvo1wXw14BrK+KrIjBy8vcoa4nXTLigHH8LOyGzDVCQyzn/BYcudYOCyqEfpZnn1UdjzFXX9sB9ASsu5Bcq3gUEcALfACYyg5UHcy5hjKJ88B6ppJgXh2olPY55u8+2AToCw5JdlsQbjypPR/j9w3+QCsGUDhUuHVlZ6P01oE6CmB4nNhOktW3wssTEFDDUXoPOi+rxJ40OGfVo8HlaZjXeCf2X+/KacCz0wp9b0+Vwn4TrK+Jq6k/X//d5GkqZR0amuzgYPMmjJLSWf/8QXE6+E0f/ioWU+i9kS9pvzkpLWxV1WZFF3YZaO0w14A1ga9nLX00kUuZs8eG59fZny1jnXRjw0DMi2puw4Y6ctMz+9Id66x51zgyTqz101IrpogPzOp41XeBTfkIDxmEzKyr66l1SBzBDJOnYUTUJvPQHThrPm9mtlkXVoGbev36pDB2PNgKY52DgnCarAYWxDVclTJHJzBA3C+cGvqrBlCDP7UZET8AeXMtg74R9kXjNfW3jFmyjFgotljSPit3jYwK8MuXj2O0u/z4wtsibyVGChNyFQlM9VOYagJcp+dHQApqUJ6ghQjf9ud0kQIMAvivlflm/Snv1PdIfLE+lzeW7MrSnLMWNKCouylq9eZWUW8phmwEOLLv+DWFXTzfUlwQB6HKX5ADs4wkBBQPfnGTAlGM3dJMu+xJpHHlAqehIri1E9bX+5CpX4xpZpbNc5ITTuGt6hxE6YyeHVPP7n64+DnMYzCDtS7NukVUsS51p3rPEfF5NivNZxQkEe38su1PJMcdKIPmsk8DpDV+kjD/mzb5GhMbq49ZreHV44TfuEdE8VCqGszleZ+hhqU4hIjfdFjAKnCT5LS1nxDE7gvakyUQZvdZ3N9B71uA6q0NV6sHAanREwtU0xlq3HU0mqRkSOAWGbJ4kYQBjdlMrfBGw/yMZP1zAf44WNLxM/yRrB72e7bY5EdRPGGNnpc2JbnFBKBRfmd3DrjmxR9ZnJeqZ+MD3LIyYPQM9w6OqsatWPr82ec1IDXyxbXehr1ldq74OjuoPoFfuv87v6Mq36RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 3 pinged essentially at the Pearsall station at 13:45:00Z, 37 seconds after the 13:44:23Z purchase, and was stopped there. The 61.6 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyi8BBa3R9NHBadSxGd",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4306,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 3 pinged essentially at the Pearsall station at 13:45:00Z, 37 seconds after the 13:44:23Z purchase, and was stopped there. The 61.6 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4306,
+    "output_tokens": 235,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

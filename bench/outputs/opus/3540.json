@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024752,
+  "durationMs": 2875,
+  "httpStatus": 200,
+  "id": "3540",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 29's nearest ping (18:30:00Z, about 2 minutes before the 18:32:14Z purchase) puts it within about 0.01 miles of Pilot 389 in Mathis, and 48.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrwYKEAgTGAI4AUIIdGhpbmtpbmcSDMHD6YzNs1KDJUoUIRoMFcIHqbboLhn4VgKpIjDSDtWIcjEWn1xUK/CHXFm3UGQ4qTuo2KwuzIH9H47hZhzEfGLGdiWD6/bHBn7WlskqzAWsG/4xRk0efY6C3ijz37cqTj4DZig9Fev33369c9sM756YLuf/gmLTm3o9mLD75IocY2DkoUSS2VQTEUu9U6Zwx8cTsyEf4/LCFQsM6CJa74NJ8Gm9DZsNQbDcQZcIFFRU0BGde3ofId80+AlpoJ121HY3k/Tj3+v+si8ubmdhKp7SER0yzfmlDpG5UNrsYrENgYuq9+ymzkD7Horkp0Jo6ZbVLQeXYjBw7ZVDmrs/HwY+BoEUK0PVjh0jMaDETI/pz8ncBOVA6LEzEwuijhWR6IqPquc7JUG3j+Yu+aWDFX3Fkp6lrngrP1BXRWbT4Y6mMmSYvu+8lt+AwPdLOsvb0javoZoztfBjLhG0wGMoV9JZkuCb9ZdUNorU1SYgDI0l3TTyAdylTLzN6UZpsXheo0hOVaIGdDmNLh7NEy8KvhoxpmshSDdxF1U0Oo5ub58ZWtrVFgMOw5VJQGpS+LE29PbsLYc0zbYhwLcb5hcsD/v6brGqCXMQC9c16uEpwU9ca1dMX3PspKHZ9tX3gLN0z8ChQ4pU9MfBP7C5M92xV9m5fLKqE+acUKLUEjehtFUO1849x//Jylmk4UJtxJqt5Ga6cfq3z+yoUzOPfYbCw2ra9BN2aTsPM3spu7OTIxyqJMOzGqOKWENv4683RKk5cdealWs8RUjQ62BmjelHWNIP0Glji3BGdx31D7xGZG8EImKBv49gSZHeOk9Cx/MVbFy2JWY8kkngJ1Wl/qUSYNWaoA7BDr2fEJiMLsAAzVfmy19ryKfAsqHALv82d1GON1jq49ciyKB+EaBT80M2TyuZ92//IAc2BSLrpjkJia2AIFfNE6sK24DxgckF0Ke3NfS3K7GJwNL7Dr/1aeI+Z/XedmUrSP5285CgZ87uO+EbzBzrRlxIsodIYa2lE+WOSCXptYPkeBVUznkqyOaH2h07sD4YARezb0uP0BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 29's nearest ping (18:30:00Z, about 2 minutes before the 18:32:14Z purchase) puts it within about 0.01 miles of Pilot 389 in Mathis, and 48.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyp8FZw1XQKdvxgUUif",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5033,
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "thinking_tokens": 109
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 29's nearest ping (18:30:00Z, about 2 minutes before the 18:32:14Z purchase) puts it within about 0.01 miles of Pilot 389 in Mathis, and 48.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5033,
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 109
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

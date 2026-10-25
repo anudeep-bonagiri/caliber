@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01456,
+  "durationMs": 3363,
+  "httpStatus": 200,
+  "id": "T1875",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1024 toll at HCTRA-FBT-01 within 10 minutes; the nearest same-plaza charges were on 2026-07-09 and 2026-07-10, so this is not a duplicate and no other hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3wYKEAgTGAI4AUIIdGhpbmtpbmcSDK+n9rbAA12Yh3/ZjxoMk4ObBLtkIGQAaq0tIjCQo0KNIy7LR7lQ9YtcM/ZpbMNqFVIKT00YW8vQXKcZLOdNAjA/5B0rRreo/bQTq4Mq/AWrJPvB/28aEpb4SQdUxJWsA//1HZ8pbAiqpz+5BntGLVsOZHDkUIAo09++YLBQSPEtGRajtL+z0khRLTeh5QYSnqCSQNGoeoRCy1eHz5ge/87igjQdWQQQBQIO8j40ahNrdPbeKMiif74Qw0AkA2KrUijNnpZeFJvMM6iVBWSc0TTXheFBawfHowAfYckLaHL62r1no+2FdQxoUlB+QyGfU4ZbQhHNbUskE6svwV+uua7/7yhSqzQ3I+O9vRN8e+N4qu9D8zklEKhCVyEtn7l6BJOtMJD5K9nW8hCBXSOkpyEgKFVwT20kr/C8uUP9iyxBIa51JBkIebpFmVu+E1Mcbr72sdjBBtEdJgHZEHSm8iCSqlsmZ4ea//PSYONm/jcIKTnqmzgpt/nvS+6PpDvaIiWECJLy/feRgDZ//rePTnQE5kAAmKSUCZdrH9NHVZG/+rI7M6dRMEfCNz96E2qpUF1+lj07dHQ/ZyAAinUaZgPCjEmaFLpFD3C7CxTSFm012fL1Mfgu+owuw2LpyV4LkGl8YCLnb9eGmTuXlj9nTqBNmY4lzih1JU/mXr1Yi/D2+etKFiHoe13keW01MgKIt8vGvQ4UkuoiAwaFUoKYQrCwOxnrOk1xOJ+iVM/VOhPG7TmDgYduMw8PFAz1CwML1MtO0wY+E7V0HyBLbLvCVRXltq7xc3LkIKmKkhSDl/wRF5DmmlmU+lnI0NdNOMy37U/Z3fG8LTx9xqk4B4XhP7AIuwzILSB/iudE8jxmv4GbqZjvLCt/r7AjaqmNYwpzUBhWRrwNjBLbgbYXM36l52yjwCVuJIbiKZKbfhiY4lp8CyNcZ3j7grnnbKmsQgKkBiIjuTGU4f3a+L6WA2RH894xg1r4SowXsUUNgjXnNyZb9kPdAy+TV7l7tXrvd5DsHa1DJ1hsayEN126r1CG19Y/sMVckiNIxC5FFjm+LE+0Ts8JMyTWM0/ZxaZdxtWP5vwPortaasfkG6+5rERBeQNEDVDyAzvwUYG3XWBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1024 toll at HCTRA-FBT-01 within 10 minutes; the nearest same-plaza charges were on 2026-07-09 and 2026-07-10, so this is not a duplicate and no other hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz72dDVbmpJcxWs6A6a",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2490,
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "thinking_tokens": 133
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1024 toll at HCTRA-FBT-01 within 10 minutes; the nearest same-plaza charges were on 2026-07-09 and 2026-07-10, so this is not a duplicate and no other hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2490,
+    "output_tokens": 230,
+    "output_tokens_details": {
+      "thinking_tokens": 133
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

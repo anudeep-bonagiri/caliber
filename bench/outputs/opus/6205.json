@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02808,
+  "durationMs": 3157,
+  "httpStatus": 200,
+  "id": "6205",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 16's nearest ping (20:07:18Z, about 4 minutes before the purchase) puts it about 0.02 miles from Pilot 1126 Luling, and 76.9 gal is within the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7gYKEAgTGAI4AUIIdGhpbmtpbmcSDEWqwBtz7MOimlB1VxoMVIdN1gMuyKziPY4XIjBvAfNluzYjqUALM4glWpTvPPzNKiHH2vIiKLk9mtHVS4c6jCVV5zOO86bLMmlVfKQqiwZ5b3r5w0MsAp4Q+uuaR3d2uRqFgzHqYQOj9ym8eCcTk4KfLgaF2ziKhqkZKWNB7I0glRK4q4xbRMlfq9upNmSYZBitu2rZ3xhonagx0fAomU1xMQZ0iD+uPoGAElxJc6Nj3kGhjMpZEVijFVhxALHebx3oCTpnRWGsYNbi0+miia5bwyqQo7Mww8lJB4ihDudSa6KqVbMhn7kgARkUpVRBNJURfyWJSmiKKxHUQwFB/4ii6QJ1n+GdVXnJoXHmcfypmZ9egP7RCsJfAfPbcflOsQofocFdW5dEpF4ixyIATh/T1i3j8Bi8EBC4dqUiBE7KdPoeDnIlwvuFw/OX/Lq8olKyfmfooMRY8QYqp3Ok+SdzFX0NgMESHwxvxGtlUZmuRVra9d6ThhgIyCD9UT/otfubZnIX18WK/f46QRl+JaklSS5Xkw/xgb3h1Hyalns0xbRwSJXa4pKziR3FQj7PK+IB6gI/fQHaRUyv9cUUwaKNnfbj/LVviflN2Zyu1HQnj4pvUgYd3jS0oxP5QDzklxlqzDCfEDwvzPPXdnEC+Xe63UdKS+vgphr2FIzBjdS7gz6LOQKg/aEnMoNn8WQknSDkkuLQnhcgBvghTR3n8zosR4IqqZ9lkJqpKriYw1oQ71HXOnU7NTpR8bbRdFZo31OcUt4vtiQYT0BMcIc7EilfVG5YX5Yi1S1SLKy6gKpqwegOtpildlCTKCvUUBXeooB7XDwkSfUK2BD78Jm8uAhdMY2p2PJulLSNFQXOqK2dNMUdipN/dXLDzy6P3hWIb5ZcnoOnmlAk9T6YYV8nHcVGms9ukZQ8rSPJmtK8W7N8JVJn2ZLUzePpVWe1DQ7Hm9UvQLM3fmu1EfDZdu7cxtIQTnHSOlTle2GQ3qoSFoiifG7hLJgbJG+b1V/8ni03G44dr9hdHxjRrvHH5ZfdfMuTx7jH9H9Dth3rqaoePoeb1pB6fPlw8vx54QYDO+FUim6KFfAT7pcii8q6YtyeZ1k3Tv93NxT8o6oAJSlF55awxSqyT1TTM2H3FhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 16's nearest ping (20:07:18Z, about 4 minutes before the purchase) puts it about 0.02 miles from Pilot 1126 Luling, and 76.9 gal is within the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMcSqA7T3UcvSBk1Qq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5765,
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "thinking_tokens": 145
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 16's nearest ping (20:07:18Z, about 4 minutes before the purchase) puts it about 0.02 miles from Pilot 1126 Luling, and 76.9 gal is within the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5765,
+    "output_tokens": 251,
+    "output_tokens_details": {
+      "thinking_tokens": 145
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

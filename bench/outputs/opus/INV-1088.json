@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022152,
+  "durationMs": 6127,
+  "httpStatus": 200,
+  "id": "INV-1088",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies. The 52,500 unit price matches the contract, the billed qty 2 equals the PO-1016 received qty, no earlier invoice in the past 30 days has the same 109,500 total, and at 109,500 cents the invoice is under the 500,000 bank-change threshold. Note that the total is 4,500 cents above 2 x 52,500 (effective unit 54,750, +4.3%, still within 5%), so flag it to the vendor."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrQsKEAgTGAI4AUIIdGhpbmtpbmcSDD6IPnsLuozRM6bahxoMFpX1efMP7IpQQ6NnIjAdZXAHgp2aMWOHpVE17hj/g6nsxTvfnhpbij+i1miyqrm6mD8qWtm2uMdiRxlmaIkqygpub3pq5d5ixxFsB6Kqu/OL8pTFRmm0LekfvfBs2XnIOM7l005d5LuwKrgjzxsRro24O3vAgn2tXUTaGOWG13DS7alsTLFmf3WOfwsjiN4VbHMvSgecT8c9WXnaTKnIY6sOxMaEc/XMD+mK39UYt9FwZteGbzy9U7yOzQE+04Fgm4C4eCurrsuAEA8es7qBOwnE/W0BRh0EKT7yCI8LEL6joSbclavNpn9mZ7qjG1V8o61LMVuVbMlbzhoMF8SfTTQ4g8EMBnL+ZBr4mQiPWfV6PzhuQ87yASjiPHBTHryo3whDKy3gz3FPFg7M1weQ0A8eYEhppdb08pdnhVD/xwVmNhLQHf17WWTO/XJpZ9DGal6AfSaHTNKi6arK1NKv1yB2O4WX07DjcNidM7Z9KmjJKQgt2o5jC6INNteL13i8ojeGF3/iqaUW1fokSGPrZIChsggxlTVhmmndq2CVEuKGyrLI/uBcKvvH1xTZPI9QsR3CD2GYd+xsT73pwohYOgLuuD00JsbAMX1Bd44PaHowjQUQKVdnuAD9xWe5ngPi2dezkKZlQFbRBKu8yimnzHXe1XvF5y4lzA/45tlxATwfyzokg3S0KaCcb+mXpKpbFqNBSrQwnofV5loSRUFhhe47eqpGufMDROF+c6lYks4OFnLHCDPLLOtfaqapwTzjqqIDUKyZAG9LKgFNt3QDZmAp/rCGDlE9C6nwNhAR+QVrPx37bOTfbwutgZgu+5X+QF8x9eIzJcrCsDzidzMXdntKnOI7za4K7+tP+tjZVnBKrMhd9JUmYuob4s4KGkGufsGJcxnLqjI3MLzPX80q+XbDkHAyzrbIzXPZK/x6n5kMnfpRSvPl46hTfkCxLK03l+trlQn+TqCMXaVDFU0h9MeJeJF11uR3Z5ZNnvUMn/jboVl6wMXHy8GW6YHz7+gxgHtSVvF63bOBKeZ+sfz0cyq2WhbY+bMnXmZqmPlKFxKcMfk81VZrdOnwUK0qpUAjV865g9xHyDLcEBVgGQc6dBAdLWHnRFlwMeEi6Nv/Nlt0NFSc0ZatH1MkT1OSwnBdS4SeMrpRYhcPiUJzRBqY1qAESFFrs+WfLtLa+ZLS+0XDyD8TATrhjAhSWRaMuurR0+VDPXs5QaECRQcDH3Uo+srrJhV50FsIFv/MGkT2jPwCXRrzlQcVCc/VOWoFA2isXOLPZ4ip1zpGaSnW6sx2xKO1X359iFO/amZoM847yIROXLEYu0DiYkHe79BwEPu4ZfN9Oa7d79GYsgxQNtGYSFnANFgXX3ZSpuRRBiW0HYquVYn7sH6n+QTGytRZ0bBR+gusHk4LY7DYYsGaVLu/ZdNpUkvrwIM8oma80qouJ8LuWZflwU4o79NWJQPpxGMxxaTSpbLmJh1nUdreqNq/SW1ApMZFsgPGi4e/lz5h0xlo4u0c2H13xgFsvToSUyasziHYJezLo00Q8PsmSM12cJn2UYaAi66GGtC3fOEqpJTsU0RW6KfNtaEOFHLczMurD0hRnwz6x1q5J+spP4rA+MHSOr6+QH5sInJaolf4MmYSf4XvcxAdEtTlwdAkCxqfXut+T1uvV7K0/Z4yGRgTpYmLFecOZJkHAQicWMjnbfrfjpMv8sfhiYhHvZVPqC0AV0XokFLq8WtUQskPH56NFTm4FW23B5RSqol80PZ+C5K0xLQChat/ycT1vQRWUJqTBBkAV/thhJYAkEjsA5ZAN+TPnAZ8HUJy8El/xGLcdQfuYBzssABqXlMZuyMlPcF4HNZrTITYxjHZ7r5I2oKbM5l99Uw13RH1WP9cGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies. The 52,500 unit price matches the contract, the billed qty 2 equals the PO-1016 received qty, no earlier invoice in the past 30 days has the same 109,500 total, and at 109,500 cents the invoice is under the 500,000 bank-change threshold. Note that the total is 4,500 cents above 2 x 52,500 (effective unit 54,750, +4.3%, still within 5%), so flag it to the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz16XSoLbYDqS4pD9Fi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2918,
+      "output_tokens": 524,
+      "output_tokens_details": {
+        "thinking_tokens": 355
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies. The 52,500 unit price matches the contract, the billed qty 2 equals the PO-1016 received qty, no earlier invoice in the past 30 days has the same 109,500 total, and at 109,500 cents the invoice is under the 500,000 bank-change threshold. Note that the total is 4,500 cents above 2 x 52,500 (effective unit 54,750, +4.3%, still within 5%), so flag it to the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2918,
+    "output_tokens": 524,
+    "output_tokens_details": {
+      "thinking_tokens": 355
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028028,
+  "durationMs": 6166,
+  "httpStatus": 200,
+  "id": "INV-1160",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 36800 matches contract 34, quantity 1 is within PO-1017's received quantity of 1, the 368.00 amount is under the 5,000-dollar bank-change threshold, and earlier 36800-cent invoices all cite the same PO-1017, so no hold rule applies; note that PO-1017 (qty 1) has now been billed repeatedly (INV-1070, 1082, 1149, 1153, 1160), which may be worth a manual look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3AoKEAgTGAI4AUIIdGhpbmtpbmcSDFBvsU1dH7/mDcJq+hoMLd9shy6//PnanyhyIjCGSUs5ydd0LTQ28oN2VqZFS+4B1/EnuUEd0GLlL9OnfUL4EADcQrL4M0umL2H0w6wq+Qn43wkMnfMq73Eu+AALydxfToZD2NRaBNjuLXnJLrKHMwH13OCW/JDmc+owZqB4BgASHZA34ZnNB/Oqoclbe7k5KUn4K0AzkW3bP1BzOxErN2Mq1bMGPX5Ser/Tff4PjEgyYa54ByqB1I5G+HrD5lf+VRq5TWLzDc7E/1EKTkppsD6cOlEXDRB6ch3NIsa8Ta98FiSdS8pTmdZdljqZpiLQ89XoJnUzPk8deasFoNKG30nNhttY04pg4NnZWUi+CACx61Hx4RxRkUH+Hf/hP9CwPTzBhGp9gsBJRdr2c/8bzFDkwSeBsEJHmgRSKdT3jZMcPOGDDP+fZhFQy4KWHTFQW/fRMhnYcUFZbuJWrHrN0/wc3zeuCDW7GAOCCJAB4FaVhbrzOhNpC7ZUuATq6xHU/mfTs+LmhifH7MyXpD48LY+ES7/YMyvnhZGQc1ydJV6XhDQQDHILz/262LM16ScJXu1Y2pLeM7c1ltI4nXFHxVTCaFrzLwZT78KZvBXuCLHIZ5ZVw0DP9VAItWzHn36qZ/nqetvlXIzcJnmerYKrnkm7J7R4NJjBDw1EcElqdfWVC51Fv9YhB9BYQrS2ioWAMXR0XLS8iRXumYj61OO4p/yvASt3emUHILrsC0MhV3JcpHXFnycBCAXQ7o46ZkCBtIlNc0Y2wRI2C1k1hvKgLUPOpbd7A7e3oGywKdHUKosVMbGsXoBb6MPHE84yRzEI+zcSQ+nb6LuAmpXLIagzNr9w/4h/3lYbdqhA9ROy1x1uMp2Ytt4kidBhWBzktfyNB1l2Ctjig8EFxe3U04noZ4eMJ4PDVeBE5y2GEwvIERBQ3f31iz/3YRhNrT6XTpRQiakH1v/lSF5eAwRZpVSUEFEdlHOcLK5XsIYHGksF/dkPJMv8HL9eC0CjMUofehVDyJQTYjFsQ67Q3gYxzGjAwLCPVg8E8g11Bc44ezjbBe+WbpmKqOcnwtT9w+B2ShVUbEuqOHOM8NFxNQDNCy35Uh5mG11YZ3qJhmmx4o1fEkwastINR0ZZ/xnx2bXr9PoGMdWEOMGcRXWY4cCTttAfHm8S+X+4acj/jcjtkaGEECCMta9uEMYzIj+Swakv/u2fHwtQ0g8lNKbTbnnWsI/76LxG4Que0uuszjnHCmzH3Eu3/yZ4KNwl8rDOwtoQGN1cEiT1X4yUAer5p2xVAF+AqaVntFWY8EDq13ZCKziTYJD5B8a1LNRp3JzQWjHr6O2yxTr0suO2vBwM7u8d5xC12xN8KQhy4KoPAa91sUW3MLkX5uaYZlFptxry1pp0vc1I7e820/PjLIjKzQYugymUQ9LmqUKGNDjoLKK3Qkr3ZSjhejDAIE/Qh+b9/9J9mM9gbqAksBaOhJ2mWEv+B4FlHo27Ra7U+MdPTnP3y3oxwQ4Fk8/pfJ+SdNI1ZoU/umoPsJY7RcyTqpxBIAqI44E7JF3aXn70uYIJVkEWDH6yDjInxfaIcpgYMPjC1PKCuLnG3502cg3DH/Ltnvg4N94nh0w3wrCuJysUGNWomVloIEk0vGGKclbPPbYm9u2gFTkJ71AsGU3fUj8MOel81CBXxLBX04DkPd/M5SoxR4p7XJbEcwTziUDrbmLP6PpRV0FSee6D/k+HI4ZMzn0jh62TMK6xzMK9jeyOPfiozGomBMtyU3PBJK1B5+U2rdnWzRCq2LNE1srgOieqGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 36800 matches contract 34, quantity 1 is within PO-1017's received quantity of 1, the 368.00 amount is under the 5,000-dollar bank-change threshold, and earlier 36800-cent invoices all cite the same PO-1017, so no hold rule applies; note that PO-1017 (qty 1) has now been billed repeatedly (INV-1070, 1082, 1149, 1153, 1160), which may be worth a manual look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjGRp9n8CXLfftT4oQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4477,
+      "output_tokens": 506,
+      "output_tokens_details": {
+        "thinking_tokens": 335
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 36800 matches contract 34, quantity 1 is within PO-1017's received quantity of 1, the 368.00 amount is under the 5,000-dollar bank-change threshold, and earlier 36800-cent invoices all cite the same PO-1017, so no hold rule applies; note that PO-1017 (qty 1) has now been billed repeatedly (INV-1070, 1082, 1149, 1153, 1160), which may be worth a manual look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4477,
+    "output_tokens": 506,
+    "output_tokens_details": {
+      "thinking_tokens": 335
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015944,
+  "durationMs": 2801,
+  "httpStatus": 200,
+  "id": "T1477",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1026 toll at Mountain Creek Lake Bridge falls within 10 minutes of this charge; the most recent one there was 2026-07-23, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShwYKEAgTGAI4AUIIdGhpbmtpbmcSDBkO9U0XEK5Xgs0tNBoM1WnGXNuQEzMduhA3IjDdGJlu3eiBE1odJFJg27d3bwo5BZxxsk3mNgjiIugzTO//rPdvaBmrMuFMEBbkTAsqpAUToqP7norGKZupn2dh/038pTRT9nCYbexfkDtU+oyRNoc+t7CzRkIDjlACE2FEGyow61uIBA+6t5QwewXc4oE8+E/vvHI/RKiEUQEvJB3c5Qn2HoxrPzM1n9NROug80PePGUCsiI9HMPlyKdCzU6WpQo6agzMimR3/vcTYhD8zTrkQPcrvw6WlJ6Ubg+sDprWJWV4xv5YN41Aal4n0A+qQURcaxSmuYm8zcGet1ax66Z8y9PPKhSLALOFl6+AaLoxHez8OueFLURD7m2WXoJHMvzEkNnCBy0SXCEED0Q2TiwTkYBAm+Sr7GMljxvNKgM0L31FvriHDdUDd16kD8ERIpJDG9ueC4I9JdrhO7s/Y17JC28YSkdbVb4I/bcY2f7GL9vNepdLSi5ba7RC17+6CINJN4cW0h2EyZ4N2dyTVRVBNUjpqgGEes976lBYjqUqE9UpZXjWVd/bJr49GZtWMXZqhdYc4Iv3rcUanjEtgyWcG06UJ3yQ8tU/NzDzIF4LDKGexjHdTyPutjdStKTjqNTrPNdqzwwjT00aLh3LtHnJyOTKbJxZoGcbTv0VfqpszF9dK0EZP/Mb1DnWZvoxNx31BhMiONYgoRyPMfeTNWBIsoeVRbFdvEuZGDLA09EI6+LH0+dD91oN40VUwO1ShxQuhwxmW09i3qCamZwUXFYPe1LLIph+ZzcsDrYfFFAlxnLo1F2/fngYR1kWYXH073LPHVl7pAEFxO3rMuOSOOUWl1HbsAZS+GKQEZ9l98iKUzV4u0asBz2hYLEdR8Le0KlzP99qeF9KiJ3EJtJKjaD4LycEX7BvGm9aRzy5zpfa7Z4JoiG3EG1JWqiaH/3SQ60KrfdY6o7a6aPqqudnCckInvzcPsbVPTeCpcbAhkQ+a/qC/GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1026 toll at Mountain Creek Lake Bridge falls within 10 minutes of this charge; the most recent one there was 2026-07-23, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzE11vEyBiMdzKt1zNR",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3036,
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1026 toll at Mountain Creek Lake Bridge falls within 10 minutes of this charge; the most recent one there was 2026-07-23, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3036,
+    "output_tokens": 190,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

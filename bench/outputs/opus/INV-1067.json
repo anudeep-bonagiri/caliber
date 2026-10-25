@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025376,
+  "durationMs": 9649,
+  "httpStatus": 200,
+  "id": "INV-1067",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1067 lists a unit price of 465.00 dollars, matching contract 5, but bills 489.50 dollars for qty 1, an effective unit price 5.27% above contract (limit 488.25 dollars). PO-1006, received qty 1, was already invoiced on INV-1019 (day 12), so confirm this is not a second billing of the same job."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1067 lists a unit price of 465.00 dollars, matching contract 5, but bills 489.50 dollars for qty 1, an effective unit price 5.27% above contract (limit 488.25 dollars). PO-1006, received qty 1, was already invoiced on INV-1019 (day 12), so confirm this is not a second billing of the same job.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4iM4c5SrphGvxA33W",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2074,
+      "output_tokens": 854,
+      "output_tokens_details": {
+        "thinking_tokens": 704
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1067 lists a unit price of 465.00 dollars, matching contract 5, but bills 489.50 dollars for qty 1, an effective unit price 5.27% above contract (limit 488.25 dollars). PO-1006, received qty 1, was already invoiced on INV-1019 (day 12), so confirm this is not a second billing of the same job.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2074,
+    "output_tokens": 854,
+    "output_tokens_details": {
+      "thinking_tokens": 704
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016392,
+  "durationMs": 6030,
+  "httpStatus": 200,
+  "id": "INV-1008",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1008 bills 78,100 cents for 2 units, an effective 39,050 per unit and 6.1% above the 36,800 contract rate (contract 34), even though its stated unit price is 36,800 (2 x 36,800 = 73,600); quantity matches the received quantity, there is no duplicate amount, and the day-71 bank change is outside the window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1008 bills 78,100 cents for 2 units, an effective 39,050 per unit and 6.1% above the 36,800 contract rate (contract 34), even though its stated unit price is 36,800 (2 x 36,800 = 73,600); quantity matches the received quantity, there is no duplicate amount, and the day-71 bank change is outside the window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz77zuZzuJswLvaYjao",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1473,
+      "output_tokens": 525,
+      "output_tokens_details": {
+        "thinking_tokens": 378
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1008 bills 78,100 cents for 2 units, an effective 39,050 per unit and 6.1% above the 36,800 contract rate (contract 34), even though its stated unit price is 36,800 (2 x 36,800 = 73,600); quantity matches the received quantity, there is no duplicate amount, and the day-71 bank change is outside the window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1473,
+    "output_tokens": 525,
+    "output_tokens_details": {
+      "thinking_tokens": 378
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

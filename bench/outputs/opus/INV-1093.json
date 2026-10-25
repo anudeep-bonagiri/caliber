@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023368,
+  "durationMs": 7726,
+  "httpStatus": 200,
+  "id": "INV-1093",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the unit price of 53200 matches contract 20, qty 3 does not exceed PO-1008's received qty of 3, the vendor's bank never changed, and the only earlier invoice for 160850 (INV-1005) is outside the 30-day window and on the same PO; however, the total is 1250 cents above 3 x 53200, and PO-1008 has now been billed three times (9 units) against 3 received, so a follow-up outside these rules is advisable."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the unit price of 53200 matches contract 20, qty 3 does not exceed PO-1008's received qty of 3, the vendor's bank never changed, and the only earlier invoice for 160850 (INV-1005) is outside the 30-day window and on the same PO; however, the total is 1250 cents above 3 x 53200, and PO-1008 has now been billed three times (9 units) against 3 received, so a follow-up outside these rules is advisable.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxxJHvPa574dFYV7E9",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2657,
+      "output_tokens": 637,
+      "output_tokens_details": {
+        "thinking_tokens": 459
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the unit price of 53200 matches contract 20, qty 3 does not exceed PO-1008's received qty of 3, the vendor's bank never changed, and the only earlier invoice for 160850 (INV-1005) is outside the 30-day window and on the same PO; however, the total is 1250 cents above 3 x 53200, and PO-1008 has now been billed three times (9 units) against 3 received, so a follow-up outside these rules is advisable.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2657,
+    "output_tokens": 637,
+    "output_tokens_details": {
+      "thinking_tokens": 459
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

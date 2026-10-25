@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028688,
+  "durationMs": 3636,
+  "httpStatus": 200,
+  "id": "T2126",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1015 at NTTA-DNT-01 within 10 minutes; the most recent one there was T1719 on 2026-08-12, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gYKEAgTGAI4AUIIdGhpbmtpbmcSDLqdtMXNX+yfzJVzfhoMcE7v2ygcChdJgS9hIjDwKrE7ZpC8zQg75O7pokrK7Gr9ofzs5AXRN0vdzPW9KXDTKg5KqW7KS2SdmNXGLVwq9wXFq8wbauiqpbYjFYwPwRm+6E+5Jm6i1PK6p+0uSr+BzoTL3/aoiQ2qa9wLdVocRQ50ox8jWR7caa4nUpJe1Ki8u+jHm8mzSHw22os21sqG36tKwCS+dlo6fPhVPG/Qcou+eNgz2kc9LbDEw1jMloCwpY8UU8P9MdNlEbu+iam9oIsI9ffy+eGCL4sGaLghclaUOCApHXd4XpZLrfQNtMGDqPLSRBNFjEN45gbNnmzv7Yq40+quF/wsF0bTaMYpGrV+V7CgQIAEiolZ/j/qnjjHPD0TDtxydZC3ikOXO1c2Z2MCUx+mMnDLbMogWIrZobiBB5mAvE+Fo5ZBXqiCiwIfmKjFSnJ0UZbD+X1Aj5ReYsVGvJDRPjJDWicqxdoaW6jsqs5qzLAW+jIjDnQyBa9mvgM1KBbvkC25HPzskvOFTrDwDH6RtChvC72r/GhfVWEWpM5NMhHNOSnhOUTYrh6c0LkYSLVrjl6ZrH8Xvu0MbP8PEkDHrZluG7Imug6vgLQf0RMG6EhjzfX+V8pC19oZ0yY0htPL1VT21kq0A1IlC66p9DPqYawe2Jc/npf7e/TDJUIqwjBk8LH0Zln4F7beE8Vim9vV5WNlo/deV7DjyQaC0LDg4uSFOfbWLFSivxiG6lXIk9IGC473/jAlYMhxXxhjCiMWe6OYlsmSdcQT/FBiisUwTMlEW+STkefZPs6/coCfXy5GUnG0GQkz7lRaEiviy+XVSxgtQVDRF/CXFhJaNCfTBZhTxT8KdkHzkGSJMs0XoLcHpJfNiiV/7xqEdhzI9+kTnJzQzOanwAh6IHEtDmY66/bQjbtmgAdXPnP7aHaRso/u6yy52eYI1Mq0uBy2UFKB5JOj34bLvb271TjA7VlGVYx5+j5EfH7LJr7p0r5Mb2OLTHjOa0xZppZVSQBLlfR4D485za8wO/c0aB0zm46/jjVPLtF3Q9nYP+SVMRdkvPMMOteza6hmfWX3r5FHrh57adryx4z70tjd4MmRHVTY0sQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1015 at NTTA-DNT-01 within 10 minutes; the most recent one there was T1719 on 2026-08-12, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzEfsWdvJ2itUcENT4S",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6047,
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "thinking_tokens": 143
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1015 at NTTA-DNT-01 within 10 minutes; the most recent one there was T1719 on 2026-08-12, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6047,
+    "output_tokens": 225,
+    "output_tokens_details": {
+      "thinking_tokens": 143
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

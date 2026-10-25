@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021108,
+  "durationMs": 4761,
+  "httpStatus": 200,
+  "id": "INV-1123",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 53200 matches contract 20, billed qty 3 equals PO-1008 received qty 3, vendor bank details never changed, and no earlier invoice for 159600 under a different PO in days 36-65 (INV-1040 is day 25 and the same PO). Note that PO-1008 (3 tires) has now been invoiced four times (INV-1005, INV-1040, INV-1093, INV-1123), which no hold rule covers but may be worth a manual look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QgKEAgTGAI4AUIIdGhpbmtpbmcSDIznqXH48WwacsZpuBoMP+KnWdXuT69KvR9jIjBjLlxvE4ZFx4H8QnE+v4eyFbhg5uLaMEr2hZ3IvQ3Kf66PGtndvEkJ6kHcclckTboqkgjblTUIbDo2DXh0SS0GqHPso3fMklzYnuaBxCbawWnJFBrpsNBhhQY0ZMqnbOBck2WlLJ85xhP2MNyHlzTmDxsOpQ/7s329k2nyS9BbuVfSJ6ItnGt7kGfHf2HH2KNo53O/HCovcDdTVRHpJrWaMaSRUNqxNfF+MeyM/ZI4BI/RdD/TqWtbQaun/9bSJS1o0SWxkVk2QqQATQ2qUZ/KV4Een8LX73ylC9RkpvMwYLG4lPqmp0xifHU9m0tW1leZ4nWFZYstzM6Grh2GhrZ4EihSCI859zzygH0EHdiowgkSUgx7Qm8YVniIQumo8D6oFLkgrgKfuXm+lPq9fLD7hrEdMv2GwZuKWHJ11eRcq/LMQ1WHwVMZ4lsGuWIPWcIC+otRXHiLIH2arO/7huAvcF7hq/BgK4SUxc/CpMcRYQcEc4UKAWdT1/XzURl0hFjKCZEn5lyMXCnlX4ykDcMdJaUpIqTbq1UngIXer6sendSU5ZPkY/NAFI4nlaBar2hDjImvNMvvj8AsAmrH4sRqtPwUhKMVpC4OetrMNcJ4r8GI6Moun3t9+kUFUBVEnGLQAxFiGeh5XgiWaTTEP/sGaYNb6IY0Y4fV/Sl5aXzrXDyKeuZjDlX+4D3bTnpzuZ3SI/Avn6vu1WsXrWtKOToB44xFKj4zKeGX+sknwOuhdJjMuxODESN2DflHAIKdevjYIXwY7CFRvquwmKXuYTe3Epnz0u5jQY17Ducl5TeXw3ef4s8pzh/JQk9+yx0yVTu1YsigqIhy/dhmakCtfHMTJz5ATG7tMu6YCDLQM3BFvdZi0PvTa8NxHkjdAljL+0l8HYgAk5hNiE6NzlsKvGVvc+h8YtpKXEbwZVWT2uC9O/NllLdcr0aqVU+vNoXJNMmccacsCR3HqkXdQw4J2dF8/3HFIbRS7E4BlXow7e7UNfRdCbTWbgp96+qgPY9TW5t3Zi2mEE1XN5QB45UelohAcgsCUaG+xXTO4UjNH/Mk/AmiKq0y5Tz8h8j83y9iZAV38a9RVTd7w5dt1DgRDJn1IcQqx1jnSVkUSSih87i6LoNAmxqzL/a3XFiLKJFP0JW5ow0bdEYbQs6iFLB+s7pDMvOnlM3dD1bo8DSelbRqgdKfJQb8mBFGax+R/CBd9q641Ts/1RFkyb2spZli37lMMEr7tWjhsDFlzfDJAdG5pjzPjwVbnF2nQlmWU4YpLPQahK8pnMbbyR3qLog4wdz4WkkFY3VAOBbO2Dt7op4pfPvfgHhKgiwabCBpo6SMfT1AwOz63a6+BGHh7H99NBEyN7mysw5yDhFNa8QtxSTwHrUM4bam6LwZfiM11k3xasR/woFv9FfOq3rPFWX0OUvqrmUlf5jYer7uU6817p/nbVIBoml/GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 53200 matches contract 20, billed qty 3 equals PO-1008 received qty 3, vendor bank details never changed, and no earlier invoice for 159600 under a different PO in days 36-65 (INV-1040 is day 25 and the same PO). Note that PO-1008 (3 tires) has now been invoiced four times (INV-1005, INV-1040, INV-1093, INV-1123), which no hold rule covers but may be worth a manual look.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyppr6ahPWYkxCmUArb",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3167,
+      "output_tokens": 422,
+      "output_tokens_details": {
+        "thinking_tokens": 237
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 53200 matches contract 20, billed qty 3 equals PO-1008 received qty 3, vendor bank details never changed, and no earlier invoice for 159600 under a different PO in days 36-65 (INV-1040 is day 25 and the same PO). Note that PO-1008 (3 tires) has now been invoiced four times (INV-1005, INV-1040, INV-1093, INV-1123), which no hold rule covers but may be worth a manual look.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3167,
+    "output_tokens": 422,
+    "output_tokens_details": {
+      "thinking_tokens": 237
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

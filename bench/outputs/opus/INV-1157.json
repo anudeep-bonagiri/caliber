@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026196,
+  "durationMs": 5686,
+  "httpStatus": 200,
+  "id": "INV-1157",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 52500 matches contract 18, qty 1 equals PO-1023 received qty 1, amount is under 500000 and the bank change was day 42, and no same-amount invoice under a different PO in days 51-80 (INV-1095 on day 51 cites the same PO-1023)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4woKEAgTGAI4AUIIdGhpbmtpbmcSDKBBUIgkTGrS9Z0Q8RoMLYbcKCXwp9JRxoylIjAz9TrbOUt++5j0zTGYCnY/COiozAmrkxqRsx901ZsaIzD4BAYc5cSctLfO1lGa/NQqgArImUt6PBmP3T0Pq6GS3MBnQ/qj/vhiAkplyVMWnp34w5i6ihvSGppnOYPfgWioj/fev0Oi4Ny43kNCgBSQFDteV10BpWoBwMNCpvXE8fr3LAGQYibTCXTxdLVQdIVx4s+yAcOv/+/YIsRaGiXK3zN5Qr2R1QXjl6Pi8QedKKZM1pdK7ckaZqfFOH35IwHZdJH5q4+M3B7Cq/FZlhcK8gEpmbMrzsD5FCJfUvtkPABEgAMzOR1AsNnbUxn8NfUun3rYfQXZKcaBwNL42h3Q2u4j2wxCYBzuVbk11ybqH9jY7n0Y8ma7Om4Q5ZEd5HolR0aj7sRae5dmvRm4C2BotZvqOfSPPd5RLLxSFFYV3iCQzYaqxaHgz6KDBmcLwXEO2hdEPa+zWZevCAmNxFOGleBQ2kjXQhpkTKdE7qS737tKpBVaxNyX20lZc7vwSDsQzBV77ZUkekM2t2hkXUmSgeoI5WObErGb06oamaUE5gUkIrNOa7Qf0GqdthpxvK9f7QtYEtIANnrdgUSLXn5lr0wiSUbniExS3qq7RWIlr7f6zGoMFKCFj38eyBz6BhQX7uhBHda95HFknVGIY3IiBjTvg5fbnlafu/e6acPl2TsjYkvIfXOkh04TsnDCRJM4kJpRd8MvLVDlBVrjxxzy9iky63PINWA81+rmw708fX+Cl9DvbriD8jc0fogZlx8AGs8mYCBfeE4jHcIDJmEZj+0XL05lDvO7b97ajg9IVAFXKlcu6tmbW7iAeqsyeswZe+HZwsXAAsdHAf00A51kPtixhFzlHZqMklOS6QZkq5iEfTSX/pyKXCz2Hnozsu9i1vsugqXksQDQQuCj594KhrHTNeyi7ODbkpc+JegJvUaNxcnl1hjyJG8I1YtzRqc2qWiRuHZpScI8MSm33xX0ZIhoyVdoDtvWNurjMhLzLtCLPgHKf0OnlmQbsVomzTcvLbTSWKMxaz0xTpY7j0MBo+aVJwRY/jZaNRDHEwJFBGn0Of3wHFqpYX+KjenvpAplSPScF8+ugl5ioV1zeAdoge4TIS92lVmx+ybhDNmDbe4HUQnyMVUi3xLziS2Ze2A5gQgU4Nfy4sMIKMW/QXOAewSOZLktHuDWIY3YTkWwPdHxJ11n7XFyiC3dWJke5KPCJoT7G9l+DAC35e8Zt/qtj8pvDPmiR7GYOWCTRPcF+6YH80t7YfYBMYp1yBe6bXJsSQE0uMLhQESdBXWKhz2GzsyLhJV7ihhF8LaHBJynzB/rbmBb1yUVwhUy50JrWqf4yk7x64OSAfEP0rjWsim9XXiv2UsNiBq59T6aeD2L0Y4fL/Aod3+6WNJAAWla+EVT/Rb2E6Ie4b7A/KtHbk5sb2qNmInZ09y9tICExd4VaomfWb+mviCXcDR7XAO1SWAPy4OW/qd0Z/i9ARUN7XDZoaZqg4Q/Ehe9dKHmGkHcWPho4+6j9pi4qnaK34tn2+O1/bZ9qInVUIzd1ZSnNBpZZd3FRhuziX3v7/1I1OpJz0mZmMI3EnHUBI0bvOnECk5sd9JL+eeFwih8ev0WXlaO2PjSfR0GnTf7vGZy8wMihd+8hBxFvdvD+Z4BcM5A/AJlrpsbWAoJKNroHgmwFIN+vzClnuScBsoimztRcVXpz84519npzCeSoZ4LL9vvZ4Lebvu0hcY/ZMmMCaOYwdUp61wJPewDERFZlSEIRVYhfjTCMBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 52500 matches contract 18, qty 1 equals PO-1023 received qty 1, amount is under 500000 and the bank change was day 42, and no same-amount invoice under a different PO in days 51-80 (INV-1095 on day 51 cites the same PO-1023).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjXG2xVsr3KZFGKDoq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4189,
+      "output_tokens": 472,
+      "output_tokens_details": {
+        "thinking_tokens": 352
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 52500 matches contract 18, qty 1 equals PO-1023 received qty 1, amount is under 500000 and the bank change was day 42, and no same-amount invoice under a different PO in days 51-80 (INV-1095 on day 51 cites the same PO-1023).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4189,
+    "output_tokens": 472,
+    "output_tokens_details": {
+      "thinking_tokens": 352
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

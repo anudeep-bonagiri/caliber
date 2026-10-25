@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02532,
+  "durationMs": 2875,
+  "httpStatus": 200,
+  "id": "1651",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 36's 20:50 ping, about 4 minutes before the purchase, puts it at the Mathis station (well under 25 miles), and 63.8 gal is within the 132 gal limit (120 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+AUKEAgTGAI4AUIIdGhpbmtpbmcSDE3qyYvP6Tf64AwhmxoMnuTBAAYl4vtm2i0SIjDoM10rMPqz2MC4cbOLOm4bQ3JIgRZnpesQIaPQfYWbI8TmpQgjPPrEQ5p6rgPT5mAqlQWDIomAG7LycssRrEy8guruEd3AWysmSeBgJFkryhAbCsWjztPyvrluxB0F5xgmkYkUrDSwtuWF3E/LoUMLPiYj3Ig4ENQLxFPwrWuWVXW2eg0kaY0s5we3RJvoK7c3dOwh8iAq+ucPC3gv4p+bCzbE2YshyGK08TSvCQqzMh/5fxaFbwGRprHg9rJwV/xhyH/fova6hxKmiIPzclfDavkIoXAzLZyp4aTXglOYQG90C0nRG98bsreanzMLOC1rhQLqj7jygMCZfD6XxkDgV5cfJgkDZmH2EcbMINyf4J7y2NNBtceil2ATtbEd1LmM4jUknE+gAW9SlnyL7f44psPyH9qPpYqitFqoOCxMsoe+/kUUK+LJ+3hEe+xQzTVZn9ehs2gihgKxOgst/OybmwG9RGR6kAVs0DaxKpuCZv/VII5t25zBtATQPfBcPTfa1PwsMl3/OCywhyTSqn8YGKPngLqq/bz6iscnFfkHjYMpPoYZzp6gx2axEg2/Ac3z4ghcR8W8Ljgl7GRBb0vF1WfjhrNqDntL9ecFX8Fna8QsXsvMn8Dvb14qrWJS8lG8fL3V2SzbAJiX6WVZJYGl+vSonwYTikHckwbD20OKzrMxpnRwA6l4l+YDxk1Q0/+AOHoIe8/1eDGTXemmpflzbepcR36Hn8kXQxOrpgsYDLLrBX0kNWJ13VLBQZYhoqKy6iU1TJLsNToCt0StbIB6M2LvRephaoA1Y505vIFoa1If0AJDHucQwPJsoS3i9KTt5cncl9RBfpEwAxxtCKh30d9e4kvfkmI6bj347JRmayDUjgNrdVjPBnFeXiGhL/oKXRmSlzA1O7dYZCJ/hywIxivAlV59rU8UbH1R4mFE/Nnw9/XOriggGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 36's 20:50 ping, about 4 minutes before the purchase, puts it at the Mathis station (well under 25 miles), and 63.8 gal is within the 132 gal limit (120 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCpYbnw6P6m1UqcYy3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5400,
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 92
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 36's 20:50 ping, about 4 minutes before the purchase, puts it at the Mathis station (well under 25 miles), and 63.8 gal is within the 132 gal limit (120 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5400,
+    "output_tokens": 186,
+    "output_tokens_details": {
+      "thinking_tokens": 92
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

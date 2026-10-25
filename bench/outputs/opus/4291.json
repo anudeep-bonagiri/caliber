@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025544,
+  "durationMs": 2907,
+  "httpStatus": 200,
+  "id": "4291",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14's ping at 17:29:41Z, about 3 minutes before the purchase, puts it within 0.1 mile of Flying J 713 in Temple, and 34.8 gal is well under its 132-gal limit (120-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAYKEAgTGAI4AUIIdGhpbmtpbmcSDDducbCVy/uD5fcqghoM+ec2fEAhYWiMx2pfIjDlba+DYwjxdAJwTqrf6X3EGxKt6Mxs3UEYJ0xkkvNKiwQh1tBLh4iERovIVWBmM6kquQUZHKLMaAqLR/vrSj+SI7t10oDNfRr+StWsOVDcu8pzPT3hDpbZPzvm5j8UQo7mO5NJDYrpoq5i0DiSrPi2F3XJ1nPcQajLG2zLu8KQRPNTNviN13yP+lmspCB/NSIsXWBlTC4Z8udpEnbHz7TwYPqTHASqqV0uhb8IDaCLDLBsnPSS2+wTnZOLcz53rQyxYcuZf78zxunW+hIypPQSST2gy8DIswoOXQqLh90MgMduRk7vrVq81/4ho+BQLI24+vqjQROl0glltFPlh+khx2pbx9oZTE5r/PqMkkqa9M9jHgFi3S4DmyJyTyncD2eA8mJN/UR1TxCbt/XAn0gAWFvTt8PcjIXLqmJ6YMRWrrBm4GwYfcG4aB0BvatPhToT+rN1qYm+Wt63qkAKXF3BVksmyEcgG+ZhxZNgfiJiA89a7APxUgXqRQ5n0ouqWbf7KDECIXfVLNivlLUa+YnQ/oxt8s8ywDNGjR/1n08cyaOFX8BXzPCuLVtpys53GrKy1Pn6Si1vpCwobTJOSm5pzd1yH7rHnkKGGmnEUND1dn6eLtJzML5tTAiD10kfBmpe6xx1dmZody5zmra+OwpSDIu0zcTr3DNQ01F930Wp7wUj4vRkKAuwcS+92MIZruraObELOWdhKL6LhSCyDXBfKkW7Y9SGWJ4g2+IB5nFwv08fc0Jc2tnjg1ciq06nKYGzqSTq/J/ouQlGP4g1Uqrk+i0sLilU8Dx5Gt+c5LIf+duePl2Whi2jfZ7f+ONac87qoWJcZWjXw8Ln3ni0srAP/M030oEOsE9bY18Gc+8u8Z05NQNYrJzmO13YbX16OuaIQ9QdEXw02IeScr/jpO4D+wHtBmj6aygckzsGO/fcYGLINJGCPIxY7RlhPVxcP5mAErlXVCyb3hhH+AIG0+aQzZp5Vsm/6WxHnv0NGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14's ping at 17:29:41Z, about 3 minutes before the purchase, puts it within 0.1 mile of Flying J 713 in Temple, and 34.8 gal is well under its 132-gal limit (120-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywPUJsK8kFpKXpzgyg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5326,
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14's ping at 17:29:41Z, about 3 minutes before the purchase, puts it within 0.1 mile of Flying J 713 in Temple, and 34.8 gal is well under its 132-gal limit (120-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5326,
+    "output_tokens": 212,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024924,
+  "durationMs": 5469,
+  "httpStatus": 200,
+  "id": "INV-1168",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 46500 matches the contract rate, billed qty 1 equals received qty 1, every earlier 46500 invoice in the last 30 days cites the same PO-1006, and the invoice is under 500000 cents with the bank change on day 18, outside the 7-day window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStwkKEAgTGAI4AUIIdGhpbmtpbmcSDEwh5yVuMs5rTqXuHRoMuHf/IUWjx4c4pi13IjDGAlWFCwk7c60jFx4InvjVS/es6M7EMYNTXEDgmbUkbjNsS7zo1mpZJ5Lgczn7R2Mq1AiwjJRk3j8MAJQUzKqFz3MDgMU6Vlpx5LVfVYeXI543szcXDTd9mEGSwucAoWfgeuONCtMXobnYJSsaJXMH0ZuAgrza9GW7B5Ahg8UcdSCo6QW6edO1DWQGdKol9pVuVBgtY2mH0MfwHcMs5rACaEPiZpGbbenW6AWBnp0EpJuiGApE6J2d5Duqae+leMubFdM+LoPq0DxoYjPDYa5vzomCDjyfZ8i53J5AI9X5peoO3ucwKdapcWdg5JdM0vYKg8FZZKqWgVbgluGIJlwPQaS6nJteIgrQ1UIRBCJy/rrQdW0lRtHCHtXbR8p62t+eOoklSNhPSZvObaQjJiAn4/gsreU2o0CqT5FkCohQ/3lITVj5zmH3PFOKiDQjyVAyrSNaXoR6g7FJCyQHlctXfAEbvngIY74dZPuPLgrKQlH8hfTmblBdEiJkA/GyykL9vSli1hysa/Cel2Fdvp4hUuV3VLn6GDbddygBUYfl3ErDEeRJS5w8IhUTc+AMibmjBijSS0spU7REYu6gFaL6Z5yR/mijKmEAP7uIRVyWMpK2CVFl6VTdkHpcpHfxEITz9uuSlzN9sFPAPy7wk8lUH9ZMaT4BIrTAtdcdRTA2UbrnojDN9LGUj+QxYIjP7HbEiUQ7KBtWC/Qt+zWRM0RYZ4vzQI80u0dP2Et6tWtfNar80YPBIrlcmMQ8dIlX/PfglMzCAnXZRiGWDwGXnNw+h1Tklknfa5KYaNMgs9bep0Cbzuwm/HpEK9hH3YKqZ7c9HnudhD5j1LpngdjkFXCvpnvfDy6Gt2jm0e9ad4vNf9u2VRrDoKL7MgscT1GNkSaZuVEmp+RflpjUqP4wi5HADlevnUeFxypQVdI+fXiv9ym3ghNsEPxaiv1Pv75nWgi/zXK/I0zFmMIBXmLnlVi5fzXTQ8eh2SlYDQYLVHWJoCbMXOPHvbQYK1gVKfrTlcITXDHNYU6vGVBJc2xJb9mtkh53WXnDoxUkFARYFHgO6KoveDaEpsCIp5a+Iny6v6T1bMVWcMSFLobnGgFNSXeuBxaUwQS6fyho8QOSfIZmPFqmuT3kG9674xS9OA5c58PVP6Y8ymKNsLMVoZkfPuV+Wclwi/NSsNc9670qapaKr8d6vzNvauFchVvt4QraJB12guicFw7+4Dk2Y7ppugKwTz7uNTuXuM6XaJiaA4aHfv+O1X810OvfYI7vOfAD2rCw2PFVT4zaFcLk4kHE35k3iBYLlFiiElNIjCLdhDVt6pSdl9veWXyY5srHr6hBpJ2j4XH+68Zbtzb6OhhfX8VbjovG5dvSGgqh/CygtfHU/htWw9EUyG12ZUgzwxzc8OggX0iKFMelHnQSov6KQU3B9BDHD+LFTA4ZVgT7oHITxDM+fUF1o1S5aFP+okVlkuZOGPObU6VZD54Qan/XIHtlXXEIsN+In/rdZJSluW/c1qv3JQz4ILp4+X/8q0lfjnnE8lBdQubdGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 46500 matches the contract rate, billed qty 1 equals received qty 1, every earlier 46500 invoice in the last 30 days cites the same PO-1006, and the invoice is under 500000 cents with the bank change on day 18, outside the 7-day window.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyoekqdQcNtpd8XgEQA",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4271,
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "thinking_tokens": 272
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 46500 matches the contract rate, billed qty 1 equals received qty 1, every earlier 46500 invoice in the last 30 days cites the same PO-1006, and the invoice is under 500000 cents with the bank change on day 18, outside the 7-day window.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4271,
+    "output_tokens": 392,
+    "output_tokens_details": {
+      "thinking_tokens": 272
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

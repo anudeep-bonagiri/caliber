@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.030916,
+  "durationMs": 2394,
+  "httpStatus": 200,
+  "id": "T2966",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1022 toll at SH 45 SE Plaza within 10 minutes of 2026-10-27T11:38:42Z; the most recent one there was T2768 on 2026-10-15, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxwUKEAgTGAI4AUIIdGhpbmtpbmcSDI/U2c7AF6auD5pHKxoMQdofXC8ploEmI2EuIjDT4R8S/vo7DX7+IXs+JZqzzBboTJPeoFt+qopg4URjWCCgduWg97HbTgltzdr4PrIq5ATjgyr8baxnctBmMQSYoXIUAPOkvWh4JPGJz1ohDmU6vsd/lFc3+GK818B64usKIaXHydXHfWPlJRPtFlRGDX/N+hZs/sVO5IpePkGTQdN3UCoW9XD9e8MYoqVGpf8DpOjjBLtgyLR5boql4pwnGAIvM8alTAr+FEv0/K9TNegyLW75cvRYni7QWWODsMcY/yvGjq0mJlMDqvdAY++eI8oUYwW0REEc6+QC5h+rBOqOD1fQimBab3a0jzEyYrNiOfDyXt7zaGZfHv/ogxwn+J4As0Qo8eegLA2XI4mCimg0l/BbBHeBdrnWawFxQeUP+Fr7rlUjTpYH35WnI/t4CCeQzkx5McdlCLrE0c5VscK3idJWoZvpTSFcOJNXrgUY1TMU5hfM2PJ2usDfLmH82J0pfoka9PMKNPAWuf30CFUuKin2QPe1E3QntD2R/hApi0i3QF35TY5RxtxxbFAIu/1Ht44PxHZP6P82MIAGrWOElIwvPhoJYE5qqJaatDAzKyhFv25hKyEFp603WhiZH791du4lyxuk6nNVJmtDuuyyoJ2uqJOBBtGR9qvs6ttqLPkSX0R2C2R6IWxIclrsZTj7BOAAYlLcGMJYnzK4vloEJvUu2rx5XZRgEU4Kt1LSY/C8tjnuMl0pZuqlFUoNQOTQOuPIabeOIf4W0WX9MN/19/uV/Vd9aFwjppg8wNiuF2TYTE9g6k88AZVCLVaHm9ej6pAHCtw+v58b0Pq82pYYr4lw0KVXoiKhHeGAGkCi0FIcqqWlgkT/uL+LhyxExKEfx4EGuTiPIeFKyX1z9mE2lE5PTvoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1022 toll at SH 45 SE Plaza within 10 minutes of 2026-10-27T11:38:42Z; the most recent one there was T2768 on 2026-10-15, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFtoB1x5A49NghAgqt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6924,
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "thinking_tokens": 66
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1022 toll at SH 45 SE Plaza within 10 minutes of 2026-10-27T11:38:42Z; the most recent one there was T2768 on 2026-10-15, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6924,
+    "output_tokens": 161,
+    "output_tokens_details": {
+      "thinking_tokens": 66
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

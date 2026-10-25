@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024144,
+  "durationMs": 9874,
+  "httpStatus": 200,
+  "id": "INV-1028",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies: unit price 56800 equals the contract rate, billed qty 2 does not exceed received qty 2, the amount does not match any earlier invoice from this vendor, and the bank change (day 42) is after receipt and the invoice is under $5,000. However, PO-1011 was already billed in full by INV-1021 (2 x 56800 = 113600 on day 14), and this invoice's total of 117350 does not equal 2 x 56800, so AP should confirm this is not a second billing before paying."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No policy hold applies: unit price 56800 equals the contract rate, billed qty 2 does not exceed received qty 2, the amount does not match any earlier invoice from this vendor, and the bank change (day 42) is after receipt and the invoice is under $5,000. However, PO-1011 was already billed in full by INV-1021 (2 x 56800 = 113600 on day 14), and this invoice's total of 117350 does not equal 2 x 56800, so AP should confirm this is not a second billing before paying.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMd2YrgmM8HZ7yE3Bc",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1656,
+      "output_tokens": 876,
+      "output_tokens_details": {
+        "thinking_tokens": 686
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No policy hold applies: unit price 56800 equals the contract rate, billed qty 2 does not exceed received qty 2, the amount does not match any earlier invoice from this vendor, and the bank change (day 42) is after receipt and the invoice is under $5,000. However, PO-1011 was already billed in full by INV-1021 (2 x 56800 = 113600 on day 14), and this invoice's total of 117350 does not equal 2 x 56800, so AP should confirm this is not a second billing before paying.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1656,
+    "output_tokens": 876,
+    "output_tokens_details": {
+      "thinking_tokens": 686
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

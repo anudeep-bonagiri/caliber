@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015984,
+  "durationMs": 3139,
+  "httpStatus": 200,
+  "id": "T1565",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1001 at plaza HCTRA-SHT-W within 10 minutes of 2026-08-04T12:10:41Z; the nearest earlier charges there were on 2026-07-28, so this is not a duplicate. Separately, earlier charge T1368 looks like a duplicate of T1367 and should be checked."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrgYKEAgTGAI4AUIIdGhpbmtpbmcSDLcTXG4bDxYDe7kSrRoMqJnPXw0/8uAQqItBIjB9XRvPYaXJcirtriaOhpiyA7P9M+OFCwt72HChLnHcNcZRGVuLmdpBh+W3h0IqXTAqywVm59ghAZ7AH6z56IVppmfMm4p0StwZu2O0kBVIWVh7p58Jp+MBxwtFYu9y/zNHC49lgIfC9fesQZIOvbcgkSlJF2zdUkHLQlepvNJyITiDtelSvbznx+gzCLbKc6fJomF7ayrUiGLBbRXI/e50SO1jyxG6W8On645s6PsrIOtE0GMFaE0moXX3wIb9ANF/+3KAHzzSEv8o9CsMpmLI42/B6Pm3pn2Uhs7fZT05rEqCyV6CEMYxQ9GphHVu8wUF98KgOgK7v2PE2TRmLIAalLd4JyexG3d+TN/GL3T1RIVo0WGjhDoF76QP6cRKklphcgYE3cD53+pGggxkti3wDKt66r84NK9njbg7C2f4SYu91bOdN7w4Gog9gu2ojlAAzUVHv+zThUMqmJGKU+SxjzqwR7g2g8NbXMTaylTUoN0/17IyUGaoPyJF2zf3mQLiyX/h3v5ie80qnspik5stLEz2Fngs8Knhxn8YqDblbDM2e6PG3Ped8OyT0MSBTSz+13QEIUlNi84TTxEPgI6l8yacq3JENNenAHfKbm4Xe2j7pJddwzWRF9GRDK9XxSMDfhfSqyr5pLDc6waynm5+ytmi11aIDQoDxVRaoy7vMjKD2UWPwer+2jH3Sop/dqxXaNDwdQxkDhjE7UJzyokyXXG6TfJVxOxZU3Md2HNfyodvzqd9GmYDqJLTuqbYO4lHggyYd3HLUovQvlziy72S98cI+pM9i51TQubQI/GzZf6ZqnrF7OaXYdiWVndJEkYUBT8MjdjVjegJ4hnhv6NvdzE/qhGozHVITvUAhfm6aWSSfLwcoTvwpCo2vrOzLnDPxcPZ9XQFDgtoGN4pgQQMGZdQ5zA0sH2wsQ5t3w+yOOSjC84X7auZ4GFOLrgtSDjmFedsqv14Do52bb+MNlfN3FElGmfg3o84sqzirqzqthbz6bxvxlN1XSMUx3MZGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1001 at plaza HCTRA-SHT-W within 10 minutes of 2026-08-04T12:10:41Z; the nearest earlier charges there were on 2026-07-28, so this is not a duplicate. Separately, earlier charge T1368 looks like a duplicate of T1367 and should be checked.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyt87kcwECWrQkNYuWn",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2736,
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "thinking_tokens": 114
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1001 at plaza HCTRA-SHT-W within 10 minutes of 2026-08-04T12:10:41Z; the nearest earlier charges there were on 2026-07-28, so this is not a duplicate. Separately, earlier charge T1368 looks like a duplicate of T1367 and should be checked.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2736,
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "thinking_tokens": 114
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

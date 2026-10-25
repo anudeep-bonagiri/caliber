@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.029424,
+  "durationMs": 7919,
+  "httpStatus": 200,
+  "id": "INV-1156",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches contract #9 and PO-1021, billed qty 2 equals received qty 2, no earlier 72300 invoice in the last 30 days, and the vendor's bank never changed; the 72300 total is 4500 above 2 x 33900, which no policy rule covers, so worth a look at INV-1156.txt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract #9 and PO-1021, billed qty 2 equals received qty 2, no earlier 72300 invoice in the last 30 days, and the vendor's bank never changed; the 72300 total is 4500 above 2 x 33900, which no policy rule covers, so worth a look at INV-1156.txt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymRRbxnSFKHwQYBNCc",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3831,
+      "output_tokens": 705,
+      "output_tokens_details": {
+        "thinking_tokens": 576
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract #9 and PO-1021, billed qty 2 equals received qty 2, no earlier 72300 invoice in the last 30 days, and the vendor's bank never changed; the 72300 total is 4500 above 2 x 33900, which no policy rule covers, so worth a look at INV-1156.txt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3831,
+    "output_tokens": 705,
+    "output_tokens_details": {
+      "thinking_tokens": 576
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

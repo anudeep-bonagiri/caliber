@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028416,
+  "durationMs": 3097,
+  "httpStatus": 200,
+  "id": "T2611",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1025 at plaza TXTAG-SH45N-01 within 10 minutes; the most recent one there was T2507 on 2026-10-01."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wYKEAgTGAI4AUIIdGhpbmtpbmcSDCsgx/nZ2swcY823DhoMHYLtlJnXg/IXQKXtIjBPNEHSroC55mC3LokLsjs+l2gKq2I2f/1RYtPLJ9BNrnJ1KC9IC5OvMKQgH3hCSUEq9AXYHvPokwCYg7uzMh6qmytcjzYluIOL2fno9kxO/PQ/M25irDKHMjyplWOGy8GjWk8mRwjoF4MrkgH/MbQ7jIW+IrHZAsRoXsHnFKfwGvO2k0p2sYCRRecBGboNdGqtq+KK1N5hMC5agbFjp/1rqyxl8gXyWO0Ay9mD6Qhrny5ZoOko282rstx/BwKqGN2gMzPDXtS/LWUkEVIJ6Hoya4o+yCkmYwXOWYgTKO57jK2YQwD0+T+gWb+QK858haw7WGrfGR/2eVBhoXnpiVjV7pmfHUqouBFEPwQd2cJO1id/ayQ51O4PKZcDCLIb8BbxkscD40Cks+jLqJVxRWMopUoEuzakdu8cLOALd8InbipTAbE3RQvpsOF0D+mr4KLa3Q9KsL2As3IiHp9dcQHSHHQPHloF/ko84O8byaFES6aMvbMLEa1arrScrqDeeuPgxwWOVaC/VOGhYXbauzmRsl3YZJirFCmnlJNHcL7fGdULkZJp8ZVcao0NiQl/+1wncAKkzrUj7Z0orZaTqE9+cuig0OcMgP3euur6yWvtHydrp2aATQDjYWX9yL6vmBOrciOCjB/hRGdHmD8PlZ3bIHDP558JE3UIRrHZI3VxvcDGIiBQevYc2taQM6Ae2ntv4NsUi6NbLzowA0Rc/MY7XvmraFAlMl3Fd6oScoxNUNZYn3n0YHENKASixb+1tKf3hBTl+YOCNoKxsMuiDS3ZYaaT4mjzeAAuiWpg5UjMOH/GI1atsqGLYg0sc/sQQtF6CFORUNt7+M89SscvGIrqo1X5m+laja+hzDu00dQ9yiFtOko2RYt1migVN1qfOwPwlQ0L7Lh1vfY1kuz6ji85ZoupvQVUKRpTacOV4QaB89KkCC1ZbQgVkQhzfeJODMfKQ4q6IDu8otkg/QjXckscLcxqXooEKqCfujsyVDLbexTn14ShGs69pEcTFuoleOuhyOTtRgsqyRK45p+AIk4sEltJ1CpWDXuCv/VZbNb2uV88NIbIAS4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at plaza TXTAG-SH45N-01 within 10 minutes; the most recent one there was T2507 on 2026-10-01.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyp4jk31xTkJyrNVEJY",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6024,
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "thinking_tokens": 139
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at plaza TXTAG-SH45N-01 within 10 minutes; the most recent one there was T2507 on 2026-10-01.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6024,
+    "output_tokens": 216,
+    "output_tokens_details": {
+      "thinking_tokens": 139
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

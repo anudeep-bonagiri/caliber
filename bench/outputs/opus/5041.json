@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017672,
+  "durationMs": 3466,
+  "httpStatus": 200,
+  "id": "5041",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 29's nearest ping (14:00Z, 14.5 min before the purchase) puts it parked in San Antonio, about 107 miles from Stripes 1204 in Freer, with the engine off all day and no odometer change; ask dispatch whether another unit or driver used card FC-1029."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAcKEAgTGAI4AUIIdGhpbmtpbmcSDCw2BhADjKJHDj/ephoMCIo3aEOeO9tPLrSPIjDz8sUP51v5LO6s2hzeNz9k3CQLmoP+/fewq/RbNiV3HXCuoS8rxuyugkZsHgw5KQEqnQYpC859ck9gh29shJW/1iUutf2J88I4dS7sk1ZGQ3XBH02jP2jJ35V7zs/MlZuAU1DV4HJEBnMqPzyfP3kaXz2VReP3ROaMyS70T36rlu8BmLhE9NbeTNCXhHxKVzMcy2wC3uszY8+sUVLO4cc/HGz02Zl6O7WZeSbvU9MQwLMhG3qL0wr/m36OfVxpTy7X1ERWF5Uj1Z1IzvY+W+P9BlN7+Ny5HVYqyeKA4mFbGA/Ae+fZ/380aLzKbyZIB+i6S6T1t2+BtcGg7QXOYF85yyjLvmwbByumdfrgxn6ntTlc32y/lUVRc98HcpD+7gx5bfkrMJ63ixc+dyOjhj+qXgPVSy3PHYdL6fgZsqAkwXzED19lwxICtqYEe70IMrgsJE3Ae5sy35QRe8oWzzrBtxyP4ukhVJ5s1RO7+5+U3WAGvLL+Z/XC62oRtxawRh83ffVvuCF1P1vqJ30XjfI3uh3qOLcyYGrpCapTXgT9dzPXGh76fWqJwwSL+0+2kjCjeMiu7ontJ+kQ6m1fxkosye6NalNeFPN54hG/zLSUh2sPGwIzMKv2KjDMbjdZRUAiuU69zxGi6f16l8Mr2K6taoDprGCiHGqzNWSV1fo46NjXFbsdzipc4+3dfUNHJTnd/lvMaRhj8mI/XRjmsqFOR7BJWjEU/i6kjpW9lm9CIFv69Pn2wcV00pPinWsIXIhDxsg4uA33Ns3vilGdmhX54H798Tt2agZ3/uF/ER9Xyq1O+vC1eN5LrXKVIUz9kbSkMgZ55M4A/U3a3bcxRRAHwBUvZO1hJSRSRpRp7mlh1cgo0OGClJTmbmTh9crqBSCWK6fD99v0aXzu/XMpqxKs4FGdbR/S9OwbvZ4ydRrbN4fo4or6k8f8q6jM5J8raPmJ18YZnzzlb2pMqozRsVPaZfd2yHvpVEqr9u6UDSjiGAsBEG80wAPmDW3cv25azcL4Wl7ANth7rHhG5oO59f93+HKy+B4xuHFdXT5dH45YxQ1r8rh+w6p5ja102wB7f0G5qX6nWEeXiTp+SrXDohzoyeqh6dKmJYryBRMsJ9qpfhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 29's nearest ping (14:00Z, 14.5 min before the purchase) puts it parked in San Antonio, about 107 miles from Stripes 1204 in Freer, with the engine off all day and no odometer change; ask dispatch whether another unit or driver used card FC-1029.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2zKScPe51jJJA3fmM",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2993,
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "thinking_tokens": 159
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 29's nearest ping (14:00Z, 14.5 min before the purchase) puts it parked in San Antonio, about 107 miles from Stripes 1204 in Freer, with the engine off all day and no odometer change; ask dispatch whether another unit or driver used card FC-1029.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2993,
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "thinking_tokens": 159
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

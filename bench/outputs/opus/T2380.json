@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023444,
+  "durationMs": 2549,
+  "httpStatus": 200,
+  "id": "T2380",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Same plate TX-1013 at the same SH 45 SE Creedmoor plaza was charged 7m50s earlier (T2379 at 19:51:25Z), so this later charge is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSswUKEAgTGAI4AUIIdGhpbmtpbmcSDMhAimVL+gA7Xi740BoML4vEeW3Pudg/JtrSIjAUPNUP8baXuCbsXOhLwT0LxwiFpvmsbxUzZ2JbBBh1yXbF4WWr12I2uF12sON8u6sq0AQr6aqW1YlqDNBRrNWQjyPyjjad6Fp4aV9buG1G/MiSX9yqq16s4tcD28/+AegBEIJfOm+ybbLuPQa9DXFgMbEoiYETCIRUwfxrLhHhNFANY4dJoMhOmt82pTlrhPhHeW/47XX3emKnxRIO8gMCy5msaOGP+9z4pu8ZqpFKdkc4DOxk/0SyiMkRkKHaQzG+XawDajDEdYGr44A7G9tN7JTr0sCytr+TIobSt6vukosHL+dNJDYNfooc4PqedqAe73MWa7fCo6Wc41nFY2gIJcnch4cVHF8ihHuwzhCy9fKEu8Ntidke0gNppmjZKaU2nkPkQBnIeFwgReCMsSw67donRRbp+q+CYHkq/I8maOUWcdZK6NQLGLSRjl4RNZ6Rna8TLl+K0VRvGTwZ+nNrBobXRzY6F42rbtT1uyQcdKugcxdgksxT29sTPEHosmGPsyUTj1mSnlS7kKr5NufAUDc6EcVbhoAt7tziCWkGeon0cl3Btsd2d0pkovVfu2q4Jd2HhG1294b5N1CeXWDqK6aMIPtxFsKqAyG0o55XAiDSO93EBCFTVTCX/O4SquH7jJuKP1e0MCVJgyxNXXPutXrarEsLwa3cHCfealJiQkPhBU9+x8B6AQ2fji5vzOT+5rWhWZP2+GA1Sjvb0HEJPMC4bprWWOYv+wXgWGicD3aTJQsMVHLootAHHdB9c8R2jspSEzEXhg8WQ+ia7Oo/OVAtTzkVx+uBHBuexO0rRHUdWD65hbgjVWUgQNXLpS/I9oiHq8hQtpoL2NRzhLO7XjBtGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Same plate TX-1013 at the same SH 45 SE Creedmoor plaza was charged 7m50s earlier (T2379 at 19:51:25Z), so this later charge is the duplicate.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyzosqG6RvcGzt6GfJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5066,
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "thinking_tokens": 58
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Same plate TX-1013 at the same SH 45 SE Creedmoor plaza was charged 7m50s earlier (T2379 at 19:51:25Z), so this later charge is the duplicate.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5066,
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "thinking_tokens": 58
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

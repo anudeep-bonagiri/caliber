@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024084,
+  "durationMs": 4365,
+  "httpStatus": 200,
+  "id": "INV-1173",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: no earlier invoice for 23541 cents in the prior 30 days, no PO or contract to check rate or quantity against, and the 235.41-dollar amount is under the 5,000-dollar bank-change threshold (bank change on day 71 was also over 7 business days before day 89)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAgKEAgTGAI4AUIIdGhpbmtpbmcSDCKgmKin5VhxD2hx/xoMMbTfd8Oh8zBcfQ14IjCPrVHHgfIONGMDzKTg2zoFs+O+KQURQTCcAVuBPvJ6hxhH/9f2Y0LT/8dDrhX3MzsqnQdGvvUaj766UWqAOCio9DaimzxbGftFcJ94cgwdjM3OFD6RS0sflRvLCvdzznfP24oRXzT7oWq6K3kFyhOdY7tp2aRg/t76Qr/Gh7dZdMuTIo7G9NNJAka4tHUp2/92JOVoZTs9990hALQQFhQ+igepT5VzBHJ/XJmLSXfXYj78j6gxn9bZBq5AlToOD2hDrnql8IVoGuUSLvfQ4BG5izuiHVwsuA+1ETxidLWO+CX/FShTgWCmXbJvlwgFTIgrG3FjQscJ+ZAaPua+REr6e3sFTQzzPEnYp/7d1vTMC1RYfq8WmFDXs4gYgmwqJpRAFCHnTYTB98eqrDTK4W7DVLptw1+4cVtzWQnLoUAWEiIkKcH4o8bhqwh1zvssvM/GJbQesWzBQsDfKFOycHuHoE60tXMT/1RoLKT9gC8jTna6X7idK02TY6anLgUckyAuFMMR4V9CdK9ALI8KcoW5f80BVki0670OOviz8GeGUqXTpapwHIliHQULlTzDQ6zmg3USqKNDEBBT/wiFInWd1viYhAn5PYx6g9UvjekUc4IBJwYuxsBHc2Yhuo0ykdfoS1wLjiAO4SGlZfr2hXiqs0pTy6FpWX5bfhwKOTytkxchlG0sTcjtxuBrCc9q/U2gys+R6mG8RsAmjllnKca+hrzxi1A+2PFKAgDggTB/C0TsZSQhkrSFdqJIt3vLoJmHHXslNj2RveYubE55b+XEtBNwKSJZWcoGNesk7GslTKCc6DlQLGcQyjW5HLrdyUXdUDtYRpbMc1yR0KedUmIVqG2WJs3DvtjaA5onb1KjvF2gJ8BCHPGZRIPKEmCp43xctxPi39/nvdOB5v5F+PKxYhYJFrDpU1eZFknv2XbEdvM0M28KEyOjDmHCFhGTFMUg1F59+Ceg+3a1mteCE+mYb1gs+uLz3PmjhHk6631pH5qTtXklCHMG9kklbkjo/ZlFMiU/5fgtZXS0mErHCE3/NVpqt9c1Bcca9jLnK//GrlOZUKjaCcvBIerGd9BrL5oUTxwyYzovevGzGTnPewsff++vRFLC3nNyUWwvDmAeYtK30lx6e+RirOMgkp3QTcQyGGoMOBOw46YJc+Y7G1T079Nfm8QDcBbv5Dg5VgDrWc64oEMogBTC5m3FVPPtogtR9S/HfCPo/G0BDMHe+Tg/XVYnH9USZY6AVbmUF2L+pd/AumylPA1maqRidpXpTtrecP2I8N2w8PTPaJybQOxkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier invoice for 23541 cents in the prior 30 days, no PO or contract to check rate or quantity against, and the 235.41-dollar amount is under the 5,000-dollar bank-change threshold (bank change on day 71 was also over 7 business days before day 89).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyttKZ1PaCR7RdiQTVD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4566,
+      "output_tokens": 291,
+      "output_tokens_details": {
+        "thinking_tokens": 169
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier invoice for 23541 cents in the prior 30 days, no PO or contract to check rate or quantity against, and the 235.41-dollar amount is under the 5,000-dollar bank-change threshold (bank change on day 71 was also over 7 business days before day 89).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4566,
+    "output_tokens": 291,
+    "output_tokens_details": {
+      "thinking_tokens": 169
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

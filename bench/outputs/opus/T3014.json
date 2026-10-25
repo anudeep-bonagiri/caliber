@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.052132,
+  "durationMs": 2720,
+  "httpStatus": 200,
+  "id": "T3014",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1014 toll at NTTA-PGBT-01 within 10 minutes; the last charge at that plaza was on 2026-10-26."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjgYKEAgTGAI4AUIIdGhpbmtpbmcSDH5F3XaHeb8ZYgBvNxoMmGX4gqcfAIlu4rRaIjDnvv4sAIxe5N81yc67sfXk9xyzR7oX0SAvB5ybA7mJnytodkrDJXU9S6nByTB2KMwqqwVRbp1viFuOjY+Vxn9KQ9Ll6JBM9wRj9LpTmYR7fhfveYa8V/qbDrwDH7wsGdKNR5kv2C3nJ0Z0bnYwnOVVkxcouvhA2fpAjyv2VA9VXJH/JiHDGjuDwWcl+w0h7NtzGyCxc/sz6bVpGci3/2iAk6lFkvTJdj3z3Q3/x3dwlRSr11HxFcgeFRq4j4kIYraw6Pxqv782Jz0xWNSH+4a2JW0+U4YNawPJFkARsoEm6BWKqPCRwGn4sXnTbcs9PBOVQKUoabg2SPDRMHfW1v/jqsgXu7Z28qyQsRusqhFotFj+1lwf+SvphY5bgVZCGDIq8EMIJskMxirrI/4QzWTu3C4FVKa+D8N0nmxAgYIqVByhJP7XJnS2uajhHoQOg/XOkFg5GiKO5KlL9RMuHaIn3ePKwzwpn3tHn1g5oazqbkAW/ddIJ7YCpqNKF4cfiv5AF/pw9Gm0o94iCR+usaoydehWEBH2JE/QJ43nGrc5E5AuTl9xTl5KUUy6VqKU4JLj3BRm3ry2UT+qXkhYsYBz+NdosPhqKiHI72ujSx+1JaDo5sbMGeBmqqfmioVjGNNqTKHQUgi7UGZVNrPez4BZIS76JyKA/xdBIZIRWcoWh0poQdVYlNlf1KuqhlbVeONE2w+edCSTUeOt/FcSyrTa0a3q7i2bvVSlnaHr+hmWRttZiq04tN1tTtqy3xXpNGrOVjP6ksc7rY3t/Vzl+vfrsjp5KNLYciosUC867rAElLpC8yQgpkVL5FMuKJmy2FVHlt/gBAL8tJ/c1cT0YihT7oHUt/K5/upR8XJLJ1x4eNNx+dl+nO89bXqSb1FVmv0Ma0VFLEPEJXiHQh3uOedi7pA77SPMBctufLb5vHLyqpG8WI4+n5dzIjLs5oKXYNYAEgeY7N4YN27mD8e2fBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at NTTA-PGBT-01 within 10 minutes; the last charge at that plaza was on 2026-10-26.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4w5Hg1KDDwADmErcy",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 12163,
+      "output_tokens": 174,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at NTTA-PGBT-01 within 10 minutes; the last charge at that plaza was on 2026-10-26.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 12163,
+    "output_tokens": 174,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

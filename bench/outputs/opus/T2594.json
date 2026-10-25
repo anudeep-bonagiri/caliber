@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.037132,
+  "durationMs": 4037,
+  "httpStatus": 200,
+  "id": "T2594",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1015 charge at NTTA-MCLB-01 within 10 minutes (last there was 2026-09-04; the only same-day toll was SH 130 Plaza 4 at 15:48Z), so not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0gYKEAgTGAI4AUIIdGhpbmtpbmcSDJ6pmCYHiV1ZTzqyIBoMGKnU4NskGpEGpt4fIjAbR3ev+uH25CjBZSG4JJafi6wPJDrQnC5SL1mzIv1qAT7vPXwkyDxa8Eax+Fbokrgq7wUGzQFue0XYSjxD68f3UCCHmOrxt3rDpCa+IHEQo72tbr96UGvQ+VJZnNVcXPbOUJ+MOn5j/OoIGuMToN/FL/MaRvVX8QsoVDYQFrWZQRbiF1pEhSmVIf3sTdA3ft14v7orQIgxv7FHhR3IHP320ctI55kkiTCuC+TkUtsv5U850PzwpQDMmINXJCO2Ut8tK3EfV5lUfW881RHr/7Af/NF01Bbvevq/arWZq++aFVkeJs7j1STg8Z0sc0TM4RzYpB9JhkfmRSueHKSkRoENZcxxtadMMuetT9kNq1aqAFhArRvUUUdIKIa/lBef5u5Mi+h0v4zKzH7DWNPRwKwLa6a/Z88DmczgkDi4/x9FWHatPJ62Y0ZlbYi2VmXBLOFQUERx0NtjmJ2K/KO5+HbjkuZuHPTFbqkb1PxUGd8L82qzDnOog3WAXEsXkBJSHpuWhQSxv1dua8d1aJqynB6z5UNxtsvih7NPS/aoPtFDAS0oRqwIHm/fA0M+xCBXf2HIS71Z2CjogkXz9HbaYmuB6uQ52kTXjQdVNsQBBAf+n6Gdz9LM/LFmVTOa99CJwjeSpKb9m+6oJI4CRBrZXQ2fC10ag6iU/2XDeYjAukLyGB15+WDNzCqsqYrstAZn4x2C9FSDdOhpdKJeOaLl1F7BtkFJ7wtkZ1Q2Umt4/A1YB5IsH8rbOnxItTits9v9y4LNsEeHG5vjCzfn6ddGPGxgYHQNRE5YZteBNLo2f+fhrkkTBUv0394ZTaOQqaqyNh9WqF5oM/9pERMxILATRLtxSgWGjK5/PYybjuq9B/WUKyU0hZYN+iztMPVWmN4AYrgklIhlo+/oQJ3tW7bREvWXRSwZ5DK3xDLdeBfUxbO+t1gaCQHWb0iwZMuWBEqqGBSP7N/CB0meYbuWY5sBPj4z8jQ6psSRnZ1ywZ8V6Q4Gxt2ISPuuFgd16XUDneMLaS7sYqW/8zqQUT5y2DBZ7+CtCr+VvGQ7OkRgT2R+NQVi36y9GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1015 charge at NTTA-MCLB-01 within 10 minutes (last there was 2026-09-04; the only same-day toll was SH 130 Plaza 4 at 15:48Z), so not a duplicate toll.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvJTehpgA4ffk61E2g",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8043,
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "thinking_tokens": 144
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1015 charge at NTTA-MCLB-01 within 10 minutes (last there was 2026-09-04; the only same-day toll was SH 130 Plaza 4 at 15:48Z), so not a duplicate toll.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8043,
+    "output_tokens": 248,
+    "output_tokens_details": {
+      "thinking_tokens": 144
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

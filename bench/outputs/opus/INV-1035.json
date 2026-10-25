@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013364,
+  "durationMs": 3772,
+  "httpStatus": 200,
+  "id": "INV-1035",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "4 x 54,500 = 218,000 cents matches the contract rate and PO-1010 received qty 4; no earlier vendor invoice has the same amount; the day-18 bank change does not apply because the invoice is under 500,000 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoggKEAgTGAI4AUIIdGhpbmtpbmcSDB2FOdm5/OTJKQkI4BoM6XAN2f+qUDZvKT4KIjB0iYd3dvVrvZiRDqWpmntAa8DEsKm1hsZR0MgCrRLV3bRuwwfblbAf7pZR8UqqEIMqvwdIZkAcw+swOYvzRHA8OkKrI4WPO86MGVFKMl5vNHPvu/LTmRs2hgumZWvEvqOPLkyqveLDyGRyV9UdgWHvwyONjY5mrYtgDVidhUGUP5WeFuiU4TiNA95gFnv1mNzFP9493/ytxSwPgUYoq+1nl61d1ha/E612xem0GppRWmeE4SC/Qk8DfzgQgFsjXYa3ZCFBSG39s1OKoLEra8BdfZUKlFw+Oj5s63S7wcn6Fm791QqKqZ3Pvs3F0imcvFbMBdmtQe3DU1i/L7V0CD6GNEU1Fwu4JMROB7YXybyojtA0NgIYAcZZW0h+G/ZSv8ThwM/PbyvFlVCl03KPyVEsY0YsY6EHqTfi7nXIeOPrV0RV7ty7rIhY69+N4VCGQYv7TXIA9Um/AdJpe1P3XP4Pn+avnPbn16X3LVCRz6qhz1t7y9BMgEhb/8zpbritw/tvSkWT26BXX6/pZk9+JpOPfyvG0X8Q4HNi43EcGraa6eBbL01b1ccV8uOB5m9r7x8wlbu9T9qkfueSe3/JG3RqPWPKOxfvP0tF5WhejMHmKucq9xwzy4KyZQ/0NkaZEekrZayz0dprDayOS54gR+BcYnAA2x+0XiV0UBJqsTzfPNaQPhpDDjIdgEOYfVdYfQAFE23B0N3Fon2M+KBaTGXO61vVfpHw+dNzi1GAn0nADz9KvqFRVbv5daDsbLYQ2JsemfFfM7DAGXolT/ZnRm5BhScajbOdwMFwXEeWrkjoyn1X3lTDBFKb6KYPfxR7jvV7u/Epw8XptXj2jI5JhezrIZFIaPau3KbKC6TBhKKdkjYWhSYRU/lGKx5v8T/li0O6ngTXsMtaE1/PlFbVQyrLsELkI0Xy/BQV8Qmwy5Nyo7DXRpn1UN7DS3bOJgOzmY3eFA9ta9quiniqKpCxmQwqLTDQgq+AHJOcuWg0PdM1gg3PLEhYfdTo32Xfg8dO8Yni5hGTkv9i6sAV7lnU3VJ5dN7NdfWqlFVOz6244lzKP0QXXJRnN8mf2O/m32Xz1S1ywqpbfsHTYZf86c8D5KjurTlocQ8Um4/0jAeZljIjPLaShqGkBq6tiE+h/WCE2MRqa+fJKexyNDUJ+f2xUd0gVVSAiviD7QYxCXrgrAFcP2ygVCjNa6vH7Raxk0axRnqM497IkAF7ajMiUOdAN61uimQhxoVtrTTYPnxvaiXTZwdWCFKIISOMMT7acBsLysLZXW2SREh/23IbpxChhhQeZynoSprXoMqHvZ9sTny3uPz/TcHwV/5hfkVduDsn+P0IshgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"4 x 54,500 = 218,000 cents matches the contract rate and PO-1010 received qty 4; no earlier vendor invoice has the same amount; the day-18 bank change does not apply because the invoice is under 500,000 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2Kybgj3jodKBxWbAs",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1816,
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 209
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"4 x 54,500 = 218,000 cents matches the contract rate and PO-1010 received qty 4; no earlier vendor invoice has the same amount; the day-18 bank change does not apply because the invoice is under 500,000 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1816,
+    "output_tokens": 305,
+    "output_tokens_details": {
+      "thinking_tokens": 209
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

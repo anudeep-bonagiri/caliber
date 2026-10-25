@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009712,
+  "durationMs": 2237,
+  "httpStatus": 200,
+  "id": "INV-1017",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 48800 matches contract 23, billed qty 1 equals received qty 1 on PO-1009, no earlier same-amount invoice from this vendor, and its bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0gUKEAgTGAI4AUIIdGhpbmtpbmcSDCzXI/hFM8NxEcCFmxoMZ6Dll/sf70sFP1+FIjDvXZT8hUsCfF+sz3MiOU16MsCMbJ7Z5oYwNvr7o7B1rjD94H/WTvnAUCe72UbyR3kq7wTS89Nm9yto4A6K/FBlhgmGMfNv9sjHm8pjeNuF7Z8dtzXu7LpOAAd2rVRvxKMMrSgR/vX5E+bjHCm9OZnllqF3a0kddv2GjT76BzbWvuGXC0pzZPBHzxzOwllTJNtXVXFwZScnwAv0LhGQMB3NtjmEUHoBY7h68QW09ejks9uyjoUVXWE/+mfvrKlKaYQTLcXZhBooWMUtEaBI5nlZ40olK5beZ4VGlUxOBe4/vWGubX5ipRNYSZ0cry8ubY/ATMs8uioyFpyzrEz9z60eQAaD7FUbA7A5XTKp+ndBIAbkgeSLrRkaXdP5IwkVym9SlHC21g4XW272ty6CkR36iaNlckkxLBFcO43Fg9TKMI35DOkwgzlSmdAUH6XohiTPVgWaLo1yfsLOr/8DGTuSAijiWdTF5FikoQmtdBjWz7O2nE1WbKsp2gm236r4vHe4g7nzADb0wozV9PSwXN8Yh43gebdNPL6dnnqFEp1Kn061/CQjuprH8o/c0SYizYnYOQ+Ywyij4AenHY/uN2ZEv1PDKmYiIPLU0KcvpctWk1IC2/39qBJjjkUGt+0gq+XIbDoUjVICwSQfL4sZ3BMNg/Lv2zJZTTyQJkc2y0RUYL/2nIhO0Eh/heQjp2kpUUE55YmwMVBEYd4WNobyZDJxI8gW9VM4bheOhKlmhGcBvKmI2bL8rOspfRtzkFuqg993oVCn6SmzhKIzquApL9vC0pJ5BxEags8S+ruMHngBAbhNxq8hOTFHBy8xvFNp9OwyD1io4wgKFtoiTGDhorkZRZ9kpFHR/DcPnFUYfKIqXZ25yVkZapsWN5V8Ika192WYXRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 48800 matches contract 23, billed qty 1 equals received qty 1 on PO-1009, no earlier same-amount invoice from this vendor, and its bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6xWuuyZADZterhK4R",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1723,
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "thinking_tokens": 61
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 48800 matches contract 23, billed qty 1 equals received qty 1 on PO-1009, no earlier same-amount invoice from this vendor, and its bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1723,
+    "output_tokens": 141,
+    "output_tokens_details": {
+      "thinking_tokens": 61
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

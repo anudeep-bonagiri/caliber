@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02638,
+  "durationMs": 3014,
+  "httpStatus": 200,
+  "id": "T2706",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1013 at plaza TXTAG-SH71-01, so T2706 is not a duplicate toll and no other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8gUKEAgTGAI4AUIIdGhpbmtpbmcSDAhyE3m7Y88N3yV+aBoMD4ZFfKATVZxegoXEIjBHCEOVcefZQ84SFOHp2+VXzqCPpRV4vhziCdlCcLih9yxd1WFlmzySN5zeAvUcwnoqjwU8RjcN3ns2uiCU+mOaFJLXpzBA/GFOTUBjvLArTc4P4k/8lfhwyoQ5v03vttU+TQiMOP2OeYIV3++Gx0xvUlQF+wPso9UGk5AhfRsZUDA9LGyexCnX5sOl/3FjWgRPtO+K3cYIipqQmKFZ+6nl2XdeunsrqVUdhaqWXsfecTUppfsOUC5Txt0S36uPzhdB1YMVjGXQusQxkG4QuCQZIi9PyG3kSAoFrabMlGBGftNjfDh28E1e0H/E3iwP2NvCqibc/EBvvm8QKlr6l2YpLhuDRC+wE7MbevY6wKKlnM45zsOEdBohd2HmwS2T4ITgOP2wygZ1gUTwu0jQFMJO5kWJ3/HDvXXoGip5VNmqR08NfMyIeGqjpmrnYKPBHviUshubRqO8jwLZxk7PDkvzcoWKZ+QWUwtGHjPRpIU115YDECokpIeQ6XxjjP4sTKdqAfzhJcYG1Qt8uWgyuBgjwIMqsXkKUuM59Fhskg+qK9/swZc3wMS9K79TMNYpQNRUnff00Q/kphOWl3ei1kCKGNIw4mHflkGVwN+pL5JL2ARlbeHiMsyZrIvr/2XPJAd0drxv4MB0aevdvVPGJlfYOwFg61WHwrUk5kYi6M6TYJSHpAVwRTAI9y5v0ceztn8tpo2aaBROERkwe4YkK0lo0DOIoYjNij1UP6rVD+0DcHPLk7jW3M1qnkOWIz/CHICmcsaUIa5nV8QMpDOxEOzxV8nTDCJ5si7V6DGML0TWSuxlKmlu5W9McyyHr38XVWgnZUxeVQp6CSuQpB7wr5cTXrR7w4ZnQTruwWfDHyCLRaQka+2LktIU0Ress774Ag67qL+L6/0TSki8w7I8CGE/vX9p+0+yYWsV0IkzfnWACIrGGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1013 at plaza TXTAG-SH71-01, so T2706 is not a duplicate toll and no other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvYvZNotBP2pBfViAQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5830,
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "thinking_tokens": 81
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1013 at plaza TXTAG-SH71-01, so T2706 is not a duplicate toll and no other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5830,
+    "output_tokens": 153,
+    "output_tokens_details": {
+      "thinking_tokens": 81
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

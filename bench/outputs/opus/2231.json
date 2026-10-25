@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017848,
+  "durationMs": 3743,
+  "httpStatus": 200,
+  "id": "2231",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 17's nearest ping (13:00Z, 13 min after the 12:47Z purchase) puts it parked with the engine off in San Antonio, about 97 miles from Love's 412 in Schulenburg; ask dispatch whether another unit or driver used card FC-1017."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9AYKEAgTGAI4AUIIdGhpbmtpbmcSDOTMvgSvXZzOiTPzmhoMUDcpnYDbVoPL7ZaaIjDnQj1VTyAQkoXTnK6/jy+SoRPBQ5heb21LoaFriBJDP+A8WsC62UjG4BCt3BT7xkQqkQYis1RVZlWNCRTYCfwXPx1hB6IvWpvebCf9V4VTvMHPh5TbQcEs+OIa6+z069256amZWFyBbLkyFHQi3d06Bcw0uJANKCEg3l/SDl5VWF7nIJUE3ST1ZOnpiETSlWqTb0lhmTKbEx6vkx4JUIvyRQwlSbNh36u0xWXrs0JBQYVYRAfYeySk6L60Yftqi1A8A6KqRl3ERmGCpKsZ/cWRnfosid8q9E5mp6oi2zCU4dr2pAzxLs3UASDURF2o5qriOtydOxS60Rx4OAOgvYMpfPgafgbA/mipxS7tNMmiC7mcAd2IlO+3tSCyWbHfRl0OZx/fafalEIYlOx86NhUknTfLW2kptkUB91XXb7sZUTA4/lLnN3+rhg2FDN7kkmeqJwN6NwFF6FknkVPbmYJh9j2zTrMQOtgdVpFwF8Vjze/YWvHBbEqTfDVEWG0BnhbAkFqxDhtmqAhaFda4Qgk4ghSefF2owcYgDlLwxJCSwpeTuuB/IpqgIb4D3BJ+VR3tEBL0VWENRNNJSFzM3g+wsKsL53LNuyUETJ8yAg9QQZtiy4cbDOnyaEM9djg5VFHO8JxGuuxniRZlYnbP17iaE4ueW7fIPEjlJFsHcsyyoJQkJJJN3EnAn5Twl/5HbsZzxtPNzbvMzl6plyAb3r5oMjgFtyEjzWj5AWTA2yxzVZJVh9mONUcbEjoYqA5OEzOHmJrU3dbNu3sohvpvZ3Kqqu9dC6jZYx9ND3refBfkzHbhP7JFa/QGQ/4VO8guDbAnANLaX4fqNXWi0mDNRoONx5hyLMrTKehsa1uX3NDJtjX95NtERZo8SGCD0cGqVGCYQCxSTYX2L0zxIr6W6tjE7XslJaFb05L7j2rVd+kG/0iaHXAWAjllLmgBh/eSjmsDp/r7VaTUrxZxXn1UxqSHounCUH7T85z6C1ybnfMiL+wuHNY7E3t83fQ5/LCOJOFoIdJK3o71TkYXJNveSFQUtj8VatlPjRnqD7uTEB2BNQRI/7u+HVjr2u03jgpnpgEX5fd8cEtN5l26c9afsiNqm2Nf0hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 17's nearest ping (13:00Z, 13 min after the 12:47Z purchase) puts it parked with the engine off in San Antonio, about 97 miles from Love's 412 in Schulenburg; ask dispatch whether another unit or driver used card FC-1017.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz9oYjTqXRz3k2Ggs9E",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 294,
+      "output_tokens_details": {
+        "thinking_tokens": 172
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 17's nearest ping (13:00Z, 13 min after the 12:47Z purchase) puts it parked with the engine off in San Antonio, about 97 miles from Love's 412 in Schulenburg; ask dispatch whether another unit or driver used card FC-1017.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 294,
+    "output_tokens_details": {
+      "thinking_tokens": 172
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

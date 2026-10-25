@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014568,
+  "durationMs": 5170,
+  "httpStatus": 200,
+  "id": "INV-1039",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1039 for 27,518 cents of coolant cites no purchase order or contract, so there is nothing to check rate or quantity against; no earlier Border Fleet Repair invoice has the same amount; and the amount is under 500,000 cents with the bank change on day 71, after the day-22 receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAcKEAgTGAI4AUIIdGhpbmtpbmcSDKmLgGvSfgBCUagBshoMndTrg9jJzc8PKz+IIjBr4ajVRW1JxecjXpgITQ6+Y0xv3edkMD/GCFWSITdMzPzjf5OBQIFVuYmOFvuNyxkq1QbzFlx8tUk0vS2uEgo84Eu5amVqx8TE2KQUvn9pqHHgHpzHK7p2mPnTJt058OefAAFgtqjTkeHireBb9HJWrz9ZTwJltDs7ca4PSFexXpsX3TKgQ+vY1Mv4zCbA34NY2Aet0e+PZPAItMtMMyEDs2KYG4PfZeKj7o4/Y3Me/7cJym8nEqR8L/0Of1V//XYd/hq1nrUDqQNx/yP5OihTPn/nHdplHZESRV8F2SXDseTzNZDx/To9yIUWRLFz64Z/aJB3vbI79Wt4/7wAVvT+bCgRtg46kE2vAmnC5uwxIKXLgNiUtxUcSjp63xnIF1nV3fQDQlJSmdenwVVTDe3hCTE29mJG8NCH9k08I4hzFHcujtH6s5XYbhfJypoSFsdozdk47eLNdh8ZZ5Nn6Y+vWWCEm7CS1IS5fmGbGvj+hHneor6D+Jnr8ISfbevk9E9pyEAOadEZcjC8RjI/B6ctFDqADGEEXHYZSB5+rtDE0SG+5Vi28BrtivdMIxVgeaCTJc6TqNfVIu6+RqZTnQh91EO3ziZI7vfqw9upYYmfaMAB2v/gdeV7VwmFHvOn0hZRZfq/CC90lzN77jtiQo0yIBzFCxjdTPxs8zV42zVAQxD7amxq5d5yhwdzv8NirUdJRFxoUKLt4ud0LaaMSNYv4o6dU+Ti0VNaSjmdTpgbj6Rd5oI50xICVvM9j+5DLoVCpbUdaYzwqiyLU1ocFGtfINIw67dsa4CMydY3MQuMXQtc6sa20IiCWZzqUnw61kUzV2o68k4fCDiPYaaFMorkRJuf9NxL6yBudZ2fdDSCM55/wFwSvcyL5rNEkuBY9ZwJw9iIieg2lWcsomSPosuKBt7x1YDKixZrw90KoLvBQSxXmxeF+zbXJg9kbe6IeGHjBmz2eLBpcjng3ZJ6ORcsQu96rnHI228JF3otB2tSVjKcvIgwNERBKoMEEaDyau1hKldnGk6TY/jjJVBwE/5skbSmf/OMm7d2IXS4Ss1eYl48xNQqNYFKFDMCuHTw1AYRp4bop0CBh0Tz0kD7c0Md0LsT+8vLLi7/dKhF0L+yZiQZL2sv5mcpHRFJDXN/rp6s+dySkBS2DpSBmyi3w6s/a5bkv0rFZj/W7U4C9w5rnDJnelF2nuf+GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"INV-1039 for 27,518 cents of coolant cites no purchase order or contract, so there is nothing to check rate or quantity against; no earlier Border Fleet Repair invoice has the same amount; and the amount is under 500,000 cents with the bank change on day 71, after the day-22 receipt.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKAnvJjvNJ6oAGQsW2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2322,
+      "output_tokens": 264,
+      "output_tokens_details": {
+        "thinking_tokens": 142
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"INV-1039 for 27,518 cents of coolant cites no purchase order or contract, so there is nothing to check rate or quantity against; no earlier Border Fleet Repair invoice has the same amount; and the amount is under 500,000 cents with the bank change on day 71, after the day-22 receipt.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2322,
+    "output_tokens": 264,
+    "output_tokens_details": {
+      "thinking_tokens": 142
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

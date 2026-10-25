@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018248,
+  "durationMs": 3957,
+  "httpStatus": 200,
+  "id": "5986",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 16 was parked in San Antonio, engine off and odometer unchanged all day, about 54 miles from Pilot 1126 in Luling at its 14:00Z ping, 8 minutes before the 14:07Z purchase; ask dispatch whether another unit or driver used card FC-1016."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AYKEAgTGAI4AUIIdGhpbmtpbmcSDCNRKVnwM5b4tk2GqxoMu3Qr0kliMcoFP+MkIjCczaigl2x2UxOKsEfj0sxjMgvZ5DdJSDgnR5BEmc8V/9YXti40jAbgHvG3jhpRnYMqmQbfC7JZTxeKFdZajHPA4JYUoVgGgevchwk6gt4WfBAQqGufyugKHk9YZagMCwoe4y+jDU9Ibl2FvCzl8KM/okJl9rH3WZWBFQoAgeoNLR/sIejYJMUlWlVIR/SUihBIbIwMRrTaeV/DkiE/XoeYRm/kTsj5MucuJPc1QgQ1cuneBibcSJJIl7Yd21BFwy/nXLvRJiv8VQKWafRpG/Z2xRQ0C6wgUDXl6KVnE30xHVgEy0+f3211pZGuj9d/B0S4N27H5n+UrRD4qMhLKGcdMjmsPMk6jPW985NrAnikXz140Cil9TMgeX519byZxGfzUVRI5Df/Rtfxvgy3abFgUJ3NRsIuKZuWTap6OhhRigPln2BhwkGDAtm5yPIKJuOHJ64Ape3XkGcff/um2rh64KMUvTE7oIPnrPwXj5QCgVlQwmriThwdrFqnLraXfYpQXN+6rTFB0HyT8ATE9z69p6KwS/J2zcEFGWxn/cRUipVRrFnkeYY0LmY3TVU0gRojwAYr3O+txrU2ZlY9QI2AQDoaoQDT06eP1DbS0Qh7a2+z9Z5N+UFRUwcOgZMLIjhqLWKz9IcnlKbL8U5Or22RbwfH3Jam4L64wbOeSkN2eFYCMApnxchRcq/fv8s+xq+4WA0VUQVV0uQfJdmWnm10XpmLbu35UcCCfKcNKWGmLKu4ZzhTCrFpqFqvNl6BzZw1uW/u0Sl1PIrt59GCnOqBSE6bwPlL5bdzaIQFfZ4kt7f3ar/zEoUSGMf+r1h+EpI1f/QKkhpPzZF9+0WTHWnlBHa6BaNUkkOxklNhSQOj441fBYuyAsOOcZPWwsTMJv/vCGoI18MZ5IU4NkRUDPvpPsrbJMUmbvuu8smOx5OrrKtULPkIfc24fpJ2zAgFzOR6aAUSIZvOUEhzpIGvUrODrEhf6zZLNCvlIK2ANQ6ItguYTPdIvX/xppNPjNnJAz+57dzkubGI8Wk1Nn8BW+89aM63DCkVQFzYeJQzRxWoLY2P1wQ8EZKQQOm3lYp+m/ZK1Eh9ndwcbWf8DdxVXN7PiDNN/g25QbFJYRNLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 16 was parked in San Antonio, engine off and odometer unchanged all day, about 54 miles from Pilot 1126 in Luling at its 14:00Z ping, 8 minutes before the 14:07Z purchase; ask dispatch whether another unit or driver used card FC-1016.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAjMkXMq4nFWdzWKyv",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "thinking_tokens": 181
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:02+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 16 was parked in San Antonio, engine off and odometer unchanged all day, about 54 miles from Pilot 1126 in Luling at its 14:00Z ping, 8 minutes before the 14:07Z purchase; ask dispatch whether another unit or driver used card FC-1016.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 314,
+    "output_tokens_details": {
+      "thinking_tokens": 181
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

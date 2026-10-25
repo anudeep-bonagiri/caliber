@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020448,
+  "durationMs": 3721,
+  "httpStatus": 200,
+  "id": "INV-1134",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No rule applies: 253.57 USD is under the 5,000 USD bank-change threshold (bank changed day 71). No PO or contract to check rate or quantity against. No earlier same-amount invoice from this vendor in the prior 30 days."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkggKEAgTGAI4AUIIdGhpbmtpbmcSDDrOkyDSGPnKUoExUBoMuACrBW2QYOyeNspOIjCOreVh/jZTskhhVKjO1GLFoS+Zow8QgRc2ak1LEbBZHksKrc951YktKCb0MkfStHsqrwcDwXdrPgHaMxCzK69ZQjHcYb/oVTcxSLO8vz458RkNLQidUERkf+NUn8K3RGFbYf5kKL0qbJpjfAYfFQGKqeKbRnixWi4AmwmTFuHykwjK0C60ZrUgCNINnJdtrtUTRgoDcmcBbUmY2Aw9W929/d25nSNJlwF0swSQnL8+z7CkmnAy1VhAI+8Tygpyb1cHDNJSnmOUQcc3GLcRDymkvZHoeW305G0OTo5bTpwN+VLFh9hspTbs6+EefvJ0leYwLOh2EDjuE1Y0XyXtxUhTMq8KZ+zlqvbRAXz1y2h4QxKOtmBt+xQNowXKhlIUMFqNwWQkV0W+SKXvwBeZuGc8oQbvxfkwkTaNiZmS8IJIKGZgLXQp7/4qbH2ukR97EsRIrx3ad3eQ4nhX6XO4vow3SQ9l1a7Tiu4Ae2z9RKEA+kWgI1ovFJ4deNCUoUDGQzC+xz021mKHnJhJjfgkUlLZY9T65iVxFjP52CIFuVWMJRvdip/swybGc8HB39LtTuPRnWtcDV+puIO5a7+rB7X9nyHy9Hak3DCfys3FhAVVlaEqJAMNw4FHMJ7kO/Vs9ASMNel4jVOh4YDnt6LYkpfZ/DQLsLqL63CK8n5bukmg0P05o+PeqX5iRPUXxEKxtO14ndox3i/mAUOHldEKQ2d8tizSohviyMEEupD1Tl19/cVG3s4dqxoeo7hVSv2cT0PiMU8kXzETaQ0aAtJ+m6+9/eEn0OhPNvYPfVGHceWfuM7wUhDCRCRtLa63c8IoMLKt+gqBDF4blcl8gVbEIkxqU7DRPqaS57+wMuzbIzK1fjb4WumNaiW4iG82TpGdpWr1HPZt2WhHZ8R5OJlWjAihMAW4hZKhMCzxVg84tF2rLZPta3WoswPpNPrvqVZszjyofnKK7Oz+gInrdKeo2jSkj9NWz3tR2vTO/39NXSI8o6Ix9b5GaOS4Dew2DuAV2QJ9fpnrP8kbJ/SBUdckX0oEhBakuMrmnouBxdpAseyO0bcevIETjSH+tEixMDMntJL2auyEulcUjwF/6DdptUv9KkGNDlBUw75XAT8aswJSlcrhn1oXOyHf84UBbTHkiLeZPYZjQL5kncEj6zU+/OBqugUPo/ZuIzet6VLkIkUofm3N29Dox+rCuaUWa6gRLBAqtV8u8oWorQGVomqE/rQ8G13ZxTtPYouEFef2hF9EQ1CNfrZPgrA7sRKQn0bRDBbT05VrxrFwXPRmBqXUavDjkaPeD1XRPBxGjRkGS0150x+6GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No rule applies: 253.57 USD is under the 5,000 USD bank-change threshold (bank changed day 71). No PO or contract to check rate or quantity against. No earlier same-amount invoice from this vendor in the prior 30 days.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyynwztTtYNWPmZpxrB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3727,
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "thinking_tokens": 180
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No rule applies: 253.57 USD is under the 5,000 USD bank-change threshold (bank changed day 71). No PO or contract to check rate or quantity against. No earlier same-amount invoice from this vendor in the prior 30 days.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3727,
+    "output_tokens": 277,
+    "output_tokens_details": {
+      "thinking_tokens": 180
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.03392,
+  "durationMs": 16860,
+  "httpStatus": 200,
+  "id": "T2815",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1020 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the most recent one there was T2686 on 2026-10-12, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3QUKEAgTGAI4AUIIdGhpbmtpbmcSDHsjVxM3dnbvTZz2QxoMRdfsC2LZWh8UEOISIjDn/1bwZAx7ZwhbB+ixGfm59Bcm+eXIhupqVv173XksjrWEbtO/0UfgYOY5i4eJYqkq+gSCiw4xcNxFGg2Tn1MKAVX+jjQEcq5bTeWLSN+rU6vTxPRvK5eFdSQAhIKIj3/muEsCofCw2u3eADMZhFkdB2ne0OTn6L+ZUFTtLqb1IGYymyQ+XXrnbzVvnkV+LHpcUDyxJV5abp7kjwJb9yCa9vc06ZHyrR0WLStcKFu01RYHhkRhBcfAkzJBTYJ6s4XyyRfXnEsiEU2IQFwb6WaiQsGF8mGGIMcJFDIVet/Ha8ls84NBdOA3ksEeTseBVCRCihJtjTSRybLTdiNVPLl1j9kFXuIqckJZoljbeVIy8kwKveFEPL9siYm0q9Jia7T2qqWJmsd8rIZ3wyXql+sFhc3B877LG+w9ystHl8HBA5ORvMrr+phmbueYPaxGC7T025kC0rTVW9wUzWUGJ3ZWr//9YH4kXyDUlK+qvjZr3m/L6SY6mt2Gwvv6969gtCH6S4BzCFxPyMfuBwpS4Czei/8oCDJIS3JLNVxIoS/1u4U/dOSO2GtOI+gvktDU4J+ev1vATLuebpDKRdLf+12DGyL7/YnsxQL3EfwQttaoMkM60axPoaKKtDoXJ9EefG0w5FrjFYuE+bN1RcOnFG11CFubjt6RUi7rpsW60kvN7Z6YjvKs935qi8ULkYFHbV/C0sUS7Tg950dXKdHPTXygC5Up77JL8bm6gJgRiWcVforRLoAJauWtwgZ7zhuWKhFF8m52jisHwv8yX5VSlfHMrGgdcFQyvjVozGQ0u34ppP7GHjyBsZogpDpAtetViKMDe0e6uw99PtSqipiizk8o5tjDYHgWE8/P4gyekKXa6wwS038qVZVspIuh//ThcGPBHd0Z+a9/s1ZWqI+qGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1020 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the most recent one there was T2686 on 2026-10-12, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywpdPtJ96NnXNbizqm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7580,
+      "output_tokens": 180,
+      "output_tokens_details": {
+        "thinking_tokens": 82
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1020 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the most recent one there was T2686 on 2026-10-12, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7580,
+    "output_tokens": 180,
+    "output_tokens_details": {
+      "thinking_tokens": 82
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

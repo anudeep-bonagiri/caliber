@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0158,
+  "durationMs": 3801,
+  "httpStatus": 200,
+  "id": "INV-1038",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price matches the 36,800-cent contract rate, billed qty 1 equals the PO received qty, no earlier invoice for 36,925 cents, and the bank change (day 71) is after receipt on an invoice under 500,000 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxAgKEAgTGAI4AUIIdGhpbmtpbmcSDLEqjDkidcla5ULpqBoMjBjwb6dwrChVkqz4IjCHLZdU3ngMkVxRD1qgVstBpmwzwkhXDwvcsqSPxZC4bmQs7EG35rKUYGrQFNsIYbEq4QcIU16bFZ3q684PSQZ382g+w4pI2MRNV9LuKns5LIR3j+akcNVuhJbHaVJNbPxDcrG6kGVAjYV6jugYNUeGKsvm0hFrKIuMxAjNGQDx++xeqbn8+eApiK7BR7s0/gaAqLIqy4z5KGeMZO5I/vakLIxTIN311MqQLcScodX2pjNDzOYj76ei+Nn2OcNya2p+WyYZD3S6sjEumaBoCQClxrmaG6xsckfhIo2kIH2gTvuSz1z/ySgilXmfeQtsJacH4YeztvMAZovpCERTFDpexpSZNbd0FR3jN+8EfUxaqOphXmj20FnZuIyoBJXyZgH4z7yXohdGnh8w3mSt7F+ToLDeDz1Tf4vOFsLxxDggMi+M3icLDdwWSQQICdiDRzCT0CvXRcQ4kh8IsvQ8/2Qse4fmviYwIN8fT5HtPOg33ABN12hfc+manDopY71661IiSWhwXSGl/c36YCHazymDleO3C/bgfT5kL69vHy0YuSxdWNsgKB1ZHuGldOEzS2R4UJV/MFk80b3StKo9vjXNimp6ZRTFkV6mj9ka3RNFVvOjK6SDHtuhJ67vSwEk31wg2dHui6ECfwLpY1PkI+pOJMug/CO6J32gw8zBcrF20cQEC7JGL/9NY6k4Hz/4JChadGz4Ek1rSf5Y+NIX0kUbuJJg7LKkhDU+RWGdDqq7AOJozL7g7oDhn05IbOIHXyzfV/ThCUFtY+4Li14y0eDdCKmjCDxLPr5e266/fxhp+GV9LgXkNTo0279/6t9qLCZvO3TpUOJG9p8BBlznaUkF8Osfic1DBjEPxi/JQ8Aug8FaDd4LH8gTDM68fkdZb3e5b8EAHfQXoyGjv1AmtSwYI6EbDy4AHRIdTvy3vJEMyhthHKcpLjIA8cfQM+Ctk5lxR/KDlgOK9BHV2MJQvKOGiweU1EVUEkDwKUTWLwkYCnMmJHLLvsw5br9bG/QWaQVHxudOFuBm04+eJZHfX18pRW/BriaG6ZYHr/T1uExp9YCbbAWQ96j9nRAAZh4wTMWsBd/Cw8LZ9diJ6llKXUneF5vNTNVbVPfIoHpdDWA3yJGpS58YgJR+UBqx654M8aBSchhwthO//Mua9vxZ7QbbERDJts0g88BbM/5/VSuO0aAJgO/FO7IboAiIZ6BCGXBJmtvNnHb+aIOkfxNnXMgrLmkwIcTGGum38rCU7Fu6oGIA/OgR3RpT66hzxdSpCs+UvICAh89SkwhlArSMH6BzryjCfVk1NTbLwlKB8hdDLKv+g+IdxZI8KeXi5oEEvRBvcDckqmF/SCYLtOldmc//SHx9dpR2xZu+JIFsmFWf7t33szIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches the 36,800-cent contract rate, billed qty 1 equals the PO received qty, no earlier invoice for 36,925 cents, and the bank change (day 71) is after receipt on an invoice under 500,000 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynKJHT4GvoH3TTuVhg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2400,
+      "output_tokens": 310,
+      "output_tokens_details": {
+        "thinking_tokens": 213
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches the 36,800-cent contract rate, billed qty 1 equals the PO received qty, no earlier invoice for 36,925 cents, and the bank change (day 71) is after receipt on an invoice under 500,000 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2400,
+    "output_tokens": 310,
+    "output_tokens_details": {
+      "thinking_tokens": 213
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

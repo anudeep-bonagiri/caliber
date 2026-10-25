@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02432,
+  "durationMs": 3548,
+  "httpStatus": 200,
+  "id": "1764",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 25 pinged at the Waxahachie station about 4 minutes before the purchase, and 55.8 gallons is well under the 200-gallon tank plus 10 percent, so no hold condition applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAcKEAgTGAI4AUIIdGhpbmtpbmcSDEMCzuhtPEJckbJtSBoMPxCeXpf2Z3QvrxfBIjAzO9DxGa6xJv4QODGDZ3Uje5r82WLgLJWUVr6B+36xlQFdVx5zs1EXdpBLisAAS30q1QYADsfQ4eP9CDr0bY9qrqI27DvDXgHfV42YH22PNklhLXDSH0UOyiqrPXBDcmDJcljr37utatfdX8tkwAtIfkssfS3BEzpucD8yOEiq1ZYVAMNNZDBgNo0CPszghqy8XrCTN/hQejqb1P5miijbsviMLG7W+33zH9i0omRNskKZa74+GnN9ax7gBk03Tpu2cfadwdBU+Jl+8isZsDD2BqUHzRKmH52Or76LkjVTOvanaDizMD4tOWeJwn9LN2Z/ZUS+YMSyv8w/IiQRPEgoekn/B6nkJCbqJML4h+T2GFrblVV7S+vmAjWwYJtRmGJOpGVyG2sS1gImdTSRuXhJhFfO0f57TwjTVblhG0Ox7Q5IX9F1RZMhKviaIXwxxpkFF3ppo6wwC5yzRZf4FDRtMfUy7DRK0QbZ6mLQ63Sl9+YAWH4uhDE879LKD74CSIEmlk7heGNXZK5Xg8dXLoRkv2rq9hUyz3C78sbBsJ290zLpnYPjlfORl6J5fXWfR3Hf6vUdG7RA3lIA05cPCAmCVX/j5jeKHWRpddVVOKQlR0uujI3clU+cjwa1dNUigZsH3suCHHeGNK65V3Z5ZH1UAOiShRXZn8zXjSl2ic0kGoaTEAJxlK+hxH4252T+g8E7cguDSo21v2LtP35aMkRLkiMipX70V8611W9EHNK9J4PdC7u+cY+fMIQHyzthChgbyrXQm0Hzu45R2NRRwiKV3vZo1DnjOF1hCwXY4zQDU8ghPYKeX+wEoBfJaPkLaPXAU4G7gjnD5a7NHf4cD+iFKSXgH2HnXiWpPxNQ8C0BaSFCrUqXGWw833CKqV0nPDsFUlQrf4Wgf9Y0Pmr6g3GPmGZu3IrMJklDT0se1gFHwwmOYxgrP+L6bJCB5WB6IxYYaQ5NxOAbNFd3kK4+ZLrVYyUkyTY3DLx6Pmnzw3viEQvE6itkSJj3dm4Q2ImOQbEZ8j9pQ3lnTlUF/elbI5QuMm5dw0lqinB0ABFfIOVHbma62C+PQJK2R5v4Wh7raYx6Acq9WILMowpMNnkUxiwZgidy4qvsdqGNFQukA5iPWzycrIYPzPONUG4sEwO2ONlGHyGSiY/aOh6C8Fi+/DTAq/IaCIhF36nMIX/vrDJb3UPXYiCDzw+aGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 25 pinged at the Waxahachie station about 4 minutes before the purchase, and 55.8 gallons is well under the 200-gallon tank plus 10 percent, so no hold condition applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7GuSppJh3ZYBxSpQm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4745,
+      "output_tokens": 267,
+      "output_tokens_details": {
+        "thinking_tokens": 181
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 25 pinged at the Waxahachie station about 4 minutes before the purchase, and 55.8 gallons is well under the 200-gallon tank plus 10 percent, so no hold condition applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4745,
+    "output_tokens": 267,
+    "output_tokens_details": {
+      "thinking_tokens": 181
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022308,
+  "durationMs": 7921,
+  "httpStatus": 200,
+  "id": "INV-1065",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the 48,800 unit price is below the 51,700 contract rate, billed qty 1 does not exceed received qty 1, the bank never changed, and the same-amount INV-1047 (day 28) cites the same PO-1009, so the duplicate rule does not trigger; note that PO-1009 (qty 1) was already billed by INV-1017 and INV-1047, so cumulative billing on this PO should be reviewed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1w4KEAgTGAI4AUIIdGhpbmtpbmcSDIWmjdk8ch4cUCHbghoMCJYrd/rPPMK9HoeFIjC3uJICuJy+0nDGEZLCCH3Q6oxkNJ8lgwxnJlpMZknn6I9tZ3lyAcGvhYayRa9I2Acq9A3N+eJ6G6t0dQ70gq8QlEGXjUPO/sYjIc6YD5+xMiCo4V53DybJAzLFQeOfo5wfcGw2kck1F8cl7Wy6QlGhWn3JoiZd8LjV66XrRbtxwg5V4Yky2ILMB6EkZIyJEqN/QZ0s/O3n4O477N0Yy9l5bFSvkUW8jvf7MORcrFo4ZnNbgiIhH9sdCI34Ow7e12yK58u9uoF5TjEgky1rE1u92Uimwn8nq8Maku/HgzkUOueBx9DxzcXGKy5Dhpwix751DJiaKrdMH40loU8ZZch9DvOPhb9f/43xliuCAWLWxYV/DmOeNGOjCpqGJhBWnh9qegURHjHeoSuO3oNCfyxPQDpmpFpHJhshHqky5YDyk5s8IsYbeYW7oLmv2kyIMbPfarzu51cPNU45Qi/xuVY6KsNSS625DLnAho4XTVawheZ2iBWOnPUgKgX78YTMasyaV12zGeasj383noqkJeI+kXlp3XT2UE301BwYK9EIzoY/cnZcWJs/40GPiAfI24U5Gp6xMREjuhD6NzonoE2NMJl4DsNAmIoL6S2ddKlLh8tJngJQDP4RDeEGYs3qFg1z8dbRX4R3j7KN9WCdEfRGTjq15yS/nCIsg0e5ZEn1fxXKsMQ981jOoXipYxupXu6+VffrOQ/iJiXKPYxLndhoexk7BIMuaLMXfGJ34Z9HYaoEGxv3ncDmo5CQKVJv7yTQMFqC6geA+GcnfqJjSVp62Bn/6qxnwinaTRSnAVaxo+SjsqcMTLloRwtZlJgtscyXtYp9sPX3fQZoKe3Wm1FFkMtbVcy9fc/FVFB7DuhQj9oOoGP1jGfLd6KNntWlWpdFtDAVPNhi4hDxb4o6HwiC5CU3kVYay3pljddnXJMbayRaseyJ7L+Ftb0WbmlqR3E1ms+T7VBnBbdZqkZKuJjgfqtOqNnggBqeirDw/J+L7BnrcOEWDbqlXU5AItlQ29vvWx2dqL58/ROI+C5cl1SGyAiSY4YR5iJquA28YN0VKxmQtz5eXH2CW1GdBniICShWNBOkl+6Xjap7kUqkrjAO41iz0ofmQ9KqUnFy3V+l/MHrMfWBCl2z63zpNmeKjxVN51PkRBGBbhxNhLUxw1brCYoxzYKLeRadWHbH6AA9zAorJPwIlkfLFBJGwf/d8OD7MLNIfHmdQaNB/OsPs/T6VOqVCv6pOoYNCqfGrr0xiBeqrais91NaklUPyBfmV3thdYJTSqcQr/lmCAWpW3AtcVhiJK/33W8LrrUffTVjDb7vBQbknk62rweDA5m/ts9SDxuAlsj/G2w1VgMAXRtS7TglskaWKBLZ1g2F6Vb0/rBPzd1kqoWUhnV4lmOfiK2scHcPkKSQ1WdJyYOopIZekTsUjgIdcu/zeFuXkYWQCQMeav8QAyNQXzdcWEXtX2ddURufgcKG+K1X6H/aFBujxRWYtGSlY3uap+bIm4B+auicj3LpXSCyqoGQ+kZItV9a/C9XMmQWK3WSfp1eFlZUWqQe8WH+y512p2HWq/srgXt9+sM71cwqsuOH3m9zEjXbbt6HFfjcw2Zbdn9yGQsCbBmLI3ljYLO+61pFJOA7d1ybO+UmPZlJ0p5Ad2ioHfyW0JUftz44HBDYVRSEXNYJIkNOwa4iZ9xZ9V9dBgiEpEboIl8pRBQANcwmgDYPyBr4q7JiKDzL1sYAY9HiR/ArM5gQLm0zrwrPGk38kkLkQ6EjwDB/8tcHJVZ0FI/pydpDK2nDslqabjwUp67ScbfV1KYOZGT4vlB96aZkAbouCKOSBshHIsJtvwA30l8EMv7okxwGQaS4qej4W/AbzR52fPxA+gbXns7UP9J7Qc6sa49XqE3Bqy23aywnl2qSlmWcuKoFA+KLfzUOWQ5SFP+4ng+8mWnpTGyjxsxyu81wUYtQMFpPKTWASuHaX0Bjnv1H8HmVIKwvriuLJFLiMofRVFxCtW6WvSwjhPXM0+uYSsM7orqOuNvcOx8MsmjKSWyTNdMF10LcXtg5nRuWb1mcY9efGVEfkEoz8LqpnRHISVLuLEvsCzZvjYmEOnSKkHKs9gZ1lELS6wctmDEWnw9eA74fddAXRtjmVBQAvogAfY7rtbwrmM7in297humBB093zNHzFMZtNjBHlqLPErSQkiZtPMxMjnoXIi33dZyH2BiN2glMiy/LMcXE8SOaXOfwv86V33gvZi0gWOyDd61QnYtt/Nftcn57zop+bdBeZ37YsTRFlfcGWAeCAyc03JbE8DPUxG4g156HF2evJ4WSIHxZjPH0n7dVmv+uHbXawyGwBSuAgfrh0x+1E3rGcFX6ETzxijtPuF1UsCTwzNMv+FiHTBXlNcag6vtBmb8MPvJOMyKrApIKWoC3eXfGWce9ZlD48t/GGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 48,800 unit price is below the 51,700 contract rate, billed qty 1 does not exceed received qty 1, the bank never changed, and the same-amount INV-1047 (day 28) cites the same PO-1009, so the duplicate rule does not trigger; note that PO-1009 (qty 1) was already billed by INV-1017 and INV-1047, so cumulative billing on this PO should be reviewed.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzEpTCnQLdFAuK2VTQa",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2317,
+      "output_tokens": 652,
+      "output_tokens_details": {
+        "thinking_tokens": 484
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 48,800 unit price is below the 51,700 contract rate, billed qty 1 does not exceed received qty 1, the bank never changed, and the same-amount INV-1047 (day 28) cites the same PO-1009, so the duplicate rule does not trigger; note that PO-1009 (qty 1) was already billed by INV-1017 and INV-1047, so cumulative billing on this PO should be reviewed.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2317,
+    "output_tokens": 652,
+    "output_tokens_details": {
+      "thinking_tokens": 484
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

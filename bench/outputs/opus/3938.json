@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.030616,
+  "durationMs": 5588,
+  "httpStatus": 200,
+  "id": "3938",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Nearest ping (10:55Z, 6 min before purchase) is under 0.1 mi from TA Dallas South and 44.8 gal is well under the 132-gal limit (120-gal tank + 10%), so no hold rule applies. Note for follow-up: the odometer stayed at 183665.3 across the roughly 4-mile move from the 10:00Z yard position to the station, and two different 10:55Z pings were logged, so the telematics data may be faulty or spoofed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3gkKEAgTGAI4AUIIdGhpbmtpbmcSDPjGdSK5Yj8sb3fgLRoMie79fabb+GImRGoCIjBqAwdp1rwu/ZWU+TkRF2mCoMc6jt03mFpl8+fJi22y4oGc3zrx+ir35G34tq8GMm4q+wj23Xn/EjqMbyyR6MI9uZiTmQsJcFy6704MgwhGyFib1OAMPboRBBmTwDVutQNbsQ2ttqCcZcSxJVQ61dPeNm88MwQT5kOuWjMYDJy7ut8rbU94u5dkVpHoSZ9j1KGNsgjJXZrQ0HGVH6EJPtA0J8QMa2384U3SXiMBfNaUcj/6q8ur8Gogns+Ak2BDvZlp14QFwINvjr5qWSQSPPsSInGwV2cZS0SdNjpp6jCynd9bbOqwlbqLgwX+d9QFMmSAIOSeVt6XQQfnlybSBWZSns0KoXSCZIiFheu5HCf5VYdnHYRw9T/cppoC1kTn4HjMLyAFQSZ7uAm5E19T+OH7mBj4iIbgb5LUs2lzIG4tdCzvH8547v4Y4hNEYvkWd04VF6Xj24eWSCqsEHGlqOYyDhrCmAK+YQlrVPGDGhqhwxltO72JV/mzl6E+mA57eEcK+eNNAdfY3A/7VeR5bjBuJl4B4/iIH62IV4BTJE31cFmoFTKNk6xwc0Xpn65Z+9pxDPSBsa4Oto0Py+hMeaXAnaEhGRdwG/aq9EM/RTPzhLm0IQreFuBbStKNBoAeujV7DlZsbKHww0B1MNDZUqLQacG24kUxUrPhJU0q5Sf+7xCpYezXAQthI63d4ny793WrDNwcVTy9KoPZye8fCHYwcPCA/lSAi5/NRTLbuvBuvaujPS7MYVxx++06rAFappF60+yidcOPNMTN7j5EUKoBwL0k1K1Ycu9U6s6nhmLtFX1pIWCbi535/kKW+yC4C+QO971p+jKa2XNbiODi9BdKVnTTk3Rj9abFULJ38bsHxEYCJLeWwwleuAu78W7Jtt2RJnAl2PeeBXInp3IcMJIzVcTV+MrJQVPVG8BFlst3VcuKFOdy2h60Q0KZvpy+hALcEyu77FpC3+uQnalScWTOoRiV2R3ef3yvCHFdGfOEhN00pdGqZU5EJZ5KQh6WQ0eatPBWgQgTfgrW/oRvdKBGCICl3d2II6UbplEY0//PQnXFf/+hAafrk/XJ0Qi7k4rVQ5QcEmTMI0K3RRcQd1TiAg4/RegstcaOluqn5GVDyS5dI5DIDh4hsBS753QOkNE5UB0yf8T4/ThZwH1EDXr49Za0oPUC2Fxl/scXGMqtY8bbmKcoQEFTIEkOtJllNZgExokM8OR34AGSasaTCzfwJorSLxlt1YGUDz9xeEyktafKcyo80Ha9TukyzvhC3S6Vq38WDzxb6VXQNzoBj0gSd29z1PgB99XgFTAaqV0bIMpo6rz1mfUwiBno+fUa+UcJB6NcshR8UFLrGykufYxSXCrV3DFE4MMnBh3f14em8+orLrt6AsRtot2Tz5U4E7r+5+rRTKCfuxR4pPf1WcHpRZAbbbls8+hgaXEw3p+Tkqm5rDe+BQt1kUCj5MFyVO1EmG//1WgG9a9OzH0V5U6EuMJuSo1pKvwRjBxhrcXB4zu62nT6EPMfQ3c3qykOERO66BJbmyYz8kcdP+SbNdBRk04yJ5M8wATQIX61vsj6ywESIFKLr/uY2Quz18IJGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Nearest ping (10:55Z, 6 min before purchase) is under 0.1 mi from TA Dallas South and 44.8 gal is well under the 132-gal limit (120-gal tank + 10%), so no hold rule applies. Note for follow-up: the odometer stayed at 183665.3 across the roughly 4-mile move from the 10:00Z yard position to the station, and two different 10:55Z pings were logged, so the telematics data may be faulty or spoofed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywVp4BvMMBo3r9sd8N",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5329,
+      "output_tokens": 465,
+      "output_tokens_details": {
+        "thinking_tokens": 289
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:02+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Nearest ping (10:55Z, 6 min before purchase) is under 0.1 mi from TA Dallas South and 44.8 gal is well under the 132-gal limit (120-gal tank + 10%), so no hold rule applies. Note for follow-up: the odometer stayed at 183665.3 across the roughly 4-mile move from the 10:00Z yard position to the station, and two different 10:55Z pings were logged, so the telematics data may be faulty or spoofed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5329,
+    "output_tokens": 465,
+    "output_tokens_details": {
+      "thinking_tokens": 289
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

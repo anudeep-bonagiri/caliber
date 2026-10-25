@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02276,
+  "durationMs": 2541,
+  "httpStatus": 200,
+  "id": "T2598",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "T2598 charges plate TX-1040 at the same SH 71 Austin-Bergstrom plaza 8 min 4 s after T2597 (20:29:46Z), within the 10-minute window, so it is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSygUKEAgTGAI4AUIIdGhpbmtpbmcSDBd8zA7T9pi1ZvHYcRoMHLSfCmMhLp+mK/1gIjAa9x6tb3nHkr/IAT1OdAPf5LgAdvPhMuN7F0Y54Msgriumq8MkInJGd2WmyanzNAoq5wSfDBmQKi3f6GlKuTy1f6o01TqgrL+YGEaRpuhAtOySzWGBDTO1DvDC5KluiilmwgS2xXSr/BsT9rZO1bwPGOAte7lOCF389eRY/PnHav5KDgq1RcTZ3NfJ7lVVvK2FIsTahgiXxu9vrpyrvYs3S1Xtgk08cxSJ+TLQlfh0dnC7D8VfXV+qNlQTkanq9dYtDD/XuDWJCdIcOHxVspv9j3CI/DrkDUQno+u9890vYtsqnVxkfKejBvJvjFLzkJoKhCyA972w69b0QgMc7ryuo8fXmViEJjqojx9sMfYhFvgOHe6+3gM0e2HJuT/rs5jRJHqJZN9kTlT3d/k+73B+VqvNmgLPbm8Q+kOIHyi5JUGGeKF1n2wY9IkdJxGcZrkE0AB1UMCMHe4F0PJcthr+3XqjMulgaZLy38qrM9cRcYUt66zPV3y/AEfbJDXgb3JBVStULUnb5TbsGarSMJK5EAW69girsCN079hEUDkw/IDAmT5tl+c6dM+iIbLCg0ZzfRE1e4aEtu9zY/8q9q2X/DZNtNWPoKjdEaE4kr5q618o2J+fauo+1psapL50wwJacu5RD7XhaufHqxFj1AI9Ra/i1Iwnc5Fg5XLQZj1N5FlHqTdnC6eB4G5QejeGVUxNHjLGFDVw5gGhNUoojQgfyVhdg4/xw03mtsWBUDwY91py2Y5gXQswKmc4TIBLuN3pC9SB9tMF0ZevrWkws9yInaBOl7MZ2Qx+9V6h0kKY8UlfwOh3by2ENGTs5OykzFwoHM27MRdlK0Ix7tIX3zgURJofOW+Sv0vYGb9FEjmUlf88yQumw/n1iWgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"T2598 charges plate TX-1040 at the same SH 71 Austin-Bergstrom plaza 8 min 4 s after T2597 (20:29:46Z), within the 10-minute window, so it is the duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFff8yA39Dbb9J2xKe",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4835,
+      "output_tokens": 171,
+      "output_tokens_details": {
+        "thinking_tokens": 67
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"T2598 charges plate TX-1040 at the same SH 71 Austin-Bergstrom plaza 8 min 4 s after T2597 (20:29:46Z), within the 10-minute window, so it is the duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4835,
+    "output_tokens": 171,
+    "output_tokens_details": {
+      "thinking_tokens": 67
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023124,
+  "durationMs": 3985,
+  "httpStatus": 200,
+  "id": "T1944",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1020 toll at SH 130 Plaza 4 within 10 minutes; the only nearby charge, T1943 at 14:18:26, was at a different plaza (SH 130 Plaza 1, Hutto)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShAYKEAgTGAI4AUIIdGhpbmtpbmcSDFnriyUmu2QryMfjAhoMPE+7/pLKrvK+DcBiIjA8Rayr0QtwQR87JpXrvbat5vVUS9oF/XLEgOXQLZ4iduilKkOehpFHosaNVZNth/EqoQU6Wu0OGBWoD6Zil85uYCqRWRvTTun42ltOweYOrr3CIDpbJhF3tvHU5usVPrCAB70XVYV8xPTYjZUHcZ0QAwQMMq2l6z89tHDFFSjh1BFtR0828f+Eyypu3sWyU4gce/2G345KDyjLo+LYbhzAr7SAbGwOy/ag3k+eIs37ha27wVOkZWaqeAvx75S2zxuZEqwSjA2IAlAKnP/K2xkJyfrhIs3eLkU8WKZkctkPQS7yI47iMz/YlQ/0YxNQ3V2/B+dvmGZqReQ7QJf3zTexmvcy5VBtqLQ+SXYy3t91dK3V2kJXWwJ+e4YF9ks2Saa+4jAT3PrMRtfCHYpHSSHzF8+5IEZFhBKG2iYnwWlRXS8HddY5xpBCyMP6+tXj0djK6btEkguw2b7g1Hq9RxSE/lJ9KirgD50sR0pUop7AIyn9KBrP+IY5SmQ7rrl8OVml8bw5UbnGw4YpoKhHo1kfGx1mcW2UM4kBFA6snh71LTbVnyNe7MRXs/0BcDeOGsPZlbot8CY83mWSojq3JS5wgFqdcRFT62wt9ysKYek9PMj98sGs4t8UZREPwfkIm60DWkGQ3YUCc4EpiNRYRTQKfDm0VWIOnjhYKUtsaQqtdpfn2KlV3WzJE8f2M8A5h9nStnPo8fIL37QiA7IGFAqx1UAlTAVUose5MQSdA+kaMRfXdvRaXLRSlTMS+08pBneDqBZGr9nGTwFSkkK/mq8iMnq6/eQ7pZ5WmG2ASD3p2CCNQgRU63IWsx4JpxBphDyqV+S6vVOLG3QFMCScHtTQ07ngHOcuIeMApjWgB6CmBUMtU/xpdiKFQw8nbjibiy9qXpCaEf3qej8PZpSI8VKJRV5tzIX3t119oc63Z2Zk1FqTSMi/S6CI+m//hKBG2I50c9Z0GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1020 toll at SH 130 Plaza 4 within 10 minutes; the only nearby charge, T1943 at 14:18:26, was at a different plaza (SH 130 Plaza 1, Hutto).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyidMNQMbMq1jaqEj3U",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4801,
+      "output_tokens": 196,
+      "output_tokens_details": {
+        "thinking_tokens": 100
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1020 toll at SH 130 Plaza 4 within 10 minutes; the only nearby charge, T1943 at 14:18:26, was at a different plaza (SH 130 Plaza 1, Hutto).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4801,
+    "output_tokens": 196,
+    "output_tokens_details": {
+      "thinking_tokens": 100
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0216,
+  "durationMs": 4933,
+  "httpStatus": 200,
+  "id": "INV-1133",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 54500 matches contract; qty 2 equals PO-1018 received 2; no earlier invoice for 112125 within 30 days; bank change was day 18 and invoice is under $5,000. Note: the 112125 total exceeds 2x54500 (109000) by 3125, which is under 5% and covered by no hold rule."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqAkKEAgTGAI4AUIIdGhpbmtpbmcSDGZYi7Zp6lo22k7cWRoM/n4zVMJnxf/VAbTHIjDHAIM2I+dPmrilYNIlq3eNGqh+9sJ87ocVVFtVqJPvYJqKMldfb08CyfHK6KdrmQcqxQgjQKu4NUaI+cxE8LevQITDhcztlKF0H+3aXvPm0m0mKMe4hk+LPayYUwkQxLoX29s+D6vrTKjpzwkznjNmEWYt0JO1KPEbGDb3WXEmmMgBSd6p8Fwv9zyCxVhSL9N/SPxUDlKI7EwvN8wamayFJ09EJ6Y/3XsmsEZHaMVp+bAc9jeQgBi+oqlyrjAMkNnN8kw7hsXYK089YAHEM46YI9pNeX26bm6bUZLO8oEilETRVLzq+evUpylMvjhPvyy2bjZlkPxRpLdxS4txERoh6R5F5kmRM11cGijQIjuXLVVw21pRKvCA8nIuH0RDBGFG+6LddpKbvRBZcngRGg6PH1M4TMYDK1CbUV7MLC4qOPFxiuuFqNi3RExmFTqXnPgPzrlPGKiLxMH0vTTkMsLYeA3UHJS48WezsEgEe6PLo6dhAG3zLYR20JVTfoBfDDWdE9T2el6EBlvh/AjHUGYGzAXb6Tc167SlmVR/Yg0Tjmh5YB75HdYVyHtq99N57lYWbTVI/lY7VhvYQ1Oq4EYwl37bCy3zGq3AutEuw3lIZq1CeTeVBn5e40Wye8Ui6ofhbiBGdWL7x+kilhG8J6qG1cAAWzUp94LOOWt7T7Yysop9Bu0O5E76v7DHo3StsLd7NR5fxBkBZFp36C+wcIhpZWNRvFKfgr3Bh4xwYsviTQA062kecswuGrQI3FuZc3EOdf+YZO8E/dix97lTrfKRX04G85YQuT5dSjw+mbrp5vczT9zqGONax7tI1ToM2+o8mL2eL+0WgNLtZbgOengvVPThW7V8Lxn/qqOZ80EQYhQ9PlC91YOWDtdTZxXMfMzD4Z86U9+2tQsEMXdea64dRrn5s4VFVhRLGhmj1diOcwBjT/VuxRHnQ/tnNRjcr6YrCTSygvP9hyyU3W8b/T1Ge2HDQgtUM1fa1I0KWGAEMDB6glkakblIlO0g8wcvVmnEaz8Ew0y5fh387bgRJ69TmWC3xdLdxVfHiaQ9q+JaJtZrlWAJgmZJNZmW4BAFpXdI/bckdvphR8d3xD9BjXLW2YdfBFZKPu31mPxF5ahIrePDx4h1pY/0bN1yYidaE0btjaZKPFJOxG9TUHT603qfuXHcI3AA6EAVnZnf87D1D7JGnwHjMIbMsuz65nrRpG0jxR+HQfaODiDtS1ez2M+b6H0aDX1+qWsIBEXUsA8hQ3Xkam9f+ey6LSxJHZh62AW6/5rQm6jMlPWZPBT3wz/um/NVQUfvLNd0Lxyye9aEdnaDqfIX+YxRDwrKiiyND7qJ+jCS/4bniJOVIqWgEhOVMYIMfa6M3o8sLU9itUSnYN8kX3GWT6YIImj9hjEiGSAwed6pRi/RDDYNzdQ8UkxwcO9YMAB/Zcb+LdKtlw8PVaDNTXPy8A3RYsQod8FoqzxhsKCA3/FWsyxUKxMPpdtnP1v6k1ozVs68IUMzYNyyYZwqt9jN8nP+GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 54500 matches contract; qty 2 equals PO-1018 received 2; no earlier invoice for 112125 within 30 days; bank change was day 18 and invoice is under $5,000. Note: the 112125 total exceeds 2x54500 (109000) by 3125, which is under 5% and covered by no hold rule.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyukJ99FYxxJ7mmGu9K",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3420,
+      "output_tokens": 396,
+      "output_tokens_details": {
+        "thinking_tokens": 268
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 54500 matches contract; qty 2 equals PO-1018 received 2; no earlier invoice for 112125 within 30 days; bank change was day 18 and invoice is under $5,000. Note: the 112125 total exceeds 2x54500 (109000) by 3125, which is under 5% and covered by no hold rule.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3420,
+    "output_tokens": 396,
+    "output_tokens_details": {
+      "thinking_tokens": 268
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

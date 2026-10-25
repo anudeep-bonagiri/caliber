@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020744,
+  "durationMs": 4073,
+  "httpStatus": 200,
+  "id": "INV-1162",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price $488.00 is below the contract rate of $517.00; billed qty 1 equals PO-1009 received qty 1; no same-amount invoice from this vendor in days 54-83; bank details never changed and the amount is under $5,000."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+ggKEAgTGAI4AUIIdGhpbmtpbmcSDLTBqCsw+e/zKk2KIhoM5MloqeoK/yqnjKnFIjBIK70wBgaff17EXT/Kl1SeCuWj960xEphG8MX6bVXk8ULkt8EdxRsoBCpz3Z8mlicqlwiivmTx2b2ZWzPUrGsG9rj4mWnxq//lBVe3zfGVNepHIiT1bDXSbA+fpQX0jhjKgnBBoJDI4c1ftWaAoOex6WZs901s7Vwg1ohg6Iv1ODpOyqE7hjQ77AQ09RPTaC7MRLBjaEBSAjawgYI6R1uMf7AM4qrmtB+18u+2Z3z7v81jtDJgDSgwtoJ8E4ZUQ3CMxag9vGHsiKreJ+/5ZWCBSqw5MBTMxeihWTV4eqhuXGzJCOF6bGWitcWdZBogNfQ/M7QLzHfXeGDXCyN9X9E373fJ8+/j1ZrnHe/l7Z5ZLY2IfccDGiNiozFX9hqVBCntxVGu373aBk7OXCyd+hnTrMOYyj9M+f/9ZXAX1BNyXrAAhxUpPpaOdkbLNKgVkfUuIBcNLOLLvlli2fbJmPqJZ0EIa503Nh3psyghL/YhujFNRyQ80GAfVFHJLS1vaznsYCvSrFPZUwRzBxZru+GpyVBwfTDnzqE0Bj7JFI9b7ygTAzIgm/z3i230cLcFwezLEjPugcDdvV+ip9Xj8eyCCFRJdSKHGVPBCRP5MOJc6E2BwkioQk3kHrDX7FiZu6ycNlR7pXs6kfKrc4M63bdVNFDj6iE7u32yC8l2YuoyjNL6H6zdM2AiyTeOOKtJgBjqthII9dCGeeGwcKE/EQPbNi7qE5XuIxr77cOy0FCv9yKclVhUbqM41QV2VeTtCUDJGTGcde+TZj1s352Z149tPbvWoFf128jD4OCGVQrHNWIxjQibhlLncRaS+Y9Q6JsQGwXJ9A3rQlgVpmpV9M3NF1euPVcSaRopG03K53gu5u1szrmWXuTQIDJ3JGaWuGO6Ss7QcyUO9sLisRJvssvccMzHGUvNgT41RQ0Dgp4wu68DrQUOqMZhWl5zx7UTOO8qdx+Uu4V/NTJA/DF2H2w8Sp5TlfFrp7Ew2GiX8rBRtlPzPiSmJNViTMou4E8+GfmXQxXoWZhMGGkQg1yuqiiS8MX9X32j3CVWncDN7QfAit/Ekna9ZFMYOyM6QZPj8lASoUUv4esFV2W4NKV1GbZmOXlZUzo1TzU4VHE3isL37vP0iS4YyVq9Z5uyrVJz4qz6AYqY79EQDTDvq0mFDGhsJKgQk2aZK02BxyLuanhMtgPU1mpWOg0SaRx2E/MjLJ3HyEtJtCibLRc2h1902rcp942ByKaIrqSpmccIEiaWTrd9W8ZBRRVfDniLyLNOTqB8zdRvEOh7zOTUa/PLiIcLMSNCaAPNLVF5tpVfS7FRb70hEBuRd5TcXY84OSEDRrgk4ANb8DGqsty6MROsX4y8F+Cp5ovxUlUk720rZf/hDw5/7x49kuVew6ZRnndIuiuYTWGv06a+CpOaT7QwOmI+9KrJKH9XSNF7rbg8mDRDiyF/Fxxzb6dszD4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $488.00 is below the contract rate of $517.00; billed qty 1 equals PO-1009 received qty 1; no same-amount invoice from this vendor in days 54-83; bank details never changed and the amount is under $5,000.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjimpoAV4xMZu3vzje",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3501,
+      "output_tokens": 337,
+      "output_tokens_details": {
+        "thinking_tokens": 240
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $488.00 is below the contract rate of $517.00; billed qty 1 equals PO-1009 received qty 1; no same-amount invoice from this vendor in days 54-83; bank details never changed and the amount is under $5,000.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3501,
+    "output_tokens": 337,
+    "output_tokens_details": {
+      "thinking_tokens": 240
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

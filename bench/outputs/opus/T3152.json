@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.056852,
+  "durationMs": 2719,
+  "httpStatus": 200,
+  "id": "T3152",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Plate TX-1033 was already charged at SH 45 N Mainlane (TXTAG-SH45N-01) by T3149 at 18:37:19Z, 9 min 37 s before this 18:46:56Z charge, so T3152 is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QUKEAgTGAI4AUIIdGhpbmtpbmcSDOJY8QIq5+6dUjrvExoMHkRMnJMeiP5iw4sqIjAcFGQoGaw/A2PlNvqpa82ImLyiNHEbhWVXyDZCWBmzabgXiNouFXOXva5ZMG+e8jgqigXj8gFjEMEmPI2z/bCYErvWE11Yu3N+Vt4ajqcdK954CqaIgBwtxEniLg2YN0Dil2UVkb5NIK95KCMQ23qZAodbAfNK0yIKiqWH2MOHlMURIM+k2zJhdrMAhaUWehuK40GQofJBd105PmEkKB2+PWHdBwyqVTVUbkffojOOfAgJOZjmT/6FVzugZQ+WkbJbif9+Ya5Tw1tjQH1N5kJVtCSB/RILwAtDVyLCYmitqNqwXq35rDwi8OXFdjpzkR+2NGVtgsoApZj6y6gryBKh4NU+2aAK9CNhLs4YaNwNEQ93v5RuN82/mVj+hzMKKj17SSaxuXBeV4Zo/vHFaezeAOOuE/o5w/ejpSHuC+kCu30BxNO6gD2mdV9bbbOY8S9FZ5m8Nv7mdHYF8NgqYZq5DHnfJdhr30lUN53aOgRhfDZcDbZclQQJt8hWm/nd2gqCTET4+Y1L0C7hly4LvaAsHZtERFdFqrARkTZGMiojDrSFzPfEx12iKewxWI3CDwmJpSX1mlpPcdz8bI8xp1gVfU7owwQkXL6uKzAIWqbBGn964lcbB7Vriw9PElLgLMcGTjVVoG+oDUdEHdgN2Q3b1pOeoLS5k+slwDYjtIgnEKPuZu2FlknnRSlfL4rwQzWC2iTJiCEj0juUh+JuqLujPOpNIvs6WqEOCsvW1Wvm4E3AeQlx/wd+Cyed6o97mNN49CXp4Tnd0yUeeu4gvMrJ7V+W2XP0ZKCCONMz0Wm48GFFvFyFJLjHH7CqDVb3DKPphDnSDREixDsQkluzSrqfc8ygln/8I6rFM/tDiO7co1glY11eZgTyhZf5f3P/V8hYszc0x7WXLMXm2uC9jG2vC+aoFaV4nr8rHbBYSRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1033 was already charged at SH 45 N Mainlane (TXTAG-SH45N-01) by T3149 at 18:37:19Z, 9 min 37 s before this 18:46:56Z charge, so T3152 is the duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyy3rf3ty18eY43VeMK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 13218,
+      "output_tokens": 199,
+      "output_tokens_details": {
+        "thinking_tokens": 83
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1033 was already charged at SH 45 N Mainlane (TXTAG-SH45N-01) by T3149 at 18:37:19Z, 9 min 37 s before this 18:46:56Z charge, so T3152 is the duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 13218,
+    "output_tokens": 199,
+    "output_tokens_details": {
+      "thinking_tokens": 83
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

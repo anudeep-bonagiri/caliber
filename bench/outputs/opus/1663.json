@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.035252,
+  "durationMs": 8532,
+  "httpStatus": 200,
+  "id": "1663",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 12:25 ping is about 0.01 mi from the station, well inside 25 miles and 30 minutes; even ignoring the suspect 12:25 pings (odometer static over about 5 mi), the 12:00 and 12:40 pings are about 5 mi away; 46.1 gal is under the 165-gal limit (150 + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 12:25 ping is about 0.01 mi from the station, well inside 25 miles and 30 minutes; even ignoring the suspect 12:25 pings (odometer static over about 5 mi), the 12:00 and 12:40 pings are about 5 mi away; 46.1 gal is under the 165-gal limit (150 + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzL4B6NndwQKpzwKu3M",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5618,
+      "output_tokens": 639,
+      "output_tokens_details": {
+        "thinking_tokens": 507
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 12:25 ping is about 0.01 mi from the station, well inside 25 miles and 30 minutes; even ignoring the suspect 12:25 pings (odometer static over about 5 mi), the 12:00 and 12:40 pings are about 5 mi away; 46.1 gal is under the 165-gal limit (150 + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5618,
+    "output_tokens": 639,
+    "output_tokens_details": {
+      "thinking_tokens": 507
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

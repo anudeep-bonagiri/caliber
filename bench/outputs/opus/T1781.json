@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023608,
+  "durationMs": 2469,
+  "httpStatus": 200,
+  "id": "T1781",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1011 at plaza HCTRA-SHT-N, let alone within 10 minutes, so T1781 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStQYKEAgTGAI4AUIIdGhpbmtpbmcSDNpeySWchsoPOw6BtxoMeyb9ISvv4feHilTNIjB7qf3YLxY9q3ujCfBKtfOdQx1AdQaI3X1FnOyImAz4ZCKa/zGg60i9iRW9W8hrITMq0gU4Wpxc6RRLLDJTsHDpfstm3ZTKyl1OXy8HGIDCC0LKocl9zRu67MtWQW4DVIPLLNJnoliRX+h06dpdnmHvsNYrv/dew+sn2bkqN8sddvHdrcK1NFT8JxsJjG9MuAQDg+cFIXSMKKqnrNPOFo5F7d0Z4kgteEm1TG8jC2jyqoKu15r1ianNg/O/77KXwAbAIF9sp5uxiQto5ScUmX1yUcyk5oy7/+fCz8geZdOIRbpUzrRBCpq0GVRkaPcVeguVgVPpdvhZeq5uv4Gr/cHxeddiP9dlPcIjjW25iVqbrTOPRwq5hY3Fa956Vu/h8WZCuVe/EJ66VGq1W49QikeIrJO+1Pv7iDVkTQrLeul+NgMyHGmxx8ThyDbiQgL7/DsztG5/JOZ+EVb7nW2JEgd4NMn319pT3i7txBjsI2votVDlfEQ/iuai5H5vih1Vsu3oxSijNCtDftGlTT38y47/0QFd/rKLsNH8m6w+9g7TL1jntKx6CMymFM4X3Tv1vW/j9pW0hnPYGb8W8AZdc4jlrH27+SXILxnveaDObCyuof8EkMsLtDTRV6flwvJ3yzrff5COP1jGggAaFc/WKoMttJAC4WY6wTLrP3miQG9dk5UXknOVDiP587jSsyaEErWz6NA9svguro8G6AKFYQ7TldigiyhGJbp7rZ+LVHpvvQoi7R5/sZ+HhhW6Juq2Gn2lrCT/gMn2J1+a6/+yjkVY6odIg8q34NkvvIP0k0iXGJ8OiD9QxSZr4r6lzltvI98GQIWHE9lZR0FUUS5D/ZdFNMC+5tdX/go9hMll/YCNowjMnhZripX66eFKKAMv9RI5U43fJjt08gjibepqA252b2IjBMEX4mRszn5mrGqqwLGeb1kGWKIUVbFVTxJtZDKHNM3GMSS51Ih1rewB81p5PIn+qqcnS9x5/Y4BdE+kaJgEWcZ3vjjeg0mCwlS9u+Iv3WJYQhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1011 at plaza HCTRA-SHT-N, let alone within 10 minutes, so T1781 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDZ5D3iCiTCV2152we",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5107,
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "thinking_tokens": 87
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1011 at plaza HCTRA-SHT-N, let alone within 10 minutes, so T1781 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5107,
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "thinking_tokens": 87
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

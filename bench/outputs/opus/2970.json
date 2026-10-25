@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025936,
+  "durationMs": 3051,
+  "httpStatus": 200,
+  "id": "2970",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at the Pearsall station at 18:39:44 and 18:50, both within 30 minutes of the 18:45:53 purchase, and 41.3 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnwYKEAgTGAI4AUIIdGhpbmtpbmcSDOrTFUm/UPTr5TYN2BoMLbwkLGy2BrSMOpfwIjBQB9hUgUKAUFniyNWOuHIfpUmMsEWMv9P2B4SLnmU0xUEYci+X7c8qmwgICbg9qakqvAXEvQtCnqevVmn4BmZmSrPBUsZP8KgPtDRU3STQl6c6PaOCIwISMIgiGR6fPqlD23UprZOIy+fyDjXLhXRoD3EQd6isUB3aITZyIuOJ4VHS/bQlK7eDHAwYkOAXPArQM4eWj2XCFk9idQ+EWh6kUpD5HifJiQY7wvHAyTyUol6Q9IGdwPi54g06VixdRNI4fvl3sTESXQttKERda2qlsOPZLNMm6fpPrg9njmqi5dN2UsTtTdGh98X4gw4DZn0HrwBRQboIgPro5/rTc/WHqaMt2WCfcDKMHUzdkUQkoz5oz1QIETWHP81qBOxRywEyfW4tq5kfLPS2SXiSTLUJ0iuS4S+DP6rAYriwpLJOhdx+xTHZjHJZLetTcyGc/PQ/rZjlGWOPt0dldbCwDBDo0B1GgLS/TjRlOGfCbfMysY7FT0SJb6VyYcwtgtQpXFLntuS/soUTnMwg36ecHYuV2uEDEQfVIpn6Oqicp0c1XHkzx6MMWUnGjaS32enqaWULx/FMrWMKqw6xMfLs41t4rLTCZ0Hjb+0xV3xPgMuhoG1TuVnqB/X//zUstlcEUcxfpVffBt4/SRKObxlatkEJ5suHxZtzSkAMkd4lbVa4MF3YcZbwLq2E7UTbAvji8eToKKaLySFYVrJEB41uHtPysSVKxR+VXi/sS0sirQzcOzsj02Ve9owPMdeFeOdyeds32SWtM3h8ckEFJhmuzkBpuRg1jhgNO0OM5Ds4/9B0kr++viNEwGP4bz7AAQhquSjh7DXAoMGrB5dMjRwh9eL2hk0nBrcOtbegb7OFH/DkW0KszfGfRty9tEOb/2rGBgBngQx1AC115ioliLddBLrDPfsyRgmQkoTwyh9/8I2Ym6V3vtUG+bNXXM9IskxGWtJ0CxjS3+6cFiWhG7/onpKXfjLFRAOnSr+RZNfXMj7LGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged at the Pearsall station at 18:39:44 and 18:50, both within 30 minutes of the 18:45:53 purchase, and 41.3 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz87LVsVewiNBSwfHuz",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5474,
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "thinking_tokens": 104
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged at the Pearsall station at 18:39:44 and 18:50, both within 30 minutes of the 18:45:53 purchase, and 41.3 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5474,
+    "output_tokens": 202,
+    "output_tokens_details": {
+      "thinking_tokens": 104
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

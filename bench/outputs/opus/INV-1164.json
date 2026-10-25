@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022948,
+  "durationMs": 5033,
+  "httpStatus": 200,
+  "id": "INV-1164",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 53200 matches the contract rate. Billed qty 3 equals PO-1008 received qty 3. The vendor's bank details never changed. The only same-amount invoice in the prior 30 days (INV-1123, day 66) is under the same PO-1008, so no hold rule applies, though PO-1008 (qty 3) has now been invoiced repeatedly and may be worth a look outside policy."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wkKEAgTGAI4AUIIdGhpbmtpbmcSDJKyiHNkJ/Q3wihfDxoM9rcBXW5iMyPxV7MeIjA9m8Jf3l1sZ0hq9VkoJDkewYDczdpH0DDCUEWGpU9LScTjfOcPe44/5G0vWpJptuAq9AhXjdURH6ebdkAwr54LuacY1/L+uWT3QTt6gq7gPTI7ZALd6yaYEApyymMzCy4Bhdg5F783CUNUrJIHFWzhbHrRdHGwWBEXRBMAzyyrW/KJ1kfthpKUJySfj0ON9ADER97j0M6gP7HsPCFef3AhmdxKtw1mY5bgat8gmrW5nLRdF+FQJV7d+WQWws6b0046No4snQyBVsH6u0aIg8vOL3OeUc4cMydeTxqyqBzHbtrpeLHK0kmLu+puF1cAqO6UxHxF9cafQCv+ubMXWelFttzSW/9x9nWPsMiBG+foQMM0iOZAYhd592rkGXkRWlEu10p7t+PBu2GQpksPtnlIEN8MUDqzAWeG9w2aDfa19/NUIgzF5Kerw5gDBtvkR1kkqL8Ip5+sMNy2I5LeEftv/LPyk8H+LMvj6+mHgmGX4cnZ/EkzBahHzQmT2BlgAD37sRe7jyc9HiiLCw/RX1OM6WRUFXnweYhwoq/SgtFRg5zMM09nU+B0iFp0byGqOcW4saNlV8AQcqwMwX+prUyVzn8kJaLWrfjHykAScMp0hdP3CjhpaTUuH1jSLLMBhU9c/JbJE2pyoaznOPEUVDn3NTHXkGbEG3bxWesVc3INULO0+qvi+NDPv6VoL0z/WMzA2lekBwOiRuB5NkCHZy1QOjuxWBELgedZ4JLcrsSe/EsOJ2yqas5pPRdrOWdjQ8XLBpllL08IETtuIY41fiQChW0w2oz5W5lbZLG2EdxJM6eF9f/bTPwGvyqT2eG1SGwNmLoWpEJ9lNt/yJFQXKi39J1HeUX53dNeHfYMAkZUcjnrvEZuQQcV9VVbSE9mr7up5HY3ixbwGjlR+ivWWdlgyb0sh2QT9OF3DdHmoZqfHLnJLYeqi3dQsc3r5a7ZFS5NZuOwYTKXPcoJQ9KELBUfxWn/oPo4ChwMo6O574Nsk2Mq19VKl+3JfOzaoFtgAzf7DeqJ+qvsgXkxbOqLRwLcX4NPkXa4nRWOJcXhj647JXZctoerSfPd07vOoTKNcoe6Cx4cNaEw5X5oPsH5Hprlh1kb5P4MWndTYmKBTuRnd1QI/HR6frryULfDtEb44GFUSXupowbEBfNjoOm+4kSv4iis/i1wSwakypAsDYl7Evn2FJF+b5R485tBsBy2Xa7WVPckg63pVbyjPxXdYzriEkkSQcPCONEmoT/fUaycRGOx0mI/MKGTcaB78K7g3qNu0u3BULQfX5G4rrosIGEQCdCNCn8bTHhcoYFjZNqouvsT+0gnBMxeSNwzwSwj1ZOuaZIqKgTVxIf+t/SQw3XlsOLZ92cQcEzkSaG07OJm90mjiRexfI222FpQiF4EUC0js87lL2fjAzxo8MisQhZUFyB6FI52SwZXOLI097R9g2/xsjGfpjRBaoRYJPAbijDlXdhAgROQ9qW4XOeEhpvIBxj8GYF4PDBZMvAODaLo8XfPK2/n3CiC3T7FZnYPoILFPWvj9IAU3tDZ6H24I9xq7Vn9UddWkgy0nyUzVHklJs+rNQHZKt0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 53200 matches the contract rate. Billed qty 3 equals PO-1008 received qty 3. The vendor's bank details never changed. The only same-amount invoice in the prior 30 days (INV-1123, day 66) is under the same PO-1008, so no hold rule applies, though PO-1008 (qty 3) has now been invoiced repeatedly and may be worth a look outside policy.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3CJGC99iyhEVzy13w",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3587,
+      "output_tokens": 430,
+      "output_tokens_details": {
+        "thinking_tokens": 279
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 53200 matches the contract rate. Billed qty 3 equals PO-1008 received qty 3. The vendor's bank details never changed. The only same-amount invoice in the prior 30 days (INV-1123, day 66) is under the same PO-1008, so no hold rule applies, though PO-1008 (qty 3) has now been invoiced repeatedly and may be worth a look outside policy.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3587,
+    "output_tokens": 430,
+    "output_tokens_details": {
+      "thinking_tokens": 279
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

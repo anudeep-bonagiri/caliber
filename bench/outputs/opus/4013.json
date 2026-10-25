@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02654,
+  "durationMs": 4943,
+  "httpStatus": 200,
+  "id": "4013",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 18's nearest ping (11:20Z) was about 0.01 miles from Pilot 405 Laredo, within 30 minutes of the 11:24Z purchase, and 61.7 gal is under the 132-gal limit (120-gal tank + 10%); no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQkKEAgTGAI4AUIIdGhpbmtpbmcSDIBk1f9JK8KU+K0nRhoMMJakuPkxJWZKVFaUIjDsdhk4/yKHWUJKGkXZkI/yHbFmd01bkftQHpMh1eSKDJzS8daEY0gE8EDO3lsL7BEqqghpMuD70TeQZgr3VtcaQCEypg8WWpRYOhdcEiUvObhBU2TOP2z+WjD8grJ23nDZagbDb1Hi9fqPMZ+EO9l3A6P39CxQbiYOFBl+RHBfaR1xyFpJbHZPTs8q2pfUyzQsUYQOmP/tf/ktHGcAfWzQMPSZHwqCqx9zKRw3aaPgaGScOs6ySP0nEUk8hxdvs3VhtLl1JmPkWOE/ac2jqCjPU9Wsk7JQQPhMhhTfMeRrX3o16WSRde2MJGEr8NRrk7TJwTOiEH+DcgEEO7HGe4ifYU2MMSQKg7cM4Voy462C0vfjOgnvZlknIpCdCORD5C+j6tKbxJn+vTYqd2IeNkmpvvD+SaPpcBwtjaqaRqQ+TM9DkdKXzIkeBiFGHe9bIhek8y/ikQ/jvVrBp2x5UNSW4iZm1e+vK+ksmNxgbm/gLE17gs4QCowBQbxHUbQLboK6AAAx4+d6maXAVvGPNKePjgR5kb7OYBGcpgQdkAzaRioqVEGL7Kjh1gbrlEa5tojlboIzUMhtrw8CMUnqO//mmLmwAIXGSo42uNsHaOMJc2RnTKsSd9BVa94HYkdQvJap713Dbak90r3NDMjxW5xk9NNyjCJ/SEvidEiW0El6KYiF8DFoFuN2aoJ/HbTo2qHxBXsm8nhJtnqO7TFIh72hoqoD7mj5L5OyK2GUn1va+IPDbB1iXBz9jpExn+3AGCkZiYMuOENOOyYN0sLI9KAsvVxI2g1taE6ZE6i3n08QhGNO+HVtpuRiu5E1i6DvH9lubkZ6EWv4TJdjG6vV3tMwN1GtmLi81tphh9MXsYUsRTA2/+L3aBxpTMoC5oGm/QGNaFYd+lfxqne1QhRXiuWYU6gCTcsUC0WnmCuyXFvB5matDlGs4IR6MLK5igWky5yhvJUHOiYtAIic/yT7vNLfq16OdTFur5Zko5cz5CTJty9Yomcu7I+IG8EnoE+8RhKa/pVAJ2DvVfk/GVLRHFz9mSfJwBAEvXbasQEZL51qo2XK/l617t3nEHAHWxmG09JdeaW5pEaoyIXVCZ3IEjEUsekRGB2yzCGKnrY2CTqlVpT16v3pTVxhwEccJqwPWiFCzUAoEAK7TT10J058WZvw9CCAdisa9Rptvbq9hi7Dt85FcjEo6DhzB6nXIyjVE8ZwVyBEsoh1N0KzoszMLsavDpPit9NZ/aEFkF1QwJZ1Q75FTzgAfcCqtOd5dS6atbyI5K88/cP2AdxYymrotgVnwGy4y52Pt/wM9iw26kNh+squspjbHsJZyXNIMxtnWMmO8zfvfmIcscTyVUNHLIe7YZDBF7aF3E7RMuhotSv9RRIeaMmn0J5KslXoYDWzaywqt7MxX+n8aIbyAcFO/kKuN765oBxy9YhrdVB03C7u1xdtMRhftgEh1lXnRIG4XqLFLcrKTUeRaUk89bG+GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 18's nearest ping (11:20Z) was about 0.01 miles from Pilot 405 Laredo, within 30 minutes of the 11:24Z purchase, and 61.7 gal is under the 132-gal limit (120-gal tank + 10%); no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymaPMaBd7KfJjRjq1k",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4595,
+      "output_tokens": 408,
+      "output_tokens_details": {
+        "thinking_tokens": 294
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 18's nearest ping (11:20Z) was about 0.01 miles from Pilot 405 Laredo, within 30 minutes of the 11:24Z purchase, and 61.7 gal is under the 132-gal limit (120-gal tank + 10%); no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4595,
+    "output_tokens": 408,
+    "output_tokens_details": {
+      "thinking_tokens": 294
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

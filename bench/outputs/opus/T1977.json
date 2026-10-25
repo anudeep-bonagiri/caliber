@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021072,
+  "durationMs": 3284,
+  "httpStatus": 200,
+  "id": "T1977",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1005 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the nearest same-plaza charge was T1921 on 2026-08-27, and the same-day tolls were at other plazas."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpAcKEAgTGAI4AUIIdGhpbmtpbmcSDDKiLxtKgkhnLHxCuRoMuk3OlVkHC+Rrn/ItIjAYIKPLnJ8/iQ8C+I+CiaCeQQVdmpS9Fe+bbcFaha3VUoncWEPIZwHgpH7C5gtwvxsqwQYkH3pkPT+fuAlHDNm9OQreW72uShpK59jz8WRR75SUwKH+m0W18OKM4mXL2PAen2PQYQoOTMtcZj6m0LmXwJt4yP2KNOY0IH3OkAkoUwWgWReb5mPEIahSnfGr7SHBO/pxcFlgKRQZxmaWP/yOETL1ikLOguP8Ysyvs9G/kuWGXn63jTBLKLPF5doHY++53s0jAZVZ52yK2JWfeM0k5vwucWuIc8JrkGhzGHiT+Uicz/CsMSzGhVj4obU4jbxh6y85dPqKV4+iTYs1AQ05HdwydnbosW0PSREkPRWgxalPmCnsnS9/9IQVnoeGNm1juudUhB7YXEuf423nFBjegDIG7Nz5WO8/giWvyLMlJKRcMQwLDUrfa97nb6RuoWId6RKiQ+AFygdU3IIJ1+1AkgvyPNNu6J+q4eTg63dcjEiuDgGfqG0Dukkmddi3tVnpLUSTs2+8heWi1rsVEvMIrvg7WFWbUgR6Ji/CeM+6AvcKD00Cyxi3wuNNPT6Fwi97NWZfeUdvOlQMVoXl+Y78VX17KRsyIgBhI8AYaWUJweJi/CnOY4cxtxR//4lypTyqxrya0ZL4KnW3OgvyN2lOqKFI76urH6fqQPY05JsU6cROuWSJ5BThrND8tslRzoekWdBYPDjSsOoPhrm14LuBAdToE9ij3iQqMYUkiT6kyc8ILtKQjalZOITCLsxDJHY5VsfNsgVxRJNvF1IvDCOLK3stgnvzCJTQidOOJ1WwGS19GkS+4mijWyvZF9I/+Y2XiKKt5hM6Ge69ZZJaloWLQYMdE9QPcrNYPiAzeqI5xjhABaef06GloWgGjaT8+9wBK2GEfWqPj5KC2eFCkhxIeI2raC5wQFpYg+ee/LHsHyd6MzKvMCL19znmPWW35nQlbsZbNHmGnbtuipRAj3Jnyvi8OUigYlFE/XYBBqpQAZxdCQLE103T17B2VjDqdGeeaFXizCKJpoeaJh661ZpQx+HoA/OcgGX9hkA2MKcnSUKTxHfKAsGHetFagYiEB6/tFpVro5gCTPNR8MPyzbnPmY5QWXwlkrezA6/zCu+mA6aRenM6i+0qSxW2W0HX1Bef/kQSHOT+DkYZjpTZMfV9nNBpPBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1005 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the nearest same-plaza charge was T1921 on 2026-08-27, and the same-day tolls were at other plazas.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjhfc1uEi3ND6aFHH3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3793,
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1005 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the nearest same-plaza charge was T1921 on 2026-08-27, and the same-day tolls were at other plazas.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3793,
+    "output_tokens": 295,
+    "output_tokens_details": {
+      "thinking_tokens": 187
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

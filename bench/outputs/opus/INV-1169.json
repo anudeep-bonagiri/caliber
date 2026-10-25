@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.03324,
+  "durationMs": 9738,
+  "httpStatus": 200,
+  "id": "INV-1169",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1169 bills 37,025 cents for qty 1 (370.25/unit), 9.2% above the contract 9 oil_service rate of 33,900 (5% cap 35,595), even though the stated unitCents matches the contract; no duplicate (prior 37,025 invoice INV-1002 was day 3, outside 30 days), quantity matches received, no bank change."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1169 bills 37,025 cents for qty 1 (370.25/unit), 9.2% above the contract 9 oil_service rate of 33,900 (5% cap 35,595), even though the stated unitCents matches the contract; no duplicate (prior 37,025 invoice INV-1002 was day 3, outside 30 days), quantity matches received, no bank change.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4zbsJRFJkzedrJ875",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3915,
+      "output_tokens": 879,
+      "output_tokens_details": {
+        "thinking_tokens": 723
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1169 bills 37,025 cents for qty 1 (370.25/unit), 9.2% above the contract 9 oil_service rate of 33,900 (5% cap 35,595), even though the stated unitCents matches the contract; no duplicate (prior 37,025 invoice INV-1002 was day 3, outside 30 days), quantity matches received, no bank change.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3915,
+    "output_tokens": 879,
+    "output_tokens_details": {
+      "thinking_tokens": 723
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

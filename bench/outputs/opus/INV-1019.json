@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012532,
+  "durationMs": 4306,
+  "httpStatus": 200,
+  "id": "INV-1019",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 46500 matches the contract rate, billed qty 1 equals received qty 1, the only earlier invoice is a different amount (33950), and the invoice is under 500,000 cents with the bank change (day 18) after receipt (day 12); note the 47750 total is 1250 over qty x unit, likely tax or fees, so worth a glance at the document."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5wcKEAgTGAI4AUIIdGhpbmtpbmcSDKAvuoHGnd16GTnKsBoMa3yTIao/r4+RVkQzIjDuAuKBfqq80k6ENvqyGcgQvpc2SOF2/u8w8fYAzCQwpHgiIcjqy7ZuQn+f00pRHmAqhAcfB4+UQHPuKgr2ixCPhycZ7tLwXGSqixzGz3anIDONxCBIQycrLJCaAD2FTztviVifFcbC5m8K3UYOQg0JKjnH++DoWSPqR/rabYdKdlDLsOPKuc5NlwbPDhbylyJF60wfnr5qpILmfITpHSD6vd2SThODl8mLIRJ737Dl2fFU3o+i73qPuLBDcbMCBdlr+Z2VrgngMkpfdB+jRZIQMC1tzv4R2cX2pdEmILzjd+7bBg9BThI+CrVVgCn+EZgVLkVvMw7rcNQhyUcBY4dMjtbwja7EEIH0a/A+zhgyO6L7olEoI6qpJ0epvwSXn5/Mo172sRzqcbVZujyTTUJs6akJ2UEQ+TliakChx8ObrORpilMORZVG6tjsr67weeXrO606yatUq2M2lw3eDyC1VY3DmS4YQnXEUjkYK1Fxk+B0mNXKRs0gxbHwOxZQjJTSjr950TIibhdxT8DaTppmx+zLudb+A8RudY4RMcYRuWbZZY3WbrDbU5+Hk7oPi1NpxWwB4X55luxWLjFesOKglTy543Pw3FjKY0PERtJTymvslGNuLOggtO19FDWrE2Ug3fSvySIwsvrP5qz/nz1/LwoyOabb6kH9xv8kcpmC41ycpglDQaN776x/Aqi7tOfGVgXHb6ZFdk29bGOFGsuHadkwhOd0kOSjPSWeX8ieFCKyd0QxKGqheBPYHCNBZlK1plL24jTZF7EhdYXzBAP6gl+REA7zF6bqFTf8yGzV+HFW0TlL4oiL24jtZJb9PIu0jEQty8e2zanMbUJwWOQSdkXxdRlsJDTHUER6438iGUW5Busei7T0KUiPxGKstsV7GsZL4yt77N1j5H62i3baGyL9Weap3eWgDjIMPhC7FyN4CX81sGMbUc/v5lry30HTDLGSEK+xCa8IAd4H45s+PXRWOS7maey03GAu3bunmRbBJfmCpS8a6k83mOQR4GvjOYSfkNwUuV/Q8cYPyDerNEsOqHaze937L76FF0Fj5GPcat1uFeqc+1YYk1gD6y2GxbPaCtGYd0cMBOwmSVQEiCxCVeSzFPCqaz1ngdysO5mXIsZsL7wFqP/EnvhDEfCX+q/tYwPsFI6dBLHk1SOjd1ho1DuDZ08OXAxotiXGEb7tLxaivYUjSFCiPgCn3QYU3JWJ3JOxGCF9dm73NPgGKZliGeu5XGYEXL3yhHxVKyM5GoVmZ3cYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 46500 matches the contract rate, billed qty 1 equals received qty 1, the only earlier invoice is a different amount (33950), and the invoice is under 500,000 cents with the bank change (day 18) after receipt (day 12); note the 47750 total is 1250 over qty x unit, likely tax or fees, so worth a glance at the document.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFmZLe1SSikthDdKn3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1483,
+      "output_tokens": 330,
+      "output_tokens_details": {
+        "thinking_tokens": 188
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 46500 matches the contract rate, billed qty 1 equals received qty 1, the only earlier invoice is a different amount (33950), and the invoice is under 500,000 cents with the bank change (day 18) after receipt (day 12); note the 47750 total is 1250 over qty x unit, likely tax or fees, so worth a glance at the document.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1483,
+    "output_tokens": 330,
+    "output_tokens_details": {
+      "thinking_tokens": 188
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024488,
+  "durationMs": 4157,
+  "httpStatus": 200,
+  "id": "4080",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 2 pinged at the Freer station at 12:56:07Z and 13:05Z, both within 30 minutes of the 13:02:03Z purchase, and 33.8 gal is under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AcKEAgTGAI4AUIIdGhpbmtpbmcSDMYyceppbV4rVwjuaRoMRo/7hi7AvHZIPkxEIjDyDKfGo+f5ZYBz/6xSlyB7bmXZr6/qQmZvSbBApiHc8Xu7GNFW0a6KfZsOIg/GygUq7Qa8EkTCWTLu6sOVe2R0QYHxlf6nvYSxJscj2wa16tpNXMkr8c+4ZoKaaA4iVC180c/bUr/X3hK2rF8r2xL3mkExlkudOChK0N2l9YkknXg2bxUOqE9neXx/bkvkdPfcGxnzSf7cuG/qb5E6lP75g5a2nCrLYpXdPCIsdJqOrE6HurXML/11ltvD9Yx50YBO36d0thC63T4x1eTdoQbXmLxIUwOd5h8bfWyOVbqTtkstmVUB35EDPpwYcJmxLAGWgg1BYCy0suQN45zpb80oxtJQZBzshaQ7tdyzMyH+cRC1o+FEUK28FtvvAJsFMwDVJoL5rN0RmzNYUsJVfTvl90/zg+pEK04RK2W06O105iTigqJ/HDO7bRbk20FZdGOeSNFdcFCUXh0VCPYL6C8qnlsc0pcLzJNrxZIlx2w2MlT6tymtCXoWtpBDdISZn+hjlyg3D73adg02LBV7T8k5+Bfd5tx7toG/MmQvdycUqTPbrMu2HuBd1qIje1WhlbLS8L3iA9vDg/GZLGdMzb+rySqasEmCnJjgPRgnF0T8GYFWmshZvVepNggvdlI1J0jGW378kL0tA2yOpXYQvszPNZ/DNbKU8xLvGenLDOjK82WusszJKPKhrwIGi8oErgwafoaRmLiiBDl3n/1BcrTjXf1R3R4re80wTubDGjbuNl0ZB7ljVf5TYX4hx5uHw1fVsaH8joushQ5krNc+0+OaMOsm6jWvmE25tV2RH5E9LmnB0zfUeDtTk1kmpoHecHsI9BVeXu4DEsTqfC3CfAHfMqAcCjZGVR/wteyNbca0DMxzIzswCv81uagg7ZEb287ocK08y5JAlg6JO6EUoFsNx8o5friIO0Tz5N2JOG6OS3PbfML+hUGw6Q2ggsEC30X0USDakJo9ZukLy10tmkk8fRSa1W+Y1JsWbnLeBvH03VtBLhwI57rTvquo9POWHCWuuHcCmGDg6KZhPStg/MlaKgGqPGNoquPX/v3NMLUmW23QjwgHj2byeOXZ8YdOgEpA/eswCNeVvYLEl80ASVm6Tl6JuXfSCduC3ntE0kKVDB1HHBLKsh/cxQqZbx9vYlKsmPo9Aj+tQ3z3pnRB7lRRlnLdJG30r/MQDzIn956oQ3hvwfi++mfV2TnS1pBSeykONrm6MY7G2j4m/bbRZhM3GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 2 pinged at the Freer station at 12:56:07Z and 13:05Z, both within 30 minutes of the 13:02:03Z purchase, and 33.8 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjKpwjYUo5zNj2RWgx",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4672,
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 2 pinged at the Freer station at 12:56:07Z and 13:05Z, both within 30 minutes of the 13:02:03Z purchase, and 33.8 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4672,
+    "output_tokens": 290,
+    "output_tokens_details": {
+      "thinking_tokens": 187
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

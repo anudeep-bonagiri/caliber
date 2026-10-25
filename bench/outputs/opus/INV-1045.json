@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013372,
+  "durationMs": 3812,
+  "httpStatus": 200,
+  "id": "INV-1045",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 52,500 matches contract 18; billed qty 2 equals PO-1016 received qty 2; no earlier vendor invoice for 105,000 within 30 days; invoice is under 500,000 cents and the bank change (day 42) falls after receipt (day 27)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AcKEAgTGAI4AUIIdGhpbmtpbmcSDIq0y+2Yy7xnM7M0KBoMcvuvAI4h6Qb+Yc7AIjCfG61winB/Qr601x+vP0DTmXSiZI2WFEO4DCFmdSpcfMdD//V9yNlmyumOEDeDFykqmQd+AwktFToAR0Eg0g33Di3KYQko6FV18Ac5iUJ48Of18n59DO+8xVmMdIobIadvEF6TCcXeACULhqA8iS5qcKmaRHqVJCb7heMpwUyYWfnUjf94FlkyA6SEity+osBbp+Zeecd2rxnskJuK2CKBNslN/GuHgw0rm5IcYtP+LhjQ4aWXNtX81tUv6eZftg0+TnrYF0ndbWEGqmiCEItsa/kLIYPBURqyTUgZn6Gz8NzV9ancKTt2UZipZJL/6zrVXu55WUxrHTAhBV/6fd5DQD8HRL/7jmhIOn7Xmfbg+S0Sq8pUP9UXX/lrk+DVAnWAhyaRx5fRmgqz/Tfgpp5Qe9egXjy7xLbBg3X7bcV14gfw2PKw56KOjNbVLs24+bFFEca0z8QpbJrRqpO/lAZhYUuCUdf+TV2PxzH6kY4IaU1mCNGUDyZBA0/+AaSuwgE8bw8AVRQtYFqvawRRffX9wb2QR+NvgfLfJgujYVdC61/Cu9cyc0sS4BQT9XMgdcaKiFgAt52sFtUhbXgjPx5bigHcLPLIjfdAuzctKaDLJz+EGu04jinyjFvdUacvqrIIpXgeAppj9EoAJHO0pWaXDFjzg8lh2M95KyXcQmo5pAVyC20q+I42XDE0fEdCaM9kEIT+thuBJyNPdG6GYhlTnhTugsTsY/3Ii1v6CxEjUbAFvRZzByT4NnMDTx2zuURfPwIk6VdzM9EyhrIh0ahnaKURplQFdhCytrSdL11HZempf80cYfXPjmcIZojUGAduU5eFFZhZJgbpJmpFsJerFX9H24xXYNU6ZOojvETOCBt9nCeJCfkxzOHcMRZgejGG8SAa4T/TwYEZTd/57I6HAJHJMmkSVswaqbDRoKnaHW1efHi7LSrEE8CzTjtG9CvyHJpDk2ba5btoLzgfRcyFETG61KPrfKdecWX40oX0XbsDKp1cmFr6wdiiumg8Z82vkFw06lZB13clKIK/YmXd+yJeBHPjVOWUwCSbo0z7Q2T/k/TkNQ+XxnqcJIvJ1pk0IQXQ7hQyQKVd+sw6f+rvGDljTVwq7PL/fyrQBpVvm8Dy9GXvNghD7IjZp22y5pjTXSpK5PPcnL1F6RJ1lRES2/TGisuxh1M6Hb0TDKA2vU7CzgVpalbO+RE3AcggIobn8yQl7ZG7zcdW5DTY7/b2+hoQKtJo0EJ4EEhPpngETiaWViYp6qUNzzCKTFkD6pjwVsqaxVbk33BPv7AYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 52,500 matches contract 18; billed qty 2 equals PO-1016 received qty 2; no earlier vendor invoice for 105,000 within 30 days; invoice is under 500,000 cents and the bank change (day 42) falls after receipt (day 27).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzK9qsxTRCLZPf6pD43",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1823,
+      "output_tokens": 304,
+      "output_tokens_details": {
+        "thinking_tokens": 194
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 52,500 matches contract 18; billed qty 2 equals PO-1016 received qty 2; no earlier vendor invoice for 105,000 within 30 days; invoice is under 500,000 cents and the bank change (day 42) falls after receipt (day 27).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1823,
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "thinking_tokens": 194
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

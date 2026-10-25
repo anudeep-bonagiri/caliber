@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.045708,
+  "durationMs": 2706,
+  "httpStatus": 200,
+  "id": "T2780",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Plate TX-1021's previous Mountain Creek Lake Bridge charge was T2673 on 2026-10-09, not within 10 minutes of this toll, and no other policy rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSngYKEAgTGAI4AUIIdGhpbmtpbmcSDP3D6er19eV9xVq07xoMLrtl67lg/n1D58PTIjC7+GotfS3gQnsmpiNOfcLKNthlptiURxBeoX4wjAuvkznfNE7r+ZITCOV1d9It0zAquwU/PGI4Gkecq8ryiHxGPBlaS/80kJTzFXEeSamjtzfFody108LXjcz5tfcb1iPoOnuG/6TCKUQZ5sJFVXlkRjL8MR9ivTuPxtgSHzI3QPp7DYHG5yZQqXubvPNBUtJlTJWUg31LdPinUL7HVI88zVPRq3tRGYPD/50su9+KHcnxc6/EdaU1oQ0d0+p7vJcrwwPfwcAWlHtsLzRpuSG3ge7ynrlPzxvieM8JwrkqanohPwrT+2RzoaQxkqL4T50PLMXjvFiKVd30PT9KxpXzraI8MyyLlnS85CqEMO/zo8uPCpRfjwsLhLX7V3kTfBPnMxhZbi6rKiY+ou+HkHfrnj8h54wu9bA4VBid4NrKg+dV05QUF8TlE/4HsjUqti5eZpTfk/WKbFaX02YTxnzB9yNeu/GXb72RAz13w9dpv8+lbPY9z9Vs/3WA0QRBRLdyfU1Pz8YcWk9HlrEUwmScQGE5Ulsn8cFhW7TilSreiH2SyXrhrfhRrQM2gFmVYMccR6h2iRr9jyoDDmvW34ZBjs+KI2FuzOCWzVg4xUQTTgTbCpWl/WIkG+r1SdDUasCRp/W0WKIoCysPhdZGa0kx2bzb+senl88uthUiSCaYbJhyGandP/H7ZN63SIv2V3nKrIvqDCNC3/1kVwUb0BHHCq7NOQQHSdRDZz9sGFM4YxI3Txv5FWAphXPyMYPk+6fNqauiFZFPE8PAdocVi6AoXVtyTEbbqS1obJHTDtk6VWGr9iIGjJDyFKeubz9/AV3zfOmseTcGR4gCQ9c1lDuDd6GRK7RU5Fay/ya7I/tXnvVkUO7wFG5lr8JMatPdhoH+kx8DSO00L27V4/0EU/qhkiF2/zwfp7GEB2ioirbeMZeW0XGD15LDK1DuF/+ozYNMPO+j8W33S+q/g7HkEygMQ4MKps71qshXfTbkFuEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Plate TX-1021's previous Mountain Creek Lake Bridge charge was T2673 on 2026-10-09, not within 10 minutes of this toll, and no other policy rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzD22uZuCmpRYT1fzcF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10432,
+      "output_tokens": 199,
+      "output_tokens_details": {
+        "thinking_tokens": 114
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Plate TX-1021's previous Mountain Creek Lake Bridge charge was T2673 on 2026-10-09, not within 10 minutes of this toll, and no other policy rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10432,
+    "output_tokens": 199,
+    "output_tokens_details": {
+      "thinking_tokens": 114
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

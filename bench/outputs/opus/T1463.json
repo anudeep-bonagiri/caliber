@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014564,
+  "durationMs": 2338,
+  "httpStatus": 200,
+  "id": "T1463",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1015 toll at SH 130 Plaza 4 (T1375) was on 2026-07-23, six days before this charge, not within 10 minutes, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvAUKEAgTGAI4AUIIdGhpbmtpbmcSDDw/ful6/PAeIvVCJRoMJRZjYtynfSyhG4u8IjBojHJ9eG5TsFcGrNbBZsZwZS7sQgRYXuk6+Sm5GY4JxbtWjS/MrQaTwVNiua5yyEoq2QT6CXfYL2ZWjt0xYJ5TW8xcgAcZRaalcyk2s4Y+wo1V8qzuVxNOw+OZjZNgFGg8E+AdZMOmahkkuVQuP3jWZbpP6TYn6/EyA+TGdF/a+PxBrk8d+i0G+G3vkR8SitvZJ3niwaawOKDuakhyhZCMq9cKW+GgXnYzCG3BAlmR1RdXvWce6YmhC9q51BofmQEUBV78bTT/LovKfShHD4agwyFwkwC5XI8VuYwy5oEBoBm339XeEc8jqpvy1BxnnRSTKNa6sQqwjYPv6Ykdvvtqa812VyvOJ2+S3EjYFL25DVgQMdOBqv0xMmFm4sih1umznfsMC9D/rfHD/uOG11x9g3ZIhO3qAa4tc2xp0CVXujN4yeUvvlfJkN6RqIBe/mn4tblxTqHj4+gBlFJtDaO8tPANxVglGA/I3WAFpeZJkgYKILtMshm6yWnYQQyetBsTvHwtdSqitNRRQUAeuAzkLA2fRaThIwWENcMR0gRwgxSUmu5J4x//xSOAiQCnkKzz6jL3PILCTzLFFuCK5rouMBPndiGCvDi3RENEKxkXtoJgnT17B3wH3IgZikdvJF+l6kRyDNVUeW41n8kGUdk4T695OrB+iobHvGnqQiEb5oElmQcJ+tDAM8JyqlxvCytttdlLYMTsq2l1RKvTWVx6ad/j6tluPSLyK9hIOq/bwQ1sPRDykFdpXOspit2pBLkicMXbn8BbXNOT1juCRYH9xxS4Igm4QD2+ombufTT2NC9mtOKCwkb/Y5aJ/prLdSdX4mh+6HtQbIgPxbbyOlp5mTUoTQie8WMSKDSGGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1015 toll at SH 130 Plaza 4 (T1375) was on 2026-07-23, six days before this charge, not within 10 minutes, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7jGThRtgCNXK6zv4W",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2911,
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "thinking_tokens": 62
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1015 toll at SH 130 Plaza 4 (T1375) was on 2026-07-23, six days before this charge, not within 10 minutes, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2911,
+    "output_tokens": 146,
+    "output_tokens_details": {
+      "thinking_tokens": 62
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

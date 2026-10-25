@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028876,
+  "durationMs": 3925,
+  "httpStatus": 200,
+  "id": "4300",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "At 19:10:19, about 6 minutes before the 19:16:27 purchase, truck 1 pinged about 0.01 miles from the Refugio station, and 48.5 gal is within the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAcKEAgTGAI4AUIIdGhpbmtpbmcSDC9MpJ2UodAtxh55TRoMhPJa2/l7J8/WuP8kIjAtkWIPXlMuGk/YHOGEMPyxYW5KLMA3g7vckFgqf77QoRwCSBVMNeA2G3xNbe4H6AUqpQZ9n/TxCm8Dx1mLLrcWPEjLkhRRE+OP+QaXPaVZJ2chQPj2hy+xUdMblXiRXV7+lScYt0ODGKn5sjT6on6oFF9VsGza5U1Mo4jf/qhlydPnJEOw5TDmAgI9y7yXkZGXF9lESLWHNwBOaH98yc6zuN3OqCszGvv6kk6V0mSvyxvejuprT9NILZF0MV/5IPGDosm3pg1qXVt3StoX9B8vC1ZV86XmnmoXDdY7o2xon+tNB60MY54ZOwdC3xqs6ovQIAL8wpwYlaNtNF+yKDD9OMWg4mXQ1jCUdeED7ZVyrEEaSYNyG9xxVXG+o001QgA2sjsXouhEpTp3ogIYDfLy0s5KSd+GWMVxsHmzhoh3RPYcy48rY9mevO0ho661JiDNLmGCB0Pzw5GLXSDWtwq1ehhNF0Ojq8WZvX5PPCyWj0A3ph0o3wbf72Vj7v7Lay7rqg09ijEOydgV0NeT0ZylUTF/dtX4LssZjiCTIXdNcZhZLmsgGoMPhsTGduraWBDqRQMd40KjV+5nhOMh+PcdFnDSSDvKGl0SczN2hNA0aydlm1YG/rUZmKIGzoc6Sl4HVBY+9Fc8+RQHW2e9FT38uTUgtAtwzeOjTPSQsAAOVb2iQmtwIfDAQPr7o2pp9C0cOjrnVi+KhLZ4L4cZnAT21f+ydM9W5LOztwfIsOdDuLVYh1vp94DeHFmD4fJ+wUxO9VqOhD/SxgK1U+lmxO1nW6W2WMedw4emz7Kr4zJowl05IAhRdudnTj08xOlIyD4Ne/TtPYiThA9156337Zro83kSfuYme39s4Q/MhMgSUPXPuOPBrM6WXWs8u8Ea7uMC+YQGvSwtEPUiB5QUwNq9YErciiEEARKqLKyZeGBHaPefLpoBqRDROUi4hx6PFfIaH09m6KYgO8DQJmVqt7MK9OD8qK1ZCt9LREfsfTsxZmtl33xf16k9k0AbdUZ/iGjZFLaVbGO33EjxoBd0JtmUpTVF184ny01y4DTKjBSUZBCVX+ul/ryNNc0LjvxaW9Xsg63P4op/MhIWaRA5z/3y+5bdg6mc/bwV1bJyDnNc70Aaj7gJ0EnLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"At 19:10:19, about 6 minutes before the 19:16:27 purchase, truck 1 pinged about 0.01 miles from the Refugio station, and 48.5 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4hmppPZVUN8aA4N6h",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5914,
+      "output_tokens": 261,
+      "output_tokens_details": {
+        "thinking_tokens": 160
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"At 19:10:19, about 6 minutes before the 19:16:27 purchase, truck 1 pinged about 0.01 miles from the Refugio station, and 48.5 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5914,
+    "output_tokens": 261,
+    "output_tokens_details": {
+      "thinking_tokens": 160
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

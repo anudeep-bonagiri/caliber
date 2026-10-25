@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022108,
+  "durationMs": 7053,
+  "httpStatus": 200,
+  "id": "INV-1068",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 33900 matches the contract rate, billed qty 2 equals PO-1021 received qty 2, the vendor bank never changed, and the only same-amount invoice in the prior 30 days (INV-1049, day 30) cites the same PO, so duplicate_invoice does not apply. Note for review: PO-1021 (qty 2) has now been invoiced three times (INV-1016, INV-1049, INV-1068), which the policy does not cover."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 33900 matches the contract rate, billed qty 2 equals PO-1021 received qty 2, the vendor bank never changed, and the only same-amount invoice in the prior 30 days (INV-1049, day 30) cites the same PO, so duplicate_invoice does not apply. Note for review: PO-1021 (qty 2) has now been invoiced three times (INV-1016, INV-1049, INV-1068), which the policy does not cover.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymoAJLsn8xN1hRjwrx",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2567,
+      "output_tokens": 592,
+      "output_tokens_details": {
+        "thinking_tokens": 412
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 33900 matches the contract rate, billed qty 2 equals PO-1021 received qty 2, the vendor bank never changed, and the only same-amount invoice in the prior 30 days (INV-1049, day 30) cites the same PO, so duplicate_invoice does not apply. Note for review: PO-1021 (qty 2) has now been invoiced three times (INV-1016, INV-1049, INV-1068), which the policy does not cover.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2567,
+    "output_tokens": 592,
+    "output_tokens_details": {
+      "thinking_tokens": 412
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

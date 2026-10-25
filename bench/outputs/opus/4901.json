@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0265,
+  "durationMs": 3127,
+  "httpStatus": 200,
+  "id": "4901",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 21's 12:25:15Z ping, about 4 minutes before the 12:28:53Z purchase, puts it about 0.02 miles from Love's 229 Cotulla, and it stayed there at 12:40. The 93.4 gallons are within the 275-gallon limit (250-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAYKEAgTGAI4AUIIdGhpbmtpbmcSDAn4xLznYY6uDbEevhoMhu3OFvm7jGWfqTW2IjCsvk7fgKR6AnaOM0eHK//enNvjmh4YSllpZ489sG8SUv0Rlq6fr3PXNEK/N/QS/hcq5QXv/tEN/2yYaA6jY1hfmHsUNyBNXT4ccpIjidVNfJwElOoSqPf87cBB764iDGxsghQsgaFqtr/v4QwDRRHW9QeLciKvMnDEPwf7mim83Te5A8o38sib2Ed11bfxHUxvco+jtpgN+04NIfQq7sV2rw8ricE0cRGdB6qHugtw8dlEA/czz8zo8VyMv3Rhipfv+Y4O/WWWR9eXperJ+56jPF04Jr5rxV+kSsDeC9+HuA4ZQScQq/5xe4S33gLjncqfk1wmxc+l0ujAqtYU3c/wyf89Ok6dN/5RUp9erv4pY5pFudgWFuc+qoHLaCIoPaTfyFU+4X3PynySa7K3i9WQ7JJYcuLh14O+WSaEa8ZW2oVQmn2xKdUBjPtZI6zQvDJ8P+N7GOI51Ml5Ysw8KNwW/hs1nYTBfDIFzqMP2nMwcSq+w7AzmOHkqnw8+exrnqNQd64jxtHv93S8ilg5tqkH0kWtlmYuR8IRQY9Lk/nuXvcAKHkalgC8VpccwJGXuuM7FRHOJVLcGv3KwzkhT2u5BPOTkFdqimC/r+EzMLiLu9ce1wCfpo8muvHY46LpyMG6XtqQe+ZFd+zXUunRHNw75oijPGxwcenov3uMtTPS+c7bzJMd11IMoBhWhBpnXD3tVti2dCKI6/Dz54JSzl1Cft+M8sc1z0Zyl9zV4keG+aAaQO7r0lIk4soxhN0/n+QcIUm67y3svIfD7KXIw6QosQmoA1+YT4rNiCq5lU2vCwHyizJFTbwqofvCCEptMp0AFzHlqCIXH4zR9QuNHGXCzepWuhHQ48AuZus5sqSZCU5P848/BFDgZpANXHCUrhLU0DvrvWzavEttWiFmOj1+I71m6pYBc1edWxtN7Nvt82Q/wwjKimFYdkdDvFlU9JqRVnDBoYT44A2wAJp2xtND8T4+Y4grVnjcCJMSPbjJOQJ1S45nWoMaSd5FLBLPFL324yNi6SxnSOcQpOkRmIbM6gF7IfaSO9cYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 21's 12:25:15Z ping, about 4 minutes before the 12:28:53Z purchase, puts it about 0.02 miles from Love's 229 Cotulla, and it stayed there at 12:40. The 93.4 gallons are within the 275-gallon limit (250-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyz7KHWNTiFnsh88TSJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "thinking_tokens": 132
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 21's 12:25:15Z ping, about 4 minutes before the 12:28:53Z purchase, puts it about 0.02 miles from Love's 229 Cotulla, and it stayed there at 12:40. The 93.4 gallons are within the 275-gallon limit (250-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 260,
+    "output_tokens_details": {
+      "thinking_tokens": 132
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

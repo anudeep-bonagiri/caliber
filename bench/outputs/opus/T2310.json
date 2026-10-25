@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01846,
+  "durationMs": 2350,
+  "httpStatus": 200,
+  "id": "T2310",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1017 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-22T14:57:39Z; the last one there was on 2026-09-04, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0QUKEAgTGAI4AUIIdGhpbmtpbmcSDA+MYp+zJOMmZNMcSxoMdoytfu3hxXy+TU/6IjA4ueAYKWJINl5IKFVMWKmrW7+HSwiiRY/OyXAWvpv93C75epyFObDWdZrCBb6IFjcq7gQJSaTCRtZYVCWS/0KR7Cu7hXTtRM1FV5YPy6u2nln5pX/mwEmfZf+Q9GOdGzxA5g7aVoRHrfX02HTHKWfWjgJDi5bKGTSj+J6RkqbJQLjvxO2OSm0ahwyWwnLnw8vNZhA2pDhXv5p6Zw+tgfWDYh17T6Z0vlWGxbWQ4HY+heKVHCkL5ONM86BJRjESMXZbi082RPx3XTtuv5bI5cHp769UXLULBFQ7j53FtjO6CNNLXyyMJqyKyng/9UQaGZkl3uBpMhgSMo0HqnBZLH4OtdbHf9AP+eNP6r+LmUs0jie1nH4iNA2maWk0wnFaeMiaHNjyQ/ueQQQtBx6kyzH3/SmdFfBWVmiKr67FYE55VHH4tE0xOkE26qhnr8S/egurQTiRWXI7JoJlWvRnjbEtfZ7LZPkMD4ugdGKUXgtHwI9PGApDa8vLnmsJaxlYp1JUdzOYpsL0N7lsfkAFwsTTEHsmyh7V+NTpuWghby+EQpWlnZ7xliu36K0XHQorRgFoZgo+hMb1shKXS1Z2rhmEYadmQTm9sawHTpkgLyIdRk2r7wEjYzthFjVfQdZwIxNmvBRADkB+slRAxPLBSc8UOzOwrSmYnXk0Z4co0NA/Ynzn/B9XQswoGb4V0oVLofoD7S3hzwiSetB4GEXz0xpOdsVXfrclD3AE7rzX6vlYT+XnWe048CflTP7a9IUNPQT3GpEKlYC9cL09f6r9TQtzWFLp6/HquKXno0mlsSDi8/Eywp6Bi82Yq+e1HwslZ9AhTahf1jrP5aXoWrr3Tdf1ZQ+g5R27XRCKT4UN/blOHwnMC1lQvR/dozrFRP1P4lz8GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1017 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-22T14:57:39Z; the last one there was on 2026-09-04, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzGM5yJZ3qU8ULrq7dp",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3810,
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "thinking_tokens": 71
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1017 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-22T14:57:39Z; the last one there was on 2026-09-04, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3810,
+    "output_tokens": 161,
+    "output_tokens_details": {
+      "thinking_tokens": 71
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

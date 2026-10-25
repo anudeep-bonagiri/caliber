@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016216,
+  "durationMs": 3213,
+  "httpStatus": 200,
+  "id": "INV-1099",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1099 bills 2 dpf_clean units but PO-1027 shows only 1 received; propose paying the received quantity of 1 at 51700 cents (rate matches contract 24, no duplicate amount, no bank change)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmQcKEAgTGAI4AUIIdGhpbmtpbmcSDMIwnzlovCxhwP+wuRoMtbvxm+6uRBMRw++rIjBEUKZR1tDNSVbr124dF3jfbeoiRDe6uE9XwNNgUCgHrTaw0Y8Atv9kMXhlOhSBKfEqtgZ4/7t70ImkK7uzqpdkb4YqJtqv6lPaePCk/u9SnKuJL6GLS108sH80I5oSNwPftU7MPv6kpJZvM8rgXQifRTrDeo8zPrCF+FMg570d/r9Ynhcxvsv5nzd7alm4ffuKAVrIET/9FjJzRETX4OLgMOWGk93GNZs2Fy0+CyNyfy1bU+PugI0x8iq2ggLroOM7gNMVp3j2sxYQOqEH0ZcYOpXzixQMtgyZksD+/dKdoEH8gGZ3fdwurt+uQynoXpQrQVOVjVrWBTTtQv+E9fv/cAxj6GiT9bg7S9JUIEd9nP+e//bpkK7Lk1wgDKCeR2W18mWXjzmFaUd21V0rDXzIQDlLS1KmC0d13zGVCy0VxEPe/l1CbPe+T2CSg5vnYiMWpZihkGu7/N65ZXDqinF/lDhv4maq5Yd9TRAzo90+CNMl7rtkAxRnrI/5dvi+6cp+vzDsSnkFCmyzvN4xVuKQ9AAL1g0rFdSlXz2CB4TS8TeoQeT2JLjcAMmhu9v1KViyIS2N2pUBnjwVGQZ/K4jx8a0oVoPK7N+PskqO6SHgkpU005q91RMRR1XWlB/5b+RrM9D5YmJ5U/iSH8G6yQQQ4TL3hjZgW62VfS3pmHR/srekuix3G09owhByEV8b6bpCr6vyiLZawMzApmxnpvuC1eAZtlayLNZbIKlbn5/tQo9r5curjO71scqhgpq3SRrc7eK8R7pZYu47u2kg3gU+fGWlvRSgxio8z2DMoJOvc2O0PYGygQMddtTz6aLMPF/rriZSS6z23tqUirMswO9gMhfh84rQq26E0jmyrWkcbPni+LBbHj2SuVL0dsrR4vGeSLhvZXjXp4RY+nGXx64jYfGjJpSbtZ91zMS9XHHN9GgYHn4kRxJGhIFiBXAG8ZuJgEaWN7k2VAQD5DmsxUvXYXKaZlhAntr4NuJQXOq9rdXaiqZ1mDs7Wm+Rkq1ahyLBGyo2GXEJTxOwbv4Wt6xWyMzEnMKQgGf7aECLTdLYQXadJNUnxvUSVJd000Axh4VIVbVauvzD3dJoT9jF9vUJ/zOU8a0Fgo+q5tJ5zjjVKskClciKiuiCjg8R9GIqbx8yZEHT1wWVJykYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1099 bills 2 dpf_clean units but PO-1027 shows only 1 received; propose paying the received quantity of 1 at 51700 cents (rate matches contract 24, no duplicate amount, no bank change).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKeTa4o3bNZfd7nsPj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2829,
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 143
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1099 bills 2 dpf_clean units but PO-1027 shows only 1 received; propose paying the received quantity of 1 at 51700 cents (rate matches contract 24, no duplicate amount, no bank change).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2829,
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 143
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

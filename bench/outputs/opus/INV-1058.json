@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0245,
+  "durationMs": 9145,
+  "httpStatus": 200,
+  "id": "INV-1058",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule is triggered: price matches the contract rate, qty 1 does not exceed received qty 1, and the bank change on day 42 came after receipt on day 33. However, INV-1007 (day 6) already billed this same PO-1012 for the same 245000-cent brake job, so this looks like a possible double-bill that the duplicate_invoice rule misses only because the PO number is the same; confirm with Gulf Coast Diesel before release."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No policy rule is triggered: price matches the contract rate, qty 1 does not exceed received qty 1, and the bank change on day 42 came after receipt on day 33. However, INV-1007 (day 6) already billed this same PO-1012 for the same 245000-cent brake job, so this looks like a possible double-bill that the duplicate_invoice rule misses only because the PO number is the same; confirm with Gulf Coast Diesel before release.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyu4t4CfDUMrXgbDApe",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2240,
+      "output_tokens": 777,
+      "output_tokens_details": {
+        "thinking_tokens": 609
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No policy rule is triggered: price matches the contract rate, qty 1 does not exceed received qty 1, and the bank change on day 42 came after receipt on day 33. However, INV-1007 (day 6) already billed this same PO-1012 for the same 245000-cent brake job, so this looks like a possible double-bill that the duplicate_invoice rule misses only because the PO number is the same; confirm with Gulf Coast Diesel before release.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2240,
+    "output_tokens": 777,
+    "output_tokens_details": {
+      "thinking_tokens": 609
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

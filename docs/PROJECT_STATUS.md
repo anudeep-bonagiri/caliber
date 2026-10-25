@@ -1613,6 +1613,58 @@ The Workflow `caliber-stale-holds` (id `caliber-stale-holds-5`, `elastic/workflo
 - Sessions: builder-S (dispatch-ledger-fc) idle, holding for job 7. The 16 other builder sessions were closed at 21:30. The director moved to Fable 5.1 at 05:10 after a /login; the commit trailer names the model (D-4).
 - Open on Anudeep, in order of deadline: the one ASI:One line; the two takes; Devpost paste and submit before 9:00 AM; caliber.compare forwarding; history rewrite of a87192e before the repo goes public; scoped Elastic key; harness deck for Task 23.
 
+## 2026-10-25 05:58 PDT Builder-31: Claude Opus 5.5 baseline (Task 31)
+
+Brief: context/briefs/2026-10-25_0545_task31_opus_baseline.md. One Opus 5.5 run through the Task 22 harness, same 558-row sample, same prompt, same $15 cap applied to bench/outputs/opus/ on its own. Started 05:40, run 05:45 to 05:54, scored 05:55. Nothing in the staged take (SpacetimeDB, vite preview, worker, agents) was touched; no process started or stopped; facts.py ran only with --baseline-only.
+
+Result, code-exact precision / recall (bench/BASELINE.md, generated 2026-10-25T12:55:10+00:00):
+
+| Code | Planted | Caliber P / R | Claude Sonnet P / R | Claude Opus 5.5 P / R | asi1-mini P / R |
+| --- | --- | --- | --- | --- | --- |
+| location_mismatch | 20 | 1.00 / 1.00 | 1.00 / 1.00 | 0.95 / 1.00 | 0.71 / 1.00 |
+| capacity_exceeded | 6 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | n/a / 0.00 |
+| rate_variance | 9 | 1.00 / 1.00 | 1.00 / 1.00 | 0.47 / 1.00 | 1.00 / 0.89 |
+| duplicate_toll | 11 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 0.12 / 1.00 |
+| duplicate_invoice | 4 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 0.29 / 0.50 |
+| vendor_bank_change | 3 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 0.11 / 0.33 |
+| short_received | 5 | 1.00 / 1.00 | 1.00 / 1.00 | 0.62 / 1.00 | 1.00 / 1.00 |
+| overall | 58 | 1.00 / 1.00 | 1.00 / 1.00 | 0.81 / 1.00 | 0.31 / 0.81 |
+
+Where each model failed, from the scorer:
+
+- Claude Sonnet failed on nothing in this sample.
+- Claude Opus 5.5 held 14 clean rows (holds by code that did not match a planted row: 10 as rate_variance, 3 as short_received, 1 as location_mismatch).
+- asi1-mini missed 4 of 6 capacity_exceeded, 1 of 9 rate_variance, 2 of 4 duplicate_invoice, 2 of 3 vendor_bank_change; held with the wrong code 2 capacity_exceeded; held 101 clean rows (holds by code that did not match a planted row: 82 as duplicate_toll, 8 as location_mismatch, 8 as vendor_bank_change, 5 as duplicate_invoice); 1 row had no parseable answer (1 unparsed), counted as not held.
+
+- Opus 5.5 tied the kernel on 4 of 7 codes (capacity_exceeded, duplicate_toll, duplicate_invoice, vendor_bank_change); it matched the kernel's recall on every code and lost precision on rate_variance (0.47), short_received (0.62) and location_mismatch (0.95). Detection reading (any code) 0.81 / 1.00, 14 false holds, 6 of 6 decoys held. Sonnet 5.5 still ties the kernel on every code; asi1-mini is unchanged.
+- Spend: Opus $12.8491 at list ($4.00 per million input, $20.00 per million output; Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)); 2,358,546 input and 170,748 output tokens (output includes thinking). Rows answered 558 of 558; stopped for cost: False; partial: False. All 558 replies parsed, all 558 stop_reason end_turn, no max_tokens hit.
+- Model facts recorded in bench/outputs/opus/_meta.json: requested claude-opus-5-5, the probe accepted it on the first try (used claude-opus-5-5); temperature not sent; thinking API default (adaptive; cannot be disabled on Opus 5.5); effort API default (medium on Opus 5.5; Sonnet 5.5 defaults to high); max_tokens 4096; request body the Sonnet runner's shape (model, max_tokens, messages). Footnote 5 of BASELINE.md and the paper's protocol paragraph say the two Anthropic runs sit at their own default effort, not one shared setting.
+- Sonnet not re-run: bench/outputs/sonnet/** is byte for byte as committed (git status clean on that folder).
+- GPT: not run, no OPENAI_API_KEY in .env at 05:40.
+
+README paragraph (Anudeep re-pastes only this into Devpost). Old:
+
+> **Model baseline.** On a 558-row sample (all 52 planted errors, all 6 decoys, 500 clean rows) given the same records the kernel reads, Claude Sonnet 5.5 alone tied the kernel on every code: precision 1.00, recall 1.00, 58 of 58 held, 0 false holds. asi1-mini alone scored precision 0.31, recall 0.81 (0.33 / 0.84 counting any hold), holding 101 clean rows, 82 of them as duplicate tolls. Caveat: synthetic data from the same generator as the clean rows, identical inputs, no fine-tuning; the kernel's precision was measured on all 7,944 rows, the models' on the sample; the kernel is plain code with no model call, the Sonnet run cost $6.38. Table, prompt and raw outputs: `bench/BASELINE.md`.
+
+New:
+
+> **Model baseline.** On a 558-row sample (all 52 planted errors, all 6 decoys, 500 clean rows) given the same records the kernel reads, Claude Sonnet 5.5 alone tied the kernel on every code: precision 1.00, recall 1.00, 58 of 58 held, 0 false holds. Claude Opus 5.5 alone, at its API default effort, tied the kernel on 4 of 7 codes and matched its recall everywhere (1.00) but held 14 clean rows, 10 of them as rate variance, for precision 0.81 overall (0.47 on rate variance, 0.62 on short received, 0.95 on location mismatch); 558 of 558 rows answered, $12.85 at list rates. asi1-mini alone scored precision 0.31, recall 0.81 (0.33 / 0.84 counting any hold), holding 101 clean rows, 82 of them as duplicate tolls. Caveat: synthetic data from the same generator as the clean rows, identical inputs, no fine-tuning; the kernel's precision was measured on all 7,944 rows, the models' on the sample; the kernel is plain code with no model call, the Sonnet run cost $6.38. Table, prompt and raw outputs: `bench/BASELINE.md`.
+
+The identical Opus sentence went into docs/DEVPOST_FULL.md. That file has no verbatim copy of the README paragraph; the sentence sits in its "What we got wrong" paragraph, the one that carries the Sonnet and asi1-mini figures. docs/CARDS.md "The model-only baseline": the Answer line gained the Opus clause; its "Number:" line still says the model table is not in FACTS.md yet (stale since the 00:22 facts run, outside what the brief allowed me to touch). context/JUDGE_QA.md has no "Why not just ask the model?" heading; the Opus clause went into "Claude Sonnet tied the kernel. What does the kernel buy?".
+
+FACTS: `scripts/facts.py --baseline-only` (new flag; reads bench/BASELINE.json, no ledger) rewrote only the "## Model-only baseline" section of docs/FACTS.md (one hunk, from the heading to the end of the file; the header line with the run time is unchanged) and only the "baseline" key of docs/FACTS.json (checked key by key against HEAD). web/public/FACTS.json was not touched (web/** is outside the brief), so the site's copy lags docs/FACTS.json in the baseline key until it is copied or the next full facts run. bench/test_facts_baseline.py: 2 passed; facts.py --self-test: OK.
+
+Paper: `make -C docs/paper` built; 4 pages; `make check` no em dash. tab:baseline has the Opus 5.5 column and the protocol, results and cost-per-row sentences carry the Opus macros (opusP, opusR, opusDetFP, opusCostUsd, opusEffort, opusFailure, all from BASELINE.json via numbers.py). With six columns at scriptsize the table was 31 pt wider than the column, so the tabular is wrapped in resizebox to the column width; no prose was shortened. docs/CLAIMS_AUDIT.md was not updated (not in the brief's file list); the baseline rows there should be re-read against the new table by the director.
+
+Checks run: bench/score.py (exit 0), facts.py --baseline-only and the FACTS diff read, pytest bench/test_facts_baseline.py, facts.py --self-test, make -C docs/paper, make -C docs/paper check, em-dash scan of every touched file (none).
+
+### Tried and rejected
+
+| What | Why rejected |
+| --- | --- |
+| Fitting the six-column table by dropping the spaces around the slash and 1 pt column padding | Computed to about the column width with no margin; resizebox scales the generated cells to the column exactly and leaves numbers.py's cell format alone. |
+| Logging progress from a shell watcher over bench/outputs/opus/ | baseline.py already knows the row count and spend at each row; a --progress-log flag (every 100 rows) is one place and exact. |
+
 ## Tried and rejected
 
 | What | Why rejected |

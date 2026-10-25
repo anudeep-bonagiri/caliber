@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024832,
+  "durationMs": 2440,
+  "httpStatus": 200,
+  "id": "1166",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 13's nearest ping (19:35:00Z, about 1.5 minutes before the purchase) puts it at the Georgetown Love's station, and 33.5 gal is well under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wUKEAgTGAI4AUIIdGhpbmtpbmcSDGnYLbA4QKrAxwTjKhoMbZxHLOgBKOJ03HKYIjBpG3K7WpNJP/pAVuZmODS9NZDM+FDjBUkZJYqDEuGR9P0i2fk4g/+q/hWUahVFO8wq+AQJKkD9Nnwhay7acE81o/ym2B5NRx7QmSvrW/ZK9fWz37iGU3b9dNpFFBIa28+OZ1Fusq8dixhTAbvAc9Ue87VWcGTsy2UW1eVExRSEi/A/vIPya1If+DrdtXskKZ+IZfWkum716LmNqpdcFLkZXWgDKvBVAc123IgiQ9L8k8WlStKfeLkaHsWKKhS5JJwLftr7qL8/WOA/XOyUfeRg8dkKC6cPCt2blKn4K4POhbDyvfHzgomsYohIZGkwShWUMaysffGgQWH7dVT2wvpqKceseaepm+0PFwQWvFeCwQMiLg7MPBoi3iUNAXRNLF3R8Qm1H9uQ5ntwLRP7yTxrD978zDytmYmSeaVYZiTrb3xwKa50oith/q3FaaYoLPjkjHknP+H8jza74AXUhfaRDoTOf5jzrKKBE8+c5tCOjW1Udk2ApoJUeM/EyaZr+u6eL7CsqbyQbHeOpIJZowq28uF6AkqYVfrHNRCa0qy/PJn3WIOnH+NPrzjqMqswNVIxzkzGRv4f1wFQ7tfHRDbgT/prwl0y8cNc0myh40iRklKr9c5Q+/BQDqFtoGdMXRoudDNlrsI209/L9Rx8eh+TxREGBgpYLHb7aKtWhTY0fRg9bf6WamdJkv3/7RF28XpKD82Q1PvRxqPY2TFIUrcD00mgL2JwElxWRNVrb935IxpoUntahbFyttTKXdsOejVEUI4R+w7Tyd+3swOqUDgMsjQgkVbI7c+F283SaEm95k5nYEgnKfq2ie0O6OxVqRxi/HHG0Uw41n8+LJnIGjsRaN63bDLTPJfT2Zbntae9SHNVkSnctJvHxS26qjXrruXh1weqIEYe5pnxnhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 13's nearest ping (19:35:00Z, about 1.5 minutes before the purchase) puts it at the Georgetown Love's station, and 33.5 gal is well under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywukTo33Kkam3QoQTQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5323,
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "thinking_tokens": 77
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 13's nearest ping (19:35:00Z, about 1.5 minutes before the purchase) puts it at the Georgetown Love's station, and 33.5 gal is well under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5323,
+    "output_tokens": 177,
+    "output_tokens_details": {
+      "thinking_tokens": 77
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

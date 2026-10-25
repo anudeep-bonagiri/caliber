@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019656,
+  "durationMs": 2438,
+  "httpStatus": 200,
+  "id": "T1593",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1021 at SH 45 SE Plaza within 10 minutes; the most recent one at that plaza was on 2026-07-22, so T1593 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzwUKEAgTGAI4AUIIdGhpbmtpbmcSDJZ6MxWGtl6lU66JfxoMgcYhaGEb7wLLRj97IjAsWYLKAY6Hw8FubYuhM06oyaB9UzrJKxtiIS8CdEBpJNGczbcaWtI6CeAXM1xoFfUq7ASU7YFUxkt4V9huoCkJJz7Gqz2N9FqoH0Gdw0Ms1aBj2sHCASqqRgI/iRsxL+4vjk/NkpqBVXhha3tnJCfS1L/qS/oDBEvPlhCzxwPIeeVePHM2BzXlFfLdx5lw+b4WqEa82nFMxVEDy0e+4lbvtotZt37ENOCRRYrbFm6hDbgv5o65Psel1PKI8KI9l+xYCTvJQIVGVwgaV0g79z2NIq2uvuWk57QmZ/2WaFbCc76gTA5Cmngz4xTJukgKKPf7nr8eDnYuGmO4t9YR6/QIiOncD3LmkMlDsp8XSz2Go3NSR68sieU3OB26ixNspRvuBthLF1UTdTjoqU2okuNzQHOS8vcMeIFQIgqPIsbvw7P+zzrNglvsg3JJSr+mA9YRj1+074Yy9d9J+si77Ge8BVgcKyeE8Dj2KXjsS+L/KP053hPWN/kOC0AmDMiFnl/Uk7vg5C+VN6tYNsm+rTHsdZ6zC7qAhLwNAhatym1/15tvdaMUfFTi16CTOsfVYd2Obsu0f9KU1lZ07d0sx93dnkwAknTxdCiUxICCILqx3oJAvUR/4FqEqHL8AVo5+YUFpAA3p+K9Xpmi8h6qYzh2R1muwRdWV6CZ08WffnubN1kLGPc+F0JRVg2CWLkE+rHow6qUU3ZbZrPyf6yZ9lDOcl4oP5ad3O9q6/BAD7oAvdoCD4Vmn6Q/ldg/Vdrz9SlFkDk70JgeQGLF0tiORfrvhBd3G9DI/LWWQWSJRL0KCTrtoSqflY4ayPsNIbeCtoTm75tEaFZqhOeNH5Y4W/VY3Q+MpxkV3FuV9l7blkesUvADdockQyRwEfrUpu/zrxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1021 at SH 45 SE Plaza within 10 minutes; the most recent one at that plaza was on 2026-07-22, so T1593 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzBqWrzttWgtZSSNUvi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4139,
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "thinking_tokens": 70
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1021 at SH 45 SE Plaza within 10 minutes; the most recent one at that plaza was on 2026-07-22, so T1593 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4139,
+    "output_tokens": 155,
+    "output_tokens_details": {
+      "thinking_tokens": 70
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

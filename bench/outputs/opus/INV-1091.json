@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023076,
+  "durationMs": 6535,
+  "httpStatus": 200,
+  "id": "INV-1091",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 56800 matches the contract rate, and even the effective 59050 per unit (118100/2) is only 4.0% above it. Qty 2 equals received qty 2. No earlier invoice for 118100 in the previous 30 days. 118100 is under the 500000 bank-change threshold. Two things to note: the 118100 total does not equal 2 x 56800 (113600), and this is the fourth invoice against PO-1011 for qty 2. Neither matches a hold code."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 56800 matches the contract rate, and even the effective 59050 per unit (118100/2) is only 4.0% above it. Qty 2 equals received qty 2. No earlier invoice for 118100 in the previous 30 days. 118100 is under the 500000 bank-change threshold. Two things to note: the 118100 total does not equal 2 x 56800 (113600), and this is the fourth invoice against PO-1011 for qty 2. Neither matches a hold code.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrfiU9RFFvizLYhnk2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3004,
+      "output_tokens": 553,
+      "output_tokens_details": {
+        "thinking_tokens": 370
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 56800 matches the contract rate, and even the effective 59050 per unit (118100/2) is only 4.0% above it. Qty 2 equals received qty 2. No earlier invoice for 118100 in the previous 30 days. 118100 is under the 500000 bank-change threshold. Two things to note: the 118100 total does not equal 2 x 56800 (113600), and this is the fourth invoice against PO-1011 for qty 2. Neither matches a hold code.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3004,
+    "output_tokens": 553,
+    "output_tokens_details": {
+      "thinking_tokens": 370
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

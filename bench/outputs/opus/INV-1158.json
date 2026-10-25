@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020484,
+  "durationMs": 4637,
+  "httpStatus": 200,
+  "id": "INV-1158",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 34500 matches the contract rate, billed qty 1 equals PO received qty 1, the vendor bank never changed, and no same-amount invoice under a different PO was received in the prior 30 days."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6QgKEAgTGAI4AUIIdGhpbmtpbmcSDNAAAFLdevVqj/ouwhoMzwiEWXVpQDbvKtWmIjBxN41De6xfR3ZqKELedP+Zfdp2QkD21mB4AZnd+H3OlhnP+VUog1JTz3jWt7Fqq7EqhgjHV4DnvU+jsX2CYfBSxS1pjFDelbI28TFU8EVbZYFXwr2La2NawMyu/Y5CIBLdBCjYneuQLSXvt4NWUKAjtbd1WyEkprzL+UFvmUIALf1FDEkKsbCfByx+G7zli8eqEFQ+/RbGqL2IkN+UliLEgFdXdR49zPHpkcCm084tJhw85UWgfo8NTrMGHl7dnQOJ8E3xZREhL4+odLSv6/MNaQZTJFmCQyIuEex6OnUPwRqsN9E7pMDz5jgeeYDeef6IfhwMJWxZIe95VSXE0I/WnOOETfVyTWcLMxHqyAJOTfNMaSAQgReTVQLmwZkkIbBIDvL9SxEhNeC5n2ihPiWPBoE7w1KyqAdOq1CL6729SqUqre4flYfHxNqKq5aDUBOjeB5PmgSBB6Hstc//qpeQgycYxeOodlwx8ef3t+61wyeMm1od+Viv4K71nngwGrnFRWoHYEnpP8w89OhKxFCVVdwquRAoT1keZd1sTXX1icU8HfB+zuVm2QWcaEWcAvBZAoi/zR6xb4KxPf/DpXYvwtNM0iz7CAf7cVMS2gsyuPOdygF5Ln74GDdOzYOV8asFNMhTFqbSF5m1o2j634Crwr43St6VPHim2RpMsGxrFyGehGCN3j5VqA+gip00LMGMDgikblKg4yo/DdX/863g0MfMSGLi9iUoflzJCnFI6lh/hdKtucjK3ZtYBW27rDkDNHDL9x7T9wWwNGcKeCCF1f02SKDixkHqsfQ+M60yP4Ef6IIVB1hoB+ECcaavKGmbAROMDQ+21EXyZKo4rKasKv8qjXKOQ7usdQsYnMTo89g6OSQ/Nadi8e47YHO/qQMERqZ1bKiVZQsOYBuDyz8+oHh5VOU0eHs+MiOBtnd0Zhcig8/SkFVSv4b0XKrG/TFmVKwB8yGReUE+XQWQZoIiRhAWYOrWX1px5gOmhxdExAzxt56vio2mZAI7Zi6sFTZuIUaDWdjdNaEcoUteDqLBhRUcZruTiFjxZRQU5VKW+edLHBIwhpYq9DiIRXHNRseQ8IyShTfRU34x29mFF/pIURYp3HIObgGWrJcptVpoTavqCk9Z+qEG+C3yXGAClp2tUu6TntLk9o3CNjWR4ZMt3QzsroCcDZrvHaV39d4AtRzcTL9iM0ayXoyY+9/gFnXupo97IGn3cCSWVgJFncAwpodKt8wP1BwPIgEoNOav5IbFFiqCrxes2LOFe/OH6nL+3ttl5qc7LQe/cBhj1HZ2eaDitIkoIayPd9yIaOGI6HUXWZy8npMWaPEnQmuOAyL2KTOngblZNfVjWvbGaAl04tE4aPXI8k/PvYAFBc6T6iMBhC9T62awwY2rOPuJgPjLRTCRO1//A8VXQQuOZ5v1WE5c/FgrAtAOGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 34500 matches the contract rate, billed qty 1 equals PO received qty 1, the vendor bank never changed, and no same-amount invoice under a different PO was received in the prior 30 days.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzM6by8b642hoGwJMZZ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3411,
+      "output_tokens": 342,
+      "output_tokens_details": {
+        "thinking_tokens": 257
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 34500 matches the contract rate, billed qty 1 equals PO received qty 1, the vendor bank never changed, and no same-amount invoice under a different PO was received in the prior 30 days.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3411,
+    "output_tokens": 342,
+    "output_tokens_details": {
+      "thinking_tokens": 257
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

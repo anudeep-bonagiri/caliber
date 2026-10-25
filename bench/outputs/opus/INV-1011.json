@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013676,
+  "durationMs": 4492,
+  "httpStatus": 200,
+  "id": "INV-1011",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies: unit price 135500 equals contract rate 10, billed qty 1 equals received qty 1, no earlier vendor invoice of 138625, and bank details never changed. The total exceeds qty x unit by 3125 cents, likely a tax or fee, which the policy does not cover."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QgKEAgTGAI4AUIIdGhpbmtpbmcSDM6rtUq3dsdgOqUY2BoMWpVBYI1wHlaQn0lIIjAg+am9rgEX7DHFWkNhBko1KWDwbniV6j2dPAOBhrJG0NkqYfpG06+373Bv6PiLim4qkggz/aM9vnsjUED46Nok42Duvx2Tvr5KHyQobL7aHOFasFbnHr+8ea8T91G0macgWiQ7bbNhiSPmKQomhE3400xdm8foogSi95af46A9NRuLETu5aN1jLp95d3n475RlqvKb7lJnSXUyrqqfA995JaHnPvyVvaAaWCThTfIjepp8VbZOQH/Ug0d7xTUK/40j033CQ3RzNLW6swZTxCXnEM0BUjQZoeN2710i3NK94n9piA7PNdJktTpdfYZPWEDOK/C1grqxS91UVbS55ttqu2brRhRrU5XEAugUZSaQ6j32aA/hI+KmBPx9UPCLLjCwo/nEeDWU20JGXdOEFboi0jAiLF35SCcGysgf4Qjt7lp6f1y0no/XII6pb0R7MbC159GnIuT4KY/GyamYrJl+MG1qqFysCGrssVj+ve8lHNml41JsPLknDC4YlxMtd4nZ9AF2+6ZxJHdZcPyPOSSYGqR4obQuLvO2HTaHqS7t3RN/AYaszS+wFwKLBNL1KsIgznrexvypkKhV8g+lazSbm4FsEK53Ea4dFXxdmn8x85ZS9S4YTPBk5V3nXe78kiv7O4IHlL+BEJB/q1Y0WmUoUEz/rV3W9Gvv14wjnAyCZ49hDTIWlOL5uBFmmV1ulrYyQ70eZFjrirR/BEoy3jyHWcqrwixjJCJ/1tW+2E5Mm8vdDWWhbzi+7brBZ7MWfjwjYrtACdkLUj1pTdYBBH+tyhC7H88LqxlzumDgkL73UDfpLYFbhJlp+/TAH80n4J7jzr0D1wKwVru7EgcpmV/p1JGF+PPfrmLrhvan0qX4HS8NpBn0cqkhvCc9guSGd4fvWlc3auS9JyCTrGL0Zi7YFVOfBpGrHBjRE9hYgdE4fu9SOSaVeXR/v3UDZVCFIPcTAye1Ws0A3pZ6kjTRarOyaruUxRALT15d4IugJN9bjzMiZJ3WHXnagSqT6HIfhXliUa326rqLx7zC7EOgB3E/xIoNOIrQSInYqYwaX0tex9CqJiECoou4+nBEWBY81tfTMXAcCJPgeVEQrRPIDIIh1h8Vbqn5mF4PLZIy6UDD3PRJgOzxYkET7DGlTK+OF1ldoGejQV21JoiOfVWev2LcnxoS3C2KKeYiROnRubtdy4slKMlfYvMgquoge2NK0rRNxWxcLKRqzglzjSjEfGtlZp9obpWSz8H/CuLY/DsXjoPKFav05pONBI4/UIzCN6DwwSKMUt68R8YzZDwRiyXPn1X+P+4NnN/3IuZE7FDbo6UTZ85zNaLyL3S8LyCMsw6ZM1lePtJnIZfDpXSi6MJl/9oovqz9WKBX68CwSCFnV9cn8cJEuUeKnljRUywsBK5GwWiuPE3m9vCnMaLOQXRM4r4sZZp3qXXsSs31nAAYO+KmyLA5GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No policy hold applies: unit price 135500 equals contract rate 10, billed qty 1 equals received qty 1, no earlier vendor invoice of 138625, and bank details never changed. The total exceeds qty x unit by 3125 cents, likely a tax or fee, which the policy does not cover.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyictbGUsnGydAkUebr",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1639,
+      "output_tokens": 356,
+      "output_tokens_details": {
+        "thinking_tokens": 240
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No policy hold applies: unit price 135500 equals contract rate 10, billed qty 1 equals received qty 1, no earlier vendor invoice of 138625, and bank details never changed. The total exceeds qty x unit by 3125 cents, likely a tax or fee, which the policy does not cover.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1639,
+    "output_tokens": 356,
+    "output_tokens_details": {
+      "thinking_tokens": 240
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

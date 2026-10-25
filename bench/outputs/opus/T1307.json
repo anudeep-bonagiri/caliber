@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012672,
+  "durationMs": 3577,
+  "httpStatus": 200,
+  "id": "T1307",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1023 at plaza NTTA-PGBT-01; the nearest prior charge (T1293) was at a different plaza nearly four hours earlier, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoAYKEAgTGAI4AUIIdGhpbmtpbmcSDKrnpkDSIIWNTnxByRoMvhWdlnu9ArJw8gYlIjDyGJkfltFCx4hK8MJlDtjLpgc5DW0urAeJb9PrU7KSBNwsRJwvGp60xNMgM78phfMqvQWVeO6b/C9RStsMOwmsM+SBVM5fFEUQmHBnEYra7HWO/FL1xqsDajDUQlpf76fcDBGiw/xxjuL4DXKuUSDmnk0C5qgGi/kah4wfU/9N2GngMRFK+/blCV+D3Q35fP9U2d1w0F/h//QAUpGbnZcScmCuoZguCff8DzOaIs8IgmmChfe4GAr2sUCoHuUGBJW2dJiHkDKWrnwH9TMQkyUIzm5Hf0j07D55iH7eoQX9kxIOBk9jLBmzAS48pCVefL3k2N5ZUMbgIJckEOezKJb1SH/n+0qFmRspIEY2WDzrdF1xaLZ9uMGSWD6EUfg5jYf1oREfHX/6ntWUVrDTOwwWKd6TmgP2OuKZv7/mDUuMtirVBdqZ0HYOMcdDPxyJwV776WsjDGBaedmSWO+3YYXInzvMf8JRevFM26BMvXB9/ptNFeRe5aHSlgnhU20jWEMpbarDlDFlMAe1ZKEncGceV4rTEFUYIeuDADA2u8/bG0fc4uJ+BZslokQ9VkRr4JtyZlIGrpfinAg/IpPppfm/qV9BswFOX4Y7bvOnhubJbtQwK78wMADISIS/tYZC961yNPXlNI1HP/kNejjf7V8RMm74Amns0taq99Znd0UAm5XlokmF+ahKKEAnXTSOUknfw8+ww1GhictTP5PKrLaC9Snw+l96zBmiZM3l78bNBcVVRqIuTxKf82XqEqeDPMRwMdTryyogyEsztFGTlcTKaAbK44mJBIJvkWwi0cgNEE1+r3ufgqRX4jPEwM7BY5I/DtsqGb2GwKYoTF+5Yjr/x3cR2UeiNovrBw8avyGXL+hs0kn2CRGAwInFGtADB5/kidUhtrczlZnV8MFKIUsACre4D23AeB/WDnErOIpeOe1C252i6ZFPMFPiKmxINmB+hqZkjRtWgDyMUfH/n8MCHsQmcePDvC3NsMSMZnBfLxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1023 at plaza NTTA-PGBT-01; the nearest prior charge (T1293) was at a different plaza nearly four hours earlier, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzA2QQTUb9G7kACviq5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2148,
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "thinking_tokens": 116
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1023 at plaza NTTA-PGBT-01; the nearest prior charge (T1293) was at a different plaza nearly four hours earlier, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2148,
+    "output_tokens": 204,
+    "output_tokens_details": {
+      "thinking_tokens": 116
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

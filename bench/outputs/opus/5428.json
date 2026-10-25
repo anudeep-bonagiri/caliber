@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018436,
+  "durationMs": 4916,
+  "httpStatus": 200,
+  "id": "5428",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 6's nearest ping within 30 minutes (14:00Z, engine off, odometer unchanged all day) puts it in Austin, about 48 miles from the Giddings station; ask dispatch whether another unit or driver used card FC-1006."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStwcKEAgTGAI4AUIIdGhpbmtpbmcSDLZKoDmvS40xqzhoQhoMp+UqJgddZ0UkqQvxIjAEqy4wU0PWUc1XfIo0+WFUD4vlxU4bkGPnGiEsZFzOr62MHUIZVDfG/ZeMiM05BtEq1AagK8XNt+DIWoxAEQyuBSWXeW+TU6rcwOtu5f5s0D8K6PuVxm6Ns6z0Yg5Ia5IflCRZ5HZBxKz2NqeyhvoVMRA8VqCIKy1c1d2Mc5WWXV3fPoxvgfh6hUWyq/OW3VA/q1iHrjCPhISkSLF5ow0FvmdvuVpIwMESG0v5hx1SxGiaJoYI/2jUsXK8ry5qkpdD54uw8x9IBTo9y0C8ol/OqQCzZSK+1//oe+C3IfFfDUOTPQmo9DwvNH/GcewN9slbZ+SVVj9eBJhUtccJ9uRZe6OGtVKuwl1d+k+tTWdkv5UTMfSy2uUB9tvcDDWEJ4VSJsL1d8rsYa3jcaLSOwhDO66FCwRvZOe52i/vOI/dlVIsx49yQCEjTaCQooHh3TxLkvGaut247HCxIup9P+UOp4Zm2wUeVVDLAFDJLuPpG/RpZnLignA46G3wplPYJAQfkVKtCIWN+xX13z0DUiUOvy3L9DuYQ5h4i99xnFHR4gjJn+W9w4OIBI4DBFFfaOM6aSvgEcETfaMkGqd0xxC7EABt1B3v7UNZLZLGcRKcC1M0/vTnaaXVk+o9cD+stoIhlYMc3kclkXqGzZBWXSz7jt+Ljg/LvKhqwqzjaqlm4A30nBP1AEhuCaCL7m0iTmfukHD1Ujlk/XmJTQh/SUaw2cLs1benzClaXLough4SrvFU9/mJpTordDeg4MBlIHeLle9UHd7jsOShn3cEIV6kWiK+bCfTiB/JJ+mBFJ3JbhrYN/g1TyGbF4Mbvy5NZ0WUBckoBKssVqMYLC2AC2df0IYwFz8/Tk0nk8iSG1jYXz0OjdVG7e0mpG5SksWU5rvu9DD6IAuRH/yNrtH1UQoc/rmI77TFfNNpYA/rapEysltHLF6lmVrDgvAVuoM54zOlw5ukZTncc1WDwZsiZZ7oSdfHIVE0YCZp4S/U5i/YTXqswmlariiMFKjClINB3UToiyIXdPNQEXl6JNk/oaokM7ziYOXrdBm0A6Nr/yJhWyhSx6SKDr1BqMxKFx5miqXWO+A8RED0VK4CgXxXecGMDar2gHVGIhmsi9V3Zqoum9mI0vegwD8285PLD/2N7r8Sz/4OPmx5+3OuUItwm4ll7ESOWjsVSn1N3cP32lH86/En0eIuJ9MYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 6's nearest ping within 30 minutes (14:00Z, engine off, odometer unchanged all day) puts it in Austin, about 48 miles from the Giddings station; ask dispatch whether another unit or driver used card FC-1006.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCz4MBBvxJaFdLW6Xs",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2999,
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "thinking_tokens": 211
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 6's nearest ping within 30 minutes (14:00Z, engine off, odometer unchanged all day) puts it in Austin, about 48 miles from the Giddings station; ask dispatch whether another unit or driver used card FC-1006.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2999,
+    "output_tokens": 322,
+    "output_tokens_details": {
+      "thinking_tokens": 211
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

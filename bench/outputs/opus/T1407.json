@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018052,
+  "durationMs": 3616,
+  "httpStatus": 200,
+  "id": "T1407",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The closest earlier toll for TX-1036 at Mountain Creek Lake Bridge (NTTA-MCLB-01) was T1246 on 2026-07-14, well outside the 10-minute duplicate window, so no hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShgcKEAgTGAI4AUIIdGhpbmtpbmcSDFM5XY7U7PYcGuHH7hoMEOd7JOGTdNLGP3NCIjCjxSTVSHpdeHAOYus9a82n1VitcGc6b+HeTH2uKlnUSO+7e/AqHseT9IwnyL2QvpMqowb8MSHH3WZKXMEgx9JmRf4fANFBt9ppnzwhyBsC6uWGSN4CMjXpZwuoR5MUoLXaZflTR6eEFn1ysv2t9j+xkvh53cs+7RU3ThdKUo96c1qx3xGC6ep8FJEss0XHnnJl6KSwUFpYzWuuC6L5cEb2T+BYeTd0HWEwSc9WVApGIFHQIt8aPrG8oRIduAugu7iaGky+E7YFt6hxeksE0wSYsQmUWgaa861hN3PxaYHSW0pXvwb8ANt4KiJEQT31Gb5+M3uW3kEhd6mRQZ4TygPA/wl0jKkbrk4kTpmZLHDpLxnvYdBI6vqWNpdA74aGsuWCJdaK6mLG5HROd4x9wukeN7doHz+nZur3Liinc/2dE9aRsooAK5MssQvFZLp4X0ppVi3HO/qlE2ZXa18j8vNUM1qNDFvUfOBi/E1yoMBfnox5weaKK50N0Kd/ab8UNzPbtxxpt2enkOXQdGCAJX3Z3/CG2VLTvtBS0r6VAU/7jpF1eEu7GwfF6kWdlM61x8jm8fqdpb0lUzFYPO2ctpGR2zzyn4WchsVhJ9fwzd/FtxTm7OXULekabDKNYLyiqeyCTB3CGUa5zGVwCV6VDvHtsJZiGcx6SZ9PX6u2YQbRgD0yyadIOSoVgm896gZrD4UZCQd4kGiB4hkYfIS5HxR3amdHtwAUno+2O9IgKRiwC4h7IuZ3fXgbNaa7PhMVUcIkLLaWQCJie4WPKfStmzqa+c2rtRh81EySL7enZvO6LlwGzC+qmUxQ8Tjq0H7+llqN2VsC1g+nCk+mECB/iFS9ZwwFVtPL24CBs4Hn52/+qClwwrx3Sc5u3EHpe2jkbsM4FECSvPu0TjXJgQx2nmNaMNvyI63yLbut5cuBgLnggadEEdnxul+jSbgW+oS60mH6E/rbDGFgxVmOJjAVE+RPPeGsNZxGUbvAYtA4IflLYs1WXMiJru6OIuGkxnGmi00492o5/bfaorozIfgMT1gjRuVLp38t2VdpcAnc6SNEJQ/eg+e8Z5h/2GJUIevEhoGuoVq3DIwjg/9GpcO1umBDlE7XAphSajiIm5N/n/Q8gjTZzZdfBBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier toll for TX-1036 at Mountain Creek Lake Bridge (NTTA-MCLB-01) was T1246 on 2026-07-14, well outside the 10-minute duplicate window, so no hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfKcBk8P1g1ykeYoSL",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3173,
+      "output_tokens": 268,
+      "output_tokens_details": {
+        "thinking_tokens": 172
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier toll for TX-1036 at Mountain Creek Lake Bridge (NTTA-MCLB-01) was T1246 on 2026-07-14, well outside the 10-minute duplicate window, so no hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3173,
+    "output_tokens": 268,
+    "output_tokens_details": {
+      "thinking_tokens": 172
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

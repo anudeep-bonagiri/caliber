@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022796,
+  "durationMs": 3509,
+  "httpStatus": 200,
+  "id": "4215",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 34's ping at 15:22:15Z, about 3 minutes before the purchase, puts it about 0.02 miles from Love's 806 in Georgetown, and the 33.4 gallons is under the 110-gallon limit for its 100-gallon tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4wYKEAgTGAI4AUIIdGhpbmtpbmcSDPl9EuEvztTwCC9eAxoMnlblVvg1oJ18xaEkIjBAidplmiTD/coin7m3hPNDRKXzHTP3uSL1FisC6rvUsAoKOA4qDQkUYAqKjIBPxskqgAY1x1s/k2zSQQHzXKd3cg+UuyU1Z6i9ZePgRxzscAlWpWyZGXhBW06qm1J/XP3qtmMfh0W7M0+VyyUa32RyHZqaPo5pbR9gsJVkPLeg+QdbETGisstZYNWzz/bvaJQkWGvTD4gHcZNGm1QJL5A/688tMN5RAf3hgPKY4KFzp2LCca4zaepA9ZSW0Q62uJzlTSQuv3arMbsCOW/Yy4ef0AHo0zJNlgB3KZMpZJmzjSLDlUkfss9dfxEXosw0zkJ5FMRyuSao4d4G2cm7BvMDJ9ePlFo7hi5EQ6f2LZiyIPjpLeFaSj77bjWawiwBxtckv3IXKjZ9KFx+FXVI63RZcCq0QyRrQ8Qs55O76KbZcnjTdabvzjm6eMXi29/bqFZyx/AmgRraHS3f7XA3ww0Noa5qXTZT5eAdS3YyLM95Es8peKR06ByvVNxTe8WMpY044W5YZo552WeV/oniFalgiLTK1diPSoBkfSaeXC2+8ShL8cu7ipee8OiCmI5v/h8InQtHQh1LSVozqdJBsw/oAr8+c2LdSMAjXNwcmcD9Y8p6FR7LpkvtPHj1urGCbtZmYhOUrIzcESqn/sM9mkJM3pf1NDZpGeUWWHdVRWO06RsoQ0cAqKHmpcs94t7+o6l9GzFvxMDANvt3Ny1P0Ng0a+1vLi7IGwfoIDPrOzOqmygUSlCjFnby6yjpqJTRrXik5ZuT0IndBHc0zyJfCVtflj1LHOx6fCOYbk91I3KcnZR+cZGgqArXEmvyA4ppqYKT/3MnJccM76/QiAra5GcfQxEe6rShazKZOMJBKhGCrqNxuMxcfBBYT+y0Gtt7be6P7cYOfcB6SskogeGdawyHW25PqNewbKzKn4OYFqaJsMASK2515gGwWoeJJKf29899CTF0vYTn/AU3QIa27KSmyqP6nZeYrUr182rGchmgrVbt1NTvoQ5tWp7HPj3CLZQOUMQNQUjnFuJCH0BWzEswErRwVEndqigjvD2X89f+0A/NhSeHR65gMC0lyT4Zq1zdj1IYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 34's ping at 15:22:15Z, about 3 minutes before the purchase, puts it about 0.02 miles from Love's 806 in Georgetown, and the 33.4 gallons is under the 110-gallon limit for its 100-gallon tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytAYMBAgr8Tf3EKvmy",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4449,
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "thinking_tokens": 145
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 34's ping at 15:22:15Z, about 3 minutes before the purchase, puts it about 0.02 miles from Love's 806 in Georgetown, and the 33.4 gallons is under the 110-gallon limit for its 100-gallon tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4449,
+    "output_tokens": 250,
+    "output_tokens_details": {
+      "thinking_tokens": 145
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

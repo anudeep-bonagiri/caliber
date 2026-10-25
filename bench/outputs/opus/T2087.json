@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02156,
+  "durationMs": 3148,
+  "httpStatus": 200,
+  "id": "T2087",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1006 at SH 45 N Mainlane (TXTAG-SH45N-01) within 10 minutes; the closest prior charge, T2086 eight minutes earlier, was at the SH 130 Hutto plaza, and the last SH 45 N charge was on day 29."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShQYKEAgTGAI4AUIIdGhpbmtpbmcSDC+6X1jLX6RLYrebnhoMgoLjKFWwDE+tyfl5IjBlyJximoXX0K6gUqXQ+U8GCyFQWqMncRXF13l2hmQMQ8NHoKAdFJOT8XGdyxSW1pYqogW4yWRdPxfR7UQHhr71m0LLcO93735teq91gpjphRO8aCjyprhBzEFM00Qq/M+a3EYMAbvD1db38IoTgSLeqncCcGEFiTXhHF3DxuPLnHzqdV9GcD8W6yUFsnaUGYntLgz8i4NTCqY9INUQJIuIaqGOfJOHBOxORr8K+fkzeuj8zkJSEJQHckd+kOMawwzno90wjEWX3b0vgsl0S6Tj4zmLwYQR/INin6IJxDfHDSaceVABBjJTNQklxLVH2L3cDmpvm2rTHNTwH4NAOU1U+bPg0zhaD5cyebGHUgUCHN8zfCOw/z24woL06cl06f1LeoB+gXwvqeWFhsJnYrtZtMlWOtDgD+JOh7gnewakwL2Tf4k9gibULNPRI6g5ATzS3FwQT/hruxermNKdXs7e/okPQROfA74JMpBpVXu31flveEzAvS6Vg1FjzG+mSwLanwjs863mOVRMlzIsQe3rHssu9La+5P48M6jTzwHO58XhhTWiVC6SIX5GuxoOhI7/KqBPk5lpXYlNxrejKzFEnLI+jvzNPwGtNUF5PDVAioqwRqtauQ6t6VSZwV0RYCHWaQarrZTZX+cNy3Rf34Tva6yx/3bHEdumVnHL/ogvHx5mAuq7kdmkHVCxgPxrbK4BKl53+18IepmVCRD7E4qtMMliHlnGeM2t4xQKkgDVTQlj7WsHDo/qRcMZeV6f7Gxy6aSzBpMoSt0X71R7vrg3OFzGWFsFCKE4vIZpBL1GMyOfIoMXd0CS46tHMLxeGwjAGAp6FKmTnH3A2ydyLCKQxnK1lhNU3Bgr37kXVFFREFL3cfSM3rlbuKl8NoIu6X34BgppIdhnRaXwCWdJjPZ8zo1OnyOMyvWspcd1IUkqoTF0LlCyUdFlLUivMnjasEnLsRAObBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1006 at SH 45 N Mainlane (TXTAG-SH45N-01) within 10 minutes; the closest prior charge, T2086 eight minutes earlier, was at the SH 130 Hutto plaza, and the last SH 45 N charge was on day 29.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHfwotPTeXLQwNwB3p",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4295,
+      "output_tokens": 219,
+      "output_tokens_details": {
+        "thinking_tokens": 99
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1006 at SH 45 N Mainlane (TXTAG-SH45N-01) within 10 minutes; the closest prior charge, T2086 eight minutes earlier, was at the SH 130 Hutto plaza, and the last SH 45 N charge was on day 29.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4295,
+    "output_tokens": 219,
+    "output_tokens_details": {
+      "thinking_tokens": 99
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

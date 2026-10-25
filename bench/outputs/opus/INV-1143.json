@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020664,
+  "durationMs": 3526,
+  "httpStatus": 200,
+  "id": "INV-1143",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier invoice from this vendor in the prior 30 days matches the 26,873-cent amount, there is no PO or contract to check rate or quantity against, and the 268.73-dollar amount is under the 5,000-dollar bank-change threshold (bank last changed day 18)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqQgKEAgTGAI4AUIIdGhpbmtpbmcSDGHuLktGIaeGnXhD5BoM04MRbsUv26nC41HKIjDd+HXbhhxCIA9feQtPz6YCxsamm4nCYXarSHOMWcDF56sV/gmLHcfKsFekUo+LmXMqxgcsUHDWItJDEVzT/IsoepR1XNGzBxiJf8ubk7cULkNKJhacLf2S5KjVjHbJHWD53P26RjZS0K0W/bSM8G0AAZyK/BmreGfWY/uP+k2ezmY3o2N6iooP7Q96D9zNJp8AAL4CY9SbiVN5Z603PHadGffTAhjkzP9CN1hPKlI2puQqRnwUIy1mgmUjkbmd1aGhPNM/6bmOKV+3nljCIalwpyfd1tuRYCuX4Z9fxPxJtiFW5Vev+2crqhg/XaH4vFshx4g3IFyhki5oBMG5SvNr6Bro9iE53JUIa3S89Jvs7yANQlqC7VD0A8zVf/ymCqmO3qH5eb3/xx2mVsyA80EyuyX4n7gQNr5MBzRLnd6q8Mmq6sZcjh4AUc8vluYy6DWlECTn9C1GRLzhfJGBKEo7quJ5UMrz5QkKClrj4Igkm2lyAMegqp9EWjAVfCcwrB3M3MGho1lBx5cpz1ldHgML1VS4x1F+tx+lMUYnhonsl1jGsf2mkHj5iJ8lfGz1B0SK6+JKKBvccJg2VAcnkwPFs4KKA6LsWYFA81oXHOU6wp0oXPcMj0XBKZDTCsCAzVEGgvPZiknwCB4bFjiAPay7cV5PXE07gYUVMqdCa+QUKlF8nZsebdVeGxmTqE66m3NdGREONSGPB4vkfH91gvIL0R6af9woQq000AIDqCzY3gKWB33EILq+CtRnvAd1bdRiMRsJu2YRT9xoCM1neW4rHRgvvgwo+7EpYefNyzPTf8MWFj3mr/JIoj2Cn3SXi/ZyYW3fDBc8hD/CodR4SzSp9GwjQV8a6EI7LAwmuK/S324a8l1Xwoz2GVRvKXfma4/N39WtOE8CqCBT5hv0dfMF+uSNSNPEkxC499utTywai7JdPHq1jH7v1Gmf5dCWlv0KUDEbAz5FaZpl0rkvuZWTOXUz+pZnmq7PkJ4brlcm9ArAVQGMvA/+hkb5FcUGwgAVN3UyQIEDtfRiDxWbqPrAjDQT9x3UWc9mYalTMa/kXqlO3McQSeNXNv0VaAl3aQ21Y8PWqKIZBl0urwdU8A1+HgNd1FDp4Wjn8P5WTTSV013v5BQGFt+8U1FGwldD7ePcR77XU1wqCPkJI16e+fVHAfv8bqVRCt9J66xkjJNgjB1LRf3TNd6buOcP/WaQtX+qMyO30f/VZGOGj9L5689bByXqBFvnaazQI0rwpwz8EHqH4bEIeZhS3792AtpdZ0rqaVwBJy5tnqD3dg/fAlq84ElBKuH88HHloJM0DikkLQ9Aq8CpcZ2S7pxyiU3XPxwFRIoYAuiXWHQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier invoice from this vendor in the prior 30 days matches the 26,873-cent amount, there is no PO or contract to check rate or quantity against, and the 268.73-dollar amount is under the 5,000-dollar bank-change threshold (bank last changed day 18).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzC1rxYuC9oTHzbftPf",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3681,
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "thinking_tokens": 188
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier invoice from this vendor in the prior 30 days matches the 26,873-cent amount, there is no PO or contract to check rate or quantity against, and the 268.73-dollar amount is under the 5,000-dollar bank-change threshold (bank last changed day 18).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3681,
+    "output_tokens": 297,
+    "output_tokens_details": {
+      "thinking_tokens": 188
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

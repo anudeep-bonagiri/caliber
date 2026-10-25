@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009424,
+  "durationMs": 2107,
+  "httpStatus": 200,
+  "id": "T1344",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1007 at plaza NTTA-DNT-01; the earlier charges are at other plazas and days apart, so this is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkwUKEAgTGAI4AUIIdGhpbmtpbmcSDHR+5BtCwBshYBhdVRoMZ3hZHBdODyqBPgooIjBj8Yl7YovzVrUFalOXkoViBJ/jKiAHDUT5V5jdg6CMPepDcXcamEfZa7VwI6bXUV8qsASfiU27s6MpMmelwohtj48vKmUBBmWQ5V5nUJPyD2uF5ak5oKzvki5tN46SK5JjfKajssnuXo507Mql9e3gfEEy88zNCnGioXXbSxQiljg+Dx501NI/+bEvPDMLIId3j24TyptSYYWFMe9ahY6yWtwn4CnISPiVWyVKrNJEPWIQmP9pHbBuqZJqvQRW8lcqeQbjb3jZVuQ5YbLxDAqkdYteueTc1A0ybRi3ZUOgQqzIJ1yIz7d4yTESDOtsAwmONJEaCwmy2/sRZk81bgiorJaTpo49KdIUTEMf+REVi4tWjuJrgSEU7eh1O7BpHi1+5lUoYzo1RdlgwColCp1+P6M7zbWuSDa4HncvPsdZEdXTf82cVLytg86V65nstbsbTou5lFRJ6CQnIaq7G6E1Ov+I3zBLKqdASXli5hXa9nmu2bsCRPVUvjsLHhMuXqdHOWxZntaHTS85xn55ClKFsUPZgZ/Pdy5pLk+fi8K1zAwVRp4clD5JRGv2XMH/md0P2KuKlzzE5PvFOHtLq0T5fDEWfkUqse8m2HsnvfdK4a8PdKEMXwcsj6k7ju9am77kbrb0NThy3/ocq1Npts1GcKIZ4DPMOWOSusP7ae+wD+0emcFqTZT4zyPtUlEh7SVnWwY9ePd2TmdZ+OnxE48qiOKoKIHxq2+q5zL3s+ryFKHg5/CzwsFGctADBV7zitjACJlsSdX3Ro+79fwvhoBcsDnevekWa2txRUueI2NSnAjNzRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1007 at plaza NTTA-DNT-01; the earlier charges are at other plazas and days apart, so this is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNykXKHTgR5qoA43bFkk",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1756,
+      "output_tokens": 120,
+      "output_tokens_details": {
+        "thinking_tokens": 44
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1007 at plaza NTTA-DNT-01; the earlier charges are at other plazas and days apart, so this is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1756,
+    "output_tokens": 120,
+    "output_tokens_details": {
+      "thinking_tokens": 44
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

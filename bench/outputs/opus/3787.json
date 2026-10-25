@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02598,
+  "durationMs": 3752,
+  "httpStatus": 200,
+  "id": "3787",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged about 0.02 miles from Pilot 1029 Pearsall at 13:50:35Z, 4 minutes before the 13:54:32Z purchase, and 43.3 gal is well under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wYKEAgTGAI4AUIIdGhpbmtpbmcSDC5dYDmEiadpVYkkiBoMeQnOKBt7yv43HsYmIjCuVCwHZpSZihlcWrTrY5EDwMskXqAB64itb8uU4IJBjpSK4EMeHGJfgcnCRIA8e4Iq9AWCT5tzI44uluMNvnLOyATIbft6A2fybyeHhgweTLX5WwKaw20EUeI7aB3mJSkwYg8d/8Q4x86P3/lVdDzl4DaN6rmQdLjiMr0TkV6jFdOdjeftSzdVAy1MsRf2rXkq8IhH95G4FdujGinqlXvm8U2VTgS8LOqrJMDHr9IWEbhu1xhGmE96wyHwJfEHcAho52dcTorcwo7EfrLP2Iy9nCwANw8cN0VJBxiy+WAErBLFw1htSbaztxJcmcsedIITKGnLVtocOzZDzU8o2dZMKRYdptK8fQX4wRoWDHvxoiIj6SJAVejS+y6e+Cbh/jn0OhaLKwX9WQ1tt7rSlJhDvXt+BpTBo5bJDnKtyjekpfAQ/bo781cVpn1Uv7PYcc86w2uW2569/DQnlAFWHnWR+oxHZMwES6ZABX2MBYUJ16C34DgFDj4PaJBD6gH43mJyc5elqvlZZD66FoB67zWHTbtQgUgOWqqANPag+OftcGwaeRhaEqkI9cr1slqBjANwGqzNWrlxCQQ6IsitasEkGJFN9BTleEzSZFQJu7uNJ+Z2dSGBiDMLQt3Zs0zm00BAt/TQmq628PzhOsgd7S+XxbJ9VqI+6n+Vaon4KZrgap9VLhLZkc3gxZEXXenQ7z9x+s7TC6AdAvYKf6ZT1X8teLGnTM4r774UWB82Nkk41RKFRDSAkk6lxcWWeQk2oARFOrqIWcEZJK3dDwt8Q5rw0onzDLxbnIq/R22MvzwijWUROsafauRKMawx1tfHde7b9+ZPusyBvtR3bfmK4gxIMre+PCRqvuegJir4FFUeHSRNjRLylrTLNQSGvk+Gs0nJUqfcdIbg3KmAheEv84TXjSqasgccanwORRjXSO+LWJgLOXviYWpR+M97vzFMp1lao2l4UKdQPAy/dvYLZsXkl2iFL74NoVJdX0Q1nIzfLjJ+LoPiKxPhsssp2rcWWxD7LQ149E09kNLobB6y1FSL3JWtm9g8kcG9dh6y/Cyid2LFVD1cD/UYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged about 0.02 miles from Pilot 1029 Pearsall at 13:50:35Z, 4 minutes before the 13:54:32Z purchase, and 43.3 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyr1WaGaoBWaZqCbQuY",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5255,
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "thinking_tokens": 137
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged about 0.02 miles from Pilot 1029 Pearsall at 13:50:35Z, 4 minutes before the 13:54:32Z purchase, and 43.3 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5255,
+    "output_tokens": 248,
+    "output_tokens_details": {
+      "thinking_tokens": 137
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

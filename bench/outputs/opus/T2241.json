@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02974,
+  "durationMs": 3088,
+  "httpStatus": 200,
+  "id": "T2241",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The most recent earlier TX-1015 charge at plaza TXTAG-SH130-01 (SH 130 Mainlane Plaza 1, Hutto) was T1378 on 2026-07-23, far outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiQYKEAgTGAI4AUIIdGhpbmtpbmcSDGf/qrDUVhqdhboBlRoMOCA9Z2NzFFU3/SEXIjBPYDP1OEEzvcNJ6eXhRjPSjkrKEK2L6UcKBa2DVpL2KSBhLz2hI8aFO6ucqTrRqyIqpgWGCZIuceoAOkVa1xfum4NOicdRF7m/A9yJjKvGMKIVJrRLDF9XaBZgxjnhX/h81X8Jha68Sk8zLvm/+RiUnP8YlMbra7Q0KQnYee2M3cH4mNQoUnR4fIAuB/dvw+/S9uJzGKAp2lRxHaSx4TdP4yRxZzI0BNbBtE/91qYVQD0xtcpExiSpLK1XQw+TbjDAlqksuvMEQ4kAK0gGEIa0QV+F4JSyAAzw4KSoXubxMqgAnGrJ7N/JscS87DyWeu8ZOx1aRwGGHPbX+mJbaQPt9/BvyiOHw07NDFjwPMCeslWvR6H56nW/ZCFHwvn8YM1A7k6g7OvyjUVqa8ES68KuhnLeFu3NmXERYGv71aiN2QAsk3JGUMRuYMulup5jn7eOb0p6Hs+3F2Cz4nq2hlPWMxZZAkyuVkXd1YJpue6tPVSLDPuVRmrQgCzSia4702FhLxf6VKBf0VTragZ87BXnbe9PhFVcRjqynUTaiWAdeT8Zwx9x5x9hiYYdYfMXXEDSJYkKoAcM58Ol0c38zi+8eG+SsRMIinm8cyXLng6LlMYI7qo0Y/UeQnVzkSpSuVa32QYMSFSDHl4GpWkq66x9wlYkdiim9vOxpGISSDRroB6TNbGGri7hqWVaIhnbUM8Sc9ddtiec9tUJpVfONdps8dlQ8QdB3istSocBiKUueaynpYiinemtcJVF4YkRMV9A8V5jU2CcsOxFo2IOJ1SWXFxUL9LHMpq1p8OqgCk9RYlw49UVJC5cXXAKceUGCjPQ0CPq7qoURPMKmznpvG0NkssPHx663hnBbc97QiVjj3hzVdh8qgLCphcz+iCpaquWqgdt71Ls3IEJa7dq+VfVabMV8LYSPW6gCHd7Be6NDL/sFUDmLxqePV3pdYQAAsBjniLnvw+gehIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1015 charge at plaza TXTAG-SH130-01 (SH 130 Mainlane Plaza 1, Hutto) was T1378 on 2026-07-23, far outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4BuyRVp9UHB8H5PnT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6425,
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "thinking_tokens": 102
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1015 charge at plaza TXTAG-SH130-01 (SH 130 Mainlane Plaza 1, Hutto) was T1378 on 2026-07-23, far outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6425,
+    "output_tokens": 202,
+    "output_tokens_details": {
+      "thinking_tokens": 102
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

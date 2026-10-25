@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0096,
+  "durationMs": 3419,
+  "httpStatus": 200,
+  "id": "T1160",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Neither earlier toll for plate TX-1004 was at plaza HCTRA-HARDY-01 (they were at NTTA-PGBT-01 and NTTA-DNT-01), so there is no same-plaza charge within 10 minutes and no duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShwYKEAgTGAI4AUIIdGhpbmtpbmcSDKq2Bx5g7WkWXZYlchoMxmD07Yg9sASYRb0hIjD0P+LT9cDkfI8/Hop29/5Yg+G7IfGRstmubHWVxMjdrJ8bhzZyOHi61NVCq+ePJCoqpAWGTE8g3/K/cVKOTEnVLTKmG2Oo17BmvqCWCnfb2PwCA9w4mxSQigRvz7mvCI5pmo6VP/8w3pfeNwTvPpyF59/bY58R9f0G2s7CGixQ5yG/WPV0U+NLb0z2CY5Huy2rmAaMn7RhfwdW6PdCBnJVbi/cb49jLUm13JHTovBC5Qou6OeufbdWfaT41TxFHFfHL8bFnfSGiU4eCl9eRQmfXVWFbeedXWPfMgTdSMXSn1UW/vup9Xo9RlULILgLYRKRCcUNi5hZSiw95ZirG3EorxNQp2zXXu4J1u6jAcmVP+bh5KsrTp6BVVuASkLEH3eG0pHKc+T27dCY3tEgQ58M/2DXd2Cf/Yau0By6ppLbVcprTHDJ8VWvo/ZjYm9Ikn1uF8U8wzeFLP3upcJzmqhuN2C65p7zSvh8/4QuMjlhH/yab8eBjXLqi2OBhq/8dKUlVh9tp5Pk3p0GCd5GPkYAxMUDV3ZULzPsQEwrtuXP359v9szxBp/vP/qIHlzuNvA0oRUavm3z2t+nLgIvFh0B91CV4ASjCokvieid2tZBJTk5k3VpwNDxEU6Wg67xxAPWINOU7MAvqAxWHAnDMWajC75X2vrw9XzfXnl8pTpUlvNJPXbST1JOX3owLdtNJXRikhNdxlStsmemFvcsa0wUt3h5utzJsk2kgscr8p5bsaR1L1LYHGZax0MWC+VfJ5y7BA8edf75Cu3jOgNb1I0553hkdokigG12T/Jn/u82vyj2qJ4YBEnyPSdpYp6HOU76CfragSTmBZu1AvAwjybmSsJc8RFdMJKXsxgYAh78WegRcZy3iWBMAGcQs76npRuTF4+6OuijE+yUEsmm6RT2yRQOZ1M92lyhSC/v1LrQA4Zm9BptsjyvqzVO058zVplpCn2nX2ANGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Neither earlier toll for plate TX-1004 was at plaza HCTRA-HARDY-01 (they were at NTTA-PGBT-01 and NTTA-DNT-01), so there is no same-plaza charge within 10 minutes and no duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyw58VDweQ1NKvxqoht",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1385,
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "thinking_tokens": 98
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Neither earlier toll for plate TX-1004 was at plaza HCTRA-HARDY-01 (they were at NTTA-PGBT-01 and NTTA-DNT-01), so there is no same-plaza charge within 10 minutes and no duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1385,
+    "output_tokens": 203,
+    "output_tokens_details": {
+      "thinking_tokens": 98
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

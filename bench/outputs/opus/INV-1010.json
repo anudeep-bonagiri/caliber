@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010992,
+  "durationMs": 3022,
+  "httpStatus": 200,
+  "id": "INV-1010",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1010 bills 3 tires but PO-1005 shows only 2 received; propose paying the received quantity, 2 x 49,800 = 99,600 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsgcKEAgTGAI4AUIIdGhpbmtpbmcSDJjmQK9A3ze6rhn3JxoMgSKB+lkFcImYtPajIjA6BZMbD75TNnLWW8Oelq9/Jb++23RCNFHCug/mmgQlLsZEwz3k3cJyc9mBJm1jl7QqzwbLBx+FKzAj6EUwQXeOP1lwSVrYQRoPDrKpkIfUKTOpSimNbdcLM2jf1X1QgkxYuAs4joKnurisD+pFjl2fKn9IXsjzup6B7nLAHDZ/YjXL0jKvVvng3roA5R8X5js6mzH7yNy7WaBPi7EKIafx2Bj/04GAA2EczBZyfSmfZ+TuAh02QZI4SGqCl5dh4r8UdjXoQG6HabSep8fH9uV2Vj/K2mOhXAmCbvRE0WSfjH6uiEc2Q+LlCyiPzSdWC+VTOoVroKVpkhC8bzQ6a80xhGBFT9FUvjEDkPkuzo7vb3MRuWwpwLn5sI0BWe9hj2DyPNgfrEv6UgqdbuO++fP+uaC9AM44jhcrJ9RE2DsREw+ACMZQFBbc7YmN4TaBoCnsCNmkeuVQ1Zn/ZWviPxOO3mTnJKuMRmPQke3UoNAEMXNacalgf5U0kCFAlq5B5o0dlmMVeRf+3V1xc8AT+M448zokVH2+lOHui/pSjbNiPLY2mdFlWnRcsbFiUUA2YPthmKuSZggrkiLTKasCcZBVeC6CWhoEeS3oZPxyw5Wj2lAzCntQ5unukbIUr7R2+fHb3zET+qNSJrXyZOisq3zrPX4gRKu3URl2/+/6TX4/13JAvv6uS1YA/5hRwfq7FypKzZLG53vJBfh/RzFwJpzVKS/jGR4DK0sfV/Rdb0Fn82QdXV2U+Fgs4EYNnMhwINMJzhthGRamTbqLQQg7bLHbxITfgz+Ma0J9z2E4qscV2d2WzJOllTPPTZVODO0gA5JjneEOgPigb0QwFFuQ5nsJXufHNoV3grRWR6u7v3xh8mmf5+xvsY8PWuCyFc+Q8hiu/V+zmN8tXHwKGMBKJHmCGTrU4xQUwp2viSnluB/86y242GEYAJhSHDUMXinBay/79yOnsZhOIkVsL9d0eZiXPzHssPj0WtQGBqlhZ/O5XCFWk6USJDbKqZwdrNgNvdA3BNemVL+fyuGWcdMoHZ8nM7+4Y/h8AgsLpo1cJyb49esu525/hUCJUKcy0VWVtA7kY+E0y4y6qtxU0A5wSChHiyAvQl/jDroh3y6bGucP/FJQpW82LvdrVYab7WZp2+ancrP+vuUaxSnwNpIg55Wz+7ZUIAPAidNBYrhM7yOc2HiLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1010 bills 3 tires but PO-1005 shows only 2 received; propose paying the received quantity, 2 x 49,800 = 99,600 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLJmfiwoSuBNv3ZdHP",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1563,
+      "output_tokens": 237,
+      "output_tokens_details": {
+        "thinking_tokens": 156
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1010 bills 3 tires but PO-1005 shows only 2 received; propose paying the received quantity, 2 x 49,800 = 99,600 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1563,
+    "output_tokens": 237,
+    "output_tokens_details": {
+      "thinking_tokens": 156
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

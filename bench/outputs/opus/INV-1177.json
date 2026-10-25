@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.029308,
+  "durationMs": 6352,
+  "httpStatus": 200,
+  "id": "INV-1177",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price matches the 245000 contract rate (even the 249500 billed total is only 1.8% over), qty 1 equals received qty 1, no same-amount invoice under another PO in the prior 30 days, bank change on day 42 is outside the 7-day window and the amount is under 500000. Outside policy but worth a review: the 249500 total does not equal qty x unit (245000), and PO-1012 (qty 1) has now been billed many times."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price matches the 245000 contract rate (even the 249500 billed total is only 1.8% over), qty 1 equals received qty 1, no same-amount invoice under another PO in the prior 30 days, bank change on day 42 is outside the 7-day window and the amount is under 500000. Outside policy but worth a review: the 249500 total does not equal qty x unit (245000), and PO-1012 (qty 1) has now been billed many times.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8dK3x34uM8V9S9k21",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4607,
+      "output_tokens": 544,
+      "output_tokens_details": {
+        "thinking_tokens": 374
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price matches the 245000 contract rate (even the 249500 billed total is only 1.8% over), qty 1 equals received qty 1, no same-amount invoice under another PO in the prior 30 days, bank change on day 42 is outside the 7-day window and the amount is under 500000. Outside policy but worth a review: the 249500 total does not equal qty x unit (245000), and PO-1012 (qty 1) has now been billed many times.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4607,
+    "output_tokens": 544,
+    "output_tokens_details": {
+      "thinking_tokens": 374
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

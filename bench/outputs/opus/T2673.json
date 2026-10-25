@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.045544,
+  "durationMs": 3190,
+  "httpStatus": 200,
+  "id": "T2673",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "There is no earlier toll for plate TX-1021 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the most recent one there was on 2026-09-28, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgYKEAgTGAI4AUIIdGhpbmtpbmcSDMt66JOpedYKjl0VPhoMkoUrF+8UtSpr/krWIjDY8knL3Cl97HBVln9DP4d/VBL30usbDvwFVpUrOsDD/dwg5K3+GYrKx/eCd8nXW90q6wUkvh7+e1xUPndAp5mi5pWbPhuaC1uuN+uDyl2ktIH4K4qQUQV6IiwOQKayz3BeV7byuGf3feHM+Jj/c/c5pdIoTcCdQJlF8wROr3NfdoMzOtlVh/5VUEUq8XSqZFxMEI2vGpviZltErzpDywFvqV/8j3eTSOdYHwl+eu00XNwryPjdeRGIx6zH3tBmUgBKOWDX9YKJT3LU7BTHLXxGwIVHWYBsfbFAJD3hJctI6dbqW3fK8L6inEzbA5P+JaIsxsUVQ10LOZ0jWdiO+SGYegzl6PHyEzjCio0hrx+ZyzrezGfZnGKm8Gt8zOxaYOs/1la381+mOHZqPueYOP/Bq4fGgbEe99RJCUrtUU5aM3whZz9tqapwIJ1jHkiROTwSWdzeEejechtb/VAmgyiCjAH57Mubbljs+kRYbD/IwA2j1YPUmj2cimrEx+xt62rrdudkSonVBBBfXw2C5+WeyLxyaRT8lwIejL9YFD8Z0dcVVizdQEiso1fhfKm4GRkBTc8mo2XqVR3/IR5j6ZGmpjZeyUANzB0Ed9I15u8ecL2i0+AEOWQUrAUE92j74JryIPaChr6+Hqil931FuZLF93wjqGJqJL7zWgLKcUMZQVmegvfZcXek9dQh9q4xZD1ssUuejVuAtYglF+G5I4cWDXwWpBituGWZy1tp4EtjKdmVQP/Ugm/9jkqZUt3H1YZE5IoH/F7UEDXiOehQfPOtw5WNuH2JUikTRaw7JAfmnC5+CGuZrABlMrE7OAYkQPz8sqd1w55SRiAuPTmvRfM3U+mDgZqLtFUea5Pohb0fg/rel9VYUR4eZlXg1bUEyqmfc4ezNCuAQpiSIR/eca+5SMCTmllhJ9hYnredihzIJA/SJnXbpP9NLmNnkq3XrOEB/l6sMo9NVzZ9DVIORiDKX8pAds3mwt5o7/OY7MfsLa8ZgkwOZnVm+Sfr5ikVRXWCmzYCEB2L1jMLcFIvgAKvYj0SarnhVsfWU4Etn8YYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"There is no earlier toll for plate TX-1021 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the most recent one there was on 2026-09-28, so this is not a duplicate.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6Urm2aC9MNBEdJgC3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10176,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 141
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"There is no earlier toll for plate TX-1021 at Mountain Creek Lake Bridge (NTTA-MCLB-01) within 10 minutes; the most recent one there was on 2026-09-28, so this is not a duplicate.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10176,
+    "output_tokens": 242,
+    "output_tokens_details": {
+      "thinking_tokens": 141
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

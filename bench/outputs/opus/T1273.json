@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009104,
+  "durationMs": 2096,
+  "httpStatus": 200,
+  "id": "T1273",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1015 at NTTA-DNT-01 (Dallas North Tollway); prior charges were at other plazas on earlier days, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAUKEAgTGAI4AUIIdGhpbmtpbmcSDCTqMBMpcZdosOTlsRoMH51YAhhs26Fr17C8IjA84jJ+8+CSoIr/kYxb/jOa1Jy5YudpdkCA9pMUoJ5l7O+iSVRGL1jYv2DgeTi4Z1UquQQ99+e/pogv5U/p2MFqiRogYuxJcwh824mKJGE+yGE9MhWLo5egPvfgb4XjN1eehUEPzL4bnVshJVS738w4BYZZ5aJ8dalwwrfAoXOJJCNx3NLHJCCrG8xRZYGyaPs2fUsrvjOx5bCvipJjsGAaNo0qpXOKIAOPkNoW1x9fj0CeM/OTrukezhSIyC/l96fufBkpZgZ5OrEn5gmQ4Q/2AP591UwMGpVnPMilKqKfplCqoMpyT8t4hGbBTOr5iv+Db4Iu0I6G1Bzgu8IZ38hbrjceIwSr/Q3dMLjpsFKtdUCPH7TvnbW4I9WtcmucA5bj46S4hVT9vKNiPOW81BIEgHQLlUGqcSEwE4QZEMKeL7Z5zmLJMpQxmIDYZZnJfLoK2pf6qmn38GakmEhI9Vi6Kc8OVEtAU3BwE8Tybg0QtBJc8bj5rkKw7Xchx0gH82JIuY483djp8weg4e7AsLSs7tXDTPniyVOfVCSm4arRgMxRnj+WL71Bc0e2IsfBFiM88fA4IY4zZgimC6Mchkauta+xtcxHQ9JJ+yng7J7by8MvkKpovrn29XM+270GVJkoBR1brxxuVbSwSYQqA/cDqXKXoYS1c1XEwfSzIRO7MGDHimkCHTOaTFN+swQQaoKJDQZMhjKRVaWsB+xAv1dLiwl17/L/UdTdaYjKb1UuUyCp9KVCjG9efeGfc5pcOkM+dUukrQzdb+G5w/NjzOQAVSp/TxmVFRlqdIcl3rdF7Itr0Rck9cujBzov7hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1015 at NTTA-DNT-01 (Dallas North Tollway); prior charges were at other plazas on earlier days, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzEf4tvF9UswUsS9aHm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1646,
+      "output_tokens": 126,
+      "output_tokens_details": {
+        "thinking_tokens": 45
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1015 at NTTA-DNT-01 (Dallas North Tollway); prior charges were at other plazas on earlier days, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1646,
+    "output_tokens": 126,
+    "output_tokens_details": {
+      "thinking_tokens": 45
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

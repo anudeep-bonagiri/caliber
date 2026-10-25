@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026956,
+  "durationMs": 3777,
+  "httpStatus": 200,
+  "id": "5558",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged about 0.02 mi from the Waco Pilot at 15:30:19, within 30 minutes of the 15:33:03 purchase, and 45.3 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+wYKEAgTGAI4AUIIdGhpbmtpbmcSDKYjNI6Qe4KStTJ0PRoMAqCSSGJ8bx28ahO8IjCmb2zD6iYxSN+KZjRIZDin5B8FEcoha+xHMLefe1e7Orj+9gjhiEZQScxrtMtVYB0qmAbbcIOfDZyC9kQ6VBPyCjR/SqASwE6KLIdYp4TaLFTiNjsoVKNm2nquBei9V86dHKu4oHNwEKEUqkDyKPHFWo110ZmF1baCVqv+36UHbSN5jwBWbaJOXkf9a7mD0Bd32jhDN2vB88bmKSjWSBo1vnMW/rC3Wl4r3cp9FUQd2Bf5kP7t/0Z9fVCv/zjusAZ9ZovjJaWmfNZDhUi91ouVn6JsJhFtwN9TrrQVb7EgRLFvBCS9qb7OCGOIp9+341fnnwgvXG4txEX1J+nbGwmUtzZ4h56SVzVPnt9UoIkWBdzaeW6SEiIE7QE6bODuSyf5JQ7MbQyIYo4+XD78rS5/Ol/OdU8AtzCt/fU9OrJsFOkGU+XkKs0z9SSTF+TJYXumxSOp0AzEATblxtfg6eJQ7Z49smlqAW5C+GWi+B0HYaJ0+v0SDOBeF8ZwzJ37Y/FkIVNDiEZh4wKrOPjd5K8chgLGB0v9+XmrmHy9SiRpOfET4aAj7xb7xFSweoQ4oaosBEZITrEnvrvw/L1+B3P8iD8GvXHOD7tChL76Etsn6K0L+b50HhA/KsLMYXq8OmmaVgTy0gueKyHq5XRxJmDPyg+JbyKFOLJBtk0GPJ+GCxsaQba7OSEP5MJonEuCc+gBUpHre1LKPGIfyW83sXDKFCZ0ByXQjrbmvzsXFngqclWeAL4wEORkQ9BxEzAGQ+AgG9qqg5qfQJuReoWTK0dCY5D3rJZZKqDxspmdUfDLrompERLFuPuDbDXcw1WJPejnK5kpSCCJTZPofJusTRpFHlNn6AZDo98lfwSdR3bG1syOEqPokmFmIHB88ZdfUVrMLeaPSsTsyUgNKeuPEcdjvai85s8aKtV+nmihamdxwVdpEUkLdSBsAiqJ+C5f388zjrBKmfZxF7c6wDT9XMV4s+ceQpVRYo8yXSxwFrnGBDs9X8YYeOyFZepHtNIZJLVHfcOCzeeICAHDb9fhcgHwPNd6uI7u8rAioSRla1ge6fRjz59towQtyVzxjWzqdeYTIZS2G6w8/4rVpYe0GCArKuP0U33CQcSs+mQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.02 mi from the Waco Pilot at 15:30:19, within 30 minutes of the 15:33:03 purchase, and 45.3 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvmowWNJeyMr6Lf16y",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5399,
+      "output_tokens": 268,
+      "output_tokens_details": {
+        "thinking_tokens": 165
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.02 mi from the Waco Pilot at 15:30:19, within 30 minutes of the 15:33:03 purchase, and 45.3 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5399,
+    "output_tokens": 268,
+    "output_tokens_details": {
+      "thinking_tokens": 165
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020716,
+  "durationMs": 7340,
+  "httpStatus": 200,
+  "id": "INV-1072",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price matches the contract, quantity matches what was received, the bank change is too old and the amount too small to matter, and the earlier same-amount invoice used the same PO. Note that PO-1019 (qty 1) has now been billed three times (INV-1012, INV-1026, INV-1072), which policy does not cover; recommend someone review it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price matches the contract, quantity matches what was received, the bank change is too old and the amount too small to matter, and the earlier same-amount invoice used the same PO. Note that PO-1019 (qty 1) has now been billed three times (INV-1012, INV-1026, INV-1072), which policy does not cover; recommend someone review it.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzB2GjhJaP9E9TFSHgF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2154,
+      "output_tokens": 605,
+      "output_tokens_details": {
+        "thinking_tokens": 470
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price matches the contract, quantity matches what was received, the bank change is too old and the amount too small to matter, and the earlier same-amount invoice used the same PO. Note that PO-1019 (qty 1) has now been billed three times (INV-1012, INV-1026, INV-1072), which policy does not cover; recommend someone review it.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2154,
+    "output_tokens": 605,
+    "output_tokens_details": {
+      "thinking_tokens": 470
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

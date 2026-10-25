@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007744,
+  "durationMs": 2124,
+  "httpStatus": 200,
+  "id": "T1161",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for plate TX-1016 at plaza HCTRA-SHT-W (T1099) was on 2026-07-06, about three days before this charge, not within 10 minutes, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpAUKEAgTGAI4AUIIdGhpbmtpbmcSDA6VR7rb/lrJ7+F1gBoMpE0wkAIHjcTrl78NIjCareBhi1tMjzCE+T9m0AhmDpkzTe09/W/Xm/6fihU2LH1SmSSIhlVWl59zftFPSacqwQTkPHX0fEB/8R27mFu6tcvkIXDAcaunTND6hyQu3u4p/iuPFMmnaQahMtn6Cht7AhUaHkq+u9MicYHCbWYJXFy1krrmgLgsJYbEkDtyKprlZh2qSS29az4mc3j5W13txlyzqU+rB8FNTfBwaR2Iy4KUAyVtGrbnCSImf6W5YKDYY8e2qsg5SgkKrojBd6TrMSRUVY/uk1lEUyBklCKtwhcm7Jeh3ttQqA40HK9lxkwxD9EX7MdqIlLFvGpmTgAwecBfccYHzerK5K2sqqvG727dYVk2JdKjVaX7UsQycqpv9Y7jiYEIlwwkQl18sbgneTPww7V8dn+LIodG3JcN1EG7p4guLsKJeoBVQdDyK/GECf6hpfPkHX559Zd7B5+6f3xSQ4+z2iXNC3bS5SVYVHd3PrCf4JBeLeRW7+HGEI4B5Bv3uIgg2iHIhhDvOpMNbyww//742dJ/KWhB9Y8nCuZfJ7ez0kWel5Z2Kh1SA+XzUxc/h3Uc9aDHMBlqyhEIf8XI2XFYGl0/YsTjEU3/l5jYwNo7PiOhi1e8+zYWCAqLm8FWMtoGdUR6Mf/VFFq3C+3hDjikRebsVFTLgVNYTTrRjifBZ3DJ6V1xv97o3a08M4tC5jeT6OfnyGAGwpbsJ3V8OK1aSdatjP3Nx2pMMNDm5fxV+pb7gjMbb9nbLDq3TCGmD3CKi8wOrWvqBkgoqDJoE7Ntfz2InsSiOKb4N3tq6jX0yjojqLSBXCb4yKHRQ6p4KghVALRvw6jAGBDocSYnGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1016 at plaza HCTRA-SHT-W (T1099) was on 2026-07-06, about three days before this charge, not within 10 minutes, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhodU5bLDVgPzPMCrD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1266,
+      "output_tokens": 134,
+      "output_tokens_details": {
+        "thinking_tokens": 44
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1016 at plaza HCTRA-SHT-W (T1099) was on 2026-07-06, about three days before this charge, not within 10 minutes, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1266,
+    "output_tokens": 134,
+    "output_tokens_details": {
+      "thinking_tokens": 44
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

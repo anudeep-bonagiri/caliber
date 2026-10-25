@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028252,
+  "durationMs": 3258,
+  "httpStatus": 200,
+  "id": "2238",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged about 0.02 mi from the Hillsboro station at 13:22:49, about 4 minutes before the 13:26:51 purchase, and 22.6 gal is under the 110 gal limit (100 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7AYKEAgTGAI4AUIIdGhpbmtpbmcSDKe7iiieyqnvmhYVORoMFz9+sU5a7zEvNWfdIjBP9X9hjopMzPew5+8gDE0zZlrZavE4jE1R396SxLjTLwbJr+kap8/mW8FtwgwbyOkqiQazYPKIH3ufJ0aB4/wOQxT7a19o4k5YFpkw62HrzSeeIEQvXlPj7RBORyVoU7efHC3h2+2eyYcS1xgkhkQILQYXdKh3t73x9TFqMn1tix3sGmbsGzOkC3u6N/VvN6qNiDq98qe6DRXvS6BY5pWo3fmTvSuJGNB7fCqHAe43GVmNYoK0uRMpo4uP/TkuHm6nn4uVYUxN4hfJIZbT7kET4+8gknj6ysfFR8Aw4dBFSGl/jbqzELwcZ6myRFwBemsQugduUwnHbBZztNuvSpgfMOJFp/Db33RZ84jfD0bwsvhR7Vjy0ER7euzsjU/NSt5p4/bpz5VwT2GgQNHrE/keUGfAZfjLWxqBvagEj10AeikYH5AOYiDLgaCTUXY1Wfd7IK4FQLbaCJSaFMNvdEYLUN7kQINQHhYHJBlWcbrfeLN4+rqsaw2UBKqcBQngTk0MAixiBclIorB3Z88LmCRKmLY2xTut0XlnCxmf8gh4ipVM+H8hpS8KUHGYfyzeSn/qcfPUUSyO/uAfdC8AtVRtIBj8wctrhw4i2CLktP3L6Kd5l0u2i2bfH8CD/i1B/6mMny8BvXJnx3kQXaE5VrN1InbPuv21K3iVBd0iJESnm7avoVktuVel3m7BONh9UypNQMu9ivLb1MZFy7z3mmm+sW/nkY+bYNShvPz+W0wjacxr6zRFKtgA9A7f5dYADKBeOv0t3WJ1S7DXNlUqq9swHl3SIQw9p4sullfXDOwFiUn56p4qB6Do3NeuRDgAhxri+Jtl5xd3oWLBAd6TfCr06Er3Ize6/kr6l3RZ3ykmaM8ypVFOMBiJ1/pS9Pwx85GTOK8R8VGnOBDb5votUmNzdyI0+zIyPUSnuoABp9ae5YClZaSsjkEiBESapO1+WFeGuWpT1PAAi7jfdRgJypbAc0HWr42XIOV0m2XXQECNVVAie26psPxJUVIwzwZebZfo5coqT3nweId7d9lNds93nUwS9eFa/IP+Gy7tZO86zztrSDHD85MNgQ91L+FvLoOdEHNS62QKXnKwlCIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged about 0.02 mi from the Hillsboro station at 13:22:49, about 4 minutes before the 13:26:51 purchase, and 22.6 gal is under the 110 gal limit (100 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymBGJfw82HLBgwAX3b",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5763,
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "thinking_tokens": 158
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged about 0.02 mi from the Hillsboro station at 13:22:49, about 4 minutes before the 13:26:51 purchase, and 22.6 gal is under the 110 gal limit (100 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5763,
+    "output_tokens": 260,
+    "output_tokens_details": {
+      "thinking_tokens": 158
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

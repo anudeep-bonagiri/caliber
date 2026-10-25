@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0231,
+  "durationMs": 7721,
+  "httpStatus": 200,
+  "id": "INV-1059",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule is triggered: the unit price of 52500 matches the contract rate; the billed qty of 2 does not exceed the PO-1016 received qty of 2; the only earlier 105000 invoice (INV-1045) cites the same PO, so it is not a duplicate under a different PO; the bank change on day 42 is after receipt and the amount is under 500000. Note for review: PO-1016 has already been billed for 3 units (INV-1045 qty 2, INV-1050 qty 1) against 2 received, so this invoice would bring the total to 5."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule is triggered: the unit price of 52500 matches the contract rate; the billed qty of 2 does not exceed the PO-1016 received qty of 2; the only earlier 105000 invoice (INV-1045) cites the same PO, so it is not a duplicate under a different PO; the bank change on day 42 is after receipt and the amount is under 500000. Note for review: PO-1016 has already been billed for 3 units (INV-1045 qty 2, INV-1050 qty 1) against 2 received, so this invoice would bring the total to 5.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz84KvpuJUj5nmtcrLZ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2330,
+      "output_tokens": 689,
+      "output_tokens_details": {
+        "thinking_tokens": 483
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule is triggered: the unit price of 52500 matches the contract rate; the billed qty of 2 does not exceed the PO-1016 received qty of 2; the only earlier 105000 invoice (INV-1045) cites the same PO, so it is not a duplicate under a different PO; the bank change on day 42 is after receipt and the amount is under 500000. Note for review: PO-1016 has already been billed for 3 units (INV-1045 qty 2, INV-1050 qty 1) against 2 received, so this invoice would bring the total to 5.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2330,
+    "output_tokens": 689,
+    "output_tokens_details": {
+      "thinking_tokens": 483
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

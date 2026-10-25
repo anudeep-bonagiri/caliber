@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025336,
+  "durationMs": 2967,
+  "httpStatus": 200,
+  "id": "2124",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 6 pinged at the Hempstead station (about 0.02 mi away) at 14:55:00, under a minute before the 14:55:54 purchase; 49.1 gal is within the 110-gal limit (100-gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrAYKEAgTGAI4AUIIdGhpbmtpbmcSDDvkif7J0+nPIKLRhBoMDQgUSCExxQX1JGvQIjAOy0jTjq3EfO3HsNG3nkxtYkYAWOmogPu73FYjHjxbGNm4JZL3BW87HaEMxahJXowqyQV/GmcrUpHKKUGTfP3igfiQOfoR7QajCAvQUFMUlXm2zsBYJMQdBoCshzDqXBmNO37Kes3VnEIma5E01yf8JA4rXIRW2ucOwu10tlM2Chkj3cbuOlisCMIgJg3B0kfvbVsx1vnbOvEZjo0wsDGr5nXrmS5ztsW7A87WqGx20YS+AskWsRmXVAj8bgmp4Ha2AtqAS7r9+olQrXDPsl/ESNbP1KhzrgAwvRLPPXi55GYvRrLfPnTEVv+oSgWglivGUdft7ucrNW4CC92ykDZkav4LC10s7A+fKPZTrYTbvXE9sORO2c+NCAdiomY5I0SjMC13zyJ98M9ZItWuR36XXV84eT6BxFip9ySBjKgk+X7tHBFoeU+Re6F08f+72CKDII7Pj4Cu7CSNfwNvEttFSXYyofW6gYw03nCI3Ikx5C+E+qKvMSA+o4//kSwhS/R6ZLXo6L3W28gBRIoTuIwt9uV1L4NU704WCvJvKj6ACRk6ppiQZKz0CsFHTDAd4/O0Fj9cBniQ8584bvP7LBBThzDWXiuOKRLKAH+k5uUnRCnE9aDf0HSdcbpEjFR2/ZO50m4qqCQFF5L9jSuUITq/1Pe7kyrDZGVWg5SD5m3SNjKqHPjBnYSzzJqYdK8cHbmGmDkNlfdRriu4Mewr3s5V6pPZcWsNuLG53hnj/iNxypndy5gRVF54ok902kSAZzGONYAqSLU172SXcgFGUidvLG4eXcLpiUFdjUXqCcxAbDB/rjaQkmuZNIoVa7/IdTWcWhuo9l0OHmCqAce9GnnhQF2XOv2lGrwjhn41cuHgISdvJtZsgkSHf0qgCIkwJgY2p+eeoVZspmxY9f8+N0Fb7VChkKkzvhFmqzF8Pwv/hWM0qIKUof3i3aXYDhf3Au1jpfjiejudLJ0FOYokX1IdkvAWftqK+HfLvoEKANxePszDU32pjWqipIw+TxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 6 pinged at the Hempstead station (about 0.02 mi away) at 14:55:00, under a minute before the 14:55:54 purchase; 49.1 gal is within the 110-gal limit (100-gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3nWJxayU1j9jWz4yg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5254,
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "thinking_tokens": 116
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 6 pinged at the Hempstead station (about 0.02 mi away) at 14:55:00, under a minute before the 14:55:54 purchase; 49.1 gal is within the 110-gal limit (100-gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5254,
+    "output_tokens": 216,
+    "output_tokens_details": {
+      "thinking_tokens": 116
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

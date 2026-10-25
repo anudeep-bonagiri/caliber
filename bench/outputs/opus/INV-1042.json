@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023276,
+  "durationMs": 8798,
+  "httpStatus": 200,
+  "id": "INV-1042",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule applies: the unit price of 51900 matches contract 8, the billed qty of 4 matches the received qty of 4, the vendor's bank never changed, and the same-amount INV-1036 cites the same PO-1015, so duplicate_invoice does not apply. However, this is the third invoice on PO-1015 for 4 tires (INV-1013, INV-1036, INV-1042), so AP should confirm with Lone Star Tire before payment."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No policy rule applies: the unit price of 51900 matches contract 8, the billed qty of 4 matches the received qty of 4, the vendor's bank never changed, and the same-amount INV-1036 cites the same PO-1015, so duplicate_invoice does not apply. However, this is the third invoice on PO-1015 for 4 tires (INV-1013, INV-1036, INV-1042), so AP should confirm with Lone Star Tire before payment.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNykvp9yb2zabApQzqrT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2069,
+      "output_tokens": 750,
+      "output_tokens_details": {
+        "thinking_tokens": 577
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No policy rule applies: the unit price of 51900 matches contract 8, the billed qty of 4 matches the received qty of 4, the vendor's bank never changed, and the same-amount INV-1036 cites the same PO-1015, so duplicate_invoice does not apply. However, this is the third invoice on PO-1015 for 4 tires (INV-1013, INV-1036, INV-1042), so AP should confirm with Lone Star Tire before payment.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2069,
+    "output_tokens": 750,
+    "output_tokens_details": {
+      "thinking_tokens": 577
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

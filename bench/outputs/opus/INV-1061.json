@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015392,
+  "durationMs": 4471,
+  "httpStatus": 200,
+  "id": "INV-1061",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 54500 equals the contract rate, billed qty 2 equals PO-1018 received qty 2, no earlier vendor invoice for 109000 in the prior 30 days, and the 109000-cent total is under the 500000 bank-change threshold (bank changed day 18)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7AgKEAgTGAI4AUIIdGhpbmtpbmcSDOr6VS4dgop2ZV5xOhoMclZSVDBt9hOOjOa4IjC8amTCScUOp1yb5/KytMcfsiETChT+rxaXMPX7aV5BDTqJH3qP3xUv77g2BpOyfGIqiQjV1JB/1CLl7pQAS5QvEGWz7yP3bUaTK/HqV+nBxJVJfpJ6BhIYooLKLQC8apx+5BeH1YsjDD2wZwE5nuSrV2AxZT8eCIUp5rwUpWTs4UYf09TICrvdLtGkDUqyaZnlSgC/9he+jhRtu7qQjgMRsFp4U32cC+jdyP5b8BtATX3TOxyOTfbRpj+PVtVS0hyuTxHUt125Tx74AP2rXZQXJCjY9iNtc/OwNvw46pI/mlXmgfteY5HbA4HWqkK9BUnoLSen/+EgQH68zsLV9C1IirJUaFU02grild/RjNoovzCk+LqUFAVPe1dxMO3IwKG3lTVG4UzKzL1LS+AsgtYFNmMAEIQqTfl9mlilKEQfJJ8WD0W/7DIc2V3xzQDoQ05LXV+CFobHUAPjjYR2l9Zak7buKWc+YNf3eOkr1nT28GssOsgyyPKlNM2OjcZE0dB1m4nBAvEgQl+9bYnu0D7jT/SWn3lkzCemVRYdk8GGwgvtLPba/Q7WsvlORC7oLikNPch2JJR/dqAXGPC5MI2iPUlbL0MX2gPmfTAuo1jt0/bv7C5BXNS5ldj/vObkORBzhjaiBDY3kjGGEJElUNkftaxlIhFlZFkDcPq41oWa1ra/9gBU5SlShBNdpNFdVEIhRhTrgj5LDcq6JX2LbsKa+0SVyzqoo5ATrEZsvwA/8iRwPTf8iKeJ/EdPveFKU6O8MTWCvIYI9QCtyLFex3//9HzjhjJEgT2skt0vHV8whMWiwjH/V9W78GfvQkO3sSThb6NUU/xSqBz0Mgo+RqYUwQ8CiPD+qLF5ALxIcPFi/vVteHO7JW/T7dninxxBtGF5qt+XGcnTjv2Nkq0AmBcitxTvKMYXh4qKF2ZjPbGgnuOihr98/y151hiWYJwNSOQqd+h1nWz50/0qRMR/0p62xq6C4oqj3YVIyMb+D2QMzpeMcq7sqH5OJa9L6lnACcXFKhMdnxWrrCy5z6HH/pu8Gll2Cb200PrG4drYLIwKANkzL1pSr9pHvm/ulET/5920susgNS6QJEw2nOLkfbIMuc339MEWQhves9/fKUJw4/FWfuyD+jgVnY4NXh3nWETdX8T6eFq76QPR3r/LeL2LQb5FtMijjggUNNQ57H3WlwdJpdDXydNwRFlMeYOkqozmmEBOlWTPNAO/l/fGxZ8oocoWzPs1PYSgLEGW991wcV7vip2Y0PCRVYqb2eeOghyH0S6F4+96F7FBQviYx8E6PzGWiG6EXyjNSKFdTCHJ1v3EENCHI7MnHz0xbyYNMDFPup55A/0aUDVgUtjYMIkmwkXk4uhAPmawSkpQYyxPL2utlkY9JPiHt5rg/JTflw3emFRalqBYEfeD6dH5/5IWALe45Dx5m0hC18DjGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 54500 equals the contract rate, billed qty 2 equals PO-1018 received qty 2, no earlier vendor invoice for 109000 in the prior 30 days, and the 109000-cent total is under the 500000 bank-change threshold (bank changed day 18).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvXi8hKJa8xAV77PGo",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1988,
+      "output_tokens": 372,
+      "output_tokens_details": {
+        "thinking_tokens": 261
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 54500 equals the contract rate, billed qty 2 equals PO-1018 received qty 2, no earlier vendor invoice for 109000 in the prior 30 days, and the 109000-cent total is under the 500000 bank-change threshold (bank changed day 18).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1988,
+    "output_tokens": 372,
+    "output_tokens_details": {
+      "thinking_tokens": 261
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

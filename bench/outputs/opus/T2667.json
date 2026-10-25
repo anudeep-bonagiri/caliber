@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.047044,
+  "durationMs": 2544,
+  "httpStatus": 200,
+  "id": "T2667",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Plate TX-1011 was charged at SH 45 SE Plaza, Creedmoor (TXTAG-SH45SE-01) at 17:55:10Z, 7 min 31 s after earlier charge T2666 at 17:47:39Z at the same plaza, so this later charge is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSywUKEAgTGAI4AUIIdGhpbmtpbmcSDAxX0SVGWffqDnvvNhoMcAXAL0ABpJm3If6EIjCYZTLpEv2I59y6AicLsVz/ttTadUBMng+u7sgr4PVAehTUt4mjh359K4/sU3snRJgq6AR/KWfHcysQ+oxJi75NvxBOEvoXIW/gdXkQEny3aR/NHqAr1OHnunSiIQwmF8IfRmVzUIip/2DNdyEFq2TBOQppVR9rvD7tDtS/oQrGa1MhJmk2rMr7jAyAWroL2aurBwdUmYaleUOHT7HRiRdfdN4UxVqcz+nExId2MD180aKopcKxfxKEE16Qej4VZBQPdZljJ5ODMn7poRXlAGDevuw1yF31pjX+MLJuhVtnUkGAIY+jtAw7AYtQlpuyFWzmx2UYoa0uBWlh3TtHotq3Es+nxweoKD4SPm7gWBl2Xu1lkkaAuJ8uv2TVdl3o2WSQ9Oxlw0mMJR9JPX/gjEjWpG/WSt9x6wUSwk08VhOMLvUAXlA3emo8qlmqZXZqwN0kKMbJmUFPnzj4F3IUl2vHmeTkv+2aLfigZ8LNVRG4dyLpuLHsSF+NWU4tEJGJaf3wYFcOBNjidR0U/DJOYDW+4CkM3Rh9hKmk/gdroQHMGHPW/OcL2oVtV6UB2rqlPExejJMt2lpa8t5RN+tLBGhgwL1zz2ahcFFDeu8NHh+apA2EicOobo1UWqCm9T1Amf0lWLYNldp35Tfh/i8FheLCX5wJJXF40tH1a7W7l/3r6HsyvNCcn6NBxIiWZK4eXGvziS5NVUfBS481zuu6JXCj6Ds8Ql4mmkefsHxEhV+BjZ3BwjiMHzQXUk9RFnWMq7ajzStBPEAu+gPUaJ1YCqe8rfejJY7MX5PnfZSQo3xK8gkTW/dbMjpFYZhMOrnOP7z53I4DXmnX348BXTX86APH5TiU+A8ZIubIbBhKtBYG0TX/IXeFW3bKYbV3GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1011 was charged at SH 45 SE Plaza, Creedmoor (TXTAG-SH45SE-01) at 17:55:10Z, 7 min 31 s after earlier charge T2666 at 17:47:39Z at the same plaza, so this later charge is the duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxsbFxCzsncEYfX5Ve",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10746,
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1011 was charged at SH 45 SE Plaza, Creedmoor (TXTAG-SH45SE-01) at 17:55:10Z, 7 min 31 s after earlier charge T2666 at 17:47:39Z at the same plaza, so this later charge is the duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10746,
+    "output_tokens": 203,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

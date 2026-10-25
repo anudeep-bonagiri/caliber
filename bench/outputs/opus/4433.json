@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02378,
+  "durationMs": 4463,
+  "httpStatus": 200,
+  "id": "4433",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged within about 0.01 miles of Pilot 299 Corsicana at 16:33:52, about 3 minutes before the purchase, and 32.1 gallons is well under the 132-gallon limit (120-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiwgKEAgTGAI4AUIIdGhpbmtpbmcSDGauIY8vnm3NdF8rqRoMyoItOSs4XV0521q1IjBoGWfm9vb0hyyXp5ojsokPi54GUjz6uLzqOBPSmjO7p6yNc8X1/XfKpbBu3A8WGEEqqAcmlbEex3Nly0dhVSJe66kLVKVoYL79U+GZ34ipNduN5J41vr6Nxm5dAfvtgGC9FBB9t+qjF8AePgacVLudjEWdo1p7+FOyLCR5DQnkjtu0RdcRWpAGwFxnQWIAkwuGBwwNXysjL29gf/Fka6/q8EHeSHdNl+yzDUn52/D3Zr0Sb2pPZBJG74nf4GVNwYjGfIOaVRS3eU1cMYG9JkNYdmkLXFREus34Z4FO4hmfNduatF250YXwOZgaENZlZgbewq2hU5xIo4jok31i599TmCqbI3am5N/4yWbc8RGo1RFdHun/BbrC5ztSap7P3xSCanHTO9jRivxH+SMxql3rkpcWajqo60ytlZJljaCU/mqWoS2AeO6t8fmSZ0g3N09Y+LkUw6I/tWIJZAHgTwjGB4epTFVO8/CJtQMZh06cECYw4VGb6WNloE0boHRHknc3qE991ZznEdw00lqVLqrYVRYMTLCHB1Y9Q319vO9lFm3Uqeh3IQIoH55aDghpU80zQA+QdwdOw4mksCAMuXtFi3CrCbAtd/NiE6UAitV5L8WNa2loDr1Zr8n53PustGuuecz94hunZzQwprjcRBDNpR82A3pdsvhkbAFBwL2plFIpvGQ4sLLb1znAeMs8eNf+QxIDLPO0UHvEJn8ctiKw5yPYFywRw3jxxElgVSWU7JFk69o5G6nRRAuXr/rbV/pESHvwRBs4BzTEjNsElq8tv0AoCQMy8+/ssll/7nhz4jVbQgcM3VZy5/fcleeRiLswGCqLRjOWzmVanOQIUxQUyIcjhVrDPZSt95QWb6GO+qHRkT8sBeC7F13dEW84NJyhLl60tPMy+Vg6UmUshqbI04kseCVzp0OdXrLvsa4GbVkI6GIq2OwEX4w2jKvhF/YLVy6qb/my9IsvazkZkdbvgfvGH9Q6S4eU+QJPLrSNOX1GOtpX9jwX1wvFLEXSEouZoZm2MFshxz1V5XR4bBESj5PSkIZf4OQI0pns5eSXG3cOMRL53RiXUJ3ugJyZgMMWcz/Rbgd2qil0BphIo1Pz8jGWcKu2hPSEU0Db8HbYoiNff04BefL8hUaa4MCf6wX6U1uHGsps/Ul5zsUzTxtsGMcHzbMhtMwlenP3/XXORNCgE8wed3+Qdf3pbrbJ0qAbOCg7ya20LkQc15EExcKNOAk6FXk+Q0HKyIYoBlPCTZ0wRv1vEF/m+KPbZ9Xq1JmjpiCERyh0R2EeiLwmkp85ygLW6tDnJCRvqbMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged within about 0.01 miles of Pilot 299 Corsicana at 16:33:52, about 3 minutes before the purchase, and 32.1 gallons is well under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxSwT1KzjVcWqYCMFJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4305,
+      "output_tokens": 328,
+      "output_tokens_details": {
+        "thinking_tokens": 223
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged within about 0.01 miles of Pilot 299 Corsicana at 16:33:52, about 3 minutes before the purchase, and 32.1 gallons is well under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4305,
+    "output_tokens": 328,
+    "output_tokens_details": {
+      "thinking_tokens": 223
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

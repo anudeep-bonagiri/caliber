@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.034464,
+  "durationMs": 8897,
+  "httpStatus": 200,
+  "id": "1049",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck 16 pings at 11:15Z and 11:30Z, within 30 minutes of the 11:21:47Z purchase, sit about 0.02 mi from the station, and 80.6 gal is well under the 165 gal limit (150 gal tank plus 10%), so no hold applies; telematics note: the odometer stays at 159710.9 between the 11:00Z yard ping (about 5 mi away) and the station ping, and 11:15Z is logged twice, though even the yard ping is within 25 mi."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck 16 pings at 11:15Z and 11:30Z, within 30 minutes of the 11:21:47Z purchase, sit about 0.02 mi from the station, and 80.6 gal is well under the 165 gal limit (150 gal tank plus 10%), so no hold applies; telematics note: the odometer stays at 159710.9 between the 11:00Z yard ping (about 5 mi away) and the station ping, and 11:15Z is logged twice, though even the yard ping is within 25 mi.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxCtLq7cXqzi769eub",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4596,
+      "output_tokens": 804,
+      "output_tokens_details": {
+        "thinking_tokens": 617
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck 16 pings at 11:15Z and 11:30Z, within 30 minutes of the 11:21:47Z purchase, sit about 0.02 mi from the station, and 80.6 gal is well under the 165 gal limit (150 gal tank plus 10%), so no hold applies; telematics note: the odometer stays at 159710.9 between the 11:00Z yard ping (about 5 mi away) and the station ping, and 11:15Z is logged twice, though even the yard ping is within 25 mi.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4596,
+    "output_tokens": 804,
+    "output_tokens_details": {
+      "thinking_tokens": 617
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018092,
+  "durationMs": 5496,
+  "httpStatus": 200,
+  "id": "INV-1044",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches contract 9 and PO-1001, billed qty 1 equals received qty 1, no same-amount invoice from this vendor in the prior 30 days, and no bank change; note that PO-1001 (qty 1) was already invoiced by INV-1002, INV-1003 and INV-1037, which none of the hold rules covers but AP may want to look at."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrgoKEAgTGAI4AUIIdGhpbmtpbmcSDBA+R3spM+oNwntzMhoMsRk1JWBYv2UmBgmOIjCu/srLsZOKBzpUfod8lEzelEZzrcZwH82HDPrmtgofG3w2wv3vidJj2wVjfKUd6asqywnfjKN1Pufd9iZq60OwF9XG50AbA0f5Ui4SioFe71gGS2DMFZNe8E+c5WS4JOYwue8Xanw8jqONb4ceF/shvJ6J7MXtrzIZFr59jDsHptTsAabwHv7JR29sXY4m5xApy+WDoTWjMyibX/jwYXUiHUyOyth4/GXfOrP8Bzgr7RKBG23nibcfwUm19gkstkCDpkR4kkmbGpbVKqoRA62Riw5CYUgapJvulSCGkUMXq+WVcV5bfQNJYRqa95iY34f8T5CcNC9gzE3tOPulRYsRF4c0Nj4gCqg5z48uSX5oGJrII3qwSMt/vPLyTSzKR2uADSnmUW6rJisudtnoHz7a6jOaDYR3fMqfxlYjkrwHcIluOPRtuCZEEehx+BkCjDzYgxuWTF1hLc3xz22RoWUxa+f9CVyU/QGHxlgqagCaB4kX7LqugeVmvvwFeCl+ObxIobtOKvZCJd7eI6XLvm97Nfw8s3xuQyutiYYukKw1RRmXQybOtaWMNcr8h4vs2Ufp98Lpl47efypuvzax3iBrs2NN6hLjQ8vAEEXuvjyihCCWDvN1qcb8VNhGnYvJyGizUccybUBA/0FtrASdKw6PQ9PjMPxusOxsDGF5uOkj/+P6G8jAo733Btf/EuX2VlTgWz0Gsac5bEHdzAEc5vkl62PYdUT+OXampEK9OQAjhCvwt+AI0PQyMAbkdNQzZ5DhK5DPiUvIM0OFBXImeuQ6bHcGxNi3XaPOSbsvzobg2OiNKyPZCyTxJ2FMF88dIuIr+z3j1BsjzQMv1LL6XeQ7+2PwtfdMdV6I3qOUssxNagCCSn4z1QF5rrUKc7OnLOMaaS73G+x3WyPOj7BM10d+tVr3zpNmCeTwxqpmWFc9KSvoTnzjkzMcG0k07Yqj52Fzuk4oxtcuu7tm8OkBRfQGQMWy1gYr1vo/YVkOSa1ZcX9tjFMraVOkl7CLs+IaYzbOwJ3mMvXV01kXqLOeIBy8w1esc9Nxb4fC7LUcZi1jZJv75EUe6RtYQg+dh6LI4mL56nusi8U9mZ1yZHU3tlTKTX3AtmdZ+zvHkgMEIseZ/nGqd6GWt5q61wYgBaaYKc//6A2cxrD8tX+G9PI7YDHGXpounNBXjj3YOGQdveud3KDvkxS4W1AXxF1cDFpsFGcm+JuMZTOYEJ7DvRoSSBKlREWy1IKscj7G1chkp6kNBVhTAyyucZxhYTcqWCdzwAZk3Tq2Qa7geuQmupwWtx7Rp+2eDfbS1hiOy2rEXP//obgh63ZIa/jugt/q5i1axM20jQNYf6zatpTcsCxZcV8rPdGx48E6B23ZYRN3dft9NLmhOuyMlpssvR2z1WF5u4e75k3lkS4fm4drTCO8nhZvxML+mDPke07kC4jHaN2Y0csOtaB9unqWSkNDho6EcjKb3jz93izRjn4dCQYvDV9+nMCblAPh9F0vlMfzijwgLMybv32kj872qSwt2rsKLHamtYWSoTP4kyskT4ibJZIZmgaCorcw+oU67AxqGtMzEvr8GNxr3nnr1ocUbSJnHL+CnF4M/7J9msXhIYTbw4vDK45rax+Sf5nHaY57/8MIT2NGjvVuQh9OeG/PgyBvvxdtru/YWyqWEnzg/fI3maqUnayU7Z1bfsOp4JHPhtMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract 9 and PO-1001, billed qty 1 equals received qty 1, no same-amount invoice from this vendor in the prior 30 days, and no bank change; note that PO-1001 (qty 1) was already invoiced by INV-1002, INV-1003 and INV-1037, which none of the hold rules covers but AP may want to look at.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6DDQjXgVU2nyqgBYp",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2233,
+      "output_tokens": 458,
+      "output_tokens_details": {
+        "thinking_tokens": 317
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract 9 and PO-1001, billed qty 1 equals received qty 1, no same-amount invoice from this vendor in the prior 30 days, and no bank change; note that PO-1001 (qty 1) was already invoiced by INV-1002, INV-1003 and INV-1037, which none of the hold rules covers but AP may want to look at.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2233,
+    "output_tokens": 458,
+    "output_tokens_details": {
+      "thinking_tokens": 317
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025516,
+  "durationMs": 4708,
+  "httpStatus": 200,
+  "id": "1235",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 11:20Z ping, under 4 minutes before the purchase, puts truck 7 within about 0.02 miles of Pilot 1196. The 40.5 gal purchase is within the 110 gal limit (100 gal tank plus 10%), so no hold rule applies. Odometer reads 274732.2 at both 11:00Z and 11:20Z despite about 3 miles of movement; worth a telematics check but not a hold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wgKEAgTGAI4AUIIdGhpbmtpbmcSDOwE0qG7Mdcb7g33TRoM0o/O4xrdpzp0asZaIjBU18Y3YxFsezWDmNdvu786UMwOr/VosBuhX4wnJY2E1qiIEHwYv6377oJN034hP5Yq8Ad7CB46LHA4mAnl0cP2i1cXIrMW8usWr+hSnEM3JeuzWrCZ/tren+/CAzNWKRVCgge3kmbTbdZlT1+EzAGi8vMIHMj/wxDpgxzRwn7dnumu+hBN2ghjNPxKjx50vBJ1O2SXS6bEdjhZFkMFl4P2pdybg8jqr0zlC8XyH2EDWG8DUxoWbrpL8KOCrB7g0N/bFf0Xdzhn+2/FilPkCumpDsfoJpiSxqneS5eJmro/JUZ7bp4eFLpPDjihv7Rts1jCWz36S3oH4a5QXYsJRh0joDFWjH01AjvqV7sUym7bqyMzJr5FN8vFFPoUxkkAR+5CunPtZP1Qw6/RbRiaOs1GRnlaJvR8jTEVrgfMK1izX4sA5aoOfXYGvs0I0Evzpe6UznC83TFDsfxUc+IR+2mHZYV7+EmEkQUpc80U3uGg7e3QVau/6nuQCONiXUacnVTDW1cjZyC62sw/MXrRFdxWedKe2Pyaj8oqPftETRI09d6aoA8HxOSBPd5cltrLxOHutBKaUJoFj4sng4XCzOq9VlTtHbaiup1OpFuOclXzONRKngQ53SC0hMtC7Vz7UYLbXI5mRoj5abWGXgg7g6RPCS0Nd+rizFtZksBAY7W29ALdPJ2dwN1J9tubMTxY38k+6rAAw9jKZXigOBi0PKePaf/1MUZWJ4c4hu1ocs/J7c6KYykWjsN78F2MQwa0tG4rrH3LkmG0OZrf/uXan3OvZzckIFfkVZf6wxPp/jsDSl5cP6Y75N/nJrAsC+QJsTQDbLZSrKw50s/leZb/+90RDjRlVTZJdQudeHQZ0xBkeeI6WOrmPoeNlM8+C2cWBk89q9lpfHRnWQXXZVMG9u83qqMGFMge3mtL3nigFzR/9CCFlYHh6pdJcatUS2/6ccFADF5+ZNGCwzioliBqaunDHxd/XLL9eA2tYKNpM6szSDwYeIj1pEIhhrU8VYmCg3pvDzszpSDAFAikK9dYqQzbLF4zZQmPFAoKMKyYaXwQk5OLJhsGdBszt+70xDFi5ZSoEeHA7RIU2jjVzQuuzKH+zwYyG/CRFN6sn3Kk/80a6hSPPGmFHMzxZr1eUZ9JZWGrszK1scVB7zQTQzCMXyLQGXmHxo20xZQlZDK+69Mn8cP0QH0R0A6vAwjKt1cb2K1qRuDdofondwxGUMlyibDgI9We4xXyZ2f9DhaqcbMjgUwrOkNjcRur3M/ktJCc9AlQv0dl4Qcv2viX8mdVVbGjI57zdinUIQbi0l+aAWIXoJBY5IZA7FX1Ae03NGOMFO9c2H35bo6TCnwEx9++7TiVYEfnvO+122j8h+zxbYjvBaU/5MzVoIAtV+VuymA3JAJqQ3YYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 11:20Z ping, under 4 minutes before the purchase, puts truck 7 within about 0.02 miles of Pilot 1196. The 40.5 gal purchase is within the 110 gal limit (100 gal tank plus 10%), so no hold rule applies. Odometer reads 274732.2 at both 11:00Z and 11:20Z despite about 3 miles of movement; worth a telematics check but not a hold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyw412f3YzbmHo9UJ4V",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4449,
+      "output_tokens": 386,
+      "output_tokens_details": {
+        "thinking_tokens": 226
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 11:20Z ping, under 4 minutes before the purchase, puts truck 7 within about 0.02 miles of Pilot 1196. The 40.5 gal purchase is within the 110 gal limit (100 gal tank plus 10%), so no hold rule applies. Odometer reads 274732.2 at both 11:00Z and 11:20Z despite about 3 miles of movement; worth a telematics check but not a hold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4449,
+    "output_tokens": 386,
+    "output_tokens_details": {
+      "thinking_tokens": 226
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

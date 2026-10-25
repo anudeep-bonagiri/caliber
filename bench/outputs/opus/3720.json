@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022072,
+  "durationMs": 3859,
+  "httpStatus": 200,
+  "id": "3720",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 28's nearest ping at 11:35:00Z, 3.7 min after the purchase, puts it at the New Braunfels Buc-ee's, under the 25-mile limit, and 59.9 gal is within its 220-gal limit (200-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlgcKEAgTGAI4AUIIdGhpbmtpbmcSDGsBK8y4SkxBg7Mt1RoMCRvUw4wpeG/mnQ22IjAnzBca/p9P1uGOvCsr1QJFlfYY6Q3zmhpUT7U02pONt4bMoxSDZdbOmoNvpL0BTEUqswazrUSC+SwLEL5DHB5uxnOut3kCz30XcY+hT90rIJq6aVyWUbyZGvvi1TYUV8JhVK4NNyL9jedIXwKACFR1ke4FR9VPMwdWEHR3/LzADBRVOPJ//Ccse9yw0F2rUROmE7kBSGF8yCL/Wp/QffplrGAvTyg8KPtE/CUPimwlUZbRDb5N22trGHmU6q67g47NvojibCAK0EjMZzMqW+n8N/XBXh1EnwMLGvSfckqOsjtUz8hRsz1jnHSyCff+73HBsvp/tKY46hhYtA4cDUCxUgRBzQaxbJURSgzh7YPSmoOq6WS4eEXh87+f/pDX4vImQsmx73du9KL0gyAhukILhGjyAn3hdQ4N9AcE/ptcw5451oQvCo/80ryPbTZesJhdt78Wy6yydYvBrq6vq8mUnp6r3ELtgqb3FKizLVoN5M5wz5ul6XZTAelJamx7GOZUlhT7xweHbDFCSbNYXMhXsvoBuPQKhSdlfsZ899Lo+GTrkXLRQUxyqetvp9iYCt2saJwMwGODH2w1mB3Zd4XVXFwUtnG4RpnCa7b3lb4SpFKcQw6BAvayRsqhwvMIOp6ERWinyIbGlSGdMZ6pjyiZ3gI66zT4WyyrUwOIOyUcSQfRgp71x/wW62YgcBwIT37H8Ifs0sT0qCBmtMHpqCRIiF0MJu1Dq3S2NUlg+iRzC8tXqRkB83nKql5MVGxTLWbPsGKe7odRef1477gJ+V8uw2Bq8yfwuErblE/wrtKRVQqyaRrn8fu2J1ZbkGi3KHGQq0lKcPgyimcdLnvUVe2tWMJjNcrylqlnPhxxW4tHBBeDxNgzv5c7kZU5Uy/USPf/PY/C/4zIVMRFU0XDXREBuu3fEHDaNmFIQBtUhL971fxPUPjqh825qaipYCvkNGG3iuLmTuQeGUiCqcAo7WC5+WYE+I5RznV3BZYIjt8vxc6KLrjhBS42sCsEPTFnP7OxBItvyVNE7xrOHn2yEijxgmF5BqMd5y1l1EsOUaO3KEBnkgascgrCP58v+RVdiPFmj6uhMa3vcYpQogrKJEH0qfiSRRA4HZcvcZIYLH1lvj51NlojLYpXngV+eWkB/BSLkwaOVt4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 28's nearest ping at 11:35:00Z, 3.7 min after the purchase, puts it at the New Braunfels Buc-ee's, under the 25-mile limit, and 59.9 gal is within its 220-gal limit (200-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypSyhsKUrwQqUGVrXf",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4088,
+      "output_tokens": 286,
+      "output_tokens_details": {
+        "thinking_tokens": 175
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 28's nearest ping at 11:35:00Z, 3.7 min after the purchase, puts it at the New Braunfels Buc-ee's, under the 25-mile limit, and 59.9 gal is within its 220-gal limit (200-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4088,
+    "output_tokens": 286,
+    "output_tokens_details": {
+      "thinking_tokens": 175
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

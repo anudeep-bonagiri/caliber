@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.046684,
+  "durationMs": 14119,
+  "httpStatus": 200,
+  "id": "3719",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The 10:50 and 11:05 pings that put truck 22 at the station look unreliable: two pings share a timestamp, and the odometer stays at 377851.8 despite a ~5-mile move from the yard, while the 9.7 miles logged by 11:20 match a direct yard-to-highway route that skips the station; set aside, the nearest genuine ping is the engine-off yard ping 55 minutes before the purchase, so ask dispatch whether another unit or driver used FC-1022 (gallons 75.5 are within the 220-gal limit)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+hYKEAgTGAI4AUIIdGhpbmtpbmcSDGqSsW/NJZkpdGj8QhoMPoRpCGxze2Sbkc6vIjC5tneCHGPYFr7/eugCGjLOFdq9SaRxshymMCfYUmsQ9Lpnne8v8Rfw4ZlFi/8tmaEqlxZrTtsXDecF3QMWDjRDAgYLgkZHcoB2ScmtRlqgQhc79aUsmuhqlSfJFhJrJZErCBII81T1ECEMKkhlQY/bEVw7nR7/BxRHnT1vzzjYCynqyzmVQMzFCcLrKOg1rf4g6/yx1pU42EApG6V8Kl/FKoImO9xmIZHTIsUHPOit6L5kEPX+iPX24C/2LekGdFS5wYUN+IsKcUEr0FrDI4qbMZLRrI0dSDG2PPZpQVcMd8U3rRBrCa2Z7P16ZeP+5n1/fA/e9hFNTX9sbyXwqSjM480jw/WE1qBCLlOxcI/WzoiaBt6upt6UrvkBbu/kioHdiFPDpijLoBRcbvfMNt1Fz09ScR+ZtiIt8TfA8FiTRh5qlLtqlpoT4Hjm/QqJAlDGILQLY4HphMeP9f9GTt3ByMs7LbCG9pdLY/NfbrkZPnQUqsCw/J6LGooi7qWlAITbX0B99iATOYqWNRRi0rwA54S7CXR9N5HI6R2obreMIGBHXNr8543pgE0HNV0Cb1Glex3cgwqKCtQdBwQp3bmfF/cYJFAxOhpgxNtZT+JLAysxTwOnmpe7DFqn1yz1XuuJ3A/gydcjnFbm9rOea0K6hDuDdfRyY7iPJYhO2UgHM5AcfjsIDxkJVdQvznkdN/wd6A3AO/ss/IqCPFFph4aqPJdvEef4ZYvORHdjizcKncluIS2c66hLV5gJ/sBpwk/wvsHPx5OKQdDDeoxaBCxokGz+bbxxdFb+ciStbnPVGcNsfrzlbtw3DSMCbXL8d2RImYK9vPWJXEs/PQlV9EIweRpnECmEFNKNCcymw93Rnutf0epUBaUDTPjM/NM5Akfbo0aetxtaIqj6DMAgP8VyF94AoEkKwJ0EP9Rz6voeC+zy9ys3u0CZEDhSrJnf9vS8yH7oE06Wx2eTBPkpx/5WzecMscIeCQmrKtTIC/SgjxftG/ZnFKNCGNF8+WvZtJPmZbvOJi7rdJ7OYiFneSbMpWNtQyDzypwAJzQ5PeHyKYPaVg5mxsIAnFH8JWvnzcMIll2IgKxNTqeE50kb3qdnVmDTJyHgmFlwvaJmABLZNclizrm1wCihzMDzfTz7949VphEDKZy00JIw40UqWpFv782kVKr1VcdPwdhm5SVzjr/QIWRtTFUMtMTSPdP2qPldU+mjbhJbrIsjVyfIjYkldlPI+C+84VsQWajK8tX2An/kBhK+Ot6oX6slSPvQqhDoDjPE27VcMziTpuf7w5YYdyDLIlJOOMz1Qc1hs6BzQCnesYtqunx15NACwyYiKYFtFBZrVsfAePDsdAi42gP1yfEgTsRyYC2r9sDS9hP6sd0LG2k5fXTyoN4V8LxSyN74aiWM6zFtUVxoMVro9fk43oPOWY8osN44nK4a3iGzp0hu0qTB4LQ6YjSIPX+QrXrqYeTSl9pUrZKKQe7pdX/r4dVLicxoARs30NS4PEZL/mL7gBOKre+Fn6DTQO5EUDjhCuHHbiJsxAQPw9uKyn0phogwunSToaJs9Q2e/umY7F+Ma9LTN9u8PLg777m5t9CJ4ysR2mX1uzfJEJ38ZQsINhU41ebQM0VBaVtC5RM/FOFQr9tvp+wz3mmtMEuLNKkl3N3JmSgmmYEpLCzWVT4QDJKHrHABp6TOkGrvSlT9fPZotsiBF5ux98VNdXhL2Q+m2+B17rSToB3DX8nmt2OIsDlCm13e/23EJyvKBLqGTox2fCs88ol4itTtQbpGlVDOwxD3wnjt20q4Au26KO8syw/U1ge7D9V42uH9VlmU0F9yOHUXH/jBKlicu02faEL6Mae60MJdQtGiUxTsnHXkQRSFKjpeLB3+HXAipVjTcQef6IaGoB/fFdSh8/1Ul2mp54ZeiaxBKutOT472+UMIB6QHIHf3fwEtgKsF9ryrfdkBNBtL3dk0AvOWZQ/AEPmZT4Neflu4BX4pfgJw4WshTxzBhWq7/zAMWfunwtbmSjBZ6ig4u/Bs7vdQb1WdzsxuU+KzYBo9HIvYpq1tKq7AktWC2AVdAd4lkAYmlLWVJe+wgkN5vgl9y4IGy2zAz1jlvWyejUOk/BaRW7b6GUaoouSRgCv0eil54Y/BhWQonUOpiZf3jMgu9EKD8uQAjRlb96NvNNjlQ4XEYVErjwRi0LSGpZPKyGHSLLqHdvo5OjHbFWAiS+6tPags6P7T/Poggamef5FYyj13Cu3MuZuxtINpVMG1m8Swv8IMe1C7BGwc2Q8wtcS0M3DnkvXyEcq3v1TzcaNU8wjRKZAuMsRiuRrVsx5QBtM789ywrNnpdY6anURa0/mGtgDTs+hPW38eyRq7gRBatPXE3c7JVXqINRKnKacDI6CjlJnI1tbsp8QjTX4RzPOSlTGTsE7KDI9X/jFbgT5tIC2z/M5OHyK/ESW6y10SfXdJJAuEox7Od5HuJ3wghAXtwuTQYYg+fZUOInZZO9388NDF+rsoy9Gp0ZbcYrNNyL+jU8o/LmncfVfYynkTSjpxuoe6F9FZo03C/VRJT7JtFDlTVrxn6H2R2fFQMgQlsohyqDZrRa15xNdxRD5GlL4wgZjfkI8a1gkna9dkd2l609pbu5Tcw9ipxhRiPy44w/pXnKHZdd8hN8Q+ubZinJcn3abNwbloeFaOFbj8MGAW3UP/9Uk3uXgSlPIN4cCd7cGSqc7QNxkTogxPbqtUdrAP92DemyrsznjZHP6QeLSeaJNzYCjNSV9pYPDAKSo3uKVxueJgLaRuSjG6lDUbQmOHZFY8rFc3bzBIxOx4U1ycOfnWFwaCAw205oOxruuPlGjsTLHnp9/vvfGAjQdqYmDKwVsJjzYxXw4lYDXzEiH+T1XDunsRJa7EXkwqgr5237pTvZnbxD3VtyiwiCHlXOjiucmOcoao842UbNkG2uFLpxAeL//2WPO33pwj9LEG0DPVaExcJnfwuhkfQlA78Rnxds27yzy4zENFoE+fPH4mDrTf/2mSK0OFZKxwGd6cg7XaGOjmg+rKJ7HKyRUPhhxJltm6QBBk8lWnzwFeWErr7cuqHQ8XI7Y6ugT2ZgH+BYnNlrJt1dZqElPC8s+TOcXbSoF6JXwydOxSV8B9TRjbXtSiC8d3LE6Q1mPWBie1WnSVNFhqsnW5H1TE0c4q3Tyv1ZoKvDqwTkjQaREmT/k0iy6IKPfR4lmuwc7APTAkfVAzYRzmjwTUykk296jbRFAn6HkJPSJBi0CW7oTzA3QxepArEYy4ZIWzV6eN1BpUbYLuawXiKb02ijqUEp5M1sfbgWFWwSHBAnDw3Wr0Qld/5vKmn5TU6vgLVTHHxjFekA0joYV23/SZ+0CZPk+XQS8jgbk0GSMeQBCq9cB1kD/r8dXcwfTPUZ4ArP2j8++CovDyjBcuYF8cdFF9sVzKEtClNBgFJMAg9S/gn6a10OXVfOu5khrJiYqBXd+gYzaR0lQLejL68ME5gICBH0fh5+NVPu6PDWyARMBtrZcrqMB4bMD6i5KXK6c1nDAX17RM3vbDshdqMtY4Oj2JOxh/TmgU5BaipNYDWQuiaxFVIXPxN2e+2IrshVAM9zoziYhYBLQLnpCxfuG6wtHDD8HTBVIK+jbRb0m0JDYK4+Akx66qMAg2zxGACqcdg0HWgJ75jflcNEvJJfHevmPLoNBrJRdp7ACDETIfw9NLQAyCbDY1Ot25n39x6zAxseNNQd7SmzzMa/FxLSxlCtuMfAcKx1nbVSFjpMm554pVqFkZKPdCAQQJR6bNgEH1Tur+rQLZjm0vsrW1nPa4yJf1XqhZlwzVxJGhALMn2G2NGQ50s6dlebEuGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"The 10:50 and 11:05 pings that put truck 22 at the station look unreliable: two pings share a timestamp, and the odometer stays at 377851.8 despite a ~5-mile move from the yard, while the 9.7 miles logged by 11:20 match a direct yard-to-highway route that skips the station; set aside, the nearest genuine ping is the engine-off yard ping 55 minutes before the purchase, so ask dispatch whether another unit or driver used FC-1022 (gallons 75.5 are within the 220-gal limit).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAiTRhFMvpZg22FHmh",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5326,
+      "output_tokens": 1269,
+      "output_tokens_details": {
+        "thinking_tokens": 1054
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:02+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"The 10:50 and 11:05 pings that put truck 22 at the station look unreliable: two pings share a timestamp, and the odometer stays at 377851.8 despite a ~5-mile move from the yard, while the 9.7 miles logged by 11:20 match a direct yard-to-highway route that skips the station; set aside, the nearest genuine ping is the engine-off yard ping 55 minutes before the purchase, so ask dispatch whether another unit or driver used FC-1022 (gallons 75.5 are within the 220-gal limit).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5326,
+    "output_tokens": 1269,
+    "output_tokens_details": {
+      "thinking_tokens": 1054
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

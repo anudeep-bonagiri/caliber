@@ -421,10 +421,10 @@
  },
  {
   "macro": "factsAsOf",
-  "value": "2026-10-24T22:25:41+00:00",
+  "value": "2026-10-25T00:22:27+00:00",
   "source": "docs/FACTS.json",
   "where": "asOf",
-  "raw": "2026-10-24T22:25:41+00:00"
+  "raw": "2026-10-25T00:22:27+00:00"
  },
  {
   "macro": "txMatched",
@@ -855,10 +855,10 @@
  },
  {
   "macro": "baseGeneratedAt",
-  "value": "2026-10-25T00:12:27+00:00",
+  "value": "2026-10-25T12:55:10+00:00",
   "source": "bench/BASELINE.json",
   "where": "generatedAt",
-  "raw": "2026-10-25T00:12:27+00:00"
+  "raw": "2026-10-25T12:55:10+00:00"
  },
  {
   "macro": "baseSeed",
@@ -1064,6 +1064,153 @@
   "raw": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)"
  },
  {
+  "macro": "sonnetEffort",
+  "value": "n/a",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.meta.effort",
+  "raw": "n/a"
+ },
+ {
+  "macro": "opusLabel",
+  "value": "Claude Opus 5.5",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.label",
+  "raw": "Claude Opus 5.5"
+ },
+ {
+  "macro": "opusModel",
+  "value": "claude-opus-5-5",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.modelIds",
+  "raw": "claude-opus-5-5"
+ },
+ {
+  "macro": "opusAnswered",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.rowsAnswered",
+  "raw": "558"
+ },
+ {
+  "macro": "opusRows",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.rowsInSample",
+  "raw": "558"
+ },
+ {
+  "macro": "opusHolds",
+  "value": "72",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.holds",
+  "raw": "72"
+ },
+ {
+  "macro": "opusP",
+  "value": "0.81",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.codeExact.precision",
+  "raw": "0.81"
+ },
+ {
+  "macro": "opusR",
+  "value": "1.00",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.codeExact.recall",
+  "raw": "1.00"
+ },
+ {
+  "macro": "opusTP",
+  "value": "58",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.codeExact.truePositives",
+  "raw": "58"
+ },
+ {
+  "macro": "opusFP",
+  "value": "14",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.codeExact.falsePositives",
+  "raw": "14"
+ },
+ {
+  "macro": "opusDetP",
+  "value": "0.81",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.detection.precision",
+  "raw": "0.81"
+ },
+ {
+  "macro": "opusDetR",
+  "value": "1.00",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.detection.recall",
+  "raw": "1.00"
+ },
+ {
+  "macro": "opusDetFP",
+  "value": "14",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.detection.falsePositives",
+  "raw": "14"
+ },
+ {
+  "macro": "opusDecoysHeld",
+  "value": "6",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.decoys.held",
+  "raw": "6"
+ },
+ {
+  "macro": "opusDecoysCleared",
+  "value": "0",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.decoys.cleared",
+  "raw": "0"
+ },
+ {
+  "macro": "opusPartial",
+  "value": "no",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.partial",
+  "raw": "no"
+ },
+ {
+  "macro": "opusFailure",
+  "value": "Claude Opus 5.5 held 14 clean rows (holds by code that did not match a planted row: 10 as rate\\_variance, 3 as short\\_received, 1 as location\\_mismatch).",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.failureSentence",
+  "raw": "Claude Opus 5.5 held 14 clean rows (holds by code that did not match a planted row: 10 as rate\\_variance, 3 as short\\_received, 1 as location\\_mismatch)."
+ },
+ {
+  "macro": "opusTokIn",
+  "value": "2,358,546",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.tokens.input",
+  "raw": "2,358,546"
+ },
+ {
+  "macro": "opusTokOut",
+  "value": "170,748",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.tokens.output",
+  "raw": "170,748"
+ },
+ {
+  "macro": "opusTemperature",
+  "value": "not sent",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.meta.temperature",
+  "raw": "not sent"
+ },
+ {
+  "macro": "opusEffort",
+  "value": "API default (medium on Opus 5.5; Sonnet 5.5 defaults to high)",
+  "source": "bench/BASELINE.json",
+  "where": "systems.opus.meta.effort",
+  "raw": "API default (medium on Opus 5.5; Sonnet 5.5 defaults to high)"
+ },
+ {
   "macro": "asiLabel",
   "value": "asi1-mini",
   "source": "bench/BASELINE.json",
@@ -1197,6 +1344,13 @@
   "raw": "0"
  },
  {
+  "macro": "asiEffort",
+  "value": "n/a",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.meta.effort",
+  "raw": "n/a"
+ },
+ {
   "macro": "sonnetCostUsd",
   "value": "\\$6.38",
   "source": "bench/BASELINE.json",
@@ -1216,6 +1370,34 @@
   "source": "bench/BASELINE.json",
   "where": "cost.sonnetStoppedForCost",
   "raw": "no"
+ },
+ {
+  "macro": "opusCostUsd",
+  "value": "\\$12.85",
+  "source": "bench/BASELINE.json",
+  "where": "cost.opusUsd",
+  "raw": "\\$12.85"
+ },
+ {
+  "macro": "opusStopped",
+  "value": "no",
+  "source": "bench/BASELINE.json",
+  "where": "cost.opusStoppedForCost",
+  "raw": "no"
+ },
+ {
+  "macro": "opusRowsAnswered",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "cost.opusRowsAnswered",
+  "raw": "558"
+ },
+ {
+  "macro": "nModelsCompared",
+  "value": "3",
+  "source": "bench/BASELINE.json",
+  "where": "systems (model count, Caliber excluded)",
+  "raw": "3"
  },
  {
   "macro": "asiRequests",
@@ -1254,24 +1436,24 @@
  },
  {
   "macro": "baselineTableBody",
-  "value": "location\\_mismatch & 20 & 1.00 / 1.00 & 1.00 / 1.00 & 0.71 / 1.00 \\\\\ncapacity\\_exceeded & 6 & 1.00 / 1.00 & 1.00 / 1.00 & n/a / 0.00 \\\\\nrate\\_variance & 9 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 0.89 \\\\\nduplicate\\_toll & 11 & 1.00 / 1.00 & 1.00 / 1.00 & 0.12 / 1.00 \\\\\nduplicate\\_invoice & 4 & 1.00 / 1.00 & 1.00 / 1.00 & 0.29 / 0.50 \\\\\nvendor\\_bank\\_change & 3 & 1.00 / 1.00 & 1.00 / 1.00 & 0.11 / 0.33 \\\\\nshort\\_received & 5 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 \\\\\noverall & 58 & 1.00 / 1.00 & 1.00 / 1.00 & 0.31 / 0.81 \\\\",
+  "value": "location\\_mismatch & 20 & 1.00 / 1.00 & 1.00 / 1.00 & 0.95 / 1.00 & 0.71 / 1.00 \\\\\ncapacity\\_exceeded & 6 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & n/a / 0.00 \\\\\nrate\\_variance & 9 & 1.00 / 1.00 & 1.00 / 1.00 & 0.47 / 1.00 & 1.00 / 0.89 \\\\\nduplicate\\_toll & 11 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & 0.12 / 1.00 \\\\\nduplicate\\_invoice & 4 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & 0.29 / 0.50 \\\\\nvendor\\_bank\\_change & 3 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & 0.11 / 0.33 \\\\\nshort\\_received & 5 & 1.00 / 1.00 & 1.00 / 1.00 & 0.62 / 1.00 & 1.00 / 1.00 \\\\\noverall & 58 & 1.00 / 1.00 & 1.00 / 1.00 & 0.81 / 1.00 & 0.31 / 0.81 \\\\",
   "source": "bench/BASELINE.json",
   "where": "table[]",
-  "raw": "location\\_mismatch & 20 & 1.00 / 1.00 & 1.00 / 1.00 & 0.71 / 1.00 \\\\\ncapacity\\_exceeded & 6 & 1.00 / 1.00 & 1.00 / 1.00 & n/a / 0.00 \\\\\nrate\\_variance & 9 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 0.89 \\\\\nduplicate\\_toll & 11 & 1.00 / 1.00 & 1.00 / 1.00 & 0.12 / 1.00 \\\\\nduplicate\\_invoice & 4 & 1.00 / 1.00 & 1.00 / 1.00 & 0.29 / 0.50 \\\\\nvendor\\_bank\\_change & 3 & 1.00 / 1.00 & 1.00 / 1.00 & 0.11 / 0.33 \\\\\nshort\\_received & 5 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 \\\\\noverall & 58 & 1.00 / 1.00 & 1.00 / 1.00 & 0.31 / 0.81 \\\\"
+  "raw": "location\\_mismatch & 20 & 1.00 / 1.00 & 1.00 / 1.00 & 0.95 / 1.00 & 0.71 / 1.00 \\\\\ncapacity\\_exceeded & 6 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & n/a / 0.00 \\\\\nrate\\_variance & 9 & 1.00 / 1.00 & 1.00 / 1.00 & 0.47 / 1.00 & 1.00 / 0.89 \\\\\nduplicate\\_toll & 11 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & 0.12 / 1.00 \\\\\nduplicate\\_invoice & 4 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & 0.29 / 0.50 \\\\\nvendor\\_bank\\_change & 3 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 & 0.11 / 0.33 \\\\\nshort\\_received & 5 & 1.00 / 1.00 & 1.00 / 1.00 & 0.62 / 1.00 & 1.00 / 1.00 \\\\\noverall & 58 & 1.00 / 1.00 & 1.00 / 1.00 & 0.81 / 1.00 & 0.31 / 0.81 \\\\"
  },
  {
   "macro": "tiesOrWinsText",
-  "value": "Claude Sonnet tied the kernel on location\\_mismatch; Claude Sonnet tied the kernel on capacity\\_exceeded; Claude Sonnet tied the kernel on rate\\_variance; Claude Sonnet tied the kernel on duplicate\\_toll; Claude Sonnet tied the kernel on duplicate\\_invoice; Claude Sonnet tied the kernel on vendor\\_bank\\_change; Claude Sonnet tied the kernel on short\\_received; asi1-mini tied the kernel on short\\_received; Claude Sonnet tied the kernel on overall.",
+  "value": "Claude Sonnet tied the kernel on location\\_mismatch; Claude Sonnet tied the kernel on capacity\\_exceeded; Claude Opus 5.5 tied the kernel on capacity\\_exceeded; Claude Sonnet tied the kernel on rate\\_variance; Claude Sonnet tied the kernel on duplicate\\_toll; Claude Opus 5.5 tied the kernel on duplicate\\_toll; Claude Sonnet tied the kernel on duplicate\\_invoice; Claude Opus 5.5 tied the kernel on duplicate\\_invoice; Claude Sonnet tied the kernel on vendor\\_bank\\_change; Claude Opus 5.5 tied the kernel on vendor\\_bank\\_change; Claude Sonnet tied the kernel on short\\_received; asi1-mini tied the kernel on short\\_received; Claude Sonnet tied the kernel on overall.",
   "source": "bench/BASELINE.json",
   "where": "tiesOrWins",
-  "raw": "Claude Sonnet tied the kernel on location\\_mismatch; Claude Sonnet tied the kernel on capacity\\_exceeded; Claude Sonnet tied the kernel on rate\\_variance; Claude Sonnet tied the kernel on duplicate\\_toll; Claude Sonnet tied the kernel on duplicate\\_invoice; Claude Sonnet tied the kernel on vendor\\_bank\\_change; Claude Sonnet tied the kernel on short\\_received; asi1-mini tied the kernel on short\\_received; Claude Sonnet tied the kernel on overall."
+  "raw": "Claude Sonnet tied the kernel on location\\_mismatch; Claude Sonnet tied the kernel on capacity\\_exceeded; Claude Opus 5.5 tied the kernel on capacity\\_exceeded; Claude Sonnet tied the kernel on rate\\_variance; Claude Sonnet tied the kernel on duplicate\\_toll; Claude Opus 5.5 tied the kernel on duplicate\\_toll; Claude Sonnet tied the kernel on duplicate\\_invoice; Claude Opus 5.5 tied the kernel on duplicate\\_invoice; Claude Sonnet tied the kernel on vendor\\_bank\\_change; Claude Opus 5.5 tied the kernel on vendor\\_bank\\_change; Claude Sonnet tied the kernel on short\\_received; asi1-mini tied the kernel on short\\_received; Claude Sonnet tied the kernel on overall."
  },
  {
   "macro": "tiesOrWinsCount",
-  "value": "9",
+  "value": "13",
   "source": "bench/BASELINE.json",
   "where": "tiesOrWins (count)",
-  "raw": "9"
+  "raw": "13"
  },
  {
   "macro": "caliberRowsEvaluated",

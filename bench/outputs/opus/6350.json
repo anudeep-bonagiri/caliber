@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027644,
+  "durationMs": 3587,
+  "httpStatus": 200,
+  "id": "6350",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 27 pinged about 0.02 miles from the Waco station at 14:10:00Z, about 3 minutes before the purchase, and 28.4 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwwcKEAgTGAI4AUIIdGhpbmtpbmcSDBcU7iFExkpTtMnfJxoMxUcdVDun8OJEeEAeIjAKK0rihNBJky2LTcGeEYZi5ki1M5pfM3ZPseetRa6608iegkipELB1ZIqa5BIsLmwq4AbjZkefCP5pf8uNgydNHAM51R3b8Afp812gwJ7xuOCspddofGIyF7G8fJo8kP9JnG7hMjZWPR/EPqqWXvua7rgpAbXfXCFg5DeXiMyCO/SpTBsFJduA+LUACBLI3EMQGw/uLg4UMAMajR/GOOaemIuJDVBMlg4YEv/CtuLORdcx06AYLgkFLnBz1HLlxcFOcnKLg/HloXUIU0i4TS6k7jdK1Q9FyV8i/6pf7/oiNXD9r0dR5CAO+Myo6kcrnWJD9wgj/ymwzroOfVcOc6gzmUxefPuJZDemr7qdDBWJVPWHhpgH3aMCFZZ33SWkolM9scc4LoECNXL5ldWyIJaVuoT4mDfthvzlFSytvekO4MHgi4uKoyGgaFezxXCk3AU2pMWX9PcmAwlCd4wq7Ml5/K7Ui0/2h2vNBxhYrAst2YrcH/6zHDty0lszfgJR5RspAJNeVDWq8WMGzA1tr5lVHNNBbyIyrxP+kp5n9UxrgsLrTY5+wlJwO3jwrlHsyDCu0C3JJNeyPhqDfkpys0w+f+Q15jHEE9a25Soua8XgRKuoAuzxY7LizIa82/WX89fI5YMmiqsIre8GniMHSIrWgtZadmPrGqd8dO78A+VC+Pyh/gF56g7pS0mJ+5BZFEDTk2MyWAoO/evXV1poEP5NaQVzIlf4DaJ4OVqXSzRpHu6D1uZ8Bc+OL5ZvA3uL7KZyA3SkYCpb7D3kZzBH82bzut3avlA1OP+WJv3ZQMuCnauzcoWJ0+6pkyTsp9xy8jtuaCtpX3L/eq1EM/o0xXkYz1drWvGbqJ4K52luDEXkGBMEFqRr1RQSEHQgkFVzFb+gd2eQDO+aF3YU3o3zF0fgZWavuMCEb61YbCHnRWwqptztIK4SEWAwAZmCvhdErw5ziWGGa5jE78Qk418n2xzJHgiM6iBwAO/uPqHMex8WSkhOPOxynDB+bEDbBP1Qg9VqpYb4q6ZcvhTCIN/t2CmIfDgYpF7zIvzkQKYQ+P3oswB7kwa1GlUC7foVYE8shDW+zvbZUdmPO6FyMwMwJD+hiuVhrz6WzSojYxlA3uX1W0O9qOW+VyJwjuYYlGp7wLZvuQ7Q828MM6ctg+YW9cZN1mdKjeVrKpndaVmi+NIqM9sfYzWMlLCWCIL17qazNb9+f/oYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 27 pinged about 0.02 miles from the Waco station at 14:10:00Z, about 3 minutes before the purchase, and 28.4 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNhkbo3EWEp8L79wP9",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5471,
+      "output_tokens": 288,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 27 pinged about 0.02 miles from the Waco station at 14:10:00Z, about 3 minutes before the purchase, and 28.4 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5471,
+    "output_tokens": 288,
+    "output_tokens_details": {
+      "thinking_tokens": 187
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

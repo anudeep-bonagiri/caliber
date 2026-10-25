@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02228,
+  "durationMs": 3190,
+  "httpStatus": 200,
+  "id": "3650",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged at the station's coordinates at 16:24:51, about 3 minutes before the 16:27:44 purchase, and 45.2 gal is within the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAYKEAgTGAI4AUIIdGhpbmtpbmcSDB1eP/sHOrEqdt071RoMD1H9+wboDp0bLxUeIjBamfW9Y1yC6S7Se20ohAS0jSsmdUgYINfl47GKdue3GoL1T/GRURjcxbuWC1YR8Y4q6QXnVe9kY59KEm66GUmSx5jyKF71dwaGMRbir0Ca1UE+QWigHMMAB95wz56glWDHIewxf6PwXwAOKCor7sPD6xv+5ImnP8gzuWcwC9tvovEG/goKi5v/GpPTEYS4+qg5/8WW96hYTbQcArnfgFbAmUZ1ShTT7+R1X9KOkqjd4xMfGbCZrK5ZPQf3tMIFrdaV7kYu1ekUMcwZ9wy8bpTZ8XSE0GXqvwoGswkMvNnlXh+NFZ7M+DHjdjTK2A0wwYahloElqF02rTch0XCWQqgendO01ICLp0PCKtFNdAIahkS5eOqfoIQJuOLmmrmbY7Wy17TcXLgGDWaZdAX+UMqLGbXAbczFw9ZHdX4thk9xlN6ttdvAX3g2Wnw404aGmqH8fFXW2D7yO+6xLGkYqDedtgKH47isgjrfB2gx4p2hldVddmWvk+44q9NDum+yp1vz4imDH1TCuhmPKKS0jmjK/jpGFTQgcMucFpsHVLsLp4aFs93UE7vPxL6UGADzNwM0P2n2cuin5v5JGAiEXovv+hQ8sCxhII9FowVhA9ZapweqH62+cYsrew6Rb7+KTQwNFRu3CX979fCTrHpg4EnTzwBYG00UTDp5a0l1sVzJy0HUjXCxlwBGQrYQuUBV9ZMw0GJojRtgGqsXrmWU2cvKJ3L5aKUS4HijRm2t9pMSrOeYfrf75rJ2C2jz9H6WeB33BxpA86sm9v0TTSwn4vVP//1K4H0OkG53uzT+gd4GO5zDA0RPMpAtsPhcnNUW9wl6kxuvlFdN4DSXUTBUD0LHn9VbqTTzUaxm6vhEaSiks002vsHNzm/rneFLgS654hSOFlFcjoY6kjopLIWbNOl0O6JJDQ1cnL9wYSl0EcQM9dBCzpzHb851jy9tVEBtYzFAiSglXezuyzC/VnxNNlDFCdozLtlvL0HQTv3DKUFpn1J1ZvW0p7fFOvL4XFTBmXeyQ/UdqKwMPxrDFCACNBbbISvgyqUznriEe4s/GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged at the station's coordinates at 16:24:51, about 3 minutes before the 16:27:44 purchase, and 45.2 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzgjxrvBD8cZ8BErK3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4450,
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "thinking_tokens": 130
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged at the station's coordinates at 16:24:51, about 3 minutes before the 16:27:44 purchase, and 45.2 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4450,
+    "output_tokens": 224,
+    "output_tokens_details": {
+      "thinking_tokens": 130
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

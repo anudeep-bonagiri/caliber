@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024012,
+  "durationMs": 7717,
+  "httpStatus": 200,
+  "id": "INV-1083",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 56800 equals contract #14, billed qty 2 equals PO-1011 received qty 2, the $1,136 total is under the $5,000 bank-change threshold, and the only same-amount invoice (INV-1021, day 14) falls outside the 30-day window and cites the same PO. Flag for AP review: PO-1011 (2 tires received) has already been billed by INV-1021 and INV-1028, so this third bill likely exceeds what was received in total, a cumulative overbilling the policy codes do not cover."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0Q0KEAgTGAI4AUIIdGhpbmtpbmcSDLGAgssBhp/7cP0MphoM1m6hnACcgOdM1JEnIjDJyO7gUYh5fR1yGBl5y15jo9BD/UDq9P8wkEnOsb7ndh1BqpQ6mpTg9EGlCGUZz5sq7gwqYUUjq+0hfZjZ/g1DYU2kLMOEgV7apSU9J6QROyafMU29EaJ3+WalhxXa06yRStY32YhTnUpYOC7vULfY7EEA4qTjeCpO6tmuh2VasGPy0VIdUlmBzj6LX16ibjMUuPv4Crs/+2R33QdckoTSgZStxoQUjVnZ5N/McrxaYnkMTDk4ybjLkBu+ibLcd+TA0rgz6njOHTtPj46J2aQU95SYFcNa/adyNQ0iXCCgAsJaBP9PcXp5VqOctXLiCmJdLsx4swIEbr3/pJPSIo1lNMiR9f6m9NSte+ZahbuXNNI9vVuClIOh2SS+A4AZo4GIPK6Y/gqeJJamoIAZIA49KdtfnDNzHAV6oVFcWgcQt67FSfpHj/HQNpoe1V1mgH26vw033RDJLD0m1jnOIyrONTjUGCuRW7nnKpF6ahr+y4jg4DsInCJGmxJvjK3OnqSkC8NVIvn28rKU1GhJOqf1+zUQ3I+fZmcVFKYiEMP4I9J2Df3aBfC8uI4Qbp+7wOd1pylvUE/KcfRSQI62kN5pcgTocgDzXFaQFSWDyFCMaNB6AvGebzDNJuzvAxwME9/58Tni1LZBaqzeVtSmB4aPR2ckF6ac1rwgnv8XFUYkann5MAGHLeWF/EXsq9OaD3NHMKmijJzl7P/Pz/a0/Kzxp8FUNAC9UNIGvhfsuTpQxpgW9RdIMYbVX3uh5CvDnZMg1/DXlxA17tdLv1yIR4OvP3ynjIxR3crmYaEbFLRp55R80jKSLqARmdemHnnPvgZpzO0Lzqd+VhBBvxeasE11lwrq4Wun3nx4MfEBEDtujDSekH0ClnioF7QdngJvOj8XS+BIcUGVbvlelkGZYLBhbQrRo59VPgrUGRcIO5ORtWV+I2FYdulmHehDQ67EpRH0E8GT/oZqpeAwB/mEEpRZHrUxHqnMXVjxWR8nCKVKXgJ6NZhcyyNmY0pLRqaFD5XZnjfahUV8a+ANDsIH1IEdXue2v2dcf9Doq72rXsI7jXoc4Lqp4zednEHM9zhhSrvN7W7GWtWgno3YGBjBSMA3esq4YSVdn0+Rg+THJaxNTHLbF/DTIz08aAiNbPqW7X7Rd7Yu0JbE1MGp50wCUbJHOtv+DJ+B1Sg4rtLk135C+vUCb5OQ7XrQ7JXWhkX1EC85Wg4qWvsfpcIRCpaDL41DzHQPh/N45RgxFSWPIyMmF9qWHKshZP3FVUFWcjk5WFv8mMuSSUsnc/G6T7Z0+aQZieyn1MGm8JVwHT4U1CYB9uxKaw8sDVp7G9ElV8Eq7CWW2J8Ysn/h1soHqpDP/7UqiudAKhIdj58HI9ltBiwnlS5l88XLJ+EmPkwri0N0r2KnnELPK+VIewKEnfGWywrV5HQSnP18psebJ03cV9AnCFllHq7WbfawgJz0IdEAdBL1xiZtfm/xR5L9nL38u8yGmCwvb9GYrt6p5LRZWdJyLgbOOHVknTgiIysdYT36d3qArSkAr6dyDyBfWS4h/e9AUTWGKd+cBEj9lV3WacFVOJ0dCC8py4MsXeUdFk2phWJ13LFkK3EMzEjvxeueMfP8PAjFlQudyh0P+reU2Eh4rZZoAMX1PHDjDEh3R+xw7MrGmfjqgEJ2A3123TBQMX219bE3oDbtUKZvCi1/f774p+JBmA9dbOb6oYwNApGPEu5LtSHhEtrtrnZp9O1ajYqewq+omcNiXHz+zM555Ehkc6RhSO/Ge1RBHUXz2bl6zQ2Axg1huXVH293qAN0BkxDXTM/a02rmlan1F5Sdn92bC5+PBMerp+7duQo+xjXGcu/m9p2L8mhQTJQ4NC0ZmCrFEmrtdTczyphTjWXji/FI9De+AP/ayTNRiXnxcveQsm9ilx7aLjAbg/MfH/mxrJj+g17yhFl7J/YxcqvNElUtSG0OkoUdpqMs8dugakcUsNrLhn/jmTgAX13hHl8HBzWYaVMHkeJEdN8O2kbVgawSgA83pnf3Z6WZbIeDyKdubZ2Fx9wMPus/DgOBAywlzOAQhpNPOgKrj4tOmUMzKlnMqYOP313MlpQMeGaDEpfVaeBej7yMwrUyGfx9mME9uZOLaJTQaZQGVJQ1Msq2RERfPSlorA4wZtbevWCfvkWemCSu6/gm01jyKRHfjlLEQyF2sL1tM/kJuoyoylnpGJk5eIL7B36UJCJlib2flK1bHOGoU+KiCneGDxtXo6d3/0gxMRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 56800 equals contract #14, billed qty 2 equals PO-1011 received qty 2, the $1,136 total is under the $5,000 bank-change threshold, and the only same-amount invoice (INV-1021, day 14) falls outside the 30-day window and cites the same PO. Flag for AP review: PO-1011 (2 tires received) has already been billed by INV-1021 and INV-1028, so this third bill likely exceeds what was received in total, a cumulative overbilling the policy codes do not cover.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzGhUoSP41mGBo1iJZE",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2748,
+      "output_tokens": 651,
+      "output_tokens_details": {
+        "thinking_tokens": 448
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 56800 equals contract #14, billed qty 2 equals PO-1011 received qty 2, the $1,136 total is under the $5,000 bank-change threshold, and the only same-amount invoice (INV-1021, day 14) falls outside the 30-day window and cites the same PO. Flag for AP review: PO-1011 (2 tires received) has already been billed by INV-1021 and INV-1028, so this third bill likely exceeds what was received in total, a cumulative overbilling the policy codes do not cover.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2748,
+    "output_tokens": 651,
+    "output_tokens_details": {
+      "thinking_tokens": 448
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

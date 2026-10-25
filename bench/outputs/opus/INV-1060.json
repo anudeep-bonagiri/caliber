@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019308,
+  "durationMs": 5672,
+  "httpStatus": 200,
+  "id": "INV-1060",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1060 lists unitCents 34500 x qty 1 but bills 38250 cents, so the effective unit price is 38250, about 10.9% above the 34500 oil_service contract rate valid on day 34 (5% limit is 36225); also note PO-1013 (qty 1, received 1) has already been invoiced by INV-1029, INV-1046 and INV-1051."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxgsKEAgTGAI4AUIIdGhpbmtpbmcSDNuZiE41PbYg5XXa2xoMVwz6HT50mK2x/QCCIjCvk99m1qqt19ACNMWl6pnNcj2NiTG1Ktpfvfpn/L9y1UL/QbwBwO7QCKO3pL+u2lYq4wqWUtIyQ1QcoPFiVlYyRnvr/VaJ79c8NyLU+7Tf+oHLqERXClo4UeT6j2pSzJbQlg/CbUTy3UXT8H+k/BBZVP8mTDiy/BB/YMP7oKU3TeRKqPaFaxR6uJuwRuWCSGaTOKrIxSDGeRroGiY1pkaT5uGG2ihyN+bVB6NXKF0QY6ylrNAouJg9Dhahd+5STXyxmdTlc6y/OBTaXE0ta6WwXtzA+nF6OhiX7AEj7yVbo4+mSPnaZrZ+eFyznGh8hQ9b92zG2Q1d6HpxhSHuO00rKUHLT+7svxsYwRevgcGKG+gVV8nbXTqWT2K3Xshsf754AIOyNIvXzV8PP/B0OJ+vzh5Er/jL/qU4LBrSDaNjikfMmuv88pWP236pB1kV/11AyjRdtn5TWd+9u2eEB1uGUYnZdA0eN+/+Pss/MPkUDI8VqFliZQYup+FhlBbSsbdUQ5gLxEIBJJUQE/UqNnLY02wV/KsHMrWEnUCe++AQ9LAll5z5xAI+G8JiIn3U1PMg5v4qK+/ki3gWN9UjvvhVFMDgOV46gvV//4cZkWLQnAKMTQF1hM6s7MvEyOBok5yzt+8y8VTXoAadGgQ9WWX7k1twKVzQ9/Q7bOX6A/BFYUhmgq0Y/RabnWI9+VVbWSu4inBhDOcJ9lBzwoMnaO2eq/CvuVnFECB3TFsWyv/YJIoRTnj0FxUYlWBeG6D8LtA7kq4Ktcs7n9OBwgOXucFXxyJH75RRa7tyeGVmJNugue5iTwqDJnj1CsPAJx1dw0nUf8HELZsuISq292wxtP+7yalD62plkl+K8aDhWcUmDQKkeya6ulg7p9m8XRj3d10HKL58TApGV1cnHekJ8f7qWpndmr0RKEs5apLkJ1o9O53oHkwyV1OMhgNlsotBpJXnA/MSQRD5dELoH6NK+Z2EhbutBAK3rZvVjAXe64NsjTN0d//3VtaOUHW6A8f1NgDObJ0+zG+F+hnSAQPwaA791lFXtgI5UnGP2dpsZPcDXLKi1+8SzzpQGukLUPDF2SVn4PKSYrph0rjA29obDy5q0J11wqv+wvmaSqrprohnUODv4959DDh7pdXTZYPsYC16v6IrZCu2oQ0faKkGJYkl7QuFgYvzmrqQrI9AGFF9w8vqYG1HppSWtrgPruviZyCEi9qk5KgTN3hosRdncztqkoS6G/UehqCd37Uc0poGzfMy7PeuMDazBjcs7xaJBWhxvwea4Mct/OU/Le03rMseahm0ytRpBFe3AB4VBjU8J89qv3MuUIZxdYe/EKtoPVj5hoAr4P+6dw5AAnpQRAVIhzAA1ukajkrgK/QM6NqcJe+FnU9RuGuXRrlTbFU0EE+w62KqGxb6f9uah+AepJZ1yYtTsO/3UTUwJl3FRB+KauW9q7f3YTt5uRcRUoKnpPOnkmQihpzT3uPqhD0yJlZuBcTMAbhIKTEcKZV3OmlXp0ITiXJlky+yk12RcJsZZ/rGyCOKGnCUu9ghPj1qot7ZSsk/KNDtvUaWPoI3LSB5x74ROdnCOxxN86hgtfzjZ0JoNCuMIalCIyyl9OHaKJoeysUBxb1m8pRj+4WU0YvmfSFfVQV5Rr7Nhk6GI8oziOvKK0oMAm+jZcumM4L7W2+ujz5X2lXJvD1xmrSZM7T6h9i1dfjfnrUYDBb0CIMU6Bc9I3I+Yy3LzStDfUGyeNHoC45gxwIrUQNzSWhryAHSpIUvx/XCgEa68LFp/nixqQzTWKXv6QAOr+DFQ/Ngb4Gpx7lfnpoLpVM6HpxricWI9fFESU+qOMwd4sp6628BjSnHBgfkmB6aTYl1g/lSVmhbEPs94osi5xwJOmYaq64vlUI8YNFFBxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1060 lists unitCents 34500 x qty 1 but bills 38250 cents, so the effective unit price is 38250, about 10.9% above the 34500 oil_service contract rate valid on day 34 (5% limit is 36225); also note PO-1013 (qty 1, received 1) has already been invoiced by INV-1029, INV-1046 and INV-1051.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzEp2ABtSU4xiqehAsT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2227,
+      "output_tokens": 520,
+      "output_tokens_details": {
+        "thinking_tokens": 362
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1060 lists unitCents 34500 x qty 1 but bills 38250 cents, so the effective unit price is 38250, about 10.9% above the 34500 oil_service contract rate valid on day 34 (5% limit is 36225); also note PO-1013 (qty 1, received 1) has already been invoiced by INV-1029, INV-1046 and INV-1051.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2227,
+    "output_tokens": 520,
+    "output_tokens_details": {
+      "thinking_tokens": 362
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

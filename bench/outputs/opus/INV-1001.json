@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008632,
+  "durationMs": 2595,
+  "httpStatus": 200,
+  "id": "INV-1001",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: Lone Star Tire has no earlier invoices to duplicate, no contract or PO to check price or quantity against, and its bank details never changed (the $245.09 total is also under the $5,000 threshold)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyQYKEAgTGAI4AUIIdGhpbmtpbmcSDFEEoqKpZQpScRV/NBoMfyq/K3xECpO+5LsbIjC4tG6tyO0WSgnzOEPORkkrxm/zlfMmgkFjbT9ZQqJKqN5uujouxRQ+EarsDFc4wK0q5gXLdlqo8E8HtdTSqxOc/gBTftdq1Rh/SmHk/UkVdK6ZGKjih7lgvSiHL+xiV1JNTsniP5rd6jO5vaxDoLTe4Ff3i5JLu0uIVaFF0nYXtnoFfeuaEUiDFJ6Onz2ENUlMVIF6GEkRcrCiXvwtFTEQf8Wh9OwwWZnqBJpuW+ozZRJc9UfINtjT5XbydkqUumro2Yvaff7+La3+Ikt2LwkAzzt9K887bnM13GKXxI7VfHaEErq4IFC+tmfhK29XB2BnwPRYur576K+4kUCQ1O1Xx3wlCmWsx4dUgHemGhaXtZ2VLJSodBijY4z6ApUurw8fzErG0YikFtEcUCiDOamkHQ70h2LP5ERIuCMkTLwBW8xpjY3dyllPdzc+lJJAZP3jhWzhUjBVOGlJ/rYsJnABKJDzPou0BqX9Wcbmc2jk0nz7F2Ix/i9e4I00U7HPq/hKrfWfnGniWXz2euWqYrCP7mUQoAKfqbqhc/J9h4CTAqb0rmcvtEX0SY0gqSjAC0fkHwAwdQgdyX698c0dy4bz+S9O5JnaM0ImvN+2nzBtlwrWLTF9nBTEXpPG08ZhQyV2ytIow6pcc8clOInWqCgmWWHZ4vp7iDbhaFS8YbNl+0k0s/OudspKA4asoGqAAApf/9rzMgftpljmZnXxRqCNVeZdFtn1k3DhrYNNcAk7itItz8rqQNKFLA8oinYUCjmVJVxAicgVmnFXeWQlzFnzUI4HrR/wDWpJXi4DGxUZ9peWtsTy7a4itb6AXxupCC2CYy57dG201M2QY5/mh27OkGzFYQFZch0h+uY1Tn7amQTnobE4LVhQm6G20AGGTa4QknynofcXBNQHvXKlnjtz3HHPmnX2R2jw8KvqCTkbGIP3vQWRFXYIe1Ntk9bUADaQD0Ms5rfJq+RBGpAibOPsT5T6nX4rp8L6xMrDZc9ItIyhgxgRDNNM54Bsz2fKW9fJLNZDvH+P73ztuFFF7NQ7J7M0JPn6fJk9GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: Lone Star Tire has no earlier invoices to duplicate, no contract or PO to check price or quantity against, and its bank details never changed (the $245.09 total is also under the $5,000 threshold).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCdT7FtHHYcmS4xkEx",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1228,
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 94
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: Lone Star Tire has no earlier invoices to duplicate, no contract or PO to check price or quantity against, and its bank details never changed (the $245.09 total is also under the $5,000 threshold).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1228,
+    "output_tokens": 186,
+    "output_tokens_details": {
+      "thinking_tokens": 94
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

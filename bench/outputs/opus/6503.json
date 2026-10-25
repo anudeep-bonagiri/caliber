@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026556,
+  "durationMs": 3212,
+  "httpStatus": 200,
+  "id": "6503",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 34 pinged at the Schulenburg Love's about 3.5 minutes before the purchase, well within 25 miles, and 23.7 gallons is under its 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSngYKEAgTGAI4AUIIdGhpbmtpbmcSDOS9aAChjKslhxO3ABoMGal8qmA7qcQrtLd8IjAIzAijnUP0/eT0rgcXjvH7YONq/sfYEMFCacfQK0LP3iXTrZ2syWdd38xBkmVrSTAquwWgwyWVtiZzXQIuoKOptd8dVnmv2pgzF3leARkiaHgeIrT2yS+EOufL0woaXU0cYtI4/y8C5Mo9YBwXP3s847N98pJ5zGiV54vtwRqnpCER2Bb7ggf0XbYHl/YhGH3eIl73qJFCeGg2FO+qOcavFsr9AVzXyXYEcBpKK59CCj45l1jPWB2bn2mBtzLdyVWEtJExC63Ee6HJ+W0u7Ekgsx7v3IF0kFoEjEcCdnoIqXq3ZliNeDdGx4ds2mATalgpTTkeEai9ThEjWD/1zoC0zd+vS/hJeFOz+Ye+fMFTDnUsRGz97+Je2FP9gSHeccvZXlNO5JYbhzRcFINDJSxhr79GgJbTNBJZV89tvy0Yz2XqJz+41SBre9lxZOjMMlowKzcawfXq+9wgBxY69YrMnx/F1jc7XwFCOcMNqm23HSuvPSFa7QUXI4t+U0tMonRT1mjsjLrwGyn5mHXEjliquMtNNs6i3xEOjbtkViwxzCMdjzBYuGG63gqdqLHAsgiCX/9MJzsWWyxcYAxRX0VtpDfpl7a4Nh0/A28H6bN9SQHypSbKeDx8d4ftU7g5RrvAFkB4d1Q/C2a4zi3lw9I+tH43GzF/Lg49652UqyI/UU6LqMNmZ0D5vn95ttXpT1yxD3wEDI0aFDmh826dlg0mPdZpfWoe59FJDalWJG68veeJtf+gz5i19YoyPUiHPsSYweXjslnuLnyoX7iV41aNGXO7ATNt0MUjK9qZd5ifhvj9bg9UMFUm/q6sMNqAbHIz+y24UIEa4thUpI4Pr4glJyseLgdc2Zhg9m49J0jNML/WayakzDStFC1G+hPkwb04NhnLMjYQAMNsL/s1jJ/R+fXps2tnEiY5FPkqDtPAv5MoSVuMC403pdsoesZdXINt/FAGsQn6nEp8gzddBDpupDejpunif56W32qv/xkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 34 pinged at the Schulenburg Love's about 3.5 minutes before the purchase, well within 25 miles, and 23.7 gallons is under its 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfbrVsueAG6fwwUY9f",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5619,
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 34 pinged at the Schulenburg Love's about 3.5 minutes before the purchase, well within 25 miles, and 23.7 gallons is under its 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5619,
+    "output_tokens": 204,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

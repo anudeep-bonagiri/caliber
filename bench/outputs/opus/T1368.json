@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011388,
+  "durationMs": 2560,
+  "httpStatus": 200,
+  "id": "T1368",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Plate TX-1001 was already charged at plaza NTTA-PGBT-01 (President George Bush Turnpike, Irving) by T1367 at 12:38:49Z, and this charge came 7m04s later at 12:45:53Z, inside the 10-minute window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzQUKEAgTGAI4AUIIdGhpbmtpbmcSDLyZaWeQK3/DsqrC8BoM4428BLE0cUCqkz4yIjCYP/77JxpbcdgG4VA0fuRk1XVp3IdzPAf+4nc/OpTYI6oS4pK5XdJjx4FcOvbSPvMq6gToTLmRKf40wAjJgMIibmIPBZL66x2HP3sbunVFowB+9V0nbp7Enys+GymeynV809SPDuINHEBsBfTbtoNU/gezvQaQ+czc12DOGH56MNpu5N7n4hnXsOinq0obE5gSmndaXyz055JF8pAe43gqrVJWJ7nPE2eMSYS5rJ5GXn99Ncl9CV4CBay5e7fe7KvDF8fCvrHmL5NoEdGAyafVNrw+N3vndBw85z2MSbGR8JhYH06jeVcPIimw6DVpbTxkVJleLCikXc2SE1HtoTLv0rWu6bDFkCoDAIZLxdQHpgLfZD2YSBLLJrQTTrEA06BjsypEn4Q7TionHzaG/W/PRf2adcKc0DibDdDxLLLOtM2E0IlkgxJe9XQaRXAiabCU4O6DexbJ6asr0ZIK1dnamxAYnRiLkshkb99WBbnVP1aQ6se8LmtCh/FmVW9r1ahkR1JdKaEVIDJ5OQHPUqkQs39tN/VmG2VhMDosUOvGGDRkrddcZwAYsvR0QkZNzz+4OxoJJV4/KmubXA2v7tnu8FZkI7/9ZHWpUJ5KT5eQDYgWunCdV3UDv0gCmgQr/fHwz0dFcoL+a87ESWRcH23jmfqlFDRt73VgcQsDflsecsZMrk3qjvfCA7PeboD841MD/ZSa90uq4DU6SfUZaDMaKxF2lHM9cY8ReQOkTyB3XC8KYlrcMd5DyxsCzAzeXAtR7Msy+uPoPTRgAvjqiLEf9Y7ePMLQTsV4SVfjEaC0WAwUz5pEDAiWEJpyFQqDjxcq4NQyLv9YrCmD1iJWJw2ymlqHWg4KZWwthG4elVYK1ArEeXy8ckrENjSHOmYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1001 was already charged at plaza NTTA-PGBT-01 (President George Bush Turnpike, Irving) by T1367 at 12:38:49Z, and this charge came 7m04s later at 12:45:53Z, inside the 10-minute window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrHVzbBgCVta1YKZxa",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1877,
+      "output_tokens": 194,
+      "output_tokens_details": {
+        "thinking_tokens": 74
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1001 was already charged at plaza NTTA-PGBT-01 (President George Bush Turnpike, Irving) by T1367 at 12:38:49Z, and this charge came 7m04s later at 12:45:53Z, inside the 10-minute window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1877,
+    "output_tokens": 194,
+    "output_tokens_details": {
+      "thinking_tokens": 74
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

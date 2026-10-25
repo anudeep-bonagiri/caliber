@@ -80,7 +80,7 @@ Need: Proof plus comparison: what a model alone does on the very rows the kernel
 Where: `bench/score.py`, `score_model` (line 47).
 Number: precision 1.0 and recall 1.0 is the kernel's line, and the model table is not in FACTS.md yet (FACTS line: "Overall precision 1.0, recall 1.0."); the model figures stay in `bench/BASELINE.md` until scripts/facts.py runs again against a live module.
 They will ask: Why not just ask the model?
-Answer: On the sample, Claude Sonnet tied the kernel on every code, and the ASI:One mini model did not, holding clean rows mostly as duplicate tolls. Same generator, identical inputs, no fine-tuning, and the kernel's precision was measured on the whole run while the models saw a sample. The kernel is plain code with no paid call per row, and its decisions are audit rows; a model's are not. Read the table from `bench/BASELINE.md`, never from memory.
+Answer: On the sample, Claude Sonnet tied the kernel on every code; Claude Opus 5.5 at its API default effort matched the kernel's recall but held 14 clean rows, mostly as rate variance, for precision 0.81; and the ASI:One mini model did not, holding clean rows mostly as duplicate tolls. Same generator, identical inputs, no fine-tuning, and the kernel's precision was measured on the whole run while the models saw a sample. The kernel is plain code with no paid call per row, and its decisions are audit rows; a model's are not. Read the table from `bench/BASELINE.md`, never from memory.
 
 ## The inbox connector
 

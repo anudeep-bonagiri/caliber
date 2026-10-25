@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019,
+  "durationMs": 3263,
+  "httpStatus": 200,
+  "id": "INV-1107",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1107 (23,560 cents, filters, no PO) triggers no hold: no earlier invoice from this vendor in the prior 30 days has the same amount, there is no contract or PO to check rate or quantity against, and it is under 500,000 cents with the bank change on day 71, after receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAcKEAgTGAI4AUIIdGhpbmtpbmcSDJVHNaHKhaNlu/6AaRoMsxadwdORkcDBj19wIjAaIxFI1NqxgdNbUN7vz/SmqsugfLMrLdCqnIKqJc3u3kJbvSeWsvyCSEJumPhylSEq5Qa+wXUynJnhDuTUiYKROz/5Dnha1k4LanYqP78AdI/qPrx5i6BTJ7fvmfqi2ynqworEut4whxSOYx0tWHcvP4SA5+h7Fo1lp16ObUnTgdOtvcCVwiN68lS/8jU3bJ+NocBA0C8LFdIAT+KEbFG5HanpU+btpG7A1gbMkSVT3rDiAtNYHv0FNSYtCtOTyFXdcnaBxHJIQzztzJobiLmLcoZnTTnyqSzRZmuy0XCj7GH9So5Sr7Lr6bDX17dCudwC77Q6mDMNyc0PX+doAppCnWsGQfXfEbz43mKPL/1kPprGzDFEKgBf3+HrRFGOTGaVk3UGF8AF4sQqQ7fWVMH/V+KlhsQgoYW38YJSAAjKYggsduKXEjxahHI6oSI988cLGOJobKPlpWh1J3gIp4zII2otGjDoiEmMBrkXLosqlBHiO5gyN8cO7GpYmi6+gGd5hKtUsvteIpFY+lNScRZS4j9TFrlC3HKNhJELs5asvYqbpwPItXMvzgMatis4LQL0vL6AdYccCa6bIaj0SRMF5hDuEDXD5pW0i1argeowd8l7VAcWJXe/a9j6PKvFjGKUf7jOeRlQLWJUMX14DrRtAALmWXs46h9c4WtejMHGJD+bEkYegahXlmBAstQAkZajj3/BvrlVO+BeokCvX3CSBeT/LlJalhU+opyXI4mWbsCbhbjrdmoZgj27GVAaftCpZa13SBzr0n8jiAu2QOCiO8ORL6Eequ4cQtVSkH56RfC6dfJ3YG8lL3Zl+cQXnNcqiGEe+wC3rTXe69Lu6r0+qdv1n9UxXoA1ncpxhAM7OVae4qzes4TuwBa+B2+mry3v6eo9LVO2QlWNO93ggAHQwQTdQwjFquGRgXhyl4b6R4PAenr4mumPyScjJbcVxUvGe4fLty1IbMLEWtnwnJj8kgF7CEL+ACvIysNsVRXh7EZ7HfLgvjao7beTNxZcI+/hHC/jGEUIc8nd2xN+GHi61dHR4GEibcaeffalB2podaXvA0xhO52wofBAuLX4jAUxSVrhYgdv0eeB+TS+8o2URtMkGancNQOQr6iciyCAYEcaC/qG1rFOva9J0p3VUHoXMUhurybNFNq7G4/DfTprXW+zP6/wq4mpigo27ES80xNpzX6O+7cIp2wf7BhplSYqSGlNhDs9LhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"INV-1107 (23,560 cents, filters, no PO) triggers no hold: no earlier invoice from this vendor in the prior 30 days has the same amount, there is no contract or PO to check rate or quantity against, and it is under 500,000 cents with the bank change on day 71, after receipt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywQ5XFcqvf57tiBTbX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3395,
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "thinking_tokens": 156
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"INV-1107 (23,560 cents, filters, no PO) triggers no hold: no earlier invoice from this vendor in the prior 30 days has the same amount, there is no contract or PO to check rate or quantity against, and it is under 500,000 cents with the bank change on day 71, after receipt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3395,
+    "output_tokens": 271,
+    "output_tokens_details": {
+      "thinking_tokens": 156
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

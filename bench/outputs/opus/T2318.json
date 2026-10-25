@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019792,
+  "durationMs": 2415,
+  "httpStatus": 200,
+  "id": "T2318",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1012 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-22T17:23Z (the most recent there was 2026-08-10), and no other hold rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlgYKEAgTGAI4AUIIdGhpbmtpbmcSDEvw1BoNqD4gTogChRoMBUr6WrE5HS3noTmDIjDT6GRs1gtGE5tzJFafVqt9x5XEkc2R9JSaCVElGD8aJV3KCa0tB9I/NBmCkJIrr2sqswXm8MPh8vz5OFVMOLyl++4QRhE0FLJWtK4txV5cDykL68yqTvofWgGYT5ebcNcTrcyTt0Z2gAk+aRm750jqIvwu8yCaqgS6WZokXj2eAD+KXc2zrdYnxZmYY0Kl0ObrUg0Pdf63hKrOWMEryqG7A16vpCC1v1gVdhnPT1jod0I8zG82tZfjVvnDNoyw+Rshg0djC5umYgDIHP4o0+ZfMGt1WknJWhdaTwrkrHjxmTNUB4J29jNCqODxqCe+m2fX5barFGlZx62UunMbuR4QpnPOoqvcnTawYL9jrlsfLf/39goY7aDKrWyInn4P1Mq7KptEkxwDjRL/b6SbqzL7+JeDcqb/FxDWGRPzLG/LtlTmdk7Vsoi5yJ6UIcfT3M2486/re0F0DQNR8BEgActIQdwPalAlmUMgg7t4h94urkGVNaLpERBUu6LYFoapy+scVuBu7HTx07GjLWbiGtLP2YMLjXX3WdBmrfNvwxZazdaHzDnbSLW0JDzOB7f9s/YiQiBLRja6zhn0tgC/Gxw6QYzZ+15OREI1bSjkZ0c6ms0G18Az4wZoS9C01o+fOT5g7xZjSTGL8cFjFse63DDzMeoPjTHzRFpQdFCdIhvM0nVmTpxVQuU4UqfYfHxnaOUzM151gOvs9UKWlw9A/MYCyoWn9VK4zeX3CfS3oF3Vv6TTjCTA9Jmgv/DRyLBGFn9svzHmXJOGts/XNaPDsthQ5iCYX5WpHg/L/6cyzn3Cb/OiQaQECj9bQZlAHZLKpmvv8eYqfVK3vZd6fX6edSzVk7pO0QBRDs8p6U1MZzU19Keh40DXx87xrAv+h4JMMVH7d9P1i3DnMgxLZv2osIxMP+/0wGnipiP4K2mgkRg5tYYbpPslfuP+cNumIiihAfNzIaGAKFywfOkF1GMtYN0W7x8llbhhGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1012 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-22T17:23Z (the most recent there was 2026-08-10), and no other hold rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz1AEgmjRBpNHfR93h6",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4028,
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "thinking_tokens": 92
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1012 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-22T17:23Z (the most recent there was 2026-08-10), and no other hold rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4028,
+    "output_tokens": 184,
+    "output_tokens_details": {
+      "thinking_tokens": 92
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

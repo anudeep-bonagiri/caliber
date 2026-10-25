@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02196,
+  "durationMs": 3224,
+  "httpStatus": 200,
+  "id": "5268",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 28 pinged about 0.01 miles from the Encinal Flying J at 15:10:20, 4 minutes before the purchase, and 44.3 gallons is within its 200-gallon tank plus 10 percent (220 gal)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3AYKEAgTGAI4AUIIdGhpbmtpbmcSDHfC68BaCK81bwp0hRoM1BS/BIBFbjYm6jssIjDBD/JtMCPo9xGoN+Vui/5+a7Lt/MKkfYPT+Rnt+KZFV0fH49R3/4wt+ejU2Iv08QUq+QW8m02iNdJL3qKtthKDYQIQPoRkufuelqLaJuKQ/MSY5XscICZ1oHqH2fces7zr9ooNPX0xko1mnOI+WZ8EiH43i/VtopluCM7lbzYZomXgZQiqO4flTudlp+GVgJagTzxDGwxhOPQ4A0p3arcj9rqtOF/XApIFW7waDI1rhD8p3g0WOKrGZnxmQiBDNILQwc2oLyNYa7wfuIv83dPg2Uaa7aGmdFN3WhsUhFxaC04IFVp9I7Ir79cSnULhenUKlf5/RmFhqRRqAWKvdcH5aJwPHBE32TpCDZpMYFheTavtLBX/Aw9BAUN/X60iGXK+XDlI6SMEBVoKdt+csldpcmuatPa2CuoxaYuXVkuyv4skOrYzKD6gxrlEn798KEj8xB9p9/52nL90JhafINg0j0RH7Nh3dlX/YbcBtAs1IJs/Q73MPwhHbGqdW7cscYGuadU1F3XI9U/pac/Ukw8ULB2RPW18lHVx1105034OImJ8F+V7CgJ4XaW/vmWmYhdyNIvtYKauDgxN4wb8wiguBHxfSgboRbLNQ0QsdRcBFwYKfSjr8rXazfmHaVzqFYEJVSX4FJ4FRpyR1Gk5F22N7/7FDJpdIST3NkTxiqoYBZnxyPuyyI1vA5iIv/jqlJWXuc25lhVZ1IVY05eLag/XCtmoEozcgyYigtUnt2TBDtzbsBzRii3gi6fPEpocb4q5qa3MFN1Edp/Gvjc0LCqOurvSs4n1YzyX2pU+6yzLElbLmP5uuRcKShTCsdnLVyLoq119PjHYHFpnxKOYSCSgxE6zFJMUoy7m5tqBfOkNM/4xSNgqhTXDO/9HtLlERj0g2II9Nw7s7Ohl4MC9lyli6/ZzAaI8IghZpKp6BcfAhy3HuchleK6FnWVTkyiuL4IAbCmwvle0JccQXCw8y+6GTioD2VTb6j7Fu/k+BfHEtfHv3c2wfiyE4vbqe6alEMCrN3BxZayN2snulE7n72wEFM/iKRyUgZgdaHvLY5+VkeZoR7a/KQDU9u3Y0BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 28 pinged about 0.01 miles from the Encinal Flying J at 15:10:20, 4 minutes before the purchase, and 44.3 gallons is within its 200-gallon tank plus 10 percent (220 gal).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzvWwY4TgNPk4n1vcj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4305,
+      "output_tokens": 237,
+      "output_tokens_details": {
+        "thinking_tokens": 139
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 28 pinged about 0.01 miles from the Encinal Flying J at 15:10:20, 4 minutes before the purchase, and 44.3 gallons is within its 200-gallon tank plus 10 percent (220 gal).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4305,
+    "output_tokens": 237,
+    "output_tokens_details": {
+      "thinking_tokens": 139
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

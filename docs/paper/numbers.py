@@ -264,7 +264,11 @@ def main() -> int:
     add(macro("baseCleanInvoice", n(smp["clean"]["invoice"]), src, "sample.clean.invoice"))
     add(macro("baseExcludedLimits", n(len(smp["excludedLimitHolds"])), src, "sample.excludedLimitHolds (count)"))
     add(macro("basePrompt", tex(B["prompt"]), src, "prompt"))
-    for k, s in (("sonnet", B["systems"]["sonnet"]), ("asi", B["systems"]["asi1"])):
+    systems = [("sonnet", B["systems"]["sonnet"])]
+    if "opus" in B["systems"]:   # Task 31: Claude Opus 5.5 through the same harness
+        systems.append(("opus", B["systems"]["opus"]))
+    systems.append(("asi", B["systems"]["asi1"]))
+    for k, s in systems:
         add(macro(f"{k}Label", tex(s["label"]), src, f"systems.{k}.label"))
         add(macro(f"{k}Model", tex(", ".join(s["modelIds"]) or "none"), src, f"systems.{k}.modelIds"))
         add(macro(f"{k}Answered", n(s["rowsAnswered"]), src, f"systems.{k}.rowsAnswered"))
@@ -284,10 +288,16 @@ def main() -> int:
         add(macro(f"{k}TokIn", n(s["tokens"]["input"]), src, f"systems.{k}.tokens.input"))
         add(macro(f"{k}TokOut", n(s["tokens"]["output"]), src, f"systems.{k}.tokens.output"))
         add(macro(f"{k}Temperature", n((s.get("meta") or {}).get("temperature")), src, f"systems.{k}.meta.temperature"))
+        add(macro(f"{k}Effort", n((s.get("meta") or {}).get("effort")), src, f"systems.{k}.meta.effort"))
     cost = B["cost"]
     add(macro("sonnetCostUsd", f"\\${cost['sonnetUsd']:.2f}", src, "cost.sonnetUsd"))
     add(macro("sonnetCapUsd", f"\\${cost['costCapUsd']:.0f}" if cost.get("costCapUsd") is not None else "n/a", src, "cost.costCapUsd"))
     add(macro("sonnetStopped", n(bool(cost.get("sonnetStoppedForCost"))), src, "cost.sonnetStoppedForCost"))
+    has_opus = "opus" in B["systems"]
+    add(macro("opusCostUsd", f"\\${cost['opusUsd']:.2f}" if has_opus and cost.get("opusUsd") is not None else "n/a", src, "cost.opusUsd"))
+    add(macro("opusStopped", n(bool(cost.get("opusStoppedForCost"))) if has_opus else "n/a", src, "cost.opusStoppedForCost"))
+    add(macro("opusRowsAnswered", n(cost.get("opusRowsAnswered")) if has_opus else "n/a", src, "cost.opusRowsAnswered"))
+    add(macro("nModelsCompared", n(len(systems)), src, "systems (model count, Caliber excluded)"))
     add(macro("asiRequests", n(cost.get("asi1Requests")), src, "cost.asi1Requests"))
     q = cost.get("asi1Quota") or {}
     add(macro("asiQuotaWindow", n(q.get("per15min")), src, "cost.asi1Quota.per15min"))
@@ -299,13 +309,14 @@ def main() -> int:
     for row in B["table"]:
         def pr(k):
             return f"{n(row[k]['precision'])} / {n(row[k]['recall'])}"
-        rows.append(f"{tex(row['code'])} & {n(row['planted'])} & {pr('caliber')} & {pr('sonnet')} & {pr('asi1')} \\\\")
+        cols = [pr("caliber"), pr("sonnet")] + ([pr("opus")] if "opus" in row else []) + [pr("asi1")]
+        rows.append(f"{tex(row['code'])} & {n(row['planted'])} & " + " & ".join(cols) + " \\\\")
     add(macro("baselineTableBody", "\n".join(rows), src, "table[]"))
     tw = B.get("tiesOrWins", [])
     if tw:
         txt = "; ".join(f"{t['model']} {'tied' if t['tie'] else 'beat'} the kernel on {t['code']}" for t in tw) + "."
     else:
-        txt = "none: on every code the kernel's precision and recall were at or above both models."
+        txt = "none: on every code the kernel's precision and recall were at or above every model."
     add(macro("tiesOrWinsText", tex(txt), src, "tiesOrWins"))
     add(macro("tiesOrWinsCount", n(len(tw)), src, "tiesOrWins (count)"))
     cal = B["systems"]["caliber"]

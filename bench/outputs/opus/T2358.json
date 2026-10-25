@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.038156,
+  "durationMs": 2591,
+  "httpStatus": 200,
+  "id": "T2358",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1014 charge at NTTA-DNT-01 within 10 minutes; the last DNT charge was T1721 on 2026-08-13 and the latest toll of any kind was 2026-09-23 at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgUKEAgTGAI4AUIIdGhpbmtpbmcSDBjWM1vxrwl6ROPG5BoM4sdpChJ10rWIannuIjCjbUU2gheYoTRRMiI92m7bE+vpWO0winBVAuc3UQLy1tsiG3oc/uQLh5ADdSELJ7gq6wSlyO03vSgvVNYUFZPErwzqick9k6fJdfIQ/FSS68R0fH7vLFjGxEuzESxhNByEdkHbR/NtOHKF94wKZM7nth2CTxarR5WG6s0uLNdWQmh6oOfXdIg1nJywEMSihUXxWmODYMUiXa3iyChLAbOIaX0hmCzlW6ZHXr5lMvtW+kYJfJkkRWyTJTWdIM5zLhOPkagUW8ennffofSGZPHbWBlh0YnAJj5gKr74/wg2WXz7k9aD2QqlJVtWHywrBdVhJZ362fkIqYdokeJGqK7LqloLS1cg7cOUIHZ3f65X4k4NsAjJvqtgVHzM7t5o9hFjn7qZ+oeLK25vG4CMjcKhmxYRVLiFf8vyjwPg8raeg0eU8DloA9sqDud3WVyaiHsw9uel4RTR+Jypgh/MvUdhuL3JWQT1tFyQkq4Wxs8oQLQ7KLSDPPM+Ngsclw0otw60Wsg7T9RPqPh2/SJb2dBRRbxPM4AJosV5D/eK9rHvbLs2v99PkVA+Y/l0+L0yTKoz4FdWm/ia+ZX8HAaK9eeNocEDR767iRy1yfxKNrgscachPv5fb+Z304CcQTCS0AtA7WmQEar22IesOtrTJUrOQLaka5KZO8UbnXEl5tm/VaLhQ8qq+hvwrvWu6Yag4ybClGTGsyp+BevGeYOPuadJgoUiS8Lk6wyVzFR3szi1EgGxvZMgq+luBpPEJH75IGyGHK4dJmzL1zxL2B2LBXG3lioK5oDjzklFUWseWL88XNy4W6Os6xsr6XOnPWvqsjvVTbL6VijHDS222UBEK9gGXMR00wnLOh2orq1IPkF5qs2OqKSM53gWqPI8VtUTdGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 charge at NTTA-DNT-01 within 10 minutes; the last DNT charge was T1721 on 2026-08-13 and the latest toll of any kind was 2026-09-23 at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqBDwcEmRKUEoaqhgL",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8664,
+      "output_tokens": 175,
+      "output_tokens_details": {
+        "thinking_tokens": 79
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 charge at NTTA-DNT-01 within 10 minutes; the last DNT charge was T1721 on 2026-08-13 and the latest toll of any kind was 2026-09-23 at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8664,
+    "output_tokens": 175,
+    "output_tokens_details": {
+      "thinking_tokens": 79
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

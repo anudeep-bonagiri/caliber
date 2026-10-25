@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028928,
+  "durationMs": 3909,
+  "httpStatus": 200,
+  "id": "T2416",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only toll for TX-1023 within 10 minutes is T2415 at PGBT Irving, a different plaza. The last earlier Dallas North Tollway charge was on 2026-09-23, so no duplicate_toll rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwQcKEAgTGAI4AUIIdGhpbmtpbmcSDMedoOVdX5igaYCR1RoMU2bTJm6sGZAk3HRxIjAKsQcNooB3g8vu9/3sAtSgnNkNtynoacy7yAg+gSvQO4c6ex2hLjPPFKwjA4mcVQwq3gZ7a3+ceC/L0kNWk2h5CHGB79KWgii/k6tg3uJa5vD+UHcZh9iAWSrNQ7lphdSmJhKbqrjFi4f6k6sJx4ASkNP2JI5PR5DYiHzvqUd8o162NArUT+YXkeK/qsLCJ+sdcEinnLDypGzAdnLb+slplQNRCUvoNTMWdT7I/LRxuT+WoOoq7zPs4FqqJ3HXwAyCouxocYGo2Exg2HRT4uIJGnpCQeET4+CzfhZE1GBPUuQL54d1Uv6eS+hTisE3sI6qN/FzOsrOI0N75ztpe3beT59bKqhuipDGy/re+ug+Iv7W9IHS0L146AvRI9FKc6SOEzoCR0Xb999aMJmGC1CnwzVcjcXBfiH9cwdqlXpwd51IKwVhN0M1Wja9KHd95sr3a0AnTT3c5R6ZTX/N3jsP8+5ZuhC6uO3pvdhP3gL1Ouq5FHq8UeHgFDHxfq/F25hybI/lCdmVmwj4U6DqG+CdnhaMIVMFcvpOQMfq9LxpmEzP+7jAeAKvpB73ym1gwh1KYT2yxxBKmdcNqs0e+JHxHGSuMcfqbxdaN+RRvBXlRnFvwURoP0Rd+TO3baYVelRwIix+0RlmKKOr3/v/ONQd4XMSb79zdbH2u5do4xWbcV6iL5UAl6hahS/2CoUTN1VDWOdNSjXEGO7trDAU8wSpK962SDW+rHSOXsTjstbTojbSE1TX9GNe2pWes5ZyBGY9R/4nrWQwAjllP4ns2ns5y5dwA1bDGWDoatmbG+am71j+HDssdgwy+/2iwzPZ6faxzyhT6jWcBqtL0axlSwfyOfd8Ik7v0tO5ePRiiabb3NYC6l/wZEUb/ppXbq9LprubG0ei0jyabI2OST/F4Yw9Zv/qnoBNNlR/uQESnTjTqSw4Fbsd3uasrH4i1fhLIsS3s4hJ0vIpX+/islbxnOsyt37A49bYc7T2xlmzoz1Rg5D1tLhViihbTK58S+a6vDtOpVEZDjbQDnRb1Gqv4ePPZur7DvM9g3GLLsKT2MFN6BmrVVrdye1eGv/d9mg+gjCnfNV15U6RvP9PJzpzQXrjhy958WX+p8eMYPmk8JjZjmq7uTn1H0hqNPaBb0ElrNvwvfeyMXLNp+2RegDtCuhlBReYOrcQK5M0jjIhiGiInyVnr443rrpIcPzCfchv5RKZGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only toll for TX-1023 within 10 minutes is T2415 at PGBT Irving, a different plaza. The last earlier Dallas North Tollway charge was on 2026-09-23, so no duplicate_toll rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyktaDY7QzbGYP6WjDx",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5887,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 174
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only toll for TX-1023 within 10 minutes is T2415 at PGBT Irving, a different plaza. The last earlier Dallas North Tollway charge was on 2026-09-23, so no duplicate_toll rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5887,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 174
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

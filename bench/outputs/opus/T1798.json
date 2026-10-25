@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028088,
+  "durationMs": 4215,
+  "httpStatus": 200,
+  "id": "T1798",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No duplicate_toll: the last charge at NTTA-DNT-01 for plate TX-1011 was T1767 on day 33, and the charge 8 seconds earlier (T1797) was at a different plaza (NTTA-PGBT-01), so no hold rule applies; worth flagging that the two plazas are 8 seconds apart."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3AcKEAgTGAI4AUIIdGhpbmtpbmcSDHJrnHqGMAQv8SZKXRoMYqrxDdCfGQGBMuTjIjDcnxTJgJigEhNOpLB5P5r0bKd3agpOi+m7fdw6r1o15DehYF41OQF30D1uber5Kewq+Qakh9NVwUK7JwMH3HgW73K8JDaKMCjjA7lz1lY6G5Bfhp9L6Kuwc0CEzziGg/L1FIruQhikRdblkGZDCETXKKspKwCO1Oqv4CTYXzHDjT6r4mPobK0tUuSFaHdSKur2Gi+DVWst8hJEafHTGvHmbcRP/kVQl2w1dwgZJdElF1paFlQYq1kkcLTCJw6z8aYT1Qm3+4kp2+moiCGxR5gy1X/OgEjLc9ThC4ivrLoqEeYB+2TrKuKQEWROhT4KZDszb5kdAN45f66re0NUQQyYzuMukCGfdKdwVvxXBuCYY2XlYvLf3d7e3tm+5F6fl5qLH5BUxXGg61lVxdAhZ0WY0pjbOpY2h4IIHKkv79TiUZ+7laTZQrhVvSArWIjzvfuJ8NzBcMHmNuCVu+8nhRbn6F2gInU3OodM9YkMzpLfC4fI1xP/lERSGmBMk8byuMUzksWU3SExMq6k+yc76IDX+jtmSBpR/fir1CE9Qsz+RrWnDWUwWccZnW3t7hxDUFxdz3vOh4TMMsMSZOFXXaN0QqsENWhQUHvrwHt52GHcT17LTAzjDi1Gf9OneWAs/IePPtO+uBVuTCsC9Pb4W2XYH6I6muOj1YwtAQm2Fs/FFM2EfVH1OogbVpCrzKMIR3J/YIdYRFuMPRAuw9ZqLTtv787JBLsoiGlgIArSHKgO42BRYSEI8EfjF2oIJfE4goCuFNlA+I0uXzObi5nouhlKePSzCzeZl4gAFs/Ppyobxuxv8RFR7MdWTYj7zCwInkp7uFiur+8C0HeH1Rha46dqz/3jaSSZQ9uHZaumc8N3eyBIxWBaYITz+tO9wKJHPGgu0d33Jgno6xxlA0rq/alxppaN2OS8XkT1jt88HXZ4aC8hvEHcxa/uZ6hY30ZF7GcKktQ7lKoLUMhhlVpD/OvgWrrqcbao0pbndtKznxZdXH2ncgh0d1Sr7vqo18wVjP15Mwmfyw+eCqfn8pTbKmlMM7T8h/ZBiDxoeAcu/GcQKUgDMfBGLQKQ8NmN63obfI7sBbQS3/9o8gwU8y98YbyeD1AuCUBBqo+aNz89as53EBlgT7WWgr5sC+DMUJDBxQ4mHMzxvUiPLt4fGNTXVnCKAY0NpWuLYiDuK5w7irz4b5qFCorSXjQ/QSahJKXS/1KsApCT72+mMg6dzOm2+kt9jhaqFxK+ljxCBLWzGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No duplicate_toll: the last charge at NTTA-DNT-01 for plate TX-1011 was T1767 on day 33, and the charge 8 seconds earlier (T1797) was at a different plaza (NTTA-PGBT-01), so no hold rule applies; worth flagging that the two plazas are 8 seconds apart.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKtPDg6KhKM53aTYP5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5472,
+      "output_tokens": 310,
+      "output_tokens_details": {
+        "thinking_tokens": 176
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No duplicate_toll: the last charge at NTTA-DNT-01 for plate TX-1011 was T1767 on day 33, and the charge 8 seconds earlier (T1797) was at a different plaza (NTTA-PGBT-01), so no hold rule applies; worth flagging that the two plazas are 8 seconds apart.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5472,
+    "output_tokens": 310,
+    "output_tokens_details": {
+      "thinking_tokens": 176
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

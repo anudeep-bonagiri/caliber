@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023888,
+  "durationMs": 2923,
+  "httpStatus": 200,
+  "id": "5215",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged at the San Marcos Love's (about 0.02 mi away) at 18:19:32, 3 minutes before the purchase, and was stopped there until 18:30; 22.9 gal is well under the 110 gal limit (100 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wYKEAgTGAI4AUIIdGhpbmtpbmcSDMf9JPfg6xvjsBzcPxoMdDFXqEyWcp7X4QZDIjDmMkstqCdAJDjpmhUNDhowVuOjxkrN8whzkuIENA0UzJ0X+Jc02wuTqv7irCptflsq8AVKAhWTx+t/cek6gZVKFMJuTdPZ9nMR0jcJl/DUvgSX0/Y2DRoqJwEFZKrcKRrOzNLjJpix37N2UGv17kqQngz1KA2OIKCF/OFvM+PK+OgpwTHyHIdADTrVOKfkrgueDnW3auIYdUQwAaV2FZBVrCfdhzUcr03WnHxwlaUMFMRoY5gAvRdC1hf96fbfqJe7YX+N7ltDW3K8KdEBLUouNau5U6wOyX0oX3uMYsYLZYEsM4uqIQVKzBWGe1JonP/4X0S5XlihzUCy+0sYswwcb9dyhasoOFqOVifLZkbg79WwrnEKPSs69xzlvuEM0kaJRN6Rz8eu5qTYeKrS0zngtgincPDgV8pAfsxMX5nnOd74prT/Tr7+3EEnINGPaat3rLpI7xcHhMb72vseDViHhR5pV6l+tBfHGrU5lN7fDJ+HnaRvJ4xL4bJbYEjzmsnYifXLT51ug85uTVWC8BwIWNO3vPARfoZcCOEL8CyQdNZGGQyAHX1wY2ROFJUuIsK8YQA9GH4sVXJkWmRZH1tyIrLJP2ERnVsn4iang/DheYiPT6NOf61/HzruJ71SxU75255VoFLqW0Ts2N2vN3OpVwSvAS2mDyBWUhxhCTJc603jtoul6j5eJEAU2LRKZy1lLFuL8xvgyMuCL0Dl9KuAk3lVCTMRXcFrZcOh9RL0aufweEAUmKLQRg/RCJ62RoDmhS9VxfraTtuKeW5zgzFGwwX5l5VGEPQK4A8b7shO6sdCHXomuoww94Ko3HUUkPwIOVE8JYXd31zzzuZFk4O/8T3TkIl/WStvyR454AlN9jOOFAzKFCABH/+bhTmxaBn/WupTnzTjLP77j7BILGyq2ihY8IsRtGXkGHweOICNWOmqX+QzSFjCn7qUgmSeNlKgsbZvtua4uZzIlhSHuaZ/5DOGDuaC0UhFFQHFYS7839ST21qIHCNZUrLBYhE1pMcCKFXFnPC18Kx6pEP2Yl47y2028VqmhjGYxDtYeCvYUh0FgBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged at the San Marcos Love's (about 0.02 mi away) at 18:19:32, 3 minutes before the purchase, and was stopped there until 18:30; 22.9 gal is well under the 110 gal limit (100 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCDn5EHAw8ieTkEhev",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4742,
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "thinking_tokens": 136
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged at the San Marcos Love's (about 0.02 mi away) at 18:19:32, 3 minutes before the purchase, and was stopped there until 18:30; 22.9 gal is well under the 110 gal limit (100 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4742,
+    "output_tokens": 246,
+    "output_tokens_details": {
+      "thinking_tokens": 136
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

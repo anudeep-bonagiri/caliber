@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024636,
+  "durationMs": 9152,
+  "httpStatus": 200,
+  "id": "INV-1090",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 51900 matches the contract rate, billed qty 4 equals received qty 4, the same-amount invoices INV-1036/INV-1042 cite the same PO-1015 rather than a different PO, and the vendor's bank details never changed. However, PO-1015 (4 tires received) has now been invoiced four times for 16 tires total (INV-1013, INV-1036, INV-1042, INV-1090), so cumulative billing should be raised with the payables lead."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches the contract rate, billed qty 4 equals received qty 4, the same-amount invoices INV-1036/INV-1042 cite the same PO-1015 rather than a different PO, and the vendor's bank details never changed. However, PO-1015 (4 tires received) has now been invoiced four times for 16 tires total (INV-1013, INV-1036, INV-1042, INV-1090), so cumulative billing should be raised with the payables lead.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHuG115e2BB4DvWUsT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2909,
+      "output_tokens": 650,
+      "output_tokens_details": {
+        "thinking_tokens": 470
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 51900 matches the contract rate, billed qty 4 equals received qty 4, the same-amount invoices INV-1036/INV-1042 cite the same PO-1015 rather than a different PO, and the vendor's bank details never changed. However, PO-1015 (4 tires received) has now been invoiced four times for 16 tires total (INV-1013, INV-1036, INV-1042, INV-1090), so cumulative billing should be raised with the payables lead.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2909,
+    "output_tokens": 650,
+    "output_tokens_details": {
+      "thinking_tokens": 470
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024552,
+  "durationMs": 2347,
+  "httpStatus": 200,
+  "id": "T2409",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1006 charge at SH 45 N Mainlane on day 63 is T2384 at 11:05:54Z, over 9 hours before this 20:17:03Z charge, so there is no repeat within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0QUKEAgTGAI4AUIIdGhpbmtpbmcSDO3sJEu61mXkKR9lZBoMSJJWUWl75OLYDWGqIjCM7uJjGxeimDue1iXpZsYOS7iBnL2043m2GE63jfAJSg0no3tJmouBIGU53eOI8+sq7gTSBpGsEe8uGm9CgZs2rm0hr9ZN7Hqq2pAOxEQ4pOur8jxihwlJwsdvkR3xI1526O9JBmyqxSCx2k4zXGgykHwm9vFpQIS2bzC8dkDdkv0nYcbs5dXOdQKygtD6CeFkEg+qy6xk5jQV2DuVXZpEvxMZTw265PCwBwJe7lIgOT4qwSkBmLT/TLHJmyi1LrZPWunPWuvjOA1c0vT5ZY0nGFeB2xkXTx71td/CJ3GkQpDGI3KfdA/Ak7baSmxOON4AZ1CUoEOWfofCG0Y9bboAEkKZ70oE8anVGAXTT7Mo+Kwpc9L0k4D4N5e4D4vmogpYiwRcYHb2I19mrfFzFJhFjW8taFN/+4i4bMzGqhNndlRZD6Py4aSDkjksmiY0juo38LJJxNlSyT89ZLemqnm6J8pH91tyKC9QltaierQZkWrW0bdf34kyMFrDQhkYE1G9rhULO+yTq2jWt3VfPmiTtiWrQ+1/2XfGEeDskET95+pvJhkQzXlOPhsntpGAYGaiwHfU36intldhhKSASXw1/Br/WZFoqX8qEceaNylydgC/2GFNT1KO7RXfaeurrrBvAgUa3BhmR3QXFgNUD7PyXY6nlG042VWQ7zHkmwafbobhSclbPkXIdQfNS9CtOnG16OvR6+3EOBtWWPAy5oQGeytgJ7bZYL7uErZBvYr5CTIX9mF8zWlMxKYPYXYIdYt9ImV1pw1L5e6NDR18gEB18axBC8yDEZVG46IE1XjulnIKSsseLIiqd5lTrXBViXiuV4ZbdnC86dTUdyLus921+K5dpho69xn0HmM0sQFnebC6MXVoAKsu+dYe3JjU0U9rGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1006 charge at SH 45 N Mainlane on day 63 is T2384 at 11:05:54Z, over 9 hours before this 20:17:03Z charge, so there is no repeat within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygPVdBBJtSfcH4svxj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5298,
+      "output_tokens": 168,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1006 charge at SH 45 N Mainlane on day 63 is T2384 at 11:05:54Z, over 9 hours before this 20:17:03Z charge, so there is no repeat within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5298,
+    "output_tokens": 168,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

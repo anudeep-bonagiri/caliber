@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01664,
+  "durationMs": 2904,
+  "httpStatus": 200,
+  "id": "T1921",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1005 charge at NTTA-MCLB-01 was T1747 on 2026-08-13, two weeks before T1921, so there is no duplicate within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmwYKEAgTGAI4AUIIdGhpbmtpbmcSDFT5EW7fbMqGzvX49hoMTzQCqoybCFU+tpG3IjBoizzdPyaXXlNxDT2Oo/88TeMQOKmMCOZ5D0hsnpp1EXg6iGURMdHplD6PZ2JaHnwquAXE7TkfC31sHBl24l7s1SuSMtQw9oGTDUvA9R04vrdyaO5EfBLXGBuyAgEue7YXFUclfyEQZ6H4+MYnM8ZaTOf9zfv+8pla+9TeCJOW28WK7f2wkqfkpAfezu6eB69QyEmxphW0YktijOWGFEKXVfJ1yVNHhZnTKhALQIXdyS04QbXm6Ko97y2YqiQcizAdkG036o8jzvVX/1graCGvumZj5ibDK3MLpykkv944yePkKHVMI8g0tZlkI1fcEOlCYEDn5RQqVZyHXFW6ukHHmE9mgorebFcHRVDSAVpBKZz2aYXXjlJIDywof4ud4rU8ohjdOE8MTEbGo/iLhVSTxtNIkKVN4pe2N/22pIx1+JubmXqZ6IKYUhedlKgx4gUkDx1a5vNQfB5TPUhSlD2JFxhT3ZUXG1rkRsbreKU1Mxj27TUZqelR6gSMCr5+T9LgYlEG2abAgGZHaoLFg1neAaZniQC1VDkglYEAX0pFcpk/pfnSR05i8ZcFLruyXQeW7GUdRw1bLiAAe7WqnMfhEHabVoNDzRtTOTtPtOeSQ3BU7FrXZP4kB0ioGtzE4kVxdTpEvi76fhWtqADjbOZ/WvYLefzkUC7EBkvZyLj8rxTNi019jbucmuj8el4c5f6bKQd5UdRvUQqnNCb3QZl1jNByI/pe1Njm4MN/kaut+oSx1/eK6z1LrhnELZP8qHqGwBprNZ1RI0NEej8vh+yoAQcQk58KyQOWD7+qLG7d2pDhW5/3WJTTbe2Ib8WcKWaebIjpd1YnWae7VeuH3tcHFSBJvz7UbKVB0I+Y98jYcgw0fFjoQmkU5qSD22i2xcNJlLcgpj2vqnH2cTq1V9nDrTVg4mISEh1cLDsv7pqCQmdt5hAYu7xEtsugEPWE4JZqNrpqyrAHFSFS96wCM2GeiddAN2AiNZX/HawYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1005 charge at NTTA-MCLB-01 was T1747 on 2026-08-13, two weeks before T1921, so there is no duplicate within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2DWfoEmZzvvfDdurr",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3155,
+      "output_tokens": 201,
+      "output_tokens_details": {
+        "thinking_tokens": 119
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1005 charge at NTTA-MCLB-01 was T1747 on 2026-08-13, two weeks before T1921, so there is no duplicate within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3155,
+    "output_tokens": 201,
+    "output_tokens_details": {
+      "thinking_tokens": 119
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

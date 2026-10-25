@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.042976,
+  "durationMs": 2950,
+  "httpStatus": 200,
+  "id": "T2482",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier SH 45 SE (Creedmoor) toll for plate TX-1011 within 10 minutes: the latest was T2398 on 2026-09-25, and the only other toll on 9-30 was at the PGBT plaza in Irving."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9wUKEAgTGAI4AUIIdGhpbmtpbmcSDCxRUWAQdc/kk8XVVxoM/2RCr4+7BDqbkvA7IjBpdX9LlfMJPA46TCp2QFMoaD5KDSFgpNYpMpWKlkl2luJp+a5d2cRMi4j9qTD47bEqlAWFNutZ6vQeoy3toC4deF5ECiJV5IhQh3eMAMnvqyP3lxdWm4d7mwdmW2hUnJodepfUPsbngNgj6QRZTg7Nnms5G4ANlVAH/Lzi0/BoCfqlsMVAwaQdZpPyiFVU+z6VDPaFWik/BwFeSi3g1chQA3qgQFPP5VnRcTt6Jg3Mi8Nsle0n93xeF/KRuDImEQwVjeo0ZWNdWnx0b0Z56fmrKcFObscNfFKPvZKqk4LCNCnblqbFJqFyxEziqABCiKDvrhuuOm/i/kbDK3GKwrqNSv3onDbC5ZWSiNYJhHhjPfPB2ygdYVzl1MuVcQfDIAEF2q9ds6VwirF5XnYe3jM/sRN5TK4IWI8/hE5wRBA8UVo6aDQLKIwY/hYqjk6b9+j2cBtH+SzJpIQu3djdt6WD+ubfIm++YkHhIJkeRUcuLmxuf+xXabZh39LZ+EasmoG+Q6Jvbukc85g4GvB/+qY5BtnYfXmN2HAAVNLldjzFZe2F1BmTiPNZylnCu+IKCKapvilp4bufRZD7XnhRmdBwR3mpwRg/CQWBaBUgDJ+xDEa1mFfLxxaFvbcQC3eZfYj2J/G9FMoEIv2A3335GXLlrAQSQUrJ3UqJwfsQDKo3mm/TH+q+lXuteUh1jslZAknrUAzO8WDSYYaHrZ9rpbhz6ZW/XhcJDPRRwC26lW96SwZCd7gZ1CYtRJL2Px+JZMfK/wP1rSHGcG1NekFdWJicmp/9bvfs/ajBH850Wb9S8OJQA4+yg6niwjsffxB15T7hdqvQSWkeBUPtvfFlZyzXm10v2mPWS7ZYusPD5A75zSklj2QphdrJrdDh8XfV+eC/gfNjwp0yOVNn5eoTRq2H6okASJ1Vvd9+sDEyojCqin5rtVQwaYYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier SH 45 SE (Creedmoor) toll for plate TX-1011 within 10 minutes: the latest was T2398 on 2026-09-25, and the only other toll on 9-30 was at the PGBT plaza in Irving.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynemJtWEUyeXGrdEmG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9744,
+      "output_tokens": 200,
+      "output_tokens_details": {
+        "thinking_tokens": 101
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:02+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier SH 45 SE (Creedmoor) toll for plate TX-1011 within 10 minutes: the latest was T2398 on 2026-09-25, and the only other toll on 9-30 was at the PGBT plaza in Irving.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9744,
+    "output_tokens": 200,
+    "output_tokens_details": {
+      "thinking_tokens": 101
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

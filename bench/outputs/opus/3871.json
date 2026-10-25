@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.029992,
+  "durationMs": 4780,
+  "httpStatus": 200,
+  "id": "3871",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged about 0.02 mi from Love's 606 at 17:05:00, within seconds of the 17:05:12 purchase, and 80.8 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShwkKEAgTGAI4AUIIdGhpbmtpbmcSDGvOFj2DxAybpqkFVhoMAMt1wsHVm6oL3cubIjDeuVyaOEazPB0evDG+qBV9I8hG2KmuIDoq55t2xQ/+xUdRcT1GgnNe6ZTc9MeWuucqpAgtVn4fvQ1QZn8dBJ3n22siJXhEQ2g0FIOppfrh2XtAMSHk5R03nXYzfwnOHQh0W1EdKC8ipeNb4fO5nBujtS+8d8QzJeQ0zhl3sjlczymiYnjn5UNrmLHAuz+s8IEPYpVxAS5/Na7fmEDkoIuwuSB9cEtLWv+MdwZYgGwBFu+cIxArDzF/2pimbFzdWWIjnQXh5Ed4lhsHAqbPkxWYUxyMS85TFm35b+IY3QQ2chmfzwh1L4hAm9qo41XLyNVVm9NTm8DaIJoCHfZkKLiYroeqo2ruMv1oede8YPmkf4uuoyaet+uY8QSvvFFbutYq/btxAxbu60Mxychc4q66WH5fS0uZrqer5HMEiNgOgIbPaAfFx/6qdynzkMFvJT8xYwNjvc4JlvrmWS8R2AIMLFx5U8IjtC+syK/r58m7AX99/9LP2rzB1xwrhTUrtE6MaML5POpY0zSrgzyBeGyQjxh9c2pDrUTpdhJhRG7Wl0mqRsjBHj2UvuaNTQYOSh8GvtZ/GhPTnATD6KpHaL6+sKw2Ew2Rc0MHLZJJhu85Rv6KpQT9LLsNVePJfU3j5QUDI7GZJeg/RFFDbnW432Ee7ZOyni4IuiNRw8VrIwe9vl0RBP1AMzfCuF18EybWSOQM27fLpJeNhfIzARDGZ6Q8HiVy7Td1uqVP3H4j+UvMzMBQJNmE83LnCBE6yRwQ3u9x88gAKy6WaTKVNEGaUIrjxThCvrIdBJWUEWhQ3D/aijvO/YJnvjhfpMuOgnbiqOi8D5+e0+DQt+BbSkTZAOy/vLyIldBBLhY4WYYgD/4rLyYYjbBlkNJjLgEV4oMCVfUVuKxOyyigHNlEaznRLwzZ/BmRhdetGKROIjWhXIEs1J3XX7mpLYTezirjMT1LOXv52XJIrL29uDhFRixhsOBjylYYg5vkxOD/EdI8alHa5GHJ9A/UxrvafA1CDHwp+PUm+h+CgUs8L1zZJcKaRZAdRU4S1qHx3bCLBEfdqdWTREw2Ib1ZRi/lIBxx5gZd5cklkSLSm6TjmWpXDOcgw3PVdtSZJhcYDkkEpe6v6Go559PhnZ74Mpc5qdRWANugV8TWCW5/6tFc9DK7lC7Gpc91qHCmRtKwzmckTP3M2toN4nr9BlACDQqlDnj6iVU5VmrS6gNK19A2WAzJaOjDP0dnhGsYCs1RTbCIR0KbslMZK4owSay/ja7J/Br8Nf+rZQolW5r6ceotfcKQVshrrzq7OCEnreQTubYoLw6Oi8xp0tbu/tnHR1/QRNjtt6YbTgWpKH6J+0v/zI6KlTsDZo/linsjLlo4vP6FS3sD2ndgp84VW/QC4o3uW1+e+5Z823Maxmg6CF1tYQmP7SBTARIb/UIfb6vql5tXFom6snum9IVuDuhfZi4E6UzdQgRNy1D66Ewe8AsbGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"The truck pinged about 0.02 mi from Love's 606 at 17:05:00, within seconds of the 17:05:12 purchase, and 80.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypHM21TSnkk2Sp9jKo",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5618,
+      "output_tokens": 376,
+      "output_tokens_details": {
+        "thinking_tokens": 276
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"The truck pinged about 0.02 mi from Love's 606 at 17:05:00, within seconds of the 17:05:12 purchase, and 80.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5618,
+    "output_tokens": 376,
+    "output_tokens_details": {
+      "thinking_tokens": 276
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

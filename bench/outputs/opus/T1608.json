@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02044,
+  "durationMs": 3564,
+  "httpStatus": 200,
+  "id": "T1608",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1037 toll at SH 130 Plaza 1 within 10 minutes; the last one there was T1240 on 2026-07-14, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAYKEAgTGAI4AUIIdGhpbmtpbmcSDK6H68NLY5rVgZmtUBoM6drUQVONFUlh7uaPIjDBgacTkPZ1BmH31viUyL2Zwcdz9vtRA/nC6a++BiKl+2AdXgx94hjfddAnnUcwqSoq5QW1HN2JowyjA567DBxyJoJOQB5++wHZk4iioDtMP67ZonSphYx8UPAz8VX8NM6l+eZu7fBMRlwIGLknvXhWWlKstXqt9NXxdoS1fI1Z7jiswAcywgEU01ymSLQeZlauoT5MGbowmOAiBmIVbC8F2yp/DysAXOAUypELI7+bLTVjfuU39GoCajHOJ6qUNwirjSZbB9RYeHWaUnaXnXsj/RCCqDaHns2SznuJg8/8qBoHaCC6k/k6wmcw2LO8lUHanKhVJwMDeq4psRJEVYqiCH1Z+DUuSV2XUk1tnuibGX3vUq9Tfu8yATW+aJr0+Mik7JnPbWeHW4F5/LiQGSunz/HNmyLX/UcbtNz1jNGHePwhtekc3Co+bUThSwP6EX8PkKXhR5OIV9cUt9yEmY84P3leBaD/+7aTqRLHkBq7dxwSGNR+GdkV3q/bX5z9lve7sQzoeqJdXIKGaIvu9x1jsMfuaWdLGL4E+JTSNnOdUyhlPBB3zwx3/pzWrIMDSvB2iM8kEApbUUGAG7pViZ590rdI7Wdn0zLb11J9Rn7mOSMT56Wwizj1U6aPosYjwB0IgU1sX+YV9x4B2uTRPNwbRHRM0dAUoFfu5CfWc1K1VyWif50wE5XNa6lCbSN67ad0AeE5B81veqozayEP5EUDTM9USzTiyIvs68VR6fcUlJokdFDT19vGLuHgj8vLaKWz16jPA8u0wr6wyGcOR71J3/c0yr42abYsCDED3hfBaaB8FWCh9KwVDcQXxOQcCwXVNcXgKpbMTjsHpCq8NbRj02CA6nSIt/TqNgDldHSeguRXGl2UM19OXb7cXiNQMvvWsHSp7IJgOQQwXGfhR9Aytovu6WQ6WF0iMiCY+yev23sLAPBcI0HIM6KF/6kX0nv5ArGjAyZbgtRiz9DmOL/qIGhu1NMjYGWn6wh/v6cvjKR6gv5kidTnbDy2MEtHVhMJAeA8wo9PBcOb0KmEh3yfHS1k/7hb8bwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1037 toll at SH 130 Plaza 1 within 10 minutes; the last one there was T1240 on 2026-07-14, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMSRq4AChJZJ1fP5Sm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4040,
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "thinking_tokens": 136
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1037 toll at SH 130 Plaza 1 within 10 minutes; the last one there was T1240 on 2026-07-14, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4040,
+    "output_tokens": 214,
+    "output_tokens_details": {
+      "thinking_tokens": 136
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

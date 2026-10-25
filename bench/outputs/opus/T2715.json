@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024472,
+  "durationMs": 6634,
+  "httpStatus": 200,
+  "id": "T2715",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1032 toll at Sam Houston Tollway West (HCTRA-SHT-W) falls within 10 minutes of this charge; the most recent one there was T2472 on 2026-09-30, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSigYKEAgTGAI4AUIIdGhpbmtpbmcSDHJ+KnKlLG1Fxo56DRoMbF+E+QqvrX+OObbxIjC2JFdDgXvuYHQ5SnwD0hdSf383SoiV32r3sodMDNJxaSCUtXsgz4P/QKAn3zMSiP0qpwUSQJYOM1+2XaMiB1K9808DK5lz5Z9H/P3Kpb5fY5e1FdbQ79Gt3bDZnEFXHB5T9LnwH8EF/q5G/OKmqg58vEraBfazrVhu5ig5Yp2+3IEFx8SPWAcFUzn+0ud14dil6fmBR5KvCUVQFVkBd+p0Ggu7Vmn1xdRSb9amvTsxpFaskOGvH29U7fLf0LJYR25JMdN3meMXj0XCu6er/6ibRbKH+UqAUBQwqZ9v85LrmLOrxc7vSujPWDu32GAga+T9F+4GuDa+DcmHdw2B3jH7CRwFdyHgKrs3va+TeI0cGk3CpbE4bfYhh8BPSLieJTouuWMa6FPySnPtx/eiPW8q0Y1HMLBTLSm/kokCywuGhnE/GXkYq3ZvzRO1n+3yfXjVAp/iQn8pJh5eF9c9uxZGSHTxe2Kjoje7jeWEd4z9ecY+6zMKNJNE7wHGqvAEedPOErESkBmpyUYBzNvGHp9usAWra6dx4kG2k8xciHAkWVaz5lSnEoeipZW3a7qU0LaHnt0YltGqZjbQk5k378xK136lGQmfhLVGYzgWgNZQF9FWMaOEa/RVLdFdSHMlcOMo+ZihkARP7CHNnVWVOFgMK5mbpouT688MIZTs07XIBSrdEOlcespzd/ZNaduFJj65c4NakoCw8/rqj+hrUFiO6sqaE3HmnVF8ZhkRGJK5WA5Olj+KEVLq7XiBUKc1myKkXgPMA2KgOvevrEetZmJ5U6W5iucft5eSNgU39p0XHfhn6chEbcozKvQH2l7Pt1L5HbiN2CX1HtMmHXXeXp65rESclF5G7cDEU/9ut7Vzqzzyyi3xYz4bWLCyizCtxK0n4Fxs0ymYdvgZ1U0tgVxZmslV7bwQzBq6FwZmgReuqn7HhCZ6LxRaxc0xHO8pwXHrHOfjCLq1vm25GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1032 toll at Sam Houston Tollway West (HCTRA-SHT-W) falls within 10 minutes of this charge; the most recent one there was T2472 on 2026-09-30, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzE7nxu3Apytd4arGvT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5163,
+      "output_tokens": 191,
+      "output_tokens_details": {
+        "thinking_tokens": 93
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1032 toll at Sam Houston Tollway West (HCTRA-SHT-W) falls within 10 minutes of this charge; the most recent one there was T2472 on 2026-09-30, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5163,
+    "output_tokens": 191,
+    "output_tokens_details": {
+      "thinking_tokens": 93
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018248,
+  "durationMs": 4079,
+  "httpStatus": 200,
+  "id": "1793",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 24's nearest ping within 30 minutes (16:00Z, engine off, odometer unchanged all day) puts it in Houston, about 195 miles from Love's 228 in Pleasanton at the 16:21Z purchase; ask dispatch whether another unit or driver used card FC-1024."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQcKEAgTGAI4AUIIdGhpbmtpbmcSDORoJ7a/K04SK+DJVhoMfMRvQajXkRhvXhKLIjClwRO2Jfo5ZvViIxnHUCpYKAuf9Mu5toybTbZGreTd7eqfvXtUrD3CGoxCzwn1K4sqqgbcR8iWJVkYsi9LSlPyWbQgff93W3Fmwji0zSzxqe7BemHh2NyVYgXMBmsLdWZYj6Zh3gqsXFzV9xlCJ1K/4GY4nMT5oMX32mfG/yTpq2WtioFmxA2u7OWd9jjuWgtJ5iZO6P832H7SVESBGdEqKVoL+ZftC2HkGPIPppANfoFRr6ElvEMnyPP/dTuQsFGW87bkaPtmBJDdXdE3lycakQEc9icX4L+MYfR4oR7SCeY0pN1vKtcbb43hSuMceaVGtZQosVQDRPvUUBkk3vFvYUNgU63+RaeMQJ4NXVCguucK6k/pkxkDXOmOKveHi1DbA99iZgZRWvVepelQRcjcT+tz2Yxd2+/c/Z9c2p54XiqHpALv7UY/bzyRMLNs4Hs/RVbi9nwKtRyx+YSEL7/5U+3Fjzgc2wAlUAmb9xAIZtj7MVf600mMjG4B5ApMAavYuO8IHVCuby94vIOLYjrEZrbbqvvoXubf7vlDU0tIlTYKO4XD84i9xMgPRiWPg8v4BzjYZry3RoGtf8CemQsbcksCU4pyJ609fLQoGdSd0XI48utYWpMp2azPzJcE8T8lP95/bUFiTJgsFO65KhnZ7OH4skv/4XZrQOt9QhxoVWvZFvnySIOqinveayvTw3bBs4It0QWfpNVRJYW9IkiMRG1lDIubQ26aRbJw6ZIgNVNcHAOuVQiFE+zyolHWeHzpj7VnGBgDpTKJ1px9JftTTZD2q4Dd1WWquAgNlfpVAJOLMLEJtR9jIZ2f0CXrwWhv7PcoguRJ1JXKWiDb1CELB6YD6K7hQsSzJcEPXTd9OduWmw0WEYu9DuR4eX5PdMNHhdiXp9tBgPMI5HDRNullPXW6JSKNHD3Y3fOI2TPGbvFA9cbinpLyZgCjR/gnO9TY+AyO4FRMR0fv+vbRNg3PkGtYh5GIV5rtmJmtV5MFTBFSFHv4z0NDVZ3+tidvMbSKYVIuCskUQOjEwqakAsYjQyilozFwCrDSuu/r30iM1x5ydegmyhxLCRS5dZkKAN6VUCDw8go/tSEAfmkvfO8Z1kTuTsYtfMMGXRmUcIY/0d39bnkll+BWgNsVLSMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 24's nearest ping within 30 minutes (16:00Z, engine off, odometer unchanged all day) puts it in Houston, about 195 miles from Love's 228 in Pleasanton at the 16:21Z purchase; ask dispatch whether another unit or driver used card FC-1024.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrTN5YRHF6aq2WKp9L",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "thinking_tokens": 180
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 24's nearest ping within 30 minutes (16:00Z, engine off, odometer unchanged all day) puts it in Houston, about 195 miles from Love's 228 in Pleasanton at the 16:21Z purchase; ask dispatch whether another unit or driver used card FC-1024.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 314,
+    "output_tokens_details": {
+      "thinking_tokens": 180
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

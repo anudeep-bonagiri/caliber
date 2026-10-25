@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022716,
+  "durationMs": 2259,
+  "httpStatus": 200,
+  "id": "T2426",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1025 at plaza NTTA-MCLB-01. The only earlier charge that day (T2412) was at a different plaza over four hours before, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzwUKEAgTGAI4AUIIdGhpbmtpbmcSDHW0MOjHhVY/NQHlLxoMcK2t726hhNG/ibVZIjDdwT12ZE0kzY25LkP0kCIqvu1VgOiAtlUfS/QG3GuT5S/U7A1bI7HjQdygdOJoh5Yq7ARabgcRWcSCQY3x8wA+G3jeYwgiy5pgvLIZartdLdv0gakFtcMYGWnRogxbPtKJLbay1lQI1T3APji30g8eQKdUWPJGcAtKBUw9Mu1a3mFGfw3TmT5NsZ8+RBrEZQRPqFYikfZuBtbv6Wq9oZcmKiKgRhR/k5cjJE7DgRb/hkq4sKheZkNig2rX+wq8qGMYqrcFOwbZH0tHGmsYsqKK3TafX3jjtfjE0yQXTUe05oZGOhESaHylKDZCtrQYFXsLGdIrF1XF63hfdWO4wEi06PWd9UMy8ljyUQGZhhXYbGkzGXpKWDsASM7y0uaFg4XDzcvlMIM6XpExMh+Pxk2AFyBGA8/tdADnv39xDjcU1utiCGvYP+pmOYE1KdlDOQ/ZymLyscGWXwJ/jIVRxU8BmDpOwLLb68DjGIHNJ3KjTc9XvL2rQoiNS0oYyH+i65DOkqk3qFPzPmZDl0L8rP5MKJnZtKNRG5A6LY+ED64uNtAEjTsiP8vHdbpFhREbR/hl9R32iPvBLuE6aowQmboSawXGnFuHnNEITQucKQPJHusMn6hEgWMFJy2wvtIKi7BLeXAKEZ1HJ6mukUdKB6vD1EVfbwPbSMfL8Ymi9rTg/qsn3IrT+HgFpZ4B1cx3KPQ4ijCWpUhlqvPNgpGBzYCKiDKjAvXEgEd/AfuF+VQ8YDIPYQlh11/QaJi1cktuzcIWpSdHe+DtYoXVbA26ynK3knXYCX8MBaC3DqJ5Kn0GV1Ra4BQ77lsXl8DOvexnx4n5UlqwKpvAGNljZQpiIJlcUOR510l+Iv1oPlr44CdD3J6uu9UMl7jUEkag9jLT0RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at plaza NTTA-MCLB-01. The only earlier charge that day (T2412) was at a different plaza over four hours before, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHuUem5kHeC4JFSRt9",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4894,
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at plaza NTTA-MCLB-01. The only earlier charge that day (T2412) was at a different plaza over four hours before, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4894,
+    "output_tokens": 157,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

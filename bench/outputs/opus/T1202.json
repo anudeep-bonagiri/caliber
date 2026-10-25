@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012732,
+  "durationMs": 3282,
+  "httpStatus": 200,
+  "id": "T1202",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1019 at plaza HCTRA-SHT-NW, so no charge falls within 10 minutes and no duplicate_toll applies; separately, earlier tolls T1034 (Dallas) and T1035 (Irving) are 11 seconds apart at different plazas and may merit their own review."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwgYKEAgTGAI4AUIIdGhpbmtpbmcSDP3OVsxPm+U8oog9CRoMBcdXl9A7sKxrobGBIjDbjHaM/Exejgb1x/DqASKgsvaZYWzSswSA4Zv1f2bzIrWMe9gIoIM5ZzzhiCAjIwMq3wXkjf1cHCOVdmpd0GSXSyjJEURdXrt31UwoGR+UR/iT4AwXRm5NlQKiak1TgU3qT+FbK4Lr5NFBvoK2PN47whBpbnmtZSDg70MR/skM2bJA0MEL7IWmG+47s1S/86vQqcETqRT2l4ICIeT0uhKJWs6Vu2bmJOqUKTs5o8RQoU0ATv0CRmCRsnZY/pj5WWUCmlKAAObSQpBVyL1znRFsPpjOXYd14Ic9UOkeRSE+9mimJy3HVVCCBwZoRyZEej/jtc60Gmfxx0WkmozwDvHqb8llsbUR7DDUl/CciUJNkytx2PpSXlbcYoIScbAyPcD7WjB8vGcdL70+F5Czuyq9IHLl9Jw8enMonbuLh0ilnW1ZRsWUb6Rxss1c8VSIho47m961aLGfi0mlnUxLBC9N3UNLl3RyjdcU5m6oaEUlmq4U+pwO9+zk7N9cUswVBQSrtjsE3fY3E4jzjd03EgAstlibIKU0vl7qsPco+rqNSQhHUHFIu/K3xVEMnM7IHjCF6f0+fDAcOook9TYp7HDyePDZlBbr9hlHcKdeCI/9mPx+VWW0kVEv3ynAL/WIGtzrD24AsBP0kL+841x8lOsqM5RNUOwF6LLAI5Q0QhY124eR+Hue0zjrDfUbR5AMaQYXPmEf58X/jXFjLEKrlw4CImBWR7+VVT3AfvOfxDASx4nwx/ev+0O71FTtcOCcX8230lNeAOEgG7erlCOx7kdlowP6P4m8ZJ0eWuWbS2nJAakB4S/wAEp4lgx26MyooqQ4F3b+1hsbBRXBwglR3A6dlSsokgaSEohHO8NmP2S7Q7CdVYUCLbJdZJCHx172utMtsRURgxk1d9NUoVZ/Y3Fdk94aqRrUkIDjzqSV5JKedfHTXDR4iWBQEplD0Yayef+akFT9PysBx7NAlPWRyuF9q1jM1ed7jOh0pSdT8pjBU/GXmh6qIxBrOkw8z4epQaE31EldPxWHL1oUDVJZtbD9LqoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1019 at plaza HCTRA-SHT-NW, so no charge falls within 10 minutes and no duplicate_toll applies; separately, earlier tolls T1034 (Dallas) and T1035 (Irving) are 11 seconds apart at different plazas and may merit their own review.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7pqKbjT2tNhsARShd",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2008,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 110
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1019 at plaza HCTRA-SHT-NW, so no charge falls within 10 minutes and no duplicate_toll applies; separately, earlier tolls T1034 (Dallas) and T1035 (Irving) are 11 seconds apart at different plazas and may merit their own review.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2008,
+    "output_tokens": 235,
+    "output_tokens_details": {
+      "thinking_tokens": 110
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

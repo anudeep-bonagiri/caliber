@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008252,
+  "durationMs": 2776,
+  "httpStatus": 200,
+  "id": "T1050",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1035 at plaza TXTAG-SH130-01. The two earlier charges were at different plazas the day before, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvAUKEAgTGAI4AUIIdGhpbmtpbmcSDLqs1SCrabcQXLulEhoMZ7q0PfaifGG+gk4zIjB+/ecHSSADXObe3BMNAX0uWHWKTDdX53zjdKADnQP49HONuegJIT82aYf5DNtZRkoq2QTD7X6oglsnebf68fTvsMxLKA+5hMInxG7XUaE8xgyxWP19pYk+32Kep2PkxYKi7f0IgWJg5wn5Aq4+nN5PLFBvthA2vARIyFUC5cCAm8EcopslyT7lWwtToAuONrgQrjtXTCZZ3VQyc3DPdqb2wAsOmL1nZUdfx5c5JMPnfvZnWwHox3JFxB9tQrB9zRh9mi1bMr8T2cCzj4x1asz/TVnz/K0biYc33rI1uD5FuTioy2VRJZsA5ep5zHK9GvXCfgPtLGS1RX1CFLS4flZkrP0DuXsxFXdGQX9oY8XqTpyFbLM1ryhbXOzOubvx8NkB81ZhaechVxCQWLw3olgOQmmmHRy/H5Wp697DReqg8gdVC+BgJMsxaqdirw3/wTHdVUYnxT2pXUdm6uAZBOS2GK2+qOPFkWc3s+dTUIod5gbzXwJ4Jjo+f5bARRyUL1nT2hiVluOuPL55y6qFhqyybr5gZpgsfrQY86FtmbrW9LFQszqLC2kU5q40/vOWsFoHm3ZaFNhAIa4wWGr8+3XfLAQ0f/D2EJV7c9RpNwW8NjFye/nTvxa27234DN0i3BlLWbMa8gZHD/4kmg4MxqMewRVBXfT8F3lAjK1j5gRepHIqUvMXbMmox59YLPpowO1kbo8VfZY3SNBzaEH5vGnhZa3cGhf02eY/+yWXUcDe6HKnqp0xNzD5WlbSeBjGnC0SqTl+H6vSAl7e1L/gTS9cp8OaqEKEeSlmI7efYYIhucdEkAcJ3q0vRCGjMtdeCEznlAOgDemXws+9eZ3RiljgyaUo07rsqPFWEJmWGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1035 at plaza TXTAG-SH130-01. The two earlier charges were at different plazas the day before, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzESgFndJhHknWiX8bu",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1398,
+      "output_tokens": 133,
+      "output_tokens_details": {
+        "thinking_tokens": 58
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1035 at plaza TXTAG-SH130-01. The two earlier charges were at different plazas the day before, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1398,
+    "output_tokens": 133,
+    "output_tokens_details": {
+      "thinking_tokens": 58
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

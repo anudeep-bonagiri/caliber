@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018088,
+  "durationMs": 2283,
+  "httpStatus": 200,
+  "id": "T1969",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1035 at SH 45 SE Plaza within 10 minutes. The most recent one there was T1948 on 2026-08-28, three days before."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzwUKEAgTGAI4AUIIdGhpbmtpbmcSDPaV6NcylSxbb9GXExoMTT2NUcdB1D9kQk9xIjAOqFHzz+VvOGBn211JowyVBYFGgfeqz0IIq8fa4k7PmY8UBfuGgPkXTFx1ZxX9otcq7AQor2N6XHV0VzO5AWJD+MyWpKcu1oQ0Fr0+jDfulx8d6CkCg02VCjAy7NX3rRs5BEeDxlbjVU4OpWMhR93cwa90mnQJRUJ3J3xeqTvTueF/bBnk59+Vqdx7WOwPyum4ldaf3pmwVdfa6mYqVHz+Px8UpNqeRUKQ7eKWnvI5Xku0+t9wd7lHceVGxQsUNrq3PzIBwF11vGls6aXiKpQe25PLku4aT+U3aDfiteLAoVmGI7lFJK/7gPZ+mjp9gwdV9YehjrleP0sLdBsy9+UDj2HCMMmSLTMjvVxiVkmJl+tEqvlEosvkyPWfYKNIzS3CSTm1wWizZ7w0YwH28ZmxD+BoJ3r1fC2QQhcHMit62HHxYiEzLDB8TT6aC6XEhyfvQi0giS3iHtDiF8fs4Z6oh5csj78qw5v5RZED7GI7r1lkMxjVIrw28BoWQva/ZlFx2ioLZVwJ0l4B+dJ+minyOAqw9boHPUjj/a5XZ2sTDK/VNCLVOM2Y/UHyWeI6+Ft3BsxAp7CSsFtfH6DKd1Jd/v/vtFjHAVnf8aBGYa6TlERSrsHsZSKrsoyCbentHgOq7s8Md1WLXzWhnjAcT8lGNp4ebC/WBumM+iTthL99Yn0t4k3PeH0ZRdAKM3iYX+x342W9XNijj+UnaqcpPw9kuzxDKvhvIwixayDslIjUieG8QDbgSrAhYnreTIAnrsrCR4fgMygPtZP+E9aLjTsu23d8xydUJY+TayU/fU3YiCU9deWAynrvpW6rEfOMTwU9c9/SbGIHTqBHobZ29SgJD7Y+r6D67DfN/PqEhuXH2SJ7eFSrOOzWsKqRjfVXURgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1035 at SH 45 SE Plaza within 10 minutes. The most recent one there was T1948 on 2026-08-28, three days before.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqk49DrURmkqHToB3E",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3787,
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "thinking_tokens": 71
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1035 at SH 45 SE Plaza within 10 minutes. The most recent one there was T1948 on 2026-08-28, three days before.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3787,
+    "output_tokens": 147,
+    "output_tokens_details": {
+      "thinking_tokens": 71
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

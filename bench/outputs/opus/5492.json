@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027664,
+  "durationMs": 3990,
+  "httpStatus": 200,
+  "id": "5492",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 34 pinged at the Sealy station 2 minutes after the purchase (15:45, under 0.1 mi away, odometer stationary), and 39 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+QYKEAgTGAI4AUIIdGhpbmtpbmcSDH14JUFaqxA3EbtH1xoMYyKUGD0Wo8MMQZZhIjD4bR5I873tkYt7lRXJJOfZe/s/sSm9O9ziRVnX0DraMm3goFWW8WiCuVvEOON4cgIqlgaEz1cL5i5OVvOC7WE9ElZjKTKQZ/Vijf8ZXAF1XAYsdp/y9JEAkVgGrjHFOsaKP+G3wam6EYCFPFnUvsksF55pHXH4Dk4fThkq0eA949QtJi2qTWNIz9wm67jmE4QxMv8KQ9QO4vtQ4iWTYlS+oXMAqPbZgDx4pl8IDVQYCbZvVvKfoMyLZHSE7I8dUX/uDtUc/TtnUle+rTLzZ+ARLecohSkHAF6Wh/EIRRgxrAmPtSabshdCAbACzjgpneJ5dFhK4KSIukWLdkqyUfoRejH1hEHPg0rClZy2qmNPs0phnrBmkKjLuWh8Ef/IK/h3vrihOo8oswNprIz5ZKBXIYvBtumGvMt91PbG7VyjADnluBkk73bX56uUHcYctfMv6ig3NzVWxmWlLTuGWr7bf5PT46nnhpt8aiMv5/slg+bdHAv6ur4EpTMRdNUu0hYGtBZRdejaMTLziJolLYcJodV+kGSwTVqR6sm/mVoAvgGjyvvUu6/fBA7heIZK9AWRIZA62U2RHCSXs//j2ormZ1FG/vj42EzEVhizDACj8+NBr5/YZOuTI5kxU+N674XlXGOSfHJrVLT3hS4iTMDYzfEYuE28naz+EPl7vOSd+bOEwVaZDgG7xXJ23ftYSkONsz2F/ssUBR3WsnPhnkhAvTcI5rysEAdoBi7N+sWDp8Ml7Xv6Uum6chvJp0pC5PdWSY73wfRaPGKDDHnen793p9kd1uQTGJ2P9MO/h/1j+mjEOqXeKbOWzlxsYHNchc+T6BjjS+Cl61eJxuROhiM6O+imdk6O6HJ6q7tcFKxfTA2ZdrDHTR9HB6jeDh5fSjAhJrQEzRcW2tRw+Ce9NvBA3VUwmsJsqB07Yh7cO9wJkMaVEmba2tM1UVTIG24DpRvoG/2psxLfB8vW1H3t0o5fzppGCp5HUmWibWfTtZDnW3BNWqXIyBrZIH+6/HY1hE9Mewy5DczDW+vVcjTeuSfnrl//2FyZ+wmwqAHqCxCu8XIJ/ZJoKEylvM/U7l5w4KFcu3e5ZDsKajdwx7tAqENGqa1t+6Y7XPSDGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 34 pinged at the Sealy station 2 minutes after the purchase (15:45, under 0.1 mi away, odometer stationary), and 39 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrxy3d6MNeNG7rJhTw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5691,
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 148
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 34 pinged at the Sealy station 2 minutes after the purchase (15:45, under 0.1 mi away, odometer stationary), and 39 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5691,
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 148
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

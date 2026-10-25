@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021852,
+  "durationMs": 2955,
+  "httpStatus": 200,
+  "id": "2872",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 13 pinged at the Three Rivers station at 14:24:25, about 3 minutes before the 14:27:26 purchase and well within 25 miles, and 43.6 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAYKEAgTGAI4AUIIdGhpbmtpbmcSDCovc1tjEr8FfEASQxoMkVooJkM1W3wVrDSZIjAPJfAZ1zCNyNXuYgg8Tf0mN4p01U1qN0Qv4eIisXlPrH21zeV87YI4kXy91ikA4i0q1QXg299DLO+XZceFlhPw3y9lCvEYWM88be4yu6HiS+quReq9NHRo8PgH/fQ/oqB/LAzA5GmDV6+n2x9EDnEn9MFtmyvQNHt4XkTNSy+qmzrrE6FcDx79R0S+xhZFVr77NOMUzndcQiPtSV/ZSegdb0zNUUhAwtYsPyrstHmPYz6F9WXvmsyLiOXIbvpwVjI8tfsKaRZ6EteDVuW3sW8agb459Xx1mjm2vrsjR/nTF4MieKEXpj7L/Q2CPUJy4lxjbCagmjE9vzFJ/gLUyTC100B+tVteLLuwucy0Stq1cZiUWCxHpQpD5zrT2jrAw/ksBWYhl7T+txNaIFdCB8B171GRKlY5SUdh5g0siJwbWVqa3JSCf07iB/jX1pcOF+qMXu6X+q9tXP7jrdVjidZC2BKKhiCRVLw9oV+m9612EQTQBg6HzhgGrE76RC4uA+CMrtJNTHBTwdiBPcfsaMkhB6MmPR9NmydXHhmXekqhJ2LkjpqcvHUHpr3kBjht4tpj5h+OjPMOAhd0dZ8auVQjBp7Mr2ipFLh8mfqHR9n5D4JnguC7lpSFBVhz0aPE0MAiiQqW25C6geXsPYqGmiuWhOTDdx0sufO4yPCDXYwARxBkCHu+aWQFRXXntRDUBwjoqxef0DfPtOBdq8bS+Gp0XSyUiIHtcfwEJB4GxSFgm+ukY/TdEIDGPBlF5HT0LJFqk06YMxuD9iKyhT+0I4d4e+AAF09TW4HFCSYOETqnG+ggMsN4JAVWMdv1yp8fEEEihXOXYkrRTMEVTYtKbru+xJV09aEb1XIe2YhBYkR1BG7C7izYafud/dW4RDszO0F+vvnrEYlOIrD0ZWOaaZbf07NZz3sAL0NY4KumTRzgteY8ifmukAHkvmRpZHn7+Uw7//bhxWgIuYnB7ifYIYygqoz2uYqN2kBkW63srpGxVKsPjLaiDQX26aodL1MaqshGFXiwcyfKnhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 13 pinged at the Three Rivers station at 14:24:25, about 3 minutes before the 14:27:26 purchase and well within 25 miles, and 43.6 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynbXr4344KsTgTEKJq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4308,
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "thinking_tokens": 128
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:02+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 13 pinged at the Three Rivers station at 14:24:25, about 3 minutes before the 14:27:26 purchase and well within 25 miles, and 43.6 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4308,
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 128
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

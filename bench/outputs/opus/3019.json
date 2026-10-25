@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0257,
+  "durationMs": 3138,
+  "httpStatus": 200,
+  "id": "3019",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 26 pinged at the Freer station at 18:05:29, about 6 minutes before the 18:11:06 purchase, and 32.3 gal is within its 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiQcKEAgTGAI4AUIIdGhpbmtpbmcSDD2VuqHSH008W3SB3xoMj6nLc2a9rgDi7rjrIjAdhRKOwrKCQqMQ7Ftuodm1WWWJHevpJsRI6HQ3kcCmDfAApTToOxuRBkN170z87ncqpgaBmh0DBh0mPTuky0WMChvJoSNlSNNvdjbOWj1ud2iZXMxesU5zg6QFbXEUzPidw0pGV9cUQyBl6FlnuD5mTS3gSkSnrWyM1Rtfe0SRKPQOxmxAl+yBi5/p2HIFVG2JShHvYIiVvyDHw/0TJIvQHxf5tgaNawXy19FyLHZszqg9AYvViy14ujpdqbpElkyDWn4f/4dxDS1MphgnpXa0EFbmQzTEld5JyhXY18pHcGwP9OVH7Kj5tFUKwpKA1eyjE7q7UXGjZNfOGZn0G8Ahzv3sjAVNB85Xd4PVJ5yxcWQg1yXi7r+Bfva78RMeIUSDLQTwXH/I0KXW9/pS1lbluk4MZ1dG4ELQQM7ylnSWPt5u71sa2mMuQ1p+n8I6tYfvktq1GFrb3V6NiHxBURPk94UfgIxNRo+aBGUYl5jknP8rpP+OSGLEGhnE1HWh7W5kntad3PBXaHp+YsjKsNoubJOMX7bxCoWwT+XDNLSwlt9NW/f1VJik2rzRvJW23K8gTtq99cub+frC7xpnjoMLY3ZTDbmTe84ih1EbTMeBGXXj5EaMbT4wBegmpAbzb1KTGcwK3c5F1HEGfxam3ii4etlMU/ON1TCVGE3VniGFgJw8p+7haW4FdOtyjSHRjOkFBJlP2rh1BsKi8DgDW3Ey3Cp1kWmo6WZ1QhZPb29U2DSOclXanF23Ul2ViH89ZfpHFaRaIvFDM4D2N170DAtb7I2b76dvD9zwNjx3KmjCvUSJdF3CW1bZ+ursFwKOR3qCjt/YU+/Ya02hGXmmuITxFPJHA4yeuy+UsogGNI+mOqag6thYuKjzY3xhPxIgKD1ZGR3/jvJQSv4gh7Hf5qUikBv7Vkab59CKrNURQRwD+hPA3GsQt6OkaTtpo0oPrezX7aaSVp1IGNg6L8OCioeIqMOISu/B9iDFvyusVPkOBbd75pUGYo3p94rmNslNGRzT+eC0PsW0d9UbGd78UnuP7gGvI1FttaTGntIY27NbuCTkc0Y4cXJ0dZ8ljdo00np4rzbX0+Hd+zjQHNUadC5EnrwwiKMX+Z5TZcntsoc0lZwSeGJ/9hdimhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged at the Freer station at 18:05:29, about 6 minutes before the 18:11:06 purchase, and 32.3 gal is within its 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3w2nEYqtT2yEx1Pwg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5255,
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "thinking_tokens": 142
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged at the Freer station at 18:05:29, about 6 minutes before the 18:11:06 purchase, and 32.3 gal is within its 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5255,
+    "output_tokens": 234,
+    "output_tokens_details": {
+      "thinking_tokens": 142
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

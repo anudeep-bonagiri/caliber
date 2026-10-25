@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01552,
+  "durationMs": 3059,
+  "httpStatus": 200,
+  "id": "INV-1074",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "The unit price of 148,250 cents is about 9.4% above the 135,500-cent contract rate (contract 10, valid days 1-49), which exceeds the 5% limit of 142,275 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAcKEAgTGAI4AUIIdGhpbmtpbmcSDLNEMD8gUT6tKgRZBRoMWtQtyUQHXwdzpJ0FIjATfgEXYG57/Z6VwlrfgtdKw/Qu0fR2u9tciG1o2z+ijBEZcDA2zFQlAus8TCcoTgoqnQZberAny95GOlS8J4ocRyEACPSJhxW5Mr7OCMAWALDu7GWrpi6N+sD4F2b4ips/Fs21jc5XeKXg2RkL3TjwQ9NQ97uCIpWgkNm3HNX0lEz+D82bz10s3zsdhExdbYyo2TPyr/GuHkycxWbEtzM7NZTiUpuYik+K2j7yCzsvsMvrTLWe+DEEX5p+CGz8aPqUCK2R1N6vYVA8kWcjWn9zx16lXg+CDOuwF+8jx8PJ4tws75HazgygDVYCxcM529qXll9VBW72pnHn6Nj1CGKZ/3A9xJEiv+WkBKK6Vh/gBSTvNHvnQMt1tWuB9beVE3abC1UdpC47gSogSnndmxbvFGxhgcPZULquiE2iS2lYPYvHQ6iLb9GBqrxyfn+00we3u1qLalPZlHGAcUN5EEeiGqa1V/4me8rg6nO3FMEBGwb7DPmPhWL7UjfoBoNeUMghrsxEfwcmwkh8BpfSUnysmhha9ehzWD0IcnSishQtV1oOfFqudJ3z8ggz9Q64Luq3muA7XPgWTJ+2DXcHPsHzRpzMJ94wFW/8pyQjl2DXj2iivAKRIcvvThQ2T0YqeTF+iWIsIkNcI02yfZqcKpFDOypG8JLwnafSPM5JRHm6P35+rB8wnBHU5EUff6vG6rMHY2eXoxYn9AOrC1GWlBeKPpzYgl8Rvq3MLgUrRTXHkx1H47zdmKZo+uRxyMELwdXmAst235uo9A9kf6tcyJeIpaeuQ96+tp1VhTQ1ATfq817PwdaFnWNvjf5OOKFEq04v61kD2t/MAkRBLenct38ltQ14fTVAtT/T34Dx+P2lY2mOGnBTLrAIha9Az5GRorvVoJPkcIYMHHKA0hG0CKR9jbCdqhMrH6ujz4qU3V1nWB1A9gGCzOWVzC/uh59ajDdLzl96j6EG+qAAf/azyFpjXf/MbyvbxvowHf5hSqY6xs6/SrsfS6P31JoBK9iq/G3P4XLopIl5Tqwt1J5NHIM+M/ktYjNJEm1ujCVa61NhhSIZjtFWEM9ZQzZeDA0+Cq5RLhb0nIrpR55MwOz8/wjaWibaufG/+LBj9DAjWejGeRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"The unit price of 148,250 cents is about 9.4% above the 135,500-cent contract rate (contract 10, valid days 1-49), which exceeds the 5% limit of 142,275 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz26wmegxBSvvFF4uk4",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2735,
+      "output_tokens": 229,
+      "output_tokens_details": {
+        "thinking_tokens": 136
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"The unit price of 148,250 cents is about 9.4% above the 135,500-cent contract rate (contract 10, valid days 1-49), which exceeds the 5% limit of 142,275 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2735,
+    "output_tokens": 229,
+    "output_tokens_details": {
+      "thinking_tokens": 136
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023888,
+  "durationMs": 8160,
+  "httpStatus": 200,
+  "id": "INV-1041",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the price of 29,900 matches contract 30. The matching-amount invoices INV-1018 and INV-1030 cite the same PO-1022, not a different PO. The 1 unit billed equals the 1 received. The bank change on day 71 is after receipt and the amount is under 5,000 dollars. Flag for review: PO-1022 is for qty 1 but INV-1018, INV-1024 and INV-1030 already billed it, so this would be the fourth payment against it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the price of 29,900 matches contract 30. The matching-amount invoices INV-1018 and INV-1030 cite the same PO-1022, not a different PO. The 1 unit billed equals the 1 received. The bank change on day 71 is after receipt and the amount is under 5,000 dollars. Flag for review: PO-1022 is for qty 1 but INV-1018, INV-1024 and INV-1030 already billed it, so this would be the fourth payment against it.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyuSvd5r5vHLrC8FrT4",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2562,
+      "output_tokens": 682,
+      "output_tokens_details": {
+        "thinking_tokens": 502
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the price of 29,900 matches contract 30. The matching-amount invoices INV-1018 and INV-1030 cite the same PO-1022, not a different PO. The 1 unit billed equals the 1 received. The bank change on day 71 is after receipt and the amount is under 5,000 dollars. Flag for review: PO-1022 is for qty 1 but INV-1018, INV-1024 and INV-1030 already billed it, so this would be the fourth payment against it.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2562,
+    "output_tokens": 682,
+    "output_tokens_details": {
+      "thinking_tokens": 502
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

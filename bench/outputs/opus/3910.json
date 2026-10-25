@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024312,
+  "durationMs": 3210,
+  "httpStatus": 200,
+  "id": "3910",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged about 4 minutes before the purchase within roughly 0.01 miles of Love's 244 Beeville and stayed stationary there through 14:20; 48.9 gal is well under its 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6QYKEAgTGAI4AUIIdGhpbmtpbmcSDE4dVoxD2wK2pXjQ6hoMM659YS9saq+/K5RUIjCgJz++hJMWLkTEY/BePKwJ46/rjod6bCCOfU7mpcTUrmMp4OEuS/GgbtoFPsT0XbIqhgYWYzKztYCw5cSPJAEeB179XhXs0x4JU2ZD05Li6jEKp6wq1g9KiwdxvqRU63AYPob31Q4cK4ktTicC3InwZTgZxFb77J4TLH6T5rDT4eqNHBQMVelrngxS2yS/l1vg2lZwTLSUWXkjyA9Z0WL38cIP5m1hTx3zazTLDZuYElzFMow/PiiIHQNYh01YuCd65Bgx6ordzViXSE8ejy/ED3xWGtx73UjWHOHpZzuRizYligiw+UOwL1y7T9d04KFvZ1Rtkus5hQrRVpI0gp0BrUDqPtTPfyFQ/tB6BDnFaoYc2JNkZpD+uAbcwEkLjedglpyLUyK0W1sutdxE5MoWc2cJAIOxNJmJ9HDeOEitHmaKc3E6ffHIAOY73e9TKZQ/F49uxH3SPKvlsN9P+KhB3QszFNs/VUZ+lAhimGUUuFeyD5DEgnuoYAaztaeG1I/ag7BLjPYtW0vgH2SuH9I7RkAVi7IZU50AY37XL2lN6lQorc1RR298Fs6Yl4Q727khyoSLb32VrlhuoQXGYdxRv8M+0mqqkt74fM7w05xAV8St7jPKwMCe/fu4mfUx00eToA752eYjuVYs3n8EVkaIy487kBmrwwK8CwZImeWL9wn56CB8gu7mO/mwll3XtsxXLSlGoa63SS8EQit9SObnMkiFv8oO6l5pDFYB43E/55l7qUZIe6ZQwD1bftSsnIWeLaQNVhF4X2s4Mb/jwZXWUVoYHOsynyrTEpUiIwqpNfiUP4Z2teWhEmuNqTZeKfOtJ86csb1hFsUwVMVLwxX6PKTSPfP9uvVMoXA5Jf/Lot3vXIe2hRL8OH3G9pxG/l0W/DIJXeZHarc+Lx5WD5VSbfCvEGUK5/aOMVSig/8JlrHNsniYgpYB6fnxzpcVce6qNn3/nwPJOV6X77NyjistKzfZniOT9iqIVXF/U+ujql9DX/6xOQxaXZwk5FTBaf1zyHdCQbc9YJHW4MP5FQGrr59JXcQgv6e9sSjbUsf2gjmd9dCLp5DOxYK39s4poagrAzbUDt/W+X4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39 pinged about 4 minutes before the purchase within roughly 0.01 miles of Love's 244 Beeville and stayed stationary there through 14:20; 48.9 gal is well under its 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8LMq55grPC9ga1gCv",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4813,
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "thinking_tokens": 147
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39 pinged about 4 minutes before the purchase within roughly 0.01 miles of Love's 244 Beeville and stayed stationary there through 14:20; 48.9 gal is well under its 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4813,
+    "output_tokens": 253,
+    "output_tokens_details": {
+      "thinking_tokens": 147
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

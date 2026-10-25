@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014716,
+  "durationMs": 4070,
+  "httpStatus": 200,
+  "id": "INV-1050",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "INV-1050 bills 57,000 cents, the same amount as Gulf Coast Diesel's INV-1020 received day 12 (18 days earlier) under a different PO (PO-1023 vs PO-1016); ask which purchase order is real."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/ggKEAgTGAI4AUIIdGhpbmtpbmcSDKcq66B5UCFJd8GrjRoM2qILECOWpomzGUZxIjDpCE/jWLnl5Nj5OLnHE8odq+pZBdErl8eP+YeF0eB5hMvhutVIj9bBKay2o7r/0bMqmwh5DEyZliC+Xz/tKtHbVzp859z7ccImHd426g151AQXfhv5KYOptOL0G8FcGHSjcqpzAyaZ752WR9WnCMXwDJwzk/VKHFSvaoN3k8CiT9bjlRippcr9fLiHWx2Ayrn2WN7tkZ+PL1CcwDjuYRN/oQ9IZWuDZW6N6FmarMxFuLb0FabJgxgANFS/PnLlha4tAHuuLHg6W7tWdQ1S0mstgqtQrpKhUqRzQSGQfF0H7SLYg4RuTWNx7cylzFbEfxPKGEcNET6RvZ2IwX+RIc0JRjF908mg1qsZ9i73AGS64CwWg8gRah76QDznu8QzQsSF1Gu6I84pnmoBgaU2s9dg7ZD4XNbs7Mdxxtvu0yiN7x4Tb0MtJaydJtyybruMLGR30sWB15SgNRUpRtcojxsTytb/STixGqlknHHv0fgT6WNw0p0zTyFM+gRZZ4flAJN/qGlAcg7c0IMYjW0sV32So4A55oMVn2BXHiUuAYMyUjg9TTR7uvstLuUlo4n16JRKK7XzzKXjtr0d0P+RP/eH2lcoUXff+BfMrxxy3lp6je67PiJYgunTe8ynSlwWvIsvNZEzWP414dMReXohNYL8DUyZrBx3b1aBCBioekS8zx4QVUzeK8AJ4V4qGEzIhgGYCHI0BNXm1phPksYU86FZpSedXec9Kj9a87qqOLMg/vfGejx31uIf6Z9zSEhGT5fXLvnRE8EgdR+J4oscrGJgrTnPjWlUFbnNVe2evIW+yfq8FLuDyCTCI1Ssv2Eh1lHH8WVjHjnXnK+ZgOGVUWqGVqD2YIIsJX9WghRT6ybT/9gOCztXPePRi8OD6s/mwIZu3qS5ThScPFCptmshci5LfkQY0RKaHHif3g8g9fWpKIB63dHEATEitMLk6rec3JNJQd4Ex0GJrCTVT3u10MknQ1ogqxmwPaEgJEsGh7VPxaCek8TsOzuQfiD22kuEy22Vyag7PPuLc2jLIPL7VTG56XppIl5k1hYE7+/S9wCAu7ncLBzv03NVBJbWIwPo6XSNbx6khs45C7+eFpgPFU/1/iT6zJ1Q1nBMuHH9Dhm8J5yFQuqBv6ijcPEkLg7yHmpcpz2GdQvw6900j+s0qdMfQsK7oY4bXIirU+I5HiOCf/3Iu/mYGYm45AMMM0aaPBjtgpbA57KbZKFXFgEFIBNK4qs+woAn4UfkiarUrSeu+9pjOaH2mHhnq8Znlvh6osb4uz++sMmSVxMKV53KPODHcVDKMxDx8wUbj2Z3HQA8wGiHLoE58z6cU7vQfFdy/Yco/bRUY9QuD+Pme3QLa8oD3iZP+1GLQIsFaTrQCokbFvCC2Xfy4aG+8Hyi/z8TfBtGe4/M6X7Prtj8ofkB35lHUlRaiiMTamx492aWAmJL79ASKap2eLuZvVZDLAngGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"INV-1050 bills 57,000 cents, the same amount as Gulf Coast Diesel's INV-1020 received day 12 (18 days earlier) under a different PO (PO-1023 vs PO-1016); ask which purchase order is real.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz1oWXZNnPA7EL19pew",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1909,
+      "output_tokens": 354,
+      "output_tokens_details": {
+        "thinking_tokens": 242
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"INV-1050 bills 57,000 cents, the same amount as Gulf Coast Diesel's INV-1020 received day 12 (18 days earlier) under a different PO (PO-1023 vs PO-1016); ask which purchase order is real.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1909,
+    "output_tokens": 354,
+    "output_tokens_details": {
+      "thinking_tokens": 242
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

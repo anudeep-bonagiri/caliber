@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020032,
+  "durationMs": 7311,
+  "httpStatus": 200,
+  "id": "INV-1046",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 34500 matches contract 21 and PO-1013, qty 1 equals received qty 1, no earlier same-amount invoice under another PO, and no bank change. It appears to be the corrected re-bill of INV-1029 (same PO, billed 22% over contract), so confirm INV-1029 is voided and not also paid."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 34500 matches contract 21 and PO-1013, qty 1 equals received qty 1, no earlier same-amount invoice under another PO, and no bank change. It appears to be the corrected re-bill of INV-1029 (same PO, billed 22% over contract), so confirm INV-1029 is voided and not also paid.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7AC889aPxTr11WUBy",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1973,
+      "output_tokens": 607,
+      "output_tokens_details": {
+        "thinking_tokens": 475
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 34500 matches contract 21 and PO-1013, qty 1 equals received qty 1, no earlier same-amount invoice under another PO, and no bank change. It appears to be the corrected re-bill of INV-1029 (same PO, billed 22% over contract), so confirm INV-1029 is voided and not also paid.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1973,
+    "output_tokens": 607,
+    "output_tokens_details": {
+      "thinking_tokens": 475
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020124,
+  "durationMs": 3168,
+  "httpStatus": 200,
+  "id": "T2509",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Plate TX-1008's most recent earlier charge at NTTA-SRT-01 was T2394 on 2026-09-25, days before this 2026-10-01 17:35 charge, so there is no repeat at the same plaza within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwYKEAgTGAI4AUIIdGhpbmtpbmcSDLYnWAxbLl5ONi2KWhoM1iQHLGzYRQ/ki5N0IjBOjFbwpeOwC6qR5cJJj2SOLjD5SQe8Br0jYZrG2hlazp4LZkzXbcunLBiUMW/kl8MqxAXxLhmWLwRLScPgCFpsOfTCcEKW56kpuElTcKqVTrL+oqdK7HKmicPDSqoseIN6oDslJho/DXlqzj0zlg3Wp3sFGUvj9/gBEKBzJV2Vjs9kTiZItJNYZ8GOD5MvlROAl+93tC3FEaKSQ7Xv+AJd1AxsK7kwu/5RSu2pW9UygasyswjsrzJneciv4rcdnDeowJOHrdcZ3FIEkOv84Thc/DtGkvdHtfKtPT9AYWfk8W+kuyo8Z4KSM1+nOXVBaxORQHzXJCNXkNLz7tQBMSj93mEIIVQgYXvKg4q7ufFemhqgVMdAIGkbRzggB2ghzIIPNI/31Yw5ZDwWSQdq2UyxiY0m+gEHHyBFfwqoJsgRdyUHaKarA8ygAqpY48aEFx8TpjeGWxZJRCBb3FjgKnJ/hzLqbiqEguRX64G+iDR13N2hnND9ddipjhlurAgOsCxmjcFZdnCevFC8jJp2ZbMGOXdM07TsYtB/22a5pLcT7vTjGZHrOaKNuaYLLrPRmmADPIGrzfR49QVKOdbA/kpiBBz1wX3kCwqmzTeM/6l4fvqfK9EzOutEgCFlatKP9EjpfJ61JK18rtRROkD9ToRWS8HLXykWH+yzRlAwNvWpck/7fjN8lXKVV5CVNq7RaYg2lW7TYUwX9ce/AUd242di+4BhYGmdsLTQXSD5tobSML8JF3cymBgzb7zcImffKdA0PZNWVloSbAt8H4N/txvCJMtJCuTof4tNN4Kngi5Lb36+wLRjC1tBfqH4dmj2xfGsWki5HXDrxbls69mB+NNWFsPqRT7Pqwa1Vq0xXxmRqaMsr5Sh37Hnm85OuGu7z+4kLxBgds9Vu3I5bNu9Ak0Sg0d53EwFrCcxfaBoYi0mDa3ew3KPHMjCjfLDDgCx9nkGOeHlLgw59RMCOPSfKNeVZGUQMkD0HBNZwD2dDwPFZiXWqGtKLJ0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Plate TX-1008's most recent earlier charge at NTTA-SRT-01 was T2394 on 2026-09-25, days before this 2026-10-01 17:35 charge, so there is no repeat at the same plaza within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyghD7j7ZoyG2vFAt8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3866,
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 134
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Plate TX-1008's most recent earlier charge at NTTA-SRT-01 was T2394 on 2026-09-25, days before this 2026-10-01 17:35 charge, so there is no repeat at the same plaza within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3866,
+    "output_tokens": 233,
+    "output_tokens_details": {
+      "thinking_tokens": 134
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

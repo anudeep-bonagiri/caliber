@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018072,
+  "durationMs": 3519,
+  "httpStatus": 200,
+  "id": "T1999",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1007 toll at NTTA-PGBT-01 within 10 minutes; the closest earlier charge (T1997, 7 minutes before) was at a different plaza, NTTA-SRT-01, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAcKEAgTGAI4AUIIdGhpbmtpbmcSDICM/bJuxaTRdq3/QBoMiyw8ONNnMLi4u8u5IjAuTbDQhcpgsaKvcRTgtae97b9ULOWPTucOJs8a06yfG0tGYOF1sHI9W8HE7TBTl90qnQZ+15RHj5tZNzTQxeqjR6774kXaTAPaR10SkHIkhLsTQzvpck/jzemqEwncDLLDH6dOeV3gg4m9YRLFb7RbDcfiB+0O3ok6K9mvau8Km9PLdY48iUHEf0BDqRFd2h/J0zg2EsgWTCQ+L+dQWxhPwdWWgr0yMVc1/BY64jfOdq6/8mSEHvBDsmjN0cGOeHGDtjRw4W7xYa0B15pvN/p1WvPgbGfR/KJuB+Z4MLFLtMB/xgmKvpnORWNRRrssvS99A5nmRL/5zeOTTX/HAz8pogYMtWSkHuDbHLuQI8LHtbZuaVwd2P9R3/S/cWVhA4gTLCjSGgACXJQGNiuSbekTjXrgxWKSpr2su8ktBifEDu5uu3Ajr1wM3W9q5FwwXCDFaBO1J1BgEpU4RR/zT3uIjPIOak/y0N9AVeUHo5kwXjk72duvfxhF7i2IKkOCWN/UitB2TK5VChRm8DM+6WnnKwhSQ/Gb4mRjeXsuU0LIq0FqimJxpoXyRcgUPasMNFtYDT7THtk0WvSZDJeWiwJQUn6eVqx5893kynEJwfvqYNOM+/XKIpHUmGlTo5yn8xkz82OMyBslJlaUDmzTNOeVg8Tv8tyEeEfa/hZ4VRDGcXyY7PXibiFQTl5RWRNAFvxLm/kEgg/flxnFNuStBYN1xcbDUv89+IMW+aZcQijHofInv3ZrrEJUzOmP6X32tx9th+MKGpoFJWNHZJKccZNkJzGh6D11h5sLv8z/b4GTzE/fT4mK9To2VL3dCL+yUdN0dxCgN/HPq4XLSzPyoF7jWelmx3aNJamfw+7cSj2FUOaZUFB8fXl3z1sNKpfxSwcfAWUTwmn1U5yyca1dTNhO28Cth6p7tVyjMcKkEeAoEccJpAj7rZdYNrF3Ii3RcJp/sT2WrSg/dAlApYIu3lgjBpviPM1d+/KDOB3/fmuTJIPE5wgOrTMK486xW+cABPxjUSEuV3dh/YuYA2JNQSIexE7qHWT+14wmQXuM6xPjx8UOeOtmMCNVwnVEOUmBHESGIke4WBkJ08wK6fGbusvdYQbM92ktq6b5UU01oKbPhhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1007 toll at NTTA-PGBT-01 within 10 minutes; the closest earlier charge (T1997, 7 minutes before) was at a different plaza, NTTA-SRT-01, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCis2wMRfQHfyfPUdY",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3238,
+      "output_tokens": 256,
+      "output_tokens_details": {
+        "thinking_tokens": 156
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1007 toll at NTTA-PGBT-01 within 10 minutes; the closest earlier charge (T1997, 7 minutes before) was at a different plaza, NTTA-SRT-01, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3238,
+    "output_tokens": 256,
+    "output_tokens_details": {
+      "thinking_tokens": 156
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

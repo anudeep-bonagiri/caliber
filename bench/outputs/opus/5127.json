@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0261,
+  "durationMs": 4534,
+  "httpStatus": 200,
+  "id": "5127",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "A truck 26 ping at 16:15:34, about 7 minutes before the purchase, puts it roughly 0.03 miles from the Georgetown station, and 44.8 gallons is within the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gYKEAgTGAI4AUIIdGhpbmtpbmcSDOmlKB90jZtUGfsA6xoM/iUcz+9aW+0AtijQIjD7HdeayZVEIokxv77GKG3l2VbYOHwnekoWkH1py98m5SddHZQp2gGIR3morIUQ07sq9wXGEvx3RQC4VyXLd28kfrrvPfwu+aOO8FNUd0VPlBETbbeAAkf8l5xgqA6GTO8xkiHSAKlrkh8SMMccU5/mMUSS/PPShgM5TE3T0EyMl1qEr8LxvGdr8xic8H5eOM6D+TMCoSJyHiY5x4dpLMUEhQnmKNVc+biHQVYsp3sJxQfQoz2C7Jc6IvyZsx4CBQrhqjasJqA/bNnrBcwHRuoxYjYkBPIaqMoRGNIarDZ1Fg2ibPlT7RZHkyAwwuITeJ8rzFXezIXXdgtQT/CujtEoDLlK92V18WQ6DDLgX2LJ0catlgQ7k59o3JK0KZ5ADBcHAcr20dGH5UQUlpk/uOLkRkf6fqtCTkZcsHSDHYw8xIsuw/fZaEjiPZBWjPIhUSrQkw7DDZgOQoMvO8KY0KAMUzkPvV8PhDulmOXRgdlMWC3pQ5Lbwhln3Raye1yEXY/iRci7V3HNzZ9s1WgcrLkYgptqGM272s4GiXSrk+Aeir7RnkDpQ9i8TboWzTt5YCOOj8H7nGBxIpJrkmnBsDEuPel8nFkqUNDHKRo15yQT9Tm9Sa0eoul2IMJ92+0nwPiMKBIDF34lBrg55FUY3Px3Wxl+KU0HmkJQAe2ZQ2C3tl3pH5uEw8bUAqVYDLgKMek7qzFcU6jGLXXlI3CahVL8RuZSDrjBOqf6h5DaVD0mT/M5fz5jDo/KBBTSSlCnFJKc5H/NEgY+zeLaatIC7oh0oZruAo/GwGmlkE33oB66e9CGEsmb9sTAPSz7tKzBqkEG29rSK87AzPHyHouZgZZpCbJwvOihhv9tQLv69hqY3g3Socjj+1K0lVND7V99lxsoEBbrHEUSjCmOjBpT9Ni5T7nP5AQEx/xrrplwOlvddRiv9m/j8WtqXjydmOwlgu4pDKm1Jdow6pZ9tiwoiiTetbH3IqnG/aVFYFIDMKn7TWLu9YWrVUY0rxdBL6MANH20m9GDbfeowhRacB/Vh9gTtOLGs8kJ6P76kH/XOJLfYvvLt1Ywvr6aSbkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"A truck 26 ping at 16:15:34, about 7 minutes before the purchase, puts it roughly 0.03 miles from the Georgetown station, and 44.8 gallons is within the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCCZPWVxwHteCUaAbo",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 240,
+      "output_tokens_details": {
+        "thinking_tokens": 137
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"A truck 26 ping at 16:15:34, about 7 minutes before the purchase, puts it roughly 0.03 miles from the Georgetown station, and 44.8 gallons is within the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 240,
+    "output_tokens_details": {
+      "thinking_tokens": 137
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

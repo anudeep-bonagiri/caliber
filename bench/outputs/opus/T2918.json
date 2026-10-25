@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.056184,
+  "durationMs": 3883,
+  "httpStatus": 200,
+  "id": "T2918",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1011 toll at NTTA-PGBT-01 falls within 10 minutes of this charge. The latest earlier toll for this plate is on 2026-10-21, a day before this 2026-10-22T17:27:12Z charge."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnwYKEAgTGAI4AUIIdGhpbmtpbmcSDB6lfDm5Ob03W8U9axoMa2e04Z4yBdD+qHa4IjC+nJgGAAImKb9iW7de4siacL2IPzcTgJSa1ychhHRoo+zwQr+FLVtCgb0BgHaKCCsqvAVV2xj2Ej9VlDZCOlkQAc3gm3/Dw6UDAB+LmIzf7HRmNMcSdNpcJNGXjqVxxy3+VzAs/UaGkXAXWBJF20d6JgMZ+tKx3Cj6x44QAPZONRknqKRuptpHOGHkKtKRBRxWFK80Foew3wJVEoQtsCfGo9Im35vh39aPIWOLIzgxSrA4vOwrcB+1iJObAzDoW7WgQiyJFoba0dgwGhCApiroabBylDg4E4zchxU8BDKA/iejjc628dRvVkB3/sqoQf5d6b9d15yKEFuVNYGXw8xJX9SNzlrJo1LlrC6VZ1NNb88kMXkDHpEyKiVvpPvZmoWtu8fXB7rlvTSMigHk6pq9j0Ob3m88cdTMhiO/89lUDUjd+6DUfsOr8mckz7rhj7a6IjvBW9ej5ucxygA7VoJfkDXwrKMADpsFVzPSznMiFlO/acuP9nl9GAOtAZfmDQrP4wuTu6zvPiUxzzXnEuhm/L7zQMTx+4VvmWSGetuz5LAvbFRN/Mb7S+UJhguFLmN6YnUJMM/L8JedDevSfft91gfMWCU4nPBAkUbxfgGRdh/RHO9NLx0ZASt9ZdpNta2gFAx56yn9swE60gFnGz6+MtJTxmfDIolNqDRp+VMnd7dTZrEwNqwGoIwYMtBjpELtCqJYSotQWsj0LSz+4JTchrPIaJ5AkbpaKqUeaCSYcCPZvukGFqATFdHkT7ZJ6x2XfhXLKo/l+53N1QlTk9BH8Sk6ApBZ6r0xFVS2KCphvMQOLWfwzXSdgaUH/nRCthF6bEESTexDVqgednQD6V9MQ2rBF6P2TSlwi4e1UVrYBFXdXu0zGlHmoc0gwdt5OFe6oBBYJ6dkVzaiwKRMrvi/7Hjw4ZvmmoXln5mxvvi8r6dIHi/A+wN5+tfLL3C3cu0UO/xPCMwLh88LmZd7okcQGeG3U8Ov70BGYu8m+2e1GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1011 toll at NTTA-PGBT-01 falls within 10 minutes of this charge. The latest earlier toll for this plate is on 2026-10-21, a day before this 2026-10-22T17:27:12Z charge.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyvEHffFnLcsPsdaRE",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 12991,
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 111
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1011 toll at NTTA-PGBT-01 falls within 10 minutes of this charge. The latest earlier toll for this plate is on 2026-10-21, a day before this 2026-10-22T17:27:12Z charge.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 12991,
+    "output_tokens": 211,
+    "output_tokens_details": {
+      "thinking_tokens": 111
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

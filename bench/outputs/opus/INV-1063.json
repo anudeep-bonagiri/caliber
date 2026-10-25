@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015348,
+  "durationMs": 3882,
+  "httpStatus": 200,
+  "id": "INV-1063",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier invoice from this vendor matches 10,233 cents, there is no PO or contract to check rate or quantity against, the vendor's bank never changed and the amount is under $5,000, so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgwkKEAgTGAI4AUIIdGhpbmtpbmcSDBSTihyG6h8vSU560xoMox0waTmUkJvAqZB1IjCCttKxUj35QQvgVbz4L4m9D9er5KYcsMGh+SU1NQL1K1iFaKTkxYg2NZrrVZIX5QkqoAj24GjtBX+gIgPfic0RLFHLwssnpVHfgKy6INS/LKrh74bkyw91e208AkFf29H4T+XM4GQ0zX9MWUw45VD3IXScGu5zyS8RcHdfwYOSHNPla2N+JOmazEX328CSbHDGaHVQ5K26fgfkFJkjpndG4toXXYMzTjaND4KRAeQ1nWIs71AV4VgbdH6I6lWDsBK98s/uTmxZShhQ5x598ltAc0Tt/ont6I2dn6YZzVCx485rv1eJaZ8w7XbVoAwanZeuogjr3rTP1WXPc9aRx55lgnp82lpi+dUGXN5C21KJ6PiHiT5KTiYPVRIf74+yy6HUENTKmbMsldMsmyhTjncNBFkbEVzGQwXLbRlEIkhzt6mWUBNK/xFr5unUS/FPXpjBhZbP2W0Pi6WV02dRpiRJtIysiY6feZ0kLr2ig003jQRTX8SmwTGD8hZ+SZ7iF01T+Mq29Sb8QYQxeIudkpIeS5OOZRfrqjDU4q974hKmXt+gFw2q/FsKWT8JO0pgD044/tRAlOZlQjq7pxlBsDk5JxNS2HlTlWSR1jxw+Gmzj0KvU3R6mO86bD7gR/nHE/YQkxBn8t6M5QUaq6KIDbf1DzyslTuAXSda2F6WGqW9Qh79A2zS8rekGp1Z9WeSSsJPA9346vGu1NJUVVlLF2DcxkqT/uPH3zRBzfWEw2oMTlGeiPyGU1xcqx42WlWMlk2NRTvxghpk9SiubLiUZJfod1egH+WJxBCi/5uRGkK7sx8LjMl8nj4DPnEjrin0s1a7tVXyObVO7Xe4JEpz1Opx1qiU+wJ9EMJhHu/hgkOGt/bb4Z7+VpRyxEfg2tld2sHv0iiRagPhlrjXUqtuVKXWfDNtZU/slxlyaxUYRTFHcQ0jR/eS/vBRSxlbXGEg27dz4B10BL5F56W2qf3uF5o+GriBp/IKbwEQohd6IiYH8H9VA4cJ4Nipp0CvqtKsROcRUK1Fm5zLiOmoKqFzOqgsCuKWmJzlsAnji/lEEkq+VKuxKEjVFXEQZzeK0lNh7n+ie0DiJYXYFjUrk+a02TMhtTSlXHMKnb6ot3lmZNbTGpE1uWCEePE6kVN7I68icD2TtONTi4GQV69Xe9Tg7iiuaA6vyBblQ+kFa67LuLjqiYokETuRfTQJW3Dl1HS2w7TCIDFAncvdyMd6D6tLiAkflwdDXLIh3nEPz4Pf5rX6fLFCucthvwj748nVJgu8V4t/7F/mfk/ZbzvRg/emV4UciCgsh64z943m3U/EtEHr2YndVRv3ykf4jFKNGRqCPhR/CJftb65c/OEMNzjYP3b8wtwrNJMr1y+f8TK0egUmhJrZ9PKISuhcQ3PMEBEB6NafyTZMNxUi0cqz1Azy9Bop2gc+6lbeGtWXzRIS7xabMvKzCBA7MGdUVjwun8BYkELYZO0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier invoice from this vendor matches 10,233 cents, there is no PO or contract to check rate or quantity against, the vendor's bank never changed and the amount is under $5,000, so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyuE4xBhwbuY6gfV6fx",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2327,
+      "output_tokens": 302,
+      "output_tokens_details": {
+        "thinking_tokens": 215
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier invoice from this vendor matches 10,233 cents, there is no PO or contract to check rate or quantity against, the vendor's bank never changed and the amount is under $5,000, so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2327,
+    "output_tokens": 302,
+    "output_tokens_details": {
+      "thinking_tokens": 215
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

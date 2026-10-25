@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026344,
+  "durationMs": 2760,
+  "httpStatus": 200,
+  "id": "2056",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 9 pinged at the Georgetown station at 14:45:00, 3 seconds before the purchase, and 35.7 gal is within the 120-gal tank plus 10% (132 gal)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAYKEAgTGAI4AUIIdGhpbmtpbmcSDLi+1/D7cfkqo/sZxhoMrz40EElA785puh93IjBSZ24sK+wNy7awLHHSPXYGa5urqi3tsTKkAyQYGsY90qlnn9HDJkvnxBhQJelKXt8quQWA/Qjb9Bh0vcgdfEodl1zMzOUGFwIuyk8OypjDvu+kVN3EhHdUZNBwfvAYyAldcHB6mgrgnV9JrjUUUHv2PeNsQ6lyuQYp38yaLawnFLHHTbMbgvFQOfOxdP/6WK7GxHKBx9/r3A+GQ7uZyEq7M1pi47I+WQepEfLdAVvNVa8LwfacYApiRFyxFPtiiS/xUW3ATo/ENKyyQaoin0aFSDnrhH3ddKNvvu+iA0OFnpOZxscFSsDrojSb/8GWVX/8H6/JbodVHsGyU/P+cC066uMnX4nhpz5sCuKPIN78BUNBxlHV5qeLT5Bo83qLccIQYpmehJDk0hQQ/R3Bp9RLqtuctEhmID5ctlwPvAA6SX1+llzRkYUuWxQRQHgMaMZaGKqKj6cEkMOdxxjKZYX4wJ+eeyoMRFLpIqHPJMYvC89DRVgYeubLhMNYlAEMzom/IZldQz6lCasilbrfBzanuMkyDOHPitXwrp4dIOMHTEfNp00ePqb3T8TDjQW7jOHL0wuiecqLfD2lrOPVldttpy0edAXZW9Mq5n4CTl4xfZO3tcGWoVkxSMAZSpSG/wGhq/xL7Wpt93snAfo8vPk1BamfMuoH3gI3sKH0KGm2zeYSMHJZNe3BU4qiQgL/PXigOge5KSn3/Mq49An3YfKiv4rl85noTPsel6JA944jgUXqp9Jptkr30jCY4YrrgMWUyW7K5poKhovxLR56Gnvf5+XNzVaBZtso9n+ooJ9GgurHDLssHihAJLQ8J8A4FYTSAq79YKIYUm7Hd1p5I1CZDWUJgHJlInQOjD0mxaJfiJAkWAWFlK73ggmuuaGS4UbVC4gdI0nN3sUyXaDbNMDcKXF+fpUZrbevuRu2EbgF4M40EOD5Rec3pj1EeGOp13Oi3pout/qpIKU5/n46QlIqkmaAvibun1iA4bLYGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 9 pinged at the Georgetown station at 14:45:00, 3 seconds before the purchase, and 35.7 gal is within the 120-gal tank plus 10% (132 gal).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLnmffEXubRDSARRgw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5616,
+      "output_tokens": 194,
+      "output_tokens_details": {
+        "thinking_tokens": 110
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 9 pinged at the Georgetown station at 14:45:00, 3 seconds before the purchase, and 35.7 gal is within the 120-gal tank plus 10% (132 gal).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5616,
+    "output_tokens": 194,
+    "output_tokens_details": {
+      "thinking_tokens": 110
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

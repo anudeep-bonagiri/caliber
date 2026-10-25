@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023424,
+  "durationMs": 6069,
+  "httpStatus": 200,
+  "id": "INV-1094",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the unit price of 32,900 matches contract 16. The qty of 1 does not exceed the PO received qty of 1. The amount is under 500,000 cents, so the day-42 bank change does not trigger a hold. The only earlier 32,900 invoice in the window (INV-1064) cites the same PO-1002, not a different one. Note that PO-1002 (qty 1) has now been billed four times (INV-1055, INV-1064, INV-1084, INV-1094), which policy does not cover but is worth a manual look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QoKEAgTGAI4AUIIdGhpbmtpbmcSDEfefESK4g3z+UsEeBoMw5QCyH68aFvDdKonIjDenpyHr48Zf8AdfXJZUtTFyNYwm+EhADkkdTCeEzZ4F/vG/8xGeQaA+LkC1BnqYz4qigo1KtX0ztnPsQ/2QK36ExGk1WHLl7JIHliZ1zL+uUrg26NFFhq9wTFM01TLm7jPhZcM52pv5D3xen4Cws3Tp3hucKOdsvK48WL14dbB0AohcLCQF4c+PTd1KqQXJq6+dtQWcyfkfZPCA29Z0aeYHPzHUAd2pfHbID6vKo19e4Ft8apDYmUC8LNFrtdkJePfz5+JIbCu4RilzSN9WVvLxJajh76t9Wh348TSRsnTGHsxwZP7KmizlNGG9ON6DKnAWFaLNiU/Isrp1ulmGnph9cLtONriLQZZvf3zZUcsFtcg06uQER+T6rM54t0OK9psjmu/xdw6bxV+DPUdLaj2KU/Jti6HwWn1ksT2TTB/MIfbCT/0EY2Bg+yVPEC1/Q9YckiDHI9A1V1x3kR/On4anMOR2W8VwZtb94SfAIpp1LCl51dVeQhaDDKbYehje5O3quhsAttmrWtbtD95+S//3V6u5eT0h+kcGqW42+fOIDk1EyrvmFpisan2g91PXBM5/Z5GmZ2glw8WzcNDD1zZOKAehCEFnmRh4aN5Wi/h11+I//w0TTtmHgL+GOoLr0O6Ayi57WoSsgTvQiPiI9yhzTajH2v/w6KE2OKUdLVPCrvv6cP8x4QlOhSmh8vWKJcBg5vL887Py23c6op7cLLDgAK+d734Q/HC9nPwnx+2C6+HEh1ISXFzMdFpWHMjFJ73WMcszICwecKxbSEkuCLs3FlnxtB89g8xnoPiw0vhhPoPx3ok4jJRHE3fNunshrkfA+SXMjTx8t4XxOqaO/bhtu83rJ25umvSsTtoor4PCVLC5I2KUq23OmmjN/FraIUMuF3Wy15D9cygTB87qMeXLceECM8XbiT2VemeUcse7TGQOQnjFcyEZIqQR230W31HZKjUKy9muEFcvAEfTrHBI+CdhkD94t4A/SFY1Fna8GXYQxPx4x7Vrc0CGe7fMxZmbbGAES4d2BzY6aznm7joK/nI999ot37Z9CXEv1el9jMJrjwotZ+XTQm9e4xedlIg17ZiW6rK/4Lyko1saZnIiXjT+hnEkbn7TrWr15mOUwADbU5bwZ4fjkpdyOfDUT0gFL3Z8PY+MfUtIDXjG34EyqOsEaXDBz41T29Oggl+f43e564dJZr5540AkYs8oef+WF+BjXQ9hqb+p9sAhODBq+fzchIcBKOs5avDb3WmiCXb9gGFyFhzP1PB/wyTr13u1g/CSad0pGbgxqy7EgsQ8Wtucuf5ZeDK9fft9J1NUrjRtcb/Cu5jxUW6zZGdnxscEJUwOWegHN0sMtIwRinHk2v/THKIV4n1knpGjYZDgGob5RdzYp0mbkGe9Dc3EgTgwpXaEf3/RsPphVW+TYcyxcduo9qGRrdQooV9uQ07MMbZG0xKs/kiRd4aAP6U4oxuBBCaSobQVG32hwBjrhnBkNUJf0DKvRu9teRteaDi6bMtnP2JYbrwHgRrQ5uUonXla3JhohBGWh4vevlkM/d8ZGgEqH+6KijSdcdzMjbCSQ9gPHyDNExTV3ym27fekEVaEF59Vdwnrqg5vZGoBd+y7TTkzILCwnJr32n+r7lZsNFYWbQuV/WW1eRa9WMYvIu6+SH72yOw6Ms9CJwUTkGU3BFXOYeV67tMviqkZ75Oer9lq24wlpl7sonzRi9hFRBeLwcJi+ZQurzUFLYkzlGTKdzvCPylH2fABDeAIk4lu+eIIjULb6NU4qA4f8sYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the unit price of 32,900 matches contract 16. The qty of 1 does not exceed the PO received qty of 1. The amount is under 500,000 cents, so the day-42 bank change does not trigger a hold. The only earlier 32,900 invoice in the window (INV-1064) cites the same PO-1002, not a different one. Note that PO-1002 (qty 1) has now been billed four times (INV-1055, INV-1064, INV-1084, INV-1094), which policy does not cover but is worth a manual look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNys1hFcJcr9NKWsL8wE",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3161,
+      "output_tokens": 539,
+      "output_tokens_details": {
+        "thinking_tokens": 343
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the unit price of 32,900 matches contract 16. The qty of 1 does not exceed the PO received qty of 1. The amount is under 500,000 cents, so the day-42 bank change does not trigger a hold. The only earlier 32,900 invoice in the window (INV-1064) cites the same PO-1002, not a different one. Note that PO-1002 (qty 1) has now been billed four times (INV-1055, INV-1064, INV-1084, INV-1094), which policy does not cover but is worth a manual look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3161,
+    "output_tokens": 539,
+    "output_tokens_details": {
+      "thinking_tokens": 343
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

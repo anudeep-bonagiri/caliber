@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0177,
+  "durationMs": 5636,
+  "httpStatus": 200,
+  "id": "INV-1053",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the 52500 amount matches none of the vendor's earlier invoices, the unit price equals the 52500 contract rate, quantity 1 equals received quantity 1, and the bank change on day 42 came after receipt on a sub-$5,000 invoice. Note that INV-1020 (day 12, 57000) already billed PO-1023 for its only unit, which no hold rule covers but is worth a manual look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AoKEAgTGAI4AUIIdGhpbmtpbmcSDHWLt2BVx0uOqxpdURoMFllZyHIbNCseZYufIjBdGdg1tQ17/ru2NbCXVlCMddKIv1Ca37TH+0/M8+SJE82R4vkM1y9uUmI7xkdnsVEq7Qldms06DTsr8TWFChWfSS5XH2VAXuO3gW+BNXih8a/Sv9orQ5FQQNV6Bie29QCpua/utdxPNQd9Ne6t60GNhGtP24iRQLpNxmd7gGKaBig54O9BJ03I6t4b11OVo/6QwHsEeTggy+HJHvVcy+Gt4nqz6uHVBQk7NIfl5nlevbynyNtL3RmguN+7xlRFuHSlh4X0M9CVPC0WPLhOOOyufMAMXGlRIBgyTun2c80/szAHYUXYEA21BPloz8WK4wYbymI8KGGh5AZzYfRmXH8eCgq/khY/zgCa4fjODl3MzNZAPggHKZY59GyODAKnkhCLRZ4Ou3YtWn7iyFE+W91goQcGVB9jGm56u/E3db6HdCjIVWTc64FMhQKg020p0OPhfmA4H6qTyt0SNURv8MpMWIl9PSKtLnY79Nu3ri5jj7rxV7XyPRTTF42UhONi8RKlZRR4TpsVGGsx4q8ANpClFFrM6qQpuz49P/hjX8pJEO7ODUnDBxv9nQdF7uBLoRMj81CTU5L45uANSRUWsMrHB0MPipjPr8XsNt9pyCB3VN+7n516Aa/4TsQN2iaK1T/TYfcibdINt3UDuQiAaDx362cZyU+Ngvh0CcSpG0dSiwmRlcHvLmnffT5P8fI+N8IphN4MKXM1YBUsOMJlO82EB746z2IM0N2GyIe+W0G3DmIy/ZvN3CqNtaJU3Oj3SUyL/Kgq0la9fgcYh8/nxtI6qCe/y2UHcOqyLkxiGa03QHPtXtE00KWN+qJaJeWDnDlX0c7ZppGw7hpNWvuRxkMCJWBr3xgrTzPpMf9PTluNZoWVWV8wd2FDbk8YS7zhQNsTXAO1q6xPkDAmhP8YZlQBAdVvgVVEDZHoIYyzptMb58PtFj+rgWHGsHn24DRG/RbbRQXjpf4694sLD8jbcRuXG21jYmLH0exOW6/orm7kAVvm43DXGU5YRgLoMSV6DbPlzCm52mZAKCvkTBJQja3riVJ3nDs8eFqm9Cd/Ck21sHC3MUMhDeHEgKbv3HD23a4VnjYGGca2FLvN2NR/jmqjoljy2QJ+zhaV/dPPxnqicUgbc+Wox66TbgSeHIKzoB//mPaExohsX2Q1jokXJFh8ofBw9n/A4YzdU4ygnGSdx0yiPN+q8tVpHb19bjiQtxiaKjKGttVJMP0y8fa81VwiMhTs+xhnAiCToWdTOP0RB12YMPxduwwX3mkwgkCHQLXWsFvqi5V2NDz2uI2H8C5+8x8eb233PKplDSOThoYJZtav9Ep+Z1wElr4hlBFPy5jKHnGRbCnV5nYxc7tXHiyYWvw5BbO8lMbgb1xgh1lPSXvlKF9Lh7JYHS+ZotyH+Bg6NBfO37Akkvrz9A3fZZdCr801JidROzceSuDiiUFB7PWWBKKR1VYU3ZOfDjh/QZ2KP+NGSmG3tqmThB9qBZy6VffkecyvLOdGIMMRKWs5sOXfVoysHlJ/GaljE1p1krQcDUlrn1JNHRyW6RfGQKhuz8Osoaxa932/546y5V9q7EDsW7TNfm8R7a+JIhUEZ7xzScvt1JaAdDOKCQjP60y3juLD8rQ09lLuu0x0/7ALB/e1LKvc9vzNbYjpPFHxvFLmp5On0wbrS27pK7qlErvVmkbk+IBpcTZQzUR2zXFC4m6KYFlGTpjQm6ByqGsuphuSwv5RvMKfYIjf+YxM0MSkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 52500 amount matches none of the vendor's earlier invoices, the unit price equals the 52500 contract rate, quantity 1 equals received quantity 1, and the bank change on day 42 came after receipt on a sub-$5,000 invoice. Note that INV-1020 (day 12, 57000) already billed PO-1023 for its only unit, which no hold rule covers but is worth a manual look.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyoehrz7gZ5LNGaYkzG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1995,
+      "output_tokens": 486,
+      "output_tokens_details": {
+        "thinking_tokens": 323
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 52500 amount matches none of the vendor's earlier invoices, the unit price equals the 52500 contract rate, quantity 1 equals received quantity 1, and the bank change on day 42 came after receipt on a sub-$5,000 invoice. Note that INV-1020 (day 12, 57000) already billed PO-1023 for its only unit, which no hold rule covers but is worth a manual look.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1995,
+    "output_tokens": 486,
+    "output_tokens_details": {
+      "thinking_tokens": 323
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

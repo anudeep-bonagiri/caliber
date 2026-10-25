@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012168,
+  "durationMs": 2825,
+  "httpStatus": 200,
+  "id": "T1521",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1005 at plaza TXTAG-SH130-01, so this is not a duplicate and no other hold rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSogYKEAgTGAI4AUIIdGhpbmtpbmcSDJJWlKhK1HKUIJ9cVBoMmTxaRqU62X+dOFh1IjB621XbAjx1JOgautN6fEb6FlpYtObs3aK5Lm3jaBFp/OhHoHlE5EcQOMPBF/LkZdcqvwUQ44RjgEmtWMLag9ciIsFx8WVuaBffgPFUbf/fM4OeoZzSwlA1MzVv/n8ooiWhYTnabEiidPfCho0Oe4/wv7E5gPdKDeo0pHmyn7VDMXvWOyHwEMkuC9jEhAZz+jV4QsS1zESoa3N2LxvMsC9xxL9rQjk1V+LOmKWDwp3kbiOL+PAJHXNXwXkHEyRsaXSy0H29KKl48McgeuIbnbIIGN2YvWz0lLDmzGtkFPPojX8/asVDGqs09j1woPvRtB4Z4hbARaFgXCbsQjNEoL3A7fJr7PM4g+bPUUTsGDJa58FQz6chfWWjRA5dALTSIV1BnFcpitqaRn4/ETrjb7FItgawo9vy/wydxgmSaCdM28Ar+q9wQh4cQZ3BVvS5GsQrxiQnPMZOZHbd8b4vwk9DPLDsDpIN9wLJlUkalVPtfc/JvyKt32o68x+bgNOEdtH16F0dF9RjkptJ1h9FjslpTqr9eJXDf1pCZZR91TPH77JtTLc3Y0OchBNHv9aLDjle/twVqdHRObDF/0EuXV7+MAdYu/goL95mmwF/p9lwtYdXNpaQrX1ia48Tm2hJvWDMIq4MNWgCVgc1EPcoZtF/Jhq9GRXmV23x0I0e3oK2+M4kcSQEYmkw0rencAxvc1k3V1OMm5/6YCJ+4skCY3oboLle4xikH7FKu8Cd0loP3J2srnECmIxBqMXR9ekMRIhOQCtU7r9efmpsK1X6NVU1KIcVYwM5IFRojV/YmWeZ174IazoHqgcxHyH51fVZZ70KFMXGkQ/Xz7r2FPZRkcI2R+lJHszjo4zsYvB/k5SPxXeJ5EGLaqbWxI2SABPOOQ8sGROS8kJCQP0PHLuEPufjvMLPVSH6hKC/u1F86buZf8U1mScYm0ZqkAuhaFIewEH5r9MwmTw/f4j8rT7RFuZoWlQKF07H7H34Mjyf6G8r5X6iGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1005 at plaza TXTAG-SH130-01, so this is not a duplicate and no other hold rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyh4mmNQpgvii9mchUp",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2147,
+      "output_tokens": 179,
+      "output_tokens_details": {
+        "thinking_tokens": 108
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:47+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1005 at plaza TXTAG-SH130-01, so this is not a duplicate and no other hold rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2147,
+    "output_tokens": 179,
+    "output_tokens_details": {
+      "thinking_tokens": 108
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.038304,
+  "durationMs": 2764,
+  "httpStatus": 200,
+  "id": "T2395",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1014 toll at SH 130 Plaza 4 within 10 minutes; the most recent one there was T2017 on 2026-09-02."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8gUKEAgTGAI4AUIIdGhpbmtpbmcSDPFQ52bAbyDXtNSjdBoM2lSSHStrZvfXxqDuIjCudRi52ID9TvUyJ+0Ze0hwDrPnNcDeXlVdf+ODM20uX9Fj/Mw0u/XD85qOYnofO+oqjwXG9lYva8eEZpu/VzucIt4I1ogLQ0C5PG9IY5hDCj0IPNl+kz7oW9EN5YhodAZ2zjMnE0MSFSgLxjFRtj8feB6K/mkfnfvU2TUTo2SChz6KLD3E/vvUtMDtYTwoxQaaH1uKXcOcH6mJ5A0R3z3GzAq4LKAQpAY4Va9tLN3ZaUOBzl2cWoJfQFvyIunbVIE2XMVtSxIgVQjhrwlUXnUzJivkcTzms3qO5+FBB2MgzZjqwGTdfLvKWsZ79sKNJotIJVtwmYqd2ZaHrxpdvxPcOJATFQ9lzdJJfSynai9rW8zKMEgLwpMcpUCG81T3Nt3RgmPKWAaTRuKDsz26uBWTLeKhFJVZlP85tyybzPiJpGJOYkv2O4FxL8eM1q68TuQ7aRBieLGztAw0biRV5+b9XUebI1EoBr8vfh04k6JGRAKR7Phf3ZKSOCZXhMjxIgy3G9x2vwsTGyEtwFGgSlZqIe1fA+jPI+sGtpCxPHy5ZD+j8dzygLTVLztsAWc2yyQhOtuGi3OILvezaynhOuln0ccfq4SCtEVF7Afcs5XIctCRSMulcKges1lK9+uD84UO9M2h4as5RjYy6pTiLuK5TPxaBBfcJh+SgULvoynJPMgVYFFC1q7VCm7rubv8KwZfXwzJed9gVVMWmh1ZPNyR8rGonMYOyzJes1B/eljlVwEql6PGd1CRxJjnR0UOA4ENvlfOtYm+uNrKHt/b91d7NtSGMoPzFg5epO/iCoTv+M1B0VjOM+nXMihsiNIoaqGo5LcnqHWKHTwB97rMmCtP+n22B4ICtgcPXChtQ5vPxdCts3Kp4OZclbsmQkj7NRut9xxf3+ZHkzzajLE1BuckcKKycyo8f09k7lyBJFJPKYYMGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at SH 130 Plaza 4 within 10 minutes; the most recent one there was T2017 on 2026-09-02.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrfWKQFakNVe3w9DhJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8791,
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "thinking_tokens": 87
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at SH 130 Plaza 4 within 10 minutes; the most recent one there was T2017 on 2026-09-02.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8791,
+    "output_tokens": 157,
+    "output_tokens_details": {
+      "thinking_tokens": 87
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

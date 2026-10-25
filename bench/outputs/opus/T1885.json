@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02502,
+  "durationMs": 3711,
+  "httpStatus": 200,
+  "id": "T1885",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for plate TX-1037 at plaza NTTA-PGBT-01 is T1852 on 2026-08-24, more than 10 minutes before this charge, so it is not a duplicate and no other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6wYKEAgTGAI4AUIIdGhpbmtpbmcSDMvSTkPd9qdUC16NThoMyCTJuWLGdjCajG2oIjAZgZFIW2amfDWni+A65Upw+C1o9xmkNJw39q/PExC8TO1lkCOyX4xaIsGBa9HwQQQqiAYiwe1bkjgt57wmj++godZGznmZBplKFWdqlkSSeCvqPXR973vrVkAWg8K/UdUxNaxRtJgwUyxqVgmPUmamHsPpgkTurOmLSYhqQemUXLgPkh2SWjaj+M99TelynXrd1FEgtEDkB6SlaKwtBXhmqwaZzDftNC6Zu+hUBUl+4eMTMLA5Td74Teym6IPsnBhioj9aCGTkYw3771kzmPu1WaEAEyqrCbwGowSwnFqQvV2/WNJ4GfBIzVIlg6YYZMmIJCtbekh+gdvFsFmw2xOZU69BRuT2PVMiDeiX+0DB6TdKF66iSLoH18LIjC141JqCKFmyhvTwJAkZYwG+YTNWammvjfThwEqiWOq2TRh2xF43Ea4dEkwIcIXiUGobBYJ/HZHRXZBi1dH31y3GLUtoNobQGmmo6zqNSs4S1P0L8pJd66CKDwFfrbgC66zyWQ58WneNgaPEJfnSXf7T3ONb5J8mh28R9CrRC04B1HdfEXyI8mEW+CAo0oi7kaZKWpeoJiAueYbuMcVsXXmLdzWkkjMJm3WivGHbcUMczqsxFo/fnWgNvm0paTGQpNZOTI866O6lUAd3qTxvVWSB/lj73YefQymelLRXyY69bS/d8aU16No9LhrOdvpX+Za5tkRx+QzBctO032ILX9IKSPBA0Sjhot6/z21vNSWwFQ8Ggq9oAa21ovoh617TUd2w6qyRk821KTQ6HTpA6sxTLFFT8K4J31jqqIBxC3RldD0YA+0+t300LsGC53agWmJuh8VPLhFTjtKHyrpFylK0/YDMN4VfNWYmvq4i1y907JlqZjHTM+1gA7MnNRgnneTcren3WJiBTryWRFEAj4ZeAt0qyABqujJ+G3wC/7l3Z5GWCgJHdxbsLRLTnUfbjr4JEgSst/1bjGr+RfdhgVDkwCN4BzbNapGzl1ERXuKTQyDq7UzVgPJUfGYDAKVMSwcwf0SfWrvmA7kM4UCDAkjhwjbdmbiL1Hwm10/8zsaYVily8svdZhfxbTzN01ByV3kgnTnR3LdtTdcC97u6sxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1037 at plaza NTTA-PGBT-01 is T1852 on 2026-08-24, more than 10 minutes before this charge, so it is not a duplicate and no other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHVxY937bCYhHuu8Rg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5025,
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "thinking_tokens": 151
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1037 at plaza NTTA-PGBT-01 is T1852 on 2026-08-24, more than 10 minutes before this charge, so it is not a duplicate and no other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5025,
+    "output_tokens": 246,
+    "output_tokens_details": {
+      "thinking_tokens": 151
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

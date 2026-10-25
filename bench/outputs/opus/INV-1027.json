@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012216,
+  "durationMs": 3968,
+  "httpStatus": 200,
+  "id": "INV-1027",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the $230.15 invoice is under the $5,000 bank-change threshold despite the day-18 bank change, matches no earlier invoice amount, and has no PO or contract to check rate or received quantity against."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgwkKEAgTGAI4AUIIdGhpbmtpbmcSDO4sxHvIAcZi7p1lvhoMmEyVxuKbM9B4fwgkIjABi3wgzJWcBxNSCxVRxgZilDXNlest6Hs+gb2oDI0iHfpL88f+ZSe6LqtmdqJ8dmsqoAhbLsacPjrG1PyLsuZOmx/9DhRAv34EEVO27FdUhCYDFcBkzmUdAwuq/fLiBMVpWjWygTpozlYg2TrtEDH62a26cU/TmTi7XybyOvGIFUna/rigoPM0zmLZSAqlQGtd088S5okdqFG9D30/3iFwxDeN75fjSVeGlwHNSljbde5t4beekdYntJBWC+ScyDfh2qcyrj7XRb/8ugh1CkxTQiHKOQ9t0mWdRfoMF/QfO39BOAthSDtLHsPiPl7DorMxh6PeSIo6luGNAzoj/0h4d0oR/Nfj8Zqzkg5BL7vJmpVFEN6oOxAykfHioMkzudpmAj+7Ul+IDR+TpwVvI/FQ8vsxfIQb2Bycs31Egmv8601HD9MEE+RCpb06OgMc9lWCgiRQB2noJasRpFiNhqn9bNAiavxnR3kuyUQQx6U+d0YGqHCF0TJyX8zT3RDrAspV1YdbxH+Ucb/eI17svKwE2SlSTRE+4vHp3lYVIHDoXH3Tb1CS3rWztKZAaApOjZYWhb0fmfhc+gMfSZZA6H+lbZO379NDgNGT236BHthkaa5beuwx7ObbOVls8c6mPLb4d5ZTPMjQeTQb91s3Kf9XzDkHMICwsCgtr0bMQfS8nN5biGwltWEU58Aeiaembj+49ehvebvVtFlPJecjhImIoZU15QY97F9O/AGqjped6pnX3axzTf1UUKvxriowQwZs7RhG+v6wGSVDN7Puw5c7+KPJcSZZMQam0a2Ieqv7xjOAFNkOnXj9Rl0/4ALO2BOgLqONTJeZvNy2+Kq0NuWDEQ5j2jORVRdSDfpXAIK79UGYQWPcY/FTv74qK/T/J/DF/n5rJW68Tz13ciF/4RUjrCnWs5tBxXZE84p4i+LGnMX1NDEX2p5nHSg1Waew+s1E8b86c2hJEioeuKKJh/UQSldRjicN9wRJvPI0oaL4DJGzvII1cyqVJWCstOYHoB8mjeXNkc6Bf0Rk4jVwFUIWK/hHxh4uUIjsNN+rxK3I/cm+drD21jxA7LJDsHrazlncLFvkHjuAg3YKyXj7nIdMj8gSlBtw27x2ED/2I7tgoN/2AjHk49vSAe6l26sDH1Ho7CdTUUGjbEGCwdwJOJ4E2GHVAb1giUbhJNlu10ftVxO/Rj4jrHOZg1yRvWAIh6KodUxTZbUetAR5HGMLSpe5Ix4W9gLZJPdjqrrI9yTGt7jGt1gdRiM/RaOq7hIfcXhMnNR+SedSiMeie+b2Gx02Jfrut5kF1sV1s9NxA0TT+O7jDH3fRdVBKi9bylAhgQiVKxuq69Q6fGIpKPubQJ/OHRNwC1CtTOD7ijUuQKJwURrDUT5zZh5E8cqzGp8iy1MIwTuz9qc0v0iSVlqHOY7RK9tadTxEvODplDN0GjcAbnW17okF3g4GT31sOXvPdfmyUlgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the $230.15 invoice is under the $5,000 bank-change threshold despite the day-18 bank change, matches no earlier invoice amount, and has no PO or contract to check rate or received quantity against.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygsQATHZRTXrpXzhvt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1484,
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "thinking_tokens": 223
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the $230.15 invoice is under the $5,000 bank-change threshold despite the day-18 bank change, matches no earlier invoice amount, and has no PO or contract to check rate or received quantity against.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1484,
+    "output_tokens": 314,
+    "output_tokens_details": {
+      "thinking_tokens": 223
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

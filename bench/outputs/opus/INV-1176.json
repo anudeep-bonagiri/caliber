@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026432,
+  "durationMs": 5002,
+  "httpStatus": 200,
+  "id": "INV-1176",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price $2,450.00 matches contract 17, the billed qty of 1 matches PO-1012's received qty, and no vendor 3 invoice for $2,481.25 arrived in the prior 30 days. The amount is under $5,000 and the bank change on day 42 falls outside the 7-day window. No policy rule applies, though the $31.25 above qty x unit price may be worth a glance."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4AkKEAgTGAI4AUIIdGhpbmtpbmcSDEc49O8+Ncfpalga5hoMazkJAh3cu1DbXH2DIjC3L45Ym+6oHcciskIHhUh3BU2mbae5NC4hsHEf6jOKE+QF1eud1yTWAA/P6JLis8gq/QhyeWxFjwpTlrU2Fh8LL2Wn4eqZwOOGHypI4uZQoTuZJf8H0sc98CQxOl7l9GEsZoH0CF1MFIThiFcue/LMCEJSaAarsavITo8AaXZZE4NPGHK8Ceqbft0W4EpT5xOEMy9b9PZh/rxbEJXpeQnW9oBKZzzyVeGo2IsAnwb3Vzq4fnzgSQo67MaB5Kw5A4TK+Ra4CMZL38K1LqSYipv+Q4peDD+yXXqqVfW0GnIsUpwGxwGBs27acl16soLkwfnzTlR11NJFc4g/mC0F/hXph0NvaBdNKmOjfccbXRYSHQL4iKgfcQKWTgv2e6OQdBL19CTJx4lfqmjlBI3EX0UoPCBd0fyKbahX68jQXft0DG2XI8OsxRcBbX7ovz1e8/5Fu2aGsGrqB7eVSqFZ0DIJ5sQ4Im/0ksxjfVdHMsJkzSMKU1ifqBar/Drz0rA7rsr0QAJh5ie0RGjjWt2iauEEDAeq5utL+eZNrZg7P60kth+nNpEKOauS55Qrfg2ChWu4hxOtTt/XLyKiHGOeVze236qrtsssYi9pIECbd0EF4apbScyUHvHXnRhnK5Rw+QP8bQkz3ib0S/ORiatFjSA4SZUjNTKVlqRjtqiBAVzydcqoRe+KM/hHH9Ojp4Fdh32cBTOpICoi6MHWOuCFei8yzxACXimqWdsRCBnf8i0690ZFvAiY+98yAN1DdpN/HAFs55bed6CVN0XoA8XJeV+Q8/5DasxvDv+Cs8a97LoSZjSTd59TxeE0Mvbn1RGo5eoZoxgVMTp3+OqcwyoejAsSt4ExjsxxFQJ4ftmV0uI/9J2mi0r+6r8wjSvD3khbfFej6j4izgJN7ekz2siUXwVIhgVlhcCUoOteQCd+Ax6dKZYO1Z7DaSrNNq7mC2oGYiivKsrhjOUkXCqVccmmiXfh6bSREx93/pntdcin911ISjU3b7qosRkbtzn37zCvOe4u8JtX5rk+jKdp3E31yxltOSZPl/8Ah870WnyMccyPNJUQI7VuearVqlBRv11IYOWHXNgddJSM1/IG0QwzUrGGqcR23slXeN9QCJO0FQ05d113BklutF2oi7t9ORNppWJoQ2Dl7zlSS7j/jRH1e0P7nfWCKOaoZl86YiJ6sPoc631jFHWGHzRuStfGVptHmGhXHQvbin/mMvFH8GNXmLZXIgMiJIl9BBOAVjw0EaB9U2RKMyI6vWYvFph4ywusyl4teadrlSh3DfXTfEMQc2wJt0O1unqkDWQyLo3ciXgNbPJC9bNh/YVtNO5vfCw4N9BYR6n9vqCkesvl2d6TmanR6dHEZg8OWPAzWMWLUGl9mPnppngk3N1wbyJU4QHmCPaoZxJ+m5jlXP3XZvcf3T8ABzciW+2//u8GwtAzYzG9D+7/aVUsgdKoDfwHewl4G6r6nWopaomdyaEOhWs+xuXjLcjShclW8Du/q1Os3kahq3I0x+pO0kbfl0/mC6Jajx+NkQSOESxbopscLAWn/IPqK5aoMTpIe9CgjRXWqlivb/5U42cAy9owtAjpDtP5JCgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $2,450.00 matches contract 17, the billed qty of 1 matches PO-1012's received qty, and no vendor 3 invoice for $2,481.25 arrived in the prior 30 days. The amount is under $5,000 and the bank change on day 42 falls outside the 7-day window. No policy rule applies, though the $31.25 above qty x unit price may be worth a glance.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywe39prce9mbuhgNiD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4523,
+      "output_tokens": 417,
+      "output_tokens_details": {
+        "thinking_tokens": 269
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $2,450.00 matches contract 17, the billed qty of 1 matches PO-1012's received qty, and no vendor 3 invoice for $2,481.25 arrived in the prior 30 days. The amount is under $5,000 and the bank change on day 42 falls outside the 7-day window. No policy rule applies, though the $31.25 above qty x unit price may be worth a glance.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4523,
+    "output_tokens": 417,
+    "output_tokens_details": {
+      "thinking_tokens": 269
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

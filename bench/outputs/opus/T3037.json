@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02414,
+  "durationMs": 3487,
+  "httpStatus": 200,
+  "id": "T3037",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1012 charge at SH 45 SE Plaza, Creedmoor within 10 minutes; the most recent one there was T2938 on 2026-10-23, a week before this charge."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSggYKEAgTGAI4AUIIdGhpbmtpbmcSDP8a8MYzArncd1edwxoMweV/pp1wwkjWPWeGIjAojqEG5pGcyMeBfEGydl60MtEq00M/SUqhu5h58iGMcH3rhoimElarqyc26PAjiQsqnwWeCetidKYihV+k7u1Y9W2oh29vHgG4r9EUalgm26XGH93cZGMZDffZDst+UHpScb6KxJsJ91AQ8/XmTkQx9gIknClyYFDGUjZfukJF8RWRpWQqOvUZCMrHyGVVCfbq+M/07wWmooQ4mcMDmgOugJ6hWfFxd4AcOaGoIGpyZfhM3k1H9kX3iqaSx0jhbvExcRGRmAzf9GXihxbJfBl/ld2O0z8t2eG4/nMNLJuQqIVAqeKda1pU4izubefAVFivi0mgPrsIGy5dg4biUInqcU9XHmjBrMk3EAzCv0Nq6yCuIQr1HJ+1+RJqNsldcS1Qva7ffX5uUV8mMZ9TVwCFFlnk8pY6k4cxeUhw4P/VVyoXhGfYZzQSvScEQcqAFnTmXYNEgm74ayJYA17DNlfC7pZv/CGQ2tdfRfus1VRkMJML1WnZl9y1i7ygq1tkYc0XA7f479PKiuKAJFNx69Gey2DA/IJG/FT4hG/0beeVlTtX6JasvE/xYE9BQDlanqpsZdzPVHLdowPlhlBo88sSF/mMQ5ZeApn6m76gNSXhHLRS+pcwCBzamk9GE359lIz3a0fsGsvJnDCl5VHdJEHCmr9neM1JI72QEhSsVrJO1/lS9aqCjVr5nF80SCVCBEh4UNbPyRFjIh37DFB44ZBQRkQksjjje/gfjI7q5k2iVnN0e+89FwUU99EpI+xvkf3wpJbYv0NUpwyKv96LeKa2r+KscNnk3jevHoKeeUjmtacaD+6vLRG8VjObBYfjPF9h00RN7DGEz2Wvx8fSD4n0WWiQso9+rob76CDzFtykkZ+RzaJZu3S0ewkKvEq5z6SE3DDxx0EexzjtyG+C5mYLhUXxe9dGqV6U3mdJdzmoz/2eiJ/wBTJZ4kkdrcG5X8q/vhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1012 charge at SH 45 SE Plaza, Creedmoor within 10 minutes; the most recent one there was T2938 on 2026-10-23, a week before this charge.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyziTeCGCJW14ZmXwzW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5155,
+      "output_tokens": 176,
+      "output_tokens_details": {
+        "thinking_tokens": 93
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1012 charge at SH 45 SE Plaza, Creedmoor within 10 minutes; the most recent one there was T2938 on 2026-10-23, a week before this charge.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5155,
+    "output_tokens": 176,
+    "output_tokens_details": {
+      "thinking_tokens": 93
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012628,
+  "durationMs": 2558,
+  "httpStatus": 200,
+  "id": "T1341",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1026 toll at plaza TXTAG-SH45SE-01 within 10 minutes; the most recent one there was T1206 on day 9, and the only same-day toll (T1334) was at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5wUKEAgTGAI4AUIIdGhpbmtpbmcSDJKGAFV1CFR86i12QxoM74IBAUYpv0+aUQA0IjDj+TEZZBIfSzINsRBZ02hVrDlqBkFWVXNa1bhbTGnz54vJh6kGZwwB4LOHiTNUCHMqhAU6u+9uG5z1Vhjzp8V6jbyLhr0y19HqzDM6GKyFvEC4dtofHZ5u4wAlxCLe671qw4j5rXlqr5HZzE9uUNArlrUUzdal78Y5qxm2k8sx9SQrjNkapk0jn35fjCQYXe7PSJwvOzxtS5QowlVyoMQlyhO7zCe32t6bYDCXrNQMRBh5bmA4sLQajLvvj0UlyrOzE36deY3AfMAEDIQ5WOQGRDz8yf2ZnDfPf2Jk4z1saxqRUhmHSBNnDPDuZunjIDFaRKERBm0KzsXImwRnUI7RX+GVS1tnOTJoy20WmZB6uEsgbX98/dvRYGRW6iYfRtfVUvlhSAxiKCZzlnzsZzMiX10j3f4D3iBfBvgEQV9ibVJ1iV7Jne0PmYh47d8n8IiiYQaeDhYw7kUZtnUI+f07NJwhrJLjYqG9RJJLnjTnud6IbzQ2HDkSWNl9XQKwdOqXNXnFY53T3j6l7MJNXXKiunb8AsSVwKZgjMSY2nhW80/g0mpz9jvwiyu+zAy8EQdTlql8ljZG3kZIRmpNpTZIAPNIxYU6fZFQ+m+tcT4GDnBTNnaNYssG1a9ieOIx21ggOdlHmD8clm0H4BmySbTD4OrPnDqnkJ8TJFs2/Cv8PnVIPgSMnvI7+PF2OcbQ7tHphYMUPV2wfOCTAvJayWqWLa+/D2kib+J8kIlKTFaD116StmzVlUMQwoZey74lxipBNaS4AubOOyM8jQ8lCXiETcoGctV2tiBmwKpJyTNRfyn2Gm2iXo0bLC2cpJslc13cbC0ZvTpjCyVUrsPNtCGvQiPbqiuXCSb4v8NXs+t669hBSEx01Ei4bnozZ2J13omyLIIO4kUoAdWUK8UPzWYtkLcF4Ga0HhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1026 toll at plaza TXTAG-SH45SE-01 within 10 minutes; the most recent one there was T1206 on day 9, and the only same-day toll (T1334) was at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDKF1j15aSz1huPr41",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2282,
+      "output_tokens": 175,
+      "output_tokens_details": {
+        "thinking_tokens": 83
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1026 toll at plaza TXTAG-SH45SE-01 within 10 minutes; the most recent one there was T1206 on day 9, and the only same-day toll (T1334) was at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2282,
+    "output_tokens": 175,
+    "output_tokens_details": {
+      "thinking_tokens": 83
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

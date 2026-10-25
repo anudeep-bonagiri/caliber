@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010336,
+  "durationMs": 2831,
+  "httpStatus": 200,
+  "id": "T1082",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Neither earlier TX-1013 charge at NTTA-PGBT-01 (2026-07-02 15:16Z, 2026-07-03 16:19Z) falls within 10 minutes of this 2026-07-06 14:48Z charge, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgwYKEAgTGAI4AUIIdGhpbmtpbmcSDGsP8bVhe0QPhRMgqxoMniydtiYdof3TjJG3IjAMvmm+GKzLbZluMFnuppf9Jzafa0KQoaBhiRWDEztYEY2Xg0UwaMrBS1ZXusZBv9cqoAWyecD/TtG73Od2azhluUKSw3Q/I4xomRQt/9XCoh570BzCyQi1Rtii3Dk2S2Bqp5Inehc46TqpIf5iataA9ZkJOV1uDYqKVb3qipex77SAaixSYN0s+RSnCaCFUcpWXIFrWhHMt3/XLtMNWG7J0mpfEu0TXwtvs6rgp2Xc1v/+S1PfDmbb9q5UBHzLMic0IczJAalOiRmTF1uDj4p2VEQkSL8evZq+70ljA26oj0C50pTyutd+OVnki5T6IGfEgOp4A5OX2OpUMSLYuKND2jC9xFd3sSq4RDUbLonpNHxCP6nvnSOT9I5D+zhk2eZJI8pAWxJ9xOPckQygmfqPel6DdYKcBvtmcuDQJuMcjcDkCs+9Cb6oc2h2wcaqSPy7fWiCSTEBawV62JuBE/Gm2QP2fYpvsSd13h+d/OM/lFve6fnAhMfM5hdkO6clKI0oI4SvBw29NZ4pItbiFF8HKSC9Bn6WFfyrTbxExstn/smLJ2W6x6Wdl+4tz7klJCgyA9LAc8fv1Up1EtJ8oWaT27imsocwYyjofbMlYeSlLrtfNvwsNWmbsmAmhwOg4BbTO62m+hzT2l2QUNjuwlRuvkvMkOq8psEQ4fwwep+09g7MfHDOehhRxcw1T7/cUlNrq1DVmqgKDg9xkKxFviULVfGldHzNsk1ovia/+E1i3JgCgwaJAQD+P9I9jB7iQnccqg37BNCeP6uJmr/bH1IlA4Fpcs5usr8t252JmRh33XEaoJXNFDGF+H2lCFA1XKIWjzH7/AN7411tl8pCImAiBSXC38CLfiV+Z+24uNcqmSGK7M6XjE5EdihuOveo09IJqnpWTItz824XPEuxI5bwJjNCheUaZnXe/rH6T9SQ93aLOvpXXRvyihSjJNkaLk2st10YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Neither earlier TX-1013 charge at NTTA-PGBT-01 (2026-07-02 15:16Z, 2026-07-03 16:19Z) falls within 10 minutes of this 2026-07-06 14:48Z charge, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMzsxexvh1QdJnTgCB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1514,
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Neither earlier TX-1013 charge at NTTA-PGBT-01 (2026-07-02 15:16Z, 2026-07-03 16:19Z) falls within 10 minutes of this 2026-07-06 14:48Z charge, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1514,
+    "output_tokens": 214,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

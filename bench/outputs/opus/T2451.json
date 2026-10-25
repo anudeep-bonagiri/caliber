@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0226,
+  "durationMs": 2948,
+  "httpStatus": 200,
+  "id": "T2451",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1038 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-29T15:52:26Z; the most recent one there was on 2026-09-24, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QUKEAgTGAI4AUIIdGhpbmtpbmcSDBc5EE1pjRMvKlL1RBoM6bYQAKREzYGR2YQqIjATPwJKcp9J5xyqqcV6iR4FutGHF55vhIRfC8JbiNTbnsnDxZY9Kbyfz0vhcnN0QeYq9gT+E0RbQ5WCRHbmCOxS91BVtodbHOwn2SjQl8Hcav9K8nrFH0OdwHa+bOylyO/V+NWB5YZIZQRh7nOu5o7JlLGeqKqg+EI0istsdA1x5RMUinAXgAKdclwBrbgAuveqerEo38yE/2GG4AEM08JEeDkU5rJkLcauOsC9DPeQNOIkUXw7F7way3o+NXFYDtIi37s45TVcdE9BzvD/7kKODjRqa4KAupBA211nMWLiHNznFOG0rddYiVqoA9PHBvp2tlHKDZueNEQbkVmA7OJxfSpDXx5F1kvD36Ug7H9uZMUXkp+hFtftmlfp/zcM4y4g/Iw8l/PIg13Tf7wpIpmZTje8i5w8EQEcbab144WSZkzYr6K+KtRTlUGEMxM3CT6E0A/bhfKq3Yvl2r0H3NixrIIEOovzCSQh+D/B6RyHsjowALzVeR+KIxHLFWDAu20K1gr/vmLlxtKYlt0EspARq/WkYnVlkOyn4FNXd0TNjq2SUp4sQd/dVXIlRHpW1VxbVjx8sItBMs+GYRtp1DA21kFz1ODp1ioqaZ8tx6yVC19ZFprM3jbGdRqCOcSrH0f2EbRRwivn9uKJwYIre4gIKadeWuiauAOfYocxstCl4IcB1zI+mLKhAoE7RgzXcs2LQpkc2W/qsVp4iDWkFdRXbffWLx9AMkr1AIhuTqUyCswcT2atSb19t/JrNmK5XBiD30fp28fe50ki+5mS+6Fd+1H8iNoXKhdaE0Z7SZ1UJUDHnkqLIDVmGV1Yu9EU0+lJ/pM93NHtO9bnnUdXD5qXkVVABBq3BH538V8vubnRx+BPjRiYbv/SUzhbT5HQ7QW0psTtxXUHFMgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1038 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-29T15:52:26Z; the most recent one there was on 2026-09-24, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfKfRC6jEtjLxpsNvn",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4815,
+      "output_tokens": 167,
+      "output_tokens_details": {
+        "thinking_tokens": 75
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1038 toll at SH 130 Plaza 4 within 10 minutes of 2026-09-29T15:52:26Z; the most recent one there was on 2026-09-24, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4815,
+    "output_tokens": 167,
+    "output_tokens_details": {
+      "thinking_tokens": 75
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

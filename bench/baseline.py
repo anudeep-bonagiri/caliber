@@ -2,6 +2,7 @@
 """Run the sampled rows against one model and save every raw response (Task 22, step 4).
 
   agent/.venv/bin/python bench/baseline.py --model sonnet [--limit N] [--ids 2231 T1314]
+  agent/.venv/bin/python bench/baseline.py --model opus   [--limit N] [--ids ...] [--progress-log PATH]
   agent/.venv/bin/python bench/baseline.py --model asi1   [--limit N] [--ids ...]
 
 sonnet  Anthropic Messages API over httpx (no SDK is installed in the project venvs). Requested id
@@ -10,10 +11,15 @@ sonnet  Anthropic Messages API over httpx (no SDK is installed in the project ve
         No temperature is sent: Claude Sonnet 5.5 returns 400 for a non-default temperature. Thinking is left
         at the API default (adaptive); effort is left at the API default. Cost is priced from the response
         usage at Sonnet list rates and the run stops once the cumulative spend reaches the cap.
+opus    The same runner (Task 31). Requested id claude-opus-5-5, then claude-opus-5; the request body has the
+        same shape (model, max_tokens, messages): no temperature (400 on every model since 2026-10-21), no
+        thinking field (the API default is adaptive and it cannot be disabled on Opus 5.5), no effort (the
+        API default is medium on Opus 5.5 where Sonnet 5.5 defaults to high; recorded in _meta.json). Priced
+        at Opus list rates with the same $15 cap, applied to bench/outputs/opus/ on its own.
 asi1    https://api.asi1.ai/v1/chat/completions, model asi1-mini, temperature 0, one request at a time, paced
         to the free-plan quota (100 per 15 minutes, 1,000 per day).
 
-Both models get the same prompt (bench/prompts/hold_or_clear.txt) with the row's bench/inputs/<id>.json
+Every model gets the same prompt (bench/prompts/hold_or_clear.txt) with the row's bench/inputs/<id>.json
 inserted. Rows run in a seeded shuffle, so a run stopped early is a random subset of the sample.
 Existing ok outputs are skipped, so a stopped run resumes. Keys are read from .env and never printed.
 """
@@ -44,17 +50,39 @@ OUT = BENCH / "outputs"
 
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-SONNET_IDS = ["claude-sonnet-5-5", "claude-sonnet-5", "claude-sonnet-4-6"]
+RATES_SOURCE = "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)"
 # List rates, USD per million tokens, Anthropic first-party API (platform.claude.com pricing, as cached in the
-# Claude API reference on 2026-10-06). Cache writes bill at 1.25x input, cache reads at 0.1x input; this run sends
-# no cache_control, so those two counters are expected to be zero and are priced anyway.
-SONNET_RATES = {
-    "claude-sonnet-5-5": {"input": 2.00, "output": 10.00},
-    "claude-sonnet-5": {"input": 2.00, "output": 10.00},
-    "claude-sonnet-4-6": {"input": 3.00, "output": 15.00},
+# Claude API reference on 2026-10-06). Cache writes bill at 1.25x input; cache reads at 0.1x input unless the
+# model lists its own cacheRead rate (Opus 5.5 lists $0.20). This run sends no cache_control, so those two
+# counters are expected to be zero and are priced anyway.
+ANTHROPIC_MODELS = {
+    "sonnet": {
+        "requestedModel": "claude-sonnet-5-5",
+        "ids": ["claude-sonnet-5-5", "claude-sonnet-5", "claude-sonnet-4-6"],
+        "rates": {
+            "claude-sonnet-5-5": {"input": 2.00, "output": 10.00},
+            "claude-sonnet-5": {"input": 2.00, "output": 10.00},
+            "claude-sonnet-4-6": {"input": 3.00, "output": 15.00},
+        },
+        "meta": {"temperature": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)",
+                 "thinking": "API default (adaptive), effort API default"},
+    },
+    "opus": {
+        "requestedModel": "claude-opus-5-5",
+        "ids": ["claude-opus-5-5", "claude-opus-5"],
+        "rates": {
+            "claude-opus-5-5": {"input": 4.00, "output": 20.00, "cacheWrite": 5.00, "cacheRead": 0.20},
+            "claude-opus-5": {"input": 5.00, "output": 25.00},
+        },
+        "meta": {"temperature": "not sent",
+                 "thinking": "API default (adaptive; cannot be disabled on Opus 5.5)",
+                 "effort": "API default (medium on Opus 5.5; Sonnet 5.5 defaults to high)"},
+    },
 }
+SONNET_RATES = ANTHROPIC_MODELS["sonnet"]["rates"]
 COST_CAP_USD = 15.00
 SONNET_MAX_TOKENS = 4096
+ANTHROPIC_MAX_TOKENS = SONNET_MAX_TOKENS
 
 ASI_URL = "https://api.asi1.ai/v1/chat/completions"
 ASI_MODEL = "asi1-mini"
@@ -128,25 +156,34 @@ def backoff_sleep(attempt: int, retry_after: str | None) -> None:
 
 # ---------------------------------------------------------------- Anthropic
 
-def sonnet_cost(model: str, usage: dict) -> float:
-    r = SONNET_RATES.get(model) or SONNET_RATES["claude-sonnet-5-5"]
+def anthropic_cost(rates: dict, requested: str, model: str, usage: dict) -> float:
+    r = rates.get(model) or rates[requested]
     inp = int(usage.get("input_tokens", 0) or 0)
     out = int(usage.get("output_tokens", 0) or 0)
     cw = int(usage.get("cache_creation_input_tokens", 0) or 0)
     cr = int(usage.get("cache_read_input_tokens", 0) or 0)
-    return (inp * r["input"] + out * r["output"] + cw * r["input"] * 1.25 + cr * r["input"] * 0.10) / 1_000_000
+    cache_write = r.get("cacheWrite", r["input"] * 1.25)
+    cache_read = r.get("cacheRead", r["input"] * 0.10)
+    return (inp * r["input"] + out * r["output"] + cw * cache_write + cr * cache_read) / 1_000_000
+
+
+def sonnet_cost(model: str, usage: dict) -> float:
+    return anthropic_cost(SONNET_RATES, "claude-sonnet-5-5", model, usage)
 
 
 class SonnetRunner:
-    def __init__(self, client: httpx.Client, api_key: str, model: str):
+    """The Anthropic runner. Named for the first model it ran; `opus` uses it unchanged with its own config."""
+
+    def __init__(self, client: httpx.Client, api_key: str, model: str, cfg: dict | None = None):
         self.client, self.api_key, self.model = client, api_key, model
+        self.cfg = cfg or ANTHROPIC_MODELS["sonnet"]
         self.spent = 0.0
         self.lock = threading.Lock()
         self.stopped = False
 
     def call(self, prompt: str) -> tuple[int, dict, int]:
         """Returns (http status, body json, attempts)."""
-        body = {"model": self.model, "max_tokens": SONNET_MAX_TOKENS, "messages": [{"role": "user", "content": prompt}]}
+        body = {"model": self.model, "max_tokens": ANTHROPIC_MAX_TOKENS, "messages": [{"role": "user", "content": prompt}]}
         headers = {"x-api-key": self.api_key, "anthropic-version": ANTHROPIC_VERSION, "content-type": "application/json"}
         last = (0, {"error": "no attempt"})
         for attempt in range(MAX_ATTEMPTS):
@@ -172,7 +209,7 @@ class SonnetRunner:
         t0 = time.time()
         status, data, attempts = self.call(prompt)
         rec = {
-            "id": ref, "provider": "anthropic", "requestedModel": "claude-sonnet-5-5", "model": self.model,
+            "id": ref, "provider": "anthropic", "requestedModel": self.cfg["requestedModel"], "model": self.model,
             "startedAt": datetime.fromtimestamp(t0, timezone.utc).isoformat(timespec="seconds"),
             "durationMs": int((time.time() - t0) * 1000), "httpStatus": status, "attempts": attempts,
             "response": data, "status": "error", "text": None, "parsed": None, "usage": None, "costUsd": 0.0,
@@ -181,7 +218,7 @@ class SonnetRunner:
             text = " ".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text").strip()
             usage = data.get("usage") or {}
             rec.update({"text": text, "parsed": parse_decision(text), "usage": usage,
-                        "costUsd": round(sonnet_cost(data.get("model") or self.model, usage), 6),
+                        "costUsd": round(anthropic_cost(self.cfg["rates"], self.cfg["requestedModel"], data.get("model") or self.model, usage), 6),
                         "model": data.get("model") or self.model,
                         "stopReason": data.get("stop_reason")})
             rec["status"] = "ok" if rec["parsed"] else "unparsed"
@@ -190,11 +227,11 @@ class SonnetRunner:
         return rec
 
 
-def pick_sonnet_model(client: httpx.Client, api_key: str) -> tuple[str, list[dict]]:
-    """Try the requested id with a one-token probe; on model-not-found fall through to the next Sonnet."""
+def pick_sonnet_model(client: httpx.Client, api_key: str, ids: list[str] | None = None) -> tuple[str, list[dict]]:
+    """Try the requested id with a one-token probe; on model-not-found fall through to the next id in the list."""
     tried = []
     headers = {"x-api-key": api_key, "anthropic-version": ANTHROPIC_VERSION, "content-type": "application/json"}
-    for mid in SONNET_IDS:
+    for mid in ids or ANTHROPIC_MODELS["sonnet"]["ids"]:
         body = {"model": mid, "max_tokens": 16, "messages": [{"role": "user", "content": "Reply with the single word ok."}]}
         r = client.post(ANTHROPIC_URL, headers=headers, json=body, timeout=60)
         try:
@@ -208,7 +245,7 @@ def pick_sonnet_model(client: httpx.Client, api_key: str) -> tuple[str, list[dic
         if r.status_code == 404 or err.get("type") == "not_found_error":
             continue
         raise SystemExit(f"anthropic probe failed with {r.status_code} {err.get('type')}: {(err.get('message') or '')[:200]}")
-    raise SystemExit(f"no Sonnet id accepted: {tried}")
+    raise SystemExit(f"no Anthropic id accepted: {tried}")
 
 
 # ---------------------------------------------------------------- ASI:One
@@ -291,11 +328,13 @@ def load_existing(out_dir: Path) -> dict[str, dict]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", choices=["sonnet", "asi1"], required=True)
+    ap.add_argument("--model", choices=["sonnet", "opus", "asi1"], required=True)
     ap.add_argument("--limit", type=int, default=0, help="run at most N rows (after skipping finished ones)")
     ap.add_argument("--ids", nargs="*", default=None, help="run only these row ids")
     ap.add_argument("--concurrency", type=int, default=4)
     ap.add_argument("--redo-errors", action="store_true", help="re-run rows whose saved status is not ok")
+    ap.add_argument("--progress-log", default=None, help="append 'HH:MM <model>: N rows, $spend' here every --progress-every rows")
+    ap.add_argument("--progress-every", type=int, default=100)
     args = ap.parse_args()
 
     sample = json.loads((BENCH / "sample.json").read_text())
@@ -316,7 +355,8 @@ def main() -> int:
     meta_path = out_dir / "_meta.json"
     meta = json.loads(meta_path.read_text()) if meta_path.exists() else {}
 
-    if args.model == "sonnet":
+    if args.model in ANTHROPIC_MODELS:
+        cfg = ANTHROPIC_MODELS[args.model]
         key = os.environ.get("ANTHROPIC_API_KEY", "")
         if not key:
             print("BLOCKED: ANTHROPIC_API_KEY is not set", flush=True)
@@ -324,14 +364,13 @@ def main() -> int:
         if meta.get("modelUsed"):
             model = meta["modelUsed"]
         else:
-            model, tried = pick_sonnet_model(client, key)
-            meta.update({"requestedModel": "claude-sonnet-5-5", "modelUsed": model, "probe": tried,
-                         "rates": SONNET_RATES.get(model), "ratesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
-                         "costCapUsd": COST_CAP_USD, "temperature": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)",
-                         "thinking": "API default (adaptive), effort API default", "maxTokens": SONNET_MAX_TOKENS})
+            model, tried = pick_sonnet_model(client, key, cfg["ids"])
+            meta.update({"requestedModel": cfg["requestedModel"], "modelUsed": model, "probe": tried,
+                         "rates": cfg["rates"].get(model), "ratesSource": RATES_SOURCE,
+                         "costCapUsd": COST_CAP_USD, **cfg["meta"], "maxTokens": ANTHROPIC_MAX_TOKENS})
             write_json(meta_path, meta)
-        print(f"sonnet model in use: {model}", flush=True)
-        runner = SonnetRunner(client, key, model)
+        print(f"{args.model} model in use: {model}", flush=True)
+        runner = SonnetRunner(client, key, model, cfg)
         runner.spent = round(sum(float(e.get("costUsd", 0) or 0) for e in existing.values()), 6)
         print(f"spent so far: ${runner.spent:.4f} of ${COST_CAP_USD:.2f}", flush=True)
         done = 0
@@ -359,6 +398,9 @@ def main() -> int:
                     done += 1
                     d = rec["parsed"] or {}
                     print(f"[{done}/{len(todo)}] {ref} {rec['status']} {d.get('decision','-')} {d.get('code') or ''} ${runner.spent:.4f}", flush=True)
+                    if args.progress_log and args.progress_every > 0 and done % args.progress_every == 0:
+                        with open(args.progress_log, "a") as fh:
+                            fh.write(f"{time.strftime('%H:%M')} {args.model}: {done} of {len(todo)} rows this run, {len(existing) + done} saved, ${runner.spent:.4f} spent of ${COST_CAP_USD:.2f}\n")
                     if runner.spent >= COST_CAP_USD:
                         stopped_for_cost = True
                     elif not stopped_for_cost:

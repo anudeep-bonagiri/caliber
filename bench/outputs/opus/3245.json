@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023228,
+  "durationMs": 2521,
+  "httpStatus": 200,
+  "id": "3245",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 5's ping at 15:30:00Z, about 2 minutes before the purchase, puts it roughly 0.01 miles from Stripes 3310, and 29.8 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QUKEAgTGAI4AUIIdGhpbmtpbmcSDJUK8bHfaemd9vvwqxoMMV8c58OkU9Seo2oYIjDH+kydUeYOx1mST7eEkHC/ewAFgjU9Cc2JSGCTKKfuQeEdJXNLoevzCy1sY5c5OE4qigVtyHZF3A+UFHAcYtu1hXM4vLVudXC/n+cN4h4ZYVac5TPkdNCugXyO6+RmpUQCpetPrxZ2nMguxNWRBt5TCf1vxAHURaBxvzucMwobo8KftFv7yQz3NKqFD3YrIa0oyTCrk+NDwSHoknDT6veZACXgLCmnzP/yM1CGV0hkGi5xngkaRxN432IUEqRdThec2/CWxSn4u+suiFBxM/np781YsBXt7EA+GG105DXZqaIRPGKcnm+4mbqw9r49UNib5x2Buf5ccs1FT+vZ+jizp6Z578nuntaa8QizGMZswWVq5Ms30Vz6A/7aAp1Bo10olSZOR5K6WysZXTPPT+pCeVKjkbYCNQofUwlQ3lIRlGacuVMstutm4klyuKKvDWPwd3MSxMWIBY5RENMMiUjuLqbMr7RbQr+13IUUXxg5re37xDBHfaXiJTa5VGkQRu0B31K3KTBgxK1EoxGu/Adi82TG+APRlhf0XP0oIWV3sJ24K8yTOlUJ65EiBs/gptASKA7VYaBx/J6a35MuoItbADryq0XcytZZr8wzU7W+2Etee5Lr2U7mhSYSkaUO1A8ZLprS7DJg7SPWABY6PhcMiyy9HrYmvR7dFAKDa531NbEdeLiWir/raSKHPTuC0T4H9ZmT9qXSbBY5ZOPa1Iy1IVZJMsO4q1bujs1JvKprrJ83uQ7Cft61pqIrq9dNfwdg5e7kNs8r+4IQCZbKLkpKqS4d3hKVdX0pwBkUmo+xm92QxgZrmLUuLmHdxV3KxgpDYqWzaig8hz0I5jTxoNgZ/UGuwJm2i8nxotW4i+07PVgE9WnWPsxlfzv3gylOG8eh//O1eEtcSb5GS69eT/crFvuGnS1FW75SRypDiBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 5's ping at 15:30:00Z, about 2 minutes before the purchase, puts it roughly 0.01 miles from Stripes 3310, and 29.8 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynoqWXRgQkjhAY1WCh",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4817,
+      "output_tokens": 198,
+      "output_tokens_details": {
+        "thinking_tokens": 90
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 5's ping at 15:30:00Z, about 2 minutes before the purchase, puts it roughly 0.01 miles from Stripes 3310, and 29.8 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4817,
+    "output_tokens": 198,
+    "output_tokens_details": {
+      "thinking_tokens": 90
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

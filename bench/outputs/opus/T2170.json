@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.029604,
+  "durationMs": 2374,
+  "httpStatus": 200,
+  "id": "T2170",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1031 toll at NTTA-PGBT-01 within 10 minutes of 2026-09-15T13:03:35Z (the last one there was T2055 on 2026-09-07), so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgUKEAgTGAI4AUIIdGhpbmtpbmcSDPxH2pbZZwzDp0Xi7hoMdOOgHeDDIrQqvv8pIjDcFiC4q1zuKV8L37A2CtqgRn61wUhQ+E6+um+CMuvFhPo7K3nLddjdNPZiBGBEJ8sq6wRQOL0JSqszFzQ55JLcXfXaDAF3JslUIgmIUXP+ZToL17bIWlmQ3YhfJpyeSm4ZtGOcR0QhPTNoNmO5YAPNqeiPV2oD2CJbriIFHZdCd7ouuJiMvqQMMgr3X4MA0sQ8w01u1QILSQ/94woMNuwsZLEqknoLBa1iG15GJd5o2iGnLzWcnFNob1diHDLmDUK2qfz1vpL7BYOVAHBhztxC01Pn1njS57TeJ5PPlr2X4cKREab+FC9WJsVbYvsxqxYWCjMUDRuAykMWcQRrvAN5AHp9FqXj2uWJMczXyOKlisam6aVKvuvhkepgJ9fzSgznHxCUzKuxs4gIh9luZWhS5LMa0+U0VrAdAt0HlospQb1UfAtHkqZJkPosXHUINY2XFNp+LYAxTvHnLVtQTbyt95bxsBbrAuzsuyTkRY1RQGYhmBi01Itvh/hOVUmqap+e01d/vGGQOnd7vcgR6SL11c6Vv9SAwaSKNtdmpbP1nEh0ZME2GdaUG7fEtU+wt1vrvoWf/HqimjB2Jut/cmK8hKlLyCWjH1HPksN9ld4fKlEhucddC4PwwSuX49NB6IbIACo+XTfLoxoxhAsYRWUt6sSpH6wVWWVPH3eh4gWAvLxp5y2j9pT9wFQxqZl3veygEhByDdYuwO/qmTFY98BLFDtpyL3jqFSoTjt5sEHhJmdODrirPksvWI73VLmgRhlhlbPcx4i8sqUTVgXBM400M0TlcEjZezWDxt/GaA9wummH+MQlJY+B4ajGNaB+9PbT2Ff8h0mhERPCp/xIpMbBagpGnn2D7ZrqkDR5Uj8yw6Kd2t0TlYpmYvKIvGUMGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1031 toll at NTTA-PGBT-01 within 10 minutes of 2026-09-15T13:03:35Z (the last one there was T2055 on 2026-09-07), so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2rBYB7cT8Q4YHGQAU",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6566,
+      "output_tokens": 167,
+      "output_tokens_details": {
+        "thinking_tokens": 73
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1031 toll at NTTA-PGBT-01 within 10 minutes of 2026-09-15T13:03:35Z (the last one there was T2055 on 2026-09-07), so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6566,
+    "output_tokens": 167,
+    "output_tokens_details": {
+      "thinking_tokens": 73
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011352,
+  "durationMs": 2646,
+  "httpStatus": 200,
+  "id": "INV-1029",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1029 bills oil_service at 42,225 cents per unit, 22.4% above the 34,500-cent contract rate valid on day 18, which exceeds the 5% tolerance (max 36,225 cents)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwYKEAgTGAI4AUIIdGhpbmtpbmcSDHfKC3bSQUGB7mCoChoMslNIRk+22hT5MtZYIjAkKdI4jiGKPkqM85Im0PFKHUC7Ya0Fz+6cPcRoH0T3GPwSks8mQHUQmDRPznywg9wqyAWDSZho2EO87ZProymy5ok6FpNxq8wvl9dmVYNzAictdrmdx+hRmvptIw8FGfPDHL8phvVPBf9aHZJtFmVDI6mc7OnZfXM7uWrL1+nW01MZ/lfo2Wb/OR/hN2lSrPZVJq839R4lm4LTWPjj3wcUtXbj2WPCeN5MxCTuS8VDd24rBJaGtsBt87GNKCtI30Y670pPgD+Y8McvgaA3lA+LXBdnW8G+Ojku/cFH7FaxYEXT6b8U8wFIgPgZ5mjwaOeefAVtuO/rEVdVJWkLkxchAR/AkozheXK7oWPaGxM4tQDNtB4vwKqaeHyN/0gTHhkVUaVRw1fMXx5LiZso3Bp2+DDlFosPHJu3kV1LMLzZ8xlRtpLRFd8qdp605O2FI/eVPFTmuuLzR1GDOk1tR8aTousM1C1X4NVSkQMtZ6jpBYWPIgErYNl6gtWXBU32evaHbdM9rCYK8amc8GQhD+ouB9oT1DKPR44VIuBj/okVOwBZLFPY4Svm8y3G+e2R38dWVcfGhBkXBOV26/soZwYPBm0tJ/x+nPZ5bgLwanRe9NOujQ3LS/sgMhFucf8zXPNDGzuCIOnqLMtOiSGTz9tZCQUV99lM9i62OCyBC9uD4diX4j23wqMaBZ/Ep4KgzAPn+8xVJoOn956cxxyqFQI2p423LNLcih5NK23dL2eIxZ1gRrrQA2oZf/0hC6wmwjK9ig7AtyzdC9F7Wmq3JXf9UAr371zqZA6xAEiA4mINH1r7AnbkEHFZW88QV++R4LP/7sb/d7sBLZsIOzM/nDDoJ3whOvOEQ7NuPmDbOOO99JZHmggUJaAzYc/XxCl3Vhs87foibteb5JeZcBj93Bm+fqjnSyuM2M8U1li6PvkS08IfNYPWk/JRJsSr3l3UEYKYlZ450vFvKEuaWwq65GJXF733DodfWcp9YTZbqaofLoqDPJNvozWx+PoaGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1029 bills oil_service at 42,225 cents per unit, 22.4% above the 34,500-cent contract rate valid on day 18, which exceeds the 5% tolerance (max 36,225 cents).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqQwgxNbifZkZKd9yu",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1803,
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1029 bills oil_service at 42,225 cents per unit, 22.4% above the 34,500-cent contract rate valid on day 18, which exceeds the 5% tolerance (max 36,225 cents).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1803,
+    "output_tokens": 207,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

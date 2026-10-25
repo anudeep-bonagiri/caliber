@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017908,
+  "durationMs": 3140,
+  "httpStatus": 200,
+  "id": "INV-1102",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier invoice from this vendor matches 29,832 cents. There is no contract or PO to check rate or quantity against, and the amount is under 5,000 dollars with the bank change (day 71) after receipt (day 55)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxwcKEAgTGAI4AUIIdGhpbmtpbmcSDPdzCM8PociIFLjDphoMEfaqqx9eoFPWsg+sIjCW7wmQ1g/aFtP9gfjOBTXTUHh2ffIatAsXD55s+POF/NzIrI3/e2jyXX5oCCWSZ8Aq5AZalizUkadXhgi34g4LUjUwMFYzdpkLmZqtBOFqal7wdqA+3jOWQw9JKG3qNtJqVGh0WeK9htnwQ5k/QJjro3K3A7DkPbhUdDeR6p0gkw0E3j3YKieCFVL9SL4GdUWkkq/uJiKiLMcMYF8YF+mlwjNAUAomNDM25bi+uUddwwGl4q82tOa/ibILbxFDmib34PRRw1ozn5xX6Ac08IVQhZZqCm/6t1jbklYRwDoFJ0fvjJG5bppirOnKOrejZhb7ftB9ybMqY5hrFi59HuTeSTBlHM2VX5SlbDeFx5GkgsBHf6Ud+TGg4pTmb1oidcWV/D/Nt5hdaX7Res+PeDuLl4hhilYdV1V/THqygQv+sELC+HsggdvW0/pzLmARfR5uaLXXDyuxGOkBw/tMGiLmBB/RKTk01Ur1oCYbTr0w95Z0LZJAbFfm9aescwvNoRUWCtGxIPWQIGY7cSVqF/rdG5Qb8sqZgjdzVxZBzhP1xi6kcPREh/0+xgVgY27u66ixOqRd+KROu7VE1DAi2ftay66Q7jUiaQW7Qy3wonyfBBVW+VxOTvxtEbol0r78rYQsMu7ry3E/ql3BKaCdHTdRNUqL1IwpgPMQIvjx19evbfcRacPtn+Q4Tc+EtAr7SUEB7fpoPyfj/NUxj3pdfTgUczi2vLDDWEc1ZcxlOywxyNi0rPumfho0gChre6hCwV4lon7q9JiNv2Em9AptwJOeQcsQ+9H0AAbvLnMh8AhlVcgH+sMa+pNFH81MAXpzaWtdPVCwMy7EJnC4xYqyZWwUpG7HLwVTyPj5uhslphXhaqMCiVNIHEKjI1I9f3gdjnPGlKd9MYPTG34q6JIR1OSfYlSv4saaJ53vOgB4yCeXJjkMxbv9YrODVbcQWpZFebbRYgeH+IS0k1d2Y4RSvKycrVbmXp4nBmZbIssbywQR09JE8wkPXYO3vITch3hpca5lvNMRaw8OSzjjkIlwJC82Bw9CprJAv8xKllGJ8p7V8XnpzTjdXuel//9UeHEJ1u2gZ9YRyI1Yypkqx5cOCPHY1+KVkDBoPh2B5hSldByLUrIQlHQMGFikEZHiwNz5EmonTm3+6JjpqtqrlE0ExLcwXyskK9MbQjCZwBLFMrqH9oYtQokEGImS6QDAzTtMFdQnKGev0L9dGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier invoice from this vendor matches 29,832 cents. There is no contract or PO to check rate or quantity against, and the amount is under 5,000 dollars with the bank change (day 71) after receipt (day 55).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygZthw2wueqAs3YoQw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3232,
+      "output_tokens": 249,
+      "output_tokens_details": {
+        "thinking_tokens": 158
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier invoice from this vendor matches 29,832 cents. There is no contract or PO to check rate or quantity against, and the amount is under 5,000 dollars with the bank change (day 71) after receipt (day 55).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3232,
+    "output_tokens": 249,
+    "output_tokens_details": {
+      "thinking_tokens": 158
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

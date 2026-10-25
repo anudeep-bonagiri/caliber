@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025212,
+  "durationMs": 3976,
+  "httpStatus": 200,
+  "id": "4212",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged within 0.1 mile of Pilot 1115 Waco at 15:10:36Z and 15:15:00Z, within 30 minutes of the 15:14:18Z purchase, and 23.7 gal is under the 110 gal limit (100 gal tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1QcKEAgTGAI4AUIIdGhpbmtpbmcSDOZxifphj+XEGeZgTRoMCdVKpRNj9D11GWmNIjBfV8w7ei5bUEHFih6yXwD3JKjU6S5ufFKNRzIXN8R3YA7pBzes1Zy3GdI4WxIbeKQq8gb2SVc6qYwlz/rnUudwG6/UMsyzitGnus2Yoi5e4+xeicc2uXRoseJpksBHk5cCuZvdQyiYV669edqzPN0AVAdXqy3lbv5xwvRhKUHQe2BBFYFUVR3+WurB7WVVO8O3pclnVmHdW/GPJ/OZta8t0ZZXLW+dSi9WuPdb+MDleQXnPPAbBjoz3pIB3xB4J/gFtJeLGMZ3IHQHuNRY2hEe/LMxpuplxBLHYSApSgGAPwRP+Zn7UNuNXDbmU54FemTxD9CjyMD334dwAWF9d7tQOSd91SZEKILtoU5/5MTWeMbqJndN2s8++HZ0T/jIsK1FFpVz+4jFB5xCih/kKxnVMmFXoFW/SAFYgd46tj0hUEZn2ULkjQbmAEFrMAX6i3nm2fj7ik/ccwyxYm4qAhvgovmb0basSt3hnB8PKY9vqtvfzhfmSziJbXjs++FCBXk37tm9MM5xk4ZGvr0AktoNnTgoVTyec/fe4fO1g9ZZNcu0MvH5NXFhpZjsXGeb+uIO6H2GvL7wfLKOWE47OPYesRPvCP9XwMPEq1CVP0Zu8W3ZMTEybj6FjUOoy96WdP2+fwn7GlY3f+4uumR/ErPXm4h+d6790jpIrBuu4vFjB5RFrLRDJwExNXk0Ics1TAZrnxS1OLTFTfXHK22EykIaEo+B2lnd8jnH1Ctq0xhA5tJ1xbbReroRMjJMg64iPE7ejek35pbPog6pLjijG3NGoxg/j7Hn+XCtr5rw5YhJuD+xTgZSitpPMt48bxZtN81d7iqODStiSe1/29voTzFo4rXrmEQ2WE/zm5FYBhGYl8EOyi4vF2/bnANZFZ9ABMjqfE8Zxa5Xx0Edf6riSA7i+ZSHr3UXxs+2panRCts9fsMik6OFqv2x0zEYBP67fwCZ28QtEy7VuMrVXezFXQkr30d7M1xIpZegR41mvv53rpw3D06z4H/GxyrNuAnAy+l8CyLhsUkW+Mzwma/cNcujqK37PDCBYZvamiJtnA8g4BxUAJwJJ9OHq9kAsDug33bOJwWTKy9hqqiWXnukXmyFwtX9zfURWmnguyrqwIyR4CjOTlWjn2Fesjd2l/IjYJotf8MSlixoQPqEsQm5LfN2MrEXESSxtz4UPZkMWFCKZ7DyEM85+VXaAOWkQAIqXAYi9mt7j5LRy6v28KpIBSDFLRZ0gAAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged within 0.1 mile of Pilot 1115 Waco at 15:10:36Z and 15:15:00Z, within 30 minutes of the 15:14:18Z purchase, and 23.7 gal is under the 110 gal limit (100 gal tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzGD237bhKdu2ojdzTo",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4598,
+      "output_tokens": 341,
+      "output_tokens_details": {
+        "thinking_tokens": 221
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged within 0.1 mile of Pilot 1115 Waco at 15:10:36Z and 15:15:00Z, within 30 minutes of the 15:14:18Z purchase, and 23.7 gal is under the 110 gal limit (100 gal tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4598,
+    "output_tokens": 341,
+    "output_tokens_details": {
+      "thinking_tokens": 221
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

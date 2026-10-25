@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021988,
+  "durationMs": 3713,
+  "httpStatus": 200,
+  "id": "3698",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 7 pinged about 0.03 miles from the Huntsville station at 15:30:00, 14 seconds before the purchase, and 50.4 gallons is within its 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gYKEAgTGAI4AUIIdGhpbmtpbmcSDDXHWzVM9TeklSve/RoMUhk+IsbUrv5uQXi1IjAyUbVFvoNHVxBm4dmZ56wyMFjMzVJiFzHn0025yiHCQY+zd6ntSygllRErfMV8FGAq9wWbQojf9rKWnZeT9PqkzwHtUk4DAHYQnQLK8Y9Z7yH0OiJ4CNtkGge7/4sg6q4VEV3eTYzJ4wL//vYNXlp78ZNXXRBwd2+HUEtnJrVizC/9jV3vpj8WsQYn4xRJ1U3eqJpU1gAPISAlwAyR4Iyk+D9WjMI5uWgCQI5F6uM6hmR589HxgZjWf2UHuXMCcaSBdqPSW26cNWOZprYWAGRW3T2qBC0cjL83IlF6pajt0GdJxvHJJWAlvSoBurFp/+E0ZENVJJGhTdIqvkp1fDafAvdWNYX/TPECJZcED+8KQY85c0i7p1Y93qdUTvtQ6QrqP54BXi42SWpZ1B76LxKYX2CXdyHlVyA1t7K6pS18dlzrVB8YLMckfQSYV0gjpZRRibelNmYvivOcblr0SWq2J6J6z0BcvcAbs4RAOGRqYkdASh4QAjwdRUcDQK5DUqBAI56VXy5cH780pqS2mNAmC7GoJbOmqdjfY2cJ+wn1GjyrjP6LZc3MI4FSVg3Q9bskdWSqWQmc6F0Ifx7bJwDSkFf5H8DQsN8FgtUPRJQiajSOplr0M7cF5gIUaiqjaxwXuu+j1ACqwLyEfeLl3ITHtC8tvBOr/L6fxBgZew8XbSXn1f0p/UrtXqCWGjSJiE0Z7CG/dFdX5Do/dQwSw1VYIch5wWh6TWoDAbrtXbKr0kS72rSt2IqL0xoB9Tn1kLfKhfuorEnV3PXuHrTYDgRuILms0Dw1JC1YquxC/e5kimDYmNLzEVkYN11xXW+r/ZnbmHMOvzEv3A5Na6EpeRqkvU4nMPiNuAeFkBLCYGNlxdkmD0HOrQng7zuBNFhb0lFFTNx1mkU/lf9fJTS+v0bctR1c8kiGVBTnxkiGVCqiL4o6UvOOa/K4xqD3WloEp/0GvovSiGhavQZfwnWyq5eFytFUfQQUqZPq1iShAMfGspupjK/pAZxipGywgjMSu5BASTuI4WIIQZanahVg77IoR/of44A+0+aVZnEtJ2RBmhw9kYB9zAmFZUAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 7 pinged about 0.03 miles from the Huntsville station at 15:30:00, 14 seconds before the purchase, and 50.4 gallons is within its 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyinxapoxMoRZ4k85Z",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4307,
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "thinking_tokens": 141
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 7 pinged about 0.03 miles from the Huntsville station at 15:30:00, 14 seconds before the purchase, and 50.4 gallons is within its 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4307,
+    "output_tokens": 238,
+    "output_tokens_details": {
+      "thinking_tokens": 141
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

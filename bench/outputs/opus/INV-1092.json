@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016784,
+  "durationMs": 3162,
+  "httpStatus": 200,
+  "id": "INV-1092",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold applies: no earlier vendor invoice for 7,813 cents in the prior 30 days; no contract or PO to check rate or received quantity; the $78.13 total is below the $5,000 bank-change threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QcKEAgTGAI4AUIIdGhpbmtpbmcSDO719XXSum+fzVRyGhoMeXvSpEMYZcq2uVK0IjBg8t8XtGQow/Hq4Mx3uDBxaFheFcAVKQM5u9kwFzBqG6e4VIJEx+8AHzJ0PpGxDRkq9gaQ6Sb0qvP/gMDfBMWpT1X/R7AJoabBweHEPMmvraINHtr9UC0uN3TOt6q67FtGcs6F0E71AGynZFgjAdKXS5vCHG7AEsI+tV7tAtYPNq7Rg8GJ7RxpgJKdyjP6tZiWHTLOmnufVwwbpoV9Zo7KUCCJdzGzfXVwznA52QEK2NbSvS9ZGdH1m48vCf7g8PhxkOUCe6ThtTgjOvzMMlzrWrVKw7Ow4m5QeoWzovn1Qs3faourTtvr24UrqJJxTZrIoR5GRWg9VVeHuV3hWGFwXnuT8pPCTUtlVH0bVxpBzQ8/W+DiRgkgjQwtNBXfC5cLrlc10QEgRLc7E3RMJcliYgEa1UrP+k2UnMEaU0LBQ6Iv2JUrU2sSBh/nSLc9RfXn+erA6LJomMpvBaE+hUrSmOH9ki/VyX15pQmD0sQMLzsq9Q74VzQW//Sbve6CxXQc1GIcGXfWDGqJD8oq6xM+58Jldo6OZOL8fAu97c37RXgre0Cd+KU5pCDnjUwynz/qBkCtvlLj6GLbJMqIrJLAXJTbxMhWau6wMMDhpmpwu1tRZUzB9FtnUMy+BM2RhGoGNgjv7eon8NXdztusnUKfJ9CNx43u7LskUQFi7ABsQwkOfsVGzDr10bvO6j9eIrtXy0BPFne/h8Pb7UfG2Tsd2E697E7+EzmhOemEhq3xG8zOOHbSObYkMactYx1QNEqg7wNXZXOVetVUXysrbu3PeWQjXkJJs+DPIo7KU+plBj10siQ+kpWg8mGuRMM56TDmsQ5W11fdzJ5Js4vcCsE+gm9F1uideeSukS9zDZPJVYfwwIB+3NcOAaNly7smNUSKzlUscRiMKBrryrhpKPfyHdfbuCwxaNFLRic1mxOORy0/x4XEqGiIoePKmrp3wgPYpBsCbA5+V2LWxc0lUUVQ0TPmsx/l0OSXCs5UWnTO1Rd68bN5Zts+v+DERLho6d4VyFDFiJYMGjHp2kEjWKOoHZjjBbLf8h08qTZ0sdWMAHbLxwym3Oc1IUXrxrUyhBPBuflCOhyROFsA57nrkOPG+yYG2PX7WywUsNCI69JBZIs7gHmDKc5dyX6H6+xvBha94scSLEd01DZZwB8N7k7NB5XgBfJG2d2Z8fUfMxvOI1GNpy8IMFq/8+juqJLFDJKfXNhCIo9ka0dN/5YDRnmsMM90XiH8kPZnGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No hold applies: no earlier vendor invoice for 7,813 cents in the prior 30 days; no contract or PO to check rate or received quantity; the $78.13 total is below the $5,000 bank-change threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrDmksHWz8djDrhJ78",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2921,
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "thinking_tokens": 161
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No hold applies: no earlier vendor invoice for 7,813 cents in the prior 30 days; no contract or PO to check rate or received quantity; the $78.13 total is below the $5,000 bank-change threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2921,
+    "output_tokens": 255,
+    "output_tokens_details": {
+      "thinking_tokens": 161
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

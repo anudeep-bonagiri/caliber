@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017584,
+  "durationMs": 3205,
+  "httpStatus": 200,
+  "id": "INV-1139",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: no earlier Metroplex Truck Center invoice matches 31,550 cents, there is no PO or contract to check rate or quantity against, and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7AcKEAgTGAI4AUIIdGhpbmtpbmcSDCTW7klDdjhqUOWK8hoMsOQ+aaveRFO8fPCkIjBoZUfNyR3UT6fsaJ3D/RPe2uCgk/FRT0AS0OtXQ0jt8UW6Cbojo2zCUwsGhYYG+7MqiQcXkQ3TCDoIGHLFqKk3cEP2JPjgzF3ki8hrAsHPTLWUq/MpFjK1Waz+Q7hgNRseV3Deyc0B+nO7GHwfowZTOZZ1RJ8g90/+WQ9gJe280oFLLNg3qTYg9dmqaR7Is7D/aM9I3uiTpelrOoa+8KtB88DMiejbH3f5mALtKS8+fNUF5fhYttdJ+43j5sJWqfl4AlDAqZ0eOm81EI5VDjsxh9dA/DLK9c4umWyvN9k767Tdju40XiI5x62DdyhHmCIoBZXzGYufIJlhBOC477AOILGyXM1GyFNaU1rYaA6DpRm4l4+u9iGkB21s0odgdEfANM1mzteE48Ljl1r9C0HRUcppCsJ2XxMEFV48gEuLBhJwppBA9dc7FOI37PA6Vc+0BgejPjNvbMYaWmYwhMlg9I3uEoMFb4FALAwnLJsnuQnqIyJ+vYkbjtjsL6wxWrc5pnSOCSOQM0FNm58lDeJSmLBFhfcTlFiM08A43VykI+T4M11wm+YBwKyif59wTw4QRN1Y96ZtfyNZFyWq2EbOWhwzs6hwL7lK+3NqHD15EDcJ05zkcOe447uUbBHsizIRbH97y9aq4Ub9UBuJZOdF39fr1K+sHaRgloA9F9XR22/bSY5bEBoXe9nkJRodAOZQi61+Fv8/uuQ9dGgEVSKfI933SORNrGGZvuI8GP963C57vANWXY1HmxQuMyn2LCTiYZWUn63XqBz8coFsXSmMSnI+CTO+cKLtLuetmMxFknMDiA1chjQFS68QIJlrX8ZLM/ufnQcIS6AkFScIrtgMgGo0CPMPFGYavA+wECbklKn8aTwcxTCy97WjLmqIOi3vKdoxMMPcTBFt8oiE3qnm5Bxp3hCiHvj81MZFI/Kq0V/gV28ROrDyR6HV680jUB3A6DSkNAPXjuJv/OZkitoVnOZsa2WssLH7IEwkDOsEC3bquuumSK9cQxs67vYfnYhTkxirVstjrUPOaAnYBoOBEUhxUpXt3Gp67V1rR9J2V0H3yOL3LE2/8bmkAFANOB8J+y1yqPjwXWhJmQ/XbKJnYwKxT28hv6uvyUA5anImtyAzf8e/S37KLbVipdVPSdwRi7FaHF8h7Cr3IAR/68oYp3HVzTNY1KrdXj1yAjr3ub3Jcb+5CealuF4FWQnYnp15RrWcGPJ5SbUqiaFH8V6kcE5WO6AYXrYTgvHtrTf7RKiZCW1Cxx0+Iev4ChgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier Metroplex Truck Center invoice matches 31,550 cents, there is no PO or contract to check rate or quantity against, and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2jkqJEvi7tUnmbkqU",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3171,
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 162
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier Metroplex Truck Center invoice matches 31,550 cents, there is no PO or contract to check rate or quantity against, and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3171,
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 162
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

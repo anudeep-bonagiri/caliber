@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019352,
+  "durationMs": 5184,
+  "httpStatus": 200,
+  "id": "3955",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "At 13:00Z, the nearest ping within 30 minutes of the 13:12:56Z purchase, truck 35 was about 58 miles from Stripes 1204 in Freer, near Laredo (27.5305,-99.4804); it sat parked with engine off and no odometer change all day. Ask dispatch whether another unit or driver used card FC-1035."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgcKEAgTGAI4AUIIdGhpbmtpbmcSDAW0n370xWzqIUkbrBoM3fOlv2mU3rn0gbuEIjDdx4VcllizqYeVmIVUHGPKIa3Tsrqlvyug8j4IQvs0vv0aoAFCLKoC2EH7kFebDggq6wYvvJJvaWuAHKFfCML4WdehNNrVZn5FeAZPZBaNe+TSv383SE7kCvsArh7oQAde9W77MqmmxF6Ddaez6eomTH96xJCCGSatq+X3LHFRQg/EmRFNsbi2vPp5Hbyn2qkP0aup0c+5s9IVWDZJg5XgDr0bJpJn6ogg93QZt+IUQ8gB8vUt9/bqi8wY9u3nBr+wzCsNaJkahgM/mOJUf5J0WZK+y1OLx1GLdlwlhzbjDfEaRVuY4yIE+br+hQ+Zv75o80y0Up98YZyxudf86bStouXNTPKraLmA9CcUuacitLuJlRWOPg+RbyAa2mJSykzQ8f3JKleqkJ+d4Utw//Bh/Oqwwxrh94sh7EWim+k0mTP4KUHAPb8TFG43s6alThOdsP1q2bLzOQ+4FVpSRVdxZtZaPaEqpnqz8Sd/nTbnXNJAZGRBHA2zvRkoZp//60VmjJ/kdcLPbTYcP5npsrBHb38vTtEf6o9uiDpEHzF8avfgBIGr4lGzTE7nAbbuv7uLxYV00sEOQs2AqpoM9FFkHQpG3js0jvgG5wzEgzJ++IqOGqHKqmGn8bVTnX5pcnqVbIDkQ4okk9XAC/56awqzS0hi7HHp1b17iRpGNVAuKkVZWTHXcu7YF7mSteWv128V6Tj6IbTMJDEsTNHnH/QfR0VPTwIOb62Nktfib/772ua21cSmY+P0x1bfBu4icV1hFltTyH8ExqBY5Mt1XAyZWO5K3GE6ErRqUcKObtRKycrE6ROlyw6DdjJ7NTTC4QXOwm84HCHyutGd59M8BDUF7mh7YLXjceZnySjQzAVQqJK5/rVyE3+6288r0qXCQL84C9JW79mQXRxUktexdAtHgdpbzc172YZO/DWgLpIcLkEf6DNib20tnHEWO74sVG5bp+/RZl842vGHQGtSdS+GW0reu5IThEH4Y6EbbyAKE2xaP36T05UHVXxuT4l7cfCMEhoIWdDSOjUFXDwuO2Yqdw2iuwpA5zPNApPUP7tqgHXwUKt819S67im/OVN6QFZTe3pikVUUlNmI2tN2JsQSNYrbKrhKhWmJKqMuTAYeyyqd+QGRiND1EyFBWoqQ25p5IJOHYiDdZf/xJOn+BFXfFAdMo1O65lH7Ky/kuaMs2zpE9JihuUL+qgaY8B55t91A71Ruj66RF6upd8P9kBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At 13:00Z, the nearest ping within 30 minutes of the 13:12:56Z purchase, truck 35 was about 58 miles from Stripes 1204 in Freer, near Laredo (27.5305,-99.4804); it sat parked with engine off and no odometer change all day. Ask dispatch whether another unit or driver used card FC-1035.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2qY7C11GBQsn7qWvf",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2993,
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "thinking_tokens": 217
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At 13:00Z, the nearest ping within 30 minutes of the 13:12:56Z purchase, truck 35 was about 58 miles from Stripes 1204 in Freer, near Laredo (27.5305,-99.4804); it sat parked with engine off and no odometer change all day. Ask dispatch whether another unit or driver used card FC-1035.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2993,
+    "output_tokens": 369,
+    "output_tokens_details": {
+      "thinking_tokens": 217
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

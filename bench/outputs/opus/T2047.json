@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028328,
+  "durationMs": 2523,
+  "httpStatus": 200,
+  "id": "T2047",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1021 toll at SH 45 N Mainlane falls within 10 minutes of this 2026-09-04 17:39:25Z charge; the most recent one there was T1829 on 2026-08-20."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wUKEAgTGAI4AUIIdGhpbmtpbmcSDHNm+XOAzams8STryRoMW/xhtR4guY7EM6iFIjB+CXH1vIyMnOOHF2c3KB+AFIeYYoruhNm/ZUDZ0vU05yjxvSqu4/FhNowYeytBr8gq8ARq8KA0zwhhpzymdbwq4NEzC81CV/19lSat4Dju4Biz9yQOaErm1Fzxs25Pn6W9F/1ng3LPqSVuyRF5mRwW45AzeOs5v5Xtf2pdDt6xy0qNIZYPqBb1ZOgQlfcPlRve97o150t4XaWsHDvUth8+kFqldxkewj5meLUi21FpGl+PY1UovpEIdj0/bUVO1KwoGZGYmpuqW8kZodIXDCvYYpWe64k4jKeQBkUDe0F9uhRmxDWbuB8SUC4QZWLMUFkfB6chDXrcnKXXGASGz0HzRRi6mYp+oI2IkNR7OBDr1jqdBusQSgiHpzrsrGeJBpnrZkL30w8IwhR7AFz0FAERwPJWdfFwYMr3hGrSvDD4ItOYiz0W/zFFhmyVzmZUEBjGqssLGwrA7q01dpl94cdFhc1ud2G6PFyjbcMLpL84PJwq2xBD0Fo6xFekYgxfWrb/iS3iy/RNLQwcIzfE8kTCZ9FxpPU3wWzu0dk8JXUosm4To2cis/L1LwVseybN2y27wjtqe3QWidnNBmNOqByaTsAcgjFgktpJefXvmDTSteGZPrZL9vQZpRxXAZfpPM4rt/r/KiYl4wbS1nVQostnONeqeizcGIw48CH1BiPGM4GQILGyHGjEsNIvVygxBWPYW1j8mV121ZDC77cNlGE5JboaAK0IuwDsMPedRxSQNtIhMNr6Oe6ycktrqVnv9FpSyXOCalIZ77anf50w4UKmW1I8TMP1jzGd8E01ugQ31PkN5pV2UaV6NPD8xhYZG9JWuoCA7IGIk17X/2vFRg+IlaWh8BQzZjhDDEjCh57Wc3poKcxkR9ovtqRUziAPo4pwlP0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1021 toll at SH 45 N Mainlane falls within 10 minutes of this 2026-09-04 17:39:25Z charge; the most recent one there was T1829 on 2026-08-20.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytRWGTXQ3HtaJX6Huk",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6277,
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "thinking_tokens": 71
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1021 toll at SH 45 N Mainlane falls within 10 minutes of this 2026-09-04 17:39:25Z charge; the most recent one there was T1829 on 2026-08-20.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6277,
+    "output_tokens": 161,
+    "output_tokens_details": {
+      "thinking_tokens": 71
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

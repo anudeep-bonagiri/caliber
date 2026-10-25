@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010896,
+  "durationMs": 2686,
+  "httpStatus": 200,
+  "id": "T1069",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1037 charge at plaza TXTAG-SH45SE-01 is T1021 on 2026-07-01, two days before this one and well outside the 10-minute window, so this is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wUKEAgTGAI4AUIIdGhpbmtpbmcSDBV/0F2WuTAgT4OezBoM4LJrV4oIrKvID0QwIjBFboQgnQbWIT2C5mG1PRmmArRX0Qy03WlDRZgl12sP31BPgVa2m06BuBkQrod0YY0q9AQytPv19sssKOsvuZC2h87PvH8UUvr9jaZCC3rg0NEUZU7BIP9PXA4tqwv4s6M8qDNh0N9jal6aBhcQFK8EcuivkLsYMQwckG1WhPYPxUV6rFGRnkhOHDK6vHXbP/CoC7Jo1B1/EBkQlxmaOqBjdUyj/6x6HzCOhKGZNEoPm3k0qnQrWH9sCfgyhnW89dzbn1j6GLY9kikhWHcSmgeQcF9nMa6696hUm55CX4EG4uU+XSXrnq+89738xHxvyEK0bDsGDBU8OCJqIMR8zylQt9m4Qb7xHOn1rq+G/Fr/wu9RRosSwMKOxEg+CBNh55XOe8FE9Gxr0ptoOqAt9mhfmyD6mYO88t1lSr92PY/zgECCnlaq30PriIQOa8B6T2Q47XwI7+S0TgmM1bnvMnLEf5XCmFujkeaqq6PhaTUx7Fw0kFOIZZDQo6GQnzKC2/vYL/WtGNR121ZBicOQe/o2bgdpzLCkhmE3QctuXCp/6j58igsKWR9vAteFqnG/iowCqvn0kHYbXrFp1gbtZU/AoR2oi6p13FjWx+3OEepyRtMe4i4i9Usa5dG9SS5ygfoThprIUdcjgKiLrNUBWnvjgXabWPvrSANXKyU3TJpZUFzuIu1CZ2l1Fpb5/w44VYGcKXD9ma0PdVvBpuA5I7NsUNFf51qHV38kw6m8Diwn/KtDGMKNxXubodOLwMj/9aHW0rC33Dd1FMsUhfxn7SYXjZRVXOArBCmmYEvYdzmy3uzOKE9z174yMuRf4qFCcLJwduy92qFjnB3bGZcXlvWMy5GAzOfnVfTWhx89deT2L/wpN9u7XBp/IgW6RKq5dYP0+t3zpGjiGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1037 charge at plaza TXTAG-SH45SE-01 is T1021 on 2026-07-01, two days before this one and well outside the 10-minute window, so this is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzGwj3vHmebrZ3tAUzw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1909,
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1037 charge at plaza TXTAG-SH45SE-01 is T1021 on 2026-07-01, two days before this one and well outside the 10-minute window, so this is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1909,
+    "output_tokens": 163,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

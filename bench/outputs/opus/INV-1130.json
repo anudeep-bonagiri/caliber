@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0186,
+  "durationMs": 3537,
+  "httpStatus": 200,
+  "id": "INV-1130",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Unit price 37875 cents is about 15.5% above the contract rate of 32800 cents valid on receipt day 71, which exceeds the 5% limit of 34440 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4AcKEAgTGAI4AUIIdGhpbmtpbmcSDKYSnCWRYkiiTGRedhoMDxKeMEGN4CqNGGZuIjBLYtDj2wNTT3lrOpbNWCbhRkRbhVMBy+507/st5aSAdAhgmW4SgNVZsOdp3vai+RUq/QaXun/tjjZ+hBlGlt+OCEyMeXlK1z+ogwsYG+so6Wpo3663dsle9daCROKpAne5BXq7zLTruI6VGY8yK7+JmhzTMxlVTQMvbhCSRD/DN1w2h9VwH9L1hW8u+JATQC2zOLdQkDBjp+kjzImxVAsRzKUbtGOgBeK9Ox8aJGf103wu6hbrKkisqiUM7wsgrfy2TRDyNNy7IElpY3Yg6hXT7wDg+MhS1l2DBpAN8vQSZVP1ZNVTAB6jgPGV5LSnzp7a+M+aNDBFnyA3VB43HWlB6uJaRNc7t5PtFRWnP7GHwJ0RnIbrHCY43NF7is+Z9bIW2Z/hNbZZaF1RFbUkw2/Sj1cYgok2bQHg1RFtGXctp54jtXoKonBJSgIPNxI++tD2kwk0IkCG/vjGd53dBGaHtqoZ4FtmLhEaWxJ3E2NCI1GBV2A+2JS7AkKvnGwhDDmEjuUwFz2sK5nHwnfqqYbXeTqPy2HqDC3RoiXq+8HU7schfKtHZ6kOccy5mUBi1kLijApUiXWJqCIyBAuvnIFxgg8gD5VJJT2U9A3bworKQLKZy93zxMlSmEdNBswtOPcYmXpMA09NyfpgrxeOIfOl9EDYq9kTfsJICTglPgHbYkhR2Ot578I2OG/a/Foj1dGGb0EHLaXK/LvYAsC89YN0MXWerph323EHHt12vjmsYocoq980qJmfO0/tVAfjL2mBxdM4M3A3iAmZbmpqWQ+udxUSg+W5u+UTSh+iXV6J4dZ9VwT4yo1d65pxey9nuLh3wkedolYTVw4gq/a/lc+TGSCGz1jMwBRTQmm8TV2FIvXoBftVk+zNaXmVO4a63yRyNxzAanXiokRuc2pbCXc3oCRwF2t7uuuO4jCO3ZKnFRaScIJh1T411R6OV0UYZ8dspSfIsJl7kILNv9wsJO4c1kuMtuDtbI15OCCCY1ZWDHM99zsH6gElqrJQVxuwo3uYHXotnGXGB7oG6gQPS6GePkdT51g/Hh/cejwYL2kOJ4UVCB2vzYnf4MNVQk12KjPFqlyOWZHCYKnc7mOCO4qItofWsRNkSMkDIth4huE6PzTb5R802o8qJV+ylE/WRM2sfkuAyQSfTkd4wmp8DAYCQm7uGE/zpFYqV/38GHiyXDd4v94grd7CuaX296flo2g/6YK1OwmBFhmWqKUVNx6EquVQOqIP7/6o1VxXm1//YBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 37875 cents is about 15.5% above the contract rate of 32800 cents valid on receipt day 71, which exceeds the 5% limit of 34440 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7uHy1F6uLwtjjFuDd",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3330,
+      "output_tokens": 264,
+      "output_tokens_details": {
+        "thinking_tokens": 178
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 37875 cents is about 15.5% above the contract rate of 32800 cents valid on receipt day 71, which exceeds the 5% limit of 34440 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3330,
+    "output_tokens": 264,
+    "output_tokens_details": {
+      "thinking_tokens": 178
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

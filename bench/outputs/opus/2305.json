@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02568,
+  "durationMs": 3015,
+  "httpStatus": 200,
+  "id": "2305",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 6's nearest ping (13:32:01Z, about 3 minutes before the purchase) puts it about 0.02 miles from the Bastrop Buc-ee's, and 27.0 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStQYKEAgTGAI4AUIIdGhpbmtpbmcSDLDnnwKwkhWgeYFkThoMz7/C0nz8+W+c7/V2IjA55JtpNMwEOFBD/D2ntTa8HRsr2M2E77GMi7r9oPEKoTegfx1pOey6Vy3Ew9u3Zvwq0gVy5nQTu2gcn2eUvNGhi+u47ZzimFDz7oWQL0QhFe4e3dXhsOaNbHMNbpy99cSf4RzYvGcGP1V/VcJBtD2GTC5bm/0Ts7/EHuGykdlLAwtQMUH1ftI9JRyHxEMvlFbe4U+kGLFt6vcJKZ+xL0oFUjD8cPKtFZbCKZH9dvYheyvBO7Whzq9hR4fKpJqoHTQhlCmvMiu1Bl4YiBKhBX33fMtIShF9b5UePnwRjRRA8vCo1j3PbMXeCRW9Sc1D0lr34nVNMDnx5YK2KjgR3WehDCsqxQMCzYw3smdw1UgzQlP9fEbL3X1PRbyyf3fK0vCnBcnOoV7mihPRFVUHCHm7NyMhMr/RDXWK4XuRC3Jz68uQMlyF7RYVv2vByseefYSTcK6WlkUhlOuhi2QTSvt5/U93KXA69fiu3jgMbjiFjcGIxyJ/yLBglH0AZDswZ+RB+hMva12/Mn3sdsTeWCU/IGufzhkW6Bj+z5n+GLcTH7Cx7Qm9DYGXlhqpjOyk2wVhRX102jal8L001TW4l60Qk8NvXPlDX7VR8fz02SF3+1+JSDaQK3OgkeYLQGdYbnbuA1StaStzerh/egeQ0gU5bv80KxutkW4Jg9kKjHKNMSk0xznWw8fsH43C5Zh8ZJ8pOlBTaF7O9Y3q0b7/8Bu3g/5+zGrRB4he65VISGfug0A9o9RyHja46GfgYaZZKQ3PGjxpvdjoOlifu4/e5Gv8rWfNIzccP+qSRxXzEH+CcFR2umO0wLTcgEPSkHfUAXwSXNCqPBI6vP7gez+8EAYRHG46GyofREdKWON7YMwUkalJOsITgG5U9OgfF7l+7FUHCd+UabiVJHAc/DR/GE3bPNmg/VTxmD8HNVrnKnJ/EotHW3WnVXuPVN85WknY+fzumR/f/qyzPcKMvD4IhMXF4XXsDC+S5+xYtLeRjVhvRNZorEQ7owiiOspn8SI3SsZpei/BxRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 6's nearest ping (13:32:01Z, about 3 minutes before the purchase) puts it about 0.02 miles from the Bastrop Buc-ee's, and 27.0 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6jcGUdNFZb8J5CLhB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5255,
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 122
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 6's nearest ping (13:32:01Z, about 3 minutes before the purchase) puts it about 0.02 miles from the Bastrop Buc-ee's, and 27.0 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5255,
+    "output_tokens": 233,
+    "output_tokens_details": {
+      "thinking_tokens": 122
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

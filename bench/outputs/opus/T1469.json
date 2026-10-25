@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017588,
+  "durationMs": 2510,
+  "httpStatus": 200,
+  "id": "T1469",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1011 at Mountain Creek Lake Bridge (NTTA-MCLB-01); the only toll within 10 minutes was at a different plaza (Dallas North Tollway at 11:11:04Z), so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0gUKEAgTGAI4AUIIdGhpbmtpbmcSDIohDLGF9IEha1O3dhoMLf1WF2u9EX9q1cSlIjDWbeCknruL9TX3OZibOinPBO0eOUZQk7Wd+WQSh4U5jDglXBJPceyDEi+WSrCseMgq7wTTQN46fvvRipSjuZlqnQs0xqvH9st5NMaBS5NMfP1S+1HPgAck/IlrqOGLplDQNuC18j/JUFJFqcmSo1qpciiPTwlkaTdKlJzyMPwVws3DQTxzuIkCc0yB0Qd7ZmzX13LSpdk6x4hVj90lgS9w3YsmTg6C2WHGOaC3cIeE/9flaUVWJ+srWKiKBkMU1ZO5pVBDRi7LcRestgfmunMT9MdrDF8RNA2w9TLbXHwEaEh8fflcDHTK4LrP63TixTed04RwaqO7g4ysATlX9B1p4K3LpRRfaNOZdQH5gtxd0DyVUsaXGVtWEMgdGwMTV0Ixo363rszovT/rdQB7agDD1i9zknU1ac/GxsZnbtdTQ3qe6HyUmFGs9vRwJNJVdAUabcDv0k/6Kl4brjGYNqsgO7+M66m6j/sTxsb7b3cV3gG0v+Y6dMgAKi1pdTFvXotNx1/1pSA9ECRNyNSZTn6dBpphGmvPb8Eq3jsWb4OWyYgDVNmBEoFjmxpxGXEgQotqQOzdWhIEd9iL1Pb768Tr6w45iQomdpWfoxKogzwQoIHu5VdDKEm5h+HtNXpynWPwYv8VdolhdLY0/9lIjA4KVA+IRSgymaJHj1EWy/O8giP/fFddxgoYtHTY8etujYRQRbJcEJtMuM/ZsKXqR0XiOcg8rwaN5u4iXmuFn5viHjcvay/G1Q+/6XX0YUKz7q+G8fkDzQVG/jWCrUPGtdWh8veP9aed/i1GLgJEuvNTkvgAFnpzpegys85XeFEtAtApv+G8bVueF87OQrgZvd9NRDoz2BTBeDw2ERWgq68WKBd85PXCUNFbOnwUG0ju7jfPFRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1011 at Mountain Creek Lake Bridge (NTTA-MCLB-01); the only toll within 10 minutes was at a different plaza (Dallas North Tollway at 11:11:04Z), so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzBNXe3cZscCxCpuN34",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3502,
+      "output_tokens": 179,
+      "output_tokens_details": {
+        "thinking_tokens": 71
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1011 at Mountain Creek Lake Bridge (NTTA-MCLB-01); the only toll within 10 minutes was at a different plaza (Dallas North Tollway at 11:11:04Z), so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3502,
+    "output_tokens": 179,
+    "output_tokens_details": {
+      "thinking_tokens": 71
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

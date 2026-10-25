@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.034116,
+  "durationMs": 2502,
+  "httpStatus": 200,
+  "id": "T2349",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1021 at Mountain Creek Lake Bridge within 10 minutes; the last one there was on 2026-09-22 at 12:04Z, more than a day before."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5AUKEAgTGAI4AUIIdGhpbmtpbmcSDHGFTVJre/LjhHglShoM65R2npqAR3OC7oTiIjCmBwNxWBk+dj82JHSAIF28V3+vgHE/hvhQD0MsvkDwn0umfzu0Gk8qx8veQOYbfIYqgQUVX7SDB3/1+4YJjEcPvHnetZldx5xI6yyxv0h+YfwsBGcKZRsrHQd9is0AUCjYWraxL9ugqEgkEv3YakuAdJ2iuAsKVW+MGSziXzTxLctjg9cIAmlaC731ZjegAFIAfDw3bq4a5xZ8iKKCP3TTk6+EHN/qhH4dEJfIszppk0Qf1LDCkPPt6L/UvlRZR3VIOYBkf/jgKs6QTROCT9rVZbjPSptE4w0i1LTGiM7865GkP++5xRwf/jUu3brEtQsxyptyYX/XNAHK5g80/GRIZYTH3iHUhvCxUmQcYOyuGBFc+zRnEwvx/9h3ELSpSkmyEvoOvnFYMX6h96zlZALtrDpbYBX/oxiYg3Wurke7DLuIUJvbA0eYCKnxhdmRdWDmZqIzP7LPZxdSDUN7C8SO32w6j9L/REqjOuFUUPyFE7vgedIHyqNCDT/+BKkR0WowZ9ggEsxuF4uuO5qpPHhGCfJVn6F/bueuhZxaD0WhDhIb6BzTaNKhyJzQaHz/Eo4BuHtyWDQpI7Aue5feFlqLDcq8O2M3REMUOCir7ebbFtiYBGao7I8DLOkG5YOKOxuUPbVFTsu1BGtFeJ4nf8PNIt/gvHjjMu3U9B0QIUfa1RCKA8XHwZML4nkUS1Fl9ZDQxOQgakh7FQrGmruwos/nbIrSRkVWoI50CcWGkhp19VtPEWlDxkVom8zH7gb2jr2AyoySclRSX3EdWbHp4t/rojg9QL/GHxNYEzt7Ruud48qyC2BiExWh6xymtvIVDlKwZVclPh2NfOZJpe7Pq9xO7XYeH3V3I/kJTUS4UxGRljQRHNnU2CXumpdlcyiSbOxPB/7XVDY56bdnLmsrbTz0uaTGVRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1021 at Mountain Creek Lake Bridge within 10 minutes; the last one there was on 2026-09-22 at 12:04Z, more than a day before.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyFX8hW8ohDtZ1o8r7",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7669,
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "thinking_tokens": 89
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1021 at Mountain Creek Lake Bridge within 10 minutes; the last one there was on 2026-09-22 at 12:04Z, more than a day before.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7669,
+    "output_tokens": 172,
+    "output_tokens_details": {
+      "thinking_tokens": 89
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

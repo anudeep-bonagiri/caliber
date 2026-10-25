@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.032512,
+  "durationMs": 6517,
+  "httpStatus": 200,
+  "id": "5035",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Two engine-on pings at 13:25Z place truck 15 within about 0.03 mi of Stripes 2167, 5 minutes before the 13:29:57Z purchase, and 30.6 gal is well under the 110 gal limit (100 gal tank +10%); note for dispatch, though no policy rule applies: odometer reads 196786.0 at the yard and at the station 2.4 mi away."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSswsKEAgTGAI4AUIIdGhpbmtpbmcSDNm5cRhiJusaKjPMMhoM4lRkKIJR6vxYKlbnIjB4OyWcSU8cyMrxHi+05fQN13gL1K1yUamfctU8Y0huMbkZpmiy+UhMzlR9W1pb2r4q0Arx1K431VshGy9popna9txITHPdp8eQVYsHqgVg6QsftqhpfN8KSab9Xjo+2cTKuqsBUO2e9CuGqHqZUSYB2f9Bhij/TluxxDgYy4IPG/h2sTc+yyGOv951U4WSytFJBLYvkDaYwkYT85RGjsWBFoFsmFd5+zUgkVjTF6hfDrPxz2unrwOhensHM9DLSh2Jf4KcJNf7MJ7e+ZRDk2bxUDzWGFV25NL8WR8+PR4atSmg1pauU6s2KurSBVW1cVcmlILN2XcKYxd7zQpInq/YSmLAqgx8N4H++cN+2R5ZDSBK0zEE4weZHBoE2w7rtYDa/xdKiu/UsgKxMfHFGLUp8A99pXsNgaQusSP6h1zxz8uk7393FwNdns5226ESU2/K40x0e2l9eGvmuB8C2KTPPp5GRrDUZfnsEAI+VJ0+MTPGY48CyhPKjnlORg8AIUcAKL18JK2HMVuICWReI0/p9nGNq3DnCKSFPoGo8Ok1O/6PPw9zNTgyhh9ljzwfWtzNHu/duIYBpuxV0fX8g+eQhQKWLOC3QkHKxRbrle/heNOOyIHa6zMw7sJhMMcVKNsWsi/SC9NXZP5L+yNRwvk95jCbDEEbRPZ/0i8GK5CK2tLjzqLXKHyfhXSy+IBeR3C+uwFpQReDg/MGws6ZOyPLQDx/hokOCZgVI3h20ehFvQ/8X8hUeDkJ11gWsXcBDrCAduKb6X6mhCR7GZ1r9l7+k6Q0oRy0JE7C1k449TtaPE/oTqA0OHnRW/ZipvZPMuoe6Ru7xzphqSShXajURESCp6GoT4LaFxMvFuth+R3sEzs5k+pt8WO7CSG7U+xxTfwObXXM3BLyhwQcKYtQne9c0Cb7CgA+areP41KO4M8c953JC8a5cvUH33LIXGLjzklODw5cNuP0T7/p/x6sOXCQCDuTbghZemq8vK+YGhWpIGJuoqNhcpKnAhUWPtHv4f/wmnLMTSqkEshqxoDF5a8V51rMFaGCuGfNHCKjGfY97jfS3oHxyhnPQUkadGi2RVHK03XJ0CgOG4J2UcmQYYvJPeYuLMMCtFOSpyTmbPxG3SakZHihA2lyjBW8ZewXpCrRaRJhA5ZxD3tcUqOX/MnUe+WIymLWdd3/+b97suSMSpwr0EptwN3F0qQBUfdETzqI0bP1++nxYdbFUCXzWdlWQnaE1lcg39j8DxRBm4whCuOqzUEURziDfKk8uJan31kchIXmz3TG4yW2vPhL9/u/vRvCx2GbyPfg4rEt0TgNS9nVbj0bus366EqkoEbP8imyXuarKTlSEULs6UuC4bbJ0+qCnwOfDIZWuIQwcb5PE6Rcsj4jpkd+edasORLlq3jeSAfwIkdABIo34cnxQl4dBRhrvCamO7O9jvHOmrmmSkEHDpeX1liCF1R8YQklLxx1Q5kwLfrcUF7jDgTbq8rFAB4Q4X2KWGAWYXemqEA1iuCPr2eP6EVSKH9GcKfnFQ1N8eS+xq9Gnk6ZsdAtVa68FgLVW4o9F4q5GcKl/cTmpb/wjiNH2SKhZP/he2rexs8s1TEqmOOx4aG2UHX73pBbRQDuUbqsobVVO8P4frfjxNNnROjJc/h5y6adTrFEo9bzqHXZ3XsGns4kpYtPFcynXZipgbRmateFlXzlfw6ojVpy0HpOswuPcv8l9JOqXnIOFgto5nH52N0dfKvkg9oGfNg81IPkqdF+SvtSmUP8/KjZY5eO6SvKWsBS6rTjgZxOnZwsOk4B52zpdclNANB6hA6L84RpvL7KIF4izceHbXg24cmceJtGSL7Mw49j+whOi+5LlK6OBtZaBkwAfdiAtqQ1GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Two engine-on pings at 13:25Z place truck 15 within about 0.03 mi of Stripes 2167, 5 minutes before the 13:29:57Z purchase, and 30.6 gal is well under the 110 gal limit (100 gal tank +10%); note for dispatch, though no policy rule applies: odometer reads 196786.0 at the yard and at the station 2.4 mi away.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyv3sJn11Rit6RyYSHs",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5403,
+      "output_tokens": 545,
+      "output_tokens_details": {
+        "thinking_tokens": 395
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Two engine-on pings at 13:25Z place truck 15 within about 0.03 mi of Stripes 2167, 5 minutes before the 13:29:57Z purchase, and 30.6 gal is well under the 110 gal limit (100 gal tank +10%); note for dispatch, though no policy rule applies: odometer reads 196786.0 at the yard and at the station 2.4 mi away.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5403,
+    "output_tokens": 545,
+    "output_tokens_details": {
+      "thinking_tokens": 395
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

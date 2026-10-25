@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019268,
+  "durationMs": 3818,
+  "httpStatus": 200,
+  "id": "INV-1096",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Unit price 67350 cents is about 28.3% above the contract dpf_clean rate of 52500 cents valid on day 51 (5% limit is 55125); the invoice total of 137825 also does not equal 2 x 67350 = 134700."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8QcKEAgTGAI4AUIIdGhpbmtpbmcSDK6XfwhHIohRHlzCahoMvEdOzZXte0XYPBGZIjDH1Zllz02VX/2Ku01E7WXZ/mxlVTgE6znZDO96xsjmxhi8jfz6wDGScsY6QiKHrSIqjgdbuwA1GOrgs8HjhgdkI+U7pKTpNafPnL6qWxxnD3nzNlj6fMMk8RZNarf1Vw8VQPCwWOYErycVQfJSO7jMzbvpIM9lWjIwqAQYhbLQdiYt9JCLsmWutQmoquvQGsIz2S0cT465NWVwQdEMh3/sMZr5W4g0GKo46J9qMfkiCgrtkqQpWwHxLj1EjFSI11rI7bgEtU3p45V2NaZaEcARYmSXUp611HDjAdhqFA2okziyvBc0ASSJmRKJnWjwQVEtP9FrzPg7iZqqNrsKfRTzEi/oDQQp7AvZZCqHJh5b4wAIx0yZNsYaQKR5fbAaGww4nRR49Fw0u2cEDKiz9Zhct1z6hG90Wjg8hYhEEwP77fVyR73IVVYgMz9bi86S7aBt491pK5a4QzsZ0eWhxrqN9auvhvXjS4KSloBNkYAWK9DUozEqze203/t58vBB+Klb1Bqp18pZft91luV74Kqf3hTIHFQRXKcTDdxO6ybhtntEfEm0f6YlMp/bI2J2jUOc80Dn54NdmqgZqn6tQyuRflFKsq2Nes1bsAnhyKMrww/ZfjBetiPQBx2gyux9rOTFvBgdmWyo+TM+7YaIOVhhblF4OCYJNbsR6SrUM7pvK2DxSENF4whQ0WlJGT/NGAPG/BH5uWjCSCjb/RZFvFpgBMHtCBoaW2tpcBSXLRN/zv+KjHvwqzJHYAn6w+A621rdIqtl5KpA2lCTwqxXsFMojlxoqT7ZRLcwFOKxCqhT/NTI7S+qhCyD2UVOlH4trQ5WJlo1iU3LKL/eytwzyEJt53rvG+yids0PYULGuK2MbBo9YZEU6a9duiTcta+F0tRvgLlik5flQCTI+/wclnnpWZxrQpvlx5rWPNRu7wJJIy9CwV+ovRcjQQ+igsYP6h9DG7cSYXBAXrwDAb2xkRFy12vlmf7eTNlkYrHWw+Mk9CZGAkLPj5Qo2y56gNBmzg9q/8yfZyQnyOLu8OpbW4LaqLmfkZbrvZ6HfyLC7mLSKSoDVDi/Ih4AP5sTteAjLyGVFXCP7uVfEoRr1a7DjP/yKTqt43k2OTJyfNhZ3bV31p4JnyiUCxdHj0EFxd+1PU0ml7pEW177nmSYJsLiP5WymY/kpfzK7aFH+3lVbKZS0xkBwViHiaqRfrdjlBLUKMTym+5jN5dC82redBZWubJB9LR4472jx9PmH1BRS4PY0XEz4uY2fKwJ4F9xmMyIWybkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 67350 cents is about 28.3% above the contract dpf_clean rate of 52500 cents valid on day 51 (5% limit is 55125); the invoice total of 137825 also does not equal 2 x 67350 = 134700.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqum39DcEHktSQVSQi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3337,
+      "output_tokens": 296,
+      "output_tokens_details": {
+        "thinking_tokens": 188
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:47+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 67350 cents is about 28.3% above the contract dpf_clean rate of 52500 cents valid on day 51 (5% limit is 55125); the invoice total of 137825 also does not equal 2 x 67350 = 134700.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3337,
+    "output_tokens": 296,
+    "output_tokens_details": {
+      "thinking_tokens": 188
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018116,
+  "durationMs": 6034,
+  "httpStatus": 200,
+  "id": "INV-1036",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule applies: unit price 51900 matches contract 8, qty 4 does not exceed received qty 4, no bank change, and no earlier vendor invoice has the same amount (INV-1013 is 208850 on the same PO-1015). Flag: PO-1015 now has two invoices for 4 tires each, worth a manual check."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No policy rule applies: unit price 51900 matches contract 8, qty 4 does not exceed received qty 4, no bank change, and no earlier vendor invoice has the same amount (INV-1013 is 208850 on the same PO-1015). Flag: PO-1015 now has two invoices for 4 tires each, worth a manual check.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhxqc2Rrvg42iTJVJ8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1899,
+      "output_tokens": 526,
+      "output_tokens_details": {
+        "thinking_tokens": 398
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No policy rule applies: unit price 51900 matches contract 8, qty 4 does not exceed received qty 4, no bank change, and no earlier vendor invoice has the same amount (INV-1013 is 208850 on the same PO-1015). Flag: PO-1015 now has two invoices for 4 tires each, worth a manual check.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1899,
+    "output_tokens": 526,
+    "output_tokens_details": {
+      "thinking_tokens": 398
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

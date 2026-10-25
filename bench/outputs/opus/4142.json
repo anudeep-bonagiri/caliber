@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026736,
+  "durationMs": 4033,
+  "httpStatus": 200,
+  "id": "4142",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's ping at 14:10:00Z, about 2 minutes after the purchase, puts it about 0.01 miles from the Sealy station, and 69.1 gal is within the 165-gal limit (150-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4gYKEAgTGAI4AUIIdGhpbmtpbmcSDBxvp20vR8fZbFKjARoMtcZTaz6eBy8pT6z4IjBRwRzvmNpaEN5QOFsf40KK/um3n247zPPQqsBJy96lCgvmmtERygHxTRmfUNqBjaMq/wXRPtZ3Vdn3KYZkvs5Bb5BTQf6WZJnJ/nQDUf8iINipmNU061a/zvDq9mWrNG88yeUZFmX1UcQQcuJHvnKi2+mDZSaso0e2CaSTYf1jwdK5EXfrJFMJZA4HeuemcUww9KIDnSlBI3la1Zh8+uQtJ8Tj4EJ55rCbFLLHvzcnXETEMFkOER8wyiaJI2Bna+6YbdeQ/rbaLEYDUPLnTDQf0/o/nWAbNECBH2EVCYy6d8c32MEpjOyIYb6DTxxbwE/DCbAvD3pbNULXOFu+MDJ46Zo7ihXvO+pC811MN5rosziVQFnlYY2Xd7zLPcy4QPKjOQ1foJ2Fttn+0kiFLas3K6RgK09wmHcJFp8xyOVvIO9avh3P16S0cGvzJ+XizVURpTKkSYdr/xScLbsKjPhHVTGQwfpPUVIMGM7Fo39rZr7bPoyuC50lTOWlrEGoG72fyN45rITRcZPX5ZDAO+WQnm+UacJuynG8VMSc5ON38jO9+QMF11lR1k2duxJ1FqxpD/wLf7FxRdTKsrKkgCOD4hITD6+v3SN2oDbYxgiQxVvMBMD7mluUfGwLbkNCV1dQ1cfo9RKBXP5EKYVCpdnx6KV5KisBvxVd3nhyQc1p2HfK60DM1toM3YHl/XJBxQFXHcqAtzuroeCBSNGreDcgf8J58q3JfyPkTLt91teppn+Ro14TVgt4Kk6lAA1dRNn3w5DS6gr4BZBfgFpqs/i0U042a9EWLG3RvX2nawmanXsHFvy8BrE5GKrXzza/v4Bvw1+oaw4Tu5gwS9GxK7vivL3Omb68w/Yxbo0MZOpNaB6qNe5pSBjixr7CB6j3zj6gqKdJCGGYVUImbzXngmpah0pKDYs31/+SVhANUkVnSQd+ufy8GtGBYBeVIRyJy/Kje8GadGzHC9buqinxVEK+J5Dre3w6GsOqJALsCPhiPXbc8KtNEf8UP2iQdOf78DNtuu8KmgpFvgkIMmftIQ76f/CqyLYR/OKnFp4cCg30WpOsAJXt1xuh0ncpQsTwL9XcFhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck's ping at 14:10:00Z, about 2 minutes after the purchase, puts it about 0.01 miles from the Sealy station, and 69.1 gal is within the 165-gal limit (150-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrs8p8KGauD4HJJbwE",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5474,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 145
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck's ping at 14:10:00Z, about 2 minutes after the purchase, puts it about 0.01 miles from the Sealy station, and 69.1 gal is within the 165-gal limit (150-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5474,
+    "output_tokens": 242,
+    "output_tokens_details": {
+      "thinking_tokens": 145
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

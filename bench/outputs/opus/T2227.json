@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025264,
+  "durationMs": 3198,
+  "httpStatus": 200,
+  "id": "T2227",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1009 at NTTA-PGBT-01 within 10 minutes of 2026-09-17T12:13:14Z; the most recent earlier PGBT-01 charge was T1151 on 2026-07-08, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStwYKEAgTGAI4AUIIdGhpbmtpbmcSDOk7VBp6HBFPnIITNhoMbJ8LEje9uEElfLLvIjCp744basLcAkkBh+ouGFgTCxNJNomqoytQV6qO0hpjQkfcktOczRU1d2LswvKYNtMq1AVEbzMZmWTzSLtX35DHWtcb9OtmxxeReYiXKpj050tO9MkLKs3j2r3ALjBhOKzjm5xkPjCuxKn6/HqnrikgLvvlbuYhEeuTL4PFSmRV1Ixfrn2AIiJ3o/LQXf8Hs8LBn18lV8x3P5uc0sKqRdqSErNqjYXw69qfr7ulINaorAYemlqOeQB32RFv4IAMVwHywohZMmWDj893yjC3bebD7ggw0Ob9GDN2lUeH1c5D0sbVLlfmCj1n5Vm152rlzKr7Kmch196fUWnmOE/CQFY5kMtO33pfATnWAOJ08ckZbIPXRn86PICXTp4yA6eYSrqNqlArMAAZyZwP56vV5IgHg4LUCIXfS/W/pfxPne2w5rFEUHDBSzNzVzHzFn0qkSuIEhxAxOpjIxlHbncRlZDeVAp/EQ4F1uGIwBQOMSA05r3r5zV7ThRBcxDTDzdmO4WwIoh2Yx7RaU/8o0A15yULMEroltdtN6gZ5l6JKqACPrAYYd3/HHHysElgruG+TGoa/pF+ugo6MVBUCzR3z0Q0swfeD2nH+I2DhDCVGIv4I5ulIUBLUiaUcFwH97tT7UEhno9hk7EQrU16FjOwIh39KaZauuwfVHPI+rss1MU3BKYioHLkzSLqSnSbb6HciJI+yzYwU+VNzRVzUyD7SZSg/96sqqDmbmh06S55EKB598NuM6o2EHM1/eEJxLmlBGtc9P0P6ZykExCZkxFEyCMUly2KTbtuhrAFNrZ7xFS+8ZltGoowzY/5h1uOj9QszIJA3MvCfTPNZBlLIPgO2e0FSqqE//BvhQaiICVfJymx9S9+FDt8YnWCxboaYyhMMjpqJhRDcUBns4Dr7e1JfSbzqRHbAfCnsHlJo0RRnGUnrQHvs1EU97kScKhbM0BqJL4Y4tBdhXUq9iMaD8GOVG59bB9Wa/o+wVmBO/ZxbI8ZVyEX1Z7R5J8VQ9BvS55FxVEyZvbnOWRbGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1009 at NTTA-PGBT-01 within 10 minutes of 2026-09-17T12:13:14Z; the most recent earlier PGBT-01 charge was T1151 on 2026-07-08, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLrtTx1bUZphGKoN2u",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5156,
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1009 at NTTA-PGBT-01 within 10 minutes of 2026-09-17T12:13:14Z; the most recent earlier PGBT-01 charge was T1151 on 2026-07-08, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5156,
+    "output_tokens": 232,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

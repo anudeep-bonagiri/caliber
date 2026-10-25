@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.050924,
+  "durationMs": 3517,
+  "httpStatus": 200,
+  "id": "T2956",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Plate TX-1014 was charged at NTTA-MCLB-01 (Mountain Creek Lake Bridge) at 18:23:55, 6 min 42 s after earlier charge T2955 at the same plaza at 18:17:13. That is within the 10-minute window, so this later charge is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSywUKEAgTGAI4AUIIdGhpbmtpbmcSDEb/Zh0bDG6GUeLbwhoMGiB5HWzQN1hvnmc6IjCuHA21ghvNMpGAFLvYFErOONdCnKlphEXAzqoVazQmDRk74BvhDnEAt0KcbXIAeWMq6AR7ySXjesZT4QDA/UGXKiPk+6KelzKI3mtcSY0AKtKrSG1FyuXcTeMOyJcST6iHaxBF/3Lfdjz4BzvvFM6G0yHlhR5XGYULDLptToQ3Jzz4jXRloDHIQlDkn84QCI3pqrV7BiPChYCOahMn/ShkpvhDeyZi78vy6hfoXVNOFClSjo6aFSTwFgD7pjHHU9IILzCTlBtKPVXhj5NStw3xLul/qUpm/8uLRZFGYVxf4lqHJcHFXXd5zlZpr6MrTYsjCjinGZIcJOMdVRFpX83kuK3O7YvpkBdte+xYdszU/WVhcbXubTkZK3GeOoBhV4/HnMHzfv12ISgdVW4yWocF3psJHvndH0zt7GboeE8pGF8HFK0g1DgfZJ/PO3jdnf4T3qKMfDiEMLlcB1249reK4xKXS+0M2sLr2WPDxoCn//oIa/qRAf1MEV3gsK/F2eVEIkKfXj1lLJv5rjtmPk2Dd9qLzydC5nRjr4YD9CRKvyTntyXot+0XlomkrgL6XvB1jNzBVUA49mnQ18nFbpJsfQStkuHis6GSzsc/CL433dG6Rr/KirZ4Wk5AHlasSfXCvFphpSmWrh7NhwPewt5LTHEaVY5mbaoobXZ3cLpuMBH3TYTuuxL0yX48vyRxEKr6LMCTmUTwNa6q6c+WDKtZuDIztohxZfd2ngWOHhQMWmjEE6GtnzPT4yJSEcaTU0evHGJqS+5unMKe0y1t6PJYNjj+LxSS38sa+dXS6lJ3QE8sBw+6srFtuudn+b+r+uKbpuuby2z/dGw9wBmzqtgJYEyswrgqH33s7eswHlhPmiSda3cUsTLo7RTFGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1014 was charged at NTTA-MCLB-01 (Mountain Creek Lake Bridge) at 18:23:55, 6 min 42 s after earlier charge T2955 at the same plaza at 18:17:13. That is within the 10-minute window, so this later charge is the duplicate.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyv3UkhXoJBYsGjgF5L",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 11671,
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "thinking_tokens": 74
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1014 was charged at NTTA-MCLB-01 (Mountain Creek Lake Bridge) at 18:23:55, 6 min 42 s after earlier charge T2955 at the same plaza at 18:17:13. That is within the 10-minute window, so this later charge is the duplicate.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 11671,
+    "output_tokens": 212,
+    "output_tokens_details": {
+      "thinking_tokens": 74
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025436,
+  "durationMs": 6368,
+  "httpStatus": 200,
+  "id": "INV-1154",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 54500 matches the contract rate (even the implied 56375 per unit from the 112750 total is only about 3.4% over), billed qty 2 equals PO-1018 received qty 2, no earlier invoice for 112750 within days 51-80 under another PO, and the vendor bank change on day 18 is outside the 7-business-day window, with the amount under 500000 cents anyway."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QkKEAgTGAI4AUIIdGhpbmtpbmcSDKpqpqEGIbjpaV/L9xoMcbA0RKwlItLKPRCbIjCLQK+kS/iDFpxk+2R0nVIyYgUTOrL/yjofIm7JiG+RXlsZ27SKE/BonFY27gyDOiMqkgkO0HBvtk38NLQIJJEKzFxI0RVbdRIQ8fguqyuA9KsnQz5Xvp5F9yCW5+HMy+Km3fAWd8EoOLuvTZXH27Od63ZMnTUGU+RKdnt72YIQTAge09JdyCx+x6bpPB71nlH3eZBxS/1x7bopySC9b8gWNcAGBpUQy1x+U5f6vVfA1jGODgFAPbgFayGq/STevK4s8Tb6nDWM9xJkRtqAgJ8SLMjRwJU6d4kDTGY7Ea6BzvlR468RTvNnwYxzaTkE4pEii1lwitJVe2Ba5fUEd60v9twKcBha7pO8AZuMbM3NHvLLkfVvin67dSYkNjc3JvnBKwpaJt48/qFsWIKkRQBYoEbJw8iz/GfB4K5IGzScX9NN4znjVfJqCjaQyx5Teqj9s0hoXzJ25VN6CkXR9O40Rto8meoBQ+9QOuE9090ThYzAF52UzBeGGf2pzpES46pY621VdPoqLdXOb3o5AssT5QuwZzgW0MR0Oukng/64SOELnV6tqx11rt2zhvZqYwZrcEqUqggHplVVvboSh7vPVPeuYsZ4TT3+8t/ihSvLoBlE3z+gDAYJZ5pgQ+9cylBjpuAnsYJWwAQz2Xsb6EOTXCIwRY3pAZ7DE2b2/aiMNo6RFUiZTWXrBKj7NOt5iqFNABwTdI2siYjtdGNWpTvHxT4MzgnG6Of2ySACPVMEQ4uAlnmsGXmB0oGL+CgYLir7P+6+L+/ynzgPXmXccrrfQzcvONCGEb3QUZBm6KpFjg6r0b5mGAbECC3NibGtCDzprIvvyISb+O1fM2P5I7wAnQ+oEvJzsZvecrkgoz8T8RdCuMLp0wOAE2XQWWUkp97/Vbs4LhpnBo3b4f+Mo0qw+sA6FNUo1khC66BOuU2lm6OaUPhT9mEnd01OhzKz/LC7AIlw1uY7EjUtzdq8UaDs571pkQg3w3nsOzjRed2INBOfxNhuGgAR/UoqWM8MZrbsuys2gNrOt9lc9Y1DOZd/Rq4oLFMwNUyhuXybCXsD8pqkUSTGn5vYzx5krG+qL6ZOVIcoucxeEWd0tZhLJ1JUPglp1OsS23HpErUzZ4RRwsEOr409hZYqNhdQLTv6usv89cN7HML/MCP+wav2V8XQHKMKT8T8dGAEvSms9lv8F00lTQCWKRr51i9ZSx0gGDdQhJMFEyNxMtlQbFqEBr5N8V7TFzUSftbLsT+duczw+OUs7Oh6yrqiiqPF5DeK1WVK6SXfwwnNczr4wXt42/DRPayWUZYUwQfAJRVd60zlNdxGplVNPhHeWy5CZYdw5mGnE7mhrfxbdybvPPiJni9Rea6j2Ch6WHDZozoBDV9IOBpJ1Q5OQgGrn04t0KfZw/cm+G2aB8vF9fYWM63gVoRi3zKm1CoIPAlsfMgBxZ2j3Oo5SIk2/n1UXCOpTEvSmhhMTYhZingvWZwuzpzDKKQvH0uw/d6G58reqizwkzkhh4vkzPX6PSEo3uUf0zHkJE6p4jwRavVNU9WbvvAyHOF90uIWbDPDzYyKF1lmVXwZ2JDPm4wpOSp4PJWEteBet50v6opnSjdjvlibQ4ksXYbJ1Tup61gYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 54500 matches the contract rate (even the implied 56375 per unit from the 112750 total is only about 3.4% over), billed qty 2 equals PO-1018 received qty 2, no earlier invoice for 112750 within days 51-80 under another PO, and the vendor bank change on day 18 is outside the 7-business-day window, with the amount under 500000 cents anyway.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCXuyrLugndzn9qup8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4099,
+      "output_tokens": 452,
+      "output_tokens_details": {
+        "thinking_tokens": 301
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 54500 matches the contract rate (even the implied 56375 per unit from the 112750 total is only about 3.4% over), billed qty 2 equals PO-1018 received qty 2, no earlier invoice for 112750 within days 51-80 under another PO, and the vendor bank change on day 18 is outside the 7-business-day window, with the amount under 500000 cents anyway.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4099,
+    "output_tokens": 452,
+    "output_tokens_details": {
+      "thinking_tokens": 301
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

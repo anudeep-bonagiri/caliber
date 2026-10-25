@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.039792,
+  "durationMs": 3161,
+  "httpStatus": 200,
+  "id": "T2498",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1010 at SH 130 Plaza 4 within 10 minutes; the most recent earlier charge was on 2026-09-30 at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5gUKEAgTGAI4AUIIdGhpbmtpbmcSDIF/LxtwVvUACepaMxoMGydg20bV3AEk4zGxIjBtyKn63S0H3E2PWksHYO5zvLre4+SLtAyPlHKuDE+DxCIEux6tANYxDtB7D5gPs/sqgwXo0w6r0sJAZcDvsRX0lgc7uIzRxx8mXRlZNX0jQyUFFjA2N7WDoRHexllv1oeiBpxPbCfwAbPw9hv4ZMWSeFH3mP3k/A30+w6IQHZJH5rWCJnsHggq0ZJSuoqVyUs3O0OLnrlQTHzllEIUkfJevjBZ1cAZI550MXvIIY3fe8pTnoBQ5RPm0k/Q0QNboxUa2f4iMEGCiFczMblQrwsmTqy8aPQQiXgLLiLMluzBz4tmnjcKnRrJ9lL82EoOScSc7qfleTKkXdZFzF+VUUVFntHcZVGovwW/GazKGVjzfRYar1A6WhybYMEHJLwQlqJFRJxBsdO8/shhU8e4+VSc2sdd+9SxYyEPoMVGStlBdTZs+j9RJJhYQa1OFL3Ni2wAdUkbH7bo3xqA5TTiwiiXcDfmOha/VuP5QSHcINW0FcXz6by8pFreqhOF91Cp28AvbGhPv/f8LkUCsyciWuvyGCXYR5QJ5GPHNZWF7ZIEEZrzPNeHBnxapSHTXcFwsZEzzAo3BeVXpIfnNDTkbKW5zFRSWo0zX4vEqzwyQbC5fBvWdzV9+Dv1AMhpHf96oyj7OdbuVGie/5UNNFQcXGQQN+87+lx4vmkrWpqdNGYGH3oLKHmFo8xR9aRDB1KLmvJIBJsJXZcFaYY+3XNdA05t5yDNRaN+UozO5oZOQnVjt0R6yClutulQKaQb2eHCkmhQ5qe0cnYXwAlc1tsapwzObRwo65WucBby6jolo9hKdHWhIUtqyVdqr5HnuBFzvOTB3xW9uXlOes9rHgCrFQaVSayKwURtxPp65LfwVnKaRdeuaQ8GEUP8W+BqJG2yqGAJ+J5xjVgSTW+ZBcY4BieKMPwinaofGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1010 at SH 130 Plaza 4 within 10 minutes; the most recent earlier charge was on 2026-09-30 at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysg753nDhSDFfzbhY5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9148,
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "thinking_tokens": 81
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1010 at SH 130 Plaza 4 within 10 minutes; the most recent earlier charge was on 2026-09-30 at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9148,
+    "output_tokens": 160,
+    "output_tokens_details": {
+      "thinking_tokens": 81
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

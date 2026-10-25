@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.033944,
+  "durationMs": 7761,
+  "httpStatus": 200,
+  "id": "1275",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14's 11:55Z pings are about 0.02 mi from Stripes 2167, and every ping within 30 min of the 12:01:40Z purchase is within about 3 mi; 35.3 gal is well under the 132-gal limit (120-gal tank +10%). The odometer reading does not change between the yard and the station, but no hold rule covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14's 11:55Z pings are about 0.02 mi from Stripes 2167, and every ping within 30 min of the 12:01:40Z purchase is within about 3 mi; 35.3 gal is well under the 132-gal limit (120-gal tank +10%). The odometer reading does not change between the yard and the station, but no hold rule covers that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNykMShurBy9jJAvGMmQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5256,
+      "output_tokens": 646,
+      "output_tokens_details": {
+        "thinking_tokens": 510
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14's 11:55Z pings are about 0.02 mi from Stripes 2167, and every ping within 30 min of the 12:01:40Z purchase is within about 3 mi; 35.3 gal is well under the 132-gal limit (120-gal tank +10%). The odometer reading does not change between the yard and the station, but no hold rule covers that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5256,
+    "output_tokens": 646,
+    "output_tokens_details": {
+      "thinking_tokens": 510
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

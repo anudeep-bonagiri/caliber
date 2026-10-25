@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027008,
+  "durationMs": 3298,
+  "httpStatus": 200,
+  "id": "2821",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 22 pinged about 0.01 miles from Pilot 1196 at 16:30:00Z, within 6 minutes of the 16:35:23Z purchase, and 60.5 gal is well under its 220 gal limit (200 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3gYKEAgTGAI4AUIIdGhpbmtpbmcSDNcW3u9PjIovtZJ7GhoMfK/8HrOrx+5xQRuFIjBV3iC0OiQo3MwcxEpsl3e0Y0WcuWqINzhibDkvzZbD+i9qIh+ZAa2CuPuGRV3oZogq+wXP6AQlHOdT+4LqlMIZNDon/7xU25nPhBO6GrEDDFC7z7m2ArVS/+01aytWH51dmSRLLV2QC+uoJ06wWkhMCWvNU7nrUO4arWad1ayPmIkGPI1OoQhdxbox2VWMi/pv3zKRpRg6v6eGpIElEoLCoqXiBQ7nIi/SIrHkLNVndVJAwhhDRnw9yl1uG/7qiRHXdbFd5TN9M/Womy+Mh/53rggPHaAY0I8zRhNuGQTKHr038ct9LqCN1PjI1/L7fv7Cq0Gfe1XGq0QAxLyYlas6cOUqvxtyt+RjlyNq35lwP+RB8rRzim5YhY5gvBlqpHUvmAwZUdeZtVOjwKUAQmw95Pl7eYMY1BB+CjLqZMHt173wCKDsEKFPvRCSUpq1UG/mJQID847Gb4wrDdY2DlWzlKiAzL/tx+1LluhPaLY+qCWbVgyiRnmT9GDUEFemjmWDKhb72cQmgH5PIGF5yfvwVDZ2+D3vgqdzG5BHhOSg4TLfjZduT37X0Hns5NgIbyAf9mIkAkl6YwbbSxbcv09vLA0koRGt7SweikSbNfgKd2RE53tW+X9IbyCcvWQg2w4Zfg2gN1yM5G3KKWv/hGaTHcFbY51ffzAbIduDqDTYnb9+h72RavVBPRNePPYow+PdzoW+82rHjv21cyxDutJBdfFltAYcEezqQE5M+gIrRq8HvQgkQuiMfxXyRocHlL1zvQtQHoLwGAcDku/PKe9MtAmw8X4TuJnt1NUEkH+wtAJs2rmX285NGw5Q7p968Uwp0aMrUaDAbYvzChlMNaL/JnU5/5mptJX9G029/Fl3jXxF3A6s8QVdb1fbbNRYJyLLAxr+h4ahZTKtQ5FXpg1/S5ydrBCHYMfptl8VWKtsOmfxjfltTF4bl5FbzzH+CXvt0ZQ+IbM3gV6WVgOJ/A/ZdFsBrMRuxxzxIJ/WRjKB3znr7SIUa1VSLZ3F+cJYDUR+6X3xxVKv2aMFW7nGyamXqvAuJsKwTHRvvB1JP0EC2NP5f5uxo0iQP0Iq6CxGGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 22 pinged about 0.01 miles from Pilot 1196 at 16:30:00Z, within 6 minutes of the 16:35:23Z purchase, and 60.5 gal is well under its 220 gal limit (200 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKAcmCcWr4DTDBY5dG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5472,
+      "output_tokens": 256,
+      "output_tokens_details": {
+        "thinking_tokens": 150
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 22 pinged about 0.01 miles from Pilot 1196 at 16:30:00Z, within 6 minutes of the 16:35:23Z purchase, and 60.5 gal is well under its 220 gal limit (200 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5472,
+    "output_tokens": 256,
+    "output_tokens_details": {
+      "thinking_tokens": 150
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

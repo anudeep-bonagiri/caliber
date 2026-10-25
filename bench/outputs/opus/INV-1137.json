@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020808,
+  "durationMs": 5090,
+  "httpStatus": 200,
+  "id": "INV-1137",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1137 bills 39000 cents for qty 1, an effective unit price 13% above the 34500-cent oil_service contract rate valid on day 74, even though its stated unitCents is 34500."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAoKEAgTGAI4AUIIdGhpbmtpbmcSDPg0NMA0TtKUYmfBAxoM0jraYy1odCLMPtMPIjA33JLlMwqHlcinoAhGMtfQmFpGM+2Gr4Ql3c8N1Hs5rjGJJiaFz5x7vAZc6h+v3cAq1QnhPflgbKwgtFfHDLmWMCP42bby55luIVLwuUtXmQPH10+aSxCkg0XfTI7qZhn+1Ade2DQy1DA40OrUGGdGm180P0Dh5iSKQvnpAZnsA13Ng6FAm37kJBccVBg9xsww2bs3Ma95ANos2Y9kVjaUrNTS4dO/OhtkSLrO7n7BJQPQnDx7NUsIjYVAcd10qfe7ZFOzykD85QAPlekBE0DNlwjnE+TrgikAg/tgytDLTSaVRBRPg/jtzb+RfZC52QpYDOJqrfepP2i3G/jgEn3CDCl2oNU0wesmJ9G54gPqrT+HlrtXNf+Vseh2V3Phnm9iTL45HuCY7U3ZLMs903aTJpEedjoQJaDeYRzjthaNdi/ZKpoSBV8AVJuF++4fWp0Txp4VQfDAE+sURxj40gttn/HchE93sbbvck9pGaMzddgKat4oFVA48r9lozZK2sG8RWy/MQExgwofwgLPP80gK0sbgKvXE+4A33zsbDa1t8Zd0VFKnIjBwGG3dw8AsnjwH+HSoHb9zAnM4ekkrLL+mjr1tNlw7moNvGu+CyouJa7JwhKMjZRDwd0bAuK0kSoV2LQY2PhnpX4HwEH6oz9ooYIuvjT6Q0F7GD3lqiYxivv3/S9fDEiT+mvu6vN+Mi1bAY8c+DDh23teTfEtIcXIz7Su4VVVmd3wceRHOlBKFJ9Ku2WbNydcGvBmjeIcH0lLgJZYGBdkH1wADuJzWDijiAyooOxyhn5KPG4K9ANke+YMjmLcwiRPaE8lOEfmewDl4QfCxZfryKA5RgIhpuwzeAeWgcDl+83p0WI1swbXV5Lv6yjnFyAIJFRwHkod98SDJFFAYJsX+qkNYwjnM6ujAyNmuwTPLL7TWyJ1Isfkb17BVP7bT4sUEaMf+TkPNGwlL4VhOHmLT218hC5wxrwrfxUeWm3M85WaX0SMVqwFXcSPBzohv3eGmsIFGeh7n6DQl0YkcCoJhfviMQBGMDw/SuEPhAmZbSAnOlU/E/yOOjliyY3Be8+q01KSAkXW6MyfjimZ08A+x+bUUPRg7O98cxySvFWW8rk120nI3M+HggDKM0U0zv7/3Ik++TNNBTFjzQb630UPNpvxm+2twE9jUFHWJ22CX2UAUwCG6ZDxgpm6IunpH88i0WJ85qAeIPqja9Bm4w/TmlDikAu38cg4lHedCBDI/frxCVXknDXQ+dVbo7X4sGWSkF3ChVyCt89DVrJ13ayQvFpgquyqY4dUkUhgJCWE/sBh4ly0k+x5wM0qZbeuEAPida9lW9Q5w2ElJYghTECd10l2W1pwi9BBDKxrqdgLxznMb8SHLlUFPQnXOAwckVibs5zqCjo3QKBIDZ+LeH6MxQ503QrsColSCTUHA6z1ZHtskR9yvMFaQocuCIG3VepvsRs45migErJu6oXRkSRFG9W1xm+Jhz9aUZKFnYyiSPGDfAwdRMWnDOhQvtB5kp5OjLXXTRF/jYR3PCqPCpjjJXGQ3b6HARjlsBOZb2BDJ6VayHu5OSaWL+NL2yymLH/lhLcsSswEkEvIILunHRzG8Fnrh+igKC+ipY88jn08O3wvBcmXKKMg+fXu0tBo0U0D/MGwuPj9/8V2fLKeXTUmwUmZ01XTXj+tEP055XJUFMRXURr13nbo6vH6gMEQXwbKGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1137 bills 39000 cents for qty 1, an effective unit price 13% above the 34500-cent oil_service contract rate valid on day 74, even though its stated unitCents is 34500.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyix41NG9DHs945SxS2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3247,
+      "output_tokens": 391,
+      "output_tokens_details": {
+        "thinking_tokens": 298
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1137 bills 39000 cents for qty 1, an effective unit price 13% above the 34500-cent oil_service contract rate valid on day 74, even though its stated unitCents is 34500.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3247,
+    "output_tokens": 391,
+    "output_tokens_details": {
+      "thinking_tokens": 298
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

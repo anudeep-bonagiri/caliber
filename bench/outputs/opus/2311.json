@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022332,
+  "durationMs": 4820,
+  "httpStatus": 200,
+  "id": "2311",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 19 pinged at the Victoria Pilot about 4 minutes before the purchase, and 109.9 gallons is within the 250-gallon tank plus 10 percent (275 gal)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9wYKEAgTGAI4AUIIdGhpbmtpbmcSDDn3HPHb9gFnXO7ynhoMq7IXtzbOiIs0Mnw1IjAhZXB9hTN3gueMDV1+oBpekMfjeSdpqNs5FHGKK0lQAX/bDdJaqqWeGrArELjn4oIqlAbctNO2ZcYCvbsrjIS2gFmdzJgKi6LtKWqLFqkqzXpHKBtRzaMFbZdlQzixV/AXH5umm/+pYo04mNAi6OZbcnAnSNVLm7UNdnK7h61QpVdZEhTjAJa+VaCBHq3Ad/De4/cwHKkK0ygBJ/aEHzAHKL/uJhMWeoWEcArnPuQPCWRd76LL2c3mcz7liYhJGWSaWAwWCAjnWTkFVbNPRIzEBLsF030o3XF6PWSaeC3LaBA9E2TK1IkRMVEYJjNJkXkR6Z/i7HjG55oosZUZ83K2oRqgYIju554qEPoWZQTadHzlNzwOYbLkcSL+4AdpIujOSsMBFjmRlQFeK/lyNAiFD1IO83cnEQCIN20fI36FRs/c/SYqzcy5b1Nc/2LoY6agkIQ7IZiEcf5PCA9wbT/zHnuUaHEJ2AFDc1XoCDnw6VfZSj8/3Pk901vENNH4HLONSfb8zI/hufGbn/997lF8cIcRxviFq9ZjqN5hEoLWEUue10ySPBQq21DBd0MruKMlJodHbaPwlGSc43S6+1Qb1ZM0RGtBeVtVWPzhP5a8c8LvSMd+8y8enySb+1fjY2Nf0KvFFMV6R+udnJE1wBh8hA4M/2oLuhpZTMMR/ICa5H4djjknshvmpaGYNvyBcardb7CWtDfQ/Dk9JWsoECVwUav2+sui7e222DxR2GNshRVv+PkKQL1YP2I9uUlfu89c99q+GrXgW6N4eThA7x5+RMo0BDKdfzoSe4Rt0IunVt7l7TghVtR1j0EpEPKf+aqrc/NUvuY21Z1gtucnfE40x5hg+hwDdKmHx3EMtzjBcp7YqKJUqqqacLWUbTAggMpiKMdaOvYpFGx/2m1sV0Z9Ikuj+hyMSf2XO01YuSRHITJn2EnqZ6VoiREcILdhWaGzRxFq7OdJMmHJWJsD5+D+/3O0yRLsV3NMyUWN1wxTA8ZPYbu0P8gvWxS8+l7caVzLHkeI6GdRCwIqsFZHw819RAwsyLGixTxnhD6UEtWnQwb4z9W0XndOUXiMmjs8bi5pUUadW9h7SgNHeopZ5GUoIdrbPbzD5BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 19 pinged at the Victoria Pilot about 4 minutes before the purchase, and 109.9 gallons is within the 250-gallon tank plus 10 percent (275 gal).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyx6AnDbpUdQcBnqNY5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4453,
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "thinking_tokens": 143
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 19 pinged at the Victoria Pilot about 4 minutes before the purchase, and 109.9 gallons is within the 250-gallon tank plus 10 percent (275 gal).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4453,
+    "output_tokens": 226,
+    "output_tokens_details": {
+      "thinking_tokens": 143
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016352,
+  "durationMs": 2842,
+  "httpStatus": 200,
+  "id": "INV-1121",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1121 bills 2 alignments but PO-1028 shows only 1 received; propose paying the received quantity of 1 at 24,500 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAYKEAgTGAI4AUIIdGhpbmtpbmcSDIxShfZy+V56PgZ3jhoMlY8gMQN88yMpvDs8IjCY5MuhGuqP0VHqHeCbfM7Sx7+Jy7SwgT7EsMK0nVSzM1ZiQzxTpyTjQ0pI3qpVLOcq6QX2QG0ecfnjC+jj4hvhZqGkMjn4ZkxIt3I/CX5YXtmjhbdt+q3R/i1hp1fyPrdUOwds2aamHRhEt5aamzbG+D4ODvsyaw6rwtj6tvu7PWfY5Q3g7AtV1li7sTg8bFcjnfaX0XULeM28N1+ruQC1G1o8l2+Y8p6okYWyYybno3Lq/4XT4G2sYFi2F2ltk6WS36vLfARp2L9h5dSpHsPn+qG2rELviPnBa7Q5DIrEq0hMQlSIndwefz4RS0WmXqpa/n4o0YSGB8e1kGFR8X1hK9CHv23u5fMp2RRZSpRt1xLL6/Kvv+iQf1/3JUnpPgTGqj9X0C+baWNHpdz2TRKfgCIlgYbpZS5PkFsxZIynmMp+W5hebUNsy3Pf1ILbKwNc0j9Uw/3W+WL+bH/LEc/p2hgGRx+eZi5FkjXIV64cNog3l3MC+7Db8o0xRRXFF5ig19Zaw+DAY9SZjn5DDgy0DNTOgTxxogcwfsKbKswlEKMyuBZGsnhAC0xQpzoLbGJz/bqMetnw2BTqTvCEF2rKbRrjPOGrzDkRTNhGAeVaiinqViConMlk1e0bkK0jLbal99QSwCSMnbTN8xjOVSnI6TJt8TGEhIh7A+FVtbbAbQM0plRoTA5jUFNDy2rRqphEO4+y7ZVmJZTMWy+YjLqy+dUS35S68hTt924vN1ksqP/IFnJHvNTdfYCgF0vXIPUm4vNZOUevjlIyBRuyFh79TrVToTsiZPSYWk1S93CtFtuSll4VRpExpCbeGGrKxpVENM5jPevuWPfNUx2LRjgkk9b7+tbDqL1tJMbVRy4Scw59uaNsLZJzCllZm82ZF4MrMOBebWw8kFNXsLzjuuzEt9wDfYcvoZwIHZPoTf7R3NiY6vvpnQLy2wYQvssdFTBL39ppCb2cZGUvQq5Ij/wvCOMt9NS89To6j7+zqVoJYYEPsPbY6YAYjNE+3nGbi9exkKvlAtayMx23J9tf96520MD0C5X5fawI8G+4GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1121 bills 2 alignments but PO-1028 shows only 1 received; propose paying the received quantity of 1 at 24,500 cents.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz1jrkskPncbUmfWuRa",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3158,
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1121 bills 2 alignments but PO-1028 shows only 1 received; propose paying the received quantity of 1 at 24,500 cents.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3158,
+    "output_tokens": 186,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

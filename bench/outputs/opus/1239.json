@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027728,
+  "durationMs": 4509,
+  "httpStatus": 200,
+  "id": "1239",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 36 pinged about 0.1 miles from Love's 405 Hillsboro at 12:25, within 30 minutes of the 12:22 purchase, and 53.2 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjggKEAgTGAI4AUIIdGhpbmtpbmcSDAi/z12adrGjLrcboxoMar/sTkj6qodpPEOEIjDTIha6v1StVGfbbOLALc1NbAplRjejwPWgl3d/B3sOYmIylEeHNyyHU/sng4QzuVoqqwcJLKiGI45Ag6gryxtE+3tgWwEPkD03l1iIx8YUU1ZSlByt5H4dO0/cXkvZHZsEAmbR8b1tM3D0BrTyTbP3G4fk1j6GZ+t6ZgNCxz8Eh33Ex52EbIzXtfIHBWMEuW1dlo+/L0nVfnZwEpQi5c5MKMJmgAH2+TYHOb00LmL0JV00yPU8mdeJHpaqm1B5EdQAjtE47VBuK1zqvDVfc8JUbFA/FWiAzkm7H/to2D+CYk+U9Mf1qXwqoF2VxgvFvt+4XASZCYgIr1Zbxw1Y3cvuRak4XHCYBjafpuuSmc2HI+E6Md0qmKbTIiGmIGOqbEPO4pT2uwrIuUF7xtZk/H6jnNGsjwpbXCo86L3ukX2Vrddjr7VWB8VfNlAoPKnZJ1MuTfZvX831oK3AnTwSjht5ANqJhjEo3y9WBGTfdlKiyPysw4XMNFudzjtU9lNgKw2RC42yAPLES7b08Pm3jIwB3+Zc/sUzK0Y/VIEbKAlPpygcAsWaK/TiK9NmO0dq89GiJHnnElH1//NYgIeU+YT0H8mahTpT8AG94WoAhnvdyKg/wEy/ZynX21cj6rQ2+/puaHNtM2cRwNjfImUgmWKS+pd+9BvVzgTZI2KzdVJbDIF2twyCa4HtWtrWLn8y3f75EFM8vGtUuOmvWvTzqh7rwIsVP+lbdCcSGdOpzla+7nDhLkLhGFOwplFRAeGKZZqPI1x7kz7oqzsIJcbmBnGo4iCGKYxFpW9ER8akhSzzfZjFjDODf8+Oe72/aLwH4e7YalQKKm7v5Br+XuDvYXxN5gmSj5tW27vqXYZII6WaTml/thWHNTAnQitZvHzwVMeU/NV+ub8Svtgi+vaLKYo8IJB4nAl2JuSnpAfvdyAP7GICj/GQUJPA71oOo92yyD/Sj6fzl8vLqAbfDLSHET7saDm23qze2ARUDUuMFk7ig87KhuUg2djN00iv9VfD5hs+LU4tN44eA/34xdBTrv2lnL+rBH6SeQrrO/Hnrgwce2H9Vf3Kb+PY6296EIgY0rMSB+G34EdsEckL6rrQMnF+84OPV5CDbv1JMCjMIpP8nsM51R+qpEomRDG+RrxJBk5bpqA3pdGhdToG54q2OqerbHgmdVMroN0Cd3jmv+FZIh6sC5tbWI76KjJFxhIuv9/zB1hu+pPHxirbqv7PlT5lmLULhor2/WF51f/ex5NMqxQodqu51clF5Sf6hmlkTJJ8ora1d0nt0iTmnPUMa1G+/6roG8EkkE/4d6k3A/MYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 36 pinged about 0.1 miles from Love's 405 Hillsboro at 12:25, within 30 minutes of the 12:22 purchase, and 53.2 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4AYNnGyekj99N7h6S",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5252,
+      "output_tokens": 336,
+      "output_tokens_details": {
+        "thinking_tokens": 227
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 36 pinged about 0.1 miles from Love's 405 Hillsboro at 12:25, within 30 minutes of the 12:22 purchase, and 53.2 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5252,
+    "output_tokens": 336,
+    "output_tokens_details": {
+      "thinking_tokens": 227
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

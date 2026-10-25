@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027172,
+  "durationMs": 8257,
+  "httpStatus": 200,
+  "id": "INV-1105",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 49800 matches contract 28, billed qty 2 equals PO-1020 received qty 2, no earlier invoice for 99600 in days 27-56, and the bank change on day 71 is after receipt and the amount is under 500,000 cents. Note for review outside policy: PO-1020 (qty 2) has already been invoiced in INV-1015, INV-1023 and INV-1101, so this would be the fourth bill for 2 tires on the same PO."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 49800 matches contract 28, billed qty 2 equals PO-1020 received qty 2, no earlier invoice for 99600 in days 27-56, and the bank change on day 71 is after receipt and the amount is under 500,000 cents. Note for review outside policy: PO-1020 (qty 2) has already been invoiced in INV-1015, INV-1023 and INV-1101, so this would be the fourth bill for 2 tires on the same PO.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyuciEdkgP8s4HfsnqW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3478,
+      "output_tokens": 663,
+      "output_tokens_details": {
+        "thinking_tokens": 480
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 49800 matches contract 28, billed qty 2 equals PO-1020 received qty 2, no earlier invoice for 99600 in days 27-56, and the bank change on day 71 is after receipt and the amount is under 500,000 cents. Note for review outside policy: PO-1020 (qty 2) has already been invoiced in INV-1015, INV-1023 and INV-1101, so this would be the fourth bill for 2 tires on the same PO.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3478,
+    "output_tokens": 663,
+    "output_tokens_details": {
+      "thinking_tokens": 480
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

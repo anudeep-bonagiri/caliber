@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017644,
+  "durationMs": 5156,
+  "httpStatus": 200,
+  "id": "INV-1055",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: no earlier invoice from this vendor for 34,150 cents; the unit price matches the 32,900-cent contract rate (even the billed total is only 3.8% above it); billed qty 1 equals received qty 1; the invoice is under 500,000 cents and the bank change is on day 42, after receipt. Note: the billed total of 34,150 cents does not equal qty x unit (32,900 cents), a 1,250-cent difference, so confirming it with the vendor would be worthwhile."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsgkKEAgTGAI4AUIIdGhpbmtpbmcSDKoJ0jwYZ+TuU3V37BoMMHxgVt37tUnhP+MfIjBwfncmVa7YR9Y4YU1U1rSrqn8OtQ5GMgJHPL+SZnzFBIYKXmJ8uLws6/9eiiIsp+oqzwj51Xw1PMzG+iSQMIIG+5yTG1vkF+g7TdwRIv2cSUG/Ew8O/Dw/xGwVrf3gY+aJZ4730plGpIN3TAIlHs6zQ0BdQ8qqrlU/BO2hdf8VooixXLtB3rxZAFPrbDAingGcnY0YquZPJgpISzRU0hoNfuWoV4NQTuN4ctIugYS/LP/Mw9kmFpTYzZG78lcf0EeNjUGASqlQjQrGIX/GXtK8RnrgWgiecvv4ObDDaBMZKLHTBuuoqjzVlIf4r5wJllSl0gAi6Bn7X7Wfqn21av1Csxk+t7x3hy0mUfsTvt2kQ0mqed0YQCVZz+A/snOc9EQ1ERvhQ9NuXJZisEyq/e5FvgshcemRN0xZSPue5WopVIkIRY9k3lP3yC02uwwWvxe57BD75uNWU7VEgmQd3Mvx94yfMCIxvqaXQQAqauTUA5HmBn38zi0KIZPVglfpea1YWpv2grIWM7lkrvygyXuZwtKU879j2MgNEz2BCdCgOplQmndqPias1g/AeZduZCfuECR8bZoT+939S9YbALzyV5lhIAcUe1rYVJPlB0hV/REkdOlOQaUiiOLuQfnILqbIASy7FeIHxh4WfV5VZFLx4aFOZcdaV/gSeRlY0gLSQGbp7VMEmUcrprB3qbQG2BG0g5uwpl7R7xIj7ixK1GQmff//7+SOfWnilo5Nw+wjo9uVn942RtvfYYhZEWpwXtcPvpR+qbt6WIWrvbZiE4PE/MIiqUPXwJkcV0Kti9ejrtI3jn5iQmXtGZpvzSLYkWh9wl0IhrlvMSAXoIFGYBBONtSxfDoS0T53wElqAFbmI1/mo1IbrKFQCYfds7kcgD0gbz3lkkGHV+1LjKrakHsj2jp54/7jbjZmkbTsgNaHSASL7f2cHitsS2kAmAT2111yyZhpEYrwnMyIOX88XMN4cE4glV7Y4FKDb6/Tl502rKpPg4UWvyylBjWSRR8uO2I7WeY/kBPsCB1UBV5TGJFLmRjIYPTcEQivNrdDabtmCX5DwcsDje9zhe0WaXk/w7Dh+aPX3j8GPfMM5AK9JtzD9JwQ9vUaof8/0pPY3vT2FlFg1oZmPcO/PVV2hJ1VdoFWFPLKjkAzZ9FfSCC/L5afPUrrJ1ItVKNnIGJpdMbL3JNlBdQLD9GMQi796ekYwD2fh7mhmv+TZQCiauJM8/SwmYr64ihGC563sFUOuG56KL/waAh+8OIPSE8I2WNRGwFhv0g6QMCjpiPb8SEcrb4zOxOYXTOCKVsMeC6IJUue9RYuAMvK+rWUdZCb+u4u6/Qa1C2C02XJX8EvgPEa0F/KozbZdt2CFtolkRuzXFeX0G6ezkv/8cgyBXHv0rJ2aIAQmeXs3YLI2ZoTFPEwHQu3rvMlAOcOrGIs1u+lyt19s47g4H8FPB2IduOGp8gLtLFl70kTW8YanIMw2m+mHW4J/DipkCfjnojrWADHKDtHwE3onldCF1iHsuw7nAGG7zV2CRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier invoice from this vendor for 34,150 cents; the unit price matches the 32,900-cent contract rate (even the billed total is only 3.8% above it); billed qty 1 equals received qty 1; the invoice is under 500,000 cents and the bank change is on day 42, after receipt. Note: the billed total of 34,150 cents does not equal qty x unit (32,900 cents), a 1,250-cent difference, so confirming it with the vendor would be worthwhile.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6tkgdzx1Gk3x13AKR",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2156,
+      "output_tokens": 451,
+      "output_tokens_details": {
+        "thinking_tokens": 266
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier invoice from this vendor for 34,150 cents; the unit price matches the 32,900-cent contract rate (even the billed total is only 3.8% above it); billed qty 1 equals received qty 1; the invoice is under 500,000 cents and the bank change is on day 42, after receipt. Note: the billed total of 34,150 cents does not equal qty x unit (32,900 cents), a 1,250-cent difference, so confirming it with the vendor would be worthwhile.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2156,
+    "output_tokens": 451,
+    "output_tokens_details": {
+      "thinking_tokens": 266
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

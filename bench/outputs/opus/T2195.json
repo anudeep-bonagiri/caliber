@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023204,
+  "durationMs": 3282,
+  "httpStatus": 200,
+  "id": "T2195",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Plate TX-1032 was charged 1850 cents at NTTA-DNT-01 (Dallas North Tollway) at 11:33:36Z, 3 min 31 s after earlier charge T2194 at the same plaza at 11:30:05Z, inside the 10-minute window, so this later charge is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AUKEAgTGAI4AUIIdGhpbmtpbmcSDL5JkQIERNPXQUcJlxoM7dGamJRPHigdSJiVIjDSySku7pnzJHOP7Q+X8fLaa0Ckvf5+/wUyUxBW/PLyVavgjnOE/ReA9ZG+sAT6hX4qjQUIdLaAxHFXywKi607+GALZN0tPgQY6Fsov16q/S7omPz4vl5FJXCI73dsafNvcCgoNjCB53WbCPo/VQT9cpM7+iDnrscx9zoTT9ASTUdlBjQ1pRx9qvnwJcSpjAreNaFIAu4RrVvgmdpxsKPxDJTBhMfBVjGcBp4qdBKkavGfwk6ZiCAYV1s8RJr1sAuimVeP+svWeCu4N1HYJ9+8xkiCqvH3OehmdGvU5QYQTgMCONHKs88JHkoFdR/Ls4fuxy7akhLOx87oI1WsT0/rPXPKXZIyObPdr7hcVKWMGe2xF/8+s8KL/i3K+QitmeJKT7ojEhQP8+SmJNmg6SqdJZaZNXP3ELw9SAqHR5vUH87dvwb75SBVJddnzeLSTA6kU+r+Pz6Ed3e994idCaeT0DqqFPQkBUX1erPR2T6HmCDs+R19j8xy6FNauTHkpTlvlChDuKIPvT277AYOblbuQ4dNZeXj5BV+e1aTaE3nv1p5ZYYpePt0C3B856S5ACgmU6aKmSdB0Ez91HAMLwbPLZqdSdvUCD88mrfucVm3F3guN+8deD+FQmJ6Ul84XvwNrCCj+GLVSHpFPg5c0HCvCz6wJViUrJs6cVfmUtp57miqdrLgpel1VbVtMvojxSOiBEU3pce/8mNPSZmFrFtE+N7q3Fzw6ioCjP5kmXU4oFk68sWBEjzZ6mgt9Swlz/fDLTpD6LofZPW1/+SVh1tbvLL6p5UHbNWyMe9/cpla8LEuEx4skIwC2nY8Pn6uyDDwdRpMpKuiTF7WnqUZTST5qgH/b1rh9ir3K5lwuk8NPCPsgq7EzGk8Hg5pDhFBqXg99eYzHRUqsNWf6R1AtX69uWtDGmgPR44xj/Vc1CueecRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1032 was charged 1850 cents at NTTA-DNT-01 (Dallas North Tollway) at 11:33:36Z, 3 min 31 s after earlier charge T2194 at the same plaza at 11:30:05Z, inside the 10-minute window, so this later charge is the duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzCoTAApgM4e7tJUpt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4661,
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "thinking_tokens": 92
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1032 was charged 1850 cents at NTTA-DNT-01 (Dallas North Tollway) at 11:33:36Z, 3 min 31 s after earlier charge T2194 at the same plaza at 11:30:05Z, inside the 10-minute window, so this later charge is the duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4661,
+    "output_tokens": 228,
+    "output_tokens_details": {
+      "thinking_tokens": 92
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026788,
+  "durationMs": 3805,
+  "httpStatus": 200,
+  "id": "1007",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 8 pinged about 0.02 miles from the Wharton station at 13:33:49, within 3 minutes of the purchase, and 30.5 gallons is well under the 132-gallon limit (120-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5AUKEAgTGAI4AUIIdGhpbmtpbmcSDGGlkXApgwRpm5HtShoMm53N5F1P+FArNr69IjCRgQDOGMOwk8PnMm4whU0B7+t8fnV7cQcDdsa30K8Ra5WescuifHDEx8086geHmgQqgQVaIBtsgP9mDjXg3hebPDt6YYLmoOlnUU4rMAaQNYw9Q1ayyVc1xux0YrbLy0NmaS6bfQUz0Tm7JD6FdtvGeVlo/6lKHKpay9MIwnxjJD4yQ22aFuuf+LO2Z92xTGawk58AMB6IPkzr3/padZeXepPT1tg4DVIVytHj2Kt9k0RjtgfiHOCuxbHVbu7fiAihcz3xBO+QDIuOaqaTVGNCEvnQ1fpWU9PsMuhlnXpSdEDytk53Kua/qHTMoBU4XMLSVSPo8TIzJufbPRHzRu+ArQWqtv0FH/UnXyvcJ4Iykt3H61593yKYOoU05Y9fbCLlZMHKmpS4+FKV+auKWbXXMab1g5Tw8rFsnhL44bN3/boNOGr88JND3OWOrFmjKXHgV3aBBJuPbWCAfOdJAdIwottzc6yeJ35mw63x5sA+9F4Ys9ULu9h2BnEzdb0BEqC9PdTGlRNWoWKNRW5vQ5JHO70Qury05l39tVx2cULbiRIQ/UDSRELVYSSdLdBZgG9qOo3SW2ngKK49WsLlT/7GIcPzkSH15LwJ7BYAxjVXHD5PFdqEOAFRxgIaoL2yQgCCvfRvnePEJnpZqeLmrda90LGYJ4DHfIYgs6iqaF5OX1uvAyXxIx12/CzjoWXyF7QZEjB6OMQXXQt9I+9/Nn3YKQ/q4qEdnRoO2+TM1LZd4cIOmZK7o0HIcPfdIhqDAERxeTIVLeGKir4Q6h0A0psmgOuUSo8v0cZOMWtf2Vnx7do5Hxi4Pmsk+P4h+MP80WXOxZJssJVsIyF6UdRM1X8WVGL7Uzt9yPkl/4yApVELOCIxUJL6gHmxrK48xECBntF4r/m18hRmmlLh1fWoJa92idwnuhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged about 0.02 miles from the Wharton station at 13:33:49, within 3 minutes of the purchase, and 30.5 gallons is well under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzBZfd62zXrdGWox5kX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5767,
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 88
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged about 0.02 miles from the Wharton station at 13:33:49, within 3 minutes of the purchase, and 30.5 gallons is well under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5767,
+    "output_tokens": 186,
+    "output_tokens_details": {
+      "thinking_tokens": 88
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

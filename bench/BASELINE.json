@@ -11,6 +11,22 @@
       "output": 66383
     },
     "costCapUsd": 15.0,
+    "opusCostCapUsd": 15.0,
+    "opusModelUsed": "claude-opus-5-5",
+    "opusRates": {
+      "cacheRead": 0.2,
+      "cacheWrite": 5.0,
+      "input": 4.0,
+      "output": 20.0
+    },
+    "opusRatesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
+    "opusRowsAnswered": 558,
+    "opusStoppedForCost": false,
+    "opusTokens": {
+      "input": 2358546,
+      "output": 170748
+    },
+    "opusUsd": 12.8491,
     "sonnetRates": {
       "input": 2.0,
       "output": 10.0
@@ -28,17 +44,18 @@
     "Code-exact scoring (the table): a hold counts for a code only when the system named that code; a hold with a wrong or missing code is a false positive for the code it named and a miss for the planted code. This is the definition docs/FACTS.json uses for the kernel.",
     "Caliber's figures are the measured 92-day run over all 7,944 transactions (docs/FACTS.json); the models saw a 558-row sample holding every planted row and decoy plus 500 clean rows, so recall is directly comparable and the kernel's precision was tested on about fourteen times as many clean rows.",
     "Synthetic data from the same generator as the clean rows (seed/generate.py, seed 42); every system was given identical inputs; no fine-tuning, no examples, one prompt, one attempt per row. The result measures whether each system finds what we planted, not how it behaves on a real carrier's statements.",
-    "Claude Sonnet: no temperature was sent because Claude Sonnet 5.5 returns 400 for a non-default temperature; thinking and effort were left at the API defaults. asi1-mini: temperature 0.",
-    "Parsing: the first complete JSON object in a reply is the decision, for both models; a reply with no complete object counts as not held. Raw replies are on disk unchanged under bench/outputs."
+    "Claude Sonnet: no temperature was sent because Claude Sonnet 5.5 returns 400 for a non-default temperature; thinking and effort were left at the API defaults. Claude Opus 5.5: the same request shape (model, max_tokens, messages), no temperature, no thinking field (adaptive by default; it cannot be disabled on Opus 5.5) and no effort field. The API default effort differs by model, medium on Opus 5.5 and high on Sonnet 5.5, so each Anthropic run sits at its own default rather than at one shared setting; both runs share the $15 cap, applied to each model's outputs on its own. asi1-mini: temperature 0.",
+    "Parsing: the first complete JSON object in a reply is the decision, for every model; a reply with no complete object counts as not held. Raw replies are on disk unchanged under bench/outputs."
   ],
-  "generatedAt": "2026-10-25T00:12:27+00:00",
+  "generatedAt": "2026-10-25T12:55:10+00:00",
   "partial": {
     "asi1": false,
     "caliber": false,
+    "opus": false,
     "sonnet": false
   },
   "prompt": "bench/prompts/hold_or_clear.txt",
-  "rerun": "agent/.venv/bin/python bench/sample.py && agent/.venv/bin/python bench/inputs.py && agent/.venv/bin/python bench/baseline.py --model sonnet && agent/.venv/bin/python bench/baseline.py --model asi1 && agent/.venv/bin/python bench/score.py",
+  "rerun": "agent/.venv/bin/python bench/sample.py && agent/.venv/bin/python bench/inputs.py && agent/.venv/bin/python bench/baseline.py --model sonnet && agent/.venv/bin/python bench/baseline.py --model opus && agent/.venv/bin/python bench/baseline.py --model asi1 && agent/.venv/bin/python bench/score.py",
   "sample": {
     "clean": {
       "card": 174,
@@ -440,11 +457,179 @@
         "recall": 1.0,
         "truePositives": 58
       },
-      "factsAsOf": "2026-10-24T22:25:41+00:00",
+      "factsAsOf": "2026-10-25T00:22:27+00:00",
       "label": "Caliber (kernel + Droid)",
       "partial": false,
       "rowsEvaluated": 7944,
       "source": "docs/FACTS.json"
+    },
+    "opus": {
+      "byCode": [
+        {
+          "code": "location_mismatch",
+          "detectionRecall": 1.0,
+          "falsePositives": 1,
+          "heldAnyCode": 20,
+          "missed": [],
+          "planted": 20,
+          "precision": 0.9524,
+          "raised": 21,
+          "recall": 1.0,
+          "truePositives": 20,
+          "wrongCode": []
+        },
+        {
+          "code": "capacity_exceeded",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 6,
+          "missed": [],
+          "planted": 6,
+          "precision": 1.0,
+          "raised": 6,
+          "recall": 1.0,
+          "truePositives": 6,
+          "wrongCode": []
+        },
+        {
+          "code": "rate_variance",
+          "detectionRecall": 1.0,
+          "falsePositives": 10,
+          "heldAnyCode": 9,
+          "missed": [],
+          "planted": 9,
+          "precision": 0.4737,
+          "raised": 19,
+          "recall": 1.0,
+          "truePositives": 9,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_toll",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 11,
+          "missed": [],
+          "planted": 11,
+          "precision": 1.0,
+          "raised": 11,
+          "recall": 1.0,
+          "truePositives": 11,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_invoice",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 4,
+          "missed": [],
+          "planted": 4,
+          "precision": 1.0,
+          "raised": 4,
+          "recall": 1.0,
+          "truePositives": 4,
+          "wrongCode": []
+        },
+        {
+          "code": "vendor_bank_change",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 3,
+          "missed": [],
+          "planted": 3,
+          "precision": 1.0,
+          "raised": 3,
+          "recall": 1.0,
+          "truePositives": 3,
+          "wrongCode": []
+        },
+        {
+          "code": "short_received",
+          "detectionRecall": 1.0,
+          "falsePositives": 3,
+          "heldAnyCode": 5,
+          "missed": [],
+          "planted": 5,
+          "precision": 0.625,
+          "raised": 8,
+          "recall": 1.0,
+          "truePositives": 5,
+          "wrongCode": []
+        }
+      ],
+      "codeExact": {
+        "falsePositives": 14,
+        "precision": 0.8056,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "costUsd": 12.8491,
+      "decoys": {
+        "cleared": 0,
+        "held": 6,
+        "inSample": 6
+      },
+      "detection": {
+        "falseNegatives": 0,
+        "falsePositives": 14,
+        "precision": 0.8056,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "failureSentence": "Claude Opus 5.5 held 14 clean rows (holds by code that did not match a planted row: 10 as rate_variance, 3 as short_received, 1 as location_mismatch).",
+      "falsePositiveRows": [
+        "3719",
+        "INV-1002",
+        "INV-1008",
+        "INV-1012",
+        "INV-1020",
+        "INV-1022",
+        "INV-1024",
+        "INV-1040",
+        "INV-1047",
+        "INV-1057",
+        "INV-1060",
+        "INV-1067",
+        "INV-1137",
+        "INV-1169"
+      ],
+      "holds": 72,
+      "holdsWithUnspecifiedCode": 0,
+      "label": "Claude Opus 5.5",
+      "meta": {
+        "costCapUsd": 15.0,
+        "effort": "API default (medium on Opus 5.5; Sonnet 5.5 defaults to high)",
+        "lastRunAt": "2026-10-25T12:54:53+00:00",
+        "maxTokens": 4096,
+        "modelUsed": "claude-opus-5-5",
+        "rates": {
+          "cacheRead": 0.2,
+          "cacheWrite": 5.0,
+          "input": 4.0,
+          "output": 20.0
+        },
+        "ratesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
+        "requestedModel": "claude-opus-5-5",
+        "rowsInSample": 558,
+        "rowsSaved": 558,
+        "spentUsd": 12.849144,
+        "stoppedForCost": false,
+        "temperature": "not sent",
+        "thinking": "API default (adaptive; cannot be disabled on Opus 5.5)"
+      },
+      "modelIds": [
+        "claude-opus-5-5"
+      ],
+      "partial": false,
+      "rowStatus": {
+        "ok": 558
+      },
+      "rowsAnswered": 558,
+      "rowsInSample": 558,
+      "tokens": {
+        "input": 2358546,
+        "output": 170748
+      }
     },
     "sonnet": {
       "byCode": [
@@ -614,6 +799,13 @@
         "truePositives": 20
       },
       "code": "location_mismatch",
+      "opus": {
+        "falsePositives": 1,
+        "precision": 0.9524,
+        "raised": 21,
+        "recall": 1.0,
+        "truePositives": 20
+      },
       "planted": 20,
       "sonnet": {
         "falsePositives": 0,
@@ -639,6 +831,13 @@
         "truePositives": 6
       },
       "code": "capacity_exceeded",
+      "opus": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 6,
+        "recall": 1.0,
+        "truePositives": 6
+      },
       "planted": 6,
       "sonnet": {
         "falsePositives": 0,
@@ -664,6 +863,13 @@
         "truePositives": 9
       },
       "code": "rate_variance",
+      "opus": {
+        "falsePositives": 10,
+        "precision": 0.4737,
+        "raised": 19,
+        "recall": 1.0,
+        "truePositives": 9
+      },
       "planted": 9,
       "sonnet": {
         "falsePositives": 0,
@@ -689,6 +895,13 @@
         "truePositives": 11
       },
       "code": "duplicate_toll",
+      "opus": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 11,
+        "recall": 1.0,
+        "truePositives": 11
+      },
       "planted": 11,
       "sonnet": {
         "falsePositives": 0,
@@ -714,6 +927,13 @@
         "truePositives": 4
       },
       "code": "duplicate_invoice",
+      "opus": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 4,
+        "recall": 1.0,
+        "truePositives": 4
+      },
       "planted": 4,
       "sonnet": {
         "falsePositives": 0,
@@ -739,6 +959,13 @@
         "truePositives": 3
       },
       "code": "vendor_bank_change",
+      "opus": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 3,
+        "recall": 1.0,
+        "truePositives": 3
+      },
       "planted": 3,
       "sonnet": {
         "falsePositives": 0,
@@ -764,6 +991,13 @@
         "truePositives": 5
       },
       "code": "short_received",
+      "opus": {
+        "falsePositives": 3,
+        "precision": 0.625,
+        "raised": 8,
+        "recall": 1.0,
+        "truePositives": 5
+      },
       "planted": 5,
       "sonnet": {
         "falsePositives": 0,
@@ -787,6 +1021,12 @@
         "truePositives": 58
       },
       "code": "overall",
+      "opus": {
+        "falsePositives": 14,
+        "precision": 0.8056,
+        "recall": 1.0,
+        "truePositives": 58
+      },
       "planted": 58,
       "sonnet": {
         "falsePositives": 0,
@@ -808,6 +1048,11 @@
       "tie": true
     },
     {
+      "code": "capacity_exceeded",
+      "model": "Claude Opus 5.5",
+      "tie": true
+    },
+    {
       "code": "rate_variance",
       "model": "Claude Sonnet",
       "tie": true
@@ -818,13 +1063,28 @@
       "tie": true
     },
     {
+      "code": "duplicate_toll",
+      "model": "Claude Opus 5.5",
+      "tie": true
+    },
+    {
       "code": "duplicate_invoice",
       "model": "Claude Sonnet",
       "tie": true
     },
     {
+      "code": "duplicate_invoice",
+      "model": "Claude Opus 5.5",
+      "tie": true
+    },
+    {
       "code": "vendor_bank_change",
       "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "vendor_bank_change",
+      "model": "Claude Opus 5.5",
       "tie": true
     },
     {

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025488,
+  "durationMs": 2839,
+  "httpStatus": 200,
+  "id": "3668",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged at the Mathis TX station at 20:02:57Z, about 3 minutes before the purchase, and 47.4 gal is within its 132-gal limit (120-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAYKEAgTGAI4AUIIdGhpbmtpbmcSDDzpOjb3UDA7bZwhkxoMkus7/mRn74LWvUO/IjDkF+RMhPG4+QmgeZSTxTwhc2LjI43bDVpEJWpP5D4a5htZl6vAlc0QSlK9Nma3+NIq1QUfpqIvqESSyTHOmpYQMF8BQcYCR45Fywxz18hE1MAn7eeuaiJyvgDm0s6DGAM3wr7EGue3d94lWxShlyeagWW/E9/CP1NDGHmzRODBLVpvxjQ9WCWGqUxuEjWSxB7DBQdB1wmGnXmDRKvVhWI5x8liYYT1Lqpmd9hT5Y88BxPTIsXs/WIZ/c0uZDyOwdUevtLZlqOfMRxrSCKjT90RaKQzVtAvrY/7uvW/rQ9kPG9P8uz4xwkm9DXaEDlDFJ9jJUvfo9L82FBoR6GX+AZMUm/o2H1qnFYxOwz60Vzd0bTH/RbBfUDYKgADxcGdvAkyESpWZR8CBnY2EaAlGuVa4upPK+XlFre5gTtTTgElUkoAcIjuCqs/+jvQ91eL6GyQmUrm+EPAwUkRu7nnKEJaBFN5EzR7S+0aQCuLBLi8Uykallf3qI8iz3VzZsNGO0iKd6TTYxbjhH2Pz6KRL49NLHTkhpf/xiyvOgXc4ONFLJssO4pDmZTKZAb1Dv4pW4fn46PhuY9dG1ZrqQ0zzLj0zT20rU68mfXOhjniu8C19zCcOG9QfGliyS37Nch1MgdCZPz20bdEqW6CkqjLGQDAVxYBu0hq5PfFVVHG1uHLBDVPVZI2mp51p6wy+pdT4YIUv4nt4D6CRcmfetInh5xDBIQOXFnvAkX4vvtQl1dM/DKcj4l16W6GoFe1nqQc/T/zMEV16eAGi4Rws/GVs0PmhsWRmpNNSyOGjep54MQWuhOGiY3qcxaichArJDMjXtZqdxDNl9Umx6JNp1Zb9eXUDG56tgiN15/gZQtsWOf/NttdBhKLfitkodfksv1KCQnYe2b9MZw1HDfJMZajHZxMrHiiKFv6KLp42eooJQ2ZSDRHmwUH2lvxrV8OOtUnYrOO2UWvvxbEVOv+BbyJ/80mTqyxBXez7+sFTBa58GV3FNnJUOSaZM4a4r52uTpSAt3NlIajcKP54RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged at the Mathis TX station at 20:02:57Z, about 3 minutes before the purchase, and 47.4 gal is within its 132-gal limit (120-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymRFwGigNAwq9fv3Xm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5327,
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "thinking_tokens": 119
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged at the Mathis TX station at 20:02:57Z, about 3 minutes before the purchase, and 47.4 gal is within its 132-gal limit (120-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5327,
+    "output_tokens": 209,
+    "output_tokens_details": {
+      "thinking_tokens": 119
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

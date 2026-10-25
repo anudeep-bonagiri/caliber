@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01046,
+  "durationMs": 2450,
+  "httpStatus": 200,
+  "id": "T1406",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The most recent earlier TX-1008 toll at HCTRA-FBT-01 was on 2026-07-20, days before this charge, so there is no duplicate within 10 minutes and no other hold rule applies to tolls."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1gUKEAgTGAI4AUIIdGhpbmtpbmcSDDoScMj/NAPDxjicwRoMBaersy1ktFC/lJ2UIjCVC3rb5ZbEbZsFLcYyo/jJKsM6+2Kix2BuHmcZXh+DAKR00d4pX0f7Hqw995BETYEq8wTHHObd6PT0raXGU4PR+9no5QGY0UpEZp/pJQRgMgI/dql6nmpqBe/H+rZp+24NamH1rLwigQ6eojMeB74T19p5iSGRZhiEgKhYQW8O+KG/th6JKhumSkv7aVtCpkYo9hZSQ79gganpUxU7ekvLYXo+oDeHIf04rh7p85uphhuphrOe5FVlR48PF8PpfIv2d1AfTKP4A6EMTXcUwzuvDlEMS2LGGBk3Yps8n9jcEIlK0weR7uPoNaCvbAlxm7ojjvzN/XT5C4xSn9qFf5KlCm9L08v/7FJw1wSI0wV3noiibY5xEasOdjHaERlv3oZaPYVnAPnMvaRgBIqnY7cXfx2YbAs0dJ/GuyoJd5wdL7ax95RFkUbcrAkUjlIkQdy3GvodYWiD6XVcddLdyrV2Jde+N2lfQHCqVhpyuxu8Co4sxZ0I9wfmwqfPVdEsFiGmOd11bWYPlu4AJ75MNcOh9adWMy7Xq9zBmO/KRDnwItAf4y6XZXKvYDy3zalFUOx3+5kQrFuKYblN8gTjuvjNk6OE8js2c2SXm49Kt0FQeoBokr3ZffuQF8JY2aOn10qol1I4vuVOKf55m5r54lA8cN0Gy+fQbnC6g+onp13hxoG+lMJe7qAUfaotIGn/ik+aAcqRB70ymm9+VBpCZ+iinjnnhNtKKcsyip5UNATAPPZD/KBIiUh4uS7TLtMNGKsryxCOAmTxVVp3JBH6Ka87HnMcaRPvt48DL1JKAAhlOy5rJbj5dIXHBdT+Ug47O9Rl7nBE8xmCmjVXTmvM+zdvGxKsccXg7QkfJAk1yF0vHrvGesUIcekNGePSjdWekqbWNLu64s4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1008 toll at HCTRA-FBT-01 was on 2026-07-20, days before this charge, so there is no duplicate within 10 minutes and no other hold rule applies to tolls.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqpvamArH6pRXBWYg4",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1770,
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "thinking_tokens": 79
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1008 toll at HCTRA-FBT-01 was on 2026-07-20, days before this charge, so there is no duplicate within 10 minutes and no other hold rule applies to tolls.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1770,
+    "output_tokens": 169,
+    "output_tokens_details": {
+      "thinking_tokens": 79
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

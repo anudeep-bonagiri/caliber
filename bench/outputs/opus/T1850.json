@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0164,
+  "durationMs": 1950,
+  "httpStatus": 200,
+  "id": "T1850",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1035 at plaza HCTRA-FBT-01; the most recent earlier charge (T1763, 2026-08-14) was at a different plaza a week earlier, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmQUKEAgTGAI4AUIIdGhpbmtpbmcSDBVhKDtU1acXHvQ03xoMTfSMxR03gaySamtRIjAXzjVuEE8B8lAPNoFARquwwx4tqj+6L5dYHV03jLtLUaA9mwHrXFdRxXmI8VhjpXwqtgRfqslbGPTNl0WyAsEdTcx5Pob3OfF7pdMwoysrjhtXx+L7AicgsjhFALyGsp1yKcGObMVSgDEcc1sb3T0N0Ica4CdaABQOxmRWsPh/LHskkAtyZs/4awjjkD34b4i4vcTyDA1IJnsAejcNaOd9+VJY05mRjWMacurZYcQ5J3JzjKZnpGd4M52vm1+JnB3IBtpqEuGLiSH3psBfAwyKq801W5h5dXvk1RCQQHGPapop1eo5SjK72qinFLpCJBbn7sYtoDUnVATAy61Tr5W8kG9ipefbC0jnesynT9ItYwJ3mJrLn58qr+bgBCgog1EGjz76IwILxg/FhEMgzXwEyCO0VYmLdLXh51y/FR9e33yvNbqQh2/GPfpp7BCBC7NFPTAvQt6Egky3To+2dszE2p+6/RxpOEQw1iPuNTeAVE+WXZI1hG3N7tQ7fFIc+yKB+lxt9s0liouuotlwKuGvKHi3/C1OAdgArOE02lmdA6pcZzbwKbmkUuxcJg8YDMI1OeuQUwGiYyOGiug8SgnHD+wsHNUJ/0YqNIiKmW/Z07SRPjgnPoMWB4uMq7+4HEaYp8q6EQJK3j0+4wiuuom/z5E8qiQNq1sEtA0KPsXPz7/NRLehyR4v2H+Zcoh8OcJfT5Ve7M/P4oSNloZeDyoCOzI8//hYmOrfQDLvwKUFb3lcTjcsq7GvjePTUYaaqQEsf0lfzIRiCtU989SNrgFDbZzlPVuzUIbu4kuHjpOEXuTwfRqSfNjy0RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1035 at plaza HCTRA-FBT-01; the most recent earlier charge (T1763, 2026-08-14) was at a different plaza a week earlier, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3poyhSHxUdUfVNMo8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3410,
+      "output_tokens": 138,
+      "output_tokens_details": {
+        "thinking_tokens": 45
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1035 at plaza HCTRA-FBT-01; the most recent earlier charge (T1763, 2026-08-14) was at a different plaza a week earlier, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3410,
+    "output_tokens": 138,
+    "output_tokens_details": {
+      "thinking_tokens": 45
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

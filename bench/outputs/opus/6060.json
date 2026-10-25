@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02272,
+  "durationMs": 4007,
+  "httpStatus": 200,
+  "id": "6060",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 3 was effectively at the station (ping at 15:25:00Z, under 2 minutes after the 15:23:06Z purchase, about 0.01 miles away), and 60 gallons is within its 120-gallon tank plus 10% (132 gal)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmQcKEAgTGAI4AUIIdGhpbmtpbmcSDCAh4ME4OZXtBGRNgRoMMhRbFoad+BJsuxM3IjC51WihIrnpulwkT372VXBYQrZE/H2nUlvtmwBxrCH5vMHqUdzyen3Dbaw1y2CmpwAqtgZQNTzhF5qTwqX4e1US2gw02SOc/oFor3RtfOMl9gLx6ahSfDlNanM2fSct71uvdzZHiqBXtDy9T+mwFR/AUK9c+aPTSQzghlEqqxocFd4w8RNqyZk6i2jCZCOfxDbhPSdZuSSwUEjjOI0m5IaCjI+VMNLfM+qkPXJkiIBLPpHj2hdJDM2U02Zb6gZ0iFLrQDOomIg4vChCNQq1166FoxJceCZHIKUuBYjQD+fEfoGF/JH+UP8HMf05tryHoZ8NSbOs1PY3tiAqzxLM6vx3PLNNjFTBIT3D69ccNZGixpvD3w6j4Z8i8VVZYEkNTGBYa9KKJzYOCoZfxJR6U0CTtRSSspAKxNh00KtsZc71EQNnNLA3IfKfXAjDcwnskJKRXyICSQFt2GVyIW5+FEqkGJrHSw0aZuDKAhwnPCQzDYA0JV7/FZydP48gl2h+pNWxI4ydXEXjOELVn7SDHPfx90popjxpqPU2yHTJND57YKZ0WFtzdYP+UnvbM0Sz2XrmhDwGKldshWLvDC4xw1nCIL7ubzRR75mc61Qso6zr3EkwCKgy5uhHKGq/xSjpMLaZrIsQedJEeysy3xvPWLC0nA3+YTqPgXwCAjUVckrCSGM6nxD0i07o6PaY9wSnNxBMtNxg33/7XeS/gwU5Fl40KcDrcYP/8LdbgnHYyJYG2V85XWTqUwu+XE3LUrjb/z/zi2hao5BznUnA7cWllQBeE426EJgxKOwB9zEyvuNVThbGCHx40TOdRVnh+kM8OzrBoBsJROVnE6/mxpOg3czsUUzu9etla5Y2ahJy1IakjWVou0rr41G/c8laZG5AiqtEOTQ/kw73kpaS2rEoHp5jlML/O9bi39BXsDH9jQ8Pdw5rGjTSqbxBFnboRJCH8QOi79MQEGYlm1twEcRrV0p5Hzr+RAVsanSjkEvmo1gmXvfpPXP02yBYgp0v9iQvxon00ylO8n9CsBo7SGmZnOZpfXIYquqg+kXxWsRZjxjVC6+BGZ9wwk7dFtAfQZUGCsdd7oMprTSqMeR42EZQNItGSZH1IJwFxRo6qpoyx6ODqz/CI/myljOXGNTNSId/6AEmsAR6P5XhrHcYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 3 was effectively at the station (ping at 15:25:00Z, under 2 minutes after the 15:23:06Z purchase, about 0.01 miles away), and 60 gallons is within its 120-gallon tank plus 10% (132 gal).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzN9EF6QrLTUYgmAqMp",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4310,
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "thinking_tokens": 170
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 3 was effectively at the station (ping at 15:25:00Z, under 2 minutes after the 15:23:06Z purchase, about 0.01 miles away), and 60 gallons is within its 120-gallon tank plus 10% (132 gal).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4310,
+    "output_tokens": 274,
+    "output_tokens_details": {
+      "thinking_tokens": 170
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

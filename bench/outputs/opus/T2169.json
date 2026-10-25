@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019536,
+  "durationMs": 2194,
+  "httpStatus": 200,
+  "id": "T2169",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1025 at plaza TXTAG-SH45N-01; the closest prior charge (T2168, 24 minutes earlier) was at a different plaza, SH 45 SE, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrwUKEAgTGAI4AUIIdGhpbmtpbmcSDG3iMXD8a/oE/SVHpxoMqGMuuweNvm4kJOTtIjDYL0V4LKVM3K5DqjntYuAFPiT1vH03pGymFAvYtgjlO/iE3Phf+rfFOe+bhOMWieYqzATgaIPVF7IKRYYHgQJV7+685ylO0mC96L6+JWU1Asi/G5t4ie/YcSbosH0HzfAi+EM+xDMkQl1aanrALHAWnmq998oaKXb5dNyJYxsDgxcsFTt4sNCwH867GJXMqqp7HKhjdGZk2Ej/u/inX7yqWPyJZv7CFhn7HKvXS0kHe6HU7BqoBwFQh1V96bdyq0q0Odz2CEE91GQFmOJj8d+uG9sWATNotg4nYaPSJvXvcunI2MECYwBWFALTKpxc4XGCj9rXis4S+e2+24I5LaJx3aG37Qo78Ebf4qSQxjtaBnofLNxQHYmKcm6BbddQFSGi9P8lvmghNSsYZEBH1i4d29tkYh9KDHpOrWlzXtfT7Py/QzK1cD4c+QhonX7KZ+wrzKkrjLxUeSnZr+N9QHbelVfVsp7sEGsXRx/Mnv8Y/o1GmZMh6vWT9oPKuQX2/QdIvTx1reOC3BVPk1iydx3iVbqO6eF7pvEY6ixCGsI7K7tGJjHWI/y0pOLjHFvanZdONPBMzSvC+ges5r3ebKa1m/dtcP1gyAFKs6LSnIUnkdyMg7TtqM3LR/evO+D6N5mOPkoWuF198kuVGURkcbJGPJAq/zxmLRG2XTmf3Oj+iL9bz0klqi6zzkq8oezmqPOT+odFlXoq2VxWoGLvqEIUBIJpWWKm+fEs1rrQDUDygM479E8eXxPUhpEwB+qEOudqD18aPWuHPAalbL5GvAtOeg1vJfj6yzgm1J9tXL+O7AAWa6J2bmBf4rF6xSyFMNq+TqyqRR0jnVqtlB6D26QYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at plaza TXTAG-SH45N-01; the closest prior charge (T2168, 24 minutes earlier) was at a different plaza, SH 45 SE, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyywvVttwzHTzUbavpd",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4144,
+      "output_tokens": 148,
+      "output_tokens_details": {
+        "thinking_tokens": 51
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at plaza TXTAG-SH45N-01; the closest prior charge (T2168, 24 minutes earlier) was at a different plaza, SH 45 SE, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4144,
+    "output_tokens": 148,
+    "output_tokens_details": {
+      "thinking_tokens": 51
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

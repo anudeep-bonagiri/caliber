@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008356,
+  "durationMs": 2377,
+  "httpStatus": 200,
+  "id": "T1269",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for plate TX-1032 at plaza NTTA-DNT-01 was T1167 on 2026-07-09, a week earlier and not within 10 minutes, so T1269 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSowUKEAgTGAI4AUIIdGhpbmtpbmcSDC1hppitwNXH+8pREhoMd0PWSqkvzBsLgOUxIjBoE41ege3fBXvOEUPTHxkhnoy3SZlBRhv5EZ/eTH0Z8AqItb0jb803hYtoM+Qk9CIqwATldzy8w9SfLKWDZrA6IZHHPohUSTsGjo8/0hv+pSyZJ2setQomCiLvM9JKb64CuLKkLBfyzzFpPkvtmxwpxxTVED4X/ubAfnD0nb5yfQEO/GQsfCPy/I4bX5Kk5euBJS75ezcKvppH1P20cXvukMcQ3EgQdu8/OFeTP9F7S8w8WkmG84M9ezKhavkYJx5lmInufrngoPyAbyVOI7EUsgXz+mz20FHk6ARBDYwgHPM/Hnh0ffCUc4h9Uk7V03odDaNJHxWMO7bSNqd2kwtF5QoQljCj+ZIDLOBJPBBNBD+BalVbeYInvV+4011CiHiQJJRqIZf5jrq+9rBLm68ka9k6Ewai598Q8+D29vLCWE4dZeskla5djVdOzGt3OQj6gFr7QGvCDuxt4flwFvVukre3c/EOQtQNWjsolEwHI2/gYJDAhqt3Pk2382Oq6joeWIU7nZCMkMP1bwzxU1UZp5mc3AoEbU6l1zFVXq/3NewjujLPuAWPd78JcjNSWY4aWssuU+lBdWNXOcg/GebKNLyzkGNx2JbWVPTAGck38XLpv2E5xNIn9eEFw3x1649u/ZvHGjFwOz9LtnGg/RZmnYGp6BC7atACKiNTPkxb0NFmuvtf+GH462/pG1VL2FjaNfzAX1LPrEgofhcvidd256Bhuxa/cjMbu4726y1u7bKlo5SYH5gZNfnPe7+FewqpB7R9Zd2ikXGou/XEglXiEXMt5fyoi7u0DgZAN4ihQgaIW+ZN9GMj2tNxSWcERm3oCKcYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1032 at plaza NTTA-DNT-01 was T1167 on 2026-07-09, a week earlier and not within 10 minutes, so T1269 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynCaxhjCVS9pmQe8DU",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1389,
+      "output_tokens": 140,
+      "output_tokens_details": {
+        "thinking_tokens": 50
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1032 at plaza NTTA-DNT-01 was T1167 on 2026-07-09, a week earlier and not within 10 minutes, so T1269 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1389,
+    "output_tokens": 140,
+    "output_tokens_details": {
+      "thinking_tokens": 50
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

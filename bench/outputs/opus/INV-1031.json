@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02612,
+  "durationMs": 9832,
+  "httpStatus": 200,
+  "id": "INV-1031",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 36800 equals the contract rate, billed qty 2 equals received qty 2, no earlier vendor invoice is for 73600, and the bank change on day 71 is after receipt and the invoice is under 500,000 cents. Note for follow-up: PO-1014 (qty 2) was already billed on INV-1008 and INV-1022."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 36800 equals the contract rate, billed qty 2 equals received qty 2, no earlier vendor invoice is for 73600, and the bank change on day 71 is after receipt and the invoice is under 500,000 cents. Note for follow-up: PO-1014 (qty 2) was already billed on INV-1008 and INV-1022.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzG5z7kY88W5dvvKzHN",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2235,
+      "output_tokens": 859,
+      "output_tokens_details": {
+        "thinking_tokens": 715
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 36800 equals the contract rate, billed qty 2 equals received qty 2, no earlier vendor invoice is for 73600, and the bank change on day 71 is after receipt and the invoice is under 500,000 cents. Note for follow-up: PO-1014 (qty 2) was already billed on INV-1008 and INV-1022.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2235,
+    "output_tokens": 859,
+    "output_tokens_details": {
+      "thinking_tokens": 715
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

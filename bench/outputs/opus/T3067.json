@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028064,
+  "durationMs": 2589,
+  "httpStatus": 200,
+  "id": "T3067",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Plate TX-1026 was already charged 1150 cents at the same plaza (NTTA-PGBT-01) in T3066 at 20:22:34Z, 2 min 22 s before this charge, so T3067 is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3gUKEAgTGAI4AUIIdGhpbmtpbmcSDM+3vheU4782WMJnQRoMQzakvavvn1nyOCl8IjAIn8/3YvOAjDp0WXn0DlW0Rs+udyxEKX5HXFqcdVB1sePcg6b9FEpBhkndz638kK4q+wS5E/tlpQiqxOn799Nvxvpwroxv2lYWXoxfhEKxj80PF+W1unjCMXbznIMrh/7HKKpmtfkbhbJ49kJ0DU5IWciqXJFPscdb2GL3UFGT15ud6zPH9Id4XMiZsvM7TJouuklEfbBTF1u7pvaPOEqgZcglzFH+mGDcGk6qLCKfKLnDx1ui+kgVG0xekWkQ4TcZ16QWhLpwUELuzbMBB9BZ2rdJOJiYs2rDdxaewth0tNuNOCno16Im/u/R/re4MwGZxtANhr9YDzNHLH5DSAlKNVYn5l+SfwewhKKd8pSHscMmKEBT1o4JlHeJ93kZ9Q8rB4dpmgRMkeUVD35mpMOqJ1n0TYQsrUHK0zJa53mFklIOvDtNFRoe10JBkx/ywYeIQ45pQ36uX7Dx7t+vLF5vYKh6QfcRAeRN8bC6IO3zYSgKwBcneyCopNYKrAlHBAEg3sJC2zZY2rJvAce9Yvbota9mZC46yKzoy2/POvMFBZUhE5ynNtiYRVi9ouRPiz6cCaoDH26TBA31sH/wNOk/rzVe74javMPsGCqjFh2DbSSvUAZ1VK3iMC1cEzqbaCIYpSAgGtIeNPZzST4vWuPNnRjU1xvaTUZ9Uyrv14PsoWJq9IteTIC2siemLBj8qoB0wfRqq4QHjzK0yCkDbwljRigJiwyc8+LJKuck0zakgtKPqfwo7Kr5Z48MCy21WgllwX3OxOcJ2IOt9ZKJ9otfZkAj7iWJdmepfRokelzZe9HiOoluqru2JVvgVGa6v1LDoRlVsPuSQcw5/RK7vYq4EBC6gfqyjpac0Ph/azq0ZVXW36/iQSSu0h86bxyMfWszw+h2W2MDFkSWx0iHNBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1026 was already charged 1150 cents at the same plaza (NTTA-PGBT-01) in T3066 at 20:22:34Z, 2 min 22 s before this charge, so T3067 is the duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqeDA5zs3Va6NDEUu1",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6061,
+      "output_tokens": 191,
+      "output_tokens_details": {
+        "thinking_tokens": 84
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Plate TX-1026 was already charged 1150 cents at the same plaza (NTTA-PGBT-01) in T3066 at 20:22:34Z, 2 min 22 s before this charge, so T3067 is the duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6061,
+    "output_tokens": 191,
+    "output_tokens_details": {
+      "thinking_tokens": 84
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018816,
+  "durationMs": 3795,
+  "httpStatus": 200,
+  "id": "2830",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 34's nearest ping (18:00Z, 22 min before the 18:21Z purchase) puts it parked in San Antonio, about 107 miles from the Giddings station, with engine off and odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1034."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0QcKEAgTGAI4AUIIdGhpbmtpbmcSDBu+uuvvCIIifbRI2hoM4zUAvzlwz7CrmU+vIjBifLPqY08HcejgkBuOlhaLU69368AtIf7MdE5Zln4qJIf875InHTGb+UGzzVN4spYq7gbU7wbxUdWVedhaBh2uA82Jf7mgUoyKHvDFivBiVFKqwD/TXt7sGYibe3jD5J1nlTNYz58MKMXfWasdXFOFHt2LF6VJmDYHKLdjP9nLMOk+YWTjRVN1n10SIWNXoKDIp7DlP0CHj80DQxS9Ckxt2qgzOI+Zzy1iktCSuoNX+EFZvDO1HZXgmhCaMzDlh31ie6o2q5RJED/W7nIntbn1MMPoSclba7w3qSldaEeIqPnIPytkexbG41yX978rM1yeB6RB6+dvy/fbhVONmHMA4/o+qVz5xzT2ThGJbb5ncUH+ikUrFGg7g5V4kp6z/bR/+4O5YEiqIW5vUIx+J2YEsfu/RWv9Pwvq0W2VctyDWsaQ/+34zFaPoPctJ5qPZsPg5jre6PWVZYA519K8sgxpkwjhDoyhVRZFs9xq16eiUIpRZCyQF5qbbzc5371FI05Cwzj0nbVyO+4+4B90uxuiPlpWZGwuGvMkC/mCloYQYTJ7jdOo4fxvXrP9zhVgQkas0SklTqRXL1Z4eO+cCn9scRs+/iGaildFJdRw//2oS6YvvA+wS2oAL1hhr68VQdfWlccPzMsml7M1ioXFwkYohL1K1OaBNTVbnClVtzEnK8FzsFzg1+8kgJOQDCf7L3sSZrIbRmA5X6EuFhWuejDV3JKsW2ijt4oJpPqTpfThfxqiZMMXk71SjXgsK9abCUtok7jkIWeYndC7slxJO//PXBXNysO/BRgYWJFMXrYMgo2jV6/YXJA1w2H2lQrOUxPjx9Q9HGmFuWKjyZSp030ZceaqKq4PDNjzs+RuqhQysOnfryfa+5z7zRIwtMVGQwvpDpp0DgImY9rjKAfjie/UXJCK8em6blAewZFOyjqsr/CkFDAdGlH+gskoYehwNVOke/1cB2NH6TbNc0WX+DVuRmYnoYduHTkkIjqXsFWMkFBw1PgPO/nyrCHXIyv0uagCZtYFSRA5poCclHS7aDz7B8SalQGTUBt7hgk5Zxirz3CR8Eu/zNISMHUUJOG6gytVoV6fDNV0hRbJjxQ5pibwF7fVZqv6CmTAHBx6eheuwkeIkUGDJVY5ltiHkllaU8qn/3inA6D7GJ2lxmTSoQ0TdvBhOw0voVFD+se1hZPDbgzgZ4GW0LnRPcMBkK03SqIRs9f2unGCg8XaPk2eCQ0maRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 34's nearest ping (18:00Z, 22 min before the 18:21Z purchase) puts it parked in San Antonio, about 107 miles from the Giddings station, with engine off and odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1034.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysqytWjHA8mJYVd3t6",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2999,
+      "output_tokens": 341,
+      "output_tokens_details": {
+        "thinking_tokens": 216
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 34's nearest ping (18:00Z, 22 min before the 18:21Z purchase) puts it parked in San Antonio, about 107 miles from the Giddings station, with engine off and odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1034.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2999,
+    "output_tokens": 341,
+    "output_tokens_details": {
+      "thinking_tokens": 216
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

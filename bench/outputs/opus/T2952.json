@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.048864,
+  "durationMs": 2945,
+  "httpStatus": 200,
+  "id": "T2952",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1014 toll at TXTAG-SH45SE-01 falls within 10 minutes of 2026-10-26T14:34:33Z; the most recent one there (T2900) was on 2026-10-22, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7AUKEAgTGAI4AUIIdGhpbmtpbmcSDFFpXPZCfuyoas7BNBoMrHBdg9m44MrsItwIIjC400OUOKmrlfrNZvT0WcVtLZlU5KI++G3mn4iYs3M/jdtNdOg1AHjAxmTi+X/B5IwqiQWdfQg/h/XCcq3STRHkrVWBmv+Kb37PsZNdBsHYjfdKQjh9XdqTie+AAVTPnd4AlKncXJRtT56B42n/rrsoeT/TiQUoldZV72+YjkuntqlHNRTaMhCs/LDDnkTPLytR2kfJbLb5/5vSKxPA90osThnJO6JHn9vUrOEf6TxjrEnMmNnv7bpbPwOS2yKrA140yL6Ydl5kM/NNCFPf0tI1q7p2kIQmIHJO7t1P5olV6VvuK/g4gFulHbuaBKGdB/v0qzXRGSrpRGTXdegnuUjew56RPD2/pyqZnfL6L4hYKl1oSOObceZV5F8RGJ/fL4GAvpHLlJyTbiQVkwlrPEbOUdI5EOTDK2YqHT70V8IRzmPH2zotWeh0irAPD8thePUtk7rx8i7ubYXDW9JR0ryv2RXldVxNWGXieggPtGXE7R43KEwQmlBDQDaubPC9uTcl0V3b6MHPejwlorbgdQ72M/wYO3BVis+LmomE1w3DicuMKtHAtq6UZ7/mjpBkOBRivfUPvfpw/9deXf09IXO7Pb8EpXUjYzliY9W1Ckjplv2YiNpB6wCKP16xt0Pz4r7JM8ClLp5dL3H1j5VGF8naVnSA0jn1eE1WBipWFqXAqoKP55iPOU79lfKeZtoP+EIM6zz6RNDz9aEbC6jfvgHij8Kff2bQs1sCrmFYA5+LxpmE5wobFiso8iKwsqlF1SRSfSvW6LQB9sQS+JPUtTbpLNZdbHio21pGXQQRuZ3rR/w/seXuRPOVn71lX3yGC9uWrcxjd+OWzkwKnUJbL7AVE6miaNCE19+g5AjMn/QPmZ7k0H3SW/hjjAEloZ4SVpwdyO16ZaC6Gcqn9Gv7/ytWg3UtoQt2gtp39Z70GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at TXTAG-SH45SE-01 falls within 10 minutes of 2026-10-26T14:34:33Z; the most recent one there (T2900) was on 2026-10-22, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyi9se91bd3KWwcSdpM",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 11286,
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "thinking_tokens": 85
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at TXTAG-SH45SE-01 falls within 10 minutes of 2026-10-26T14:34:33Z; the most recent one there (T2900) was on 2026-10-22, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 11286,
+    "output_tokens": 186,
+    "output_tokens_details": {
+      "thinking_tokens": 85
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

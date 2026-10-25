@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0274,
+  "durationMs": 4233,
+  "httpStatus": 200,
+  "id": "3188",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33's 15:56:57Z ping, about 5 minutes before the 16:01:37Z purchase, puts it at Love's 806 Georgetown (under 0.1 mi away), and 42.0 gal is within the 110 gal limit for its 100 gal tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wcKEAgTGAI4AUIIdGhpbmtpbmcSDK39uRcYlr4Voml6exoMo2FbD/GdcmzZU3WRIjDzf7v9JFMPhENAVmYijjmmzh/fJPv2xTE+aYwjNPOAK3lXGiI4/E4tMn17X53XY88q9AaLyIb0IoAP5xrOPWIO6Xdh//SfvBxkCEk4Pbt+r9VIvG7RHqm1obnpy1sXv8ALaZ3El0z7qDAXPFdZkW44ejIHTX4IOUgCTgpyfoxUgIw8/cItfXzGwre5sFAuzp5hrDVBDTbCoZdnEulaSeKABFacFXvwTAxKHhJ5/OUNrZX61y07gNDxw/PBylq8sKd+7aXu/Z8Cq9rFIBmy7GADhcbvyRJG0/sbZR5cCK8VRW14ffrFolxp6dc0lHMJT8XvucJKiurd+1n1RcBt+l+99nPHf/+GeFJKH9W0poxUwPcbkhypE+b72vxPb4Axy5H6ukpokSuzhB4GipIQuJBeXa/fLHPjMSmm2Sk6CTaJgxc+YyYGhCUWje2qyTx4qKsZPoQg4vo8g+FPMT20Yc8qNbQUSAyuEnYb9K1XWO7Kcy+YgHT1NsEDbmNOusFktAOznH7JI3+ywf3lCKgfoXe3gwihMLtmUg6dMwZH1/AhTqhsq/uV8T7vz8+rgqdY7NGtMhZClDhjcN+9XxdJuqvIiQdai7xPUlV5q7rGY9jsc9bUtenj7rZ5cR/RceBQsl4rilO/Iv8aORENNLpxsGoUNc8pXVPykUHvZmVT/gvTsbXBQGyHlf1qWxEfh3dxymFX4x8+atFZiaKxXbe4Kpf8etDizWsTainf1jhSbrZJlnGusmP19AEomszQLuconlIHQCuZCTIzRrQjXVnqw2TaxYKj9pv80UuxbuEAftI1GFcPJfma4vazwzYeLa37akIV+FxaLZaoELCtaV75YMvLC1gQykUz732CD8rPyCNxO0xXD9g4AOmlXq99RSOS8Udet3VfKLmhnMFuBWCA8ei19BJie0IPScsprmah05dBHAPUd9UOybLpIUkda9stRD37hh4zE3IErXuuQfMr2XUOFPjVTKOp3qalKt7yu6oKUAiZFDI9U4lbDugatOKTab0XoLbC0EDPJf9np1r7i98zQCMUM+PLHqpaksDVVqBmY1yFcd7hEHdj9AKKRzvh2xYufMFRvmG/jBuNVPrV7pgotyHJyDZOUQDr2Mj9ZGpQEeZePnX9dMCv0HK7tmrJO+XqEDFpekePfW7XbVQTwuy+a+F2zNAxdX6Xxrhi23KmxJeM+XApsxoswp2cgLjY0dnjrvW2jaLlBCztARik1w5cUVF/LwxO6BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33's 15:56:57Z ping, about 5 minutes before the 16:01:37Z purchase, puts it at Love's 806 Georgetown (under 0.1 mi away), and 42.0 gal is within the 110 gal limit for its 100 gal tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjwX3JmV5PGAbzouaQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 196
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33's 15:56:57Z ping, about 5 minutes before the 16:01:37Z purchase, puts it at Love's 806 Georgetown (under 0.1 mi away), and 42.0 gal is within the 110 gal limit for its 100 gal tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 305,
+    "output_tokens_details": {
+      "thinking_tokens": 196
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

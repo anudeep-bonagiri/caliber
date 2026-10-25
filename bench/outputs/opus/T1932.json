@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018332,
+  "durationMs": 3152,
+  "httpStatus": 200,
+  "id": "T1932",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1018 toll at HCTRA-SHT-NW was T1558 on 2026-08-03, not within 10 minutes, so this is not a duplicate and no other policy rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8QYKEAgTGAI4AUIIdGhpbmtpbmcSDOuiYGjGLM/sncuCUBoMqYwowN8rhfhZ8thSIjDK2PYe5uG4mBjhUOxOtv8LK1svaNMx8CDdWEWBs2f3+g46tHtluj7Ca654wVQHDrUqjgYsaLm25GtFTG5r/QLfchOyDNzqrCtlYzq0UYHJ2lvDj+x1kubfM5hAX8b8FCAGPhtdPKKIj3oOtahdz4MAUTfbtUidkrvXHDhG7ZwosRnt1MGXP6EsvfcTtYv2cSeuawqcD2mjGCv0IFrkgfVulPZ0BIclX0THPxBjWI/qPbJd8GnGELADPyAFjHDF064fSedbfn9tR8w+sGogDrIuED0AOCw2CEhA7zDvtdl6HLE2Op/vooKLTybhfGYGrHZrn4yDG06kRwF0C5shyQv1+at2C4ir4HB9UFqO1CI30+1hOlGOHukMlYgzgZNDniZ8TzORbRZovRQCwSzf4k5qmsqDCEozNLe/LQYRjyI7ZsJ7leynp809zTptxCMtOYyaHGumBO1L581rwb7EDn95JvaZ9s88pJiOfipu/Vq32jpoJT4pdvdUR7fA5kDvC0q+wnqdUGR2nYMNigpdT8B1NqbI6y/w4irambK0eP9puOpRnT9cTVt3YlxgmmctydTgio/H9pj/rpzniV/cskXg4HxU4zUXu7OZUiOv4RZX6POPTi3cEgMh9olmSJOavOaUZrbuXDX+bWLc50Y5LKqJo5eXjQw5fBS8HuQynUyEwUsEVGb6vFYocfYMGTC5D9sgBIhNytsvK52MPczEveJ33zMVuBh5P3I7mcNbZaWBU8KiCOPKD6NDKozb16R5tdvsOhHTjBGubCbvXm0MvwFkVUdFpc1PoMFUkQhL4ROLZt8miPoH0fmsZGIyp3hUxanCKXACHjuRQrUCYq9G7KU5esmqCX3dhBNgDrQNMPo6dxzb/pFjLXeD5aH75oeeFvUrERgUQvoP5YhoUDBRSZhm+vS3H4ssU6qq7WDDzUXgluQaF3scRjFsnXFgm6wiIzedzVsV2pOE52NW+lMb7hkRaT9qK1AGlHkXzLp0WfZpPUl7rsek1l7Cw9G1nSbG0Eirq4GhoI0whF8QU0InbzEqLJZk3sJXagSStp24RuObm8Q7sK6A5FjdXBSIFWknu/1tnogyhR/WTWPoOT+KUc1NYhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1018 toll at HCTRA-SHT-NW was T1558 on 2026-08-03, not within 10 minutes, so this is not a duplicate and no other policy rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz1frAbz7AN9Y5nPTZB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3373,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 153
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1018 toll at HCTRA-SHT-NW was T1558 on 2026-08-03, not within 10 minutes, so this is not a duplicate and no other policy rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3373,
+    "output_tokens": 242,
+    "output_tokens_details": {
+      "thinking_tokens": 153
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

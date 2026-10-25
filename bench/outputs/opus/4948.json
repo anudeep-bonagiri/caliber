@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026632,
+  "durationMs": 3299,
+  "httpStatus": 200,
+  "id": "4948",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 32 pinged about 0.01 miles from Pilot 1126 Luling at 19:06:37, under 3 minutes before the 19:09:14 purchase, and 105 gallons is within its 300-gallon tank plus 10 percent (330)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiQcKEAgTGAI4AUIIdGhpbmtpbmcSDFf6RUqJmz44wU9tixoMhc6lVBqOvHFiF//KIjBTrDKX88Wt3PGwIK8hCZGYTd4jVt7SiBeu2U4tLj/em3xqxflW3GN3iYbaY3kTfZ0qpgadlumqC9FuMtJdswIEDH6IeH5XjXW77mi0pl3ORDYe1HexvOigLgPjAsbYeNZi7tCB2r3eWae/T/qQbHvPY+dYqPP24VF2HON7Ky+euXzv8K2FH4Rrup7iaAoDfjhyMVbbxbT8il5+KaCsBmfvgQLSHXBmbyDMsOpS0oGsaVXnRTqFDOm2Y1LvyzcH1Z7ClAO5AjlO1eDmNrDhh1ax46hTKGhG76YJFyeQ/qOLnbuG+qb49+zxj4e0wuVkpTcGIImxKD+GTcnHlu04eklBCdVGC6DaHAbynpDFrGU21uBojYDIy2v4gPyVtydZ8AriRBZUaD/fiCrGZAOtCuuovdnU4xXGmQZV8OJXApNxX5o0q4rPEkVc6cB62bWBt/Fc9tDYTrA+0TXzJfB26HJVc/bLVG4WP74zwrvDG2GwEWfm8nfuwHFnAEvK+N4FdPLNvzI53FhvW8XG6+/hjFfq516kV/dKLQLAzcNR67hFRqaHAnsv7RSw6zGoWfJxeWBK5ziuQ6QnPKjhAhiSEi4hH/tKQ07wvsfFdLiAsa6QsqOEVGFm3wAIW3x3seUaL5N52VzxarVihbYRgZHl6M6hgftNmhJZ0EgWgrn/flFbkXLC5nV48c+nMwcDjZ+q1ZPF7QSBaEniDVhtcE/e9j0iviqh0YPkDrSWrm9qdoWRJF4Nw4vXRYtk7kmHG52HQQ4aEPGyQEupYg1Yjy63YJJSgjsWPsOhzyYkcjJH0+VK2JelhM/beEQuOTcpS38Fz5ZqV7jHnocpR97FuHms3aqstswOXToxprbrvlq0c88N5npr2fBiA85o2CzOdy2Z6X3XyFWa8Sb/KMV7wrJ5d5TU2OimzzvlUZF+ND7+NI23elet2d5a85ihaa2zwsZXQl9pbbTnzIsk4S2hmhCKrI0wc36cOGQ6StKuTwNZUba01XgxDfBL6vNFpIk2zy54A36kEwV3inUi5IEUwLVOQmfHTcg12wHc3voVvTQ9O9+oMr0Gd8yAS6v1XkO6hmMTZCUfYAPJrgGiFsB6O3bAZbPgqTFLKY6xAFvp4AMvnPtgn9YLW34Z9bSpOBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 32 pinged about 0.01 miles from Pilot 1126 Luling at 19:06:37, under 3 minutes before the 19:09:14 purchase, and 105 gallons is within its 300-gallon tank plus 10 percent (330).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzJLakd2UH5owcw8qsk",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5328,
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "thinking_tokens": 163
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 32 pinged about 0.01 miles from Pilot 1126 Luling at 19:06:37, under 3 minutes before the 19:09:14 purchase, and 105 gallons is within its 300-gallon tank plus 10 percent (330).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5328,
+    "output_tokens": 266,
+    "output_tokens_details": {
+      "thinking_tokens": 163
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

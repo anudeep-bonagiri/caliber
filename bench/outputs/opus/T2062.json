@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02238,
+  "durationMs": 2509,
+  "httpStatus": 200,
+  "id": "T2062",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1035 toll at SH 130 Mainlane Plaza 1 falls within 10 minutes of this 2026-09-07 14:48 charge (the most recent there was 2026-08-13), so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8wUKEAgTGAI4AUIIdGhpbmtpbmcSDOiNUqJ43GSr9z5TFhoMxf/K/cx4RFueGfhDIjDmUsek1tWTNveWgdhnub96dlG4YVKCfdyO2vnP6Ybq+N82FXfmokaUYvkt0egjF4wqkAUzyV+COjZPpqYLPD/TpZMvQEirAbdQkWZc5PoAxEcs1fdoa/9NY5PQGWqRuxgVCiLUxYG+kPH4w2IrCMgb1/XHEqxUvZFPKpDp0Sh2iPmHTEsHWyoE/+PoK3eXKpeAGZV6WAkRYV6D4bsyKlNLG0v3UUVwlee0it2FrwxF+6uE98m5HczQwoxZC66n2d5bwTqzMqxD2Yfx70Psk0B66civaBNt7pa57iujS7qJMkHDkwEmmCNgVcBYqtiCG6NZicu0/Ars2bYqWwAYzCwT/pcaTHephtOgH09heUNI2mK+aD7EoROolt6D5hi7RQ/JtKf8Nac4q4YgBS/2FlW1okzZJQD1TIoIX4eoYK98giuSQJhmkufsaJEYD0uKNBShMxcj2M3MO1bL6sKr06cXb9E5+051zwAp5LeAznfHDh0u5LwRYTNS6YZROODBrL+KJoFqNGWQQK6YLC6fH11Tm8yHlpj1SHntvkyoyhMAnmLRbc92V/DjhG+IsCv/ucT0oKRJpT1spa2K1F/Q242SHHVqXl3lxPR6fAAy0bV3RMN3Ir5V7+GwhfwSqDS1sI3UyCbkT6TAzUsQLkHVq5pDp3PlhFq390/nprT6RYbZoNz93la+F8W1UFg/SwEBDw/3r8rO93kbWMybLYc/vWAsrWJ0lwUxD+Of4beK8YUIuTh75fQpC54BNlEMUO/5FhzFv7LAblpM8kKvgzbfMO0mI0xCHOOn7GarzPHORQI3SHX0WKFyXOcYij6wDXrxm9SB4+tnxydB5UjJBTHyN+xm4LSls0Xf6tOLAVKdHUuDaMw7Y8oiGSKpbNitmbaI5QB36sANUxq4aT2lKVqbhLdEfCJQWqxdHoylrE0EiDBvCUNqYBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1035 toll at SH 130 Mainlane Plaza 1 falls within 10 minutes of this 2026-09-07 14:48 charge (the most recent there was 2026-08-13), so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAwksbH28SQzqvRGTj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4675,
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "thinking_tokens": 87
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1035 toll at SH 130 Mainlane Plaza 1 falls within 10 minutes of this 2026-09-07 14:48 charge (the most recent there was 2026-08-13), so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4675,
+    "output_tokens": 184,
+    "output_tokens_details": {
+      "thinking_tokens": 87
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

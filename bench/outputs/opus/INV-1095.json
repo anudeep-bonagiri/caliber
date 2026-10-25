@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024464,
+  "durationMs": 6933,
+  "httpStatus": 200,
+  "id": "INV-1095",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price $525.00 matches the contract rate, qty 1 matches PO-1023's received qty 1, the only earlier $525.00 invoice in the 30-day window (INV-1053) is under the same PO-1023 rather than a different one, and $525.00 is under the $5,000 threshold for the day-42 bank change; note for review that PO-1023 (qty 1) has now been billed three times (INV-1020, INV-1053, INV-1095), which no policy code covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No hold rule applies: unit price $525.00 matches the contract rate, qty 1 matches PO-1023's received qty 1, the only earlier $525.00 invoice in the 30-day window (INV-1053) is under the same PO-1023 rather than a different one, and $525.00 is under the $5,000 threshold for the day-42 bank change; note for review that PO-1023 (qty 1) has now been billed three times (INV-1020, INV-1053, INV-1095), which no policy code covers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynsPpn5urJ2zkTYiDA",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3251,
+      "output_tokens": 573,
+      "output_tokens_details": {
+        "thinking_tokens": 387
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"No hold rule applies: unit price $525.00 matches the contract rate, qty 1 matches PO-1023's received qty 1, the only earlier $525.00 invoice in the 30-day window (INV-1053) is under the same PO-1023 rather than a different one, and $525.00 is under the $5,000 threshold for the day-42 bank change; note for review that PO-1023 (qty 1) has now been billed three times (INV-1020, INV-1053, INV-1095), which no policy code covers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3251,
+    "output_tokens": 573,
+    "output_tokens_details": {
+      "thinking_tokens": 387
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

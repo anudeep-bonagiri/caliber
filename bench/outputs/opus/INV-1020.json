@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013256,
+  "durationMs": 4700,
+  "httpStatus": 200,
+  "id": "INV-1020",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1020 bills 57000 cents for qty 1, an effective unit price 8.6% above the 52500-cent contract rate (contract 18), though its stated unit price is 52500; the 4500-cent excess needs explaining, and paying 52500 per PO-1023 is proposed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSngkKEAgTGAI4AUIIdGhpbmtpbmcSDMBBjckQp/NHrtWAxBoMBf1CJXdRQWLwAbKPIjDcXh6dy/fS9zzJTZf84z8WhKC0taHB6qXv1TLT5AhBo42zhRuzZ3C5NYv724oOC1squwiL00UK7RPpovxZNOD6xvDpjgyaH8NixUMdLp1RzvKFHrgANaeAIR1M3VNLIBDrrFxlR9xXPg8bw3mhS8+3bbCDXqxStIbxom2Va0bHCb4GmL8BZsoHicFn6K5/M0k3ClXUBfCSnc3ZP5urS4D/KPzejKgAf7J3YDFwvKMfNBTFO1qtrLQWjN5lhtIEdlOul5/g5GUYzIyIDo57HmSxwBuRGNBZowPhjJYLdz9PB3C8xu74scC/oYqsikX0GHZ8xwZuIxnhrjhJ10CP0zy/VYeHlvPEPo/1hWMGPRi2R1s0rP1zuY13DvdSRxNE5JlIE3lsfsVZOviFHp/Zdyt1JugNZXteOzTqjmzh8cHXqUkLHq1+SdSGPa1lXnMs0XoApfZNyI3AIrCwenEtzMQ0CLo9Y7xNoSf4VwwcDwqphrpZ+/KRDfJBFCvArY2X6YA5MYRwwNg3XZmoFhCR/S4NQhIKLwAMrHiz3aUT3qLMltIMbrV4mGHhn7ZnmzgFKdDevqvKHMOEDiSWPJZ14UuJAwlxmtWQKtnY0nYOop1mWCkcpOxhyKMxM/o4i/Y45Am/8DmN7Uw8NAJ9QWHRbTfDkr3jjiudIDuT9+D8D05xzbB+hVsA2HBItf+xg2P8goVCoK7EVhLGybpffc1XuOE84qVQLkwBhm6wtiWZ/kj1b+m29jr+0kvYOI5bhLJBsiLYg9LthPLXh7M5DbaL3xpHDkkMXDmxjmSqxSCN8bM7WTKdwra7JVyzmKKxAtI8n1jCY8UoBnB10oGcxZG4OcwvwTpgAdgDT8/KdgHnuG4+Se6EHKaKRymRocCqaml1fIc42EhCwBRmdQa75spJTxZxYjYIC4/Qn5s7iuNprA9aP7JxA0IGogBQh6/bcHnCf63mo4M3wIet9cghAZzvBj4zFfGuWQ4JX2zx8kIPrqz1OUzjp4rfl3BnpXLEbCpZqXL+UImtodWkp9FvlX46GNXJYENCSAjhIFoU8pi6hwqGaP7MerLJbOLeje280br4RZy6Ah54PM6hApD8hICp+5hesmmwR2iS5ALwW+qqhox21Wm9JPqcWimsesH6RohHttmgLblVAnSipe5twZ/0+w1rpXZCQ59mxAI5ZYn5Ynpa4r57eOD1Rb2fsbzfEvZ9b6sEPjSNeSRytaJ6S3OZyukfrmvpezei2wxMNKRruFGSx0utpIaiesaxAXZJQ4CUujCW+dRmk5kzpWjpPa/vfIRGusMgtlJAnU6rBbTspg3WRlLfD8fzmGGJwwU0QiMYMxkIYlPc1UqqhdknrwD0sJ3Ct5u7VXbktSk/todOP2DHdsdcsSGEJM/Jw+SBOox3EyeCnr+/HRB8O1RLRXelCMWmU+mwzAVa6raBpXhfVx2NnhbIdo4giq6556KipMjqfgQh2nbwtxIRpoImdt2xApJMcS+m4yGzq7D5TRaup3IYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1020 bills 57000 cents for qty 1, an effective unit price 8.6% above the 52500-cent contract rate (contract 18), though its stated unit price is 52500; the 4500-cent excess needs explaining, and paying 52500 per PO-1023 is proposed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhH5CgtqyoPRGfYzLX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1484,
+      "output_tokens": 366,
+      "output_tokens_details": {
+        "thinking_tokens": 244
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1020 bills 57000 cents for qty 1, an effective unit price 8.6% above the 52500-cent contract rate (contract 18), though its stated unit price is 52500; the 4500-cent excess needs explaining, and paying 52500 per PO-1023 is proposed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1484,
+    "output_tokens": 366,
+    "output_tokens_details": {
+      "thinking_tokens": 244
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013408,
+  "durationMs": 2721,
+  "httpStatus": 200,
+  "id": "T1244",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1013 toll at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the only prior charge there was T1166 on 2026-07-09, days earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wUKEAgTGAI4AUIIdGhpbmtpbmcSDC8KQXIHfWrDERph6hoM5IwtdA2Mu2OV/DZdIjC148c5WmMf0x67o4FfpABihP2NAJH6IuHGrqldiESNteesWRsGr8QCz9RXULkSGVUq9ARjSbCU71bfJwZgvd4P/TPXltGW9qu6StP3SD9NadyxTZmvhQByxRrc4zKSod6crebZIAptim4gcTCWLCJZHuULHmTdYvGr9hscm+Jua+N9KIglRN0nrLAFtTXhBaw5Ms4JaosSiL0YQU1pZ2izS/D+YJMvkWLVHe+JCEq6AU9DhFNVYf8atxQQH8ksvgRLy9rmoyyhAfr0236Pvx7pm3fKF2zkKRwZiKz/mH++SK5yuj3AH+tZVK+oBoeAVzZS3P9Vz/fMkcuvrn1MsfRh4CpCH5qwH00K1prl8DRFTOd2vc0xVDRP84V4g3jnuTSG6YDh3IIFnYPUZALSmVHIv4/6EBRXUk+HPIaX6lbdGR+guf534PVagUI4hMtM31tGLbHcM0XuiTaplvjcACgjlzol1Y9QY6djvnIallQ5+GBaztmU621Teb18Bflo5kzRpYFnlDtHjjuYV8J44V/8c7cLrfuoBnDgnvxGj6gvly9kKVNuOj4cGW3faXGCthcj/afK3m8zi4B4i0kk/Y0rYpuO+OvWm4tbfmv4RtSq8AJiomqZ5C68BS99bGuBMO4QCX/9TDAdRvFBqsn0EsYAE5hOR8s5FzBeusfZYICd8h28veHjdOU+5hgIxuzgs7mg3taY7k8dOafBsNFc4k3HX+L26KhsQJpgGAJIDYPFTWKBfhuSV+b6wDbzV6JNQ0eEMb/TNWtxOZtXrz1nhClKACw9W3dgrgyltbzMCyxybg41EWfQLNU03j4sb6xkpGht4iErzYbApxNnqD35XVEZx3kFFMwg+1gWo7Rg2xLGTV7M1u9nERIX3xj/+oVmLAvFA8OCSUkmGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1013 toll at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the only prior charge there was T1166 on 2026-07-09, days earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfwhqcgyxLjZV9etPc",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2527,
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "thinking_tokens": 75
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1013 toll at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the only prior charge there was T1166 on 2026-07-09, days earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2527,
+    "output_tokens": 165,
+    "output_tokens_details": {
+      "thinking_tokens": 75
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

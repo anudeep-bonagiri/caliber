@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019008,
+  "durationMs": 4762,
+  "httpStatus": 200,
+  "id": "3884",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The nearest ping to the 19:21:39Z purchase (19:00Z, 21 minutes earlier) puts truck 21 parked with its engine off in Dallas, about 185 miles from Love's 851 in Austin; its odometer never moved that day, so ask dispatch whether another unit or driver used card FC-1021."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gcKEAgTGAI4AUIIdGhpbmtpbmcSDO0QZwQwF7It6p9yRBoMfRM1ImXBsdIoWBB1IjCQyhqiG6Da5DBd1DtmP0UrXbQN2jd8OEhbqnVU2KuojYKSrkbn4IrMIVgm4uP13nYq9waZgDVX6CfJJNb8PqmCQzW+nm8sbOScHGSmPRaEJ74TmlHk0v28Q066cvE/qGxMln799wUc4Jw4d48Og3ENwNsjX3FVg1rIBmm+klEil1kEV13JN/v1YeR+GBGwph9ukH0MG4NFGGRNCw+0VLKwKMGkwOUyDHIii7dAM0wuSfPPwzXvTNs6XTM+QWEnihbxCCURvLE+WV23IV47JQt6FxnLc5AFKSN7yCwen4hIFWBVzSYAmMHyneUPWppCqmJY9VfSwbQdW6ileaDl1wRRrRqlvd2y9NyxuxBfLWeOYk2MB9K9pYh4WCpXz7XLuc/PfHcZ/dkD1snbOGBnDFx4nDtbVGEowXuDv7M1r3R6NZkG5DyoQWpg3vAEIhqk7kbFNpoZ9zoGUAwNTow1DNAcYOuqf1psmabc9qWPqF8cESdz4YS+GSfnjwTkB3MzoeCuWD3rYJK8d6Oz2S5+LX+RP6LNyzS6GE562ty4PCHCQ6oZ6bdRuUSWs1Hby5UpJXNpnGHGrFYsj/F2GsS3LrUaIvK2fq0J1y0CfCsRBT4VDPaTtuqM7N6uolOVA4V+sufvmufFTSELnk+a5JjFcNaPiB7KroRN/JeUDYcT+iAkTtZYWF5CtD0rmiYJyy7zVRYLxAEFd6c5pjFpCyfWmDqNaU+W0hcyuNJ3ViZmLw74Jf/xlvclZFfV6sIiK5fbTPyCSwmtbkU2VGN/dS7C/fWqM8nmQQjH1WtZULbTMwTbuTBCZ5w2kkSz4lkjQWEBo4phEKtOpBKRVfObFZX4RtUtmlnePZiOPGQ8UJME2OB1nJHq2i1j2SR2fpRMdXpRo3mRaeRNaR9k78loKSqtR1fsCEmviFQ3oNdmYxWZ+qu6aDxC1Qd8w1hXVef7w/QZW2AmsvNhh/jW4a9HqMKrmp0tzvIeNd1t0J7b38MKEoTzjMavRe+kEPCHCxbnPzxI2yikcbhnCNMTuyJy3U6kIUfJPdM6Mr2Ed074ICnYF3RUUk8FCynFr4tdPAXV/0Fqt49e563YbXcSuMPxInATyJmkElFnHW5BNAHthQiaqn7ZUPeGhlICY4J+PnEoEWy7q2Xg3tizoSQv6y+6yTEdOOsPijs0zPpciawyupOEVjOfq0lGBGCnFU33YTSSvpqJOWWwydq9rOwtX1UuVrgS6+gRsfjT8aEXgZsmKRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"The nearest ping to the 19:21:39Z purchase (19:00Z, 21 minutes earlier) puts truck 21 parked with its engine off in Dallas, about 185 miles from Love's 851 in Austin; its odometer never moved that day, so ask dispatch whether another unit or driver used card FC-1021.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFraUZHMbJry3s2VTX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2987,
+      "output_tokens": 353,
+      "output_tokens_details": {
+        "thinking_tokens": 213
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"The nearest ping to the 19:21:39Z purchase (19:00Z, 21 minutes earlier) puts truck 21 parked with its engine off in Dallas, about 185 miles from Love's 851 in Austin; its odometer never moved that day, so ask dispatch whether another unit or driver used card FC-1021.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2987,
+    "output_tokens": 353,
+    "output_tokens_details": {
+      "thinking_tokens": 213
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

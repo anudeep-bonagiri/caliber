@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024632,
+  "durationMs": 2538,
+  "httpStatus": 200,
+  "id": "T1803",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1010 at NTTA-MCLB-01 within 10 minutes; the previous one there was T1562 on 2026-08-04 and the plate's last toll was 2026-08-14."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7gUKEAgTGAI4AUIIdGhpbmtpbmcSDOMDN/xRS1I9Dvm+1hoMV3FujUJbh9kFQM+sIjDf+iy6wjTF9W433y6CeRqg6gl04LcAAtxs4j5ODt+RlcK+8977C343kEnSiMSfy2kqiwX6+ZNKkIHiL72nTLs68//ghGApckCbqlB/pjj99Xu0g6jEDAvk0EeisALvCqoAh4GA6ZqZk4EVk5BRbl1CQKe0SkoXl8V99LA0IMPxsPOTH2nLSO5Y/TC89UbL+ET3OPav+8estng4cakxK/KUW+n3ORPO/GxEFtr+ryg+G3jPnXjYyOZWMdfSNFMRGTqm0JHcZ4bKvwTW/TCv5YD5hm+/L1VwfzvAlBHfBW3Q8EA6gWYTp+7ruvAhJNvCZZyDBVPSP8xoxxfB0f92j9llMadFgEmT3xMnZwNYTbSi2acl5u7+gs1MjAZV239ktqNHui/P9fYxtUGntMKLMfhCLPsp4G7NAsH2ZZEqvByJF1YNGD3qxvnL863ya1PEPPCtXxMKwHg3G9qDdJDwgxedT1LCfe8hTqpCf8sngHnMVReh/v2AvBm0H+JS06xOYxviBVw9YSS6/Vt3isD5T5Ye8lWfKc+zOYNKSdZjN9eF9Xod3Y/8inR8YG4COXUD2k8i6PYsTFd2K5cAbqFuDL6igG5Qfo0XcekkCp5dorukcTKt/SbO3Tz6rjDWaRWiXwYPN6d2o6ie6hcfvqjAvNnpGuvlDcVOc0tYRHrUcZE7Ok5WuhL6O23xNfwv1y0HuYvi4ae/fkKozrTG06Gfu6bwm5V5v+pd1zQcR5eAeFeTqng51ispLGSG8clbZYdcnJjW+H2COkDji9HlIa8WPCLArbAy9p9EhRyvyAisHMN9mT8yjPxX4kPzLUplyTWKDPtwNBUV31JWSODHvYvg6oYSooN80qM9wzE5QWRqL9aUk79xVHXGODEpoXUZpY1jE9blDAoxekNK8+r0qmCywy/LnzJvrWhoxuRn+1SZagcYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1010 at NTTA-MCLB-01 within 10 minutes; the previous one there was T1562 on 2026-08-04 and the plate's last toll was 2026-08-14.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz5nQRZt6MEqFg6m1Q2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5273,
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "thinking_tokens": 88
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1010 at NTTA-MCLB-01 within 10 minutes; the previous one there was T1562 on 2026-08-04 and the plate's last toll was 2026-08-14.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5273,
+    "output_tokens": 177,
+    "output_tokens_details": {
+      "thinking_tokens": 88
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024056,
+  "durationMs": 3355,
+  "httpStatus": 200,
+  "id": "T2019",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1023 toll at SH 130 Mainlane Plaza 1, Hutto within 10 minutes; the most recent one there was T1515 on 2026-07-31, and the only same-day toll was T1515's counterpart T2010 at a different plaza (PGBT Irving, 13:22Z)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStgYKEAgTGAI4AUIIdGhpbmtpbmcSDHcQCCcEOR4qBWUZChoMXkq1PltSd1eHhafAIjBUJEftAsjz27nZJ0vloxI61O3UmSj77yIG9T0MCDwJ8qtXYP/Z0QkqGjZHXBaOkQgq0wVjLGwFpE4pGelUa+DDcl/zPntWW1Zhp79MsSfkRo5lYfnpqN/fPWHnjn7qJc5T40IYS2YT2pIraG9PELcrEbKSavA7qjo2TTBadcAMddoUAD3DlY7Sc/7Oe57jB39XrdrMa2YV5MRfd13DwLDBBSmxOyIbiE3stXWlrgki+AZieIaSMSTnAmCwnwWtPyetiptANqVWWAhcDSw/fgbiaJjpc+JfnCSp4uMwofmgD3CmApm40v9MGY2eC2HCcXMSqwfXHDgfX6fLrlA0UjCPzD9F0Pjf49Dl6ZdUVmA9XJegJYBYtxZ3kpo0aVvaANdu5ixHSXGJ45v4VQd5+l4BGD50CwjFC5r+Jjj1XO4izltgXrWAmROccfa56VKVPwHoTDKCD4Cywtbtl+sCM1dyv41BmbkSkUg5IJm2WbMG964H5yDh1BkV3k1cDu2bF4g6O0aunLRl4ynaw5p8xIzHkKlt88nf9iK8w1cfEXR/2m4ujnRf3qluFMdK4gkJSB5umIsVblGCjnDluTsM+V1ycg18Eg/aIzuNaTelalMnVh++LQ6GYptlZhcZ+V7cyZLTPU6nlbyUA5mkG+hqBnWxZHfbYSsebKk+kLTWhDRa/9oAT5YxSy75g9a7kznCGOLFFH6+xOqONe2d55J8VJFHa2BdkIrz0opZ75T4CDL+H/jiJUsjv857H5g68eWv98Hg0kOKNKMLZ/9Oovwyrx2fOgPG1dQGCfavBuHC1SvN66JIHjhGIAFKZJq2nCrj8nIILwJBtyhHaqXhqgTur/mJkNjAKURHMUzCfxCN+3xMXs4OoA6ymoXAjtVRZ7kLp5H7iqjKxeagWnCZikfNdIc5oMwBoCK10DQE1Rj/tvvG8q7Bo9iu/hrmh3dosfZjOkUa3seseUVAB8pP9n2jMhgGWg3ANKkR6eTIYNjemvW7RuQy56s9QCCEOoYF4Wb24iBnTGDSCiUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1023 toll at SH 130 Mainlane Plaza 1, Hutto within 10 minutes; the most recent one there was T1515 on 2026-07-31, and the only same-day toll was T1515's counterpart T2010 at a different plaza (PGBT Irving, 13:22Z).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz58jmBYWRkZ6nVpiPB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4779,
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "thinking_tokens": 124
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1023 toll at SH 130 Mainlane Plaza 1, Hutto within 10 minutes; the most recent one there was T1515 on 2026-07-31, and the only same-day toll was T1515's counterpart T2010 at a different plaza (PGBT Irving, 13:22Z).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4779,
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "thinking_tokens": 124
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

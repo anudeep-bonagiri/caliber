@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023788,
+  "durationMs": 5096,
+  "httpStatus": 200,
+  "id": "INV-1151",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Invoice billed at 33900 cents, matching contract rate 33900 and PO-1001 (qty 1 billed vs 1 received); no same-amount invoice from this vendor on a different PO in the prior 30 days, and the vendor's bank details never changed. Note for review: PO-1001 has already been billed several times before (INV-1002, 1003, 1037, 1044, 1136), which no hold rule covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStgoKEAgTGAI4AUIIdGhpbmtpbmcSDNuBJ7FPjZPCdNacGRoMA+KlpHqyV+pRCX5cIjA5YIgb77Vr9iQ+iyVP8wR4Q9+U/h+u0+mUu19/Z7Lfl4uRLXygwsndMchRJljpmZgq0wmofgeSWGgSop1txQI+b8wm6xSfiq488jjt6DAm3ydhby7CZNM440/KCN2kRimlnmCL2fmF7KPkPm+4B5K+9nrW7fuI7KE3SLT1bTIZ7gWEKIDSdb9D0JljiuUPtWL9gC9/SXD2utmoC2hC0KPmO/5C39nGjoLHoT1nLMZXYFHxzpPWf474OaurnQ1DhbU8r2PJ2T3gMJlW6LlUS8CqWDexy3Ix2fJz6GRyhYzb3yvwr4q46GyLaES8e1lr2yE3gdUtG/IFU2RTdhKGM31ADnEMHf6TF3blKNx/abQn9nsfQZiJgJAUxhZv2EUv6pBAM6qldAaB7d8mx7piQhXjYTnwKfjtunWD86JEt2cV2sD9y7c506ksj+5LqcB/cUG8HMiHyJtfJS41xJ5UzhChJttScJ3tBEAAwkOuoW1K99QoRWf4C22vQZWbbcbwkls0jVdTVXy7LxCko5cL6Ms/Ayf6zwQeEsunzxGsuYdniN9sBBOiK5nRJJYuI7UhpnZGNC8l8tS2rbelvYVqe9H535irfCkphADMoUaRziU4LNz8HYbnyCqknnnUjQuchK91OIe+85ezTu2nkbIULX8g8jvgPI1H5C+5rcmNm9F2NEsoflN+my+NwoxCKW/pPDU5pJWDS7mw5JhBGXU8WHubuh8j6wgxBZO1WeBNFIzYknobvq8xpm16fduY0QTGmlGzrME3mPPRDJxXGYGdKTpxcJANMfXS6782ergrY9QpYvEG97dB4RtgDUSo66qZUcygx3DCuK4N1LiYmy3Aa/rdyEuuLeZ+lhO+MwMU80u9w19gpCwsHqFxuk72nPYDwCA+cBF4huuQ6UsuW5JEDFjEvitqw+GIW5yQ2GbMExyvHNrmEcgcOVjwX6w6MwrsbqCc8XjONesYLQ1I/UYst41lE1HuTO8Q8r4p+ivF7veaegliqyqwzHatlun7i3Yn2MFokuo2bhB7b4K3B1o3BLfhrjnU936qCZBPeFDbTL9E75VdddCj6aOF/buQrLvKX/Li7bI5DBbqnXdYJiaCxMZyUjkUUCkPc1s3fGv8+vX1QNxflXRQfr2VeNLspdiplbg1gYgasIucvS9vHjIXV0DntSrh9xGm+0BXyHK7nsEGEj7CeHv4cFJnj5KSupASEaBzxnvi1C0z0wgjdvlz/H5hSeKE+811cbgmcaCqw/MC/J7zbITzHmwbzPSBFCh/BCbf9+8udOyyTbDwdatI4jv3rnnp4FgQaCQ7Ozv2PuBNBNjy8ySO5p07gS1gPGa50KTlVpwQcwLg04mcVyJWDIJchuzl0QI4apP58YFE4+aEWeBwlnVYxZRmDjBPjuC6pOrPGTRmOU8t3wCZ9L6PUb44s7igKGJM7fO5i0rmuVvP1tMiASY6oDNyEUWBAV1XSlWoIpmy7QN8N8dwSoFd9Z6Z/L73ovI+27QnSwcS8zAfLuWGLoIjAP94VMBRI6dcjd+TzJTMG3liNM34vYK1dAyuqX67AufyvzAuINTR/XXaMpfScwLBDvEtSBJDHU4UcGziGXvTUwKVy5+Gay2VLAgBSy+Ufvx37VD1h8AfOrK4kE75bXvooDq5YCoXuAkA3k2uh40B0/qFvQCRRGgJNu2xKQO2TGaMGBMdnX3+RFPIRhETE2aADBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Invoice billed at 33900 cents, matching contract rate 33900 and PO-1001 (qty 1 billed vs 1 received); no same-amount invoice from this vendor on a different PO in the prior 30 days, and the vendor's bank details never changed. Note for review: PO-1001 has already been billed several times before (INV-1002, 1003, 1037, 1044, 1136), which no hold rule covers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3SuMWZ4dCkvVTpNdz",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3577,
+      "output_tokens": 474,
+      "output_tokens_details": {
+        "thinking_tokens": 320
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Invoice billed at 33900 cents, matching contract rate 33900 and PO-1001 (qty 1 billed vs 1 received); no same-amount invoice from this vendor on a different PO in the prior 30 days, and the vendor's bank details never changed. Note for review: PO-1001 has already been billed several times before (INV-1002, 1003, 1037, 1044, 1136), which no hold rule covers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3577,
+    "output_tokens": 474,
+    "output_tokens_details": {
+      "thinking_tokens": 320
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

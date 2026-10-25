@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025564,
+  "durationMs": 4723,
+  "httpStatus": 200,
+  "id": "5200",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged at the Buffalo TX station (under 0.1 mi away) 23 seconds after the 16:24:37 purchase, and 34.8 gal is within the 132 gal limit (120 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wgKEAgTGAI4AUIIdGhpbmtpbmcSDMk2YZORzR3TDWwaVBoML43B1jcbuZUyf37lIjAdi+Xz+iSX8oVpEgsr+Kx5FC5roJVM2R52jzElIPBNIJiX9hdJHPOsKvaMVtGjRr4q+AebStwctsujCRuWEMuBH67v/y7Tm3iGHAed8jXJCDto6IjRIT8htJO7juHGD2sLfVytBpjrLlYus4xtFgC0gB9ltsY7/W5JvzRt9cLj/+MSYP5QfndQZirES6idEYKm/N4DSalu8ojaBviQR48UPnEeq/VI1tHDxWoxyMTZAb0VjVKdrZkJtC0MOv9pS3alBpfWd9q2/nVyboO+dj6t6TraNopXXskGMZDlgfXADUjEeIwxjeiaIY3MdymfbGMFaOuNMLIoeZhPSwuMNzpydJYzJ4wk+b29y+Q/28rJl7pB8t4sj8v7hZPl8BzX1URgVRZ895diVlrlycoAJnGTCzZeYBsaJakQRMexIY9/Lvw/IVF4AhvwuFMN4GUhVDTTz/hZVbvhVvR08a9ic6fqTvNWblRJ20WHoWrS6XgG//FZoIyD/2C9CPGNLdKs9b7rUjMqbtINA4sSmEwxF68i2j3f1ATbiv48BWI08VuSudyQIJR2kvg+cAkjurx+xAWiIUiAAVwtIbCgCsAjWcRb1wPcS7MJBewVaKRIvyc4SMUZ3xxA7412zwrRdvYDGNV0BMpqqQM5zfngftJ6ARl5eJ/oT6XDuROMl03wj42Ik2nQG+Z5ONPeOnAEuUKtdWtrSLyLmtP0A/3q3En/uJKXFg0eandlq6Y2u2qL0zU7MTI7gYFDVQJrZyKPakvZzVZTbpmTc43p94vJYrHrGNHLS81472lzry34Q0aIOE9V2xaos1Fj29NwG0ihrq1ODH17dXDSCJ39tbyLO4OpzxAg0Oej/5yG5nxcGa1HCRXwCywpZWjDmMKXTsO2HsBWl6K68rRqWsIBbwK9NOAKaeYPf+NpEhnvO8f+dok40y0EQzvlJHrIMjdUB9wSt3x4esyKMe7GXTK0TRzlyjRSkatu9BzuHWhxfXjvyEuRaJo2aYIFo1r/oRYmKa6Q7s0n6q7f1dJqjiZ+szlClNlNXjGUn2YYciy1+X2ND3xxmTJk+8oZbl9WMegPL05CVk7d0cqIfADn3BBmS0I3/GR55aC78F/tfTVuaFezHGT0yk9uAxfSDftWaGQXQdVaeE5q9oInN/8AZpzbmzIjUZdCZ/O+0CSGD/jt/q/oBs1hkCeJAH+4qreowss/sdKbsQzN0SXt6Y6mgh1L1b9lOgASNzhaCmnd4e49dkHu+jSxcAemwuSXqAHaKUDM0iOdKL7LSnbUGC/mK4CZHgEmnSVQBL1exMehhIdO+a/QopYKzMmwey620D1NLOrHyYG0R7kUwCxL8UoGMTMPsg+GTDh6QhGK5twiZwh0ksxoCFHWERdLsCotk5mchvZXhvDScCTIoZoqXa6U85P8NbTerhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged at the Buffalo TX station (under 0.1 mi away) 23 seconds after the 16:24:37 purchase, and 34.8 gal is within the 132 gal limit (120 gal tank + 10%).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKpPcvcuD8ERedHKH2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4451,
+      "output_tokens": 388,
+      "output_tokens_details": {
+        "thinking_tokens": 286
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Truck 14 pinged at the Buffalo TX station (under 0.1 mi away) 23 seconds after the 16:24:37 purchase, and 34.8 gal is within the 132 gal limit (120 gal tank + 10%).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4451,
+    "output_tokens": 388,
+    "output_tokens_details": {
+      "thinking_tokens": 286
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

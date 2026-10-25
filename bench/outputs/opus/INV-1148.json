@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0263,
+  "durationMs": 6198,
+  "httpStatus": 200,
+  "id": "INV-1148",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit 49800 is below the 50800 contract rate, billed qty 2 equals received qty 2, the only same-amount invoice in the prior 30 days (INV-1101) cites the same PO-1020, and 101475 cents is under the 500000-cent bank-change threshold. Note that the total exceeds qty x unit (99600), though no listed rule covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7woKEAgTGAI4AUIIdGhpbmtpbmcSDITVYJ/XD2oVa52XexoM8TESLvMdLCpZWbT+IjCooy0gKfrSdzOBdBe0QLQyxLPBugCtmpbl60kgBTmOaFroQei9o6nHV8JIv11Q9n4qjApNnMkZd765qo5mmuu1Y2O/R13o5C8OK58JB9kroa3IoVCY2lZKtwHCDieZGjL5m2HDovgxI4FF4qfDQKyXzjebh/BdbKNF2U7y0zMJJ0oxBknHaQovyCsGurgjXSNLIwWU5LNERZ6ilPNweKSWOlu3ososNQpFKVGW2bN2xUAUBa2Fqv2VQGHbwZfjA5vSO71+QhGnfeWmFoECOToOWmm7ZP21kTlL/IXVbpOwhV+D9hFlNAaWXQqPXZP7eGxTWK+AtDK+FcHoE5Re9JukYO7uYNvBoseFbYvITzlgjGQHelWsOywLCFKpXBmGlsMcja02LsWDX8O3a1nZ7f5NhnsDegs1OaTBEvwuYVLxcgR7EIJCOp2Qx/cStMhl+QG98fjUWWWsPLJTIyNBa5xGtxyegK3kXiaAwUvPPqCgPhneKKgpc0hhmnE9Da5AQuwY4KXOtDH+uRIeQyO8+L3tEKInarZFi6g80KckLQk2Rra6dqNWVRpn9VEL8VEFkO+ul2XRJuA5ey//+a4qoLDiPLspunyCpHHw/wHN63SIKZQwo8yijdn6C+4lnAL9uZWKz+YNHNNU/3LokBeOlpbNS0XbzLdvFc3ixqM+JX3MnJaBReEQ6R00U9wY1FeMp7oKwc1CmdpxtFDG1+HWyWDbZ29fKoo853T91vQ41ZbMe/BkJXhcrGOoFCdVu5qvaWJOwW6dFesWwxnkx3foui6MCCTFm6a8RjZE/ptftdc2RCJwSiqkufJ/tWFf1hMJF51OCedgNrkStV303ILG7FIVb7oLyklWCfRIKAJem264i8BKM3Mns/0JtXU0mG6qJm1vOsfXI0PL2SHv45Va+sDYpWzaBPhmw41OWiW1sJTaU9SbQPIIGUPa2Pbe9020abPu5pVzj0IiQYvRZYybp/AreoEvRiLD8a1IY77WrvB+F7bmJiAr1BIIa4/OBRnHuoRDxwarBZe7Gbvovs8YfiaTP7xMgKd7jyNogRa2i9FB72MNPWEF+JMWGI7uH8rpJ1Px/v4GgjsuooAKdEm/+roOTT0H++zY+wvgXWQRpVD1dh/IiVSWWxuKL5U47XldlSdV4/wbbLI42EdH7cCkW9IFcHwPnCxaWCZX7hcEuY1X94e+LXHbF3O0Q9X+0YHAKHLoCJoxteaZ6YxpbudPzSTzwOMqAx8frgwTIQ2HMk+ixckX2dJz0fw4oP+zNWvPO1OI2g2n9hCwdteGfBxMgEPOxlV1uLNgilWgRBZAW7yp0TDBW1EOyNdxA45x5vtSG0T9LPKkbuFbwJd+AJl3/ttFBOjEelHqCJUDMPmFfR6SYEhRg2hQPDCq9j/NMLUxhiWMjht72T38oRkIOChh72Qmzb6UqoIzkZhlfeQMOjIv86hvUcLjrAAhvsDApuEXJ5FQC5zWbORanw9YkyV9p8LbxuKrYUGOWEfupZo5qb+g4MBntlRhuARGCH7bm88YXz+9Ato7jpuVfocqrW3Po/C3laHdTQ42Rc2hOCJJj4J4CkIQ5apaeo6GpKLuCcFwMieQ4GhJJZ9ql+14nCHIQp7SlbHlNfOOcALFjKlHWycFHBHnG2nDDPTr2Qroab8YMC3kWZ4g/g+HBY2UCIwNwKBvb/r5M0Fa6ftTEelL4+G2fpQIiOP5trY55cRbm3GNqQ96n+MhV+ub2vw2Ov/B/cGfd1tHoYvvfaEZxl926XKx6ynQ7ziEn1dyaeE+JOUoWRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit 49800 is below the 50800 contract rate, billed qty 2 equals received qty 2, the only same-amount invoice in the prior 30 days (INV-1101) cites the same PO-1020, and 101475 cents is under the 500000-cent bank-change threshold. Note that the total exceeds qty x unit (99600), though no listed rule covers that.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytcKeFJUnFpFgdNP4u",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4145,
+      "output_tokens": 486,
+      "output_tokens_details": {
+        "thinking_tokens": 337
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit 49800 is below the 50800 contract rate, billed qty 2 equals received qty 2, the only same-amount invoice in the prior 30 days (INV-1101) cites the same PO-1020, and 101475 cents is under the 500000-cent bank-change threshold. Note that the total exceeds qty x unit (99600), though no listed rule covers that.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4145,
+    "output_tokens": 486,
+    "output_tokens_details": {
+      "thinking_tokens": 337
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

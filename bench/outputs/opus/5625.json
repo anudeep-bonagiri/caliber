@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02354,
+  "durationMs": 3321,
+  "httpStatus": 200,
+  "id": "5625",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 8 pinged about 0.03 miles from the Goliad station at 16:21:41Z, 5 minutes before the 16:26:37Z purchase, and 33.4 gallons is within the 120-gallon tank plus 10 percent (132 gallons)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwYKEAgTGAI4AUIIdGhpbmtpbmcSDGbl09VxYldKt6WKGRoMfJBiaIZ7YXLam+z4IjC9YBg5hixW2Y+Twi3SUBKLFS/cyB6Z0PCK1G2HwTzClmTROJFV8Ztqz2rPvkmH2EYqtAUipedlJVt8Z3vdx+waQTkJvSKpw8hIzh7SEFsqNiO+xaGcy7J4sNsC+3oWOAK8OBn0vXaUPTQs1Rhkgl9gWzZ1tJQaQ3iB63u+jNtgwUVpq0MM4633fiM4QUDryfM2lqmGkuspYpA0IXlsqPnF8fqxdSCMbqh5pjSkNNXQw1U/7S1q8gUJyQ/X1BfZb/c5ghkhqX8LSSOBKgIQOmLhEnXO8wr7ZEaXUhjE4NRn0F/9by6i80eQKh9kKPrEJH1sNmyBhh6isN+83ySINXgpZUhHMvbOq3AomOnche3vLXQI5ahRthsTJ1tMXlxc546vDaTFDVRv5APvhHsHMuX9MG74mhKmCM4C0+/30YmeZY88mHy4jkOC/ixoeGkUoZbQSq82uyF/jtYate9+pcgmrqp5NhtpwnAijJhMUOoMdwohMhYpt4TEUmOYawhy265qaCugK5ZDer4Vfqa25CBUTjS4zRESxyJu3W0wBAoEuaYYvUfvGqd6kVzsYVgDdzHcU5iDHK6sQxUyd2Y5q7Py9/tsc5EilpOqqBY2MhbmgOKkT5OvXQvDKCW6eZ1seO/Ipg4BN6b1G0QUyUwuQeoEGJdJgMxa5ikgFh5/z+ZXldgdUcgAWuG8yZlbQZf3YcQdhC/XBeDBIfBGWZzqk0EXGae4ptlNFbSJU7XedguiR5O1Do3ymsAZ/RGbX1EVPKuC0SZs0PKVXF4g1VBlswDRlEINg7UP9JQJQ36S3jox+L+NoxIcXGfC42eAK9tjiOX85UsDDvoDJ+Q6iGZ2NOyV3xcjmY0gIM5c0h6pzPnri8fsoQcL8T+dtYvrxRbB9lGA1U84gP1J90Ku03sp8mcNNzZ/nnEILgh7x5nEeX5ptwgA+TJbwNqPjO3SFPj0g2SGpq5jN0pIMVXy01yQOg/H0phdeRtZdBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged about 0.03 miles from the Goliad station at 16:21:41Z, 5 minutes before the 16:26:37Z purchase, and 33.4 gallons is within the 120-gallon tank plus 10 percent (132 gallons).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyuWfLisYzGz5mofraG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4815,
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "thinking_tokens": 108
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged about 0.03 miles from the Goliad station at 16:21:41Z, 5 minutes before the 16:26:37Z purchase, and 33.4 gallons is within the 120-gallon tank plus 10 percent (132 gallons).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4815,
+    "output_tokens": 214,
+    "output_tokens_details": {
+      "thinking_tokens": 108
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

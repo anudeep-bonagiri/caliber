@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019568,
+  "durationMs": 2794,
+  "httpStatus": 200,
+  "id": "T2104",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1025 toll at Sam Houston Tollway West falls within 10 minutes of this 2026-09-09 18:48 charge (the latest there was T2040 on 2026-09-04), so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkAYKEAgTGAI4AUIIdGhpbmtpbmcSDN+guFUcJaBrmf3PeBoMdhXqLF4ot0VT+dsDIjAM+cjv/LrLPAGYAhNVoW3pa8uJIB/jNHfobQE2ZZ+GTm0Db+710gb199KsEKB0zCgqrQXYC564V9GAB9gtxPoYnD+4y82r3P+qpWPE8inRKM1Ivxc8W/WIsmPyHSej3St5ud4hxmWWDURNK5fi3R6vXTBrcCXdnzm0B3cmRzdpN+sZUj/dvLRQG3KMzTR3ukdEWgJRErsaiZv1JeWaWwLeIDO1OUqHgjJy6MvJPVzKk3cAMN2dExyrpY/rCXSJ//huXpY8tsrbQVpQBcYiSQdysWnx8W2D2sK3LUDazrn8uueGHukxFDMz2/vsvFNijqWm/B9rnoaKquhDdTMJctdSysKcdjDOMB/6Y+qlYlLJ+JjaMEFYRevNNtdVFpQAQkHzG+E07X7OEUzwARoiSoCeDPbmOdiEUV1p/YMBXYyTlZhj5UxYhcQs28Fy46wq5sedA9rtvvRogFyMsZ7lGEtuJy5TcBWqtbqmFcg0c9Ra7SGSrBoZT6L2Sv62uSqBkQyk1WJnBv6PlfGvAw5H/hc8FvCubxhc2vwkrWHPVzp1hUVbJx8IfqiX39ZJfF3/P83fRAT+bQwpp7wl19mS8MBFVA/JOlKgxcTOK552tc0HXFKEEfnJwSy2KNzb9z4pXik++54qgg8UDE/wowJ0dFyY67Mua2ZhvXrjkkG6g4fXUD5gqe6OSz1PJ0Yw6X2dZqnzZuUG9l6ShVfAeSGYvAcufboKKzELMTuTtZbPcC819A2L+pu4XDnAa4Al4k9uyD+buxFtDcY2j5Nr+5e+fpBMUjOavqyvUNbLV4PxereKZBsB8BlrLMdY0AAwqxmC9N1K1qc2x0K+JNrVLG0Dg2+BO3S8naLLlKdbvlrqZ4exB8PCvrgDkcHtU4XMfT7jqyNuGgPU/NvLovUS6+f09TRtC7HEveLXS6LlsimVjw7P7TRto2YmqSB74/H3oiF4gs1MQe5mXc9KeSxJZjjEm3cHGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1025 toll at Sam Houston Tollway West falls within 10 minutes of this 2026-09-09 18:48 charge (the latest there was T2040 on 2026-09-04), so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqDwAC17WR9FKV36CU",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3892,
+      "output_tokens": 200,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1025 toll at Sam Houston Tollway West falls within 10 minutes of this 2026-09-09 18:48 charge (the latest there was T2040 on 2026-09-04), so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3892,
+    "output_tokens": 200,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

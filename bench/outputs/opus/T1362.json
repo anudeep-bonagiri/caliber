@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014868,
+  "durationMs": 2797,
+  "httpStatus": 200,
+  "id": "T1362",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1033 charge at NTTA-PGBT-01 within 10 minutes; the only prior charge at that plaza (T1197) was on 2026-07-10, and the only other charge that day (T1356) was at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AUKEAgTGAI4AUIIdGhpbmtpbmcSDJKQRqlZT9BK0mdkFRoMMuvj6j+RSm1LbxHbIjD+UQGdIMOFt6eLaQjUJ2QsEdvABX4mNGlYOwJXsll9N4LKy2Yl3nXCyTZlb5Z6lWkqjQVsMiNAi2jeMh+jmd0zQModjfxhbuouS0Ut+fXaT1Yjc09lFAZRNXvJJfuhLTVQTIYJO7zniPdeji4OBT5fBt2PVbSP/ZTjT9ZXyn4kV0jhYr/HRfqj6daV3ffVbFyZoB/lUTUacXBC5u9mDQMTb0H1UjrIMms4R39kRXst/wTkQnYsdnjLKo2SD6/zgVj0tpSYK2w64KMWBDS8QJOVWKplhcWyqWW89lwHYljnH67kBL3eZK+2O+BWaeIBo5bN5bp7ZNTlhFRXL76Sbm/TaqeQZuMJMcFu8Fc1zZqgUhmYenXCkhPWgo1yp5jB0rnzEeUNI+gA8L5SH219QLIOIhBugpluJOTTP1XMOxBfAqEYBPm2RjC4gfswUciY1ZqiScG041NnfYv9n8C7mefsQiCz/6LDsm2cC93PZFKwDK/1RuzDWZ1ix/AxrLckz2eN3bWf+/qMq9II9CHrIdsn4g4mDHcrUoojcdntR0d2rzsERA65xYD5zS4vUKjsxSn141ogXH1qrz4OdZ+J/0YHEPEMI6Q9J9Mg8i3uO7EEs4vvwPkRDQVwwKmJ4sywFkzJDV5T9ufx+txZMUKpGHN+ER6fSSQnF9AUT4Yi72nAqcCNEJysIIej47ai7MNPcKnxA+uLcDPY7kx+LJXuf6+JlmoOLvcVc+C5ZVw+IeoZsHzmEw1CJg6GbcA6fw9mCmGeUMaQAdowUkiEvd+ob1esJ0e5S6jirnm8o5yvyIQCBy5WM4ymDy/VkbDhEP00Z9AyXRXF5d5qdg8gEkeklIs4FmLH6q7lSf/vg/XMlL55gyKRN6PPQ5TUFRxC00n34T71geWB9t9/dSC2aqgikb+7BQpCeMaC8i9bImrEfLd/aRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 charge at NTTA-PGBT-01 within 10 minutes; the only prior charge at that plaza (T1197) was on 2026-07-10, and the only other charge that day (T1356) was at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4W4PHfsCLdnQVdjsK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2792,
+      "output_tokens": 185,
+      "output_tokens_details": {
+        "thinking_tokens": 88
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 charge at NTTA-PGBT-01 within 10 minutes; the only prior charge at that plaza (T1197) was on 2026-07-10, and the only other charge that day (T1356) was at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2792,
+    "output_tokens": 185,
+    "output_tokens_details": {
+      "thinking_tokens": 88
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

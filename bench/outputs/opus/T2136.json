@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02636,
+  "durationMs": 2360,
+  "httpStatus": 200,
+  "id": "T2136",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1034 at HCTRA-SHT-W within 10 minutes; the most recent one there was T1836 on 2026-08-20, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wUKEAgTGAI4AUIIdGhpbmtpbmcSDMJ5UEtKETDrxl8KEhoM1AFJCHaV4RpGuY5yIjCwcOAiHsG1usE3wto30T8lJWSM1UCtqXGmz3oVhqTTLxUFO5axw2d7qJ17KW/a64Yq9ATUjXHDnhkI/DWT8xnWxg9l2YKLWgUIBOMVRNTGYuP/Te/4gp6uSfY9zUNCiCAJ4OTHbivqaJdC0QIlMfbRcWmD9RdI+MpIFDGIhv8DnOCigM0uHZFFFQx7RGroknOuoDsEgLQ8wC0NrpGXJToxXo7xnAjz1hs1DmnF8ep0JIDKodRuT+/SBLACC9eGA9Xm4oAPFFjiwrWhiCo0a6ISy6vwepfXdXnzaJmnDVuQuVlSgf8eiSaC/PBeb8pTliDOv6JJ3VMDzUGDGOrdj6Og75Nt8O04CnvfKtq6DdfyIFePp+JR4UzVRkTvrXSXDhTXdnQ1Sf39cQo8T9YoOSk1eSffnMZ5Vb8IJEkAvDI0tJHDBRENkvQeBm74uIW3wxVDkn0o1w/tJTKvg/J8oE1I++TiML731qqVPbZWuvp2FpvjGssYXwxEPt0D9If619oIDcKTJY7m0tYfrwj04x5gPa5fsz1WABdnqiybz4437WvypAYy0gzv+lSR7I4ANBAaBe/nKYhqnju4uMCbgT6lVuXqqih789C1IhXelcxlZxP0AmBBOOxjzssZ8ufcqGAczPfn2MYBNqK6hSFmq4tM7bBO6B5c0b0xxyL9a4yqWgamEn2Za+bqkwVM5H2++eFaugWqK8//M5DR9rXEFLi8axnLVsfOzsi/bUM/gjH1K+Ea4PfxM0Wlf5Gvw83g2QTLR5BSEMChrnz8lgOR58IIZNEndyLwcxCTyDqo+mCRU5Tt6UKTVn/a7g2wkg8Il4Ndg9hPPOc9VnL3ccBpkP35K2uVEBNyso2bL7E0g+REWIZrPU+EfGx1Vv2yy5mQa3NdkbJDY2ebGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1034 at HCTRA-SHT-W within 10 minutes; the most recent one there was T1836 on 2026-08-20, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvfWgDbvvsYcwaQxWY",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5795,
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "thinking_tokens": 77
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1034 at HCTRA-SHT-W within 10 minutes; the most recent one there was T1836 on 2026-08-20, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5795,
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "thinking_tokens": 77
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

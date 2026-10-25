@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01894,
+  "durationMs": 4613,
+  "httpStatus": 200,
+  "id": "1068",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 12's nearest ping, at 14:00Z (about 12 minutes before the 14:11Z purchase), puts it parked with the engine off in Laredo, roughly 168 miles from Love's 420 in Seguin. That is well over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1012. The 80.6 gallons is within the 200-gallon tank plus 10%."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkAcKEAgTGAI4AUIIdGhpbmtpbmcSDDLJxHBfqVes8AHt9RoMlfHzcM4b2bETZehPIjDNwtC4HHAoBpSNW/2/vgvm50m7hlQrVhLk2r3NEu5mcJR/nz9mgu4LGW8xR/ZBRxcqrQbDvsGx+qfcBkG2lT3lDgAyuQ9HXU551Xls/++66Tdcbt+YgrfCVt544CLLnZXyoB3JT/DPSrNgPjToxHXvCYvwW6SyF08nUNzMby/sgngKvXIcOIcSkN7ttc9qCM7ODKL/e7tXfZU+7akqnQciA2JB25+Wrnz6bliW/Vca8b+XPLVPPyc5C8qLn+UJwyuyCZyBRBmNFhNdetgkztVusq+zeMfU5sUZ6MRhPFLNiSKDuktm3zB/Fp3LOIO80xL64FqEbZ9zdGDiqTT8d6HaFaVk1DPTwx8vMeh3I4yUYuBTobgvN/mwOjjzTdxWCOfYu+ifIrGFIu7UzuTTqujBY4t9ZljcWXHtbK1l1117ok5oOlswUAMk4iJ+UJdT/1gV9mPn/UqY0KGODkBtP06WZcFZAAn5SetETA0UEdB/u9x4SUmFn6xCJaAPWFW2VHcWMFvDO5AmzPsUKq2nLv1+D47kXo5GTxW+eNxY5QsEmSz1ZgERPKJHH/aScmqZryasdME0RWtqihdZ3nnnNbACWJgIquJ/qYWdkeZLDe4AkE1S6oRx8IkWPkHBZwGgTeryuc35p+WXQsa3LSeZ1W/csKp6Am8BYRCUooum+wx9evHWGKB4y0Ci4LT5KQ6KBgFt726lsleY+VrJAmPBeY9bNwB4MhAuXWva2T1HWo2ClC3fSHjWdwr1ETfuPFclAYxEKY75V2YQaQ+hFbFQoHg8mbUiVi471vcr2QF7k52ibWXoKch6RWHroS0lVKI1/r9p2W9svOhSfseI9+fAzIeB0NXU+Z5qpIwfZp/zvcCCaIgi/0pxdkO6EbuTb0t+g51geI8K16+1q0Lqg4jz9YHBZJ31xcSAwt0pZy7CfCbL0VTvZNZto1H1f0kPvpEjaAR05nmQYJZWaxxeLgqPGEg3g09uU05J3c/2BH7ZTZ9sV1qbXkqFYv6FrzWaCXHvlGSixTRmabmwy+sUhlMZzZfjQD5PSyzlRv3Z7vJGRbc4imCYbvhe2tkqXBpE8u4aFdXZxhTbXn4ZwGhJfIL9hCVt7fz69BJANi9tz52M+4PmlzIqt6KE2CPPzorwLyWfFRYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 12's nearest ping, at 14:00Z (about 12 minutes before the 14:11Z purchase), puts it parked with the engine off in Laredo, roughly 168 miles from Love's 420 in Seguin. That is well over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1012. The 80.6 gallons is within the 200-gallon tank plus 10%.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhkqYD3TuUUNhsvKNN",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2990,
+      "output_tokens": 349,
+      "output_tokens_details": {
+        "thinking_tokens": 183
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 12's nearest ping, at 14:00Z (about 12 minutes before the 14:11Z purchase), puts it parked with the engine off in Laredo, roughly 168 miles from Love's 420 in Seguin. That is well over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1012. The 80.6 gallons is within the 200-gallon tank plus 10%.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2990,
+    "output_tokens": 349,
+    "output_tokens_details": {
+      "thinking_tokens": 183
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

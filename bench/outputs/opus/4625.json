@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022952,
+  "durationMs": 2882,
+  "httpStatus": 200,
+  "id": "4625",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11's nearest ping, at 16:10:00Z, was effectively at Love's 405 Hillsboro, within 25 miles, and the 39.8 gallons is within the 110-gallon limit (100-gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStgYKEAgTGAI4AUIIdGhpbmtpbmcSDNm2jlb+CqpP81vBJxoMCKSOR2/KtfzJIzJYIjDJRgiDXRKUPNljgtgTWFboRuQ9Sh5VblAs2VcgHMzrmw5usJHajakWJRkbTmb5dKUq0wUNETvMs/Tiw5/JMkKqnMOiINQmg/5xkzkZ7j+LuBzjorxyyp1NQHc4Nr67ruzF00tScDLvlqawRlClGzuDRlrMygON2RjBIGZmnOjtqbpjPf1k4APsFfFEF5xcpM/zi1FGIdpPFTVUYgHK4e31co68CvAHFFqdVnHOEhAP6kUxqxP+j/+cNOnSt4E4+X/o8E466zoqq7EXa5Jx1QTaeRvlbCMlSQPgxqbHcj8j93LiIhbhAp7vG6dkP6RA01ducSyTYlI/SYWtvhuwfXdxFJmQZTt1Tmra1nzmBVClrxZYevW6DRKBGgmPwFUV3HU1G/dr4vwrzLLkHWpIZSxFfPcuywL3i2XVw+bCBFcXwwknJvXNSdkdUju70VpI79NgYO9B869SdXIEQcpwOHGAocJxdERHNK/Z4N7AR638BI1BRAyqNK8VW2ebKN5U7bAnIUYD45TBLaU8/Rh5s677FBsVAK3noaxw2E24DKkeaQ4chANVRXlWiTxZBZ7aQVRVe4mxOcwufbjO+gvllWfCZXiU5XnYK2LTkIEUlj2mTbGCT3a4aKtmL5RpFOP2L+NlC7beewKo0b6blVzFJ8wbyj7+xKOKgLAjFeHsN9w0JyevjKyxPKqx9WGoDMEyivRxl+5Zr97nC3N12eumbEh6WFX81WkmU3FFgaKzflMufSliiv+lYHuG4oo1TZ2CmAbbQfqJkMAWhYNwICYwOU1gM76Wylj2bj/VRURPlceaFm8RjNgyOG6Ves+n866haYUZfWSPbgxHRLBzdtWPaxaG8fYJZFTQHZmlhKsypaVVbRONnJ0v/THGFPjuWTcm4b0EboAGyICTGVv9/bo6EGOdNQGzB3anWyz+OnQCW7YYd5zaoFH14C+X7u9hqRFL/Fo7jVPJkOBWg4VvZUAdK3DngYbXCuDrxEJp3JCO/OIOQtCWteM5jFUNhJY/Ge1RDnqEdYi8s5YYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 11's nearest ping, at 16:10:00Z, was effectively at Love's 405 Hillsboro, within 25 miles, and the 39.8 gallons is within the 110-gallon limit (100-gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqRvjAx2Wg7HvHh6jC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4668,
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "thinking_tokens": 116
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 11's nearest ping, at 16:10:00Z, was effectively at Love's 405 Hillsboro, within 25 miles, and the 39.8 gallons is within the 110-gallon limit (100-gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4668,
+    "output_tokens": 214,
+    "output_tokens_details": {
+      "thinking_tokens": 116
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

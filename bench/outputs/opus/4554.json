@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023536,
+  "durationMs": 3297,
+  "httpStatus": 200,
+  "id": "4554",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11 pinged at the Hillsboro station about 5 minutes before the purchase and again just after it, and 40.2 gallons is well under the 110-gallon limit for its 100-gallon tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAcKEAgTGAI4AUIIdGhpbmtpbmcSDGhNYKRghHn34CfJfxoMkzTC9RREEbgKKpxFIjBJMHJjB4omlf7/FxrirGAtOlKHQLjLf+pzPQacSiBP1j+gq4MbHv4E2gwTLlQ2XIIqnQaOTQpisucvsGnxUazQT5N6Q2f3I0Zsgp2afd7fhaK1PUTinnppk8udfaZZxWDGOJA/Nt4DX8K+5PqtSeg1NdqrIt3nTXbgy9BzVb0LKFO7U8+lzw0kADVCwfrra+TRcjzifli5DFwUpvvjzP0yIQq3G9cLWYHvoNek6WqyvZe1ZCDAmSncgZRDhUS1nZJEXCPrFfYDrVJ55OzhuwOITogl7plzTVGi3jLH2KPNHieLohiZ+ARb4CCwMrrT3CNw4YrU+WlJ5WJ5swG36PrHiva6XSNRo3xX75lXC2CeDvfLR+HdmMjI8QDEZUQ/SJFomW69biNU4v/5svnp3gM5lNTYLmNgjrfQtpokrSi1518qwrqhkYlpnf4qG37a+WbZxHgU8aZN40PbuoSMd07f/7gSaCBukzre4mrilmN3XekNdRVCQWuTEXRjC+VXv7rm7kK91AsFuMBf1sMMCViKmFWL6ZJ07MFtJsgRkVn6Qi1EjFZf49Q6xiJKQh6Iz2n5tGSHkyYGYTWOqOykqzHV/uQnN4rnYh+MOWHMr6dJ2JCztTxl/zePI2fQAu+KlAXf02vzdGrPUOXi+LetCvPaztSaCCLEAzdkW3bLvrR5cSkOtIdWRHphqN26tvjtK4c/kZGyzRWE6cRGgtS2XDtzNJohahtmEya67+LwBvMqPaZDgT/VuEOLA9hahk1LjEJTYCdE6Y3SYzfyztF52K8AE46LSDH2wnen+cVdpsmebs/Nm2aaE2nUamYWIN7uIfC0UXQ3L8EdxHPY610VxkuNc06R33J8MOTnwjWaG6fkciLI7zjlwzYRr61AQGqiaNePmRQmYjxhHycAkXsrV1ogoAXVH3T3obLHfj4QhptdFOuRqRriAC8V5v7uVBkssV+ybR2JpJ4ygeHQhGlAtGVpT1fwRrssN55WezbAbxpuCM7ijMJ+JofCuhe0Mgo3VadBUXELlUsV0EQgnwHm0ZpVw7XkMb9RZVuaed4hvoAfijf45euOWKUmo8uROCPwF6UcNs5Q6JWoituAqbPIrfOn1T9LaNgxVO6gzqcz+8OPRxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 11 pinged at the Hillsboro station about 5 minutes before the purchase and again just after it, and 40.2 gallons is well under the 110-gallon limit for its 100-gallon tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysG8B1CeCFe3dpfBNv",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4669,
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "thinking_tokens": 158
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 11 pinged at the Hillsboro station about 5 minutes before the purchase and again just after it, and 40.2 gallons is well under the 110-gallon limit for its 100-gallon tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4669,
+    "output_tokens": 243,
+    "output_tokens_details": {
+      "thinking_tokens": 158
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021612,
+  "durationMs": 7937,
+  "httpStatus": 200,
+  "id": "INV-1023",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule is triggered: the $49.80 unit price matches contract 28, the 2 units billed equal PO-1020's 2 received, no earlier invoice has the same amount, and the bank change (day 71) falls after receipt. Flagged for review anyway: PO-1020 was already billed for 2 units on INV-1015, and the total of 100850 cents does not equal 2 x 49800 (99600 cents)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule is triggered: the $49.80 unit price matches contract 28, the 2 units billed equal PO-1020's 2 received, no earlier invoice has the same amount, and the bank change (day 71) falls after receipt. Flagged for review anyway: PO-1020 was already billed for 2 units on INV-1015, and the total of 100850 cents does not equal 2 x 49800 (99600 cents).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyiwGsmLc5JjrPvewMP",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1903,
+      "output_tokens": 700,
+      "output_tokens_details": {
+        "thinking_tokens": 545
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule is triggered: the $49.80 unit price matches contract 28, the 2 units billed equal PO-1020's 2 received, no earlier invoice has the same amount, and the bank change (day 71) falls after receipt. Flagged for review anyway: PO-1020 was already billed for 2 units on INV-1015, and the total of 100850 cents does not equal 2 x 49800 (99600 cents).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1903,
+    "output_tokens": 700,
+    "output_tokens_details": {
+      "thinking_tokens": 545
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02196,
+  "durationMs": 2758,
+  "httpStatus": 200,
+  "id": "5243",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 29 pinged within about 0.02 miles of the New Braunfels Buc-ee's at 13:08:12 and 13:20, both within 30 minutes of the 13:13:55 purchase, and 27.3 gallons is well under the 110-gallon limit for its 100-gallon tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQYKEAgTGAI4AUIIdGhpbmtpbmcSDP8eCya27KyPK3YXuBoMcBJ2zsLKrs226CDIIjBfPxHJWmU2cwK04qhOFVdgateO8ciHy2YQF8BEY4Qfz/TC05rhK3WpIUOVGKwzIfYqqgVPBiK2AghkYD6yLmCYkevDUX8NfwQ9DIjUuNwNNJV8Z1FDFm05KAxn6SiUS8dpi+YUHFVwAKws08/epR7DR8OrFBcxFKVqsCfJIK23ZoN8DZ2JGk3NnUk7VsHUC4Vumg7b9e+EgS5m1gVmqUY5VfUhFdldhwkKnphTMVTgD8/eVHnwa7Af9lrzQFoM16+urQtjL70j8oAc9JuNWn/YBMIr1+/vC4eVqk8NjqvEXtV1NpJA09utfrZB5OZ14l0sr97ZhHewhbXfg/sicJJGoEb47kWthJxQYqqMEbQsWZeqjl4xxFGvilnwrA5qGRZOgoRLRrZCPwAwYiGTFSczQmEjke51gFI1VRcFMDCZMdlR+dSd2phb00VRHr6rsHzpuDQSyJdFRt+uOjQQaE8/ALX83xXcaXsTPZSAVgRnM9GsF8k8fgmwj82HLq8mR+AjHSmP1iLLkTOIhpodJJzwUblztQFpQmKt0vMIR4Zh582WCWIq4rOtgFkKZDtyzKRneFFuMoBAcDs1mzq7aGHQe73a7ij4r/HbLKB9sJFMjx4nBwAWCxBR0T/lE6Y9jCUKusL8fIp01kmvZ1jOJX/4hCMW15hStNk9zfOGMI8Qh+Hb9cI+GWJ7CIX/GwvxIUNM1//TphO3qNYWCwUy08TXakwe441GUMwDFrKwPlK3ZAq5N2ixJUu/SCARzPKvLCOKKj4wRZcsh3MbMa8w/DA68s+IqeQVIBa4M7uMbfSrMZNAR2U98a93pvZfa6gVVIcqdJABkKuNv1xnOMc/xuYvUnExlPWWXjEOU1iVeQKHuIQXW605PUKEomPgK/d3Z1vREIKI/TRfHgjVa4nW4TeKwCPKdMq9S1Qz01SZEDHQSdxLEwKHKM+IhgP324R2qKIbdeUFVsx+9nJ/30EkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 29 pinged within about 0.02 miles of the New Braunfels Buc-ee's at 13:08:12 and 13:20, both within 30 minutes of the 13:13:55 purchase, and 27.3 gallons is well under the 110-gallon limit for its 100-gallon tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynNq6xJ1wv4LC5dUqG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4380,
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 29 pinged within about 0.02 miles of the New Braunfels Buc-ee's at 13:08:12 and 13:20, both within 30 minutes of the 13:13:55 purchase, and 27.3 gallons is well under the 110-gallon limit for its 100-gallon tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4380,
+    "output_tokens": 222,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

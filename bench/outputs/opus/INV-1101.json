@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027056,
+  "durationMs": 6863,
+  "httpStatus": 200,
+  "id": "INV-1101",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 49800 equals the contract rate; billed qty 2 equals received qty 2; no earlier invoice of 101475 in the prior 30 days; bank change on day 71 is after receipt and the invoice is under $5,000. Recommend a manual review: PO-1020 (qty 2) was already billed by INV-1015 and INV-1023 for qty 2 each, so this is the third invoice against it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 49800 equals the contract rate; billed qty 2 equals received qty 2; no earlier invoice of 101475 in the prior 30 days; bank change on day 71 is after receipt and the invoice is under $5,000. Recommend a manual review: PO-1020 (qty 2) was already billed by INV-1015 and INV-1023 for qty 2 each, so this is the third invoice against it.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzBTtrZVTDfXFk6WxNk",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3314,
+      "output_tokens": 690,
+      "output_tokens_details": {
+        "thinking_tokens": 531
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 49800 equals the contract rate; billed qty 2 equals received qty 2; no earlier invoice of 101475 in the prior 30 days; bank change on day 71 is after receipt and the invoice is under $5,000. Recommend a manual review: PO-1020 (qty 2) was already billed by INV-1015 and INV-1023 for qty 2 each, so this is the third invoice against it.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3314,
+    "output_tokens": 690,
+    "output_tokens_details": {
+      "thinking_tokens": 531
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

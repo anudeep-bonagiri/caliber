@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018724,
+  "durationMs": 4221,
+  "httpStatus": 200,
+  "id": "1971",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 20's nearest ping (21:00Z, about 24 min before the 21:23Z purchase) puts it parked with the engine off near Laredo, about 185 miles from Pilot 1126 in Luling, so ask dispatch whether another unit or driver used card FC-1020."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1AcKEAgTGAI4AUIIdGhpbmtpbmcSDNwgif2XQYYZfsnKeBoMD4BHYJ75isB3QpSUIjAyUJ7Tv0J9BKSqckOD7/WKjLt3PzOrbyshM5B1Ox4IrJHLpmvYoYOJJ/n+iWypFhMq8QZB8hWHvqvnuVyvcAtOKWY5RPn+2rDy4CMHKA+2UBGH+HDSC/7ohqM43vXciAE+lxYLinsaIsivne8BzVGhSCi3KgZAhRtlJM1aU92CjaPkV6+UXTuwdx3b83pHwVzl3z0GpWUywevUrN0CqhlYcTo2gdSpFvpwzuFb+QtFRhpz/fViWyJuUhPzjjpWE96PKQCWTse5Z2Zq1xzItFrwEgfjhvTJl410TckMCzy9Vf3Bmo4mFPg2sIpuedXtFyUK7WuTSOqlQR/m7CLVd09VrzxCPO1qlGwW90X+pbof4m3EPnjn2RKhPYDa+uGvgzHyjORZJ3rH3qsS9OdURbVKLpvXzI5M0xI9oHFwOsQCoLzCrkcvcRPGK7pQt6BbLsAT+Z9iVPgcYpeYsFP/SmquDTjmkpuQYpmR7+/3+sE5/LHi1y8IpYmcuH5vSvGCZPoMapEWOYJo6GYJixskXnqSe32m1+swdhCq5SK5iZBdRQ7hahqDWDvQD+LpOmambAkQChq1QAbTYnUfukxx04vmXI/DhHfRpnQExBU49Z0iuqrfV1INAw0dYCFl6kjjqwNoM0zWLQA8BbccWGD+lf4+e3BKxCw7Gi1kvLnhIiSXQbX4nNjBiMNJ0HSW6R4oby7q4+fxXazZwpHRouvh9y6VG6zG5pV4Blzx049kgTnDT1fa3+tE2XhFPtFFWOr+BShJKok8tQIdaduZbaSLLJKJJqkaWX4+eHpsqN/nMkse5ENJ4ppsTKv1nKUWfTHxSERTdnSdcgzXrLEVUFpAmuJ95/7k+BymBFki0DWjs3K7OfRw0NnaYvGAYHurFRyEeDX6hksN0MLF+96HTIKiUUjPok2+o6BDEyUGFihNxB0qOMuzNFf7WL3Qtgxptn6jVyaK0Qzno/fP/rVT+3jkFP8a7yykv/WWKPxa+lJtdAaHynSFHCDx3w86j4erpCOlfYK9YHk1XoSGGYmvm2GajF+Lw0MXDsm2ZRp9zN27eOEEWbjUGvXsazIUMKmGi9i6pH/LMIW1KkMz982VsNS9FtfegBorgPR4ccyfLjnBlbILlFbSP/XbFMZmvTbDKWpERW9tE1AX0i70rP3n2qFLhzvCwXzKWWx/qJOxGxfR3kUEukLdi8FyRoda9ThlYXPY+nbn2DgvO6Y5uwn14ZSoeJO2xHfeWBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 20's nearest ping (21:00Z, about 24 min before the 21:23Z purchase) puts it parked with the engine off near Laredo, about 185 miles from Pilot 1126 in Luling, so ask dispatch whether another unit or driver used card FC-1020.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzD18pzfoeNKbfrAxwT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2991,
+      "output_tokens": 338,
+      "output_tokens_details": {
+        "thinking_tokens": 216
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 20's nearest ping (21:00Z, about 24 min before the 21:23Z purchase) puts it parked with the engine off near Laredo, about 185 miles from Pilot 1126 in Luling, so ask dispatch whether another unit or driver used card FC-1020.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2991,
+    "output_tokens": 338,
+    "output_tokens_details": {
+      "thinking_tokens": 216
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

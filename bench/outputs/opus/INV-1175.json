@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024852,
+  "durationMs": 5401,
+  "httpStatus": 200,
+  "id": "INV-1175",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches contract rate 9. Billed qty 1 equals PO-1001 received qty 1. Bank details never changed and the amount is under 500000. The only same-amount invoice in the prior 30 days (INV-1151, day 79) cites the same PO-1001, so no duplicate_invoice rule applies. Note that PO-1001 (qty 1) has been invoiced many times, which may merit a separate look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1AkKEAgTGAI4AUIIdGhpbmtpbmcSDGVkDwPwCvPV/QM7XRoMjDGfBCaTRg3TqOZAIjD8OMabShB3q1urP8/BQrY5p8o4Y9qjQ/U7b1rEW4BTePDOduTg1lkNFrW//G20BWoq8Qg0qq/h434fQ5pAVxZOXHMAChe86zJ5IvUR6aohq0D4gRKaHq1jTUq45Yl/uYe6uxO14eQA6wkAzhy/JbP+rz/oSjV3je5cLy6LSEbnGzFQY45B6qY3mKGWux7uAHI2Ii1KLbIqYfjvH7fDadHdxiQpM0+9epqcJE1za+JSYcht1uxeQHdZi4brtXPD1hR74GTKUIKXB4h4LrQYapzG6/WZXLrwRXV/eCekCUsVE97cz8GY813UImxvoOQP3PL7Z+WtYS2dYtHBEJDSQSfcWvF5/HmpVn1fHWNWIR8945N8wMCRlflXugbXBaOClviOpJHJixhSm/14Eid6sN6L7dxCVD1tLk31wK4l3WcXDbRuN6zT1Q0AKEyBHsbvhdiycIOPUSD+ykJNw/vGsfvV1CJc6LPGc10CwQ3ncGLkVrvPYKm+h7leMZMjhVTuqzaj1coEdhxuu7MQR7bopeAowagIKebKUxeJJf9x7BykOJcaiYnJ6St6xSeHEFGUWVmGOZxBqQU8hYdHutT9xgMqu3TdJ1NUF1o6s7NaqLSe9dlSF5UEWZLYoFPAM6ClxPNpXHmgi07CYlMts3I5E+UmemJXCvOywDv2NWEEHpvDEh89XZVw6V777hzwteEHNWT9lNTDpuUyeQzvywSHn8Pzx6Hazqe9PIVU5oislPOU1AxkjUQcbZx+Ph58p7V+2Tcbd+4D0sDloxES5d2n+YKp5YyLtT//IUhpMiDsVN0kAT/PD7GZ1dlpS9Iq9sY7+uTFKZzv56LdMo/qF4YmoR4gZ0OO/z6YSHLlpcF8hUlDM1rZTH73XHvPodmYy8ZlFyFxrGPzHavkjloqeZWA0sCRXaHyukVRllf09BSydWaoq28V/VznTE8Vj7L4AyyYytg67cBgBPkPB66iiT3ogMyJANHbxFVZhgIsbYbm8R4B7O3p8JL1eaKgez6wrw/tMze+bp7lEWCV9s9JB1gKwKJLO/RcYxUz77AiSydbp12KstQnYLOJIrfVqeGkonEFCzXq0q2k0+uCJQ5puXHMaunLAg0zM7IlM2yzkVeuzeX3RAlO9P3PfTqorlPD+z9lzotFrOyXkuIW6Tha/YqERWKj3mJshHzZziQg39K5xKXCGg6b431pLUI8tBdrnKHFYu9mvr8ufFv9h0QpuMSPhPHq1lL/9fp61wybyEoFCi+9pE5ALx0d/L/KiFbtR+lceKQovC/JNuCa/tAaWqqg9B5yirkfodJfosmFdpXlQzbvRD92qAkcWJz3UtpumgLOHq/kpcjnaadzPCe7x9rtSFYAjBgn2pLAi3hQ76bGcQzjif6IZcquQDy6tH8f7xIFMpWKSOABIk9i+ySKNN02ZNgEbgcRC9Gu6yMJxKhZpSBjpCK0IljofAlBBkYgDF7V58YpBr5JgMqLd/Legc/GhuWlZEO7w4LeWJN7mYL+7TpgapAKnyRgV4jEOeiijlZyCG/KjFttKOSJIvzUCG9l3qxBlRVcm5QOXwV/VvamhQ6yczOcYYwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract rate 9. Billed qty 1 equals PO-1001 received qty 1. Bank details never changed and the amount is under 500000. The only same-amount invoice in the prior 30 days (INV-1151, day 79) cites the same PO-1001, so no duplicate_invoice rule applies. Note that PO-1001 (qty 1) has been invoiced many times, which may merit a separate look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzJmXwZtthiuozbDQdV",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4083,
+      "output_tokens": 426,
+      "output_tokens_details": {
+        "thinking_tokens": 267
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract rate 9. Billed qty 1 equals PO-1001 received qty 1. Bank details never changed and the amount is under 500000. The only same-amount invoice in the prior 30 days (INV-1151, day 79) cites the same PO-1001, so no duplicate_invoice rule applies. Note that PO-1001 (qty 1) has been invoiced many times, which may merit a separate look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4083,
+    "output_tokens": 426,
+    "output_tokens_details": {
+      "thinking_tokens": 267
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

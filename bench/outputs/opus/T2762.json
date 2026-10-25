@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.042176,
+  "durationMs": 4522,
+  "httpStatus": 200,
+  "id": "T2762",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1037 at plaza TXTAG-SH130-01 within 10 minutes; the last charge there was T2655 on 2026-10-09, and the only toll earlier on 10-15 was at a different plaza (SH 45 SE, 14:16:45Z)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqQcKEAgTGAI4AUIIdGhpbmtpbmcSDO7ELbIV4Pz5fue3qxoMA0WsffHRZ2UpRqsDIjAGnaeC5MIx8fl3DVL/aHPgCH3+QxFd4jOgUkP/wF6d3+/pqMWlM9p7BGHdb1d2bTEqxgbUF0EOK/NfItf3gXSjDl2V91b6COMbGEIPQZsijRR54nBk9VE8RwYk/BANe2ALQLI2Rykna/CZIM96a9Qy/HcFgqd7o4xeU7vbKRq1fwvqOU8/HehEWGrEKwfKZkorXt8670KRHv19oEdm/+PKxE679rgyJBWEO+sGcjNF0e26mTcWFGz5IP58eU6yzPhJH/mck8/ZcKpwWEAUpYgLaiUQKEbzHrcyhKk/GgMLuQwRrBPhQ/jMRv3gUZGlVU9WSqrXf0DIkUChEF4NOWJNx11ovVDa18virBusP+jWZqnfOsIyu24MYG1FGgMnF5yAEviya74JLohd0pqPBVZmaK3QvkMPK/upHUabgCi0FH+9dIsNfplqZOoYorAF7p2C2NwGR2TJ7ne9LU4DwVVwZdVapL4xCEPz5zwjrvJrUXXStbot2fpJ4xSmMK7f9Yjk1Nj18MBXR23SxdElYWj+9f30OICaTDpwmerk6h1xL6zwXdeyZnrvMXlcK6zx13d0bvYv4N5VoD/whTVCf1V5YaIWOZ5zPLE18WqrGnpzLpU8ULYDJmpLScxAQsEZ8N8GDtHOBVGc+Pn3D2rjSuod08E8NfVZpw+1Laz9ZoGFrpnGAxfPwKSkFux0ZST24QWitppB0+cNtDHw2l+turtgdSa++2EDGhKe0SZZWD1tnFYZ918C190HE0CBuFXO76Ix3lHJ8aXwkS2YpPi3srA3X0GxE+yktxuDoUO3O+qWdXWtEHWEZYYQEx8y8SPiyJX3cr+4U5gCoBT/vfWAhpqpSrHA5nK6c2i1s6R/DdI2M3XY4g9OFfFDTZpy8oCp7NKdlXmXP9GzLMYlNadiERD3FpXbirKj61dGTAc87HChheZevM3HPkUwGa2/WTscHNFSNDFSilpyVdlIv32iw4aef0KpW6DQ92EKC63S3Rkd1YG1mXsmeVhnb+0kExc5PZl646L1DAsG6Vb1i2mNjc/O0SjAAwK8oWobKIWRwzY/a65a67NThiRNi7kc9ojuHb1Z1ZGkX0Zk6q5mGfyywQy3FH5qgyu/GUfGD1ZkBcPH6smUP935YkzMsvrtA0VmQkaZP8TRyO8oVY+EKt50Y1FzD/0XGReWNcX9GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1037 at plaza TXTAG-SH130-01 within 10 minutes; the last charge there was T2655 on 2026-10-09, and the only toll earlier on 10-15 was at a different plaza (SH 45 SE, 14:16:45Z).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzB8XmX9SteMsdmYc6y",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9059,
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "thinking_tokens": 182
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1037 at plaza TXTAG-SH130-01 within 10 minutes; the last charge there was T2655 on 2026-10-09, and the only toll earlier on 10-15 was at a different plaza (SH 45 SE, 14:16:45Z).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9059,
+    "output_tokens": 297,
+    "output_tokens_details": {
+      "thinking_tokens": 182
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

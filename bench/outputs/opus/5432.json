@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027412,
+  "durationMs": 4091,
+  "httpStatus": 200,
+  "id": "5432",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 28 pinged at the station at 14:40Z, about 4 minutes before the 14:44Z purchase, and was still there at 14:55Z; 49.5 gal is well under the 220 gal limit (200 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgcKEAgTGAI4AUIIdGhpbmtpbmcSDLklVelyosz9FnX7DxoMAf0B5yvCGSYCvwXXIjBDnWGyVo1B3JAbm5YqTNnCrszAIAtHHwJLNfHfm0WC943Ezdz9Fh7BScQfxT2GskAq6waSedFjix+c16eS7ytYQngaNhmTXSpRsjWnm9VvcKhjud8bYZ5iyqtwchgW1CkxV0uLzjDDG3tWSpFZGGiT9IdJ9cY1ruS9ZaLNKy6UO98at37Q1QpJUAKNZGzBrcLsJ1NHhHkzGC/1tnxIIDjW1uQs4c8IXZvm2zIiwARt/f3oPZ4b5NIF5lDUcRIXHUx5qfRdQnWpNx+vxh4dYpIezhY5Jc5VCdlvcepf3kW4i0dfYF4ye4ObFankKIpTj0y4wDsGL4Zck3FjZ2b1B8me/kYpnmPkZApNT+f9ptlvZ1+pL7logw697ESjkTn4nHKkBMzpjiND0MNKL2eaBT2UVD8eEoNhwQfDOYYZkwig4pb5pQmvaNDRXcnsgloD+AtxsIyUEHnztwwgW5v2z2ySaiwjthY3JLjFlvu7yJkOw6WzmhLbDTvp2UFV9INIs+DN/l9zIwyFOI7ihyc/uYUPQH3y9qG95oOBe4jdiC/YPh9Uzu2wptd9d5ktOksBRdneJu+FGk43MbcF0ogdy8dfjQ/Ix0V08XsiQjUZpKwJHr5BEdPZ1nzuTQPmUG1y3d6AB8AAI9Umodvrqg9r8tmy3GIJ3ni7BRNscW1001wUU6ulI9/VM3MsVG0OiarJBL1E1DZ14sDZxt0pgtON2yzv3lR28/lVFt+1pK30Ryg5cFoQTaYxmfXH19YviWXiMGmnAR9tF2nWsGdYL4jSMiXSkkyE9wzG49ZSCu9KT3Y/D0sb8PGbYg/Mfgni0+GcBtyTpre5ZtNDdwyPlNYyyiT3VbJAfH8bDGSyggDcASPqY2QhOy0DJVAT3WN3fSVFRMGXCKJx/NSnEKPRIlElfWt3T1OGlWGpKoxibsImPGJkmo58MAo8nnfWcUtERlZ01DSbBfx+vvkaQ3vlvIKCluAky7ULSpN+YZWlLFdO4jzcJV7j0oY9PUgFZsTFcqn3cHynTXKIvRRCoalL7VdqmPo88PR4jjIHjDbBMEkUDuen+gpIjqZB/rtpmv/AvcD1dQfKW8eHqA+vnNc750xrjkd+YxUvsh2BylBKgcyS4DqEh2Q3Lk04NgUvrRV4j7rM34xUTeAfEbCqlokf22kY8Q1UNiM93YkOz7oz0wLZPBTktiaPJIkmxJ1qH/y+LxBztew+7ZEkB2kbaoMnMhi+BhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 28 pinged at the station at 14:40Z, about 4 minutes before the 14:44Z purchase, and was still there at 14:55Z; 49.5 gal is well under the 220 gal limit (200 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDWB5bdSJzfu4GbAku",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5253,
+      "output_tokens": 320,
+      "output_tokens_details": {
+        "thinking_tokens": 220
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 28 pinged at the station at 14:40Z, about 4 minutes before the 14:44Z purchase, and was still there at 14:55Z; 49.5 gal is well under the 220 gal limit (200 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5253,
+    "output_tokens": 320,
+    "output_tokens_details": {
+      "thinking_tokens": 220
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

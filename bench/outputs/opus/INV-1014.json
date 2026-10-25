@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010228,
+  "durationMs": 3272,
+  "httpStatus": 200,
+  "id": "INV-1014",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule applies: none of the vendor's earlier invoices matches 17,701 cents, there is no PO or contract to check price or quantity against, the bank details never changed and the amount is under 500,000 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+wYKEAgTGAI4AUIIdGhpbmtpbmcSDFcN3ipGdPSU6h4rTxoM0l6RMn+3BCPtbapFIjAlXj1oxQybxxzEaPgb/+KKjJo9ZwRINrrlwuEI85seB2stZTYFeId+0zGad2RAb/kqmAbdghTyzk9lGbv/FJHLkQWNKGTX0R0VBlkWv0DuNIipYrF+uR5ksjjghBRoppxgtaWSG7XAy7sNWi39wsrjhiWP+CygJYe/xGmBZtZGz6PMmce0OXBWYHjI8bQEJOUkERWwoQqxPOFjlNEqQfQ0VewFjdCvfdcm7TJe5tRcrrBtu9tCFoIPLPBZlSRMbd3KDmTmtKb54NkxSevAiKReRREQSOUiduyEbpZ/Ci54DqloJHVZpuQizkU5U7G14QGkby/jOgKktVBDEZNQO/51rFQiaw+CeObVeaVNzswx3b8U9AXgmXs0LjkppKiH1fzEDl1B4fUYodzV1FeV5ZfXI/CJoSomkwpJL1b0+uVOV95rh7RRc067saHJP6NRaqwaHZ79HyrqT9cU16IvPmV1xyUhIr1utzHIdOo9AiNPzUoeK7Ik0h2gOoqrhFNazm4B1SiVknsOvkSa9rZOrYpKs74p8J9o5dmPmMO+NVZkII1SG+LtcIIv8syDd78uKrxauWzB2byhZcufxZw53dohKwbhnPLWR0NAH8vY37RrWWB/JWKsQv1vzb5qAKjqjcTOHSg/URkUsZ9KsE1GsYXF1D+3T85AJA1ShMjb6CVt9Wd360OGcdWiVC0VAb2oIM/U6HUdNyEk4fw/r5I0KQRWfawZLXzaRsxRAjA4ZvSOrWtJ3jMbPZZiEvar3N2m3YatY/nx0d2ImBJfkpYO7KG4zF96Ucnv90PsZt3+hgDNkNu2PGSWyrYRDmJSuynWnTPJzxT+jVZHIN7IzFZqH6PMnQxZQomDIXVdjQ+BkYtuRa0jQEt5/c5tJDBe5yf6pDIUlIp3f+UgzdpKMmvyHr2PvMybXKvKQ9dQ1eNev+NBtK9Z+FZUEzISoiQWsF0AuMZfymaXhhQpLlF/989sZcIGGsWUJSrJSsFauqlfohq+GItd1Q4GWmfY9OtaQbGdhlqGv+mvmtmsylLbI+7iGN+FNisDlcz322Kvfge8ucTMemadCuJJ/1I4kqmS/9jn1rkB0S0/yYpec5wO00E6H9uo8TpiBr3lepQ38HkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No policy rule applies: none of the vendor's earlier invoices matches 17,701 cents, there is no PO or contract to check price or quantity against, the bank details never changed and the amount is under 500,000 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz5yHG71puLqZVDPNis",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1477,
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "thinking_tokens": 130
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No policy rule applies: none of the vendor's earlier invoices matches 17,701 cents, there is no PO or contract to check price or quantity against, the bank details never changed and the amount is under 500,000 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1477,
+    "output_tokens": 216,
+    "output_tokens_details": {
+      "thinking_tokens": 130
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

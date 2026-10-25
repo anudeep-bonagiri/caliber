@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02628,
+  "durationMs": 3393,
+  "httpStatus": 200,
+  "id": "3105",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 30's 13:16:55Z ping, about 4 minutes before the purchase, puts it at the Three Rivers station (under 0.1 mile away), and 31.7 gal is well within its 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStAcKEAgTGAI4AUIIdGhpbmtpbmcSDH01uTEZmTpR0+//VxoMR91H+JQIWWEGH+akIjCNk1M6U6cpGWG47KJ4pGJ5MyeGoQ7ZwcN2qfEEcaN2GUWRVvgjQJM7kb4COQegj6cq0QZfYZA99/ZGBViicg1r3e5NU2aaWjTJ9+WQIYFboiJZGZYvmK98LD6+Ykqrwgxpw6MXaO6Nevi1CoW1xlfdbcXgoAV54Db1EUzBOLrDn6AmEmEo81NvrH0f92RAS0om8wb6fS9pLxH5YHVoD11SG+MyK191pxFgKge+t2xkdcCs8fh+YHtfYXzSBBN4I+OjqTkuLn510rOilB5zDqgqJ1ZrPEE5yIJxXjPiOXjubYkXBLeiRdERSkco3RET/GxbGwIpcwvaaJ4xAGxM/9rR+cgrq5c0ym0le1ynBwRBdqxCuev40R/s0ljl17RXo64VWKfkOCkaw1MJ4jtMKGFtDlfHcGJjutsWkRXp5mSSPNqUPxE9Wq/LaFBmpgewztnFTeoVrfpyBBMFxILA7+GsXfQgWjFH2upE1a9eY6NAFOe35U2c7WHLFSE1yTn8uAM3xO7O1/czyD1p9j2KNnd5T3Dxj1Q8rXYdKCTnYiyt6+DZA4iKEBEYMkXvFKnnHz1F9jam5TNkOQpj9UgvaQGL7XPoco2UAzs1XpHdtxA8qzV9krt5tKSQ/GKICNWuCtB4utDMq0V6S2JpNDggUIFE0gQEXRfGC/+mPfa7bDEZQtwWv1KlgbQd2c3VQf56Gq348DpvIBvlAa3vFSxbvhuzN4FKV0SUSktUe69ratrqxzkR3pEaPQ6lRTyVQyujF4bFzZVRLhhFIhSWT/X4P96fm+f3Pi3eCDtUiCKataThjmbN3OLdLGYxirlT1EKsjIgf5gqrM2Pqr9y+kssS9lxpFB5qPYjG/jXKOA/bTpIEjFuVbt/U0NsndGvqqXBAFpCrlNnSCYFqBUpNTUdYxuAJ25CEHoE3+ivaZvtGSa9ALePOEGIoUnQureDzDYV6k6fqClkfs1bC2vdrX9LKJKsoS0Mw7L2L0VjVwWYOikGxWWBjBBFQ93ISY9SiD3OofY64AayW8ZKKUMVYoFqBNIXxsJsja4Iu+e36hYsTZwaT+D8nW9s9buQ8FRdGXo0UTOQHm5QkT0fJupYG+Msvo+JIkv/hhxZLKcfJN4OuaWIPRPsXj+jc7Kr5sn6OZRBWY0p3x1kkfma3zbEjSsV0TKidNrV+afSRKE5l4hjueHMBm+g56LUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 30's 13:16:55Z ping, about 4 minutes before the purchase, puts it at the Three Rivers station (under 0.1 mile away), and 31.7 gal is well within its 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzByEx5hHYasPcKK7XX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5185,
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "thinking_tokens": 174
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 30's 13:16:55Z ping, about 4 minutes before the purchase, puts it at the Three Rivers station (under 0.1 mile away), and 31.7 gal is well within its 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5185,
+    "output_tokens": 277,
+    "output_tokens_details": {
+      "thinking_tokens": 174
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

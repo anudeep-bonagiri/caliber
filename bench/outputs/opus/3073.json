@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025676,
+  "durationMs": 3357,
+  "httpStatus": 200,
+  "id": "3073",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 15 pinged about 0.02 miles from the Waco Pilot at 17:16:06, about 5 minutes before the purchase, and 45 gallons is within the 110-gallon limit for its 100-gallon tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6QYKEAgTGAI4AUIIdGhpbmtpbmcSDMFwY4i4yVZCKT1kJBoMqRdcUPBol1MUAf90IjCdm+RndPizPnjoWLHVKLLBwEnKI9oFrQq+Kwon0oAbnH4MSDZYB7ylY5E4Q0ISoH0qhgZk/IifRNlYx57C+P2QhdbIINTuyIMWN0gjdgVs3min2yCtz5fuasbFjXBmcq06079M0EOwggvlT4rTTHHcG+njpLq57xRxDWKyFH13691xsZ/y76v1fkmtYbNjzgYLFYNNP12rbOm415l/5rlDmvlt3gODYD25jB61vj4ZgYStmarlUhgJ5+1ob7BO9a3ldiBQCarIsaTKPw5Ky/JU1Phxpcjwm1yynrwbGmTwuuNw2qO5IVSo+7ne9stKjKM3i7lW+TSN0Rq0GvmaonmF8XH2ysNmBzK2JxmALFC84+EmITRDCrNzCvD/iLrQlaKyU41YYPFQ4FX9CpCfM+s8CDYZJdIeh0iL09F8zh9BJH8NwKOi/j4fBX/PHAYu/N33eTEAVrewORagHIhwmP6mS2eUEN8AW+A87/YpuKr+9flkRRe1qWIFZakwoBgzFJD3qcqzxoE8qZdNPLvSL54lTYoGEaLAu/PEZ6chNuGaWz/L63Ef8x2sdIJY2J6FM43TtQjf5DrreyDFt+xLDNjPefTtHIn6W+vZgPR8fX/dnd182oayXEs2tFgjvYiI6NsESGSlh++d9xmz+AiEjrKFj9X9V2wK+OeyMUjn13i4wd5jNLYaiQHU3yCljUJ1LS37GOlh6tM1BGfha3m4pCUiqufwRmoz8vNqonBYY5ptmXxRsSHdmr4no/4M8cZO3a7rhAj/bvca+YEEBwLfhy4m1m6v4afGDocT+aabsqNbOeMNpKj3yTdInkQZnOUBm8U+FZIr/He0JJjjOABAxgjMDRQxX/1Jiph6mgrVYBip15oYEwfKMmWVNAd0bjw4ihoTB77fHSj5U93ZSQmxBEGVl+y2RX6pRUdyiGfh63844Vli0137zETKIWR8w00cD5OYvDRQnJ6vaOV/DQft6NEIrqsAzGmQ8hjdNDncukYMdXh0U/x+tWcsCSW2h1bkH1RtmazHvu381ZKSXc5NfkfZ9td4HUyYuNfvTEILDKqGpr/aTNclgNRby0lQD/jGtyuVEnnDkkvAGEwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 15 pinged about 0.02 miles from the Waco Pilot at 17:16:06, about 5 minutes before the purchase, and 45 gallons is within the 110-gallon limit for its 100-gallon tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLAd2es6yDVmLjKBVG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5254,
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 140
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 15 pinged about 0.02 miles from the Waco Pilot at 17:16:06, about 5 minutes before the purchase, and 45 gallons is within the 110-gallon limit for its 100-gallon tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5254,
+    "output_tokens": 233,
+    "output_tokens_details": {
+      "thinking_tokens": 140
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

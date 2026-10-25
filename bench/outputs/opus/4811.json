@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024376,
+  "durationMs": 3773,
+  "httpStatus": 200,
+  "id": "4811",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 29 was at the Waxahachie Pilot (pings at 16:14:29Z and 16:25:00Z, both well under 1 mile from the station, odometer unchanged while stopped); 27.0 gal is within the 110 gal limit (100 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoQcKEAgTGAI4AUIIdGhpbmtpbmcSDFVVzfFp3Bn2nIkrERoMhBHpwjUL5188ly69IjADLlr2p6gyUlR9FqZTVORXvMU7L4+T8jQ4HzPylsy7LJeqbYWuPlogrSH0XEW339gqvgbB4wh307lvtTVKMa4R6YhYXvsHqSjxaBZaBKfD0wvzjpQt7TsaW592XFY/pmpBWBV/pxnT3JLek2BBTcc/6yDb1wSh8ZkuCJ4M9Yr/jzghMYuZgAL3jbIoCO1Q5OHoM41JN0p+94u9b1rJKMmrt4GH9iFJ3bTQMXq/tl32eSaP3al6HXmzgcH70elIFs9A12apHs+/4rtbDidR74FDGSCf6vVEO8KDcCCwzzYbwwVL+1k/nyMrkUjlzpoomm3CGXcMwneRbpSRjfLzqY+1ksTqecsEfDiCBhvESyXGMsp9p3US6QePJGr1jO54CIocwsX7M89/3sn87I6F/nfF1KV0q2xIQ9dH1LxcyNjr49XrmW9qcZhaRgbh3dx6mIOk6P+/VsNmyZZcrazjRduMR/thyPy8JRMcNTwEFXEVI1c7jhAMG4eb9L8GNcXgW2Oo7I4NTRY0wotsBPrLRcaAvMdrs9/mE7dLsi+HpGvENhwks4iLwH5IkS3vjG77bDlHsGdxKXFbNuE0ImuRfhtqY2RY/7JUuJE1eL7jS0ogEQFtYBYUhyaCZCVwpwZdnGSdIh87l+XDtIHjcmg4J8ReZuXHEbVVi6iSIl+MmPB546u0HPYFJUrgUrJkj1zabCSjzLlfxVj4Cf+KSEIvVq4faEhajVLVlBcsHl4z24A+qAhpFqHdBKfJijwrAXAwz7NmipqZ0snxYXo4gv3Jlkwf+NhO37DnqV0PBfHzbXGOWVbq9wNUd+WIBCYHZ5mA30N6EgAT6beoRWiqqw7Btvln5d9bedrWf95abw5hEOlr9EhJOlfD1IIc9476VVOz+OBBkUovmL6rd9VXGcQPrE2K/A1Gc6oZlH7bXUUZ8A2A3lAMjGc6skHMfemWaB48gTANNZqtvVxzZh0+aUxJts0jCKfqObcje/xeN1dcYkVZOG32lZbIglJKxiC6fnKPz99lHORephajiU+xFPBHXUz3Fa5if1NjySo8PWu5PVDWaJmcuiwe5Oh71fO+314bfpHkU3zzF0mBpnAaXJAkPS5pd/9R5/4xGvkJVaFI/NHbyNx5eSUe3MosZA+9REWVkLzRHBCONNfYuTIzvpI4rMnNmhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 29 was at the Waxahachie Pilot (pings at 16:14:29Z and 16:25:00Z, both well under 1 mile from the station, odometer unchanged while stopped); 27.0 gal is within the 110 gal limit (100 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDVKjc2BYJ7DnedZQf",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4669,
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "thinking_tokens": 173
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 29 was at the Waxahachie Pilot (pings at 16:14:29Z and 16:25:00Z, both well under 1 mile from the station, odometer unchanged while stopped); 27.0 gal is within the 110 gal limit (100 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4669,
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "thinking_tokens": 173
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

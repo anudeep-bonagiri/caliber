@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022396,
+  "durationMs": 6354,
+  "httpStatus": 200,
+  "id": "INV-1110",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 54500 matches the contract, billed qty 4 equals received qty 4, the amount is under 500000 so the day-18 bank change does not trigger a hold, and no same-amount invoice was received in the prior 30 days (INV-1035 was day 20, same PO). Note: PO-1010 (qty 4) has already been billed by INV-1035 and INV-1057, so this third invoice may be worth checking."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 54500 matches the contract, billed qty 4 equals received qty 4, the amount is under 500000 so the day-18 bank change does not trigger a hold, and no same-amount invoice was received in the prior 30 days (INV-1035 was day 20, same PO). Note: PO-1010 (qty 4) has already been billed by INV-1035 and INV-1057, so this third invoice may be worth checking.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyiJ9yEXbMmQJRTS5yQ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2739,
+      "output_tokens": 572,
+      "output_tokens_details": {
+        "thinking_tokens": 410
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 54500 matches the contract, billed qty 4 equals received qty 4, the amount is under 500000 so the day-18 bank change does not trigger a hold, and no same-amount invoice was received in the prior 30 days (INV-1035 was day 20, same PO). Note: PO-1010 (qty 4) has already been billed by INV-1035 and INV-1057, so this third invoice may be worth checking.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2739,
+    "output_tokens": 572,
+    "output_tokens_details": {
+      "thinking_tokens": 410
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

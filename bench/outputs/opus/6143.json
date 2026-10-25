@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026696,
+  "durationMs": 3543,
+  "httpStatus": 200,
+  "id": "6143",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 19:15:00 ping puts truck 30 about 0.02 miles from Pilot 283 Waxahachie, 35 seconds after the purchase, and 52.7 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+gYKEAgTGAI4AUIIdGhpbmtpbmcSDNXYiD1UBI4nQmKMvRoMewPV/BPR/0MAOQCzIjCwFMUb7IQl6BS7JCil7nUl0AgOVqLMy+2c2CqPBX3Vqtb5bju+ZcUVHxDsIozBODIqlwbzi+P3P2lgReuQ97m07AFoCjAp6eYnKvYmFYFbISGYWLLmIGwdfD0J1vFYJ4/ldMG7k/CU2c3fOeIUA7o47WQtL7MmWV3ms61V0+NuBzINE9FTtsfsi5/qN1ByYftl1Ir5ZWyT8RLk4TKL3PiTfKu62dS1TjoLgEB8gUKjnz6l1trDnTs61icLWO2xSK8jgbWdM9iLbdel+uSOsqM4wd5teJ1Tb2dsZ7tQrcwifOSl95dS0k3osVhohey9G4O83nbb8ex8u1lzySwlXBhnDuX3+HWgCMfLtuWIRze6jP7mqzygKTsZ1SCF07SnAWdA3qWLckwiG9jkhsHY2plI43AglaMAFWgYugxXsh+EEE6Ov852r+2iPBxLPpaVX3M5wdqzut1wR/Z0+g2MK979qBaPfBmG8hQx68zh7iyosXJz4PMfLq/i80D856Wz6BPpEuLc7Osg+XwZI6/kHwa/ndvXdBrSOI0thrAQ50BjYyLrzDUBNpSdbAkSGdRYo2Vm2Ph9e/TzuhHglqhWHMEUMM6tALzzP4BFWaqzXcy0UVGA32Sg+CzT4F2PcJo0ctSrd26Hw1oqNGKR/3T8Hul0cCp2iBAk/43zL1tOuqzo6MRaohwxMkuDN7DdIMJYYmL/7Flir7nLeAmGgUX3p7Rtaog5MqDcieTxfgvcaHaPVyprTqZgpZmjbIt1rNirpumeeRcQoty91cupa+xTEPwWjtuuHlv6LH4z7bDevW8vuhRTPpV2iZ4icIO05lPQmKwxNCh1keEoO6ixCwcip8rLQfFPr+dNEF2Y2uYEBdz/VNZJ9UYpG0p/skrCFp1f2PWWa1M4qV9n9usTE5BwsPW8wx1K1b39DXR8wLOkOQRt85X7bBLZXtGGXVGezKni2OhP4bqX/AGWNT3wivGsqUeQM9oKRPwCUcl4TOHuAG2XU6d5nwM0YUYY8lxkzfyb0Jhbp4yQvrOhTmdSFdsQZil+FFIo15MX/1jbpWHxrlfCS722csjK7HH5JT8dfUFFWagiZbAVNbT0Tk2ymlH7bNuBV9iuRW1joamg6RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 19:15:00 ping puts truck 30 about 0.02 miles from Pilot 283 Waxahachie, 35 seconds after the purchase, and 52.7 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6USCnaVgufENaQTkL",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5329,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 163
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 19:15:00 ping puts truck 30 about 0.02 miles from Pilot 283 Waxahachie, 35 seconds after the purchase, and 52.7 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5329,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 163
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02642,
+  "durationMs": 3929,
+  "httpStatus": 200,
+  "id": "5763",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 18:35:00Z ping, about 2 minutes before the purchase, puts truck 6 within about 0.02 miles of the Giddings station, and 23.0 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyQcKEAgTGAI4AUIIdGhpbmtpbmcSDHXbXxEj2Ohq5p7SPRoMuUpNaXzp5UImU5wvIjD5J996XnFT1sY2CXIVx2v7iv8vJPv0wysAgb2hTcdQDdB30Vfbmc5NwpbzX3PJpRwq5gapr8j7pL51MkVIFYg2KfDSegOIYAeVKcZNhRYIa2SCpWELxteE7ZyofZV23yLcbGzvTbLXFaoyW1aAgQlOY8Tqf+3pDFPr7zLLl7ijt8eljhFBVrGWJ7HhRr0a5I//U5wKiObrI5/2SI656bAmofvF5IauVDa1UoeOU4/bXP3OdCE6Awi7aeQ55ges3aZBsBf9l73jS7TqwxMkXeUDTNW7cxxU6t5WaLOmweipV5EAkNpIh1FjKyUEAlCLM7jkxUqgqc8xLPnkoS0M8rHZt+///5gbC8i0m3x96ccOx2BtNj7LOZM+ptBzeGm4783Zm83JibhSbVVlN/obXoZb9a+/IlQG/Jpz5GlrysCKJKfRHz0Phfrxl46sK0UaBaqxdSFJ7o7dPEAouXB7GBJelcLJY09VUyqmn5kVFKzl/HvgK79M7plTp7BhN7/LOCzHovWNWVgFZq+/vA5PfcH4umQr8Ljbdft+UpsKQAwxWqrO5pksuXPKph17CjUnj6eCYb4rIH/muXNDSuYMRyyccvi4g1ThEtzw8YlZFYJiLlt75rjiHr6ULyiEJ1PlrYLpI6YDZqlzhGyODMsxKsoGnUP+mqdCSQEt+0OQBIrXjg2jH9xKYxb8VAVTXEbKI1Gn4JKN3odVteca32ZwZEQFvRvoPrO6AzQumSdffuv9zHeyiTQjzKqJ0OWEPDKSosRdvyqYOgtocEbJ5Ef7RncLfTXs2TW6vrijrCEje1wWz7mXt009IM+v64edA0gD30iyIWr5PglYp5Zw9Mk2n0yfcttQJl7C/MqQXXyAfN+wl/HHzoIpU4+a3WEhWeN8JaMAaal4WFtU6HMh72i1aJxu3muhOaiLg2t+WULYdVj1bEB0+PUW5LH1bcwBxmURv/SBnWDalENiPIbrGf6I5xqoPRlpAqd64cK1Z03mCdAVRus77frPcEOx47ybD86ia4k9qjG0JAg62bLTra03OH1ifOaJponsHD9rwSYUOXKQe+oeYiEV0jl8YaiQQrrMCA1rPFiQIYAqMCIGGLWrAJqfSvB/XPkE5P0vaGwWaxd4hztL7qiVgLdRohW7yKEoBA3oftCr93reZ+8qeuW8YWdxp9SKAqhLVGcu3TmVJxIuyNipPAjmzS8IVum1RbZgia0qnHdaQTECL4IYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 18:35:00Z ping, about 2 minutes before the purchase, puts truck 6 within about 0.02 miles of the Giddings station, and 23.0 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyoMtLRsZEqgdnf7Ksy",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5190,
+      "output_tokens": 283,
+      "output_tokens_details": {
+        "thinking_tokens": 180
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 18:35:00Z ping, about 2 minutes before the purchase, puts truck 6 within about 0.02 miles of the Giddings station, and 23.0 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5190,
+    "output_tokens": 283,
+    "output_tokens_details": {
+      "thinking_tokens": 180
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

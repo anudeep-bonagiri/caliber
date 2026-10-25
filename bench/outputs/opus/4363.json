@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018596,
+  "durationMs": 4291,
+  "httpStatus": 200,
+  "id": "4363",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 23's nearest ping (17:00Z, 17.6 minutes before the 17:17Z purchase) puts it about 69 miles away in San Antonio with the engine off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1023 at Stripes 1150, Three Rivers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStAcKEAgTGAI4AUIIdGhpbmtpbmcSDMAI5y81Ro6qv32kARoMkGNzsqKVk18mwp/LIjCHs6LmB8qNjz20nuV0UoN4BRJ/rNavtMdGTZssf6vT5UVZ20r/Sox2gvsHfBD2WcYq0Qbj0r492g6v/c+JLr0eQ0rD4wS18QZyhlOEUSQIKAl5ufYz0NjwJ2jylYcCRNfqwo6zQNRKdx3tgLrsYS5PQDtTsd3UxyL3PMO3TrWq2/0DWJFSe9f3PtHi7rvPNtSeL/4D5f/PbNsPmX2VoDMXCvcV3Dko27mCSxpcKI+arMRVWJdphBoMiKU7nDiOq45pFVnMmpHtscwLvfbFguv7FCvZEMB68iGaFflnYceNhxgIEdodgUdhPU9j0qsQ/x7UHw38Bfh5snfoiClmYXNXxaQjDM0Q2wwA44mhPwml7eNHzuCkNSyt0EIKJU9Co2D2KS8EF1QM3mDnImEJ1ZPnTKLsA3eGZp17Ar3RCOHS9dwD6f/PqepSDUj3F4Uiv69vgRJ72BwH2gZjAPAoEJQDb5raahuAOYGJO3jeVKwbx7I8hXrPdTTfXD3duoTgdPqWX9dKPnn46FjKRlXBkfdOjDFgv+JT8yn82Wj08LmdeUZuNMGtAK/ToWa6c6Yej2nfBeTx9j7vahYeGsm+m+fDPimJkQu27OSrenrSvhlhr7IfuJ13bDGHugUFqrikjy2p3Eeap1MbVOYylQZT67AO/tMrVTOW3R3hrvOS+okp75cfyJTDrfcTe7efJ9mWKhpnZrMzB0AnB6lhhv84T9Ko98ifY4WtLenogkT+wxgfLfxSOb9ciU/gJwlwieSRD2OsdKlLvpHet01q5TSjzncw8LxtvaHNMlB8t36jrjV7JTM4MSptxR83w7XzVDJuvQirpeemh1yoVQ1uWJhxwMl+qPMOBzj+4u61eOrKXDN5R2Vt/Tlsb75xUkKTjKs0E6ewXurPQ6fvEcFQv19o4Q1QaCcJpKxUXMTtGuSV6gn7njt409hpNdQP+5FcX5qJ8bHhwUxSfRxx8JSjsO/PCA+yMzWRCC2+DybjqZnhBhxPe/0rEAXRFTevCOGUkWn33I9Qud6rUb5T7MO1ZPxSzjahwRv6ntKun9DQXoqZ97oBUmQkTUGVH6gEgjhTuWsPaPo3f4YMJ7usOse8xAaxbkxznkImwh3XV32kIMEzGqQang23MT5h6EMI/Wi7yJ+oLAs7N2Q0uqCVFIQWvQkkqT+Tc7SPqHNjrMnuRkuffwfoQ37yrMYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 23's nearest ping (17:00Z, 17.6 minutes before the 17:17Z purchase) puts it about 69 miles away in San Antonio with the engine off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1023 at Stripes 1150, Three Rivers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNMGo4TmaztNYn5dsp",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2994,
+      "output_tokens": 331,
+      "output_tokens_details": {
+        "thinking_tokens": 193
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 23's nearest ping (17:00Z, 17.6 minutes before the 17:17Z purchase) puts it about 69 miles away in San Antonio with the engine off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1023 at Stripes 1150, Three Rivers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2994,
+    "output_tokens": 331,
+    "output_tokens_details": {
+      "thinking_tokens": 193
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

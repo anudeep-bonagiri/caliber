@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019128,
+  "durationMs": 2982,
+  "httpStatus": 200,
+  "id": "T1590",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1031 toll at SH 130 Mainlane Plaza 1 within 10 minutes; the previous charge there was on 2026-08-03, two days earlier, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvwUKEAgTGAI4AUIIdGhpbmtpbmcSDIvC1hm+t2Nhc2pIMhoMrdBZmKMGz/0zpiddIjAQyOx4/Z4cSnILaaIQpjc6ru3JbDkdQqxZ9It157AMza7trIjpRFoub5vq9kYeb50q3AT+SO80lRY6UdKYyotdiQS6kD0hVDZ8mlL0w4VDMLQ7o/kbWxXSG2TCw1yUivdcMB9TWUI9KHauiJTMCuRFNTigu3SyyvRYHvkK7FQmdjwSNNYe/4Rx8L0cIRXVBXg6Jvsz74ffIbPRbbql1i94KCirKJ2vXEfXVlITyyBkiAxd+4+9OVCEJ9CgZQStPAKV6OK1IkLCnMH40gKlyj5/31lrKUeJILS0/IskPg2QLj60UnwRADBVR3WpRbRD+KCVyp9oS5tJOkPZFa1vkcEZwUskQL5x7OtWKU5bRAo/cFv9udqA3nggcx63/2HH3zfKzqIHp1jBhfCWtMsbq0NK819RnNsqAajbSsnDAYg4vQw9YT3tfj2eVPFOQtFliJmKJHjsLbZX1W7vexU9WTISH5IW7K5QpnPnpam6bLmrjQl22MpUEdj7PkAcO6dP1QPytJL7CORmZvY9cjHY16CMRDYFDBaL58x/mWvKj6yYOFnb1pnAr/5a2tROXnuCAB/2OC+GEdFYaQL6gSJ/fYE0/VzY1lBwSyzCIOHbNu8FURE0vyoBTEeDRxND+PLVIN+7t7mItiWfjI1cY3KLCX6gqig1XhDjVPtQdawiD2LAILpRdVbKnfO9SNKhmOMvAOmAKK2AOENocbgJrTUfHb18sowGj0StuwFoOc4mZjWPOGGuHSEE8JJ7N0Q28faHaFm2cAOm1J/CXbJOASG3hbD2uUv+zZxxXjqDhB4tEJQEGMYKSWKFXLKXlG8duedIL3060vCITqcefYbr+jhW05SCsDtB3zPlksUtUq7/gJ4iGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1031 toll at SH 130 Mainlane Plaza 1 within 10 minutes; the previous charge there was on 2026-08-03, two days earlier, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyg7ePgk3X8bmgXB7cz",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4047,
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "thinking_tokens": 60
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1031 toll at SH 130 Mainlane Plaza 1 within 10 minutes; the previous charge there was on 2026-08-03, two days earlier, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4047,
+    "output_tokens": 147,
+    "output_tokens_details": {
+      "thinking_tokens": 60
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.033632,
+  "durationMs": 2836,
+  "httpStatus": 200,
+  "id": "T2524",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1015 at SH 130 Plaza 4 within 10 minutes; the most recent one there was on 2026-09-25, and the only other toll that day was at a different plaza (SH 45 SE, 17:41)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQYKEAgTGAI4AUIIdGhpbmtpbmcSDHmOU/0JQayxOH7RCRoMceQ4gQTDOxdbC0kyIjBVjqpQusMGCA/xmlrpaPDMZd8+9fBZG6tw3IBPDmLZc5FmJY242tg4FGvIdBSng5AqqgXo50chAIp96O+u/IK2WWbgcN4glUjHn/BOvDadwo7g6vBU5jxIA60HzJ3ZXF2phNesfr1pC3zI4nXK9iyLnb+GlHeM5T7LeLCj8/VX9TcWoRQzuJlzX/e5XBuxj6bxCGglPQktt8S8uYJ2zK1lP7W+1+EcXgIuSGukDR3+cC6J+sHiR+pGbHEej9HKhwUcIKSfTdkuzxlnWVs3bgkDyqMZPWBBfr0YeheHsjN9TEK2JOvIQ7MJIekPEolawfqIxgCQCew7HgzV1k+Mu5GV6FCQ2TVPHy+F3atsMadvMz//qJbnkjNNT5qPtCThUw2nVBmoVW0SxZW1xnFAxlBgcv+i7WOen/ihAwWumtUOC+nPeVL2W6M0zjigQMov+H0jkc2Z0T/xTKQhH7qs3ijtrpCzpBuWDOkqrerUYUpgx0asL+9qEQ4BzNGK82QGlKUt8JLbzH2VUG0MPjI0Dk6WZTLAvruCHT76GEE4CHKEKS/PMAFljxLU8Xbmr9jLfvvfofEIj415aFILmyDy7krgcT9EnvtxyKnXBmvamluVL1+6IoCUjkjRWbwat9Bly/rbVqGXhw+sndldZMdXrrXSzpjqIpCxC9rU0fBPtl1Pz+p+vg14qKL3BjRyHIOfBenqwd5QHIk+GH0KpESLf7OKfeEUemdYzVh23JMyCWA15+Lph2lXxBrA/5xnNXL5Nb/cGfr+AdWRNGXSPqI7auKSZYijv5obifYR6xkssVrSBimjo9sSxjTABdn8NoWb/3pQ5qWHgLoHHnf7m6YQsgMh1BwY2dm3e69iohLe5p+VDudFFCTSxKqMmU/6pq7OuRG+tHeYp9LMTj7/JqRVCd9/7CDPdZg8LmQB3LyXUT1zIZh8JI1/rcbzsv9wwm4M1lRH+VYrAR0EZ1FU5nFKGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1015 at SH 130 Plaza 4 within 10 minutes; the most recent one there was on 2026-09-25, and the only other toll that day was at a different plaza (SH 45 SE, 17:41).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLbMaKNzepiBpkFREY",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7423,
+      "output_tokens": 197,
+      "output_tokens_details": {
+        "thinking_tokens": 98
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1015 at SH 130 Plaza 4 within 10 minutes; the most recent one there was on 2026-09-25, and the only other toll that day was at a different plaza (SH 45 SE, 17:41).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7423,
+    "output_tokens": 197,
+    "output_tokens_details": {
+      "thinking_tokens": 98
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

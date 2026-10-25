@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027836,
+  "durationMs": 2869,
+  "httpStatus": 200,
+  "id": "T2934",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1017 at SH 130 Mainlane Plaza 1, Hutto within 10 minutes; the only earlier charge that day was at SH 45 SE Plaza (13:37), and the last Hutto charge was on day 81."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/QUKEAgTGAI4AUIIdGhpbmtpbmcSDPLIvv2AUsJs4yLOkxoM76ldUZoJK9KMJOGjIjB2Vxe8dQ7aUURJGqKLyYWbdp3EB5NF3UgQ1DjXMKvh3zIZ9IEgGJUKdOg9j4dEdF4qmgWcRdKUTyV1q37DykBy9Sn3QPMJg6luWigrGJ15VbJxvCtE3/kyYovr1T/3E1gSTgj7Hl4f3Qt9biN4IgPo2gxlB1LJBZ1FxBJG+eDGdkoKJesvDoqbZWOuifll/ONZOz2ttgTRcuUt3ErmcNl6pSUlBlIfgrNlKKc3lg+3QCW+8d+rsrA5t30AfLubw8HFSu0se0Ma7kIy4YIwLIftpNZP6E9EGIX1iXQmWp0Okcw0HyHzoJLbvthbd6e+2Mf4dW7FLRYiytx+6zddljqounR7HHPLxCmm5n8RBTMkzhJGt5wtg1OBxOSLbgZaPXKaTcCuxSlLo1L5TlCpJ+fCIAe8KiWsVYzcmDaUi1KxDbt3gcopjR2EQ2hwUEhfN5WVqxrxpyEEh1Qa2VhD2sh9tfHerqSsQmNDxYEqzZzB9HCYzYwOWVf2xOVnkTU1tR2X2Nvs/gINHJPSe5YCdDXFnOWQxXYe4xo5TO+uAkWq3n0EM2rtN04X3SwZ47kSOCnH0umT11SqgpGxLmkB5mO53vFs1vW4eR77O6F8SNJqL3/Dr9PVaCPC6wC7mC9mxL/KBQNUMby52Ds+ch6QKyB5KKIAtB70yHBL9rFBSR/xmXq/xCitW4hZ8glSa1sEPv0xsgNxGUqDM9wlkIOZxah+f4SGmmMZhsbSwOiQlbqkUHg/oddJiDJ21Ta8Rt/iU+TG+h3zy6PjjdV3mo3XnpK0v4jdvMu4+80WvU5cmYmgwGamEjkcgNfTrXwqzZ30Ej6kZz/NsqcpISTgtY7A4tRI6Gk+UwWi8qQnan6VvANs/y2PUbJ54rxpCuuRgO35lCno0LGd5tJzBqGkPJQKsxDcz/BqqNQXkDi/yD9IM8PTS+aH9jZx7TH8z1oLUe0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1017 at SH 130 Mainlane Plaza 1, Hutto within 10 minutes; the only earlier charge that day was at SH 45 SE Plaza (13:37), and the last Hutto charge was on day 81.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzKS8uymNGYweHhQiDF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5949,
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "thinking_tokens": 98
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1017 at SH 130 Mainlane Plaza 1, Hutto within 10 minutes; the only earlier charge that day was at SH 45 SE Plaza (13:37), and the last Hutto charge was on day 81.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5949,
+    "output_tokens": 202,
+    "output_tokens_details": {
+      "thinking_tokens": 98
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

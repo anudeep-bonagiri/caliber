@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02288,
+  "durationMs": 4181,
+  "httpStatus": 200,
+  "id": "INV-1126",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price $568.00 is below the $596.00 contract rate, the 2 billed match the 2 received on PO-1011, no same-amount invoice under a different PO in the prior 30 days (INV-1083 was under the same PO), and the invoice is under $5,000 with the bank change on day 42."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4AgKEAgTGAI4AUIIdGhpbmtpbmcSDJEgxyo2sH91cA3PMhoMV9jqOvgSe/riv2PqIjCEgHsNSA2luGBxPS5aYMwyYaeTN0MeeCU3vdnPytv9o59US/w4UR0qQfYqaQy+IOwq/QfMovpS8rWkZhJi9RM9k+AtP7e34PxEERlkiI+7NgEv8DNjtMLCeMvkGiALwUVGHD97wRpehSDyUJyZRc+/cFiVLrdXQfV8AWopSf6YnBDvRa9yQhSl0OJQ0ExFO2H+26iI1XyQrm7vHa8lwexOlViUHP5nZrHSHP8CFXRz/4AGoQLW5wj01yOTLgCRqBf/Q9kunrLL47cpAhsnIgpEs+3Of5VTJC1vTTjEZEwNja5431MEDSWLZR56dUE8U4RkzQ2IvnW3WmkuxGnfd6xsBBt/OPxeLODdc4LXljt6ld3eXR2nnauZhACXO6K0inDZOaGBwqi5YoiO8VboFaxN4jAi3nWmkPlONktLqZHcVMjBs41FANTOe62tviOL1VErSD9Odbo5hKYvjNN7xegG8/eV6i+9UVD69tIJdbV0YO6NQM6+BFjNp693+aWaYGFdBC0fyXTy4oKnODWjFkdWymAwda5TZcwZ7/8y2um0EEYr0onuFQfbA5OFyz/eNQ+zxorYDMURD9NWHJ2ee7nluD+Jb1n1NavvofbpJyms3BWwaDVmhrcNBSClclhtKoTr7xyLOwRvBE9BdGyUeQeq/Uc5Wpdb55puBYBGecCpcrI9VJd3y8OsXeTV+EgJgzBtqn04Z2SKGu9zUwmk4e636kEa/t7lKXXh85rF5LyCQ+n50/J8vDNI+NGBQUhMYj16X9cSiSqIQIS82FIESMThEFWHLquoHEojgZQT09wsfnOUDz3pjGKoLvOaH1J6ahLXhjvmMBd3DTbLwHVmNcpG1HQ26MiO11rP8TicJZ5v52jvmmQWHf03rodiWHzugSkOgukiAmnCm03j8ebFlQRmmwqmMkdPwttwSMnHBxlSJ50TPPtgNN8rhedPVwZMoBtz56s0XODGLZpTR+Hx1BQadRAJEYgKPOhyJANTCmnN0yPgfLC+cMgjgGMB9VNmo05BGTjyLfjs65p8t7Wabqkuo+GpPw7M34O8y9E7Erh79RAg8gXr5S8GKoIlcaODgaSQUUDQkyiPYfnxbJvEk1jEP3IOSZTqyfBcn8RI8XlbOqojXu6uvCbEZssznQyQ2/GJAfj3Jg164VU4nJsSWK/5I6xduTGtlya/mLEAGlP/tSeuukqJJvV0Te4i+QMD363dvMzIg/tokhjUEgcNltm31y23jaGwT/PTmZt8zTj4G4qU3IRwI24zaANMtccU6nEBLdisWPdT9V+BtzsegI5OJOKPS2DhxNACzUWT4+T32O1D2utc6uLReQXiJLSsryMSgzG37PZJrKM1rClvf5uadGLV7jVHcxm4SsffO/iJ9+bDrayQ6/QEb7RDlqUM6cWHMuuZcp7qNPm67dxr7fXBGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $568.00 is below the $596.00 contract rate, the 2 billed match the 2 received on PO-1011, no same-amount invoice under a different PO in the prior 30 days (INV-1083 was under the same PO), and the invoice is under $5,000 with the bank change on day 42.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2S6wbU2BNzYkbRB3Z",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3935,
+      "output_tokens": 357,
+      "output_tokens_details": {
+        "thinking_tokens": 242
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price $568.00 is below the $596.00 contract rate, the 2 billed match the 2 received on PO-1011, no same-amount invoice under a different PO in the prior 30 days (INV-1083 was under the same PO), and the invoice is under $5,000 with the bank change on day 42.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3935,
+    "output_tokens": 357,
+    "output_tokens_details": {
+      "thinking_tokens": 242
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

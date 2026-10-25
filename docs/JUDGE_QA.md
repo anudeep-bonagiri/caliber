@@ -70,7 +70,7 @@ The spoken answer is the same at every table. Copied from the Need column of the
 
 **Where does "planted" come from at runtime?** It does not: the kernel codes each row from its own evidence (pings, tank size, contract rate, PO, receiving, bank-change date) and never sees a label. "Planted" exists only in the answer key, which no module, worker or agent code reads; the rule backtest counts the controller's own decisions. The key is read by the scoring side alone, `scripts/facts.py` and `bench/score.py`.
 
-**Claude Sonnet tied the kernel. What does the kernel buy?** The same result with zero model calls, in integer cents, reproducible byte for byte, so code decides and the model only explains what the kernel cannot read. The comparison is `bench/BASELINE.md`, and every threshold the kernel uses is in `spacetimedb/src/thresholds.ts`.
+**Claude Sonnet tied the kernel. What does the kernel buy?** The same result with zero model calls, in integer cents, reproducible byte for byte, so code decides and the model only explains what the kernel cannot read; Claude Opus 5.5 at its API default effort did not tie it (14 clean rows held, precision 0.81 at recall 1.00), so a stronger model is not a stricter clerk. The comparison is `bench/BASELINE.md`, and every threshold the kernel uses is in `spacetimedb/src/thresholds.ts`.
 
 **What about the two tolls at the same instant?** Tie-break on id, so exactly one is the duplicate. Reviewed and tested.
 

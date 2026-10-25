@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019188,
+  "durationMs": 6095,
+  "httpStatus": 200,
+  "id": "INV-1049",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 33900 equals the contract rate, billed qty 2 equals PO-1021 received qty 2, no earlier vendor invoice for 67800 under a different PO, and the bank never changed. Note that INV-1016 already billed PO-1021 for qty 2, but the policy has no rule for re-billing the same PO."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvAsKEAgTGAI4AUIIdGhpbmtpbmcSDIqBzl/HA/M2x1Pd8RoMfqbFpsvIWRG45JA6IjBG6uFiaHq0lWMbsjfgHoVgvKxiLGxKQ9Tw1KKxhJJxZ6aM1akxsxrRm6rv4UCbesQq2QrzbBCkG/hOuQbjquhaA9GeChjL9oVVE1bK3fAidgLX760PbPUSNmELifg5I4bKQ/8myxOjXjhKekf0zXxNJpOpxsd0KOBuaqUckosStcEaoSmRmtQZ84wlxBccnbP4A8dcBqmRhWKc4RmwtxJI479CJtGV4c4GRpaj4Ta3oidiZS51CbQOra8RtpBISI9QAFQdLOyUh3r3oT1sszJp/HqzD2GQQFnXzZqMjHuFjQtUIo/RwC6Cbhd4YAlHTRxcnGJLqgeP4NbPziAzyzyzEw5YPXeTWMtpoXSlTg7/DcHiqNx9Ly7R7ordKV89sOOgpwmZjNwUNLd+cnREjLtyyYORm0if9W5RjmO5fRE+QBuFK5zZDfO8MecO6vKpy16wS/AmfJ6GiFjNHkV/gym2fGBh1rpBjM0P/dPd2lm78vBoTMefDRSUrpS3aYQ+o5JEmYnrElv6bA3l0GC24CIjbPWq+mdeypFxkyQc/1bndIXOq4W9PwQD+/I29zoWHYVcIUKR58qpA0SQe9B6Tsw3VinJROMz29/RpGLJwteiwpKb5dlusQfrGjPD5XG2tR1eHELHc7Bmu2ye1Nf9RYldVfd0xmocybD2fpDyGTe3gVi0swXpLYSGgOkUiNASx25u1RTOSmjg+RT9l1MWcaNx1j3/cYQH9MsAy/16GqJD58n3yYQano9BcLCkqF2qeXQPPamZIdUAyzbYDpQ1RzxVmL263GCdrNB++j7AZPKFbO15VMD1HuRRlxT01YTXW2N85ECNl3U6tgPxpA8nqfdiTNOrfqLIaHmUAqwjqsM5ApJVS/LD7QOpqgM7IEkGm4oT3XVtPFHNLJi2oSKuv/nLn6QuSe6KEgZ7S889cHd13aUPsHTP5YeV+R+OF1v2s3fEfi6WMmPS7jQ1DfwoqLEPc0uKIyeXdz86tOqWcTcsb51vvqDTjjZFgW6jipd/uZwNlKROaqoPI6ZP1kUZA5mV+g0IGiRTLiWsUDg3Jz9Molr9FHTzL8MuVB+aMRI/x4WT/vR59EtiCHxhBs8Fk6pzqxyAAR6w9UsH4Nwqy0FZuIGa0VON3rI/T1C2xrz/A34evYyPl47iQBUAD5m/eR8DJ1HYbB+UQhOnC27JdFJ2njYfEyZyORO2EPoz/iqWFrXuk/egWTPROD0N2ADvUU/fYLOxAJLT7j0NSl0dUXhAgi/wNI70PfXY23BT3VinZ90RKmEWxWoEWGxttfUX3dsflpMIyfy3jNwKVgmA2WH7vSLhuH7qeSwt3wWA1Kb7tUiSjBBpxoC08mVJjt7H5br8JpinfxY1hxatzrPiVxJ+OUoDTJd0iM6T9YECXY2H77Te8noZITLs9u9/xIrUs5xc/r3gGw0RcKkzI+gft2HKK+DFuG0BBvyu4q9wSqa79kAM36sIw+yVlz4/dA40udPIxBdZLn0b2H4BprxE7cIQICb65vf4GL/IuvYpJS0ndQ2Aszy+pj5GKTBofcvgxqLjh/eJZ+YWHHTgxtY53L797mO0WvWeyqreJMYfiofyl7tgPNCciaRY2M44h1+fA/Z3H9eTLCyjLuiTc1fejkfb14IhMlC/X6+tm1Rj2EZ+azfogYfdYxwOW67CGcYeD2s8nCDHHNVza/W6dhVo8jyY5x8s4TcCXkY8P8KdjIiZpcLxhMzM8O2pk/MKaSVil1E4wMWJXGY+Pyep94JLBLCD0Z5ZUBiQi84J/xUgRVEoFR1nebA0eVO5jOj7wK9x4phn5AyLZT/2KUJiIiHEBNZaH7hpcqTckz39yuEs7HmbVQ5GF+6dFEBV5uRzBT5X3JjyGcYwEBSNowc2u44GGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 33900 equals the contract rate, billed qty 2 equals PO-1021 received qty 2, no earlier vendor invoice for 67800 under a different PO, and the bank never changed. Note that INV-1016 already billed PO-1021 for qty 2, but the policy has no rule for re-billing the same PO.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzeU3RzECdKiQHACGt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2317,
+      "output_tokens": 496,
+      "output_tokens_details": {
+        "thinking_tokens": 359
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 33900 equals the contract rate, billed qty 2 equals PO-1021 received qty 2, no earlier vendor invoice for 67800 under a different PO, and the bank never changed. Note that INV-1016 already billed PO-1021 for qty 2, but the policy has no rule for re-billing the same PO.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2317,
+    "output_tokens": 496,
+    "output_tokens_details": {
+      "thinking_tokens": 359
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

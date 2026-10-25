@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027268,
+  "durationMs": 8576,
+  "httpStatus": 200,
+  "id": "INV-1114",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 54500 matches the contract, and even the effective 55656/unit (222625/4) is only about 2.1% over; qty 4 equals the PO's received qty 4; no earlier vendor invoice for 222625 in the prior 30 days; the 222625 total is under the 500000 bank-change threshold and the bank last changed on day 18. Two things to note: the total is 4625 cents above qty x unit, and PO-1010 (4 received) has already been billed by INV-1035, INV-1057 and INV-1110, so a manual check for overbil"
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 54500 matches the contract, and even the effective 55656/unit (222625/4) is only about 2.1% over; qty 4 equals the PO's received qty 4; no earlier vendor invoice for 222625 in the prior 30 days; the 222625 total is under the 500000 bank-change threshold and the bank last changed on day 18. Two things to note: the total is 4625 cents above qty x unit, and PO-1010 (4 received) has already been billed by INV-1035, INV-1057 and INV-1110, so a manual check for overbilling is advisable.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHUhe4hhhUaHSyroGg",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2997,
+      "output_tokens": 764,
+      "output_tokens_details": {
+        "thinking_tokens": 552
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 54500 matches the contract, and even the effective 55656/unit (222625/4) is only about 2.1% over; qty 4 equals the PO's received qty 4; no earlier vendor invoice for 222625 in the prior 30 days; the 222625 total is under the 500000 bank-change threshold and the bank last changed on day 18. Two things to note: the total is 4625 cents above qty x unit, and PO-1010 (4 received) has already been billed by INV-1035, INV-1057 and INV-1110, so a manual check for overbilling is advisable.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2997,
+    "output_tokens": 764,
+    "output_tokens_details": {
+      "thinking_tokens": 552
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

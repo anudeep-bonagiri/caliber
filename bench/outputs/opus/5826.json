@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022896,
+  "durationMs": 3889,
+  "httpStatus": 200,
+  "id": "5826",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 24 pinged about 0.02 miles from the Love's 307 Conroe station within one minute of the purchase, and 61.2 gallons is within its 165-gallon limit (150-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsAcKEAgTGAI4AUIIdGhpbmtpbmcSDAMLeJCNcX4CoXIljhoMpWoxnypiLGQwByWbIjAPqNvuJBzP3krpd/aJ/L/PvDlISQBpCSutmCTagyhNq4OUf5hz+bINsV0bO0P57qkqzQYCEahxngDbKoNUJhIeH+eIap896BpsFLc+l0CxEwOGj/C/Ro6UIlZjezId9jbMQe54w15f1tH2AkRgzBg3+eiqG7FTYbgauZjLCBhRLstD8siLDQ9nh+fn3fQTdBCfqYOLiRL+lg/fFJYhTtG7WR7vcakEw4187LA07Kt5aW+RO6KExjEcgkUnhRZTj9/YwhoUPkHcs0kl5tzK3LI9riDWnjBYbCoXuR5oBJCoqjx6PEZQoSzx5KXDp7SueaisMEHSjTEjQyX57BZRqs8gv2lZEQ5awh7/mfOvuSiIwKH82ajCumu3yP4kKi1wEojk3hai9WiovCZbZyyy69f2oxEjXNBUfWeMD0mx7SFFuNX7Voxah0GnSuvaeFRGoDTyY4CyrHt2gmmfho6Such5Yfx7O0dA6HXkycYCayRGo0lOem2HYKzZgGdVVfLw5A7CjfSueSbn18HruTitSq8xh+JSpwbutyrvcg37UBr8Zje/1ToGT9DsV8xZVb0tV59cypIR6VtJRP5bk3CLSQa7c8wsIWOCLi/b5QxfLlpUg+xdTp0X6HRHIEZhGpW3JU5OeE70H18TkF9RLHC4BOU6yS+ryr/aPwwuuCJnWF1MRtlL+8gzwvorzo6sU5qfghKkknA1zTDbQZB80nYs/QlyUnUz+DE3sjj3Pb5IzlDuco8HwPJKudW59RDjctKSrDFXKyvyihFVIpPG+KSUhTs2vI/YnELRZ2QpNf6ep1NKd41FmuvfoA3AXUkDIOUVtmo233kCq7KMmsMq8eCccP8ef8G+7fqMF0Z3lKTC9+yIkbshgEY1wH+IYh93/n40GeUlNX9pPvimxoXD7cNKlikefGNr8pWwXZrUG/ITjaKcm/GIusgYJCK0/8PieaFJsBYWSo/xXtK99o7r2RCjfcPYI/OmqAvUbm5iedH4PIA63BsPAs4cFFYiGRU3CmkzEfSjvcbnHsIVEEFYtzf+9uQ4VH7EdFflr4AXVA48na3VfRiHkRcAxyojV5bDWfZVbVkoJL9ixGzxlt0w98xwYTS/N24G0V4WNHJEHAcwHyPcpRQeJylA5qa5UGMCS8BoAHuw8Zv0W0nlVi4TjuWfoHOVizQGw+2zlRNQNWHTdZ9ewRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 24 pinged about 0.02 miles from the Love's 307 Conroe station within one minute of the purchase, and 61.2 gallons is within its 165-gallon limit (150-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzCSEASMaAVNyJeueas",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4304,
+      "output_tokens": 284,
+      "output_tokens_details": {
+        "thinking_tokens": 190
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 24 pinged about 0.02 miles from the Love's 307 Conroe station within one minute of the purchase, and 61.2 gallons is within its 165-gallon limit (150-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4304,
+    "output_tokens": 284,
+    "output_tokens_details": {
+      "thinking_tokens": 190
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

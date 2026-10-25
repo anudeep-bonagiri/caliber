@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02404,
+  "durationMs": 7693,
+  "httpStatus": 200,
+  "id": "INV-1111",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies (price matches the 46,500-cent contract, qty 1 matches received qty 1, earlier 46,500-cent invoices INV-1073/INV-1108 share PO-1006 rather than a different PO, bank change on day 18 is old and the amount is under 5,000 dollars), but note that this is the fifth invoice billed against single-unit PO-1006 (also INV-1019, INV-1067, INV-1073, INV-1108), which should be checked against service records."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies (price matches the 46,500-cent contract, qty 1 matches received qty 1, earlier 46,500-cent invoices INV-1073/INV-1108 share PO-1006 rather than a different PO, bank change on day 18 is old and the amount is under 5,000 dollars), but note that this is the fifth invoice billed against single-unit PO-1006 (also INV-1019, INV-1067, INV-1073, INV-1108), which should be checked against service records.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzH4h18A8BeVYVbC2Hq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2825,
+      "output_tokens": 637,
+      "output_tokens_details": {
+        "thinking_tokens": 460
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies (price matches the 46,500-cent contract, qty 1 matches received qty 1, earlier 46,500-cent invoices INV-1073/INV-1108 share PO-1006 rather than a different PO, bank change on day 18 is old and the amount is under 5,000 dollars), but note that this is the fifth invoice billed against single-unit PO-1006 (also INV-1019, INV-1067, INV-1073, INV-1108), which should be checked against service records.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2825,
+    "output_tokens": 637,
+    "output_tokens_details": {
+      "thinking_tokens": 460
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

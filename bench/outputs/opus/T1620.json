@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013912,
+  "durationMs": 2583,
+  "httpStatus": 200,
+  "id": "T1620",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1035 toll at NTTA-PGBT-01 within 10 minutes; the only prior charge at this plaza was T1158 on 2026-07-09, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoQUKEAgTGAI4AUIIdGhpbmtpbmcSDGR+Rr+PD7q/oN0GvxoMxYwEJsnmNROtUp+xIjCFuVe8n7aeMbCjqzhqxfpzstedO2nsrocylL1nYjfl8JtNXusN9bYKuNu0ddnw7KoqvgQbgB4RnEHXSoGQPyJPLlCUDS4UyHMCxFqxmh3O1ML/Rd94Eife1aiqjlRfDZTZ6hxpwLb2kJ5AlV8BEA79s5NWYC7NOxsHYfhZA4LlMVt+KKaVrXoPuHktvbv7iQzFiE/BFmfipVPUenUOW+/643Ofs2784EQ+eEuolu991y3ftYPnnEhTeuXDv8qrrDFOQFki85c1YVsOyzjgJRqu8mTgHUn8r4y9GoXlEtX/m2Hpualiv7q02r0VRH3v64eFBaVDhqNhiH2n55R3LcFIKSuoPmQhl5vWdU5rbaovDRgtEMjI8JfZcmxeIavwbg2ZiYrQKXTH83Gqf+VShBhr7XhkT9smsmm0YqfVwaoeuz/kG6S4SLMKAT6WwGM6hpusD8+qG7RPQACvKoic3H2DdN2WiSwAg9ZjTcc0H2k5FlGzWBnNmb8JLRSNBUYnS8cjeAPXjy2nXcCpHRd2PjYKzDkohGwOsLWsR2eEJTCoXKcYrh8xKMzC6CysnqJOGHufM3gt7Z23pY56qQ7gKSXb8p2ynCVHmLqFChXHGRyNbOKjLUS81NRI182VBk5gRGqs0gwGd/iLMyQwWe1wGW/xkosT7iEYPdMgCziDqmmOVmphexQlbpE230MCQLBEZxopkKhXtuX2bWAHNzZhBj28nvlzvfAtpPi38MDIHQKnSqzYs/d75uIw1genbrjCD13MQvOMRMNFvCYuHPD6v+p/3iRzQm3yuyQs+UoZV0wXyEyYFXmZIJSSrbMS7dYjaHl/GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1035 toll at NTTA-PGBT-01 within 10 minutes; the only prior charge at this plaza was T1158 on 2026-07-09, so this is not a duplicate.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzGW3iPCcr4h2aGHS6z",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2778,
+      "output_tokens": 140,
+      "output_tokens_details": {
+        "thinking_tokens": 50
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1035 toll at NTTA-PGBT-01 within 10 minutes; the only prior charge at this plaza was T1158 on 2026-07-09, so this is not a duplicate.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2778,
+    "output_tokens": 140,
+    "output_tokens_details": {
+      "thinking_tokens": 50
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015264,
+  "durationMs": 6268,
+  "httpStatus": 200,
+  "id": "INV-1005",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price matches contract 20 (53200), billed qty 3 equals PO-1008 received qty 3, no earlier vendor invoices, and the bank never changed; note the 160850 total is 1250 cents above 3x53200 (effective unit 0.8% over contract, under the 5% limit), so verify the extra charge on INV-1005."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches contract 20 (53200), billed qty 3 equals PO-1008 received qty 3, no earlier vendor invoices, and the bank never changed; note the 160850 total is 1250 cents above 3x53200 (effective unit 0.8% over contract, under the 5% limit), so verify the extra charge on INV-1005.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypc3uazQVs7EsxXakH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1396,
+      "output_tokens": 484,
+      "output_tokens_details": {
+        "thinking_tokens": 354
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price matches contract 20 (53200), billed qty 3 equals PO-1008 received qty 3, no earlier vendor invoices, and the bank never changed; note the 160850 total is 1250 cents above 3x53200 (effective unit 0.8% over contract, under the 5% limit), so verify the extra charge on INV-1005.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1396,
+    "output_tokens": 484,
+    "output_tokens_details": {
+      "thinking_tokens": 354
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010704,
+  "durationMs": 3420,
+  "httpStatus": 200,
+  "id": "INV-1006",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the earlier invoice amount differs (160,850 vs 21,807 cents), there is no contract or PO to test rate or quantity, the amount is under 500,000 cents and the bank details never changed; note that the invoice cites no PO."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5QcKEAgTGAI4AUIIdGhpbmtpbmcSDB9yu15iYYSjaF41gBoMzhOhtAfMYwMHJR+qIjDnHVRAP/kgj8OhwUls1kr/nYGEMN/CHL6351aZ6yYXPGGoebc5UUq7rRotoPZSfWMqggdqiv6kAlsrtTASKGCxbCXpB5QyKk6bC66vr8sfy0pUj1+1Yf8qBNfNHN4/Gi2pqKz/yVsRcIcNRBK5jyFCsbVTAq8eCorCoaW84JGrRnPUCNQ8DrhYlR2URsYg+OzTwCvIcPRHF0OXTtLMs9rkVAStVO36RDcs0i50eFfk2MBWKty5rWuIIKIS2iSaCNVkq/2j5DxHXynm0E6YoUMy/5zLFXY/h9Plp8yesi/tt7UxWMVBH0XeT7mZUoD24QKwp0Lf1rLsrQ4Rq/od8UPugL04Cm+JUEHa+/oqx/okoSAkWhBDGiXcBp3xwByHR5ojntkd+hZjMS6giC9l2FPMYmx205murMMatxU+USPgX6Do0ISv22QXSz0n+2/Vjq1zoL3udeRs9ADNRKkWMAJrgJVIdbqF/zGmfy6uFy4doF+BRJThoRfooBCOgUitEf6Zwcyr5ShnxbwgGOncdWh9phuuTNA6AykJXDlcmn/C2JrW0tFDeJu2+Vo13X4qEAOaVKIEAVGMuaizgdVCazz0P0cvByeddTzjMDK5xPFraWR4t52fJZ/+c/i/fmqLQRz23niEOHBNMuQyya+hejSBm9zS/8Kqux4mBPRIJy4YGdyU1guMRzkWy6SGpmSQwh31apaYqK0fYEQN89zFsCs7bAf/nT2xY7mTNhguZcQH9WoQf/uNV/27HznF1lJb/3MpqgFHorrqaY+LI/w+N/IzonJyMLJ2t+d7+NfvvrewstDk0QTScqlHOS6I2S1klRUx2vA9OUDE7/7/tL/uwtPpEaG+VW1pR3yPHcR6//rs4cSda+Dd5dBzEbm6SNPBHkTxdPncerZT8oFgOwCgkkfe/EfV8yiXoSRly3uqtrkvERwFxG7FdjZXabqTLNF6oqLJwbh9/6MQ5zmFUmPdmtPezRGgq/GDz2iFFojHe9MwMgLUaen3gKmiXaulBPflPAhBJ+n/3AQD1JAEy+lAVkxtYp2vUUo/B2hfVng6Zw5bYBuF7iyY5jQm7chaj7h7Zh3kbapA42lpqWDYuPijvX0K9d0EEdf5v/lnhgE+ValOPw5BdUm6N/MOzw9I0rVucmZpgcm8fpd9KhY7kwBkU9Ccyk/N6dK4t+yDBib2CX4coi9APtlXHG1uzkpYIcYhHynwRQg555BGuUb7rjyzOxpzo97mZcZYVHwdtf72qTd3ba558XRUGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the earlier invoice amount differs (160,850 vs 21,807 cents), there is no contract or PO to test rate or quantity, the amount is under 500,000 cents and the bank details never changed; note that the invoice cites no PO.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz5iF8uFYtV1ocBN3bS",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1316,
+      "output_tokens": 272,
+      "output_tokens_details": {
+        "thinking_tokens": 171
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the earlier invoice amount differs (160,850 vs 21,807 cents), there is no contract or PO to test rate or quantity, the amount is under 500,000 cents and the bank details never changed; note that the invoice cites no PO.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1316,
+    "output_tokens": 272,
+    "output_tokens_details": {
+      "thinking_tokens": 171
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

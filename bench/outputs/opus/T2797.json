@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.045116,
+  "durationMs": 2690,
+  "httpStatus": 200,
+  "id": "T2797",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1014 at SH 45 N Mainlane within 10 minutes. The prior charge at this plaza was T2743 on 2026-10-14, and the only earlier charge that day was at PGBT Irving at 11:48."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgwYKEAgTGAI4AUIIdGhpbmtpbmcSDMDobN5jbGN3QhpW9hoM2Bw053RG80O2N7AdIjBwD5WCewNjhC9xKt8y4mOglECKgbN0dIcfHEHI3DsAH9hswhH+8YMIUTgM7insWMEqoAVL0nay2vA2IuDEG6zadBtXnlEHgDOAJcTaKa832lSFOQAPuWQL/vvyd2eJPraCWQm0xYDmiMuF3T569c2/8N7TVxSnKpVjZEckU/CVs3CInolK3JJk1afxlE47XEKFY2vD/vUFX3fpZYVGIWPgOKVk9aMOEyKLdJzzIrjokKNSltEnjv7AJjEIFHYaK6TaINbeV+amPF9NJ1AVLDWcPMPhUfIOP2gp1rhxsRxLEIJ4TaUY9kGN5oo6m0AtNT7Q2P3t1qsX8TNNb9Nfq6TJyYXc2/I2X25qDbsMzlTqdIldpkeCp7bg+ONCqsoyqGZddrqKpSRbsEIvhUBK8NdhRqljbFdKqXUd4o/J+m5cxsbJriqe9ybPGgRyAGz94R4T4KXnuIS4fpATar8/Os6MlLbvMoZqtprBYzQBl/7FE7VLp5oG00/sRIVQ+ASJ+1enq/aX99a9H+ZqQcaB9cEY6Fjo3ME/ueaWSLmHA2X0IizvMC8w0IdgWPkimfwGhA7jKIrdusVtrNG1V2GxSXVyawz0G/UB0jxrxy8SmqSiFfu1IXX96Cn8+GEW4988YToXWAvUkIVUWfv6QPnG4n6U/cI7BmGZs3RVRpPuEKV9ith/b0qEQ+I3t1trdDP+q8mGWtaW5ZTVzezf3S26134eNFwmTOcvpYvtZno05mySBd/VgC8jOzS203BUyh/4mj+4zSqo264+ytbw59eW+XhecK5pQldk9nImbJJdwbxjgo4BA2iaXEG05KcXajrrZJIoHXuMGoRlYltCjhWDIYT6VJaeNNYLrDkXVDiwZ3cFclN5RhVG+bfiwKRrIhI1aXK9uYWLhU4KkaZWAxWxINF+1xZ1u/ymrdRh1z9eOgVqWg1EhKAQxP5cYpaY9fH91p/GQ7oYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1014 at SH 45 N Mainlane within 10 minutes. The prior charge at this plaza was T2743 on 2026-10-14, and the only earlier charge that day was at PGBT Irving at 11:48.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzL7FdKwrGC8d2FXvfi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10284,
+      "output_tokens": 199,
+      "output_tokens_details": {
+        "thinking_tokens": 98
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1014 at SH 45 N Mainlane within 10 minutes. The prior charge at this plaza was T2743 on 2026-10-14, and the only earlier charge that day was at PGBT Irving at 11:48.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10284,
+    "output_tokens": 199,
+    "output_tokens_details": {
+      "thinking_tokens": 98
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

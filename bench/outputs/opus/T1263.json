@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012432,
+  "durationMs": 3659,
+  "httpStatus": 200,
+  "id": "T1263",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1026 at plaza NTTA-DNT-01. The 18:49:29 charge 8.5 minutes earlier was at a different plaza (NTTA-MCLB-01), so this is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSowYKEAgTGAI4AUIIdGhpbmtpbmcSDOymYRsaSoItmSz9zRoM8J6qoWsPWx/cZKTkIjC8D06E1meK/4arcE0AnskRB5p5lWePYLouQOsINb0hMMPRjyQVou6CDehataXSbpYqwAXUWfqLCdTScBu+sj2igBjgUMQQ+9MFBjxPemSIiXjh1XVgO+hDYIf++UkfKzYTJkoUzL+QStuOh1XW2OYjQDSQujmnqJ5ld2dDEgfXLhjNpDz0eDMQoLp0OnhVN4oA7cPSOjt5cdryZJ4I6MwrDIdSIGtMhB35kdj85pguz+Uy5uHOQq0xK0bxCqULinA/xs/MBApNCeGB0Cd1lOQThiqBWKC9XHl8lnCWyhsK9jWHo9o85ctmzQx1GVcbGZ8Fny58Cyg2wRWK7B6IJQdulO0pjWS74aUFh29EmWM5/Vn9K7TP8CbK66in9bbG35pirWbEZuZcqXG8neSOeQr7HiuFdel1HmBwpwzaYX++A9JN14C7u9kGYgSIt4aX8zh8kB0TnBsdjyD5XBM1X1Jht0poTKiQfgNBzqiwsEip7RufoGaKvbWHTSJiBwy7W2ulQh2+PMxjqs4Z3Whlq0nfOXi6GR5ITAXLIdmU4+l2R9Z0mp9ex1LcF2C4fHBXFPzh0BqRDm4kZowBrSgKK2Ncad29aaZSFVsUj+n6s32Au/r2y27kL9y8DssH2SVmjOLtZkdbd+up8PLIGtpTq9FJ/0t+vomq4gh1UC2wDG5gDnTaH5X9WbNL5MNv0X+zjc055qDx7OtgUbpLUpnRcMZZdeH3vM4t5rE3LVRyrheBbVD/c2EQDIlY3sPUmG8I52bC//je6Wp/EjcS9gRT1RB/6gtEyE4+sBr9e5lhn6Xve8GCf4hCfOnovzSEAAANczau8TzaYW/DKvV96kqOnku7SK/2annWUROIOeu9Ah3uzpumYBs3RTHy37/8tYc0oRlHsCfo861jgvpFIfYjcoLn5e83rOqHE4Ss+FqiNURiRrEi8AQxHMTVwLwys2/sHIPvTLcK3ZSyI/u6ajcda08666itTSuzBU8KxY5t9pKyd/RtuhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1026 at plaza NTTA-DNT-01. The 18:49:29 charge 8.5 minutes earlier was at a different plaza (NTTA-MCLB-01), so this is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNykFfCMfaQtsmTPnjTt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2033,
+      "output_tokens": 215,
+      "output_tokens_details": {
+        "thinking_tokens": 115
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1026 at plaza NTTA-DNT-01. The 18:49:29 charge 8.5 minutes earlier was at a different plaza (NTTA-MCLB-01), so this is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2033,
+    "output_tokens": 215,
+    "output_tokens_details": {
+      "thinking_tokens": 115
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

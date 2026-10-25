@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026888,
+  "durationMs": 3027,
+  "httpStatus": 200,
+  "id": "6561",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 40 pinged about 0.02 mi from Flying J 713 at 14:21:09, within 6 minutes of the 14:26:44 purchase, and 34.3 gal is well under the 165-gal limit (150-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5wYKEAgTGAI4AUIIdGhpbmtpbmcSDPj8HinquXPx5pYQHhoMI6Es0ApIJEFLvhWAIjAu6cCxkorED/slbmGhVfs0bqmqwwLW+x2UrAlZv4w1YJRn3riDyyTdfU0oLVxykzgqhAY3h15eEHJ6zaDIp4dKSmOrkR5gOO4TWkyaFJ1Tj6FaXmxWZyss4+7P3kVBkooQbVwaURRiq+wt9eVTCWwC3CfbF9bxhGUWAOa0cCWoOLwI+Hay/SyNDOi3/gAndIbInsV45MjlHBA6qYZqEVqsUPERNJkNOZUw40abTxa0zaYEYc8D+gqVSpHqXmggsDUkTJrPX3++QDhApBM4CdRGwHBOqOqPmnh2MsAkEEkb/V+XHbQ3u2sZ93+EWGRPu/Bb9tJo+yhjoORgrXbBFYGj2rPcxvoRi088NoNrzIDB0/sGaaViJHicdjFt0NtNeyjDVt6tWf42ke0PWFU5X5+RsO19qBIIk0CB9X8FgdFMmtYMCXEbcJzpovTwdvCvjbo9zMh3ERP/0mbKFUnYRZte+GiiaucX2Ticp3T2sqG2QyD3y+AO4ZFk7n+Bnjk11UEFgUK9YGrzAiVNiuH3mvz3DG7k7jbwlZE+rKRV7VzmuDC22cXLlBPkOfmnjqJIKBF22bp02uTWyx+jAtq6rQwsOYyA+leR90R7dzXhcDWOGB2jdqMGFTm6l3g79Pv0+FKltRvVC/p8gjpI4Gzu7ZIsTSuO1+CHEBObLqeUD3OyGk2fM/JQ04vGUnf/WwmkdtQeQRgOMHueHFBwVINH3rGTP2wF67RssPJ6DfH9+OBiOS5qRAwLb5Ik7awGEEJblnLOGCjGy67Cq2KRlH9g+IpLFZHWfT4eaHsYyy5s0mfkRw07A9zn1+XMFabHZCC70U4Q1xOsLXJjIYkFVNNANxQdAAQADMw20ZnLfu+EAWU9eMlp6lh+h3HWGCBwZVYK3JjUx8pjhscxTdreInOD31uSqdDXzYEFR5eB1C9gl+o9HXNRw+B6G6NV/u68ggefZpO4GdBUK3GaifWJLmlt47QKrfqUqi9tz2YheJxqc+iomkGQmJPaSzhalSOWA8LiykK1sGgfOO/X//hLG3UFbvW2ENuiM4xS8Cc/MYfNbbqgnBsmGGvBGlT/8eOh/zNY8AAhIyIelXzLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 40 pinged about 0.02 mi from Flying J 713 at 14:21:09, within 6 minutes of the 14:26:44 purchase, and 34.3 gal is well under the 165-gal limit (150-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6Ft9RPGoqRDRbRBQN",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5472,
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "thinking_tokens": 147
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 40 pinged about 0.02 mi from Flying J 713 at 14:21:09, within 6 minutes of the 14:26:44 purchase, and 34.3 gal is well under the 165-gal limit (150-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5472,
+    "output_tokens": 250,
+    "output_tokens_details": {
+      "thinking_tokens": 147
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

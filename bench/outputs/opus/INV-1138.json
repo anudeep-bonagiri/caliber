@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021132,
+  "durationMs": 3252,
+  "httpStatus": 200,
+  "id": "INV-1138",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "vendor_bank_change",
+    "decision": "hold",
+    "reason": "Invoice of $5,508.00 is over $5,000, and Border Fleet Repair's remit-to bank details changed on day 71, 3 business days before receipt on day 74; call the vendor back before paying (rate, quantity and duplicate checks pass)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsAcKEAgTGAI4AUIIdGhpbmtpbmcSDGzkp/RhkabyRu/M4RoMRqPgnRKQP6CFMtSAIjDbuZ/tCkPov2T09jahP8LnEowyJWCWB2JC0pfqo8+a6RWehWBDuNN4/38cucCmYjMqzQYN2ZFgMCeZAay6OypS8Tw5T0ilQy66DlL8GZNuA4QOrpykq7lFI6TaS57wDjOp1TRsCY9q5eqS8awmXRXCX0se+Oy7wI5Y9FZvEGqa56w1m+wikFVM1x0QsfL3HXGwnYLH5ffVr08j+rMJBAcNkrZHmxTSiV8hZTAmQgEX+SOXgiW2GObOJEy6D6guu8jlPGc1Wr79DJE4RxiHcKjR2Y5jefJ+RhpC8BujM/R7cqtdeLAq/9rKUMIpu/hx/oe5OvVvPdt1EYw0Pq01sdljYNk9gFeHs7m+a5FQQKB/d7dNSdjRUDuedg29e8e+8Zu5pwPrAPVli1MUtmkQe1uCdvIL4GBd2PzIr/gYRU8rzgTDum9A2m/INRBvHIK7tC4Cla3T/qXHxsbFvVoCc9lXJkQtNw2yNsVhnhLBHrvvas6m7ykmm0aRbfsxpyGAWCvAINE4ZnIei9eBKMGr0Y3MkP+vvTcRxsvvoGQPRkYhFgkuxKYJW0qqv8gwkKZUpa8MfowUf3KH+IZH29rwav8wvwpAlaSYRR6pOqYFH+k+X3DNmJzXV6eTw9+Od+kyqtEGEWqwAGejtJtIZCdj8bacDt1zc+d0O8SMZyb0qGx6Dr3xHHL5NigQjyRwdeXS81E0pCYkTVmLbleaivc+weBvIZofcuIq42JoXgQXQbmnz2YNp/+LO3SIukhvkqsv08WELGufxTY7++d01V72GDPM6hKj6pqBLrzlTXpeYKsycihaB7zateIT8ua5Y7kmT/TLK1pWwaMQUTGJDCDqLuZN3QjMwXjXjCoTy5sNvbA1yPqO3douxuZGtOOgiVkHRLp0/V+s+IFox6rA+YA6Itj1anXiubY9HUCSzK8Af89OJAyrc4F/+hrnoWz2ttA9bYla1cTfdgjtX39zH8WYl5MF/u1dS/aqmvDH/MoLvkQXDAX2q7Os0PRlTwImS5B+RAydewhIIC98WjMMt1OFSHeZXavRZosjfLmEcO/8uac/fPZ5Zukwozz15HswmBFGaBQ+IMDUac1HkW1ZG4C/rxO3eAc85gkoxC0NqYOle7UK5iAtXvtbz1Z8BsQsiY4K/8DC5UyEgPLsABd+ZfT0VpdzNJQyiM7qfQw2J+uQhHIzCBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"vendor_bank_change\", \"reason\": \"Invoice of $5,508.00 is over $5,000, and Border Fleet Repair's remit-to bank details changed on day 71, 3 business days before receipt on day 74; call the vendor back before paying (rate, quantity and duplicate checks pass).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzJvr32Pchqsdik4gPF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3973,
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "thinking_tokens": 147
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"vendor_bank_change\", \"reason\": \"Invoice of $5,508.00 is over $5,000, and Border Fleet Repair's remit-to bank details changed on day 71, 3 business days before receipt on day 74; call the vendor back before paying (rate, quantity and duplicate checks pass).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3973,
+    "output_tokens": 262,
+    "output_tokens_details": {
+      "thinking_tokens": 147
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

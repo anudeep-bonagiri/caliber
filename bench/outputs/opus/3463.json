@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0263,
+  "durationMs": 4741,
+  "httpStatus": 200,
+  "id": "3463",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 16 pinged about 0.03 miles from Pilot 389 Mathis at 14:14:23, three minutes before the 14:17:23 purchase, and was stationary there at 14:20; 81.5 gal is within the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwAgKEAgTGAI4AUIIdGhpbmtpbmcSDPUejT836Hxv3ehRWxoMerfMgn3T7tjn2QtSIjCqGp0LPAl4gji9qvRpyto7p9bJcnveg9VEbJlxpr8FTw9hgbHrA3uBuGiTUdV7NFEq3QfCkbuykJxXEchDRh97SCDBm8hVhY4o17BY8uM4WYc8+JwWtIKRiSoEcGE4YSFpA4pjLgsGdbekOD/jtoaDrALCM+Pt/eO4TwIEElGYTVBRNstkbZCwrSpgSMP0rfvcSQe8T/77X5+UC4H9Hoo5Ot9LvmiWl58Qcu5ZYslYXu+rPKKPGPEX84AjcHD++9piNSduodTb6U9xYc/lBigfPuK2RE6ceh5WL4/tHyNTHUFkYHeeEhHweX9X5r4KAyIVaUs94Yw2gu0EaSWBKJRTlkrEs1sW4xSkX5P1Z0Lm4nP1e6tbU+f3wo33JOv4y68yldWy2ig/u1TjZCUJqrkGCilR4sq+rkVdn5Vo/om1ez4votJ9C0T3yVYHl+5/pkWY9iAj7ViYH9AreyqPeID5ZqkFqAdSCIJe9sHMBl/8NYSEx96rSqDizKQWyc/xprZfAJUM0A7bf7ksCDbcvBTyzvSpVWBYXRCzNDIpm5mA4hTEm4YHdu/dsFYCvb3evXBA4jgKNlKKV5TWynNelcZt4UVQZLopF79YCpcLcSOaj/XkVECxNgN4QHBe8UBJ16Re/BsCkxmW9hHTgxjejyr6nC3F5foeT+Y7WN4U+117vxG4ePp3AC4IBJMNOmdsStGmsBMKdk69+UKJUR5XN0jEwb/hk5oZ/Wxmxi2NzYejeP4pUsDrajHR8qow1pIzme4KDYbIfDYqpXit+NSxpJJY1BUsBmCfMuBybCaaAIOApoaNexhh4J5oXcr7vsfjL+ZCgM/3nG0eX78iynYEvT9wJonNzqaubpyMI7XloNQkoGcoUtPI5403h8ejejxltpcUhDIOrSjKMiYGl/14adNxr5PbzTnSGokh4tcsTCShPspBOFrvlgZ5BLPex/dk/NswzSSD4l8XYRfWKZWoKSEs0roMRhqOZ0cvTHUL0BTp3z066S48oj4U/hibKneUyy/qZlGKsyl3JH0Ba12WFDkS3KwGRKnrMeRxhQzbqtTOssXdA98a/712IlpgqmP5eOPqKZHRCwXYxIeq3rIWKJ2VZXnmrBZM7KXoLsZUDmIO79Ts5STFep99cG6xEUbjF6Uacn9fa5cpfE8Mx3X4FxOM+h2aMOKRPknfZ4eiDiOM1af8KUCfyV9hu3b3EWJlSbmSwCfrzPE9L6+o6knMziorT+YMqiAXeZKa9Pt6zxzF4r0Kp4Kqz4r3rFCSP+TvdxlYci8//RQm7QGObg/sSjU0YfomuX6U7uc0e4YaoKf3eCABSZQLXuaM+KVvCLG6/jTxIvKsaiO4BZNw8coXouFyuta9fDLo6oHwpUdrGw63aRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 16 pinged about 0.03 miles from Pilot 389 Mathis at 14:14:23, three minutes before the 14:17:23 purchase, and was stationary there at 14:20; 81.5 gal is within the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyg37mz4guAB2pw7i1S",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4815,
+      "output_tokens": 352,
+      "output_tokens_details": {
+        "thinking_tokens": 238
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 16 pinged about 0.03 miles from Pilot 389 Mathis at 14:14:23, three minutes before the 14:17:23 purchase, and was stationary there at 14:20; 81.5 gal is within the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4815,
+    "output_tokens": 352,
+    "output_tokens_details": {
+      "thinking_tokens": 238
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

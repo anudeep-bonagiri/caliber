@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017196,
+  "durationMs": 2671,
+  "httpStatus": 200,
+  "id": "T1760",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for plate TX-1034 at SH 45 N Mainlane, Round Rock was T1146 on 2026-07-08, well outside 10 minutes of this 2026-08-14T16:11:51Z charge, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgUKEAgTGAI4AUIIdGhpbmtpbmcSDBnV7nDk0Fvsw+scihoMBlC7JTlkOz0AR6zoIjBJ2Y6LeZNawOO06Q4Nn6nL2EY4KMokg3XUm7Z4SYLM+lKbBdwa8tKRTshohZwNKUsq6wSjjn0A18ePbDDwznG5mDH7d8gMhn3L3CMKTIHfuWagQ4YsPFmt//ZYAApDt94KDFllVgae8W4i7sGvW0oY/FCAsFuK7VTvSFLmOx0S3qLUG5s1rkojSrpJPdXm43fieWyRAFiNVitur4m9e52SxwTLzCgwDhb32I545XJ2SEC7Yef7614Mi/C9dClALddypTAm6qgdpwb7YlNODLhF2EG+nRe+jRf7ZwX9L25qn9TNG1/UAh5GW1ARACJSNjOa1OIIQ0HP0g2nIt+qJacoH4O5m5IhZjJemWWrcKcBNmSHbdRECWEhYiss6ukStgVeeOZer6ziDE6DoJiVu1v+C0zqRFCyuSGjzfREYePozurP5BLe5PNeTKs5pW/m+YKeYvgOFr3dlf3iXePpsJI0Bq96YC8FXMqNUh/RHVrzwgj343LTmwQgAZUsWD2vRAG+wS8dEy7yTdZ+qaeePWHVGOJqZpPJXjwppvQp8/4Xd0GkzcUBYEY97Mz9uPbxUcPKNp/cPI0lUcvlFZ6xQ/1jzFrxJX0RiEh7Q58jllJ9CtlZtmB1KF2kEn71eDg+dSID9ZZb3CoA4BsX2nMEnfw5Uimd/v2wQZqsNuF9O9pTF2txA5sdbNUf1LAWYio+TyUO4EsC+td4LAZR7jRTqoW/kxYSmZJht0dwjBNqI8bbamLsI1OU0eU6IYWARbat13GBwgQmP4k74ZZRGEYAkmoi3W6Rlw3tc55yMWcBTGyvz9df5I9kV2cnYPp/niApLSNc19ZGOcgEBQCtKlKcEVQDwclqIzT/bbIC70xv522nQvGufibB5oJ6jmyG6gKpGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1034 at SH 45 N Mainlane, Round Rock was T1146 on 2026-07-08, well outside 10 minutes of this 2026-08-14T16:11:51Z charge, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyhN65KFLgKMzw2TZ3v",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3404,
+      "output_tokens": 179,
+      "output_tokens_details": {
+        "thinking_tokens": 75
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1034 at SH 45 N Mainlane, Round Rock was T1146 on 2026-07-08, well outside 10 minutes of this 2026-08-14T16:11:51Z charge, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3404,
+    "output_tokens": 179,
+    "output_tokens_details": {
+      "thinking_tokens": 75
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02714,
+  "durationMs": 2924,
+  "httpStatus": 200,
+  "id": "3176",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The nearest ping (14:15:00Z, about 2 minutes before the purchase) puts truck 7 within 0.1 mile of Stripes 2203 in Wharton, and 26.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmAYKEAgTGAI4AUIIdGhpbmtpbmcSDBZ2uUNQ/NGn+244VRoM68P79cI3I8nafKqnIjAbWQy5dxMizxMBoGCLNNrppyFn5J+FqPNVp4C4K97s9l08Fj1QAog3mHGaYw3V0ikqtQUr7mpcO4hEVZbxHH4R3Gt2gvf/7zX+fIlFLB0ZO7FyMixu2ZdFAs/A6e3odz+10xiEOooREiM3fDY3b2CQm7HMl42Fju83BbQ3987LdiegMudjQGWvJugW40ueQgWJgPxGHqNB7QG5Jy87ujiEKRDTeKL6y30tz143eIWLpMLG+0RNm6gtRY9RbBO1GI3YVFctlxUYfeMF2Tb51E2Nhf1a4Az0qcxzMsziMYG36jmIt4SAua+zUsKxKZWeNu64XuNXfkuzLO1M4yG3lMy1iXfxMYN6U5ylj/xER1f36QNj9mmnsStsVJ+VqxtFkX5yrYg4bQSNb2/eCayxqe6g1/p6jEJS0bxbeWXi7QDODzZguqOyhm5+y3Mkec+2Vq9nebSyj/cvLc1oNG9g/hwMbztVOEPW+fL788Fbi0+QZ4wjvAk0O4VYbB9CMevY5jyrDXpZde6Rm6OB7H/CLJRROIowWJVgVisd0HtdwFrzsfg2jTnugip2FqzKNu0ANXUEn1KSzwcsqN3xgysoiF53IhdPqUpVO6UCjCRAOoYbWUfmFh21GHpaz+TXovrdyy0v7t1xifJ8cLXZ142kHi4fOhsxmtQ7cGZlW3Pj6mV2yhfxZEFAQOhpeUlcEG/gS8emqbJ6H3UhwHVGD9iPwavqFcKIOJFLmpOvgOzCHvtWPLzyTOTwd2dMlcvl54A+iT3jwDHSbqyCfST1+lgghQuKf3lCf/ODokKx8Yvkv4qSIcyEqtL/FyfM7K3WVmgenDSk+R6eCu552fBSouLIheMedQmX3DqneCvFXueDkea1akXPYx9nkPgrhup/kuQ9YE5u0KJjgQO0LSlmZ6dX9wTfk9GpC8yck/EHMbgfrmfzTibIu33fARfVkB445+dTWzo4w/1+I1B5/LvGYKfZzufQ4CjGK3U4IlkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The nearest ping (14:15:00Z, about 2 minutes before the purchase) puts truck 7 within 0.1 mile of Stripes 2203 in Wharton, and 26.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyy4kEYqC4oUqAZt94L",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5695,
+      "output_tokens": 218,
+      "output_tokens_details": {
+        "thinking_tokens": 108
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The nearest ping (14:15:00Z, about 2 minutes before the purchase) puts truck 7 within 0.1 mile of Stripes 2203 in Wharton, and 26.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5695,
+    "output_tokens": 218,
+    "output_tokens_details": {
+      "thinking_tokens": 108
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

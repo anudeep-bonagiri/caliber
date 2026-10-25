@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014396,
+  "durationMs": 3811,
+  "httpStatus": 200,
+  "id": "INV-1037",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "Same 67,925-cent amount as INV-1016 (day 10, PO-1021) under a different PO (PO-1001) within 30 days, so ask which PO is real; also bills qty 2 against 1 received on PO-1001 (short_received), propose paying 1."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrAgKEAgTGAI4AUIIdGhpbmtpbmcSDF5GYRFw5Lu0it073hoMb0pXc+7QAnBlAeXlIjDSmWYsOnNbXU6SXXFT3Bp/7VEbB1sg104iNJni1Eapdx8repcv9EwKT/bTFaGFbv0qyQcGO242mzI/uS3c0J8db1ED8EfDcM3YfaoOmXL4uwHJ7tW8rUkmNPMTx7V/mhAcbu4HV/x+wQ2bU2Pm56D0Hw+Nnvu+ASIxa4aE06ywPluLVH9ZhA205UI6UjxIsCDjoSXpp6oFVQicGfBTDMCDU8GOVYa8tsB0tDaHpCSuFR6+7XbApSWO0E0OjqQ7LYbuYmA882QPFMP1YwUG8dZ6FHeKkbw/3NLP1pIGHaEykKhle5y9uUUoH+GDBp1BP55d1Ci1GlSwgS/VH3WAzArQGMH5ePw5uW03NHVxvCC9LdZSPtmBu3WXFH6L4RCopHZbNxMPj7+upu+9raoCiN6qj/d6gdcbtG5gBF9vEMbi/xBwNnErtdBjOY0HrZVxLsqS6YO1zNsx3/72J4LhDQ6pWl2mDw2+OSilCDoq5KMI2FwKaYD6+sJSVapLP5L/YBL9tUUrKTURBf32BHbIf5ldQSZPOa59Qn2oYTVCKyPntVDYSUeA7QWis5+R2/U93H8BfAPBy2L8aIgyl22Fun3J1roUAfZA1N3T5rOQVGuw4MSR99eu9sZa6WFQGyo2+UbWBe38kzvXewZf6i6udP29vOniTVGVP8jjgl9AoeHvBa7JQs+3MSYvSkqshjjVILNnj4yuIFCVyaAMK9c8ch3NtGwZs3PCOFUWAkQluiDGZRsFZtr22/wugXg+PTpXKaSCaAJQzGeX1zqsJlDeBFJ1u9wzZZrAPEV3UJvhjmcv4PnSpqWpjqT98EuZjf7jHYhI5SC1w9+bACJQmkyLcezguJrSfNtvUoGfXM378b7PleVn6jbymCgh9KAV11ZNbRI2Kn0DpEXPwUI+sE49j75RfK8CyhuRZtxzK0Q1S+HZKgnh09x+vimKzBsCPAGXHGXUuHcc7Dvu4ZEgkkQ5S57r4NEYlNpq6TG3uMeFK/QLnmyiyDAJm3c4vR9R5Ag7KtwO/WNdgUTigWR6OzdCtdk+asFba7bNS5Bb+CRqeOjpcE5KimNqlnziOWStpAV2+yOLM5vQJwAgDRqcfaysNu9mTyWuAfIvvfozMG2xyTDDzttIyOkAayD76Y1MpDMBa0KoVJp3xjOYC66KarJPVOKON66eHi5SRrKhBS40XSjRReSMgo/c+5BUL+QTDaz1+x34fbXNY/4y0TNFrtNa3/rs/6n8/mC9Qi2UxSoA6qzKlZ0YfUlPFx9r+oW7v5FXGW/lB+OagVC7iAAiZATRIyWTXLXIiwT3SZe9z4jU5sTNH7yJ/ZlpI53OSlrGpMl4QPGPuAgbGvNTeAvwIsQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"Same 67,925-cent amount as INV-1016 (day 10, PO-1021) under a different PO (PO-1001) within 30 days, so ask which PO is real; also bills qty 2 against 1 received on PO-1001 (short_received), propose paying 1.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMLoEtLngN68zL7EXL",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1979,
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "thinking_tokens": 206
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"Same 67,925-cent amount as INV-1016 (day 10, PO-1021) under a different PO (PO-1001) within 30 days, so ask which PO is real; also bills qty 2 against 1 received on PO-1001 (short_received), propose paying 1.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1979,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 206
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

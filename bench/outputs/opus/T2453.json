@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02018,
+  "durationMs": 3068,
+  "httpStatus": 200,
+  "id": "T2453",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier TX-1016 toll at NTTA-PGBT-01 was on 2026-09-23 (T2347), not within 10 minutes of this 2026-09-29 16:36 charge, so it is not a duplicate and no other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwYKEAgTGAI4AUIIdGhpbmtpbmcSDIcnc+AF2RYXjao31hoM2Ce/+Ny4Cv0WeK4HIjD0Hg1iAD0mUtWGo3AIBioylwa0a0Gase/4rMGZjcfmbHD6cTcqv6aBtA7svywfG58qxAUhGtiOUQRJLDfvxbUNMeCFOMsCpkY9+HizWecL4vJk2qwanrdYRr7iTYXkRL5URdck50mqH71TDYwkysH6P4Im08Cm3FBpleDLflxNCxPvfchPTrUJuhZfoPZNvvBeTzxCxpLFCMoexL6cyBvRmhcYpnxxj/Ri2hBj/cQprRJwumRm02xv6vGJnfzNoAW3NgETjX9kL7ILjvKoYp9D4TxSOYF5NcFCL5wBx6cDDxm+G101qF2A6vlbRDgZ5szHeGnokX7ayieKjDwvAqWWvpRbC/2JKLQtqcx/OW2SwXhbejcaE1e9PqzNz92u3DrGpg+2sbTloKzS/h2UbBllCxlBqqN4HXtrtTRLtUTZSyyrGaTb31WCB/S+C6zJwXT5CwYAXLsNV+gMBIYNdFGjFXBhptnYuJxCucWNNB4MlHipDUEm3z1YGU55smhEz1OrCHpvE+76agCdZUnAYYZTOHrpxZrw5gBRbwjZ+LpQ0od49ptefhRTM4zemJlSNqLWPoGkh++Q6Q6qraIlESPnG0b75yv5RgPaa4qbkwUoQVuoJWHC7wdcBgLBMNun+q+q0GyIoAYp/M07nRm+/TFK5L8+wOprlxkWXWZXrPWwcNJCyMXyzaXVw3fr5GEUJv22oRkAp4LNIHlapFHibYsJvukXbCzwYx0vNe46KO4p0n/YIN82He6Dyorm9VjiG/95yArQAEuNigRc607RWCOmBd2sbr5jUUBghpBA7s/OL+sQ7Rca4j6kU0I5ar8Ld3QRfpl/63m8Wd0SIQqRxUubZfqPkKUl/T4vw1nTOYu5tNoPgjkmsjUBW+vyLr3V4B3sDP1nzcaRTxLgEDv/kHmXiB4gtaTyoZqWV099/P57abf5/an/1SYqJMBxi0ekkYFcqgw++1iToVWq9BE3/EDTSzKhrvJqR4IjV3h0t/hds+CvsPPNW9wYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1016 toll at NTTA-PGBT-01 was on 2026-09-23 (T2347), not within 10 minutes of this 2026-09-29 16:36 charge, so it is not a duplicate and no other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyHF4cEixcs686aGFU",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3925,
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "thinking_tokens": 122
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier TX-1016 toll at NTTA-PGBT-01 was on 2026-09-23 (T2347), not within 10 minutes of this 2026-09-29 16:36 charge, so it is not a duplicate and no other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3925,
+    "output_tokens": 224,
+    "output_tokens_details": {
+      "thinking_tokens": 122
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

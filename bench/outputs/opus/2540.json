@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018672,
+  "durationMs": 3952,
+  "httpStatus": 200,
+  "id": "2540",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 28's nearest ping (20:00Z, 16.5 min before the purchase) puts it parked in Austin with the engine off, about 138 miles from the Refugio station, so dispatch should confirm whether another unit or driver used card FC-1028."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gcKEAgTGAI4AUIIdGhpbmtpbmcSDL5DfLj0RtTi/iXv6RoMSa7sOY9DRm5pAZOUIjA0EtGoqE2PVsVCOf7tXcVnrrdtZfP1bGhjANPOKFiKnn/xKcz9K81y5DkWdq/24K0q9waYLd7htPqJtfwciGjvpQE0DdYKW5oguGzlLJ1CI7L4fMlmtmn1ijZw6QEDk5IG0x4/0p0RY5lVlebPx6zF6J9W9h5+l77SMNKzENPlWiSCMdwUsI5R48gCV4JZJMJPiNylqhcHXwG1DUU2GbgMgRQELNubDJgZ6LmzXrGsj18JmvWgRv/2NAoL8LPK0CoZhoyDanOoosqFBLa5Rnp1CvwPvJT+Se+lVmMM/bVc0pturgbeRIFKDuuHCIhWvKMrSzjk3joV54SeOBuhUwO7jMBd8vdCYXERJs8wY8nKp6kclg4GKOou4L6k3lyjc8xor0OEBohlWq/ojeQQykspXdhXyzJb2qUSFPvScP79n/P7jbdZvlO6MjIutIP+vl0OlQYxruboFMX1Y2f9+c7vn93mT9nALIy2LZzlRswdxfciuzD5wPotbPNmYRRAXUm0y/6oElEQRjXwYJG3KlRy0gVyOFmkZVdzQTirBNo0CiLdsync01RClJ7hIFQdg1q4sYzAS0WKHWai4Y+FyowXjAIGPnszQZFZ0a1YA/9+xumWphbiurHRZYuFbH6zRhdg1mBo7+6AJ3mmefYHOdUZdwmgp9w0p2m39m27MoFDBAtrKhTRiRAx21zuLOufJMXaa0ymtRAQIrqBqD/y+kASUZzKicgb2jb09PLcJe22SXEGn0dDr4NF5Ulxjdn6dGhOMIIlYW9fCJZRTg2TCAMXp95vyN3dAeyZ1m/EPtk6zYoFeBBHGbsSt+Q0X39hhQX8xr/S7uVTgXbhpwqe0dZXKS3BWFw75YAQZ59gCMCi3Ttuhl4Tz6emiJDH8mwgytMawn2By/vlw5FEm9M5pu3/iZLtmiP2Ch5bguocVkf5PWXACh6eGcQpkM+FyB1LbAntE1J51EEzsTjeSYYABfO3EzJDDBDJo76YTVJ8fLlVQT3jBbiGKtyeXqMOyb6pgJwCEHnECN2s9PH8NYei5XRB+ewlAu1vqxhVqBZgJo2ZW8z4YHKHCZyBLxNXSFtb3BiuCUKEgrARJl15jYSxJpZgioBang9ZF/LvTL5O3FQ1Udg1PAQ8XyZIrBHP6EncMJlBkx5wur+uBskf1GwK7YcNG0a38Apja1zNO1Jb9vV7xDPd6v+elKDNaaRbKW0LUd7qj0l7aIyi97AnPz0vJ0ETppfl8fbuUHzSmRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 28's nearest ping (20:00Z, 16.5 min before the purchase) puts it parked in Austin with the engine off, about 138 miles from the Refugio station, so dispatch should confirm whether another unit or driver used card FC-1028.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNy5LJqfeawoKM8jFk",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2993,
+      "output_tokens": 335,
+      "output_tokens_details": {
+        "thinking_tokens": 218
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 28's nearest ping (20:00Z, 16.5 min before the purchase) puts it parked in Austin with the engine off, about 138 miles from the Refugio station, so dispatch should confirm whether another unit or driver used card FC-1028.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2993,
+    "output_tokens": 335,
+    "output_tokens_details": {
+      "thinking_tokens": 218
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

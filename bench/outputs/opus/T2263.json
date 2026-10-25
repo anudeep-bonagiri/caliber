@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.03546,
+  "durationMs": 3218,
+  "httpStatus": 200,
+  "id": "T2263",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1033 charge at SH 45 SE Plaza within 10 minutes; the most recent one there was T2163 on 2026-09-14, and no other toll for this plate is recorded on 2026-09-18."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzQUKEAgTGAI4AUIIdGhpbmtpbmcSDKOEW7JWgWlc1KLP4RoMu7XmFQ1hOmtvMGYBIjAyhHAQBX/BAMh5TbkIlAYkkqiqk1Hvm+FyGAffAMMocNFJAzmdlPkfPwxTD3xBa8kq6gRcP2J6CWbnIQVItccevEuezNE1+5QhPodTNvtGYIxMr23FQLFBPk/Pkcd9uXJXSNkX1fNUMg4YGT0Vc++CcN0929mxZ4NIcQ5gQg7ule4TbVRUHbYMyEq2KciDBW5lfYrij52JInGDVBqQx0r1bPm63YF4YkHBq2G38wHKLq3zJzCfzk35gZKVwOJXGiVUUJwZX+cPtbLRN/QlTPtPjtDjGfKYYFR5lFkHoaM063Bd6QaTiiYkr+SBb9b9tUOAPiMdnvDMq/EgMozcoLl12okl2dhW8OrublURwJnj+DaSEqIVcHTwbISt7PppUqXGEd+BVXWVzjxwEKijjAzNEENB7VM79rbuiW8z7dCm6hrGORMpVTj5c6Vl5ZV9zEfyxWdnbWv5kArsFQz5E4R7Y/8gbO+seeMMmBvg3xbsacWdiZORn0ZJuI+DBFqz1Dmb1HEo3i8umJdh+CeakKAkJSP+ncT75AlA1C/+uVeRchJXMp2QFVt69gwLQhdrkymod3YHXkra4VOstQkV3Wog8Bla5GNRO/pxheAbH8VgrSSdygrEhWlDfFl9sMdck2K0BBrNiV421O+aqvLcLGeosjjvfSYNJgBtDfMr9TGwA8/lEdB3yMfSkuIYtBU+xSZ7EoyKPc6H9d5RUKa37gpjhseMYqsAW/WCuZoXyiUvWuOY5EIl9M9nyibT+mJLmOvUL1FOujhpMJN0ZxuyeBCUZhsC1N1/ID+XcCRmFpzUp89+1EqjSnuuSPyXJiIPl8Rsk1d6lWK49S/oRaFh3v+AQTxv9VWro1zQeW/mp7Xwl52G4m+lBHu+SYBXcCMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 charge at SH 45 SE Plaza within 10 minutes; the most recent one there was T2163 on 2026-09-14, and no other toll for this plate is recorded on 2026-09-18.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrRNXJSPWrvZ43ucRP",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8060,
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "thinking_tokens": 70
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 charge at SH 45 SE Plaza within 10 minutes; the most recent one there was T2163 on 2026-09-14, and no other toll for this plate is recorded on 2026-09-18.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8060,
+    "output_tokens": 161,
+    "output_tokens_details": {
+      "thinking_tokens": 70
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

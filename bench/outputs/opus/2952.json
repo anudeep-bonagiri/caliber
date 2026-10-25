@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023236,
+  "durationMs": 2949,
+  "httpStatus": 200,
+  "id": "2952",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 19's nearest ping (15:19:14Z, about 4 minutes before the 15:23:06Z purchase) puts it about 0.02 miles from Love's 611 in El Campo, and 72.1 gallons is within the 275-gallon limit (250-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiwYKEAgTGAI4AUIIdGhpbmtpbmcSDOr4Ovl/lfpiu32XUBoM5GeijQ9xrx4OWFQdIjBJQv2WL7FVXclCeyllPqN5Iv+mn1jBNOxmxqShJMuK2knXs0cfOuqf3zMonb79hi8qqAVy8lKa8fexEOAklprlA9tewPNFZihx6ZkGabGCxrD5Vc0HZv0V7TbKaAqfRv9J5bpX6uyRDqrix+cjgg5PrEGgN525IjOufoIF/U/cJ14XCc4+rpTnOOMjfqm6MiLDOAgmLGxHe5Shr+upwmbjrjdGI+6SxEyxUC0ELnC4PypupIfdY6OCeBxUZaXcq1olVuS4Dwb1fsk+rXRnw/MzLYvrqxL6Be5EkKrF1s/uyZ6WM8UFSONq+38ITx25zyd6VtBNB01wwB8rlW+IfoxXXHVKJtDYjMQB3/3dBP1+GVFvz3LfvMN5WnsMtrrxYZwW5y0yC2W6HXY8yTtl8Crh1WBemJusNMZC3a83RbDoGpu8Gi8OfaumALFOZBlgeKXs7oioIJFRoH9MzvBCIgI6s+lym6To80s5J2xk9+lQRYTM5qLubc8D+HPDfZqmHRzOzyeuGAISYAUqthe2juCY5MgNxO35wwdW35mXcFoYtkj72rvQ+9Nhd310mh1AAwLz+Y3vCYPgYpPJmvMQ39WmePFuVhJSVFuUBWW+WD1dOZfIiI1IiS9pgrJ4cahSNOLbI9dk1BfjWQpKSuFy8vKOcOB34EliiyvpzKFl4bKYSPqaBIXrzQI4KBnrLq7Ay3h5mws3bSD7QisYaX/1FSXc8yDpvzl4mPW+d7iJ0wlivXSKlXX4cKGR+EljHbvqBe7pq1Kmpfn7dpMOVdvMORDsc5AJ/iqNdacZVjgjbonOMxeldpHVbzBfgN5y9iAFDQTqGP3Ap1MZZpTK+FxcqI6FJfOk5HLvLlvixzmWDHVSKTkUNkf5zDSs9kee3Gt8VaCTgHRDbfq4jaxmo12vfXJBqn5Dl6WAeyRramG6ftUlxn+E2UYKfcnvtqcuBGXIoTQXPQ7jWbVeMaTSfBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 19's nearest ping (15:19:14Z, about 4 minutes before the 15:23:06Z purchase) puts it about 0.02 miles from Love's 611 in El Campo, and 72.1 gallons is within the 275-gallon limit (250-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8LCugmdSLgZNrtS9p",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4669,
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "thinking_tokens": 109
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 19's nearest ping (15:19:14Z, about 4 minutes before the 15:23:06Z purchase) puts it about 0.02 miles from Love's 611 in El Campo, and 72.1 gallons is within the 275-gallon limit (250-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4669,
+    "output_tokens": 228,
+    "output_tokens_details": {
+      "thinking_tokens": 109
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

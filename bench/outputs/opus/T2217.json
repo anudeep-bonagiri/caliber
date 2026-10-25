@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.036604,
+  "durationMs": 4373,
+  "httpStatus": 200,
+  "id": "T2217",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Plate TX-1014's last toll at NTTA-MCLB-01 was on day 41 (2026-08-26), and today's earlier tolls were at other plazas, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AYKEAgTGAI4AUIIdGhpbmtpbmcSDLEwVdAXkkGn33oySBoMTfj5Dvz4FQHX+y2QIjAvUeiPnUFt0QRoiLz3N4a0l7gqKYO7StvKtqbhjWIl6p9/g0sOJYRMEsmQhU3hYzoqjQaQctVnZ+2mzCHqGgqcR5lqpSxw/sYCrJgKrab+QrYrLs3tbbbszP/4KU6kPXHmGpjp+wRrzLNK4ZqeK8OwNS/2RZvp0BS3dnW+P3v4JfT0N3gVjBgaSSi172bbLHMOTK/xw9T31ftDrEofoPN0zPqar1EQ/W5TQxJINFSFm04XlTG4psDvsoAO+U7T8bQlt7/TOrNyOlO0mZfoiMWE/CcNkDrBjqoYr36mEESzHtvAGkkEp51AV+2FWr45aIu+V+yCs9emXNvQNWNE90gdck47CFXphqC87Rwm5Oi5ZXFaE1HVSV43SCmdjwySw4ncPAQe4L1iQjQvuPJYt5EkaNkAiZRuWox2kNpYn6s4FnfY4SfNDO6u0QkZn8iDjNrA7oid9ecQIVpBX60nAGIZqDTmTEsLUyIfSPTPmMIqFVcHjUtx3EJuQjN1ZBrSBKCj4WbFOHlw6Fk63g+o7YMTbBcUCbffgjHwmovQ3ITngvigS8fMtima3ZHmNNdyDwqRurq+vZDdB0KaSR1xqoUE/QWLgjY8JRfq9xXV/Pe7zNC64c38N8Y86ogynK1GAvxP2khG/qj8dDI0GnmexxVav+HGINGWxu39p/JjxawzR1BMjORtzu1mogNzGQUbhWgjbjVtXMcjkOEHAXx9K+tt4Y2zWecucIjKECXc5oSoMB2TnSHq4JR0oiLCmqTXnyIGbjAopEdnbnyFEQdq25MZC+CFuE8MLuAb/UUen7SiIiYkG3qeM5FexG17x+yxQQnQqKdKUpHQknMcPZrOKEYHk2LNJr6emqwJcxHE+xqUNc2bfE8KGJt2nOUcE6ROKtgpgGhP+D3JeBrkiVx4VAUTpkfU8Dd/2DW4vINUL178wTL0YSvTFLB0afV98G8yOHSLzPRKkM749MOghSwRKsD6szqjksCDIR0C9XS58P7G+YqehtLMDToqRBzXB2jWrR1JXGJl2y3QlMiG/yxKoGBRohOjDzYlYJYrZ/6Y2gvMDjvVEPXTa/aGh2/3k5d2rpYOaJrgmRdl1DbqMLURXMLjGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"Plate TX-1014's last toll at NTTA-MCLB-01 was on day 41 (2026-08-26), and today's earlier tolls were at other plazas, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzJ566c7SZG3xnRHtZD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7916,
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "thinking_tokens": 160
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"code\": null, \"reason\": \"Plate TX-1014's last toll at NTTA-MCLB-01 was on day 41 (2026-08-26), and today's earlier tolls were at other plazas, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7916,
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "thinking_tokens": 160
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

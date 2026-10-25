@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028884,
+  "durationMs": 3708,
+  "httpStatus": 200,
+  "id": "4485",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged about 0.01 mi from Love's 420 Seguin at 14:10:00Z, 1.3 min after the 14:08:43Z purchase, and 42.6 gal is within the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkgcKEAgTGAI4AUIIdGhpbmtpbmcSDKiFeBAF+ZdAYq4hxBoMFVOnKbsIKgSVTAAZIjDtD1gs7TR/oSP1JBm3UYKzF3it4Sldt8XCJwCtkJxZwZ/RWSlx1d3zalMOlwBzBZsqrwbzopHtX63iaFNULzsmsjWWP50A4q4T/fV2CBrOY72NMtdYD8ovn371TC+ILQcXMuC2kEe8Jn4pOUYQ2QLiWASYjrC+KDjn/6np03uI++28UyX2iFS0KL+XahoglXx4ICU+igZi6bK9JnwnzjrKEItIKD+v6ndaLRey0M+QM7eZHTGKT+VDVU5Y/1+lrFbRMGwsXW4npyP/+c6ARMYYH1uOeQgaLsPIXgiyZrb7bkdBEM8ee1hT8Uiid7EBZoDDeAXZflMSdtVd9pXQhjVisNpS8am9QUKrbY/pmpHIivcLEWM4RyXMFtRhS3MUUL8f+P6E5Ga1G8lFSaXvFubjaz1+s/MZcTQ9xXgG5/TyAV9gNiiVIWX+MuFBHuw1itqSJjE8jGgYF5Ir5zEGjjUJkWXRGvKEws5JXoC75FiumrumqlifWQPAalUwU9zst0bRztE8viq7SIqd2owNHr3PBrEHTxwCzAK85N97NpNiK6TzU3aarFubvFTnKvXaUsYlJaFp0XxGYKsMwAAJLETYEqOv2GNNC9PWIg8LgdDMCURJobyRuenfpfPDsxDH3cNhQtwfxwkoJkhspgCq+6g0XqgtXjHwzABRRo3yu8trjE1I+TxoIHdVzKQSuT/t5KCfprRGrlss+DDYfaTL4LiKwhYtXe0f5Nl/98CGFwKRGOXVYs3hSh3ghP6pbNz245rIaZv/GMfo7r0/2CXzAEQbrsq66IZxraxcAXgufNSt2yw5rZSKzS86d/IE0T7Fyaau5V+oxne6LjaJFNr1X5iLWS/sWkWrrIXef8Y/irV03W8e8rQscA9GZeANLurvPOz4DaX9C14W1wFbs2UJ4yk9U64qVw6oWTLy37cuF5d4tv0d4npYZC+xD8EO0DWlakSek0NJsQZhApSUGQrkRuV/PjKsr+OyAck9vd+aY6QJgEp+u5LVenNb4bDGKu2L3Vr9kI5IIzv+BBiK8xNbgmQC1oLnRj+3fjYHuIeeQ3X01tkuHzChYiU1QXCnPAzw8X7Nn3HcqHEan4yVzuIjmesspXA4wUy44s0+LGUMRhqDsWxlSsh8WvakZn+ZNuI1IPFrQhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged about 0.01 mi from Love's 420 Seguin at 14:10:00Z, 1.3 min after the 14:08:43Z purchase, and 42.6 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAqSsRTGXdZecLGa9D",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5836,
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "thinking_tokens": 170
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged about 0.01 mi from Love's 420 Seguin at 14:10:00Z, 1.3 min after the 14:08:43Z purchase, and 42.6 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5836,
+    "output_tokens": 277,
+    "output_tokens_details": {
+      "thinking_tokens": 170
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

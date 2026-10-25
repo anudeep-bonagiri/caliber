@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02726,
+  "durationMs": 2780,
+  "httpStatus": 200,
+  "id": "1970",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 7's nearest ping at 20:02:55Z, about 5 minutes before the purchase, is within 0.01 mile of the station; 24.1 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wYKEAgTGAI4AUIIdGhpbmtpbmcSDCnYagJ1780j63i0TRoMFpO8kU6+0Gfc2LCxIjAhFRCfMjYD4L6Wl45YANgERaRmf1w80UaCoOLjx2A4eSTPdsGskzok7PBmBhaQveQq+AXilh6ZsV7exLJ5HDwRXNfahCliQNpo1OlrUyQncmXjEASrn5Jj01i1it/Z1sA+PVXcblkWkW0V6UNl3mt75oaAKCNxg4RXGBVONn+WJ35bMuk2QmlecYDZXIdimeuigOlFBAinB7DQxls/WHh7K1SDhwrGt9Z/LZw4gzWhUfWJhquAMRkbYU5qtvO1lI2tf4ZvaYhRqyxz7ep5KeMf1wNRySvi6giRxSiioBlyklpDVo+70808xPbrFRx19nxPNb+H4lez36NI4VaDjfsI6mVKhlCNrfJDJlBzOihAXhukxowQ344gA+hFTiNSRipYQxbB8+Veh/rk7NyDrl/CsuAdwHR8he8XAqga5sp4oinWyNq2B6HXi4nL54VXiTa2+DL+FCo5U/rU+IzsdAwkM5pjNNx3YdUPJ073VBtDcEE5n3Zu/5gLYxGAZvT27DbzUFV1lpa9y45VgeSayOe82TBUf7bcTqn95X3y/oZrPoruCkJNuw68Z9QtTK8MCWSUYxmzqng61/8rDutr7feDDNFL1bOzEUgCdWDpJ3/06lb7X/qoDoI6uFW7GpIiHuHQD4wQ4Dlbdc6yuJI1wIPsNcECPp2UdE6l7CmauFG0MZZMP3Up+dcn3baw1VXKsR5lIHiSqke6Mux7KntflRIf63KCC4KPS17N+HMi6DG6BmFvaQ3s/tvWzypJDoCUH8CUtF7+Kk1/65QP3V9FXdnM6DXNIyPBKW61dcYmeRLmGSRgVM1uKKB5WU5ooJZ4hnsogfjxo4z5uj7v49wegkMPIi1IQwb9DxnVZsIvhJ1fRqlkRr7n++mCc7JY0bk1PqliiYwkSUqEdlE1wutoHkcQNRVpMkSEz91I20DGlEMPgTqQh+Le1TsOWTq5znZ3hAghZJ+OkBrG0J0Z6KR5ne7psgcrLxdhjy9iYNukYuhZScxS2owfSBeqm1ps24qJ+EMyeOjm0YdYA5NyKPqOv1aRH4Rnrs7fpLE889nsIXCEmpe3wElRR7EQQDFVGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 7's nearest ping at 20:02:55Z, about 5 minutes before the purchase, is within 0.01 mile of the station; 24.1 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz9urkLoNQ1YVNs9d72",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5690,
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "thinking_tokens": 127
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 7's nearest ping at 20:02:55Z, about 5 minutes before the purchase, is within 0.01 mile of the station; 24.1 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5690,
+    "output_tokens": 225,
+    "output_tokens_details": {
+      "thinking_tokens": 127
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

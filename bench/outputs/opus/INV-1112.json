@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024504,
+  "durationMs": 7744,
+  "httpStatus": 200,
+  "id": "INV-1112",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule matches: unit 54500 equals the contract rate (the 110250 total is about 1.1% over 2x54500, under 5%), qty 2 is not above received qty 2, no same-amount invoice in the prior 30 days, under 500000 cents, and the bank change on day 18 is not recent; however, PO-1018 (qty 2) was already billed by INV-1061 and INV-1078, so this third bill should be checked even though no listed code covers it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule matches: unit 54500 equals the contract rate (the 110250 total is about 1.1% over 2x54500, under 5%), qty 2 is not above received qty 2, no same-amount invoice in the prior 30 days, under 500000 cents, and the bank change on day 18 is not recent; however, PO-1018 (qty 2) was already billed by INV-1061 and INV-1078, so this third bill should be checked even though no listed code covers it.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjdiURBmYtUcSRRTMC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2911,
+      "output_tokens": 643,
+      "output_tokens_details": {
+        "thinking_tokens": 469
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule matches: unit 54500 equals the contract rate (the 110250 total is about 1.1% over 2x54500, under 5%), qty 2 is not above received qty 2, no same-amount invoice in the prior 30 days, under 500000 cents, and the bank change on day 18 is not recent; however, PO-1018 (qty 2) was already billed by INV-1061 and INV-1078, so this third bill should be checked even though no listed code covers it.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2911,
+    "output_tokens": 643,
+    "output_tokens_details": {
+      "thinking_tokens": 469
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

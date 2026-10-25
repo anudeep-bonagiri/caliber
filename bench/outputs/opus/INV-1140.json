@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02306,
+  "durationMs": 5145,
+  "httpStatus": 200,
+  "id": "INV-1140",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "Same 222625-cent amount as INV-1114 (PO-1010, day 62, 14 days earlier) under a different PO, so ask which PO is real; it also bills 4 tires against PO-1018's received quantity of 2 (short_received), so propose paying 2."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AoKEAgTGAI4AUIIdGhpbmtpbmcSDPh2hAzMHXBZEeQvhRoMm9VA2anqhkFYIGqBIjCFKi6GN5mVWiF8INuvtjygvnbGooHFR3SLeoNV6Ge9Thz04/zolSIctUekJw4QcVoq7Ql4iKe1BlNUvl86JO9LZvjlzqKZWaEDj60oP5KKiEHdJTrR+9ahLO+PZJL9Ta9g3dgiJAU+NC/v3O822/uCjDvlv4jxPRDGLLBtdA+p2S95UUFt7l1oZhJMNrzk3sUO7FxCZnybjisrxbYpmkhDVPtyjCtIDeGZWex198rOCg/C0Q4JSVNOz+mVN9qoC4NWVg4lGBedJvcYgLME2RA0O4DMOgoZce+xrK0PGEDlbAlrRQVRWhmEkP3nodufpSn77dTRW3GavUH+BcxfjlUxPSGfquMovsSQHodFT0eAX9ACML7+pFE6ri3ARO/xcfoxmyEJnW+umZ/BJzKAVhSDoZSg0bRhv0wrcE2bQpwO2zzHrLjhq4030nfolRU5d9Vi8bYJ59yE0W1hIAMajAObfSkZIgKpBlnOLN18+B1K33kllddJZ7VSDgEPxl4y0EWyD3sv7AzY/z1OL9m/t/LHmu53wGFbzNVQcODs0tcNF62OkR+fYcMeYXUGLi+c6zr7NWZlbdweBhaOz2p4PnSVlyWyUsNDexLn5PaMrk4k17ArP7ucf1FEOuz2sA2bhBHmM0AN2uc+jnymuiQRuTvlDYqz/RyMYkMoyFp/+hKBJjn3U1Fj6zZe7q1n0qx3ZyE3PKa7b3zmdbtkZytqF1P9MjwivnYPBdtVkcaL1pzM8XRC8CrrCKMrR3KwI0e6TOhvEn39TqYT9foOQsDryKwM1sqYk6tEMueNIUGRdgXSUvRNgUTlmfutsIMDMg7DxQKUy1ICU6PbM6kxuyOKTXcO3py9obLaBFVXXLnezYKwUvSuV3/dOcfbNELGyLJpVK8nd7ewlCYraG4nxACLM3/HtdR3SOQsidgpJr9EC2hcM7isGNLCF/8YPDa1hiqBzYjjs+/81G7JEwqof/UBmOXmaMHV8WICRTItCsG9yB7Y5XOZQHPyG9mFgY+Io1dAmWL0mnHHWIRzNrGLeaUld55y72NzasFk2/L6XhfZ8bVGUlccKvfTG8ZBGcmZwzPKH7Tv+raYdxjrdB+t/6CZgN+umxExb7nKYC2m9+llcitlWMa6m8xWZd7q1JO+MJqJgBqqBBxte2DlMmJdkvE98a8BPhC/6XLSEnKtMaTl9sqD74vGSlY4M9bgxDzpZ4cI7PO76oQVjkF8G1oNdZGBcNAAEZNl3jK0C72/ZzKQZuUzg3Pb15ioCm+1NsDgBN5R7tNiCIHMU7l+9PkaGyvK7e5ROtUy3vHLmemZUJ8xdduraAw4LDSSqjrsJo5cjNz/4/bL34oEd9RiPHlLa/e7tWT3lDHDcmoCnkVqgyIpanKEn4IaMe1cfWUiUy+QVuXwP+wVQXAC1op05cOnR3A4dTkvVKhfFNNpciVjAbl4YGugHJY5R2w7IQi/QqUnQRjSSwkGWdR4A3Dlx8g53jyGpi3OC137wZWnPQX0luAz9bya+T9iFgC6tvgG6dhpXjJfViaD7HLUdhAcVt3yRkTE3HLa7mKg1HMrsHeoHmcHP1BFTRudDys25oqoYuGewf0XoUW/Pnto/v9Ulnk1XHEUSJCacH1mjO6WJOfDHygpCRNpJdszMsZJRLwfOo6eBXfkXavJ/RD6yZvm+hpFXYu2liuUvbN3QCysv2QPZruY/haga9kYyxRiUYXcw8JHmqusP/m+w85/BOD52JtLdUZURta1GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"Same 222625-cent amount as INV-1114 (PO-1010, day 62, 14 days earlier) under a different PO, so ask which PO is real; it also bills 4 tires against PO-1018's received quantity of 2 (short_received), so propose paying 2.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8a84z76AMsqisL8FK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3590,
+      "output_tokens": 435,
+      "output_tokens_details": {
+        "thinking_tokens": 312
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"Same 222625-cent amount as INV-1114 (PO-1010, day 62, 14 days earlier) under a different PO, so ask which PO is real; it also bills 4 tires against PO-1018's received quantity of 2 (short_received), so propose paying 2.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3590,
+    "output_tokens": 435,
+    "output_tokens_details": {
+      "thinking_tokens": 312
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

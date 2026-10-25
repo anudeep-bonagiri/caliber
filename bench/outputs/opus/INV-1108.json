@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022872,
+  "durationMs": 6778,
+  "httpStatus": 200,
+  "id": "INV-1108",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: INV-1073 (same 46500 cents, day 40) cites the same PO-1006, so it is not a different-PO duplicate; unit price 46500 matches contract 5; qty 1 equals received qty 1; under 500,000 cents, so the day-18 bank change does not apply. Noting for review that PO-1006 (qty 1) has now been invoiced four times (INV-1019, INV-1067, INV-1073, INV-1108), which no rule here catches."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: INV-1073 (same 46500 cents, day 40) cites the same PO-1006, so it is not a different-PO duplicate; unit price 46500 matches contract 5; qty 1 equals received qty 1; under 500,000 cents, so the day-18 bank change does not apply. Noting for review that PO-1006 (qty 1) has now been invoiced four times (INV-1019, INV-1067, INV-1073, INV-1108), which no rule here catches.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3S7DaTYvkU8w3srvW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2653,
+      "output_tokens": 613,
+      "output_tokens_details": {
+        "thinking_tokens": 435
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: INV-1073 (same 46500 cents, day 40) cites the same PO-1006, so it is not a different-PO duplicate; unit price 46500 matches contract 5; qty 1 equals received qty 1; under 500,000 cents, so the day-18 bank change does not apply. Noting for review that PO-1006 (qty 1) has now been invoiced four times (INV-1019, INV-1067, INV-1073, INV-1108), which no rule here catches.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2653,
+    "output_tokens": 613,
+    "output_tokens_details": {
+      "thinking_tokens": 435
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

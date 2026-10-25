@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008084,
+  "durationMs": 2421,
+  "httpStatus": 200,
+  "id": "T1053",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for plate TX-1002 at plaza HCTRA-FBT-01 was on 2026-07-01 at 11:19Z, more than a day before this 2026-07-02 17:42Z charge, well outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrwUKEAgTGAI4AUIIdGhpbmtpbmcSDNgkWfeO3FOml4H2UhoMJWS4SS9uisib48cMIjD3omSBqbg8/DFjnOijz1w5wRiC0Rj8AsBnS6wFY35lWZVO7Lyd7WsqoUcsitWP+5UqzARH1MihWqK78lXrLSLJy+oVMbuRME4Yaa+W5jXPKYQkQU95WAo2PIpxXzN9v9B+H1uxBq6ZBsgPtF63dOkPTq28A1e2ugDK7jEMJGB46Mmb/sjWyiC51IQofrKNJaHw3murDROVcnnIO+6lWdVwbw/tWo2Hzb+kxUiOOxXcshjKm91vHYXxIYh5IO0ELGHVgffF+kLfUIfsTZL5s9D7b8MyW3nXtHnN+vTdRsBFmDjUYYUweXHPrjtdeOUJat9O3rggZ0MenfG6cY0hAsMeRTqzm5vEbFBeJkhXB9695Jyi/kohcz/s31Cy+szfVzx95jO1n6tsWx3I1Gi0lrVd8yZElSlCdMfBRaoc37jct/JQ/V3DOAweTrgbi5VGUSnbeE6E+QfQuipVPUetqSXZTJGMPzIeBsrnZpFiZFFpY2jte9TZhU7MP5DXIDTtwLegg6qVYGkQFpy4ybZZSBaWsntS4b74av04FoME3+LakCtwOdvaUJAdKXLVIVqxbUnOJURo9uNBUMnY5wPNJwPjpxAjCIZ/m885LGKolPGdj3zGQGTVZ+GY1jERuOim1llXlibdRaztpoet4ZQTgjMZDrELbc4mowm2oVdEwSzT57U0Q1gtK1yR+nxbx6C1KbQOko06ve4Ziqv1Kqkra+Z6bwiZeWdBYKPXSCFTpyNJkYcU0pqV2rivVlzZlvTt8KuOQ6Bl9GuasPnzCWoUSzste3sa44ADtLUd5D9Ia4VjgJVZBchUcR+OMfFeoIDX9U6apSO59RHDj88pZAlVVeUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1002 at plaza HCTRA-FBT-01 was on 2026-07-01 at 11:19Z, more than a day before this 2026-07-02 17:42Z charge, well outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyWH8sM8LtU8GiVCQ3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1266,
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "thinking_tokens": 47
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for plate TX-1002 at plaza HCTRA-FBT-01 was on 2026-07-01 at 11:19Z, more than a day before this 2026-07-02 17:42Z charge, well outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1266,
+    "output_tokens": 151,
+    "output_tokens_details": {
+      "thinking_tokens": 47
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

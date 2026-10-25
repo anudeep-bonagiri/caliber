@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02512,
+  "durationMs": 3212,
+  "httpStatus": 200,
+  "id": "5834",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged within about 0.02 miles of the station at 18:13:41, three minutes before the 18:16:37 purchase, and 36.8 gallons is within its 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvgYKEAgTGAI4AUIIdGhpbmtpbmcSDG6BZfbznNsKuMgylxoMj7qS048u3rk8MuRRIjBcVrp/TEiAsM87p5tln14zTkX6DgBvrL+MsOeI2rtnG5UW6DLah2gUIpIKKhlXuMEq2wWmWaPU49ol1ADckPRVSUtNHUZq0g2t6Ef6iO5qoMUhKXd+fq46vYUSc+OCITQA/vVL9wlrWSeKJ8zyAAYiYoRG/dvM76O+c01zeknHeYe+PXudxJe2AKWcU79+L/HddvNuoeVeGDuDI38UAyW8aVlSd6VC7PdfZIk6aZTPqTXcd4sUgR1vLMZxeg5meCBT2ehlB+2cLuAsxQ5/znVbc0Bb5DUmWY4J/+fKy6Lc335oUExxW5pRXJXb891I7ByKiRNaoKqoRglHfqSuHt1nhiR6eF/YY7nERySFOu/yB4tTJfy52s1yd2OwNxkOm9FSk9KLmvLA2pb6AcaImMn8r/UQpVK54ubuZZD7im/DDSiwtHWJj1ro/+rO/QAt/r98RlK7qIfV1l5lmOoYpU4pFLKjDYt6Ko2O09vjeGRkdyF6Asnj/RVuE24vKgPiiJW0XQKFk3RuTqciGM95RLfpB2Qo70cmXHMx4xO8rvXpG5+w/FgxvCC2QIpQbmVimeF39Hsf4Z8nFBO+zo87MPv6PByc9jp4b32eNwVc/SrucpBdEsIIARODu0PnZD2hNuyTbVBz60gPCWhYOmxddiD6yDWanpDvQD5v2OdYSyXVg2v66Fo9TNc9n37TEFFF/sXaq8ZAF8v8iHUOc0tvLHCNDAv1DYGhZCybUTurqz8SneXAR/U1QsLihlKt2sVf23ceDl0a+VMFW1q6yOZN1Wtjp02ScSwbAMiHdFAeXiwlXaQipuIyMD+fkZMTaLatW4uklz1NCV9LdgRJeZc2envDaasxtAq4WrdV5mb3JC5gVQTTbNzF+dexpDsdk8Wbva+0tkyV1uGE0wlkzVtuC1MmzsVTC0KOS/gl1QfTBSdkB1WOBSKyiV+3mBZjVoV13t4bg5ZrOwIp14y+8K91O7H4g9hz/jXK/7aY1sEkxHlZN5HVkucwsFXEmBwReS/lrEWWDxFnKbXnA0vHW2mxxxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged within about 0.02 miles of the station at 18:13:41, three minutes before the 18:16:37 purchase, and 36.8 gallons is within its 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyy3RMWBnbSVPw5HwMh",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5180,
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged within about 0.02 miles of the station at 18:13:41, three minutes before the 18:16:37 purchase, and 36.8 gallons is within its 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5180,
+    "output_tokens": 220,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

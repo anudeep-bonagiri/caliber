@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026944,
+  "durationMs": 5127,
+  "httpStatus": 200,
+  "id": "INV-1165",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 36800 matches contract 34, qty 2 equals PO-1014 received qty, no same-amount invoice in the prior 30 days, and the 74850-cent total is under the 500000-cent bank-change threshold; note the total is 1250 cents above qty x unit (73600), still under 5% over contract."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShQoKEAgTGAI4AUIIdGhpbmtpbmcSDLjo73LCUdFFlrp5VxoMh/66QDY0n36WhCBSIjCz/5LGindwazih13sjW9ZQjn4u4hp9lnwAsS6zl5f9OyT/vezIrhAixkyLY1XKmxUqognMnRC8fCeX2FYPt8kGA1c/xTW3BkvohMa3CFKCeZOY91rPyKIHKaXfco5Di0UGXNex2j8b3Rg7bW1DGLon57ZykWbbPj34LBW6nLp5x1V82fWm4oyMXisaklkh/81eY5aAMgjd7LYtpxUNeCQWoGmyGbEYExmIbPnNHJhh8wCWw9kdIkzjJLe0H/LWn4lC98QktZvvQJHGkxnpJkrwSEO4xJ2DeI658pvEHmsCcDLpzMHCRap2Nt6+cTebMEHRHHPvvRycrJrTC/Hpwlz/XUBly4qnwgWRwc/+9AOunOk8tzeTW8+u9dxHon/z096s9ndsXVAoTiguf4HuXk1l/N89pnhFDS3GsaaG8RG97veoWJMB5dqqLnjy1xmwykUkYGfeRoTcecxmdfcFDOeWUoNCCiO+/LqvqhmUZCQM1ny0PJMzrGlszAYYumzDhJb8IBRCVnq7QGBS0GAT7b410MxMH6eb5wZ9mxyrA8Pljqjg98VseQIeNKlO39A3yUMAr2ylssxBiXHjbkrLAkNK6W0liim/QYZ8k9uW+R3uxe4ihF8/7QmkiJFUwA+cJCuQUkeiw0deSRnI1cRAlPFQhHvxipoJWQWCcV8VCdsBKBrK8ykB9WxSMehQqEex3pRqYqQpH/fWoKTeqclQTBwzjD5x+cb02VBFRb6dFnQV8+/RbaEK+pj4/dpcGffhTyH6SG6mU0SsZ+Qqot7EHFGggScojoP+Vzf3miTh3OCs2k4d0cwn6dl6oLJ4pNnzdrmtPjLrC5L/kw5vDmVxjOBQq7pXt0VyeDWco20LxyvqNpGBHyI908+K9UmEmAcKCidu01W0MWC5j0+OYo8x51cbHMKvU2qrWKRBopGb421WRGJJVQ6n7xaFG12bO8ENj3SVJkJ8hXflJ3jC2RTfuVYybwSjrvjxOLUN59ROVrnOE68JOw+uQkYFqGVp19hdwe/6NyUHP/13MsJx82tYdw5AKBxahv0vSUbCMMFfRcr41vrZtvYCeLkSc0VvvrjTuSHhiIor+9TulP4LtbWSHK4s0noEWZxzuE7woR67TGHLYqoyEstB+J+wZOxWkGLpcaIo0/DcuyX7oQ9uCERHIPSGUjs8ixT7aezssd0ZHdCkpAb9sqWbvrQ+AxRgzEarbRGFbtf2ivAqA1g5ZQ6tdmEcHdlZcaiGvwUs0kvFXT3GprE9jkmTDJCc1lzGxTuaWweiWtIyMaODGaEwpIdHkxD0RSLVzOHMz2I3AGtGGGFpwfBpfOelwz70KN1nCbLbb9ulavpE8L9iPZ40m5T0hAGFIpXQMGzv7lQy4OIqKGAE3gZR1wFdQw7zkhPhUkrkAx8ctkok2DZFPrrZaDE076vn6miOGD9xf94Q9a00qLvPR7U790bKHXrgYljA4+rSie4RZgSHZn4g2JqaoqKXFH2maXh1UWyy3DlOgPHhIfxYTSsK46PxFgAKJLdf5hhfQQzOy+zn8EeK0Dd0HUi9fg9qlBp4OA8uYQa4P/VmEizY7WJToJV9Al9lKq567QQ57lqPcPAUpDjkoCiIHuDB6MfAtBACTbAm6Y3HyQWrDsljs/U5oCfbGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 36800 matches contract 34, qty 2 equals PO-1014 received qty, no same-amount invoice in the prior 30 days, and the 74850-cent total is under the 500000-cent bank-change threshold; note the total is 1250 cents above qty x unit (73600), still under 5% over contract.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzAa1vCMZZWuJEZK5JP",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4561,
+      "output_tokens": 435,
+      "output_tokens_details": {
+        "thinking_tokens": 314
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 36800 matches contract 34, qty 2 equals PO-1014 received qty, no same-amount invoice in the prior 30 days, and the 74850-cent total is under the 500000-cent bank-change threshold; note the total is 1250 cents above qty x unit (73600), still under 5% over contract.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4561,
+    "output_tokens": 435,
+    "output_tokens_details": {
+      "thinking_tokens": 314
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

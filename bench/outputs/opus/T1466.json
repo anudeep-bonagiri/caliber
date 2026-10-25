@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009372,
+  "durationMs": 3262,
+  "httpStatus": 200,
+  "id": "T1466",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1466 at SH 45 N Mainlane (TXTAG-SH45N-01) has no earlier charge for plate TX-1040 at that plaza; earlier tolls were at other plazas on other days, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlQUKEAgTGAI4AUIIdGhpbmtpbmcSDBn8qKW4j8TSeRoRBRoMEB8H3JsVWptkMbS5IjA0s6TWyLtI/wWZQgL63WwZGS1U2AMTaT5u1rBj4/zcLIdAxpa96n9dsq8M+f5r2CYqsgSiUlzHIK6rRpq0O/opZ+eztI8kZIBtrt3uIMptbcxnxChNRfOUjDUZ6PZl3uiwzy1YNNSIbnIBrkp/hqUmnaWw6ytSyuZYhW3QwrFG2qQmHsvKW/8aDQ5W9KF+r3e7jzV+vkFBBXrFwTpS0IeqXxrKrKBOHHv4qe9xTGOsjYZDQnfaCiO21jXfjAkJzcg4OQ/C1HgZCJmsfOlpEHpb6ndhN/E5lYOOkcZUxzPj6QMGKH8mYamfGz0GMnMDkXNnubAD+ii5as0pYAjdWff/MHqOQqLxJpixbc7QuecVP0/bDr0ykmJvN4QXINRRzxTaARhBYUgESQFLvUaEArahnjFUMYxjztd43RNTWv22oT/zaL2avX4bS53qtBTvfI7iAW3dUUrPSSAch23ogyeYe4EKugt68IpyRLUq60LRficYR5FO1p651UuxIMqtzmqeC1W0hOr2siLe9lb7Z2McEP4MRUqO+IJEfWvBnvUjJ7EGDbsjJOODW5Wfk6p7Ys86UAx7PaYSjYioPkbbUzhdcczTqKErne+tXz0dnLRLTRRv20g5XCp5+Xn7nN9HWxaktz/qbAfXvq+s4Xg9a23xjvsiy7AEuTFyScbuF85jGRi0ojfuaLT7BbwdYMd3xkiNn7+i2H3i1wSJi8Y/6Q4phqUPLh/huw+h4QIgcwRjszbjjTUL6fQYYY02VlHlEY3gn/Y1NJa84sjdEPSWDdORxAEKK0XGCqbJgSNlXNim1uXhowisGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Toll T1466 at SH 45 N Mainlane (TXTAG-SH45N-01) has no earlier charge for plate TX-1040 at that plaza; earlier tolls were at other plazas on other days, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHG6rUnV9zoMyhFAJ8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1653,
+      "output_tokens": 138,
+      "output_tokens_details": {
+        "thinking_tokens": 40
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Toll T1466 at SH 45 N Mainlane (TXTAG-SH45N-01) has no earlier charge for plate TX-1040 at that plaza; earlier tolls were at other plazas on other days, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1653,
+    "output_tokens": 138,
+    "output_tokens_details": {
+      "thinking_tokens": 40
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

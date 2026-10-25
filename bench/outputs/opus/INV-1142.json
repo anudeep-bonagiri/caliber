@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024844,
+  "durationMs": 5580,
+  "httpStatus": 200,
+  "id": "INV-1142",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the 31,500-cent invoice is below the 32,800 contract rate, bills qty 1 against received qty 1, has no same-amount invoice under a different PO in the last 30 days, and the bank change on day 18 is outside the 7-day window (and the invoice is under $5,000). Note: PO-1019 (qty 1) has already been billed many times, which the policy rules do not cover and may be worth a separate look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAsKEAgTGAI4AUIIdGhpbmtpbmcSDJKg1hh+jgnL3ML2YxoMM5ntgahgD6YF94ueIjC/O/uJKsZSjmoefyPrXUpXRpk85uqbD36WvUDma1rKde5QnPI168m53YRAQZO77M8qpQpbeSSEM7dN3uAiJSpzz04IuGTuYHuReowxDLQTAazivWcTy5ACs2Pg1G6VCb+zFiMVqE24Hi0MGXP0TuvwfyS+QiRvkC8Wf1xKJBgFkaaGm7WbCwIsmwFM2I+bBOWEBoDn6i4D2DCLEK1lRXYYic/EFDY8ZAqytaHEz+8Vd6lMmYIghAOEMGQdeS3DNmc2egQVedIn4YXPQ+Ha9lk3o0LGAlRyhmlkjsT7DZ1fSUxDvwN09OYnDpZOzevYG+u7TCLNCdYt8gkjAIqBoeVP55R42GEA84CCtW55avVe4X93vrNhakGEaVjx9oPJmlHpPXI6nG1rd9vkac2HxMoNxgNotflQSeUoW2jMejQa9pVVXEwCgMGb1C5vLmtIQ5tEPaHGRSdFCQz0+2BMhX48Qa0qWmh/nKYwISSgbE9MK0uhGIwauqaS9Q1vLe4FKEW4NDWLTsu1pIUvzs6tpWH0GS8VwxTUY3zzq3mJ1uQvnPPG/ieU7uBlzauFu92sztETttp8oJomtD5BY2JOstfi6syNGf0fwSsbQP/eBtfkVRB+wScBBOZKsAB75ZlWc7GQvngiRav2uuOftOBVj8wSDjd8tnzKh5lJR0JtdtuFQCUOB2ICeLd2GBRuckjxv2sO87TmdkKQgYvCJPw7lbGvMlnvsW95pVZI1RCcanK5ItlYTmkZYS5Uxx+tXta4hsZTudGqpcpjKa27BZE+ddhmaLMv1dCCx2TLPdU0ZgInvVvBqfRCPnvktlq+lmw9tOR8YWEuuPrFg3G3kgG39rdxS9CyPKYvYPGfelxzLpZ4Tw2vbbCMFcckjsz+pfjMVQTCexTwmICWv0nacvxjd+AT8rQ6lqGwHLeZQfOCZqF7Cyu+fRNjryLyljLUskY7gn7MIboiPJNRatyAOQ33zpx7VqUzVclA0HsdLF7lqrE5jqIA8Hg80eQjs/Xv30HAnwJrLrT8BkjU9CLrwGfh2Ehyk3qw7+nGdmWEUCsFrwBG4kW76nf5VI/x4EiueGvYz2apGWvJJPXn3jpFN+4Y7K2WMc20ImmCbU/OER3gP+eU2xNE8tjVEbEG7Jpn+PBoxEoH0ElmnhlkFKbIql4kH6om1IDe4ECh0wZr0eGt5t+PIhOs02leOxkcXhahwwKwV/iu9zGlE0d2umXMFQnKfm+hu5DHVqAA1RXNotaNB2Yy1SmGog6mqwYHMqNpFDVYfVYzT23Dtc0JUER2ydwgsz1zDB89Yr3kImu2Xh0m6c7lknb+9kFfyWAxcK8RRK6ORs1p+q4tOGxFbpMp0Bb4TlCSNYP4jlDYCgXEKk7+t55eYBN8OFPHwGluQc9VvrN7eWV9ikYHHHq9rOx1JuZXVXnxgtphStG0i0/7SGAGaUYi5N6UizA+Xw/greqK4hYaYEJAk9AVu6ATAi+8cvZF+2m8dYAV5joYe0Ud8F+11hILrqoE2VdSrd8MqVJdPFt7NIPnDgezhWeMnzPYE/VT5n0meLyMY92sP+aGdWYzQzeKBowRSHpM/rib/1PALfBDUH1ITVfRR8aDj6IWOdCBDrPLr8LB3fLiJjET2mg7GlI/RHrlNWGiAjX6ktV+R6LQqH0IYs5A3IeA4hTj2SVZNFrax844Q+FdgeziHb0JKpBG2sCxTnKky0I3ZKDGhL6wcmAo786WOMceMHu/AXMl+20SMYnjosLgM3EaR0wDm/vBDwVdBD+8AtGR6ANDaBAhsTSPI1EVdf1XKQdTvcJMNKXSr5iVhHHLdw0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 31,500-cent invoice is below the 32,800 contract rate, bills qty 1 against received qty 1, has no same-amount invoice under a different PO in the last 30 days, and the bank change on day 18 is outside the 7-day window (and the invoice is under $5,000). Note: PO-1019 (qty 1) has already been billed many times, which the policy rules do not cover and may be worth a separate look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymdPgjLvJ6Fg2n4WSC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3756,
+      "output_tokens": 491,
+      "output_tokens_details": {
+        "thinking_tokens": 331
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 31,500-cent invoice is below the 32,800 contract rate, bills qty 1 against received qty 1, has no same-amount invoice under a different PO in the last 30 days, and the bank change on day 18 is outside the 7-day window (and the invoice is under $5,000). Note: PO-1019 (qty 1) has already been billed many times, which the policy rules do not cover and may be worth a separate look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3756,
+    "output_tokens": 491,
+    "output_tokens_details": {
+      "thinking_tokens": 331
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

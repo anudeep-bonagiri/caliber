@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026188,
+  "durationMs": 3958,
+  "httpStatus": 200,
+  "id": "5003",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 32's ping at 17:15:00Z, about 1.5 minutes before the purchase, puts it about 0.02 miles from the Pearsall station, and 118.7 gallons is within the 330-gallon limit (300-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSywcKEAgTGAI4AUIIdGhpbmtpbmcSDG2pDujz/KV1QVJPbBoMLFS2espvzWtaigtWIjCFBrAd7EV1bGnB5zsqK/Jr5Zn/9pwj4SreUTz+GG4gXCm41kb0xVQD1bCZSFyCdgcq6AZ8GQuS46QmV8K4cwn93pfWulNWcyIuX3fGFFNiOQskqXi/Irb9Y+SkvGGrpQ1K2v1slgNxKHUJUJfDel4i4vc7lET2af1+9dCTtAEhCESK/t9lcW0kOtqdFr4Fe3NJ8IeIwUMnQ0EOb/2jIhIEb1oLnzjS2vlbzTQayR840vW3ohe1FN7+7g2FDPzrjlV9HcHJxHQAoRJ1+6T61sJbBFCmrW+YsWH6ClFL4czvFbVGGxgDJbl7Z2q21jriA0x0lQIOInDIf4jmriu+vYUMYgRmlbhDrEwm1+H+PVOwoKcOowB0WkF7NGcF55mcC8snhswLhiHi9pcmraFRTWrdUkvU89RUdBZiWcvpfbEV6MPXjLY4AyM07xWhNwMHIyeKEtZ6Wf0TARm3FGWCqT+ExzmersUO1w4RuWsYRZvPhjdqnR4jR8lQYXKvdXVSeJHuGKpPZTW1QxIuzf+cBTAP/1fDLwFVYEGXlFByjDnznngLb+3yYLMFziVfVjinRuhuSLUOEtIrj3x6UAPrnnc6sm45VMNK94Q23ws3dfdRyS48NMwN14EoQ1eMqzQbnyl6b4cpjQnS47ZNo3QHOzvFcuc+6Dv+TpuYNfUYqyYqIaC8nwNf/Wdc17XsWA8e8eJ7FcIEm1b2PJkwa2kF2zSIg975hy6BQE9M/VVSTnmvltyhkfAtfpN0mzNleWi+PmaGcsShy/PuIxSvOO0867KWM5d3fyA+sHe85h5uNu4aFbBbJWznxL43tnBsFlL2vXCcjV6q5/Q0T1J8Jj1ykKEbY/623UsqRfjpjLHVUpO028XoMRY98SA71X3BoMZCbP+lXr3mAY5QC/ZQ2TqjAEAFXMN8LqcuW9NCFmyLny69vWFZY0akJEReeWONFwMHxg3m4VKlyqm2Y+mEfGzy0YhM8FzAiStfEclmB8otS4r8sQpAiG3XPVEgd56TyPJ2kStHEksMjkBkpdkwEWujGBxbMO7X8RggHsysfSc11bP05AH8/DxxFlwiO6rehUrVQ8steUN2kRwHfhH/5nPV2ruB7/6JhU5gqgKrZ+f9zBZhMR02M79Rwe/0cVaGd/4LKKDd/vE9/JydZNz8QvBYQX/j53Pf6E6Cx4XofRQb149dBI8U2R9wqRjxpPZoDdZUWSeTeCsb7xPiWHJa4RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 32's ping at 17:15:00Z, about 1.5 minutes before the purchase, puts it about 0.02 miles from the Pearsall station, and 118.7 gallons is within the 330-gallon limit (300-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyiLUMkyQZDHKfUh5SV",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4962,
+      "output_tokens": 317,
+      "output_tokens_details": {
+        "thinking_tokens": 210
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 32's ping at 17:15:00Z, about 1.5 minutes before the purchase, puts it about 0.02 miles from the Pearsall station, and 118.7 gallons is within the 330-gallon limit (300-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4962,
+    "output_tokens": 317,
+    "output_tokens_details": {
+      "thinking_tokens": 210
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

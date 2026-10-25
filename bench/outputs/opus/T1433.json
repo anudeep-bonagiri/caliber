@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013452,
+  "durationMs": 2436,
+  "httpStatus": 200,
+  "id": "T1433",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier SH 130 Plaza 4 charge for plate TX-1027 is T1299 on 2026-07-17, 11 days earlier and well outside the 10-minute window, so this is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QUKEAgTGAI4AUIIdGhpbmtpbmcSDAUM0MLVV4CqgiCV5BoMm3Ilx5yFQQ8RNTpiIjDWsj3nu0G0kAAu15ihBXNFQxpXsNskmQEQYsvaXKfwb3MLRP9/UYAO72dFnhDDuPQqigVVII+dKhNCa5jc3mrEgPTJnu2jU0TBGRymWATeh9M8KQBe2Ht0TMSEobC6kPF6nkQvcwlAogMHyd6/vVQJXmTkwILBr8hUkDlsCj/AB1pVIVJizb9YZP+LcQQIgUBviul12tMMbjpdNA36o0hk2f7NpVAXvMw/gRTY+oG++PfdI0ehLw1H0j0aVqWEiFqs366UDaUWvrKPXLBLr16AZVn1t7w/Absj+R7nsbXoqXanAhQ4vudCbHHPCFNnOqWgYq57KMtKEBHwrPrUqt2VptgMdWvGXJucVnlcrbAknFb501lgKAYHL7UbVBWdpYbhmO/FiK+jCvOWWgQ3uK1e0a9NSEWZZGFuXt2dk1bsrTBYF/GUh763PQsr0ER5Ucvbj1BcrLlAXpCZHz7NVziK4f3YhjSnhnnOtW510ZXYTsgXy6QnjEsxYZ2ToDcHRiEJAQNCz+6pAaUJooWF31k/ZEh7u8h+/mtnSTc/zPxaXbTKK7MOTsZ8wsqzRyO5QMG3g/HYNL96wJZcA5BhhBxyXZd7009sHP8wr776kkuEOmoNc/m9+GmAI4g2KxItgdl25JcnqRTp1MYk5XW7EuZshTmWK3vVsgR9+hVK/XBZVK386Gpbg5PsdyWwUlIwnRQLPoQKF+4ARmXna7WpsLjfHZEeQMOGCVcrFfy9vU2SzJQhBCP141+2169aExVIH8+50I5ZM7eLaYRblpLWfOIn54QSrVH8iiEALuKu24pQDWFQ6oqpNKKkntyZgarLSXpnijZL2PaqyGFy/CIp0XV8Mf38WjhGBtBgUH5PerSJUs23ge67vUF7WxJ4UEQZh0nnRQIpggCnBUmv+JtDbEUm8wj8iTyJWdKwUqe44BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier SH 130 Plaza 4 charge for plate TX-1027 is T1299 on 2026-07-17, 11 days earlier and well outside the 10-minute window, so this is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLQyym9gqs7xCAAUBD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2533,
+      "output_tokens": 166,
+      "output_tokens_details": {
+        "thinking_tokens": 76
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier SH 130 Plaza 4 charge for plate TX-1027 is T1299 on 2026-07-17, 11 days earlier and well outside the 10-minute window, so this is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2533,
+    "output_tokens": 166,
+    "output_tokens_details": {
+      "thinking_tokens": 76
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

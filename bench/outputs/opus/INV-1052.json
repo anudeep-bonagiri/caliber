@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01772,
+  "durationMs": 4043,
+  "httpStatus": 200,
+  "id": "INV-1052",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "INV-1052 bills 36,925 cents on PO-1014, the same amount as Border Fleet Repair's INV-1038 on PO-1017 received 9 days earlier (day 21), so ask the vendor which purchase order is real."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5AgKEAgTGAI4AUIIdGhpbmtpbmcSDFMfsNQyC/NTGuDdphoMDrDhlEF+LXEl/C+pIjC07LngK2Ec0wy9MjFK74VTZVEfZoCw3+/zqiY2M+VqSqiOCmme7CazV407Eq5yNhgqgQihLssY4E/xCxGCj/iw32NacDPCrGEQJeO/5qK62zrpoZoLmOX7qAGBzkwn71kglAKDjePPJpWVIGNvSN9p//Ftfvozi7gF/7i1f/X0z8uAEnlIy6YcO2t4THTO6PSQ8zuQWIsQC5vF79RkDRUmYN6cB5EFnKbS6iXAsWdTWvl8Uptm3JVzJfusMHfwQ1sSXd11ypCQWxbiWzKTslQOUqeDMctOCdFB0GM0eSSEH5xDRWkJflqT0eFzBvEElJgiUFd3xblTAEmmXGiJznFB2PprVoQgdn9U2oe0KzX6htJ5//BUZAhzXFHqG4Z82n7TtQ28doIuGCGIzeAbDrLnyPEN5E7fWlGDfMnsMpInUai+i4wau3KnziilnMbdCz2chp7J7dW7eRF09fJ1A7zX+MOWLoFb2nJflr8Rr2z2pscFZeM9q7SSGZ+rFg5PkzhYNHmbgJr3zCeBtC/gvA4xiejR+5jxKRAT9dvg2UeeEd3UsNBkBvazkYW8i7JvCW0+YLFWF/T/al0ylSBFoegqL/33RmwlB5vloSU3BnKPbHJW1zdjSU0ZX5OJNIs+2QH2xcm7HzP67tYW73n9nt0jOFLQ+xKUX3XtufhA0o0r3o114OhFPgzYlVy0uN21/wpl4PlRxH1vGcRFGFyB8zM+CwnmzknuI1c86KoS8nPTWpIhNgvx/bkotEg2kFJIvO051/L76NHnnA3LcHEs0P2NIpdKF2ZetZfn0s4FDAoCrWzbSL3eQblxJwflYVBpZ7AB7GLGuKfWyvFdj+IGIs3oQ8+6OZqj1p1C5OHd4ppFhwUyswi1R49bMgOWXR7aA8LC0EfZYKo7GXlZzlCPJ3b1I66kqt+5RMVeHV0gkdoev8yfNtHzoZH7dFSom/YGvHrMlJZB5fYPKvQN3TvE/YMvOBy+Em6R4k0q3d9xLjZ2mee8fSN3vZAgwEwSkWpkKScc/eCHoHFmBr6tOqYgkExn+/tOb0HrA+snKqw3k6nUN3Ja53GxaXZoujTirZBslvNb3RPyvN9lC6B6h9dcQT6CdpZ45DtaeUGW9GUUjyWlGzu1TDOoN/35nU3PzrvGdXlisNOfliKg7eJiNMu4FZx3DZQ5m/NwKe1XMpavK3A7tTews9Xhjd/x8r1s5IiklRAq0sMNir+H09ukNz3JVoRS1mYLnsUqlOh5K4XgDaOsrz51SSAebAs6Cxxn4CUGVWOAM7DVyZYTnVaE9cILb/FWz741B4yUNnGu/uwKwu0ZHEv1eDKuYR43LFZvcbc5GPJ2Zh799A3fKzWHMfsx7PV7WHGZhoqK3XYcOE7OAG2odSGXCg2Z2DcQDzKMPG9NxoduuAw8G0fcX8lP2wLnpw4n32LlHBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"INV-1052 bills 36,925 cents on PO-1014, the same amount as Border Fleet Repair's INV-1038 on PO-1017 received 9 days earlier (day 21), so ask the vendor which purchase order is real.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNykq8M6zG1c8SP4aveF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2730,
+      "output_tokens": 340,
+      "output_tokens_details": {
+        "thinking_tokens": 227
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"duplicate_invoice\", \"reason\": \"INV-1052 bills 36,925 cents on PO-1014, the same amount as Border Fleet Repair's INV-1038 on PO-1017 received 9 days earlier (day 21), so ask the vendor which purchase order is real.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2730,
+    "output_tokens": 340,
+    "output_tokens_details": {
+      "thinking_tokens": 227
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

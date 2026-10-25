@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023332,
+  "durationMs": 3255,
+  "httpStatus": 200,
+  "id": "T2769",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1024 toll at HCTRA-FBT-01 falls within 10 minutes of 2026-10-15T16:59:05Z (the most recent was 2026-09-18), so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5gYKEAgTGAI4AUIIdGhpbmtpbmcSDMvgWH51tq4SHh8G5xoM/DZ5MguXcDUjCGOxIjCBF50geS0pCAPQS23X8GAJFOG8Ur5ZBtUYYIRwgcr/Em8V1c+Em/SS9fMO+CbeRvIqgwZYf79ajAuQEWhEzL5EMGCz7AOk0vfl2zN99fkeNARgO6t545oWFFVVXA9Wk9FLrIZ6Nl/svuJ74fR19UzzdOpo8qhHofwZx6L0X2tRsrMNUk4GgcbXepGSXH7+fOfhK3C7vD7eOKNF4fWoagaF6/5+n65gg76Ux5Is13FIu66Gq23+ZApHsQ4HDvHVI0VfxAgrLp+rYqKWVbvMm9t6UhJdM/FTUYkeg9/KOPjvnxa+NnWTYkMvGIzrChLe6Bx2x0FTQkwrtl6uuvkZSC0CZkNBLtLctouwAEWCzBZbhjJ/Ab9rfKLrVFZIgOEy9g9Ya71Evq0C09WUZPCtGBj5gzdDoAxK0d/i2NuRqI5/Rvr3fYCfFJYADJ0+WUeWW7lbyLZegHTmFBGpdz+EM9OOkcxesrK6Dy9OzWFxPYbHi/CsetppaizPeDEf+ugoFwUzmOM3IZxy/qzpOC0+/rPqdG11zDRHNKDD4k270clMlbRWy76Q3kVDdhTMPyS5XcKzZsEjXIJ8KEQHvUKDSg1xLb03b2WrCGYahMvTELvxvkmu+I5DHeiSZjGB8vaxhqifFznXy9r1makjZN8mUhsVWJ49ra/K8Df2tFruuNiJZB67AZPqnPpXkR4M2gPEQJW/XkZTEVglx5pHk0rgR7CbfHFHyD0e38cujEfNBA8m0t3ApDUS1g/DviyuYrQF9rkKV+n2EwxlnuEnpr0+TkNqM118iyg9PvYcypKEB1sOtvNkwsbhIo+iqm96pIEAs8xxCuObZNZexP6oAclT7z5SycT85g22lYbDwrOEASpiEP5IGFDiLSpP04oDi7I6YSeIi5keku7zIfLgBqdYHxG1qCDHsOkkaZAK2KskwCuHDFqEeuxjF7U7IXDvSGj7mtPkbdUhp+jymIHz6X79lT1YVJjYEEGfQBuceh99D48AbNCS3QBo5cS7IHn2MjLFST3wPWUSdbBrR7/f4GWW8PLT18iapyWdFA50sRtEhQPgucj3zMnHbwcRlIr7w4j4CIEV3NCyekoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1024 toll at HCTRA-FBT-01 falls within 10 minutes of 2026-10-15T16:59:05Z (the most recent was 2026-09-18), so this is not a duplicate.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyuCzDRgMyRtm6AB6aj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4698,
+      "output_tokens": 227,
+      "output_tokens_details": {
+        "thinking_tokens": 131
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No earlier TX-1024 toll at HCTRA-FBT-01 falls within 10 minutes of 2026-10-15T16:59:05Z (the most recent was 2026-09-18), so this is not a duplicate.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4698,
+    "output_tokens": 227,
+    "output_tokens_details": {
+      "thinking_tokens": 131
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028552,
+  "durationMs": 4321,
+  "httpStatus": 200,
+  "id": "5307",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged about 0.01 miles from Pilot 283 Waxahachie at 12:30:57Z, about 3 minutes before the 12:34:09Z purchase, and 31.8 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjggKEAgTGAI4AUIIdGhpbmtpbmcSDJDmlUJ+VSwcbs85ohoM76yZj+980p5gFOJwIjDHOYDjrCEi++q1rqhmrflZUc8gGLKpKPA9LPbNRdCBYfH5BWUJaECU2BjNggkuApsqqwc23vnOcy9nrtZZ/HI7rR2I7lwxTpvlrRb4w4vp7oje7XFfboUIeHD5Z3mqoF898bBlhSZpl4w2Y+DTl0hvh0qeshdSMv+qZduQldVrU6sxNOT8lQA6ofdkJj3CPNaloUnnhgXQuyjKC+dmjYHIdE0cBJhwOyOsd5NSoGw0vy5566H5furjS/6AGKRN1PoAAO+/kyWmdC+Ldv8zlFT76M3/qSaCb3G4CRls0Y6sDWrie+4R9RsCXPsTqkheOMTg3/IuVQrTBlX7f9MG0S89FyOaclizTZeWSafbs7v9ocOKFqV/ezMNpZwDNvxoZvXeMJgFTuj7EcdE10EeSaXeIh9hesFfKcCygmSzoU1kZsuV8zjZRi77fZxwE1it/RwJm4SbIl8F6bk7QEcwUx563wnOch6lQ2UMjBxXOdde6JKrno61wOYIgxghVuWjKD0cgRdnr1ZeQzls81BDceacw2hGo/AQyh1QfS0Jnxu+VsfYv4yxUNmA/xqpN5L0rXtQWDXJ3uaaJgj15/WUslcEpqQ+h0vtCBqPo8ibYZ5fXfdV4SyWzdKpEDMaVL/Ajm4rxNRaunGrnLDRVh8s69mNSkHjnwIH8aey5OglXGBFShsDKo5u+yBqUtOiKra+PKQue0c88jxxsGOf+yBl8baKfqxybsILODN7FE6deLEy3nfIW2DHl72uBxFzPFKvJebw9GYcgY61bLBxfcB1PBeERVyVuNGNbFRWoWfgXLVmsu7NGSZq4arq6r4Fwos9YjALcP4f9mygXamW65HK1LZeqF4E2jA9qlUq5kdGJ+AQqzjeLghD/FnhRCjaapEUveIPpvC5vHLhqq1gYHvjwxKKYlgK45D5WyXUNBE8K901NfsmOIh/x8C7vl8CecrYYqWNG8c/0+OaEVerJh9KAECLeybWOUN6mSed8KhxN7nyDMsENh6GXkrILzCBiYl+HHUkdrAdjSx8sHpiKEKyGbkD2NHo1MAtNB7pi91OfG/AKB+ISbGmfIMhHMh53ckf/TcisNaebHfoHTY3vce9/N37rvWQrO5/bVpmbLDONR9Pqos3+uXd7a5HNZb7YO1n1rvdrUHVXfr+KeH0dhxobV8AI+JhZyWzdF2RB/Vnl4H8XJb24fv64lLOPlrJtLQfLXUzRE2PHBla5dEGJ05t8U28SMM27JrQXCkDTpng+BH+PypzYpyxdp18WQkacyQvONtATNqumZIveNoiT3nUR4q13ld7G/XbT/P8cJdnTcMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged about 0.01 miles from Pilot 283 Waxahachie at 12:30:57Z, about 3 minutes before the 12:34:09Z purchase, and 31.8 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytubDBgVZ9brn9kWGq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5328,
+      "output_tokens": 362,
+      "output_tokens_details": {
+        "thinking_tokens": 246
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged about 0.01 miles from Pilot 283 Waxahachie at 12:30:57Z, about 3 minutes before the 12:34:09Z purchase, and 31.8 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5328,
+    "output_tokens": 362,
+    "output_tokens_details": {
+      "thinking_tokens": 246
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

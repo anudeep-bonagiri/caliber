@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021564,
+  "durationMs": 3206,
+  "httpStatus": 200,
+  "id": "T2552",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1016 toll at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the most recent one there was on day 61, and the day-69 tolls were at other plazas."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjgYKEAgTGAI4AUIIdGhpbmtpbmcSDN/3DBJuWyfuaNOuEhoMr7Y0bZY7jDskNPGTIjCT3X0yDI92YBofgFKkqa3cDCLUtc2WOTSyjjhXq0T5kFXRyv2UyINOK/EYw+SfYn8qqwVC2sw8oiaVsKIa1OSuGQ1jB0vH9ajk70y7GYLkM/srFQ+AQ6JjHowaHEVHpvR9WDRWsBLXwiWLO5iNV/zoMAGV9urZ9u9LrgX/mN2/e6JVDJ78PnA8RJsXsndl6D7KJcdZ/IOykE1oMMAftsEoc6se+SubpHo66NB6jy/jUVeVwlkSEFJitkMIIEXPU1xbuI3IX37kQZPdgl6RCPFQjQHeRWkyXsjaH+TNk8HMen20tOlfaqnnjci45h0UEU4bgBPGk6qGwp44IjMifsX4Fbi485/6Km6UK2WP4mlmjTzFG7ylZ9Tbuu4K43aOaMxtCUB2u5wR5fajWX4QxRZ26Hsw41IHhwq+2knXw9PyfBjOXstit2dSe2BaaILbeGwCSc3LOSnKqmUNeLL7y1Imdk1SlrE/yZ3YPeGunvPXFMv2lo2ZuKuoUfKZWme3/ziOe2uZLSHoqYSIIxcqh9rZRJgBJysdTs6RrhImf6diPMsmibRyY88i6SyB763ruiMwvjLopwtbSe56LMV27PnWMHFsiZTjNdOHXFKGouZIqWGp+DUiYGelCqbIfQhk1CvILiHKC7x7Sv2XqabbN1PNO4EVO2oD8WSn1LxTZqiKi1Tnrt4eNo0RZ/MFwOSZGA+lsSUE6lcWZnDhmpoeIVyUCcAQRzff1sXpbeRnjz51KvQ/3g17mI49LyJy+h42QQAxW5eYLiuh6CE6+WS4D2YFcEL32ojlJIQovxeA3MpalizYU6I+p5KjqhdVzahnWQQOVQjom169Q62h7KHz4EMaCqd7rnUQZfli95K6D200Oi9W9eNp0VaMzL4MlKfWbHGThdEsXMi+bGQ73n4YQmwaOamKvrw4ncR3fwWQ7QmLRWuImZ8SVsv1xmq+1Emabw0awE1qgCOA/BKDbng/KBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1016 toll at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the most recent one there was on day 61, and the day-69 tolls were at other plazas.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzBZeNXrRN2hPQGERis",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4431,
+      "output_tokens": 192,
+      "output_tokens_details": {
+        "thinking_tokens": 100
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1016 toll at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the most recent one there was on day 61, and the day-69 tolls were at other plazas.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4431,
+    "output_tokens": 192,
+    "output_tokens_details": {
+      "thinking_tokens": 100
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

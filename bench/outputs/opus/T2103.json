@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027232,
+  "durationMs": 3687,
+  "httpStatus": 200,
+  "id": "T2103",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1034 at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the last one there was T2014 on 2026-09-02, and the 17:02:54Z toll the same day was at a different plaza (SH 45 N, Round Rock)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/wYKEAgTGAI4AUIIdGhpbmtpbmcSDLmrNIbQh0NddW0qrBoMTphfQNUimiN399RFIjB/usX8iew8BvS70+F8mMGL4H8yNvhVJh7mWuEHgjiBDmVrhSMTe+f1dlNDwS1gbiUqnAZM0m+RWG45Hfd0CVrGeJy6hvUYV1NsT/UGssV5TjLVRzuXbeB6qEqtAju/tukDBAVfbD1keREezXnDQG5rbxhabPrMe+Qyl1RkMiAZeqrkN777hSk50Z1uLI/vChprJfi8mEngcGeDYP1Siv8i5dJJVcnXdQDh+wjDGl9uFPcZRH9PskkOIcbZdQy+/gghUyMow6SRaY7IzlreqpewlhOGputqLHxICVuBrSHS1qffFI0Tfjy2fEOMsIU2evhueVEDYYUmSAEaLvWqs5OlOIk1EY7NhP8d3UrzWNji4YhqamqdsZ1SrSvbAUhosw09mL1iWkNU1vR1eX5cYvdyQ/jXEotWN/SK+0hrPTXD8ualsxkc5F+xXnPXQZk+r82OSmxk5YK7VeQKiuPmQF6xTpnWAS3Mbiq1AolUjCUoP0UYiunIMAp2myhg4N4n55Gl8VD0tt9YJe7RiMlNnqHAe8wx2kR/dDeJUUnaOa5JrLgeV4i5lXPpNsJdZhBjLT5hlWmQDHREUMZmdCZ438VFR8ZhMjRNYoEuUM6+tjDWPq7rmP9oR12Gr0MUzHn9b8PnUJ5QLcawyZg3p9pYxQpUo/b3A0q67MQyBLmwJbvDwhkYHeaajJX/16KmOsbDZOkktE6oSS8zP70Q9Q+RiHr/PeB72/AK+f8xGYsUJrdggiic6aLBPgmrdoY8qOqcmSe1uA/kmNgHzLRoiIibL6qf3f3oUkDs2dr8vKam+2WxuO1yBSqDd6jeY0e/8waFYU+TT+qVgDFU44wza9rHEOISD/9v1xjEuhsSwc01ekFAGp+FZ6KVLXeY61i1ejiw4Upu7lDdzU1ng39IHqtZN5DReKD7Mc13at1rE8XZ8Hd+MFhp496BTJVPdEtzuNpKT3FZwminub4VoTS77UVpO7/U8cmboAvQLP4Cwb53xVx1u8k5EDU97VZYIMA4EDfELtwVyzH+AMOoWStHeT7co55YY+8/H6bz4iANJSC30sUxrWIvel4YVLDlYK2L6o2LTqnsoZC7yaonYhOVJlI8diTAPTr3Chfbiv8VTF0gs40rGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1034 at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the last one there was T2014 on 2026-09-02, and the 17:02:54Z toll the same day was at a different plaza (SH 45 N, Round Rock).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz6cqUj5SERmgN7aMTh",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5418,
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "thinking_tokens": 156
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1034 at SH 45 SE Plaza (TXTAG-SH45SE-01) within 10 minutes; the last one there was T2014 on 2026-09-02, and the 17:02:54Z toll the same day was at a different plaza (SH 45 N, Round Rock).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5418,
+    "output_tokens": 278,
+    "output_tokens_details": {
+      "thinking_tokens": 156
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

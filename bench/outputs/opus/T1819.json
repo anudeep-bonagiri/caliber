@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022592,
+  "durationMs": 2413,
+  "httpStatus": 200,
+  "id": "T1819",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1015 toll at SH 130 Plaza 4 within 10 minutes of 2026-08-19T16:51:30Z; the closest prior one there was on 2026-08-18 (T1793)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6AUKEAgTGAI4AUIIdGhpbmtpbmcSDPyhdBkhraPuifxa6hoM8JwH2L89ci96lKCfIjDuPIFmldiqOsWGxV8HkmFYJayqut7J3VtR01rhsZR04e5UPGIO41t7OqkSC32DDmYqhQVaoCGjizvorTWT8S736yDT5Fmyh9kjfYccMMwp1ybxdFR9eOj7KNpIeRqcWSoioh5dAHg7OiavWfsdxNyAtCVsOSkTripU3FsVXTISikolVgJgkgv16J+2AoE+aOY/5BbJsp0TJOX1P4Jy3oHj/+v/lCI9IoZfjHVCVnTEfE0OM+TSW+1owM5wvNHQSKSxP5W5oYHB8kR3+51x5gFosovlKu6mjQzzmd4/u9G4cptir+6eYtl7IrJeKuzjmIgsS4ofnip35gyFA4+7PVft+NWkOwFByfa7aPUZOYSjKjAhY/d3Ggnfn1+ErqXFJbObphsamJs4PVMI8+/t8QkN0MAwPL5QhhIDglyMwsobHSZcdiPiTTIWdKKxiuKPmQrXIXkLl+AZ77DadmhRAvydLqE/jUk8IaQEvQ8Vu5vuJ7AbvlUoyDvYO+XiVUTHUj/jsAc/1PCVgiadT4fo9IPoH5F6r/d6o5WHMrYbKnQu6sPiLn+lRyvJv/6Ccnsa9ZEelB/ZUB23aiGLj12KY0HLMfK2yRVtUj/66FFyfZ7aYsG5Hw1KwEY7p4uHC9Ne1u52AUnjAZIbKeT6Vm8k7NTHJb6WguH4wp47/MbhbhZwOB+TLpUJwfwWU2ekxQIPWEJHCOgNri8EEvotXvArW6tCjeHP8cdmJz95AD0T8BDOIjV5DOinxhpy3o21zevKiYid8i3zM85ya8NdypaLgVFXIficqd8oOdXzdtD3EH01y8v/bEUyixDafOMIvekkfhTh0YG3oBPWpVL5rG1BfghVgRyGJJC+KsojxkicDcAyj4LU1BDPLc6eEOfAHIgJChavLMtPnTwveuHEPfqGnr5QOcBY0M7XUcEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1015 toll at SH 130 Plaza 4 within 10 minutes of 2026-08-19T16:51:30Z; the closest prior one there was on 2026-08-18 (T1793).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2fAmL7EGLaDbVLqrm",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4793,
+      "output_tokens": 171,
+      "output_tokens_details": {
+        "thinking_tokens": 82
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1015 toll at SH 130 Plaza 4 within 10 minutes of 2026-08-19T16:51:30Z; the closest prior one there was on 2026-08-18 (T1793).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4793,
+    "output_tokens": 171,
+    "output_tokens_details": {
+      "thinking_tokens": 82
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

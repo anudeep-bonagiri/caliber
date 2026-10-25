@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022788,
+  "durationMs": 5148,
+  "httpStatus": 200,
+  "id": "INV-1145",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 54500 matches the contract rate, qty 2 equals PO-1018's received qty 2, no other 109000-cent invoice from this vendor in days 48-77, and the day-18 bank change is outside the 7-day window with the amount under 500000 cents."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrQkKEAgTGAI4AUIIdGhpbmtpbmcSDFeLR5MpVH53Lg+sVBoM2YT0JvGQD0CMUTlaIjB0kZ+x1JoFm1Z0B2qPLSiYlo3D6f14lZImhqw9XSQyQmN338+HY+4Pj84AreoT8oYqyggwwWm0fhnHlivpMnV1x14AcHx8iM8VW/wOvtrnTLijRVQbWjruqFV/YzrhBup32QwK3eh2KYpQaPvE5gNf/J6Lp1zjSN1bqZqY6avtniedXyvtgGzGoVYZfoMNaB/tMgjnoopiRmR/RCi42D9TXyPVjAlG7hY+OADON4ik1awWldmxIIvrblfPVXvhX4M5symoRs86OGB03Aw7pSalvzzpim+bACZu4qFX2nfZ6+2ANuyPVBUc8NYMtKvH7dKzvOjyevFGVz2KtShBfvILNH67Bd0YhNhiNDWUJRp6fwt+WAVWGNkT4TJMiKLfHdSxS5y/koUJdV0QpBN0SJ6zLzw0NuC+jefI4OlG6ozYpBwKmZVud8A5G9rcGZZyKVAxf2gfFRX/gBFQG5DyBJ5OXSlBQzZV1i5OqumPDAsIIoLz2ghdMProJ+7wGD6LWv2Z/azlOnoaI3sHMpmUxXkNfOxQcQTVfAx8eQr+Yx05b273cDhZeaCQXRH6Up2CVlrYdkfVg53MYvcHXapGinc6ESL+39aXLk/7h0Ap341urQEAqBOGpPJ96JkvmmhO/gRrWVsmPddtb/2dwjwtgT+7Py1KWRynM2kYRm5Zra2dbFw6mtRMzFjgST6ssvSC0TYc69RbXQt/Z3vDH8VfAe5Vh5SXmsAZ3QOMh0zkrZvmNesZIsBBQ0vxOkseVocIfiizYK5JGK8fAjVhrWktF5fzG1Pl7hohj3EtQ3D5LvAmoPn2doN54sapAwCN+wyNnFkcXIqLt2OWXWUvVwXW8wLxCgs82NSE2hq3wLAGghJ3m6miEWUBkwUxOZOtQGACZVx8G5xfwBryyy3vizUxgItidUgrVhSKTLPuP3tg3pLbWHVG29RxEpB0R8HeKTi9Ip1wcLHKaY7uBiGWp/IuEtRAzxuA1H3RFGfmkehfwSgYYiqekdbcvDRsQ+iHw5kjTsHKKrzqHm1F7uZHWw7eEdbyP/pY0SGkdI6uvX71wIbKKtXao2DXWVFuIJ+3KMEVXvRgZXdvAywkFGBdQ5SPXrBSBy421BhCvaw+NUXbAWlf/C3daP4cSfdH7T/tpa0g25WtH8Dzlqzw/m7o3z4qK/Zr95CwhPS4+r2LmfnRjaL8EfiERLZ14t3KgYEgEWMaVOKdTsh2QHC5hDDs29sBl8wxArDaDJfSwzsr8GfjSYbGMjH20BLPSF+qgPgIoCQjjTDhQONEoC15CTeIBS8K5tFjv1pTxF8TZ/D6rDP5EYelBnoWqEppGKlwc6IeBVHsoW4bASgBij8iYEA7x0cf1glk5+vWt+nXi55ogDiIPs4O7yA4IaYOlw4EmWVQWlt77/U8rLb4WPiBAT/EDDGo3QoWD8HpuS0gppADuHmFf4aQ5vpt/qJyQAE4xIxvzqtCii9j6Q8aocYs3pcv2IZSkRtVth811RH7PFLiFtFecFpNEftX+/X23XOcv1wRK8oYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 54500 matches the contract rate, qty 2 equals PO-1018's received qty 2, no other 109000-cent invoice from this vendor in days 48-77, and the day-18 bank change is outside the 7-day window with the amount under 500000 cents.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzEwMRxxf9AZGhbzZyD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3927,
+      "output_tokens": 354,
+      "output_tokens_details": {
+        "thinking_tokens": 249
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 54500 matches the contract rate, qty 2 equals PO-1018's received qty 2, no other 109000-cent invoice from this vendor in days 48-77, and the day-18 bank change is outside the 7-day window with the amount under 500000 cents.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3927,
+    "output_tokens": 354,
+    "output_tokens_details": {
+      "thinking_tokens": 249
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

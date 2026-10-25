@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010656,
+  "durationMs": 2260,
+  "httpStatus": 200,
+  "id": "T1415",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1008 toll at SH 71 Toll Lane falls within 10 minutes; the most recent one there was T1301 on 2026-07-17, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzQUKEAgTGAI4AUIIdGhpbmtpbmcSDGXIIz5vvqZQkFe7ThoMvsYb7KoDyeoYiUluIjAtCGINfVA1JIowuQOV+p7xGkqLWJdSz+c79HSjmHv60hHBOZ7vgkFSfpB6XGRT78kq6gQDK5LG2af2y4T5BVwoJ9oPSmvQAfsxS2UeN/xAVKXzSVx9pH+9Ef0V5gL5kP6wMiSiMWSts07zUYRi7PiPvyfiXUL6T79PvPOGNRQz3Vf207Ja1X1rY8Wi6wj4OpIRTXrDKFyeVgJOGSjjvxc47TbtKwZNCsTojJ0nUkwmLIIZSikeoFsFyyu2kIojraOzwqOMafXL7DjtnTvcnZ7IEdoYr31m5lC8yeNL5Fd5DHcDbv+dVsq4ibwvoVvM+dgBCLf4wsukJ2/PI4WnJmtBwE5wiUAqH0KJjWUgin9d+nRO8TFkTcSTyj31N6WBT/QaIyPngU/41xXx/eyBj36s4VyUIUe0LLKYIYA1YsQeugObsUx6pEGKENODf5RjR3v4LEZaBl3EOp2+rHC9HG7WUtmaoJ6L5oRZ3z1oTBrxRYkXh/w7Ve+v5YwrfwmOnTja3JbrP1dFWUWySKnIu6q8ufEdbwy+XEdmeNLAc78BV8zlVdRGqMjsqPFhwfUA35zqKHzsuaEb0LhLtOekLHGZ8jERWRwD//GVoSiLP9Rw4fbtiOIRPUcAtei4gVQzfK7cwE5W9uDNz2SyXYJGnJEuzGhjOsS/H49dU/EXGC+Jw6KYoK26fjQPcd7AVXwpBL1ygL1+SLxQax0I+eTdYHhIaTHaMK6fzoLyYWAKgHOIxGo2b1Z092jaaJnbpGBZx0OnUzITg2vj3UUx2X7A0jDFEf6THSiyJ8NSxkDhtAsOpANfx0TqknX8dvgZyvU3MYOpU4FmwVUDCz+j5GXdM7qRgqwK0snTaHkJ07uKKPH1ER2K2YL0W+PsiAUfeuYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1008 toll at SH 71 Toll Lane falls within 10 minutes; the most recent one there was T1301 on 2026-07-17, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNymwfHBBhTV567HrXGx",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1899,
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1008 toll at SH 71 Toll Lane falls within 10 minutes; the most recent one there was T1301 on 2026-07-17, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1899,
+    "output_tokens": 153,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

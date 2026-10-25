@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018368,
+  "durationMs": 4364,
+  "httpStatus": 200,
+  "id": "4177",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "At 22:00Z, 6 minutes before the 22:06Z purchase at Pilot 1178 in Robstown, truck 7 pinged about 195 miles away in Houston; it sat there all day with the engine off and the odometer unchanged, so ask dispatch whether another unit or driver used card FC-1007."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrAcKEAgTGAI4AUIIdGhpbmtpbmcSDJbuUx6L43G3/TntbBoMPJZ6ubGdkGDJBe40IjBeYIvcG8wQamhK4JiwXcwQTlvCeJGeIR1TYnYdqZLCp0Xs16iwJ2KD500azn7JwKcqyQalv9kIjGjsKzg9+vnGpkwqfFtP1k8tZehegYuQthQF8XJpT8dsmB0Dilv+eKc0Ih3wfr6NCH7ZAM815+kBd7tmsMoV0A79jlVqc1kQ4ygUkIjnaiL6XdceTRD85LVzTA6TH/LjjWqtnidEBY7gnV7dio9XlCieMVgow8BlRHuBtQq6xhxj33XBwE2ZMoUv3aHe+ERZxMRdUTWLactR7WbwzVyEfrP+wZVrhtAq1lcHscsvGRAFfM/R23NVrPTSIH1vuMA8k0/rDwnHrMLZdl3G+7eh9rbu+a8TpCk8EBdoBIHfZhNPubw8/T/fErREY1WPg8tXSjUKY0ezLMqaGDRS+JvQq/FNCVBW9nsnoBGwT3My8548YZmlK91R08nBMAPesbkv8YYTGQIG2Cy54xEfkMPnrMBboFlSqDF54BYt9ajWN0A/yEAQBw7qgGuikwUhb6xX3Wsn3imHj3Krirts5IrjtnOOKfEMyBYJ6ZkHcU3z8uCesVwbAqLi1rrVPhYYR9Fa1uP5iCQ0Dy9AdGl79CiWnGmApnMb2JzOho/FX7wI6O15SA8d76F+KaFsnucszRxS9wgtEfjmyKAPrCKGGcYpQLMdF+FlRMSLZJqqkZ/teURI/YbpCLHLEjwTONYJ95k+wrAbaxP7Jqf2D5yVaYUoknkLpuWwLAGY8WGz1a+w9aYUBEfjU3XBc0hvOHeclA2rHNGRd2aWidX2QarHCuCZvvi9aXWh+QnL2zkJJ0NGXuV0zqU0HsvFz5gobqsm5WHopu1OlS38JHN0KmQpqmYYnRf0YBNPUBNcgWScaYXKK8y4OMGgFnC1LTkZRXWzRc1/Y604d7gAS/osC5YxrH/uaGNLzcikvEIp9fe2avgqJo7ByMy4xB1/jREPKzu/95+1WGXBU72OVFw9RZdQqERl1c0uZ1FBKGyK0PQlwwaVbfTByQPZtFKANadIs7RoWFkslTYH2t6iV65iqjUPIbUXaHPec6SFivFQPdUxDkvob091yfut49dyR/9PPuzNINW3gGdHVfBJYUqBIzGG96erYZ/AJBVCK4MxErW9rd0twHP90oA3LfD+ADRyL+DBj9REiqSdFCbSKLW62px0vxHfyARFTnjcGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At 22:00Z, 6 minutes before the 22:06Z purchase at Pilot 1178 in Robstown, truck 7 pinged about 195 miles away in Houston; it sat there all day with the engine off and the odometer unchanged, so ask dispatch whether another unit or driver used card FC-1007.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8AQoZ2YPUxfgzPsnq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 320,
+      "output_tokens_details": {
+        "thinking_tokens": 188
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At 22:00Z, 6 minutes before the 22:06Z purchase at Pilot 1178 in Robstown, truck 7 pinged about 195 miles away in Houston; it sat there all day with the engine off and the odometer unchanged, so ask dispatch whether another unit or driver used card FC-1007.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 320,
+    "output_tokens_details": {
+      "thinking_tokens": 188
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021536,
+  "durationMs": 6614,
+  "httpStatus": 200,
+  "id": "INV-1076",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule applies: unit price matches the contract, quantity matches the received quantity, the amount is under $5,000 with the bank change on day 42 after receipt, and the matching $2,450 invoices cite the same PO-1012 (duplicate_invoice requires a different PO). Note: PO-1012 is a qty-1 brake job already billed on INV-1007 and INV-1058, so a manual check for over-billing is recommended."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No policy rule applies: unit price matches the contract, quantity matches the received quantity, the amount is under $5,000 with the bank change on day 42 after receipt, and the matching $2,450 invoices cite the same PO-1012 (duplicate_invoice requires a different PO). Note: PO-1012 is a qty-1 brake job already billed on INV-1007 and INV-1058, so a manual check for over-billing is recommended.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypLaEAdQpMg3nW2TFX",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2574,
+      "output_tokens": 562,
+      "output_tokens_details": {
+        "thinking_tokens": 403
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No policy rule applies: unit price matches the contract, quantity matches the received quantity, the amount is under $5,000 with the bank change on day 42 after receipt, and the matching $2,450 invoices cite the same PO-1012 (duplicate_invoice requires a different PO). Note: PO-1012 is a qty-1 brake job already billed on INV-1007 and INV-1058, so a manual check for over-billing is recommended.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2574,
+    "output_tokens": 562,
+    "output_tokens_details": {
+      "thinking_tokens": 403
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

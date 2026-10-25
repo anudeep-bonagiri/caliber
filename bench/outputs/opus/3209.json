@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01768,
+  "durationMs": 4024,
+  "httpStatus": 200,
+  "id": "3209",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 11's nearest ping (21:00Z, about 6 minutes before the 21:06Z purchase) puts it parked with the engine off in Dallas, about 180 miles from Love's 402 in Brenham; ask dispatch whether another unit or driver used card FC-1011."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8gYKEAgTGAI4AUIIdGhpbmtpbmcSDO2WEYgSV6ZTnObT6BoMyhwBnoJDe9pgreXHIjC0yUNTJyo/Ar3U2aOMib7wTl5XojiHoDpqJTa7Sw4owjANlt2cjcudg9QX3tC8AM4qjwaNLxK4Nr1j7V/07c9q7ifhlKiUALOPkfW6bTRKN7tA1+eTuANm7RqHdJ9s2eEyMZstdlgktvbZZx4fCQzEiNjpPe/2V++Eq5LvHZa+Yd8haFUywcRHpajR9kEunE2jbWVdkBcrIp8l8K+PORPe9QetHdbqgw0GonmWkWQnxYevsFmvhnRUqmuVHnnpEqGapexGYbmJ9PFHjuqT5Q+w6ON4ipAt/rwa0GlrKHFG8LNgUmlomsTJoFKRRHeONrgsX5Hw+uguO9/sNSZvFquU1DJJoDhdxIim+uHKvOeazKQMIn3tVGwMsFMg8hHgqCpToUUZ97Ghl/9obl/1z+eAqRDCOzAzEu34wpJYrBeb9bQNcrHudjfH1UPtDq2PJcFWEg34j7p/7Xa989zwErIjs+DRIyTNbeIturhW9aoMRIVWdbGuMQS8QHcohjxsVuBsdxfqz9t+j319VBEqqfuH6DuzfpbC5pBXv02a1XpefT3P+nnZ5Jv2VCtyyq7t7uDNpvYk/3g3gBBpTx4dz/7UN4pHlX8uPq+4sk4WkS3J1UDMI/CKSvWYUgPNrlf0B5JKi9SMOz4n1v4bqIOMastYGN7Dpv7K7bGcmJHLRQtsP56PpGgC3i3HYIj/dcLXob3EXgc8YaexFLEHFR1mRlj/F/wq/bVtUQh+oFjo7umpuVrU0LgQtNaFHpoux9o/ItBvHSrw1CGiq72M0DLwxeMxbTnx8Ckomk/jG66i70CKXMAzJ5SbnuG0GRaGF2w+r8yeMowy6AiN7JD4c5bisjD3kmwdnHCcZi3Ut+aESKBP3oGanwv/7msAewkEFabdi2tOSmwRrGsB3wBtRUNKXupT5OEstqsOEcpwJpYb/3DVAfglEmKyCG+fBoTOXmuO6wcapPlzNyseuj1J414LtBCL1CkYel0dEAnm7wgzJaC+p2/ZjjXwi094f4NYtBr01u/SpiAnE3GAV3Dzn1aa1oRhNfipqrVOtdqZjJPWoUPdBiv3UByafjyCLTQvzU0j6Rp8gN+3ivS9ns/pCVGr2U4TsQAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 11's nearest ping (21:00Z, about 6 minutes before the 21:06Z purchase) puts it parked with the engine off in Dallas, about 180 miles from Love's 402 in Brenham; ask dispatch whether another unit or driver used card FC-1011.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzMqzR2ns3N2b9UwDRG",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2990,
+      "output_tokens": 286,
+      "output_tokens_details": {
+        "thinking_tokens": 164
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 11's nearest ping (21:00Z, about 6 minutes before the 21:06Z purchase) puts it parked with the engine off in Dallas, about 180 miles from Love's 402 in Brenham; ask dispatch whether another unit or driver used card FC-1011.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2990,
+    "output_tokens": 286,
+    "output_tokens_details": {
+      "thinking_tokens": 164
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

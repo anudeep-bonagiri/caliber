@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.040156,
+  "durationMs": 2943,
+  "httpStatus": 200,
+  "id": "T2850",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1015 toll at SH 45 N Mainlane within 10 minutes; the most recent one there was T2834 on 2026-10-19, about a day earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiQYKEAgTGAI4AUIIdGhpbmtpbmcSDNe/JYvbDRiWFJyWhRoMdgK5+K6PUJdC/JDoIjAnab0fRIryi7PrjPOWOjwmkGyLctE2GWf8NuP1Ewmv6B/23prknu0t6Fs+3eoG1HYqpgWpRgNkRS+MF1GFwWB6G3NoFbsmvCaX1cH4lf7G7tHpIICsBdQtqqf9q80+zS3sodNSlPkJ9ZwS8hIdGHw2fnVrvyoT9lto1mwXFxDa8L2xW/8OfYGlBOcgVS+r4LLOhECDpxnzcjOkrm0ec0GR7IARDqz0F0jvuMXs9gfLcWvNXUgCHFZ0DLdK69zoBE0p347reiBH/4n2OW7J0SpdKyvRdV3QxWuZR4HPZDMOsdnwLyiCzj854msNMlsJcpZ+xPmtphIN0mCTZy574JVQLdhBAQCPowhF3pXTAPteKy0DM89bFqsTZuvQ+PX6gDv8w2AOkB7ZZVPwkH21pRAwSerZqGXcOHHzjk7b3AHL2vFca+6yoXXNLsg5ZzQizNWDOo4Es77B2QC59Lv4K0wDbNg0LlOGofqb52pGYYRljrgyzTbczOkNVlTF//URaeHrNKck+rd279kVttcUXJEBMLmRV0+kyJAkmdwefzgmeeUkIvdVaGs//IxoWfZxwlBNt/JZAqBjl1YL8BKbDa95rXZ3fmT4rv/ADsA3uiHIJYVtGpMHWZt7B9qWdQo0NpVswTvqxaJTuFraqlLKonjO7amzYoPv+XEkYj05QtFVbxiQFHCx9nWUblYeSxqfitxKHXMEJKTaZ37qA1AJvuGrn/swK9gB50Wq19wdgE4V2qgmP3fj3lIchCU/9pCNe9AQnQL3kKePElcKDBWUA+S2T5D4KRylhwZQwM003SoMxw67UYAqoQ8RUt+qu0FEEVKDozNVb+QkLNCerETFDxiy9hkMeCxJBHkQN5LQQQ9wvDX9avNRbL/YY6zwmqzgp5fXBbwsWQvmR9YU42HroxmrgakTjzR34WGN5Q+XVQVeDqsxtXGys2jMcnqWiir2P3WnP71pcAuT6n4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1015 toll at SH 45 N Mainlane within 10 minutes; the most recent one there was T2834 on 2026-10-19, about a day earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyivPJhDx3a5twJFDGM",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9174,
+      "output_tokens": 173,
+      "output_tokens_details": {
+        "thinking_tokens": 97
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1015 toll at SH 45 N Mainlane within 10 minutes; the most recent one there was T2834 on 2026-10-19, about a day earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9174,
+    "output_tokens": 173,
+    "output_tokens_details": {
+      "thinking_tokens": 97
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

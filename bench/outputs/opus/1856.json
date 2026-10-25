@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026116,
+  "durationMs": 4173,
+  "httpStatus": 200,
+  "id": "1856",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged about 0.02 miles from the Three Rivers station at 18:53:45Z, within 30 minutes of the 18:57:04Z purchase, and 52.8 gallons is under the 165-gallon limit (150-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxQcKEAgTGAI4AUIIdGhpbmtpbmcSDPHOUA4TetIfPEKL4RoMS95o+7bkyq0jWCQuIjDfB1iwk5tZ/rKlpBaVMx8pEhwq0k0PL0BvSbFY1MRL9mOn8otsFrq74trxGjJCc1kq4gav3a1zUpHrOUSg+qQXGSAJKYKwVHtQmWQ84khBrsKGvysF9xYPwnTzskLqvMRcVzOekP6x0xMsy2REEpqikEN3CtY93w/+MmQWB42YtxSlsKGMT2jmiICCD9f2whT41yVBUHUnRgGEaRMp+APs2wF4yhyMvJjy0aLfCyuPBVuvQ2UIPNfoHKma/8k/l58Owk3Jt3imQRgVe54yEQJjOtSp+JtDAwTp3OPm68GrHYiteNwNn9pGcf1/5pMyPbQPm0h5x4NBqWodLxXK2HEn49suBq6j3rMF/IJByhIpSsoeB26B6+Ef8WUUt4A4+SqNYNC1vx6HnF5IH62uJbm21ZNPX8xURBi/4xbNE/GyiHZfWUuyx6GeAOi6V3Z7a6Lj/KX/dQBb2uwF5mZ6Jt77jBo6fgvnVvfsHWkDj3J+j8nkQOK2fNctPKdoCayQhreIbXaJqOMKF9MRcPiRo/l3i1wk7tOijOivT7mV9q3JVENyHPtlfSVmkxKqBS1BlEcmLhegnBa/QWVf0nak63jK+q5ZZ6eACtEvD+B+jFFaOivDD6NmY5y3yqdinnYGY9L0LWCK2wlJMOXBDNsEntFCY63UTdLAlzudVcwvDn7swPa7S1AImBLgCqhvyMpSqjHEy5M5Leq4QORxC6Tas74voc2bCG12ush5jZK44jpkKVXizsT09kVtWkTB/dVISPS7d5TpSs0ogtd2LhdnfkPbQHywG0Rn6BqnCeLQtOdMB0PKS6zjL0EjQt02PpW76R4ppdAuiRUMUIGgtz4hkH9UP89bIPug8RoMXlFTLl86WkZW7aMJepag8GPtXPavkam1CoWoUR3Bar2YZ38jm7jQuIUGVV+Yj42YFWCjJm53QqPcP/MxJpHqtPboPXGS5R/VG/kML3/UDBN8rs/t24DdroBSDmHqYYIAGRIHNXrX9Ez9WBg4VjpvZ1EABfCqqHv/AwMvQBVAkK3gd6zeNLcX1bkZmq38E7RtzEDHkE0XHTkRbdts220TX597QvbQRuRQgTfFm39fv1x3bXsULel0PKcUv405K6iG6aZe3HlA7rqdDtAAPn7kQHRaelVoExKx71tafkm8US+IeLWUZjlOd7jQugbI4EDTIjHY9rMsWNhtSHheBFcheslHNhwAX5Rgt8E+3BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 17 pinged about 0.02 miles from the Three Rivers station at 18:53:45Z, within 30 minutes of the 18:57:04Z purchase, and 52.8 gallons is under the 165-gallon limit (150-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHN5nAZhKY9jV6s374",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5039,
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 17 pinged about 0.02 miles from the Three Rivers station at 18:53:45Z, within 30 minutes of the 18:57:04Z purchase, and 52.8 gallons is under the 165-gallon limit (150-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5039,
+    "output_tokens": 298,
+    "output_tokens_details": {
+      "thinking_tokens": 187
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

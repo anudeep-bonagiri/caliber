@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02928,
+  "durationMs": 4717,
+  "httpStatus": 200,
+  "id": "4153",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39's ping at 15:17:51Z, about 6 minutes before the 15:24:02Z purchase, puts it within 0.1 mile of the station, and 53.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wgKEAgTGAI4AUIIdGhpbmtpbmcSDC9JLRkcSJbEbdQmtRoMUo1abZne8RqVyt0SIjC54JtTI+f35e0QB5BCXE/v+ejGltXa9ZVtbgseaP41sAs8ySgZuV/T+O4adMYqt/Mq+AdnAuU0exbJZiA7DVD7wZf6GhstEF65v5/qKAk4cNxOU3asSgJiBh8Er4+WDdRqep/JurOwRu+dlIJKLIBraEg4PPKxQdaCW2kNneEgZVqTau+7XKxAjtcpiJ2acynqKEkSrH8ByY/yom/3EkOsXcU0xX3hZBwwOaNk9rthPbZaJ2/wnP4/9HJR5TMcQiAvIrQI5GFf32kXSnJX8tbRJfE6QN7WxXrVnmdx8ugttnPewnwOzqoxFLVLta4xBalqG9ZWLUpPPxBnxl4ns0UY3lETQIOottrE0mSnNF47YPdyqN++g2AsHvZ29CHemjjZPX3K3/J2+dbQiNrG2//+sFaUMR3qdrrw6EDQh8/XKpD0odexHuMLZf6NHQska9l0IbwxcIpm26WojGP9Zdp2yfPjtfOUo6+0b4J/2BL/Tu5SYgZcm2xJ03oo0LXXSKZ0/rsAK9OCnsx1EJeM10blzo1MIFarKqezMSM3M+1WffXuF7JKL6Eatn6Q2PPeNLvuZjdS5aH+j8S33WCTAcrmmg4Le1NmNlwvfmjfrxv5+bqJPDCh8EGRCbJwkZfmLYB5b9ieyzqQNmP8E5xKEWeHRxIsxsEhU7ekoVr1cuPVIXQfvj+y1jUcB16zJ5kDqN2f5FqLTvzGLd0YrQzOR9G4kHJYjdxeNb1L+r5ok2n9rcPpm6cjKZ/mYbUBSqtYPr5cHr2DZy7iAUXt7LAezwFc1c2b4K+xe6To+iWZfwxhj0EiA77U2pLtgz6F80abA3fm9owiDqG5tRrGDUyEOeqN5u2I08OZGg7JMEz9y472HrKU38bwUJKEksWxhwjWfHZSt3TGuG69VIg3SWUyC46YYnP5xNiEk0AaK9AQb99DGHAOxvjV8m6xTX2iXFhjNHB0Rs9eN93RLvGrbwYcQBW+gU78dBEzMPt1ZLpbyVGFCqECsKyg0CkTz4D5iHoZvSJsiUZ9AErGt97/daI+y4lVWq1v6rosQn38KZEOB0mAZIfpmZ0bnBoeHCSY0gNM9+HUd01WGtVRB5RWuvEQSk7gNcZ5pOi/yE2DveX9XH67KNI4V7BESeyTCxe6NuXpZMAHSHXNMH3O+iXBdNnLXi1sWj0alk8YdgAavPGde6uLZBHe0l2RB1Vn88oUjfaBTEMrHeCcR25GveolmmoQFX2gja1D+Sov66xX8UNtO4TjiBGO2BnMwybsyhTk6fxXbOVZFe1yjHGF8cwH+v6tBUvZYpq0wwaX5s4Y1ojMvEeYGdN4Azw3FGXD33ICttvBzfFdxYcGmu2EG9NluaxGZeHGNY0Sq0x4SNO97UQPaI8SuCtBqs+0u7Dse/LI8knAoM7fnPijQre/f9OkNhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39's ping at 15:17:51Z, about 6 minutes before the 15:24:02Z purchase, puts it within 0.1 mile of the station, and 53.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz8nFLEvoFXxfj2mMV8",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5475,
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "thinking_tokens": 262
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 39's ping at 15:17:51Z, about 6 minutes before the 15:24:02Z purchase, puts it within 0.1 mile of the station, and 53.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5475,
+    "output_tokens": 369,
+    "output_tokens_details": {
+      "thinking_tokens": 262
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

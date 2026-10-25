@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014888,
+  "durationMs": 3592,
+  "httpStatus": 200,
+  "id": "INV-1097",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: no earlier Alamo Fleet Service invoice for 17,739 cents in the prior 30 days; no contract or PO to check rate or quantity against; the amount is under $5,000 and the bank change (day 18) is well outside 7 business days of receipt (day 52)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAcKEAgTGAI4AUIIdGhpbmtpbmcSDLDJMTWPzvpBlm9I+RoMUChRxf0mOOZLgjyuIjB6INm0/n+CubSHd+uGAz0r9rU2+OdW0zX4p9h+WloUaZVRywpsM0qYMoe0NvGMqo8q5QbnKsATwk+jfpeWnkkH7LObW7AqYhR2tuohpPP6fEJPjhQPPPATSsO6E3uQbA/xgqP6EzO00zH/CnjGdegASwWILcgiAxwoqzC8evKUHXGXOqJrz/ldat4TUkp+oxxQInpsJdhic1FUsI40SnxOcjJdV3sb6r05HFWSSvo/rzbkz5iuXqPK58Ic1jMeEdBNBUAu7coEwY+gTs52EijM1GPSBzIQRIURXiO1P5ptPspnQnDQzryLqTs9bA4Zqbjb4yLtVd4g0NUp077MlyqjOZjLTaEREOI71cgk3JQjeVZzp5fo/Kf/b3fY95DTte6P9eoYXx6A+8WZdLoAfe5lGSM6XnhyaJgI+RYpJHoOTU0i0svC1B5S3uOnZVwyLoHSsDN5gpKyBJwCwIWPrHBuNeSs9U/P8vAu4FV0e0GAqLITNmjhoqhCCEKjnVaMrHcWlx8RqwZwYvMCi66LeH2MCA4SxvK/bDzAwAwHvNbEHh6s/AYFz0fnlznYZOr3YQicaZBexBYwEYnxKlAwsn9K3RZdmF86O1fmNa7jbINCajmn7DNmAez8RIlrrC/7ZNvFOXZuA3m1uXl34KXs+RgfI+4r2rruc6cAjiOANBJKO8CbVt/+JapA5sDUqA+HuDphmyEyIu/Ngwc/x0ksak2nx0VS/fZwwm2UkOSOuSL1+Bl+lJJxyslUFVdA+gvnoMKrGPJyjQNPBzPin68us/QMogG6uNyAC+xdAJ9Az2+RSgeVRK3ZYHj1peAw0CvjxeUbTQvllMiF1LyDrq5uwGWETApxyu5o3HCB6xV9nHobX0qfZ8IwvtfT8CHuGiUfagqE50SG0+r/NXKAk6sAfIMZlw9u2j4uhfDIz6Ey/bu7S3SZsBKEwgPAwTybNwMcGnCEnbHMeou+VAvjraJX5LKZmt2PU1NR5LDjFTg3nEL/7pd0djg5mUuvfSJaNbnUkqLf7N33YT0z9J+PCAyLyrOKL06MBFKOa/mLSltqi54GNN4WsqA7pBKHZ/HAixyOGDOYq3gRcne1RgUP2HuPFE6CUfHQIWPuUtzph2wveJCAEyGWbu5H+SCpU1jJ0BZPK5IIBVRAK9N+/HAOpUO87QgG0+Zeciiy/WU7ZudEe3C8Y0YEqpJRQwNGNFcWSY2sLliT3HgZOBYLFxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier Alamo Fleet Service invoice for 17,739 cents in the prior 30 days; no contract or PO to check rate or quantity against; the amount is under $5,000 and the bank change (day 18) is well outside 7 business days of receipt (day 52).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz9NPQct8zyRNpbbdVw",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2407,
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "thinking_tokens": 149
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: no earlier Alamo Fleet Service invoice for 17,739 cents in the prior 30 days; no contract or PO to check rate or quantity against; the amount is under $5,000 and the bank change (day 18) is well outside 7 business days of receipt (day 52).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2407,
+    "output_tokens": 263,
+    "output_tokens_details": {
+      "thinking_tokens": 149
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

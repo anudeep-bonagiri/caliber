@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026532,
+  "durationMs": 2111,
+  "httpStatus": 200,
+  "id": "T2714",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1013 at plaza HCTRA-SHT-NW, so there is no duplicate within 10 minutes and the charge clears."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSugUKEAgTGAI4AUIIdGhpbmtpbmcSDLQFzPk6raF+CYJP2BoMEE+ttYSnAYc5dGsdIjB5uVg3SVBoUuyhIQKmOUMzbFN+NdNCLZKGHkmPX3GHDkRzXb97dBmhBBtEoaXJBskq1wTF3R8cxqEAreh98ClV8wUGbxyCDUlf/t5S3oSwSacP9vkHQUAOkitxUAYKPRbqPwtZjX4HtXhTxnbl39x7asGyVVgcPh52kC0bol1Vk0RsFHlCs2vQfefINgJdQ2b7v1s+7JQi9KLD+f4fnZmJdYALghpRW95AeuyQzQCjWUDI6Tc0oL7JbAPEsdHolpSudxwg3+N86cdDIlMDh3xJkpEJ9PUnlcl353X7TTkbhP8fkJLLvz4Xfw2s7k1rQqzj87W8Ex2lnQJ1e4qzkuhWFDI18z9VcxgUPbYBKzdepJfTfBYSsJigkz+54c/cikC1RdPUeAqmUChzK/4tjxIQtzEWOlk8KvzAxHREJBZOnDgKMVNQUvxkudMFopTjnSGIfeY9NpVKq2+h9re+fd68PhuRpQLv4u8whx3RBKEoDqEEJmQJJVdGyxZKVBY+65LIqBbONrTsF2HO3TyC+SUvA5+wqTLTw8WYnjAyak6M9DTaa4Ht40ZGhcsm4idQQIPt/crZG92t84k64+SWnKLkEyftyGfUwoi5pJZbyNKGJamPiV/nVMVNJTwSnlrpDCcVp4If6QzPBdmY0HukwLIhMIjb8SWZ6hOcuJEFbU7GIqeyjetj9tvHL89qVnTIb+BaZ/GcvAbmMW6iYE1F4iT052Xk5LpNqtbI0JurSkNgrmSgypaQN+f5E5TO4D50eWwE4ao13Ucq4Ljih8Asu3EBNgzNx7vj2XlrvOIw2/muVC/PxZ3Y1ncg1P3UPXEYsVSkSSK7JIh6rMDLgD7psvBILmX+E8jblIpXcRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1013 at plaza HCTRA-SHT-NW, so there is no duplicate within 10 minutes and the charge clears.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyj7RKgrSWwrSy6ZzNt",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5958,
+      "output_tokens": 135,
+      "output_tokens_details": {
+        "thinking_tokens": 64
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1013 at plaza HCTRA-SHT-NW, so there is no duplicate within 10 minutes and the charge clears.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5958,
+    "output_tokens": 135,
+    "output_tokens_details": {
+      "thinking_tokens": 64
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

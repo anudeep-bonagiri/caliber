@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025216,
+  "durationMs": 2397,
+  "httpStatus": 200,
+  "id": "T2823",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1016 toll at Mountain Creek Lake Bridge within 10 minutes; the most recent one there was 2026-10-16, so this is not a duplicate toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxAUKEAgTGAI4AUIIdGhpbmtpbmcSDMT400FP+W0TZv0ErRoMD27MXrPd2jz0nRbfIjBUc/98sZtFYrmqx7w1qs3fR3k68y33SZczNgxBQzsWlPl6dyGuS5cbNpc4JCHv/eYq4QSeWYCSw//BQrJ4UNaO073oYFKKuy2O1k0jZftDKDyS4vm7b20w/VQ0MkJ4mZtyxVkwd3xPq+0v6LwWnwWXjQT+NzYq1ZIuymsxCN91Sjb8gyDowGBw4aPZbkJn1TT0y6te2ws0WwcPO/CFFH0FhIrVILoaNaQiZc2M4EzoLs2ujSm0MggnJb1i/pSDdinve215vI4ZHguqbvSm22NTv6u5VvRh12CkGMLghnV1SXorTVWb+pSi3fQBoXysmULFcwcYtARvkoPgeXJtWhTqctMlYHn+OtSm/vqmJI3H9tl6YMPeOq0Cv7+4FvJxlcxHHQlWTwsmYhq+yZL7FPcl1mr8MgtL3WocrK21y4KMgnzw5q1XSOLk0ze3gPGipVC8WsGT6hEuaShZ05GAKPsq0r3KvcUtnGvB9um0Dq7SlvDm5a1NLyGXmgbw7NAuS7aih0qfnePXhrPQm7TCdhh7qC49cPThzecO7xLI3m6z8Q+L8+5YzwXgrrdtYncx8CjlgGgmfE3aEbDny+QCGqlHSV/w3l63yQBaBvLGNUDO/Y/RRWiam4lim6op77Eq7MMh4Pq8dulemZktnrVtUFvg2iq/SpuHpE25zlwLLcbIeLaV+0HKMQZZWorbiVflUCNYTUnkRCaPuEyZCe6AcSkx75+wlECwK4KRFyzSRbsH9uytW4B99dvB4Dcb+xPWAKXWeVoFtcNkE79B78BDps+s65TkBBu4s2tnU7Fr7LIVvOiU5XyUonPJE4aU8zMCuO3BxD4+L62b9dsd8eCtF21yolQr2wx2ZCjkesl+kW310PRnYeIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1016 toll at Mountain Creek Lake Bridge within 10 minutes; the most recent one there was 2026-10-16, so this is not a duplicate toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLgcpUZDzjhT8BCLJk",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5559,
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "thinking_tokens": 70
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1016 toll at Mountain Creek Lake Bridge within 10 minutes; the most recent one there was 2026-10-16, so this is not a duplicate toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5559,
+    "output_tokens": 149,
+    "output_tokens_details": {
+      "thinking_tokens": 70
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

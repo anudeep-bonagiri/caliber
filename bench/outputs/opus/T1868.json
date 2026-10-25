@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016484,
+  "durationMs": 2520,
+  "httpStatus": 200,
+  "id": "T1868",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1025 at HCTRA-SHT-W within 10 minutes of 2026-08-24T18:00:42Z (the most recent one there was 2026-07-24), so this is not a duplicate and no other hold rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStQUKEAgTGAI4AUIIdGhpbmtpbmcSDAN6cX4722l8ngJnPBoMB+pPdEQ8KrRo2ilLIjDzj2mpeoM9qNDBi9eEzPhp1fxje+TtR9iq6BajVxpw8J5j+cDo5yVEJZqeNzfHOHcq0gTE2H3y865vzDDsuHdJx3HQPgnRs15Jly045mHXubAqeRansjbFwNeAraSBFbvt6qe7DisrQM+2AC8bTveTXboRJvE8niUIAK82HW6XltZlAiBjnNiQ5wj/c9pqXg/GsnvYK21YIHVZVcNl0hnmjJizw7dw34+lSGd6BCue+ANGbQBqZIR9s+3AfqTrUoNJIwrMD8Pct7gnbqDUDQh3tt4Ng1bbuBz8Uyuf6uOPs2rQddbSPXtZb12DLNbVwjL2hgdADb8DM/eP0/2P+qGOfv+++0hCAg791xFJJMPHT/DQL//wbFHO46/09ylSHCQB1jwzy18mz66j+wgLelufuQgYkV+//+FfNUBxOaTCDMY85s6DykHTnXGtev/buoDEwGQAEO6rBmE7y1Sos/xj90LxUANuJ/8ubuRhG7hGoBuVDS1MlsZi2UsXuzrUeY9ofGK6J+tNewqsLGTUJ3ch+i9hYUGMQSSWr1lpcIuuML9EITflZeDqZKQbCDC80TRJ55CowgQPqZup11pZJ7NIM/FyEvHrOx8ujXnEAgp4k5TfKNXQ6St+IDSF1t3HkXVrjZwrXxeax+d7dqaJmg9Dhgzy0o4TMvZGtAQXdOgk+6T2OOnr6PyjZAZeocrXNrdh1DQRVvTQddLRP4+TXiMvtQeQPTjtZ5rpVGkCd/+MNsRHw+TMtw/fhNfTLaXi/90P4ytzhagquPrrrKuHU6Wxhf+ju/p1IG4Vse8ZwLAv3Z4CuDK5ypgdEOeVblK6TcXTosAluxywHWea7N2YsTpMjT5Ms/0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at HCTRA-SHT-W within 10 minutes of 2026-08-24T18:00:42Z (the most recent one there was 2026-07-24), so this is not a duplicate and no other hold rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvUmGN2eByNhvWeQUR",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3276,
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "thinking_tokens": 63
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at HCTRA-SHT-W within 10 minutes of 2026-08-24T18:00:42Z (the most recent one there was 2026-07-24), so this is not a duplicate and no other hold rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3276,
+    "output_tokens": 169,
+    "output_tokens_details": {
+      "thinking_tokens": 63
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

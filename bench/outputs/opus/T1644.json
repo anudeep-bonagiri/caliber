@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014204,
+  "durationMs": 2335,
+  "httpStatus": 200,
+  "id": "T1644",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1022 at plaza TXTAG-SH130-04 (SH 130 Plaza 4, Mustang Ridge), so there is no duplicate within 10 minutes and no other hold rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwUKEAgTGAI4AUIIdGhpbmtpbmcSDJoOkNVm96gVl1390RoMDBp8jggPRtLHDcgKIjAqucrtzgBnuvQZDIjJoikf16TcukEUP9BC997HsSJKcc/JP5ZUaYSnoeMD/l4VpqwqyATHGLhgQB/RbfIwrGN/r6HQyK/HvOMEG3Kh6QO7yW0qA4yMWTKrxnfLjH+RqYK5LANwfORkblSQ05ak0YVJuwMrzJivAU/kmz22KzC4+qHgXLdOoYFmX0sUBqZWygva9WBGqFxURszN9uEsbcuaIIxqb4ejSDn6c84HuWSne/wDGR8nBcFrKpB/65QL0N5+DOQ66BAKAVQaYa6EmYUxY2ECnYPYDqCQ6eCvA/1YaqsxFDxZ4qznmdovzJxIV2LkEvAFhsaX01wafXEfzhJonSmuUxMBRhamCbsbiS4UHRgAorxT9q4h6VCFVWrdTXa4xNVOo4SE5izSPLHcFuRWFYoM3InIvcFfSs91HNYfUIACpVak8VjMt57kYOMAfMDwfvei4LVHcnj0i4hWVBjOyFNdtwu65wE3oNVPiHQ2/rNwUUBGBblR/5IYdNBS7L8W9ZOBRuwbrbzL/2c5dOSUqO26NlQgvgRK41hkry77/4sbjDrjEx1tr+UjGIyal4Xx0jhYwa3cg+DVYyXSaDI0RFrBx6vM4+ebW18FyhqfTvxcfYL1euS9L4OnLyA1mhK4l2rxdlfOUhroHk1YSGwHrJmkD8FYPHHpS49NCb1wBCiiOr7cKnmi/Eqr51lGko+JcP+wFFLKDQV6eAvGM9ngbxUmxx1bDvOky0Yoapub+9uxJu60ttqg0C3YnLRAdLJKKuvphoFaBOM0GvAoBLh3tCJuUre8xtOdgO/BTLqBiuqsm/v7ni+YpOJAV0a0fBvPf5bY1CQ8HlTShhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1022 at plaza TXTAG-SH130-04 (SH 130 Plaza 4, Mustang Ridge), so there is no duplicate within 10 minutes and no other hold rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyimH7kiwfYdkjHU3Zz",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2781,
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "thinking_tokens": 55
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1022 at plaza TXTAG-SH130-04 (SH 130 Plaza 4, Mustang Ridge), so there is no duplicate within 10 minutes and no other hold rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2781,
+    "output_tokens": 154,
+    "output_tokens_details": {
+      "thinking_tokens": 55
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

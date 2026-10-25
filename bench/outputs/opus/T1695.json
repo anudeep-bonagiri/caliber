@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018892,
+  "durationMs": 3368,
+  "httpStatus": 200,
+  "id": "T1695",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1019 toll at HCTRA-SHT-N within 10 minutes of 2026-08-11T17:41:23Z; the prior charges at that plaza were on days 2 and 26, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gYKEAgTGAI4AUIIdGhpbmtpbmcSDPnLF1Be0+muIHSCmhoM6PDOOFns8XoS6/rCIjDFs2MOtiVlKcx1bp46jx1MvJKnYSw76Ys0+58kJ6z5jirSs1vuDXphD9Rvk7HTaLYq9wWkISEK/5q9nU0mV+5bGb1n3PketYSq3tp1FzfySdsHUkvYv0oxK6SSGnn33p1LFyrrhjY+lublD+YhCCkB9jA2usjqfQ9MqoCDV1iTeEX6d2zm/E0X7UV6CKAB+7rHDNknbu9aerd+/qNlDWgeaFhcLY/6Exk52p5A58O1xqroVPALryZ674TkL1ucO1n6V08Y9UgmZdh7GgcS5ZP6nvBNGR0qj75BRHLCB+IYitgZob7MHzNLAK+290D+hI+gejFz3WCpfmwXORtO9RENhFV8PtX+rW64S2BZTI14+poklf2eTAxn06jKL+58kH93+4MyXU4gYHofLVNkP4tR9fHtLEOjWRUqRwqB7aVEZviwlyzYF0E8V1zqDqw0LsxSDCx681XmC4gacNAtr/67ioHWa7q7fjYfivhOH6fccVMajaghPz2M7VrY1d+sa19pzh5igCUxFYktKLpJfhwDNOChp/lZJf+LNQJzMKZUpEzKJJ/vMyysFIndv8/yqxUanuIxD6GCswAFvY3iamBdPgTOmdmqbxG8AgAqdzr2wNXK76sUglAA1cjDnvM6sVvmfciCJ2UkyspDYJe3Y4bdDiRPa67xmC28qmM++fIEPALZD5mjeU7/BDYMvKpA0zD0YbeQURDSQ7q4oqVWGG0+M9qDpFe4sbmQlhfl/6YTltPfpg8yRRSDhwNRQ8eGTe3KPdukHowoTGdmv0InYTMxyxUfzfcbHW6ki5fyluQ82FKobfE9CicePjkDDiyypSArxFbYX5xZwznVqPdQsYVKJNM0Lu84KRApdkKd59PekpkyaC/5tB6nq6Bv/teVpu6G1oiW/BMKCr1W2iRFAgddjPNuv/k/FyP/eFqll1/lllAeWzvWI8MI37xqLBHc95vTp7dDkaoHe6uETanmKobbjCpuTVRPw/r8MLoO6jHQH0Igz46nTO0OqnCqPpkWBeTrd4f4FhzYAYFwfthKL09EW9c8D/+Sf/ZYjGthl19sH9bo11bCL3ET1LgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1019 toll at HCTRA-SHT-N within 10 minutes of 2026-08-11T17:41:23Z; the prior charges at that plaza were on days 2 and 26, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyidpeTnSHfJFyD9btq",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3493,
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "thinking_tokens": 151
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1019 toll at HCTRA-SHT-N within 10 minutes of 2026-08-11T17:41:23Z; the prior charges at that plaza were on days 2 and 26, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3493,
+    "output_tokens": 246,
+    "output_tokens_details": {
+      "thinking_tokens": 151
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

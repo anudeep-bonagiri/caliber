@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024112,
+  "durationMs": 4183,
+  "httpStatus": 200,
+  "id": "3411",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 6 pinged about 0.03 miles from Flying J 758 Encinal at 15:40:00, within a minute of the 15:40:52 purchase, and 49.1 gal is within the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7wcKEAgTGAI4AUIIdGhpbmtpbmcSDPjbu46VYySvf+lXqBoMxl6V1cEkq8AjCFMAIjDyXQUNbfiIYLkzWl8d2boi+0k6gU2tLt/fHEdH1KL+W3T+7RPLIhXb21/Nn+kn4n8qjAdzU/j+AKuo9//EzL08Ye4GRl2/aZ47PvAd6p6OYV7RkAGTnCRWJmSJ5nNjbyoDDlEQtyXn4EGwPzEh4DEfE23oiLj/KSnTo4D3k83q+rkUR/mDSHoffLiiu+WnlX+4DWRhSg6AfZFjUe/2UP0R8X9V3bBNMitnwYHKs7FiUbqJtepnZGzSHSPl0p3JCaE1Av1iZxBgWJSucWBGxTNPlHjncF5DTVTaJVVuqHiNYoBgijjq9dW9jWYhOE93RxMFsZFy/8C1K/HRRIZ5HpxNv/KUtzynSF554mSX08uVYqJFI6s8t+YxMrdD0Ku0V67ypS2wq+0Q1XC4zf/ivPgKBhUQzjk0z8G3Z5+1h+O4uWjBF5y2vG3JyZhY/KhW+qDo51OCmsSCj/cKp0nDVpf8p7GzMhHwU3lCSfAynHtVOi3PWGD06uNjacMBO4+rg5qf81hbDnaAQ1Pgvtf3/4fGxY1LmAhWquP26gGWKEU4qhxXLqh2A2PpSF8NaeJXuE2e/gpIxDv1Rlj3877lD/4gbxxJbxXtkLM26RRQIPe5pzYx7z+kjQ+hwcDJcpIGynttMpTxFYKaN00XaXxYBQBpYhWt+nCGciUGt/u8/AgJSQlhLJgtTGJl2gGTpgCuob8JHa0OIQUuFctWqpJET5nzmq/xH+xQwilubLP9knP6xCZMJS3L8/wF+LnyNwo6slo3SHQZm0+zVYCkDds/4h2ZVB8NUDoZabMeKHF3vN62mfFfsOJVjPcSUWcWtrrWktfdYU2Cvlp1QSqSHZc3HuGoH+i0oHDq5k33fG2qI4h27C4CMD9mrXpoiv8azASNy1n+SQVzhilXXkmzB5qlYPPheM2IXo+/1xMHcLf6/K0JRVaThxfa3xTuLmuzog/t4vPdaJvtA+4UoyuN2gZFl0TdqRe6DGVZtW5TP0hZAsJ9o7qvDNlD8IumBZCyxedhJReWAH1a58ZYvlHMhzhbQq1cpxsVhD8147R0HmqBSV7cWdR0xEq011hBZVyMv+lsyDYglTzzmenMuGZctoUuJLo0lcql1Ex/CTzQgNUHB7nNgK5FZ3dDuKCEFMWtteHMGcf880nxdFGGsFcQUy99c0guWxjdVBoQa2zLCENdyulDSmsNICD3mYL/FDGkSi3qOGXnjpxcn/IclbZSrbwJpGUP6rVGpsKgpG1w0BdaW2Ij/EoxZrS0Wrj+EeHfehFk9xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 6 pinged about 0.03 miles from Flying J 758 Encinal at 15:40:00, within a minute of the 15:40:52 purchase, and 49.1 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNytMcMXamFJ36WZBnrj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4303,
+      "output_tokens": 345,
+      "output_tokens_details": {
+        "thinking_tokens": 242
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 6 pinged about 0.03 miles from Flying J 758 Encinal at 15:40:00, within a minute of the 15:40:52 purchase, and 49.1 gal is within the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4303,
+    "output_tokens": 345,
+    "output_tokens_details": {
+      "thinking_tokens": 242
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

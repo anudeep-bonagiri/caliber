@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015456,
+  "durationMs": 3416,
+  "httpStatus": 200,
+  "id": "T1702",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1038 charge at NTTA-MCLB-01 falls within 10 minutes of this 2026-08-12T15:33:49Z toll; the most recent one there was T1311 on 2026-07-17."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSygYKEAgTGAI4AUIIdGhpbmtpbmcSDAs1w+2lZO3JvqH0PhoMXXCqZGa12/rWeXmVIjA6SPnmcvlmLT04LFfxbuSUriX57wppG+GvKfit2P8B4/oS+iqY36wRmZbS0dkTV6Yq5wUn3A5KPGvtz+hghF9CXhQyQMYLlUSuDO/T2y//HivCDQi9iPV1sHoVEzbohHzoRoZLLkrF4N9qX4oycT82P1NeJHfA2tAAl3JFZSFbmuA3xwwuevcIzSXhxOaN80yJy7brWj3r70LlULtrdj8YXpXPZBptqXwuHtzgh5tZn4DpeXX4440T/hW1N0rPOfG61JuW+zePUTNJQue86U9MvR332oOqlWOHacBc/Mo9wnFjBCbCiOpUV5lZWBrBSppy1ZBHTu2yMcu7RJjZp2N6SB7whdOgXLf+WurporUXALHLIfLqJj0x+W2gUxTlw3N0/EGREi87c12BujVYA6gwftQqJKIhZnyvsk7Ff60dJKvAbutKFmu2cpLKiPifxl9T9Tcla7h+TS4/fbmicQxnrLBUdUlOymbyLH/ktZY9eUPD5K7mHkSHyx7WF/zS1ZP4jOg3LDVsZcqqMO9aWQRIpL0FpnFRuPZBz9FL+up3mvPvqK09C78bAwfV+Z8ev5+6HHok51lIK3PIrbUhNGg8nXRERq1N68YgN2gjxLZrvi1Pb+0nqNORkJ5y1XRu0qru6gwsEsQdST5nIOVpoCkCzSo/cVkRhD691T6/EtXOhsYF0C3J3A8Iqi5tbc1Q5AVE6IDurXsfW8Sw6ly1FM1G+Y/BTco0KEkKxy4WsSKrC+bfaO5ChGzn8vF6Ckx9TCyBqd0s+CBQ25AJcyh9of6XolXFGxo+YePfvcgKZqAVnyIw9rtTTk3sqQ0sj4Rp0MrKcF41cNg+SGXVKbhvh7J+ndoIpxCr6zT7ndlAImABKKR9I3/qWAF9ud/VX50zqzo7nZDbjw8Z5JK2lueKEB8K2BvO5Jmab2UrGgLHxF9uC/BPKFsRBe31Nd88qOLKNK9AxdKab+IATi9A+y5FGjKQZbi5wVpkchr7hfVqqNKfMfSzaUvaWDYUOacutPP1PAL7w4D4ZOsk0bGGdW9FzMZwIAMmLL6vJP/eehgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1038 charge at NTTA-MCLB-01 falls within 10 minutes of this 2026-08-12T15:33:49Z toll; the most recent one there was T1311 on 2026-07-17.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz41NiwC5qXbf6rpCS2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2794,
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1038 charge at NTTA-MCLB-01 falls within 10 minutes of this 2026-08-12T15:33:49Z toll; the most recent one there was T1311 on 2026-07-17.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2794,
+    "output_tokens": 214,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

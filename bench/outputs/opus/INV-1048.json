@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020444,
+  "durationMs": 6325,
+  "httpStatus": 200,
+  "id": "INV-1048",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "None of the hold rules apply: price is 36800 (matches contract 34); qty 2 is within PO-1014 received qty 2; the only earlier 73600 invoice (INV-1031) cites the same PO, so it is not a duplicate under policy; the bank change on day 71 is after receipt and the amount is under 500000. Caution: PO-1014 has now been billed four times (INV-1008, INV-1022, INV-1031, INV-1048) for the same 2-unit order, so a supervisor should review possible re-billing even though policy requires release."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwoKEAgTGAI4AUIIdGhpbmtpbmcSDDNT4QGcF5VUgIbodhoM0nCVzaywDbhh9K8RIjBz5YPp7TSCNeRsb9gp9a7wilBOW8ndO+F064l8VPl+IFXJDRcwY9FKL/IpnoZTSzMqtAnBnNrADysGigMqgQyVc2lpuM1BE5NitqDtZ5YqjdV5TImxd75ND0E7R3kO1OIRrH/3Y4IRNVDc+NRbVQWmc1Ujl9OA7qrQYF/iHUlral11pAQ4UUEGQxStUrPG5zAztABo0MvBjVChDw7d27l2xzHAojJxUKbEDpXy7yYJGyf/OMnOD4rJpTpk+nBZEUq0atC6qjvxJyh8p3DfKCYivlcs+zUy0r2psf7wsS1NHaM02Doh2xs4TqO55EP25C+ketCntIQEZzwpzq583pGoM1iL5v5B4ZppXUyhnBO+3OANImrbcICWhJ8SUKUd/PGc82bEmRDcmc5qJVuKyhIf35AW/MA9tl5uOTTkVf21j2I2sSewjtKxPDxSE3GSwTzPfUF4Icc6oALVk5kN6oi+mZezODoqMUPeY/q8WpiRRYlXR355OSvNjDzUmR2pwi+h9dS16E4fNnap/6lUKgVyaUBtYYCop3nzthT383nkpdnLc8wlRcDAdUB0yxl6b5JtJooJzrJPukKhKHm819Pm84V/Yn2Ev1qGp6+jQZUK+ciQxwvT/J6fFqqjIH9k+gSjdSN+lWUzkwCh8Y52hXWrU9awfyg7eWoHIIDoP0kGpFbrg7cwMtm4TIDbB8khsQMUUp/DdjsJKIhQSoDGARHuZgm2rVVkQV0p/Kp/EfE0ahp2FfNV7NyJv8hENjuNx2pMCCO1b0K/alewNGV0NHFzWn9tOusZ38+2kj5KFNlALuqsZnwC2udD15c0dUEE5sNbhggRt4Ben6j2s13SSc7cNAsHknjcCgdo8pzLDwTX5kiikdA+0peh8+fHj4xMIEr8doLSOUxt/UazisZQS4vwqB0WKRfR1Yk5cX1guMx5Hd+ZehTnuTizvYjtG6CI8HxuU7ZWqrTn/ZInxb9UOxvYa+PtsFK9HFQ1zR/YMar8fp6qrhPQIqnVeE4odOwHpHqTBDhJyMf+Gwp93GaoyUPb/Nf2Q5x5FHdAcjHp/U1iHkJEtKlUo/PXFT3UtWhAfF9MYPDG6rZlGx1qXdJ7mGyZvxL1Ovc4ChFdFMlZYRgvIGt28SInvefEF+qSkOqZ+6AaKRnJknjWqV/ittLkB34RYQ/2aenfWdAjSwXBLfqqt141/RlJ80zWGAQoV1ggE3R7OGk8RJDEpbfbIX46ByBCkGJQoJ/9As55bxG/3XWieilfeH+RBUE2OAC6oduaR6RKXNQbGRPlSuWhe47MjgTLiiPZUhGFyDjmx5JY8Otcv1x1WHaKZ8opFwymU3V6MDhqgM/XEDVCi/8zZ6z4R/te40vTneV43XCPjyUCkMORp5I1OJXjaarMeiPA7zueS9N9JY817Kh8pX2UIetrnC2kKvKXnCww6S+SyH6FbRK78M/A7bgpVzeWCWZY9vUCw0fkOmyWL3QmrC5KWCBAZXhAiC3Wwiuq7Tz1t5kPJfLPU/qT6SWaSt/Ila2f6F8kfeYRq6yVWgLX60zIIwDY9fvFHQlZaLu3WKRZLqZDYLaTF1xKxDobuYTpb3cG8jF6h2YW+1uC0FIq3cbOJTWNKpVKKQYpTBqxAK5MWMkr1FLPNyYnO0ls6msOJ0qF/yv6sseVC2zMqtJNGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"None of the hold rules apply: price is 36800 (matches contract 34); qty 2 is within PO-1014 received qty 2; the only earlier 73600 invoice (INV-1031) cites the same PO, so it is not a duplicate under policy; the bank change on day 71 is after receipt and the amount is under 500000. Caution: PO-1014 has now been billed four times (INV-1008, INV-1022, INV-1031, INV-1048) for the same 2-unit order, so a supervisor should review possible re-billing even though policy requires release.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNykCL2SbD98W6J49ivj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2646,
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "thinking_tokens": 291
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"None of the hold rules apply: price is 36800 (matches contract 34); qty 2 is within PO-1014 received qty 2; the only earlier 73600 invoice (INV-1031) cites the same PO, so it is not a duplicate under policy; the bank change on day 71 is after receipt and the amount is under 500000. Caution: PO-1014 has now been billed four times (INV-1008, INV-1022, INV-1031, INV-1048) for the same 2-unit order, so a supervisor should review possible re-billing even though policy requires release.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2646,
+    "output_tokens": 493,
+    "output_tokens_details": {
+      "thinking_tokens": 291
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

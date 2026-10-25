@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013136,
+  "durationMs": 4075,
+  "httpStatus": 200,
+  "id": "INV-1016",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches contract 9, billed qty 2 equals PO-1021 received qty 2, no earlier invoice for 67925 within 30 days, and the vendor bank was never changed. Note the total exceeds qty x unit by 125 cents, which no hold rule covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4gcKEAgTGAI4AUIIdGhpbmtpbmcSDDnTn/A+wrtcJpv6qxoM6ZnOhZNUEhrLSkc2IjB3p/ih7/9B62t8m7WarjEzxxcg7jVy6vPLvMg2yNNnmoEOUg/AJ2nCu8xcIWoes48q/waLRP0tmop1kWIBZ9bHAkDsPY4aE+RB+uAwEJ5myjLcCRDaiAba4iMCgBAG88f8q7/uG+GDCm4WZLV7WTDx8waqcUmA+LCQ7rLSBZaWDUdG/B+Eid+ViJ7sJzmDv/yHgfAml2b8VDojo4fW9YGlUT/gy0ehRP3PHySFEcxs3soz99KnFhA45sJ+rYmmda1TL6GFTkJgB9xz3o2fcIwyXo+Y7mf7pyM+gnZ84WRPhX5/kQTl4X47e8XL/IXPXalkcnPZjOREMKYBkSTpaHJY4TmGOsDoZsgshXS7S4mfOnpPE4TYzAgaXTXFNEklgevUK3aRlu6gapZ0FIlwYLKWx/WciPA3K8aU+QPelyd35AQpVwoWf+Y3TlmIGGiIENhu5J9suOqG+2Bc6ASk/5dsY2hSsPTVPoXIJbzAiVgMA2PwBVsi/SeoDo8goOKAkVuoXRcJWFdp7YTC0H5ptCtw1CIH8knsPda1Af7Ln6fEhiz/4/NJHCPIJiOH8S4yYL8KJrsedD7zzBlIio8mDP2eKHPUMcN/ft8HazVf6fC/Qq9mclJTF+EPSY++3lq3drC/4vr5m7ZHAGHke5njAGmoT5MhoRacJ1XjYdb/IM1Fc7NCkGEtXxgsctYFVU4gA1SV3KSWqjosjQwUd5Zy8CpjNJGzhTy9yNc5ZR/HHhTUuPtsBp4qq04z5M6Mv3ZReNSiR5ripZkSm6jwWIbJCH8xJ719xnab93Im3DvoRSwOwvedeAv4MH1U9juXjqokHbTT42thLJd1HLITjnXvoAS6hks2nWJGVcvPeHcRboBOgSaLt7Xg1iaK5wYEJEaCLKGiyp4UW+WQ217Na1bcZXgqLdu9CY8Mjg7Nm8fUjpic97ILLWaDQ4vX+xf6KB2cU9knaLVpXtNP2dEsbVGvWf8mwkbeQK9I8QNL//N0XwQrts93uCagJO2XFikrrYsU4o0FI0BHaKC4NG+16LRaHnh4E+pHE4zdrFQb5OVxcEae6nj3HmgejnnyTAT6eOtkYFlaR7tfDd18S9Jg1NjkQ0aYxw9yj6zZqrtTG0OtfF2tI5NuZuJG5eOEwXlPWIyEZ12IFVl8IBNAy/66TKVsLypPTkO8CB6RpTdrM+YTa/W7ytPjxmjNwPcA3Aw5fc1Xq4mAB8cVUPsjR1yZal6mJs5cfVyUBNRk24jzf0rIi8Rc0PzYGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract 9, billed qty 2 equals PO-1021 received qty 2, no earlier invoice for 67925 within 30 days, and the vendor bank was never changed. Note the total exceeds qty x unit by 125 cents, which no hold rule covers.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzC4KHzq72reeNEMN1X",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1809,
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "thinking_tokens": 178
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"Unit price 33900 matches contract 9, billed qty 2 equals PO-1021 received qty 2, no earlier invoice for 67925 within 30 days, and the vendor bank was never changed. Note the total exceeds qty x unit by 125 cents, which no hold rule covers.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1809,
+    "output_tokens": 295,
+    "output_tokens_details": {
+      "thinking_tokens": 178
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

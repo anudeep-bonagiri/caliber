@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025708,
+  "durationMs": 4066,
+  "httpStatus": 200,
+  "id": "INV-1178",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 52500 matches contract 18 and qty 1 matches received qty 1; the only same-amount invoice in the last 30 days (INV-1157) cites the same PO-1023; bank change on day 42 is old and the amount is under $5,000."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AgKEAgTGAI4AUIIdGhpbmtpbmcSDO6t0BcwYgdzXKgowhoM8v/Kr+gYFgQ2+ISwIjC8uDa4pM/VmWF8qU8k4zlOCSueM3En5TbCFpUSKjZ451niBTmevCS5vXK/occxko4qjQgx+tm9/3Metnuw1bI5Q/LQwpj5IsOD5YgGpU2mlJaNXc/NS0yyvr8/YRl1ARyuiahE16owgjsGEeqbd6jacTgdXMm7n7OIQh8ewTfQ8NmBO1q8IQEcv0MLB2wRpkCrewrahL9mj4h3Ri6S1hdXJc9Pyh9TmR/nJJML1EGJu3OYdvTcLx9z8mMoUbmQcRgsTWSLUgDUWzhylTOwmFqtIln1ftP4Wn5BPCcY/GRNFPPbnsmITK3s+f0uFjaFNRUhPo7SfkWi73rn7pAZiqIEhE+F6Hof0+VICzVuO29LtGkYdJjl8kLAlJ36G8TWD4ktgFwFVjSls2wQ00ca8ykXZOkxDB2ywaTjMJA7DFbAiqqwJuByI1l1xkmGG49YoviOWtdMVNO4plUh5PHTX0I0V/kf1cXmwrWbo7VGEKBE5cGIUafmm5nd1TWzjV5WSKrmkIaK+5zFZrZZ3yuDbrZeOBhi03z6GM/4AUHpx9tDAqtx0heCpIeqTlFoUpXVNEfBxAfYh1rfTzP4bFWk50qbU+ueIvNBLsHYF/5WnJSqhNt98fFS3HPzmPQcmo/gHVW2OQHn/QPIx/BEV70MSDE7lNEOndQklxX6aS7FvfWLM8jXw3oVgaPP2LZk3ldS+7XyBHlL/KLoBwrxbWLpIJDwsdZrqDyal9zuo/C3PmVoCRfOY09fH1ktlAdr7gcI4dz3AmdrlYAt3KheucLUrvRcyRmeYXTuMTUWL/oMaYzRvUlPQrzAf1HDxYxFB8+/lq4r/j69rr8EGMYkL79S8bjlXuyg0RBKG/ea20F6HuSnTI2VD9ygvnlzktSONGygoPKTUxfITvjnn4TZssVdGWqhDPvHvYmEfBkWtGxzgNdrkVCAcPsxSMlaI34O7hHVx4SUvZJ235BQulCjeLfCvFRXIqT9WqTLAEBP88WprMIfT2h6BlhHLdrmcYpU+/94xd2YoTYrJKAeHbtAZhZnEUjeb4P0taxhjP5GZaCrbWl8Vr2NxMR9RWLQgUXTCyu3RSd+xZUEgtRXdBPCnpzOnuprzFAG5ZCNVI7BZxma1ZT5DM7YNnatLt+KizJcuVzQGsIydDo1ZpLZhQSuLRaljtoTUW+OBDJmyaXWZOaf5RfQ9fbPZCwVOu5Ut0+QOir8O+s+msVjKAoznn4YR2Zr63Mw4lgM6VdKeaxJzqMzGVLy/A3uaIfE+Hr0G9yqkIYs/hx2fiJNSBigil1XUQvFRMmL2Ok/CPxKuOG4PTil8A+ckwbtzK2j+2XniukjFLwG0Kokv8NwY5sGgS4p2sQqJ93dPSOVgzpE4FBCcmK+oJbxYizYJDUVH9TaBkQnkxnV1TuxhM2As/ob575zDlVN7hzyeAbVGlq3jYxprE1qQ314OxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 52500 matches contract 18 and qty 1 matches received qty 1; the only same-amount invoice in the last 30 days (INV-1157) cites the same PO-1023; bank change on day 42 is old and the amount is under $5,000.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz7H4ruGPMbkAJRKrn5",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4697,
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "thinking_tokens": 246
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 52500 matches contract 18 and qty 1 matches received qty 1; the only same-amount invoice in the last 30 days (INV-1157) cites the same PO-1023; bank change on day 42 is old and the amount is under $5,000.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4697,
+    "output_tokens": 346,
+    "output_tokens_details": {
+      "thinking_tokens": 246
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

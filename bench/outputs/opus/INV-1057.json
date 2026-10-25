@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027168,
+  "durationMs": 11258,
+  "httpStatus": 200,
+  "id": "INV-1057",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "PO-1010 received only 4 tires and INV-1035 (day 20, 218,000 cents) already billed all 4, so INV-1057 bills 4 more against a fully billed PO; no listed rule catches this exactly, because the amount differs (222,500 vs 218,000) and the PO is the same, but paying it would pay for 8 tires against 4 received; propose paying 0 more on PO-1010 and ask the vendor to confirm (its 222,500 total also does not equal 4 x 54,500)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"PO-1010 received only 4 tires and INV-1035 (day 20, 218,000 cents) already billed all 4, so INV-1057 bills 4 more against a fully billed PO; no listed rule catches this exactly, because the amount differs (222,500 vs 218,000) and the PO is the same, but paying it would pay for 8 tires against 4 received; propose paying 0 more on PO-1010 and ask the vendor to confirm (its 222,500 total also does not equal 4 x 54,500).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygZUAFgpsr3XDzgTgC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1902,
+      "output_tokens": 978,
+      "output_tokens_details": {
+        "thinking_tokens": 785
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"PO-1010 received only 4 tires and INV-1035 (day 20, 218,000 cents) already billed all 4, so INV-1057 bills 4 more against a fully billed PO; no listed rule catches this exactly, because the amount differs (222,500 vs 218,000) and the PO is the same, but paying it would pay for 8 tires against 4 received; propose paying 0 more on PO-1010 and ask the vendor to confirm (its 222,500 total also does not equal 4 x 54,500).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1902,
+    "output_tokens": 978,
+    "output_tokens_details": {
+      "thinking_tokens": 785
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

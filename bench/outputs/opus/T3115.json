@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0376,
+  "durationMs": 3276,
+  "httpStatus": 200,
+  "id": "T3115",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1025 at SH 130 Mainlane Plaza 1 within 10 minutes; the only earlier tolls that day were at other plazas (PGBT and DNT, around 13:30Z), so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+gYKEAgTGAI4AUIIdGhpbmtpbmcSDAsPFM7TVjnOYuFH5RoMCqMT6ptuaMgxoGPOIjD7gsU8159I1FV3nVGj4ZFVWL7Rnxj+jnm80VwbBLeEvngFv3FxEUcVEbm9revR4/wqlwbbBc8sOLF1VQ4tSySAO9KvU9lztqKrpMAzvgl7K5KQOkjjR5ho7B94wZ/nx0zOLZsWGgQ6AmYxGCH8V2KUeDn+Gxj0k2jBJGXSNnhk+DrTKVt684TRDm/N660/ulcfoWRMOHJY4y42MDdz33Q30+2xj5/Okp/eIRo24uK29TA865CwkfgS9g6Ya8/zwn5oTOdhVIsKZg+x2u7aTvSLIZ5JjZWVLT8Mh18f8IllvRPL/33J/138xCZoHa1bSKNDsGcbRobhL2GGkBQsanjjpwzMjqstwbFdcQNcFsfqOeZ1HzEBg5gF1e5dwKMIActKJkXRR6JD7/ZZTpQGkNRz3cWGoKdO8f1iHSQEKpMm62vWB/HLFvoV+oRyUHkom7eP2QVdcxIi5ZgmrMdFvx5L+bb/ZTJViauqEV+G1rGhP4PamMkbe6I1VYPfX3zavN3UyfgYPlv59OCx6ZlrJGgFZUuWgShCBMCT/PDCGNr+sbXK8XO2vgR6WKThsaBcopFABUhF6cbk1pEw8mtmiSL6o0bAN3ywYALBHTycxm50Jo8lU9uCxrOeLI9XM9yb4qAQg3pbUjrVue/FwG+AjkGRTTL4uMR8DR8acxi6C3G0cNG2ysHOt+xb6hkUrKnzq5hC2Pn3ZzZyzfvcPP390DfR+PXBbDehAdaSFI6TopD7rQTG0alYtpjPRc9oP3ipYLT3u4NZNNHK76kM1+MhFXXBSJSzHh4nlKQPU14bXsfUt7rRkx80/rSQutoES78G6jLQ+bqQZzrIz9nKfSYF4OukbhsQ4rVec09tNOSpQv5is6qSiNwWRr3NPaKOvmYtTT8TLwmQoODyQoomDBcS6/bZ0qcDA4D36QzL+LTI43NZdhZKgoBfdGLk7MlNfDLEyAL0u8l7azBKwt34orQl2AJesGJA5xYXMrcu/xD6i2cNEKda+bze3NbXwuDOsm++0BatbWbYa4KutsrjSvmaNf9sPCCN+2hUGbTTHd3RHN/PdfPrRLvTApMOlV96Ij/o3MSD9xT4C8HJ7wyYEn5jfu9LtP7Exc0PDiFSmBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at SH 130 Mainlane Plaza 1 within 10 minutes; the only earlier tolls that day were at other plazas (PGBT and DNT, around 13:30Z), so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz2cDAndqprzBXHRAbC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8040,
+      "output_tokens": 272,
+      "output_tokens_details": {
+        "thinking_tokens": 170
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1025 at SH 130 Mainlane Plaza 1 within 10 minutes; the only earlier tolls that day were at other plazas (PGBT and DNT, around 13:30Z), so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8040,
+    "output_tokens": 272,
+    "output_tokens_details": {
+      "thinking_tokens": 170
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

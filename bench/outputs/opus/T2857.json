@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.033672,
+  "durationMs": 3272,
+  "httpStatus": 200,
+  "id": "T2857",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The only earlier toll for TX-1009 within 10 minutes was at a different plaza (SH 45 SE at 16:50:56Z), and the last SH 130 Plaza 4 charge was on 2026-10-09, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxAYKEAgTGAI4AUIIdGhpbmtpbmcSDFz6xW8RnRCuwy99DRoM0dsJ4HWzf6/eUuVyIjC29tvpb5QpqZJ9Du28XP+VFoHIzZ/QbxmGesiWrSa7clX0a6zMsce6eRtrCs5OHAkq4QXXXNcL5LB73FxGwdl6Ac5QCFPZimSPId46p1h4KKEpgPxTpd0bQ+kcQ+PJ2zR9GP2deZBdfVaNEgFEw9rGyE+PIi4gV3Oy9T/hzKDrY5GlVoaQMJ2+NSpGKnQm0GGnJpXzaxHUKC0E41h2jKKjQYQxJPSz8BsbWJGddyjtUCB1Koa2gn8FMZAhddO1kKw1u8yYqGy3mmuk4EilQ+thq08DUQguLQ7kmG8PPk3rpy9m5uvOmQyFn1886eZeyr5dTnAumNGRlnA11SrldMi3ycPaTxUhWoBB15ccns+KWpwukXw6xRutHCnUnqvcTBFhr91nPVCCfoGZRksIgU4NZQ1Hu7ZbjvXcielV8Vq8JyABqOGVItaohuhSmAvgM904wHCauCRAgG/4u5ixVaPSURSg3myi1g79MElRz7w9cj76h+JgYK3iN60TdBVT3ve2x6YGdoI5iknl0K+bo8UeQT59LI1FDSomSCqNIjfv516xn4wBfqFsc5qnQ4MKCMHtINE0UX/zFXkuhgF8ItoUo4p1U/JZEXv2NsNLpUnwTfCDaVhabUeA4aNbuyn/ZMykmKUwJ0NoOO9j55dRHm1zopKVzZ4jptnD1VorKro4CKBENQ1JpnFW93RZ+47ZQzGs44DyLLe8tYPXak5kT1F0RGFwhYUiBrBNI/4LmfQmkC8+/wZqbWrXI6a+T/HuZp6TgfYQWM9aou2dH8JwGcEz7dCqO1xB15KOkFZF7mMs509DIHy9Y6OQAu7PzYLOh7BMwIGCWS0JLn9o/VJMB99CqEn3J6mZxyylKutMiSUebm7hLQnUgndru3CxOaYspIHNIgicoH+xj/tmK1n0xKhuejNn/LrzYMJv5pkLnTPfz0TofSwe6RkORQnh2Ts3eXnU7l1SnPdUxT9YTc3CtIo+k7AL5gdYrqzYvEbTMMBl7s9yUbeKIfEEUq4hINmmFODmssfJieNNw6xPFiC2YoqYWdr5NhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for TX-1009 within 10 minutes was at a different plaza (SH 45 SE at 16:50:56Z), and the last SH 130 Plaza 4 charge was on 2026-10-09, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyqb3fJHxbyUe9ZYiLT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7293,
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "thinking_tokens": 125
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The only earlier toll for TX-1009 within 10 minutes was at a different plaza (SH 45 SE at 16:50:56Z), and the last SH 130 Plaza 4 charge was on 2026-10-09, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7293,
+    "output_tokens": 225,
+    "output_tokens_details": {
+      "thinking_tokens": 125
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

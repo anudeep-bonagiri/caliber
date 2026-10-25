@@ -7,6 +7,9 @@ which this script writes. It is the only program in the demo path that reads see
 
 Usage: python scripts/facts.py [--uri http://127.0.0.1:3100] [--db dispatch-ledger] [--key seed/fixtures/answer_key.json]
        python scripts/facts.py --self-test   (checks planted_by_rule on an in-memory fixture; touches nothing)
+       python scripts/facts.py --baseline-only   (Task 31: rewrites only the "## Model-only baseline" section of
+                                                  docs/FACTS.md and the "baseline" key of docs/FACTS.json from
+                                                  bench/BASELINE.json; reads no ledger, changes nothing else)
 Reads public tables anonymously over the SQL endpoint.
 """
 import argparse
@@ -112,15 +115,18 @@ def baseline_block(path: Path) -> tuple[dict | None, list[str]]:
         return None, []
     b = json.loads(path.read_text())
     systems = b.get("systems", {})
+    # model columns in table order; "opus" is present from Task 31 on and absent in earlier baselines
+    keys = [k for k in ("sonnet", "opus", "asi1") if k in systems]
+    label = {k: systems[k].get("label") or k for k in keys}
     block = {
         "source": "bench/BASELINE.json",
         "generatedAt": b.get("generatedAt"),
         "sample": b.get("sample"),
-        "modelIds": {k: systems.get(k, {}).get("modelIds") for k in ("sonnet", "asi1")},
+        "modelIds": {k: systems.get(k, {}).get("modelIds") for k in keys},
         "table": b.get("table"),
         "partial": b.get("partial"),
         "tiesOrWins": b.get("tiesOrWins"),
-        "failures": {k: systems.get(k, {}).get("failureSentence") for k in ("sonnet", "asi1")},
+        "failures": {k: systems.get(k, {}).get("failureSentence") for k in keys},
         "cost": b.get("cost"),
         "footnotes": b.get("footnotes"),
     }
@@ -134,21 +140,25 @@ def baseline_block(path: Path) -> tuple[dict | None, list[str]]:
     lines = ["", "## Model-only baseline", "",
              f"Copied from bench/BASELINE.json (generated {b.get('generatedAt')} by bench/score.py from one committed run; "
              "prompts under bench/prompts, raw responses under bench/outputs). Precision / recall, code-exact.", "",
-             "| Code | Planted | Caliber P / R | Claude Sonnet P / R | asi1-mini P / R |", "| --- | --- | --- | --- | --- |"]
+             "| Code | Planted | Caliber P / R | " + " | ".join(f"{label[k]} P / R" for k in keys) + " |",
+             "| --- | --- | --- | " + " | ".join("---" for _ in keys) + " |"]
     for row in b.get("table", []):
-        lines.append(f"| {row['code']} | {row['planted']} | {pr(row, 'caliber')} | {pr(row, 'sonnet')} | {pr(row, 'asi1')} |")
+        lines.append(f"| {row['code']} | {row['planted']} | {pr(row, 'caliber')} | " + " | ".join(pr(row, k) for k in keys) + " |")
     ids = block["modelIds"]
     lines.append("")
-    lines.append(f"Model ids: Claude Sonnet {', '.join(ids.get('sonnet') or []) or 'none'}; asi1-mini {', '.join(ids.get('asi1') or []) or 'none'}. "
+    lines.append("Model ids: " + "; ".join(f"{label[k]} {', '.join(ids.get(k) or []) or 'none'}" for k in keys) + ". "
                  f"Partial: {b.get('partial')}.")
-    for k in ("sonnet", "asi1"):
+    for k in keys:
         s = block["failures"].get(k)
         if s:
             lines.append(s)
     cost = b.get("cost") or {}
     if cost:
-        lines.append(f"Anthropic spend ${cost.get('sonnetUsd')} at list rates {cost.get('sonnetRates')} (cap ${cost.get('costCapUsd')}, stopped for cost: {cost.get('sonnetStoppedForCost')}); "
-                     f"asi1-mini requests {cost.get('asi1Requests')} against the free-plan quota.")
+        parts = [f"Claude Sonnet spend ${cost.get('sonnetUsd')} at list rates {cost.get('sonnetRates')} (cap ${cost.get('costCapUsd')}, stopped for cost: {cost.get('sonnetStoppedForCost')})"]
+        if "opusUsd" in cost:
+            parts.append(f"Claude Opus 5.5 spend ${cost.get('opusUsd')} at list rates {cost.get('opusRates')} (the same cap on this model alone, stopped for cost: {cost.get('opusStoppedForCost')}, {cost.get('opusRowsAnswered')} rows answered)")
+        parts.append(f"asi1-mini requests {cost.get('asi1Requests')} against the free-plan quota")
+        lines.append("; ".join(parts) + ".")
     for i, fn in enumerate(b.get("footnotes") or [], 1):
         lines.append(f"{i}. {fn}")
     return block, lines
@@ -255,6 +265,33 @@ def self_test() -> int:
     return 0
 
 
+def baseline_only(out: Path) -> int:
+    """Task 31: refresh the model-only baseline in docs/FACTS.json (the "baseline" key) and docs/FACTS.md (the
+    "## Model-only baseline" section, from that heading to the next "## " heading or the end of the file) from
+    bench/BASELINE.json. Reads no ledger and rewrites nothing else, including the header line with the run time."""
+    block, lines = baseline_block(ROOT / "bench/BASELINE.json")
+    if not block:
+        print("bench/BASELINE.json is missing; nothing to do", file=sys.stderr)
+        return 2
+    jp, mp = out / "FACTS.json", out / "FACTS.md"
+    facts = json.loads(jp.read_text())
+    facts["baseline"] = block
+    jp.write_text(json.dumps(facts, indent=2, sort_keys=True) + "\n")
+    md = mp.read_text()
+    heading = "\n## Model-only baseline\n"
+    section = "\n".join(lines) + "\n"          # lines[0] is "", so this starts with the heading's leading newline
+    start = md.find(heading)
+    if start == -1:
+        new = md.rstrip("\n") + "\n" + section
+    else:
+        nxt = md.find("\n## ", start + 1)
+        end = len(md) if nxt == -1 else nxt
+        new = md[:start] + section + md[end:]
+    mp.write_text(new)
+    print(f"baseline refreshed in {jp} and {mp} from bench/BASELINE.json (generated {block.get('generatedAt')})")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--uri", default=os.environ.get("STDB_URI", "http://127.0.0.1:3100"))
@@ -262,9 +299,13 @@ def main() -> int:
     ap.add_argument("--key", default=str(ROOT / "seed/fixtures/answer_key.json"))
     ap.add_argument("--out", default=str(ROOT / "docs"))
     ap.add_argument("--self-test", action="store_true")
+    ap.add_argument("--baseline-only", action="store_true",
+                    help="rewrite only the Model-only baseline section of FACTS.md and the baseline key of FACTS.json; no ledger is read")
     args = ap.parse_args()
     if args.self_test:
         return self_test()
+    if args.baseline_only:
+        return baseline_only(Path(args.out))
 
     key = json.loads(Path(args.key).read_text())
     key_by_ref = {k["txnRef"]: k for k in key}

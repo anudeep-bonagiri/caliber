@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021684,
+  "durationMs": 3443,
+  "httpStatus": 200,
+  "id": "T1937",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1020 toll at NTTA-PGBT-01 falls within 10 minutes of 2026-08-28T10:38:35Z; the most recent one at that plaza was on 2026-08-25, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AUKEAgTGAI4AUIIdGhpbmtpbmcSDBBiKEm//jLDmQSQXhoM0+qysyhHT4C3iPwmIjBRQ45FDTl9jUAWKZxGtm8+xGh6YGEeCRe19C+SJpc0M/kV+vXQhcb5SUfLp+7e1zUq7QTwdrhR7IQ4YAalmHJeFcPN09YYX8fpFCLs7V1IFNmBydorGINOdE57wh1UxaCn14eXKA5RSzH4spPSEYlfqv3QPNDYN8Ze2vIvk0AI3+47RFzuFVWSGZH9kbYkFW+R+YtiLYXkdHow/T2m8AWIXTdaa6GodRAPNsA0kh0VFKaaI/HLe8mSxLut1qmVAWAtK+ZvOJvzvg6lF1y0eYlHYPO7jEJfQL/kqP4ZXGm7TtvESZurCBQ8Uz8PpDrM3k1gIBCq/ql6lq3uIT3M6YWYzIvoeqsInWXYvE0yAo3fjaYsvh7biEYQZYt3R9LoqEOCeiByYdVaTtP0i42btcdJ5oFSDnG09cBcIw11jMI9JpKihT0gsHMOuHXOrknrucCjRlGlfAqkb1G9Yk5oxnusWGz0PYLo9qhQVpJAhv7FMuoI0VyX2TqnpSfbWkThgexwwJDTyzpx+5PHkxzRrFh01wFvEJVqyGQ29gpJBcCpNWw2wOacd0MAy2ira2uMmWyBnbSOuHl8SqRiP2ABwFRW6rJszgqkWjcFns6awO6uoxY53BStkkwkin+E/EYr1Zb7aZKSukO2c29z0rmOLUk7Zzj0JbGeqipzEzmZkHNMx9VLiOHJEP/f4r0Ou9kp4TC/Byk7GZ6alPwqpI/2+eOrWaRzL2LLx6CLaV0rgeel1Vb9/mMgKTZUhDjuO/PXxhUITF1hcziQjxre3PkLXhSLTEvONvgkbqvaul/X/n1/7hMy/lCfq95wUgrkChax6yClqGrYbBW4Syj9Xhi5JjEjTg1D0OLziJIl8JuVRli1iRW6ntdhay+3snRTdJVkA44YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1020 toll at NTTA-PGBT-01 falls within 10 minutes of 2026-08-28T10:38:35Z; the most recent one at that plaza was on 2026-08-25, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyt3PzCibftnZUqZeVA",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4546,
+      "output_tokens": 175,
+      "output_tokens_details": {
+        "thinking_tokens": 77
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1020 toll at NTTA-PGBT-01 falls within 10 minutes of 2026-08-28T10:38:35Z; the most recent one at that plaza was on 2026-08-25, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4546,
+    "output_tokens": 175,
+    "output_tokens_details": {
+      "thinking_tokens": 77
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

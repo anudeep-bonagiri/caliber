@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025884,
+  "durationMs": 4553,
+  "httpStatus": 200,
+  "id": "4553",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 26 pinged at 14:25:00Z, within a minute of the 14:24:12Z purchase and about 0.03 miles from the station, and 39.7 gallons is well under the 110-gallon limit for its 100-gallon tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAgKEAgTGAI4AUIIdGhpbmtpbmcSDEr1mB6AmP3PtFwE+xoMcdpuomDDwSfjMRUiIjD7xx1fkD9S7be4qFOaNXmm+F8iL4bCkIpUN9pf1pEc8raee/WC16lFZlJPNTh+X8wq5Qdztx2SnkVkZah0i3tXjvnNs0Ec+cuz3Mxo8EjoGqOFLN1FIg9vrTZhIzl50nl6FvGNbGtm7Vouk9nZsbheDpqmVPRy536EROggHJSg8WE0shX7WQWsCM9q8IEsjX+CHP5Lq86wBPlvX9rOrStIZ1+oz6S7Jphk2mN09H7CVdocb2FuwVMLHC/9Q/NgtIw9SYAu7eVJsP6quF9YeHHPaAQJ5tWMCZafQx6+BCm6a8SlrtLOj0Fah7BbYEiAXiV9MQBhcKFj9B/ErzSrP5b99PwgF+9oJnFwZwmJW1iMCaPZ5IdVggwiKstYJdL7qBnZTSSwfPROGWIFE8x8tixKZyHWYU5HoQN5D+UkwIh+gKu0C5axP0UZaTmYEzi7GJfCkI2Sc5ewIZPcVeN/8Hu3asWHFA/fgy7QhRVaalNRTF2+PnfDnfbua2Oc68OZoQTLBfTFxHB+UTWjybIqJ4ObFaDQSSzGd0iA4RDLRQbSYk1/CgiWVMTv/kHO/lGWc2ZYHMKHVRLmsIiD50/T/tIyjfkYUf5knSb/G2CAfKn8nwIIwBnXo/ZPn9BMpvKj7t4uH/z8WSbd40dltmlBm5XVV/QQ/Y1Kbh/O6zVp/BDUrt7ihYQpE54jVF64CkJGeItngEhkVielTcinIwIXQFqR2CeFZI11dH7iPFg/WM92+Nq3EwZ0tpOXonicGYU+ksJkEJWz05vIipfmEVrPwSWN3IHsjVjHIWvO3KNEmnXBk7AQC+zqcSpXecy4UdICqHvoqIxbB4nRsb/P0rcr97Gi8/qgRlfP9RsahD88XIVuSEsOvcnWY0ldGhy7DLH2yBYn6O9XwB0ipYduwZ3/OJ7Dio/NHMxOYh5LCpg7fygf8NGZdZhZxEqR4UUuMU3E3oa+15mwsM70BgJcVGsbzt1MFMi2EUPIRcAjHfM9v0qu+blJUoV/UBf556JGzIJwm/F8NwHUFLhYYevYOv46w1GlBnYN48VJRZZwwfht66Qzr+zlg2nkUWcNflS4SS2d7iPt6i/4SLQs2/tR+W4gRJleecLB1ZNqQUJSSVxJPnqwDMScynkNXWjosJnKQ4HFC+B9aFCaAzHBuBOBkc1HhdZEYJVrrBAShNMb6kMr6yS1Ry0UI3haPoqJBQ43RGbt0sKiUdehk0yBlu1okiMRDAyUD6yM4SfGdVchGtbMcTYvfIdM7HSBdvCWiRShGUd7Ppaba6Q9CvykJHBLeOHkyHxQA/Uq0m71lTLdZAqvxqrso+AhZmXlv16m7CSCxMdf2BDKkDsJsfrrnEKNsry0eUSx8gmtVYT9/CBawzgVxhB91GV0GQOZc0RVGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged at 14:25:00Z, within a minute of the 14:24:12Z purchase and about 0.03 miles from the station, and 39.7 gallons is well under the 110-gallon limit for its 100-gallon tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfnBMHXvQx18bKZN5G",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4816,
+      "output_tokens": 331,
+      "output_tokens_details": {
+        "thinking_tokens": 233
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 26 pinged at 14:25:00Z, within a minute of the 14:24:12Z purchase and about 0.03 miles from the station, and 39.7 gallons is well under the 110-gallon limit for its 100-gallon tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4816,
+    "output_tokens": 331,
+    "output_tokens_details": {
+      "thinking_tokens": 233
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

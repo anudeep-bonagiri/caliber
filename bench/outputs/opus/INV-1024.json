@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023392,
+  "durationMs": 9059,
+  "httpStatus": 200,
+  "id": "INV-1024",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1024 bills 33650 cents for 1 unit of oil_service, an effective unit price 12.5% above the 29900 contract rate (the 29900 listed unit price does not match the total); PO-1022 (1 received) was also already billed in full by INV-1018 on day 11, so confirm this is not a double-billing."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1024 bills 33650 cents for 1 unit of oil_service, an effective unit price 12.5% above the 29900 contract rate (the 29900 listed unit price does not match the total); PO-1022 (1 received) was also already billed in full by INV-1018 on day 11, so confirm this is not a double-billing.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNym8V8gJqBK9FpoeHMj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1983,
+      "output_tokens": 773,
+      "output_tokens_details": {
+        "thinking_tokens": 634
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"INV-1024 bills 33650 cents for 1 unit of oil_service, an effective unit price 12.5% above the 29900 contract rate (the 29900 listed unit price does not match the total); PO-1022 (1 received) was also already billed in full by INV-1018 on day 11, so confirm this is not a double-billing.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1983,
+    "output_tokens": 773,
+    "output_tokens_details": {
+      "thinking_tokens": 634
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

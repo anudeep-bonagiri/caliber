@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02432,
+  "durationMs": 3447,
+  "httpStatus": 200,
+  "id": "4510",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at the Waco Pilot station about 4 minutes before the purchase (well under 25 miles), and 37.8 gal is within the 110 gal limit (100 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3QcKEAgTGAI4AUIIdGhpbmtpbmcSDExEEMZDUKaVejPJPRoM3Zpu8aWWDmyushOeIjA+gH8xqLfeHzV0kUrSMKnfm7OImxmrnJ2dnu+iAhs0ucUEF5EBNNt+4jLmEGsdGsEq+gZwp1w3mLnaDY87K0xWmZtorCNKQc/qDagWeLdRCQ1ZBm4HdK7eURCcvWHg7BzK0k8rauHu6ULsKKCGLkqM/yLlRy9xPX8Mdvw8GnkvI7c0iGxuMliiBjiDtRR4BbHcKYITcT9Gyr7xSKP6QMljDGgdhU4O6wGToUYiu9odZfC4Cpt65MA17S3+flVoqKNOTNQU7hFPyQ/VmLrD8GvP61V09J3gK9tDyikf7uakU8lcIcsO7cevWaF6fR/Yy5H7U7efaLZzdOblCd0CdgXfwbsTPNPPYfwiTEOvm25RvTq6ICENZufhzksWaRG8wjwzk89kPI7Q5jbYYl6k5Vdfik595iiHUGUaB3pks0Dz7zDAk/5ITsOMC/IesBQtpW6lI4o1ssMtYqJ+RL065rcFbIIH7MGBYwqCkLguIMxbZIr07Zl84Sz1iHf0GrmkalvsaaDHQUgkbU9u6+T4BbApg7QJNrk2qu0tc8wB7WDA9H+ZrO4hg7yKViejdQceUddOAF/VB/tbsAm+1hzYCx1+NOUWG/tnYLMxhknK17WS4Z4TtlsVBDzRLH3V43FiAlsn2dnl3vArlwInuM3QcRcyhKO6y0NcMRfAodpuLw83Fapmx5ssw0NNQISFIAD5hn7m1Et99ZabK74N34RgtJbBTLhxg2/ZIobcYOuu+f69kHuYjqzAQXsXsj5rv1lwuZgdVdOMmNM+VMqDwJAbVOtYxLRKLKrs73IL/lGqhTF2ofdYwv9oBNX1kdaqbnoQYN8CrxYUE2YMLQ5uGpQrYBFSXwOiSSCUVPhDYB0dVbGSOmWF+aiPENpmrdL0ceWr+hb2otVKZHhHSsvJn6qDYYr7c4uE+0eQChFcDeZZCBs1Fc+92pKt+wqi5cVd2NuoWFiIya1sQ6RQdY8KAKGNfybanVO+wnIDfnl7X4WnaWRPc8uu2RDVyiWxcDc7JutyHQAasYD/MeaNwkYCh3z9p3kjpxcrXnNBm0zJ+0bjnT2QQadtqDEr28ZdwYLgyMbVcDIAJsHgzJCrou6UgyCqGCRYxWE/Hdrc9uN/D20dOd8juJfOzNVMvLvOSd0WhtEfWpGMgulQ4q9urvL/dlZGO0gB5siyfTRUN5ZsYZliri67dd7yVnh1u+v30kPdUY4IVUb6tsm4FylH7Nq5En750nG92orWinuuiALnBOuC8BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged at the Waco Pilot station about 4 minutes before the purchase (well under 25 miles), and 37.8 gal is within the 110 gal limit (100 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyjwdVLir7tbPxWnpXj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4670,
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "thinking_tokens": 197
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck pinged at the Waco Pilot station about 4 minutes before the purchase (well under 25 miles), and 37.8 gal is within the 110 gal limit (100 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4670,
+    "output_tokens": 282,
+    "output_tokens_details": {
+      "thinking_tokens": 197
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

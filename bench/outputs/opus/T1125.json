@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011812,
+  "durationMs": 2357,
+  "httpStatus": 200,
+  "id": "T1125",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The closest earlier TX-1025 toll at SH 45 SE Plaza (T1115, 16:10:36Z) came about 5 hours 45 minutes before this 21:55:44Z charge, well outside the 10-minute duplicate window, and no other hold rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wUKEAgTGAI4AUIIdGhpbmtpbmcSDJy7ZRDWUXoPkAZLzRoMtFEGgDU512B0OyfcIjDwg7EvQzO1gLR1RCpO4zhxmfkxei6HTRlS0ISeySJeREqBM1Gx51hSBA/waOtmac0q9AQAfxGTmPnMyOag4TC1FE0lO27vqEStfbJc8Z0Ezb3poggMDQOUyD7zqrHvI5L7m37tqpIrQ/X9Pw8wi+vIyOSmSSG6nJ1Sv9bWKxvRoQrBELHLGqZzBxIGI7Xb0OhFJU3VGGm1oMQl7UOmT4azjYLgwnEhNDgwqinaF2HM5esK2EJNMhrgNw5RSFvzNWIblevB/7VprsOQi8tWnhYfiGWU/5LvcS9ZklXSDUfRZ0JVzzxEPENwfRYKJwVS3fTsHAAFNSy4qifTz/6CPy9DrjUF7kttFb4WVY2H4Kqjvy8Tklb6YgyX7bK757ScL+i24TTIWUaOeDTc8xRhLIVcr7qYqM4RUO6vPiSTz4KA3qmZ25WXNjPj1mnwlayReYtg9aCapC8ITmlMeMogkjNumxLvo8hQ0dlwju4Q1ERmJOM/UNoIoQLPoP20OZitwhF54mRgB+5iXZiZ8jYAPiynKiHchbb5qopQqD5/5+xOCd07xdRo++SRMBCEIKbwAJ74Cwce8L1BIvsIe4sWYSH0DUTcgI67LBArVS6rTMckiqWisxjyZ8rb3mlBPpoA4dPLtWkWKUCmO8+B5nrUYatVR5GXxiHZA6JveApNcZpXPnKIhWGeZlGgUwxScjm4y2MYCsBrM05DNYOcSB08teQFU1MoZuekugwgKcpWAATmdHdct3VCm3TzBQ1abEVIYvLaIuDM8wXHV3jwtgrCbmxSF/7LkafkAYIhBWUdwSq/WKF5kz6tXhiXwutZlr5NcD0eGMhvK0259/yMpDfU8sXlxqHkfctIZVC0wu/sG978LdXS1sVYiXWeChf0fH6LbA/haCmN66u5GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier TX-1025 toll at SH 45 SE Plaza (T1115, 16:10:36Z) came about 5 hours 45 minutes before this 21:55:44Z charge, well outside the 10-minute duplicate window, and no other hold rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNywKj5JWWyR7WchDUhj",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2033,
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier TX-1025 toll at SH 45 SE Plaza (T1115, 16:10:36Z) came about 5 hours 45 minutes before this 21:55:44Z charge, well outside the 10-minute duplicate window, and no other hold rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2033,
+    "output_tokens": 184,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

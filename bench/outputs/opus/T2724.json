@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.036268,
+  "durationMs": 2661,
+  "httpStatus": 200,
+  "id": "T2724",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1031 toll at NTTA-MCLB-01 within 10 minutes; the most recent earlier toll for this plate was on 2026-10-12, two days before this charge."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwAUKEAgTGAI4AUIIdGhpbmtpbmcSDGblZhPWevRh1b4acBoMNvwihV0y/xYAHgk5IjAnsk+5Ycn6z2gLGrCoogT0O6rhcnGnP0GbFBdDTlhIa55VP8QD2FiTk1WkjnjliEYq3QS5NxjRvjuNn7IWgt6MjE4tKu5kpUYVQfJSEVIieGoENtrG+AblYnWc8WM6synat3iIqq1Zux8U7aGyRTEO+AOOk44DhgGeZKW8wqZ4OsFIVvw9aONDKoJPRawdn9ipHh2jHD+81dTOjxRwTy3Af5/j1ZKO5R9djnjOaQfV3kR3dthT2DCCBMC6ue7EMOjLZmiIX9hGfAEvrgJ+HJlLx7vPrOzxKXOz2pAI2W+pkoU2yLworxzHGYc6LbgOkkfm/VOajQHD5FkH3omPh70xZbp9Uw83UwPSvxLRHS2FHjVzAba1xpNXg3OcyTxYZnspL4jbRSCF/zg4WHT3mjSSPWrMt9Bw4kof8VJ7hdAaYtlKE/1R/UuW4uq4rrI2aHvG+Aq/XCPwj+Lz7UC/5Yf3RanaDN76JE/QYVA0EFUwB/Owfz6+bjyBIvhOS/etGX0gk6bciad7USLyo59VgAvjBVNnxjMJ1CARwCXn0sqhkctQxy/PQN1gElBCvrmTnMbGYgcVP26zdh+YZD/K2xZcShVEHSVmsozG3ISpScpxZjREwIryVFoixsaeGfX44EaxE3R4RhrAGF9BbGz77e6wu79wTuo3+zpKokcznaRSACGJF/ijKUH7Nj/NyZlq1xEOYU2mzexjF7/RAE8KJaa2ICOwU4EjxHM29azKY2jvO7FxGM+JoeP40lSjP5O6HXms8e6/9Si1x6rmhvrlSYoCX+pdkkSzO0+i4K5rt07qCErwVi1r7uKsHiyWEmLryjNrJrzGu6bSIEJuHkhKIF+OPFZ3Ym4uY76Gsaf3rg/AzxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1031 toll at NTTA-MCLB-01 within 10 minutes; the most recent earlier toll for this plate was on 2026-10-12, two days before this charge.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDojX1cB3wYDitA5uu",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8337,
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "thinking_tokens": 66
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1031 toll at NTTA-MCLB-01 within 10 minutes; the most recent earlier toll for this plate was on 2026-10-12, two days before this charge.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8337,
+    "output_tokens": 146,
+    "output_tokens_details": {
+      "thinking_tokens": 66
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

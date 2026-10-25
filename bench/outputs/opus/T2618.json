@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.030684,
+  "durationMs": 3094,
+  "httpStatus": 200,
+  "id": "T2618",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1035 charge at SH 130 Mainlane Plaza 1 within 10 minutes; the only earlier tolls that day were at other plazas (PGBT 11:24Z, MCLB 11:35Z), and the last charge at this plaza was day 60."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAYKEAgTGAI4AUIIdGhpbmtpbmcSDPRoRZedJVIuWsVQDxoMO6ERJts5Z0sfFJ8DIjDccyyBNdqKxoJ8i+paWy5Co/tgPIdFeKAGKBtLVqZBHkJuiAW0uBIC4HRCpZ3sq8MquQWXinLMzz7l8LhIYZnZfC6WxTfcaAVuUsotr3t8DQvOrvNA9cmFoCVpJkNCVkGyff1qQuuOeFVUnjmouvM7crwviCHvETpWw2un3g0KvOHBB0gxrbMoTrPPurTjstrGyEEm0iGxb0vklRYyHnAreQiHlDqVng8bMEM5JIT542T1mf+LTOhBsqLWAjuwVgWHdszd+R1lYSLtjvhRp6L4J6n7I55v2bEupTMOc2CxTc4Sc8ejuaHOTfp0TWUfEKsn0RHcXyAFlSF2RNG6rAdZfGAqGC7iFiZvo/gVy27urF2xIniV5qIIRBqSNJQuk/hxsYaLemTiGl25XSpHUJABAj5EC+jvIqRuUrc96xUJFDM/UNpeiiAUCmQlYR7raVKGkASEOIYGd1tiZ9r+LdEm0IGAAMWs4Uqj/1tTq84KRBHdOyUvXdzYxb+0n9JxebeXoH4ZvSxI3dNwCLWDBmx8ZPfI9wgg44TCfjClYgKSXftCBXS2F3CphMKbcfkk17yJu11pQMA+wMTpftWDL7pRYljjToyPVIgmToglwXMtA9V4HjKU7rx8jmw0MkavcDkBtHtLf+k6vzRwVmB+pAjyP2x+ZoYr3OF7UEDITSPvuMCBOBjPb0/ZOmakiFpq1oYyClUBeKL1HPG9zbzCKZo1gM/9vuzaku3UbOcDDhO7i5LPLIZRHiYoVe2EynoC1lySLpI8/cLq6cDspaTFKUDrXHExdl9PX127380wQ3wGV5EupJyaDvuLiSgMgfU/kKdDuQM3MU9C4vk2TdqkAlDYLKLSMVxaTQ2I56VYcygJ43JKOO8/JkOPxauIXSO45QsUvAdjRVpw4MCDT4StMA8yrAZNMez+Z0nYm+0klLPlODyExHdIECcugcZb/fULQQflwlz3e0JobQBn9UMYMHo3ikuF+bJU8iZyFsSZGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1035 charge at SH 130 Mainlane Plaza 1 within 10 minutes; the only earlier tolls that day were at other plazas (PGBT 11:24Z, MCLB 11:35Z), and the last charge at this plaza was day 60.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzHFMhm1vLZBryy2jZD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6561,
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "thinking_tokens": 113
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1035 charge at SH 130 Mainlane Plaza 1 within 10 minutes; the only earlier tolls that day were at other plazas (PGBT 11:24Z, MCLB 11:35Z), and the last charge at this plaza was day 60.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6561,
+    "output_tokens": 222,
+    "output_tokens_details": {
+      "thinking_tokens": 113
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

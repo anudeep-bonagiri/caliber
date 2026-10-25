@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023272,
+  "durationMs": 3761,
+  "httpStatus": 200,
+  "id": "3250",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 16:05Z ping is within 0.01 miles of the station, 2.4 minutes after the 16:02Z purchase, and the odometer shows it stopped there; 33.9 gallons is well under the 165-gallon limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6wcKEAgTGAI4AUIIdGhpbmtpbmcSDG0BospMq/mVN3r6dRoMz4mcuCU3h9uwWn2uIjCgdtmAwS4EVFoHmqLybhNtZkLeihnMYXf3/LJ1FMmXLB2+stP1RrXEHD1eQC532rwqiAex/I3OISDDw+t218CmsRznEIXVwaZh2L3HTNuaRHJF/4GRaAlnCqQ24RtfrD0rpyrxLvDhN7YeBQfrwVluJQCQyYk8OXC9Nn/UsdQOtvtu2jWAbNn4fx59IVGPbCe8knecE2IVnDgJuy3Md53+pQXQMZ8BD9x8ul9iO/RZKxz3nixIGUru11g9B0ZhmJA7DsmEs50Fc2sY+6tfqW45gqIaU/tEkY18R9SFZ2MLYoDFf6l6i8GQRA7VfE8FGsT/khmjBtodbh0aZ7IeQEAXNzJg1mOua56HhBvylBfWSknffOhKDeu4a+2pbibRvfYwp8N2CWOsByJGhsRKVhml9jPZx2Cry+wZ5/8dPTtfqQya7+z++x9o2Um+y24EWfy0lX3nwDZKKVxwN7ucvqnuGOVPh+cN1heHxkIxaqPSYfd2hw8n9+xzdihuZtTNqdC/dry0hiPiMz055b8c7v42fezLi4kggCZHVVTe8O2vmsqE11gc3p4hiVN6w1ICTmbpIseLT9eYI+c40IJY0MYiZQYd22fPxTm0i7ljCSb7p0XUeH17b61HwE+wvMw/+U5vuZ7aF5fYTVCeuLCBv0+Kd2L54MLczDU4x9eKdg5AJd/yuXo9lkLVu1dD9u1jmNUy2gDrI6tVLX4ETvQwoxLKSyRm5ynNI+AmPzGLu0J7KrCDxkAQ3qOGOjP7BDYusRYImREFh4igX3c0tERuhMDBs2h5N0z/A6xE3tQf6HQMLKwUGt3VfTIS0ZirwUfpRxwwBN0slZlo2s+IuJC5Gv2GZLZZtiWRPPLNZU4FNmInXkofh2qFnzo4KeOZpNiXUE9k0j/yuRHWVUEf5gbS4lRm2caDniAlUaEljT4am6GUV0Ha1FU7C65r4dXwrKmc+FySwrBqILVAPKWeH6sklqDpNJNrV7ETKJ3mYeqpSmjHedBlotsJ9hoCc2z/XZqwEQyFM1mHLT4QpxRwKs7tW9NGBDdtgk/GgVevorVHLYe+1JEp+PMfIq+yOwZ2Iag1byjQ8MgjTFCYEpNSrq5zWGYocZTAwiOfDilCxGiXPyRLwJkeWpMDzLCYufEl1qRrpcZvbjg8rXlorbMq3pKBIjJdY6+sNK0bls6Ix37q7HeOXqYSKFOjAqu/OMIL5wndkWh1ossc/VoKKsRadHFaq/OydESEuSMnwLEIlBQwA80rDRGbklfyN3Kl+EgRGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 16:05Z ping is within 0.01 miles of the station, 2.4 minutes after the 16:02Z purchase, and the odometer shows it stopped there; 33.9 gallons is well under the 165-gallon limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyw7Lh2khDHNtnosMhc",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4303,
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "thinking_tokens": 207
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The truck's 16:05Z ping is within 0.01 miles of the station, 2.4 minutes after the 16:02Z purchase, and the odometer shows it stopped there; 33.9 gallons is well under the 165-gallon limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4303,
+    "output_tokens": 303,
+    "output_tokens_details": {
+      "thinking_tokens": 207
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

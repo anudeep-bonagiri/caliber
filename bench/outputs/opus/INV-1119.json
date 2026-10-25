@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022832,
+  "durationMs": 5938,
+  "httpStatus": 200,
+  "id": "INV-1119",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "None of the hold rules apply: rate $1,355.00 is below the $1,396.00 contract rate, 1 unit billed vs 1 received, no bank change, and the same-amount invoices in the past 30 days (INV-1069, INV-1085) cite the same PO-1007, not a different one. Note that PO-1007 (qty 1) has now been billed six times, which no policy rule covers but may be worth a look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwsKEAgTGAI4AUIIdGhpbmtpbmcSDBpAzlVBVNT8FSMeaBoMIsbFN0AIjuH7ATheIjD8YCM7HaQi4IuGEvk/iYQxLuBsFMmXBy8M4jlFi7AJuLK96ftuyfeEfn9RUoEQT8MqyApNU0mwzjO/MxweXLPEbvEs/5JGK+jXjRlL8+zod9WvFQWrl8C5T84mEcCeLLdG7mAVSYW+Ugcqsa1QYH6tDP5grjeCkWua0kWAWSz8IYvFJ5bj1ZIG4SMhYuEm32hzEQInf+nd8SgKDwgssC152TuipW5Z00YQXudcJPEf51h368jWTquBbDoFxxv4xGSKG3JRu8L7I9zoxL//QJ1DgGdRhOxd6YszvkX2JPp7hKWV/m3aRMiwziSuF1FWD+O+WMc/deMym3DBxfi/Xk20n7ln/QOmz7aJSfCY9ZcpqMP4lMKWWJgqQGS8MpXOcCabcjM7mbnbTUkAQsVDyqWDbaO4eqTTLwQ/W2X2qSCwi7U/ybJ6h9a6dyIAYKDtZKFGvXsbgW4WtqBJnbEgTXPWhA+IaI0bqeQEFO5W7eivDAdo5in2P5u8QikCyzTBRklxRGuuALgvtn8eGGmUEZH7ZERUEUkxPcZ+psXLiNIyjPUmXiOuIYfGoudQ7G59jCABPqUfGcFuPpGIycITXp9yPsGAps2/xBS5b60ja8PE41oAdI9H6y4GTByG/XpWrBbIZGgLvkSu4+g+Q/e+kDnZf9TCQ4BiBVvZW2sGAx10cpKKzd3ll5aKtviYDqL3YWUKh48WmaoQ+pjiL7GzwBeq9pqm7EZ6pMIzDLDFy/+JF7x+o2Fke18242ETewrvrlgj3IxKfqtvesgNpLB/veirrWGrB7rBgd3hSpp0qUSaN0Vp0gKXqawrV+EzGCJ+UmuNpJ4Kf8whNbx9MQv3REZvmq3IFoSeHEUlded6EytTZbyojKNFQ+oKNzfd7eHZ+aLDnKbLB/BECARddxgPjHOHnL1idGMYWpmtjSP7rWtB2xslOgikHrku2CPOK885u8FhGOFXPNw3q7g4D0oA3EQcgIA6TpawnoTjZhm8tSldQX2yENZvy5HpIFJ/kCV3LSHmvBs/bLb8AtdNgGWgvlxYNZ6FoTMpQVIDdlz/mI8hrp6uHLh0p1wtbM8xflKg+huUu+0VcNEBoQs3OnD2DCe6xwAPBEGl3qq0S8G3U040rb/GqEQpxoQs0PINqvt/mX/uZNkGnG+LOoUMLcfMwIvckxyFJ0Bh933vbcd/AbXb8z85yUYC7QnnfwkflPqYBK0guR3+FvG2dDokDNcVuACjLGJaHP9QFGCsVl94wT/sbRXS2oOBCMAvXnMwxIL4ES9SRpqBahCZzsPdxJ5OiIVqCU0PB98cGdYbDr9lH2SVKYN4VtwM4bHrFDhRKYUuxqGNj3rgnC+LfBElNeHp2Q5Y65aXFL7jKDcsiexBcjAgrxF/o/GE+d/ZcSBZE3NEofxGU324OjYD9n9ROiyCQZoO2wD9cEUZq+JLs2lgizFjNLE6alcj+RHNHJUIN0MtjIKYvqkbxx/cB8WBCzS/9PT7FHU/pX8/6chw8PmnEZNO8fqKvIuVK60b+FBaId6z0jB9awp74hJG/abXLXMjxqpExcJEHKmHdGWRgr/VrYl6R36XUGLl/wnIwu9/bbaVYbBKti7+5fE4Y3gkuV1IoDhOTLPK7/s1s2pwhJnfk3fJA7EipWoKdxcCj03Kd16RfnaLEirK+t49ty9WaWw0Sk0FKs6K/hvn6nbWIi/CocC9AaqjHlEedjFHKD994aSkXOoka6XRDcb3lgCa5BEb2S64Cp3ftTPttW5ZHknnElzXigzmPj61U9BdS/Ail7Vzd+JKmDjD23NJUb7Ns8WuxWfMrQ0CU0GSQh7ALJMwXcBmOr4YCvApl7YVdIzGH1etVn0YVhW9YNJJJ4nnWhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"None of the hold rules apply: rate $1,355.00 is below the $1,396.00 contract rate, 1 unit billed vs 1 received, no bank change, and the same-amount invoices in the past 30 days (INV-1069, INV-1085) cite the same PO-1007, not a different one. Note that PO-1007 (qty 1) has now been billed six times, which no policy rule covers but may be worth a look.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzGowFCN8WBUg7T7sqS",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3073,
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "thinking_tokens": 369
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"None of the hold rules apply: rate $1,355.00 is below the $1,396.00 contract rate, 1 unit billed vs 1 received, no bank change, and the same-amount invoices in the past 30 days (INV-1069, INV-1085) cite the same PO-1007, not a different one. Note that PO-1007 (qty 1) has now been billed six times, which no policy rule covers but may be worth a look.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3073,
+    "output_tokens": 527,
+    "output_tokens_details": {
+      "thinking_tokens": 369
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

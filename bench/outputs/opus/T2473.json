@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.041024,
+  "durationMs": 2408,
+  "httpStatus": 200,
+  "id": "T2473",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1033 charge at SH 130 Mainlane Plaza 1 falls within 10 minutes; the closest was T2459 on 2026-09-29, about 20 hours earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QUKEAgTGAI4AUIIdGhpbmtpbmcSDGP+1XVhOMctWmJTdBoMzL5uDmZK/zWeW0LNIjBL1qwPlOCZr/H+dF13/fQUlLKL9AqbwYd1bmx8vi8NKQk0tVMQizRL4Y8N6ThMZKIq9gQ83e0UIFYTgPQHwtTTIosSdVk2xtMm36ca1JMySuTNdUf5TxLGLZTnxY/cGLknaE5+6ceH/NBitkxxbhYVbDP91FbjH1/Oif6OxqNMp+MDzTStkizkF/fPbBKo9HODfZI1Q1kvFmMQMcolbmyu7D4+cv4MxknmW2DAv1vInVEfV5o/6OYKaNQFdde37wpPMcgXQ+gUPORJM0/Vac4So3c/uYn273Kp5/o5ntktH4YFrYhf4HFOt6RbfcMbiyXspSNzDYwRUcN8VGqDPLocZYdEgbyc7dH4azIyOWbpNI6QvwS2BhpCWGk1wOIm3r0eOnB7d1Neo32hjj7XgwelmQTy7nckV6clPnsDHKwu5jRGNNLNqvD+c/nyBoQehmkDUlVntP1Z2JCYIhPYMbLgQCaGn+xglo/i1mmBYxPVd2TqcRWWDP+oZbwzL7p0+Y5iYoEA85dNpUjRksYeWrfxg7Ll6SqP3lDn9dIUyLFLj0tLuX5KlPupkjo2PH4oLg3eyIqQE/81qdRLKxHKN4Rir0HMIKAgm5n8qqy/gAitH7pO1Md/5b6nTTYcZ3x5cPn0jBD+Dry/XTJKe/kddrqqioYrBqFgb7LZ7WomnyfUnYiFi2gU9NhMO2xOLUB5DyRMLOB3nBdFl/9/aERoFpvbWPR2jprybOvsp8F2X0aYxiBVUK8T1NUnlkiFqnYEmLbiEZYYdaZ7JnYI8h2km/anp6cX//qmFXL97F7cnjG5wDySzPqLR6LvcRWbQv8yXJTpBDZz0OsDyPSiLrbI0b+59tEdF+TONaXvPukNyH1lcTl3yv14uowyt7bRecRxkvHBGPp86nbahMEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 charge at SH 130 Mainlane Plaza 1 falls within 10 minutes; the closest was T2459 on 2026-09-29, about 20 hours earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzLhChDFzBEBdDXwta",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9456,
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "thinking_tokens": 76
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 charge at SH 130 Mainlane Plaza 1 falls within 10 minutes; the closest was T2459 on 2026-09-29, about 20 hours earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9456,
+    "output_tokens": 160,
+    "output_tokens_details": {
+      "thinking_tokens": 76
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028744,
+  "durationMs": 5813,
+  "httpStatus": 200,
+  "id": "INV-1180",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 29900 matches contract 30 (even the 31150 total is about 4.2% over, under 5%); qty 1 equals PO received qty 1; no earlier same-amount invoice in the prior 30 days; total under 500,000 and the day-71 bank change is outside the 7-business-day window. Outside policy, AP may want to review the 1250 above qty x unit and the repeated billing on PO-1022 (qty 1)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwoKEAgTGAI4AUIIdGhpbmtpbmcSDFG1flLIs+iaZPLXthoMGVwMYJEvsMUtXXq4IjDNtoOdj8mplu2oFv0xjQUIUiANap8p380WZ84Jy21ouC6dQjiFSG2Pvh7SNicuKe4qtAnhSXwPEe0N73Sf+4U3eu6H4XfM+y2HrdiD7mYsnvtznTQ/Rlwyt4dDW0gYbGkZTdJMF1uD9JMnQ6LULa2vl/2oTc3lIFxev1un8F2YHL7STbndeziKRK67StaJmG4GBOPH8x+aOsVX6b4H2xTihhCY9lkeQrNO6r9tg3f5i78Hylr06QejQkgoYhbY94mYsbMwxx9IYPqC0oAQGqve78JDdBCj43fEjwETBugUa0lB85aBXehUW2SjykIduQzp5FTuNfwMBN6bxpqKqaDDOGzUCyrcaTnAhLL7Xz6dNem8Ip28fu2wvllKdGFv5XSLxV6FQqb/M0vFZI0EAUpgNs/d25HBqzsJB69DNfJ1tdAqfZW87ATLMXF3Wjclvm/Nc0PZr8HVntnMG9LU2qPDLotjGCqwsabfMIiOwKfSy8pbvAi9iWkvqKKsAVKhXxvbG/2bBWeV274/JDyUNJD5eHr9rQqjciN9WO5fJ+GVVkvpTycFNw5r1dtR51uMQlb8eQuxwEn88cD/+UkdIrbwUwNe2vCoKDsftENiJHhFjKDow1QucF1ZWuYwGuJgF2kzpMCDUXZC5Bb44cfN6X/tg9BkpNkB+6enR5AMD06eeBHRu37rPaTeXTLaA60AhK9UOlw1ZW1njL36ORhL/1fiywkJ9JynZXQJeFXQgN8rKAkn3ULMLiPePF0yYuOUrgSKTQvXOZ2xI+SclpuADQYDPFyYmfbhhfk4HWQDig0rSAbq1YKVIeoz2wiwI7Y+vPf0XjRjXlfZns0/tLAXgrEMZL/epNruKHAi9t0ebeV77diBmBbEUhXHwH6nbwZ1vMFD2l2+BkzL9vxZbGnbqcNQiNwbWnj4TinibCrjjMs1D8QVQxxS9CJtOLsXi77qFlABvvmJjvFFDIzMCn9dzM9ZugEA5jMwuWj86bgixr9KQwNGUnvo6Qitj4mCSLat2DmNSfFaLE5i/xahN5wRwt6K28cOyZ1bTBirbjj4j/omTZaFs+S7fWibbHK/4vjLSvpkHWXpq7iYi6p8Fa2Bc3nMAXBnAFoZW/czQFR9OlB1aGdRwTPONtDNKpdD63i3jK+yr3hPfEy/PhRV1ph2i/esYGFdS9TVzCcLfcX187cN02to6KeOXKYDLy9ODGNmObNXqYMpB18k4p7A0BhRMXz5ppE9+p7spcUGyjr2F/6oGXLEyXrqVE+padlmazvScTuBfZ+r4+Ftvb9MS3kliAnaIZDj18C+zJ0TlX5xdNIPTeWug+4mOWR1tHPLdUhWqjErWK+rj1NdkNzvDJH8+l3r6TwvKrIs86Bod7aBZj4sqXk46ixtCo6jXMYDxBItNUlTgW3oNg+XL3xr8mt+EYhdzi0rMImNWV6w7xwPYs2buH+bvQZRFTXrk80Zhk8N9xIJ9rYWLXHQsQK2pIgsGMBXfSbKvwVyh20hP0cZ+50QfOJNkCXvs7kxKcq//mltuBXbgbxQJIXRVaRe2ZbzzHDQztwY5HoWnaatKhIYCSA87+zCOBne7LRyKbWJ0QVpD7J4jhRNmdKGuuK7rM2TxtISR2q1i2Ysx/0TiKtIin6T9rdaNnreS5g8hLdOou/Hi6HqBJyEsJ7fGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 29900 matches contract 30 (even the 31150 total is about 4.2% over, under 5%); qty 1 equals PO received qty 1; no earlier same-amount invoice in the prior 30 days; total under 500,000 and the day-71 bank change is outside the 7-business-day window. Outside policy, AP may want to review the 1250 above qty x unit and the repeated billing on PO-1022 (qty 1).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynDv5MYDkkKPVE2Pah",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4806,
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "thinking_tokens": 303
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 29900 matches contract 30 (even the 31150 total is about 4.2% over, under 5%); qty 1 equals PO received qty 1; no earlier same-amount invoice in the prior 30 days; total under 500,000 and the day-71 bank change is outside the 7-business-day window. Outside policy, AP may want to review the 1250 above qty x unit and the repeated billing on PO-1022 (qty 1).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4806,
+    "output_tokens": 476,
+    "output_tokens_details": {
+      "thinking_tokens": 303
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

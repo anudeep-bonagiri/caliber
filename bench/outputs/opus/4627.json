@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025484,
+  "durationMs": 3145,
+  "httpStatus": 200,
+  "id": "4627",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35's ping at 16:35:26Z, under 3 minutes before the 16:38:05Z purchase, puts it about 0.02 miles from Love's 606 San Marcos. The 47.1 gallons are within the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAYKEAgTGAI4AUIIdGhpbmtpbmcSDG3yI/qqaNFlOq36rhoM/ltVSfQjLkTxjFnOIjCUkI+eAXiZqVl/268Uc+hPzr9UywPOSuSjBe4yO3BtOJ6VroTDcK0x8wfhO99Awq8q6QX8tk1JzSMBXHcImOqrXBPqJfErxYl8ukXwxYkaEJnkVnLUZoNOZomoJC2sL5zNITFa1iA50eSLx6HovbZgH5ebWPWDt1tO0JgyIu2uAE1PrX4MRVHiDSZp4l9vgTC8uE7IA3JmFYzlsQVJXYpPHCoy1H3oTTdZcRWB9iaDsTK/cRwmmAqaogkiDWKa9nwxEiTmhs3QOZJtzvsUPQ61pVrQpApo600JxYj87TukTV9H8VTIPDT8HzlikKDf7ZLoaYwZREO3PTcd6cMBYP+l781zwVpYyDMXUMVMCf+uFBeQEAhHd9YYXTZTc5tjzCbUqDQQSv6FDWj5bNzcir2S/+qDV1oEKKmOXRbxrO/eBCCYsRNrhnxSkGhb+V/o/9CKJfOI4LA6/GDlCAUCGmcUmj59m3ahquMJIJxC2TROjOctleJfUDw/C6trRH1zzncYZVvVtyks3og/xxrgmPo6XLbZffB9s+Kn9qc5nsuGovihuRqaa6WbANDkuFF+ie/ErRqmRxEuxqmEyzm2F4wqt13P+LsUHQaq5wRvCrVcaAdryO7D3e+T/XkEieEsQuUJTv868W8hLJtx+msEWYhPeWWnGQ7ZI3dqWUr6ODMjxwLRjXJ92X4KxnMZmBbA5tTureiczxLwwxouP8ZmHbDQgrXZ+GjfoZPy6ojvkykskQZ1jCR+TvLpgx8hYyEGRV/H3WtHs6+Qdue7vndW5ZOpvN1vfBCzAtPpvOuHJ0JVothtUgOH569V8XruoykePbv/fvCN1r40VtoDWRMa7NfUz5oWj+lW/gyzKt11N2rYedowW5GMoSdIrgpPZxsKOoVQehY+DsQyNTUWXxtQLrpJDoEvMLi7GoYvZyDK1CAoFBBSO975AWj4nItKNRsHM40rn7YAMzavcwGt38C5rJZGVIvikCHpf8DfzpQcVuF0yHfqDltq9ZMX9OWUKZIOjLsiToTy/F0FmupDGJpdmW12RHJv1ReRjznwfzLcGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35's ping at 16:35:26Z, under 3 minutes before the 16:38:05Z purchase, puts it about 0.02 miles from Love's 606 San Marcos. The 47.1 gallons are within the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygLW3bU1sJiCBQSaeN",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5106,
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "thinking_tokens": 138
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 35's ping at 16:35:26Z, under 3 minutes before the 16:38:05Z purchase, puts it about 0.02 miles from Love's 606 San Marcos. The 47.1 gallons are within the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5106,
+    "output_tokens": 253,
+    "output_tokens_details": {
+      "thinking_tokens": 138
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

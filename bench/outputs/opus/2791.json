@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026332,
+  "durationMs": 3597,
+  "httpStatus": 200,
+  "id": "2791",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged about 0.02 miles from Pilot 1029 at 12:50:00Z, under 3 minutes before the 12:52:35Z purchase, and 54.7 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmwYKEAgTGAI4AUIIdGhpbmtpbmcSDIOxtTPWgGDHTnRPqxoMvIXDAH17/Y71KwHYIjDmK8qlCHWT/cblVwFeg7dh+hx7KdXl47Ajt/Mc8dZ50POoBHgJyeygu1kfG62ToZ8quAVpT8o6QLH1m6bX1hDLGPggcTtVnE3XJmWO/lgIUE4MV0bjqUcAMTOGDERiO7XUggWUL4hCpTIHMfKgpbeDMpxXKM99IgFk7JAZhAxZ4hJfEZrmxsB4UnDMKRQRcj5VFJaEcZAi+RI+uPSDeQEtDXyc8FC3NZZ7F/jXSEbk4GNFOtP9kl4NsnTQH0fPTi+ZmpVkR2SiTcvRQh6uq2xS3vpK9ClI6PI2BSTY8Pn+IZrlmfSbTBFwKae3QGtrSnFqCGLQX1RGae6qCVxz87rIXIGaiLdNMUT0Vk76CuFqdxDPT6tX3ro4KROEa0XtPViYZoDNKwCNT+5KStwaHQkccGOCv9BNGazKxb76iyRC5p5gdYkpttWyAsYrCgF2eVZuRogOXxeTDrjvX0492Mv7vzxwk/SgeaP/FtImiEygvw3sKPeBv6Fyd3EP9wNuZ90TsgtWtFuoc9QVLmc7KQo74nqlvze7aHo5lP+gG5As0u1nUkJqylRF/DDqbWZ8yQCFCIMEQCrFQuu4TZo5KBdA1hiQj3Nniam6f9seh1lRaltSbR4iCI4l6EDtKTXumwSzHiuBwJ4bVSFPvw4OWKma7u9Pz19bkVIqSqrfw8n3/vu8Wc87r4/5dVxgvBn10y72KPHWc4kLS36jN64aMWXrnab8Y9LhQGu3mMgPYCyzFYfBl/gB9E/qduJHYJi5vYIZYIripUTdNAV69Kk6MFagRjKB+SKdZf6FOcXn3JLPAuCMW8bEHF6a2AnLXlWBs+zcaO/Tyv32dsuNdsSQCbPpLrJnIY0RStNCfODjfZVu7yRY0SPFOdNhC+KUjGgF+5k3B8O8i2a4Jjq4x9i/UQD7PeG7+CuSNT1UYIdfireEBLU76bogT5El4NAxd2uV7VvDuj0NsTxkqv6iM16KqlTLWV1KlP4LFoVy4kEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged about 0.02 miles from Pilot 1029 at 12:50:00Z, under 3 minutes before the 12:52:35Z purchase, and 54.7 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfKo6YxVBUZKuGbhSe",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5473,
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "thinking_tokens": 111
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 33 pinged about 0.02 miles from Pilot 1029 at 12:50:00Z, under 3 minutes before the 12:52:35Z purchase, and 54.7 gallons is within the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5473,
+    "output_tokens": 222,
+    "output_tokens_details": {
+      "thinking_tokens": 111
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

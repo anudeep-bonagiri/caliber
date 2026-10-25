@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017372,
+  "durationMs": 6477,
+  "httpStatus": 200,
+  "id": "INV-1051",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the matching earlier invoice INV-1046 cites the same PO-1013, so duplicate_invoice is not triggered; the $345.00 unit price matches contract 21; the qty of 1 matches the received qty of 1; and the vendor's bank details never changed. However, PO-1013 (qty 1) has now been invoiced three times (INV-1029, INV-1046, INV-1051), so cumulative billing against this PO should be reviewed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+AkKEAgTGAI4AUIIdGhpbmtpbmcSDHUShbmZV/zqcjX6oxoMrm8iLnckaTr4Uh1nIjCkosor4URM6eYYcQSI/WWQm0S2NI2sW/6z8ODYrXboOix6elorWRimMi+diKq3eWoqlQnOK9uLNrNepKeNAPqBvkl7Qwn7qIHuVzRmme29xlSg73Cqzo/kQ4aXpVy7Tep4b8FQdWpEpKzI0XNwqRC1ydtqFEWbOC9+s8yWaRNlNm8zPJmapLk38CmB7VJ7+pgjzYpKsO4Ba+dGIKEaWsRgVbrzYy+v/So79eGrMQeky44IgblWk87Dydrk7BRjn8zL4buEjmWHW8+veYffMz/S7B71UeNNG3S7FwJxCJSs3omKMFQ4E7FGSowLRQ2LgWYWIqv3/Cidxr9PaTU+J8XEFqixOw+fFHIczjvLII+ptY9aqmOcI62vncSMw15V1HJaymw3sze3bKsXR4kgAjjdlggYU+2poB6KSbz//7K6F/Qc6rKLTkJDtnqacM7osd+lj/okuA0Lq4kFACF1e54/vnp/UGngxG34VGKoY8X6+SyfnfCyVKhJcLSIzTp3T/f2SWs3sv9ZtgpOTxNOgeTlKF9vILM4mtTha8Yn2AuNVAg7fNfxH3za3UAyGmWftN+LHntB7ckR+R9Ko1GGRCAYTehkCmwUd7kpXvDpzsthlEDokJEPSZOiBFTsvLoWFsdAm1uS89n2Icn4HLXQtA3dLRXmsJ/FSIqBe6dREquLjlcbiwNp03tYjomroZHGKsjpJOOPeUkbQXrNjzF94znJ8fJhvJW6F65GAuRMfHTz08kGKfOVkJ1C3HMtycxDtOCUuJlJMv7078l+oIj2Ldjf+q4dGCRE6tK+3ivQ7W9oYXW/ZIa9JAqEyLA0lr5hLNlrKVboRpZfAY4oeXWdwqJjzV5LBEMEolVlVzXmEkrN4RKRw9qdTgb7nL+CZYppUJ9dE8Qmd00rTkXUxxkPYkjb7TlyU6G8YfCs4wnAHIcSrSy0kcA/pNM+QzhQ84vYHV6T/xWozcWPXzg1zwfj0drWTcdpkkGnVvVGJP9VZH3v+O2J26b0xsmrqOX+8w7oEQ1s/OYcY21tbPJ6wj1oqFtDwa4i8FIvyCOk5qbb/TvvOJ7bFzSuUQM785mw1eikog9p6uGIk2XKBF8oD6CltyyNvZxgQrecfE0nW4Y+OasVD/O6EqlxsZDQlKeFSumRQeR27qK37NNyH6Ym6sNeQudNYPxX5H4/AlefTxQ4bF4XHpRzU8uRFsPl6gW02AwS4FQa8K4SkL2RJ3k+KRXtrMo7C7ItLlzsnqa24m185XL8QT7/ZSzHKqqV5+faavUaBoplh0YML22KgrFCVizOhoJ9c6ZG2PsAf8UX8gIgbJSAHDTJwG2I8P6X/zeYZPrx97AI0NJ/3N45E9NQ4/dbYYXpMiLF9PWFUJsjFHx/5KvvUsQddRzZ4+1nlbs2q+NFSEDbiMHzqa6DRZV2Zgbqm1Xu6v8eJVHok7ZkjpziWt4YkvpjGkAQdgQQskhrwvSvpDsO5Vvbu4uyWmqLAaFMsQprhDTltU+Ka5rXjF2dPLb/xvKL4az3bJk3GyFmVHTHwJXlbJ9qvAP8g5t2vDsU4IpJnONQxIuI3C12H/FEEUQ4XV3yDIhpncJS9U8bazwOlMidRpFEGOLJ0kIFL+M7VQ//QHKfHOIb0T0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the matching earlier invoice INV-1046 cites the same PO-1013, so duplicate_invoice is not triggered; the $345.00 unit price matches contract 21; the qty of 1 matches the received qty of 1; and the vendor's bank details never changed. However, PO-1013 (qty 1) has now been invoiced three times (INV-1029, INV-1046, INV-1051), so cumulative billing against this PO should be reviewed.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzF4mumihpTm3yMzQJD",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2143,
+      "output_tokens": 440,
+      "output_tokens_details": {
+        "thinking_tokens": 264
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the matching earlier invoice INV-1046 cites the same PO-1013, so duplicate_invoice is not triggered; the $345.00 unit price matches contract 21; the qty of 1 matches the received qty of 1; and the vendor's bank details never changed. However, PO-1013 (qty 1) has now been invoiced three times (INV-1029, INV-1046, INV-1051), so cumulative billing against this PO should be reviewed.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2143,
+    "output_tokens": 440,
+    "output_tokens_details": {
+      "thinking_tokens": 264
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

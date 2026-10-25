@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023656,
+  "durationMs": 3893,
+  "httpStatus": 200,
+  "id": "5853",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged about 0.01 miles from the San Marcos Love's at 12:34:33, 3 minutes before the 12:37:37 purchase, and 64.2 gallons is within the 165-gallon limit (150-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlgcKEAgTGAI4AUIIdGhpbmtpbmcSDHLmvnoqVTBf3gDVyxoMOq2ZUoKHdNuzpxc/IjBy5cPye939Sd9M/JbIggWPnmOR0IAoIvtWqgNZkpvPyXKWgeDYJ3h1jyu80sY8TXEqswaYPUj/GGu2sSRrPVKYPHX0EVpIpfNrs1DU4VhGzNzi3Z3FPAuDFc4EnkYCkgpI4dkjSS99DdS+gT8rN3Tf12PB3GiR083HXS4zcUnuZDRQ8jN/OguIE0FuYeAjjG5diD9Uf4sBaA9X3y/l8OuTHGPLcqKxsrNn8o7ZVkMtJyJxy+z+Q2mU8ahwIuKOajzkyajqd1LjQbKOSsXIVR7gvcM9IjRi7y0ckGSCfWAutIFKp/nbXHTdD/Gp+7pbxkIVDF94cCZgGuVitsDowZrz9ZN8AS0khJ9781fknYzn/BerNy90HGt6mbxAffwsmGDy3eyJv5Yf69i6CZ0FSiWLKAcwb/0KgLCaoUY0vVLNuFzRd7POUlg0qpLSDfC/xmk57niMnlgDmW3UtupEPpoCRlM4LFR899ijSHmKV6wQ15iRTAdih0zI/ou4TGUMg608cPyGra80N/2mlFthkNQgwhUTFvbYdHWfOOL4jRBfY8zNHOZPP51iOtj2yOczR5RHrO0PEAtudAhS2RS89IyRV/+CdHstX3CnplH2HVjlHTbvpz9f4ad+AaPlQhQ3dUIBpTRXAk2bV/qvCSOtP6lyjQj5oUOcM1svvGWK38u3jhumDFc4IAbvTkRSjbmV+5DDL75udbioEkV6l6JvC2qsneU23CG4fA/mmfnKp6Mv/37SfzzoalNriyVyL0qoC0Nkb+0UBTTeyvpRYYVuvYwLoaaON+Ce95fA4k7IYKr+wPVxOTelx9+ejRhQ6LbrUau29Q1ziCHdITnlBKomUtBMVmFIA9oqpNP0OpEb7O5aXd6zeQJFXe2EBh6bzg+bYHS9ws0XiTHUJJFKuB9r/YGvTlrOwl/2RP4b78iBLu9S2e6XRt8BeagpsA21HKqJMA4WctR7MahnKWtFsjzQr5+YQH0ug+yn1lm2SOZ6gpkQmMDTF9TWkOc8v6HYLjCtOpASflJENBopV25WCMNYJE1Pm9ah4FP+vW/X1YVYmPd4zy6nOpij35P3H417a5Hu0bZtHXivThR0fMosr1IjCLq0F2ZLTq3cCq0BbSNyTvMc5wf36X6b2YwwkGr+1JQ32diK8lqGK5oYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 17 pinged about 0.01 miles from the San Marcos Love's at 12:34:33, 3 minutes before the 12:37:37 purchase, and 64.2 gallons is within the 165-gallon limit (150-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyyS8M51fNrmqzqEftF",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4449,
+      "output_tokens": 293,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 17 pinged about 0.01 miles from the San Marcos Love's at 12:34:33, 3 minutes before the 12:37:37 purchase, and 64.2 gallons is within the 165-gallon limit (150-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4449,
+    "output_tokens": 293,
+    "output_tokens_details": {
+      "thinking_tokens": 187
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

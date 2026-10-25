@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017804,
+  "durationMs": 3564,
+  "httpStatus": 200,
+  "id": "6065",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "At the 17:00Z ping, 11 minutes before the 17:11Z purchase, truck 26 was parked with its engine off near Corpus Christi, about 120 miles from the Flying J in Encinal; ask dispatch whether another unit or driver used card FC-1026."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9wYKEAgTGAI4AUIIdGhpbmtpbmcSDDoVNm363wjMCq1fHhoMlb43EtduIgQvjDc4IjBuvcBn7ComNe9qHZU9NAkPlE5ZJBTLHR578PEukmBJEzYtSFev91wApDplqgY5yhwqlAbVrZbPqLIz8Qq9PBrOEMdFmx+HnDWHhGam9D8MlUHBLUeHx7VMBBd8YBNCMI7Ybga7/mDtmW01D7E+6itXufsunGu9loKMjxGpIXzdo9SPX865J4L3nWrr2LZNu6ZeAE5TccL+YSfyX03xZ3GHaNAFYe/l2cMtvZCcrif8L84hgSyd1++kWdWl0sjmjuqUBD00FXNo1UH1xoBpAGtrFSRBO065BK4rFC8N8xb//2F274Kn882aZjs+t1E+Mz8Zai1EEyzltYeCiAaWyZLVWDD2uRB4H5fSDbrLuFAAaMc8EoryChOrFAsdaSlkEAyv38adtB3W1KUK+N3QMDSSNK2R/Syy3w4Otko0UwMcpiYB6zSZoLwUDuSlXn7TTnKCkIQJH6RNuWwd8FkJPAkHpjDbI/+2iKKCFSyBTuBjCBMdZe9C9yM/AQtyr9ryQlCKfv3UxnsnyUId8owgskTO+/uAr/VD7DXoPgo1JCiR7ioeVSj4TnmkR4kwfon8RVbjsXRKuH1JHt0KUZVqJlKzPxoenwC2upHwSq7O1jv3cww1OculQuD2hWJBsIz3ydFM08dZKB+kgAbby9+IVXc+BYvMP1pFxjc6uUL6kltsaeeRgq9pHTKqFyGySEftopIOaDq1FW6L7Lbba4DjnjCXTmqkjIwZnR3stgV+76/Xi6BMI19fVBgnn+ZveQ3G4gfzGwFTvOATBVJdui+doXYVoZeN2oUAKxnOQM7zTA7MWqh+4Iog+TzyT6kpADAS4xANJmwUvgZSJvz5was1wnOKZMAkD3RHSCuH4hchwv/XPyx6zW0UDYYPVLvP89p5QgoE7r1J2Q9AVhbaQVE/4fd+JKcE3TJcvk152S1AWGEgtlxZ4VAvQkU4jqyiPVOFUrlCArcngd4DqM7zslqgYs0Jq8wY5DYzQ7RBTtdZ7nlSqzFyHPzo2r5wXX72wdevmRyO/7jRGzy8Y7Nc53FzANWw5pAK2LSPUNFaOiAM+QnDo0Q7tcN+/Gz9fJE4stO62sXFXhBwYkqqghsi9Wadfqow78ChKrTa/hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At the 17:00Z ping, 11 minutes before the 17:11Z purchase, truck 26 was parked with its engine off near Corpus Christi, about 120 miles from the Flying J in Encinal; ask dispatch whether another unit or driver used card FC-1026.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFQPcv4XpUVVmRrDid",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2991,
+      "output_tokens": 292,
+      "output_tokens_details": {
+        "thinking_tokens": 173
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"At the 17:00Z ping, 11 minutes before the 17:11Z purchase, truck 26 was parked with its engine off near Corpus Christi, about 120 miles from the Flying J in Encinal; ask dispatch whether another unit or driver used card FC-1026.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2991,
+    "output_tokens": 292,
+    "output_tokens_details": {
+      "thinking_tokens": 173
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

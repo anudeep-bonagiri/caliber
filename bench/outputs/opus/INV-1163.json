@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022192,
+  "durationMs": 2887,
+  "httpStatus": 200,
+  "id": "INV-1163",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1163 bills 2 ac_service units, but PO-1030 shows only 1 received; propose paying the received quantity of 1 (41900 cents)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvQcKEAgTGAI4AUIIdGhpbmtpbmcSDPhK2qmGAJ7V4EL9PRoM5IeQKl1s7itAKf6yIjDAoxej0zdeVDB7N2n137tek+b/3hSFNFlgwT9DtwYGJeouOtPORpNRC6Kt5e/Zyfcq2gb+jVu6pqp/zrpPqgdyv32yfooZkATB4bRuZWz6ZkNteYpMAi+WKdF7dpqS5Ma3tJ6TuTNJSxFbdhXPTYgqW06LEzaK+UljJmEXeSZm9W4syOiaFth5e+RHoYoGP6fbXddpoThU5J1asqmZQaJ+mZE6oLIEAgJx90Rui05anJDiOlM+yKiOpAAg3+hxXkUDZe11R8S14CEaWms/sxNNe9NE8ABH8sI4avOgo5jrVJ8WrGl6ITNwbR2XWlaKVUehHer/3fg9cXJACQpz+/x8EkZMkdQYBupSGIjV4XIF7Aqvk3YbCbrVprDrzbyjbGNf0AjpTx6RtJlKOlSXWVL9VSe4SiczA2AQclo9YfQob2ObUPbFYfNHflLH9xg5arrr8Ne3N+/8Dsr+e4xC2YkztWSA8ODwN+KUvFbw1Lrkdj79mfjTorZoYs9lERRnIBUYF+BCmpSvNOS6+p5EGLCKPjVhtLoHqxKyNPtK4qXEa9V0xwuz7z/8y0YUF2kwB6aAFsTMwgO16v2yM8CYnDOmCj4kaR98T2wFPqzSAFhHlAKNg6m3zkhga4H524rJ29gbdz/vg808Y20hLhNs+Y2Xw6RNckuB0tarq6HNfH9XmUkHx16a0N37RAomHu8sWKgA7SC6HGopKFpiwAPpGI9BQWVZ3XNiBawHJ++zDfLtU8s+qQ9Cu0CVUJrvaFZqL3SQ9CU0frC7jZ+nktSYljzi9da6YFzmEpYrETzKQhUt/UQ4OoQMhkmf0YdxEO7HgXfFR17r5BOWDCnJYEmhirFU6VO2tt8HxGCYGElk9P6NosQrf6mjMQYeRCs+I0io+TbA4oR7AUgtLz6g3Y8DS6uUck8aTFf/GNdQ5dbUFXDH7DRNGSW/fZi3dpkhgTUG9yaCdQ3TQxh4l6sywjwHDmnj4u8wW20liH8hjvR+ffegQltrP5Jqdy0crHWlMqvvNjZFkWEtG6johvMy2RgYFnobwFbXAUxO/kr602yg2tcEM9I/fDa9pmVWya74lh4U86b9Q3kL6DY7225d1OPQ0n0pJ32pW/7zlSf+GyX5uRXscOGuGhNhXWOqdoZAbqnFUB+IOroRvk6Chf79N2EXRaAJWqLVUoIOanCZgjaclnNWGM6or/IC417fxvvgz1IYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1163 bills 2 ac_service units, but PO-1030 shows only 1 received; propose paying the received quantity of 1 (41900 cents).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz3ZgdfW3se4M55kPnZ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4353,
+      "output_tokens": 239,
+      "output_tokens_details": {
+        "thinking_tokens": 161
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1163 bills 2 ac_service units, but PO-1030 shows only 1 received; propose paying the received quantity of 1 (41900 cents).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4353,
+    "output_tokens": 239,
+    "output_tokens_details": {
+      "thinking_tokens": 161
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

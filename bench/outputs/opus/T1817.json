@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025388,
+  "durationMs": 2457,
+  "httpStatus": 200,
+  "id": "T1817",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1033 toll at SH 130 Plaza 4 within 10 minutes of 2026-08-19T16:36:41Z; the only earlier toll that day was at Mountain Creek Lake Bridge at 12:38, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AUKEAgTGAI4AUIIdGhpbmtpbmcSDIVF8e1EY0aYKsUUKxoMMPmf+oQQRR3o1wNrIjALfXniytw7FUnjFlQvR3JxvIPlPEJrMSSPckEs3wsSdWJimM24HLSjzX7zuOXDwAUq9QS3pUg1wbkF4A4Y7Ye78xw/P1yCLFBcD3L6/zGv1Jexaewhix3m0U8nN17Y1kzlDwBnMqYDnIgh1bKNOzr5Ki4My82lNPnn2/1j8d+IJCIr0o7+oYypD/rLYOUd/rgZHA+/9xQdA3qCvS6fcm6IIr3YKo0QbGFurT4DRTN5a9hqebXEBFQBbRLBz5urAHHNlM2y4VLnJOziifYONNmP2I/WPtEIwNASDMg671vMlh6QK+tMOPBspkkNGBMYn9LBCiBq6ealp2Raa+xCy2WuU5pkmno2iz5PDXdUahIeE6OP4RVJcZnc+M+0wK2x2MowrBmfIg0VvaCY5q7dmZXM9JkP/LQcoa8cZfqxclWZrcvy0aB0tpt+7tGZEzeZejehOb4KlqqnB6fsr6k7RANixWIfXdXz9K0bQ2sU2AAq/9b5/WB1T4xnQyyGb3yqITRA5AXHlip/NbYdIyak5FXnHB2otKmlv1V/cpAP78gYKIxnuotr+bEo4gS1Dt2ZvTbvwQofpS00II3Ygx5ppkwqicnltH8PgY7q0jWhoMRL7jk4YqvmxGR41boy/VhIReLLlhegGK9mCtLcFAE2G/rsQSOhkkA/KZ1ZDk72W/06btp+inRBuyiY6XfTQeRfcD1QKOIx0mGD74wVHqSdB90rfEjvlSel3piT/meASvTDD5xEHkmc6ajui7IQQyhwIU8O6GCRSN5rpi4caw5L8xfwpxNi+tPYYSuEt6E/wdH5Fh/79ic+5C6Buv/LYFJSJ6GpWYTBKw4cAETnfpO84G4zhR0GzzMk/cl5Yd3M2jE9P2x0UgJSg85WBxSf4R3asSzNVBuO0ZnEAhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 toll at SH 130 Plaza 4 within 10 minutes of 2026-08-19T16:36:41Z; the only earlier toll that day was at Mountain Creek Lake Bridge at 12:38, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzTuXydgjfp9RoKFCb",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5427,
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "thinking_tokens": 77
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1033 toll at SH 130 Plaza 4 within 10 minutes of 2026-08-19T16:36:41Z; the only earlier toll that day was at Mountain Creek Lake Bridge at 12:38, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5427,
+    "output_tokens": 184,
+    "output_tokens_details": {
+      "thinking_tokens": 77
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

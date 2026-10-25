@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.033716,
+  "durationMs": 2350,
+  "httpStatus": 200,
+  "id": "T2203",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The most recent earlier TX-1014 toll at SH 45 SE Plaza, Creedmoor was T2129 on 2026-09-11, days before this one, so it is not a duplicate within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxwUKEAgTGAI4AUIIdGhpbmtpbmcSDNyQNlG2RtcUhj937hoM1PqikHQg/fKlMzPiIjCJG0KLc5pjJrj1Q9kcVPExyqyqZxkMa9FnYErpI9XiBLTwRvsWMbdsIEf1zbNwnpsq5AT7fHeFeMAK7Et2ig1g9hWADyZAmDkYPG72l9j9FwAZi/9Q+omVSSoWK4DSg0shVWMgqFAcqLarKrXuLKp3Vu7VRtYYeIDSQC8AZY1eHuON/PKFbKfFZ4U0gQ9IecsdttSwhiiopXnDu3/XRL5gT4bjEgNYZXmUtd/RcRr8mDu45skjuqaT2uv9gWWDkosmGLwpPS2dj53WxY94BHOj5MJwTK0wZSy2SaC1oh7CNwNPqerH1sESi7DvXXojdnlXPmW/mF9N0rKjHMT9nfXJnLwYXq+Q6iT1UoodP7sbx6MO7O9l8o/gExlEybxmysGLGeBVuJdq9q+YrdeIiPsFOC8I8hafNGLe04uu2U4SkRo5LZ9tj3wwzVJYwbHWTPKEf0ErgQ8syDq4P1Zu6MPYtAC5X6VyD8kcXaWj+/Da/anL/o/lanxh7RWcjlz69OZ26TSIdbEgpDEo08XGztTtZ3ixQIs0QP1WDRSmqRj9CD9YWICVIrem983QWrWS6mE2k95kGyDnxqwH4MP8fqv7ypL8qhOvmMkVpLKmErvvDcW9Xo7tJMNjHMMN1SHZqoK5+RLJlsQR2VDvfOemqo0ybpl/DPzMwRtTTUt6O9UfihoVdSw/vZvcTfwnbWwjF8w9URjVTb25w6nceiiDPq6N9gzpQM8RcQaFxtBpwzw2thw80CgoilauQk5R3DtN51+b+9J5N392rXcFV/kBJXeyH8X8ggoGD7bVD984rQZDjTKUY2ZcPJhWiXAPWhyH7M716VjbmCcsBs9tPm765Gqzl/uSm8vNScaTEutBl2tAY68fVyqXZcYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1014 toll at SH 45 SE Plaza, Creedmoor was T2129 on 2026-09-11, days before this one, so it is not a duplicate within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyv76HUxP7hEXfzxttH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7659,
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "thinking_tokens": 67
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1014 toll at SH 45 SE Plaza, Creedmoor was T2129 on 2026-09-11, days before this one, so it is not a duplicate within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7659,
+    "output_tokens": 154,
+    "output_tokens_details": {
+      "thinking_tokens": 67
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.048872,
+  "durationMs": 2332,
+  "httpStatus": 200,
+  "id": "T2751",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1011 toll at NTTA-MCLB-01 falls within 10 minutes of this charge (the last was on 2026-10-05), so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AUKEAgTGAI4AUIIdGhpbmtpbmcSDAHfpZSIgEexGU/VURoMlV8oxmIRa6vJrK/iIjCgwXlZCu7MF6dph2jHffp5QWKoPvICgPbdBLpcUsixzJ2s75ZLKAMqWUxlFCnHElwqmQUQE65u6NSXu6Mhz1eB0FX/Cw6dlZASPD3egIUbcJAh9Hfp0YBGi6F42ktSHnDltCeyPowydbE33tUFM1vSizYc9v7eIiEgghE6SEGxXAFhHh+WMda1T6bp/yjraCUI4jBWcjyI90vWSqqiAa/nICcw2NWOcvFv0ieINoXA7E9ndUdKxFoUXqykZYySbdK4M3pnV2Owaah4VQOH9CpVBjjYcrG63RIp2M1v4/AcLtlfp9YtfFB0VqBNg/mT7v9jDVNBNjnAmHSNrIl2a/3WgAVxl7uokVvHaQ/qu20GNU6fuqVhR1TUHTXLkOwXodRL5+a87e+QETL8/qg+Yww9FZgOvGoSpI8AAsCqIw4F49jf23aABSGojozJqI58SXezwJDZ2NmnwGyi/j0yW+BMMIZ6ZiYGDEUWpVzObaedGCKOq25U/RZ6tQ+r9t1NAUCUAOnubTdD3mgn8XUFJsje7lkfwlKUIN/Y+aC5L8I693Pwv8leE03yI0OXz7I5Ezm8MENfpSr3IlHWa1LWoVSODk+yZ87OwzS5OehoVvg/kCUoVzebkLYo5fN5kGzdfFtVvhRW5SJCX6Srkp36i0Rz2wa14omkSbCgTb54GnQHPeAkTe+VkjbiRBLlbcTHOz4e7A6W0Fe8rPOANO/3dy8p7A0pJt6Bd+8HPZb/gu+LkiU/G+HETcgVE6D3esne2u8HymjcuNJrNpupXpori44ARLpI/1LDCCkgrYK4E1zUxnJbQJPqNZRl//Ys0BpnVcK6ral7fE2LWQT8WRUD1vFWCUondzyum8rpuIqIzzCsMMayQZ3F9MTDLY1maDuqMUOeguxwjq+C8vgIXIA3cYL6qPb1WZXvCI1aDIYr4EFlhqwLVJFAROckHjzvOBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1011 toll at NTTA-MCLB-01 falls within 10 minutes of this charge (the last was on 2026-10-05), so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyxmuhrzy3UdHZykpMi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 11363,
+      "output_tokens": 171,
+      "output_tokens_details": {
+        "thinking_tokens": 93
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1011 toll at NTTA-MCLB-01 falls within 10 minutes of this charge (the last was on 2026-10-05), so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 11363,
+    "output_tokens": 171,
+    "output_tokens_details": {
+      "thinking_tokens": 93
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

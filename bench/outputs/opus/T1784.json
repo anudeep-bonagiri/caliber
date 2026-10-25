@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0172,
+  "durationMs": 2281,
+  "httpStatus": 200,
+  "id": "T1784",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1034 at NTTA-DNT-01 within 10 minutes; the nearest prior charge there was 2026-08-13T19:40:25Z, days earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxgUKEAgTGAI4AUIIdGhpbmtpbmcSDLBmcPrQ5QZ7p6S5ThoMecRmbtzK1PkLgFXMIjCleel54PM/r5YmqFnjCv4Md8BQBmErsbVA8ByvsBOcewaSaEot0Q4udBrroDmUIBAq4wT4Og5RtPbAACMl3t+C+vNuWC9EbG095mkaIdGOxRxJY+mgsJQY32KvwBzlTzNhH2gBYl79j/8+DkwsThVEkQ7TWHRJkzCvs3uH68n18IuQkxChUKruYCF2zOkUz+q7clqbm5wEDRFiMKv3iS6wZ8Cam8inu68UoiSjHaDwvEavU2ZLO7EAuy0ea6phNCS8v8WwHLOGwSHYgdypTT7LEYoKwsmMHkjp2/+iraQOJjYlJmQi7ZykYLezaI/QLq735H+eMko2bZogrYU3qO1Dh6/pBYIDH8dlSGXKAAadfTntBffLvXr2+qsbnQBltF9zLQUOXqZa/d5Wzj9leBz1abrpWeOKZkO6T8nX/RmRWXXpQcHbRjZPuggm9JC/5IL5kLHMFtJmXfEXER56agxHFkZiu1SmnGVmo1D7hjyhFOgS+Tks/plv2Hw2G7nn45Q6D5RCkTB6Pjh+dbr2JUraU8zlGQuvSJ1sYZmXGAF3JChwMEDvEZvKlrpF0/dmLpNlh/lKmEHSuApX+G7CDvwmX7ssyOWgh0Nron0yi/Dym0n4Iex/w7YzZ7LGnsV0YUf2tpJv3ii1Orih/U+xCJOV/b4oGSCwcgdlp1hURl1mTTmGjdyt9MwvtFFZugkBJOPAKs2IC1GBj/uH4smUzq5bz+gl/qzXFDYtAnFb+wf5pSapx6ktCEEJZ/3iTOo2dvdVv5XPlN32xGmxbiKYZzIxg2rCpFU/BTGftIRN6bgNFEalBo8I0V2vsN1YaUcD1ETHasS8exuWFcZktdutGtGO21DYCNvQFZCtv05VZgQc8WXv2BwVVhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1034 at NTTA-DNT-01 within 10 minutes; the nearest prior charge there was 2026-08-13T19:40:25Z, days earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDmXoCAZh8KMhtBJm3",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3525,
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "thinking_tokens": 72
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1034 at NTTA-DNT-01 within 10 minutes; the nearest prior charge there was 2026-08-13T19:40:25Z, days earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3525,
+    "output_tokens": 155,
+    "output_tokens_details": {
+      "thinking_tokens": 72
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

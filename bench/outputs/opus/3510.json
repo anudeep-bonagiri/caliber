@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023884,
+  "durationMs": 3869,
+  "httpStatus": 200,
+  "id": "3510",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "capacity_exceeded",
+    "decision": "hold",
+    "reason": "141.9 gallons is more than truck 26's 100-gallon tank plus 10% (110 gal); location is fine, as the truck pinged at the Laredo station at 13:20:37, about 4 minutes before the purchase."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqgYKEAgTGAI4AUIIdGhpbmtpbmcSDLoQ+rJ1KcmiAdPWnxoMWhPWX9ccLtnOy4oYIjBso2w0Rh2/Q1n7nU2hyq6Uf8XhdHmnkrZ0qeJZsqXilc8kx4c/0PoiXd9mTCNxXZEqxwVrRP6WHZR2RMmq/ptCCIgX38q0TlB6wI1boylYORKBXnjKYuZwTiaSDtoBeYiLS8ReI3ZNthRPfSzYItWghabWJ0eM1fN4SDUylWemwLqOVobR5XICIhc+FtwJ0tEmj+FWTiL3ZrpEd17igA3PPl0jFsscsv+5/9GXnTdtfTG7Ptwu7mbMcF73wjn3qw+0nDowQb48vT6xQUlr63FcXFoWdmnhc3XXgGSa0ugsSo0n0+P+ccOF+XwuVNEdOtyvmJ6sDd0x80xRvRkO/9tIaXlNmLELT2LaMhRPKwukRPKMZoropSfFETRQNLTmGfnd+b5Z4+jZXNji8FXJ6i3e4lM1YZ1V3xqHu2Tg+42ocnNv0Ju/LuBicWvlVW/EJQ1BQiLKe7FPXk2spPbgAJIf4XM+nZT9fDL2dJGc3f16RR9cUKGxQhQZhAg3XNRnADH28Hmft21cPoZbDmTaZ3JF53u4TQRefdlYmR5vUgKgOUNKiOKrDkIy/Y7DcO71XnSaSsV4zQOYNjJ2tcsh+Ucr25796tvllmgAmQeWv9TGuzwBtkuB+zJZv3YCHKfvb3B0VNxfGlPuSmnvZp17VFSWaBp5SzaZOxGyfpXMH3mxagIb+0pMTSotqOvb66N5nUaDS7jyGoq+6NlVXkhOqxnIDBX9MIRlG1cKXPRzhEQQDVfC3+IR2/4v7b59woSemq1+q8x9eqQMV97zjB31hAZ1ebLUZhV+UHRNID5/zfn0QslDZHxXhCJen7I10ukKGQtKK0Yc36yVjZbUjei4D4y33Q1QEOfdF8YKMu3lUGWYGEb797o6Olmo+EMgvjVSQ20rwDIWU6pMdVUX4WDJ6Bv+szAVodj0qe7CfpZnrRVms3mQ8Mo8cKX4/vYK/V+pse7olLVezvUUj0FoCqJOd4wIjGDTnWemnpLu9bqFBorfI+tqyLkYdtrHzEoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"capacity_exceeded\", \"reason\": \"141.9 gallons is more than truck 26's 100-gallon tank plus 10% (110 gal); location is fine, as the truck pinged at the Laredo station at 13:20:37, about 4 minutes before the purchase.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyukt7fEqimknhwZRzd",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4886,
+      "output_tokens": 217,
+      "output_tokens_details": {
+        "thinking_tokens": 113
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"capacity_exceeded\", \"reason\": \"141.9 gallons is more than truck 26's 100-gallon tank plus 10% (110 gal); location is fine, as the truck pinged at the Laredo station at 13:20:37, about 4 minutes before the purchase.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4886,
+    "output_tokens": 217,
+    "output_tokens_details": {
+      "thinking_tokens": 113
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

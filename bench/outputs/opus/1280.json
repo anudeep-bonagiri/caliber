@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.03038,
+  "durationMs": 5498,
+  "httpStatus": 200,
+  "id": "1280",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The 12:25Z ping, about 4 minutes before the 12:29Z purchase, puts truck 30 essentially at TA Dallas South, well within 25 miles, and 41.9 gal is under the 110 gal limit (100 gal tank plus 10%); no hold rule applies, though the odometer reads 245257.6 at both 12:00Z and 12:25Z despite a ~4-mile position change, which telematics may want to check."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvgkKEAgTGAI4AUIIdGhpbmtpbmcSDFURQf/SB+5PGHGuBRoMD9WK+y5xn5mFZC+0IjCK85h4vsslxXOXxcez2ifIi9HSUw6bILYIUb4UnqOWZw1IJabjIcnnvvi/5C+zhr8q2wiovfPGeu0xKMJE0qKencbM56NM3XhkzqAtSizOhus4/TCiGt2QpgvwF6MrOeVLPbyAv3mhDn0jgzTShbq538QfD6t0QLaHL3NAU4/8hLK6r3Sjfscqe/p0Pxx7Cc0b/AWP6GI8zTF5e59DQTKd7sLazKs/aZlB/J9TNIth/qyh0KDhKQc2ox2MYj2Cn8ldhM4jHX+l685E+KLmpFkRZuF3tky0NKGtIlPhiUDaCaN4Gx2cgRwdKy1Vmfhtnx19/sc/utczfzKxm2NtW0CRzojoEM6Nzr0ZxMlORoTX4iabBQZT8piO8kCOBNcLCbEcd7sfIb2dqtNw9C4y+3LKRzGIzw5pmaU53p0lm8N0l+eHb6XplYTMNvOMIumdxb1yEPVSe1ORvl8vwR/IinS6Du7qaI9vb7r+XSC8mGBQUjHhjuE0yI+rLpe29lerRuoEa94/HJrT4VZOQXewtOCURyH4MjPJ6ogXphzR6TQc1m4Ettzwgw5UbpThpL3eO87wVn43uCfuxXf8fy/Nddm630aSiS9nIUxN7a1OmFvr/RfggXuORCR5TiL7t3G+Z9nmQgHtVwzmDy8G9lgJ6XOTP2DtpGZpgFzQ4H2NriO4oNzKoxP8NG+HSvfrScdoWQdsWENu8G1zRVZE7FtzS2sNSRvB9XqWhYav8nY4282bkiSWl8lQfjRsXbwlIlAsmadsSYrDtMCKhGQKkVicyWFzVWfsH8E086zd67gxXRsgG9RWTXrL5XBZSq2AZ0E/LTdsozgj0B6suxWJuCTtIk22UusjQ+ZlIyxQFswBdp7GywtHuPSwujFzVMJuWfofqZjobZ9324ndFI7X/mQuXpB/ITNIE5j4lD+hhirt7EjoZpVlJCaezr2M10r7bFt7qFSCpFoQSz1EcbG2nDoDLry/YIEwX33IIpsvAPYkQIyOLeE8QRhXExFXhIG5yPNP82wPRvtnCFfPAQv5XjrQuyD5XWNY2ERCDGd8gICW4oNVWeHhMXwMtxQElFvl7LrTYLpZX8/ojEKh6BzP3uax5GKyBGCqpln0GezrKBjvlPdpBi5NBc2qiSWumIZ31UYZPx34FNqWP5U5VHYiuWlOiQY9k4JFJ5hWDJHv1I6/6a6nihHykkxjORGF1WVDEv7swOyF3ebO/BwPwtApW2X+qfkxU5b3fIXFwQBiD2TNdHpkM33NtxLZiha5PQtPHcMKWtk0jast05R7EFWU03hbp3gT2YEB0rn/LqROetD0cQUMXziXMH+/JW8jAEwAr6bom6Y+gnJSfN5uI7/UHmcNvLovgTujEqNswjhFsKCvh5rOgIMRSI4gArbRfFWExPZSc9StiBkEd/Lsuvt6mI/de0KrufsBP1pAqFHjMi+t+x/H0wAtasxr7e52i8T+vzBAvy8jgpALrgfVfWnQY6kYYHeCC2MNSBpDyBrU/V48Z/NKgJEOm5CuIQcN6FqKBhOyLYU2L/y6INW7ikGEETUhJRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The 12:25Z ping, about 4 minutes before the 12:29Z purchase, puts truck 30 essentially at TA Dallas South, well within 25 miles, and 41.9 gal is under the 110 gal limit (100 gal tank plus 10%); no hold rule applies, though the odometer reads 245257.6 at both 12:00Z and 12:25Z despite a ~4-mile position change, which telematics may want to check.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysSTmnyrrSj2tYhdrH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5405,
+      "output_tokens": 438,
+      "output_tokens_details": {
+        "thinking_tokens": 277
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The 12:25Z ping, about 4 minutes before the 12:29Z purchase, puts truck 30 essentially at TA Dallas South, well within 25 miles, and 41.9 gal is under the 110 gal limit (100 gal tank plus 10%); no hold rule applies, though the odometer reads 245257.6 at both 12:00Z and 12:25Z despite a ~4-mile position change, which telematics may want to check.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5405,
+    "output_tokens": 438,
+    "output_tokens_details": {
+      "thinking_tokens": 277
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

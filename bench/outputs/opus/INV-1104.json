@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020116,
+  "durationMs": 3575,
+  "httpStatus": 200,
+  "id": "INV-1104",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 52500 matches the contract rate, billed qty 2 equals received qty 2, no earlier same-amount invoice in the last 30 days, and 106250 cents is under the 500,000-cent bank-change threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSswgKEAgTGAI4AUIIdGhpbmtpbmcSDFVVFGWKarMlz3KbnhoMOVyDTJktAtP4/8LjIjABKuqai5ShSeiBJ8BGW5kZmAiZxd58363MwPN2EpyASZWM2gnTdao40w06BMiuKZoq0Ade3VTqEKw1KGdnV0Kq74v2hw6bHpnH7rw3EMj9tGLlc5Pr5ELfQUQ+lPxGAkKa4JHBNUX9GybneTzfdDmGrDyJZY2qBZdBjP4uinmTJsDdvwtyw2URJzXq4vuXNpLfuAPOlEB2vsSXUshUwV8kh4ln/WrzEoFaI97JzU/0DHq03RgORSVNso8b01sHimrFsx1SEZwnQhoVksv1dIGvlgmVziuyuYX8gTkt6YHdQbbNAbWjMp4GONkgCKThlpxtXdoBVN2lBj0C1dx+MWsyw6zBof0GyDflYOxTtsDhX11d7+h9jT69OnaQRIs7KdFA/a/2deDsKkrjMDXpc4O4rYgGla40n4/3Zep/uldibNQiEop3YPic8dmi+dt47JWME+2F+F+Vx9umvvX1dldMwKGHXMjk0qmy+iOZZDZjPaCbdvyflmEYOCx1kreaVgcExfS8ujnHoQqUxTUtI3imAAko5XJ1s9Kbv7r+vgQhOOuDFQenkAGfmxV94+wNL53BCD4Jak289kIFofWNPvLGHMXvMX7x1NhVqwnF1k25ULNIRvwkPc2QrykiAjGaJI6VUYHiuUVDuFOgC2mkL4JzyDAFNwaI+xUU7LOjsXPjH8gqNodvPT2uy5U7cKVe4QxiVAWsOQTcZZN83B3PdkVkw/Cn9/q4k6M2ZWJI3kTA3FX04pyHvmPjB/a8Z9LWtv/4jhAFXopgJdL2nfL6Z0gV8u5TN80Q2mq9TyTzoRuijm7W4C6Zs8d5JT8vS8SavgfrG6cLZKXgcwVH5RcRXMtcNcghz+K2wKa7WjgzaY7J6amQs+xJb+0N8PbqJ3l0PpMACNWqxOoigdAJEEA0gDOMBUf3ircINSJdgp3uWj/8g/iqfsNyxukcZhbzQQXvwqebys4oHmYd7YtKRUlmXFuxv8+n5srNwT/tb5qoALZVlFYpEF442jA9R33QXFaEtiZpK7hQJoe3WK0DvprV0zYGccAM5Q1xAr6t64xcUd8OtyZtizDxmMH8nMUvBKlH5Tjcj6dt6OWKo5zIaCqJkKzxY6exUwUioHrkeEMq8rWgC9vFaJQbZ/Xg5RBA8s+gL93gbvgzundgEXoQPfhUX7cC8SATQec1yCy+TIid6K+fgNPjYobSmgr16AUpTiwdmBaixP4U1UpfG/Qwaq8SJEa2MVHBWqTG+2opQKY0CuIElxlwUQuW4VHMl2xFDOFDiMuPfgdPU0G79dLZpBJwEhUSKDQiMyqCWHWV4Uzxk5NcX3ih9wc83ZJWgeFW23TlZh05Ec6/6fJ0uZRTpui9r7vspP/GGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 52500 matches the contract rate, billed qty 2 equals received qty 2, no earlier same-amount invoice in the last 30 days, and 106250 cents is under the 500,000-cent bank-change threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzB7FNqkdq3Fx5LwKpJ",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3509,
+      "output_tokens": 304,
+      "output_tokens_details": {
+        "thinking_tokens": 212
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 52500 matches the contract rate, billed qty 2 equals received qty 2, no earlier same-amount invoice in the last 30 days, and 106250 cents is under the 500,000-cent bank-change threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3509,
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "thinking_tokens": 212
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

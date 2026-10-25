@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027452,
+  "durationMs": 5354,
+  "httpStatus": 200,
+  "id": "INV-1167",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Within 30 days the vendor billed 113,600 only on the same PO-1011, so it is not a duplicate; unit 56,800 is below the 59,600 contract rate; qty 2 equals received qty 2; under 500,000 cents so the day-42 bank change does not apply. Note that PO-1011 (qty 2) has been invoiced many times, which the policy does not cover."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AoKEAgTGAI4AUIIdGhpbmtpbmcSDBgv0BwpoGxISo5NKBoM63M4v3tdVlLzUFfKIjB3/W4CNyR5TJmnGLS6q0YZLKOq6RjZSBvDWOctldx4f5Sv5o0/pIxbmLlnQUpwssIqmQpgnYax9VR5+BpY8Y2Rt7uFfaTQkYTSP+NxVEbGI0KZFZTmd6KV9v25SGUD9TBE56U54uaefjxIgO9/PY1/2867JgmrNwMHcBriQPsToXNP/qGDSORcl3u4wvwlPrZWf+qmY+2SbcbviUwkEZihG8g2t+SI9veY6DkkVoO70RyA6evIvZh5QC6wz+pKQIVebNbIkC/Ql2KELa1BfMOg5hZOiIDuOh++tMg9POkdU/QeYOqS85ul8lmlQ7rSWv6FJa+QAFp6n966F8WKFaSsUs2TARoRezog9rqZY9EUkEjSFXHM+OxH2fKp+rB+ywqg9pupPww5XE+BOB4Pqp0cZXhLKCzRP5cY7KlXLFYCOmIQ/VthXyJrLvfberqtjSi/rsQEIluMr4HISOx3/Og4sLAU4p6U4hv4WM/SIyLQvgpbat6bSlit0FEflk672+Jh3UURRW7H8k/wgKXHUUY8Rg+iMypIaY4C1/dvrcuTvw3isktA4GepzNH2gFwTP6K8lX8LcU6kCkA1SrFkUWFyeqlTxaXUKRyPBIC7VzYS2czUSvIlWtBR3/+SCp0LKK2P1uR3abqefZdrb8alw2x3rKndjJkVNO2Yb2WxLIu7OHwH6nJXFVWnvyxsXFzuWUUxHoOo2fquge8XARIDCxHn0FiscapzW0MgWphU96WptvqPxUFBKQGqbOZHhmGx/Kt3rwmJ/uYIy2JR9Eeh8SIDhMgauwIQDyL+okP6QRyBXihDEEipbHRUmvxeLBE9RdMORL51OgKBmdKSiY+C9X697Jqq4SUtxaH4MOHIDr2n6rZkIwYgnHdvy7dEklxSmPE0Ct4kARp73CW30VvCeO0bJyiCj1h2k+W1schJxX8EnVK3umC9kg070fnv+/unmfub/Z7rOBFuiFwheD2ipyV4WMG6YWglRhrLtkB5/c25Sxfr3ihYsQjaalBOHOZqGV21nBHmczrhO1LIMAO2FjgEFwtRai/W4cmX/t2Zl6WYAHnrVuaEPC3STRwlQWTnL8y7KIaYSpaYpIO0krwv7DmGLvQlqkUEdVlfi8pG1t+Kh7yteGIHeb7NrEE8GEuTLd6zd0XVUUIO3pYoCRCN6OnZe1D0+fWKIfitPKTNy0FPs8DtmTMBdobBdtRr3kvzXCYgSbhVTNylF92eUNzcBPaVDfeY5cIQ6nmZN+Jpv6OeG7L53FhwwZlsAZwpNdJa8ZZ4NVzJb1hZHwUW9AcMCUoMzpKpZZP1/Jc8X82f/DnXAQj5ju2NLn1CX37pOc/5hYbBzwHEGGGEG+xMKe9qIJ66alQWRyIWmaGM595moN42xkhVgzQkh1tyK2QcTyW3gQxsdN0+YKpn+wjD2Ti46hWV1GJGOuw0RBLVt2BMuJlGpCcQBFN6c+fmTUHBinVAPvpr1tvaNq/IMrZFlk2Xh2B6HR1AEmGLy3NA+7srAZ/s/Qozc79fVazZKMGEbjIWUAIABCrC+uhx5GU+njP/5/Srp6SSrOvoMUv7qKQ4z6K/rMnR58XDvBHmlcGAVlmCIgRfakTIvJZIjrzsQKbwYrLNYS5/eN3+z3VW+9LmQK6WWJcCKz2vKjvo1iIfZ9i8Ny5rMRBas/Fs7gQTt+MgdcDPC4wJBW+gO4Guewi1AkXYyLOABQBnwJlDIVmJdedv9y+gxxpUKMra49MTkciMj4QfRZZPzZtxURayHPxbpjsILZmkR3DYhd18/0kln/XmCBJr/4BqWtb/3YtCXRMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Within 30 days the vendor billed 113,600 only on the same PO-1011, so it is not a duplicate; unit 56,800 is below the 59,600 contract rate; qty 2 equals received qty 2; under 500,000 cents so the day-42 bank change does not apply. Note that PO-1011 (qty 2) has been invoiced many times, which the policy does not cover.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyoE4nPmib2BL3pUodE",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4443,
+      "output_tokens": 484,
+      "output_tokens_details": {
+        "thinking_tokens": 342
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Within 30 days the vendor billed 113,600 only on the same PO-1011, so it is not a duplicate; unit 56,800 is below the 59,600 contract rate; qty 2 equals received qty 2; under 500,000 cents so the day-42 bank change does not apply. Note that PO-1011 (qty 2) has been invoiced many times, which the policy does not cover.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4443,
+    "output_tokens": 484,
+    "output_tokens_details": {
+      "thinking_tokens": 342
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

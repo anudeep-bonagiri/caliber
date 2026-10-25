@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022224,
+  "durationMs": 8414,
+  "httpStatus": 200,
+  "id": "INV-1030",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No listed hold rule applies (price matches the 29900 contract, qty 1 = received 1, under 500000 cents, bank change day 71 is after receipt, and the same-amount INV-1018 cites the same PO-1022 rather than a different one), but this is the third invoice against single-unit PO-1022 (INV-1018, INV-1024, INV-1030), so check payment history before release; the policy has no same-PO duplicate rule."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No listed hold rule applies (price matches the 29900 contract, qty 1 = received 1, under 500000 cents, bank change day 71 is after receipt, and the same-amount INV-1018 cites the same PO-1022 rather than a different one), but this is the third invoice against single-unit PO-1022 (INV-1018, INV-1024, INV-1030), so check payment history before release; the policy has no same-PO duplicate rule.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyrM3pLnMr4M8XKiHPH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2151,
+      "output_tokens": 681,
+      "output_tokens_details": {
+        "thinking_tokens": 521
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No listed hold rule applies (price matches the 29900 contract, qty 1 = received 1, under 500000 cents, bank change day 71 is after receipt, and the same-amount INV-1018 cites the same PO-1022 rather than a different one), but this is the third invoice against single-unit PO-1022 (INV-1018, INV-1024, INV-1030), so check payment history before release; the policy has no same-PO duplicate rule.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2151,
+    "output_tokens": 681,
+    "output_tokens_details": {
+      "thinking_tokens": 521
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

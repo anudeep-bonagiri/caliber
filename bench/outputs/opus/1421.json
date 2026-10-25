@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019204,
+  "durationMs": 4599,
+  "httpStatus": 200,
+  "id": "1421",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 15's only ping within 30 minutes of the 12:30:35Z purchase (13:00Z) puts it about 66 miles away, parked near Corpus Christi with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1015 at Three Rivers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7wcKEAgTGAI4AUIIdGhpbmtpbmcSDCgJkt6EAlta4t9TABoMuISzj72wUbGu8QpeIjC+kjEvj+j5GOuew4HyPUW7Shranan847zuCTAMpQfvbI9XW85Y9OYRnahe0ytHexwqjAdIp8oHRWd0zuKlEoz1M4CxymgZS2nH/9ugMuf9AmkyenwxsbE1Dfglhn+KyRm8P1zJf/koYrpSVZBwp5F+4fk+/nJQeG0XBbLPrzu3r0ow1zue+spj4j8JJ5dKP2MoaUXNyJg2NbA3H27u2xBwApbpuaKzVzpbg5DYBIJgb/UAGoFa/MaeYHmvCyRfJJ4Qrr06tcsMRBAEGu8PCfmZndpAMiBcJk6+3PWYV9t4O6xUWRdY4B2NW37qVcJUXvmlSsypem5RocqPPhxe0Wbn9PZ3ZdunKva0am+5SJw6BhJGRFRFmpoXo6ViS3GR1WxMUs1k7psYNKzwE0lp+Q9SkMzcljXOI9xDaef++d2fwGLvvPHc13qmIqzwiAds0dWN20+0hFzYgUVm33grDqdnvEMIeKOjPVpdblMEroAYNupKyOtYh8Q7K4GtZS0ZUSkcIBMImK+hbOGf6rX09Fx9iRD/SNvbSeZyMlmqGXQdz+uSaKr5YKX15bxRLeBUCB77aNJNqMvpZlLFtTRMxGT184Mvr8FrRPi7Ne6HBWGl6h5+yZWNDKx41IsYQ4Q5W180ILNuHwIAWPcbFzb5QXLGtMS6HtFvUpHvK8CkADqp7gbTsddLiBOj31LNmETIewVuBMrxUE+vkhu7DCpVQfjOpln/8zn7pq1ZT1KzmqGDuDwRhtVdAe8e+zcTaqFC2LtITbVFmyF9sH3YNMfjCCaa6Ig9+6TQ0bS6sfed6Not1Df1Z/GbQvcGTN58hko1lfrYHrx1Tqoj4OY8ALATEB/bAK5tL1toZIm/KFDSCdF5sMWAB2tsTu73+lpinPNMngMRmW90tjq9Y1sI9Eig4LIX9HmvYizV/5llYaMuHhNvMB/dagVBF5a9vsfi7WFKw+MVFE+IEwh5D7InCqvLjNXDNCNi2FF4hUgbwjYeGbZwnEdTcVWez2RLIshoB5BUPKveTuoB/UAoER9EBy8G6eDKzjosTeJ0b07VXCS6bF74MA3g8D2O7398rjd3pnt+JUtw9ewGsZj3IJ2ja5KlSs/abjdO3oaJ+6+m/qFw3rRk8e2e6kasENhM7RSRIZatU0CfoFTt4s381ht+fjNVD+pQEEpNY+c8hQER5ot5qh6JE5vNfH0XYZFW9KeIqRjKlCtBUvXcp0kUeMQyrlODqVruJPeMGytpST01Qqmkf/bK9Tq04Hz1apDY8Nrfdz5VLxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 15's only ping within 30 minutes of the 12:30:35Z purchase (13:00Z) puts it about 66 miles away, parked near Corpus Christi with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1015 at Three Rivers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyvrnLvVBUKnbakTZkK",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2996,
+      "output_tokens": 361,
+      "output_tokens_details": {
+        "thinking_tokens": 229
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 15's only ping within 30 minutes of the 12:30:35Z purchase (13:00Z) puts it about 66 miles away, parked near Corpus Christi with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1015 at Three Rivers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2996,
+    "output_tokens": 361,
+    "output_tokens_details": {
+      "thinking_tokens": 229
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

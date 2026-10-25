@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023716,
+  "durationMs": 2721,
+  "httpStatus": 200,
+  "id": "T1706",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1010 toll at SH 130 Plaza 4 within 10 minutes; the last one there was T1614 on 2026-08-06, and the nearby T1705 (16:11:19Z) was at a different plaza (SH 45 SE, Creedmoor)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwYKEAgTGAI4AUIIdGhpbmtpbmcSDJAhA9Hd+bNPFBIE/hoMJuXMUdsns/doybC5IjCRrrW6vUL/Sx5eycXktUIHeWCtOQDs2+Ssb3Lhqsdiuyy7ukSmUs1BVLIG4e1zAmIqyAX52xSqCQZBTbeM27LnT+i7V0lgyI19DuBoSRcuK8Z72mx8ydRyM2j31ulbXQS7Y0yZKCLNQ8j2PNowcvWwv2h0ILkbrii9hw0EXxWad+K6Jbz5yxEq7oTR3B2cZhMb7hxJoysm/84DrzWElagG/gauFKoQnJAo4Bjcv194tLicdXKwSZyHDQuEqV2ycBFobaOqPP+s45GFRHeZdxADCJdZ1to/Adq+2b/4jKtsXALkK3k5h1/peOC3f/0c2Fy7jUMojUvZIX+Vgp+NwYXGUp//s+2SKG+6zXr3Pr625HJcmICXrSzh8IvfeNCumM8ZGKpyN8PXdXUSoUUNFIYNpb/Hc+C4EK4y7X+DVzc/C+Vksxpf/6xDUMHoh1Q7H2D+DgpM4xzDkJ4Ex2rQZe8z4JPsLSGNVUr5iiKjcOSx3L48Myw7qbhUiYMm4Rz+SY6LivfsNwkzexWwCkZ4xohK+xSSznxE5IXEzR+1nmGrMMz5JX9kXVU0QielC46G+M/696YzA8g0KLJfcBEoYMG1FgQaFcTykD+Bo65ejKRyNoMIf9zRrFsYvug75DRPhk79F4M2/LOXGeNuXtpQ6m9m9OB5f8PXQq3imW/Ud0fkvoenuCKJOIRdcwR/kiTo+0zLu3pCp2XK3fBA8UmdzgwlVUIwYp9NnfWf4Be7KOii/lOIZEMPtR7GCLBi9n/ndB3XBjww0GWM3k6iUfXnhWYKq1CWWOFGMlfUKgCCt7a9yAviqz3Vo4enSXj/BTwvSVfPorFTTPdazMb8N3SwyLT0rKjJv/oTqAw6LbuHhLAARA8iJUIoJV8wthC6AmREEhA9iIqJM6mIKKuhjiHXHiKCsQxHeMFCpCg+xF40Lx8u4dfMtHX/WZazbA1g8VkH1ToWaGNggOi0RWhBNa+x+FvK8uDHsnsaCf7C0SDWv9WnFWnfZE3ZSE9G/d2uGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1010 toll at SH 130 Plaza 4 within 10 minutes; the last one there was T1614 on 2026-08-06, and the nearby T1705 (16:11:19Z) was at a different plaza (SH 45 SE, Creedmoor).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNypFHk6Xc3VDjJN4ejB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4769,
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "thinking_tokens": 122
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1010 toll at SH 130 Plaza 4 within 10 minutes; the last one there was T1614 on 2026-08-06, and the nearby T1705 (16:11:19Z) was at a different plaza (SH 45 SE, Creedmoor).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4769,
+    "output_tokens": 232,
+    "output_tokens_details": {
+      "thinking_tokens": 122
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

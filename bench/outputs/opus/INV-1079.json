@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019648,
+  "durationMs": 5543,
+  "httpStatus": 200,
+  "id": "INV-1079",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the 48,800-cent unit price is below the 51,700-cent contract rate, billed qty 1 matches received qty 1, the earlier same-amount invoices (INV-1047, INV-1065) cite the same PO-1009 rather than a different PO, and the vendor's bank details never changed. Note: PO-1009 (qty 1) has now been billed four times (INV-1017, -1047, -1065, -1079), which the policy codes don't catch and may be worth flagging separately."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmQoKEAgTGAI4AUIIdGhpbmtpbmcSDE6RdN45TWhfYhzteRoMrwfNpD+BjxDU8KsoIjDYcflv3KxVlDvFKKGm1zYnpBz9cXoSHW0Rw3Iuy6mwGM0xa4tPfm77vG0BLq1CA/sqtgmKyKi/WIncvrtH/251BGkq3CwpIyPN4HV3f34hts3vIXA7Mhmo5mOaT8C9f1oAyhAdGfChrvlNNJrCwP5Uq5BUsHWZ/Fie/5prXGf3yAy9qLewcNiz8xolhAsuNkYvihfLlMQEtfOFHp4BL4XRVo0vi+CT2AdRL7G5KYHDv6B4eg2jhb2HhqeEs22REwmRUh4Va594x63O+4dbnBM1ZXcd1A8HPahnl0VjkYuldF93M57gkK9+rJ6RNokhDoZCtqIvanS0M/IUdUOKtrzxpSjb8FxEbKdMAXwPrxj9OJ4SkvwyFf68nH+JxROYKIdI6E8YLY9c0KAtrtnSS+B78HFCPdD4jcxVO4gbTMhb/zi2zqwthhRrJOsr6FBtPUrRz8+wRimWmRs6ScK8nHIlOwnotKVWUYBhPUZNfeY/eH2Yj/w7zf0CAqgW9YdZtTgQObod/JdaCQFv3P7Dj8Q44TCKC1CvVIDy/K6OYkxy9PP3YKv2maKZHeMvKHnBfkuepWCnmZ61go2ewaxkK4Se2mwzoXYVIeSoarnh2GnYphKvQAwhae/3xY8sbxhyA3J3aJfD0WrR61knu2uMlPUeVCqQBmVrHxE6U7Dfv0jXHukUPUm/k2sicCw3QSXeUOGMvlo6yVJjDVevZd7qM/ETvxCGIBTgTmvt6/WKoFQfC+pBvhkuveAK1yIAXrotUZtO3K3+6VKwD/s8SAKA5gJRMHTe9MjgCvF90FYjRcwx6iTqDK3jKI/stC3yBP2UW0+QC3B6GEv1vkWZGN3y8yfizoHYwWqhur+4Xczn3+JZWpWuAA5nVfXFTT5gj5+Iqp1MMJbnhbe3BS1EQ9TAcUYCB4uus1o8HW5sU1yjRX+H5hoehlI2cDmKrAat8e8JO+Hosgw3zsyxdsBppX5SGZeJYAOmlg66tM5awVpc6cKnexfjwHUYq0vqEyU9jUD9g0m9VgXDFQ6ODOhV4HK+sEw8eDjWAJdCBMfMFf/ar7Zrdv5PvWnink8DdrZiKWlkVNx8ZxVAuYDgJsXU8fb+j8pj80SPhioBSgqAuXVr1aTkZY5ecq2XK8pEAn1WIFpQcewsmI46mp7kydD4JUVFjZpEpik43qgoYcauh3L1iTNAEz9wBi2Spsd9Sz4WhHJbIbHgZuC+L/NxyMU1e+N++7BzlwK4tr/nrcyVqciYvqCTHfSq+K1NexxKodNi7KpIyM7lDvRiEc9rccrFoqOdyPQc5ome/r9y28Ue9+PYB+33mBdiVBjEQ1y8CBGfxjNcCk3fzeYtnjHLzWLxwdjoKxJphMP1w03AeJSkul+ArV6VJYi9TqxaOinv6gQ/sKQ/onZWdPO1TNOPUywltNDOELGU91MdVMB45VAWF0+DNSruRa//j1gPNbF/+vzvRnoPce4NUK0zGDqm9TwhAp1DdQtKzOI05PhIQXTQgfrLOol/Y3gBhgTAe1egdeRuX92hKldKKFC3VwS2X0WKyryYGOf5hRED/hbKB5fASbxkgwoWbBX1GUNqkqVcF1G4k48/XoqbQ0YMNbIFKVV9ysMshPSW6NUDeBK/pSXMTAqCJLFr9FcLlIMyIZbFMZL6wvZSfH1eqfPInihXimoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 48,800-cent unit price is below the 51,700-cent contract rate, billed qty 1 matches received qty 1, the earlier same-amount invoices (INV-1047, INV-1065) cite the same PO-1009 rather than a different PO, and the vendor's bank details never changed. Note: PO-1009 (qty 1) has now been billed four times (INV-1017, -1047, -1065, -1079), which the policy codes don't catch and may be worth flagging separately.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLCY8bsu6drUuiuDZi",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2487,
+      "output_tokens": 485,
+      "output_tokens_details": {
+        "thinking_tokens": 297
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 48,800-cent unit price is below the 51,700-cent contract rate, billed qty 1 matches received qty 1, the earlier same-amount invoices (INV-1047, INV-1065) cite the same PO-1009 rather than a different PO, and the vendor's bank details never changed. Note: PO-1009 (qty 1) has now been billed four times (INV-1017, -1047, -1065, -1079), which the policy codes don't catch and may be worth flagging separately.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2487,
+    "output_tokens": 485,
+    "output_tokens_details": {
+      "thinking_tokens": 297
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

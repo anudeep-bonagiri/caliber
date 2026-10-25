@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009724,
+  "durationMs": 2472,
+  "httpStatus": 200,
+  "id": "T1094",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The closest earlier TX-1013 charge at NTTA-PGBT-01 is T1082 at 14:48:21Z, about 93 minutes before this 16:21:50Z charge, so it is outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAUKEAgTGAI4AUIIdGhpbmtpbmcSDGlJS47NN1BWSEbyXxoMsZD36Ol1chDkH4rpIjDCzmJc3cfxoqxyzUFVn4dqADkSMAWZPw2nATC9hS1tXEVpIS4HCeMAkMToDO4cVFAq6QS3zIgtsfgtz3oViuZXGQMACIcvUGedYxpiBjEUOa6SAGjhn3t7cRXZ37j3meJcUf7kEXgbxhZAIsY0PdLu/CeNFySodLiWmtuUcnCLPfXCs4/KHorTku50KXgPWp9iho0AKk5W8TYq8Y4tvmQ2KYSyS9cVi8MhUJT/A5Ssv/f2TYfuArlfa1/w/vnan5+i/H0mknXX0jsIs3Ps7HOetBLOFdJf63VafGDhRY/jC/NYlezKMuHJVkmWYhWb6N86rpBH1T18KZUv2oLXn3furEUxCiiT9uGaHDbtPRxa6IL2m/JLuzvSzW6+AuaC/7OEC/USiuRlbIJvsrhKgT4Z6m4zq7h3+8oh1/sesW26HgS7stnZ2vXLwbZhf7I7q+FN38Zx4IjF2Sz+03Q2MkRc3CiMPumHT6W9XE3My2z4V3nzeby+FEGvYBZbtzXhxDbiAPtObkmSVX+AilBLwH9/8xs9egWepGHaOR1ySz0i/TINhOxZN0S/xzDLv4UtqLckhyxxndYfcwijFf1evYCsyyNv+FwoMfPpTgUwG/Eu7vXIATga/8R3Hb40DZ0bhy5lMb4Uc3s+3nlr79C/qm7LH5zjHNBeq3lDw4zNb+3ygi1vKeFrEDcOKGePfyCQjM9fSBR7r4B8Z6ZRMwCxT5ihaGPY078FKlHywpKeOScfc+VOyx1YhrtwMHHdFUXL92W91dmiYbf1VB5eHjOPDzLN+z1wTDIoKk/ufsUd7BYdUc+PoPhTzK6Of99Q8Tl+VTNhDHyWDQxALthig8VFDGR5Iv2JLw2Or2vUaFNuOG0QxhMjE5IEozc+7+aqWhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier TX-1013 charge at NTTA-PGBT-01 is T1082 at 14:48:21Z, about 93 minutes before this 16:21:50Z charge, so it is outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzC1xv9CmoHCxy5RVTd",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1636,
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "thinking_tokens": 63
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier TX-1013 charge at NTTA-PGBT-01 is T1082 at 14:48:21Z, about 93 minutes before this 16:21:50Z charge, so it is outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1636,
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "thinking_tokens": 63
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025868,
+  "durationMs": 2517,
+  "httpStatus": 200,
+  "id": "T2551",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1019 toll at HCTRA-FBT-01 within 10 minutes; the last charge at that plaza was 2026-08-19, and the most recent toll for the plate was 2026-09-29 at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6gUKEAgTGAI4AUIIdGhpbmtpbmcSDGKiE75rPD/tHmH/MxoMBsu+C3m7ROqKjhJ8IjAo3JUB1LTDPBSeWE1eO18U7FW9IpmxiF+n89Uv0WFwO/BLbEhoAwmSgkBXTmlqD1kqhwWHSaGK6Os65viUAw3JwkXr5ITznzis419F+vpAzAds3IPwma54WuDqq98AQGfd4DK7qvbqY3HKhYyflhJDQcBSoXAu3+Ghk+iM1mqfYxzGyWuXAPuEbDkomFER8z+6toQqf37AVWEVa+DemroztO2PADxctKaU/MAEj8xxM8uQ6KwEx1Feu5bzLy/nYKoj/nnU1gtnA2YVQcpERhZMo5ZctQFa5QCF9fnsp8jjH5xnmPM22k5zu492vh6SysMrZDQyU3sOfAmNYwc9Qsv8ENGtt32k7JsoGMuZ7xJI4Q56u2zU89iHulVajuSFqhL9k9tIKl7QOmIW62wBRGfCROnkDR+Ts3a4K0r4k5/5Gk29VqHJI7qDdQ9rPSwWqv+z+RwMZrvXab3wKD0Ri7HxkthHJfrOlz4rZC90GMaFvZ2d5KbNnh4IJMHIIngL7Ez2AMteb1CJJYMjFCv23K7QTT2Hink0yB4f1+EHnQ4Dx8NH8qCK04fVYda8y+orS+OP+xy6WktA+Wzr5IYHad55OuP5C9THjiJlTiK8HeUyMdA9e5C6rytxtWTFeUd0KbYMB3aTuT5WbxaM2L4okh/JK0GapcG8+l7z1+19EOlXyCnkRxZ57yXJy98L83TKbJUEWrj6f/Xx3nZVqAnYDNx86z0gdygKy9XANYDBFQlCmUJRm1MybxD5XzB16hoZ3ufyjHaPxVbN3LoMIohpGfOcWtwvCUJpMi5yw+DIzGoDS85X64XnogbzvBqV6Zehiyg362BUbHFejEProH9S0VYadLxSFtE2SwtitLUtDQrfXV6Qpi43cspyWqHKCQmx5M3NajZ+P0A4P7dWlkaSIrvjKv2F1/QMxxHUzRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1019 toll at HCTRA-FBT-01 within 10 minutes; the last charge at that plaza was 2026-08-19, and the most recent toll for the plate was 2026-09-29 at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzA7mrEMfjWqDA2t8ak",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5582,
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "thinking_tokens": 82
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:51:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1019 toll at HCTRA-FBT-01 within 10 minutes; the last charge at that plaza was 2026-08-19, and the most recent toll for the plate was 2026-09-29 at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5582,
+    "output_tokens": 177,
+    "output_tokens_details": {
+      "thinking_tokens": 82
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

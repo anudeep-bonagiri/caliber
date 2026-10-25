@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027528,
+  "durationMs": 5779,
+  "httpStatus": 200,
+  "id": "INV-1174",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Every policy check passes: the unit price matches the 54,500-cent contract, billed qty 4 equals received qty 4, the 218,000-cent total is under the bank-change threshold (last change day 18), and the earlier same-amount invoices (INV-1110 day 60, INV-1141 day 77) cite the same PO-1010, not a different PO; note that PO-1010 (qty 4) has now been billed repeatedly, which no hold code covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QoKEAgTGAI4AUIIdGhpbmtpbmcSDI25H58d7whxBeK9QxoMVp4QQNncXvlJmAa6IjBndJEw2x38vv+WzZn9gwPMzUffuJ56b15zKLhOTW7G503wK+DOiXNk7iJZi0VhkKYqigpHW6aSeJ8xFk6bkFOm7U9LS9tpKkNkdhHyo2TuLsg3AIduqpKFAT/vDCEjw9vNXLZTy0YgckZDhxMhF0HWAJ+BWzNecplxMWRbJzdvZd6/hYLXtdS7B00q/xVTsHlfCvz/sK2ff2YUN8y03LYKd10MvN/kAKKZIdLspbiW4nksf0HW4wSMC3+yg7wvKF2364KBy/67nN+LdqHOCKRaU3c0JbQgAw/6VbiAzZLi7j5jNDQk+FQt5nl2FCrFiBKAqE+C8RfmWCQZX5ieJIJ/bOTpxF3MWxFC2bqri4Dda7c4T/fqt/u1GhFUS3SUrMC09xA3xlSOJkbkvh4gJZKnhTpKuxsRJW8aizJmefVgo0fWIJaiKf5sZa5i2ZtgRYLfs2Q7bCGGbMBQi8ZoR2idXO5CLsvIMm2zdTZGadIWRzJGO88fsC0YWYGh4CkJo+vFmjEbIpKY2+hSWaNFfsKR2n1eQki6nAIR9d1K8XTk9hKHgeHLspHq4uXjmjGTc38TaQfSJi1l7vr4rzFXAcNkhQTpsWqOq5shE5bBBRnCv15qq6I+iTXH7WqwXBPVGS3YkvwTqGLgFYJWqnNckQqTNk/Z0vGkRNd5OukSiUbszTm6/T+nUMw+nB8ZE39U2Y5R8iN1nhYoDL0nD9j00j8eLeZxKp95AchnhzeGvWzGwmlNh0i71TWe2UNazpjjDh7M6ecWPrSoujc64WP9/BRLp2C6JAI5eGjeDdBpbzeiS4h1dlaeVCHZTetP/f8WSuZgkbS4/lXkLwdocbPA4EU1eWbfzFMGu52zd403Ngb7QfBGkIKp9mjmoIcVPuOtDdy2ztQ+bHyYNDhLzTf7hd6DQOZWuX3qDfN8lxTP+zYYoS86aH/N/niKBlEzlB+Jfl16PV4HBn0FwU2GRDu6VidwnWecW9ZKSCr1g6NPH7wPSvv97S++0kgDiQtiq4V+hiko0wv6DcGRo/X7E8CIvb/wf9DY6pPfgs0ACv3mIgemUZmake0984Yu2sR8o7oyHETmtOtYi3QFmk0fhtXmS5ZbcvETRF6qadwaEvKnoUcnYx/acJnSecvgpgTiNQ02oCgUFhefmdpkSU0gk/5w0yPVXIDZtaqkkB7XlETGs8fl5kkDXfamTZY51y/5vDCTwC+vwNWL2SrgbIDIA+ZyVFzMqqndIZ5X2H/Ici+KnMi5kyHDkvNA1MYpBIcOcIF5XdyO7i1GBHEfDtfmcJONPYi+TcKPD1iilj5UbZ6jcfwmBOD4IF9esjpDvK6v5C8jIXsgZBEoV/0Py3sKKvtDwfx5+6hAY/a8fbVp86BNbCPnLGOL4vslE3plmVp5/Znpr21WsIcGNh+JmyGUjE8mSKKTO9ltD1s+RmSD26i+pGTIzXUzTjUnMucBKX033NgKQe1lu0gw10vZvBRPblDA1yHsb5z+uEW53kHmbOSHzVP6SQvX6+tuarIHv+jGPLPtJNwbwTUCvAZ1qd9qLNmjgDMXQTVH/c3JGLh6HFPofgB/IfUtqsvwJiykBzj0iAuBlqQE+pAh+Rh1smhnAAbtrSwVX0b75+3CEGmYERSRizaNFdFW2atw5UPNwJtV2MD6Rv3BgXneD6t2q2DkqIN7VSgxjDBd1IRMlJQImaWHOF+/HA1N6tGdNLfsvBaSGDEG2sAe1CeGZALvtjyh3m0VSaGGHc3+X8O98F7WR1KGk87+rEwT3CjSkArsnhy7m6kYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Every policy check passes: the unit price matches the 54,500-cent contract, billed qty 4 equals received qty 4, the 218,000-cent total is under the bank-change threshold (last change day 18), and the earlier same-amount invoices (INV-1110 day 60, INV-1141 day 77) cite the same PO-1010, not a different PO; note that PO-1010 (qty 4) has now been billed repeatedly, which no hold code covers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzLoY3kQj34Zjdykgom",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4357,
+      "output_tokens": 505,
+      "output_tokens_details": {
+        "thinking_tokens": 340
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Every policy check passes: the unit price matches the 54,500-cent contract, billed qty 4 equals received qty 4, the 218,000-cent total is under the bank-change threshold (last change day 18), and the earlier same-amount invoices (INV-1110 day 60, INV-1141 day 77) cite the same PO-1010, not a different PO; note that PO-1010 (qty 4) has now been billed repeatedly, which no hold code covers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4357,
+    "output_tokens": 505,
+    "output_tokens_details": {
+      "thinking_tokens": 340
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

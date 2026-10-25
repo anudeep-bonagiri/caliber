@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028464,
+  "durationMs": 9851,
+  "httpStatus": 200,
+  "id": "INV-1081",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 119000 matches the contract rate, qty 1 does not exceed received qty 1, no earlier invoice for 120875 within 30 days, and the amount is under 500,000 with the bank change on day 71 (after receipt). Not covered by policy but worth a look: the total 120875 differs from qty \u00d7 unit (119000), and INV-1025 already billed PO-1004 in full on day 16."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 119000 matches the contract rate, qty 1 does not exceed received qty 1, no earlier invoice for 120875 within 30 days, and the amount is under 500,000 with the bank change on day 71 (after receipt). Not covered by policy but worth a look: the total 120875 differs from qty \u00d7 unit (119000), and INV-1025 already billed PO-1004 in full on day 16.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzDPcgTiBJFg2xoFNPT",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3056,
+      "output_tokens": 812,
+      "output_tokens_details": {
+        "thinking_tokens": 657
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:52:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 119000 matches the contract rate, qty 1 does not exceed received qty 1, no earlier invoice for 120875 within 30 days, and the amount is under 500,000 with the bank change on day 71 (after receipt). Not covered by policy but worth a look: the total 120875 differs from qty \u00d7 unit (119000), and INV-1025 already billed PO-1004 in full on day 16.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3056,
+    "output_tokens": 812,
+    "output_tokens_details": {
+      "thinking_tokens": 657
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024832,
+  "durationMs": 9895,
+  "httpStatus": 200,
+  "id": "INV-1047",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1047 bills qty 1 of dpf_clean at 48,800 cents on PO-1009, but INV-1017 (day 11) already billed that PO's only received unit for the same 48,800 cents, so cumulative billing (2) exceeds receivedQty (1). Neither rule matches on its face: duplicate_invoice requires a different PO and this invoice alone does not exceed receivedQty, so the code is applied to cumulative billing; pay 0 unless the vendor shows a second received service."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "```json\n{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1047 bills qty 1 of dpf_clean at 48,800 cents on PO-1009, but INV-1017 (day 11) already billed that PO's only received unit for the same 48,800 cents, so cumulative billing (2) exceeds receivedQty (1). Neither rule matches on its face: duplicate_invoice requires a different PO and this invoice alone does not exceed receivedQty, so the code is applied to cumulative billing; pay 0 unless the vendor shows a second received service.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyg99BKM9oYVaMq2mTH",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2063,
+      "output_tokens": 829,
+      "output_tokens_details": {
+        "thinking_tokens": 633
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "```json\n{\"decision\": \"hold\", \"code\": \"short_received\", \"reason\": \"INV-1047 bills qty 1 of dpf_clean at 48,800 cents on PO-1009, but INV-1017 (day 11) already billed that PO's only received unit for the same 48,800 cents, so cumulative billing (2) exceeds receivedQty (1). Neither rule matches on its face: duplicate_invoice requires a different PO and this invoice alone does not exceed receivedQty, so the code is applied to cumulative billing; pay 0 unless the vendor shows a second received service.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2063,
+    "output_tokens": 829,
+    "output_tokens_details": {
+      "thinking_tokens": 633
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

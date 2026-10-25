@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021856,
+  "durationMs": 7252,
+  "httpStatus": 200,
+  "id": "INV-1073",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 46500 matches contract rate 46500, billed qty 1 does not exceed received qty 1, no earlier invoice for 46500 cents in the prior 30 days, and the amount is under the 500000-cent bank-change threshold; note that PO-1006 (qty 1) was already billed on INV-1019 and INV-1067, which per-invoice policy does not catch but is worth a manual look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 46500 matches contract rate 46500, billed qty 1 does not exceed received qty 1, no earlier invoice for 46500 cents in the prior 30 days, and the amount is under the 500000-cent bank-change threshold; note that PO-1006 (qty 1) was already billed on INV-1019 and INV-1067, which per-invoice policy does not catch but is worth a manual look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz5Rd1n6rnDWarkmq2B",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2244,
+      "output_tokens": 644,
+      "output_tokens_details": {
+        "thinking_tokens": 487
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: unit price 46500 matches contract rate 46500, billed qty 1 does not exceed received qty 1, no earlier invoice for 46500 cents in the prior 30 days, and the amount is under the 500000-cent bank-change threshold; note that PO-1006 (qty 1) was already billed on INV-1019 and INV-1067, which per-invoice policy does not catch but is worth a manual look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2244,
+    "output_tokens": 644,
+    "output_tokens_details": {
+      "thinking_tokens": 487
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015732,
+  "durationMs": 2442,
+  "httpStatus": 200,
+  "id": "T1682",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1013 toll at TXTAG-SH130-01 falls within 10 minutes; the only prior charge at that plaza (T1073) was on 2026-07-03, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwwUKEAgTGAI4AUIIdGhpbmtpbmcSDIDdCsZG5UA0NLBTmBoMvu47I8luUDZBmtMrIjBwE5ab7wMgOpTizyyMfcVIYQaEBA1HWPSt42WB8ezBOmmqX8jFX5sfG4+gGroCJFcq4AR8h6erZa98L+PTOZ31MKj3vIqhGmbtNVaVsxkGVfUGb76sYpq5kPPu4BqKySho75K/lDj7Oa0aTjJRufcDZ2Nzkudi7tT1Qj5T1kXQHzDlEDjjorOoME3QuhGIMu9Rk9dqo1za2T2+h7APGeBIw6LwlWKnvqUPPANDym0aiXD6Wo0FtPZCCrpepga3lx/sat1ivS6XsB29A+Xj5BXec5FHH5ZLjkF3s1BknCwAt9OHmEzgB7pYKt4Wd0BQDe5Yw/wp2KlwXrx1OeBH4/hvGYRa4bWYGSJfdccEjdt+creVWRvY8jk8X7g3h7oNz4p3es5CSjBkfhf8s9S/0pPshSzyKHFyCP+YlVzu1BJxUuAEFYFJdeCAuFWEzdEzl9z72X3n86cBSPOWCVnpSacYHMEMV+9O08NUSJje7EtTpF9r1kg1W7HuFCMWcZUOrWCefAglMVHgG8tCS4c6AlGBakUyPmCe6eaGFGzXD8O1gGejFeT68JARg3ZmZLU7eObZ64t4hJgF8Ot/yJWnf1XWtn64K1q4klOtTfWS/UtHzNVmZxdNw5ef91qkrKljlzIv7vLsv299NCgnubXk/uFLaeTXhIDVcrG5yhsb8YEQDEOKX1CcHvtU9xquobOLPH4Catp6ybWFX7lq7RKalarKS3NUL+Z9WFlLttPPiRQBORmW1rsmNCOvhs7xN2yp2Qr/Yzd7eLWgxXUAbpzoznRIQ+RsAQilY+eNZmQIHPGqSe0A/KJPL5+1Gl1LJz7KqN7sZ6PZ+dT4DgKcCgUM+yqe8JPdNxkfbx9yoT/1DVr3OyQv0hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1013 toll at TXTAG-SH130-01 falls within 10 minutes; the only prior charge at that plaza (T1073) was on 2026-07-03, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzFEXYWBHoXXQaRob1R",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3163,
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "thinking_tokens": 66
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1013 toll at TXTAG-SH130-01 falls within 10 minutes; the only prior charge at that plaza (T1073) was on 2026-07-03, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3163,
+    "output_tokens": 154,
+    "output_tokens_details": {
+      "thinking_tokens": 66
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022744,
+  "durationMs": 7705,
+  "httpStatus": 200,
+  "id": "INV-1069",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule is triggered. The $1,355.00 brake job matches the contract and PO rate, the billed qty 1 equals the received qty 1, there is no bank change, and the same-amount INV-1043 (day 26) cites the same PO-1007, which the duplicate_invoice rule does not cover. However, qty-1 PO-1007 was already billed by INV-1011 and INV-1043, so I recommend confirming with Lone Star Tire before payment."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule is triggered. The $1,355.00 brake job matches the contract and PO rate, the billed qty 1 equals the received qty 1, there is no bank change, and the same-amount INV-1043 (day 26) cites the same PO-1007, which the duplicate_invoice rule does not cover. However, qty-1 PO-1007 was already billed by INV-1011 and INV-1043, so I recommend confirming with Lone Star Tire before payment.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz5gyk3WdL9Fpws4e3R",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2651,
+      "output_tokens": 607,
+      "output_tokens_details": {
+        "thinking_tokens": 438
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule is triggered. The $1,355.00 brake job matches the contract and PO rate, the billed qty 1 equals the received qty 1, there is no bank change, and the same-amount INV-1043 (day 26) cites the same PO-1007, which the duplicate_invoice rule does not cover. However, qty-1 PO-1007 was already billed by INV-1011 and INV-1043, so I recommend confirming with Lone Star Tire before payment.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2651,
+    "output_tokens": 607,
+    "output_tokens_details": {
+      "thinking_tokens": 438
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

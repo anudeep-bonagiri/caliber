@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014088,
+  "durationMs": 3471,
+  "httpStatus": 200,
+  "id": "T1235",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1010 toll at SH 45 N Mainlane within 10 minutes; the last one there was T1186 on 2026-07-10, and the only same-day toll (T1231) was at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgQcKEAgTGAI4AUIIdGhpbmtpbmcSDLM+j3lAFlcgRHviKxoMzi7+hzmC0ZtpYRQhIjCS4XHEX3OU8mEKwBlz/g4wchCsnwaOFtILx3+XEgLDUoSLfsWmTKi10d8iu4IdG0IqngYOuEExdWzpqqTqCYfbDB+QpTrEsZ8AWKJ5iS0lrnxceBSDRRiNkZ35smtmFHlP22sVVqpWzqNujF+HCF+oFzOwzR5UUebqbeLIiZ3Hx4h940M8wFjDRTh58l9Re9cb9DtAqdlGIvuArZz4VoOZGZDrW6KTbmh9se+8Em9bfhlSFsYiTiY569GTse6AHy3jd9UONKI6khneS/1ZQnbg0VAx63k8s09XxvokX6mQM7iciooSMtIPl7WgvjMuqaUDveu6xTgiq8KJjrwhBk5P5YevkUrh9e6qShVSzxj4guPwttSg3PFg1jpgnqJul1te6zMVQtW+is6lRer6TX61bY/rfYtIe/x+UstsDHUFMhyOOfZ/dlJZYZ33mXtmY+7goh4p+NkadXFMwmmiLmnlBa+gVYdfYYj80MJBAAJDNLpr5YevariI6cX+8I/Nm6kwD2rb5kz7Cqw6/nFil4rOToC0/YAfQ0XF2vMe+s+hMgdL0fyWWMqucda2Fhy+Mbd9MTm3GpdMvijNoJySJa8qyRxiEVOFJ29NDKKavdI/F9zJWmAwwg0GPGyFbxquCDUU0UBIbxX7V+g9xPtI2lDvIvU6d30K7eWMDorizBORAXLstiTwtj36SwLzV1D8gUfmvW7t0ElAVhZvZYh0qtclP4GtvEJWiK3nAdFqPPaqSI6vujQQJwI0VfScR3EdExzDnhqKL0xS8hRJzRMyVsPPj1t3tI08ws882IaujP6GSQ5Ugl/hNXxS+JHNXZoTo8RevLxGLGF7bRtfY4dZTKWAiADgg4Q7ZMy3XDSwFiCmptkeVjppaNBr8P54QhO0tKak7WVErR/3rLmUN264jbaSm/mjKanyUspeOzGwubhzFw2v3xsZDyCU9wPRyb8lBMJLhHhY0VT4I/+MBE27oVCIZfC/Wv0ZRKIRN4QAkUNPshZp7CnEcO3PaHVUOcBjflQgsbO5o9l9Y6WJ+7dMENRhZnOSRfKppUSrSNQlVurpbRVJPSKEru5TdXrfMiQF8UI+8TPqHKEhZHxgoQUsegPD1NBJsAZQNA6CzVvk88B+ijkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1010 toll at SH 45 N Mainlane within 10 minutes; the last one there was T1186 on 2026-07-10, and the only same-day toll (T1231) was at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNnWbJYMuu2WwFyhXh",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2282,
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "thinking_tokens": 160
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1010 toll at SH 45 N Mainlane within 10 minutes; the last one there was T1186 on 2026-07-10, and the only same-day toll (T1231) was at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2282,
+    "output_tokens": 248,
+    "output_tokens_details": {
+      "thinking_tokens": 160
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

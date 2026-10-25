@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017576,
+  "durationMs": 3504,
+  "httpStatus": 200,
+  "id": "6294",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 2 was parked with the engine off in Houston (29.760,-95.370) at 15:00Z, about 170 miles from Love's 244 in Beeville at the 15:17Z purchase, and its odometer never moved all day; ask dispatch whether another unit or driver used card FC-1002."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAcKEAgTGAI4AUIIdGhpbmtpbmcSDPKkhrguF+3YZnFxpxoMCmRKByqHPZrSfQIVIjBfkjgMLEG+BNZDpBiTKWI5YLhDSYeZ/xMxTxxJQ1jzTLRSfxgqrEPAjsMg3tlodAYqnQbhOXqEOmdfmQ4jrOJFoNxicKLST0LY+VYAR85svg8Op5D4mHT5WVJqIQC6RGZmtKEbZSmSQaR2wHMBOCtPgQP6LrDSyi5bXy1bi4GXTffJAlCyGERUmGrI4G8Q5WO1T6f3BJBTaxVpfed6M+uLsiKaCHfI51h1SWlMTEQdcX3Zpk9RmmUu17NgoDDgo8LNUTMP+s3nborbv0a6Sq536akBo9BAQR5Q7+rEgprN/gRKxzGpG4TU3mBbLQVkiRsnqwNBv0F0s/WTFpzJMZM6Z5mKazCx+QXuWQoethGGQtaB35KuAUa75lHztsl3kx+1LYATD4KLIc0MdACWKzEKwzwWdj178eRTc/ksSoM2lvSigP/EBYQ3LIsyb2gHuBsoooZf/b1FfwWhoe1s7Ajr2JaBzR+ERjE+GsdT0dhCRPGqNqGiRDcNJeOqK/ps5BHwy6Nn7oubmXPHY9sWmJVHKMlwqrJmMpk34xjnLRig41GCFZXOd7sqVdTOjnnIaxwTi03sDsPoDokf4+W96agYWqjR4q22i89mouFLTpP6jq3zVJX50YwZUjLHH7ZlaMgCvdjyoKtKgy3EO0Ov5IcKePqYFSOX+UWyjV5U9H65ceJBDmhRIQb9M4laCyesATTZoZRh3eEOvAR+hIHx4YzeL+Utqrm+KLaiNwl3QlGNAKtxTYzJOUqV2Tjnyc82IQ+RqcG2uCTV4htJDsH6QX2l03y5hWxIfuxffuzxV/AHrmhWsGc1Qoz5FVvclr0X1F3cOd+6Jyj1Mitb9QZfC7aqlPac960mOKbX+ygWXjzZlmtUBtp+AyvZt/vkRrW4ZBYn/8/aFgK0LB8DAKPsb8mOxKMaw1cGACK2tMS3/IE3ds1cjaLcekPv0cQFQPki1lH8VE1kg6C0RcOb8vTo6wOW2R/dHyFP5/qFPB2MrVBZ5zDFSzCfm2rNUvseoaBu8y15BTBOlGJwvarcUJWLTfrgQFrzlaUJ/Dm0ySwElYLix/dEM6YmJk0q5JhX1eJj/veJfDU3rFWi+ceZg/Pj9Lh78Azr6flmBsv2nY1hWnfG+hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 2 was parked with the engine off in Houston (29.760,-95.370) at 15:00Z, about 170 miles from Love's 244 in Beeville at the 15:17Z purchase, and its odometer never moved all day; ask dispatch whether another unit or driver used card FC-1002.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNz4sq55MyDKs1rbxMBn",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2989,
+      "output_tokens": 281,
+      "output_tokens_details": {
+        "thinking_tokens": 154
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:50:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 2 was parked with the engine off in Houston (29.760,-95.370) at 15:00Z, about 170 miles from Love's 244 in Beeville at the 15:17Z purchase, and its odometer never moved all day; ask dispatch whether another unit or driver used card FC-1002.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2989,
+    "output_tokens": 281,
+    "output_tokens_details": {
+      "thinking_tokens": 154
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01212,
+  "durationMs": 3023,
+  "httpStatus": 200,
+  "id": "T1313",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1012 toll at plaza TXTAG-SH130-01; the closest prior charge (T1312, 21 minutes earlier) was at a different plaza, TXTAG-SH130-04, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8wYKEAgTGAI4AUIIdGhpbmtpbmcSDJbM7/u4vBv9n3psJhoM7V50qIHA2QPLb0GhIjA9K1R/n15Ugtnm3Wr0SpJj1Vr5sRCVMWIppWpFjaJNgnL2LR4W7f9NtofY25nPptEqkAaWbqruy3BKXBcV0dRdw5QLn+FHgrfBwjczmrn0awX6wnI90EWFJLD3qGUvcNSh/u50m4nftAkjTQNUocT+DM1ZEdZQVpwIvSZNl8BBwL+cSzrzVi8ztcH9aNxgAhTEyCThPMCOHzz5Izmee/CuTr0i+9gBXmMZLPsVHEhTUQsQ8QVVoIOjJjliNGoKIQIGaMnO7LF5U427IiflW+EFoGNquj2bQPK2DjTQ78+yQW+qJpZhPg5rE+PXAFfWDl/ZDBw2QFv2D0cSPX8DP8/7B2At2cZMwie3aP7B8DdNv51XvAeQY/L2UBZ56imPkGntyn8uxlV46n/oMa02JlT9ZFfP2gbCzzCU5fhz5b2l63y5znaa4sGhW8vvrxeiwZJ9Y9GKS5GC61ECurDg6eE/qeWhHnVdp77iiq+cdV/L1sWPUT5FfuL8tbmrYZQbW3PcOmT94G050lEyZe0gEdU6+VeuR4b/Oyem8/gNWXNhc9bGK6zZQRC2T9gNqGcNumkgRJLRBU+1ZMNhii1EjYAVzBDSskvC7zqSISXyZKFZEYRdW6F/qaPIGfGs9zwHteTTe+P0O3PrgtIRO6frjGQirzzi6nFrb48f8nm6QTpq+X4XwZtfXyebwUDg/a6d6flzdjtoqalm/QbZb4T5HjvMDwKoHwJ/zaztBkpxeiUS251obNd8n8ueTRXPH/QaHaaridFyQ7YEAQIaXJmhefeJdTAIBZ/7UMlnz5AEjrBKRfiLqppL5TuETwFVEXtD2NusgMIphaUH+7qzPeQKSFlh5ljZztgwm+a7ROheerORr0v/diTjscT4i48ipnqQ3Ia7+DghuMFgTlHISGde+esSKeYRTvbwMiM56pXkTP8Bd0HCsHS6of2cBaoat0OP1oNH1ixThadap7EOPvviEyFtpD4iSyt8lHt6bMLZu7dxoIPjaFnF6QNlB+TDDUecH5xmj5RtW/L85Tq730KB7TQT2tWioKN9vJYhGk8sRFTBdFaT4a2KMhPrxfurFgAIu7MR/HDwUi7xxRvvJZSjTCJCp1npGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1012 toll at plaza TXTAG-SH130-01; the closest prior charge (T1312, 21 minutes earlier) was at a different plaza, TXTAG-SH130-04, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygdGrJCiqooN5AkpAC",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1775,
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "thinking_tokens": 154
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1012 toll at plaza TXTAG-SH130-01; the closest prior charge (T1312, 21 minutes earlier) was at a different plaza, TXTAG-SH130-04, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1775,
+    "output_tokens": 251,
+    "output_tokens_details": {
+      "thinking_tokens": 154
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

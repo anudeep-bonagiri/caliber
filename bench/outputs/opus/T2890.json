@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.04926,
+  "durationMs": 3730,
+  "httpStatus": 200,
+  "id": "T2890",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1014 toll at SH 130 Plaza 4 within 10 minutes; the most recent at that plaza was T2745 on 2026-10-14, and the same-day tolls (13:04 UTC) were at other plazas in Dallas/Irving."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAcKEAgTGAI4AUIIdGhpbmtpbmcSDCJhNN5PPBywCSt/ShoMi6ixtqmR2O5YyrrMIjDILdXjpSiU/3pLuF8lQbApMwXNwqSfPNFu2bGXRjlQ4qnGrczZbdlotcx46SvgpAUquQajuqCCgAgb45wcgU71bJkAhpZAbgIaE9VhocoNxnWScPG4AXLJyrE36+f1Z2LqUmTKw2xVNWkiL7FS4GPiFgA4FliBJl0Jofb1+gVUYlWOdsL28ZOfRNVxeJqKVWAGxUsMDEY0u1z6QsT1k4naFMk5Q38qhtinpr4xaAYSKZWIbJsCyCs67GjGlrAbDxYLCFZNEnxEBdc3o2qhGMw5CUyOU8DTxL1Bz48hBPjemVy/qtCf39PCryyBdnW5um10B08cLMbMQDD+D9wRZRNtGGdvPJoiUBC7I7wvM+7VSX0ZEIMaXQ5Hek47Hz2ld+qrQGF68KFYITeeyC7TzqyjZgjpC2G+jGLXZD/9p/5Jevqh8ED2ZDbLMaffe0+/mgEolK+Tv4K04lxvk8H7W5R4WplCwSgX1sCxBcPbguGl89wF3DcFABbWksLnh5TuwlImYE+51/1u1P3zqZgCo0VPxF2Rq1KtKX/QgRUa1SRnbRhVV3mjH/d+67X32xvQ1u6LpElLRmURqtvBkG5qu8LtSBAuFPdaMUK2Q51CZndzOJyNYgcc6jCCeP56SwHcYZIalq3md4HsrC9fvHanPAsP6+9fFtx+eGkRTybshATnr78YE2Z8w4AQgXf8OOacueEv8bfxjWUjL8b23v6WV9FNX40KxjKZ5fh9ofoXZ3XR0q7C/3hv1XsKz/o8saySzdManLqwtqdtf7nIqnMlLlID1YwKAh/Mci9HIYYvpwF2jw0MibPtOuBP1FicyxD2Xv1Mq6UWqcSMosL80T84a3Gchg7udqWnHy8C6fcqitNb0KoJPYy85HjVjUgs84i/zzNT/Hefk4bbzrpskgEgEARbAdgyn0wL0Yzlj/Wupn+AW5xRFIOsemO75jRPWIvhQ0qPLVdc0dUCd9w6wCEh6I2fij1W+UTd0KDI831S2G2vAQdQMrtnjKVs7wO9vJBDfINBZoVvSj/KEwZITOp1+X/SG2wwZvdgRAu9EzWDb38exyNE/O8zyankVjk/ICfdfaePNIn85ZMyyIXMvg4C1+Z4UaLmYMnw4BnalqY7BZuVl2rsQTYztAbl0pmbfzuZy2QrtYLRbJ0mspA8P2AYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at SH 130 Plaza 4 within 10 minutes; the most recent at that plaza was T2745 on 2026-10-14, and the same-day tolls (13:04 UTC) were at other plazas in Dallas/Irving.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzG53Jrv5Rj75hvczrW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10905,
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "thinking_tokens": 176
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:53:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1014 toll at SH 130 Plaza 4 within 10 minutes; the most recent at that plaza was T2745 on 2026-10-14, and the same-day tolls (13:04 UTC) were at other plazas in Dallas/Irving.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10905,
+    "output_tokens": 282,
+    "output_tokens_details": {
+      "thinking_tokens": 176
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

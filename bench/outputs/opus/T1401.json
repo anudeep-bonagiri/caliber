@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014416,
+  "durationMs": 2426,
+  "httpStatus": 200,
+  "id": "T1401",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The most recent earlier TX-1011 toll at plaza TXTAG-SH45SE-01 was T1298 on 2026-07-17, days before this 2026-07-24 17:47 charge, so it is not a duplicate within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxAUKEAgTGAI4AUIIdGhpbmtpbmcSDL0/qx5NmQRyOiBF/hoMGimdPJKV3BZD5vorIjAXQx3UPSz2BUMcpkNLnvATO2b2j/oxgd8IC0u5/KyLozlVxSPgqggpJeClniM6SbYq4QQoe2SoebMtoUqdhtVryhge7xoZKMCp5vYJX9zPpP5A65sMq0lDWUadG57gMNG6crk+l86HLcq8VemJH6TGnCOsljOeS4dC2Ge7o8hZqFTSTkKJy7ls3YQ55uSkXtuvcjNIQ024uu9sdnRNAu+X5xeVqvYF/wX7uQJuEYO2eidCwBhVEkFbGdJL6OXgx2/BnqdtPBT+KMOGaHOXtmQLvKNFL+/vEIsrUvHu76POiuSLWJIlH4y04QAdQG1AiqaqszadFzp5hU3uekX+R0F6tqJfyPqNxTmWnPXpU7hFtJIfyjB1vhRZ2LfM13+dkT12No+KEebl+eGpLeulK5VB2I+gbMZID/SpJVl0Gi6VB1B6zUqhp8hnzLHStNSHIVAfvPJiKTLigCDKCjDw8X80zyfJrCMXTBqLzSsks0FtUJVzX3EVpeu0Aluyrrmae2sw3LsD0PkqF8NlQE1k40118EMJaWK0ZYh4FA0GIP4/S/QuA63WyZnOcxGbZWm+MOSui1/vwLTAzgjVuR/qDLM1kvoqi2hzSZGnDnGob8XzetWHJYXxzMeo+jwEJQ8NwM8o+Afh+KslxAZz2lfvHR0i3ZZLwZFGcFXR8tahdQiCflg+8w3c4uMd5a/HerF5Xo5/jltw+W9X92MEF1Hhc9dJFIOe3xOlPZn2rs+9rx6+HkNN0azdy9yrl0O3R6kxZZ2Ufk7MNKjZ/fqHKIyNUqCbVc/op6mbzYr0f8m2Zbk5ztzKFuDrDjApGpTuhPx2Ji4MgulAcDhXeOy+I8JmIqn8ub+3PiggX7CgBl8ilTJvx9nTLqQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1011 toll at plaza TXTAG-SH45SE-01 was T1298 on 2026-07-17, days before this 2026-07-24 17:47 charge, so it is not a duplicate within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNysjBN6Vz3ZCqNE2L2p",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2759,
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "thinking_tokens": 70
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:48:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The most recent earlier TX-1011 toll at plaza TXTAG-SH45SE-01 was T1298 on 2026-07-17, days before this 2026-07-24 17:47 charge, so it is not a duplicate within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2759,
+    "output_tokens": 169,
+    "output_tokens_details": {
+      "thinking_tokens": 70
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014848,
+  "durationMs": 5042,
+  "httpStatus": 200,
+  "id": "INV-1033",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: the 337.61 dollar shop_supplies invoice matches no earlier Gulf Coast Diesel invoice amount, cites no PO and has no contract (so no rate or quantity check is possible), is under 5,000 dollars, and the bank change (day 42) is after receipt (day 19)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsAoKEAgTGAI4AUIIdGhpbmtpbmcSDLHWCS25VSQmoSk7LBoMWqJuqic70YtnTKsfIjCgC5H0Eb5nvAMNV840H+8+H+nbPL4u6wrPsRI2SIDS4oyZ2uzv+0/w807IjVcCPN0qzQlMb8XUENnZDwA9zMMzQyIJ0LEXOQ4OBy9ELp1uvjX+T8DEL5oAQZAlNdldttw8HGDU3VCV98LiYuZ+Huq8mJVg1NLg0l4H6F1IReDTzAUCCl2iHtxOrMg3fXQ9dJIjU2bQ6LKdk3Y8XBx84HkDrv74tIu7VxifZSgFBhRBauU5yh66FxRl/8Y4EBc8N6AqmEJPkokeZ7hmW9DsxAdfUDaPOcFK+W1nhuW+Y+4ONPro0UuMm8ggx6hb4ywsLHnDaoGgx86iC2XoLH5zzcYMxwb2mFh288DOG1v3LcEvBEbV0oy4JUg4N07ajB+fqTg1ldNFpdBkcmGufxBujppyg6eofWQ5vT3k3s2vQVWkj9mo6hJP5/T+Va0sUBKIw6IP4IBcrnJOo/N5cOYW+QCdLJbVyrSmXi0cWUEF8F+LFXLQ47G/Ypi0gIKtanY6qcoQ/iWWarNaTYFGh5xE5M5D2TBQ1U1HmBK9v1EUCF8mHNRMNdDAGT7He3jM4XqdAEkGsJfoqpUvOhvkMPkqMl/t3E7PcS1BMvYm72kgibaf0cLez0N5pAG/lVSXA/paS002pfSznTGtq5wkvDQs/zBS/5s+L+Sli5SgegS9cFyqoFAI2M414Zb2QR7xRYPy6k/dFh8D5ALeCNFhTkLzheq1XqoMeWeWRa2w8RwYFjpPJIiI8+K/a7BS97DkidltfTr3JWoVOPSvUQx+aPOlWMLq0hb9Gp/kS4Ow/nBH0RLzvQIpmTLfO1BU3HAvBuGNzHRwTtI0Un4Wdm1B85KSIBHxjKL7a0W/M82DQtA6d7I5N8axoN9CUj6AncEV59JllYNiZ2Sa3c0oKKm2MdYHfCyJ3i430S+Tqn0JF8kABPE5owsVe5wicaSktUawBvBwZfP7oOWVBlkmb8pOt//PFgSi794qBdl7/arJ1KoradKqGe+R6huGVz5O6HitIeGQig0JFfrSkinXWyHjJPerRM6yMmt01KP8Mf54bH0Vxex3LFa0V3XQ9Mh3VqvnbYH+f42sC5tWDTrR51WS/foyU+gtkDy0Ynw55T7CrhiazRMEkBGmjEveJta/dgzQW87DEKWF+7v6L7N1W64pG1aYlbJqacAGGVnHTBGEnFsp41Y7yGVWfYRcnwtqimxfEqPuzyHu08WNMlNaA3EJhSOxqv/aQwUSxD4Qkkn7anl22khLKo3Qn2DzgZykvFNhxite09nSLb4yv1BZxZIXAlIR7l5W4w4aiyReId/i+pS6ayvkX9CjeHrvfMQc+E8C81XnYIbDc/S+2JEoSSUHQBRh/IHBqJcCmiWueK8OmMSDGzrVeqKb09w4ucQzWrtPWSIXRNXy2y3h4eeTDSkJrYGxr1q8dYW3yRvghBVXK3BUICy/o9JDt3Zipep/jckjOxrjcTyDT676nFAitsZJzwk6W5AiPK6MCx0X49ThHmmHCoOG+ArFBVC59ya4jh2yQV9AWnQxIxXgrDibz/sfSkHunD9kUhslqtLpg9LvQ4hu9/wwQxeEeWFjRF9mHSZcUsmbc3Nd3Alm/FZdC6AInaOhu+xa0ZkDvbgzPv53lTxO2njcKLYlUbhq27ZDHpbqd57/IftDWzZ6iG+iAnAPZWvZ8aUjuq42ttknRDHiB7zyufWZuBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 337.61 dollar shop_supplies invoice matches no earlier Gulf Coast Diesel invoice amount, cites no PO and has no contract (so no rate or quantity check is possible), is under 5,000 dollars, and the bank change (day 42) is after receipt (day 19).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNzNR3WtN3hzsfrVatvB",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1577,
+      "output_tokens": 427,
+      "output_tokens_details": {
+        "thinking_tokens": 305
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:54:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No hold rule applies: the 337.61 dollar shop_supplies invoice matches no earlier Gulf Coast Diesel invoice amount, cites no PO and has no contract (so no rate or quantity check is possible), is under 5,000 dollars, and the bank change (day 42) is after receipt (day 19).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1577,
+    "output_tokens": 427,
+    "output_tokens_details": {
+      "thinking_tokens": 305
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019832,
+  "durationMs": 2746,
+  "httpStatus": 200,
+  "id": "T2152",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier TX-1038 toll at Dallas North Tollway (NTTA-DNT-01) falls within 10 minutes of 2026-09-14T14:27:01Z; the nearest is T2121 on 2026-09-10, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAUKEAgTGAI4AUIIdGhpbmtpbmcSDPhIWh3E80Up+cqr/RoMYahpZpQw1vn29sOBIjBcDzHLpGktsd1F7ewqeJbN0GYgM3KWZpWnDefVUrkSZLyVqjANuubPAclWaX+O3RIq6QQBpJp1jIq0Fx9xU4strAiNrWcEb5eXutqUZhJGowHFvlqkFVpG2thoF20JdOQSsXEdTGgmRPMCYeE9XcdufoVeSHcwdiJ5UCu8UISectYhRsSwGHuyuE9Iw5HgU3Gnk9hKl8fuUtjaVS4N11BeOYFciLTZWn5uQZJOhtbsIqDfVxf2b6eOMLpBx5T4oo7r1WnPldvPIr9BqFP53JRUX7o/Bcbss2SYy9JtkXx76sNBZGsBr/T2Wt6tsSLT1eYazvGJzxx9t5x0rCX2zIM0BAtsWhgfEmpZ+xNLh1DUGwvsDXw7/nhJXCiXh+owmd4/tRN05YOBI0IKTOBEbMXZO2lWFJjomeOTx5UUiaw8QF+4mSgpS3aSV9M5LSoTK0drLvSbeJXBcF6fPBMkNz4UCtQH5Gse4Sd7iSNjr71Ji6io4xO67RCzRUmJ1api6L0/yhBz0XtRIfVbhwLpAmD6nyEEf7Ja5ggA7A7oj/lwHNtK1JYpnlMQSa9RbL+5N2fxhIFdR4xvmCkJXRmOT1XKu6Evty8q/3CymLn1S1/0G1sd4Ipjc6dbYLEbc1fjbrUlJP4LxmZYZRUWbfazLMklFICHQWhnRV34wRUBJz/F6wHm7eUK7B2PxzVRmgqRKdnWmWPpMAM6cITwb2DQOT0QAmkHbh3RrM/MDhTDFPKFJN5Gq6S+uUSMqrUsEdQ8gzYrz3KO85zGHyE6UWiabowP4I8wrz9fUHzKgc08tvPGKi16j9pWWfx+7lmYNOQaewc67Nw4X4Acu912q/bs37YzKelO12Wz4A249IbXYjE2j1X+5blgsKXA0DQruxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1038 toll at Dallas North Tollway (NTTA-DNT-01) falls within 10 minutes of 2026-09-14T14:27:01Z; the nearest is T2121 on 2026-09-10, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNygRcsMg4eZZhjjL1M2",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4053,
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "thinking_tokens": 76
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"No earlier TX-1038 toll at Dallas North Tollway (NTTA-DNT-01) falls within 10 minutes of 2026-09-14T14:27:01Z; the nearest is T2121 on 2026-09-10, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4053,
+    "output_tokens": 181,
+    "output_tokens_details": {
+      "thinking_tokens": 76
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

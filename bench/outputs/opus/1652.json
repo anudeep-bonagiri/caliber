@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.026508,
+  "durationMs": 2706,
+  "httpStatus": 200,
+  "id": "1652",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 27's 21:15:00Z ping was about 0.02 miles from the Hillsboro Love's station, and 40.8 gallons is within its 100-gallon tank plus 10 percent (110 gal)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5gYKEAgTGAI4AUIIdGhpbmtpbmcSDKa6UzP/A25wVDiRSRoMRF5WXtl2JFxQav/wIjB9j49wxcuOmIWb/O5smxuSt0KE30KSGzr0F0fLKyydqJNhNmJptKdLQtVq3jl4qWgqgwZH/uI8i7B8nzU/VjiWx5muVflpbLEPGmUfsv+Po4l7upisNtxCclu0Ssh4usNdQFFT2sQj+EbIC2TVDEGZaCZ6W43RZyHNbYqXiHY1cbY8ko4usFhUon4gIZZfiUJMSURGH24BdFDpzKvGJKpm0CkGih8PlMfwApBgeSIGyRtzqQfbYWutp3WEB7s+OW+Hzm67EPrtyO376a3oYEcRMIlfaAqsGsab//B2XZmGvHdUmteDgmHP+/quDPwY/0Z4u22veVQdVbAsT1SLDZodEz9qLSS0ftba5iGq4kfVCJuGWHhhp9ExOzC/FUj8ln70GObNVkFSq1T8jroQIR8J82xEYm7qi+WTYF2eG/L9o5ICxg8Hr3TnAMYYKnddDIzyZOVHCDcLbeOT2OIOawIlmiJJampNh3sA9V8zlTSA7NKZ2fz9YlAIQ02W+E6yAnt6HQifBbQQDDrLP6Mnc/7zyQDQT+gmC07KGvy5AZ1qWPT+FoUxT4ZvPfM3x02ceIauYKujn8puXcu8EZP0zprdZI8jrrph9zOPqc88YnFtsbzjDtjzIwxwKIiz/Nl5W6dd3mUzNW5lliIhiDojXhTsClgl/DcrMXOIfPauuJ9kN2UNF21muAzVbwfOytyKfEgT9VsqztxqxoDAHKvNYMIIqALQsH3SfU/z02rbc5mVdVAADdd+sMAj3ntG3qr/0bCkeEToDdH4UZuovmS3ejdV9h1HeA4R5quqW/y2I3z6n0wwxE5mfyXVN70C7OZKzdzMwV7EGQZ8vZQU/2w7ouRem1Batm/ghRQOsPtLp/slBIwin6Sl9CaoZ5ZbQJFYf14qevpvvGobKtmiQNuswI+Dq0InI0JFzBPS7KDAX1ObEgY0imx+3w1/GbwQeYwMP0Au8MzJum97ntyi1BH0F2Cse2D0X+1r+irnfy+IzOfDh3Nze9bjZo0MuT9VZznWvv3+BVMhXafptkDJft2dhaFbwE1VL1gRXS2pALaYPxPcFXbXXTuMVk4pfvoT3ahfdaTMubxlUSUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 27's 21:15:00Z ping was about 0.02 miles from the Hillsboro Love's station, and 40.8 gallons is within its 100-gallon tank plus 10 percent (110 gal).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyzX15AHX61dBqLcTKN",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5472,
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "thinking_tokens": 142
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:49:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 27's 21:15:00Z ping was about 0.02 miles from the Hillsboro Love's station, and 40.8 gallons is within its 100-gallon tank plus 10 percent (110 gal).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5472,
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 142
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

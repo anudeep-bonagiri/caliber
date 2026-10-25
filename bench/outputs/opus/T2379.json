@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.022916,
+  "durationMs": 2558,
+  "httpStatus": 200,
+  "id": "T2379",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The closest earlier TX-1013 toll at SH 45 SE Plaza was T2370 at 17:15:33Z, about 2.5 hours before this 19:51:25Z charge, well outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwQUKEAgTGAI4AUIIdGhpbmtpbmcSDCdPAU/4xFFiihWupxoMxD8YTMBGGjGyA88oIjAOt8IQaJ/e7ApUFGuY591uWOsoWVn3qXt8niWnBgqt9p9wC32hpVWirDGtn7wbRYAq3gTYQ5DL77g8sswsKFheWHjFaCV1oACLQ1Iyz+Jv/xBbi7QiFVtuX83+R1lJnTPHEN5gHcczpwhT6bKR0wtWCFDnyQildMunFrhc6Wssvb5Ql3NxU6I59t7PQBFx4UPYlh0smq944jLIHDshLvr0wzFNs4DYDpG4CHt0nl6QgzX8eUrePISNkYF+HDynvCG0KTj3+ZbmlupXoi4LARWQ/HAeEaDCVn5H54XpRXkH8xa5TCDM8zaB4ZqZFom/WzmTLto8To/sJ93r9VyIcQjGvz/jekXEhAwj1WQ5FgsKYTTHIn2Ro3I/x4PiJG1EKreEne12/areDITSvOGma+oBns5wp6bu93HlnF7gPZ3mWPKJC99LqKhlDQ+3bwfPxs0bJmUM56K7IYZhDYVa8snSmJGEfdz9/DaebRBw2TQINMFr+uDzmWmYaOLWb4QBGpYotH+p1IKFZClpP8yhKeqInw+nLpM3kHU0XU/5d3TXKBUY9/QKZhgN1FVWNqUTXUxMmnZI8ZrLkEV9SEaJkeSZaHlIa2rPzcoCUDAnoAEVJFqfZXJRxqWovLeupscwHGKL/GcMhOFn6CRZ2uBZpigcgV1xAIr7vDhgdJd2UwyeS0SzRl7NIe5jEadM8iGKpMW1a2dDtw9TXqPnDov+FH3pHBir4dg1DzFezwXuqj0aD+12/Ufdcyjvyrhlou15O9v+Z80X1DBOffjGY2coNnYB0paDBgpdZhzY16STSDrxDyPJa6CNErFCNPUSgPXsgFWNG6YlcDBHcBmD8PaMMP0yQPewE8EfCtL5D7BTSeBq4EwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier TX-1013 toll at SH 45 SE Plaza was T2370 at 17:15:33Z, about 2.5 hours before this 19:51:25Z charge, well outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyke74pFz32szE97jLY",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4939,
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "thinking_tokens": 64
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:46:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"The closest earlier TX-1013 toll at SH 45 SE Plaza was T2370 at 17:15:33Z, about 2.5 hours before this 19:51:25Z charge, well outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4939,
+    "output_tokens": 158,
+    "output_tokens_details": {
+      "thinking_tokens": 64
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

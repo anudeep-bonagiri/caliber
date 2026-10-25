@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021188,
+  "durationMs": 2984,
+  "httpStatus": 200,
+  "id": "2429",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 13 pinged within about 0.02 miles of the Mathis station at 11:40:53Z, about 5 minutes before the purchase, and 55.6 gallons is under its 165-gallon limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlQYKEAgTGAI4AUIIdGhpbmtpbmcSDGj5i3S07ZofYVs7nhoM5dVMayHFGGTG+yUfIjAqgx/kYe3Fl/isR76TPdF6A6Cn6YXYOeF5fAm6uaYdNylM9XMsZq9VopbeNcyYXHAqsgVE+Wb8sUlanNhYpE1m6PDJI33tENGq85t6NWLGrLZ+iH7cnbopvd95bhDmAGODKhM2VHNAgZv26yzs8U6dNJWFi5SBvSZLl9N+I3G4EajkzHGG/jTUTM7VXBMGehelMWoSa1bToavonfwdHPzOGi4lzb17T4bWWpS8NC1QWHtS3NhLfO3qi7v6Zq+os6Tsz+t5/iJqF1WitJTtzLO9EQBPRAtOuypbPFZLbJKyp+e5B5jd4SHtvtgGgASmSqUl9yPUNzIXUPv3RaJyAvvf8sx/JMiIqnIXIZV1dOmSm0IKELH7se7As0UINS7C3iNeYLZHXK9KVvFvq1QbA+kfn049/Ket1jhEJ6rl2UQ7icFGkWZWG9Z1Gs9j4VG/nmD2I5puw91pTy6myRG9B/aDbpccHO9Bw49iFoRAOFttvO6J+iJDIO1IgIyTCoxi1Ava3AIuG3A0v1i8RlkEppkStafTfnw2N5wPzDa/iI3T3htR1gqWb2fCqA1GD4TyEAo+T1Y1aoO836DN1xqlswXpqNpATaUGoyty0Q4A2IxvCA6vEDZC03RZqMmffumwKQAfRq6zeEgFWbKPC2rPBDSHCnnqU5agteFRZTHkH7HI8OhSyCgsiy87usvffKZJpO2SmpiEDroCFzlsvsWkz2Qms+ZJ1AXwwKZ8qvEPIVixWNwWelwwnX/531ov+7sT1dxy9M0k8O0sDD7+guyKQxmf4SRbFDoXZlbOIckjRIcfGhZHC01ECdW53BBRalGK7rMVaUM7ztsfJWAczmIxWnlJJ+Fdvz4BjRqeJ7jJPySjvnzPWkEurFV8XF+M1HaP3Jkpf4u92oBYpj/BBnqrWQaQAtXgL3h8ec4H4OCa84cTnR0qRVTH/7hjvQKw3d4FIYyg1KWHrPqnpA3GpHDNaL1ENLOhzx8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Truck 13 pinged within about 0.02 miles of the Mathis station at 11:40:53Z, about 5 minutes before the purchase, and 55.6 gallons is under its 165-gallon limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNyfawvHcRuvP924YHA6",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4232,
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "thinking_tokens": 114
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:45:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Truck 13 pinged within about 0.02 miles of the Mathis station at 11:40:53Z, about 5 minutes before the purchase, and 55.6 gallons is under its 165-gallon limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4232,
+    "output_tokens": 213,
+    "output_tokens_details": {
+      "thinking_tokens": 114
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

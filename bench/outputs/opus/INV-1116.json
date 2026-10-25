@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021044,
+  "durationMs": 4652,
+  "httpStatus": 200,
+  "id": "INV-1116",
+  "model": "claude-opus-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Unit price 72,425 cents is about 21.5% above contract #15 rate of 59,600 cents (valid days 60-92, received day 63), over the 5% limit (max 62,580); also note the billed total of 146,725 does not equal 2 x 72,425 = 144,850."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-opus-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkwgKEAgTGAI4AUIIdGhpbmtpbmcSDN6Gbwi2EAta5D941BoMULBughrlyITauqLqIjCjee8nRIPNcF4oLA1oIODmxn3a+L32xk1ufIWOfokGLbQPKMnugMgBfzYYn8+xlacqsAcJTnYoFe4QGWxYXohpWACzEfwtG+ORhRjPt1LVf/4mK9KE3lfOY79VQxsL8sLj4VCfJIrNl/tV4RCJg4ZuQhv7hWUYYN5LzINQvFNCgKR0IBoIIALGYOQdwdnIXqzNSZX6bxOwNhx0NQKAgFD/onn358oWTPuEAXgmiBPPvK9CcT0s2nXQT1CPdgzJVB0ppCRlOkn/Jza5PS9np03PU4Hzk46OZB0GDah2s7B/P7HFOeaFFKq7OyeE1punfYjdVMi6jolKJutcYyetzxjCDgaf77sXeMJOekQRk3SEinET0+t3MyCWj9wTIWwQ8k+VjrXslAaH7p9Ydnra2lSHC3DCe7xzvqh2rpanpbg54nROaEvfviMKxnozc78uXlgZKCH7ZsUyBAE0cwh927YeYGoqOlN1WVD+WplpKa5T9qD+xKF807pLmiFcU1GToKBNEMFc0TyrQTx+qz2dfGsoW7WKGYlfelmcX3+uHimEa0G9XHC+guTRzUI9ZKJUN4dPmzzJ244NmmQGcCWv3+0Eo1vcdVCQVwFPCckB75MriL5w5+3ElbwCJ0bRoc4izPx8emJTzxGopc1+hWcV5gVBlqx7+dbamiewVAQvWZEzLn3Xfx9B+qJ7lERYq2Nwd77ItQ8QsTL4fgskWt1PPP06fV9vwcsnh9orTV19+mLZtclqtFZeYSZFmUDfIhNJkFdYpFtqvWPpw6bVCU863UlZJ3WGvU/Ehh1uVsa1ml1knTg3P3EoEq6kcSY1VSMX/VONvHbMIPQXc+gPhtyqWGzDBdtnno7PG1vtcKH4XYQWPPHXoUrSKoD1GDzDFFJjzHB7+2qp9kU6zoaOo2q9cRGMMoK96qYtdFy0IBGQIxuoK+KXMrYHDz2GUEllT7/Eo2Y55djp3UiWeaq4iTOjewzVCEvUf4UE2I8pf6cgSrsmSdVx+terYt/kY59W+VSxLZuqBW5wKsSplWmnT5ImC3kWQv5VUfHzcigcAfIiLy7MJQMtoxKvxlcKE5+B/5ve26PwIEYko8BfdRQjTuJy5ipXsfovl3z0ef4Rz3YXq4Hvkkny7r+iBKkU8CiXIpozSxHzsATF2kJvRMRc1R2Yau6/+1WHb1rUX7c/Z5iVn1s7kKyDpGmNyBn3crcs7YGwf+eLn88ojgicOMlUtfVzAdCBG0Q1ByMOC3be62j0wACNWyhQJcV9tgphABCQdQcj8X7vlSl0Vnf7LTKXzrfxLJYR5gkH9/11TgKNEek477nUhmajbxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 72,425 cents is about 21.5% above contract #15 rate of 59,600 cents (valid days 60-92, received day 63), over the 5% limit (max 62,580); also note the billed total of 146,725 does not equal 2 x 72,425 = 144,850.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgNynmqU2d7xBoToGV1vW",
+    "model": "claude-opus-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3681,
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "thinking_tokens": 196
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-25T12:47:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 72,425 cents is about 21.5% above contract #15 rate of 59,600 cents (valid days 60-92, received day 63), over the 5% limit (max 62,580); also note the billed total of 146,725 does not equal 2 x 72,425 = 144,850.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3681,
+    "output_tokens": 316,
+    "output_tokens_details": {
+      "thinking_tokens": 196
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}
