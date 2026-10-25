@@ -363,6 +363,14 @@ def run(targets: list[Target], interval: float, backfill: int) -> int:
         try:
             with ledger.using("reader"):
                 rows = read_audit()
+                ids = [int(r.get("id") or 0) for r in rows]
+                if seen and ids and max(ids) < max(seen):
+                    # the module was republished (demo_up.sh, full_run.sh): audit ids restarted at 1, so the old
+                    # ids would hide every new row. Start over from what is there now and say so once.
+                    seen = set(ids)
+                    say("audit ids restarted (republish); posting rows newer than now")
+                    post_all(targets, [connected_line()])
+                    continue
                 fresh = sorted((r for r in rows if int(r.get("id") or 0) not in seen), key=lambda r: int(r.get("id") or 0))
                 if not fresh:
                     continue
