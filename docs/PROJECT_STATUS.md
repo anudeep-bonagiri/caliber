@@ -1605,6 +1605,14 @@ The Workflow `caliber-stale-holds` (id `caliber-stale-holds-5`, `elastic/workflo
 
 **Is the Workflow scheduled?** No, it runs on a manual trigger only (`caliber-stale-holds-5`, `elastic/workflows/stale_holds.yaml`): the hourly schedule re-briefed the same holds and spent the Elastic trial model quota, so we removed it, and the guard that would let it run hourly again (skip holds briefed since the last mirror) is built but unproven, because every run after 19:03 PDT on 2026-10-24 hit the trial quota's 429.
 
+## 2026-10-25 05:20 PDT Director: Sunday morning state; the allowlist capture waits on one ASI:One line
+
+- Stack: the 21:24 take staging is still up. SpacetimeDB pid 35013, vite preview on 5173 (production build) pid 37377, replay worker 37520, ingest_watch 37419, investigator 37634 on 8012, controller 37677 on 8011. Day 41, hold 2231 awaiting_controller, INV-1075 open, 125 live Nessie settlements. Chrome extension not connected to the director session at 05:14, so the director cannot drive ASI:One itself.
+- Mailbox: 21 of the 60 lines in logs/agent.log are Agentverse 503s ("Failed to retrieve messages"), the last written at 03:44; the Almanac lookup for the controller returned 200 at 05:14. Treat a dropped mailbox during the take as the runbook's terminal-twin case.
+- ASI_ALLOWED_SENDERS is still absent from .env; the controller logged "every write is refused (not authorised for this seat)". Consequence: moment-script steps 2, 7 and 9 (approve INV-1075, answer 2231, approve rule) typed into ASI:One are refused until Anudeep's sender address is on the allowlist. Capture: he sends `pause` to @caliber-controller from his own signed-in browser; handlers.seat_refusal logs `refused pause from agent1q...` with the full address and records the refusal in audit_event; the director then writes the .env line, and builder-S restages (job 7 with mirror_holds.py --recreate), which also restarts the controller so it reads the new allowlist. A Monitor on the log is armed for the refusal line.
+- Sessions: builder-S (dispatch-ledger-fc) idle, holding for job 7. The 16 other builder sessions were closed at 21:30. The director moved to Fable 5.1 at 05:10 after a /login; the commit trailer names the model (D-4).
+- Open on Anudeep, in order of deadline: the one ASI:One line; the two takes; Devpost paste and submit before 9:00 AM; caliber.compare forwarding; history rewrite of a87192e before the repo goes public; scoped Elastic key; harness deck for Task 23.
+
 ## Tried and rejected
 
 | What | Why rejected |
