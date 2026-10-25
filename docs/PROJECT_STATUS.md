@@ -1550,3 +1550,43 @@ Pages agreed within 229 ms on milestones and 636 ms on day changes; 0 reloads; 0
 | `spacetime login` with GitHub for the local demo | Needs a browser and ties the publisher to a cloud identity; the demo mints a local identity with `POST /v1/identity` and logs the CLI in with that token |
 | Worker-side backtest scored against the answer key | Agent code must never read the key; the module backtests against confirmed controller decisions instead |
 | A pause button in the dashboard | Vite inlines env vars into the bundle, which would ship the controller token; pause is a terminal or ASI:One command |
+
+## 2026-10-24 21:25 PDT Builder-26: gallery-08, Workflow trigger change, escalations dedupe, trial quota
+
+Commits: 0c50cfb (docs/images/gallery-08.png and docs/images/captions.md), 38a4fec (elastic/workflows/stale_holds.yaml manual only plus guard, elastic/README.md section 8). Every time below is from `date`, git or Kibana. The builder-26 log lines between "16:06" and "17:52" carry wrong hand-typed hours; the log has a correction line, and the director corrected the 17:20 heading above.
+
+| Check | Observed |
+| --- | --- |
+| Gallery-08 | 1800x1200 PNG composed with Pillow 12.3.0 from the system Python, because no repo venv has Pillow. Left: Dev Tools `GET escalations/_search`, newest document (hold 1421). Right top: Agent Builder tools library filtered `tags:(dispatch)`, 4 tools. Right bottom: caliber-stale-holds run history at 21:01 PDT (6 Success, 1 Failed). Caption strip has the director's line plus a note: hourly trigger removed 21:02, 20:03 failure is a 429, 63 s beat measured separately. No key, URL or address bar in any panel |
+| Trigger | Scheduled trigger removed 21:02:31 PDT, before the 21:03 run. `GET /api/workflows` -> total 1: `caliber-stale-holds-5`, enabled, triggers ['manual']. Copies -3 (hourly) and -4 deleted by setup_workflow.py, with -3's run history |
+| Dedupe | escalations had 18 docs over 3 holds (hourly re-briefs). Bulk delete by id: 15 removed, newest brief per hold kept (1068, 1421, 1468 from the 19:03 run). escalations now 3 |
+| Guard | Two ES\|QL steps added: last mirror time (`FROM holds \| STATS MAX(mirrored_at)`), then hold refs with an escalation since then. find_stale_holds excludes them. validate_workflow: valid. BUILT BUT UNPROVEN in a workflow run: 6936e19f (21:04), 9a23b4fc (21:05) and c62306c4 (21:19) all reached the ai.agent step and failed with 429. Stopped at the director's cap of two attempts. The same three queries run by hand on `_query` return [1793] for min_age_bd 25, nothing for 32, and [1793, 1971, 2044] for 2. That checks the ES\|QL, not the Liquid rendering |
+| Tools after the 429s | `cd elastic && .venv/bin/python smoke.py` -> 5/5 PASS at 21:23. The ES\|QL tools, the JINA semantic tools and MCP do not use the Claude model and are unaffected; Droid's investigations are not at risk from this quota |
+
+### Elastic trial model quota (`.anthropic-claude-5-sonnet-chat_completion`)
+
+Exactly what was observed: the last agent-step run that succeeded started at 19:03 PDT. Every one since has failed with a 429 at the ai.agent step.
+
+| Run start (PDT) | 429 says wait |
+| --- | --- |
+| 20:03 (scheduled) | 16m2s |
+| 21:04 (manual) | 12s |
+| 21:05 (manual) | 12m39s |
+| 21:19 (manual, 13m15s after the 21:05 failure, past the stated wait) | 12m48s |
+
+So waiting the stated time was not enough. One brief makes several model calls (the agent calls the tools, then writes), and the quota appears to refill only enough for a few calls at a time. A run within 15 minutes of another will fail, and so did a run after 13 minutes. This differs from the "12 to 13 minute wait" framing: that wait is per call, not per brief.
+
+Guidance for the table:
+- Do not run the Workflow or the Agent Builder chat in the hours before judging. Every attempt spends quota whether or not it succeeds.
+- Trigger the Workflow once, at the start of a judge's Elastic beat, after `mirror_holds.py`.
+- If it returns 429, say so, and show the three stored briefs. The `status` reply still shows "3 escalations, newest: ...". Do not retry within the beat.
+- Whether to make one test run the morning of judging is the director's call. If made, make it at least an hour before the first judge.
+- The option that removes the risk is an `ai.agent` step with `connector-id` pointing at a Kibana connector on our own Anthropic key. That is a configuration change on the Elastic row and the director's decision; it was not made.
+
+### README "Elastic" sentence (for the director)
+
+The Workflow `caliber-stale-holds` (id `caliber-stale-holds-5`, `elastic/workflows/stale_holds.yaml`) runs on a manual trigger only: we removed its hourly schedule on 2026-10-24 because the `holds` index changes only when `elastic/mirror_holds.py` runs by hand, so hourly runs re-briefed the same holds and spent the Elastic trial model quota, and a guard that skips holds already briefed since the last mirror is in the YAML but has not yet completed a run, because the trial quota returned 429.
+
+### JUDGE_QA (for the director)
+
+**Is the Workflow scheduled?** No, it runs on a manual trigger only (`caliber-stale-holds-5`, `elastic/workflows/stale_holds.yaml`): the hourly schedule re-briefed the same holds and spent the Elastic trial model quota, so we removed it, and the guard that would let it run hourly again (skip holds briefed since the last mirror) is built but unproven, because every run after 19:03 PDT on 2026-10-24 hit the trial quota's 429.
