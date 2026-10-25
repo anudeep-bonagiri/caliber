@@ -153,6 +153,11 @@ function HoldCard({ hold, match, task, names }: { hold: Hold; match: MatchResult
   const finding = findingOf(task);
   const receipt = receiptOf(finding);
   const replay = isReplay(task, finding);
+  // a fallback result (timeout, no recording, investigator unavailable) is labelled like a replay is: no silent prose
+  const fallbackNote = !replay && finding?.status === 'timeout' ? 'the investigator timed out; this is a fallback note, not an investigation'
+    : !replay && finding?.status === 'no_fixture' ? 'no recording exists for this charge; this is a fallback note, not an investigation'
+    : !replay && finding?.status === 'deferred' ? 'the investigator was unavailable; this charge waits for it'
+    : null;
   const showMap = hasMapPoints(ev);
   return (
     <li className="cv-card" data-txn={hold.txnRef}>
@@ -183,6 +188,7 @@ function HoldCard({ hold, match, task, names }: { hold: Hold; match: MatchResult
         </div>
       ) : null}
       {replay ? <p className="cv-replay">replay of a recorded investigation</p> : null}
+      {fallbackNote ? <p className="cv-replay">{fallbackNote}</p> : null}
       <div className="cv-actions">
         <a className="cv-answer" href={CONTROLLER_AGENT_URL} target="_blank" rel="noreferrer">
           Answer in ASI:One
