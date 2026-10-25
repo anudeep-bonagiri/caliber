@@ -157,6 +157,7 @@ pkill -f 'tsx src/index.ts'; lsof -ti :5173 | xargs kill     # before re-running
 4. Was Elastic queried at this table? No; the demo exports no Elastic keys, and the smoke test proves it only against a real project. `elastic/smoke.py`
 5. Does the kernel use Elastic? No; the kernel reads module rows, and Elastic is evidence for the investigator only. `spacetimedb/src/kernel.ts`
 6. Show me the Workflow? Network on only: `(cd elastic && .venv/bin/python setup_workflow.py --run --no-wait)` prints `Running <workflow id> once...` and `  execution <id>: status ...`; about 63 s later `status` in ASI:One ends `<N> escalations, newest: <hold ref>: ...`. At the offline table `status` ends `escalations: not connected`; show the two Success executions in `docs/evidence/elastic/workflow_executions_2026-10-24.jpg` instead. `elastic/workflows/stale_holds.yaml`
+   If the run returns a 429 (the Elastic trial model quota: every agent step after 19:03 PDT on 2026-10-24 hit it) or no new brief appears within 90 s, do not retry: open the run history in Kibana and run `agent/.venv/bin/python -m agent.cli "status"`, which ends with the stored briefs ("3 escalations, newest: ..."), and say: "The trial model quota is spent; these three briefs are from earlier runs of the same Workflow." Never run the Workflow or the Agent Builder chat in the 15 minutes before a judge's Elastic beat.
 
 ## 7. Never say
 
