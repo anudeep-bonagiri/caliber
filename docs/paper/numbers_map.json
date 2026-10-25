@@ -1,0 +1,1325 @@
+[
+ {
+  "macro": "benchSeed",
+  "value": "42",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "fixtures.seed",
+  "raw": "42"
+ },
+ {
+  "macro": "benchGeneratedAt",
+  "value": "2026-10-24T23:24:14+00:00",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "generatedAt",
+  "raw": "2026-10-24T23:24:14+00:00"
+ },
+ {
+  "macro": "nDays",
+  "value": "92",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.days",
+  "raw": "92"
+ },
+ {
+  "macro": "calDayOne",
+  "value": "2026-07-01",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.calendar.day1",
+  "raw": "2026-07-01"
+ },
+ {
+  "macro": "calDayLast",
+  "value": "2026-11-05",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.calendar.dayLast",
+  "raw": "2026-11-05"
+ },
+ {
+  "macro": "nTerminals",
+  "value": "6",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.terminals",
+  "raw": "6"
+ },
+ {
+  "macro": "nTrucks",
+  "value": "40",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.trucks",
+  "raw": "40"
+ },
+ {
+  "macro": "nDrivers",
+  "value": "48",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.drivers",
+  "raw": "48"
+ },
+ {
+  "macro": "nVendors",
+  "value": "5",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.vendors",
+  "raw": "5"
+ },
+ {
+  "macro": "nContracts",
+  "value": "34",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.contracts",
+  "raw": "34"
+ },
+ {
+  "macro": "nPOs",
+  "value": "30",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.purchaseOrders",
+  "raw": "30"
+ },
+ {
+  "macro": "nPings",
+  "value": "155,457",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.telematicsPings",
+  "raw": "155,457"
+ },
+ {
+  "macro": "nFuelCards",
+  "value": "40",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.fuelCards",
+  "raw": "40"
+ },
+ {
+  "macro": "nStations",
+  "value": "46",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.stations",
+  "raw": "46"
+ },
+ {
+  "macro": "nPlazas",
+  "value": "14",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.tollPlazas",
+  "raw": "14"
+ },
+ {
+  "macro": "nPlanted",
+  "value": "52",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.plantedTotal",
+  "raw": "52"
+ },
+ {
+  "macro": "nClasses",
+  "value": "7",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.errorClasses",
+  "raw": "7"
+ },
+ {
+  "macro": "nDecoys",
+  "value": "6",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.decoys",
+  "raw": "6"
+ },
+ {
+  "macro": "nKeyRows",
+  "value": "58",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.answerKeyRows",
+  "raw": "58"
+ },
+ {
+  "macro": "nCleanRows",
+  "value": "7,886",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.cleanRows",
+  "raw": "7,886"
+ },
+ {
+  "macro": "nCardRows",
+  "value": "5,607",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.rows.card",
+  "raw": "5,607"
+ },
+ {
+  "macro": "nTollRows",
+  "value": "2,157",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.rows.toll",
+  "raw": "2,157"
+ },
+ {
+  "macro": "nInvoiceRows",
+  "value": "180",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.rows.invoice",
+  "raw": "180"
+ },
+ {
+  "macro": "nRowsTotal",
+  "value": "7,944",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.rows.total",
+  "raw": "7,944"
+ },
+ {
+  "macro": "genSeconds",
+  "value": "2.74",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "fixtures.generatorSeconds",
+  "raw": "2.74"
+ },
+ {
+  "macro": "fixturesMatchCommit",
+  "value": "yes",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "fixtures.allMatchCommit",
+  "raw": "yes"
+ },
+ {
+  "macro": "fixturesMatchRegen",
+  "value": "yes",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "fixtures.allMatchRegenerated",
+  "raw": "yes"
+ },
+ {
+  "macro": "heldOutTrucks",
+  "value": "25",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.heldOut.trucksWithExactlyOnePlantedRowCount",
+  "raw": "25"
+ },
+ {
+  "macro": "trucksNoPlanted",
+  "value": "10",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.heldOut.trucksWithNoPlantedRow",
+  "raw": "10"
+ },
+ {
+  "macro": "heldOutVendors",
+  "value": "0",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.heldOut.vendorsWithExactlyOnePlantedRowCount",
+  "raw": "0"
+ },
+ {
+  "macro": "vendorsNoPlanted",
+  "value": "0",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.heldOut.vendorsWithNoPlantedRow",
+  "raw": "0"
+ },
+ {
+  "macro": "heldOutRows",
+  "value": "19",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.heldOut.plantedRowsOnHeldOutEntitiesCount",
+  "raw": "19"
+ },
+ {
+  "macro": "policyHoldsBench",
+  "value": "6",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.policyHolds.count",
+  "raw": "6"
+ },
+ {
+  "macro": "decoysLookLikeLM",
+  "value": "yes",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.decoys.allLookLikeLocationMismatch",
+  "raw": "yes"
+ },
+ {
+  "macro": "decoysHaveSwapLines",
+  "value": "yes",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.decoys.allHaveSwapLogLines",
+  "raw": "yes"
+ },
+ {
+  "macro": "decoyMilesMin",
+  "value": "48.50",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.decoys.rows[].distanceMiles (min)",
+  "raw": [
+   66.1,
+   56.4,
+   97.2,
+   58.1,
+   48.5,
+   53.9
+  ]
+ },
+ {
+  "macro": "decoyMilesMax",
+  "value": "97.20",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "controls.decoys.rows[].distanceMiles (max)",
+  "raw": [
+   66.1,
+   56.4,
+   97.2,
+   58.1,
+   48.5,
+   53.9
+  ]
+ },
+ {
+  "macro": "auditRows",
+  "value": "58",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "audit.rowsAudited",
+  "raw": "58"
+ },
+ {
+  "macro": "auditInferable",
+  "value": "58",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "audit.inferable",
+  "raw": "58"
+ },
+ {
+  "macro": "auditWithFile",
+  "value": "58",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "audit.withEvidenceFile",
+  "raw": "58"
+ },
+ {
+  "macro": "auditExtra",
+  "value": "0",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "audit.mirrorFlaggedNotInKey (count)",
+  "raw": "0"
+ },
+ {
+  "macro": "auditEvaluated",
+  "value": "7,944",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "audit.rowsEvaluatedByMirror",
+  "raw": "7,944"
+ },
+ {
+  "macro": "auditPassed",
+  "value": "yes",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "audit.passed",
+  "raw": "yes"
+ },
+ {
+  "macro": "plantedTableBody",
+  "value": "location\\_mismatch & 14 & 6 & 20 & 20 \\\\\ncapacity\\_exceeded & 6 & 0 & 6 & 6 \\\\\nrate\\_variance & 9 & 0 & 9 & 9 \\\\\nduplicate\\_toll & 11 & 0 & 11 & 11 \\\\\nduplicate\\_invoice & 4 & 0 & 4 & 4 \\\\\nvendor\\_bank\\_change & 3 & 0 & 3 & 3 \\\\\nshort\\_received & 5 & 0 & 5 & 5 \\\\",
+  "source": "bench/carrierbench/REPORT.json",
+  "where": "counts.plantedByCode, audit.byCode",
+  "raw": "location\\_mismatch & 14 & 6 & 20 & 20 \\\\\ncapacity\\_exceeded & 6 & 0 & 6 & 6 \\\\\nrate\\_variance & 9 & 0 & 9 & 9 \\\\\nduplicate\\_toll & 11 & 0 & 11 & 11 \\\\\nduplicate\\_invoice & 4 & 0 & 4 & 4 \\\\\nvendor\\_bank\\_change & 3 & 0 & 3 & 3 \\\\\nshort\\_received & 5 & 0 & 5 & 5 \\\\"
+ },
+ {
+  "macro": "thrMiles",
+  "value": "25",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.LOCATION_MILES",
+  "raw": "25"
+ },
+ {
+  "macro": "thrPingMin",
+  "value": "30",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.PING_WINDOW_MIN",
+  "raw": "30"
+ },
+ {
+  "macro": "thrTankPct",
+  "value": "10",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.TANK_FACTOR",
+  "raw": "10"
+ },
+ {
+  "macro": "thrTollMin",
+  "value": "10",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.TOLL_DUP_MIN",
+  "raw": "10"
+ },
+ {
+  "macro": "thrRatePct",
+  "value": "5",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.RATE_VARIANCE",
+  "raw": "5"
+ },
+ {
+  "macro": "thrDupDays",
+  "value": "30",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.INVOICE_DUP_DAYS",
+  "raw": "30"
+ },
+ {
+  "macro": "thrBankDays",
+  "value": "7",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.BANK_CHANGE_DAYS",
+  "raw": "7"
+ },
+ {
+  "macro": "thrBankUsd",
+  "value": "\\$5,000.00",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.BANK_CHANGE_MIN_CENTS",
+  "raw": "\\$5,000.00"
+ },
+ {
+  "macro": "autoPayUsd",
+  "value": "\\$2,500.00",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.AUTO_PAY_MAX_CENTS",
+  "raw": "\\$2,500.00"
+ },
+ {
+  "macro": "autoPayDayUsd",
+  "value": "\\$40,000.00",
+  "source": "spacetimedb/src/thresholds.ts",
+  "where": "T.AUTO_PAY_DAY_MAX_CENTS",
+  "raw": "\\$40,000.00"
+ },
+ {
+  "macro": "droidTimeoutSec",
+  "value": "90",
+  "source": "worker/src/config.ts",
+  "where": "TASK_TIMEOUT_MS default",
+  "raw": "90"
+ },
+ {
+  "macro": "workerConcurrency",
+  "value": "2",
+  "source": "worker/src/config.ts",
+  "where": "CONCURRENCY default",
+  "raw": "2"
+ },
+ {
+  "macro": "escalationSec",
+  "value": "63",
+  "source": "context/PROJECT_STATUS.md",
+  "where": "17:20 entry, 26.3 beat row",
+  "raw": "63"
+ },
+ {
+  "macro": "escalationTargetSec",
+  "value": "30",
+  "source": "context/PROJECT_STATUS.md",
+  "where": "17:20 entry, 26.3 beat row",
+  "raw": "30"
+ },
+ {
+  "macro": "factsAsOf",
+  "value": "2026-10-24T22:25:41+00:00",
+  "source": "docs/FACTS.json",
+  "where": "asOf",
+  "raw": "2026-10-24T22:25:41+00:00"
+ },
+ {
+  "macro": "txMatched",
+  "value": "7,944",
+  "source": "docs/FACTS.json",
+  "where": "transactionsMatched",
+  "raw": "7,944"
+ },
+ {
+  "macro": "dayReached",
+  "value": "92",
+  "source": "docs/FACTS.json",
+  "where": "dayReached",
+  "raw": "92"
+ },
+ {
+  "macro": "overallP",
+  "value": "1.00",
+  "source": "docs/FACTS.json",
+  "where": "overall.precision",
+  "raw": "1.00"
+ },
+ {
+  "macro": "overallR",
+  "value": "1.00",
+  "source": "docs/FACTS.json",
+  "where": "overall.recall",
+  "raw": "1.00"
+ },
+ {
+  "macro": "overallTP",
+  "value": "58",
+  "source": "docs/FACTS.json",
+  "where": "overall.truePositives",
+  "raw": "58"
+ },
+ {
+  "macro": "overallFP",
+  "value": "0",
+  "source": "docs/FACTS.json",
+  "where": "overall.falsePositives",
+  "raw": "0"
+ },
+ {
+  "macro": "plantedExceptionsFacts",
+  "value": "58",
+  "source": "docs/FACTS.json",
+  "where": "plantedExceptions",
+  "raw": "58"
+ },
+ {
+  "macro": "autoPaidCount",
+  "value": "7,886",
+  "source": "docs/FACTS.json",
+  "where": "autoPaid.count",
+  "raw": "7,886"
+ },
+ {
+  "macro": "autoPaidUsd",
+  "value": "\\$1,083,630.52",
+  "source": "docs/FACTS.json",
+  "where": "autoPaid.cents",
+  "raw": "\\$1,083,630.52"
+ },
+ {
+  "macro": "ctrlReleasedCount",
+  "value": "8",
+  "source": "docs/FACTS.json",
+  "where": "controllerReleased.count",
+  "raw": "8"
+ },
+ {
+  "macro": "ctrlReleasedUsd",
+  "value": "\\$32,097.00",
+  "source": "docs/FACTS.json",
+  "where": "controllerReleased.cents",
+  "raw": "\\$32,097.00"
+ },
+ {
+  "macro": "limitHoldsCount",
+  "value": "6",
+  "source": "docs/FACTS.json",
+  "where": "limitHolds.count",
+  "raw": "6"
+ },
+ {
+  "macro": "limitHoldsUsd",
+  "value": "\\$16,789.00",
+  "source": "docs/FACTS.json",
+  "where": "limitHolds.cents",
+  "raw": "\\$16,789.00"
+ },
+ {
+  "macro": "decoysCleared",
+  "value": "6",
+  "source": "docs/FACTS.json",
+  "where": "decoysCleared",
+  "raw": "6"
+ },
+ {
+  "macro": "decoysOneAnswer",
+  "value": "6",
+  "source": "docs/FACTS.json",
+  "where": "decoysClearedWithOneAnswer",
+  "raw": "6"
+ },
+ {
+  "macro": "plantedClearedByRule",
+  "value": "0",
+  "source": "docs/FACTS.json",
+  "where": "plantedClearedByRule (count)",
+  "raw": "0"
+ },
+ {
+  "macro": "rulesExpired",
+  "value": "6",
+  "source": "docs/FACTS.json",
+  "where": "rules.expired",
+  "raw": "6"
+ },
+ {
+  "macro": "refusalsCount",
+  "value": "1",
+  "source": "docs/FACTS.json",
+  "where": "refusals.count",
+  "raw": "1"
+ },
+ {
+  "macro": "settleOffline",
+  "value": "7,894",
+  "source": "docs/FACTS.json",
+  "where": "settlement.offlineIds",
+  "raw": "7,894"
+ },
+ {
+  "macro": "settleLive",
+  "value": "0",
+  "source": "docs/FACTS.json",
+  "where": "settlement.liveBankIds",
+  "raw": "0"
+ },
+ {
+  "macro": "vcHolds",
+  "value": "3",
+  "source": "docs/FACTS.json",
+  "where": "vendorChecks.bankChangeHolds",
+  "raw": "3"
+ },
+ {
+  "macro": "vcHitRejected",
+  "value": "1",
+  "source": "docs/FACTS.json",
+  "where": "vendorChecks.withHitRejected",
+  "raw": "1"
+ },
+ {
+  "macro": "vcCleanApproved",
+  "value": "2",
+  "source": "docs/FACTS.json",
+  "where": "vendorChecks.cleanApprovedWithCallback",
+  "raw": "2"
+ },
+ {
+  "macro": "vcFixture",
+  "value": "3",
+  "source": "docs/FACTS.json",
+  "where": "vendorChecks.bySource.fixture",
+  "raw": "3"
+ },
+ {
+  "macro": "investReplayed",
+  "value": "47",
+  "source": "docs/FACTS.json",
+  "where": "investigations.bySource.replayed",
+  "raw": "47"
+ },
+ {
+  "macro": "investLive",
+  "value": "0",
+  "source": "docs/FACTS.json",
+  "where": "investigations.bySource.live",
+  "raw": "0"
+ },
+ {
+  "macro": "autoRejectedFacts",
+  "value": "11",
+  "source": "docs/FACTS.json",
+  "where": "sum(byDay[].autoRejected)",
+  "raw": "11"
+ },
+ {
+  "macro": "holdsFacts",
+  "value": "53",
+  "source": "docs/FACTS.json",
+  "where": "sum(byDay[].holds)",
+  "raw": "53"
+ },
+ {
+  "macro": "droidTasks",
+  "value": "52",
+  "source": "docs/FACTS.json",
+  "where": "worker_cost.perTask.tasks",
+  "raw": "52"
+ },
+ {
+  "macro": "droidAvgIn",
+  "value": "1,033",
+  "source": "docs/FACTS.json",
+  "where": "worker_cost.perTask.avg.inputTokens",
+  "raw": "1,033"
+ },
+ {
+  "macro": "droidAvgOut",
+  "value": "1,354",
+  "source": "docs/FACTS.json",
+  "where": "worker_cost.perTask.avg.outputTokens",
+  "raw": "1,354"
+ },
+ {
+  "macro": "droidAvgCache",
+  "value": "70,386",
+  "source": "docs/FACTS.json",
+  "where": "worker_cost.perTask.avg.cacheTokens",
+  "raw": "70,386"
+ },
+ {
+  "macro": "droidAvgSec",
+  "value": "25.60",
+  "source": "docs/FACTS.json",
+  "where": "worker_cost.perTask.avg.durationMs",
+  "raw": "25.60"
+ },
+ {
+  "macro": "droidCredits",
+  "value": "2,016,204",
+  "source": "docs/FACTS.json",
+  "where": "worker_cost.perTask.total.factoryCredits",
+  "raw": "2,016,204"
+ },
+ {
+  "macro": "caliberTableBody",
+  "value": "location\\_mismatch & 20 & 20 & 20 & 0 & 1.00 & 1.00 \\\\\ncapacity\\_exceeded & 6 & 6 & 6 & 0 & 1.00 & 1.00 \\\\\nrate\\_variance & 9 & 9 & 9 & 0 & 1.00 & 1.00 \\\\\nduplicate\\_toll & 11 & 11 & 11 & 0 & 1.00 & 1.00 \\\\\nduplicate\\_invoice & 4 & 4 & 4 & 0 & 1.00 & 1.00 \\\\\nvendor\\_bank\\_change & 3 & 3 & 3 & 0 & 1.00 & 1.00 \\\\\nshort\\_received & 5 & 5 & 5 & 0 & 1.00 & 1.00 \\\\",
+  "source": "docs/FACTS.json",
+  "where": "byCode[]",
+  "raw": "location\\_mismatch & 20 & 20 & 20 & 0 & 1.00 & 1.00 \\\\\ncapacity\\_exceeded & 6 & 6 & 6 & 0 & 1.00 & 1.00 \\\\\nrate\\_variance & 9 & 9 & 9 & 0 & 1.00 & 1.00 \\\\\nduplicate\\_toll & 11 & 11 & 11 & 0 & 1.00 & 1.00 \\\\\nduplicate\\_invoice & 4 & 4 & 4 & 0 & 1.00 & 1.00 \\\\\nvendor\\_bank\\_change & 3 & 3 & 3 & 0 & 1.00 & 1.00 \\\\\nshort\\_received & 5 & 5 & 5 & 0 & 1.00 & 1.00 \\\\"
+ },
+ {
+  "macro": "oraclePosted",
+  "value": "7,886",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.posted.count",
+  "raw": "7,886"
+ },
+ {
+  "macro": "oraclePostedUsd",
+  "value": "\\$1,083,630.52",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.posted.cents",
+  "raw": "\\$1,083,630.52"
+ },
+ {
+  "macro": "oracleHolds",
+  "value": "41",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.exceptionHolds.count",
+  "raw": "41"
+ },
+ {
+  "macro": "oracleRejects",
+  "value": "11",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.autoRejected.count",
+  "raw": "11"
+ },
+ {
+  "macro": "oracleLimits",
+  "value": "6",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.policyHolds.count",
+  "raw": "6"
+ },
+ {
+  "macro": "oracleQuestions",
+  "value": "0",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.questionsAsked",
+  "raw": "0"
+ },
+ {
+  "macro": "oracleWrong",
+  "value": "0",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.wrongPostings.count",
+  "raw": "0"
+ },
+ {
+  "macro": "oracleHuman",
+  "value": "47",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "oracle.humanDecisionsRequired",
+  "raw": "47"
+ },
+ {
+  "macro": "measPosted",
+  "value": "7,886",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "gap.postedWithoutAPerson.measured",
+  "raw": "7,886"
+ },
+ {
+  "macro": "measQuestions",
+  "value": "6",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "gap.questionsAsked.measured",
+  "raw": "6"
+ },
+ {
+  "macro": "measHolds",
+  "value": "47",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "gap.exceptionHolds.measured",
+  "raw": "47"
+ },
+ {
+  "macro": "measRejects",
+  "value": "11",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "gap.autoRejected.measured",
+  "raw": "11"
+ },
+ {
+  "macro": "measLimits",
+  "value": "6",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "gap.policyHolds.measured",
+  "raw": "6"
+ },
+ {
+  "macro": "measWrong",
+  "value": "0",
+  "source": "bench/carrierbench/oracle.json",
+  "where": "gap.wrongPostings.measured",
+  "raw": "0"
+ },
+ {
+  "macro": "sabRuns",
+  "value": "2",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "runs (count)",
+  "raw": "2"
+ },
+ {
+  "macro": "sabRefs",
+  "value": "INV-1077, 2231",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "runs[].txnRef",
+  "raw": "INV-1077, 2231"
+ },
+ {
+  "macro": "sabCodes",
+  "value": "vendor\\_bank\\_change and location\\_mismatch",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "runs[].holdCode",
+  "raw": "vendor\\_bank\\_change and location\\_mismatch"
+ },
+ {
+  "macro": "sabConfidence",
+  "value": "0.99",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "lyingFinding.confidence",
+  "raw": "0.99"
+ },
+ {
+  "macro": "sabEvidenceItems",
+  "value": "3",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "lyingFinding.evidence (count)",
+  "raw": "3"
+ },
+ {
+  "macro": "sabPayments",
+  "value": "0",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "runs[].paymentRowsForTxn (sum)",
+  "raw": "0"
+ },
+ {
+  "macro": "sabPaymentsBefore",
+  "value": "1",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "paymentRowsBefore",
+  "raw": "1"
+ },
+ {
+  "macro": "sabPaymentsAfter",
+  "value": "1",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "paymentRowsAfter",
+  "raw": "1"
+ },
+ {
+  "macro": "sabRefusedRows",
+  "value": "2",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "refusedAuditRows",
+  "raw": "2"
+ },
+ {
+  "macro": "sabHoldStatus",
+  "value": "awaiting\\_controller",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "runs[0].holdStatus",
+  "raw": "awaiting\\_controller"
+ },
+ {
+  "macro": "sabMessage",
+  "value": "agent may not do this (needs controller)",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "runs[0].procedurePath.message",
+  "raw": "agent may not do this (needs controller)"
+ },
+ {
+  "macro": "sabTestStatus",
+  "value": "passed",
+  "source": "bench/carrierbench/saboteur.json",
+  "where": "testStatus",
+  "raw": "passed"
+ },
+ {
+  "macro": "baseGeneratedAt",
+  "value": "2026-10-25T00:12:27+00:00",
+  "source": "bench/BASELINE.json",
+  "where": "generatedAt",
+  "raw": "2026-10-25T00:12:27+00:00"
+ },
+ {
+  "macro": "baseSeed",
+  "value": "42",
+  "source": "bench/BASELINE.json",
+  "where": "sample.seed",
+  "raw": "42"
+ },
+ {
+  "macro": "baseRows",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "sample.total",
+  "raw": "558"
+ },
+ {
+  "macro": "basePlanted",
+  "value": "52",
+  "source": "bench/BASELINE.json",
+  "where": "sample.planted",
+  "raw": "52"
+ },
+ {
+  "macro": "baseDecoys",
+  "value": "6",
+  "source": "bench/BASELINE.json",
+  "where": "sample.decoys",
+  "raw": "6"
+ },
+ {
+  "macro": "baseClean",
+  "value": "500",
+  "source": "bench/BASELINE.json",
+  "where": "sample.cleanTotal",
+  "raw": "500"
+ },
+ {
+  "macro": "baseCleanCard",
+  "value": "174",
+  "source": "bench/BASELINE.json",
+  "where": "sample.clean.card",
+  "raw": "174"
+ },
+ {
+  "macro": "baseCleanToll",
+  "value": "173",
+  "source": "bench/BASELINE.json",
+  "where": "sample.clean.toll",
+  "raw": "173"
+ },
+ {
+  "macro": "baseCleanInvoice",
+  "value": "153",
+  "source": "bench/BASELINE.json",
+  "where": "sample.clean.invoice",
+  "raw": "153"
+ },
+ {
+  "macro": "baseExcludedLimits",
+  "value": "6",
+  "source": "bench/BASELINE.json",
+  "where": "sample.excludedLimitHolds (count)",
+  "raw": "6"
+ },
+ {
+  "macro": "basePrompt",
+  "value": "bench/prompts/hold\\_or\\_clear.txt",
+  "source": "bench/BASELINE.json",
+  "where": "prompt",
+  "raw": "bench/prompts/hold\\_or\\_clear.txt"
+ },
+ {
+  "macro": "sonnetLabel",
+  "value": "Claude Sonnet",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.label",
+  "raw": "Claude Sonnet"
+ },
+ {
+  "macro": "sonnetModel",
+  "value": "claude-sonnet-5-5",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.modelIds",
+  "raw": "claude-sonnet-5-5"
+ },
+ {
+  "macro": "sonnetAnswered",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.rowsAnswered",
+  "raw": "558"
+ },
+ {
+  "macro": "sonnetRows",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.rowsInSample",
+  "raw": "558"
+ },
+ {
+  "macro": "sonnetHolds",
+  "value": "58",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.holds",
+  "raw": "58"
+ },
+ {
+  "macro": "sonnetP",
+  "value": "1.00",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.codeExact.precision",
+  "raw": "1.00"
+ },
+ {
+  "macro": "sonnetR",
+  "value": "1.00",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.codeExact.recall",
+  "raw": "1.00"
+ },
+ {
+  "macro": "sonnetTP",
+  "value": "58",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.codeExact.truePositives",
+  "raw": "58"
+ },
+ {
+  "macro": "sonnetFP",
+  "value": "0",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.codeExact.falsePositives",
+  "raw": "0"
+ },
+ {
+  "macro": "sonnetDetP",
+  "value": "1.00",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.detection.precision",
+  "raw": "1.00"
+ },
+ {
+  "macro": "sonnetDetR",
+  "value": "1.00",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.detection.recall",
+  "raw": "1.00"
+ },
+ {
+  "macro": "sonnetDetFP",
+  "value": "0",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.detection.falsePositives",
+  "raw": "0"
+ },
+ {
+  "macro": "sonnetDecoysHeld",
+  "value": "6",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.decoys.held",
+  "raw": "6"
+ },
+ {
+  "macro": "sonnetDecoysCleared",
+  "value": "0",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.decoys.cleared",
+  "raw": "0"
+ },
+ {
+  "macro": "sonnetPartial",
+  "value": "no",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.partial",
+  "raw": "no"
+ },
+ {
+  "macro": "sonnetFailure",
+  "value": "Claude Sonnet failed on nothing in this sample.",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.failureSentence",
+  "raw": "Claude Sonnet failed on nothing in this sample."
+ },
+ {
+  "macro": "sonnetTokIn",
+  "value": "2,358,546",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.tokens.input",
+  "raw": "2,358,546"
+ },
+ {
+  "macro": "sonnetTokOut",
+  "value": "166,183",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.tokens.output",
+  "raw": "166,183"
+ },
+ {
+  "macro": "sonnetTemperature",
+  "value": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)",
+  "source": "bench/BASELINE.json",
+  "where": "systems.sonnet.meta.temperature",
+  "raw": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)"
+ },
+ {
+  "macro": "asiLabel",
+  "value": "asi1-mini",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.label",
+  "raw": "asi1-mini"
+ },
+ {
+  "macro": "asiModel",
+  "value": "asi1-mini",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.modelIds",
+  "raw": "asi1-mini"
+ },
+ {
+  "macro": "asiAnswered",
+  "value": "557",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.rowsAnswered",
+  "raw": "557"
+ },
+ {
+  "macro": "asiRows",
+  "value": "558",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.rowsInSample",
+  "raw": "558"
+ },
+ {
+  "macro": "asiHolds",
+  "value": "150",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.holds",
+  "raw": "150"
+ },
+ {
+  "macro": "asiP",
+  "value": "0.31",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.codeExact.precision",
+  "raw": "0.31"
+ },
+ {
+  "macro": "asiR",
+  "value": "0.81",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.codeExact.recall",
+  "raw": "0.81"
+ },
+ {
+  "macro": "asiTP",
+  "value": "47",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.codeExact.truePositives",
+  "raw": "47"
+ },
+ {
+  "macro": "asiFP",
+  "value": "103",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.codeExact.falsePositives",
+  "raw": "103"
+ },
+ {
+  "macro": "asiDetP",
+  "value": "0.33",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.detection.precision",
+  "raw": "0.33"
+ },
+ {
+  "macro": "asiDetR",
+  "value": "0.84",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.detection.recall",
+  "raw": "0.84"
+ },
+ {
+  "macro": "asiDetFP",
+  "value": "101",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.detection.falsePositives",
+  "raw": "101"
+ },
+ {
+  "macro": "asiDecoysHeld",
+  "value": "6",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.decoys.held",
+  "raw": "6"
+ },
+ {
+  "macro": "asiDecoysCleared",
+  "value": "0",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.decoys.cleared",
+  "raw": "0"
+ },
+ {
+  "macro": "asiPartial",
+  "value": "no",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.partial",
+  "raw": "no"
+ },
+ {
+  "macro": "asiFailure",
+  "value": "asi1-mini missed 4 of 6 capacity\\_exceeded, 1 of 9 rate\\_variance, 2 of 4 duplicate\\_invoice, 2 of 3 vendor\\_bank\\_change; held with the wrong code 2 capacity\\_exceeded; held 101 clean rows (holds by code that did not match a planted row: 82 as duplicate\\_toll, 8 as location\\_mismatch, 8 as vendor\\_bank\\_change, 5 as duplicate\\_invoice); 1 row had no parseable answer (1 unparsed), counted as not held.",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.failureSentence",
+  "raw": "asi1-mini missed 4 of 6 capacity\\_exceeded, 1 of 9 rate\\_variance, 2 of 4 duplicate\\_invoice, 2 of 3 vendor\\_bank\\_change; held with the wrong code 2 capacity\\_exceeded; held 101 clean rows (holds by code that did not match a planted row: 82 as duplicate\\_toll, 8 as location\\_mismatch, 8 as vendor\\_bank\\_change, 5 as duplicate\\_invoice); 1 row had no parseable answer (1 unparsed), counted as not held."
+ },
+ {
+  "macro": "asiTokIn",
+  "value": "2,393,406",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.tokens.input",
+  "raw": "2,393,406"
+ },
+ {
+  "macro": "asiTokOut",
+  "value": "66,383",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.tokens.output",
+  "raw": "66,383"
+ },
+ {
+  "macro": "asiTemperature",
+  "value": "0",
+  "source": "bench/BASELINE.json",
+  "where": "systems.asi.meta.temperature",
+  "raw": "0"
+ },
+ {
+  "macro": "sonnetCostUsd",
+  "value": "\\$6.38",
+  "source": "bench/BASELINE.json",
+  "where": "cost.sonnetUsd",
+  "raw": "\\$6.38"
+ },
+ {
+  "macro": "sonnetCapUsd",
+  "value": "\\$15",
+  "source": "bench/BASELINE.json",
+  "where": "cost.costCapUsd",
+  "raw": "\\$15"
+ },
+ {
+  "macro": "sonnetStopped",
+  "value": "no",
+  "source": "bench/BASELINE.json",
+  "where": "cost.sonnetStoppedForCost",
+  "raw": "no"
+ },
+ {
+  "macro": "asiRequests",
+  "value": "561",
+  "source": "bench/BASELINE.json",
+  "where": "cost.asi1Requests",
+  "raw": "561"
+ },
+ {
+  "macro": "asiQuotaWindow",
+  "value": "100",
+  "source": "bench/BASELINE.json",
+  "where": "cost.asi1Quota.per15min",
+  "raw": "100"
+ },
+ {
+  "macro": "asiQuotaDay",
+  "value": "1,000",
+  "source": "bench/BASELINE.json",
+  "where": "cost.asi1Quota.perDay",
+  "raw": "1,000"
+ },
+ {
+  "macro": "asiPaceSec",
+  "value": "9.10",
+  "source": "bench/BASELINE.json",
+  "where": "cost.asi1Quota.paceSeconds",
+  "raw": "9.10"
+ },
+ {
+  "macro": "basePartial",
+  "value": "no",
+  "source": "bench/BASELINE.json",
+  "where": "partial",
+  "raw": "no"
+ },
+ {
+  "macro": "baselineTableBody",
+  "value": "location\\_mismatch & 20 & 1.00 / 1.00 & 1.00 / 1.00 & 0.71 / 1.00 \\\\\ncapacity\\_exceeded & 6 & 1.00 / 1.00 & 1.00 / 1.00 & n/a / 0.00 \\\\\nrate\\_variance & 9 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 0.89 \\\\\nduplicate\\_toll & 11 & 1.00 / 1.00 & 1.00 / 1.00 & 0.12 / 1.00 \\\\\nduplicate\\_invoice & 4 & 1.00 / 1.00 & 1.00 / 1.00 & 0.29 / 0.50 \\\\\nvendor\\_bank\\_change & 3 & 1.00 / 1.00 & 1.00 / 1.00 & 0.11 / 0.33 \\\\\nshort\\_received & 5 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 \\\\\noverall & 58 & 1.00 / 1.00 & 1.00 / 1.00 & 0.31 / 0.81 \\\\",
+  "source": "bench/BASELINE.json",
+  "where": "table[]",
+  "raw": "location\\_mismatch & 20 & 1.00 / 1.00 & 1.00 / 1.00 & 0.71 / 1.00 \\\\\ncapacity\\_exceeded & 6 & 1.00 / 1.00 & 1.00 / 1.00 & n/a / 0.00 \\\\\nrate\\_variance & 9 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 0.89 \\\\\nduplicate\\_toll & 11 & 1.00 / 1.00 & 1.00 / 1.00 & 0.12 / 1.00 \\\\\nduplicate\\_invoice & 4 & 1.00 / 1.00 & 1.00 / 1.00 & 0.29 / 0.50 \\\\\nvendor\\_bank\\_change & 3 & 1.00 / 1.00 & 1.00 / 1.00 & 0.11 / 0.33 \\\\\nshort\\_received & 5 & 1.00 / 1.00 & 1.00 / 1.00 & 1.00 / 1.00 \\\\\noverall & 58 & 1.00 / 1.00 & 1.00 / 1.00 & 0.31 / 0.81 \\\\"
+ },
+ {
+  "macro": "tiesOrWinsText",
+  "value": "Claude Sonnet tied the kernel on location\\_mismatch; Claude Sonnet tied the kernel on capacity\\_exceeded; Claude Sonnet tied the kernel on rate\\_variance; Claude Sonnet tied the kernel on duplicate\\_toll; Claude Sonnet tied the kernel on duplicate\\_invoice; Claude Sonnet tied the kernel on vendor\\_bank\\_change; Claude Sonnet tied the kernel on short\\_received; asi1-mini tied the kernel on short\\_received; Claude Sonnet tied the kernel on overall.",
+  "source": "bench/BASELINE.json",
+  "where": "tiesOrWins",
+  "raw": "Claude Sonnet tied the kernel on location\\_mismatch; Claude Sonnet tied the kernel on capacity\\_exceeded; Claude Sonnet tied the kernel on rate\\_variance; Claude Sonnet tied the kernel on duplicate\\_toll; Claude Sonnet tied the kernel on duplicate\\_invoice; Claude Sonnet tied the kernel on vendor\\_bank\\_change; Claude Sonnet tied the kernel on short\\_received; asi1-mini tied the kernel on short\\_received; Claude Sonnet tied the kernel on overall."
+ },
+ {
+  "macro": "tiesOrWinsCount",
+  "value": "9",
+  "source": "bench/BASELINE.json",
+  "where": "tiesOrWins (count)",
+  "raw": "9"
+ },
+ {
+  "macro": "caliberRowsEvaluated",
+  "value": "7,944",
+  "source": "bench/BASELINE.json",
+  "where": "systems.caliber.rowsEvaluated",
+  "raw": "7,944"
+ },
+ {
+  "macro": "commitLabelFix",
+  "value": "2fac596",
+  "source": "git",
+  "where": "git rev-parse --short 2fac596",
+  "raw": "2fac596"
+ },
+ {
+  "macro": "commitLabelFixDate",
+  "value": "2026-10-24 14:21",
+  "source": "git",
+  "where": "git log -1 --format=%ad 2fac596",
+  "raw": "2026-10-24 14:21"
+ },
+ {
+  "macro": "commitLabelFixSubject",
+  "value": "Honesty fixes: hand-shaped vendor checks carry status hand\\_shaped, an amber badge, the fixture note and label-only refs ",
+  "source": "git",
+  "where": "git log -1 --format=%s 2fac596",
+  "raw": "Honesty fixes: hand-shaped vendor checks carry status hand\\_shaped, an amber badge, the fixture note and label-only refs "
+ },
+ {
+  "macro": "commitDecoyRerecord",
+  "value": "8e004e1",
+  "source": "git",
+  "where": "git rev-parse --short 8e004e1",
+  "raw": "8e004e1"
+ },
+ {
+  "macro": "commitDecoyRerecordDate",
+  "value": "2026-10-24 14:13",
+  "source": "git",
+  "where": "git log -1 --format=%ad 8e004e1",
+  "raw": "2026-10-24 14:13"
+ },
+ {
+  "macro": "commitDecoyRerecordSubject",
+  "value": "Decoys re-recorded live: Droid asks instead of clearing on the six unit-swap decoys",
+  "source": "git",
+  "where": "git log -1 --format=%s 8e004e1",
+  "raw": "Decoys re-recorded live: Droid asks instead of clearing on the six unit-swap decoys"
+ }
+]

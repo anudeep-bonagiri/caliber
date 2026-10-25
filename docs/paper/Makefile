@@ -17,7 +17,7 @@ caliber.pdf: caliber.tex numbers.tex
 
 check: caliber.pdf
 	@pages=$$(pdfinfo caliber.pdf | awk '/^Pages:/ {print $$2}'); echo "pages: $$pages"; [ "$$pages" -le 4 ]
-	@if grep -nP '\x{2014}' caliber.tex numbers.tex; then echo "em dash found"; exit 1; else echo "no em dash"; fi
+	@if LC_ALL=C grep -n "$$(printf '\342\200\224')" caliber.tex numbers.tex; then echo "em dash found"; exit 1; else echo "no em dash"; fi
 
 clean:
 	rm -f caliber.pdf numbers.tex numbers_map.json

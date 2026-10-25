@@ -96,9 +96,7 @@ def main() -> int:
     R = load(ROOT / "bench" / "carrierbench" / "REPORT.json")
     O = load(ROOT / "bench" / "carrierbench" / "oracle.json")
     S = load(ROOT / "bench" / "carrierbench" / "saboteur.json")
-    bpath = Path(args.baseline)
-    if not bpath.is_absolute():
-        bpath = ROOT / bpath
+    bpath = Path(args.baseline).resolve()  # relative to the caller's working directory
     if not bpath.exists():
         print(f"numbers.py: {bpath} does not exist; the baseline has not been scored yet", file=sys.stderr)
         return 2
