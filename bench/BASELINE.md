@@ -1,6 +1,6 @@
 # Model-only baseline
 
-Generated 2026-10-25T12:55:10+00:00 by bench/score.py from one committed run. Prompts under bench/prompts, raw responses under bench/outputs. Nothing in this file is typed by hand.
+Generated 2026-10-25T15:05:17+00:00 by bench/score.py from one committed run. Prompts under bench/prompts, raw responses under bench/outputs. Nothing in this file is typed by hand.
 
 Four systems were given the same rows and the same records: Caliber (the kernel plus Droid, the measured run in docs/FACTS.json), Claude Sonnet alone, Claude Opus 5.5 alone and asi1-mini alone, each asked hold or clear with a one-line reason and the code.
 
@@ -45,6 +45,12 @@ P is precision, R is recall, code-exact. The overall row counts a hold as correc
 - Claude Sonnet tied the kernel on short_received.
 - asi1-mini tied the kernel on short_received.
 - Claude Sonnet tied the kernel on overall.
+
+## Cost
+
+- Claude Sonnet tied the kernel on accuracy but not on cost: $6.38 at list rates for the 558 rows. The kernel made no model call for any row ($0); Droid's credits are spent on the holds only.
+- Claude Opus 5.5: $12.85 at list rates for the same rows, and it did not tie (see the failures above).
+- asi1-mini: free plan, no list price, and it did not tie.
 
 ## Run facts
 

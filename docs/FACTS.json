@@ -58,7 +58,7 @@
       "Claude Sonnet: no temperature was sent because Claude Sonnet 5.5 returns 400 for a non-default temperature; thinking and effort were left at the API defaults. Claude Opus 5.5: the same request shape (model, max_tokens, messages), no temperature, no thinking field (adaptive by default; it cannot be disabled on Opus 5.5) and no effort field. The API default effort differs by model, medium on Opus 5.5 and high on Sonnet 5.5, so each Anthropic run sits at its own default rather than at one shared setting; both runs share the $15 cap, applied to each model's outputs on its own. asi1-mini: temperature 0.",
       "Parsing: the first complete JSON object in a reply is the decision, for every model; a reply with no complete object counts as not held. Raw replies are on disk unchanged under bench/outputs."
     ],
-    "generatedAt": "2026-10-25T12:55:10+00:00",
+    "generatedAt": "2026-10-25T15:05:17+00:00",
     "modelIds": {
       "asi1": [
         "asi1-mini"

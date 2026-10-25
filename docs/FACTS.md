@@ -30,7 +30,7 @@ Decoy re-record, the six decoy recordings re-recorded live on 2026-10-24 (now th
 
 ## Model-only baseline
 
-Copied from bench/BASELINE.json (generated 2026-10-25T12:55:10+00:00 by bench/score.py from one committed run; prompts under bench/prompts, raw responses under bench/outputs). Precision / recall, code-exact.
+Copied from bench/BASELINE.json (generated 2026-10-25T15:05:17+00:00 by bench/score.py from one committed run; prompts under bench/prompts, raw responses under bench/outputs). Precision / recall, code-exact.
 
 | Code | Planted | Caliber P / R | Claude Sonnet P / R | Claude Opus 5.5 P / R | asi1-mini P / R |
 | --- | --- | --- | --- | --- | --- |

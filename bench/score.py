@@ -262,6 +262,11 @@ def main() -> int:
             md.append(f"- {t['model']} {'tied' if t['tie'] else 'beat'} the kernel on {t['code']}.")
     else:
         md.append("- None. The kernel's precision and recall were at or above every model on every code.")
+    # Cost, stated beside the ties so a tie on accuracy is never read as a tie on cost.
+    md += ["", "## Cost", "",
+           f"- Claude Sonnet tied the kernel on accuracy but not on cost: ${systems['sonnet']['costUsd']:.2f} at list rates for the {systems['sonnet']['rowsInSample']} rows. The kernel made no model call for any row ($0); Droid's credits are spent on the holds only.",
+           f"- Claude Opus 5.5: ${systems['opus']['costUsd']:.2f} at list rates for the same rows, and it did not tie (see the failures above).",
+           "- asi1-mini: free plan, no list price, and it did not tie."]
     md += ["", "## Run facts", "",
            f"- Sample: seed {sample['seed']}; {sample['counts']['planted']} planted, {sample['counts']['decoys']} decoys, {sample['counts']['cleanTotal']} clean rows ({sample['counts']['clean']}); every clean invoice was included because only {sample['counts']['cleanAvailable']['invoice']} exist; the 6 auto-pay limit holds (a policy hold, not an exception) were left out.",
            f"- Claude Sonnet: requested claude-sonnet-5-5, used {', '.join(systems['sonnet']['modelIds']) or 'none'}; {systems['sonnet']['rowsAnswered']} of {systems['sonnet']['rowsInSample']} rows answered; {systems['sonnet']['tokens']['input']:,} input and {systems['sonnet']['tokens']['output']:,} output tokens (output includes thinking); cost ${systems['sonnet']['costUsd']:.2f} at list rates ${(sonnet_meta.get('rates') or {}).get('input')} per million input and ${(sonnet_meta.get('rates') or {}).get('output')} per million output ({sonnet_meta.get('ratesSource')}); cap ${sonnet_meta.get('costCapUsd')}, stopped for cost: {sonnet_meta.get('stoppedForCost')}. {'PARTIAL: the table covers the rows answered.' if systems['sonnet']['partial'] else 'Complete.'}",
