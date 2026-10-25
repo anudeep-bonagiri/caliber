@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01182,
+  "durationMs": 4530,
+  "httpStatus": 200,
+  "id": "INV-1133",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1133 triggers no hold rule. The unit price of 54,500 matches the contract rate, and the billed quantity of 2 equals the PO received quantity of 2. No invoice from this vendor in the last 30 days has the same amount of 112,125 under another PO. The bank change on day 18 is far outside the 7-business-day window, and the invoice is under 500,000 cents. The total is 3,125 cents above qty \u00d7 unit price (109,000), but no payables rule covers that, so it is cleared. You may want to mention the diffe"
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwoKEAgTGAI4AUIIdGhpbmtpbmcSDLtxH6R8W8iFrvr8/BoMEMb7snpkc1QRVnX5IjCWSmDrjlJqdu5dDCOmKnZIIMslyPKMpcUiGducdq0oWdHJt0NfFtsr0bKB1tm0pC8qxAlYZrtqUonTx8AnPw1oJEKktvl0/I7UjU7voNED12wJly6Nz/UtBY2F6sgp8GCsauDabSD3GQbklntlQp5Nc/s6puhyGcaG9HX+E+LSeETvZwd+AGhraDj1sN92mNFengV7AzrjLfmT3J5afaOHSSWMiOsXvwbwmiuu0gBfwzjHvwuKzr4qIJpEW4sSV0Z5xaqvSp+2IwgT+QvZK/4/SsbNB9CoxFwIQNAbjsjBMeEUxItFaURS9wsIogrABWQIm6CMUhDUKRSi/tqW6SK6rRccr3MQO4TAmjqQBDGZPkTkrxqw6AcdeEQF28Pl9fv2stlUi0OU4eG25nYv85q6ZjBlq+erwyW9z53B/1dudfaudWCUxIipamDdizaOe/oo0oYVG/EdtOrPGtdhMOgBJvJ0j6I35sJeWPQZEuO8B5AKuCZpEmZv8B3kQPAMhGuQn9iWS9qxg3cc4TUP5B794LZbA3iaTdM9oYAW8FC2YIVH5yIJ3qUhw/L6ban46v8LCQwHnucjgEVWH6C5zdbfSyXfpl/N3L//2NJHC4dlzFstl81VL8iT5PT9Ges0m8nrXmCNe90BoVFXHJf6iwFr5YKvRuExm8ZiCo9U/fg5wJdxL7uUfso1lFBHt/zSPuFbY2f+48rwz/6kbrO4WceyXW9KgYyDaqoGD0N6+B1r3/9miZbPPSE+ok87F2ffVekJx/0H8n/PaGCeG2Tug1G+Emb7cnLMrxvGG3soc47GwaEcxR2Jvdad7Fu9X0+ISGe8MOQHQroCLMvMyLr3q6B3u7xHpgjrfYy77yJUfHBOI0iB/GGr01Cw6fmJAiijH3RXzDGPmO4a147ZdKRc3IkoxdPbFykwpszyc3SB725w0qPmj79Sywbyb4pCLA5D+CoVO9Xo2fSwvaDqFh8hhshBYPHzYKs+OgzyBtEgi6nFgKkLGdWH4GEYjJDysAlu1tOEcZPzRUDeboukWLZBn3s6p/p8SQq9kiyJ5IfZLVz1Rgi184eg1CR6EgBDGk+VtU2EumqV32WimFUPimhS7/0XbIdhvr/uyB+k5BA4ptB+rooJwPB0jWiI1UEfLItvs3Rne2i9CS/M7qPr4d6GTWZUshE+7oG4vYImxNGokL+56DoIXuMXRp0snJECCfr+673lsQmsRhoy3QhzSCBd1Cc918WJMbz5HAWJAlndhOQy/k34BGHsUyPfPWKdFJ13mqMwYvUvtOFapcS2Glzt9ANdMjRlZ2RG06FXEaPk7RhCv0zGiqe4tAHPdvbQAegZaLTGliTBSwe3TQeW3SarcDAg0Fno+R0B922U/DiAsMBFokPGhXi6R6RiBLufLYHTNUPBX5scNW46c6B+kFqcEvOXn2zEc4j+UdD4Xecglecyx2hoMt9/wgl9qtSQ/3KluAJ8spBG69F9OXvAkyesUOGGp2KlVbnfzvVUYf3bTWu9E251NhYPwTvrmhm96wbO2WL2BusO+a7pXnPgl8JJUDm1t/9S9edn+688d3naD8aVebn2Yzu/2RtNxbLzNe1MlnfgU6vIxlib9+v6DwobBliP49SULb0iVqzYvrnZJp0vW4wdE55pl2jLTpC9ohjnJ8qxBJxDz+6weImaZ+/fopQyl+Cmi8xc8BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1133 triggers no hold rule. The unit price of 54,500 matches the contract rate, and the billed quantity of 2 equals the PO received quantity of 2. No invoice from this vendor in the last 30 days has the same amount of 112,125 under another PO. The bank change on day 18 is far outside the 7-business-day window, and the invoice is under 500,000 cents. The total is 3,125 cents above qty \u00d7 unit price (109,000), but no payables rule covers that, so it is cleared. You may want to mention the difference to the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMso4ufgJJ8spMv9wXPq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3420,
+      "output_tokens": 498,
+      "output_tokens_details": {
+        "thinking_tokens": 302
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1133 triggers no hold rule. The unit price of 54,500 matches the contract rate, and the billed quantity of 2 equals the PO received quantity of 2. No invoice from this vendor in the last 30 days has the same amount of 112,125 under another PO. The bank change on day 18 is far outside the 7-business-day window, and the invoice is under 500,000 cents. The total is 3,125 cents above qty \u00d7 unit price (109,000), but no payables rule covers that, so it is cleared. You may want to mention the difference to the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3420,
+    "output_tokens": 498,
+    "output_tokens_details": {
+      "thinking_tokens": 302
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

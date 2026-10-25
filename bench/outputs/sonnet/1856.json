@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012768,
+  "durationMs": 3060,
+  "httpStatus": 200,
+  "id": "1856",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged at 18:55:00Z, about 2 minutes before the purchase and well under 1 mile from the station. The 52.8 gallons is within the 150-gallon tank plus 10% (165), so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSogcKEAgTGAI4AUIIdGhpbmtpbmcSDJYvV96HSzX5G9uetxoM17sxLx49+AeHzzfHIjAW1Fo1t2aujqwjhQeXiBWl5SyWwWuDJJFyDXG4NGxupBPGyGDOtUgTVumX4PyrF14qvwZbjGjjpNe6IGb2HktQ+Ji0IG2wIafREi7s4hKFZeFpKtVhp4bTudBOuDJmnAVev5klNagkXJ4/PbJWMF6LBwHacWghCIKy6kqEBjv+Fe2gPfc2uG8VyNepSRz+3up8W0X8lV7nOLR2I/ymeDnTkxVxEK0pe5XjbeeTnQCwXL7qi50p+l5K+A5lheVgjvQgVOLhKy72isQLwxpItra1akCiIQeSdKjSO8Z02XVNAlkBrJAJxRjZSJVmcGbfwWhhqdmAKODOMQiKSYVQ2BpbGzZEoszT+nHGXvE++MJxZrZjfxFdTqwn0E/AuK+mPFzyxfl8emvuuhOQsiz/yNc5jzexoAligSTK8X1UVWEw6jPCRIfDkqnw6ISQE52T1QMTDYBYErAZ5qYt3MdEdoLsJEi5wlrWOvmlljh3z5zUoSJHAbSOldpZtUSwpmuIRYb/0sX8dDCnuRWuA2rKenbFZXkic/9dirM1RttOh3XEfDZQQ/WBjaFmsDSKwXyHSph3zkVuM++oDnpnCMGQZrRemJQzM1LLCuC/fmLhzsKyvh/KMsefo/5X8B9bp/iyENhN51wWVDRPG3raBUBFh/KNmQFe5PUsTE1yKHOlDKLa7MnyP56VZVSTaVaQzVxH/9/vRnQEmWVLqvFZ/0ZScuAEs4xolmJ/FeRK58ZuSzCA7Xf/IoYDofgFXhb1j6ukbQb28vUU0k0HWkHsLj1lV3yi0agGkOB/Kfmese5hmg40myX9znFPTrC7GXrpj+JlgSyRVfQZwHvG8KGGz5zbY5VzYFSXibukSfwALIU0xX3vyD0s8ReVyIt2ezWGLYmamh+WGcbr14KmbA+2kyiinJx29/lgkeeSWCSWErKjMaXG25e4NQWht1CNX4W1heRQgwy6utA5ERWyRrLfS76+e4ejNg9YUrzFwEfSkHHTAjmfXVDRWS3jDIR/Oc6I3YBRJh/JKAB7TUqhG2w18NXvxXBUKGSiggl4FDDmuXT53XA9DVldIxIJ053VKugFPf8t6NrcEFhlKujCmTlWG4gRXq59eQHWXD8f6WH24fMOqgWze+poK+JuU2g4TMuk2o1g9SwQ4A8Hq+31kIbvIoikQCCLGnIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged at 18:55:00Z, about 2 minutes before the purchase and well under 1 mile from the station. The 52.8 gallons is within the 150-gallon tank plus 10% (165), so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5pEbEmTZuoW8vgRJQ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5039,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 173
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged at 18:55:00Z, about 2 minutes before the purchase and well under 1 mile from the station. The 52.8 gallons is within the 150-gallon tank plus 10% (165), so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5039,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 173
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

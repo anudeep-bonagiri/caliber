@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01263,
+  "durationMs": 2769,
+  "httpStatus": 200,
+  "id": "1496",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 36's 14:01:21Z ping, about 4 minutes before the purchase, is at the Waco station (well under 1 mile away). The 49.5 gallons is under the 132-gallon limit (120-gallon tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmQYKEAgTGAI4AUIIdGhpbmtpbmcSDKmpPMx9140ubYO0jRoMi2dvUtCRqZdOrX9yIjCWihu0zuyMoZmsw4pTUeO2WG8f5HafrWxv5fFYfzJDl4P1tYktTNQl7jYhOsdarRwqtgV71SoioySs3r+AWZPc4n0T1drAVUXq9DxLu7YzNlwf1fRs5V3uwBvYBMGGRTEWVsk8Z7Ql0gCKKWcPnq8g3WOzLxi8WA3hwpQtrKvRq9mqLEu4uM4rFklHpomy/MtJqZxNNS7dsHAa6XIhrcgSh1eGt/s/ApvwP1hhFcd8MCJNX7xoISVzUAG4bqNcGkD87HkSce/7Mz8eqBr6F7Cv2qzzTcUozAh39FbwwGq8Tl2TdXPEI96BuSR3eSjD/7QUSleQWlP2WDMHfXft2TIj90CIy8NM+MmpNPX/tOGyTRzUhD8gQLLEchey1YDzrEpsIz4mpDxEsEGvGlZRIHo9BDLIFK40Pw/uQK4/hKphWnyAc8UBQZ031f78Est5BXd4Q3I57Of98iTWt9zS37AGgtbvZ6Ag0uW6jFtaEB1gggP6qJ1SPLRdkfpyj7rK9B2teil/OO9uL5fKX3y4FyfKon6w2znc8nEfNKZh7E1VRxHgE7yQRTI30v0Jt5aUoVyN/q2ysEZYm+MGUqxzmTkRZnmGPeDKgpP0TsB1HFILK4mXPFf6pX44NFsrKnUcTTY+sR0qvNluEJVHTdHBSH7bCFutpjtdx/KvX3Og5G+qoGkaj9BsT3/DPiHI2p+Qv0Vbgho7kyNL9w4kXE7TczSZy3EthHOgkMQ0v60Ne5HUZRTZyfdL7X3zVayo2Zii+4tFxy/3eFBO4e3mjar4oBhmLLUgF9woQySpvo342lCdweHB6F/IFY6S/mgbcdsRNQMVoNL/1vvYAkseYRJRHznDZckZutYd3TkjYk13Z361IsENdvOyo9SrIUJIRwm+GLaaxxUEqzr3Qf4ztO7r1k0D90xtsoataix8apQ7rfJHTA2X2REv6rpwjHl4z7F7xQbfNjxOfA4ptRXbd60zODpVWzn8R56fc2tUGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 36's 14:01:21Z ping, about 4 minutes before the purchase, is at the Waco station (well under 1 mile away). The 49.5 gallons is under the 132-gallon limit (120-gallon tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfsB36xHCWsRzsqxQx",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5255,
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "thinking_tokens": 106
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 36's 14:01:21Z ping, about 4 minutes before the purchase, is at the Waco station (well under 1 mile away). The 49.5 gallons is under the 132-gallon limit (120-gallon tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5255,
+    "output_tokens": 212,
+    "output_tokens_details": {
+      "thinking_tokens": 106
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

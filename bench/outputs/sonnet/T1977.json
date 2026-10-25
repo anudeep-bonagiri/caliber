@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009946,
+  "durationMs": 3071,
+  "httpStatus": 200,
+  "id": "T1977",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1005 at Mountain Creek Lake Bridge within 10 minutes; the previous charge there was on day 42 (08-27), so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1977 at NTTA-MCLB-01 on 2026-08-31 at 19:46:05Z. The earlier charges for this plate at that plaza are T1747 on 08-13 and T1921 on 08-27. Both are many days earlier, so neither falls within 10 minutes. The charges from the same day (T1960 at SH 45 SE and T1964 at SH 130-04) are at different plazas. This is not a duplicate toll, so it clears.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1005 at Mountain Creek Lake Bridge within 10 minutes; the previous charge there was on day 42 (08-27), so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsf96UJA54MjbHWHoqM",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3793,
+      "output_tokens": 236,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1977 at NTTA-MCLB-01 on 2026-08-31 at 19:46:05Z. The earlier charges for this plate at that plaza are T1747 on 08-13 and T1921 on 08-27. Both are many days earlier, so neither falls within 10 minutes. The charges from the same day (T1960 at SH 45 SE and T1964 at SH 130-04) are at different plazas. This is not a duplicate toll, so it clears.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1005 at Mountain Creek Lake Bridge within 10 minutes; the previous charge there was on day 42 (08-27), so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3793,
+    "output_tokens": 236,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

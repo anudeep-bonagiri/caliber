@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012994,
+  "durationMs": 2706,
+  "httpStatus": 200,
+  "id": "5595",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14's ping at 12:35:00Z, one minute before the purchase, is within about 0.1 mile of the Pleasanton station. 63.9 gallons is under the 132-gallon limit (120-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjAcKEAgTGAI4AUIIdGhpbmtpbmcSDB67tBp3TBMd5H/MdxoMEFQQ/SEtIpLRO4cUIjB4wLLBTtx7HAayfnIPIxrCSWiRERVc0QqEgAvBQ9vX57ImO3TmspnLfu4C11jFtvAqqQYH9yymeDTDpeW25Z/qFpDnmXaG93QERdcY61kXoCQoC46hzpzJ3C6UggP0XClqxyq/4K8PXIZai1JgixElZQZ/XoNKj697Al4GJL1DbryZxoAGJQloz60f3mmm5GjNsGLstfgv+E/QVEo7ppHml9Z0j64FvS5npgXmjrUXgWpomApPT6+PuwN6L9o4EHqKandg/+89pXF/pYvGbZc6PraA5OqbqWebvjUUHoVibCUgjkyA/APTlUzg+eyMjsGUSkE9DZ2sZ02onGjxnEqSfgWLYuqS5pVaT40LAjeEScYr2IbmE0iHlrv/LoroJ7OxjCDmziCwtARpjS+0Jhg6kYZ9zNZHARuivwEV2MjFKpbyd/ceU9BXT94O/noW0ELdNXqOyKYeJnXkCELhy0RfJSKsyIWY43akt4hDh73uIhDws9MEYnXWmdZvGBFaD2SDu7IzTg7moWbZO3y1DZ5AoBd0IoIBJmNyu82juTtt3o+CkXUtJNK+74cSswHLukNKGy65Zr/LKFcmI7pVpVO1sDyppqaSTPAQwH7ziK/p2YBaGxUHLoNpjcGdPgPBR3FpIcA2NZ/TOFOUinTMW01wD0WAqJ0d4yGJqSHmQoq6fKjL5xB4mTmIPiLxDU2kIg95jVMfCSji2x2aZPdr8tXXb/L6zD1N9XMeq2mm0/M8lNE6Bm8qfb5e5rxGk9qhSE6QoQH+SxoD90P5M1T9FvIyIPbCfmnKEEGGC4PC+ofLvi5cyOQ2oaz5MYKzniHrQw4jlrgy/bNRPiIJjTjH476Wo4iRfT0YU0I5LkiIuI4b7uAVjOn4ewcG49ZHGEKLsgFnPVs5AMu5AW+/tvtbf30QR7hjGdwZSIc1eDyLqvZSKSl+K/KE1rEDNhaXpOq4tgwWnrqkLTDx23t50yGCe73QTc+J8FGaIzQWE3A54V2MbcD+23NZ6P6qOv+SFOAvagx1L/jSVhWpRwDhCGf7qljypnGUxx+XumF4K+rXBPRLhRb+aCEZa6mP8zOWE5XghgYUvABI4TqW130M87B3a+bTmc8vVpWFP/OhAmdCSUQI932rlIbvGi9qfYOP/xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14's ping at 12:35:00Z, one minute before the purchase, is within about 0.1 mile of the Pleasanton station. 63.9 gallons is under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsu9J24SzpxKCuAHqTZ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5182,
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "thinking_tokens": 164
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14's ping at 12:35:00Z, one minute before the purchase, is within about 0.1 mile of the Pleasanton station. 63.9 gallons is under the 132-gallon limit (120-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5182,
+    "output_tokens": 263,
+    "output_tokens_details": {
+      "thinking_tokens": 164
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

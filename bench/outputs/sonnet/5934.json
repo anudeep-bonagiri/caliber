@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012108,
+  "durationMs": 2759,
+  "httpStatus": 200,
+  "id": "5934",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 21 pinged at 14:50:49Z, about 3 minutes before the purchase, within about 0.01 miles of the New Braunfels station. 129.8 gallons is under the 275-gallon limit (250 tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgYKEAgTGAI4AUIIdGhpbmtpbmcSDDrIqcOl5WkyU33l5BoMA6jeUOWzJk4Ecoz5IjAPb9FaqiQugj6XjNIeF5qXgPyNDtw6tkDlpjs0JQatWn+js407lZEyUD3c4s8QahUq6wWwgzjibx1OQflBbqTgSX+WX3qRyiV5Yll48PhZiAxq/3TajkXf4GkS7i70cSzI0JCZZrc+i0pnSYtzUVQOfCqrWwoVcejs06076VaAjD2z96eukb9X+vkTV62i8GqfKjc1DexqwD8MbGQLnDrmnBJ43/y1sCuVrKRYz+pkE29VkDFlxjQYoMvKhjWm4q+hZboODEqpptcVlmIUjkwjlopufiiiDPyC1elHwmx3SXEGzXJjt7O/99YKNxDUJtA95gNgNyPTtFZDeV3lz2DN104mqQUTiE4IgBeuGLmuuOtAtbShQr1el8vg3Q1eVLKjov5ZJ7wREpwR/cgy0zJxHzTV+4KOgHbQytpJAT/nXAf6wNc72bsyxO0aEPdfbX4gETOz2uvnwqqijhVhLPBj0Z2n4Gu0DqWauKtPuOSWz+ThbtQBFcDkHo/rTa94hApUKow1GvL091f1WfjqLxw6bEqxGNzvSvbV6w0yUcyQnd05IZ9Gxwsc4dgRHkViy/Dp92PRMEnwqobeJI7obdTupzdRQQNHTBlb80tChbXq/WZ3cyPKGjtnSpIAzDYVL/L7D0QwEJcZY4r+4hWQf5sMtyTHdAQrh1HPPvZGExOWDeYEWZvTDaMDZJYFXDUMwKzF0SBvFHfDnvLc4LzYm2CAmue0c/tpuIHFmgg2MRoUsAnZbbyZTCSGV4njYAsYI2XQqC2yXVn2655+uuTYNHSjwh9Wy1HZsvn01b/qgfW4A3B2Uk193GcotmO/jRX0jzH9Yk9rcEXRQEisYMbAa/DPOKEz7uGosXynzJhgpWDhbTRu5xtJDeaXR5RsSsLQGOhVoniZMDOaltwEy+h/Fq98q7fe86a322eH/95HcCC6+agxyDGq+eU3t6FRIaE2TKVkV3QYPNv/avKkUIDJYlQ9+DFgF9q232Nfi/H2nkgnEpsVaebxKvE9hhjzW0rdgraVtZgZ06h937BbjoJfMg2S/rC37zKtqSelhupjjssYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 21 pinged at 14:50:49Z, about 3 minutes before the purchase, within about 0.01 miles of the New Braunfels station. 129.8 gallons is under the 275-gallon limit (250 tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscE14piiSaa5u4FnzC",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4889,
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 135
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 21 pinged at 14:50:49Z, about 3 minutes before the purchase, within about 0.01 miles of the New Braunfels station. 129.8 gallons is under the 275-gallon limit (250 tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4889,
+    "output_tokens": 233,
+    "output_tokens_details": {
+      "thinking_tokens": 135
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

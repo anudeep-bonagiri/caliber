@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01308,
+  "durationMs": 2900,
+  "httpStatus": 200,
+  "id": "4901",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 21 pinged 28.43706,-99.23477 at 12:25:15Z, about 4 minutes before the 12:28:53Z purchase and well under a mile from the Cotulla station. The 93.4 gallons is far below the 250-gallon tank limit (275 with the 10 percent allowance)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAYKEAgTGAI4AUIIdGhpbmtpbmcSDFC4K5FMdcb+PeaNSRoM2LJu6CUu5fcZ2QrBIjD1mIp7NXw5/tEBb1zKMj1LZc4DbUXc6I15MUo0c7yK0QOPW2gu5oZ8/uIfllCRqVgq1QVxqUvelZ8V4XI4Gwys/LJHbgw65sTjg281I839prV2gwqG+FlqDKSQ0VXXUdjsHBU2dKMkC1tmAQc4qqUskxpOkUlU6JCT/AAs3ulkpVTIxOpSIzevr3P2G3pKsYwRsDUlYcmyARM+CscOTLE5GRdWv4sfzfGfVeswqVQWgcmSj2bP1vs/sgxoWwIW7eKn7EptEYbDNMVqZQb00+q5vMaFd22ZAgaF6XrJeyvLAUysPcDZJWPBW9wKK0qeHE7W6Atuh529+OAMu7aJh4ZybVprr+2VtR3OB2K3eVkC1uKfxpJp8XHb3E3/JOVAqG7JpQTznI7i3xG2gEiOcFn2INokT0qT1w0CjMroOPqNIWGBi5VR2nygAZaS2JrNp7L7UcABY3roGLgu7EcgkAjoGSRggwIn675xdz095sW7bq9Qg32dea6jf8j3gcQA4pOmItNcIYl8rbgAVwwQ0BaDfeFZhsQQCplWBh3dyW0LweBreU5yxLX5+tnFoy4URoA62X2dtaJ61kuhKmrMh5Cgvxr83wfkMT/u0sz2J7VCpBvmrkFsaN5GOZKYtTWm+4OJB7emmOvPdXdh/kda2DPJWl7ngR3EZJNmKf8HEwXT7f9sO/8cFs9Vr1Xi1szTuquytnogxeoZ9lC4HKu3mXP8dbB1oKFXDu9JRv1tgEgVosIhnF1YX3vodSX0Ibrkm15qguvbrS1QcWtdp9TlMEkXEuRSHdjSE9HvK5xkW7ysz42uGVbhQu75zyTLHQPbGS18B+dSilSeuInD4IJIhB84u2OG3WTmuFiwU5pB+Uv8fNuKGQEpMPs/tzlUCpL9Y7eNYjOjT4L38W6rwfeE7dqhIvOLO92qPIk8QwTngDk0CcZHLZTG1T4PH3eyxecVNITURioD3eHixjAPfSMcm7NFxB2Lrji+2ykwAS84b2dNuBMbt95LQqqUwsM7EEzGXC5EJqqdr8D2YhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 21 pinged 28.43706,-99.23477 at 12:25:15Z, about 4 minutes before the 12:28:53Z purchase and well under a mile from the Cotulla station. The 93.4 gallons is far below the 250-gallon tank limit (275 with the 10 percent allowance).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrKzcnGNKRRw4AvnVY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 21 pinged 28.43706,-99.23477 at 12:25:15Z, about 4 minutes before the 12:28:53Z purchase and well under a mile from the Cotulla station. The 93.4 gallons is far below the 250-gallon tank limit (275 with the 10 percent allowance).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 243,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

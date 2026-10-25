@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9309,
+  "httpStatus": 200,
+  "id": "5595",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's telematics ping at 12:30:26Z is within 5 minutes of the purchase time and located at coordinates nearly identical to the station, satisfying the location requirement."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's telematics ping at 12:30:26Z is within 5 minutes of the purchase time and located at coordinates nearly identical to the station, satisfying the location requirement.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884703,
+    "id": "chatcmpl-702e7746-38ce-4d26-a4db-e1831c353f8e",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 57,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5758,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5815
+    }
+  },
+  "startedAt": "2026-10-24T23:31:35+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's telematics ping at 12:30:26Z is within 5 minutes of the purchase time and located at coordinates nearly identical to the station, satisfying the location requirement.\"\n}",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5758,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5815
+  }
+}

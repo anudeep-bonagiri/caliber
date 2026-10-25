@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011552,
+  "durationMs": 2612,
+  "httpStatus": 200,
+  "id": "T1738",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1011 at SH 130 Plaza 1 within 10 minutes; the last charge there was 2026-07-24, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1738 at SH 130 Mainlane Plaza 1 (Hutto) on 2026-08-13 at 17:33:52Z for plate TX-1011. The only earlier charge at that plaza is T1402 on 2026-07-24, which is far outside the 10-minute window. The most recent earlier toll overall is T1717 on 08-12, at a different plaza. No earlier charge falls within 10 minutes at the same plaza, so no policy hold applies.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1011 at SH 130 Plaza 1 within 10 minutes; the last charge there was 2026-07-24, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsungoEp76sBK4AiDcR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4611,
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1738 at SH 130 Mainlane Plaza 1 (Hutto) on 2026-08-13 at 17:33:52Z for plate TX-1011. The only earlier charge at that plaza is T1402 on 2026-07-24, which is far outside the 10-minute window. The most recent earlier toll overall is T1717 on 08-12, at a different plaza. No earlier charge falls within 10 minutes at the same plaza, so no policy hold applies.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1011 at SH 130 Plaza 1 within 10 minutes; the last charge there was 2026-07-24, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4611,
+    "output_tokens": 233,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

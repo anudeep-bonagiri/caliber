@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012766,
+  "durationMs": 2455,
+  "httpStatus": 200,
+  "id": "4948",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 32 pinged at the Luling station at 19:06:37Z, under 3 minutes before the 19:09:14Z purchase. The 105 gallons is well under the 330-gallon limit (300-gallon tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnQYKEAgTGAI4AUIIdGhpbmtpbmcSDDyuZkcupLY6bfULChoM6UVOV5X94A8LguTeIjBrwDGK5WKo9EJidG3n4QEzLXi36hUK1Mbzfg+k6UBBXOHavHBVnVdNv0qpBecYD+YqugWXPeE0uRYhl7Rpy66rWclj0qNOeK8OAngjd4Evt7caD65s+bXGty8B9JyM1Jyd5SY9qtzFzivOo4QFmiPl1Lcwa0evDYO8Tn+mKkxzxExw+RxraXgQvUftttEHzPsvt4jc8nVkn5fofMFERcPbStlsyf4m7aMi1YCtdz57nknDPUxIcONf3azgeZSI5AN0QK3XJZOK+e6Ez0UcF1Ixl0Bb60gwG38UKlQ3Dbqi962RPNq+4VqHvo95MB/Doe9cngCfAmm82iujA1vg3cSKq0ZN5o6I2fVUkyLAWgso5ezI+tTfQZYBns9GcoGI0HRb0cjOBow4cYCrxsegfvbPvTr/drz9CSUmNMfy40CqHTS7md5hMLVKX4u3b64nDLaUuOlK63Ps5sdC562gPj+ukQgEqc9jLqKmvmrOQj00JFyhP0U+Sg0FgTG0UGrF6uNxhcLikfpBLffMeHIGe4Xq+1aMA/0ZZekE2cQ2KRiRWdySR0y489UkIndIWTLV36beTgj6qcDLlaWPf1QqKtBESTSr/MmrFmp1JXPc1+Q/mkDr1u/v9L63b0Jke+6wZU7VoAEWSFfX3pnoDhIsQ99wpgtYhz4lm4MAR8KcADpSbUSVhRI2Avd44Ibgb/UNf3rqYuSIssiGB11fADHFO1ObTZUTPyRldB58EltxuUG0TZfU6GVKxoPoxBZ5mGB7PBl/S16+zHjNN+slna3g53qO8g6QQhXEoIltO5dd8M7ITdI9oks4E72FK0TianQI6lZ4gZYLA2ilL+uzIxsbRiSvkFGWkal+zwDEAx4ykktCY3bqtkbhnCftH2FthlbhSp9rDpc5xweNMwQiIz667duT/+FiwUKf93DDBtMLgudK3Vbvb7KNiy6YH9eOAgYdPCLp0CkiQBhtkxykLmIbZH1Ju++ZBn/ZKAFs/+u9HBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 32 pinged at the Luling station at 19:06:37Z, under 3 minutes before the 19:09:14Z purchase. The 105 gallons is well under the 330-gallon limit (300-gallon tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6XFRTJemsy4myPppU",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5328,
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 107
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 32 pinged at the Luling station at 19:06:37Z, under 3 minutes before the 19:09:14Z purchase. The 105 gallons is well under the 330-gallon limit (300-gallon tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5328,
+    "output_tokens": 211,
+    "output_tokens_details": {
+      "thinking_tokens": 107
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

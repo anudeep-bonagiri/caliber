@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008996,
+  "durationMs": 4398,
+  "httpStatus": 200,
+  "id": "INV-1044",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1044 is for 33,900 cents. No earlier invoice from this vendor has that amount, so it is not a duplicate. The unit price equals the contract rate of 33,900. It bills qty 1 against a PO received qty of 1. The vendor's bank details never changed and the invoice is under 5,000 dollars."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2goKEAgTGAI4AUIIdGhpbmtpbmcSDMgovBAU+WdsaXL/YBoMLUoElYV9KSX4G/o1IjCAP601Z8aMOXTyDBZX6Dh4v4s5gkh4WRLTOC1CYrW29/c2yvxyP8OVSem4Zv8aktYq9wkOEsoV0SQQoFQ9jiJEWUP+Cd2V7r2a9aYhFPaYn9WtLLfrg27zKpy0peAUBCSEhbGWGXXdDoJAu8pfbNTRPqB9nmZK8msdQm0FL+E+EZlOQP6HUKgDfaHPLKwtGyCwpg1C8fxOMv0GMPCVqGJC3rvJFgdQbk3vvi8+vNMBeezwDzcnHciIVDzpnSIogWLqpU+UCwuCsIWUoobIDaTnekZ0/p/fC+C9QXa5ZfrnoTvP4rPL5VGifCJWXC6hcfAr6iGFaa8Fj/QIckn1mvvdp1CdR5NVr6af/80eoTpaZ72AWgqq+NYf9PDO/uYRdD46oRNe4d9CNqmpy/LAPoxO3oClCI6qBq4mMKSIHyQ91bRVTEUf0SGRJ+AA6yUwL+QHFuNDFMwXaGMRb/v6U5Vvfok6NSLWzYL5zhiTrsPYJg+D2kjVT703i2jb4RhEI9AcIKNstlGwkJwiKAgutNxTvaq7nCtuq/shlo8xrTdYW1m2M25iDpeRV2HfgjUscdTCg3rBgX3kzaP1aDYVSKJcb/XS6/30HFGkqXiQklSbys+UvXdeu+4PDxtaXHogFbKVOoQpWigDpm5grMPbE+NWDE6DxZ9N+gse/X0CyBY9lTEO3mwkQLPBaaP0Ji2kzFtgKGrFmxkzgaWeAmpJt3Z4q3+QJ+awuo4yqYD8anfr6GdGW50pmnJCoC/Z9GwSqneOLG/8+pNAVZFrhB6w4HxDeMcgB9uPw3Js9iQ6hQ6KXM9jYqIvw3XMyl58zZ0BuXko4u37p2nlKN3b6zQpPPKd7C5TfM9qLXVJehXoT6oGfQbk5dGz0CW2VRxXqGEDthfDW5bBjezIgU8HJSoz2mS69AQLOExntxKD4rRNzEJ0asvcdASC/VQOxwO6ULRHIXGgTEBf0dRcz+iVAwA00MvaREokMEYKjqlONqGpNONa7ubyJFsbyFtfh49Lst5ARLnzJerxqEmtCLeAaWNPRvyZIsXZ69al2vSWlD5+s+jUD49E59lOYarkXlITOGKCFotJ8rKLGKGdAQLkbAZiDqxCSSP5G81f2x4fG2Ma2E82mBBb2bh4812PkyTkdQbJXhK5cbKCZGfzMvGABOdPj4em2nf/pd+Pnq1bdrDEzUvlK+ySHzjC8XBsofu0qFCjCs5cTGJfsTVgEhnMjGGKy7S562yFs0sPmFbeHJ3UDh7rjUjJJYclaDySZRv/oCKFTJ2E1ML5qlM2SqstTL49mTlkIutgB98R/GK4KAXeYnU+yz1Kl9nO7DVBNJY1kFA2M/rSnU0SgUvZNwwzjTFayD0rjltKnKC14EldrqSKKmP/JxJAaNfZc7hG/FYDxi8u4LbsuYLUxJt1bEkUPP43xHvDE9dfatjWjFF2WTvhDyTXKPd6YwdxoMFWp5Po+gxEaXouiln28ApQwZ9kLMZ1ZdwmhDBB3oGWUbnBPM7UaQmSMRvFHjHPvA6ZLS/3Fh+5fXwFKF0E4rD+iMjl7MncNmZv+Yr4pTxMNQNGKRrMYfuS7ybnPBSxOJLxbidQkay3qcS9nyZRwrxgrW+qqyLtb9ezcczm8Z04ErC3KMiQVKWdMZqAe5tuR+THENYKn2swch3Kzj5QRe8xZU0Q1eWC+iChqsnRGrCCSHoP2hN6E5F+Ah14tDoFvls2BeKvY3clqJcy+/ZMOiCjI2DSw1WOIB8RGOuC5X77Nk6SihgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1044 is for 33,900 cents. No earlier invoice from this vendor has that amount, so it is not a duplicate. The unit price equals the contract rate of 33,900. It bills qty 1 against a PO received qty of 1. The vendor's bank details never changed and the invoice is under 5,000 dollars.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMswRRBThGnsDXUBFGrQ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2233,
+      "output_tokens": 453,
+      "output_tokens_details": {
+        "thinking_tokens": 331
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1044 is for 33,900 cents. No earlier invoice from this vendor has that amount, so it is not a duplicate. The unit price equals the contract rate of 33,900. It bills qty 1 against a PO received qty of 1. The vendor's bank details never changed and the invoice is under 5,000 dollars.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2233,
+    "output_tokens": 453,
+    "output_tokens_details": {
+      "thinking_tokens": 331
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

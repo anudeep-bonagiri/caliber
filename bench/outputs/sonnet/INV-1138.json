@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010456,
+  "durationMs": 2874,
+  "httpStatus": 200,
+  "id": "INV-1138",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "vendor_bank_change",
+    "decision": "hold",
+    "reason": "INV-1138 is $5,508.00, over the $5,000 threshold, and Border Fleet Repair changed its remit-to bank details on day 71, only 3 business days before it was received on day 74, so it needs a call-back. No other hold applies: the rate matches the contract, the quantity matches the received quantity, and there is no duplicate amount."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0QYKEAgTGAI4AUIIdGhpbmtpbmcSDJJEsfiPpPoLj9U4gxoMXLmWwdRBmNO1Rt6UIjD8oQlCp9goM2wpQJBhOCtUeqfEOUzLXUqxEA6nkxVgwSc8OeLywhH0Qv5OBwghddwq7gVPwvsRrA0DdRCmbPLT7+tDysvv6IhQ4OeIXuBUHoz1dsVglN0BG46DvgiFpZbRBgCDqi8MSF5tn1L+42SSZucRvB1+RlQaBifVHNplWQMEfFOvY6KD2svaycOm+J5JV3+eICLX1vcp0yKCISmk8jm2/8QV26bIr8q7YPd53HWm3VUSBeIFHK7Hp6pmhFlo0Nd6zsYWoSaNoiCPMbLgrZfidM5XM3zxuzlbEFlDWbvL+i8AmELXiZwUOiSGu8fD70o2tfVReiyK/SevyYCydZXjakkLUnN8oN3w8RVDkxvAlLBUN5+pX3iHAuhshlz5fSQsidHCP5JMxlBtMoCtvRnEs/yRnnyMXs1VEdsJUV6v5LBunGI2MmhzMMnvYCgeSYwKdpLV6vNV29cbASXldsCBYKAeOObSWTS1YtH8hUNy3YU0CUVgsjFHPf+B8RSPpK2EM1PvPATr6dLCMZwR13f/dSwj1llYUSzIfjPWbyMV6hVW6ESGHky4rp/7EmXlSq8aQGbOHRFba9FrR0u/QCO9LE188mUoPflO6zcCBIPBGI83Hpt9IobcBm6Srz29W4Ekah+IBr2ZQ+nmk0lyCWRAR40y0OCZPC9b8sETH3HtfzLvfxdFKGFCjlQ+peflCj22xnN0QIPm7+AiyXuTYbaK5gKEVvJ5qRSLPAHkSCjPRjv47xZ7tQsZqj8aEGO17e3Me19mb3HKlErp6FZp8wBSwvxp3GBFQ3Jba6KqQpmqkFVkMrhQTrSu1JXxxuPyeLhrcdrYbi3vulQBjw+6lCKSJ+n1aGa0iovITaC1Pfcy+wmwqv/0uXGUr5UnHAaw3x5+hm26W3FV4nXtczCJhei01wskPk/a+nNZBsVykWB5GrOiA69VbDh5C1nWCbhVNd7E614Kf6qH0XodYCvfKXauHiArmx4r3WY1jSy6kcEDKK0PCqRb8H43DOo7jAejF+cLvhkSdWAVoqtKLRK/PJ0tSa3yUB3FUPhMPyh4Zc8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"vendor_bank_change\",\"reason\":\"INV-1138 is $5,508.00, over the $5,000 threshold, and Border Fleet Repair changed its remit-to bank details on day 71, only 3 business days before it was received on day 74, so it needs a call-back. No other hold applies: the rate matches the contract, the quantity matches the received quantity, and there is no duplicate amount.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6uzuJduYGTnD4fhLs",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3973,
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "thinking_tokens": 110
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"vendor_bank_change\",\"reason\":\"INV-1138 is $5,508.00, over the $5,000 threshold, and Border Fleet Repair changed its remit-to bank details on day 71, only 3 business days before it was received on day 74, so it needs a call-back. No other hold applies: the rate matches the contract, the quantity matches the received quantity, and there is no duplicate amount.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3973,
+    "output_tokens": 251,
+    "output_tokens_details": {
+      "thinking_tokens": 110
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

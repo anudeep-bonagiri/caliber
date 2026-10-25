@@ -1,0 +1,94 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 8,
+    "item": "tire_replacement",
+    "rateCents": 51900,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 2
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 24509,
+      "id": "INV-1001",
+      "item": "shop_labor",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 2,
+      "unitCents": 24509
+    },
+    {
+      "cents": 37025,
+      "id": "INV-1002",
+      "item": "oil_service",
+      "poId": "PO-1001",
+      "qty": 1,
+      "receivedDay": 3,
+      "unitCents": 33900
+    },
+    {
+      "cents": 42850,
+      "id": "INV-1003",
+      "item": "oil_service",
+      "poId": "PO-1001",
+      "qty": 1,
+      "receivedDay": 4,
+      "unitCents": 40400
+    },
+    {
+      "cents": 138625,
+      "id": "INV-1011",
+      "item": "brake_job",
+      "poId": "PO-1007",
+      "qty": 1,
+      "receivedDay": 8,
+      "unitCents": 135500
+    },
+    {
+      "cents": 208850,
+      "id": "INV-1013",
+      "item": "tire_replacement",
+      "poId": "PO-1015",
+      "qty": 4,
+      "receivedDay": 9,
+      "unitCents": 51900
+    },
+    {
+      "cents": 67925,
+      "id": "INV-1016",
+      "item": "oil_service",
+      "poId": "PO-1021",
+      "qty": 2,
+      "receivedDay": 10,
+      "unitCents": 33900
+    }
+  ],
+  "invoice": {
+    "cents": 207725,
+    "docRef": "evidence/invoices/INV-1036.txt",
+    "id": "INV-1036",
+    "item": "tire_replacement",
+    "poId": "PO-1015",
+    "qty": 4,
+    "receivedDay": 21,
+    "unitCents": 51900,
+    "vendorId": 2
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1015",
+    "issuedDay": 5,
+    "item": "tire_replacement",
+    "qty": 4,
+    "receivedQty": 4,
+    "truckId": 13,
+    "unitCents": 51900,
+    "vendorId": 2
+  },
+  "vendor": {
+    "bankChangedDay": 0,
+    "bankLast4": "2098",
+    "id": 2,
+    "name": "Lone Star Tire"
+  }
+}

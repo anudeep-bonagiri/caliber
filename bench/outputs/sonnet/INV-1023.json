@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008666,
+  "durationMs": 4810,
+  "httpStatus": 200,
+  "id": "INV-1023",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies: unit price 49,800 matches the contract rate, qty 2 equals received qty 2, no earlier invoice from this vendor has the amount 100,850, and the bank change on day 71 is after receipt on day 16 (and the invoice is under 500,000 anyway). Note: the total of 100,850 is 1,250 cents more than 2 x 49,800 = 99,600, which no hold code covers, so it is flagged for information only."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AoKEAgTGAI4AUIIdGhpbmtpbmcSDNK2zds7ufvCO5IktBoM/8onuBgHzFFoZfZ1IjBPF/Nb8MGjj8MQwNXVYws6tmwopYfu77nttpahhZdJv1dJ7DlKt6wXtsKxFVJb5Ewq7QmV6JbWEfOp67ld8GPfNyZinKD7GCM+sCWxM8RnQMArsZSl8C4rQaeei6mQfeg4HJKps6ZjoXFccGBaqSdlp+6m7jLNia+dpk0vMRyMU2wRQ6WiBQpNrhziV/oZN+/AQEFgMzSZHgQLaBe4xlHUG3lmuPUcVet2AWMeI2/jbi8/lx1EWLQEgqnEHn5qnOYht7fFigcp3R1GQwmBwRqi29hjG2MBzW+Ko/EtqKTjrFNco6yVDUFoXdTujzpFswbRdNLrqOUznpFSP87K2ZSHe/uQDg0r94im4tNypneVrhyakgdmWmcnfPyt4moWMnxeWRmFh0goM+KR9G5lzAIh4pfKNX9uNCaegw+FIV7r4ogzPwwMvjRCusTpm4+rOCzJyj2ppJolYpD7C3a2FpNfsS1+0r+aw0R7rddaibksPOCqZFTy0ym3oigEKxwTM6jrDfGDMew9n7hIZUMQV0zzEi4edJT/58xTL3SuZa8ifBqTgIxDjCBgYfz1s8cKVi04yVe95VCSIOb+ubIej3vCPI3mdQHW9gOTM91fPBVCzgxpgysu89i0oF4EFoDo1+Fl3zqRP+YMYIK4oWRjwVBqwZmgQc6SGAytLlAQ8PmbnhVov1AfJbD10TfN3k7WR8drEKhezFz5/YVuHg9jtUb6Gin0pPS9B5z23lFXuiVEYOOoBLTTK5l5S1f6lKngG6sFVbJ1k+Re1cDrUkVoc3ignphElfC/zli8xP72f56biMSd8i2gS4T1bwI8tkne30CqbZKeXnjY3xchNjdmwBAaEhuUfi5t+PhNgVtAlSpWWShL2ExEDQqX0i4z7BwujTdQ+LM0gjRnzMIFTIMV7pTeevpJex+CWBwnLdxlDFGm5WRcoL7OoZ8MfzPWX7Z/IB41oo14Xo11m85GnZlDKUrny/OkB6IwDoRa1CQyeu/mCIlucrgyQhx5W6Jds11AUiTIa/JP094iXNamtnFJPw8Vh7kb0l3TkV9TqsrBgRvVlCnqtbMiqthcdrSguaNc6VC/bByo8cqiBQOEo7V/p0SXpJdO5hWYd5pqPOIQUbFPds696a1+4oOn5JKZdaZlrqE8rJ4Nhj3w2kIKT+rLN1T98vHyWXmm8kQVB8fe2bHqyA0+CwAi/RZudjjXc7F4v5wV9IBBBrXc4ElA664i3PcXY52hpOx8SSitfPLC+DWdlpdUxeMInS6sh69O/2WnOqigMno6XW+eagxoacPXmZIpmtEKAWsCouXZ86ck/MrAJYRQCCpLrrtYTquEDaznalQYLjDKzoiyhPB529Jxy63Xa9F8RKSure1GQF4HFmfTEh7KinsOqsGb2noSi71/2UPtdriTKF63tb4KPjpDCTkdRfdT9ngZ5mI7JtSN4ufTfv5nWUy1auXWx+UjwbU10xNp3mbQyi8a2umkCjptEyNl71tQDEJtIiT6OAEy+fbFodaJ8YN8BlJ2PzKKmxvs/B1Zc+kWxpWf5Q3+woGsdWU7eu9uLccJpmkjEzlGxn4TtWIH2wi/6uW6kiiNZOyzs5S2xIRhieYO1EOcGGDaOJfJw8phU6/h8Dq2sqCqjURN2qbSVNyqOO1RyyKUJIxn1ZK/3LxDkPeWkcofBrKwYWqxVlwsbBcAV7BHRcUpNXAQSyss5lyRrHucukUgoCxB3KiCPau/UsdcN2p3Z7MgLYdBGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 49,800 matches the contract rate, qty 2 equals received qty 2, no earlier invoice from this vendor has the amount 100,850, and the bank change on day 71 is after receipt on day 16 (and the invoice is under 500,000 anyway). Note: the total of 100,850 is 1,250 cents more than 2 x 49,800 = 99,600, which no hold code covers, so it is flagged for information only.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseYwePVUJYpap3Qwnw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1903,
+      "output_tokens": 486,
+      "output_tokens_details": {
+        "thinking_tokens": 321
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 49,800 matches the contract rate, qty 2 equals received qty 2, no earlier invoice from this vendor has the amount 100,850, and the bank change on day 71 is after receipt on day 16 (and the invoice is under 500,000 anyway). Note: the total of 100,850 is 1,250 cents more than 2 x 49,800 = 99,600, which no hold code covers, so it is flagged for information only.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1903,
+    "output_tokens": 486,
+    "output_tokens_details": {
+      "thinking_tokens": 321
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

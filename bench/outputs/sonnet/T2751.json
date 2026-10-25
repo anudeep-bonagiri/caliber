@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025526,
+  "durationMs": 2966,
+  "httpStatus": 200,
+  "id": "T2751",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1011 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was 2026-10-05, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2751 at NTTA-MCLB-01 on 2026-10-14 at 22:18:30Z. For a duplicate_toll hold, an earlier charge for the same plate at the same plaza would need to fall within 10 minutes of it.\n\nThe most recent earlier charge at this plaza is T2558 on 2026-10-05, more than a week before. The latest earlier charges for this plate overall are T2716 on 2026-10-13 and T2699 on 2026-10-12, and both are at other plazas and days earlier. No earlier charge falls within 10 minutes, so no hold applies.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1011 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was 2026-10-05, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsq7N4vekJnDwxbJmCJ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 11363,
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2751 at NTTA-MCLB-01 on 2026-10-14 at 22:18:30Z. For a duplicate_toll hold, an earlier charge for the same plate at the same plaza would need to fall within 10 minutes of it.\n\nThe most recent earlier charge at this plaza is T2558 on 2026-10-05, more than a week before. The latest earlier charges for this plate overall are T2716 on 2026-10-13 and T2699 on 2026-10-12, and both are at other plazas and days earlier. No earlier charge falls within 10 minutes, so no hold applies.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1011 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was 2026-10-05, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 11363,
+    "output_tokens": 280,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

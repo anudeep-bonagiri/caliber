@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013596,
+  "durationMs": 2954,
+  "httpStatus": 200,
+  "id": "2791",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged within about 0.03 mi of the Pearsall station 2.5 minutes before the purchase, and 54.7 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 12:52:35Z at the Pearsall station (28.8922, -99.095). The nearest pings are 12:50:00Z at (28.89244, -99.09489), about 2.5 minutes before the purchase, and 12:47:23Z at (28.89205, -99.09522). Both are within about 0.03 miles of the station, so there is no location mismatch.\n\nCapacity: 54.7 gallons against a 100-gallon tank (limit 110) is within capacity.\n\nNeither card rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged within about 0.03 mi of the Pearsall station 2.5 minutes before the purchase, and 54.7 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsbo9agcNsbJektu5M3",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5473,
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 12:52:35Z at the Pearsall station (28.8922, -99.095). The nearest pings are 12:50:00Z at (28.89244, -99.09489), about 2.5 minutes before the purchase, and 12:47:23Z at (28.89205, -99.09522). Both are within about 0.03 miles of the station, so there is no location mismatch.\n\nCapacity: 54.7 gallons against a 100-gallon tank (limit 110) is within capacity.\n\nNeither card rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged within about 0.03 mi of the Pearsall station 2.5 minutes before the purchase, and 54.7 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5473,
+    "output_tokens": 265,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

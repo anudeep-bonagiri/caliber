@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009988,
+  "durationMs": 3909,
+  "httpStatus": 200,
+  "id": "6294",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 2's nearest ping (15:00Z, 17 min before purchase) was in Houston, about 170 miles from Love's in Beeville, with the engine off. Ask dispatch whether another unit or driver used card FC-1002."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 15:17:45Z. The nearest ping is 15:00 (17.75 minutes earlier), which is within 30 minutes. The 16:00 ping is 42 minutes later, so it is outside the window.\n\nThe 15:00 ping puts the truck at 29.76016, -95.36969, in Houston. The station is at 28.4008, -97.7486 in Beeville.\n\nDistance:\n- Latitude difference is 1.3594\u00b0 \u00d7 69.09 \u2248 93.9 miles.\n- Longitude difference is 2.3789\u00b0 \u00d7 69.17 \u00d7 cos(29.1\u00b0) \u2248 2.3789 \u00d7 60.4 \u2248 143.7 miles.\n- Combined, that is about 171 miles.\n\nThat is well over 25 miles, so this is a location_mismatch. The gallons (110.5) are under the 132 limit (120 \u00d7 1.1), so capacity is not an issue.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 2's nearest ping (15:00Z, 17 min before purchase) was in Houston, about 170 miles from Love's in Beeville, with the engine off. Ask dispatch whether another unit or driver used card FC-1002.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvUoJBbBcrhm8rN9XU",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2989,
+      "output_tokens": 401,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 15:17:45Z. The nearest ping is 15:00 (17.75 minutes earlier), which is within 30 minutes. The 16:00 ping is 42 minutes later, so it is outside the window.\n\nThe 15:00 ping puts the truck at 29.76016, -95.36969, in Houston. The station is at 28.4008, -97.7486 in Beeville.\n\nDistance:\n- Latitude difference is 1.3594\u00b0 \u00d7 69.09 \u2248 93.9 miles.\n- Longitude difference is 2.3789\u00b0 \u00d7 69.17 \u00d7 cos(29.1\u00b0) \u2248 2.3789 \u00d7 60.4 \u2248 143.7 miles.\n- Combined, that is about 171 miles.\n\nThat is well over 25 miles, so this is a location_mismatch. The gallons (110.5) are under the 132 limit (120 \u00d7 1.1), so capacity is not an issue.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 2's nearest ping (15:00Z, 17 min before purchase) was in Houston, about 170 miles from Love's in Beeville, with the engine off. Ask dispatch whether another unit or driver used card FC-1002.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2989,
+    "output_tokens": 401,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

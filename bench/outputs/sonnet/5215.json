@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012594,
+  "durationMs": 3133,
+  "httpStatus": 200,
+  "id": "5215",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged at the San Marcos station (about 0.02 mi away) 3 minutes before the purchase, and 22.9 gal is well under the 110 gal tank limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 18:22:54Z. The truck's nearest pings are 18:19:32Z (about 3.5 minutes before) at 29.88309, -97.94133, and 18:30:00Z at 29.88338, -97.94148. The station is at 29.8833, -97.9414.\n\nThe distance from the 18:19:32Z ping to the station is about 0.0002\u00b0 latitude and 0.0001\u00b0 longitude, roughly 0.02 miles. That is well inside 25 miles.\n\nCapacity check: 22.9 gallons against a limit of 110 (100 gallons plus 10 percent). That is within the limit.\n\nNeither fuel-card hold applies, and the other codes do not apply to a card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged at the San Marcos station (about 0.02 mi away) 3 minutes before the purchase, and 22.9 gal is well under the 110 gal tank limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1yGhV8GaEXCV4o2km",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4742,
+      "output_tokens": 311,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 18:22:54Z. The truck's nearest pings are 18:19:32Z (about 3.5 minutes before) at 29.88309, -97.94133, and 18:30:00Z at 29.88338, -97.94148. The station is at 29.8833, -97.9414.\n\nThe distance from the 18:19:32Z ping to the station is about 0.0002\u00b0 latitude and 0.0001\u00b0 longitude, roughly 0.02 miles. That is well inside 25 miles.\n\nCapacity check: 22.9 gallons against a limit of 110 (100 gallons plus 10 percent). That is within the limit.\n\nNeither fuel-card hold applies, and the other codes do not apply to a card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged at the San Marcos station (about 0.02 mi away) 3 minutes before the purchase, and 22.9 gal is well under the 110 gal tank limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4742,
+    "output_tokens": 311,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

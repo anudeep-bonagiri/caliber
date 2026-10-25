@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013714,
+  "durationMs": 2639,
+  "httpStatus": 200,
+  "id": "1599",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 15 pinged at the Waxahachie station (about 0.03 mi away) at 20:05 and 20:20, within minutes of the 20:10:42Z purchase. 54.9 gal is under the 110 gal limit (100 gal tank plus 10%), so neither fuel-card hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wYKEAgTGAI4AUIIdGhpbmtpbmcSDKmVD+Hns7il/zk+KRoMv2DQzhrXlmii6vboIjDvFM4G1SRNWLswi7ikC359HD8KM8p7/2Jp5ja+NgPqvgqeCDWBF5BhJiFpflNQIBoq8AXDeAHb2NFsGG5t7Vfr84VwPcgxWEuM3V+1sjL/fsNl44i9aPHJHyskMyltiO6Yh33xJZPQtUO3ub362pdAbNBVnH3LEoFpRKN+CusLwuuQMcmZdz6/+dGr6hBGCT3uQBdZjk77HL2EdwiQ1cP8Y11mkg9v8yM47lQTiZfgVNu0GrFMIXmJYDIxsdOLEVgq+9zvEgb1VsAMTNHxFASroazixKtZFkGhFkQY3Khe4QZTB2JX7WlDtDwkzbJRq8MJWYGz8lLa37CzXPb8A9R+/xb+Pe0elhAHTkC84Mfdu7F2i7iNhmS34o6D+2Xi+JaoO8nZfgZL6y2Zv7OfEyoEitYMp9r00AiOlXueDJ1aOJp/0KFoQlBNAkYC+L2u13naPQNqd8n1O959BVcf1iIZU9+ml199C8y0iXvsKZ889xKc9cUAblP90IbpT4isPKA/eohhW2e8OG/s4lw7Dyd6Y0PNLDwoaCPCOpgfMgcFQLGNqRn+fflYmu7DNIF4n5fFDs4awsxM42Q0QnFSDbiyKPPU4VVyEg4RyV0G+ZalRpAw67OqK3JAMEuLgfSQFxIQGj1dXHQ60v6JOrhWiC3q4zK3B1x5Z4trzSWa3HrfuafhWktfgSUx3aKv6lXpux9Wqf2vSPjJQB1BEerEunT30rHwl09dKHiUrA3Mhq5O3kx+MykdpMPNP/cnDL3emrr2Zc1soWsM7wy+fWvVc86FuXHLAl3YbL8zNH8kfEJsiBUr8aLqH6inUrw1LN+2RBkD1n8/4n2xp2FjH3RFPrzSxqUfB/tsvjEZqe6pIFxEBIiCiyOVSBmdbpLDCP/3aaQMGYqmvt78wWv1+xmlbPSt6uc7Y0O028KEkR6NMJoH5CD7BBfQRaCn6zfoCmnOGq+Fd0C6fPPSQxs+HbRdAGOw5sjEiTKs5KyejSFFe6UfWYiiBpajSVSRWtrd/Ux76AFFGVvFS5sQkdoZy0CTyOhmv2hucGI87cV1RX1SX96ioVkRZxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 15 pinged at the Waxahachie station (about 0.03 mi away) at 20:05 and 20:20, within minutes of the 20:10:42Z purchase. 54.9 gal is under the 110 gal limit (100 gal tank plus 10%), so neither fuel-card hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmxQUdzq76Nd2vzd8k",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5547,
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "thinking_tokens": 144
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 15 pinged at the Waxahachie station (about 0.03 mi away) at 20:05 and 20:20, within minutes of the 20:10:42Z purchase. 54.9 gal is under the 110 gal limit (100 gal tank plus 10%), so neither fuel-card hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5547,
+    "output_tokens": 262,
+    "output_tokens_details": {
+      "thinking_tokens": 144
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

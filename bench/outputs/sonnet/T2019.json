@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013148,
+  "durationMs": 3460,
+  "httpStatus": 200,
+  "id": "T2019",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1023 at SH 130 Plaza 1 (Hutto) within 10 minutes; the last charge there was 2026-07-31, and the most recent earlier toll was at a different plaza (PGBT, 13:22Z)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll charge at TXTAG-SH130-01 (Hutto) for plate TX-1023 at 2026-09-02T16:58:58Z. For a duplicate_toll hold, an earlier charge for the same plate at the same plaza would have to fall within the previous 10 minutes.\n\nThe most recent earlier tolls are T2006 (NTTA-MCLB-01, 2026-09-01) and T2010 (NTTA-PGBT-01, 2026-09-02 at 13:22). Both are at different plazas, so neither is a duplicate. The last earlier charge at TXTAG-SH130-01 was T1515 on 2026-07-31, far outside the window.\n\nThe other hold codes apply only to fuel-card purchases and invoices, not tolls.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1023 at SH 130 Plaza 1 (Hutto) within 10 minutes; the last charge there was 2026-07-31, and the most recent earlier toll was at a different plaza (PGBT, 13:22Z).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvknioWnJXEetD3bTZ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4779,
+      "output_tokens": 359,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll charge at TXTAG-SH130-01 (Hutto) for plate TX-1023 at 2026-09-02T16:58:58Z. For a duplicate_toll hold, an earlier charge for the same plate at the same plaza would have to fall within the previous 10 minutes.\n\nThe most recent earlier tolls are T2006 (NTTA-MCLB-01, 2026-09-01) and T2010 (NTTA-PGBT-01, 2026-09-02 at 13:22). Both are at different plazas, so neither is a duplicate. The last earlier charge at TXTAG-SH130-01 was T1515 on 2026-07-31, far outside the window.\n\nThe other hold codes apply only to fuel-card purchases and invoices, not tolls.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1023 at SH 130 Plaza 1 (Hutto) within 10 minutes; the last charge there was 2026-07-31, and the most recent earlier toll was at a different plaza (PGBT, 13:22Z).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4779,
+    "output_tokens": 359,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

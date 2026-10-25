@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015362,
+  "durationMs": 4534,
+  "httpStatus": 200,
+  "id": "1275",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged at the station (about 0.01 mi away) at 11:55Z, 6 minutes before the 12:01Z purchase, so there is no location mismatch. 35.3 gal is well under the 132 gal limit (120 gal tank plus 10%), so no other hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjAoKEAgTGAI4AUIIdGhpbmtpbmcSDPVKFnN0gkrvgmy0yBoM0qipkcqIkoBVvOnBIjBwXkZUFVZSbhPBALkJIc+I5XVZirMNO5WplZ3SKAql5CEVBGdPACdbjX4Af4gWAssqqQnQmB7tiS4L7s4ZLPl0NHLgQ/kg5IRLvGJpF4odaDHFWsISXvwhr+y9FxTm5CvWsq0OMo8VZCBFRDYBXp4bpBRahYUO2FtmHatgju+05es/wb6hy1ZWm6xWqDU0eyGcVi1rdD+k03Z6eU+qhHvMnxAvcKpo0Uz88X6MRBnEX6BnkiBvxilDCAPV+D9CNWIh/+cbgtAjqiXzaNK+vfERA6ZC7PSDeStqhnKwW6l8tmwhOV4mQAD53bskorsocpbb4jogQ6Zbj3omdUV6Wdf+yiCWMr2O1QgE21wdExMnNv1ID7mlPHbD7LbsS+S+hWjjERPV6RWRnqfbvXZOstu32kxOLQmcv95qqq1WIehM9C13C9avq+v1RcVjeVNF+BMXqtA3s/ZwSrY5U7vFG3PFnlpVgBEc3e6tQQpz4ZpTdSN0Rl3lmqQKvgWLGE/sa9Lu/xWqjlf66cVUxP/mvgiJtZskn25ROfAE0+Sh6awc3dt0FWyryL5DGzrZiGsGuXbixAC1PVatxuZNtukV9Y19zQv1kkfmpgg0FUzJ0HzHmfJ/XY0ogpW72G3j3cWvPxgUXGCY3V6zqFGrssI3jeYR/+acr5gW9qCjLtKKl/tU+eCh2KTKWvyj50v97mX4n3G6ESA2waTD585wtMVVo34+8Xf+8q6D2pZOrpd1LgGjfsf0ddINiRtHb+7w3nEdHGrvD4yeAmvaUFDuqt9iNEpLaidgQy/p6LHXteCAsvq9OFWPGGcZi59EZyZKeFgvmIykCwlwGOnxLhX/F1D44+Z/eh8MkvhFVflcrkfDzk6+Q3NfG3bsaVGCUKyC3ppEhi722HAfM3Zr95OXhCTTk3kLKzLFny6KWDoRlKyMGgocQDgfLipkAIzZr3TxVDtpJvBDrrJznxD4Vnb+oWulNwc+eE8P7cMpALIGDQg6vAOisynZwUABMylZtECywe81RFoxPEVLQGiCt8CuNyAjHrsYKM8RPqHsTSrZcm4CWp/IrU1CGGQBT1/vSwBpEw/h/rcEEA9dPRcC328lJyemP5yeUnuz8Zr5uXl129Img7SQYxwbnTh3l1ZW45NbCRWuS4gAqZu15jqg1YpQAIo+knRrZRT2SUAxNiDGbGYGA2BnFJMg4hJDZszbXga2m/tTAI1sjiP6GuQL8HdUFvpXn5Q87anzrfzPKbG971IIJ4CXJOUNWzVLEaJUfQ09sOaE6Ry94458cyOfBrEt4UY5sh/Hu0XqxdSxTQA5A6Kb8o+S2oysX1Z54LheHN7hpdM1Kn4LSRHxMmBV8NYGFfh2VZd6zR6PR4F/sgLWVfb8vXKnO8XSjPyFoY1Og4QTfjpt2tdTH0WrpfyxvG6VmIPF3TSi0lvPPPiqFJ2X5Dts6XSWXiv8On9yNgwAjDKUqxi3K8qUYguqTNWPy+9vpatrlMmFjAsRpXBohAz1bGG8HvC9AyY/eLMZLnfu2/6ut58N2UURdoHK7Qq/F8EdC3YEDuebcDNyT0hVyhq2JUmLwnAzxH6bHIz4eQWB6McvRY0/DKUFMM7d36VbixlzZgJerN6Vujw3Lzo4QJvIv8X5XHLp2tXTTeOg5nMP6JKYsRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged at the station (about 0.01 mi away) at 11:55Z, 6 minutes before the 12:01Z purchase, so there is no location mismatch. 35.3 gal is well under the 132 gal limit (120 gal tank plus 10%), so no other hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfhYqZnFdvrmkbNWhw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5256,
+      "output_tokens": 485,
+      "output_tokens_details": {
+        "thinking_tokens": 371
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged at the station (about 0.01 mi away) at 11:55Z, 6 minutes before the 12:01Z purchase, so there is no location mismatch. 35.3 gal is well under the 132 gal limit (120 gal tank plus 10%), so no other hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5256,
+    "output_tokens": 485,
+    "output_tokens_details": {
+      "thinking_tokens": 371
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9023,
+  "httpStatus": 200,
+  "id": "4781",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's telematics ping at 13:15:28 is within the 30-minute window of the purchase and located at coordinates nearly identical to the station, satisfying the location requirement. The gallons purchased (53.4) are well within the tank capacity limit (110 gallons)."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's telematics ping at 13:15:28 is within the 30-minute window of the purchase and located at coordinates nearly identical to the station, satisfying the location requirement. The gallons purchased (53.4) are well within the tank capacity limit (110 gallons).\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883313,
+    "id": "chatcmpl-d091246d-1b71-491f-ac85-06a2f7c00708",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 80,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5500,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5580
+    }
+  },
+  "startedAt": "2026-10-24T23:08:24+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's telematics ping at 13:15:28 is within the 30-minute window of the purchase and located at coordinates nearly identical to the station, satisfying the location requirement. The gallons purchased (53.4) are well within the tank capacity limit (110 gallons).\"\n}",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5500,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5580
+  }
+}

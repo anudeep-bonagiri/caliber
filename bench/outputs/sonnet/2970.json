@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013428,
+  "durationMs": 2824,
+  "httpStatus": 200,
+  "id": "2970",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33's nearest pings (18:39:44Z and 18:50:00Z) are within about 0.1 mile of the Pearsall station, and 41.3 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4QYKEAgTGAI4AUIIdGhpbmtpbmcSDMYX7NPIFKpqHLdiPxoM94e25DC+Cv92GEITIjBY/Ct00zigBr/h7uplYskTViagq/RGq7eXesQlmqovfSbZds9ccTd2hV63mm9RcT8q/gWDu+IZhqE5LOukmP/+yPPinZhDH7oahvqvfaL5DEJa36nHKKN0zSu10ONfof27XppUlZCYyJoVP6C5RmuNXcw3ZkzvVAFc4k+YTj03f7Z54x2LvqmBolblz6JE5GIe9khw5EYUzyTl8Ku5H+RHjSBAUPnO0TkPOLtaxmfaIsa3Z7fsNv7KtomGd6SmLGv7jDj5qj3ZYqkSEBnboG3Y/T912oPtQa1iZxU4KKRRX080tXYdr0i3CU/WbL1J9paHKUnfjDTqwN8pc30BbNozcXKZfa/myikSoQ7Dk15cyrsimjUtW1JXH8Vcc3lVrzp7+fvU/EvwXJFniIaN7vy2bqlB5dli6drDPiUG/JZlM47grTznStev4T3xD6Bz2xwRd7bllS/0eiSfs5loJXGeYDmUjT+/v5a7om+qVZ/6oKn2i+Fya6Q5i/eA/s9cNDvE49HTOjkTIjlACPfZS6PV4yvjhX8oCyQgpwqhiin9jjOS0amJjORsnybuBFGt+s03IzompxQxxdI/l1C/dp/+FsChlHJWAgluHKrZQ+EG8S1koXpsgzzKyDK6GBh0uO9FlyA0azcZ7bS1yLfCS9c0Y3180ExkN7qUMdTdII96DaMoWAQUJhmKDlzJMYvWpDJx0zh09PVky3uj2yYRpfFP0JrSkGDynj2D4BiW4XfhQ32wLh05RhDE2ldf+34tHdsTCHwrKvdQx9cHyZDR4k6ZbkRCrwls1V45LqvZLoHplTvVas+zttCNAhzwlCv5tYY4rTLp7xYIiudT5K76t4tIECUrU6Y5Pkeea7vt9cJLCBWnP22d4CMQnYSkhcS5fwug7IBeEqiyFH3Xem4chefaYnsJ7JaX4h0qouCDWf78x+OSFGZpFNQoIRWfn9nteSUKo+BXvvzuF+p9C7s14aYQ/5GSqZ1IZ6UYBzyod3rMWvHk6I3Mo5RZ0CRXp4KjGP9zyLwt3hXbQtXIv8vemJdM4zeVP4Ke/WtmvlWFSkF8Oae4f7bCCPQpdi29gI1kNxqkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33's nearest pings (18:39:44Z and 18:50:00Z) are within about 0.1 mile of the Pearsall station, and 41.3 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxynd4kRaYfDibLBAA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5474,
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "thinking_tokens": 152
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33's nearest pings (18:39:44Z and 18:50:00Z) are within about 0.1 mile of the Pearsall station, and 41.3 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5474,
+    "output_tokens": 248,
+    "output_tokens_details": {
+      "thinking_tokens": 152
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

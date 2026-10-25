@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01237,
+  "durationMs": 2611,
+  "httpStatus": 200,
+  "id": "1396",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11's ping at 18:09:11Z, about 5 minutes before the purchase, is within about 0.03 miles of the Temple station, and 35.8 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnQYKEAgTGAI4AUIIdGhpbmtpbmcSDPB/L9M2YOY7sXPp3RoMqSwyXphGhMmtCsy7IjBmnP1izum3M/DJvGLReeyMv2cper70S8rmvL9RrroW1Mk+aerp6W9SrMVMaeiCVxYqugUTBC93mvQM6aQU1iX8iPIrJWTJL++rZjtKPCfVpkjEnmpVRQdqyCf5V8GYK7GeQypcVHL4Ghga2y8KAt5jc7rT2bWmm0/13VtOcg51x82TQ/gjb6lzRciFm+0Iwbm4j6WixTNchhpnSPVrbp0pKHUxyw6a+K6C8B8tPZ6IotMsOaUzoFbKuDnJjoV1uJfs7LyRszsUL6ZeEw36K2UkOMgfzd7qFEgO48XfSm16JkI+tI6C/SDgURTY310HlWtL2uaipIrFnPCtVRwDcjtj+ka8zDyyMjX58zhNHJEoA2TMlKPOL1rQWmtQNZgPukb2fz3vXDDcV7PT8UyQrifl29voJcukyJZDFpKLxiu8q34su7sFh1a3N7hfYkfuwIIHvdHsry4DccRwK8SRhdpD6iggaKrYWSl+uK1nYFna/qFcsLFYdUxvsjtdueSQyvk6bJsBAc5yCQwXhXsSuTsya6B899PLg26E0Puo9t6m8PQQEezk1/02rGCoDLC9AHLNCW+NL0Dc2hqywkqKH19jnqIn6Qu7+1oT3HcXcZKdoU4tr77lRCfIabTqKz+iBOzAldb0qxQvg8XFyPGygQifg52YTk6Tx31dVq/2QaIPBosbauHKLh79hLLQzf+ZOvRS2x57J3Sp1O+uwmq72ATk6ctfNIh97orEumRFBq5LRpKxJi58ZXog6DhxD5F4tfqfbwCAmsv0clTskwDSRryxqvCC14vQBsilUwgXxPJwJy5BOivy8MD561KVfmZIPeKW1sUq5FRu1YPJlN9PFnr1dVgrI0oCrMnTDuWJZe+TBakg9UrWYvUXen7VP2201UUc14dCgLkKooX+cuDscL1CNH4duOKc+fKK9igOfo7Z4GQIkwwU+wx6sOD8N3HU+M+hYlqo8iv9U5YzmBM5ge+bIZrHhIUWNHsrw/pvaxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 11's ping at 18:09:11Z, about 5 minutes before the purchase, is within about 0.03 miles of the Temple station, and 35.8 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7WPN9mMp1MN8HtUE5",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5180,
+      "output_tokens": 201,
+      "output_tokens_details": {
+        "thinking_tokens": 104
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:02+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 11's ping at 18:09:11Z, about 5 minutes before the purchase, is within about 0.03 miles of the Temple station, and 35.8 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5180,
+    "output_tokens": 201,
+    "output_tokens_details": {
+      "thinking_tokens": 104
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

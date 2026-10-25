@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0107,
+  "durationMs": 3214,
+  "httpStatus": 200,
+  "id": "T2016",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T2016 at SH 130 Plaza 4 has no earlier charge for plate TX-1009 at that plaza within 10 minutes; the closest, T1961, was two days earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2016 at SH 130 Plaza 4 on 2026-09-02 at 16:43:14Z. The most recent earlier charge at that same plaza is T1961 on 2026-08-31 at 15:35:23Z, about two days earlier. That is far outside the 10-minute window. No other earlier toll at this plaza falls within 10 minutes either, so this is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T2016 at SH 130 Plaza 4 has no earlier charge for plate TX-1009 at that plaza within 10 minutes; the closest, T1961, was two days earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMssJqwQWRoFtyBSTQtq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4285,
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2016 at SH 130 Plaza 4 on 2026-09-02 at 16:43:14Z. The most recent earlier charge at that same plaza is T1961 on 2026-08-31 at 15:35:23Z, about two days earlier. That is far outside the 10-minute window. No other earlier toll at this plaza falls within 10 minutes either, so this is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T2016 at SH 130 Plaza 4 has no earlier charge for plate TX-1009 at that plaza within 10 minutes; the closest, T1961, was two days earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4285,
+    "output_tokens": 213,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

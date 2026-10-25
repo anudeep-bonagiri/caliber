@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010154,
+  "durationMs": 2386,
+  "httpStatus": 200,
+  "id": "T1580",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1580 at PGBT Irving has no earlier charge for plate TX-1021 at that plaza within 10 minutes; the last one there was 2026-07-24, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1580 at NTTA-PGBT-01 on 2026-08-04 at 17:48:13Z. The most recent earlier toll at the same plaza for this plate is T1392 on 2026-07-24, which is 11 days earlier. No earlier toll at that plaza falls within 10 minutes, so there is no duplicate. No other policy rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T1580 at PGBT Irving has no earlier charge for plate TX-1021 at that plaza within 10 minutes; the last one there was 2026-07-24, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMtA6nd1heCy7jL5pYVz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4012,
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1580 at NTTA-PGBT-01 on 2026-08-04 at 17:48:13Z. The most recent earlier toll at the same plaza for this plate is T1392 on 2026-07-24, which is 11 days earlier. No earlier toll at that plaza falls within 10 minutes, so there is no duplicate. No other policy rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T1580 at PGBT Irving has no earlier charge for plate TX-1021 at that plaza within 10 minutes; the last one there was 2026-07-24, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4012,
+    "output_tokens": 213,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

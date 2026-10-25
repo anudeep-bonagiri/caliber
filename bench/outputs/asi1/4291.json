@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9360,
+  "httpStatus": 200,
+  "id": "4291",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's nearest ping to the station was within 1 minute and less than 0.1 miles away, satisfying location requirements; gallons purchased (34.8) are well within tank capacity plus 10% (132 gal)."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's nearest ping to the station was within 1 minute and less than 0.1 miles away, satisfying location requirements; gallons purchased (34.8) are well within tank capacity plus 10% (132 gal).\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883919,
+    "id": "chatcmpl-2e62294e-af2c-48b1-ad55-7d04ee27a953",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 67,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5930,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5997
+    }
+  },
+  "startedAt": "2026-10-24T23:18:30+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's nearest ping to the station was within 1 minute and less than 0.1 miles away, satisfying location requirements; gallons purchased (34.8) are well within tank capacity plus 10% (132 gal).\"\n}",
+  "usage": {
+    "completion_tokens": 67,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5930,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5997
+  }
+}

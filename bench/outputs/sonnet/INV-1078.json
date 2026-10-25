@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00894,
+  "durationMs": 4879,
+  "httpStatus": 200,
+  "id": "INV-1078",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1078 bills tire_replacement at 70,675 cents per unit against the contract rate of 54,500 (about 29.7% over, limit 5%). No other hold applies: the amount is not a duplicate, the quantity matches what was received, and the invoice is under $5,000. The invoice total of 145,100 cents also does not equal 2 \u00d7 70,675 = 141,350, which should be raised with the vendor."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwkKEAgTGAI4AUIIdGhpbmtpbmcSDFvBRpoQxbM4FfV25hoMN8DQMJH5yjCZbtd8IjCc1TBkG8nl5EQ5ZhNyrrkSmbSAhHwsmSkK+mOv5JaRbRYYImszlUfivvz8EC2pW6MqxAi7rBd2OdXq+IH9Vy5p0cEgr2Zem3W5fpAK7JIhMTtD/H0ggGAOX3MkfgLFMHi9qJoj9DJRSccsvPgd9qu6+nDThG1ycERPvgWP589JW62KRp57RVSPNCYoNcHfEWgEdm9stM2ElEOehIg+IVVht3aYsyDJag4Znpz6HfifKbbgTIKwKmJ1xEXeCh+Oy3P6NXgvUfoAnQT1Hf8fnyvIhfKgfEB4FPHDxAQZykH7L5uNNInVHuVS/8RbeA86s/jeYovlNT+P6uuO9n8TXRYd0nHQd7bXwUeXudgGUf29HNYuVCSXGpm/Phm6/EphBZKosVFkJINsGokM8I5iRTxZsxtbQ9BP9laoL8IVWyLbsnBvdYQPl4rHJDKItEHoxd25skVKHDDESmxtSEhU0lm/xivgAoVVd5p624/sDD93w3rxizUOtfGG1vpIfnk4Km/MmoGfbiiEPHYxQjkPuIwsXToOlG2ewnL1HGJwwXZVajuvL13pyiV6Cv+YvgUj0dR6WLP93+jg5TiHKIG/aRUpqt/gJETHfhROnDRRqXtQA8YVUidlPSLQyW45kMWXKbvP5TxgxEZ1Bd02kY962owgRxKyS5VmhXvPiE95nbt1LDlUvHpsirltjYlDhatYViUxngJvfQEE3lnIhRrc4Ec4K0XXYVzfDK+Xsap6cPGJRZSMUFnOkojxLIlOfI3ELwIkvvibJ1D4P08MaKY1B3r3s+m6gUJ1QBuBGQ4DuKXotu86fkN1og0mqO6XXLjFhcmxhhZShCBy5jaJJxg56XJoyvs7j9a/GnT57F/cJC7jUiucY7m/MB2lAMxU26yNljNlVxOFqq9pn6KoAFk7Fqmr31xpGue+Ac1f8AVbeZNTxAP/x9dfGfoGWVlNHjERdrHg85MJWWgQf0mnTYpoHQLtqiiTSFfIEd+jIK6zNCkFhhG9fUKLO9ofek2pVNNS9+qyh0IRkSgH17mYjppgOKTDYk4betM/B4gq+xlGc7/593gyevuxhk9LCe5RM0bFQpmZ7kzrHzz+AgyTJGoSozgre9HYKTqT3Vkc4e4n4Ttr1yEpkRh3a30aZZOegFKf4Z1cFAH1oEhsv2JJSMmu2eMNPI+mVw9O/eocphf+F6GoJxXtEGNF6O/H3RHWUja44LcW1w3P1MxMef7K+MsF8VTNgMIbDwjuqiMvqN3V/pxzJZMn5qOCVYgrVzEMa8Uu5/XDe5gH8t78p1Gkg0SHpOfSgwIufwPMC9JoFBOk9cbqd7+hWzaVrh4KFxV73tGJ2gBxF0xH7VXELljojNnmoRBdMk7EGXy6znj1aVv/blopYxtElkioRLJprz99dsellBvWBpj8vLZ2+VAR1Cg3I4dxoW61CmjkO0Hba+bPz9t5D0Tx/DyqOffadgPOoRYFc2TyDaLsW1TKGSFwuUJpqyyPNKuhVh1SSTL3HkpSrwPR3Kgz/ElEogkYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1078 bills tire_replacement at 70,675 cents per unit against the contract rate of 54,500 (about 29.7% over, limit 5%). No other hold applies: the amount is not a duplicate, the quantity matches what was received, and the invoice is under $5,000. The invoice total of 145,100 cents also does not equal 2 \u00d7 70,675 = 141,350, which should be raised with the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmFPub5BoR2veowCwS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2330,
+      "output_tokens": 428,
+      "output_tokens_details": {
+        "thinking_tokens": 267
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1078 bills tire_replacement at 70,675 cents per unit against the contract rate of 54,500 (about 29.7% over, limit 5%). No other hold applies: the amount is not a duplicate, the quantity matches what was received, and the invoice is under $5,000. The invoice total of 145,100 cents also does not equal 2 \u00d7 70,675 = 141,350, which should be raised with the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2330,
+    "output_tokens": 428,
+    "output_tokens_details": {
+      "thinking_tokens": 267
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

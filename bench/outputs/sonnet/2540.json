@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008986,
+  "durationMs": 3331,
+  "httpStatus": 200,
+  "id": "2540",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The nearest ping within 30 minutes (20:00Z) puts truck 28 in Austin, about 135 miles from the Refugio station, with the engine off and the odometer unchanged all day. The 100 gallons is within the tank limit, so capacity is not the issue. Ask dispatch whether another unit or driver used card FC-1028."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAcKEAgTGAI4AUIIdGhpbmtpbmcSDMu8l2B45iZz3aZQsRoM+cOmMEkjBiD3hUQ7IjB1qnuo+ILhZxeiurWKZtqIDpwhIchDUVJlaDmSlWuvEhfv/gfWWrlGxVcRQPo7BpcqpQaFDCr1oFhAzLGUlx/rlhIDHsr8fCGKRtG1tnFbo4+3RHlPVsNAUFXizbkUkC6dNoUeLDFhTd3DWcsfV+UakwkVCmYbIDp7u2tB6RFjZSxtcRhPs/DcxqSmwhcyiMtkfZvHgWyfT5yVWY09981YF0EnBrmepnDBrOFCmuzhINlWECEZ7/4m5GR84EbalQ7K5jevHIK7g1m45ra8eT8kM5vV1dM38/omog7ufrfmtR433ezXPRbFoA6O43KhddTzFB/UVuInwON1i9SKgFg5XkWZRo/0fu4+q7xNwiw/CMojj9F3TCr/gFLEhdLRf//DPZHTxGYagw0cY6TxgJnmKGL4wJGWO4MPSokpdKj9/TN543vyDhzEuRs0rr+cB3wViJAgBjMeNWTduaPrlWPKho3YEMX9KlbENO61/fwl3zd7weRoNNH/qRsB5ejQ/CYALllaAgnNDW6zotWSu3esww1LAr4XE8UuXeSVIwLBdVy+q7bWhX6chrIzFrjbvkQtxIrYqesEByFkSuSm/ihXd7wWYGM0zKc/vCNzPpmuFB6Otqyg0qSsLBw6JrsUIBaC47+lku8H3GtNKt7G+AB0/AL04sylAyTuW7nPEnACJNToMTajCj4QaiXRnAQy6vrFu8YFf5zA36mnh6dsg03VhOsudxN5c1KOpV6dXP/10TZEYP+t7EZIz3yMuk+6r+k3Pug4nLjt2Wl9mKu7hULKU2vL1NJT5otTbH38WdQofTPHSuovGmLTE1WGwuk4ONXMyoP51gGh/P5ZEJ/PKMefMqQSaM/+QSEEzfT8QViPOrlTJU/VDK+eaEFEuuxSZPF7DgAwk5BT7igjlfz1kCvgkApsI9qgRJ53zMjLT+bjIxiNUDCNz4FUpaSidcFgj8kOmXdfgYUVb+QfS7YTV3JgZu1UItOf3LRgHY/AMW+ZsAVjSvurVdBmczwNL46Qa9/dg1T9E+Q/3kDd5TpRPoqdMuRh13y3m33/mRmXvyHQGxX7f6IPbeL/ETyynDd8V6dAx8VSrnRVzyO9aIIgUaPo8GjnT1c/Z0Zl+TUz92ywGeLuXdhz6xFFGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The nearest ping within 30 minutes (20:00Z) puts truck 28 in Austin, about 135 miles from the Refugio station, with the engine off and the odometer unchanged all day. The 100 gallons is within the tank limit, so capacity is not the issue. Ask dispatch whether another unit or driver used card FC-1028.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMtAB36xs6KmvhbnYY5v",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2993,
+      "output_tokens": 300,
+      "output_tokens_details": {
+        "thinking_tokens": 163
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The nearest ping within 30 minutes (20:00Z) puts truck 28 in Austin, about 135 miles from the Refugio station, with the engine off and the odometer unchanged all day. The 100 gallons is within the tank limit, so capacity is not the issue. Ask dispatch whether another unit or driver used card FC-1028.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2993,
+    "output_tokens": 300,
+    "output_tokens_details": {
+      "thinking_tokens": 163
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

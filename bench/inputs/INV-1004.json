@@ -1,0 +1,23 @@
+{
+  "contractValidOnReceiptDay": null,
+  "earlierInvoicesSameVendor": [],
+  "invoice": {
+    "cents": 16937,
+    "docRef": "evidence/invoices/INV-1004.txt",
+    "id": "INV-1004",
+    "item": "shop_supplies",
+    "poId": null,
+    "qty": 1,
+    "receivedDay": 4,
+    "unitCents": 16937,
+    "vendorId": 5
+  },
+  "kind": "invoice",
+  "purchaseOrder": null,
+  "vendor": {
+    "bankChangedDay": 71,
+    "bankLast4": "8823",
+    "id": 5,
+    "name": "Border Fleet Repair"
+  }
+}

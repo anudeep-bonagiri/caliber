@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009258,
+  "durationMs": 3084,
+  "httpStatus": 200,
+  "id": "INV-1086",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1086 bills oil_service at 37,450 cents per unit against the contract rate of 29,900, about 25% over and above the 5% tolerance (31,395). No other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkwgKEAgTGAI4AUIIdGhpbmtpbmcSDMkk+FBz5gCKP+rL1hoM/TVZJWEzalifKtIsIjBOcDxhXL1yamSLwqb7YcTxyQ0/FOmArlQ9BTHirxQXmaZV7rtfxEPm/hc7Y7T/M3EqsAfNYoVWE05DmE5fkVaMUhWwL4TJzLslRQCo+TkhoTdRmsMam5/q9b7gGiGGukvEQXIkRXC054zcc+FXAuJrVOW9WO3cRCdyAtJm75BDNP5wBZw8k0j7Wq84who7yrJMTnIKnPSsUvhKLAXtIHfsq2+W63l9C8Nqwx7z5McRVfYim2vn/FAE2uzRbbwK48BNqtPa+UJnoTJBdLok4ZFqoVHUeZy5Ij+LeY/tNvK2kC381hNN/4BZ8kTweGIZJaXzs7smNRsfknr2P5VSPDh3atfGIIchR9niBvxGuyFhO3A7jCP3izjgXJiulmk2stRBUQPv1pyiBAqTV+W8pXvJ6it/4ktRBZjKExFZ29cGBH1bTGT/AhAX2h342D671EjSWUcA7LcZhv62OAoTseHUhD2YOSvnFB0hl/Vga8o6iX/KcO31U1AZq9AXeTv+IbwBkQj5iHgYgEQpP2nmFMd2zfpNfZFUx9BTFHTT2BkrU2aRdt6FQRUXUTRPm97A5btJhZvuJ5z7bBguckHiisw1lIS2yYp/d8RsJEWhQKU64/v0UpJB7AnQp6bLVj0O0gNwmBafUkMM98qMmTJcTGEWRqWk4mO9elpZp1k58kCqSFAoDAfiYDlS9vzblV0IhExGLrWftjfnWgAphVWqOztaRQLpU8EhHDXAcwohCebzQUspJ1/Ent8ZMVgy4CktyuWwk3HTdOuSEDMsJCwZPO37A3DBRmMSVdu3vYuCLGOs7NDnF6ow3g+Ly/8kG/B3MOH2yWVaTWvNmGFvj7mz88Qdv8RzdB1euWdb9w7Gqd+IsMNdSNWeAeJBwulFcvW5oHhCaq18cKiRWtV+PeSppaCpQAGUbU0Dr+w66GXNpNn7SMEt3kuZR0CYkisSRVWN85HPCs4CkVPpMWBeHQPT6qSumC3hvvtgnTt9iyyeGzrQcd4Bj2UD9iC0KixnVGPPAknPciveRw7CCe+UTHySxOnFiGT+CTjTxzJ2HJsbtkxiYVPh2q1WMdRKBv3338T6rgUOxm6tH6scKf7MGETxfhkV//Z2/CkNnDWOa+1NVJJq9ND064sHvLYqbLiv/+Qj44is3G+1uAC2THu2AjKyMvBafiAD2jkz5Efc6Yhdg8JA78P/g8BkQ157OD5+HajfIJVoTrq+HuvwSEF0U5CDeIZdEXaItWefcrICBQXEoniSpXEvHLhQoonWtn1fizOmaflUJan9oFTzKGnm8weIqtkoO+twznUQE26AsKnss91y41JHcRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1086 bills oil_service at 37,450 cents per unit against the contract rate of 29,900, about 25% over and above the 5% tolerance (31,395). No other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7ARZk8wRmGx3jpssW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3224,
+      "output_tokens": 281,
+      "output_tokens_details": {
+        "thinking_tokens": 192
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1086 bills oil_service at 37,450 cents per unit against the contract rate of 29,900, about 25% over and above the 5% tolerance (31,395). No other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3224,
+    "output_tokens": 281,
+    "output_tokens_details": {
+      "thinking_tokens": 192
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

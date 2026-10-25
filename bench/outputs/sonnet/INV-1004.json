@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00469,
+  "durationMs": 2695,
+  "httpStatus": 200,
+  "id": "INV-1004",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy rule applies: no earlier invoices exist for this vendor, there is no contract or PO to compare against, and $169.37 is under the $5,000 bank-change threshold. The bank change on day 71 also falls after this invoice's receipt on day 4."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkwcKEAgTGAI4AUIIdGhpbmtpbmcSDPG0IanjBfTPaAGxeBoMyAHEmm0wYwXmXqXfIjDLgsE/Qhh+RRt+4CCW+li2IlFK+/QZE03gFCWLPxKBb8KNQ5XwtK2Nlgy01pAAHN0qsAafbRcVBbejtNtKQBdiG2Sd8PcG4h3R9iNk4vfWgVr5p/unSiZr2reRidw1+FcljcTDk9SqCin+Ypa6tyMoEiEQVQGJNViG1FUkKzXdxw8J6rUiB+zx8hfFxfpFM/0WUxt3d7l3/8xsNh7F11Jtt5iumH8QOHDcCoQPV4p8bBVZObxzre/u4h7s5UjGuawB10Xo3jX2gdPh868nbPhMK2puKU4Xji5kkSo74AIIOT+hBCCTE9qK/T5QstEgYTZeFvUxg+aKjQUiUS6PZBUs0Mb2SAfOHhXdQYSsSs30BxQ2gjVo9hFljf7WblIc2zFGZHq3j0WLpbcxOujFo6n0/cHsxgZavLJn5RI23dT+r6fxn4UxSyn2BTgN8C/g14mceWpQDOWMnCD1WTWSuFmSvskd4xxA8DaW4Z65Fd3xAeh9W82tmt85wlu8Iqa6jyqACb589/GYZIOb6whrFSO2mDijzIjwBxVV4W13H2UX9tB/HAGv8VidX4ACS5DmXlxrbXgim32tGk9j32VuS3IiwWJKJYlhBvWiuTzY3lfNT1G+o+xT8SijP9tvc+35j3FvDrTg+o376Kio2tAll85uW67Kony9rJMc3uA+mW0lmoHsnYCfvLeMTXVrmJfVeaHAStVI8g7YGzwdiEbN2Uva2NlGh5JkAi2GEgQyuYnh7iVkvQcVjfp0WziZ43EuB93ok8pDDeJsgXz9izeHZ9DVcHZQfKVi6VIQUEF1tNArFNJJOTZOCPRnogOkj5tJeJYkQg8/2TLQ52YusIQTruTedn8PtK9ejBcw2b5jH0/FGdK05CJ4ZyWYw4rseTA+tpu3+MaG55qHBgnx55i8aBWoLvE8uKWOU1opj24i8k22tlqV/Ui8Fzy/XzknOFrqQN3gfmz3Cl6CpugctIPVRJj7g60BPMKZz1MntVybg/08rDWr1jWIO+JW1xMXWq7EuqbCThHt/SFj/fmuBMiEnDn35Gs5/ZLemWDqAXmIhH+woEgs15UU6dg2cikEzlPays+JnGvwMDzosWdNrFOU0mb2ytzOKXzvEXB7mfSt6e9pB8LNzFeVgzguBjRV7PN9Hh5hST4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No policy rule applies: no earlier invoices exist for this vendor, there is no contract or PO to compare against, and $169.37 is under the $5,000 bank-change threshold. The bank change on day 71 also falls after this invoice's receipt on day 4.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsojaN8wgFihdgGMyyF",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1230,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No policy rule applies: no earlier invoices exist for this vendor, there is no contract or PO to compare against, and $169.37 is under the $5,000 bank-change threshold. The bank change on day 71 also falls after this invoice's receipt on day 4.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1230,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

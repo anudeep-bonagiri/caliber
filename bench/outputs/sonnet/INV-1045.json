@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006806,
+  "durationMs": 3409,
+  "httpStatus": 200,
+  "id": "INV-1045",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1045 is for 2 \u00d7 52,500 = 105,000 cents, which matches the contract rate and PO-1016. Received quantity is 2, so it is not short. No earlier invoice from this vendor has the same amount. The amount is under 500,000 cents, and the bank change on day 42 is after the day-27 receipt, so the bank-change rule does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkggKEAgTGAI4AUIIdGhpbmtpbmcSDIiLkIwD8QzOoHpmFxoMZGvGepZL9SUzvIq+IjChjsx53s5dI3jfdx7j76x/r5PvlwPEUOiHKQRbuPuYMFoaE9jKqObViHC6Kz6AtDsqrwdBUkU45Crulo/mbu20W3MUyf6M2yoJrc67HB7wUISiTtIishgke44I978CM1swV1MoPfBEkSnJB/8Aqcju0Ce8uNL/aA2KRXnI7D8R0htSUPLisAB0PLRP8yitxcvE2rAedAV12sywJ19JaO1wSfugZk52yRq0BVkWEEoFXEm1M55L29XYX52zcBHhinyo2SxOPuCVt91E3YD4zuC5xZHtpsV+FxSTSfoIMKc73PlTdf8o1wCmPZ5c4xoK4kMx8VbChHGx9AEVXXT8/0Jt/7zbzvBX5X+SUH244xm867GRNJv7MZREQ0Sd38lk+B46qzu0FlCOTSmDFse/9v501jzRGxHuCMb+7T+SsG9kn7XOCcKU2zRTc78dZUroG4VPImRWx/++isLyURB2G99fwZ02pLUxp42O53ebK5UCS5K3lktzLoe9Ld1nxHR1OGurGnV29r7we8w6qoUprPJFY7TD1kXtsRRrjqIfO980T+g16xhczP1ApdC7aHNrELl6/suu/xGiRogVLvwmF4+qNF6SJJyYgz3fWcWQqSFOUPXlu8kuLAKSOCqldLXNKM+kQPMWnLej3g95vfRZh0O8f1gN79Of/o4rhX0sBfozxnmBQcKMSfG2Tn/l/giuNSUIlh3r74rxv2+3JzEvwrs77FbSrksSyjuEVHg5b5ztoovVN5mcobkpoQvO4+LEWGpoDX29NErsFInnosnKwmTP2GWGgqjGhrLjUTZNr6xdiWjqfyu5fIo7du8g3MRwqcgP/5lAwaJMRWm74Em8sIl5w3lZ7SETwbvvoh/x0899NVqS603cnFgx/zN0x74kztM6jfb47SI4Se0NQl/O1NW5++sPZnOdZmgRBz7oMh6RiuBe+TXQB7vFk+DPxbwEeCMJ0i/vzahLYAdeuYAvHXlwTSvui9LL7GE+rXOSXA1rvKxQ96me4qOMQ+O3AflA1M6pWYdu8osG2XM8JA6fDl5BdDwgmT7ys+uLeiug8hFMbBfoOuC+eHG8nS/xsi09dmIRXCDvVx7fX1Iuu3RLVBpdQGmc6meQqHfmnoIJUAQbqoToFFCQTjHT8nmPuBZncVwmYeAtURBmJfYlaPjJeRp1+hYEmv4713OaKd6rTfIvv0bX66r1KLAa8R44Z5pbfLVJb7y7m8oTAL9/mEUatR2kbW4IuhxnnBm0pwQiSu1gjXPFmn0KDZXVoV8C1ZoIsfxImOQQuvLgNiUmbIfioeEJi899aJj3mk1z/9JAwBWbI0fcGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1045 is for 2 \u00d7 52,500 = 105,000 cents, which matches the contract rate and PO-1016. Received quantity is 2, so it is not short. No earlier invoice from this vendor has the same amount. The amount is under 500,000 cents, and the bank change on day 42 is after the day-27 receipt, so the bank-change rule does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6vnHCT7vDGK9jZALw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1823,
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "thinking_tokens": 179
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1045 is for 2 \u00d7 52,500 = 105,000 cents, which matches the contract rate and PO-1016. Received quantity is 2, so it is not short. No earlier invoice from this vendor has the same amount. The amount is under 500,000 cents, and the bank change on day 42 is after the day-27 receipt, so the bank-change rule does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1823,
+    "output_tokens": 316,
+    "output_tokens_details": {
+      "thinking_tokens": 179
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

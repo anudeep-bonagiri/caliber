@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01018,
+  "durationMs": 2993,
+  "httpStatus": 200,
+  "id": "INV-1107",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1107 (23,560 cents) matches no earlier Border Fleet Repair invoice amount in the prior 30 days. It cites no PO and has no contract, so there is no rate or received-quantity check to fail. It is under 5,000 dollars, and the bank change on day 71 falls after the day-58 receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AgKEAgTGAI4AUIIdGhpbmtpbmcSDD+Nkb65eULtCiUdMxoM2TIJ4TH4j/qjP3UDIjAbxb0CUN/bEt1vtkv6aL5vcOsAPy8ZH+m3yaLXaBBZRWLOAQYyDFpfMx4Zda5+eLYq9QcVR6HlGdOnAgNFqe979xPGGf/IuIxQXOJDK8dueDaJwN4JWP4IDXCYKTOQD6tEoVK4Aw/v7AB3SRMWe6LLNZ2GpTSBVvvetOjqn3LRh4bRx/hoS6VKGZqiA0WL4Np3KRvVHwvKEC2GKxEXLT8G2e5yY4yiRJ5qo8jbwp1MBc+oFZyu34BJJkO9CwgYAUBlZNz1/htaZBnh8ssFRtiJzH6ohXc5DGFFVBIxYM0OosCzeIY0zlu4Eu+xsqrXBUXBnKfspL9wUUFCZKrF6mFNL7byN9z+P5PnSvmBO0CjvR1I3g06+4cR4GEkx9NN75AhN07zWRUw6Wzo6jSjjJ3kgTUoTAGbxYefFAaGYUwKvbIQvnDewu1D6a3Oj7xqBErEyY2BV29qGwEWxnfEGHAT8LnDbKJQTDLLiQPH8my3/LXOJvRTvEnrFHLv8nFTqRPZ3M1bSiL2AIgrXTOSxngLfgMXthEZF1iyr0tHnnYPNGF+oEb0nKFT9I2RqA+iputgVq269zWoqjsspCukDDP1pUka3hfoOg4xPkMOWeCSajVWjhdZVbHs94vy/QvQcS+BIIp/05J9rD+w62F+n5ph2+SdE0dDQPeF6c70bGm6IYURdDy/U12O1OGBjcEIXdmTQTN3q1mP8w0BqIzPTLR+0hfH8SWTj8+7gKnVbzDAxEpDvlGlFYTcGkvRrvBhqnMLtgmxmOi212uvu46fjucmyErwnryePOQaU4tvN/2u9ZPaLLaTZMGxeu+SYTDz+ZbE6OnQVb1nTvjPJrfe0OxPZG0IbfLMdLUqScFSOj5ix6xu4oWZdUnDbNfiNz91OEEpGH8fFLDKFWnrxQX6tiCH3hTzL9bpTtGD/7PfUDlSlN8Fv8hyMpdQ/fITprMAjxaUzrGLeICnxPzaIfA+OVvuOk78l8EXZhXc4H7XEIfYO4U8ElHzhO3S3qezy0lwotxMZCQIiDGgBulOb4dDbg37wTCnKW4tBlPXKdhICuJTcCoLdkM/RZViPbGwVue3dV7qLRfCzOP+RW7moBKpSbjnr3bh59ZU618T6VTHQvnE7INR7OxUxwQyVJNEkXZJ2D7m3jA1fgdb55203EkGaGKC7BsnTwNuUzjV1QguJg3Om6oy/Na/zAx+sWCJspRLZG+k70U3aPrJXYwk14Ra61ms4GsVXfdyydmPpIf9/eC0h1ofo8ids7ctloupr0enNFhCPN4TofcIq75HLq6uqzc4bSRpf8ovgRSc4cc4OOGRLE4wH+r2s0hVdi/GYyIhmGoP+Op4CjQpU4f4kW4QBs37YMgFFKDSynmQ0fTXsg0y2Iptg3wcZO4+9RpZptyFjPSAj1gekmgz/RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1107 (23,560 cents) matches no earlier Border Fleet Repair invoice amount in the prior 30 days. It cites no PO and has no contract, so there is no rate or received-quantity check to fail. It is under 5,000 dollars, and the bank change on day 71 falls after the day-58 receipt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspKjvsFhREZHn5EjNe",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3395,
+      "output_tokens": 339,
+      "output_tokens_details": {
+        "thinking_tokens": 217
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1107 (23,560 cents) matches no earlier Border Fleet Repair invoice amount in the prior 30 days. It cites no PO and has no contract, so there is no rate or received-quantity check to fail. It is under 5,000 dollars, and the bank change on day 71 falls after the day-58 receipt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3395,
+    "output_tokens": 339,
+    "output_tokens_details": {
+      "thinking_tokens": 217
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

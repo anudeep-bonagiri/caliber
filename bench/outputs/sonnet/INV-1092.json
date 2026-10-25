@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008552,
+  "durationMs": 3136,
+  "httpStatus": 200,
+  "id": "INV-1092",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1092 is $78.13, so the vendor_bank_change rule (over $5,000) does not apply even though the bank details changed on day 42. No earlier invoice from this vendor has the same amount. There is no contract or PO to test rate_variance or short_received against."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShggKEAgTGAI4AUIIdGhpbmtpbmcSDAjI5F6FaQ6NaZfltBoMvLlCC4spHGrxUhRzIjDHMsXetZwz5cKNcjBYqzBUOdW7vIGyLJt8hZrPRpDkxpRQllTG32NPqksnGwEnkjAqowfcu113bGGVdEPzhdT1fIoVYDA3eDMTKCAJVL9eVuyVtNeaFllKMqpPkCViEj8y5VhgypQf0xSZ97GNyLJ+uqtSYIkBjByYoXuGStKTA804LpHU3IWncBd1g8NkI/BrzJyza0R/Frk1zSpekRLpOFjcjfZkN3nlamjZ7O6p4ZMLlzQF0mkZkOLyl2kJJspb1H+/5AYeFZ7InIPPxwldyEn4EspVNgrMrcAhepyVP6/+T829Bkx8piZp1oNV0ZqVjiKKIQe6wEJ+pu4Ge+c44tV0lnq1xotuLiy8ju85Lh2VBjdZ0G0QE6UMYxNI08nMbwUH2wgPbYjFUXHXOfDwW98adkywW6NHXhgjz/zG2S/aQLmPaTeV5KqoLRAji86WTGqxpAeVEX8CIFLh6JIiexcrAZvMK4S++XkxLycZ2Biv4kj+iK4Wd3gMbYomX/aMk0t56ypDPI3M/x2kiJdg/TZOZ994FNJbmirRHLnDyRtp0FxYt6ek9aK6bqsI8kGhnt9PT54B3ex9rjMXw5Fp7wjha2CE4rCguDbb2gqZnxKmdJkYlzObCmmIWvvii3rl6tM0a1inkzLdC6g4DC5MjYrFRpUqNll2CaSezrm40A2HlFaLHOQKqbP7RgqSfwxfCErGnq6OYq59EMerrehgXyh7oT9bT9pshpvLMt2JTj+6aeq+vxfBqBQZFfEwAFqZi8yKxjNdmxvvhk2bbFtjD7k4WyavvRILb6LyX7BwE5GbjP4VFWpSdWgRiWTZoTwNpB3fuBppC9cXsBmTnlc+nnjcSfpGEuTkD2JvMIGh4GioivBOQoBgLumFosFXBwea+01Ueqz7l6BSXEvjZaknp3+ELodWPxUDj24vxwCo19VmihnI0uK2YbDpjPXkkEtTf019yq1VzIyOveZ7iao+U7J2w//WOejsDAYA13O19OgXB0TOknLP0qrIFbpUoLGopFVDNWO2JH9TVjUqmnN5BcLLHn54wyvSPgeg+7FKxapgFbsoeBdX6pam+ikiHHsFGsROokvhaUqb/BQpWydKy7SnfAWQdi3O93ifDrrzSLc8tz3VM1+/+66WxribVULtr2JJKbz7euvL2oiTv4kfzvDzfQi0WVXSE/o5R/+2d12W/c4dLGqiMwbqwPTtM6gthKgNfZIcyrltc2J8c5Q/iHN0GSe/lpzySiHqwaf9WA5aD7dJhLVWk/nuaFfASHx5JAoWo4t/DNMr3MqasgyNbNrCrOqWGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1092 is $78.13, so the vendor_bank_change rule (over $5,000) does not apply even though the bank details changed on day 42. No earlier invoice from this vendor has the same amount. There is no contract or PO to test rate_variance or short_received against.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskJ85UYhi5U2A8LGSe",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2921,
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "thinking_tokens": 168
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1092 is $78.13, so the vendor_bank_change rule (over $5,000) does not apply even though the bank details changed on day 42. No earlier invoice from this vendor has the same amount. There is no contract or PO to test rate_variance or short_received against.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2921,
+    "output_tokens": 271,
+    "output_tokens_details": {
+      "thinking_tokens": 168
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009334,
+  "durationMs": 3576,
+  "httpStatus": 200,
+  "id": "5986",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 16's nearest ping (14:00Z, 8 min before the purchase) was in San Antonio (29.4242,-98.4937), about 54 miles from the Luling station and over the 25-mile limit, with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1016."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpQcKEAgTGAI4AUIIdGhpbmtpbmcSDLcDA4W7cIEP7CamahoMN0BGE/Qht8c5vsnZIjAjZcA9TSq+JUAsnfRRlD9ePqxptpiPRxwaohX1z+OFqQ0bVeOz0pU7URueMxrRgMwqwgZpxkPRV05TrZw8E/geeC5S70PqUASEHeP2ORwDB8fDp5pQzq0oUy2X1Q7Bs8DWJhBqQW4JwwYDf79iOwytvmtLQpikIxob8JaJJEKXNPNWX44ZmtKMWRyNlUA427oZXzfBKdfsJK89+ujDbu464WyQLfYh7+jaBIlkyGdOi+YCu4jxKSUWtP+Q75bQhwk8WnEmKMxFZ6KgM5tSd0M0S7JH8RG3t0veYqe+hCkibuoHPAnv+QWP5fePPGF97pkOAFmNAM0MQEDe7Y1WqD/uAXeaMtGAA4GVj+BdN2+ukno4w+aAe7BUyLn476B5hfF7MZq7gOKxvrWOz2NNey1JFDTOKyrWP7wU7bq1T7JCnE+GX99tz2ls9ntw+296gUKHEnlhBrF0dNfeSN294wLDKE+WKded5H1xqs7e+ZIWPUO3u+frYr1MYGeCkf1rpi6XqXo3cwGt8lTqk6VnM86PNYIVBbhv7UkAbD5+xf/aZoKIdZ/z1MDWrVG2bsFv9aL/kuAt98M5pXFXuIyX8b/Ax/35ec32oemK8g1hKQR5AvsAxwJRsUKFJGBsEaKVx9tYRE9c/vk7XHy2CwR1gLYd5sOIlMhX/GEMcSwsZc4iCP5d0wwX4ZTho12m9btjDMEoNqqeAor6w3YbTR0VIrMeEtjDfkWXg1VSCUD+lHVcvxQJnp52+jDPMHTH3YD+Qwc22oQZERC3GCW9evuT2kPPCe17Eur+H/z+CZVcWCZkVN9wpp7/qp+zStYakHWXEYHasRNzae/rPp0gWEJnS+5+TNWyKVAUyJTSvGY8fJVQYzzCeVwscebtc1+QKa7HLRCFUGF0Ush8HNUw6L6EoO71AH46xKTyj0G05eXIogAhJishowe5ZnDHPLk4O2q3UmVmZzL3a0yUHGSEGialXEAH3/i/hurGyMO1+/0Rp35VeFPUVE8ulm8BnArRjGEbOwGgMuTnIM3IJ/0zU/o3jF/KdqdvhhSduzO/BusZczWWRBVNDEgB7RGObZZWJONjdzgoyqE4T7ssG3+fK840c6s4nOjJnzLrwXwmCm3AW5yTk4e7nIzGAhjz+WRAZVUlZ1KZqAh1ttJLabN3w/2W4wf9oddFRM4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 16's nearest ping (14:00Z, 8 min before the purchase) was in San Antonio (29.4242,-98.4937), about 54 miles from the Luling station and over the 25-mile limit, with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1016.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt11744f9UvPDGEp9A8",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 335,
+      "output_tokens_details": {
+        "thinking_tokens": 200
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 16's nearest ping (14:00Z, 8 min before the purchase) was in San Antonio (29.4242,-98.4937), about 54 miles from the Luling station and over the 25-mile limit, with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1016.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 335,
+    "output_tokens_details": {
+      "thinking_tokens": 200
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

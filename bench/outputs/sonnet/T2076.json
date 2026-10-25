@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009922,
+  "durationMs": 3222,
+  "httpStatus": 200,
+  "id": "T2076",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Prior toll T2075 was 8 minutes earlier but at a different plaza (SH 45 N Round Rock vs SH 130 Plaza 1 Hutto), so it is not a duplicate; no earlier charge at the Hutto plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The current toll, T2076, is at plaza TXTAG-SH130-01 (Hutto) at 12:48:52Z on day 50. The closest earlier toll is T2075 at 12:41:01Z, about 8 minutes before, but it was at a different plaza (TXTAG-SH45N-01, Round Rock). The duplicate_toll rule needs the same plaza within 10 minutes, so it does not apply. No earlier charge at the Hutto plaza falls within 10 minutes. No other policy rule covers tolls, so this clears.\n\n{\"decision\":\"clear\",\"reason\":\"Prior toll T2075 was 8 minutes earlier but at a different plaza (SH 45 N Round Rock vs SH 130 Plaza 1 Hutto), so it is not a duplicate; no earlier charge at the Hutto plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsw1TnGBFX9hvjJYJST",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3556,
+      "output_tokens": 281,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The current toll, T2076, is at plaza TXTAG-SH130-01 (Hutto) at 12:48:52Z on day 50. The closest earlier toll is T2075 at 12:41:01Z, about 8 minutes before, but it was at a different plaza (TXTAG-SH45N-01, Round Rock). The duplicate_toll rule needs the same plaza within 10 minutes, so it does not apply. No earlier charge at the Hutto plaza falls within 10 minutes. No other policy rule covers tolls, so this clears.\n\n{\"decision\":\"clear\",\"reason\":\"Prior toll T2075 was 8 minutes earlier but at a different plaza (SH 45 N Round Rock vs SH 130 Plaza 1 Hutto), so it is not a duplicate; no earlier charge at the Hutto plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3556,
+    "output_tokens": 281,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

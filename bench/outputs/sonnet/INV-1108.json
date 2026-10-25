@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011096,
+  "durationMs": 5052,
+  "httpStatus": 200,
+  "id": "INV-1108",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1108 bills $465.00 for 1 dpf_clean at the contract rate of $465.00, and the PO shows 1 unit received. The only earlier $465.00 invoice in the last 30 days (INV-1073) cites the same PO-1006, so it is not a duplicate_invoice. The bank change on day 18 is outside the 7-business-day window, and the invoice is under $5,000. No hold rule applies. PO-1006 has several earlier invoices against a quantity of 1, which the policy does not cover, so it is only noted."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1108 bills $465.00 for 1 dpf_clean at the contract rate of $465.00, and the PO shows 1 unit received. The only earlier $465.00 invoice in the last 30 days (INV-1073) cites the same PO-1006, so it is not a duplicate_invoice. The bank change on day 18 is outside the 7-business-day window, and the invoice is under $5,000. No hold rule applies. PO-1006 has several earlier invoices against a quantity of 1, which the policy does not cover, so it is only noted.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuJJjstbpNRuLFcP3D",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2653,
+      "output_tokens": 579,
+      "output_tokens_details": {
+        "thinking_tokens": 384
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1108 bills $465.00 for 1 dpf_clean at the contract rate of $465.00, and the PO shows 1 unit received. The only earlier $465.00 invoice in the last 30 days (INV-1073) cites the same PO-1006, so it is not a duplicate_invoice. The bank change on day 18 is outside the 7-business-day window, and the invoice is under $5,000. No hold rule applies. PO-1006 has several earlier invoices against a quantity of 1, which the policy does not cover, so it is only noted.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2653,
+    "output_tokens": 579,
+    "output_tokens_details": {
+      "thinking_tokens": 384
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

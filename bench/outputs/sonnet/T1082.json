@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006368,
+  "durationMs": 3523,
+  "httpStatus": 200,
+  "id": "T1082",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Earlier toll at the same plaza (T1067) was about 3 days before, well outside the 10-minute window; the same-day toll was at a different plaza, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at plaza NTTA-PGBT-01 for plate TX-1013 at 2026-07-06T14:48:21Z. The earlier tolls at that plaza were on 07-02 at 15:16:16Z and on 07-03 at 16:19:00Z. The nearest one is the 07-03 charge, which is days earlier, not within 10 minutes. The 07-03 20:01 toll was at a different plaza.\n\nThe day numbers are odd (07-06 is day 4, after 07-03 as day 3, because 07-04 and 07-05 fall on a weekend). That is consistent with business days, so nothing is wrong there.\n\nThe duplicate_toll rule needs an earlier charge at the same plaza within 10 minutes, and there is none. Clear.\n\n{\"decision\":\"clear\",\"reason\":\"Earlier toll at the same plaza (T1067) was about 3 days before, well outside the 10-minute window; the same-day toll was at a different plaza, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9PFnmixiGGoR9VA1X",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1514,
+      "output_tokens": 334,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at plaza NTTA-PGBT-01 for plate TX-1013 at 2026-07-06T14:48:21Z. The earlier tolls at that plaza were on 07-02 at 15:16:16Z and on 07-03 at 16:19:00Z. The nearest one is the 07-03 charge, which is days earlier, not within 10 minutes. The 07-03 20:01 toll was at a different plaza.\n\nThe day numbers are odd (07-06 is day 4, after 07-03 as day 3, because 07-04 and 07-05 fall on a weekend). That is consistent with business days, so nothing is wrong there.\n\nThe duplicate_toll rule needs an earlier charge at the same plaza within 10 minutes, and there is none. Clear.\n\n{\"decision\":\"clear\",\"reason\":\"Earlier toll at the same plaza (T1067) was about 3 days before, well outside the 10-minute window; the same-day toll was at a different plaza, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1514,
+    "output_tokens": 334,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

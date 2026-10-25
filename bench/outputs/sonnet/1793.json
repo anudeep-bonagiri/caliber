@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008994,
+  "durationMs": 2913,
+  "httpStatus": 200,
+  "id": "1793",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The only ping within 30 minutes of the 16:21Z purchase is the 16:00Z ping, which shows truck 24 parked in Houston (29.760,-95.370) with the engine off. The Pleasanton station is about 190 miles away, well over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1024."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkgcKEAgTGAI4AUIIdGhpbmtpbmcSDGX7KC737o14LNFmFxoMe5g7tLiE2ZD0SnthIjBK+6vieb13osgLX4vfCH+nhJHgEe16w0yvJC2uYLAjdMNuzs65SL8Alz3YBJ7k/NcqrwZjJn0fwAnoitj8+WPo2IfDx8pzeuNe49kgERbP2J47qmG/Tcs5q6ZogixXkkZV3su3oPZeTuF0H1tupWmVq4sMsMUR/WxS0GkHFQYphvaqeoLo7WqfX8vpyaLRQAgZP//+2PmfBrIyMzF1VmlJmkMpMc9u8N1d5iC75kZAtFcZvbBxLjDpUdy34Brx8/U9iB9s9UD8Sh61W6YqKZEZZpdgzIsV8fEneDBI64A+iVucXHUuILnx/Sazy8WdEQwumYSDGKgWsQDyp4NQNmFmZ2VbEMMccUNA5UDs/tZg/qCUkFaVeckSbXGn23arnNbng59l1ufy15RUERdy4qFTGEgaaSN0S8IMAvKqOunxc3xQIuYMnu3dSI225IWpkOWC34XfzDWCbTXCNpDEyVKkDmfNQ4r7cu30JbNCjCVKf9NRzQNWFLhQatozOIxe4hCfK2mvDA70QUlyIMEuohLSWUXRfl1kqxq1bgvo7VFrCyNoNXIWF3ksX3invLwu438Dl79JVkWpD4oi+urd+l5AQVI16/2rl1gkG3fYz+hZRgpHpGfu8WLbhKoEbCBjASqeXZvAl7X6Ecq9WdE31YcwREZuYCO2jLFdQ0fSV7tnfe1U4GtHhRM/x4wGzFhHO3kPCwNL4Wp4KJ1Kutvp3MDcGMvEpuyIzGtYxymIThFp9NxIZyVWwsjha5bUkEZV4OGxZBJFQfycnzOtm6NRosIIZDveqvzVzeLUzzJ/RDAZEk5SOWiI36etgrBSaJnLvIodxWvKjuFZxo/tpk/KUuFeTLsPuXeWU2oAUoliguOnd5j6qoHSaiPgdzsMhDSttQr27wDvnD/5Uhys9LCDu1bvOjhEk2Uba0GQYVUFWLM1LnM5HcgRw7/K3wfvnQoh/cSo6aEITpl1SUw7eTAcDirrnrgEMG2YLwjaoksjrOw/yuLxiZF40+PE+z0gZTIWVPbTc2GpCyD0I+wSaUfPoG2Zyvl40/BY7SyWSq9Yw/Tf++jrJUMTkKWgABGzCZZyAa5TMrSEysxp+oSR6FBRpVIbm6KhL6ECiPEXyh6VQt0L/Cg6yvCCBKfiwANRy3BLESil4xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The only ping within 30 minutes of the 16:21Z purchase is the 16:00Z ping, which shows truck 24 parked in Houston (29.760,-95.370) with the engine off. The Pleasanton station is about 190 miles away, well over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1024.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskXYUTcDWGLWo8wrtY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 301,
+      "output_tokens_details": {
+        "thinking_tokens": 161
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The only ping within 30 minutes of the 16:21Z purchase is the 16:00Z ping, which shows truck 24 parked in Houston (29.760,-95.370) with the engine off. The Pleasanton station is about 190 miles away, well over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1024.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 301,
+    "output_tokens_details": {
+      "thinking_tokens": 161
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

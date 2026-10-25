@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 8466,
+  "httpStatus": 200,
+  "id": "5041",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The truck's nearest telematics ping within 30 minutes of the purchase (14:00 UTC) was at 29.424, -98.493, which is approximately 165 miles from the station at 27.883, -98.618, exceeding the 25-mile limit."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"location_mismatch\",\n \"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (14:00 UTC) was at 29.424, -98.493, which is approximately 165 miles from the station at 27.883, -98.618, exceeding the 25-mile limit.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884667,
+    "id": "chatcmpl-226d75a3-6fad-42cd-92ff-cd54926ac6a0",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 102,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3191,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 3293
+    }
+  },
+  "startedAt": "2026-10-24T23:30:59+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"location_mismatch\",\n \"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (14:00 UTC) was at 29.424, -98.493, which is approximately 165 miles from the station at 27.883, -98.618, exceeding the 25-mile limit.\"\n}",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3191,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 3293
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021318,
+  "durationMs": 3339,
+  "httpStatus": 200,
+  "id": "T2850",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T2850 at SH 45 N Round Rock has no earlier charge for plate TX-1015 at that plaza within 10 minutes; the previous one there was about 23 hours earlier (T2834, day 79)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2850 at SH 45 N Mainlane, Round Rock, on 2026-10-20 at 15:56:36Z. The duplicate_toll test needs an earlier charge for the same plate at the same plaza within 10 minutes.\n\nThe most recent earlier charge at this plaza is T2834 on 2026-10-19 at 16:39:59Z, about 23 hours earlier. The other earlier charges at this plaza are even older. The most recent charge of any kind, T2835 on 2026-10-19, was at a different plaza. No earlier charge falls within 10 minutes, so the toll is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T2850 at SH 45 N Round Rock has no earlier charge for plate TX-1015 at that plaza within 10 minutes; the previous one there was about 23 hours earlier (T2834, day 79).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseYB1dCLwfeekmRqii",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9174,
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2850 at SH 45 N Mainlane, Round Rock, on 2026-10-20 at 15:56:36Z. The duplicate_toll test needs an earlier charge for the same plate at the same plaza within 10 minutes.\n\nThe most recent earlier charge at this plaza is T2834 on 2026-10-19 at 16:39:59Z, about 23 hours earlier. The other earlier charges at this plaza are even older. The most recent charge of any kind, T2835 on 2026-10-19, was at a different plaza. No earlier charge falls within 10 minutes, so the toll is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T2850 at SH 45 N Round Rock has no earlier charge for plate TX-1015 at that plaza within 10 minutes; the previous one there was about 23 hours earlier (T2834, day 79).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9174,
+    "output_tokens": 297,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

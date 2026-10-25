@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007336,
+  "durationMs": 3390,
+  "httpStatus": 200,
+  "id": "INV-1061",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1061 ($1,090.00, 2 tires at $545.00) matches PO-1018 and the contract rate. The received quantity is 2, so it is not short received. No earlier Alamo invoice in the prior 30 days has the same amount. It is under $5,000, and the bank change on day 18 was 17 days before receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAgKEAgTGAI4AUIIdGhpbmtpbmcSDPo+D8pxoa/xOz82ExoMcLF3e8kQ3Q/BUm9GIjDOftY3BPSRJlVuxr1JkZwngoMEsgCacEG/XMzMi0Wga/KVWjYrT5AXVYa+gb/h9G8quQcNZ5jqXJaaBxS0r4b6EOIlUeddNvxx2MyJ0BXUyjyxMjWeQmadq9McDXei8XagyWgoIgGkMsSHuspEPy54vQhzRyLJoARkThg7TGPDhz4QvBCdlO8D0R5McayW5KnoQtyhWnJJCd3UT3lsGUTAv344WPxAkYj7vYvUYFx4kUWNesfuMf3xvj2Qw6qIVST8822R2XwI0kUDgyli8TVkbxNpFfde9wUzK0mER3CLxuvw2pxFvVdcbCwj0yZ8AU/YVg5GCeseQMpiETGuZGpC9G86DxwdiRG+ipGsV7kCSOLujva09natVasioYhA7h+ZSFYtcXFFCj3aDQRBfru+IjyRlQk5X09PyrnnCWYIggC/ZX3c1ly/5JDmZheRkmphg6Iii12v0JywyZaB/YdHYjJj1roRlwr8iH7cIzFPPm0FTmtsuzhJIgg4fOHDNbwDh7Y4+ck8/ckgUzkyGxy950Lfb61tWS3+OdPY0lNP5aUmlhGMKyBlu5ZsJrPsvMBOsJFxCG1hBH+EUyTTTUOQ9XosyeAjeaNnFKIl9u/g9Y88BCuJa+PFWzWNjTiIXt9EmsWOzd/tZ6EVZWRB9KmMxd9DVC0wTDglc3ir2g7ZaWb6NYyuUwdL3qfDZZ+6I3E6HhnLHe92TPyAx61O/p53C80zZTxdIUrQu1dkXDhm8P050B6oj/h9XWJyn/XX3rdu3Z79DGtkegQJA7eiQjALgp+JSGEPwHsB7zCoz0aSGSKAj3WBYVJofyS+CEcJHdWimnWl3/wDr3lXxsP9yPwZXb25ZeHmjvR7/YhPTL5i8hraMxNSkzVBgLygmfKYAewqxHxQngYLFPEAbDQQmuCHTTIykkZnqRLPTYtmM+hz3fVOPdnDQKD5dtOUn/lCUQiJd/DMZX2yKKgrRQU/ghyeAropEu7LdI6QmmhVlVAhoTieufkmv/m43ricGnI1rSB3Ov9UegS4BVdeCK9ZEWwi07pjAkyXYtBMwYIub3Qlw9jgVQnmRPmoVckBMIfVoxAcHQKmYs8eAaGlFSrtbWrmTkPawbIVnhQwe5tjM485gvN80o8oBi6ibSzNJ/6coIivZ5gYHfqT6l2p25pCfAgr4vs8dDvpkKClVp92pf44TNcbkbMYG2TsV2aOJ5PWf3gNc3JWUZKzh1YX7YbXprlDxvSJCpeinFyNbfEHieqvu73iHgekoF7f4O2bfROpfcMLR3DAk/t54jXYhUTe8gI7mtWdJJwe9v3ZC0+qdiKJmdgf2ci5vcQWf8l42BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1061 ($1,090.00, 2 tires at $545.00) matches PO-1018 and the contract rate. The received quantity is 2, so it is not short received. No earlier Alamo invoice in the prior 30 days has the same amount. It is under $5,000, and the bank change on day 18 was 17 days before receipt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsofQqcVgmBVpwFmfRg",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1988,
+      "output_tokens": 336,
+      "output_tokens_details": {
+        "thinking_tokens": 211
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1061 ($1,090.00, 2 tires at $545.00) matches PO-1018 and the contract rate. The received quantity is 2, so it is not short received. No earlier Alamo invoice in the prior 30 days has the same amount. It is under $5,000, and the bank change on day 18 was 17 days before receipt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1988,
+    "output_tokens": 336,
+    "output_tokens_details": {
+      "thinking_tokens": 211
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

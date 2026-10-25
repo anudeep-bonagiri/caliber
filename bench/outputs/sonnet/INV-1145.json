@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012784,
+  "durationMs": 4336,
+  "httpStatus": 200,
+  "id": "INV-1145",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1145 bills 2 tires at 54,500 cents, matching the contract rate and PO-1018, and the received quantity is 2. The vendor's bank change was on day 18, long before day 78, and the invoice is under 5,000 dollars. No earlier invoice from this vendor in the previous 30 days has the same 109,000-cent amount under a different PO; the only match is INV-1061 on day 35, which is outside the window and cites the same PO."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuQoKEAgTGAI4AUIIdGhpbmtpbmcSDGHif/omPFVgya6GHxoMXKvG3kcpgkc3AEdIIjCVmrMjDve3hYWL/FPetzRmHtBzZ3xVRcSgpF40uVL0yBCxEvgv/tGHkr+apJlL6wAq1gl20MvwSN3G6lVDb3Kz3kgaABAk9lqS9Lsm8btbM1XV3s6f+p3yAcjKFm8XLM2X5pVUmyirZKWMYcwmicy43crTmVw7dqYU4PpkYiVl2FAq2MDUSTOSdoDpBuI7A4Pgcm3JbqvtV8pNF/6g3Eu9HVNA5hViMtTYC9Arc02kGokf3+V51uEDwAHWmHj+cdswAFBbiHwzcI091/EwNNC7HAPoqIqH7eoJ4b2eD1YtjhDD8eGCyaNV1N9eaB5yQymFpp+E5/mdFWF8Dua/h9k3Jn2GwFkFcZs0gYAg9iGjfFfsgBrPxBUTAktYX/qd4EhruDm5eiv937ZJIXFpoXdYEulQ7k8eEnTkZf5ZBfw9IAxcHndKSzY955pbi7p6RfR8f3Y9nFVMcLGsVnbhPAgx4ilLKYMr/mH2lSpdfUF5lD1sNqncWQjLrVJFZ5odPtwW42ujP9z+SexYTgCcy5FTCBtmkvP3tKIwZONR0pJ2uWkb/B0BIuZaFBuwWWQ64mkVBM+PuMYFuyBw70RY8xsrxx9WcEzyLC/uUjX1bXdwyhQs7APN2qJNT3MmfpB7gvypb5TwLU2U6gSv03Xd9u+qYYeAppANP2mPvaWPsk76fKetlF3hletudNEkHNT5Q9U6y//gMGIiIKvbxQzWuJfwKahi8GcGPPlnG/qR67GRERNWrbglzobY8yu5iRM7kUxPsVUz36SGaaQOpP1VINI+HuQH85VF3ROnfYF1Xsy7Rxk9C5sIVEfR0F3HXcu5BHuHLvvmrTiJ/u6n8TjSu9TPPkJPTii9wuwJRFa/wPoc1gWzbbx9OzptJ+A0xPZhaOPLe0w9170c4PNNblk1SLnq+y7sWL8Cb2Cf16g+7tJ2DcfIYaa8KF3yf+dkUPKU0bG0tTYztpr/lOKi49uMD8wUH76SkMs35r7CBWLJtpK9I6pjFmkndYFISpJbvCeiQaSI4/12towbjQmufDrEj+L1WbsgPtTOXjJVzeZ3jQM3XAquLHAMwzuwGNsGEqLlXbrn38zKoM3s3w5cSD1kMHhgQsnk5Qv3qFTmmey0Q2KY7XR2QM7C5d1TCeeEvNYHwdqgAIRNue581Cx1D49ETOxaLgRpNmY5/BmnM+d1zmL2Wpz3w9CggzyNFMpDH1pRqVDEiI3f0ySuRGjJsJZH/CNUJaE+c5rKaxu2ecP0WAKP7Hjf+6iqro3m+by81NulzQIovk2h20Ef8kPxrlM87ZMb9eKKTvQQkVV3T0IfG0YtsKctcXec64wIsrfms6zad4QRymAR9EcSoaPnBXw2W6dLU2ud4ysQxDCT4+RzhOi+d9RODznA84WqfzFd80kMS9Yv3i7rA9Dz3D5YLsIJoA3AbqUNODGXpRbbIHwuAV2CEzfLvOyoj/DSsTkx3f8Rb5eeXidEMwDZuWzY0BCrjf3dHBQSAWEOY/eSoXQ8GBcMXQjR2DzSDM54YjL95+1QOYIvN1GQn5Nv0CLi7VwcUn3uht6M1Ofnb6S4VUKybwC3I/ELA6fbJax26lliIrP+K2Bvz0MrHbNixE8H0mc0bDErt7Mvlw5Lnqgpa6k6rkaR6dGgJoaGqxzCLZEijo6inc5wT6PgBSarcAVpTMZe0v1YBfzIVAuJw32XM+i/10mi3PGx0DOm1vnQnRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1145 bills 2 tires at 54,500 cents, matching the contract rate and PO-1018, and the received quantity is 2. The vendor's bank change was on day 18, long before day 78, and the invoice is under 5,000 dollars. No earlier invoice from this vendor in the previous 30 days has the same 109,000-cent amount under a different PO; the only match is INV-1061 on day 35, which is outside the window and cites the same PO.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt42tYnWCP4kkosA63W",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3927,
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "thinking_tokens": 328
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1145 bills 2 tires at 54,500 cents, matching the contract rate and PO-1018, and the received quantity is 2. The vendor's bank change was on day 18, long before day 78, and the invoice is under 5,000 dollars. No earlier invoice from this vendor in the previous 30 days has the same 109,000-cent amount under a different PO; the only match is INV-1061 on day 35, which is outside the window and cites the same PO.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3927,
+    "output_tokens": 493,
+    "output_tokens_details": {
+      "thinking_tokens": 328
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

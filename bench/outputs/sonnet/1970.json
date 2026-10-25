@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0134,
+  "durationMs": 2570,
+  "httpStatus": 200,
+  "id": "1970",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 7 pinged at the El Campo station (about 0 miles away) at 20:02:55Z, 5 minutes before the 20:08:23Z purchase. The 24.1 gallons is well under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjgYKEAgTGAI4AUIIdGhpbmtpbmcSDC6aM3hLOq8eeA3oeBoMauTtTcyXnWMthHX6IjB88hepEMNNPeBN+Z+gPszOuiHJGT/UYeG4D/NuPu3MGuELfRmVSf2CPzBwmPgIBBYqqwVImkuLOd4qY06f9RlBCTUuSD80AfrO9L5uWCCA2YOXsT5Cxib79zLfQxHZ1A6see5Jfw6fyE2GQ8a7MKP7cZi8GxDeYXL0IvG7Sm5Ki4YJS4jjaetK7srOBwD3AMSOqwqx1new4WVtpmOuRQlYwSZ8Xg/eMmLygQWd6wqAxdQwe50vSZxgpSzyUvBKAkTHT6aVClLu+5iGtJxEnBU6MO5Hcj7SE5K7XCGBTPp/m/giTm0ZDiRE219TGtJYE6trDIwn1MFqOi8oDki9OUzFCEW1xGq7q/+fXqPDPtXLv0YvkudXOTEwb1pWmQ4Xhn84B1jFrg35VFmbHNkRMCaEL0pnt7l/x8ukLclRnCvKPHyFXPMu2L0DbfwW1tiPGdkHXQgRHXb3vWNIYdHv15E/++NktCTZr678m3diBWwFvcbdAcTORvQuJB9UEPI89y9+xLmYUsefZxJIISyMm5QaslzdqE/UynnwFLVXVgL8r8eDb5eQ0/9z5kisOLJxnzW8uEhCLxe0pbHihMUnPeccnLBeAbXYpDkXK42EaR9wU48mTgmNN1hhnY7/Rbt/qOat9qXk2VFUK8yevVEs1lXJ8XK7vqS01yVcXlUo526TW/9CU38ldzfH/AHjSl9MkgAfJh1yN9/6apUT7Bwy2WFL7PMnvnIr5GuNK9YVsco4/aUGP11EJloGPqnjOqbdU/jXYJ7Sey6Sq+GwIZKz2o4vqHcFB897Z/gp4ZqrLLOhsN/CpTix0C/iMtZ7A8sX4Z4fspoy/AJ+XKaOSrVUUYBst7rx4FevECSdb7s7n1J08eM1OwT1p2ggDe7zzrd5GGmEuC21wq3e+mqqXvLViFMyESBoGxl2GUu0JjoYbTA4BaDXV94n07JR2wB94C5jD82hH6puV98MGOnQG1QuABgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged at the El Campo station (about 0 miles away) at 20:02:55Z, 5 minutes before the 20:08:23Z purchase. The 24.1 gallons is well under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszPVS6qsAPkWdG2k87",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5690,
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "thinking_tokens": 95
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged at the El Campo station (about 0 miles away) at 20:02:55Z, 5 minutes before the 20:08:23Z purchase. The 24.1 gallons is well under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5690,
+    "output_tokens": 202,
+    "output_tokens_details": {
+      "thinking_tokens": 95
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9884,
+  "httpStatus": 200,
+  "id": "INV-1153",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "vendor_bank_change",
+    "decision": "hold",
+    "reason": "Invoice amount 36800 cents is less than 500,000 cents threshold; however, checking other rules: unit price 36800 vs contract rate 36800 (0% variance). Duplicate check: no earlier invoice for ac_service with same amount and different PO within 30 days? INV-1070 (day 38) was 36800 but PO-1017. INV-1082 (day 45) was 36800 PO-1017. INV-1149 (day 78) was 36800 PO-1017. The current invoice is day 80, amount 36800, PO-1017. Is there an earlier invoice from vendor 5 for 36800 under a DIFFERENT PO? No, a"
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 36800 cents is less than 500,000 cents threshold; however, checking other rules: unit price 36800 vs contract rate 36800 (0% variance). Duplicate check: no earlier invoice for ac_service with same amount and different PO within 30 days? INV-1070 (day 38) was 36800 but PO-1017. INV-1082 (day 45) was 36800 PO-1017. INV-1149 (day 78) was 36800 PO-1017. The current invoice is day 80, amount 36800, PO-1017. Is there an earlier invoice from vendor 5 for 36800 under a DIFFERENT PO? No, all previous 36800 invoices were PO-1017 or not ac_service. Wait, let's re-read duplicate_invoice rule: 'same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number'. The current invoice is 36800. Previous invoices in last 30 days (days 50-80): INV-1138 (550800), INV-1144 (99600), INV-1148 (101475), INV-1149 (36800, PO-1017). None are under a *different* PO. So duplicate_invoice does not apply. Rate variance: 36800 vs 36800. No. Short received: qty 1 vs receivedQty 1. No. Vendor bank change: Amount is 36,800 cents ($368.00). Threshold is 5,000 dollars (500,000 cents). 36,800 < 500,000. So vendor_bank_change does NOT apply. Therefore, clear.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882930,
+    "id": "chatcmpl-46e66b06-8b94-4d2b-b083-596ef998bcb5",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 490,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4175,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2144,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4665
+    }
+  },
+  "startedAt": "2026-10-24T23:02:02+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 36800 cents is less than 500,000 cents threshold; however, checking other rules: unit price 36800 vs contract rate 36800 (0% variance). Duplicate check: no earlier invoice for ac_service with same amount and different PO within 30 days? INV-1070 (day 38) was 36800 but PO-1017. INV-1082 (day 45) was 36800 PO-1017. INV-1149 (day 78) was 36800 PO-1017. The current invoice is day 80, amount 36800, PO-1017. Is there an earlier invoice from vendor 5 for 36800 under a DIFFERENT PO? No, all previous 36800 invoices were PO-1017 or not ac_service. Wait, let's re-read duplicate_invoice rule: 'same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number'. The current invoice is 36800. Previous invoices in last 30 days (days 50-80): INV-1138 (550800), INV-1144 (99600), INV-1148 (101475), INV-1149 (36800, PO-1017). None are under a *different* PO. So duplicate_invoice does not apply. Rate variance: 36800 vs 36800. No. Short received: qty 1 vs receivedQty 1. No. Vendor bank change: Amount is 36,800 cents ($368.00). Threshold is 5,000 dollars (500,000 cents). 36,800 < 500,000. So vendor_bank_change does NOT apply. Therefore, clear.\"\n}",
+  "usage": {
+    "completion_tokens": 490,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4175,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2144,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4665
+  }
+}

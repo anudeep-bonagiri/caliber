@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010548,
+  "durationMs": 3297,
+  "httpStatus": 200,
+  "id": "T1973",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T1973 at SH 130 Plaza 4 for TX-1027 came 7m13s after T1972 at the same plaza (within 10 minutes), so the later charge is a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1973 at SH 130 Plaza 4 on plate TX-1027, charged at 17:53:54Z on 2026-08-31.\n\nThe most recent earlier charge at that plaza is T1972, at 17:46:41Z the same day. The gap is 7 minutes 13 seconds, which is inside the 10-minute window, so T1973 is the duplicate and is held.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"Toll T1973 at SH 130 Plaza 4 for TX-1027 came 7m13s after T1972 at the same plaza (within 10 minutes), so the later charge is a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsqyd1wvAXcjKXSWoZi",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4159,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1973 at SH 130 Plaza 4 on plate TX-1027, charged at 17:53:54Z on 2026-08-31.\n\nThe most recent earlier charge at that plaza is T1972, at 17:46:41Z the same day. The gap is 7 minutes 13 seconds, which is inside the 10-minute window, so T1973 is the duplicate and is held.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"Toll T1973 at SH 130 Plaza 4 for TX-1027 came 7m13s after T1972 at the same plaza (within 10 minutes), so the later charge is a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4159,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

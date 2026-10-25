@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 10895,
+  "httpStatus": 200,
+  "id": "T1781",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No duplicate toll found; the transaction is for a different plaza (HCTRA-SHT-N) than any earlier tolls for plate TX-1011 within 10 minutes."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"No duplicate toll found; the transaction is for a different plaza (HCTRA-SHT-N) than any earlier tolls for plate TX-1011 within 10 minutes.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885933,
+    "id": "chatcmpl-a1bca4ef-a0ee-4770-be8e-3c2f3aa12c57",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 55,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4887,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2144,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4942
+    }
+  },
+  "startedAt": "2026-10-24T23:52:04+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"No duplicate toll found; the transaction is for a different plaza (HCTRA-SHT-N) than any earlier tolls for plate TX-1011 within 10 minutes.\"\n}",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4887,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2144,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4942
+  }
+}

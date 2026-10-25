@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009792,
+  "durationMs": 4331,
+  "httpStatus": 200,
+  "id": "INV-1048",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1048 matches the contract rate of 36,800 and bills 2 units against 2 received on PO-1014. The only earlier invoice for the same amount (INV-1031) cites the same PO, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change on day 71 is after receipt day 29. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxQoKEAgTGAI4AUIIdGhpbmtpbmcSDFyvDsnjRfjf/e997hoM9tjnSlDpJ9cYOKkbIjACpV6n0e6IjDfDXUiEaiHK2Pj31zIAIZeR6IysBhb7cRMU9wkr2hLedwd2Ohq/d/Qq4glDx7eRe3LEkZFGwOuTqDDjaJlkdF9nv99XL+vISHh5Z+xl86Wf7zDf7CAG6kuQPSxm3TE2C8Z+d/7mzurprE66vlez9M4M/sUjR6yI/Va5uYuOAupFTpYpOaQc/+YGxGPAYBg9qXyZOKwh5XNRh2tQ+6L40v5f+YZuaW9ydRntEmEEDzMThxMS8bOWnb2yiDnTd7ko3hwcgS5Eyg/zEgncW1qRHzBWA+wNEjZZbQV067ojYXXKNzdrYsE/WLnlBHHCVNpa8U+/LU99Fk1AJwf5FjpCp1efxz6BJNevvIVPOEyJsjSPIMzImCLMs+aTTe66Df5VKhUR7rQPCg8H8IfBz3c9inrFDnOjtGM+SdBJkCr42jqGONdeojyliL2CV7J+SGsYcWxXbT/DeKy+aYhuEhPdfiLG8oQML70EX2V18JION3SEeyQYTSdut8+wz0Eb8rjATNtgCIssDNsTh7jEEpkUTF/9IZY1lm7q6ijHkD2zWN7wSxvSG9OKqEtxKOTHukRDotgujgLhOKWmDfQ3Rvqrh1SlYEJDSJMZbqTBVtBTRLgggjau6fslPTjhghMCyZsXrfWjV4g3tl3+yUZgIJMiPkHt0gQjM0fsznVBWHpqqgKmeU56j8L6db7kSrMBJN4m1oCX2KFFxtOTXblzlwTxpc/qZ3/fLNsRktnAg7TE3Af2lqqzuvZwikXLApw/pN8xZV3UiSmhVy3HsJLauwxkv6uCRjGNFYttJu7kJWgCY96rCPy6Tj1853RJS6P/6GlUXgWnxyWD3CBlzXIxLrfwam7WTLxjTdTtcr62s6dVcja5n3iiFl/5epCfRKHYBLhDHlaMO08QhES6Lu8KvkH1feUObHrGLQNomfFoky4ownrUsz8zPOrAso7ko1o1itlBKs986jHI+2Cjr/lqg7zvo3mD5f9jEMGO1fmupICpkt9OH+bBERHEngKMyRr9Sbx/pBhStf3zfARVKwH10R0t9/oxIiL4hRwRxityF9czLL5lMyLUz5d7za+7QbSUBKD4fm8bZTP5L+kjChURgz28rtB0DQW2OlwLw4sLRA+BHEfkegMmZFJkR27e2UGxi1aMC0Nyj7zlFgFpUBPWZyzAp0xAM7f2KeoZJR/hbTDTJlwB3AQ//Bqt+7eg8G2TxziacDiFLGXrstlX+n90GP2zvCA3ITC2OSx/EVNalPsAjNfcLTnYgcMq0DDEwiYvekuxlLGjoHiEnu4SB+yRRvdqc68BfuhcK77+4GRGBh64nmJNPL1k4C7SM0jvN5NQK2xCPfO5EUdq+VtVhVDqzQ5DDZe/gkzaEyYsAq7FaCqskiz3ScHW3LXP6NOy9Z7RP5JxM0U3GoiUUiwDIHTL8Cx/3V788VrGx1osfH5HGDHBLTrEhPFoyz8/um5iyqq7ZBisO0jAq3pECTB9pKk+b/d5eFQAVBeHLnGqpusQARZT6ZdAXmlpJi1XZ5uMWrFf5lDv7bEVLkHT45oKLK77IV0mWBkVCqDS81+Dy6jMUWB/K1/afxwcdPxzDchXpREcdZ+3mdtqJK2qOMR38ytyijdbYIyrZ4+jyOTDMjHKImVioo+XQ/q8UNT5AULH+s05I1pBsZQa6089x9cGzAqPTxFRXWtQod4DgDh4hAeqmAF1tYeiQeXGfhw4Si6RWPUR7BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1048 matches the contract rate of 36,800 and bills 2 units against 2 received on PO-1014. The only earlier invoice for the same amount (INV-1031) cites the same PO, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change on day 71 is after receipt day 29. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfVaGXcPTRBWCyoQDU",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2646,
+      "output_tokens": 450,
+      "output_tokens_details": {
+        "thinking_tokens": 318
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1048 matches the contract rate of 36,800 and bills 2 units against 2 received on PO-1014. The only earlier invoice for the same amount (INV-1031) cites the same PO, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change on day 71 is after receipt day 29. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2646,
+    "output_tokens": 450,
+    "output_tokens_details": {
+      "thinking_tokens": 318
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

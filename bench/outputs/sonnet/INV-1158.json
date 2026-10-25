@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010122,
+  "durationMs": 3141,
+  "httpStatus": 200,
+  "id": "INV-1158",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1158 (34,500 cents, PO-1013) matches the contract rate of 34,500 and the PO quantity of 1 (received 1). No earlier invoice from this vendor for 34,500 falls in days 52-81 under a different PO. The vendor's bank details never changed and the amount is under 5,000 dollars, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgwgKEAgTGAI4AUIIdGhpbmtpbmcSDDMaQx0syzADEAjqQxoMVziYMJE0ah4N6GkfIjCtQgO0U4SqiaIj+jZxaLgh6350rY2ppduO6zGq3f5lwBly1Z9Mzds7UIt4NOVuI9gqoAeXnXNO2/udylzz0PMlXIaBtumJ+lR2ur2rJC4SaV0CTai0K7LQ8/FuStcA+JESzHOickkoebLczWhUKyYHWcM/8XGZg8KjHTiCuKHZUI1RZsjB+BLiP7FRmQgEEmCWPiBjKwVGiku9STKeVAHRZ4zsOEmK2uRGkq7B0VL3agKulcyeqHBNpNeALhprlAomgfMl4AQiplyhHXQKUeI2Hqk/1fF6CNvk/bSBJZKpdG61yS9VQ0L8W21C0f7zCwniEdgu9gnXxmYErU62MGUgEUzJt0WgRcY8VYSFhti6f9pJjrPWsC7JPvoERf/sstMJblJYATEcp78rdzcFbD/WU4GjZu2Dp81AtXmqj4xLjjsldy28cyVy+ZmQeM98yBHws2QVedyiPz06l4HtCZ8MmIBuJnyltEPeIKRZszbTE6MQ2QXBhk1+Nbr+TXMrVEjN/O+wkmQpmFcKKkTpahJrxP3ZR9H8o7J+9nmNoZZKDSRj6P40Xe0cYKk9AekeTa+qjmLCgpKwmxG2deoyKPHuAvhUSYB2M0YiV6TXHE4WlnB/iwxHT+c/FJRv/QJq5o9c9l5T7STpN9BsAFabROEtgZhCOeYL78gnXCoAXEkmstntfiDegqsvHakMyUEBv8hXN9Q8WCq3EnW9OS70PqfJgyp5HpRFWTpR3yJm52BflVsjSZuiOYSGUWIV37cC5l4nqCn5pAtItvqfh1ZuAmw1dHZu1pa+luttVh38vSCug3KmK7vTrWRCjTcfedTrbdgXO6VqkIAYjJiCclO3qWxlrHL7LmxKUpiR3wo+bUJ0TmnsxcHTZZge3slqIZCDVUE42o1xDE2KaLQsT8FlYh1VMsZJ02cgQC9SH0z9T8uJW8mDYiR+0EbqF8aUiDxKiEDJqt86HkOBMZhlDvffSTThtzcvhO4my6zwoi7tMAvMjFKEZaTTd9G/bbVNUqzEL8OPkcmdww7WUhiF27/5lJxIix+PVEz+UOcD700hCrNc+nD7nc23s3Gx506d/A+NUOzqZfeZrlKDYl4KwDhB+OxuLXST2sloBnZQTEjRmtpcdOUa1g5ca85LHZsjSvNQ6jagemJMQnSKj62MvnPn25W+XXJlmehB5nCEsQkGCKdqY0aOjSs16M/MvJkZccEIK8CKYP3TpVku68A4DOWP0pDcge1W5M/MpR/mT1XxC25dzT/e4DXUfCuuWhUaux+pidQOeA+5Gh6lOkmR+N6xzpA3o54dGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1158 (34,500 cents, PO-1013) matches the contract rate of 34,500 and the PO quantity of 1 (received 1). No earlier invoice from this vendor for 34,500 falls in days 52-81 under a different PO. The vendor's bank details never changed and the amount is under 5,000 dollars, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt8eQ624PRb74754jAR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3411,
+      "output_tokens": 330,
+      "output_tokens_details": {
+        "thinking_tokens": 197
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1158 (34,500 cents, PO-1013) matches the contract rate of 34,500 and the PO quantity of 1 (received 1). No earlier invoice from this vendor for 34,500 falls in days 52-81 under a different PO. The vendor's bank details never changed and the amount is under 5,000 dollars, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3411,
+    "output_tokens": 330,
+    "output_tokens_details": {
+      "thinking_tokens": 197
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 8920,
+  "httpStatus": 200,
+  "id": "3668",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck was within 25 miles of the station at the time of purchase and no other hold conditions apply."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck was within 25 miles of the station at the time of purchase and no other hold conditions apply.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882639,
+    "id": "chatcmpl-3316d731-e996-48c9-a8c3-666861fd568e",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 39,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5932,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5971
+    }
+  },
+  "startedAt": "2026-10-24T22:57:11+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck was within 25 miles of the station at the time of purchase and no other hold conditions apply.\"\n}",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5932,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5971
+  }
+}

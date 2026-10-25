@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 13262,
+  "httpStatus": 200,
+  "id": "INV-1160",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 36800 cents is less than 500,000 cents threshold; however, checking other rules: unit price 36800 matches contract rate 36800 (0% variance). No duplicate invoice (amount 36800 exists in earlier invoices but let's check dates. INV-1070 was day 38, INV-1149 day 78, INV-1153 day 80. Current is day 82. Wait, duplicate_invoice rule: 'same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number'. The current invoice is for ac_service, PO-1017, amount 36800. Earlier invoices with amount 36800: INV-1070 (PO-1017, same PO), INV-1149 (PO-1017, same PO), INV-1153 (PO-1017, same PO). Are there any with DIFFERENT PO? Looking at list... INV-1008 is 78100. INV-1022 is 77350. INV-1031 is 73600. INV-1048 is 73600. INV-1052 is 36925. None of the 36800 ones have a different PO. So no duplicate_invoice. Rate variance: 36800 vs 36800 is 0%. Short received: PO qty 1, invoice qty 1. OK. Vendor bank change: Amount is 36800 cents ($368.00). Threshold is 5,000 dollars (500,000 cents). 36800 < 500000. So vendor_bank_change does NOT apply. Is there any other hold? No. Therefore clear.\"\n}\n\nWait, I need to re-read the `vendor_bank_change` condition carefully.\n\"an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\"\nInvoice amount: 36,800 cents = $368.00.\nThis is NOT over $5,000.\nSo this rule does not trigger.\n\nLet's double check `duplicate_invoice`.\n\"an invoice from a vendor for the same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\nCurrent Invoice: INV-1160, Amount 36,800, PO-1017, Received Day 82.\nPrevious 30 days: Days 52 to 81.\nEarlier invoices in that window with amount 36,800:\n- INV-1149: Day 78, Amount 36,800, PO-1017. Same PO.\n- INV-1153: Day 80, Amount 36,800, PO-1017. Same PO.\nAre there any others?\nLooking at the list for amount 36,800:\nINV-1070 (Day 38) - Outside 30 day window.\nINV-1082 (Day 45) - Outside 30 day window.\nINV-1149 (Day 78) - Inside window, Same PO.\nINV-1153 (Day 80) - Inside window, Same PO.\nNo earlier invoice with amount 36,800 has a *different* PO number.\nSo `duplicate_invoice` does not trigger.\n\nLet's double check `rate_variance`.\nContract rate: 36,800.\nInvoice unit price: 36,800.\nVariance: 0%. Not > 5%.\nSo `rate_variance` does not trigger.\n\nLet's double check `short_received`.\nPO receivedQty: 1.\nInvoice qty: 1.\nNot short.\n\nLet's double check `vendor_bank_change`.\nAmount: 36,800 cents.\nThreshold: 500,000 cents.\n36,800 < 500,000.\nDoes not trigger.\n\nConclusion: Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"All checks passed; no holds triggered.\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882420,
+    "id": "chatcmpl-f53d567f-b635-4c05-876d-f900598b73f0",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1047,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4348,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5395
+    }
+  },
+  "startedAt": "2026-10-24T22:53:32+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 36800 cents is less than 500,000 cents threshold; however, checking other rules: unit price 36800 matches contract rate 36800 (0% variance). No duplicate invoice (amount 36800 exists in earlier invoices but let's check dates. INV-1070 was day 38, INV-1149 day 78, INV-1153 day 80. Current is day 82. Wait, duplicate_invoice rule: 'same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number'. The current invoice is for ac_service, PO-1017, amount 36800. Earlier invoices with amount 36800: INV-1070 (PO-1017, same PO), INV-1149 (PO-1017, same PO), INV-1153 (PO-1017, same PO). Are there any with DIFFERENT PO? Looking at list... INV-1008 is 78100. INV-1022 is 77350. INV-1031 is 73600. INV-1048 is 73600. INV-1052 is 36925. None of the 36800 ones have a different PO. So no duplicate_invoice. Rate variance: 36800 vs 36800 is 0%. Short received: PO qty 1, invoice qty 1. OK. Vendor bank change: Amount is 36800 cents ($368.00). Threshold is 5,000 dollars (500,000 cents). 36800 < 500000. So vendor_bank_change does NOT apply. Is there any other hold? No. Therefore clear.\"\n}\n\nWait, I need to re-read the `vendor_bank_change` condition carefully.\n\"an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\"\nInvoice amount: 36,800 cents = $368.00.\nThis is NOT over $5,000.\nSo this rule does not trigger.\n\nLet's double check `duplicate_invoice`.\n\"an invoice from a vendor for the same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\nCurrent Invoice: INV-1160, Amount 36,800, PO-1017, Received Day 82.\nPrevious 30 days: Days 52 to 81.\nEarlier invoices in that window with amount 36,800:\n- INV-1149: Day 78, Amount 36,800, PO-1017. Same PO.\n- INV-1153: Day 80, Amount 36,800, PO-1017. Same PO.\nAre there any others?\nLooking at the list for amount 36,800:\nINV-1070 (Day 38) - Outside 30 day window.\nINV-1082 (Day 45) - Outside 30 day window.\nINV-1149 (Day 78) - Inside window, Same PO.\nINV-1153 (Day 80) - Inside window, Same PO.\nNo earlier invoice with amount 36,800 has a *different* PO number.\nSo `duplicate_invoice` does not trigger.\n\nLet's double check `rate_variance`.\nContract rate: 36,800.\nInvoice unit price: 36,800.\nVariance: 0%. Not > 5%.\nSo `rate_variance` does not trigger.\n\nLet's double check `short_received`.\nPO receivedQty: 1.\nInvoice qty: 1.\nNot short.\n\nLet's double check `vendor_bank_change`.\nAmount: 36,800 cents.\nThreshold: 500,000 cents.\n36,800 < 500,000.\nDoes not trigger.\n\nConclusion: Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"All checks passed; no holds triggered.\"}\n```",
+  "usage": {
+    "completion_tokens": 1047,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4348,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5395
+  }
+}

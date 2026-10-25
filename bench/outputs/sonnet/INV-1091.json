@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009998,
+  "durationMs": 4194,
+  "httpStatus": 200,
+  "id": "INV-1091",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 56800 matches the contract rate, qty 2 equals received qty 2, no earlier invoice from this vendor has the amount 118100, and the amount is under the 500000 bank-change threshold. No hold rule applies. The invoice total is 4500 cents above 2 x 56800, but that is not a hold condition under policy, so it is only noted."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5QkKEAgTGAI4AUIIdGhpbmtpbmcSDG46f+kOuvZ6HvtQfRoMzN/UguJgKVa73MthIjBR8ZXrzOi9IodB2mwRIzQHWhp+q5V8gllD+eBp5A6pYFsocLiLWBvaA/QP+AHKDbsqggnab85Ke+Qr1wO86YmUeq1CEefHH22Ce+Crx+YmzS6V+xzn4N2FtRMGQI0X42o7Y9/mNrw2DLbXSukf9w/us7iGdFwrnSVgBNzb01GsaLudtBgO0CAofI5weoB+pJSCMcAcxwbswdFtq3KZGb4wcRaJUUXQOfLr25lf804aA5/eqeAL9uQbx8ppTFeiwrTEMV/iPM610aPZddtsjzFvbxmDuei73BIafmvfI07YKE1v1RnwwDjHhnMY3JBw4lf7HORilDRivod/JEO04nTRff00TqqTCm++XvDIs6/sujJ2S3xhRj6p9ffq9UO3O8hRDzuv4u747K0IrdkemZBw1VlUHP985Ypy1IRxWVtVMci/TZw4PZtXn2YfoFvMbQSABR/ErfcZZFDg+u4n4HgtTtKrOv2/+POoUqfGq0BjNZwTBD1+rtKu1cwfVEuh6i7+TnJq1Pn2NgvMCwp8hdjd5glwKnJwYCOZU0VDmyJuWS/yQFF/4jkFCtiP7uS0NiKZ6dieKmrVpGpy0B9DR5xXOX8hAq65yXJbVaOK9vXWuTDWl5cA0zdaKB7APMiXVv6Pyivh+3/FrkJ1Ha2JR3oimknkQNuKynebzK4oRvlDscF/2oE9bFFgNZ3/cylbGqnG/s6G2Xcl/m8qRp7jHQvKhHwg8YK4i8wdpgZQBjfQZwHqt4ON6n9+ryx60nsA7LOvA1Tczb9LvkVcXGIQ/q2zwl6ikfAQqDy732dRmrouOERoRMOyEGiWlWQpGtK2HnOA3jQr9vJRbgEw1B8eKLeYNsE4NQ36+CwtjW0MXTPXsJQIVoVbniDvrfuuKyDMyiMc9FSVmHLUQyXoZpblSjFug1Hyzyb1u3lksqNUMdByjeVF5ybWMzFCNAlsP9woBR+HgkbuCIJjLR8nAh2/044/72HNj35O5lNlpPMr0krJjfRliT6wR8vBxEBCpuH7Dogdkf0D7KjJX7vxVAv7E6a0mztVBqOwZMbu57l1vEMkLByOngpl4nHeMCZB2H5ps/oVsbSXnmF6Lw6GO+2RLGljEHtY50XTW+Rhfy/JaJAgrslVe7f8JOLm/Igi8j5Y70t4CdS956RoHFTA/LM832m7SXusmtLPVJydB4WNJhOIfaKBQ7TpGECTthy95VKNWNseU1QuWofJ2d25XQxNz7xeeR56Da/Oc43CL7Hh9Ab2WEoizTtqbxuDsj01yh2Y1BpYIXNAEy6ImwPD9S7Yqh+Necs4kBiA0/5yV1GEn/6bKZAxcciDtSDEcpJ7fwLlW/W23NLCAqiNaQ7gSfa80ywXNtKtsEotb27mtdzBuDGqseYldwCtLQ/Q2M/MVnFvgqj3Uc4lNjBZ7oLxWid7IlTL8zpB5i0BJw6a/GoPZRphv9ezAgpMdv5phWeOSsDIJ1Fv4pMZ76x3Ug+oy3vDrfjsaoaZnhmSR2OJSL/GD7a1PH8GqmWxTC1W4doHxO9KNCXS4nlwO8jd/qcKO2ievTyNorvCiV5zS2cxiPgfcN841aN4zcJP3X14g+gX/KD7ODUXBVURDhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 56800 matches the contract rate, qty 2 equals received qty 2, no earlier invoice from this vendor has the amount 118100, and the amount is under the 500000 bank-change threshold. No hold rule applies. The invoice total is 4500 cents above 2 x 56800, but that is not a hold condition under policy, so it is only noted.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskjW4Rw6WieHDar75S",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3004,
+      "output_tokens": 399,
+      "output_tokens_details": {
+        "thinking_tokens": 266
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 56800 matches the contract rate, qty 2 equals received qty 2, no earlier invoice from this vendor has the amount 118100, and the amount is under the 500000 bank-change threshold. No hold rule applies. The invoice total is 4500 cents above 2 x 56800, but that is not a hold condition under policy, so it is only noted.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3004,
+    "output_tokens": 399,
+    "output_tokens_details": {
+      "thinking_tokens": 266
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

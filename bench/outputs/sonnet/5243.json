@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01171,
+  "durationMs": 2840,
+  "httpStatus": 200,
+  "id": "5243",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 29 pinged at the station (about 0.02 mi away) at 13:08 and 13:20, within 30 minutes of the 13:13:55 purchase, and 27.3 gal is well under the 110 gal limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 13:13:55Z at a station at 29.703, -98.1245. The truck pinged at 13:08:12Z at 29.70317, -98.12472 and again at 13:20:00Z at 29.70317, -98.12466. Both pings are within a few hundredths of a mile of the station and within 30 minutes of the purchase, so the location check passes.\n\nThe tank holds 100 gallons, so the limit is 110 gallons. The purchase was 27.3 gallons, so the capacity check passes.\n\nThe fuel-card rules are the only ones that apply to this transaction. Nothing triggers a hold.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 29 pinged at the station (about 0.02 mi away) at 13:08 and 13:20, within 30 minutes of the 13:13:55 purchase, and 27.3 gal is well under the 110 gal limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsh8pASZuF5fPvHuaJJ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4380,
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 13:13:55Z at a station at 29.703, -98.1245. The truck pinged at 13:08:12Z at 29.70317, -98.12472 and again at 13:20:00Z at 29.70317, -98.12466. Both pings are within a few hundredths of a mile of the station and within 30 minutes of the purchase, so the location check passes.\n\nThe tank holds 100 gallons, so the limit is 110 gallons. The purchase was 27.3 gallons, so the capacity check passes.\n\nThe fuel-card rules are the only ones that apply to this transaction. Nothing triggers a hold.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 29 pinged at the station (about 0.02 mi away) at 13:08 and 13:20, within 30 minutes of the 13:13:55 purchase, and 27.3 gal is well under the 110 gal limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4380,
+    "output_tokens": 295,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013254,
+  "durationMs": 3138,
+  "httpStatus": 200,
+  "id": "3395",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 37 pinged at the Temple station 3 minutes before the purchase (under 1 mile away, stopped), and 33.1 gal is well under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 13:51:43Z at Flying J 713 in Temple, TX (31.0982, -97.3428).\n\nThe nearest ping is 13:48:31Z, about 3 minutes earlier, at (31.09821, -97.34252). That is essentially at the station, well under 1 mile away. The truck was stopped there, with the odometer holding at 290163.0 through the 14:00 ping. This passes the location check.\n\nThe purchase was 33.1 gallons against a 150-gallon tank, and the limit is 165 gallons. This passes the capacity check.\n\nNo other hold rule applies to a fuel-card purchase, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged at the Temple station 3 minutes before the purchase (under 1 mile away, stopped), and 33.1 gal is well under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5K4Qkwztawa3u62sq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5107,
+      "output_tokens": 304,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 13:51:43Z at Flying J 713 in Temple, TX (31.0982, -97.3428).\n\nThe nearest ping is 13:48:31Z, about 3 minutes earlier, at (31.09821, -97.34252). That is essentially at the station, well under 1 mile away. The truck was stopped there, with the odometer holding at 290163.0 through the 14:00 ping. This passes the location check.\n\nThe purchase was 33.1 gallons against a 150-gallon tank, and the limit is 165 gallons. This passes the capacity check.\n\nNo other hold rule applies to a fuel-card purchase, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged at the Temple station 3 minutes before the purchase (under 1 mile away, stopped), and 33.1 gal is well under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5107,
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

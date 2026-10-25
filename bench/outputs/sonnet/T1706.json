@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012508,
+  "durationMs": 3196,
+  "httpStatus": 200,
+  "id": "T1706",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll at SH 130 Plaza 4 within 10 minutes; the last charge there was on 2026-08-06, and the charge 11 minutes earlier was at a different plaza (SH 45 SE)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1706 at SH 130 Plaza 4 (TXTAG-SH130-04) at 16:22:52Z on 2026-08-12.\n\nThe duplicate rule only applies to an earlier charge at the same plaza within 10 minutes. The most recent earlier charge at this plaza is T1614, on 2026-08-06, which is far outside that window.\n\nThe charge closest in time is T1705 at 16:11:19Z, 11 minutes 33 seconds earlier. It was at a different plaza (SH 45 SE, Creedmoor), so it does not count.\n\nNo duplicate applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll at SH 130 Plaza 4 within 10 minutes; the last charge there was on 2026-08-06, and the charge 11 minutes earlier was at a different plaza (SH 45 SE).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsihQjpeNfy9q2WGRxP",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4769,
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1706 at SH 130 Plaza 4 (TXTAG-SH130-04) at 16:22:52Z on 2026-08-12.\n\nThe duplicate rule only applies to an earlier charge at the same plaza within 10 minutes. The most recent earlier charge at this plaza is T1614, on 2026-08-06, which is far outside that window.\n\nThe charge closest in time is T1705 at 16:11:19Z, 11 minutes 33 seconds earlier. It was at a different plaza (SH 45 SE, Creedmoor), so it does not count.\n\nNo duplicate applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll at SH 130 Plaza 4 within 10 minutes; the last charge there was on 2026-08-06, and the charge 11 minutes earlier was at a different plaza (SH 45 SE).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4769,
+    "output_tokens": 297,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

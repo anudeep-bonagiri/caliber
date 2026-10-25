@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009314,
+  "durationMs": 3586,
+  "httpStatus": 200,
+  "id": "2231",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The nearest ping within 30 minutes of the 12:47Z purchase is at 13:00Z, with truck 17 parked in San Antonio about 97 miles from the Schulenburg station and the engine off. That is over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1017."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzwcKEAgTGAI4AUIIdGhpbmtpbmcSDMDAIzx6zv3L9u7mMhoM19fJV1n8OtHhuwWBIjCX4IWQ1xtF1AzjnGhtCRQtC7K6NRvwRrvH3HTneGgHt08m1rrVhJ3sHWXyMhT4aycq7Aaoj88EThrvU386lf5WwBZ8GbxrqFji+cD/XDFhLaoAmpsJFdigCNI6iGZ2ETyGThku79F2dR2XZHWeYNw/28oPW4joiDNZ2zdvJr0qqPFuuXUjo9KmtXLPj2S8CB/KNEO+vketgIjKaMb6ztGLHDo44Ii7FFPWcajN3+tBEvnKWHqIFMZ/Fn7esf6gUgLrnKNIp6agPt78gUPfnHQO/mXONauBTj3vanFfX7bth+t9dgwnNAkilUZri3k5zO2V7+PrmjZU+0urse/fiucZVXEgCx7lO6IJU/JweejiQ9Y9hcUrUESG0x/X4eEERH/eu99g9yEOt1K39u+hbDGJWliw5dgNr4sOLD2/pJcMqvoid8EvwaspCHgyvns4vBEaQMZreaLiUMQO70SGKvf6F6huknTaqvjTOkox3cD5vHCjPQUtGmZnK6ilHasP3/WVI/PIBEO9XLS4CQb0j1uBoBCv3BuvFFTB8b7k1obioohmKvAeziun5j7A7dUNlRYLz6/c5rpEYss/JCuJza2tc3NgeupLBMKfzbVIRw2m0tRR8l/cn9z0v41p12svgmzgEbDrwytGuy97AZGc9x1PMz5kXyqtjczeRFGr1vQ7JFXxH9Z+Um4pSBpCL06X1rQL/Cc+lNRbq4wNVNDf9YYMMLXocBQg6Zpg8QXLpjMf6ixPuHQp3YrUOrs2F7109KZhV6kcJVdVaO/FF5uHnjpMQ6WCj7RZwAKp4JHbFenqn2VfkVQPhyNCf0A9yoOt6/qgHMwawoO01T+SV/ZcenvKJO3QQLh4fmLyQEgLoCoBYvl3f1gbpauj8XM6zPf0HJ59c7SslkpRf0QglASd1ZWUwooJqe1i5d0bA3QO/Q0gF1BBd2hC1y+andVlDCkZF6k5QSFbDBFlaRbN2lXiukJ1fRbOsCN3DfkA7JoP1zMzLe4vZOm6RQVzNRnaiffwweAkiZxM2oZBg5rwq5f7uZ/M0OhebnaL4LCCMNSYmxKq47LU5U1uv3b5yCC3X34535woezyOE9y5lchUdr2DqW4DZsSV4LXDSgvh5z710jOOpbR4xaKfXmGLcBCBhYV4iiDcCl9adniPPZtiyohYBXoF/3b4G4TxthOax/RYHJFAzKmsO2L4cxr5jyMyOYKjpLtda4CtkQYg++WYt4CncWAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The nearest ping within 30 minutes of the 12:47Z purchase is at 13:00Z, with truck 17 parked in San Antonio about 97 miles from the Schulenburg station and the engine off. That is over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1017.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsYnDhF6xxMNLxYaBez",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 333,
+      "output_tokens_details": {
+        "thinking_tokens": 204
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:44:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The nearest ping within 30 minutes of the 12:47Z purchase is at 13:00Z, with truck 17 parked in San Antonio about 97 miles from the Schulenburg station and the engine off. That is over the 25-mile limit, so ask dispatch whether another unit or driver used card FC-1017.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 333,
+    "output_tokens_details": {
+      "thinking_tokens": 204
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

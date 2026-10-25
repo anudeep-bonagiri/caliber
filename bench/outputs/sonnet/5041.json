@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008686,
+  "durationMs": 3146,
+  "httpStatus": 200,
+  "id": "5041",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 29's nearest ping within 30 minutes (14:00Z, 14.5 min before the purchase) was in San Antonio, about 106 miles from the Freer TX station, well over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1029."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7wYKEAgTGAI4AUIIdGhpbmtpbmcSDHNCbPXftwd5LX7DvhoMwN0SiUnELH+n1qxGIjCtzCIB4NjDQgbyk1FjNnCtLlt7/4NIDRrgX82A2GNrS9ju2gyhABs6GnYOCgnX24UqjAY/Qz4mu31H7lmHq9ZHO77aYKE59M/09Vv0CAoafwj7+n7h2Q8bIjJ6TEQMmhQIqy5kHdV7eWFJhiLbgFaqXDx5WfLAgch+1Zh2J6cQy0PYzFb5HbQEQ7g4SVPTIr1absdqs3yeKwcY78w3/rKcwrlIRoJ7wNOKL67qfBMARUzHAYjnAaPjcALcLH5HFeXjZ/1RdRDpUP+i/PDiLzE7uX4rSw+8dQph25q4dszbIynd5TH9Ql18n/HwtnG9mwGAWeaQu9HiLkaAuB5fUiRZZSmsayArG1owI6O6vtrypN6YmvfKTvLCJhyn1IqB9v9LiCcd2YfvSL+YIW+xsAea1X/WP7ZVU2ZXgHv7CO9GQvxc51zgme/pflP8ytQkVtN8lt/DuxFPPTBQ/sMRQcKUjJE46PpN6mg/fX508ztN0wLRS3cGhh6vYEeO0EKumFRpnthkzzTPxclKRJU44L5R7htQsbbyK/wApfgeUp4ReH8QdwCKZx0VqI4dR7MFQTNY50NScfD4DKkAlRufzbFlKulGvRA9ynYB1SIpeCpy2WQbjIK6EeeZ4X8xDKoBBhWJT18+LCkjqUJnI9QIxGZhW61dXcpOs6aEhccKJyXwaLmdP9zgyD1xUHvMfBr/XsBRt1esrJ/TpunLFxYhkoGM1G6lMEm+Jbyuwwn8pmFDmjIPLrIST3vj+G05TyJp6lxBShqUGeIK7u9UAn+by3W1KTkthAXvdsK5BR69AToFlZRZlHQEQivqkGK1oP4GoNEH/9dBgCdvH1T0/fDQ/PyjFXlT/12Qzcg2elzKdXpvgzXLJFua1D5ZsgS5F9jK1Ng/LLKGm26Bp46dcKKZAsnwqfgetujKnUcFl1WmyyXna/zr3PXt373RfzuEhcWgC/xJQvEeByrGye6jvWDEX6RYeut/3Yll+jio3jyet0xtju1VZxVsmWyjE1wNfuFuLzC1ph0Z2ejc6CsEKeCCInHsZIhleoB8mzyIoxKHwQS6VhNRoC8ufLczFMLxTRnUj1o8wKjkvsJS0w2wBkZe4PEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 29's nearest ping within 30 minutes (14:00Z, 14.5 min before the purchase) was in San Antonio, about 106 miles from the Freer TX station, well over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1029.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstupeXZr8aWY3KWTEs",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2993,
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "thinking_tokens": 150
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 29's nearest ping within 30 minutes (14:00Z, 14.5 min before the purchase) was in San Antonio, about 106 miles from the Freer TX station, well over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1029.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2993,
+    "output_tokens": 270,
+    "output_tokens_details": {
+      "thinking_tokens": 150
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

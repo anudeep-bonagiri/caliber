@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011692,
+  "durationMs": 2479,
+  "httpStatus": 200,
+  "id": "T2195",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T2195 at Dallas North Tollway for TX-1032 came 3m31s after T2194 at the same plaza (11:30:05Z vs 11:33:36Z), within the 10-minute window, so the later charge is a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2195 at 2026-09-16T11:33:36Z, plaza NTTA-DNT-01, plate TX-1032.\n\nThe earlier toll T2194 is at the same plaza at 2026-09-16T11:30:05Z. The gap is 3 minutes 31 seconds, which is inside the 10-minute window, so T2195 is the duplicate.\n\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Toll T2195 at Dallas North Tollway for TX-1032 came 3m31s after T2194 at the same plaza (11:30:05Z vs 11:33:36Z), within the 10-minute window, so the later charge is a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrQk7PEX9K2Fzb8Urq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4661,
+      "output_tokens": 237,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2195 at 2026-09-16T11:33:36Z, plaza NTTA-DNT-01, plate TX-1032.\n\nThe earlier toll T2194 is at the same plaza at 2026-09-16T11:30:05Z. The gap is 3 minutes 31 seconds, which is inside the 10-minute window, so T2195 is the duplicate.\n\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"Toll T2195 at Dallas North Tollway for TX-1032 came 3m31s after T2194 at the same plaza (11:30:05Z vs 11:33:36Z), within the 10-minute window, so the later charge is a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4661,
+    "output_tokens": 237,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

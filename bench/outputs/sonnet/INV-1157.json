@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012758,
+  "durationMs": 4165,
+  "httpStatus": 200,
+  "id": "INV-1157",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1157 is for 52,500 cents, matching the contract rate and the PO-1023 price, with qty 1 against 1 received. The only earlier 52,500 invoice in the last 30 days is INV-1095, which cites the same PO. It is under 5,000 dollars and the bank change was on day 42, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsAoKEAgTGAI4AUIIdGhpbmtpbmcSDCwk3ga+IdtoXLliLRoM/H1CBb+Hljw21nnRIjAb6951lgZ+r0spmRmRVREK08rbG1zra7Gf9mY3yrBKjAfIE0uieozxKqWq4udANuYqzQknBmsYXd7oQ4x90Gdl69JRCGwV4aA4vhFqTJcAVlj/U/FD0maWgy6TM6Z8QpF2nAoDRszU/QRxG+3pwgTmt5Njn8hU/fPWzJU3pyu6hkkSbH+UCqJo+WFURELZp1nvxbBo6xWXV1rEdlFB6+VVfuie80SO/AnaUwr09VcHw6gF6+WORch19llUX/b0JzecfTy9cWAmBJ7XelKvyBcTFbTewwZR54l7kMwgYh9Tg0H9+rnogAIzmFf4t4BIiK8jaAEEjjySKJC8xQAPjuZ8RRZf9Te5VJofXDlE0Xbonyzi63FAJqsv7lyG700Axi9+5A04w7cnjtiZrZoV7dFGAEUX/KxBE8Wv2gwIgv3BjIGw2hq5zALMAuAfJdK1rTHzpjsIyfuZFwcv1MMpIvEXXEowh2ueH31z7a7LtOSuvbcwH8o+N93F5r+aq1cN157xx7r73R7fzw1St+ivKx+BCRGKJVZahFI03yIR6kQfl7SPAxOFV82igZ1pjmYh866HNmWrrH2C4g5ByZ3fCXBamuuyoRuzIefs78Ejv02vKO+x6Q/wAwxYremgRm0rBdiSH5J6CtolxtE1ktBHhyZr+EQEkevQDuLURwVF7A/hwJz7eEBACYZFEVN3FbIe2fwXaHvINbrRXOSx3OIDijiiUAta4cxF2ae3C9/Z0/NOmsvyFQEjy02CCT/g6JK9gy8SGAWh037ZKFeZH4x38PAQTq3FBa8iIHZuSG338s38ZIFt+om3EJ1PYpRb73CJBo1BkT/EWBUNLJq4AVB4yCPRnlg9yDeqj2eQ8avhZj6fMr6otuNQ37Y0v8HlsMscoHNxqbNLuyfGiTcz+43gOGJ4YrVMFnNZpvPBloKy9zh1thDEhoxBueqdV+abxPNbvFaj+GHm0W7ZzafyXF5MzbQwIpaQB+8m0idj4OzA9Ry9X0IGSeGhYCMILPzjxR3Hgid6+FizMP8SZcDEbzFma0NC43CEjQgA15B7qZYixCloWVl1ndyvcDnstXO7wHIuMZnpYKbcHTQwneKAdFwMxXfBHDDsBEq96XkNrPDXlKxtBNa9iXZEg05uMirjLi6bHeq6ltp+dPeog9LVJmplv0pxE5T1XsskLunXVHIC7oyGlrI+tVaiSYM5Z++hQH88t+sJGCaAa07MshUetElPyxXtwI8C5/V6oHTDCCC7zehs/f1Jn05jHWBRNaIPcoVpEXXfAd+9WEsJlDbUgP3lG8unfPAJxIbtWpTd2hM3EqkCu6ywbe+FBfuZLfBk/sql1Gq+FlXAq7EWNI6XZyFt+MSUxKTRCppHbUkHht93yjdjhegobj7zg4UeQsXgCaTIGRauv4EY/Vq1Adr1lRgViAORS6uA9pq+Krwane3Xp6nI48cg3PmyJxLV1eNXAgNSAEMu8JN8smDUZqG5QRMrzy1j9t0JC617X/Nkgq7FL7sb4RCtlLnn29HhUo+rZV2CW7uEHaLjy0/xf580IVmK0c0zhP1vFx4Nzavi4HvQ9g2DuhlCHDe/mQq2GyqHFVHBVRFSRUzJPN77ny1Pf3tD7pSxRODNZFw5BpS2uS08Tfgu/lgIx86IhsJN4VB85Xlyc6nte7zhAgQACq4Iv+CAKGYJ0EEDeLQbUPHOaAftbJFTxBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1157 is for 52,500 cents, matching the contract rate and the PO-1023 price, with qty 1 against 1 received. The only earlier 52,500 invoice in the last 30 days is INV-1095, which cites the same PO. It is under 5,000 dollars and the bank change was on day 42, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsf3Te9xvmJmNtWT6ri",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4189,
+      "output_tokens": 438,
+      "output_tokens_details": {
+        "thinking_tokens": 311
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1157 is for 52,500 cents, matching the contract rate and the PO-1023 price, with qty 1 against 1 received. The only earlier 52,500 invoice in the last 30 days is INV-1095, which cites the same PO. It is under 5,000 dollars and the bank change was on day 42, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4189,
+    "output_tokens": 438,
+    "output_tokens_details": {
+      "thinking_tokens": 311
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

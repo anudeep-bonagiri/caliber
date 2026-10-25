@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011198,
+  "durationMs": 2878,
+  "httpStatus": 200,
+  "id": "1573",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 38's pings at 15:03:46Z and 15:15:00Z put it at the station, well under 25 miles from it, and 55.9 gal is under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlAcKEAgTGAI4AUIIdGhpbmtpbmcSDMI0efw8jT9WLmWHORoM+lJ1mQpj5K9ajO4hIjCCWcLUvnrrEhDSlpA8F1tlmmBMsJrH34m0HyhpFWsH6Z8jcljuhvrKSDHYPn2N+f8qsQYW3rOJKVroqWlBHBaphUEzm6MaCUoM3BuJTCdZJIEQcU6R4cbpyRLFRJTtmlaMDlcAjLgIzD/+IV2FNEGAArzUQcyJ9kmlDg6WMqBINcHSv/ftf86GiStlmvza2m79L0T2tx+VVwbU85kBtJ2ZlpdmQsuGXKM/c3XKogbB2TdnbbLd9y+wuK3hpQDc8OMdyL34HITJoM6XI3Hks6n5XSN695x1JN8YSygqpFCCOZr+rQxzMcCqspz418TBfznipBfAOQsdH50uvbdb4uEcYO8JPZsFzoY1o5rcC0QXPUO6xzLM2xg5+U8xKD010AAvf+NqzlFQhQOHAX4I7/0EUEy8oWhJpZSTuietkDEX6cHm0NGHcukyF/98RYsj1g+7u7Ym2bOymY+awJ60fLy+ntD2b6gZkUIHv3yXFRhXIYc83bGw9zghUrkTKBkrSh6znaZ8Ho8c9/1uqGFyLlKIM0+nl0WW3rGlgv16KuK1yiAviKHVe9nu5pj+sXyPgHOCMVqcYvJhXM6GJEiBFp5RyoAjdnzP0wME5bl4BR9iTadcgr79EXDHK65B/ri5iOgKVxvmKP6GrAkmPx5Nj9By41BBKAHW7zHQRZLqnvQWLp5hOyhBlqXlDjICWTidSq+HDZKnHUxOD+azRI0vgGfcp/gU30AFBPlA2iKlIiiFnpLpDQQNweShH0yYcC+VS3yU0uqgVUnu0nLlZIJr9+icyrH0c1H4Asi9F7QlY32AqE40+kt/kuERoOUSRrh2/q3HwtbLTcfpU4ztYrp/THcC0XTHk0YFz8Zh/0RZTKvDmLK9qoDK1Y5jghLEmN3T5mdfVpZ3TISI6l7cU9dqOH1e3DFbiPNqWg9IlN9o8cXnJ75SOyVCMSCqZwNMB564MadVJRhqLMyKjnlgI9c2PTcozhbX4vw8C6CKPQEuTbHKQwh2F2G5aw40V5+/O/J/FRnwmJapbiTTmCfo1FX43/eUNLLcTogThlCFjfDfEw0vXbeggIrzU/L0ekQO3ynG+JVQMoIR0Okk0oyomP1mlow6aG+taLd6FIOyVZ+TQ1wdxqM10A1zfmRmeM6h+NHm593k/LhJGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 38's pings at 15:03:46Z and 15:15:00Z put it at the station, well under 25 miles from it, and 55.9 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsoXCxsQmsPjTfv97G5",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4304,
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "thinking_tokens": 169
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 38's pings at 15:03:46Z and 15:15:00Z put it at the station, well under 25 miles from it, and 55.9 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4304,
+    "output_tokens": 259,
+    "output_tokens_details": {
+      "thinking_tokens": 169
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

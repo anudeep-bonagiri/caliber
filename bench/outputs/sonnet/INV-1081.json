@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010342,
+  "durationMs": 3948,
+  "httpStatus": 200,
+  "id": "INV-1081",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1081 matches the contract and PO unit price (119000), bills qty 1 against 1 received, has no earlier same-amount invoice (120875) from this vendor, and is under the bank-change threshold (bank change on day 71 is after receipt day 45). The 1,875-cent difference between total and unit price is not a policy hold trigger."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmQoKEAgTGAI4AUIIdGhpbmtpbmcSDKPoW5Q4AAT2XksNVxoMnzDQ8FgJAd9qdhqxIjDHD3cubcz07phfoxQn/VZcsGg1IE9Gw3ZU1ASwVEhcNjyDmNdSHM87N7aYrPMl4zkqtglEagweQD+6grT1qiKgVR6f5Lhri49taaFg2jLkQgAyzt1fTAgEHSA5C7FTUAaUEMXg1mGLKoe//HQlpf66GEUHO8+mIaaVE0ZbtYqELBe+S6ZJ0T9+0O7N9TlZPK+p8hjmpjTRNUyIFSve+4ReccJiUZ4X2kefB36L+KpD3B394ptJiYVdQd8fS/aey1vnUenE/7qJ8jN5qO8RzuTJkGVD2umcC3EOLbY5YQ4tLCpuiLojjBJiIRqIcDr+qyY56ndps0IvDUgyFaAMdgs+cxAVAbFb4vqmiLGzfTC7s53+2BOcicNLaZN37QWsSljrAF9/aBxKAhZveduPoRBEI/EXrrwRD4OGL+yOBaSm1P+FaguOmXJo8/vtdVxMW38Bef8ZY1HaLV5cOpLuHJ1dcoIC3Jgj5FhFNE66pQciJ75xEI6qnpFQflisw9cI6Yefrtm57IO8PE3WiTEqlqg8jKVrRaZ1bw1EqPtKseVEL4Fv0VzGKhC+kWQRcXmBSwYOKNtphqr2SjLrn7BSCaUsov8HMmKHAvn8b2CmF8+6c2VmRdOXchFK4g1SewCJEYR9O/5FmrWVcJx1SiDcZAu5gUwb31jYt/iHazPveV4wjrTnYcMhBzIu1MZNDurZsNN8lrHhZFSlM2ifi0wa72y9FgVi6zLXa16YQQ+I1aJc732UqH/xo4UFfugDQPqqFO+5UiWpj+Tmm3WzpJunrP65jNQqa/On1cd5/nc1dk9dVBF/O9o/dooP29E3vQatqo+M8ablb3+YVlNpQdSforbfwcVHQq/vwAJL7pK7mC42g2//jdvx9+YwTKw8cNSQR+grHZ6BAr65/Z0p25Ge1/Ui8peq3sFfl1LyOxFKJSQjTCDtiT0JYM0KdXlTlCm6UcQmJbM4KptPlb2cpVXVAIK2jh65+dRM9ghJuhWnay62GTt4m4LriqnP+9Cg2oXsfqyNTFsZDgrEU9vPnw1vMgBUNns3GfVDrNbesiRJ8Fc4aK0zVeS8wJqbztdsFOIW3Zio+yWGS9U6mK2UW+Qcb/Tnz8BFb5L+ZUpoSY2uFrURhRaZ3HFMxArN1jgaRu2mbrUP3oj2n5zZPfxD4ZgDCITiLgP3eIEKnMqSadrROjbOAQntNKG3px63vx7IjsO8ep3L3AYs4+dtCAGmIZgG595wE6nnjTHZn/epdsT7+376VI0t0OBywVmLrPPt2pdKjfXBqvEcMG5gmDXor6PtoKu8lJ1KDL9jbfF4L8cbuX9edG3UFTysqsiD5fCB5FtdkZjDuc+xHrlLk06z6Tzufs60mwdDIMxl66q6Nm/tMf5hTI29iUPqkzpUCrzryPzJSAEeggo+C3m0YkAOfdWWrNWKdmOq1eQYKddzHgHHUvBlQVLQQRHoyGfe98NRgquYS0okDd5R/kbPmaZXl9MM/r9Vxr8IzphSZxAq8Dt+L8mxSBODTqMBHJ5vLSJhWOhs2kcJt/4HjdwSiR6VBcZuOG+cRgjx2lADFTI4a7Hw6DJBGdJ4FwJjuHWevzRZWy3joS8GXh+mm2LtdwQLVVr8thdt5caxooLyTUUgBEcnEN0daeg9wf6/Hnrri4/s695p2yfE5mK6S+4UIAoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1081 matches the contract and PO unit price (119000), bills qty 1 against 1 received, has no earlier same-amount invoice (120875) from this vendor, and is under the bank-change threshold (bank change on day 71 is after receipt day 45). The 1,875-cent difference between total and unit price is not a policy hold trigger.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2rQjHRLV94H82ueUn",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3056,
+      "output_tokens": 423,
+      "output_tokens_details": {
+        "thinking_tokens": 295
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1081 matches the contract and PO unit price (119000), bills qty 1 against 1 received, has no earlier same-amount invoice (120875) from this vendor, and is under the bank-change threshold (bank change on day 71 is after receipt day 45). The 1,875-cent difference between total and unit price is not a policy hold trigger.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3056,
+    "output_tokens": 423,
+    "output_tokens_details": {
+      "thinking_tokens": 295
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

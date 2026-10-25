@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008176,
+  "durationMs": 3494,
+  "httpStatus": 200,
+  "id": "INV-1087",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1087 (28,655 cents) matches no earlier Alamo invoice amount, so it is not a duplicate. It has no PO and no contract to test for rate variance or short receipt. It is under the 5,000 dollar bank-change threshold, and the bank change was on day 18, long before day 49."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAkKEAgTGAI4AUIIdGhpbmtpbmcSDBKHDED3nDe9sqUBThoM2IHPNhS5eLDLW0TCIjCLuLss7+rkxtYtXm/LONxYRSy1o8DcscjbyeQB/xFyLi0Kc8DVBR6XQ1Oz8HCmNV8qpQjeM0yN5OEO+H3Bzy5VT30Q3D85meUsQI7F/WWf+HXpnStegj7m3FwkbMsITYsm6LeSjVPSvfRHh2Z+gBE0R3tOo3IXxno3SN0GfzY86F6w11NfG44BSaJxL2NzK6qI80TWgvUdrs8QAblswqP16wFmSg96tNOFzHFcPC4OX87oau3QCjXipXmZ0OwWdNQJvicCScv4YOgbxU0AtiD/xmJCPQ0PgnsbdGpudLc3YPmjt5iq13zVJjBC2HqJNr/eN4/Qm4e3dDlKlG8HiFcgYjNdy7uDWbq/5BwPhh5ZYyfnzy8Pw0bJuFQQOM0PcmVxjlkaR1t4brLeK2ZfJ5Clrg/6D7roKqlnl2Mf6e7djYKsXoPHBVstRl4mpeTEti2XPIudMKjFBcLE3xYvPbqvNr6vBqsoI2BSoGHF3/s1221Z7r4VFnqePc65F8F7b3vgrmKdHQdD1NUvEr4zWRXlu6whEEyOfcmAOmXZrga3DURIwNtcwgtmutRXf4MrNZgF05DQy0qrj4OrSZHHoe3XO46TIhRW4QjWE0xws3w7S66iyYrIX6BGrgrman1s3ug0LHR+o7/SIR+2DHOP0OxJ334C6mcIifCarjJlTt21GeKbo1V73Y6GOcgoDOM1ddZRxivyppB3FYobuwykHbl8wbyCz2tIQQBuTJMfd5CvrugpzmqB3OK68+D0rfB52RS6XfqxaXqrFHdWo4zgZHG+o/m/pCY/1rcRpcEK4hbPhJqWa7OJktOi/GAkIjF1lTVPtEibXTGgv2hWy0dIOd4+4HxgnilSYCcfZsuCbQiXUgsCnBN3PXyDvMdMxzlq2Q6JNPBzBHX/uFqZZnneXU7Coxam0qdi33MEIs6OfVaaZeOpveqFlgDlAM1nVanMjccIDEgn/Z2dt+/eRS4RDL7tKi8bJmBh4KYBWV7RByaT4tkzsPO1zmJKG3vrkc0MWgom1TaNe6xxak8cZKvHeOopfecU154QQ1eYC481Az0c3UAQs+pJiNEC6t6HCb7+egzWzdhtXlQ2TGW7cCBRI8jg+zDhOU6zmzg+mR9vPceCa+1XjZQ3mLNAduWKPSSzd3hcE+7VSUnu9jOOBGkufvIIChGLp5ao0Q2ZvPTWYL7fsbHaMJqcZIx6fs8zU5qGivzLeose9KWacMz+p7qWm6ScKBc5zjUoxoxBvgsc6JnauC/LnBAr3IPp9BGuRU/wdZhAi4HTZOM65A+e3L/82656HgnT/rB6PFLbSwvMb8OeE7ytsZakJgXORX5ZFybsJFlxdoTc2ZN2N3IMrQvDCpaCLSgnz/LWIK8JAKj7gNsIALz4RSQcAqkWoL5rUn0HjZaW5cGJdx0kESc4x+XS7DITOGk+rVNjSggV17JuF2rOGfjfMmLMADGLcOcIVt7vJevpGsu442JC3hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1087 (28,655 cents) matches no earlier Alamo invoice amount, so it is not a duplicate. It has no PO and no contract to test for rate variance or short receipt. It is under the 5,000 dollar bank-change threshold, and the bank change was on day 18, long before day 49.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrJofkPWY6DN1tcBkr",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2248,
+      "output_tokens": 368,
+      "output_tokens_details": {
+        "thinking_tokens": 253
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1087 (28,655 cents) matches no earlier Alamo invoice amount, so it is not a duplicate. It has no PO and no contract to test for rate variance or short receipt. It is under the 5,000 dollar bank-change threshold, and the bank change was on day 18, long before day 49.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2248,
+    "output_tokens": 368,
+    "output_tokens_details": {
+      "thinking_tokens": 253
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

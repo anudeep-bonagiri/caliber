@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9467,
+  "httpStatus": 200,
+  "id": "T2522",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T2522 at NTTA-MCLB-01 is within 10 minutes of earlier toll T1914 on the same plate and plaza."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2522 at NTTA-MCLB-01 is within 10 minutes of earlier toll T1914 on the same plate and plaza.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882921,
+    "id": "chatcmpl-9eb66fbb-0ebc-4460-9e65-5a7014fe6c72",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 62,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 8718,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 7504,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 8780
+    }
+  },
+  "startedAt": "2026-10-24T23:01:53+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2522 at NTTA-MCLB-01 is within 10 minutes of earlier toll T1914 on the same plate and plaza.\"\n}",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 8718,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 7504,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 8780
+  }
+}

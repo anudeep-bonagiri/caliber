@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013382,
+  "durationMs": 3548,
+  "httpStatus": 200,
+  "id": "INV-1180",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 29900 matches contract rate, qty 1 equals received qty 1, no earlier invoice for 31150 in the last 30 days, and the amount is under the 5,000 dollar bank-change threshold. No hold rule applies. The line total is 1250 cents above qty times unit price, but no hold rule covers that, so it is noted only."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSowkKEAgTGAI4AUIIdGhpbmtpbmcSDAthDW2YHp3pDEFagxoM/abgZJESY/4jJgOGIjDbuJbJYxbZU7lJCP1h1oh6OqRG+QD4civB3PJFSL/r6J1J6JvQeQMcb+258m00sIgqwAh3QOgO3cyb1wSaU27rai/qHgOvNKmzIx0WPG3M2QavOY9202apZhW57OY7LbHn/sh+3ES3WZk7seewC8JUq9y1j/ew6OP+fJUAQIUqg9zBRxkL40dP3vOY4i8aV+SYC5dlbbozQRT/7IVp8ALoU7mv7wG/5CxDq+G7ExV7AvkuSLR8Q0BDsqoRHwFI+M6FV5BlFnTJYA6Ir4vNWRmwbowGvAz4FnSmpyB1YLJJvmzAnqO3ct0GA+NC+8C4BNNfzAW/uwSYuwHhPaNBLD4PnA2Q+AOzC/gkE9zWPzI9xPvn9FETVrzJUeC+QaCdflTF50XGARlwi1SAuf2ZZ0WlWncnDsNswd7xeS22cuCC5DYXWiJzm9Rx7lxAh14hN9RQ4FQs6SRHHR3CGFwI8nWU2tL49xeTF60qI0b6EAIxrOvJJ/R6jv/4UmJJGWSmWxDbjxGhJRODvwvoI9C1+pTKWnieI6dLdGhuvVIxobbOHeWkqdK98Dx6TBHtA91huu4vKAwQ+E2hTLSdXM9AFKI8UlQbgDVvls/Uh2IGi6liJSVPZNnvkc9/od6Y3esC48SZYq1faGLwy6qMeH0D0aQonN5SXbTjiuvQMkBpulskH4qsHT6Ybsv+8sJtKLJv1fBAM1ZMbAiwarSFK9se8lzARbnlO5DPVTUjw1EUpcNjCzpVtGGgq/uCaGdAgxSRx66D14wgvjqYHOGnKv4+BTg3HOoZPMjtMUoWXMr/rzbx4bAXfJlt3WCPbtVJ6wzsFeULKat5166yZtriBRONo1kjW26pYDkdOR8NW0nTB7WKrpP9HAfea1cu9NV/m7Iz1wL2hCZOru+J23e/cONXadufmMmIzcbclUujXkOguCVDpD0VZKkMTwiIW0nzVHm4gjwpsj/eBoiuLDKLl/LwOaLwdekZ2e5mhKTfDQ3gs3aJ/QyFk8oRsi7fIpjizmRvggmC17ZUibmA9VbGLEva+AlF4l2iylpuhDtmmyr5+6AsWe2Dg6G+NDtmJhzc53hzy+FO0TeY+20eSHTlZhYzgxfB5LNmZOa7WoFAsRrvuYQruZxw5bGdX380FvD+bAKrDqnB3rwD6IZVBFA1MqllqlZon319y8/eEgNxXPtW5ntJV6QnlNdHr7WAZG3eS3slzy2YisAaJadrdsWBi3X2W7G0riiTdck4ZKjqI9oNyKcLqRGEj93KFIqVtUzhkl2uN21Yf5FsJa31xPzaoM5BQwMxMg16XqfXz4GP/jrTsCgUWP57xc2Q8Qc5rBgVTc52VzJfjBOZyDyXSa6bl62wUt0dZutklQ+YRKFaoENC+77DexOPs/rqUMJD9KuLMK+psglXqqPpdktSqWnhzGq5n17g99h+4SdkHcD0+aD4CkTasL+GvYTt2IDxt8O9aAPgVCfS1oYmRJlpZ4Hrl2u3hj1MkdPb4APCR6710bCOa5ONH8nsDRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 29900 matches contract rate, qty 1 equals received qty 1, no earlier invoice for 31150 in the last 30 days, and the amount is under the 5,000 dollar bank-change threshold. No hold rule applies. The line total is 1250 cents above qty times unit price, but no hold rule covers that, so it is noted only.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsh4fsdtDdD8RD1UJ87",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4806,
+      "output_tokens": 377,
+      "output_tokens_details": {
+        "thinking_tokens": 247
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 29900 matches contract rate, qty 1 equals received qty 1, no earlier invoice for 31150 in the last 30 days, and the amount is under the 5,000 dollar bank-change threshold. No hold rule applies. The line total is 1250 cents above qty times unit price, but no hold rule covers that, so it is noted only.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4806,
+    "output_tokens": 377,
+    "output_tokens_details": {
+      "thinking_tokens": 247
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

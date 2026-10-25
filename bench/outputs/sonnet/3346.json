@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011694,
+  "durationMs": 2949,
+  "httpStatus": 200,
+  "id": "3346",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's ping at 14:39:08Z was about 0.02 miles from the Pearsall station, 6 minutes before the 14:45:37Z purchase. The 38.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wYKEAgTGAI4AUIIdGhpbmtpbmcSDHTkPlRyHLzLEoZebRoM/YaMkC228+zxOPwcIjC84xjCTvyW2YG4rcC4hy+L9ZsCyDCCrm7W665EjYct28DcG9JOycWn/VQ03ZhZyMYq8AUxc8fnIn8cWll2FDNZQCliKcRsnQIy/PvElCJlwsmIBy6SIsux4HUku6AwXxRHUfX4SKIwhmgyYHHka9vFMafQTRG+Z2gzm+OcRVuJprEegVUkTuJ3DXRXLWLxg3hAc/bMV7ES19T7dTgYvRbbXR4Hw7OaoDOJd4nGOcb95gd8iKa2VvOJOsIw9+maTj1nkuAWQUZAKiDzrV2Yg7UQUaHhln3ZXiosGkmbLX6EvqWGNaB57jSM3vqaQPuA7YlbGfPzXDRvbkd1KulFeygF8Wfdyfs9a7x8TLeYTC1cShQjeaxR5tlBIQSR2jotkXeEbH9ZwmXn795xuSwLNvtnOOnY6BBawdXR/nFeAhsNrMBQPWVP1JhIFHpcDgbyrdqg/9aVplBjdtsEGQShQZ41Gt5W8mSjsnBTKpKNijQ8ApC/2Gam9Xnn//KpoL/RKXA8/Bd8GMV7PZ6wNyN2nApKqrCPBXtfChAn304WMM6ZgmduxxNFI5CQmPYjIjNRBhJHuaPfWbZWd/gPPxdu9lqEVsIDc6k3NxLvRgSUHnLLolVmR83I2NjqJipHJDmmOqG1cqFi7tnEBlhPSbwGUJMUeLx2fltq58q7LHUtG/8l/uguls4khRsFvgC7C79Yr4tK1DyeD3SPJ7ZK+cfSARrtBZO3U1jSNFFICuihhtuLD63r7y/oSV5ywvAF3EprpJ0LOWagfjyTDdy0igT9fAzVPZjZ8flDlLxjihXcjkgG2TRR1NjGo408+EevnRtzA4smEMsKPmbwdawOPY9FrmDr+VSw9z8Yd+ICNd9LuI7KBh7pGmQ+StNgLuMjOUZeDoZxqnUUzcMEUA1Z9bNQtsdTA2HwiSSbfQk4VozWLb0xTC86eTyjSEZxMVS9l3PrA7NNQmAmq28gT2l2/EZX8HVSWJTRzl595RZeylGk7yYjRzDW+tUhZ2l+cEi0V7Hgm9aHdvIxJHVhIXMIgKXe3hwx4gwL/GenCvU/XtiPzbBkx8UPyRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck's ping at 14:39:08Z was about 0.02 miles from the Pearsall station, 6 minutes before the 14:45:37Z purchase. The 38.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6FFzcwo1LRq4rV5c4",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4672,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 130
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck's ping at 14:39:08Z was about 0.02 miles from the Pearsall station, 6 minutes before the 14:45:37Z purchase. The 38.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4672,
+    "output_tokens": 235,
+    "output_tokens_details": {
+      "thinking_tokens": 130
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

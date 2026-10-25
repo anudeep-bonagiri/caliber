@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011948,
+  "durationMs": 2786,
+  "httpStatus": 200,
+  "id": "3783",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 18 pinged within about 0.1 mile of the Freer station at 13:24:35, 3.5 minutes before the purchase, and 41.5 gal is well under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5gYKEAgTGAI4AUIIdGhpbmtpbmcSDJnLQnlitlxMcPcZ8RoMGKzuvW+MgU/40lCtIjBBF8/AeTWZ0YkxAH7prQGkUrkWbTvBGcnx+yZ5D8Vt6pQnoS/iagJshtpDiVBsaCIqgwYNs9+lnAcpwEtatnuUnJg1XuqpdryJ30A0UM0zCjMrrRUsFW4YSjYDUzm8/tfisM4a6E6CK2zwimrzHYZYluWjTc2phBiK5UVIAL1T2YuTzTPKmXYZufVOhOTBWjWfvaA20roaqqVLb1jwMjRmn2rplGgHv4yd1iH+hxJUJvAfoEdoG4iTS4ckZqZOuFeQkC4iTtO3Ks5ANef4aNEcmDfs3aR6cduM2+T2+zeRIAC2Rnlh0yX1p2Ah4ILgj98IJPnILD2lWY1w1799vPPhqs5d++vY4dvcPmnU2h+8Qtll+MDD2b7RHicqLjpe1pAP+SlUci9Dmt9L7nCyM/rcoir633o1aOf/egrkwkbLD2G5xPvFAVGys6WvI9gNE6oQyWpn6UdeGOypNOM0O7AaEXJN7m35fMtXlB1ZwNkJ14mjDPW4EQgFS11Cj5g5tT9w2QmdH8RdrF+R+FRYKeP/FoeRsCbt74XV1+fWiDboNZfPJ8Fg/EaEDBDElSNE/B/S1hzrSHnQDWzNpsf5swSr1uzRqUxqx85PQoShJJ0hvUW6Sq0bBMkn/LHZZYmxTaSwFjeVrmbpNI2h3k4gG3ZnLl6Ypx15PFVvbOpeVtd1UQKEahqotUFT82sBiWpQYLg+ZblpuZgTBsVD053oyWeeD5sDTaa3Yo+P5kdN+iEzs3ayajRAEwwEmSRUygh3xPUkDflUNO/gLe7q7mvjds8IQ20P1mIx/2F4jA/YDQJYOYALhmk0lhxuW+ZiHoit6rlNYvfoNtguS0ujLACHJplMVaWXcVAUnJFVWpAwsNBbFu9SrzAfx1VXcAKfAOVZ4tOJYFYD5Au7FtlX+LiSCC89qTOaWS5QEpIGcfTvL0EOIHowbwXZBOobiPI93ZpGkixLKOReZHVB4EYve2zH4CMggzzApg4nO9aBNc6vGdVnZNtaCokxRxECR/tA0nvyk63bmxBuw0p9KVQmaKdShkSa1kXXxBlGMm1/PUE9c9UNJJPzgCoJaxh/HF06n6bZToBA8RZh6/UYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 18 pinged within about 0.1 mile of the Freer station at 13:24:35, 3.5 minutes before the purchase, and 41.5 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszBc4bfFjMN4JoApuy",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4744,
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "thinking_tokens": 151
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 18 pinged within about 0.1 mile of the Freer station at 13:24:35, 3.5 minutes before the purchase, and 41.5 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4744,
+    "output_tokens": 246,
+    "output_tokens_details": {
+      "thinking_tokens": 151
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

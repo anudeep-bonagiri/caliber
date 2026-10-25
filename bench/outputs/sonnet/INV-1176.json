@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012666,
+  "durationMs": 3664,
+  "httpStatus": 200,
+  "id": "INV-1176",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1176 ($2,481.25, PO-1012) matches no earlier invoice amount in the last 30 days. The unit price of $2,450.00 equals the contract rate, and the billed qty of 1 equals the received qty of 1. The invoice is under $5,000 and the bank change was on day 42, far outside the 7-business-day window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/ggKEAgTGAI4AUIIdGhpbmtpbmcSDHXUYFSro+OPPxGMyhoMEyvY9lmnJvz3BWMgIjDYaiIYm1kGp+Pt3AFkJeOOH7iXBfqmN/DS9ibOsYbyG8r5vsGa9DGLRu0mlfr6wk8qmwhiDEQTJyyIfsjpeXe1XNm1XQ0DF4JZYxrD2mkJhm0Rn0KDdeZ+lJALjLbQt+uilgMew5f2CPCEWfqQVIZ7t0ErwfGmEMQyxa8p8kFjH5s/ZOWVr/51bHRbbbw5k43lG2tVxJ7Kf25serjY8dRk32VXv9nRun+Z0Irp2Ff5ALyxDSXmjiKtlnEc8eOw3qdSD1kOfIHqHWmR65xQW69QgDighUVLTfuErj0IzsEUPs2VzNrlFn+SOVXyWa+U1ofPwZOGnLRgiUzIiKCxml7Y/0Aij5Hrb89JujFZKvH5DOBaRpy9BUV5nU7LnYZDtVxqGqYVB/J8AWc9k/dFlc/WVf060v4dD8x9k/FbGbD53iTLBu7yCoXzLdwmeb7q7xbK8JR6H+rIPBHSRZAu3MZxYuvrSZZUJuWk2M+xzms/lKuGVJ9owpeF1XijNuDzrkSvWKIzSYMkM/u88PiYKRSD2ElpNevfkIrYfD/U1Cum5+/pvqJsBC6+bJKtSdoClw7FIi0uzNGYgtVdJGa0l9R1ftvrUiHo2hAtdjXXp4FJIb6X8JrG/DHnU/EGLebAIX+dEm3BwEXgtkmuYVMDzX3MPWGTIzo/sT+3Yc1CsF2YNqGAR8MmvvnKsdXVQgq6iQtRC1ZnbVf+zOPw4Bw8YdUeD4ExQe/AjkcFDwfi51v5iO2aXjV8P/ZHWQX25KPBOIBPaD+Ma0SrAxcr4vWBv+Esa9iu0gL6hQUa6lPuWOnQ8Ja/oI/IgnkrckcwyRAwtF3YHTfT3lt9OVYzBCNgmQbv4/61Y8TvvGTwZ7wBPSC+Kr65npnbl6L8CAA17csl9RYmi6aXVxDsuIDfbg3e8Oz8Qyh/wWRSkWkr6cISNKVKViF/EHTIA9LroybiGndjtRp0tXok30nFDmeyid/9CcRaOwhdJOy/hNzCOpTD5TQdHXAiZwsyasaxhuC/AY3HOeoFzIEVug+D02xhS5vIgDbhVJ5NTtuFR9xFhBwIn7TOtRkLoz09BSEmrTkgKv0/2A44PbFLfWbPu5mHzdAEh1+KY2UJ8SHbRa0cYaqvk6R7DvQsUJgDbi/SLrzGyDzcxGGUZwu6XUTQ8dy2ImrdI4YJrp0ZAX0zGlK6DjJ1ejMVUcf2EnXbpNTWyN+xP2qyYCdWYzDt75xioeQ+cfLabOR9pXiOaEaiX0ldAtHOaMJPJdMlF+LCDaGzLR7jXdSOONXnAUuYgqCCexkJacDy8oB+SnhSZ7f3aZ5kbZdZw32TPVg8pgx++5CC/O5vqkStCF7MgiEOfWVgaFIdPIVN02nVMDIqy0Ca/QqlMW4dpBT0uPL8hsUs9rk3LBfSQOOra3USERd7c31YeeOoogPj6SFvFucpsX7ldRZraizk1m2cattlPGNFDeStNr7qeP66GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1176 ($2,481.25, PO-1012) matches no earlier invoice amount in the last 30 days. The unit price of $2,450.00 equals the contract rate, and the billed qty of 1 equals the received qty of 1. The invoice is under $5,000 and the bank change was on day 42, far outside the 7-business-day window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspYZrCXgLk5Cwh6a5H",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4523,
+      "output_tokens": 362,
+      "output_tokens_details": {
+        "thinking_tokens": 233
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1176 ($2,481.25, PO-1012) matches no earlier invoice amount in the last 30 days. The unit price of $2,450.00 equals the contract rate, and the billed qty of 1 equals the received qty of 1. The invoice is under $5,000 and the bank change was on day 42, far outside the 7-business-day window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4523,
+    "output_tokens": 362,
+    "output_tokens_details": {
+      "thinking_tokens": 233
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

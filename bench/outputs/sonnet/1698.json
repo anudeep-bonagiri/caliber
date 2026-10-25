@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013362,
+  "durationMs": 3369,
+  "httpStatus": 200,
+  "id": "1698",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 20 pinged at the station (31.098, -97.343) at 17:27 and 17:35Z, within minutes of the 17:31Z purchase. 46.7 gal is well under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAcKEAgTGAI4AUIIdGhpbmtpbmcSDIvQzR/S08V7jvAKlhoMSyCcte1RTYEGYcz3IjBMkIbnVsmueM3B3UpeJ8MbaoAeo/cUi6KO2PxDRXk+IIONb5elPErpY9dbhRm2GRkq1QbHePUv9yDnJAgt9rJ7sz8Xo8c3UD7O0oEwjo9WXVwE1Akc23s+a50WKKwjuDr3wqcXW6xM10kfBY0CqcWZsA7D/wcfgB1G0UzftpYjiiPEOUKf8bzYW/A9pA/PmaxIrb4Y9XBQN7g1Dg5UJLQM84qt9ZK8TBf3vYmWXYgh4w+y8Et4YSy6KzJLpHVVyCNbuFTKNld4Xpvk8vk4Jv0yP31udDKk8E4vCRxqEJEv0zFG5D6l/sXpAK+MuoVbNc67AUS7iNW/WkEaGHrBb+RpREEq35ZlUIvwAkfzXYFCZaPIkbSPuc31FOfOCQlN1+OYN+2UUyChR3/VOz71YN4yXonYaU8L7DH+s9Sv0Xb2rhk3wH6hv8j7wK6HpBizW3yRxYGmR0G1jqhy2LSLLg4iLK1FQdFgWvRwYvJqSpOiUj2Dk7jJjDVXQeiPVMcgHaicFwUK7vPQe7oxZACGG3cmhKpuIjFVY7uOMuy2p+whoQtJ55BSYChT5gZ4yw+7AUx93K1PqjGoM7KC2wRbU+toxeFGrHBV2le366hVGgftMLP8lgVAecwTWzbjiPxLXiRHEo18oZYiuXQTrray++J1wYxSaQwS8cO8LQKhPMs4lhNrUYZIfMkGlsOFu7VweJ70IuXb6Hg0mk2S0zbt0ZYmUSE0FslS2LCKKMp4ZxDKtq3Vr0PsD9bO79kLafrKPfy//bqDxtWYvD5NzIb9YA/SGqHheH4g5RLTlsMweebt+8Sb4B11bMhyf6ITtO2j52fuOBxLBiG74Z3mLJg/izhQ195agfi4s5lKKHYktHdCXXP6dghB+yMq7ONOZwEeScvhHKwl98bAxelqYAaWxhYpcLVxooM5wcy+4brny68M0zYAPZW3xOYgI+L6iHnYTW7GSynNXACCUzIPrikC6fwnn5mqDUsZROXFldMlQWISbnct+HqFo6icBc6wK1ZCMwQY/wZr95/hdiyGdiW2KFExiCXJVfXc+zytEjRCExQQAgbqg0Hw0M8uVkNkbrsZgsrDei07uykAvgmjcqKmMWLTg6isBgU7eAQWV+SM+F3WUiuN2NalfbrRthG/ma7E7xRggEncvVxyxZSUOrsYfLjxFOFQhaKgwztBJiRuYp4mPaIpWMlmDv1tGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 20 pinged at the station (31.098, -97.343) at 17:27 and 17:35Z, within minutes of the 17:31Z purchase. 46.7 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2MkZ5WaSN2A4fsjBe",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5251,
+      "output_tokens": 286,
+      "output_tokens_details": {
+        "thinking_tokens": 186
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 20 pinged at the station (31.098, -97.343) at 17:27 and 17:35Z, within minutes of the 17:31Z purchase. 46.7 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5251,
+    "output_tokens": 286,
+    "output_tokens_details": {
+      "thinking_tokens": 186
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

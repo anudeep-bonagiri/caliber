@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011128,
+  "durationMs": 2713,
+  "httpStatus": 200,
+  "id": "5853",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged 3 minutes before the purchase, effectively at the station (well under 25 miles). 64.2 gal is under the 165 gal limit (150 gal tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvAYKEAgTGAI4AUIIdGhpbmtpbmcSDFsO9EZwLcV/RlAd7hoMc3gOD2mT/GIKEQA8IjCoAiMCoY54EHzWrhqON9xGRU3X8s6TPZbca0tukTgMmP14JtTU8HYBVZ++YRVG+Qkq2QXq/MsGUmsBTb+3agQ4EmPakNlwwPYQ4pNQVV0fAacyQK0Ha3+1qBWwzQpdX5h+XvhlkQ8YHsFltnWEmHPQa1m69Dl/HHLjc0DBkbaHz0QIIeoAZgOxm0FivV9JJyC7yn4VUL0QzLhHIydMv8lxHLWZbvL9OrIKSSkIvMNrr+rwaN129UM1aOtaNivLJy/iXBTT8zctuMuNeK/5lcacKsAMknrdbJelYS9szjTYwpK/xJF6iMVz1SUBtD8zdb/Rj7PFKPZLZxrzDF0lnaArQKNifv+ZBMa2zbLYRQIIftw+66pmrLfLzdKxAamMYH9DHHCifpv91WthTLNrx4HbHyFW9QFU0PW3WD+zWP2Knq337rAPSeB49ydKe4h63BBh8fZ01RhQLZpnLB1AO4bhz9KEisrmpbSaCF+fpONNA6Jfwn4V37TCJxeNdZXerM5yxMtqxJFca03TzvGQTedZw2LDnoTMkx7wsv9n+2bBHtZ3wUD1k6lKWWqz+0GDtf+lqCjfbtawPEz16SVDuscu5tvc7AU+E+7uGUl07A3+jKSw/W++Sexk7wjk7o6elJTdcoO+jeeN6H8OM7XHXxZSNfnoG/MOiX40rP5HIHPAsmuvgAjIS4h28BXpNDNCoIFH9z5BtLlgFtZfc0k5msTq8ZyCWwCggB9WNOJeU+W0rTR/1eMQUzm6EimU3Kw5Zhl7VWRpqCtQ4IeJpqFJd2RFvuFEY3FAidQV89E+uISOXt76WWjwqNeMKI4dOcNmD2LLCvpFpaqRQPpJSQgHrNk5Q4ArylN3IXOPFmcHgvLw/rr/OpIPcJrVK7Ln6f4FDfHsyDm6MSnHosrn4FwUmGWz2ro3Ixs9JmtWwLba48KPxsiShnYJCp2NuTeqVLKvxekjkJ9D5Ksajc3bb57EL/M8nA2a9Zw2kIShj2ELNvsWE+86we7JjFfSRx4xAXShYVlnUGQtZk9ysRqMht0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged 3 minutes before the purchase, effectively at the station (well under 25 miles). 64.2 gal is under the 165 gal limit (150 gal tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsqk3h9tHinVoY4xLEj",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4449,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 132
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged 3 minutes before the purchase, effectively at the station (well under 25 miles). 64.2 gal is under the 165 gal limit (150 gal tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4449,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 132
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

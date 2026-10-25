@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011262,
+  "durationMs": 3814,
+  "httpStatus": 200,
+  "id": "INV-1116",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1116 unit price is 72,425 cents against the contract rate of 59,600 cents valid on receipt day 63. That is about 21.5% over, well beyond the 5% tolerance (62,580 cents). The invoice total of 146,725 cents also does not equal 2 \u00d7 72,425 (144,850), which is worth raising with the vendor."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgQkKEAgTGAI4AUIIdGhpbmtpbmcSDHd8LUbdlm7fn/FhxBoMAlYbZM9oFcImMm1xIjC83KeQpC2j9bXa+DZJ++RcNpMYVzwDuIPV04VBJb9f1PWLaW70T0a65Au8W7jvvTwqngh/5Z9+nJmaX1J852lhTwl2i1QfSJMTetz4IRieQYpcXINgsM+V2fhBWk9ityLwsPtkPFlrzIjL7aJPgUeR9qdGGWysZGNNf0qfqhEKiEwFpiHULp8OS4Ov+bz3WCq+EK+IfIcROhagThdYRANaXihlWuXcDD9LzpNdaNPmNuxmEFdoUs6AoFnV6Hg/95E5kwE4219WxEnpprsSAso1HXlW2ghyYBF+/GypveRaoJNpN0YmwL5aTNfm87i87yn5fI2N8/+bntJ5KqKQ6rktymdRGqso22a25klMO5zOccO2J/OnLaMJSpaZBQw5P7jbCqBwhQY80rnngWfADVHu/Y1iTZtpoZe3tDHn0QclYY1hySkdDXoMp+NS/LgCqEg1gHNZ1ZJydStuxdCsRU4N+3J8U6/fpOWS0HqRcXYAOVOSTkRCkEWF6SskMMV8UFXT8paryXLP1Q43U3VJFvPrDeUCziewEn0nyomFe7h6fCaCK2Lrrebko8Ed5aGxtRvP5orfr3RGqf9qynm7Q/kh1BGWEmgtTjOqiE0d20qhJTPmKku/2zybDcNhpzJnhnCA4U0Rziw3ONEZBWOEc6r7ghd0NXNnPlcNmtW2x9mxDZBeqRsqfoyNPU4AsEth/vVPD0VE1ziqb6Rt3OIyE8jB6Cmdt556ntvtw/sQAAKTggW73yWdXLoFdbbGUAbquCaWIi/eoL7wU6u26rk6aMQmVcFjMjPScZwc+B1EEuEPMdkC3ONzuOWYLpsydJE/MLbBQgzHPbnLX1SEGlgsAeHOSB8wNuJPK3JZuZWwCx3UqUmy35zPtWzUnqNulGv3KtHNk+M/092V4nvC9/6s4KPd7o7OAkM7SnDiKSVcY96opkydSezT9MQRYED6m8dl2JrZWg0lomJemqClbu2B/Jft7TwDpqNQ8LPwx3YKqL9s/9Hmv+/5ussG7a9J0ZmycRiQO+Z3jMfmu8/JNADjTmYQyIVwrJjs3ZLSLHVufIx5oHigM6j967N2Fit3ec6GX1/RHaybAmeaywAqEBBLxkMcla2V97IzQGMicm7l1jmC1KJisBeFgUZ+SOfo1yLcIWZES5t97bZ08WxVaGd+Vzp5G0MQWzZWVsNU/DaEP7TmKNNEJIeippxxRSgXy44hY3ZhOFcDQS0JD8C0kUxBw25p9WcZcJMYcW4/55iUBLBxif33Y2g6DuMH+ZNXVz7zxCk2bYlSKnvMf4ICSXaYY93VRcn2a4+BMpAQ0+J0wfv5PgUMFsPfOJasytc+msIPUzUkDzS+MZFp+2NgN3rtQedf7xZGyhwR2wu0bKb/BTAFQBXLb8xZKhqR3Iq2FUTPrzr2vK9bMiNX7cGbZvaOMCNAVE3p7gf161ae2XeG72znYSKMmP4i5oiEF5mKrcQnIOyHGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1116 unit price is 72,425 cents against the contract rate of 59,600 cents valid on receipt day 63. That is about 21.5% over, well beyond the 5% tolerance (62,580 cents). The invoice total of 146,725 cents also does not equal 2 \u00d7 72,425 (144,850), which is worth raising with the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshVEySgc2xgGk9L45p",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3681,
+      "output_tokens": 390,
+      "output_tokens_details": {
+        "thinking_tokens": 250
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1116 unit price is 72,425 cents against the contract rate of 59,600 cents valid on receipt day 63. That is about 21.5% over, well beyond the 5% tolerance (62,580 cents). The invoice total of 146,725 cents also does not equal 2 \u00d7 72,425 (144,850), which is worth raising with the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3681,
+    "output_tokens": 390,
+    "output_tokens_details": {
+      "thinking_tokens": 250
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

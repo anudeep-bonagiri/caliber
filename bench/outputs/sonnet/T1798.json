@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014564,
+  "durationMs": 3664,
+  "httpStatus": 200,
+  "id": "T1798",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1011 at NTTA-DNT-01 within 10 minutes; the last DNT-01 charge was 08-14, and the 8-second-earlier charge T1797 was at a different plaza (PGBT-01)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at NTTA-DNT-01 (Dallas North Tollway) at 2026-08-18T16:26:24Z.\n\nThe duplicate_toll rule requires the same plate at the same plaza within 10 minutes of an earlier charge. The earlier DNT-01 charges for this plate are:\n- T1767 on 08-14 at 19:15:12Z, which is days earlier.\n- No DNT-01 charge on 08-18 at all.\n\nThe charge at 16:26:16Z (T1797) is at NTTA-PGBT-01, a different plaza, only 8 seconds before. It does not match the plaza, so it does not trigger the rule, even though the timing is suspicious.\n\nNo earlier charge at the same plaza falls within 10 minutes, so the toll is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1011 at NTTA-DNT-01 within 10 minutes; the last DNT-01 charge was 08-14, and the 8-second-earlier charge T1797 was at a different plaza (PGBT-01).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7hcJFkU7AStHR9pBD",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5472,
+      "output_tokens": 362,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at NTTA-DNT-01 (Dallas North Tollway) at 2026-08-18T16:26:24Z.\n\nThe duplicate_toll rule requires the same plate at the same plaza within 10 minutes of an earlier charge. The earlier DNT-01 charges for this plate are:\n- T1767 on 08-14 at 19:15:12Z, which is days earlier.\n- No DNT-01 charge on 08-18 at all.\n\nThe charge at 16:26:16Z (T1797) is at NTTA-PGBT-01, a different plaza, only 8 seconds before. It does not match the plaza, so it does not trigger the rule, even though the timing is suspicious.\n\nNo earlier charge at the same plaza falls within 10 minutes, so the toll is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1011 at NTTA-DNT-01 within 10 minutes; the last DNT-01 charge was 08-14, and the 8-second-earlier charge T1797 was at a different plaza (PGBT-01).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5472,
+    "output_tokens": 362,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

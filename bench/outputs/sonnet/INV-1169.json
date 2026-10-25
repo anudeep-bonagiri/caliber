@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01171,
+  "durationMs": 4047,
+  "httpStatus": 200,
+  "id": "INV-1169",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches the contract rate, qty 1 equals the PO received qty 1, bank details never changed, and the only earlier invoice for 37025 (INV-1002, day 3) is outside the 30-day window and cites the same PO. The billed total (37025) is 3125 above qty \u00d7 unit price, but no payables policy code covers that, so it is not a hold; consider mentioning it to the vendor."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QgKEAgTGAI4AUIIdGhpbmtpbmcSDOiuSuI+uYulc7SeuBoMU4IjQeO0yrlPBCiRIjAd1G8H2c2WXPQlTdFtWuCorILmCOpMftRg4mpAwLO0bI9jsWm1+VnJZ+sMzh/8SZEqkggZKIT0+oy8lpXvGHbMu44XnYp9YquXUL40BlOpzqTed7grnm2nIDk2fl0NyXp6/0zcE4BPey1CL9tXnmdaIyWewX5g29PfYn1dcKKnNPDcXrYvqfuko63ICmrNsDPnpcmIld+WRU28Y43Y6R5IKYIVrdBpzRJ2JDtu18acC5fll2KHmbOpAPLDqD5jDCc0Stq9c4jHicoijwv5mX6nCruvFOygWrpYxN70Q4XjBhzXDAUq797oMOStUHjpf33yjDMwG1w+YxPdmWm1LmJrzkVZlfDzkbOqv5hP+UeUP+GyYaF8yKZG5zVgFCyKtsc63N44+YRWEYUYrCyIiGZKBd52+09ABKlHC5hGGHWmw+BD4XDBAVtZfdOlbZ+lh0gSXMrJfQkd+E9V14kznmyKfCgGJrW7PUClPQPtki+at6EbUcDlStG/QZsvOmRGu55f8Zb+znfCiQccW+5Fjrf9BLxWLpnYR8IDS5Afpw3o4r4Q7/7BQTv0wiOzvolGduta5RO8m/wvdpR4zNjGqrM/BvcTJLyZxbwdZZbElxzc07QmbODMmHAkvtE5ce3UJCgacfCVpAbwBBo/BFy21J6Ps9R2SPCnihCj8kJHTwy19/ATLMlv5VMmmfR9L2wcIo/gXvvnyW8ONAiGYViwhxraaHjCknVal6tWJ3rvWJl8vBICwxaiLgwHRoTv9x02uhl8WzVlVB6uVgZSb/U6oMgtlrZEMnuWUMeh1rsbY/B/RbdtS4t08ixkItO4WdKTYvXw0fmjjVal3NPLMhzhUcZY4MuU3ON7wb1DUNUTp8DJUgyhinnJlCNe6jqk10mTibrqE7cGvLg+/H7IqGOUSeUSQjg1sN8/2SWxoLd6t1OLj1/JUOqblCcpWzWFJGaFBab0vrtYukHarcfN0UuesCi1Jao/qwyMPWYR9ZI/Ls1bWVdHM8+N9woSwbM/caONI1DGUQq1Zs/tFCksonYqw3/dc+COt3ALke0OQ/GMDbJ0WkeHol2AtpvDPF5nikD4GzZ7hQrWUHDUQp6JN9YlFTNqD2AwgqFmJqM/iQYGsc2RnL6XhdiQfFDQWhwcAfFdcwCW4VTGwB/gVv8D37Aai3uQX0ZeGr7aBZNthDOnxyvbKirpIQwj33QYPegfVlgRp45q7Pg1WMdHv5Ra+FM3q04DhXiGmPwhXzU8VZcIDBMo8RlpwmzkZKJN9We2xXapTz9N3+ZKSMn3rINdEmmH0zHW3CADZVYgyUTg3pd0hMT3+hXitoCPCcgJxxRfeUUTO2NIlUIWNdo8dOCkA+5gGQvqUGnRkmP2K4aAkIi1A18goTQEs8Dg02jWa75M2wKNngY5Zss6nrLFFWeHR6wArTIYArWdBpzfJPC41xdMBzwy/CdJ2w1LGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 33900 matches the contract rate, qty 1 equals the PO received qty 1, bank details never changed, and the only earlier invoice for 37025 (INV-1002, day 3) is outside the 30-day window and cites the same PO. The billed total (37025) is 3125 above qty \u00d7 unit price, but no payables policy code covers that, so it is not a hold; consider mentioning it to the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvaAG8HRYWvU1CeLnd",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3915,
+      "output_tokens": 388,
+      "output_tokens_details": {
+        "thinking_tokens": 238
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 33900 matches the contract rate, qty 1 equals the PO received qty 1, bank details never changed, and the only earlier invoice for 37025 (INV-1002, day 3) is outside the 30-day window and cites the same PO. The billed total (37025) is 3125 above qty \u00d7 unit price, but no payables policy code covers that, so it is not a hold; consider mentioning it to the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3915,
+    "output_tokens": 388,
+    "output_tokens_details": {
+      "thinking_tokens": 238
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

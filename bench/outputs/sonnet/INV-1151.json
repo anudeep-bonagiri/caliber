@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010874,
+  "durationMs": 3476,
+  "httpStatus": 200,
+  "id": "INV-1151",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1151 (33,900 cents, PO-1001) matches no other invoice amount from this vendor in days 49-79. Its unit price equals the contract rate of 33,900. Billed quantity 1 equals received quantity 1. The amount is under 5,000 dollars and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgAkKEAgTGAI4AUIIdGhpbmtpbmcSDJ2FKuAzLz5kGHkggRoMqbDvt9yato0QVj15IjCgw7cGV2w8sD+VP0J/HVlUEqW0Qc+4tKuZ7fNkRgxITQl2HUT4seO+CLDfEQWRI3MqnQi4xapV7WS1KX4A3lwS6QVsrFoB64TBG2gC7fM6BkNvv9oRqh3DYszvfio5wUqv1U95fS2w7ONbgfDYDbHPgCyM93+4BWCYC/e6/2PRKDpyTD77YMRINhzwllgo+lYIo9JLfBrCfiEEMhKPqF15s7bsIr+Ic9zC8rTFb8D9E/0YdKMiNzOI6UMuCVJ/6y0uodfV8X2rABtNRoZKkZPIb28AAj5YqMc4Uf4AvJJkvjn6neelKL59vNwkL/yAst8d4CKtKMH6MHALAKWa2OpQXGZMYgtsgD8pwEMQq7LBv7unOC5LdvdFyi/WytMzew6ZgibqGHdJ5KyarTK4gPZXz7BWNlYDhjblopQTn3Hk93kn3X1Nc71Xw3Yrl3K3FhtLCVonwtobeIO5b1h0fNe9qaaR9W4wM8V7UgC17birx3k1WCFb+U6C4w6Mli+NOUwSLX+H2YM7Ut6ElaOPltJ7eN42Zg+osoPb1hnUS6Wi00HGkz7nOKW2DXMw5AMjYqfVI9omX14+6DZyop03AfzWD6oYjB62Yt/fJfpjIH80D7ut09BGphSh7wsWVVlINXA6QmwF5TJIil/1ogxuPyQjZBWocpCsgs/EQ1B2fvdNroHqo7TcQw4TNEoRy+5ifkdknYgKgpCsLEljCBjOAlm+hjdKysPjAlN1HYIRvkO1T3nPcBwDsvgpecptwee1QBezt3lsy8SZdrGbno8kWUBf2SbO+WRXBONrI9AQ76fqpvcLLOCJX/KZjtNRDE95bVfsTxK0fD3ueT79mbTtCDJob6J8QZc0jY2IADIMlLIcy1okbhBEsg5ntFmWTJNMepSRsx4Ipm9y0DD+LSc84/ZopSzWukfykwmkuF2wTxvMkdLeMLuHbAAxX1HFbFoVwszVRaly5jSXYQrChWbiUO3eB8lLnCHH9cKSB5yMzwOttpUntH1RxDqgNOsOseFnDsEX/BJsGBvD1LuGXlRkx/CWBfsrCpZTZ0pbgguopxCEmUCrnUsmwZHY0aOpAoGj4D61KtxRAnymAyvLooeIyYxePLvXgThNto25/mrQPKo7ohGnFUzW/5hhUGqoGFE7N0TBEqeNfjo70bjVJhkp90nfEe3LLlel44x9ZpCRSejifvuz5KUOLpcAuMo+M627R9R/aDCUB9BYJPpKr/MNhCyDhoitPb91F3VHFPTbLcjEjwXTYsDiXvU65DNZ/vBS4xxwpywC55aOwOf8GiX4DlQCA2uBb4lIdyP+j2e1bfyBlZrW0Rm6q1Ymvr4TAL5fx+hZAZe6ky/r/T/o0+IIYUJH4Orm2B9vE7aqik7ntrGqiMujI2iLKTCDbn2HVmgXKiickMVA3wcekItGSkE3g9AjtJ4VfrHcTvY7bLmWibRG6h6j8Ftc94AiX0hUjqX/AuoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1151 (33,900 cents, PO-1001) matches no other invoice amount from this vendor in days 49-79. Its unit price equals the contract rate of 33,900. Billed quantity 1 equals received quantity 1. The amount is under 5,000 dollars and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuLTE8iZuuMbKryJKS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3577,
+      "output_tokens": 372,
+      "output_tokens_details": {
+        "thinking_tokens": 253
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1151 (33,900 cents, PO-1001) matches no other invoice amount from this vendor in days 49-79. Its unit price equals the contract rate of 33,900. Billed quantity 1 equals received quantity 1. The amount is under 5,000 dollars and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3577,
+    "output_tokens": 372,
+    "output_tokens_details": {
+      "thinking_tokens": 253
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

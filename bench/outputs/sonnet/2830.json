@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011108,
+  "durationMs": 4692,
+  "httpStatus": 200,
+  "id": "2830",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 34's only ping within 30 min of the 18:21Z purchase (18:00Z) was in San Antonio, about 107 miles from the Giddings station, with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1034."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 18:21:35Z. The nearest pings within 30 minutes are 18:00 (21.5 minutes earlier) and 19:00 (38 minutes later, outside the window). The 18:00 ping is the only one in range, at 29.42416, -98.49339 (San Antonio area).\n\nStation is at 30.1827, -96.9364 (Giddings).\nLatitude difference: 30.1827 - 29.42416 = 0.75854\u00b0 \u2248 52.4 miles (at 69.1 mi/degree).\nLongitude difference: 98.49339 - 96.9364 = 1.55699\u00b0. At about 29.8\u00b0 latitude, a degree is about 69.17 \u00d7 cos(29.8\u00b0) \u2248 60.0 miles, so \u2248 93.4 miles.\nDistance \u2248 sqrt(52.4\u00b2 + 93.4\u00b2) \u2248 107 miles, well over 25.\n\nThe truck's engine was off and the odometer was unchanged all day, so it was parked in San Antonio. This is a location_mismatch.\n\nCapacity check: 47.8 gallons against a 110-gallon limit, so that is fine. The location mismatch alone triggers the hold.\n\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 34's only ping within 30 min of the 18:21Z purchase (18:00Z) was in San Antonio, about 107 miles from the Giddings station, with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1034.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmcPD9eDKEPARHfZus",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2999,
+      "output_tokens": 511,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 18:21:35Z. The nearest pings within 30 minutes are 18:00 (21.5 minutes earlier) and 19:00 (38 minutes later, outside the window). The 18:00 ping is the only one in range, at 29.42416, -98.49339 (San Antonio area).\n\nStation is at 30.1827, -96.9364 (Giddings).\nLatitude difference: 30.1827 - 29.42416 = 0.75854\u00b0 \u2248 52.4 miles (at 69.1 mi/degree).\nLongitude difference: 98.49339 - 96.9364 = 1.55699\u00b0. At about 29.8\u00b0 latitude, a degree is about 69.17 \u00d7 cos(29.8\u00b0) \u2248 60.0 miles, so \u2248 93.4 miles.\nDistance \u2248 sqrt(52.4\u00b2 + 93.4\u00b2) \u2248 107 miles, well over 25.\n\nThe truck's engine was off and the odometer was unchanged all day, so it was parked in San Antonio. This is a location_mismatch.\n\nCapacity check: 47.8 gallons against a 110-gallon limit, so that is fine. The location mismatch alone triggers the hold.\n\n{\"decision\": \"hold\", \"code\": \"location_mismatch\", \"reason\": \"Truck 34's only ping within 30 min of the 18:21Z purchase (18:00Z) was in San Antonio, about 107 miles from the Giddings station, with the engine off and the odometer unchanged all day; ask dispatch whether another unit or driver used card FC-1034.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2999,
+    "output_tokens": 511,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

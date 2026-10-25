@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010596,
+  "durationMs": 2942,
+  "httpStatus": 200,
+  "id": "3720",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 28 pinged within about 0.1 mile of the Buc-ee's station at 11:27:01Z and 11:35:00Z, both within 30 minutes of the 11:31:18Z purchase. The 59.9 gallons is well under the 220-gallon limit (200-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSngYKEAgTGAI4AUIIdGhpbmtpbmcSDH+8DiQEoeaPvXdfrBoMIhlf9SMZzFyurtWOIjD9SIii8ea0whYRbjoak6TLtwK2TOLs9+77Y/iACHowGe1Xl6CD7R6wFynqQAmxItgquwW0zxnlucHy6mc7lp1rra4n/+XIPf1Atb1ApRDagVkhwmhtdO9T34s8K42Zp17cuHWbvC6pDyRgCgR5k48QRCmxBLxAite6lx642NP5xXvLZri57asEXYSYboRnx6ez0WwWKb/1xJjP7nZAmHf34qu5We8EBAp69mVpaLzGYvi7q79UJuglABUyaMumExWBEj9eCNZoIhkkH+6tPefWMIApHczTV8qpSAsoBvoEGrEVGL4uujOKD6PXNQX9cWmnc+VYd6pC32mHlVwwfAiDhCS3FeCtxOO6x7H0SyeC0GZJ2txgUXLzeVfH9z3aGbhLQCCPoJrEIVV+opB89gJ0zlxhsuOWJh+/LVT8OhEgGJ1YXPz53kZSZtvajySLMflGwsvicj5nPxSxlic9ytWPeR5Y7A+yzYR6mxtIl93rt0stYJMBgGJdfomesRj4q3xxwv9eq8PGfjWXvL0ZA4OSwKN+dzaBu3SuLTzy5huHkDnr2K6lE3Ktj0rHUCdBcvmcuDoKpq71p5uBwGtzETRavCxtYy3bVzCXjsHrbyVpHsTVsjE+GI/TD8O32VY0PcHrPOEubPC1uKq5aDd/IlpaoXR2TuCIZOLJtl32r+v+Ti8qzQVlLtS93fo5ugMB8dEu/WGW9mjLz3nTrmgSUxxMKXV+Mef3wZRq5G+qOMvWzN8y7mQEDVvAxa88HZF1RTpnRumoCtyyGZKRPimeuZZuIc315SgwvlKs1wL/mLLwl+q8sPRA0nXoNnzpuTynh5x58jbY7xHFtpRDGIxW2F+XIVLCDUWdNfNzCvSfsJ3FCRZsotzO1YBPmjO+JV+hCChwr0O+8csmSrUyGU4QhQwU1zTsgMY7oBko4icSzibH2HkeOkS2iPGNypwS/7FcN+E0KJ+7Pp0YVqYq6L6952M/X0s5TzxMjkSnW/AfOmUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 28 pinged within about 0.1 mile of the Buc-ee's station at 11:27:01Z and 11:35:00Z, both within 30 minutes of the 11:31:18Z purchase. The 59.9 gallons is well under the 220-gallon limit (200-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsiw5H3GmtpT6qcwBoa",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4088,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 119
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 28 pinged within about 0.1 mile of the Buc-ee's station at 11:27:01Z and 11:35:00Z, both within 30 minutes of the 11:31:18Z purchase. The 59.9 gallons is well under the 220-gallon limit (200-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4088,
+    "output_tokens": 242,
+    "output_tokens_details": {
+      "thinking_tokens": 119
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

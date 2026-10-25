@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012398,
+  "durationMs": 3793,
+  "httpStatus": 200,
+  "id": "INV-1154",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies. Unit price 54,500 equals the contract rate, billed qty 2 equals received qty 2, no earlier invoice from this vendor for 112,750 in the prior 30 days, and the bank change on day 18 is long past and the amount is under $5,000. The line total is 3,750 cents above 2 x 54,500, but no payables rule covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8wkKEAgTGAI4AUIIdGhpbmtpbmcSDNS/zmJK4f+bXE01PRoMtnTOAN3OjYuftl6ZIjAWgxL76B2FZtZ5rUfcgbwhV5hDZG9af9e3ITn5XoBExQjzwK4229XXtsuFU/yGKloqkAkwrzEaxIylOR0QxS/L0WRgk44AKj4pXP7o6DV1n9oGV6zWsgluMoPtgWHu+sk8ASfi7sI/4rYQtMdgKlHjfCWUY78ijyQZuGoulEod9es6O3CzPIIjPUmm3F6kMI6lLuxGgaKSJFMsk9Lf6pWMXHXZz0pmyNgJZfnUL+4Dx4INJ2d+9drb00JDcdL+FwFW8of313NQwOWEO9kTGBQHR6Gq4eYK820ODOC0n7RerEMgLBmfnQeqZd2GtGqAcUF7JZrrVub7M9JxMdExeGRNdoQ9ViQC31OIe/UxOMJXfs5W5etU7bsecAB2K7VmIvejuYrkDq6as4UY9UzmAVeXC5eUyzCvfaYHdMw2U2MKeeVtwoBqvS7GFut0ddrs0GsWAZ/ItgmWU5Z2b0NVBvvsTSYT4kuA7BEqK6Q/UhYesMuPIMs48ziK/bVCHK6wBQaHNfIkvdx631ncuhs77mYKuos7WU3D4ivl1YmKLEuYsAjoH5U3r3P28Z+sZTvWSnr03USiF01moxpc/DLhVPH06LdatmXjV8NgbVEq8GoDWVfAcy4eUDftC/wVvuawR8zBxBGubW5cSJMkRfSoh4cHTynKz8ZWEsxsBh4dPLaAWwX/jcJbEpzVZI6KMjDydd5e4pzc3LdzK6WmwYIcx3wZLpsDAilt1gAMJzbI/NbX1Ztyc+C5t/yN1U15wPHAdmtorGcPYX6GB0yLyx3UXWFXGYENz14YtUQG9zpwCV+aGvyKBLCu0h1rLgeaFQ+90MUQB1aXxqiNm7dIveHGK/F8w5YADOyBMjc7OiQrJgM7Ph/2hE3ALlo57eIJ9XH2nZ9+r+zzMQSm2ez6KWu2ZSdo2OecXrE5gEvm3N+iB/uoTADFa3NZZsNfJ9Ry5za/4JrLAANxPSiwPIeSGplWwByFXKGI0zQcuMO471pcp7NoLafRJY+/Kn/wXidQ7t6vBhToRs+c9rolDr7yb3UvxJjPA4w949T/8C06OR/s8CiA0gpfLOhrZQ293UGBd3lQ1mM4eAj6FQtzfai2UUgNArX7Nd11yszbHAk6Rtk2U2xk9njljlLtshwNmKouf5Xn3WjwFFg46R7YBKcZJHHTDlexzfGa+nRB0bQLk8/j5dnzbEWVZdSYnry44hjhZFXNgYRTE/evQslH+VAeXamAL8RrnvnX+bc2y/d8YmMx+YK1yZ9Zh4drYjWETK4l//cDcqwFqNuAPWYk65bUp0cm5tRbH5TvbrMwbFq7IlMiEB2BB1TdNZgiiJ91ztFKE7Y3IrD+32Mwus+wiPJ8aQm7Xh30FalZooU1R2bRmwCxLCuDL+efosio+Ycvyy5+WEOj/0pzPt9WIqnHuDshCmNVXMWWQpwsx7IRA42xILOp4MS/tmhwp3Fbb03LNKX8BzL4vQDUuSDpaiw8G+ci0kiZV8ZGPg9cNqMeL+mNuxE0+D1EK9viKli2BvLVhGaLAHluV6JEbE882V/ItRr8brCF7OCBQSyoMXRqf3akB3BZly88J3MR9MIXTAOL9TSsSVFvSdn+jc29UKivcklWzkD9q9ikVxFRGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. Unit price 54,500 equals the contract rate, billed qty 2 equals received qty 2, no earlier invoice from this vendor for 112,750 in the prior 30 days, and the bank change on day 18 is long past and the amount is under $5,000. The line total is 3,750 cents above 2 x 54,500, but no payables rule covers that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2F3jv2GFaKvZSLKCA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4099,
+      "output_tokens": 420,
+      "output_tokens_details": {
+        "thinking_tokens": 282
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. Unit price 54,500 equals the contract rate, billed qty 2 equals received qty 2, no earlier invoice from this vendor for 112,750 in the prior 30 days, and the bank change on day 18 is long past and the amount is under $5,000. The line total is 3,750 cents above 2 x 54,500, but no payables rule covers that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4099,
+    "output_tokens": 420,
+    "output_tokens_details": {
+      "thinking_tokens": 282
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

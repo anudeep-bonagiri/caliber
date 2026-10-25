@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.004198,
+  "durationMs": 2073,
+  "httpStatus": 200,
+  "id": "T1133",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The toll at SH 45 N Mainlane (T1133) is at a different plaza than the earlier charges on this plate, including the one 7 minutes earlier at SH 130 Hutto (T1132). The duplicate_toll rule requires the same plaza within 10 minutes, so it does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The toll at SH 45 N Mainlane (T1133) is at a different plaza than the earlier charges on this plate, including the one 7 minutes earlier at SH 130 Hutto (T1132). The duplicate_toll rule requires the same plaza within 10 minutes, so it does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsumJCzKkESKJD4KB5S",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1529,
+      "output_tokens": 114,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The toll at SH 45 N Mainlane (T1133) is at a different plaza than the earlier charges on this plate, including the one 7 minutes earlier at SH 130 Hutto (T1132). The duplicate_toll rule requires the same plaza within 10 minutes, so it does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1529,
+    "output_tokens": 114,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

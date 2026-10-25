@@ -1,0 +1,846 @@
+{
+  "cost": {
+    "asi1Quota": {
+      "paceSeconds": 9.1,
+      "per15min": 100,
+      "perDay": 1000
+    },
+    "asi1Requests": 561,
+    "asi1Tokens": {
+      "input": 2393406,
+      "output": 66383
+    },
+    "costCapUsd": 15.0,
+    "sonnetRates": {
+      "input": 2.0,
+      "output": 10.0
+    },
+    "sonnetRatesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
+    "sonnetStoppedForCost": false,
+    "sonnetTokens": {
+      "input": 2358546,
+      "output": 166183
+    },
+    "sonnetUsd": 6.3789
+  },
+  "footnotes": [
+    "Positives are the 58 answer-key rows: 52 planted exceptions and 6 decoys. A decoy is a legitimate unit swap that the records on file cannot distinguish from card misuse, so hold is the correct decision for every system: the kernel held and asked, then cleared through an approved rule after one controller answer; a model that says hold on a decoy is counted correct; a model that says clear on a decoy is counted exactly as it scores, a miss.",
+    "Code-exact scoring (the table): a hold counts for a code only when the system named that code; a hold with a wrong or missing code is a false positive for the code it named and a miss for the planted code. This is the definition docs/FACTS.json uses for the kernel.",
+    "Caliber's figures are the measured 92-day run over all 7,944 transactions (docs/FACTS.json); the models saw a 558-row sample holding every planted row and decoy plus 500 clean rows, so recall is directly comparable and the kernel's precision was tested on about fourteen times as many clean rows.",
+    "Synthetic data from the same generator as the clean rows (seed/generate.py, seed 42); every system was given identical inputs; no fine-tuning, no examples, one prompt, one attempt per row. The result measures whether each system finds what we planted, not how it behaves on a real carrier's statements.",
+    "Claude Sonnet: no temperature was sent because Claude Sonnet 5.5 returns 400 for a non-default temperature; thinking and effort were left at the API defaults. asi1-mini: temperature 0.",
+    "Parsing: the first complete JSON object in a reply is the decision, for both models; a reply with no complete object counts as not held. Raw replies are on disk unchanged under bench/outputs."
+  ],
+  "generatedAt": "2026-10-25T00:12:27+00:00",
+  "partial": {
+    "asi1": false,
+    "caliber": false,
+    "sonnet": false
+  },
+  "prompt": "bench/prompts/hold_or_clear.txt",
+  "rerun": "agent/.venv/bin/python bench/sample.py && agent/.venv/bin/python bench/inputs.py && agent/.venv/bin/python bench/baseline.py --model sonnet && agent/.venv/bin/python bench/baseline.py --model asi1 && agent/.venv/bin/python bench/score.py",
+  "sample": {
+    "clean": {
+      "card": 174,
+      "invoice": 153,
+      "toll": 173
+    },
+    "cleanAvailable": {
+      "card": 5581,
+      "invoice": 153,
+      "toll": 2146
+    },
+    "cleanTotal": 500,
+    "decoys": 6,
+    "excludedLimitHolds": [
+      "INV-1075",
+      "INV-1080",
+      "INV-1106",
+      "INV-1109",
+      "INV-1117",
+      "INV-1171"
+    ],
+    "planted": 52,
+    "seed": 42,
+    "total": 558
+  },
+  "systems": {
+    "asi1": {
+      "byCode": [
+        {
+          "code": "location_mismatch",
+          "detectionRecall": 1.0,
+          "falsePositives": 8,
+          "heldAnyCode": 20,
+          "missed": [],
+          "planted": 20,
+          "precision": 0.7143,
+          "raised": 28,
+          "recall": 1.0,
+          "truePositives": 20,
+          "wrongCode": []
+        },
+        {
+          "code": "capacity_exceeded",
+          "detectionRecall": 0.3333,
+          "falsePositives": 0,
+          "heldAnyCode": 2,
+          "missed": [
+            "2251",
+            "3093",
+            "5557",
+            "5908"
+          ],
+          "planted": 6,
+          "precision": null,
+          "raised": 0,
+          "recall": 0.0,
+          "truePositives": 0,
+          "wrongCode": [
+            "3510",
+            "6390"
+          ]
+        },
+        {
+          "code": "rate_variance",
+          "detectionRecall": 0.8889,
+          "falsePositives": 0,
+          "heldAnyCode": 8,
+          "missed": [
+            "INV-1086"
+          ],
+          "planted": 9,
+          "precision": 1.0,
+          "raised": 8,
+          "recall": 0.8889,
+          "truePositives": 8,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_toll",
+          "detectionRecall": 1.0,
+          "falsePositives": 82,
+          "heldAnyCode": 11,
+          "missed": [],
+          "planted": 11,
+          "precision": 0.1183,
+          "raised": 93,
+          "recall": 1.0,
+          "truePositives": 11,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_invoice",
+          "detectionRecall": 0.5,
+          "falsePositives": 5,
+          "heldAnyCode": 2,
+          "missed": [
+            "INV-1050",
+            "INV-1052"
+          ],
+          "planted": 4,
+          "precision": 0.2857,
+          "raised": 7,
+          "recall": 0.5,
+          "truePositives": 2,
+          "wrongCode": []
+        },
+        {
+          "code": "vendor_bank_change",
+          "detectionRecall": 0.3333,
+          "falsePositives": 8,
+          "heldAnyCode": 1,
+          "missed": [
+            "INV-1077",
+            "INV-1138"
+          ],
+          "planted": 3,
+          "precision": 0.1111,
+          "raised": 9,
+          "recall": 0.3333,
+          "truePositives": 1,
+          "wrongCode": []
+        },
+        {
+          "code": "short_received",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 5,
+          "missed": [],
+          "planted": 5,
+          "precision": 1.0,
+          "raised": 5,
+          "recall": 1.0,
+          "truePositives": 5,
+          "wrongCode": []
+        }
+      ],
+      "codeExact": {
+        "falsePositives": 103,
+        "precision": 0.3133,
+        "recall": 0.8103,
+        "truePositives": 47
+      },
+      "costUsd": 0.0,
+      "decoys": {
+        "cleared": 0,
+        "held": 6,
+        "inSample": 6
+      },
+      "detection": {
+        "falseNegatives": 9,
+        "falsePositives": 101,
+        "precision": 0.3267,
+        "recall": 0.8448,
+        "truePositives": 49
+      },
+      "failureSentence": "asi1-mini missed 4 of 6 capacity_exceeded, 1 of 9 rate_variance, 2 of 4 duplicate_invoice, 2 of 3 vendor_bank_change; held with the wrong code 2 capacity_exceeded; held 101 clean rows (holds by code that did not match a planted row: 82 as duplicate_toll, 8 as location_mismatch, 8 as vendor_bank_change, 5 as duplicate_invoice); 1 row had no parseable answer (1 unparsed), counted as not held.",
+      "falsePositiveRows": [
+        "1049",
+        "1232",
+        "1275",
+        "1856",
+        "5542",
+        "6320",
+        "INV-1089",
+        "INV-1092",
+        "INV-1132",
+        "INV-1144",
+        "INV-1148",
+        "INV-1153",
+        "INV-1159",
+        "INV-1160",
+        "INV-1165",
+        "INV-1169",
+        "INV-1172",
+        "INV-1173",
+        "INV-1177",
+        "T1094",
+        "T1125",
+        "T1135",
+        "T1161",
+        "T1235",
+        "T1244",
+        "T1263",
+        "T1269",
+        "T1316",
+        "T1348",
+        "T1362",
+        "T1374",
+        "T1379",
+        "T1401",
+        "T1407",
+        "T1415",
+        "T1433",
+        "T1477",
+        "T1565",
+        "T1580",
+        "T1593",
+        "T1608",
+        "T1648",
+        "T1702",
+        "T1748",
+        "T1798",
+        "T1817",
+        "T1819",
+        "T1828",
+        "T1864",
+        "T1885",
+        "T1898",
+        "T1921",
+        "T1944",
+        "T1969",
+        "T1977",
+        "T1989",
+        "T2016",
+        "T2019",
+        "T2047",
+        "T2071",
+        "T2087",
+        "T2103",
+        "T2123",
+        "T2126",
+        "T2152",
+        "T2170",
+        "T2227",
+        "T2263",
+        "T2318",
+        "T2349",
+        "T2358",
+        "T2379",
+        "T2409",
+        "T2416",
+        "T2453",
+        "T2473",
+        "T2482",
+        "T2498",
+        "T2522",
+        "T2524",
+        "T2568",
+        "T2594",
+        "T2611",
+        "T2634",
+        "T2673",
+        "T2684",
+        "T2715",
+        "T2724",
+        "T2751",
+        "T2762",
+        "T2780",
+        "T2797",
+        "T2823",
+        "T2850",
+        "T2918",
+        "T2934",
+        "T3014",
+        "T3037",
+        "T3048",
+        "T3102",
+        "T3134"
+      ],
+      "holds": 150,
+      "holdsWithUnspecifiedCode": 0,
+      "label": "asi1-mini",
+      "meta": {
+        "lastRunAt": "2026-10-25T00:10:53+00:00",
+        "model": "asi1-mini",
+        "quota": {
+          "paceSeconds": 9.1,
+          "per15min": 100,
+          "perDay": 1000
+        },
+        "requestsToday": 561,
+        "rowsInSample": 558,
+        "rowsSaved": 558,
+        "temperature": 0
+      },
+      "modelIds": [
+        "asi1-mini"
+      ],
+      "partial": false,
+      "rowStatus": {
+        "ok": 557,
+        "unparsed": 1
+      },
+      "rowsAnswered": 557,
+      "rowsInSample": 558,
+      "tokens": {
+        "input": 2393406,
+        "output": 66383
+      }
+    },
+    "caliber": {
+      "byCode": [
+        {
+          "code": "location_mismatch",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 20,
+          "missed": [],
+          "planted": 20,
+          "precision": 1.0,
+          "raised": 20,
+          "recall": 1.0,
+          "truePositives": 20,
+          "wrongCode": []
+        },
+        {
+          "code": "capacity_exceeded",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 6,
+          "missed": [],
+          "planted": 6,
+          "precision": 1.0,
+          "raised": 6,
+          "recall": 1.0,
+          "truePositives": 6,
+          "wrongCode": []
+        },
+        {
+          "code": "rate_variance",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 9,
+          "missed": [],
+          "planted": 9,
+          "precision": 1.0,
+          "raised": 9,
+          "recall": 1.0,
+          "truePositives": 9,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_toll",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 11,
+          "missed": [],
+          "planted": 11,
+          "precision": 1.0,
+          "raised": 11,
+          "recall": 1.0,
+          "truePositives": 11,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_invoice",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 4,
+          "missed": [],
+          "planted": 4,
+          "precision": 1.0,
+          "raised": 4,
+          "recall": 1.0,
+          "truePositives": 4,
+          "wrongCode": []
+        },
+        {
+          "code": "vendor_bank_change",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 3,
+          "missed": [],
+          "planted": 3,
+          "precision": 1.0,
+          "raised": 3,
+          "recall": 1.0,
+          "truePositives": 3,
+          "wrongCode": []
+        },
+        {
+          "code": "short_received",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 5,
+          "missed": [],
+          "planted": 5,
+          "precision": 1.0,
+          "raised": 5,
+          "recall": 1.0,
+          "truePositives": 5,
+          "wrongCode": []
+        }
+      ],
+      "codeExact": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "decoys": {
+        "clearedAfterOneAnswer": 6,
+        "held": 6,
+        "inSample": 6
+      },
+      "detection": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "factsAsOf": "2026-10-24T22:25:41+00:00",
+      "label": "Caliber (kernel + Droid)",
+      "partial": false,
+      "rowsEvaluated": 7944,
+      "source": "docs/FACTS.json"
+    },
+    "sonnet": {
+      "byCode": [
+        {
+          "code": "location_mismatch",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 20,
+          "missed": [],
+          "planted": 20,
+          "precision": 1.0,
+          "raised": 20,
+          "recall": 1.0,
+          "truePositives": 20,
+          "wrongCode": []
+        },
+        {
+          "code": "capacity_exceeded",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 6,
+          "missed": [],
+          "planted": 6,
+          "precision": 1.0,
+          "raised": 6,
+          "recall": 1.0,
+          "truePositives": 6,
+          "wrongCode": []
+        },
+        {
+          "code": "rate_variance",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 9,
+          "missed": [],
+          "planted": 9,
+          "precision": 1.0,
+          "raised": 9,
+          "recall": 1.0,
+          "truePositives": 9,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_toll",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 11,
+          "missed": [],
+          "planted": 11,
+          "precision": 1.0,
+          "raised": 11,
+          "recall": 1.0,
+          "truePositives": 11,
+          "wrongCode": []
+        },
+        {
+          "code": "duplicate_invoice",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 4,
+          "missed": [],
+          "planted": 4,
+          "precision": 1.0,
+          "raised": 4,
+          "recall": 1.0,
+          "truePositives": 4,
+          "wrongCode": []
+        },
+        {
+          "code": "vendor_bank_change",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 3,
+          "missed": [],
+          "planted": 3,
+          "precision": 1.0,
+          "raised": 3,
+          "recall": 1.0,
+          "truePositives": 3,
+          "wrongCode": []
+        },
+        {
+          "code": "short_received",
+          "detectionRecall": 1.0,
+          "falsePositives": 0,
+          "heldAnyCode": 5,
+          "missed": [],
+          "planted": 5,
+          "precision": 1.0,
+          "raised": 5,
+          "recall": 1.0,
+          "truePositives": 5,
+          "wrongCode": []
+        }
+      ],
+      "codeExact": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "costUsd": 6.3789,
+      "decoys": {
+        "cleared": 0,
+        "held": 6,
+        "inSample": 6
+      },
+      "detection": {
+        "falseNegatives": 0,
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "failureSentence": "Claude Sonnet failed on nothing in this sample.",
+      "falsePositiveRows": [],
+      "holds": 58,
+      "holdsWithUnspecifiedCode": 0,
+      "label": "Claude Sonnet",
+      "meta": {
+        "costCapUsd": 15.0,
+        "lastRunAt": "2026-10-24T22:52:41+00:00",
+        "maxTokens": 4096,
+        "modelUsed": "claude-sonnet-5-5",
+        "rates": {
+          "input": 2.0,
+          "output": 10.0
+        },
+        "ratesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
+        "requestedModel": "claude-sonnet-5-5",
+        "rowsInSample": 558,
+        "rowsSaved": 558,
+        "spentUsd": 6.378922,
+        "stoppedForCost": false,
+        "temperature": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)",
+        "thinking": "API default (adaptive), effort API default"
+      },
+      "modelIds": [
+        "claude-sonnet-5-5"
+      ],
+      "partial": false,
+      "rowStatus": {
+        "ok": 558
+      },
+      "rowsAnswered": 558,
+      "rowsInSample": 558,
+      "tokens": {
+        "input": 2358546,
+        "output": 166183
+      }
+    }
+  },
+  "table": [
+    {
+      "asi1": {
+        "falsePositives": 8,
+        "precision": 0.7143,
+        "raised": 28,
+        "recall": 1.0,
+        "truePositives": 20
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 20,
+        "recall": 1.0,
+        "truePositives": 20
+      },
+      "code": "location_mismatch",
+      "planted": 20,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 20,
+        "recall": 1.0,
+        "truePositives": 20
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 0,
+        "precision": null,
+        "raised": 0,
+        "recall": 0.0,
+        "truePositives": 0
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 6,
+        "recall": 1.0,
+        "truePositives": 6
+      },
+      "code": "capacity_exceeded",
+      "planted": 6,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 6,
+        "recall": 1.0,
+        "truePositives": 6
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 8,
+        "recall": 0.8889,
+        "truePositives": 8
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 9,
+        "recall": 1.0,
+        "truePositives": 9
+      },
+      "code": "rate_variance",
+      "planted": 9,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 9,
+        "recall": 1.0,
+        "truePositives": 9
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 82,
+        "precision": 0.1183,
+        "raised": 93,
+        "recall": 1.0,
+        "truePositives": 11
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 11,
+        "recall": 1.0,
+        "truePositives": 11
+      },
+      "code": "duplicate_toll",
+      "planted": 11,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 11,
+        "recall": 1.0,
+        "truePositives": 11
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 5,
+        "precision": 0.2857,
+        "raised": 7,
+        "recall": 0.5,
+        "truePositives": 2
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 4,
+        "recall": 1.0,
+        "truePositives": 4
+      },
+      "code": "duplicate_invoice",
+      "planted": 4,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 4,
+        "recall": 1.0,
+        "truePositives": 4
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 8,
+        "precision": 0.1111,
+        "raised": 9,
+        "recall": 0.3333,
+        "truePositives": 1
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 3,
+        "recall": 1.0,
+        "truePositives": 3
+      },
+      "code": "vendor_bank_change",
+      "planted": 3,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 3,
+        "recall": 1.0,
+        "truePositives": 3
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 5,
+        "recall": 1.0,
+        "truePositives": 5
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 5,
+        "recall": 1.0,
+        "truePositives": 5
+      },
+      "code": "short_received",
+      "planted": 5,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "raised": 5,
+        "recall": 1.0,
+        "truePositives": 5
+      }
+    },
+    {
+      "asi1": {
+        "falsePositives": 103,
+        "precision": 0.3133,
+        "recall": 0.8103,
+        "truePositives": 47
+      },
+      "caliber": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "truePositives": 58
+      },
+      "code": "overall",
+      "planted": 58,
+      "sonnet": {
+        "falsePositives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "truePositives": 58
+      }
+    }
+  ],
+  "tiesOrWins": [
+    {
+      "code": "location_mismatch",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "capacity_exceeded",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "rate_variance",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "duplicate_toll",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "duplicate_invoice",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "vendor_bank_change",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "short_received",
+      "model": "Claude Sonnet",
+      "tie": true
+    },
+    {
+      "code": "short_received",
+      "model": "asi1-mini",
+      "tie": true
+    },
+    {
+      "code": "overall",
+      "model": "Claude Sonnet",
+      "tie": true
+    }
+  ]
+}

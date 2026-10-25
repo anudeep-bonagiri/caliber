@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010756,
+  "durationMs": 4768,
+  "httpStatus": 200,
+  "id": "INV-1088",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1088 matches no hold rule: unit price 52,500 equals the contract rate, billed qty 2 equals received qty 2, no earlier invoice in the last 30 days has the same amount under a different PO, and at 109,500 cents it is under the 500,000-cent bank-change threshold despite the day-42 bank change. The total is 4,500 cents more than 2 x 52,500, but no policy code covers that, so it clears."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+QoKEAgTGAI4AUIIdGhpbmtpbmcSDKL4nzLMNsm3koVksxoM2OSSRdgEJnZUp4OIIjA04DQraUzdFg6wuOQjlrYBjpXN4PyWhTVeeZk3QnglA938oisvwN3MWyhIt1uYf1Eqlgq88lTIxDbZBxSlr8+O94mGRhJadCemP6aw4Oj2B95i7EAvrihTSN9selYR8HbIxP9UlKMCLZT2v226CUjvH2/x6sRob8RZQdF7tr8SgsGb8FEZt/6jiKaUpsX8lvSLZkgeeu2ciE0YexUVjsLMj5sDJX8/vS0ELn9LfnqsnlAmk9o+D4NubncT1lPmJpNE9h8VwLtWAlcwbUXCy/7qpx3QqeN1/R7Os8cx4zSMaNgXirumjmTQ9Tor6xC5iUB+14MjHsu2s+rf91DOGdpGUbI+EkWGnKrPdhHHe3sZ2uZ0tksvbGnS5TzthLBdBk9+5IzTW5Zhe6orsvq7BDv1VHe+0px5xzE4DxkUSHFPowtEUDyPOTLMs6nALAnkkB+c4jYoG4+vKxAY8i+GNWB2tpMIfc1Vd3V8zJSMeOUIZXAzbPmEIioZAyop6h4X9ltgI3mA8rQdzY/EQJcAbReULGJfhn12H1xUVP96VuKTSxxxNm6D+49CbI1zAh4uzEF0+Z1bH1f9xRLnyr83BvafMOPRF10bzd19OilevMuyBDPRSAToUwafmHnHWXGqfWRvXpGByIGvWOi8+e/ZLr/2sBkYLxm78SKBx5TmBeU9BIiWyhB6nDS0Zi6XCXcJsFjrW1nZSgSPrmJwhGn5zfSwBl9kfiH3fl7eYeB3NPvNhFMvmnj0diQCWTXlHaMPAilnnewY9X9uwgwUepCcg1pWv8UiJgZO+/R27uZrBM1bCV1ES9AfSkTCV9/+fdpSC+g/c+/f895vFjRPaoCTMH2oAmDMMNWZtO6aV0G3OXZGj8V2Neh5v/BnhrLCQxPJ9lE8LmcMiK+Kx6V7dga3zAdypG3+Mxj099UOgTn0zVymXLZE1MdfrxMr6gUi1qEqP8AX/FykjLf7kVS+VKvC4519ilvT0V69T1ZvPAxMWgTT3CO73GpRgiDmgNMivM5c01wuawFW/Qb8JRoTxp232Bk0Y7mn7KNU9VchAITiNE6eQbL7BwhagGWrWYGRpt4uxPNwxaOZ8Qew5dnM9+KATOc7GO0YUmzw3fDvbeh/lJ+pVRr0WOMOtRuNy62ozxSmPL918QgRy7loRR1lIj+Jp9sB30AS3udBbvBlYrGVgOnSeGQf/+DUaqiTUGGWPNVDzgG6YJPQJLSK/XzpRMR+roxdPXCRi0FtHEfp+r1VomIHFwi928CzV6agcUBh3+KjxvVYCOCZeQiz7sj1xxVodQhP2UMjvD8C7UNjNJsGioNCK+1AbWjyQpVZZ69uC7UilVkr/DD+PFyk6yXx83huwA1SKXji+MKzt0RFF3KPfq2bYqB49henYovtzXeCXUp9SUYl0kBqVWQedOkqLDJQkkPPM+HyUE284s/IKz4eCTvUR2i2EJSf7UkBtDvgFuNAd8r6flUT/fbI1Au9uUYg6TOF0JPSOj2ZnHDyLjLGeXKfZni6kc5gDpmvgwBSeNDbTInm05djd2Y69f3cmh5/DED58dkdi6+HTq8yq0+oQXSD6EsyWrAyiTln6vJdAnH+zwK9DJLsXqSs5t4wBtrkvTBsi1z1Rd9ini2pA0Vr+UhFsqDH+OWQexj3EXfHQ/KKn+QXRISVa+6vksCEoeGfRih4sTc7yLWy2CyitrEytiSSawBLGxynjUScvvSquvXgDxjnpftDZEvFptuIH30eHa9W3ASLHgfztpw8N2HnEqN97zGm3Eln0DukO9nV+AmblTnCLaZNcLKD8vYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1088 matches no hold rule: unit price 52,500 equals the contract rate, billed qty 2 equals received qty 2, no earlier invoice in the last 30 days has the same amount under a different PO, and at 109,500 cents it is under the 500,000-cent bank-change threshold despite the day-42 bank change. The total is 4,500 cents more than 2 x 52,500, but no policy code covers that, so it clears.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMssCYfGfwRmyUbJRiah",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2918,
+      "output_tokens": 492,
+      "output_tokens_details": {
+        "thinking_tokens": 333
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:47+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1088 matches no hold rule: unit price 52,500 equals the contract rate, billed qty 2 equals received qty 2, no earlier invoice in the last 30 days has the same amount under a different PO, and at 109,500 cents it is under the 500,000-cent bank-change threshold despite the day-42 bank change. The total is 4,500 cents more than 2 x 52,500, but no policy code covers that, so it clears.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2918,
+    "output_tokens": 492,
+    "output_tokens_details": {
+      "thinking_tokens": 333
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

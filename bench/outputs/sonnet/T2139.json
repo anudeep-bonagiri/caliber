@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012056,
+  "durationMs": 2521,
+  "httpStatus": 200,
+  "id": "T2139",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "T2139 at SH 45 N Mainlane (TX-1009) came 7m47s after T2137 at the same plaza, within the 10-minute window, so the later charge is a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The new toll T2139 was charged at 16:56:27Z at SH 45 N Mainlane, Round Rock (TXTAG-SH45N-01) for plate TX-1009. The earlier charge T2137 was at the same plaza at 16:48:40Z on the same day. The gap is 7 minutes 47 seconds, which is inside the 10-minute window, so the later charge is a duplicate.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"T2139 at SH 45 N Mainlane (TX-1009) came 7m47s after T2137 at the same plaza, within the 10-minute window, so the later charge is a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskYmtwaBZHWD4sTEXW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4913,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The new toll T2139 was charged at 16:56:27Z at SH 45 N Mainlane, Round Rock (TXTAG-SH45N-01) for plate TX-1009. The earlier charge T2137 was at the same plaza at 16:48:40Z on the same day. The gap is 7 minutes 47 seconds, which is inside the 10-minute window, so the later charge is a duplicate.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"T2139 at SH 45 N Mainlane (TX-1009) came 7m47s after T2137 at the same plaza, within the 10-minute window, so the later charge is a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4913,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

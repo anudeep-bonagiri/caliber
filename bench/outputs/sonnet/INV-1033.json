@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006594,
+  "durationMs": 3276,
+  "httpStatus": 200,
+  "id": "INV-1033",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1033 ($337.61, no PO, no contract) matches none of the vendor's earlier invoice amounts, has no PO or contract price to compare for rate variance or received quantity, and is under the $5,000 bank-change threshold (the bank change on day 42 is also after receipt on day 19)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkQkKEAgTGAI4AUIIdGhpbmtpbmcSDHRdUjgAfWChckA2ARoMyxY2irygTlz2EaT+IjCnRosFQ4gLKsJ0EPN1IN6My+BSgH1Ros8thN/NqMusOeAlFDkhZz9U9m9Io1w5zbsqrgjUyMIci8rF4gH0UfFwHwReApcU1bp7FJN1Sdg/ev74LfKNgZKXm9cg8B04BtlEtyKuwj9h6gnhDTL4NtfMbLQPz96azjj8Vc5fXO5dXX4COSGLVfm83qm+CIUy0kGJJhNPMLB9Mw2XfB+RRQOcNPwbbAybBcc4TTsy9nzNrLQM2vdU5QqK4lhJvScFqe3rFi7M2I6rrprDdW+DjmgkF6mcwoYeS/aYUmaKDXImHRRiF5/s4/W2gDCblFTtsb1CSaoOoMaYbayYCVkU1oCZN/CY2MdwuAb1tQ89fT7XrpXFdIEvONVuhg9+/uKn1RO+Msm3z3akit9UH34iirdSQQK80lNJ6jfMIyEXRE2qoj9zDttQmR7RF/z2WuiuBjZNCTa3/vnu89mYBcsF9N6Cc91r00caPpexJiGhai4GLbZPTp42Fm89coCqUtAoMvNG1n7VsWQT4TKjY31J9tus84ppU89nWqLKMsoqXcQwh4nYmAxGqUtfXo+QuW3hdiUIJ8nyPBwFQ3M2xiDZ16tLM70CYr5s9hnDUVuYXNKQHqSKMINY+fyP7loYXPJlhTaep9xbpa7PRFfOTlrYO8VUP/E4xfdNQY3WKmAUsuGyD6eH8G7GBYzff/77cCNg3BapbzUL8omuodriSu4Hi15UzcPCGMcE7FTfyYEcY44XiavX9XLla5Va9wLJF+MHqhG2pCnMksXBedRWrxT4ZEFZHsZw53tKKe4ql4NX5aum6+xzUvet5Q5GDa9D54jzRdcpM3JekM6qlbYM8UmeNbBs5inQ+nvkJSguAYjZgCZ1/UqDqC6poGMcKy77q8ouHBwHLNIXtASzN4q4uytN2lp2INDGAxMcDhshIk6NS4wxrHgtD30kUCuHaKfvBfQI5woLBy7EAIr9KWWDajGCPA62hgrT7sDMpPsGkYcBHtG3IqjFjtjaMtDaQqx0cqinNv3z9FFofz6WOuuaH+h8Ypvavs2fub4Uy6XAxiF2W1y0lb0XlA0MA1Ny8q+iS1lJGIpRYsj73x585SGdF5w9B3bWXO92fQx68lAXIGMRwI6wOi9BwHhkx5Wcu5E2mXgP+OucR+J1kdJIEWq0zw45eaiiDcRl0UxCj2e0rCVSrsCsTZJ5PAZY53DAGgFH0nmqt17NIEEimguf+s2VzvmJbum8bscRR1tL3YH6oXqRaCDXJpT5U7KfELSU3k7HxGZ80/rSJQTa9fL+K4Gl/+yhd4BVS18eILOA2zeFapZRyjFEiceTeVuxpN3USRUe0WVZt89rHp1ayCHkahrgSKCrBorEmDuMjixnY841/mtrtJjJgu123mNj7ONPhL2YRjxk3mAjMmGELIqMNdR4E0hNbODlmaNwNhEWW1c+4Ucz23Y6v4GLbj0bYVihhCBFg1Hz8he/34WqYroGaa6792/DBGYf/hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1033 ($337.61, no PO, no contract) matches none of the vendor's earlier invoice amounts, has no PO or contract price to compare for rate variance or received quantity, and is under the $5,000 bank-change threshold (the bank change on day 42 is also after receipt on day 19).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9i87RuP1JiHrh28g1",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1577,
+      "output_tokens": 344,
+      "output_tokens_details": {
+        "thinking_tokens": 229
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1033 ($337.61, no PO, no contract) matches none of the vendor's earlier invoice amounts, has no PO or contract price to compare for rate variance or received quantity, and is under the $5,000 bank-change threshold (the bank change on day 42 is also after receipt on day 19).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1577,
+    "output_tokens": 344,
+    "output_tokens_details": {
+      "thinking_tokens": 229
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

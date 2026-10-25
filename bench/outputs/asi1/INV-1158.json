@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9174,
+  "httpStatus": 200,
+  "id": "INV-1158",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The invoice amount matches the contract rate and PO unit price, quantity matches received quantity, vendor bank details have not changed, and no duplicate or other policy violations are present."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"clear\",\n \"reason\": \"The invoice amount matches the contract rate and PO unit price, quantity matches received quantity, vendor bank details have not changed, and no duplicate or other policy violations are present.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792886825,
+    "id": "chatcmpl-a86cdace-b3d6-44b0-aabe-4c97b9efec2d",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 50,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3268,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 2144,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 3318
+    }
+  },
+  "startedAt": "2026-10-25T00:06:56+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"clear\",\n \"reason\": \"The invoice amount matches the contract rate and PO unit price, quantity matches received quantity, vendor bank details have not changed, and no duplicate or other policy violations are present.\"\n}",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3268,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 2144,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 3318
+  }
+}

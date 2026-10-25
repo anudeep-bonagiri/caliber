@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010638,
+  "durationMs": 2803,
+  "httpStatus": 200,
+  "id": "4729",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 28 pinged at the Pearsall station (about 0.01 mi away) at 14:34:56 and 14:45:00, within 30 minutes of the 14:41 purchase. 58.1 gal is well under the 220 gal limit (200 gal tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSswYKEAgTGAI4AUIIdGhpbmtpbmcSDA6cQzJsqCzoTSRpDhoMJ246I0LwgYyepAPiIjDHU1lY+CbzeL85fjRNqEXDVDlD7kVPuj14ubl6blUlvZKmcd19ROwXSvNqnDAnPEIq0AUWfNv6ef+ASIFGeN4KooDNnAkF2w/676Xs4PPJ1qWCIMRZQtRGNcDIZgvNnbBbB46wbY8zLNmGZBsCY3ZUqMCxfCmPbC1W4v2OO+JEuncOGZHb9yCD18JS+xDbV+X2eSL2jDVRW/ffltvUbldazvS5JXXF8KhAJo+QnRjazoRl00XEGrzVeJZ5bixL9qNuxk0liCQUwm235TheDa7s4h5WFk46j9AgAVPmzXjWN2WGWvPqAkDHZfsYLBDxFaJjkgNtywP0F1219OQS/rN1Zi/4vpU3YkPxc9A+j/l86UmfZC/2HJyBrZP4mFB4v26qEPbL6OOoUXquQWbTrcCE2cHlno1ZrpNvWn7sVNOUzreEXki6vCV+YFFxiSUbph6jGcv0ua9ty+8KpSWXq3toqLI4O8eKDPUTtYR1jiVsIpA5jxSCsVxXcczLKyaZUnEwbZ7l4+g/Jav2Z1vPSIQAvC+4o4a9ssvstmTe00aYxEh8Cd1s4i2oQ21H7+F97uUDMy52rtlaPAJ1rdWoMt6eOraH25YrlrClqlTVhEB60WoQsDTnVjGk3K2QjbYKaBG7q3YCLXQZeAGVdHN8V3TN0PNxyKk9aEVdvCWcTrnj8LcLekrtqUgPt7HElRomhxrowzj1t99w6KpJ5j0FurQh6NqewXICshftck4kMgxQNuGej+hz/Ek3iT+Hll9fGV/IpAW00PzM0ycE0lNAWRwNVjoc+GUFmmOgi7D0vLtS2JfOHRLRK096o8lvy6WynL07AfqENXa+lm1eA1Z8SXrXwW7Kpj445SI4U4nox/39KpTCFw58SV9Z/l4iXVYazB7v65fnRy+RqNtMmbugN+U+x04Nkou0L1HqpB9sMMhyUt8p20G3p6qi4VS/bEWrrDwGaVxu1eJ7gO89PHP+208v+f8p+wd+EfoxQhJoGL5ycmCXlUjSpiFMy75yKWG0hQ8JFlYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 28 pinged at the Pearsall station (about 0.01 mi away) at 14:34:56 and 14:45:00, within 30 minutes of the 14:41 purchase. 58.1 gal is well under the 220 gal limit (200 gal tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsouvhppuHjwcdCqieH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4159,
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "thinking_tokens": 114
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 28 pinged at the Pearsall station (about 0.01 mi away) at 14:34:56 and 14:45:00, within 30 minutes of the 14:41 purchase. 58.1 gal is well under the 220 gal limit (200 gal tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4159,
+    "output_tokens": 232,
+    "output_tokens_details": {
+      "thinking_tokens": 114
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

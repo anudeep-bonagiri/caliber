@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012252,
+  "durationMs": 3021,
+  "httpStatus": 200,
+  "id": "T1944",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1020 at SH 130 Plaza 4 within 10 minutes; the latest charge at this plaza was day 31, and the 14:18Z charge was at a different plaza (SH130-01)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1944 at SH 130 Plaza 4, at 14:38:28Z on day 43.\n\nThe only earlier toll at the same plaza (TXTAG-SH130-04) close in time is T1713 on day 31, which is far outside the 10-minute window.\n\nThe most recent earlier charge is T1943 at 14:18:26Z, but that was at a different plaza (SH130-01), so it does not count as a duplicate.\n\nNo earlier charge at this plaza falls within 10 minutes, so the toll clears.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1020 at SH 130 Plaza 4 within 10 minutes; the latest charge at this plaza was day 31, and the 14:18Z charge was at a different plaza (SH130-01).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseL4W1tnZNUKo94nKR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4801,
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1944 at SH 130 Plaza 4, at 14:38:28Z on day 43.\n\nThe only earlier toll at the same plaza (TXTAG-SH130-04) close in time is T1713 on day 31, which is far outside the 10-minute window.\n\nThe most recent earlier charge is T1943 at 14:18:26Z, but that was at a different plaza (SH130-01), so it does not count as a duplicate.\n\nNo earlier charge at this plaza falls within 10 minutes, so the toll clears.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1020 at SH 130 Plaza 4 within 10 minutes; the latest charge at this plaza was day 31, and the 14:18Z charge was at a different plaza (SH130-01).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4801,
+    "output_tokens": 265,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007144,
+  "durationMs": 2902,
+  "httpStatus": 200,
+  "id": "T1235",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1010 at SH 45 N Round Rock within 10 minutes; the last charge there (T1186) was four days earlier, so T1235 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Toll T1235 is at plaza TXTAG-SH45N-01 on 2026-07-14 at 14:38:26Z. The most recent earlier charge at that plaza, T1186, was on 2026-07-10 at 15:25:30Z, about four days earlier, so it is well outside the 10-minute window. The only earlier charge close in time is T1231 at 11:04:41Z, but that was at a different plaza (Mountain Creek Lake Bridge) and about 3.5 hours before. No other policy rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1010 at SH 45 N Round Rock within 10 minutes; the last charge there (T1186) was four days earlier, so T1235 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMtA5TkYqYhpjrpk3QdL",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2282,
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Toll T1235 is at plaza TXTAG-SH45N-01 on 2026-07-14 at 14:38:26Z. The most recent earlier charge at that plaza, T1186, was on 2026-07-10 at 15:25:30Z, about four days earlier, so it is well outside the 10-minute window. The only earlier charge close in time is T1231 at 11:04:41Z, but that was at a different plaza (Mountain Creek Lake Bridge) and about 3.5 hours before. No other policy rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1010 at SH 45 N Round Rock within 10 minutes; the last charge there (T1186) was four days earlier, so T1235 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2282,
+    "output_tokens": 258,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

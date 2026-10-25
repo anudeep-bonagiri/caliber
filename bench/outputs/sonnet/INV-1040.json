@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008726,
+  "durationMs": 4585,
+  "httpStatus": 200,
+  "id": "INV-1040",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1040 unit price 53200 equals the contract rate, billed qty 3 matches received qty 3, and the vendor's bank details never changed. Its amount of 159600 differs from every earlier invoice (INV-1005 was 160850 on the same PO), so no listed hold applies. INV-1005 also billed 3 tires on PO-1008, so this is worth a courtesy check even though policy does not require a hold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AoKEAgTGAI4AUIIdGhpbmtpbmcSDB5s+rki4j+GmI7J0BoMGMO14qys0qISbQM/IjDl7lLGto/CmE9CFPP+ofhPSRvKmrF+jkNTeDuIXv6HZkzb8AgMQ3nvg/3zA3pRGy0q9QlOVsg+g+ndAtCpMQAFAeRRgL+WRspz+d34inNamAaPPGTYtCWL06DvkQNac7r/Ybv8U9taQBu4MyHYw5QpGLYShYKBU7AX9cY2+n4nWjRio+ggiUQ+tcQQ6TTsUUDNRW+1JRqQkZHrfCuG/t27dtgnRsyi6uLj4O1hJ5BA2QcrHyN+H/2YCoALHIhQc6vNs4KAjT1ZeBEOxbQfPp7iotcXXGPQBRPtz+2Zqu3yL85GoJVtivBQ4FuTyXpbG0LzhLGjrYA2hFCdlsY274OHNdRWQkdbGdBz1FYZmXYHqnHa5Qr0mJzw8c6vIdKNtM4MfUexN3ZiaHHknYerxeudsW4wZ2gW1TRr+RTcpNOAB/OmOY78niS8ANhCTbMm0b3z6grQ0iJaX9zCGO5M979J6VpZoQ1sZUcTjQkIHy2j1mUEpSl9Y8BfD3tnR39ZF8vGVTo98TaWqP8JS3iMExtMDAdcEJz6VlwGpWDqLIho5aKFb41hEw0t1dKfmfd0N1fAuSHWGVpPohiHDLuhtseIQVVRu3bsM/XmKO/nk7Lr/e/QLm3bZCNLprcO3Kvqy/54iYpx3tCdoMgdfYEmMAJoWYuUHbmgfdYumegVPIOKr+c6V3P1dkFWe9lGBSerPqqPY72QqL5b60CWd3P3hsJTmxl34ss4MjhAbHRntb2A79/qQu39hdCAhQWBL/5XDa6+lRHHrmTGmBo4deYfVopMbJuAF25rjkPDr6q23zQf+obS4EKWK6ztqzl5lEWO2FlaKNGBs9e++qfYUa+AtwmPOA1hbQF91gOhgIm3YHZX+4V4H+CPAe8dt/6oh8BZGMl3EZO2h/iOcZCSPP7HVP5XceKpEkUiQ1gvovQcpUmvxEa0fvJ7Ggx6akgY7KAA9Nh1XdViJ/W86uO3yeShslZUnOMjEgucCTo6UexSC/4WaRVVjACxxgTZ3navlSRJT/g2IFGkgNOZ5yy5W3ru8qB3AjQjiL0AyIGebdpoc3AyhZNl6yYVYcTM48wjE1Xj7R7OMLQebiTvUXyC/5DW0voY2+Q0PTBbzXMlCsK78p1by1WYru5Pqd0pVNFPTCVmR7wpm0TJ1OtnSv50HRp9D0B3WS1zZnvP54K6muhryltf4COAlCGp9ILA3MQVCu/Ohgcn7+9fcBEr1gSPVy0r+uszzc8BbJVHn8uW6t/8WtWTMQ2ib3i4sEm/j4DALVD2jRz9iSQ8ma2ijDxJfmmji8BlJQixTo2S7FtkN6aZlYmKu6D399pnMnWvB+wzl+AJuog0uYYhn+RiHj94vpw2O3Rs81/N1CaoYVES+OtdkBJBu6WvJdFku9TklzbBDVJjHMDJNwH2kC1SjChgceDmYOUPMB5or8m/qY7lVJpArDL9pKoyMm677jXnEkH791dnyESN4RS+fdozZ8s0O+94PxM0Pg0AS1ie2+M9Op274NdJLb3emZP+80tOPtpeNGKNkZ9VC6h7lVYtyKquCPNuZavtxGBk9O+r77gnPqqtvhIu042oHTzKY+F25yBWhDmiXHHd+CVEX27Tj4ToMN2bSmLSTBTV8TmoegFJxY5FJbB/grVLgeXmzR+PUoY8zRGbbqVKO30qPQjFc/Svf/BLv5xqLmf0Q9MqHOOEGKHBdV80z+Rm2pvtetLNBDbT3NhXk9c8o6I/Bsn40Lh9g0a8kSEgzFql16TMjD8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1040 unit price 53200 equals the contract rate, billed qty 3 matches received qty 3, and the vendor's bank details never changed. Its amount of 159600 differs from every earlier invoice (INV-1005 was 160850 on the same PO), so no listed hold applies. INV-1005 also billed 3 tires on PO-1008, so this is worth a courtesy check even though policy does not require a hold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszRD7AgA8ePWqerbf5",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1893,
+      "output_tokens": 494,
+      "output_tokens_details": {
+        "thinking_tokens": 340
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1040 unit price 53200 equals the contract rate, billed qty 3 matches received qty 3, and the vendor's bank details never changed. Its amount of 159600 differs from every earlier invoice (INV-1005 was 160850 on the same PO), so no listed hold applies. INV-1005 also billed 3 tires on PO-1008, so this is worth a courtesy check even though policy does not require a hold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1893,
+    "output_tokens": 494,
+    "output_tokens_details": {
+      "thinking_tokens": 340
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

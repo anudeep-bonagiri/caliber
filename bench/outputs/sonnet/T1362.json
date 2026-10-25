@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008084,
+  "durationMs": 2562,
+  "httpStatus": 200,
+  "id": "T1362",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1033 at the PGBT Irving plaza within 10 minutes; the only prior charge there was on 2026-07-10, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at the President George Bush Turnpike plaza (NTTA-PGBT-01) for plate TX-1033 at 2026-07-22T20:16:32Z.\n\nThe only earlier charge for the same plate at that plaza is T1197, on 2026-07-10, which is 12 days earlier. The most recent earlier toll, T1356 at SH 130 Plaza 4, is at a different plaza. No earlier charge at the same plaza falls within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1033 at the PGBT Irving plaza within 10 minutes; the only prior charge there was on 2026-07-10, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvB3DKwZYSd9gKaxWv",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2792,
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at the President George Bush Turnpike plaza (NTTA-PGBT-01) for plate TX-1033 at 2026-07-22T20:16:32Z.\n\nThe only earlier charge for the same plate at that plaza is T1197, on 2026-07-10, which is 12 days earlier. The most recent earlier toll, T1356 at SH 130 Plaza 4, is at a different plaza. No earlier charge at the same plaza falls within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1033 at the PGBT Irving plaza within 10 minutes; the only prior charge there was on 2026-07-10, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2792,
+    "output_tokens": 250,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

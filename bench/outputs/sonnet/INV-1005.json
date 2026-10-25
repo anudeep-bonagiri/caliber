@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006172,
+  "durationMs": 3404,
+  "httpStatus": 200,
+  "id": "INV-1005",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 53200 matches the contract rate, qty 3 equals the received qty 3, there are no earlier invoices and no bank change, so no hold rule applies. The invoice total of 160850 is 1250 more than 3 x 53200 = 159600. No hold code covers that, so I'm clearing it, but the extra charge may be worth a look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AgKEAgTGAI4AUIIdGhpbmtpbmcSDPRxRDbsUvsTS6W4PxoM0pxz7yu6sr/11XMTIjBJK4ZJ4ysDHkbVaE26m0it5043PptKz8f80BBd2hn9YMFKClYFX+x6ojZuplXduPsq9Qcez4fcUErNzuqmhlpTGeQgYi8pn9U1iw3yAuMDUHFQSdwa/NO32/HV6LhlpEK7AcUvNpyWS5bJ2lFDSxFpQFzl64/oj06ALQjUNUB1mnQ4HfJMDGuj3NXHT/1ZKlst2+4cDPvQrLkCtnRalUwTzJWXk/xQrZjL40cFpUys46St4SfJ/bc93v1rb3MdNhvyuaWcdbm5OMczYnOAAbDBxOhgNbwgGLkOsNtrpcPoFKmTFOZksf/Odw13PjCsaGTyUue032tKl4eJf+mH1XVujmQwB8LxrdiWdE1eDiu8hAmjlBSnuu/576WadEBnBITFPqKDdXxGYUx+6FGHFemWgpfmhPSZkNg5WPdZhDL2ZSP4scpr3Az9FPYoMSWk2I5OMHgfBbKcKWWldJLFdACAYzaOiAW+dqKsl5aqPqCvqkjZFxhvwd8/aNCQ9PcxQWYEFp+D6bwSq01bAcmkQgiHxkRE/w/MlotW/0h2XmODMkqCbgXZ+lxB8LG7S61rWctRjMdRyhc1ernu0Y9bSJkjjGQPwwq4rwfBhMKYjzlknakizaVAzEKLI/YIF5iSpYT3gjvTBVfb5ns3maOrpD3Sn2XBHvnxiiJrHUbKlEhZSyuHWAdal4aC4heecCJ2F2rBYETGWNgzHx246qGCt7gAZPDDhWQFhnz/0VBvLqw0uVq6YEi1Z7ZTEn2bEonXq1lzH3Vyfki+y/neuBSH50epeNe6EtDIzt9Lx323phocqSlw7lIxW44Sw4j1shZRHkJB81e5GPrwb0XBA1XZ6AjRvTT4Pnn4Yp2xPeVGozbAg27kfRhMYLqvOc2ZJ/mv69HxXeSHTIgZBBo1cZDdNCvzkdgYDdGIjqxPaDIBYoDpVFPWOztZAHWLI0eAVjl4GraIe8mFhn1IY8HCZGrNOlDH0lFSSERh1B7fxfRFXdQMMQNoLyKAuAqkdbPSsxEO4UkgAQ1Qo5S07oWpnvjwbNmwRkCrXPJD5AOitQTTqN3IKGJt7lUV+HwimcENsWSUs254kpmkTrJx1PABrTQdnLkXtISjtHuAun571ZsE/3vC3nF9HoCMbPZr272LzJzm/5K9CyiF/1ad6VsaLbMB5BsmB+r7Gtv1KTClMqzwirqmL6hak5+XZ0PgCQDT40d1E2DjVEUC4FplW0tiUcDJUtCxgw5LCbj9vonsazSwphObSBviXVEENSnoVrsaF+pXX02uAvlgS2wSEt0vx3wbqFVyLN82O8HiELwEqGZAlqE6uWqaKCirNzVVI31veA++WVi83wbTA8clG7iYsDWdJJoZEC5KycTh+X4SkJEy60zTGTumAsvwafDF/gK10kGA95bDKqDaY4E/7RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 53200 matches the contract rate, qty 3 equals the received qty 3, there are no earlier invoices and no bank change, so no hold rule applies. The invoice total of 160850 is 1250 more than 3 x 53200 = 159600. No hold code covers that, so I'm clearing it, but the extra charge may be worth a look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsixqSqYpMMegUz9yiq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1396,
+      "output_tokens": 338,
+      "output_tokens_details": {
+        "thinking_tokens": 207
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"Unit price 53200 matches the contract rate, qty 3 equals the received qty 3, there are no earlier invoices and no bank change, so no hold rule applies. The invoice total of 160850 is 1250 more than 3 x 53200 = 159600. No hold code covers that, so I'm clearing it, but the extra charge may be worth a look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1396,
+    "output_tokens": 338,
+    "output_tokens_details": {
+      "thinking_tokens": 207
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

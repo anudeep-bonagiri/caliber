@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009908,
+  "durationMs": 4420,
+  "httpStatus": 200,
+  "id": "INV-1076",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1076 is $2,450.00 at the contract rate, and its qty of 1 matches the PO received qty of 1. The earlier same-amount invoices (INV-1007, INV-1058) cite the same PO-1012, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change on day 42 came after receipt on day 41, so vendor_bank_change does not apply. No hold rule applies. Note that this is the third invoice against a one-unit PO-1012, which the listed hold rules do not cover."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/wkKEAgTGAI4AUIIdGhpbmtpbmcSDJo2nH49MXUX57Fp0xoM6x/8lLBvlCSrcZRAIjAPoE6aKsJx2KZUa5ujXjmJIQSzzan5JlG3w7pADgfVjYVAF0+sMQyNKa5I8vsvDi4qnAm/uZLAdj3EF5RT8AaLRnxdUpjYpJW1WsF/YFdS2ZXNPx8LqVcT/Y9L3Xwr9DvBODOkpbr30KUx3p6jE0NzkMleF/Cwk13F1+0OKrxvg2VXSUt18FR0GLre17hVTtviclX5CteUqsn7u5W9AiTa7M0IRvnJLXuKS+uEQ/s9zDA2zwCV1979bk5j8FjS5bOP0OPL740TSEnr3vkV9c/WvWzOtCQgDLLTGaM3Q0GrB9n4upzXmcfnPPy5omiUgmmMRAZmXn8MHz0yfHLenu7qKZv6wDRLh2L1tFg/cmADjXDDkWxHkaq0YipTaHK3Kw5LYOWQALYQ9XmBa/0YAk19NzDuUC53AES+j/m0XhQ1Wnm47pH3nRKhWr1b9XOVsLH8LznPDR5wKNX4LJDqfe7p9rwP1/A3NQikeSu6paJdb2G8JzAAAmzKCmOdwn0KGS+emxLYKavrlZ9FXRiOCGE+t7yrPq8uUHXW4SfC2MDCMxYZpIYq9Tx1gokp7t74uSE1dsPjuF9RaWVn/jg4blUQjK08z715GCObOTbnbQ55rXGTK3RQG51IYz1nFVmawvay7AF8oRvimuXu3SfnPuu//OWlas4vXvTKWB4GryYw0KFSCrU7Y7f+fmsfp6wzMjPv426UYjVYNLolGa2vU743yZcUewmugkZtswiQtT9qUsitl9HHbCtVZefzc1ybJp+/dDqTmH1IGLhqO1bK8TxEEgmj1omwszXG5DfVCvTBVNDUOJMaUy24VgszGf5OL8+gSz0FP2hTZUEwa3CG+XFz3v9D0WEAhNhl2MzCi/q32SNyktcF+vV4dkMFrXFQKUqvAlZV+6fCVmKF/oRgEvi4BX3XRXtPC4eEQSVqaGKPOh5QNIZa41jH+MCEo92GvWAcXPjBENRzgPXnwQ4kITwWVgrIDxvZnDG+Z1imUgTKklT+tRB14/7SmMKIN46nuwVE5h9b2Cammn0r+L1OYut+VhZAdRVB8JVuQkrI5exHOKF/SmkS4ftnvEQ1yS4o6Phl47LIoMq05UR02bzXjv911ZTh7cwuR2ONMiD3QKpOvh1ECpi/FTpMWMaQQHliV3GBeC+iK0HEazoJOlhx1hhuUE+Vgv5DgEPO7s6IeBMZh0Ppc4HCYB9kXPXx5RXBKWeNW04hJ8dPSqiLvj5u13UbRxIZN60zuvkoeKAFqFeas6A2DgJ2gF32KZfyg4Sax9VVDoyJr6szODxLosTxwFajdKVsykKO9bEFMrkI2jEn5zvARjuEfl0bQtnsADlTqqSVL5EE8F0HGmZraX1vzLeboVS35pnKHd/n3zJnnenk8W3sOEu16QYXp88eWXRNYLL28zOpjVdO88vtRdsutj6+Vuf6g5b4YNm9JoZTRX+Y5oxaAI6wbyH6ZlDKHUBK9fjG8fLOmW4SwiZw6ewGLkEfNCVncRYsGODpy7dquoNKCCoUkDu1hWXsmHT42itkNtVctb/CmnasTlFshhjX4aaLHcZKG4ouJ0+ENMdb1X1k7gwRHMTvGWOvdLi7Kky7YdOJY8EiuD3M4yFwXrBKRpc9if1KxAuRkacjVXXb97+9GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1076 is $2,450.00 at the contract rate, and its qty of 1 matches the PO received qty of 1. The earlier same-amount invoices (INV-1007, INV-1058) cite the same PO-1012, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change on day 42 came after receipt on day 41, so vendor_bank_change does not apply. No hold rule applies. Note that this is the third invoice against a one-unit PO-1012, which the listed hold rules do not cover.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsipzQ5Gt1rTkKC52g4",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2574,
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "thinking_tokens": 284
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1076 is $2,450.00 at the contract rate, and its qty of 1 matches the PO received qty of 1. The earlier same-amount invoices (INV-1007, INV-1058) cite the same PO-1012, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change on day 42 came after receipt on day 41, so vendor_bank_change does not apply. No hold rule applies. Note that this is the third invoice against a one-unit PO-1012, which the listed hold rules do not cover.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2574,
+    "output_tokens": 476,
+    "output_tokens_details": {
+      "thinking_tokens": 284
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

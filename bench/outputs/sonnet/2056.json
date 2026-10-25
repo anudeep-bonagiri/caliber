@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014652,
+  "durationMs": 3835,
+  "httpStatus": 200,
+  "id": "2056",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 9 pinged at the Georgetown station (~0 miles away) at 14:45:00Z, 3 seconds before the purchase, and 35.7 gal is under the 132 gal limit (120 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 14:45:03Z at Love's 806 in Georgetown (30.6333, -97.678).\n\nLocation: the 14:45:00Z ping puts the truck at 30.63357, -97.678, which is essentially at the station. The 14:40:51Z ping is also right there. The truck is well within 25 miles, so there is no location mismatch.\n\nCapacity: the tank holds 120 gallons, so the limit is 132 gallons. The purchase was 35.7 gallons, which is under the limit.\n\nPrice check: $121.99 for 35.7 gallons is about $3.42 per gallon, which is plausible. The policy has no price rule for fuel anyway.\n\nThe toll and invoice rules do not apply to a fuel-card purchase.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 9 pinged at the Georgetown station (~0 miles away) at 14:45:00Z, 3 seconds before the purchase, and 35.7 gal is under the 132 gal limit (120 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt8KTZE4WbSGhcCwTyA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5616,
+      "output_tokens": 342,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 14:45:03Z at Love's 806 in Georgetown (30.6333, -97.678).\n\nLocation: the 14:45:00Z ping puts the truck at 30.63357, -97.678, which is essentially at the station. The 14:40:51Z ping is also right there. The truck is well within 25 miles, so there is no location mismatch.\n\nCapacity: the tank holds 120 gallons, so the limit is 132 gallons. The purchase was 35.7 gallons, which is under the limit.\n\nPrice check: $121.99 for 35.7 gallons is about $3.42 per gallon, which is plausible. The policy has no price rule for fuel anyway.\n\nThe toll and invoice rules do not apply to a fuel-card purchase.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 9 pinged at the Georgetown station (~0 miles away) at 14:45:00Z, 3 seconds before the purchase, and 35.7 gal is under the 132 gal limit (120 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5616,
+    "output_tokens": 342,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

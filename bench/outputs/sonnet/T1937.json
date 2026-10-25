@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010202,
+  "durationMs": 1883,
+  "httpStatus": 200,
+  "id": "T1937",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The most recent earlier toll at NTTA-PGBT-01 for plate TX-1020 was on 2026-08-25 (T1891), about 2 days before this charge on 2026-08-28. That is well outside the 10-minute duplicate window, and no other policy rule applies to a toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The most recent earlier toll at NTTA-PGBT-01 for plate TX-1020 was on 2026-08-25 (T1891), about 2 days before this charge on 2026-08-28. That is well outside the 10-minute duplicate window, and no other policy rule applies to a toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmoYRWanf8T8deFGoP",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4546,
+      "output_tokens": 111,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The most recent earlier toll at NTTA-PGBT-01 for plate TX-1020 was on 2026-08-25 (T1891), about 2 days before this charge on 2026-08-28. That is well outside the 10-minute duplicate window, and no other policy rule applies to a toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4546,
+    "output_tokens": 111,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

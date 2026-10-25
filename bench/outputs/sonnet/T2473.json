@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021942,
+  "durationMs": 3109,
+  "httpStatus": 200,
+  "id": "T2473",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Latest earlier toll at SH 130 Mainlane Plaza 1 for TX-1033 was T2459 about 20 hours before (2026-09-29T18:44Z), well outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2473 at SH 130 Mainlane Plaza 1 (TXTAG-SH130-01), plate TX-1033, on 2026-09-30 at 14:58:28Z.\n\nThe most recent earlier toll for this plate at the same plaza is T2421 (2026-09-28T16:44:23Z). The latest earlier toll at any plaza is T2459 (2026-09-29T18:44:40Z, also SH 130-01). That is about 20 hours before the new charge, far outside the 10-minute window.\n\nNo earlier charge at this plaza falls within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\": \"clear\", \"reason\": \"Latest earlier toll at SH 130 Mainlane Plaza 1 for TX-1033 was T2459 about 20 hours before (2026-09-29T18:44Z), well outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrZK3qcXyWS1wwgSaE",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9456,
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2473 at SH 130 Mainlane Plaza 1 (TXTAG-SH130-01), plate TX-1033, on 2026-09-30 at 14:58:28Z.\n\nThe most recent earlier toll for this plate at the same plaza is T2421 (2026-09-28T16:44:23Z). The latest earlier toll at any plaza is T2459 (2026-09-29T18:44:40Z, also SH 130-01). That is about 20 hours before the new charge, far outside the 10-minute window.\n\nNo earlier charge at this plaza falls within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\": \"clear\", \"reason\": \"Latest earlier toll at SH 130 Mainlane Plaza 1 for TX-1033 was T2459 about 20 hours before (2026-09-29T18:44Z), well outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9456,
+    "output_tokens": 303,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

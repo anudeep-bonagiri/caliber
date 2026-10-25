@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012278,
+  "durationMs": 3123,
+  "httpStatus": 200,
+  "id": "4811",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 29 pinged at the Waxahachie station (16:14:29Z and 16:25:00Z, engine on, ~0.02 mi away) and 27 gal is well under the 100-gal tank limit (110 with 10% allowance)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 16:20:24Z at Pilot 283, Waxahachie (32.3865, -96.8483). The truck pinged at 16:14:29Z at 32.38673, -96.84857, which is almost at the station, and again at 16:25:00Z at 32.38656, -96.84859. Both pings are within 30 minutes and well under 25 miles, so there is no location mismatch.\n\nGallons: 27 against a 100-gallon tank, with a limit of 110, so there is no capacity issue.\n\nThe remaining codes cover tolls and invoices, so none of them apply. Clear.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 29 pinged at the Waxahachie station (16:14:29Z and 16:25:00Z, engine on, ~0.02 mi away) and 27 gal is well under the 100-gal tank limit (110 with 10% allowance).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2yfJC5kBcX3GYuuid",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4669,
+      "output_tokens": 294,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 16:20:24Z at Pilot 283, Waxahachie (32.3865, -96.8483). The truck pinged at 16:14:29Z at 32.38673, -96.84857, which is almost at the station, and again at 16:25:00Z at 32.38656, -96.84859. Both pings are within 30 minutes and well under 25 miles, so there is no location mismatch.\n\nGallons: 27 against a 100-gallon tank, with a limit of 110, so there is no capacity issue.\n\nThe remaining codes cover tolls and invoices, so none of them apply. Clear.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 29 pinged at the Waxahachie station (16:14:29Z and 16:25:00Z, engine on, ~0.02 mi away) and 27 gal is well under the 100-gal tank limit (110 with 10% allowance).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4669,
+    "output_tokens": 294,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

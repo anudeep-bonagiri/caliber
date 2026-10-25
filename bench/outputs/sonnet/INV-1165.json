@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013452,
+  "durationMs": 4436,
+  "httpStatus": 200,
+  "id": "INV-1165",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1165 matches no hold rule: the unit price of 36,800 equals the contract rate, qty 2 equals the received qty 2, and no earlier invoice from this vendor has the amount 74,850. The amount is under 500,000 cents, so the day-71 bank change does not apply. The total is 1,250 cents above qty \u00d7 unit (73,600), but no policy code covers that, so it is cleared with a note."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAoKEAgTGAI4AUIIdGhpbmtpbmcSDMJncAZNuEr+85jQkhoMaDx9ySW4/urFhHGhIjAJp3ltnX+qWaGzrDVxhuUpH8uTNkXf3qm148x5WMcCXpYlTj4NX5C7yTDP1BI2pH8qpQlTkq3qVaJO3prhQ75H7bXfLKWDPckrj4mOSSB45xclKMsixcw9+5Sgm26I4C402lej+62gYpwdfwJBEpWqUPAp4YkRjNxgLCafD5c1okJktcUa0brBWea7tYa9pFOjvhBloWYbbsFgompKsEWDYLEFF8uece8bzFu27QkFME3UeQ7Ea1925zfLEUkCqZxySB1F8rTA709gsVAL//KLy0vwFqTtf1gDHbACMaAErWRIXLFSGTDo+0ch0glZ6sBlQskIwmr/FJrZuNDUPGe5ClrSgWc8hpoEge+CBE3PNjKITnpeI3PhnVTcf0dlz9vv6gBZna1D6CY+dtB1CAnGDxPc/QzmhOkXcCfwuhGKEca0oJnVPBQCkPR7XIdOpTH67cSPBLH3cPc3z1dR4TO8V4gCqyC3mNb2L5rm0CjY5P4pccHC+Zh11PlbAOtKMS8CNfR+Bf+Vj8vRHml8cESxW0A/dRlBVSrRLnEYsbhQDvhf9jy8PMGDApAXqoBF37FApbkd93XM1UVzWKh9Ht2fnb9sdKePnubUJFP8qM95Z54ya9emXtyjvNUc6ZjrKIwdw+CrWC04K2jvopdQdj4/VWcPhYZWpwiEk3lOpgRZDX8UOv6HVQP4I7/cT3g4dwdltYT4qfuMfVvopn9HIosJ+axsrS1psdNvKFWgrN1z+c05OnrOQhk8DqmZYRk6UW4m4E3yEgSDMM/ZI1TrsbPRvVpZGy+LIdgwRQv4IL0AXZxIsBWzb1JDMfbNwxKXuq+BnSNoepA0AcSja+o/T9Ffs0UQs77ObikjmiySIy4rFqGRw98NnTS2AXsg3NvORg+bXMT3DHLMDPCDZQ0iBaate3n1CDZSOjHz+JBxY5wYdAKU7O20o8jxMHydLM5Fslz4TmpUMp8gsc9Ng5lz+3/eQlaFR5/1CsFY0zlGbmkzpOmbQtbNTLJpb6Z7mky2N+0nYmWmUte8Cli7akhfgAWu/xwWMWit1FWtmCMJ+TuLTsex/ZJ0FblwKjATpPKthQrLO7lUQxP3n6/srmYAcf5Mf0vpTKBvDt01bmxPCAPZMQf9KbCVn2pL1atoHPu17il0rWvt3J727Zl3dbxpUM4I3l7PBwNlJQldsgCUKxE6ca6gNyUSEoSFKWROsDCnslI4rcfnZO8hoD3oKawj7zrqQ8fIQj5u8U5ig7lYWYR04J2+ApNRLa98sHrwzKSbtOQfc0+1Fw/8npEocaOyb+liLi71UW9svy7TqK0y2Hd69FHqMotzGmxKCIz7puiOm/eR1LldKXW8K4B3hT4OkiQCi3/juUXhOhlJJ38Zv+2C0DVAv88mbwZwJF+NbMRFRfH8nfjUKNeC9zkOd+t46Rd0rNZGe5tpOn6s2fkSTDOwf6A2E5FAojzDQ2wuejgcGcnEoG6rkrgLoA5BBBVu2KWlEG3ILFR7wXS7Cz3jmM0YoPXbfXv6NqokmbFHitq5ZRzGvlRKpi1Qsgf4XhQfgh2ncWJyJrOgvUaA3RFyT2iQqrelQDR3c3oXJ0rtEpOEVsuOV3QryCAyY0ZA0pQ7/LuvcbMfOznJ0Q6PiujbTxSX9wQQmA73LEfNGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1165 matches no hold rule: the unit price of 36,800 equals the contract rate, qty 2 equals the received qty 2, and no earlier invoice from this vendor has the amount 74,850. The amount is under 500,000 cents, so the day-71 bank change does not apply. The total is 1,250 cents above qty \u00d7 unit (73,600), but no policy code covers that, so it is cleared with a note.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszmYESCxxzdjYNN9Cu",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4561,
+      "output_tokens": 433,
+      "output_tokens_details": {
+        "thinking_tokens": 282
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1165 matches no hold rule: the unit price of 36,800 equals the contract rate, qty 2 equals the received qty 2, and no earlier invoice from this vendor has the amount 74,850. The amount is under 500,000 cents, so the day-71 bank change does not apply. The total is 1,250 cents above qty \u00d7 unit (73,600), but no policy code covers that, so it is cleared with a note.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4561,
+    "output_tokens": 433,
+    "output_tokens_details": {
+      "thinking_tokens": 282
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

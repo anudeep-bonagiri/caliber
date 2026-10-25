@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01242,
+  "durationMs": 2813,
+  "httpStatus": 200,
+  "id": "5625",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 8 pinged at the Goliad station (within ~0.1 mi) at 16:21:41 and 16:30:00, around the 16:26:37 purchase, and 33.4 gal is well under the 120-gal tank limit (132 with 10% margin)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 16:26:37Z at Love's 221, Goliad (28.6686, -97.3886).\n\nNearest pings within 30 minutes: 16:21:41 at (28.66845, -97.38831) and 16:30:00 at (28.66862, -97.38872). Both are essentially at the station, within about 0.03 miles. The truck was there.\n\nCapacity: 33.4 gallons against a 120-gallon tank (limit 132). That is within the limit.\n\nNeither hold rule applies, so the payment clears.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged at the Goliad station (within ~0.1 mi) at 16:21:41 and 16:30:00, around the 16:26:37 purchase, and 33.4 gal is well under the 120-gal tank limit (132 with 10% margin).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnyuY9fC5QfMroqYk2",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4815,
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 16:26:37Z at Love's 221, Goliad (28.6686, -97.3886).\n\nNearest pings within 30 minutes: 16:21:41 at (28.66845, -97.38831) and 16:30:00 at (28.66862, -97.38872). Both are essentially at the station, within about 0.03 miles. The truck was there.\n\nCapacity: 33.4 gallons against a 120-gallon tank (limit 132). That is within the limit.\n\nNeither hold rule applies, so the payment clears.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 8 pinged at the Goliad station (within ~0.1 mi) at 16:21:41 and 16:30:00, around the 16:26:37 purchase, and 33.4 gal is well under the 120-gal tank limit (132 with 10% margin).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4815,
+    "output_tokens": 279,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

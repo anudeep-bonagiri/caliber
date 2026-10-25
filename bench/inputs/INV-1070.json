@@ -1,0 +1,202 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 34,
+    "item": "ac_service",
+    "rateCents": 36800,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 5
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 16937,
+      "id": "INV-1004",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 4,
+      "unitCents": 16937
+    },
+    {
+      "cents": 78100,
+      "id": "INV-1008",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 2,
+      "receivedDay": 6,
+      "unitCents": 36800
+    },
+    {
+      "cents": 149400,
+      "id": "INV-1010",
+      "item": "tire_replacement",
+      "poId": "PO-1005",
+      "qty": 3,
+      "receivedDay": 7,
+      "unitCents": 49800
+    },
+    {
+      "cents": 117750,
+      "id": "INV-1015",
+      "item": "tire_replacement",
+      "poId": "PO-1020",
+      "qty": 2,
+      "receivedDay": 9,
+      "unitCents": 58250
+    },
+    {
+      "cents": 29900,
+      "id": "INV-1018",
+      "item": "oil_service",
+      "poId": "PO-1022",
+      "qty": 1,
+      "receivedDay": 11,
+      "unitCents": 29900
+    },
+    {
+      "cents": 77350,
+      "id": "INV-1022",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 2,
+      "receivedDay": 15,
+      "unitCents": 36800
+    },
+    {
+      "cents": 100850,
+      "id": "INV-1023",
+      "item": "tire_replacement",
+      "poId": "PO-1020",
+      "qty": 2,
+      "receivedDay": 16,
+      "unitCents": 49800
+    },
+    {
+      "cents": 33650,
+      "id": "INV-1024",
+      "item": "oil_service",
+      "poId": "PO-1022",
+      "qty": 1,
+      "receivedDay": 16,
+      "unitCents": 29900
+    },
+    {
+      "cents": 119000,
+      "id": "INV-1025",
+      "item": "brake_job",
+      "poId": "PO-1004",
+      "qty": 1,
+      "receivedDay": 16,
+      "unitCents": 119000
+    },
+    {
+      "cents": 29900,
+      "id": "INV-1030",
+      "item": "oil_service",
+      "poId": "PO-1022",
+      "qty": 1,
+      "receivedDay": 18,
+      "unitCents": 29900
+    },
+    {
+      "cents": 73600,
+      "id": "INV-1031",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 2,
+      "receivedDay": 18,
+      "unitCents": 36800
+    },
+    {
+      "cents": 15216,
+      "id": "INV-1034",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 19,
+      "unitCents": 15216
+    },
+    {
+      "cents": 36925,
+      "id": "INV-1038",
+      "item": "ac_service",
+      "poId": "PO-1017",
+      "qty": 1,
+      "receivedDay": 21,
+      "unitCents": 36800
+    },
+    {
+      "cents": 27518,
+      "id": "INV-1039",
+      "item": "coolant",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 22,
+      "unitCents": 27518
+    },
+    {
+      "cents": 29900,
+      "id": "INV-1041",
+      "item": "oil_service",
+      "poId": "PO-1022",
+      "qty": 1,
+      "receivedDay": 25,
+      "unitCents": 29900
+    },
+    {
+      "cents": 73600,
+      "id": "INV-1048",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 2,
+      "receivedDay": 29,
+      "unitCents": 36800
+    },
+    {
+      "cents": 36925,
+      "id": "INV-1052",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 1,
+      "receivedDay": 30,
+      "unitCents": 36800
+    },
+    {
+      "cents": 26439,
+      "id": "INV-1056",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 32,
+      "unitCents": 26439
+    }
+  ],
+  "invoice": {
+    "cents": 36800,
+    "docRef": "evidence/invoices/INV-1070.txt",
+    "id": "INV-1070",
+    "item": "ac_service",
+    "poId": "PO-1017",
+    "qty": 1,
+    "receivedDay": 38,
+    "unitCents": 36800,
+    "vendorId": 5
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1017",
+    "issuedDay": 5,
+    "item": "ac_service",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 12,
+    "unitCents": 36800,
+    "vendorId": 5
+  },
+  "vendor": {
+    "bankChangedDay": 71,
+    "bankLast4": "8823",
+    "id": 5,
+    "name": "Border Fleet Repair"
+  }
+}

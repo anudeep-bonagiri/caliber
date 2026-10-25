@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12299,
+  "httpStatus": 200,
+  "id": "T3000",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"T3000 is a duplicate of T2615 (same plate TX-1032, same plaza NTTA-MCLB-01) within 10 minutes? No, T2615 was day 71, T3000 is day 86. Wait, let's re-read carefully. The policy says 'within 10 minutes of an earlier toll charge'. T2615 is at 2026-10-07. T3000 is at 2026-10-28. That is not within 10 minutes. Let me check other entries. Ah, look at T2194 and T2195 on day 56. T2194 at 11:30:05, T2195 at 11:33:36. Same plaza NTTA-DNT-01. Difference is 3 minutes 31 seconds. This is a duplicate. But the transaction in question is T3000. Is T3000 a duplicate? Let's check all earlier tolls for TX-1032 at NTTA-MCLB-01. T1564 (Day 25), T1605 (Day 27), T1756 (Day 33), T2615 (Day 71). None are within 10 minutes of T3000 (Day 86). So T3000 is NOT a duplicate toll based on the definition provided for the *current* transaction being held. However, the prompt asks to decide on the transaction *in front of you*. The records provided include `earlierTollsSamePlate`. The current transaction is T3000. Does T3000 match any earlier toll within 10 mins? No. Is it a duplicate invoice? No, it's a toll. Is it location mismatch? No, it's a toll. Capacity exceeded? No. Rate variance? No. Short received? No. Vendor bank change? No.\n\nWait, did I miss something? Let's re-read the `duplicate_toll` rule: \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge. The later charge is the duplicate and is held.\"\n\nLet's look at T3000 again.\nDate: 2026-10-28T16:38:37Z. Plaza: NTTA-MCLB-01. Plate: TX-1032.\nEarlier tolls at NTTA-MCLB-01 for TX-1032:\n1. T1564: 2026-08-04T11:34:43Z (Day 25)\n2. T1605: 2026-08-06T12:19:26Z (Day 27)\n3. T1756: 2026-08-14T15:40:12Z (Day 33)\n4. T2615: 2026-10-07T13:29:04Z (Day 71)\n\nNone of these are within 10 minutes of T3000.\n\nIs there another rule?\nMaybe I should check if T3000 is a duplicate of *itself*? No.\nMaybe I missed an earlier toll?\nLet's scan the list for NTTA-MCLB-01.\nT1564, T1605, T1756, T2615.\nThat's it.\n\nSo T3000 is clear?\n\nLet's double check the `duplicate_toll` logic. \"The later charge is the duplicate and is held.\"\nIf T3000 is not a duplicate, it should be cleared.\n\nHowever, often in these tests, there is a hidden duplicate or a specific condition.\nLet's look at T2194 and T2195 again. They are duplicates. But they are in `earlierTollsSamePlate`. They are not the current transaction. The current transaction is T3000.\n\nIs it possible that T3000 is considered a duplicate of T2615 because they are the same amount and same plaza, but the time difference is large? No, the rule specifies \"within 10 minutes\".\n\nLet's look at the other transactions in the list to see if I am misinterpreting \"transaction in front of you\".\nThe JSON structure has `kind: \"toll\"` and `transaction: { ... T3000 ... }`.\nSo T3000 is definitely the one being evaluated.\n\nIs there any other hold code?\n- location_mismatch: Applies to fuel-card purchases. This is a toll.\n- capacity_exceeded: Applies to fuel-card purchases.\n- duplicate_invoice: Applies to invoices.\n- rate_variance: Applies to invoices.\n- short_received: Applies to invoices.\n- vendor_bank_change: Applies to invoices.\n\nSo only `duplicate_toll` applies to tolls.\nSince T3000 is not within 10 minutes of any previous toll at the same plaza for the same plate, it is not a duplicate.\n\nTherefore, the decision is **clear**.\n\nWait, let me look closer at the timestamps.\nT2615: 2026-10-07T13:29:04Z\nT3000: 2026-10-28T16:38:37Z\nDifference is ~21 days. Not 10 minutes.\n\nAre there any other tolls at NTTA-MCLB-01?\nScanning...\nT1564 (Aug 4)\nT1605 (Aug 6)\nT1756 (Aug 14)\nT2615 (Oct 7)\nNo others.\n\nConclusion: T3000 is unique in its timeframe relative to other tolls at that plaza. It is not a duplicate.\n\n{\"decision\": \"clear\", \"reason\": \"The toll charge T3000 is not a duplicate as it does not occur within 10 minutes of any earlier toll charge for the same plate at the same plaza.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882266,
+    "id": "chatcmpl-1fcb2479-809a-4a7a-b6f7-d293c9ff53d6",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1442,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5520,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 6962
+    }
+  },
+  "startedAt": "2026-10-24T22:50:57+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"T3000 is a duplicate of T2615 (same plate TX-1032, same plaza NTTA-MCLB-01) within 10 minutes? No, T2615 was day 71, T3000 is day 86. Wait, let's re-read carefully. The policy says 'within 10 minutes of an earlier toll charge'. T2615 is at 2026-10-07. T3000 is at 2026-10-28. That is not within 10 minutes. Let me check other entries. Ah, look at T2194 and T2195 on day 56. T2194 at 11:30:05, T2195 at 11:33:36. Same plaza NTTA-DNT-01. Difference is 3 minutes 31 seconds. This is a duplicate. But the transaction in question is T3000. Is T3000 a duplicate? Let's check all earlier tolls for TX-1032 at NTTA-MCLB-01. T1564 (Day 25), T1605 (Day 27), T1756 (Day 33), T2615 (Day 71). None are within 10 minutes of T3000 (Day 86). So T3000 is NOT a duplicate toll based on the definition provided for the *current* transaction being held. However, the prompt asks to decide on the transaction *in front of you*. The records provided include `earlierTollsSamePlate`. The current transaction is T3000. Does T3000 match any earlier toll within 10 mins? No. Is it a duplicate invoice? No, it's a toll. Is it location mismatch? No, it's a toll. Capacity exceeded? No. Rate variance? No. Short received? No. Vendor bank change? No.\n\nWait, did I miss something? Let's re-read the `duplicate_toll` rule: \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge. The later charge is the duplicate and is held.\"\n\nLet's look at T3000 again.\nDate: 2026-10-28T16:38:37Z. Plaza: NTTA-MCLB-01. Plate: TX-1032.\nEarlier tolls at NTTA-MCLB-01 for TX-1032:\n1. T1564: 2026-08-04T11:34:43Z (Day 25)\n2. T1605: 2026-08-06T12:19:26Z (Day 27)\n3. T1756: 2026-08-14T15:40:12Z (Day 33)\n4. T2615: 2026-10-07T13:29:04Z (Day 71)\n\nNone of these are within 10 minutes of T3000.\n\nIs there another rule?\nMaybe I should check if T3000 is a duplicate of *itself*? No.\nMaybe I missed an earlier toll?\nLet's scan the list for NTTA-MCLB-01.\nT1564, T1605, T1756, T2615.\nThat's it.\n\nSo T3000 is clear?\n\nLet's double check the `duplicate_toll` logic. \"The later charge is the duplicate and is held.\"\nIf T3000 is not a duplicate, it should be cleared.\n\nHowever, often in these tests, there is a hidden duplicate or a specific condition.\nLet's look at T2194 and T2195 again. They are duplicates. But they are in `earlierTollsSamePlate`. They are not the current transaction. The current transaction is T3000.\n\nIs it possible that T3000 is considered a duplicate of T2615 because they are the same amount and same plaza, but the time difference is large? No, the rule specifies \"within 10 minutes\".\n\nLet's look at the other transactions in the list to see if I am misinterpreting \"transaction in front of you\".\nThe JSON structure has `kind: \"toll\"` and `transaction: { ... T3000 ... }`.\nSo T3000 is definitely the one being evaluated.\n\nIs there any other hold code?\n- location_mismatch: Applies to fuel-card purchases. This is a toll.\n- capacity_exceeded: Applies to fuel-card purchases.\n- duplicate_invoice: Applies to invoices.\n- rate_variance: Applies to invoices.\n- short_received: Applies to invoices.\n- vendor_bank_change: Applies to invoices.\n\nSo only `duplicate_toll` applies to tolls.\nSince T3000 is not within 10 minutes of any previous toll at the same plaza for the same plate, it is not a duplicate.\n\nTherefore, the decision is **clear**.\n\nWait, let me look closer at the timestamps.\nT2615: 2026-10-07T13:29:04Z\nT3000: 2026-10-28T16:38:37Z\nDifference is ~21 days. Not 10 minutes.\n\nAre there any other tolls at NTTA-MCLB-01?\nScanning...\nT1564 (Aug 4)\nT1605 (Aug 6)\nT1756 (Aug 14)\nT2615 (Oct 7)\nNo others.\n\nConclusion: T3000 is unique in its timeframe relative to other tolls at that plaza. It is not a duplicate.\n\n{\"decision\": \"clear\", \"reason\": \"The toll charge T3000 is not a duplicate as it does not occur within 10 minutes of any earlier toll charge for the same plate at the same plaza.\"}",
+  "usage": {
+    "completion_tokens": 1442,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5520,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 6962
+  }
+}

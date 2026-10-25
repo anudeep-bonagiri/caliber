@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011746,
+  "durationMs": 3449,
+  "httpStatus": 200,
+  "id": "2311",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 19 pinged 4 minutes before the purchase (14:11:59Z) and again at 14:25Z, both within about 0.1 mile of the Victoria station. The 109.9 gallons is under the 250-gallon tank limit (275 with 10% allowance), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwcKEAgTGAI4AUIIdGhpbmtpbmcSDJjHlTOhIMfqt2xvGRoMWIG0+gp+7JIDeoCfIjDRg/Y/3yy3HE3gpKtKTPok6eBxVFKyW137yP191E7jj5WuKJfKgxHabk5dAFpTdVYqyAZbwW5U54QiR2kL+//gcchlDDtTTpeDOiq3K0vgTdS4f7B9FQ+JPZYv1MaKMF35z3d12VWcFbrtfirN3znylPZ0WVuO1Yiw/krEszTU7ekUuEJF2S21PztsLWHVGdfgeL+fj6IlhDN3Os1fFhk9Opy10XO0N36wWS1+KIUY78Elf0OvypPdJRUW3/nl1BD5D7+UlnIwNa/N25V5Rp37y9CrpCCyaeEnOvPSvIHPBt/ol3CIsU5fhAWMS61VFqn2Ejb9dWmdoARFfz3tmF55DkFZCN9BCSVqauXs/RLPMzVPtfnb76fe/VMc+pA4XhaxjqQ4S+KF0hcCmMEWnkwmdNh47Hu4HMRlvmt09ojXkUTFJsMoY+e3/ROqVzLa83hNRhrjVImnm92eU5zb3Rnl05jZo7/spNPTbdxFlID9NBmoxaKXAIqc8O0aBwiQ8fmPF6yV36j+p72BONq1Y/gYct1PMIW04gxRqeLz1KNjjvWSWSKkB5tQYhcxKzhSX1RgAifqCRYMxOQyuDhr4sN+Yx1darBH5k5wzh/qxObSXCWFTVTaMvD/nPQnQo4BI5knw5ouQ0kbdlx7D+Zsnh+sJjKNNXloWFs35KIzbdxg1ZzCI+AWWuv1+CBUeDPm9RFDbu9d8huB2JCR5T1QmAIDJ5dbEGPNpVb4cJkafkGK5esZLxpQq3KXwHuS1VYWtUevTxfBs4k9d6icpT0mSVhrkjg0zr7kixxSh/tIwnxeSHjGI1fcCYNIrSNQ1LOsmQkJ97oAeMsEFUI/OlNu6plgHLS+1KC+YHhlF9nHpLI7l5TuzyIZNUY/kj2rIViAYhulmuckErlAnPYdgxvT7Uv4KNEXaJ9l2+UNJ2G1P+jqER4MBoDtaM0K7e8aubVVhq0ktl7/42um22WHMRH+HganD5oyMZn+Da4uggQTWIWRrKGXeY2WxdamgueHoEmwbyRWRZnOEgvEhYtIvxm0GhoBVDTEwQFIk21rXECkeENTo0bQYq/jVJ3eO4pw2MaRMZjUwnH6cYNyvJiQeoHLHaiWs4Xnq93wb71iv9RecTGZWFx9hsKVMkJshaQfsJBWmWD5S74BqwovrQskdfPRaRmQZhqrTJfHz6lTfwgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 19 pinged 4 minutes before the purchase (14:11:59Z) and again at 14:25Z, both within about 0.1 mile of the Victoria station. The 109.9 gallons is under the 250-gallon tank limit (275 with 10% allowance), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspri19jnM45xygV8nX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4453,
+      "output_tokens": 284,
+      "output_tokens_details": {
+        "thinking_tokens": 169
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 19 pinged 4 minutes before the purchase (14:11:59Z) and again at 14:25Z, both within about 0.1 mile of the Victoria station. The 109.9 gallons is under the 250-gallon tank limit (275 with 10% allowance), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4453,
+    "output_tokens": 284,
+    "output_tokens_details": {
+      "thinking_tokens": 169
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

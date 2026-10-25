@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011304,
+  "durationMs": 3052,
+  "httpStatus": 200,
+  "id": "3698",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 7 pinged about 0.02 mi from the Huntsville station at 15:30:00Z, 14 seconds before the purchase, and 50.4 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 15:30:14Z at the Huntsville station (30.7235, -95.5508). The truck's 15:30:00Z ping is at 30.72331, -95.55054, which is about 0.02 miles from the station. That is well inside 25 miles, so there is no location mismatch.\n\nThe purchase was 50.4 gallons against a 100-gallon tank. The limit is 110 gallons, so capacity is not exceeded.\n\nNo other policy rule applies to a fuel-card purchase, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged about 0.02 mi from the Huntsville station at 15:30:00Z, 14 seconds before the purchase, and 50.4 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsqwfRzD5EAwz1SWHsJ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4307,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 15:30:14Z at the Huntsville station (30.7235, -95.5508). The truck's 15:30:00Z ping is at 30.72331, -95.55054, which is about 0.02 miles from the station. That is well inside 25 miles, so there is no location mismatch.\n\nThe purchase was 50.4 gallons against a 100-gallon tank. The limit is 110 gallons, so capacity is not exceeded.\n\nNo other policy rule applies to a fuel-card purchase, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged about 0.02 mi from the Huntsville station at 15:30:00Z, 14 seconds before the purchase, and 50.4 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4307,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

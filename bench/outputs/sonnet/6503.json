@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013788,
+  "durationMs": 2872,
+  "httpStatus": 200,
+  "id": "6503",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 34 pinged at 14:48:39Z and 14:55:00Z, both within about 0.1 mile of the Schulenburg station, within 30 minutes of the 14:52:06Z purchase. The 23.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3QYKEAgTGAI4AUIIdGhpbmtpbmcSDPIX+dBLaUMkCfAn8RoM5am1aiKoMq/aH3SUIjDph//hlb+7sp4ddp7yeelG91YLzISMjO+jrskGol1iXjfWcgZKxPnSxqJ/+2NhJn4q+gXxNgWEJbAYSqVidHZmeSnwVMYc4g9KHt2557nbeTSeO7Ix+s75JIEISpj9cvApilN3Dsg+mhX25C/u3Ae6I7C5ktQIlSjECy8LbfgRXEgMVwDJipaK7omHHqGmfUfSko8TfUvzVhB4NvHFmangHl0s+NLkP9eXWwuD2P/JT7gUPHjmdoaWsVHanqccRMQbdU0sMzmP6+zbEkoYk+jCDeS2EM5EK5AdA1Gb/Pils/Un7y305++L8XJpcFMnfxNpkEi5EolNjFGCf3RmTcmh1r1+k+qZ03Uy7/qDwe+4B+Ro8B7+gUbsspfW+4bsqxz7OTWMada/Br3M7/cID9hNGF/3JFvbbilyExZrhkPn7JVXVMO6B691sVX4O7hIa+hkxLFcRoDdcGx8vn4rsuOAsX2r7NyS8CWU7vWEIY9S8tlemSgzumUqWIQ17l/rXtlSDlOF4cJvLUtXR05z3Qn0I+7Pbpc5CpKBYQ7U5i4mHhH/GxLxlfjgdNIf6jdUronGvHdputj6OJt5srG6VdrRJmme7+a8zNQBEmWPsNvnrlAn+dTUsOBKuOfs+X1BfqiWXnH9pKXcZJudFOD5fYRtajjcSKqTPQ4AA0H0Fr6J8nR2RjOpG0mY9u6dfyCTk2o9iqMoDcMa2SeWBgrjyAfecuooNiuWqNmR+gEWkvj3/ENhDLZ76i1muRR/CasT21CLYLOzzVCS3titaHCcKEEVQKUDKQo49lrCmM4hNY8yyEY5VVdRWgMQ4iRcRm5R5Uo2YaFNR1hZc+tu/qxVkzrVWqebzHlALXrS6/gU8et7zeImdlIqkkiguqLSLlHKkH2GpMG7jQ/2OeQjN26/qpBk3RZ7ZP7Ts9EGsTXd21J/U/4MdieND6vISuafjJI5DOQIbv8SIewnQRbcfQ7uec2N5xO4QDOKEF1IQwbiY0oNxZKepCCWMNowq6ezXAl8koQSFJ2oBMqZSrIxn2uoR6cNvlIHRqtjFZn/abCV3zj2JPJSLvaJCcBXswd65LgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 34 pinged at 14:48:39Z and 14:55:00Z, both within about 0.1 mile of the Schulenburg station, within 30 minutes of the 14:52:06Z purchase. The 23.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsc1gPgDGKdantbQd7S",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5619,
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "thinking_tokens": 132
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 34 pinged at 14:48:39Z and 14:55:00Z, both within about 0.1 mile of the Schulenburg station, within 30 minutes of the 14:52:06Z purchase. The 23.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5619,
+    "output_tokens": 255,
+    "output_tokens_details": {
+      "thinking_tokens": 132
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

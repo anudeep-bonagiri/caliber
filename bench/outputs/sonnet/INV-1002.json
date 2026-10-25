@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006182,
+  "durationMs": 3835,
+  "httpStatus": 200,
+  "id": "INV-1002",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 33,900 matches the contract rate, qty 1 equals the received qty 1, the amount matches no earlier invoice, and the bank details never changed. The invoice total of 37,025 is 3,125 more than unit price times quantity, but no payables rule covers that, so it is noted only."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwAgKEAgTGAI4AUIIdGhpbmtpbmcSDNwvPMd+L4FcLBgkLRoMvrSsh9HtMC+qT3S1IjD2fVqUFm7CuI/cvCN+KpEyRdzd9UGCuHNcG+6CuLoKY3/wdvX3GfOSgvlK9RWCKToq3QczUmvZQpg/qtGYU+Bq+9d83J1C+eqvkNlj++SybOiPbWH0JjO5UQdZWkj7H0Va27CPBqjgxVd006mCEEV8pHEn7gxuV25yF3aIlPOkYsh8baGaWc0WD77XwP5QzGwUFXsc7JkZn8ZI+aVRlccdt4dzCPYunbjJVkzEuuO3MgtvDwk0D9Xl2cxRcM+ApJgH4TwXtive/O5pUp2FiajzlBNxHZtJJxweFCD6WMBEi8Geh18s+h8UZseMjZxjZYyZn4BxKGf60s2nixqwYR5WSnllRAs15rDe73zYvW0q9BZ2I+GqbvqIqV9lw99uHTs7Vz37DQk7eAwjKPQgAMc5TcTlN2nNQtbgrEfZdLKbMgYY7iv9njOOgpsNYC0Yp7363I7jO6YtKmdQMVt3sD4eXPcd7pgW+Lo/Uck+zBUASefI+F8Uew5oE+bVk+/JED2I1nZZsGqdWqhcCyHj/Y7pt85BIMYbGx5KgTRDKYon5DK99DvnoBI/xOFelfbB4fUr4PE38bQkhFiqZOyxUForR4Y26gfL6HzsWpZ0gc60PKUQpy7zk8Z/dPpXBI0ZKtB0pq5zuSptJ4yB6xIi8tQs3Bov7AB6CQlrBFvCeK81SwIzMQxYWDX2rO0HSTUY+aJEq47O1Hl6no7kmFuzJZtAfn8qhJ+BSlex84Sti5mt6Rp9zG8p0j70qBFFHN2+wwccRx213UoR8kBzswrBqAFPqyWoxPqs+1T20VSatqJxJoyufSb8Q1cjaESAQeaoUD+Oby0tvRaBHzDOSKzKa3ctk6btjO8va+h4lst971VCimq1pU3DFehubgzdzvqsxGpKj8CsvZNZuxcnzH85f+3V7tRTrNRrKBlEAtdgzmQqFXKHo+L0LZzmZWNambCGAjuTbu9jZ7M8rqyurRtFohmq99QHY7SfB/xp5/U+AAV8/ZJGrr6EpJoQs0920vPUbe9I69Zk9RogRE/zPChFO660E3R/aTzwoLMkfC0CcoQ2P8aQgdEBfTjB9JLJDl0iSwpi37Y4UW5Q6ryqBnYhTcVTNtiT4wMnwOONLbMChFSlXWIkMm9MHgORp288KYqqtgIk262ln69kiRLGfqEzIeBfHAYquVy4RSqeUhEv4BvlW3nRuOV31gSWIwutyVepVXCDyuX9hAF88pBhYW5cPpEolziM2FMKIGC3UMpHGJjXOtRMVPWMdF1OrFrXRpQoCvnfFqto7GAapvWwkH2tpUQM2/vszBYCLxu1nj5JzHJ6UPoEURVe1GBxRIhqqQOkCLG3a4Es+IQ7bTu7B7coYWlwf04x5PAx9W8YY37FpsHmdhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 33,900 matches the contract rate, qty 1 equals the received qty 1, the amount matches no earlier invoice, and the bank details never changed. The invoice total of 37,025 is 3,125 more than unit price times quantity, but no payables rule covers that, so it is noted only.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszaVivh5EavyEJwpFX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1471,
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "thinking_tokens": 204
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 33,900 matches the contract rate, qty 1 equals the received qty 1, the amount matches no earlier invoice, and the bank details never changed. The invoice total of 37,025 is 3,125 more than unit price times quantity, but no payables rule covers that, so it is noted only.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1471,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 204
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

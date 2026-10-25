@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011716,
+  "durationMs": 2616,
+  "httpStatus": 200,
+  "id": "4212",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged within about 0.1 mile of the Waco station at 15:10:36Z and 15:15:00Z, and 23.7 gal is well under the 110 gal limit for a 100 gal tank."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 15:14:18Z at Waco station (31.5493, -97.1467). The nearest pings are at 15:10:36Z (31.54929, -97.14641) and 15:15:00Z (31.54957, -97.14651), both within 30 minutes and well under 0.1 mile from the station, so the location check passes.\n\nCapacity: 23.7 gallons against a 100-gallon tank (limit 110) passes.\n\nNo other fuel-card rules apply, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 23 pinged within about 0.1 mile of the Waco station at 15:10:36Z and 15:15:00Z, and 23.7 gal is well under the 110 gal limit for a 100 gal tank.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt53EuP5VYQm5Yiqwne",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4598,
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 15:14:18Z at Waco station (31.5493, -97.1467). The nearest pings are at 15:10:36Z (31.54929, -97.14641) and 15:15:00Z (31.54957, -97.14651), both within 30 minutes and well under 0.1 mile from the station, so the location check passes.\n\nCapacity: 23.7 gallons against a 100-gallon tank (limit 110) passes.\n\nNo other fuel-card rules apply, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 23 pinged within about 0.1 mile of the Waco station at 15:10:36Z and 15:15:00Z, and 23.7 gal is well under the 110 gal limit for a 100 gal tank.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4598,
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

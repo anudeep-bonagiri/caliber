@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006256,
+  "durationMs": 3264,
+  "httpStatus": 200,
+  "id": "INV-1019",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 46500 matches the contract rate, and billed qty 1 equals received qty 1. The amount 47750 differs from the vendor's only earlier invoice (33950), so there is no duplicate. The invoice is under $5,000, and the bank change on day 18 came after receipt on day 12. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0QgKEAgTGAI4AUIIdGhpbmtpbmcSDDdoN10VDFsbJxRU9xoMfYxbpT3tcKAS8tG1IjDFaPqJfHqqhg6L4cGa1wQ2M6ptlc7f/VtrCIWG2BEG9WHj5pcloOUOnfgYrBC/+Pwq7gfbPQc6F9MPTisD9yN38LWHWYxYmnLA5BUmmEJJbxwJR5TG68dF8ExDhdOW1oddgCvOA01fAmchQ1c9mtL/my+zwN9Cga4EA7c+dX5EwGDqzKnepPMFbVhJDCMlTfLGCY7I8wDwgNK0qmLg1V0kgPy7buER0Bnu5ZG1MXRUPgcv4LWxJR5P11bIDnD/4xjfDwretLsu4o3tBnLB/B0Mcj6iFBV+fvwhlhoITmO5eOhui7BfOJVFUTnRiYvmhr2dSeV13/pApRmQitI4CtvXK886FRnJ4NDTDE/B7get2wKCtJtBMtRsSutlfRzCWcm3y8l+YmPk+7mXH1LmzFV0hZRmJoFlHBEXa4wGgmJgtM+a0HlwGZKZpcBREMzMVEFRvekrxmPDPhLhsKnGf3GcHQXqAZ805JVnGEJswn9yAM718Bw85jDRkRtNcUzUTeg6PnZ8jM4o9a1CXPpLUosjELWQ+GKWTdsv9z5ThOn0R8NMfjSbaim4ucAq4uXOimZEvFgP2bxu+OeMmXJ4C5MzdxkBhXvu/zhIjMvaTnapD657ErQbdzQSkvSiQXsaZPjqTOQg+DRNM86WQdbIV5RVyBynPevQQIJj1OhGttnPICdYCKHZ1izeb/ZqYLgc0mcCvuWxrcQFYeluRjVfK8LqcRaLxZdBRXocM8/vsnLTJldcJsBqehl4KS+gwFi9RzhCqVetUicnAuKjfAOLAvnZ5Wjsrk/Elwcr64vug7cxIZSliX08I8VXQGEbjyZIwhUWOw9vMj9NKI2tC3I9CanACymGjj1uTh2dlBE6BQJjktgpIRTZV8iELTVSFP3WPvtTThLYXxdBm3Sr/LBQR0CZUP2PDF/5PRBN/NMVvYIcowhM9JR1b6YheCRiibEWQOhC4LLljaw8bl7MeBzf4rOXiIW4gq4fQH7P5/Dj6SZDe82FiFYPPGFdgnOZ+d3SjRcD+dpJkBbVM5foEoOz7dpZnRQgTxxm3ez+usiqiFCd5tkxgKqW0Z6TO1DCaKI1YzJvkCN2LurebrKTLsctwor0IxZnXS9IZucfw2XOHgK2L3A/nvdD8KUT0YxU+EUaGJwuZ6rxwzbdwrE9BK0vYPCj5/TycwGZCZ5qWwcT1GILtDk4qNs8iorxUZ/TNG929/odasE1uFVQtCiwHJAYHoi5HpI8Bmg5MNDz0xpE3wyQqUKzf2rFCJWvDWfF2erMlnLSPqEpIkRQNgD/mUwl8ALU1Dyu28/ZI7KRCqqdIEbwfi1/LcDkdYQrMeRmajOle+MJzVLdmkkVtVlJgtLu/q2+uYxpeFmV08ZMH8fuEST3olQqurbNr4J266MqEKH59hkuGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 46500 matches the contract rate, and billed qty 1 equals received qty 1. The amount 47750 differs from the vendor's only earlier invoice (33950), so there is no duplicate. The invoice is under $5,000, and the bank change on day 18 came after receipt on day 12. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4f8dURTiTtEDuRWsC",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1483,
+      "output_tokens": 329,
+      "output_tokens_details": {
+        "thinking_tokens": 207
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 46500 matches the contract rate, and billed qty 1 equals received qty 1. The amount 47750 differs from the vendor's only earlier invoice (33950), so there is no duplicate. The invoice is under $5,000, and the bank change on day 18 came after receipt on day 12. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1483,
+    "output_tokens": 329,
+    "output_tokens_details": {
+      "thinking_tokens": 207
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

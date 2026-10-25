@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009636,
+  "durationMs": 3999,
+  "httpStatus": 200,
+  "id": "INV-1098",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1098 matches no hold rule: no earlier invoice for 53,300 cents, unit price 48,800 is under the 51,700 contract rate, qty 1 equals received qty 1, and the bank details never changed. The 4,500-cent gap between total and unit price is not a policy hold, but it is worth noting."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlgoKEAgTGAI4AUIIdGhpbmtpbmcSDMmNofO823oJ08Zb8RoMzSrS+4NqUz8ht8VIIjDuZJjgM3ZfMZStZbFzAIJIA6Ir7cShdabdSd+jurw1ju9oUT5HHZP7GFkOGJzwYegqswma4Q7oIVzRowS8+ilmZEIJpl+kqhYRG80XCY0HPAa71pq3GfH5ihPWw36FfyKTxtn0FBgRRaTUoytFxKVRkOoTW8XfeW4AHFw4WgUNH+0gpFz32aoqK/lsgEUt+G4WqikIFOqPRPlNGYHLgPzxTiYI8HPGkAfG+6rTwSUXEK2oKVGr+B/ktDwYHIR/wxu9bHElEAcIxKvMfmOK09cloB1JusTHcqfAsimlQBM1CGBKyZHUqu3gVOICFUhwXLwrCz3ntqcDHeudQRWwSAHIkeY3QCzAOUD5IW6NZ3qoIS+LJr/qnXHkdH2Fg/vdbpphPmQ0dqULf0wjyxmLsNCxmY8OiHptWLup1B2+OnwtlGnEfGTOJSfYPxLuNLtt++pTOdiN1+oXlsYHgMo5d6DcpMT2YK1Z60HTXkl7GSiyjHhvRJ8LpeEiHlD7EXUYDMIDPz8Cbv/p7Oc4U8VdtdeqBEDgyLt8/Tt+zEzv8zwDeE2UEpghtpQu8XOJI7+tX0aqvrY4R7Te1Gr3EdAr/BF+p3EufY0RXQ7YEy84nwfwZZjWBRRtIxHtvAdzuxZh45devAvd9eLo/9LzXGt2ZOHfeOQOc905pmZVlYG9yH6/Nf30UGenQMmZWT39TctdlunGWtLzmhp9yPsjlfFYPBX3JwaHZCbmPy3dfNTcpC3iR+Hy9qSZ0sejsdVLQmlJ8/AN1FVCa90rWZjx3+yTroO/bkpIoIMXlT7YVS/aNeke/ooUyXimLdKgw8pC8m8XQTWgovB9zNyGENR1IYTzf/2oUqvbP2p067v0eEm24nlO6tgJU5wmc08O5hDRlWYgyWmvmvn9co80H+ZlUc8mFcvaj6dZHmRuY+oRFwiVV4LT2WdM7+0AJKORzPXtlXGdJzN9jLrZn0lU7cZnuM6ixDbMTc+hXgXO07i1J+7NNRlH90tuu+OEVjWz8tomNk+Wk3RlP+1XAL+3QajwOxNsK5eBi7piVw9qn9L71a06o4mOvlWU94Xy/A5WPXqNqomWLf67oQQd1n1YPg1WgqeHrqx8kYdi6P9C37a33PaWmsr4WI9zdyE6QXY/H0+XUAKtoIFFjbSmXyrRUMFwM+9Z1qa0kgWkLhysPrSSySNPo0OsIG+NrbmkW7qXLOQKolyWYEbe7sqW8xPzGDU+EuPRVGJT5Jz4sJnd6csmuFlVvjYDbsvU8T/UHOBh8UiijJbvw22+ofypzojjFn6iGZJ4gsumKEzI4Y4sHQ3Gt6UbYbn3f4uiYLuDgpXDFRPL860jsw5v8gjL3Aa03SHSCZTlJFS3x102Xp1GhurFDmSHxIi2KDAg9Z0NX9oEoORZU2mn+i9SzaHH2dj7ZsLfxcxpc7dBGRrU9Cl/qywxIzQUGFS/00TgVCHhfXXfonaYXlgMJIQV0Dm8/HDLc7dK4Lh7UbgPvZF2iwHpwNISEWi98l6cWkU2+2n5DyfjelckgVvNbkYxq2/x6Mp2etdzJRa34CZ/x/0mabJ1NltTktUg2HX1lu98KPB8Pq2IbNJKzX66SCPpcShI3z5nXEghH5FWTIfcpkxXbVTUKHF2f28WIJ3ecr2ISSi1IhBv72se0uRHYoFJMfTdv6sYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1098 matches no hold rule: no earlier invoice for 53,300 cents, unit price 48,800 is under the 51,700 contract rate, qty 1 equals received qty 1, and the bank details never changed. The 4,500-cent gap between total and unit price is not a policy hold, but it is worth noting.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvmUuKHU4dXdVckzce",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2743,
+      "output_tokens": 415,
+      "output_tokens_details": {
+        "thinking_tokens": 294
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1098 matches no hold rule: no earlier invoice for 53,300 cents, unit price 48,800 is under the 51,700 contract rate, qty 1 equals received qty 1, and the bank details never changed. The 4,500-cent gap between total and unit price is not a policy hold, but it is worth noting.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2743,
+    "output_tokens": 415,
+    "output_tokens_details": {
+      "thinking_tokens": 294
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

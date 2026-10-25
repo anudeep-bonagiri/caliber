@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010624,
+  "durationMs": 3103,
+  "httpStatus": 200,
+  "id": "T1828",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll at SH 130 Mainlane Plaza 1 within 10 minutes; the last charge there was day 30, and the nearby day-37 tolls were at different plazas."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is T1828, a toll at SH 130 Mainlane Plaza 1 (TXTAG-SH130-01) at 13:50:14Z on day 37.\n\nDuplicate_toll applies only if an earlier charge for the same plate at the same plaza falls within 10 minutes. The most recent earlier charge at that plaza is T1685 on day 30, so it is not close.\n\nThe charges just before this one are T1826 at Plaza 4 (13:30) and T1827 at SH 45 N (13:42). Both are at different plazas, so they don't count.\n\nNo policy condition applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll at SH 130 Mainlane Plaza 1 within 10 minutes; the last charge there was day 30, and the nearby day-37 tolls were at different plazas.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMssePfvjkNVahD7Kbpm",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3917,
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is T1828, a toll at SH 130 Mainlane Plaza 1 (TXTAG-SH130-01) at 13:50:14Z on day 37.\n\nDuplicate_toll applies only if an earlier charge for the same plate at the same plaza falls within 10 minutes. The most recent earlier charge at that plaza is T1685 on day 30, so it is not close.\n\nThe charges just before this one are T1826 at Plaza 4 (13:30) and T1827 at SH 45 N (13:42). Both are at different plazas, so they don't count.\n\nNo policy condition applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll at SH 130 Mainlane Plaza 1 within 10 minutes; the last charge there was day 30, and the nearby day-37 tolls were at different plazas.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3917,
+    "output_tokens": 279,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

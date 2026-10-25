@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005936,
+  "durationMs": 2907,
+  "httpStatus": 200,
+  "id": "INV-1010",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1010 bills 3 tires but PO-1005 shows only 2 received; propose paying 2 x $498.00 = $996.00. Rate matches the contract, there is no duplicate amount, and the bank-change rule does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSowgKEAgTGAI4AUIIdGhpbmtpbmcSDB2WkmTeTLdylr/xOBoMM32X7UDrPmE2YCglIjDIYUwXw1m72ngAK2k+4pWeAjXzpLidV8bZhEksCBRji3H1VcSzpwglbxSMgtf9XfcqwAedMIGaMmLTkSp14DaBLwt1bkAye9vVrJZw8CcX679BGeA54G43vqQj0WsW/XhGC5q3hbgOyQJPQQR5JXWeiGw7xvCzkrmNSc9287tnuKA16zVY7OCGJVCLqmHnr3hblxEWdb+hUvlaqIpdPrc1kuvSeIFYAA8P8b+Kw0YP/9HfjexD713MBzUa0IF6AMtH5f2hrEJ+wP9FSAx/RzwiUGddt9/SqEYcr/MDsPlGrZYt8sCLnjXTcwxyadlbOGEjBLYAnlh7kHB3oSepFcEct6Xib7XI7NpLbfjXq2oJo1x+bUPO0/+EMNODNqiBu/vH04LeEerjzGYftIUqSpPHhja/XFq2eAk4YB82axKTz8oJ8uTYwdlim2JnLhZVXfM3pDrbrTNskx6Px2yf6Nrc4pvdY6Zc0ka1Jc1VAKeu5eKFkItaBjuWrEAw/tphTeM+BCSWwZCEbeUFIZMqK6pO7q0geo1dpF2vsjNMVfvgoGb3cP4FpBFJhHU2hNTO8PD7w0TQzDykE9yv2b6Cw60CKRpUZNTBtLI9RLZGlV+igDeHX9wXG+hapVOb3mf8E8z73hv9DirYTMe6cw3Nkv7yHy684FRbhdzxpE2z4J5nU8VEjIO6htmgqtJ5IEj7PbMIw4rEfHh24CJmqtTh2FyLV9IZ8zLMsaGE52eTAUNJJagyn7mvr89YoXBCwt1DxCcHk/jJ6O7UlW1fclIRjYaPuIQiNpj3fd1mK221vGMn15mLiw8rYtnaKGdAk5o9cUhk+RBw0FqyoSufo239GjeHPId3bsBpoClF4fxN1jEksli7eSzsR3WvYrcCQJmflnvJwwtoTGwPWtNREP1wHOkTSZRUj9F2vXzD/TnNtgM5ypEAnoYBlZxosRihcZUIoBEqZ6PIP54l3lcijrS6HGBTcFGz88s8xQyqQJxbPgJE0XQzake/gj+wasuh7r3MR8O2itAtjuS8OtANJ09YchHGF6E54W7AGYHuUqissoRvYmQHvYGtytVFw8WHNruNCXhFTnNzw23V+S/gLcB3oUzGJ08KW+c9uHzGnizUMHvlzUZp/uJ7kpf7pY/DQXy8y0vpvG+hGVBbXUtEo5bqEjFIf12IimNq365xsVSZAmXR8zjalaRajAqVR95+3AaSksauegcV+kg2b2nz/yinA1ttj4sx+x8s4pAh3m7BXXXZR74DKESlFTmU6L+OpzX6UwptNevOmndZ5WN1FnccAb4N2XjVSUUq21m8Xgxq+Lzjbo398AJZZQk+JWe88MKjQCCB+DoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1010 bills 3 tires but PO-1005 shows only 2 received; propose paying 2 x $498.00 = $996.00. Rate matches the contract, there is no duplicate amount, and the bank-change rule does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7zGQgsRHPwgM3yZRq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1563,
+      "output_tokens": 281,
+      "output_tokens_details": {
+        "thinking_tokens": 179
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1010 bills 3 tires but PO-1005 shows only 2 received; propose paying 2 x $498.00 = $996.00. Rate matches the contract, there is no duplicate amount, and the bank-change rule does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1563,
+    "output_tokens": 281,
+    "output_tokens_details": {
+      "thinking_tokens": 179
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013492,
+  "durationMs": 2995,
+  "httpStatus": 200,
+  "id": "6449",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 30 pinged about 0.01 mi from the station at 18:14 and 18:25 UTC, within 30 minutes of the 18:19 purchase, and 22.8 gal is well under the 110 gal limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 18:19:36Z at the New Braunfels station (29.703, -98.1245).\n\nThe nearest pings within 30 minutes are:\n- 18:14:20Z at (29.70284, -98.12462), about 0.01 miles from the station.\n- 18:25:00Z at (29.70319, -98.12468), also about 0.01 miles away.\n\nBoth are well under 25 miles, so there is no location mismatch.\n\nCapacity: 22.8 gallons is far below the 110-gallon limit (100 gal tank plus 10 percent).\n\nNeither of the other fuel-card rules applies, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 30 pinged about 0.01 mi from the station at 18:14 and 18:25 UTC, within 30 minutes of the 18:19 purchase, and 22.8 gal is well under the 110 gal limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstSQ8uikwLNukeL1nS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5256,
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 18:19:36Z at the New Braunfels station (29.703, -98.1245).\n\nThe nearest pings within 30 minutes are:\n- 18:14:20Z at (29.70284, -98.12462), about 0.01 miles from the station.\n- 18:25:00Z at (29.70319, -98.12468), also about 0.01 miles away.\n\nBoth are well under 25 miles, so there is no location mismatch.\n\nCapacity: 22.8 gallons is far below the 110-gallon limit (100 gal tank plus 10 percent).\n\nNeither of the other fuel-card rules applies, so the payment is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 30 pinged about 0.01 mi from the station at 18:14 and 18:25 UTC, within 30 minutes of the 18:19 purchase, and 22.8 gal is well under the 110 gal limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5256,
+    "output_tokens": 298,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

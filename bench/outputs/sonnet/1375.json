@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011708,
+  "durationMs": 2978,
+  "httpStatus": 200,
+  "id": "1375",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged at the Madisonville station about 3 minutes before the purchase (under 1 mile away), and 22.6 gal is well under the 110 gal limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 15:20:49Z at Buc-ee's, Madisonville (30.9499, -95.9116).\n\nThe truck's nearest pings are 15:18:02Z at (30.94979, -95.91136) and 15:25:00Z at (30.9501, -95.91171). Both fall within 30 minutes of the purchase, and both are essentially at the station, well under 1 mile away.\n\nCapacity check: 22.6 gallons against a limit of 110 (100 gallons plus 10 percent) is within the limit.\n\nNo other hold applies to a fuel-card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged at the Madisonville station about 3 minutes before the purchase (under 1 mile away), and 22.6 gal is well under the 110 gal limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2qsF8p27QM73QFUJR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4524,
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 15:20:49Z at Buc-ee's, Madisonville (30.9499, -95.9116).\n\nThe truck's nearest pings are 15:18:02Z at (30.94979, -95.91136) and 15:25:00Z at (30.9501, -95.91171). Both fall within 30 minutes of the purchase, and both are essentially at the station, well under 1 mile away.\n\nCapacity check: 22.6 gallons against a limit of 110 (100 gallons plus 10 percent) is within the limit.\n\nNo other hold applies to a fuel-card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged at the Madisonville station about 3 minutes before the purchase (under 1 mile away), and 22.6 gal is well under the 110 gal limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4524,
+    "output_tokens": 266,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

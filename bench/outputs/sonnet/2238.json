@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014986,
+  "durationMs": 3308,
+  "httpStatus": 200,
+  "id": "2238",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged about 0.1 mile from Love's 405 at 13:22:49Z, 4 minutes before the purchase, and 22.6 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase time is 13:26:51Z. The nearest pings are 13:22:49Z (about 4 minutes earlier) at 32.01123, -97.13014 and 13:35:00Z (about 8 minutes later) at 32.01115, -97.1298. Both are within 30 minutes.\n\nThe station is at 32.011, -97.13. The 13:22:49Z ping is only about 0.0012 degrees of latitude (roughly 0.08 miles) and 0.0001 degrees of longitude from the station, so the truck was at the station. That passes the location check.\n\nTank capacity is 100 gallons, so the limit is 110 gallons. The purchase was 22.6 gallons, which is within the limit.\n\nNeither hold applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged about 0.1 mile from Love's 405 at 13:22:49Z, 4 minutes before the purchase, and 22.6 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsgL7H6Mjz1jg5SBsNY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5763,
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase time is 13:26:51Z. The nearest pings are 13:22:49Z (about 4 minutes earlier) at 32.01123, -97.13014 and 13:35:00Z (about 8 minutes later) at 32.01115, -97.1298. Both are within 30 minutes.\n\nThe station is at 32.011, -97.13. The 13:22:49Z ping is only about 0.0012 degrees of latitude (roughly 0.08 miles) and 0.0001 degrees of longitude from the station, so the truck was at the station. That passes the location check.\n\nTank capacity is 100 gallons, so the limit is 110 gallons. The purchase was 22.6 gallons, which is within the limit.\n\nNeither hold applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged about 0.1 mile from Love's 405 at 13:22:49Z, 4 minutes before the purchase, and 22.6 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5763,
+    "output_tokens": 346,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

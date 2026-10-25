@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 15334,
+  "httpStatus": 200,
+  "id": "INV-1165",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "vendor_bank_change",
+    "decision": "hold",
+    "reason": "Invoice amount 74850 cents exceeds 500000 cents threshold? No, 74850 < 500000. Wait, policy says 'over 5,000 dollars (500,000 cents)'. 74850 cents is $748.50. This is NOT over $5,000. Let me re-read carefully.\n\nPolicy: vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\n\nInvoice cents: 74850 ($748.50). This is less than $5,000. So this condition does not apply based on amou"
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"vendor_bank_change\",\n\"reason\": \"Invoice amount 74850 cents exceeds 500000 cents threshold? No, 74850 < 500000. Wait, policy says 'over 5,000 dollars (500,000 cents)'. 74850 cents is $748.50. This is NOT over $5,000. Let me re-read carefully.\\n\\nPolicy: vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\\n\\nInvoice cents: 74850 ($748.50). This is less than $5,000. So this condition does not apply based on amount.\\n\\nLet's check other conditions.\\n1. location_mismatch: Not a fuel-card purchase.\\n2. capacity_exceeded: Not a fuel-card purchase.\\n3. duplicate_toll: Not a toll.\\n4. duplicate_invoice: Invoice item 'ac_service', amount 74850. Earlier invoices for same vendor:\\n   - INV-1008: ac_service, 78100 cents. Different amount.\\n   - INV-1022: ac_service, 77350 cents. Different amount.\\n   - INV-1031: ac_service, 73600 cents. Different amount.\\n   - INV-1048: ac_service, 73600 cents. Different amount.\\n   - INV-1052: ac_service, 36925 cents. Different amount.\\n   - INV-1070: ac_service, 36800 cents. Different amount.\\n   - INV-1082: ac_service, 36800 cents. Different amount.\\n   - INV-1115: ac_service, 73600 cents. Different amount.\\n   - INV-1149: ac_service, 36800 cents. Different amount.\\n   - INV-1153: ac_service, 36800 cents. Different amount.\\n   - INV-1160: ac_service, 36800 cents. Different amount.\\n   None of the earlier invoices have the exact same amount (74850) as the current invoice. So no duplicate_invoice.\\n5. rate_variance: Unit price 36800. Contract rate 36800. Variance is 0%. Not > 5%.\\n6. short_received: PO qty 2, Received qty 2. Invoice qty 2. 2 is not larger than 2. So no short_received.\\n7. vendor_bank_change: Amount 74850 cents ($748.50) is NOT over 500,000 cents ($5,000). So this condition does not apply.\\n\\nWait, did I miss something? Let me re-read the vendor_bank_change rule.\\n\\\"an invoice over 5,000 dollars (500,000 cents)\\\"\\n74850 cents is 748.50 dollars. It is not over 5000 dollars.\\n\\nIs there any other hold code?\\n- location_mismatch: No.\\n- capacity_exceeded: No.\\n- duplicate_toll: No.\\n- duplicate_invoice: No.\\n- rate_variance: No.\\n- short_received: No.\\n- vendor_bank_change: No.\\n\\nSo it should be clear.\\n\\nHowever, let me double check the duplicate_invoice logic. \\\"same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number\\\".\\nCurrent invoice: 74850 cents, PO-1014.\\nAre there any earlier invoices with 74850 cents?\\nLooking through the list:\\n16937, 78100, 149400, 117750, 29900, 77350, 100850, 33650, 119000, 29900, 73600, 15216, 36925, 27518, 29900, 73600, 36925, 26439, 36800, 25604, 120875, 36800, 37450, 101475, 29832, 99600, 23560, 73600, 119000, 119000, 25357, 550800, 99600, 101475, 36800, 36800, 119000, 36800.\\nNone are 74850.\\n\\nRate variance: 36800 vs 36800. 0% diff. OK.\\nShort received: PO receivedQty 2, Invoice qty 2. OK.\\n\\nVendor bank change: Bank changed day 71. Invoice received day 85. Difference is 14 days. Even if the amount was high enough, 14 days is not within 7 business days. The rule says \\\"within the 7 business days before the invoice was received\\\". 85 - 7 = 78. Change happened on 71. 71 is before 78. So it is outside the window anyway.\\n\\nSo all checks pass. Decision is clear.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885569,
+    "id": "chatcmpl-4c47a59d-51dc-4bdb-9cf0-e3bade429543",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1352,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4433,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5785
+    }
+  },
+  "startedAt": "2026-10-24T23:46:00+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"vendor_bank_change\",\n\"reason\": \"Invoice amount 74850 cents exceeds 500000 cents threshold? No, 74850 < 500000. Wait, policy says 'over 5,000 dollars (500,000 cents)'. 74850 cents is $748.50. This is NOT over $5,000. Let me re-read carefully.\\n\\nPolicy: vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\\n\\nInvoice cents: 74850 ($748.50). This is less than $5,000. So this condition does not apply based on amount.\\n\\nLet's check other conditions.\\n1. location_mismatch: Not a fuel-card purchase.\\n2. capacity_exceeded: Not a fuel-card purchase.\\n3. duplicate_toll: Not a toll.\\n4. duplicate_invoice: Invoice item 'ac_service', amount 74850. Earlier invoices for same vendor:\\n   - INV-1008: ac_service, 78100 cents. Different amount.\\n   - INV-1022: ac_service, 77350 cents. Different amount.\\n   - INV-1031: ac_service, 73600 cents. Different amount.\\n   - INV-1048: ac_service, 73600 cents. Different amount.\\n   - INV-1052: ac_service, 36925 cents. Different amount.\\n   - INV-1070: ac_service, 36800 cents. Different amount.\\n   - INV-1082: ac_service, 36800 cents. Different amount.\\n   - INV-1115: ac_service, 73600 cents. Different amount.\\n   - INV-1149: ac_service, 36800 cents. Different amount.\\n   - INV-1153: ac_service, 36800 cents. Different amount.\\n   - INV-1160: ac_service, 36800 cents. Different amount.\\n   None of the earlier invoices have the exact same amount (74850) as the current invoice. So no duplicate_invoice.\\n5. rate_variance: Unit price 36800. Contract rate 36800. Variance is 0%. Not > 5%.\\n6. short_received: PO qty 2, Received qty 2. Invoice qty 2. 2 is not larger than 2. So no short_received.\\n7. vendor_bank_change: Amount 74850 cents ($748.50) is NOT over 500,000 cents ($5,000). So this condition does not apply.\\n\\nWait, did I miss something? Let me re-read the vendor_bank_change rule.\\n\\\"an invoice over 5,000 dollars (500,000 cents)\\\"\\n74850 cents is 748.50 dollars. It is not over 5000 dollars.\\n\\nIs there any other hold code?\\n- location_mismatch: No.\\n- capacity_exceeded: No.\\n- duplicate_toll: No.\\n- duplicate_invoice: No.\\n- rate_variance: No.\\n- short_received: No.\\n- vendor_bank_change: No.\\n\\nSo it should be clear.\\n\\nHowever, let me double check the duplicate_invoice logic. \\\"same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number\\\".\\nCurrent invoice: 74850 cents, PO-1014.\\nAre there any earlier invoices with 74850 cents?\\nLooking through the list:\\n16937, 78100, 149400, 117750, 29900, 77350, 100850, 33650, 119000, 29900, 73600, 15216, 36925, 27518, 29900, 73600, 36925, 26439, 36800, 25604, 120875, 36800, 37450, 101475, 29832, 99600, 23560, 73600, 119000, 119000, 25357, 550800, 99600, 101475, 36800, 36800, 119000, 36800.\\nNone are 74850.\\n\\nRate variance: 36800 vs 36800. 0% diff. OK.\\nShort received: PO receivedQty 2, Invoice qty 2. OK.\\n\\nVendor bank change: Bank changed day 71. Invoice received day 85. Difference is 14 days. Even if the amount was high enough, 14 days is not within 7 business days. The rule says \\\"within the 7 business days before the invoice was received\\\". 85 - 7 = 78. Change happened on 71. 71 is before 78. So it is outside the window anyway.\\n\\nSo all checks pass. Decision is clear.\"\n}",
+  "usage": {
+    "completion_tokens": 1352,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4433,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5785
+  }
+}

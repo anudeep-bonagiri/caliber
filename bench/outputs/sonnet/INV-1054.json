@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007622,
+  "durationMs": 3513,
+  "httpStatus": 200,
+  "id": "INV-1054",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1054 (28.60 dollars, wiper blades) matches no earlier invoice amount from this vendor. There is no PO or contract to test for rate variance or short receipt. It is far below the 5,000 dollar bank-change threshold, and the bank change on day 42 falls after the day-31 receipt. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStAkKEAgTGAI4AUIIdGhpbmtpbmcSDPwCTAGHshdPTthRKhoM8s2l61GQ+i9kqZaIIjBiQ4PXOUVGd1P45BiLtcY4ei0QgFtTqKJ2XnaWX31nmu4q4ZaLpdJQVKAtlqfj3tkq0QitZbWm/7ETjJKynv2YfuDsIIbQ4pWhMSsuMUHPjjk7LCiEcsGp7WZIMdbhCNqenFPy5s5+e/jWtxMVcGYHM/NSWEe8ZC+h8AzwcNxVSpReWbSt9QvL1V1xGgTQoYZlQl6xHRXRUAZIubhDU8vQgAF44/XLileWULG4FND5vyRmCm0+ESDfSJoWj/1N8WQx5ApF319g587NF9C9fKALNjUHkG+RtqFucjLLd9AKz0XI5godCisR3RA4li91exqBczi/jxqttnXwTN0xQO1UEiV6vMS/Spp9CvE3TdzN7RDUp/aovq5cMEh915Josj9UlVoMiuZ4oixq8qcqrQXszt6KXPZbgSRBj7eNQtu9VFE00LPWphwiKPsxfIBuUVh2xnpga/b1UJXPhalwARHn2PCUYIP1q3IeM/DE6YlleNComr5+CaV2gWIsE1sNvP6DsZ47pjPOTYf0zRbk6M+V3xbtOeBqQofTDR9ER7naw9+mIn5tOyAcMQ3GyyNScwMJnU4zlGpHDE+VceUHp7VQQe/Jl/tFdc8lz6BjCu4UEoo+skj0rRgOyHkkJGWJqZRQZPu7Yl0gvgGa4oiGAt3LlB7BeBFschD8liSUf+py8aiWp65TctlugDFGWzs+aSWB2wt8i1pHCg5TfFbLkbikSd8CdEYHO+DpPuG1jsbuhjQtAqTM8q1wHcZm8i6CEAuT7Z9sd7yCtSsGaIy0aRLlIBfJFsSjShgadrnvlb2hTW4YqDc88qp8Cz+dgibYAGxUlj3TVlBlCrB/xhBby2pT04dkNBvosujvPY/MX7gONlfzAXQ5CT9AOG7REsIE6LRd4jbpvmulIaAX6X4Adgkq0KGUZqQ9FvjXSL6hFQRD7A4cXw67LGIFLNwvK7L2HhgQidNqRI4SGTmO3XUqMJ3UyKle0gZNLC+l3bjjZKP/MzLrncu5Qjbz3cf9YCPHl1N2TjEACYsrlwqssn9JB+LQ90P8y7g8GzQUa00hwDNZ++C3SFWsuSBuJSV/TOUSGqUcidAdebBt6meLunUAuX6l0uP2jrUwT3dgbT46ulC34ZX3ssVi1ujoQUplQQrEvh3aUILRY3uxbpLO/jtg2LwYNI55ePaklthJd4dvyc5DPZ3Miybpqul/ZhW9FBt05sIyi31tLzyrZtuIKdYMVTbbd+pL5dGS7kxmuu3x83X30XE5CVNK5Zow3n/G1aroonMhZNf+NngsBf9lBtv4aDQLnG2Lz5O/ch7AADxLgLjggIbLFE4mrCNyCV8cTjuLh3q4j8A0O09nGIAiUzRTF3BvV0loZw4TqFMJIleydeigjlv+e9v4hT/sY+DnJr+tzOEt2oDEK4mIJU5v/Ew+wqpvV/qUq5WayznxcIWzlzoxSgSZLZ4gqQTrKpzdoXwn9u2aij41YLx9oJzGOvZbaUCAHEYb01md502GMPm8WwXomn3fVbfX782aJN1FCRUMttISE/kiGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1054 (28.60 dollars, wiper blades) matches no earlier invoice amount from this vendor. There is no PO or contract to test for rate variance or short receipt. It is far below the 5,000 dollar bank-change threshold, and the bank change on day 42 falls after the day-31 receipt. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsenR1Kj4s56xf2zbwm",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1916,
+      "output_tokens": 379,
+      "output_tokens_details": {
+        "thinking_tokens": 253
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1054 (28.60 dollars, wiper blades) matches no earlier invoice amount from this vendor. There is no PO or contract to test for rate variance or short receipt. It is far below the 5,000 dollar bank-change threshold, and the bank change on day 42 falls after the day-31 receipt. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1916,
+    "output_tokens": 379,
+    "output_tokens_details": {
+      "thinking_tokens": 253
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

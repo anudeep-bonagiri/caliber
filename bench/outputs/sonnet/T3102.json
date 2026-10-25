@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.019458,
+  "durationMs": 2942,
+  "httpStatus": 200,
+  "id": "T3102",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1027 at SH 130 Mainlane Plaza 1 within 10 minutes; the previous charge there was on day 88 (10-30), and the nearby 11-03 charges were at different plazas."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T3102 at SH 130 Mainlane Plaza 1 (Hutto), plate TX-1027, on 2026-11-03 at 17:46:30Z.\n\nThe only earlier charge at that plaza within 10 minutes would be at 17:36:30Z or later. The earlier tolls on 11-03 are:\n- T3099 at 17:14:29Z at SH 45 SE, a different plaza.\n- T3101 at 17:38:16Z at SH 45 N, a different plaza.\n\nThe last earlier charge at SH130-01 was T3040 on 10-30, days earlier. This is not a duplicate toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1027 at SH 130 Mainlane Plaza 1 within 10 minutes; the previous charge there was on day 88 (10-30), and the nearby 11-03 charges were at different plazas.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmavu3QvTLuJaSAfjK",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8184,
+      "output_tokens": 309,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T3102 at SH 130 Mainlane Plaza 1 (Hutto), plate TX-1027, on 2026-11-03 at 17:46:30Z.\n\nThe only earlier charge at that plaza within 10 minutes would be at 17:36:30Z or later. The earlier tolls on 11-03 are:\n- T3099 at 17:14:29Z at SH 45 SE, a different plaza.\n- T3101 at 17:38:16Z at SH 45 N, a different plaza.\n\nThe last earlier charge at SH130-01 was T3040 on 10-30, days earlier. This is not a duplicate toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1027 at SH 130 Mainlane Plaza 1 within 10 minutes; the previous charge there was on day 88 (10-30), and the nearby 11-03 charges were at different plazas.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8184,
+    "output_tokens": 309,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

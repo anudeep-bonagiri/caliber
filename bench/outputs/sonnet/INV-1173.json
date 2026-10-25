@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012342,
+  "durationMs": 3530,
+  "httpStatus": 200,
+  "id": "INV-1173",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies. No earlier invoice from this vendor has the same amount of 23541 cents (the nearest is INV-1107 at 23560, received day 58). There is no contract or PO to test for rate variance or short receipt. The invoice is under 5,000 dollars, so the day-71 bank change does not trigger a call-back."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvQgKEAgTGAI4AUIIdGhpbmtpbmcSDDprMUItJiw4hrxepRoMfJKIOGqDDb5lBjSmIjDdj8Vo+WQjGN16gzszqxVsYu1s6n9Wv4hMB3W0cgmHTt2VJaZIsgASpzUGZ1l2jOwq2gclpJxPHq0B8y8uHCOpDAWVfskJCI3jf5wg74MqCW+TE9PI5FfwtOH9vBWLMiUqa8RskAHV1XmrBP15I4DASQaHEc/vchuff2LTyYjUynJvU1+ufCfYMjqXmm+dxUKbydq8cdsQiiWgUmqRJ3pK7OLJYn7AjlxmmwcQF4aYcNyN7u1fhiEABXAUtfiH5324YWgbTjZnor7cRuMGB+ztBUOHT+Fa1t8aj9AkSupeR+Jj9s2stmGsf7dZrGMr9aKCS85/e28K33m9lGLoabZWQ26yUhKG+MahpBEbLdZbHygOyHJDxkAyHTtoo2tVxh/leUIyuW3dfAVJDxKuJzstNCVXmgiWroqP0NwBw+4PZQ5LLzpwRds1791eHNQgpTpaRHFdP6LF71EN/8HaiqwQ7AdDOS+WYxcSbV+y0OmcoYGyGvhQRvBfJN23pnm6Gb9VuxfdK6vtBWheVnaG9aS4LrgfJoECktW+XRR0auH0jYsmtxv6zKhLwmIp2eblqwTr3HGEG5g6YueprOvZLnYSLNuJWpMx01Mz8dp7TE0U/IfUHBKkEGE5644y/QfKrILADVpdiDzaWag7/z6TtOC3IY1WBXr2rtoZhqVTBjZ66Tmx7t3ISuNBTdzfXFrBCiGV9bTEiahBGURjrXO5l1vBlzRgbXpEjWz2St1H98YkJRV05LsSdtP6XsWSKzEeT67yxoUY4OihxoTCBYjDqGG7HbSGM1TiZqrpXrZmuEZaFMvx79a9ONIevKpAfpRX2iFiXRhttPb3/WFNb9kZP/oaq2svrFUnxfqoWWKeST33NNkLVIT3QPwwgzov348gdoh7ol1fAcIXjptu9OTMFXhZqlMMvpE4U7Jund8KvE5eQSC/svHxTbVo1PwjysiIOEfQXiTKADKWUED8Tb0G7XaEZ+eb/otvfhp32IJMk+zLKLE3nn/Pyx/X+/BdF3r3sbgr/A5jPzrPZwEVytiBQaFSCtzRZUcz8Rdr8YJIKJtx0BosnzMG2Z+x/C2mo8/fpWGI5xKBI+SGl4rBK2QRhL20v9keJBjq6j7k3isL2glsSE0t3E1Xs3XAgul2PFfXg2qis1WEJogkyAd9mg+uM2SXjLxJUi+Qztk1f7lkcJlxC6C3zliONgIF8h35TnTyEqOVupjkHOE92g0oy970PwOzZeHq0jZSGDvFyrHMmYCVc9jOzzVH4tEzL7+z+OY7A9Q8idIRn1iJgEAW49MVEd4A/m08Kf0/Zx4DEQ6iZgAcxBbRDKEsAfZRtvdWImYyCflgth5d1t7BoG9MT4rkGYDsVeyA65abfa0kejVw8xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. No earlier invoice from this vendor has the same amount of 23541 cents (the nearest is INV-1107 at 23560, received day 58). There is no contract or PO to test for rate variance or short receipt. The invoice is under 5,000 dollars, so the day-71 bank change does not trigger a call-back.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnWt68565rBLymiha6",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4566,
+      "output_tokens": 321,
+      "output_tokens_details": {
+        "thinking_tokens": 196
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. No earlier invoice from this vendor has the same amount of 23541 cents (the nearest is INV-1107 at 23560, received day 58). There is no contract or PO to test for rate variance or short receipt. The invoice is under 5,000 dollars, so the day-71 bank change does not trigger a call-back.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4566,
+    "output_tokens": 321,
+    "output_tokens_details": {
+      "thinking_tokens": 196
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

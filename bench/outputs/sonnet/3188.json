@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01322,
+  "durationMs": 2804,
+  "httpStatus": 200,
+  "id": "3188",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged at the Georgetown station at 15:56:57Z and 16:10:00Z, within about 5 and 8 minutes of the 16:01:37Z purchase and well inside 25 miles. The 42 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wYKEAgTGAI4AUIIdGhpbmtpbmcSDGG6ohfIXkpVa1l4zhoMCHyOhX/qxBG/hckFIjDV1VzyLTWlns4Ao1GN8SGVyVB9BVQcFZqmZklAD8xrvTT8AK9a4jnJs/VgmOayrJUq+AW7Oa7GiUf9IZoPidndZZ5alZq4BCnR1MnUIqv8nqnsmRO3j1axyM0qO2uJ9uJobFYO0plbGoaKuiGUBPyw+f+UdlZkw0AKsrrtmXxa3J5qvKpr9zoMAaP/pw6+JRMFYFn+RqymfsxAEPSgkYQrucuIOeymwg+KyqBZgoSHY1UI/6XPlAJjpFCYn/b4PtyLr3agoFAfpHKfMQ2c8QQtgQzX9HZvwH/vFbeE+CtiMK+Rs/eaYtzNfFcjQ8uA/e5XZUE0em5kHSlG3UtNI+1rzqqh4qd6UbtcQllPpznK2vkMDUYpGZxv2tUJGj4l4ldYtJf1YiJ3RQ5yyezSzLZBidXda2XMm3JtMjAafeo5QB6UnKP3cMTumQZt8aVzdTThgpbL6NBoYc9jBals3GTfjnj+hecmh7+c3WHc+uK2Vs2gOOmoio5fpcyb0UFhFEzO8DJ7LOGq3kmCkE00+kcFVdh5D3L47KxBSdAAO7WDTGhVnnrV/EjkkafIKJrdOC5tZ4gUQeLWjryLsoyXxFTGI1xTtrAZEgvk5lTCo8QPwdqvBt2rxy5+LOLNVHUqdKrrp/oM89KVWN5KdBZsaQGkNkNjKh4bgkh7UC/lMAuiIprRSBYgRS/J48PpqYuZiPd9Jjit/SJUpU4EvDkZ9GEA0CCn8hckFa2GpWBJZDDt/stQxSaIZUvPuDaA+xJOyflU1TsA+DIedpDfC/iaJhMDTOMbUFzT56SyW9P90MAa/AaJMYH/9oQ8R/n7Du8W2VKNaXTmoxDPBP58N6AlYsxxByzO/GoBAy4ng1tsRSe41u8u3MsZq1AphRSAuDYRCmTMwbnhmFYbpJq6Y/NMiPbQlARi0WU28XGydt5JyQNJCWJTIopS5MJ89Af8Aj7RhFvZOt9A4Pak5woZQh5U9VAzvwA++3lVEuvq98mQETN1l8q6eUwB8ERPHDKugAkoo1fZ1UXvmZlZ2hrEaQsTSo6Ol+P4VQHyGKc/nMLY14KH1ONkiS3RsPOGyWGYGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged at the Georgetown station at 15:56:57Z and 16:10:00Z, within about 5 and 8 minutes of the 16:01:37Z purchase and well inside 25 miles. The 42 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfMJgYdkThb7zBFZvx",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 257,
+      "output_tokens_details": {
+        "thinking_tokens": 135
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged at the Georgetown station at 15:56:57Z and 16:10:00Z, within about 5 and 8 minutes of the 16:01:37Z purchase and well inside 25 miles. The 42 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 257,
+    "output_tokens_details": {
+      "thinking_tokens": 135
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007222,
+  "durationMs": 2429,
+  "httpStatus": 200,
+  "id": "1971",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 20's nearest pings (21:00Z and 22:00Z, within 30 minutes of the 21:23Z purchase) place it near Laredo (27.53, -99.48), roughly 190 miles from the Luling TX station, so another unit or driver may have used the card; ask dispatch."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 20's nearest pings (21:00Z and 22:00Z, within 30 minutes of the 21:23Z purchase) place it near Laredo (27.53, -99.48), roughly 190 miles from the Luling TX station, so another unit or driver may have used the card; ask dispatch.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2XYfxnY4CtfRqf5Bk",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2991,
+      "output_tokens": 124,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 20's nearest pings (21:00Z and 22:00Z, within 30 minutes of the 21:23Z purchase) place it near Laredo (27.53, -99.48), roughly 190 miles from the Luling TX station, so another unit or driver may have used the card; ask dispatch.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2991,
+    "output_tokens": 124,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

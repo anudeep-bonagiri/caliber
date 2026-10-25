@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005122,
+  "durationMs": 2794,
+  "httpStatus": 200,
+  "id": "INV-1006",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1006 ($218.07, filters) matches no hold rule: its amount differs from the vendor's earlier invoice ($1,608.50), there is no PO or contract to test for rate variance or short receipt, it is under $5,000, and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxgcKEAgTGAI4AUIIdGhpbmtpbmcSDHAiOxrQfOuWd49+ERoMiH4l0Gp/nUcQabdwIjDlxTgcTfOpSxl7op0ZvtaE0oqN9GwQKG9npihC8o1wqIBcX59IzOkgDqevB85dfSoq4wZybuXA5kXxgNoaMaeaQ6Md7Lw5+ANL9mclygcB47bc/OKVLgEa5ljv3L9aGcPj5bx6RLzToku5Taol10RfUSkDAaqQ6WJXal4iubh/C0V7QTyYlfnYWTnC03CjdzIycSHGbztxjhtRIc2q5oJM6yKGuU9TsQJjvhDhC4+FRKPkuFl1LrwRJRT49QsuK2cSL4Ya9p6fK87/uPt3sqC/Wz+pkP8Df8+GLyzSrZNqQh9K74QZYuYFG0qja7Zk/ohwxAAvJrJDhLRoP6UDL6m+JGNY4W3k4BgeEdS6UEAiCm0MZ5GiPPr75MpUSTVmPDssRRKMS6zPx5BDcUOzUTP+Kcjtj39dBrJhN8YPiixDmzIB5zRJWdT6/yHIAFG/RbiE1xA7WjBeP12ZyAWTtXPpwPwbqYSP7TZF6XasV0ZgbKCiSYA+p6Dl1QfnBvblf44ePlTl9sT4Udv+rz1N0qvdlSv4q2CDDHhsC0gnoITn6O2c1fmOrNeU4M8+hA3wRFCZPpYanV3xu/kfeam/hMmGeSc9EzAtH6wW/BfXzEUDKCmeb06Wj1jJZvWroA/6a1B+ABJszMPKokT9fgeGsS5NbtZtC8iXTwKzGgbqFnbTB+CpQ7deaVVJ7vn5FESOkCXaVjIlXJ1C/s8+6HpIIrHAGrE9xps4gKIlhID7a3GEuGtOYsTx+LbpbIKyoZDrMLSHNkROWhMRngyh3E87FbSkSi1yx6E60YWMZMSf92DEbPxN0pTksO7S4RgIH9Zfw8yRorKiTLG8Z7YUNq7yNueVxlXI0h8SRtx2GJwJBI4g6OhOY/+rT5YnO2/FPgm5D2kcGSxrTNTPrCJBKIiChZ/bwdSj/8H6o1wcz0oPAxwfd59O9eXfxNeXC6RtCijfV/fZY14OPK5k/LtJFW08VGC8ej5PPODCWb8Kx5wiI0HylHX2FAIostLH8/T8GnP8QTRNoMxY49FXAmh0pHrFpQFShsBCnO8qKHE9+zBeRV93cndcQADUl7MjdOeRaVfU3AALv8kFrOvZho7rsJgsxpgGP8mZ7da3374VC8ktCc2ABdN08lvD3PhagJVyiXaztwMfj7uP9RWjPWyKJ6G8Mklp/Cs/UehgdBcnhzQFhF38fp8TcrB+OhoZvUEyOH+Ly9kh1jxryYMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1006 ($218.07, filters) matches no hold rule: its amount differs from the vendor's earlier invoice ($1,608.50), there is no PO or contract to test for rate variance or short receipt, it is under $5,000, and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsw4bHxjkoqD2DETRR9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1316,
+      "output_tokens": 249,
+      "output_tokens_details": {
+        "thinking_tokens": 143
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1006 ($218.07, filters) matches no hold rule: its amount differs from the vendor's earlier invoice ($1,608.50), there is no PO or contract to test for rate variance or short receipt, it is under $5,000, and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1316,
+    "output_tokens": 249,
+    "output_tokens_details": {
+      "thinking_tokens": 143
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

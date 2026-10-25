@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014314,
+  "durationMs": 4400,
+  "httpStatus": 200,
+  "id": "INV-1178",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1178 is 52,500 cents at the 52,500 contract rate, bills 1 against 1 received on PO-1023, and is under the 500,000 bank-change threshold (bank change was day 42, not within 7 business days of day 92). No earlier invoice for 52,500 within days 62-91 cites a different PO; the earlier 52,500 invoices (INV-1053, INV-1095, INV-1157) all cite PO-1023, so duplicate_invoice does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkQoKEAgTGAI4AUIIdGhpbmtpbmcSDM0J33nrAw6PXlzZChoMuQ/MwSyGZeoXQYSSIjBbFbMiG54mq4fJCjjx2xh3EWyH2ZfAzaUsiEv1pQZjtXltXSFVpvLBjyZjhC4ELEcqrgkBMXs6q5xHxbX0vfo3/T0kmzsB1v18Am0inRz1vGbfEQS9u/0NrVAx7JYU/d3Z/dGk3QaipthNz/kXTERCNbxcZ50f+MP0zafYsKPpOk9+H9eu3b8l5pAoxv47MzMvdvVfol+g4MDw2j6fCI4+L9iB6RI9e4L755rAVeYwMUTuNGF9K91+LNBTvHxYzwoqruiA18bvcy3nNeoa6j4hrfgFf7yo8HUr0u2vzyvu+0rHEoIheRobWmbN9mnrMGuirleJdqgymuOLD1pr7O1LaoS22JQ4WwD5tYWThKEGhF9R5CjgbIAz+wARQZmMAPUM2gC6U1iu+MG3EOgUSEmvFllmHMgZG8uEWE/x0TK3/kLaERKN5pac5Ny+MwpLm32HdExaR+Rafkf7HzsYEPgf569xAmYubbv5DbyCWcuLatczOyCdONLMMYf+GkHUSKgtQ+5se1819xqbS01qvgTb9tihhKSM2I//HLfvTo6vjEbte4YMZ+7PUnCnm+atl/1uMQRczHunrbEDZy6myVF4s1SlQz37bhtvqm6nW0rMCY8QN+8Kp6c9zTP3p2cMG00KTtvzFNbqwO2vDkSUGMRCK0Piqg+woIP5mjpafbe9BK74riOog2pDdSwGnstOzsiifueTMBvbclC9Uc34Js6az4cRQm8BzfZyNM8nrUj+QYbLhS1QkEYJXIe13Vls5NvwkWhEvGclq1qKk4e/+vFmNpNE6QdYqjbNbeQbGnbkbkshp5kYfs1XUdV7HF/gWi/Y0s/AA69oIAdvn1kRKKORnMKJDXRfRJMJGudQS9AeOPqfVXSFQTBb6B9ImtGASOhVhz7YPAk+d1d8dRxSQnTEPOWBuuFhxO5fTEWtAZ6BZVGa5fcb5IItKG/Gd6OzVT17eN3BnVvzxDwUMvqleDkBk+fxxabf/Ykms/KVLBJLj/Qyx8gEI1BqTp0cyZrU4KCN0585pV9+akx8aouCSDX2/Px+6ixnaYy5/N/sv0fsZazclWZRc4TyC92UWL0Q9ykM1jIiSUiQFvO49ihatg3wNwS/2f7bobP6+LGAhws38AFfshHgHz/VhBDPo/GS1RjsZXy6/+RC+9pDrMn15rgZaMxrLsK9k29r/VrdPD4JqmnAgRIU1O0rR8sKxqOnBG//AhxUn8n23uEomDeH7aVct/1SsJWPKpqkIGLs9XhwdaCr7bZYeS4lQarN5E9vkIRkY8zF3oB+M6aavps7OCECx1AKDonPzHnHhrknpFs+g2tdyt524Q4J1lOsAjcBFGJZjdqG5H/12RBP/xBT+uUVJZ8t+kv8c13Cx8o0mM1aJViDdr3d3vzMKRjK0VhHRlu9WQVpAKN1L/RWlwhVa4iHvx7+XXz3SaVY17ln/KiYzz7pu2zu+0ZaHtNkWfTmw+sHt4KxEv5RTAPI2IRSmRZ2YRk+czbYV2eUXHvLptMammKX1iEsV/Fjp3vBFR5J3XCUQspwTlcQnPt1Mq1wTEYtKc3IxamFiPAKEGDTA9RkOrpDO47o92r/t6X823IxUoK+HYOmnqJqwt5Np9iXBMjZZi5zLix0P3aHtTyzCT+raBS8fbUWEqeV5IBWgMQiHuZiGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1178 is 52,500 cents at the 52,500 contract rate, bills 1 against 1 received on PO-1023, and is under the 500,000 bank-change threshold (bank change was day 42, not within 7 business days of day 92). No earlier invoice for 52,500 within days 62-91 cites a different PO; the earlier 52,500 invoices (INV-1053, INV-1095, INV-1157) all cite PO-1023, so duplicate_invoice does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxMjhjQa7bRfjnKSzS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4697,
+      "output_tokens": 492,
+      "output_tokens_details": {
+        "thinking_tokens": 315
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1178 is 52,500 cents at the 52,500 contract rate, bills 1 against 1 received on PO-1023, and is under the 500,000 bank-change threshold (bank change was day 42, not within 7 business days of day 92). No earlier invoice for 52,500 within days 62-91 cites a different PO; the earlier 52,500 invoices (INV-1053, INV-1095, INV-1157) all cite PO-1023, so duplicate_invoice does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4697,
+    "output_tokens": 492,
+    "output_tokens_details": {
+      "thinking_tokens": 315
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

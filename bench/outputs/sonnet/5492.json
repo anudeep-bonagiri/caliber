@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013802,
+  "durationMs": 3022,
+  "httpStatus": 200,
+  "id": "5492",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at the station (15:45:00Z, about 0.03 mi away) two minutes after the purchase, so there is no location mismatch. 39 gal is well under the 110 gal limit (100 gal tank plus 10%), so there is no capacity issue."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgYKEAgTGAI4AUIIdGhpbmtpbmcSDCPF44IjH1iDlEyMvxoMYfW5gndJwdjE4QcpIjB/NaCzjNKaqQvRXxg0OxCdaS3IE+2LxUCtgbe/w0qRYq33E5TrlvNjkc2zlKNF9Psq6wUSTf2/SiGUYBNmdjWVeZ42RwiL1NRtZu0XYUTZN5l6RnNfJS3pFJ/o/NJL2Ahzc+B85MC3tRBIqPqHcREwIz98Fl7pwaiS9y7pS3EkHomrIuOZF9JrTaZW8olHrnj8zai0E46byU9wAjLpRjOociy1CmDq+XN1FmZ0obd6zcvNd7Sg/QE+/f3gJya5vYehjIH672g0R4a8aGeBJloTUD7H7cWItvxBhrKK1ulCWMW0SiRkGk1kILJP/6f+z1kv4sCSvn+/zNs8ipPPWESK3E89SaMG7d1koxPNg7xXMpM06YHaA3cJ+tTQ9IvJn09e+6bAl0ReL0yw71KXKo63Ru/4AtaLqLaonApmXUcn8sZ0GZHZxBhp16y/iPaHtaoyRQoRNGwECoUXuAOH/iVUxKw2NPmmlSqzA+wqH7n/V3auBu/XvuZYzspgLUJBCvN5eBBzLojvb1J0Z5bQ3QWFgnrpH4EF0MxHWpOn4y4ZPtPdptZ8reVbgRcpAf3knAhfVSH9i12SXj8gsMxFeUcZg1cKL4oHMNO7G9lcXcIVRTEfjDXQHrDamhxWGP87FWv34GGNpKu2zjNfViP6RIopjqXTXKg8KC82pYJ48X87uRGCVkvj8IPpe0B4gNh+HJ2z0saIG6VglIB2vQHNnhUb88xGVuJzmToS9OrA5rttt5KUstInGIQEibH3G07E0MxEtIL0GIB45kF5Ran9WmfLxMUaz8M7RFQCowhJv9CySaZu2V9GneLAhxtBbimYneADQ5vcAyDG3ac+hAU2SehkGXflFeY33U2hEeVB3PYUOKuSod24PWvrs1ohaW7heyjgS58FAf4xSJLFN8rVAkrFt31y5eH4A6oV2xpdum4/0DS7i9a5jzFkcRSxJfuAYSYsHlEMtSEdJZ9PPbQq4Mtrux/MfnZrjpM4PG68gU3f78AIX118h4L1plJz72D42rMLvpcL+2O+1vZWvVFHlxLwp47uMdblVZgyRT0/S30YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at the station (15:45:00Z, about 0.03 mi away) two minutes after the purchase, so there is no location mismatch. 39 gal is well under the 110 gal limit (100 gal tank plus 10%), so there is no capacity issue.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskutPZ9Y5p1APcPKuE",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5691,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 139
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at the station (15:45:00Z, about 0.03 mi away) two minutes after the purchase, so there is no location mismatch. 39 gal is well under the 110 gal limit (100 gal tank plus 10%), so there is no capacity issue.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5691,
+    "output_tokens": 242,
+    "output_tokens_details": {
+      "thinking_tokens": 139
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9509,
+  "httpStatus": 200,
+  "id": "2238",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's telematics ping at 13:22:49Z is within the 30-minute window of the purchase and located at coordinates matching the station, satisfying the location requirement."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's telematics ping at 13:22:49Z is within the 30-minute window of the purchase and located at coordinates matching the station, satisfying the location requirement.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882630,
+    "id": "chatcmpl-374c1374-761b-4f01-8560-d8c1f56cd74e",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 57,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 6439,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 5360,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 6496
+    }
+  },
+  "startedAt": "2026-10-24T22:57:01+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"The truck's telematics ping at 13:22:49Z is within the 30-minute window of the purchase and located at coordinates matching the station, satisfying the location requirement.\"\n}",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 6439,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 5360,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 6496
+  }
+}

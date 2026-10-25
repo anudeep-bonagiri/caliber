@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011178,
+  "durationMs": 4252,
+  "httpStatus": 200,
+  "id": "INV-1101",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1101 (101,475 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. The unit price of 49,800 equals the contract rate. The billed quantity of 2 equals the received quantity of 2. The invoice is under 500,000 cents, and the bank change on day 71 falls after the day-54 receipt, so no bank-change hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvwoKEAgTGAI4AUIIdGhpbmtpbmcSDOQAUT4iDnhAD+stKhoMkklY8cQh54aU6viZIjBmZshrBj2627HT9bfjQmhD8cu3son/Rd2Ot67GVHFpcZTD6j2CInYEVCGRwJgzseMq3An0q59pkFlmFAE5Oq8SU8z2Hqed80616v5nv/oy4dIznRNlYmmd+if27+APpG+j+VSgcK5pGQkhscrgVffPwGa90J05cy6By8nh/ohgN87f5ukSIMeTjBq6O0jjQDDu1YXnwL+rLm7AxZSrZzn8ERDghDDUgRPwNbsMr0/w29alH9o0/sr+6l0CzwokfrK15d8lPerABfhMeTmnuVMklY73SsazqB7nLRenEfFulX0s0Nrk6rRDie9BQUrpTXgtbcH/ICtmyLZiXzjq529MPpI8MdjjEaiLWHjq4utsVFAfhQZ/iIJ1zWMydkaXxxCQbLOK5lTayfyhzwRqmXroQCc/Th/MYLbVKoncSC6rxSTb3PWTiJ28B+6MNTiaL0DGSAiD4EC0rw82/BVGeBrWNWoTIGP1K6Wrg347ApnHI+hwDmfWW6VtcDpQP7HhbW8H3D2GRdyez6ms07+xNLh920n93iAu0f0b2NvG/+U8OU9pbX/ahlXKN3+3+Tjff7fVeiRcIh5l7ozGhXF2ykXVCg0mSAG4Fc1Rf8Q+w3+KSsR1KB3geAOaLveSYKbnPtHS1CxmzP5sYkIlKKTdnbZZnZwbWJOoggN/ChNhAyNeP1P1TLVGiNhkdTQQfRKUH8QFy0Hjd5ynJbN8MmHmQuHdYY2FEsuBo0XJren3GZ2iO0wuS2Qr9DYFOtW3NXhoDH3xQOBFPRjEInF2Yw01DSJygElhgIQSNKGxQiLxVOV4wa9ftjIuXdkHS60R6br/n0mOrojkbFrln/3pFTjNmerFwfSZqN17ILbpNTwD4pYCVqSvs9uZYt15btYCvwTuEJD21BQFKdm/nKeG4ZudHjfAM9PoQSw6S3tib2VCleg561bFzcOp71sMKkG3rbeKwasuGtlEOCVZEhwM9hgPq8lFIL8idx2GEi2042qHicDyDILXJZ0tlLmsQuQ36ihGNOqJ2opVhgxKYK+UwGOwTHJBb9ptJMYzr5xcY4eOfy4r7vejAeSx7MW9e8YR/EKAXyLEuBSOxa1xh8JD1pIbK7o4NnHZZfHFNtc6+dwQfRgzZI7k0eWSLQFKVxLj27+xDXvjSOgixWlzNg6dOegbTY5dtrKhgY+Yu7uQyhBJ8m1H/rmZP9bvyb+LTywZEovTnQ8/LxkJn8nUldwxfD8yYr7uV7fLxdvvf4nwsf9T5J3sqWNI/Hdpog32CK/qmTwhRY+2MC+ndxpU2ErELRZGLIXRHYUqo8BzPNV2ZSlMyGDSIRbBT4F2gAkbWAI9wovFw/Dfl15BdIWexyWvHCvN/SfutYTACxqL8SVmcl3ZNodP1010hbCRZg1JXkXWLQfQv54Uw2h8XASiBcUrOFbr62CSGOg46G0V4IHeuBs26RoEF43tZ3wHb5WLRPFDEZXSrNvIJ/c+vtFmI3bF2h59lWwrssCD4cRmYaSAh90l+7tq+p8kh8o9E2ZlNClLM+xKVBFexyMSNzrZqqt1rKcO0E6WfykIeNB49Qb8pDBaddyJizAlNxNLn7ab/bSz2ge/q8ZFQh2Q4QpB7sG9tr7zrRTs6+rtsnJqznly2jC2poEx2YRH5ue60wOpMHHelCkgVuFTZTjx5jC+SZXEV5V6DSBvobth33+rwyXqfF6+sJe314lvxVjIVXv0F+PtNoTo8hgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1101 (101,475 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. The unit price of 49,800 equals the contract rate. The billed quantity of 2 equals the received quantity of 2. The invoice is under 500,000 cents, and the bank change on day 71 falls after the day-54 receipt, so no bank-change hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1T7juHjnhk8r4ELDy",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3314,
+      "output_tokens": 455,
+      "output_tokens_details": {
+        "thinking_tokens": 312
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1101 (101,475 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. The unit price of 49,800 equals the contract rate. The billed quantity of 2 equals the received quantity of 2. The invoice is under 500,000 cents, and the bank change on day 71 falls after the day-54 receipt, so no bank-change hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3314,
+    "output_tokens": 455,
+    "output_tokens_details": {
+      "thinking_tokens": 312
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

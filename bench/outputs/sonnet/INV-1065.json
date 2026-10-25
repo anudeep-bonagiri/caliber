@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008714,
+  "durationMs": 3896,
+  "httpStatus": 200,
+  "id": "INV-1065",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1065 (48,800 cents, PO-1009) matches earlier invoices INV-1017 and INV-1047 only on the same PO, so duplicate_invoice does not apply (it needs a different PO). The unit price is below the 51,700 contract rate. Billed qty 1 equals received qty 1. The amount is under 5,000 dollars and the bank details never changed. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3AkKEAgTGAI4AUIIdGhpbmtpbmcSDNaNFcVrKjvyWlovDRoMoPudo77al1mdNOi2IjCKhwFPLPUziuTrXCfHndt9IBwdkEUn7hnoxREHJU+lWGeNc2u1EZzhjDDMYbYLknQq+QhYJ/ijlEOctaXMstOUebE/kpeTZnjrs8RiUaq/eyF0ZGQUAxvq4D+GtnU1UvpydqMpXYqCRubWJIz3q1JoM4/DNbiv0v8FMvMzYPjC4hnTCdu/rZjK17V4anMzH9cQ4LoZemmJGMDMuuJuz01fd8979/7lvrkAx+E+kQMXcld0f7wrtMsxElq7LWtb1Pscm1phpwT9dqKQ9pcEYevrcjVVq9gmYAhmJliEqiioPJ08XFtC+0Im3uDXFF14tLp0CsHxFHJrMbMUsfp8/dP9NLTSL0yFAbhr1GY2zuLLib/kHCbWnGwLNi57FNvfx6S4wZaM0IFpJ5/gl1MEOcYFNaojyvRcdg64hAzBFv+emcPyLd1oCioUi4NIpjSMfJoUihMIeIKhPq7yu2wyGlgILvVqzuU4703UPr2eXiT6wVWnJEfT80vk53kOlBSAdVZGvmgzJlBIYykl27vJHKxstlk18w4KlqGbDbk4gZVHo2DTZbGJrTChnpHaL4Y8MnfK7fUyDUTCfhkhxUK6df2k3hULdBP2TO+LxedQHTsafJstlGUXSEFG5PXdmk7WfF5aO5iUWsHeF1EedzYfFYN7y13tipyVJfLxs4PdjUoVMCgI7Pl+2gTat4GgKVWY6kIM2Zz36EZ4nB4qH65YlWfKZZ4lHj1mUFpnZTfAXhmgnBgoa2alNz3LyH7pwzGIv93SKp5EiXgqSXc5O0fV5T4DAVUk6dfopodTlJiAZg1BFwLMknyiQXQOMFjW6+e5fxudeBhilRAFg1MgykBx+7Ed6oKtVxO3aUAGrplh2dNHWljXhbU1ljWny4HnqQ49ArRm94486qP8fgIXFhDHQYjD/BhzjcgKWs3JwJQ4LSt4xPT8GbG4FrFhI/Q3taS7EBA9AZ11rQ7KkS4EG6aOWKYLOW84bRM6Id3zmc5uGGRnd88dYNsWAHu41i3uakC21XKQ/x2xxDS6Pn0z36/gKGiCKQsp1pkvy6S2eVYc3NpTwZvkjb81PbpMjJ3TriAh2NcbXeamxvZiRj+FS/dUjlarz4ZbfqtzHMYile+TE+732B/cTBC64+HFs1uQLpf+Y+uyJIc+FNBREiQhFnHUQ1AyKhmWI9SxBaYOKfr8iEPK6LxOxIlKAxCMSzx9IJCy5avX8f7qHjzU0fQOScBBhR3rEsiT0jX6RV4Fa9pWg6NEM6FcCOe/VmCIy7RUr3Qx480DgXqoQvmuza7GI6bHYU3UM2snGxqM9ktfBrxay6j7koPh0SnaKj5pHxkw/TxRzB5m8WQ2VWRJ1cxX8E2jH7NuvJAXNED7g/liPRs2ncszuoP4uBmMKQ+2PnKI5/NJAN/WY77TM8lsfGjoQnvt3NM7qZEW35d1JsHe3fGmUhd4B/NqW16cE6lX/1p3iqIBjp5alqwtTG9vLdop80IMM1ZrHf1C8wJERDacRbqK0VU8PHT4PwnwaApbDxzTmkbkDT9sbbSJWfVPU3hYBZ0DcGjqdNLkbm9huc3kjabwOtOD7iquNib4iZ70fkLY/xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1065 (48,800 cents, PO-1009) matches earlier invoices INV-1017 and INV-1047 only on the same PO, so duplicate_invoice does not apply (it needs a different PO). The unit price is below the 51,700 contract rate. Billed qty 1 equals received qty 1. The amount is under 5,000 dollars and the bank details never changed. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt3z1fbKV2RuaHm63BH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2317,
+      "output_tokens": 408,
+      "output_tokens_details": {
+        "thinking_tokens": 259
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1065 (48,800 cents, PO-1009) matches earlier invoices INV-1017 and INV-1047 only on the same PO, so duplicate_invoice does not apply (it needs a different PO). The unit price is below the 51,700 contract rate. Billed qty 1 equals received qty 1. The amount is under 5,000 dollars and the bank details never changed. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2317,
+    "output_tokens": 408,
+    "output_tokens_details": {
+      "thinking_tokens": 259
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

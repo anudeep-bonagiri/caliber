@@ -1,0 +1,49 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 34,
+    "item": "ac_service",
+    "rateCents": 36800,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 5
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 16937,
+      "id": "INV-1004",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 4,
+      "unitCents": 16937
+    }
+  ],
+  "invoice": {
+    "cents": 78100,
+    "docRef": "evidence/invoices/INV-1008.txt",
+    "id": "INV-1008",
+    "item": "ac_service",
+    "poId": "PO-1014",
+    "qty": 2,
+    "receivedDay": 6,
+    "unitCents": 36800,
+    "vendorId": 5
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1014",
+    "issuedDay": 4,
+    "item": "ac_service",
+    "qty": 2,
+    "receivedQty": 2,
+    "truckId": 15,
+    "unitCents": 36800,
+    "vendorId": 5
+  },
+  "vendor": {
+    "bankChangedDay": 71,
+    "bankLast4": "8823",
+    "id": 5,
+    "name": "Border Fleet Repair"
+  }
+}

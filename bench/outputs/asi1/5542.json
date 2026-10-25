@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 17494,
+  "httpStatus": 200,
+  "id": "5542",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The truck's nearest telematics ping within 30 minutes of the purchase (13:35:56) was approximately 2.7 miles away, but the ping at 13:20 was ~13 miles away and the one at 13:05 was ~14 miles away; however, checking the strict 'nearest ping' rule: The ping at 13:35:56 is 56 seconds before the transaction. Distance calculation between station (32.3865, -96.8483) and ping (32.38626, -96.8481) is very small (< 0.1 miles). Wait, let me re-read the policy carefully. 'more than 25 miles from the statio"
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"location_mismatch\",\n\"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (13:35:56) was approximately 2.7 miles away, but the ping at 13:20 was ~13 miles away and the one at 13:05 was ~14 miles away; however, checking the strict 'nearest ping' rule: The ping at 13:35:56 is 56 seconds before the transaction. Distance calculation between station (32.3865, -96.8483) and ping (32.38626, -96.8481) is very small (< 0.1 miles). Wait, let me re-read the policy carefully. 'more than 25 miles from the station by its nearest telematics ping within 30 minutes'. The nearest ping is at 13:35:56, which is < 30 mins prior. The distance is negligible. Is there another condition? Capacity: 43.5 gallons vs 110 gallon limit. OK. Let me re-evaluate the location. Station: 32.3865, -96.8483. Ping at 13:35:56: 32.38626, -96.8481. These are essentially the same location. Why would it be held? Ah, look at the ping at 13:20. Lat 32.58899, Lon -96.82336. That is about 13 miles away. But the policy says 'nearest telematics ping'. The nearest is clearly the one at 13:35:56. So location is fine. Is there a duplicate toll? No tolls listed. Duplicate invoice? No invoice. Rate variance? No invoice. Short received? No invoice. Vendor bank change? No invoice. Capacity? 43.5 < 110. Location? Nearest ping is < 1 mile. \\n\\nWait, did I miss something? Let's check the time again. Transaction at 13:40:10. Ping at 13:35:56 is 4 minutes 14 seconds before. Distance is tiny. \\nIs it possible the question implies that the *truck* must be at the station? Yes. And it was. \\nLet's look for other errors. \\nMaybe I should calculate the distance more precisely to be sure it's not > 25 miles? No, it's meters apart. \\nIs there a capacity issue? Tank 100 gal. 10% buffer = 110 gal. Purchased 43.5. OK. \\nIs there a duplicate? No. \\nIs there a rate variance? No. \\nIs there a short received? No. \\nIs there a vendor bank change? No. \\n\\nLet me re-read the prompt records. It is a `card` transaction. \\nMaybe the 'nearest telematics ping' logic is tricky. 'within 30 minutes of the purchase'. \\nPings: \\n13:35:56 (4 min before) -> Dist ~0.02 miles. \\n13:20:00 (20 min before) -> Dist ~13 miles. \\n13:05:00 (35 min before) -> Out of window. \\nSo the nearest ping is definitely the one at 13:35:56. \\n\\nIs it possible the answer is CLEAR? \\nIf all checks pass, it is cleared. \\nLet's double check if I missed a 'duplicate_toll' or similar hidden in the data? No, kind is 'card'. \\nLet's double check 'capacity_exceeded'. 43.5 gallons. Tank 100. 100 * 1.1 = 110. 43.5 < 110. OK. \\nLet's double check 'location_mismatch'. Nearest ping within 30 mins. 13:35:56 is within 30 mins. Distance is ~0.02 miles. 0.02 < 25. OK. \\n\\nTherefore, the decision should be clear.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884767,
+    "id": "chatcmpl-2df7a6b0-829f-49cb-93c5-f0c8d0b57cdc",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 971,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 6183,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 7154
+    }
+  },
+  "startedAt": "2026-10-24T23:32:39+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"location_mismatch\",\n\"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (13:35:56) was approximately 2.7 miles away, but the ping at 13:20 was ~13 miles away and the one at 13:05 was ~14 miles away; however, checking the strict 'nearest ping' rule: The ping at 13:35:56 is 56 seconds before the transaction. Distance calculation between station (32.3865, -96.8483) and ping (32.38626, -96.8481) is very small (< 0.1 miles). Wait, let me re-read the policy carefully. 'more than 25 miles from the station by its nearest telematics ping within 30 minutes'. The nearest ping is at 13:35:56, which is < 30 mins prior. The distance is negligible. Is there another condition? Capacity: 43.5 gallons vs 110 gallon limit. OK. Let me re-evaluate the location. Station: 32.3865, -96.8483. Ping at 13:35:56: 32.38626, -96.8481. These are essentially the same location. Why would it be held? Ah, look at the ping at 13:20. Lat 32.58899, Lon -96.82336. That is about 13 miles away. But the policy says 'nearest telematics ping'. The nearest is clearly the one at 13:35:56. So location is fine. Is there a duplicate toll? No tolls listed. Duplicate invoice? No invoice. Rate variance? No invoice. Short received? No invoice. Vendor bank change? No invoice. Capacity? 43.5 < 110. Location? Nearest ping is < 1 mile. \\n\\nWait, did I miss something? Let's check the time again. Transaction at 13:40:10. Ping at 13:35:56 is 4 minutes 14 seconds before. Distance is tiny. \\nIs it possible the question implies that the *truck* must be at the station? Yes. And it was. \\nLet's look for other errors. \\nMaybe I should calculate the distance more precisely to be sure it's not > 25 miles? No, it's meters apart. \\nIs there a capacity issue? Tank 100 gal. 10% buffer = 110 gal. Purchased 43.5. OK. \\nIs there a duplicate? No. \\nIs there a rate variance? No. \\nIs there a short received? No. \\nIs there a vendor bank change? No. \\n\\nLet me re-read the prompt records. It is a `card` transaction. \\nMaybe the 'nearest telematics ping' logic is tricky. 'within 30 minutes of the purchase'. \\nPings: \\n13:35:56 (4 min before) -> Dist ~0.02 miles. \\n13:20:00 (20 min before) -> Dist ~13 miles. \\n13:05:00 (35 min before) -> Out of window. \\nSo the nearest ping is definitely the one at 13:35:56. \\n\\nIs it possible the answer is CLEAR? \\nIf all checks pass, it is cleared. \\nLet's double check if I missed a 'duplicate_toll' or similar hidden in the data? No, kind is 'card'. \\nLet's double check 'capacity_exceeded'. 43.5 gallons. Tank 100. 100 * 1.1 = 110. 43.5 < 110. OK. \\nLet's double check 'location_mismatch'. Nearest ping within 30 mins. 13:35:56 is within 30 mins. Distance is ~0.02 miles. 0.02 < 25. OK. \\n\\nTherefore, the decision should be clear.\"\n}",
+  "usage": {
+    "completion_tokens": 971,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 6183,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 7154
+  }
+}

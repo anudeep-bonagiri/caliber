@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009762,
+  "durationMs": 4137,
+  "httpStatus": 200,
+  "id": "1421",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The only ping within 30 minutes of the 12:30:35Z purchase is the 13:00Z one, with truck 15 parked near Corpus Christi (27.800,-97.396). That is about 66 miles from the Three Rivers station, over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1015."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShggKEAgTGAI4AUIIdGhpbmtpbmcSDFJUJLPkszrD3AQHLRoMKB1IuRKrPXahzYNVIjCDqyd2SZKcgB9vD0vlvTb+d+K5UZmjD+CGXtn9rGl3ZrAwO8DXFEjAo4mV98Cd4kUqowdWhOyiBm8Hf+bHMxbHQnDv76zI0fp6mN/lHt4jPLg0H3B7m+6U2dnG51rOtWYF2XUf7OSupGPiNDLpSW0JFloMRPUPP/gHJFSNERMOKsYSJh3XL2QVOaAE7bPRkF9v6wy++Nd82697Ed9TcbAvTs5hH8k2nvWp4GOUeI0bTWuqhGUUOK3fs4l4xd07B4lX9oEwxXUCSKzf9IdRbOR4mXXAde8bL3dBKe5+QotDrGkZugk5TMY4zecFhrouwuDleLs/j+Sx0l0ygIjLkwvqcxulVSu0cqbjb/gpOLngY222SEcJK79s5oFRDfn2WKBRK0aB7b6ZGiA7QyPki76fQxuh41s6V26Vys5w4+XIKqpehV5rRxwMPt26xpXRlSSqdz6p6ZfhiWMUJrwugLCojMhghdL8hSsAsIsXPLe+bUmHYgm9iuYh8fwGjOQUvfKScTBiviFUr8zGsMDBQASxnpv8KvN23+H3EmDAz4GdydV6PPjiIPGsZyfxXAj1luo4jaN3JYQbHmb1XIilNa6s7ETn+8eRmWh5NaHLKi/3eI4RbEGc1z3L+vy4toXIHX/pmaVVhP89RGLzKq4OcCt71AIfgpCke6Jr/VMJWOqj9oNxkrnw1j12UC5mMTlyMYoMFlz3/7UQroBZ7jfTvPO/AYXXICSamC+hElqvZtylLmQW5KlwSHVLlOa9zeQ/36fJvwQvRn+B+iFkFdKNtxehxeNJ8VbohXduxBnoB0JyAIExc/fyKoXXoQiMRH3/LZhDAho32ZQZ+9aZOyTlAkXQ8PDZ4/S697MtXdgY5G/XAs52/U9arTESiysim3IcmiO1z7d+DMEKR1/7UZtnc85kZhLriojrivawrF8pC+7v5sh7UbePbdhiG2BM1qQKfAD69nwtLC5bZB9QqtsMxBgSFyb+Y7wHZuTmlkz1x+cMcdypr08RFl/FSzY2fVRAyFbrV/tt81xDN2Mqw2Ik5HlyrID9vu9zWtVAgKpMVlYO90HN+fHzlYX9TCqRPyLA/Nv/NB8i0kSNo1lIdE21f5IyXf4MvxSKKo7ZzBghvdX1EgW8zXp78wNJsIAxG2ylyP7ih+DAcAxTFtcDEKK8h2JsOPKHRgnC/+2nfjRreqGUq9Qyk3gsrHx55J6yzsR/av2qD/FJzjSSowxmd1B6Os26At0TeXT7IzBwyQRr1xNyvEwy5AOmS3YujxWaGhuJXMLvFILvH3da4Q6TJ01Yk/k/WeHbMRQfGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The only ping within 30 minutes of the 12:30:35Z purchase is the 13:00Z one, with truck 15 parked near Corpus Christi (27.800,-97.396). That is about 66 miles from the Three Rivers station, over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1015.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsowZvoNUf6sj3KkDvH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2996,
+      "output_tokens": 377,
+      "output_tokens_details": {
+        "thinking_tokens": 240
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"The only ping within 30 minutes of the 12:30:35Z purchase is the 13:00Z one, with truck 15 parked near Corpus Christi (27.800,-97.396). That is about 66 miles from the Three Rivers station, over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1015.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2996,
+    "output_tokens": 377,
+    "output_tokens_details": {
+      "thinking_tokens": 240
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

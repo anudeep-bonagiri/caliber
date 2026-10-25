@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010624,
+  "durationMs": 2526,
+  "httpStatus": 200,
+  "id": "2429",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at the Mathis station (about 0.03 mi away) at 11:40:53 and 11:50:00, both within 30 minutes of the 11:46:01 purchase. The 55.6 gallons is under the 165-gallon limit (150-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSigYKEAgTGAI4AUIIdGhpbmtpbmcSDBAP/m00ZeUzeFpZbBoMP6ofoCdotdUIyvTBIjCdt77093GUQEMSl+Cb5K1UtDTyCC9/DvXn56ubacWajwwVU30eI83Sc1hiyILkxwEqpwUW1TJmhUdKxkIKuB9M6md5grytpMF88NUt5793K0QnhHwE+mB8TAtv18hdV3e8AWg4ION+pEj8m3RuiRH6/eTa03UsgciVa4AFPpH748JyYbhztXMql3A83WKKj+vRzYXsn6u2ABaEhHu7SAXvh33leAlupBQVVkHdXcSKcRYmh/fOm7MsZuMvDEnVUMSWhlg0ii3CmshwyLmHlU6A3n76FdMDNnK5bEAsFUzPCgcp5qd5p/JuzdTW3UTjgolCoYN53lYsRQtVBGPv2+UIH0A5utURc5lm+yFj2Tj6rkOV0faTr8698AkKh7I6KQrmfSXpe+Vlvs89pbkR8BdLfaaXukU6H4Yz7+967WbVC6dXBAymzlqwUoJSjbU0HNDmJwKBRzQhWKma+eC+W2KXtHGRgx6I2XBgCfgaMdkdWlYO9cBxwhvMaZO2Ti9W7gimL4JjU7hk+hVNbQbsbb7Lg6T+jqd+4Pkv4792RwVuisHTOUavDV1bNlLNLUOWsE6kBeAeAAJGOomFIx7TUAwcMbgdAprzZ18Spd5GLBvpZUHV5vK2Tfvc1rEJME7Vkq5Ha+TVW4n6M8/3CmPjW3bRa/p+4Li0Jg+08rrRrwbpOhsusvPaBp+kfyLZYuSDxOACmX+GtT6bO0LbwUevF5XgOJeep2/xxSW9zC3th1TaNTZJxHOOsCIcQTLX3cc139YXS2j5NtpRqIZozsqPK7FBNU5Q/I6Pg4GSzfaY1cVKV3/N9W+p3wjezI0aUYufjEWC4+wVtbzleKAAkzuGt4G6b14NOWXwtewaemfj1eq7WQHozcZdQYFWFu5q3h73vAH4hDWWK1kxxUe3pd924WUPzJfQ3owZPMORaEXxSNWQ4qDj5qbzRbtB91kp3mYUJti3zOJ8zILhwoGQGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at the Mathis station (about 0.03 mi away) at 11:40:53 and 11:50:00, both within 30 minutes of the 11:46:01 purchase. The 55.6 gallons is under the 165-gallon limit (150-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsc1h9UeDFECzFK2TQL",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4232,
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "thinking_tokens": 104
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at the Mathis station (about 0.03 mi away) at 11:40:53 and 11:50:00, both within 30 minutes of the 11:46:01 purchase. The 55.6 gallons is under the 165-gallon limit (150-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4232,
+    "output_tokens": 216,
+    "output_tokens_details": {
+      "thinking_tokens": 104
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

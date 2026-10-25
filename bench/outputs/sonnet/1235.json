@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011948,
+  "durationMs": 3344,
+  "httpStatus": 200,
+  "id": "1235",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 7 pinged within about 0.1 mile of the station at 11:20Z and 11:35Z, within 30 minutes of the 11:23:53Z purchase. 40.5 gal is under the 110 gal limit (100 gal tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1wcKEAgTGAI4AUIIdGhpbmtpbmcSDHN85/9TQKzhGCVGSBoMCxYUYou4oMrxojyXIjAAxZ+iE7wRswsWz3xt9oS5gNf3OaN+XJ/Fy4VZ7IAGIBhK6VU/ah72pTJ/fd7GwmYq9AYcQNxxk5xF33GaarD+9NKw3+r9dpJBNHt2UyIm00ujOmK4PfSh/KR/N5MEzFvg6HwPJJ7rKBqLep0yObxbkJCAwDDD2UQdmb2MAJNhsPZE0M42BdjmPvsqKArBnXsMSNUhcwRCJnkHIveu2ddJOY7E5KYhIfcazom6FrvVSHKOJIfep47Ia3IJy3f8r9wEsbvf38sZvFA5iCvkXYfgWQVMLbARcNlKmEY+8qlNpc0SR4ALrrmCIZmZsP2g7reDrcbNODmoOdpAXGUjtJzV0453riUiGxzIeqMn1LVL5xM8SGEUd8PcYxJrzmQcQmWBY8a+4+H8XWrF7y/szMKrkUb3RXXUtQuHeJv179G5PUNYpo0cxXKALY3zT0mK3a0bzli0z7AZNzgbIIrsCUOSoB6KCzwaDzfBGVDNIfxMpOFfVJBhmJx33h90+By6G0Hqhcr256eH7eRs85GIPgF3TJtchMUtUNEfDDk9f1kNlJUIR/DKdXh7sH3+5voaZHH7A2LhLtYzZLwCiQUMFXm+ULFg4mE+KxwIL6WAgvf5feEowbD6CKFKfpjfWb+eRVNbRigPn8ywlnMltQgtSrhPGVINoC5VCrc4v8J+N9iwffUMUoIro92TZuRrASeSnBXlVF7/4IOAs3XDt7RQkHnx7VGCFnvR1IXjhz2d0N6C/8cq5JlTHS4L91Hb6AY60f49BvL0mvXsrp/sUYohvQIu+4olRzUBu/h+qwF4NBNfUvt3Owtya/oXJsXpi4UiENDEE1k3Y3Rvoy+zZd24LzgSuoUGvAZjtPcd93HMjBc8a+3yS01q5bGRlF8GRt+dOj9MO8ZomOBavHwGFK4w8j1HBNznCv/1ZRoqEKqpF45y7PDXsM9vVMFBF2RnBl8/2fGEfU30kMVGsxsgDWkm7vaxL7o02jBx7x6SYztAQ7IH0zvELp9LtcFNnMVWP9rqUwLBsjzORSfwCFkREg/kmfPYAClYrzQw8Fz+CsAGnTkBwem0iWfqbNOHRB4rEaJ6HPZOxwhKGIBZk0tHhCDb8VvWu8jqvDfo1fNPgtCAf8h59bx5d197TOXBm8osBOA7oPQ7nOcffmQ/k9+lPsdc0Lu7aC4ODwx+qkI2dT8Vig79AKyqAYDI09lOkFV9KFqaX1Bg40I36IyYED35i0l1YKXAt+kcRQGBzxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged within about 0.1 mile of the station at 11:20Z and 11:35Z, within 30 minutes of the 11:23:53Z purchase. 40.5 gal is under the 110 gal limit (100 gal tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsp4nFz43up94ZDgZho",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4449,
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 193
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged within about 0.1 mile of the station at 11:20Z and 11:35Z, within 30 minutes of the 11:23:53Z purchase. 40.5 gal is under the 110 gal limit (100 gal tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4449,
+    "output_tokens": 305,
+    "output_tokens_details": {
+      "thinking_tokens": 193
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

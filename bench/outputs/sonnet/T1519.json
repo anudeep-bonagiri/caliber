@@ -1,0 +1,64 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012442,
+  "durationMs": 4142,
+  "httpStatus": 200,
+  "id": "T1519",
+  "model": "claude-sonnet-5-5",
+  "parsed": null,
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1519 at plaza TXTAG-SH45SE-01 (Creedmoor) at 15:39:31Z on day 23.\n\nThe earlier tolls at that plaza are:\n- T1323 on 07-20\n- T1348 on 07-22\n- T1431 on 07-28 at 15:12:09Z, which is 27 minutes before this charge\n\nThe tolls closest in time are at other plazas, so they don't count:\n- T1515 at Hutto at 15:08:15Z\n- T1517 at Mustang Ridge at 15:28:36Z\n\nNo earlier charge at the same plaza falls within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1023 at SH 45 SE Plaza within 10 minutes; the last charge there was T1431 about 27 minutes earlier on day 20, and the recent charges at other plazas don't count.\"}\n\nCorrection on the reason line: T1431 was on 07-28 (day 20), not the same day, so the gap is days, not 27 minutes. The final answer is:\n\n{\"decision\": \"clear\", \"reason\": \"Last toll at SH 45 SE Plaza for TX-1023 was T1431 on 07-28, days earlier, so no same-plaza charge within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsym5vrkdg2bzQb7teW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4031,
+      "output_tokens": 438,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:16+00:00",
+  "status": "unparsed",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1519 at plaza TXTAG-SH45SE-01 (Creedmoor) at 15:39:31Z on day 23.\n\nThe earlier tolls at that plaza are:\n- T1323 on 07-20\n- T1348 on 07-22\n- T1431 on 07-28 at 15:12:09Z, which is 27 minutes before this charge\n\nThe tolls closest in time are at other plazas, so they don't count:\n- T1515 at Hutto at 15:08:15Z\n- T1517 at Mustang Ridge at 15:28:36Z\n\nNo earlier charge at the same plaza falls within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1023 at SH 45 SE Plaza within 10 minutes; the last charge there was T1431 about 27 minutes earlier on day 20, and the recent charges at other plazas don't count.\"}\n\nCorrection on the reason line: T1431 was on 07-28 (day 20), not the same day, so the gap is days, not 27 minutes. The final answer is:\n\n{\"decision\": \"clear\", \"reason\": \"Last toll at SH 45 SE Plaza for TX-1023 was T1431 on 07-28, days earlier, so no same-plaza charge within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4031,
+    "output_tokens": 438,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

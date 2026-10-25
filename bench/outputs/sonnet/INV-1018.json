@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006368,
+  "durationMs": 3243,
+  "httpStatus": 200,
+  "id": "INV-1018",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1018 for $299.00 matches no earlier invoice amount from this vendor. Its unit price equals the contract rate and PO price (29900). It bills 1 unit against 1 received. It is under the $5,000 bank-change threshold, and the bank change on day 71 is after the day-11 receipt, not in the 7 business days before it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+wcKEAgTGAI4AUIIdGhpbmtpbmcSDCXYCD3vtCbUElyAvBoMQO1WbbfykOJEtfgiIjAv7wW2nGT2XvoP4vvcxRvIpazvXw5QYVVZVdUkPa2z6ZOIrruwwGK8DB77x6He5fEqmAdRuOnE6elccyLcqE27ZMZhlk9arNhLaXCHv/dm7uOox2izE+7XrOS8xYySewG20fuZB2/RUff4vYxgkflpR/xyNZsOVji64v7NmVv0Cyv+9oRqurqVRjTIUZ0cIriWSIZxRqpUszMteQNlxU71o/e3QvVh7V0+iN0j76ztRoBeYoMPCrvsEBLYTw2iVfpHwhRjxo8DnXqlrbIP4e9YXKW135r0fmyR2c2NO42uCqazs5g2BnlZJIlCj2UaTYYWUUUAw+WP2O8dTRcEiXCC+2SBpnexXVu034TPMOFFnvOdve0w+go8W5a7OCsbu6+OfqTBJdyMqZDZ0oYX90cyxq71AzZQDGxSXBD4r8QnsRWoKM6ujsan/cLvZE985ab6MUOFjTVId3Isg3UUuA7lYHyT1vE8Wgdj2uuA9hsKmHZWHTUx5OJY3IrwVDVRQNDTrjmGtP2PzbfAMQ4NLGaBepqJpStQV2wGmc697TufKRAhgM33qQOqd/CnzvTYiLjbOOkFAqrrhxMbeaAGC2ugDA8QjDWF6baOS4W29yVlaKE06snm91jA04IWeFp7N7gdRb0j8Wshn+TaPzl68Yq/X5D4KcM/rB0N2Dv/czH9jI9mhzQI7a3B6MhnRNEJDjPhhTvv5W8+3Whexvl858WmKBC3cmnmB/Xos9ZRw6FuGC/lePx57m6ASrPTm+7bmi+sbPrZNw88A/xj2tXExP0cq38n1uLM2CNA5KG9Z5b5LiJYSc96j8vhswohZnyR2d/Esr67zMtpE05uPuqKdYeb2UETjp0EF3OVe/HWDYMkkwOk/JIdQAmbzTtxVdrl8r4scqVBnr+KnjsuUMkK2thTvIAFpVwVeOYHzBxBes6HHSmmZbFf77mxJkpzHZbB3uG+LxavfUXTTV+6KvXH3Z47Avy42cFoDV6y0/JuRW9C611aQM1oy98A6PgVHbv8xn1actJta4JOTC/NAPdl4FpADMuvFmLcU1u1iwCUfDJ8YybLSjTqcPTGgqFHchbtJhM8mKK8T5EnQcYfy65sO/Sfg+t1fIp4pIbJHnGvEo5O/7D9PXxpb3xWZNCUToz9A4v3a1JSgaKgFuA3TdRk++VLh3Sm5rb046s/K7FbBu6J6VRvPhr5tLDdPw0FhMfKWBfiKdtKB9rSWF+PvjWaPSACaAV+wbYfvQT/m4rsWleqXg+RBJF90VzfMaPuczTAkH5rrdiWWpGQb6OmKRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1018 for $299.00 matches no earlier invoice amount from this vendor. Its unit price equals the contract rate and PO price (29900). It bills 1 unit against 1 received. It is under the $5,000 bank-change threshold, and the bank change on day 71 is after the day-11 receipt, not in the 7 business days before it.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1WrxcDnE7ogKDxDu9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1729,
+      "output_tokens": 291,
+      "output_tokens_details": {
+        "thinking_tokens": 163
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1018 for $299.00 matches no earlier invoice amount from this vendor. Its unit price equals the contract rate and PO price (29900). It bills 1 unit against 1 received. It is under the $5,000 bank-change threshold, and the bank change on day 71 is after the day-11 receipt, not in the 7 business days before it.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1729,
+    "output_tokens": 291,
+    "output_tokens_details": {
+      "thinking_tokens": 163
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

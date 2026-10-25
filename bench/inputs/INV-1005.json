@@ -1,0 +1,39 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 20,
+    "item": "tire_replacement",
+    "rateCents": 53200,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 4
+  },
+  "earlierInvoicesSameVendor": [],
+  "invoice": {
+    "cents": 160850,
+    "docRef": "evidence/invoices/INV-1005.txt",
+    "id": "INV-1005",
+    "item": "tire_replacement",
+    "poId": "PO-1008",
+    "qty": 3,
+    "receivedDay": 5,
+    "unitCents": 53200,
+    "vendorId": 4
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1008",
+    "issuedDay": 3,
+    "item": "tire_replacement",
+    "qty": 3,
+    "receivedQty": 3,
+    "truckId": 21,
+    "unitCents": 53200,
+    "vendorId": 4
+  },
+  "vendor": {
+    "bankChangedDay": 0,
+    "bankLast4": "1156",
+    "id": 4,
+    "name": "Metroplex Truck Center"
+  }
+}

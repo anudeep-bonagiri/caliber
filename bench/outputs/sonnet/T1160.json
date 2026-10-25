@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00382,
+  "durationMs": 1856,
+  "httpStatus": 200,
+  "id": "T1160",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1160 at Hardy Toll Road (HCTRA-HARDY-01) has no earlier charge for plate TX-1004 at the same plaza; the earlier tolls were at different plazas (PGBT and DNT), so there is no duplicate_toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Toll T1160 at Hardy Toll Road (HCTRA-HARDY-01) has no earlier charge for plate TX-1004 at the same plaza; the earlier tolls were at different plazas (PGBT and DNT), so there is no duplicate_toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsp7uHdqXV9e7TAY94w",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1385,
+      "output_tokens": 105,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Toll T1160 at Hardy Toll Road (HCTRA-HARDY-01) has no earlier charge for plate TX-1004 at the same plaza; the earlier tolls were at different plazas (PGBT and DNT), so there is no duplicate_toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1385,
+    "output_tokens": 105,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

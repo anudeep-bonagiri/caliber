@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010864,
+  "durationMs": 4536,
+  "httpStatus": 200,
+  "id": "INV-1114",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 54,500 matches the contract, qty 4 equals the received qty 4, no earlier invoice in the last 30 days has the amount 222,625 under a different PO, and the bank change on day 18 is outside the window (and the invoice is under $5,000 anyway). The total is 4,625 cents above qty \u00d7 unit price (218,000), which no policy code covers, so it is noted but not held."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AoKEAgTGAI4AUIIdGhpbmtpbmcSDFA5W7OzZ9+Tmhcx7RoMWvpgiFzsJLZtxb7kIjCtVARXeH2XucrosigyPz/XVswhlwW2O4cCFwv6NpuoON5++gofV6E7nJSmfUaS7xoqmQrwrLG84rzB1QgdKgIjV+qF6honGW1vTm/4jXUsylQDOL0e9r7fXBAEFhuEPBOVi+4s39v4ncW23nmtRi6Q3o+FY3+9X3+bk2d4pDU2BlRbz9m5I5lrYzXxWS7NceIqnK7HFam4XHMlV5LVKiv2qpeS/ZZDV9eLPRmeo5aX9l4JjqMchB6sKjFyxNjWU3tugpd/Qv/61ZvMUojTUVUK1wNHsnGZYsEN9j85GBbNxeLhIGBu0XBm6xt5SLDz8jQRudQ+K8fGyReEYXJP5gXV40RTbCGUys6kFQ5uRGOwKofCojKAewx2e5agWj4bAsB3VTGz7z9P3y2/Cx+bOMYE/MHOo9itGnx6uujj/YiOKrzRrR7YtvaeYT2QSLOwd0bymyDysIXKk+RNrnJZUGlmAI2+nF0ZmpIzPEGruEab4p0iyp5qmdeGEA8zdC0S6GhFGgX8trpDSRX7QfRUGDCzRKgTvHGzTR/VZTY6ajBaGB/e77ilM33dVzK7cpAUbCaixf5KVEkKYM8viAn9+XlFWewzPsF79EDBy40wwNmEQlJNt2AnuRgxyVIx8xG1x4CoHgIrO+gsLHSkkIftzAQk6Hpvc5MBuqyIhAUnG1S5JBFEhbOFk/7k1Vk3ydt+T72kpEC7NGVuhTlHhCFPw5dmbCRIv+ZyjeduLrQuUXdV+1HCru5Edvlvnt8GfHzkRKKvh8FnH9d73BWZSAoG3a2orY6cX9BCrIucERooF/Nq+L7SocEqODlwsyihOSlpLonsD0n0StbZwV6cLhQAKYfVKxnCvl0oMoRSmAd3hdoHBpf+Y14ZD3xZTg5ybsuUGwBwkaKsogwPTIGS0F+G0e7a1pECHlOecuurpKgehNJcbfRHptf9yuDU9guxYz2kmIEx+hpaJr8k7x6Nx9B791TtB3w8YDMDVPrypkVxgn5ZwXOwOzKMSyUpm4dU92PD1OWtTr0aj3nUNcKBKqoIGQuX/eG1rlp+NVvNvFa4DBU2UVPh4ydE+jfXgDVJglh47rP9TOR+JvWhicoEgXrduVfuDsNFgcm96fj6oVKPluf4gKASvt822mJ6ZV0Hho3ra0AMGUf5tzg/cdKj5/lCz2dhBDQvmvUFXsBsX6i5v9SAknjjfFtTgx7TOiBiBVHWItJrgseGJVneCpYo8DaXIDF4yf9hEzyMb8mJwC/71x8GWFVCV0JBxXIkohdOPyV/6ad2R8O4U+w4FTSzBILvKbPs//WbUIqmhsjPrWTJh1IhyRNfNFw3IGv3qe9T+oStjfAAp5yacdNG+WaQuw4e+MtdhHXP0tXMKVY1mnr8GTanXriXEAH3P2itxdsDI8KxMfuRhUn0mRl5/S8pop7CpXuMUMwf12QiLVfIHfYPhdr+4k8x9nLOz1gh4mtj80hMucUuJG+S2swbJoRfsdTxVDOb+1/7DttMa72g1qcNXy5uOC27aSPOePkMIh6k6wt1NARsXWLgiVGMES3U1T0o185x9qQZA7ga4q4pfv1fj6cyiKkWwGa6HuuIDYo3Dtfrm8Ij4iBF6IVkR1VtE8CiXFY3i7S1XTOrhlehnzSxDYSXVGZqGDpR5yFzTtfbzZ9HTdzDf1rxEjF6Z8B27zmWibXgjMLtB2ss8M61JXt3suG9wgurk2Lruc0o+a40BgX6qJEbwvxGENS/BzlPCy3xs3goeCLdgYQ01IUgo8J5Mkxo52t8yEjry0WNB2I9PBLn8g0/+NEO8uHW7xxVD4QYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 54,500 matches the contract, qty 4 equals the received qty 4, no earlier invoice in the last 30 days has the amount 222,625 under a different PO, and the bank change on day 18 is outside the window (and the invoice is under $5,000 anyway). The total is 4,625 cents above qty \u00d7 unit price (218,000), which no policy code covers, so it is noted but not held.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5rkuauq3vCWxPfi9m",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2997,
+      "output_tokens": 487,
+      "output_tokens_details": {
+        "thinking_tokens": 335
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 54,500 matches the contract, qty 4 equals the received qty 4, no earlier invoice in the last 30 days has the amount 222,625 under a different PO, and the bank change on day 18 is outside the window (and the invoice is under $5,000 anyway). The total is 4,625 cents above qty \u00d7 unit price (218,000), which no policy code covers, so it is noted but not held.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2997,
+    "output_tokens": 487,
+    "output_tokens_details": {
+      "thinking_tokens": 335
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

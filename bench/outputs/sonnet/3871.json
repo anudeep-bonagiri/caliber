@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013326,
+  "durationMs": 2574,
+  "httpStatus": 200,
+  "id": "3871",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 40's ping at 17:05:00Z, 12 seconds before the purchase, is at the San Marcos station (well under 25 miles). 80.8 gal is within the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqQYKEAgTGAI4AUIIdGhpbmtpbmcSDANpCkw7DJz5U+ulexoMZzhqquricRxI8/BnIjD3oOOyH30ioEpmNV1qUwC8b42YWg8Hiyh9bAeEUnB9RWf9S0X3XbU/eO1+vRzlRyMqxgVEGhH2bRSYuBwqLke6Gi9oe3dzBdcpWLy1IswyrWaIZ5gsuTgEXeQcTcwEQLbkI4ybOwuTEVr2Rg2jgI0ZEuT5mVGfniHaec2j0+5Kf/I7BiksgU6NtZ2zjrlJvCgi3qEyowoLOx8wEyeBZfMkqcFLGjaHza3W80BmSOlNgado1ujepKnY+nesHJxQP1STpLZzWfRepYPR/2N8/Flc4jG2vBPCufW6XeUwTx03PDu1F9e6zzULbQiCHMh6IGlYEyZ45XAx77iv6WaBz7VAiAtlLdJgkk40qORXoYrvH4AXRDDJVMPl4HL2RsyFgGFXWnhvNSIANxuENfLuKeukkyxXa6MuFLC2OF42M2NL1q5c6HHlqwyOWxljoFbdblJGXihjEqZHfGKO6LkUwbFljHDP1ypmxMRK6JOAnzBWpONasLibnRNddNQUU7WNXnXIKNbxsc3GTPo5CVEuc781AUAsAz0xy4/uHGOaWVAnktiq7cpRMhxZQgbaL6ECigir6IvPA/V7IXVOsj6N+Zc93bcqysDYy4zVBzWYUv2bzn+gqRmN2IU1LjB538Zdj9eowMEDQXnJ8S3kp380YMJGLrBivHSrKDonlyR0TSaty84uk4kOG6ji49OJwfvWn5/q4gGLDzuS13GE6YLKmyrNUNep3tMKdnKNzGLSW3EFmMxl8KlFaMD6gRfwptZLElKKQl2++qnJ0imbxF0/lx73ANCdofH1knMZcexwQQiCZ57cKUx3bc/3VdU6AS92BaqvURRcJe3aMTj34pIcXIntCgpUEgiqJ8NbthGSLST5S3rl5UtPbw0+wYw58rjeghXi7N/QcWdlFoy3zEmXf0kmeAvgLgErXRJcivJIPJXFDyQfL/lzlTEFjrTJwaYwm3GusjCgXtp8yPc3H/VEVWkxVUVE0hT6GzLRPxT5mxzOltT8JTFF1CbiWBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 40's ping at 17:05:00Z, 12 seconds before the purchase, is at the San Marcos station (well under 25 miles). 80.8 gal is within the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsimng5hniFy5Cu7nEF",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5618,
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "thinking_tokens": 114
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 40's ping at 17:05:00Z, 12 seconds before the purchase, is at the San Marcos station (well under 25 miles). 80.8 gal is within the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5618,
+    "output_tokens": 209,
+    "output_tokens_details": {
+      "thinking_tokens": 114
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

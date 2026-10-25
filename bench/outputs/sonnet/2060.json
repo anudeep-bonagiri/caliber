@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012698,
+  "durationMs": 3698,
+  "httpStatus": 200,
+  "id": "2060",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Assigned truck 29 was pinged at the Georgetown station (about 0.01 mi away) within 5 minutes of the purchase, and 22.8 gal is well under the 110 gal limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 15:34:55Z at Love's 806 in Georgetown (30.6333, -97.678). The truck's nearest pings are:\n- 15:29:37Z at (30.6335, -97.67804), about 5 minutes before the purchase and roughly 0.01 miles from the station.\n- 15:30:00Z at (30.63343, -97.67812).\n- 15:45:00Z at (30.6334, -97.67803), which is 10 minutes after the purchase.\n\nAll of these are within 30 minutes and well under 25 miles from the station, so there is no location mismatch.\n\nThe fill was 22.8 gallons against a 100-gallon tank (110-gallon limit), so capacity is not exceeded.\n\nNo other policy applies to a fuel-card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Assigned truck 29 was pinged at the Georgetown station (about 0.01 mi away) within 5 minutes of the purchase, and 22.8 gal is well under the 110 gal limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9ZtzeZWjknxxneEXW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4669,
+      "output_tokens": 336,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 15:34:55Z at Love's 806 in Georgetown (30.6333, -97.678). The truck's nearest pings are:\n- 15:29:37Z at (30.6335, -97.67804), about 5 minutes before the purchase and roughly 0.01 miles from the station.\n- 15:30:00Z at (30.63343, -97.67812).\n- 15:45:00Z at (30.6334, -97.67803), which is 10 minutes after the purchase.\n\nAll of these are within 30 minutes and well under 25 miles from the station, so there is no location mismatch.\n\nThe fill was 22.8 gallons against a 100-gallon tank (110-gallon limit), so capacity is not exceeded.\n\nNo other policy applies to a fuel-card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Assigned truck 29 was pinged at the Georgetown station (about 0.01 mi away) within 5 minutes of the purchase, and 22.8 gal is well under the 110 gal limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4669,
+    "output_tokens": 336,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

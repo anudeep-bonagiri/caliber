@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01438,
+  "durationMs": 3776,
+  "httpStatus": 200,
+  "id": "1280",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Nearest ping (12:25Z, 4 min before purchase) is within about 0.1 mi of the station, well inside 25 miles. 41.9 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjwkKEAgTGAI4AUIIdGhpbmtpbmcSDLvShxLVaj60KwClcRoMol/78W7FOAextkkaIjD0pjOOa044MgkWbVb8kGWG0WlcIcmtMhXn9OZNVgCnWjZkYSDd8L0lQ59r4tBrPekqrAhDZFq+cmnWiV0G33mBm4blqHp15lHQ0888cqRntIMMrP2WB9k7rPnPSW1/zVuRp3lJeT4R+MFB7I3QErcG6K9ZchwFT5hWofTp4QYgYp1TTAAuQ0BqVIUcIpXCBrjUgpHIPla8XVozQNXRkaH/Yxsu+7IMwOw8b450yR97BZZ3NbR3XV/tq1MBEIEhFJSMWOyoodHj5oMlJfOhiqJaHHnu5Jjp2kn1LcJ+YQUETil2wu0cYf0EEP9ctmGfIC4OpjBSzTHq5iuE3XqFNrtlJJFewF1v+UgSwlP6FKBeAJiTkdO2yAdxJuqcxSn5sD0YDvjOQsy51rIkRdgTjty6jpudYHNVuoYA/SfTznwxWFe6CTtl5qrVaLlHukvT2v4qJ0mz/jRUZC9Ch2xYLD28MfMdsLkM3QoVdkC8NE6dBMzERSZL5tPoFQM96/kkHJjWJNfH2cJfN7NMJhx7wtPL8bbi63QipCnYsK1Tery7rGp7eSuwr+H3fDCj6YB3i2xI4bo82fnPg9Q+mbs92YSu0isbNDSs02Jb0Ay5x/5DI59a7tu2h+w1hp8RKixT+0gXIwWwL2S/oZyMfZa3A4WQYPcrbR8wHLJZL225CNlkJb9G078FDkqlsI/+51MZfyesbBM9pkerhu3ieGwIA/or0jzyuo4LxIEaQsL65y0NtGm4NyscqVRoirQpB0bNEqxmMQFqUwx+2qlhXeob0gXurJrn+9GT5DIy+5nwlhk/inUicWmHkNPO8Cm1torNoLNInRPcgRIpSJHdtVV+bNnzTIxueIC0b4XA5E7rtKzNXt/1SzHfPtN34tz+RkE5nkZbCUGkbmYRa8xI2EYWB3wkMKvTBiF9UQAWVGR6AT5Opf8yKYXUIMaZO5jPclQI5mKVh6KVEFpT/QQWD2mSxYPoPnD06RWd8mt/am37tJU/60arXir5bVA4Zrhz/x/FVXp12IUjEJr4RA56I5L6elvyRX/ESsrNHsk8Mdgo1l0tRxcuY3880fDBFWOyLgrcdqnvAs7/IiHOwxawup0pxLhrOQMy6AfNoD3XrP2mSQcQ3/qsRAxM5benvP/X86VF0tojZ7r4sRADKUU89MCFSpcg3Ft1tTcS4sE7tVDfEdZ87JeWyFaM1I2Jz0ewSok5GgI0x6arj82my95CrlHahmGDEq3ND1uTayLr/1p67z5xbGwr5UyhByzINjXHB/sLlRArvvLvZ1co5iSnotSedCr6+q1z8hOoz8wxYwDFlEh/6o74q8CfmpwZKMdJAgcvHdi3O87p6B6Karw6EplrF3UIvQ3RL/3r0Qnvf3e5QwMfFLogjAkb0AKp4nOLmSyZeJAIu3+2EyeqVhYCka7GswnkYGZu9CWzAS3+DMo1b+xw/B91FqfOubiMVSJDHbB6BnW/c8ww4fVjJaBQaCpd0+QYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Nearest ping (12:25Z, 4 min before purchase) is within about 0.1 mi of the station, well inside 25 miles. 41.9 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmEhyLNEBV5kLB76dp",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5405,
+      "output_tokens": 357,
+      "output_tokens_details": {
+        "thinking_tokens": 265
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Nearest ping (12:25Z, 4 min before purchase) is within about 0.1 mi of the station, well inside 25 miles. 41.9 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5405,
+    "output_tokens": 357,
+    "output_tokens_details": {
+      "thinking_tokens": 265
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

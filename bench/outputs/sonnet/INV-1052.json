@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01047,
+  "durationMs": 4589,
+  "httpStatus": 200,
+  "id": "INV-1052",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "INV-1052 (36925 cents, cites PO-1014) matches the amount of Border Fleet Repair's INV-1038 (36925 cents, PO-1017) received on day 21, 9 days earlier. Ask the vendor which purchase order is real."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1052 (36925 cents, cites PO-1014) matches the amount of Border Fleet Repair's INV-1038 (36925 cents, PO-1017) received on day 21, 9 days earlier. Ask the vendor which purchase order is real.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfzT6THN895K2uWmRY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2730,
+      "output_tokens": 501,
+      "output_tokens_details": {
+        "thinking_tokens": 388
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1052 (36925 cents, cites PO-1014) matches the amount of Border Fleet Repair's INV-1038 (36925 cents, PO-1017) received on day 21, 9 days earlier. Ask the vendor which purchase order is real.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2730,
+    "output_tokens": 501,
+    "output_tokens_details": {
+      "thinking_tokens": 388
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

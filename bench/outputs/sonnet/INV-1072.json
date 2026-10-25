@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008908,
+  "durationMs": 4192,
+  "httpStatus": 200,
+  "id": "INV-1072",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1072 bills 31,500 cents at the contract rate of 31,500, and qty 1 matches the PO's received qty of 1. The same-amount earlier invoice INV-1026 cites the same PO-1019, so duplicate_invoice (different PO required) does not apply. The invoice is under $5,000 and the bank change was on day 18, long before day 40, so no bank-change hold applies. No hold rule is triggered."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmwoKEAgTGAI4AUIIdGhpbmtpbmcSDNtOPL2FjyC9qTo0GxoMmGxan7oKZD/iSX/9IjAF51Bn30QCwgW40MdWHjKo+dhyHn1qXWM/sx0x0YhUxgs/AgD0t4FK+n4xkvd+TFcquAk7hV1IHqC8fkaPjJYTYbIJt2ubaI6RuxG+0i8SIlJb6KvOLUdjnHG59PtyQwUFoqgywV2EFJdlPIRFvkCIloBkkRn16x506cw6ujOX2ilU0ULtEQIIEy+vnUfKiBHSylHEcvpNZ+EXUv73PAaUpUGlm9pQ39LIJeqJzow67LaNUPXYxNhDMoDZdmUEkh2Oi5xTp91r4xNbrUZbSWaiWvK0sq/A536cSJSs4WVM/0h+NVH6J13mUyaJiqUAzV/LWUdXY1nghLWuwzSADMkadmmLJwL0yj7r7ox47b8IjXDUxbJXY5vCLVZAq/wkWhC9x4+lONHSuRFT4TQM4aQV5RrtTVp6Ehz6fujETRH1UupNDXwVSCQPUFhxa90Fpc5/box5pdt4QRtvd5BGheMCWF06uhtO6weTlaHLMJVbKC6cOUcvZHzyD2b2T2lYvAOUOKDqKUce5W7464kWE0tfZJTlfUlvZMhBdl6Vc4p9YIqWc1VI7XBzmGvadSKn8MD5X3SWyqhMpQJhoRwZlmDxBWhRGkWnnTrRZda5DPrmGE65QO2U5Ps3+VhlCMM7qM+NBvXgG8wstwEbwEtImfMYkZbLRAyTnNud+fda3H0dLJVZNUhiLcJaWNEC2YNC5XRSHOy3/smovueB8u4uI3z3BRjipiNHwCoFpVEkKL8HwtP5TxK/aWdoaezlw7bSFfleG9KBGk60eULnPjX2TeTaCSSDgr4BaoeD5s5Jn5lyDSlK/0nBc5oYX7cZfmyBghGwCD6cOLdbR8Dpi02RY2KCuIheH3hN8OAOjh5LVoK6t//YvywtY+rWMMKWqMZKLU6dhJoxvQJQd2szgnBWt13haEjYquHcDuOFk14zuz9kNGpOEO5K/+kvnNDaGDTIhOL4FVeicYCK4woQ6jB+T5Uehf1A4rhafAfJzyjCthucl8f3mVHjVNzqPnR/Mr9FbkOITV3p3+WQJdh1ETyiJGebZmaztipb91dnCxvHqco7afBWq+A5hX38fYX1D8dXfxqtdv7/WNfLV8z3AUDt7QcfoaviHLJSe2ychEeEP0gkRKxmkMjJFOduSFqqPUrMemsY8DRxCaoOWPMHAXHMk+by8vR9TSstPCSUwuoEAG2UrrYUqxcRl18Whulw4Cs59S/3IO95XeBQq/UjJGzRBHPZ/xMstCpZRX3LL6KX0m0n3tF+JqjsbjOEbI60A/Wii/YcFC6wWBIDM6/nsID+KvPGA5nOAPJfTmW0bHOwngjryItq3HuYNpclF3eIzLtAMRYlfm9lVIoqPn3JbUpUYcgKwtDnKdapvOlFPdHC5QPakm029DK/RIxcMvH0/nj2FTdRV8IICdmfAlhcQdbEO38dcFTck0ZYgXZs0Izk88Tz5uEZ4QAtrM7jdN23aq3rJ90b/u7VOJ0ium9Y5YGft/wborp6+XGly7SWUUH+Qg0HaShBeuhJi5Y2+lvXRyzCqlAa4M7KOwgm7rvd71urNX+OPIx1SWRGdiZDgi0K+C1nPtkKJ2ybFRim3tEHqx1dbrirrVWyloet08khqQiI/mJwFQNDmlohFYqgnSUd1zm94zfU4DLp9pnN5d7w7jDGvRM002WK5VVOL5Gw+RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1072 bills 31,500 cents at the contract rate of 31,500, and qty 1 matches the PO's received qty of 1. The same-amount earlier invoice INV-1026 cites the same PO-1019, so duplicate_invoice (different PO required) does not apply. The invoice is under $5,000 and the bank change was on day 18, long before day 40, so no bank-change hold applies. No hold rule is triggered.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt18c12WtNyuTceqEzW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2154,
+      "output_tokens": 460,
+      "output_tokens_details": {
+        "thinking_tokens": 302
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:35+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1072 bills 31,500 cents at the contract rate of 31,500, and qty 1 matches the PO's received qty of 1. The same-amount earlier invoice INV-1026 cites the same PO-1019, so duplicate_invoice (different PO required) does not apply. The invoice is under $5,000 and the bank change was on day 18, long before day 40, so no bank-change hold applies. No hold rule is triggered.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2154,
+    "output_tokens": 460,
+    "output_tokens_details": {
+      "thinking_tokens": 302
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

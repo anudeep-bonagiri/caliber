@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01351,
+  "durationMs": 2938,
+  "httpStatus": 200,
+  "id": "5127",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 16:15:34Z ping was at the station, within about 0.03 miles of it and 7 minutes before the 16:22:15Z purchase. The truck stayed parked there until about 16:30. The 44.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkQcKEAgTGAI4AUIIdGhpbmtpbmcSDE24VTj1rOtvWCa3fBoMgYA1kl6MKaI8OFPtIjAeJk94nLZzhmf0MYa/uFo5GqcZxSuYD0AFem4m1/xGtPfd/N1xQfEXEauGItPMeE0qrgYC3Il6A8pHIq06AEpdj7sZVHk2so1E9ce9xukGFLoYdPZBkbWZXe0nyY8Kr2NzqV5hx5H/TddqbsWQP3MSy8mJ99pRsG/j3uYUbfr/mmWPdK/nmLfhTIlUk+ri0Lu5ndacI1d3EPwWG5KF6ZJwn045RhiGqO4r6O3lAahaw3mUXvU4S5zdDFZ4MDuxuW50oa79+lIe1xwij8GXVNT8ERf2ss14LFgYUQoy5IIs786Xkl9vYWcVq0f2MqXWAIIKn8o0XfyJwM3q7Qsxph+JHcD7lnnUiawZcdoaCo2esR1/J+n/ovFrbebXQL+sp+BNG4wK14wDgqpHs7l8CqCn9VQBNlFRxZF6idIxGiGBbiIQJ9l/QBtEyc2U9gal4x8fA+K8XYlH6N7uVYEdFmOtJ5gjL4GKX86tBaRWN3Pk5lWpluFmYwcwS/66HdOkhvLipVX/xqEzpi/VwdtA8ZLkeKn6e2XJZzniDMYwysf+Ty+QuhN5ARxEOJt1z430aHrMzgVT5/QaRfVjHC3ySHH6KAUCFTziEmPI9WHTY0j0ktlR+/uCEymctpmhcvvFnMImqNA9DlLhIkNSoCmrUoohbOnhYbRAM5V2RUu3Rfs19+pWxADyOs7jG09scGvvSDCK7LjZ+ptwKKu5v5T7OsqvR0A+Vqa/0Pzj1inMsQb3KUCPTVDeWUZkfhgLtk0SDwDenz2z9g2urMsr6Htn+oGXJDUVlioV82pzK2JxFtCl+ffIV4wLNIGV4KNTKlHx7Y0ZEAZAb/NLpSwGU35tZVREyqHbMYyp4lbg2E4vGtXA86YG+n0IsWSV9BykpalDz+YE5LA4eARKEohCQPhtfU2YdXLR3oWghIrMLnuCZJHOb1d0sZzlVhDtH+NmtQ9D/rX3F64OOj4Y4JUBYyoRMTfPb+drosGk+VuVdW2s+mscoIE96XmFzZSkCPhsBIy2k44TBaCV2mMoiAC4WH3MWBCMBDec0KeRcCA+d1SzAFoyspRH1RT944StVfpaznsFaG2m3QX/ztrUoQneU6b4Px+yIFL2nP0EGlPTB2Sc9OH54RLSZdzQFauNIZKKl9Ma9G/fGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck's 16:15:34Z ping was at the station, within about 0.03 miles of it and 7 minutes before the 16:22:15Z purchase. The truck stayed parked there until about 16:30. The 44.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1wrNeBfqDsc3EPyEY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 286,
+      "output_tokens_details": {
+        "thinking_tokens": 165
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck's 16:15:34Z ping was at the station, within about 0.03 miles of it and 7 minutes before the 16:22:15Z purchase. The truck stayed parked there until about 16:30. The 44.8 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 286,
+    "output_tokens_details": {
+      "thinking_tokens": 165
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

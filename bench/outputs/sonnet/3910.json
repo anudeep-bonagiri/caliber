@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012256,
+  "durationMs": 3918,
+  "httpStatus": 200,
+  "id": "3910",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39's ping at 14:06:13Z, four minutes before the purchase, was essentially at the Beeville station (well under 25 miles), and 48.9 gal is within the 100-gal tank plus 10 percent."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQcKEAgTGAI4AUIIdGhpbmtpbmcSDGKN5EP/tGo2w4NXqxoMfuRDP7iK/XdekoZjIjDuFzxUUBfK/wCzGVkn/LtYNdh17GZZUcCSBzhdeQN3ge8HeTcklOwRLTis5zrNgA8qqgbcKalKqZzigH3ma3ekLAGXQV3WxbehSCKWv01a6CFNe2UIS2qg2GDhEAwUT5qmRKe1XisVqhR2zLLsuC77zeypRQLkIkOsLZQgO1vKMLNlfYhORP2GtglYCEr1rSUtS6jzs/xOZjsSLodlesFmB/ahV3Re8cVbkOlsK6MhsjBdcXQ9H6lbFr1sLbe0WpLmKKGNv2+U2LYCIt7Svfp0RLpfX4SjvRcJOtsilJwzC3VlUgBZFuLjPr0BH/R10TQWne4RxxXt85uC30sEuizDy66FPLg77DV9AQTROQKR1RPupn0dCDH/ZYp87tl8ZWIiIfEbl83et6i/MZ8sOGPCgPvs4ZVUpI03AUeaKA2ubhLChVzOJKxxNplb+gDPeKvn41Vz2RWEAMRLBBjYSzFu2FbupDX9Qx9IPJHhneHoSJsAez/WkeheyJL4WU9h+EHvuWqLLhKz3DRSKmeyBTnCIMB2vmKw5DpRmBEL3d1cR5tLkeIr1D9U4+LSwvToDEoL3CkXh0a7e424es+ZhhG/E5AkxQiBhaTV3EyYPCAQNx6CzjT2xSEOudiFmToo3eWf613JorE8YwkLLrc8sZTfWaUOWnCPSQcyE4Y0Yu5vB35qkc+YROUxdmYW9Lf+4p+jTSdkuJpKDC2L0dN0jmqJtAgR4xB9dmwsHEPIXW8mU5Zn3jqEVKIXGshSI6I2RNMPxSAPpFuRm3OVkY3Me8OjvpwPYYZo5Zx2ntvUETQBJaLFDujhtImNlmJunX4ZmkRFfZSzPP5l7kF+wcp3yaDU7JVAaurdrnCUbXB49gsojfaYDWN3cCcDnA5An2h/3WgWZFbecftfjymLFWBv8CdCNxl5ENyTE6oQKdWvPG4as9T4DhptZhH/RXCQ43mYnuQCoZJaZvlDPg1ffvZfwbIKCqSP0IcrGXW8P6RHZWLX//wocZUtGjDehfsemtEmYspssg3XD6UGyaCcOMq44MGorbvji2KS3B6fFoH/yhwhZItFeT5xpAD7z1DzA0aiMXV4O29wAIuqesELhMSEus4Xx+3ANsaLGuwn7A+ETNq0ezR2WgnZ8wNGe/zQRsoYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 39's ping at 14:06:13Z, four minutes before the purchase, was essentially at the Beeville station (well under 25 miles), and 48.9 gal is within the 100-gal tank plus 10 percent.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyBx7Lz2uAmzJ4iSVu",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4813,
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "thinking_tokens": 173
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 39's ping at 14:06:13Z, four minutes before the purchase, was essentially at the Beeville station (well under 25 miles), and 48.9 gal is within the 100-gal tank plus 10 percent.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4813,
+    "output_tokens": 263,
+    "output_tokens_details": {
+      "thinking_tokens": 173
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

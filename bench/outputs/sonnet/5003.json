@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012094,
+  "durationMs": 2831,
+  "httpStatus": 200,
+  "id": "5003",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 32 pinged at the Pearsall station (about 0.02 mi away) at 17:15:00Z, 95 seconds before the purchase. The 118.7 gal purchase is well under the 330 gal limit (300 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwYKEAgTGAI4AUIIdGhpbmtpbmcSDKLa+jWmlSJS3+MRwxoMSY8J2NM5j17fZCY1IjBkketEIB2YYNtAX4nCyq7kMGVTV5z9xML8vcLniQBsmvEqIj6/ihIIWyve7ICa5EcqyAWQUbM47T4SsD/sq84lTM2mZTGbZK0/K+BYh0L9ROcKw3fLc3f8PUC/4xXIWVteWDHRHEYi3gKz8waNAgofUWYGyaCC4XS4ebU6KW4BXKjrKvaoV4mw/K1sIKbxEm85ZSrGQWs4vtagPYU1gHqnC9PGvCG3iamJwh/dhkin6ZTIgCGdV39BINRDFyBhHP+KPgUT16b8ZXXxy/P8i3o96PTGh2z0/Yb87OZ6hcmlmJkktxoBdZ15iAcprYrwKXfNE2m4UnreH/xrWrJ6S70s94rF4Lo6bKOBj1+Zs6fLgnK2f3vGy7Y41DGT99IDEal7ptjid74tVKdkpIBmGsHdGFq8inAd5+Hk/9a3kMrs5zVpceqhZ0O5xy5iWc1mISwFF58ANj6pz3Na1csZpPedEzbpffdL7Q+fabs2fDw3oa4VyXOxBrgyHXrCvgpQlXMnsYkt6ANiLlThyi+NMhfAbo6VBUMSJl1M60kiHcp15u0vqpwsDnqCQlozVvUgmP7Tur6ppjSStjCbj/RkGihsgZkva4WaEZ/A1wkmcKQ4yLLefhSZ/gH18mTNX37dLCcXYD+IN9IK4UD82WItyetObpLmHrnkpr/IIUyvESCjx8OrTxolWgadB5IVHbqz0vjHubMZ89wXAh1spZ6CXzYkM/fP01kGg5aPiKph8bFbhyF2/2iSci6Hsix+M5+Ws1z6fHtwT1ExEnPLIfwFQSaVz4t0YZEez/tZdr8XVwQ7tZKuBN/u7sIDX29BbM5FH2YgA9ODVLbAoYQ2y2ds2ouzqkAYonW5k531whp6TPEWcW22+vmRaB1SaogoPutsaS4db3hpeZEy+CHsw0V6WgZIPKB1jacLLb/RWqUNC38SOWmnLb9fCCLCmp3kHuxnrupOxaaQhPH23JpsV8czLhrJDYPUvXlvNysWpk8ntIRKtIDJQeaR1jBHgCzkGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 32 pinged at the Pearsall station (about 0.02 mi away) at 17:15:00Z, 95 seconds before the purchase. The 118.7 gal purchase is well under the 330 gal limit (300 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMse5HVGpmdAYDJmqURQ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4962,
+      "output_tokens": 217,
+      "output_tokens_details": {
+        "thinking_tokens": 115
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 32 pinged at the Pearsall station (about 0.02 mi away) at 17:15:00Z, 95 seconds before the purchase. The 118.7 gal purchase is well under the 330 gal limit (300 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4962,
+    "output_tokens": 217,
+    "output_tokens_details": {
+      "thinking_tokens": 115
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007626,
+  "durationMs": 1763,
+  "httpStatus": 200,
+  "id": "T1999",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1999 at NTTA-PGBT-01 (President George Bush Turnpike) is at a different plaza than the earlier charge 7 minutes before (T1997 at NTTA-SRT-01), and no earlier toll for this plate at PGBT exists, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Toll T1999 at NTTA-PGBT-01 (President George Bush Turnpike) is at a different plaza than the earlier charge 7 minutes before (T1997 at NTTA-SRT-01), and no earlier toll for this plate at PGBT exists, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2Q1zMuhQ88eShZvr8",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3238,
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Toll T1999 at NTTA-PGBT-01 (President George Bush Turnpike) is at a different plaza than the earlier charge 7 minutes before (T1997 at NTTA-SRT-01), and no earlier toll for this plate at PGBT exists, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3238,
+    "output_tokens": 115,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

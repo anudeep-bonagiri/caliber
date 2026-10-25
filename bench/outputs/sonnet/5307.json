@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013336,
+  "durationMs": 2778,
+  "httpStatus": 200,
+  "id": "5307",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged at the Waxahachie station (about 0.01 mi away) at 12:30:57Z, 3 minutes before the purchase, and 31.8 gal is well under the 110 gal limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 12:34:09Z at the station (32.3865, -96.8483). The nearest pings within 30 minutes are 12:30:57 at (32.38665, -96.8482), about 0.01 miles away, and 12:45:00 at (32.38636, -96.84828), also very close. The truck was at the station.\n\nCapacity: 31.8 gallons against a 100-gallon tank plus 10 percent (110 gallons), so it is within limits.\n\nThe other policy codes apply only to tolls and invoices, so none applies to this card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged at the Waxahachie station (about 0.01 mi away) at 12:30:57Z, 3 minutes before the purchase, and 31.8 gal is well under the 110 gal limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsncYAWNTKTFsa3rCRG",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5328,
+      "output_tokens": 268,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 12:34:09Z at the station (32.3865, -96.8483). The nearest pings within 30 minutes are 12:30:57 at (32.38665, -96.8482), about 0.01 miles away, and 12:45:00 at (32.38636, -96.84828), also very close. The truck was at the station.\n\nCapacity: 31.8 gallons against a 100-gallon tank plus 10 percent (110 gallons), so it is within limits.\n\nThe other policy codes apply only to tolls and invoices, so none applies to this card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged at the Waxahachie station (about 0.01 mi away) at 12:30:57Z, 3 minutes before the purchase, and 31.8 gal is well under the 110 gal limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5328,
+    "output_tokens": 268,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

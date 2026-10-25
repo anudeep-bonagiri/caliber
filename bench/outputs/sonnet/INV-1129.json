@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01115,
+  "durationMs": 4265,
+  "httpStatus": 200,
+  "id": "INV-1129",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1129 matches no hold rule: no same-amount invoice from this vendor in the prior 30 days under another PO, unit price 54500 equals the contract rate, billed qty 4 equals received qty 4 on PO-1010, and it is under $5,000 with the bank change on day 18, long before the window. The extended total (221,125) is 3,125 cents above 4 x 54,500, which no policy code covers, so it is flagged here only as a note."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7AkKEAgTGAI4AUIIdGhpbmtpbmcSDMkvQ2FnJ78AMonkqxoMGOOZhTHJBcd7MX+5IjDWtLdXz/c12jPhV9DZsRkQ4qxh0bex+ChH2DAK6EOxZ0EBF5H4H8xAcGZ6Z2YfY/kqiQl6kUC91a3fq7Ctvut6vItC7UqNHJOdQVidfZ8wAjQ1+PoBYUBQia48mKJJMFJXXObn5pmBagL2ofEeZo7Yzm9RfyuVvNlRqk1tH9sTK/mm5n8BtCRcu++6JhAhZ1TS0g7EjmnMIvFqASrCyARPEiTmv6rL8Mv/dlRw1BHV6FnBe6yfN0oRh94qSEw8JaSm7U5z5IUJWoSPywBuGsOkJG/ZnoXCb4yJqgN9NCCn+fx+0jdu/Qw4lm1hH9gVaB2ufd9SNT03aObmox9yqEYab9OpAl06SwLJPVbNayLAWGmRCrP2yGbSWmf7kBj+Z5rj9gl6sy3TTWywEjYpY1ZzlKx67Ox2SEF7JdXWC40S3o44Vo8GGAC45RW2pfsoSZxpUiqBIZnvBEdeKx/8O5dq0WYzNzp56IxicMCqJ5V8q1YIfZlrZmBKwodAQokTJsE0YSnL6xGoXeDNZVdm4b7CM9VZt/iyhKeH1rR2wsxC3oDB2s3z1Pdm9f4NImy3SOSNRpdtWp9UDjfySOtoIdl5Qqadz3LG6cUOeYw69g4QsE6Wfhi7YRR+aaCC79blrK6qSRV+FrFOY2v+w8pDW4vvFacXy4nnGxyn+BQDAmXmwvOg3r+aaQR7d4MnMk+bVBpXJdArAQquuVe7LVOyqtTbP6BqjkoxN56rq2HLg+uetv1gEqHan7JKnS1x7fsKp9bm/rSohvXhwQZN7OMmifnVxXpjkyPAiajRxOFfG0BNDWSrm0BQAklAOn7R00nUEl3eDOlCud12xBJl730FuyhItqIp/omKaSvgSQq4KR4PFc5ltZaZA+etz56wXIpJ7cX5Shh1dxrUy2ddjck3qznkRJ7WZaY9mhapWeXbHwODnI+b1oX8k+h6NLr5/xb9Zt+Qv/6WfekxpoHK2uHHkytj1IY3IQcW06+sDcab1ocwZPRuHzYTjA2jUAhj8JTprkW79gKO+Mt1YGWv+nSuxfKSgCDTQ0PopT1l8beQ4ZmtWvD6QwaQSVI+I95L+v8+buXmsmnjDO7dC9dNQWgaqNmxEQVBUx20Xl5oIM1UpQhkj62e9AqW4qHMkx1oaQISohKAp1uStfz6CexuSsNzJNG7vcZT4UUVt6Iell5CRRmb8AXdjwXYoqDElsvXDVJK0Yz+1I78s2I+7m0t1DmX63clXr+voBSHguPng+eneSp4jTMIJ7KEguVfXamTfREr9QADdNXxfuvhKtBrV2bu+GQZmskbOq3NzLbbOVe/jaLkk6MnpyFInPjbwLZLiMoPOioozHEnexuDCmcNFHylXRwCn5KGC/g3tdlHxW41BN2NZK8u05ExzOjYalXyQULopQTxkpoysx7XPbgkNBLntGfVaasSvSd4GuYmTqXSltQYfK/tW/EyxfmRT/k3jXdFEWpwetPAMXHFfb032vthl31XoDKTgXe3UpHHbIHhuXT57pS0MAhjb6+YRP5+qiEBf+o2Xp/pXDw2M7sEEE5a8Rt0X09wOAop5av7KTg8HGtV3Qx99S1KkBcQjHAlCfSBZdsufhzEwzhf5AFuBqsYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1129 matches no hold rule: no same-amount invoice from this vendor in the prior 30 days under another PO, unit price 54500 equals the contract rate, billed qty 4 equals received qty 4 on PO-1010, and it is under $5,000 with the bank change on day 18, long before the window. The extended total (221,125) is 3,125 cents above 4 x 54,500, which no policy code covers, so it is flagged here only as a note.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsj7Ss8Rmqa4P6FptRq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3250,
+      "output_tokens": 465,
+      "output_tokens_details": {
+        "thinking_tokens": 301
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1129 matches no hold rule: no same-amount invoice from this vendor in the prior 30 days under another PO, unit price 54500 equals the contract rate, billed qty 4 equals received qty 4 on PO-1010, and it is under $5,000 with the bank change on day 18, long before the window. The extended total (221,125) is 3,125 cents above 4 x 54,500, which no policy code covers, so it is flagged here only as a note.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3250,
+    "output_tokens": 465,
+    "output_tokens_details": {
+      "thinking_tokens": 301
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

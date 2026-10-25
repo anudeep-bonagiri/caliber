@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017896,
+  "durationMs": 2931,
+  "httpStatus": 200,
+  "id": "T2524",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1015 at SH 130 Plaza 4 within 10 minutes; the last charge there was 2026-09-25, and the same-day toll at 17:41Z was a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2524 at SH 130 Plaza 4 (TXTAG-SH130-04), charged at 2026-10-02T18:34:15Z.\n\nThe duplicate_toll rule only applies if an earlier charge for the same plate at the same plaza falls within 10 minutes. The most recent earlier charge at that plaza is T2402 on 2026-09-25, a week before. The latest charge of any kind is T2523 on 2026-10-02 at 17:41:58Z, but that was at SH 45 SE Plaza, a different plaza, and is 52 minutes earlier.\n\nNo earlier charge qualifies, so the toll is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1015 at SH 130 Plaza 4 within 10 minutes; the last charge there was 2026-09-25, and the same-day toll at 17:41Z was a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt8BRcPkcLNk1t3SXb2",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7423,
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2524 at SH 130 Plaza 4 (TXTAG-SH130-04), charged at 2026-10-02T18:34:15Z.\n\nThe duplicate_toll rule only applies if an earlier charge for the same plate at the same plaza falls within 10 minutes. The most recent earlier charge at that plaza is T2402 on 2026-09-25, a week before. The latest charge of any kind is T2523 on 2026-10-02 at 17:41:58Z, but that was at SH 45 SE Plaza, a different plaza, and is 52 minutes earlier.\n\nNo earlier charge qualifies, so the toll is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1015 at SH 130 Plaza 4 within 10 minutes; the last charge there was 2026-09-25, and the same-day toll at 17:41Z was a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7423,
+    "output_tokens": 305,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

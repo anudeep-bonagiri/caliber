@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12381,
+  "httpStatus": 200,
+  "id": "T2019",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T2019 at plaza TXTAG-SH130-01 is within 10 minutes of earlier toll T2010? No, wait. T2010 is NTTA-PGBT-01. Let's re-read carefully. The transaction is T2019 at 2026-09-02T16:58:58Z at plaza TXTAG-SH130-01. We need to check for an earlier toll for the same plate (TX-1023) at the SAME plaza (TXTAG-SH130-01) within 10 minutes. Looking at the list: T2010 is at NTTA-PGBT-01. T2006 is at NTTA-MCLB-01. There are no other tolls on day 46 before T2019. Wait, let me check the previous entries for SH130-01. T1370 was on day 17. T1515 was on day 23. T1292 was on day 13. None are close in time to day 46. Is there a duplicate? Ah, look at T2010 again. It is NTTA-PGBT-01. T2019 is TXTAG-SH130-01. Different plazas. So not a duplicate toll based on plaza match. Let me re-read the policy: 'a toll charge for the same plate at the same plaza within 10 minutes'. T2019 is at 16:58:58. Are there any other tolls for TX-1023 at TXTAG-SH130-01 on day 46? No. The only other toll on day 46 is T2010 at a different plaza. Therefore, it is NOT a duplicate toll. Is it anything else? It's a toll, so fuel/invoice rules don't apply. So it should be clear. Wait, did I miss something? Let me double check the timestamps. T2010: 13:22:09. T2019: 16:58:58. Different plazas. Clear.\"\n}\n\nWait, let me look closer at the provided records. The `transaction` object is the one being evaluated. It is a toll. The `earlierTollsSamePlate` list contains all previous tolls for that plate. I need to find if there is ANY entry in `earlierTollsSamePlate` such that:\n1. `plazaId` matches the transaction's `plazaId` (\"TXTAG-SH130-01\").\n2. The time difference between the earlier toll's `at` and the transaction's `at` is <= 10 minutes.\n\nTransaction:\n- ID: T2019\n- At: 2026-09-02T16:58:58Z\n- Plaza: TXTAG-SH130-01\n- Day: 46\n\nScanning `earlierTollsSamePlate` for `plazaId` == \"TXTAG-SH130-01\":\n- T1292: 2026-07-17T13:22:15Z (Day 13) - Too old.\n- T1370: 2026-07-23T13:27:31Z (Day 17) - Too old.\n- T1515: 2026-07-31T15:08:15Z (Day 23) - Too old.\n\nThere are no other tolls at this specific plaza on Day 46 or nearby days that are within 10 minutes. The closest tolls on Day 46 is T2010, but it is at \"NTTA-PGBT-01\".\n\nTherefore, no duplicate toll condition is met. The decision is **clear**.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found; no earlier toll for plate TX-1023 at plaza TXTAG-SH130-01 within 10 minutes of this transaction.\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884940,
+    "id": "chatcmpl-4dbf1d1d-7092-4f0c-8576-7be9585811a4",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 977,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4565,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5542
+    }
+  },
+  "startedAt": "2026-10-24T23:35:32+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T2019 at plaza TXTAG-SH130-01 is within 10 minutes of earlier toll T2010? No, wait. T2010 is NTTA-PGBT-01. Let's re-read carefully. The transaction is T2019 at 2026-09-02T16:58:58Z at plaza TXTAG-SH130-01. We need to check for an earlier toll for the same plate (TX-1023) at the SAME plaza (TXTAG-SH130-01) within 10 minutes. Looking at the list: T2010 is at NTTA-PGBT-01. T2006 is at NTTA-MCLB-01. There are no other tolls on day 46 before T2019. Wait, let me check the previous entries for SH130-01. T1370 was on day 17. T1515 was on day 23. T1292 was on day 13. None are close in time to day 46. Is there a duplicate? Ah, look at T2010 again. It is NTTA-PGBT-01. T2019 is TXTAG-SH130-01. Different plazas. So not a duplicate toll based on plaza match. Let me re-read the policy: 'a toll charge for the same plate at the same plaza within 10 minutes'. T2019 is at 16:58:58. Are there any other tolls for TX-1023 at TXTAG-SH130-01 on day 46? No. The only other toll on day 46 is T2010 at a different plaza. Therefore, it is NOT a duplicate toll. Is it anything else? It's a toll, so fuel/invoice rules don't apply. So it should be clear. Wait, did I miss something? Let me double check the timestamps. T2010: 13:22:09. T2019: 16:58:58. Different plazas. Clear.\"\n}\n\nWait, let me look closer at the provided records. The `transaction` object is the one being evaluated. It is a toll. The `earlierTollsSamePlate` list contains all previous tolls for that plate. I need to find if there is ANY entry in `earlierTollsSamePlate` such that:\n1. `plazaId` matches the transaction's `plazaId` (\"TXTAG-SH130-01\").\n2. The time difference between the earlier toll's `at` and the transaction's `at` is <= 10 minutes.\n\nTransaction:\n- ID: T2019\n- At: 2026-09-02T16:58:58Z\n- Plaza: TXTAG-SH130-01\n- Day: 46\n\nScanning `earlierTollsSamePlate` for `plazaId` == \"TXTAG-SH130-01\":\n- T1292: 2026-07-17T13:22:15Z (Day 13) - Too old.\n- T1370: 2026-07-23T13:27:31Z (Day 17) - Too old.\n- T1515: 2026-07-31T15:08:15Z (Day 23) - Too old.\n\nThere are no other tolls at this specific plaza on Day 46 or nearby days that are within 10 minutes. The closest tolls on Day 46 is T2010, but it is at \"NTTA-PGBT-01\".\n\nTherefore, no duplicate toll condition is met. The decision is **clear**.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found; no earlier toll for plate TX-1023 at plaza TXTAG-SH130-01 within 10 minutes of this transaction.\"}\n```",
+  "usage": {
+    "completion_tokens": 977,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4565,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5542
+  }
+}

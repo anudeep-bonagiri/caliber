@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00932,
+  "durationMs": 3450,
+  "httpStatus": 200,
+  "id": "3209",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 11's nearest ping (21:00Z, 6 min before purchase) was in Dallas, about 182 miles from the Brenham station and engine off; ask dispatch whether another unit or driver used card FC-1011."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 21:06:02Z. The nearest ping within 30 minutes is at 21:00Z, at 32.77691, -96.7967, which is in Dallas. The station is in Brenham at 30.1669, -96.3977.\n\nThe latitude difference is 32.7769 \u2212 30.1669 = 2.61\u00b0, which is about 180 miles (2.61 \u00d7 69.1). The longitude difference is 0.399\u00b0, which adds about 23 miles (0.399 \u00d7 59 miles per degree). The total distance is roughly 182 miles, far more than 25.\n\nThe gallons are 46.5 against a 100-gallon tank, so the capacity limit is not exceeded. The location rule applies, so the payment is held.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 11's nearest ping (21:00Z, 6 min before purchase) was in Dallas, about 182 miles from the Brenham station and engine off; ask dispatch whether another unit or driver used card FC-1011.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9EWgPC8hM2iaiL3Ei",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2990,
+      "output_tokens": 334,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 21:06:02Z. The nearest ping within 30 minutes is at 21:00Z, at 32.77691, -96.7967, which is in Dallas. The station is in Brenham at 30.1669, -96.3977.\n\nThe latitude difference is 32.7769 \u2212 30.1669 = 2.61\u00b0, which is about 180 miles (2.61 \u00d7 69.1). The longitude difference is 0.399\u00b0, which adds about 23 miles (0.399 \u00d7 59 miles per degree). The total distance is roughly 182 miles, far more than 25.\n\nThe gallons are 46.5 against a 100-gallon tank, so the capacity limit is not exceeded. The location rule applies, so the payment is held.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 11's nearest ping (21:00Z, 6 min before purchase) was in Dallas, about 182 miles from the Brenham station and engine off; ask dispatch whether another unit or driver used card FC-1011.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2990,
+    "output_tokens": 334,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

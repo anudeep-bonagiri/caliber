@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010024,
+  "durationMs": 3866,
+  "httpStatus": 200,
+  "id": "INV-1102",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1102 (29,832 cents) matches no earlier invoice amount from this vendor in the prior 30 days. It has no PO or contract to test for rate variance or short receipt. It is under 5,000 dollars, and the bank change on day 71 is after the day-55 receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStAkKEAgTGAI4AUIIdGhpbmtpbmcSDJDQooQ8wnmdrilnYRoMg4FHX/jl2AMgVAK/IjB73G1V/z0LrSWnQajQAoFm2aw4FuNMR4SHcWnd1IsLmnfGdmEVod5ZFUR5Ex05N0Qq0QiQcNG+TXzmSqx/NcHQz1lQ1Tk2OrenGDBEGVOJIg//qOC0D96eoN0lLzXKd9MxXoDsi1tllgGG94vJr1gcv+JczWZ9Du1c1iKlZbZzuEEz2dZE2Gi9yYL12Tj+rPTYX2pXVJs0q7tmPz1soh9EPKTmRnIZP58qQEADSn7tef0ldQMUNmyE6Mq9w0IktU6OdGQonh8cdtEOyghmR8ERBTZmhPSF9u4Y5cexGQFeWXnHatrbOXOjXLdzHlpbVUi1ue4SehF6Zpb0g6LwShDtKO49lM2H64xsouhucNl4TzhpGHChZy4A/j/yJ3Zh0Wo6i8TK6R2+TxNExLhSir0nHK+uZ9NFO09KrcmRhGvyTSa2wxc/Yw1cafXU+vEfxfhXprEnB0Z+JSmMLahZ8+06LY2kIfsfGfXtAWSzc/110CgYWTRyutYjYlEtjhRJlbTe8l5VcUipZEp9wzZQy9F42hG8QR75uU5d8mSrxAfOo7GjX8xC3qbGdshbRI/PjkJ3tbFssZxKXncW8p8IuiddMMsCxqB8EtVVA0NiSePW6dV14EUuvSewa9V/t5E8Qm/LwOprAJmZtNc9yQ3Uzd2lOumpYCuSfor9SODB+XoQRWIH1tw5ezcKeg83mjSXzz5iMqG70DL+BdVBNI7qUPlLt/4/ECLgGQzs5ZlzoY1zb03AEXbn+hlGKD6SCe2JUurjgr1E7SxKENDuu8SLw7wB+hRiWcEt7xlUkpWgSqAdv5uHESQI+RCcflek0wILGkaMPfk3bt17d3U9dWqjDZM0pOE3T3njKiiFh83PfjsY2bw7DXeVifA5D6XA1eY3B0kwGSBQqLfMj5B5IYHKJ0Fd6sWIJgrS41rJ+nMPQawOcPKk/RGq03iNBuuGUOnNwTn6ke0BdcbjlWnOu+7qiwl0Yl1mx5b7UjKM2ajhECWr/7r8KwEsHJ2aIJhPhboUTUE1KyZEfVlOlwCvUqeQrgR5r3J1n4mAaoVlDhhKVDlnsygu8k5z2pvLwcDyCmxIC9Wo0xmDCgxYd2bVfC/nxNTbWh8fCd39isn/mqv2GpEU4c4TAie+lpET6dPzU6/WBMFljThamXhsIDt2YujuOj6s9f3exqix9N90SXT8QqSGlTaCUhNh5al+7QuvVZ/KB1GA7LOqLN7G+IPu0Kx3c+6E/HxZ5b40w3RNld2wv7DkOwZDi9/Uh+9dIa6MC91Zd1qFS/7vesXYRvTulEZb+VPd2HeJy7LOpLqbg8AVSTgWM191UbhHCM+z1YXFoeSMWsBj2PkSNzbKoKQpWR1IundRkheD3ZgPrl/j9cRpqIO+Di96IlOR0Jaw61HBYTrpjXj8jHW3t1e79ejoIiMPs/MdVnp9NdI9XID40VI3xw49FcLogHdLcuCX7pNptj+wSqglKKbIHGxcdOIgIEnGC57mkVYjCw8ntuFmbhCQO1nke6IGkDIMDbsLOkrRriRZ9djKAjUTGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1102 (29,832 cents) matches no earlier invoice amount from this vendor in the prior 30 days. It has no PO or contract to test for rate variance or short receipt. It is under 5,000 dollars, and the bank change on day 71 is after the day-55 receipt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscnWfMV3Us9QvHsgzz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3232,
+      "output_tokens": 356,
+      "output_tokens_details": {
+        "thinking_tokens": 247
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1102 (29,832 cents) matches no earlier invoice amount from this vendor in the prior 30 days. It has no PO or contract to test for rate variance or short receipt. It is under 5,000 dollars, and the bank change on day 71 is after the day-55 receipt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3232,
+    "output_tokens": 356,
+    "output_tokens_details": {
+      "thinking_tokens": 247
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

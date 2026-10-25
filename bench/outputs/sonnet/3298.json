@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011126,
+  "durationMs": 2384,
+  "httpStatus": 200,
+  "id": "3298",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 15:27:15Z ping, about 4 minutes before the purchase, was roughly 0.02 miles from the Hillsboro station, well inside the 25-mile limit. The 33.4 gallons is under the 165-gallon cap (150-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSggYKEAgTGAI4AUIIdGhpbmtpbmcSDDw+SlMpYhY+7zuLGhoMDXcAoRhkGkzwTQNiIjAi4H+8Kf+t1RPK2va5DXiKC0wytp2v+bo4m84/Hv5Dlzb9vCairKL0uPTqAgPBaZgqnwVWRsI8zdLgAPFKs9q2tbVepjvglv88vOdBtBxkTLjrD+aS5Ema9AUHvSNyVdYQ4WDUmYbcTIcblewO5dK9yKsXWJqaf+6Kp/9+0DWxl3wXVyWTZGktJPlk5bQVELY/f5xJUCc24ou2JwjOMaoCcEOx+ipxjmt8O5FZuWby6E4/2PICRCTbKOIlDK+JIHy4VpY9uF5FCsDiXc4WokSkuHyn+2veAqhr4CvO9s9FdGERjuqzqdY6qSFsvviOEYm3VzTm5MBPQUKuG5EVh7c2uPEvq8sH7Ri2QHZG/8zRBV0sT0kLz9TqRNygUa7gyCLPdYAWCT/QHWCGbTlyTI4gypBC1z7reffuNeRTBGTHSSYmeFTTqpfFOx6ZIqf1+FfaSEcsSnicEoU7id9Vakaj7l+IilDYmZkeatE+lKkE0msLiTLjBNELprS49QOPfFZpOQadfMUzVf/0TRIYnwesAL8PNGAVYUxrLRq4X3Er6mFO51gKJmAsmMgHbawMfFTejEYM7NRxt+clM6TekMU/VHwtzmc0ROr2S6quMJxQa8I8P+YFkEwmn0L8IhxZtepPepXpTkH1wMKcJSfDsyN02dsNgMQUfOlj6vhmxAHc9hRD6+HRwH3iKQLEVL/AC6qpL0bnp7sukKeuVGldk2+xTqfKB5NSNgR7WwcF/NTuquMwAzVRTjAFc2+yh+6fbNzUqxecVpeoUcvH+/97WIJbfz0vs4qDlTqwVIQAZgrITD9F9chXcbTfBYqWqcFRd5UcYeeU9MiithO9ALJj0/o8+Cs+dZnnNojc6JwqvFP/gYPgyejomsUaSLdX6ulYh1Y/vYGyuzMIkWbPMo5Hu+FF8Fnt4PTQZaGdCjlswYZIv/pot/AMFGVFp2QrSxDB342SABgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck's 15:27:15Z ping, about 4 minutes before the purchase, was roughly 0.02 miles from the Hillsboro station, well inside the 25-mile limit. The 33.4 gallons is under the 165-gallon cap (150-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt3akRUragfejw9YccM",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4523,
+      "output_tokens": 208,
+      "output_tokens_details": {
+        "thinking_tokens": 94
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck's 15:27:15Z ping, about 4 minutes before the purchase, was roughly 0.02 miles from the Hillsboro station, well inside the 25-mile limit. The 33.4 gallons is under the 165-gallon cap (150-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4523,
+    "output_tokens": 208,
+    "output_tokens_details": {
+      "thinking_tokens": 94
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

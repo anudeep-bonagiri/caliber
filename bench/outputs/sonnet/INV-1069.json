@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010282,
+  "durationMs": 4665,
+  "httpStatus": 200,
+  "id": "INV-1069",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 135500 matches the contract rate, qty 1 equals received qty 1, and the vendor's bank details never changed. The only earlier invoice for the same amount (INV-1043, day 26) cites the same PO-1007, so the different-PO duplicate_invoice rule does not apply. No hold rule applies. PO-1007 was also billed on INV-1011 and INV-1043, which may be worth a courtesy note."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShwsKEAgTGAI4AUIIdGhpbmtpbmcSDB+cE9TqutS5K/cGGhoMnLzFfafwqH6m4fdEIjCMb6mgJDH/fiTNfs8xXuvkG7UO4YuYNrcpZnsgUwZijLrjJilaikJGCL975g7tI8wqpAp5MUSbx9+zVl/KfHxlbwdcFJz6oMPW34o+otHRPQjEAwBA4DQ6+a4QfF8e0iknD4RPgxqabUBz9NK2+/a4hBWoBrZOP/sXhu0jzij28XNLNuqHEJdwdjuWChhBvbNE4/ZWrf7uH5w2GvNqkbSKv+rUTj/qg2jQb+gQvSS7lkD8tKUdQd3Z/CiLGbuaDRYxgccXAPWFoXbuwbxgXZ6/OgBRqNbc1j88nJMGV2iDCVY4qtqeymWuOYngOZh6CDiENwPCyWtGihY9hDxeGHtPyWd3Xt4IqXJeA35BBI/CFXAxlU5Q2/iW9sODGxC2IztI3EQ8PuSLo923xukSh4iL3sq835oPRtugCeWL5gNWngPwKGXASoXiIT7OVfRAQdEEcORk/mENdpER6AbSAftnJ7q+ObY0ayL9ASYiNvYYvSzxmcNd5gXgbKlBQR9hd+A/yDqjoqMBa09VkMavuYNvXd4fs2O1sez5gIPqP5E9urlga/QAn/mfhlOM0Afm01wVyMcOyRE77GUxD8B9crSV/O2823cU1zW62xwQg5BVBMEKAr5d0riTUmh2E5xfHWJ7UBlilkC3ZE9LRkrikPILPEIEkx+ljTqD3Isatv6N6IUm0BQet0+KhbR+w60St5PXyX4XcOvbty9vkzM+OZD92effKR6lwd9mzmSUkLH3l94QrSnsJranAIIEGd+lSQ2ZC/ltGOYzZ8XNhNrgvPJRUFMq1JCfRfNwc5mbp04xnJsUKDvAkdyzkBazDMyfG1GBMPX5qSSX2EhPhk7+Ki4pspSR0MEtxgDIfuf8VoCzfjffmBOL3vtdaMOUoh34yiSbhlOfmvRP9Tt1zXmr7zEfnzLguRH4YlnUnNWvqDj8p0Yb9jJvfZBbqUxF8r0P8dQcCuZvQlTOlwL+02Klqx8b3CipGwrbT/bOOkHMJpGNKRW41U057bOWcMY1q+mw3cQHSYlFDzOSoJKPK7nyYTFImChqssG9zPVE6COtc0YJZWHvxNyfrwnFGt3LNwgS5EecwQcEAvwc2F1kDNdnHVRHsozEgFgW7XJofAgfB6yGTG3evIWwia3Fw8GmvQq85i2+pOTMoxjpr++MNX5e/IHUtBinsO/hEmVdH9cxU0VgJDm1QJQL2UQkps6G90lt3kDFlY2TCXptbkV3l0QACrznvT4gmfLJo/T8DWRuvHcsz6YT7pkWeehcYdLbKwgM2C8vr/buiSeWUWDATO69qz12MCX3ydQzS7BVydLL7RnbwdR6qDO14JHie+3g+5anNHSRUGTNGkE1qgkHSsZN6KHQYoUYEBGSnKHxDN3tBLCmhCI/apRS2chBBz/pu4+FGdtMyc86wBYsIAUHOO90YSmF2LCdvb+JDxLz9QVGg1NeljfwP0tpdxhKsWXQmr1goVDw5z+XwhJtDGIaCgpQJX/lpA9EZoK1V4lHZlsU0Zq1CurUvmNF3UFAc85Pm+Y78y//anHh06eXsz4zx6c0w1Z0TUNiOuYwtDGQIM2y2DBstULBFWkaGmeuCJZ4Nu6oZeELEgJkrP+H+joTWWF87w8dzNRBU6qG3NfmVRgNMpAz76DOSgpeiYFeMnOazagEU6mU+9SFDUOGEDQS1+gZjAvhNlZOhpaGhKB89Z2MTRAJmX0f8yN5jWbyK4gZ8pUkLy/jXFw0D0kbpfUIsaX02e11yLFQ5ESE45YbroPuib4ru2Y6Lu+ypkesVWnhYLfHIIKRdG4ppBtZHXllNw6VYTVVkfu64aczVRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 135500 matches the contract rate, qty 1 equals received qty 1, and the vendor's bank details never changed. The only earlier invoice for the same amount (INV-1043, day 26) cites the same PO-1007, so the different-PO duplicate_invoice rule does not apply. No hold rule applies. PO-1007 was also billed on INV-1011 and INV-1043, which may be worth a courtesy note.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsw1XzFBmmqaT2Mfxyq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2651,
+      "output_tokens": 498,
+      "output_tokens_details": {
+        "thinking_tokens": 341
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 135500 matches the contract rate, qty 1 equals received qty 1, and the vendor's bank details never changed. The only earlier invoice for the same amount (INV-1043, day 26) cites the same PO-1007, so the different-PO duplicate_invoice rule does not apply. No hold rule applies. PO-1007 was also billed on INV-1011 and INV-1043, which may be worth a courtesy note.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2651,
+    "output_tokens": 498,
+    "output_tokens_details": {
+      "thinking_tokens": 341
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

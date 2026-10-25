@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011186,
+  "durationMs": 4269,
+  "httpStatus": 200,
+  "id": "INV-1136",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1136 passes every payables check. The unit price of 33,900 equals the contract rate. The quantity of 1 matches the PO's received quantity of 1. No earlier invoice from this vendor for 38,400 falls in the last 30 days. The bank details never changed, and the amount is under 5,000 dollars. The total of 38,400 is 4,500 cents above unit price times quantity (33,900), which no hold rule covers, so I'm flagging it for information only."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAkKEAgTGAI4AUIIdGhpbmtpbmcSDDLi2mXB30OkdkXWLhoMeQqNijYz3T45p/yDIjDLTig7nEyuMK80vykt6Ovvgmt9SvE3gtL9Dc/QYs+2dy6ZV1kqD16fo0WHAu6i6XUq1QjVixgL91G/7jrLJ8FRc5zx7JFr4czKBt0Cxsnlod+Ay2pCHh4q3QOX0qHbt4xvszWFknwWF7nMlGkkobsiGPXC6Km3dzrIOSLFJUXPQPplbvrDFYQgEy6HARGGek1U9v4tzQebxzHA5B1qsgVdB7DkEbNLvNhLzqf08pFi2esweOhrsuXvpA4b+lpc5Clw9t7c1yksJd1rWLr4B636qELnWiVSA6FwEdH5Rd18p9IRvCQfXchN4xOANam0ZSanpDXn7/T5bcTwQ2N13gmt6hlu5QJNIuyfiXDG2BfIBKf3gNumen7pidTNP/53LqRReeDtlUWM+ZGOKc6dJyzRX8PhzDDrc0fRFB9ytzdJuIifh6GJj9B8snrePT2G6ZMSYCmUi6PDmA8LvZZ3Zj/6xDjYd2BDRDdO1x/knthmSxzyZ8ya/5wKceA3B0VwxQIXKWNB0pC4RlbpadrWexo8GEWF89+iJ0QSFerwo10bXd4ts0k0sCERXi+wXITe1YyrD2h01gw1qd70cQaHIpO14lzViU5ysb4NQv6Rb1DGqZiRpsy1yLq6H80VfLZjyCjOjRXv3wDD6qhXs6pNkSP7q9Wv1tZF9EJt6MuxFWsF5AuwPIi7gUcZLS9Cg+t6hLKSCq+wN7J5CBvaxEqTbUapmcDJmjf2pD25OCsquxcMBUEVbzbpg1pc3VQ9l+TK0gOxtyDChcqBMiUPWI6d6w9yPyzS/k+RZaXwiS4E3xkkq0O01n2SU+ylRquk7JonNEccFUMJNsFIFA7GgQRePxBbwGJVPSHNrVYrwmRJJvqECxV2R2jFoGsWA1dYRalAAeuUBtizC4+EW8Gtiti8k+HDSFrBfId1ksWcAPTJxdLes0Ti5lSk2Q1OQgU8P4VjoTHUl0xRA8bzIWqRqoO5A3ipGD1YFsCxKqBsQ207NcLHmQSCf84R02WcTsjzpyPSZ92qQtdONBH1tmrRRfxkHakWKgL5RBXgsUfGRqomKSXjRcdfIECsrQRIbuL3sJ/jJJA5mbGLgxNkYHsuLvY0jbordFnjuD/AiC+XvmMWe9jMVsVVqyY/uoVki9c4GpaXHuzo1SeKwKS4MChmgS4vFS4X+XeNbJz2wGNBegzSi0tbGAHhrIk6LURdV+hiCKdxpiK9tCFY38YUaNBaMPBTKenIF+DhvO35/GNsh5rRCD8M+v/z8Es9QefyLGOBujN85+ddts3KiiiNAJNmnUs7YY1nUQQnuwbXd8p5NqJyw//rZzo1jlGW8h3Nw325Kntz7qx3iLzZU5KaRLRrP5gDHAcHE+l1u4PJ+GBhkOqV7bK58Wulce9eynKvhkQGl3c4rk6jmsEKemA8HE/1xlgLPJflTL9MEra9M34x2nbRFkYLgzcSwV4Qegzr/aJGky6NpXlVJPCiKUgF9ew4iW+8JZ0GyBaPho1syVJbinIa0ni1zIOqCKuVv9qkrzj01QhuduJ7CBeZObnalRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1136 passes every payables check. The unit price of 33,900 equals the contract rate. The quantity of 1 matches the PO's received quantity of 1. No earlier invoice from this vendor for 38,400 falls in the last 30 days. The bank details never changed, and the amount is under 5,000 dollars. The total of 38,400 is 4,500 cents above unit price times quantity (33,900), which no hold rule covers, so I'm flagging it for information only.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9N3NJ1D7dQbBffs5B",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3413,
+      "output_tokens": 436,
+      "output_tokens_details": {
+        "thinking_tokens": 266
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1136 passes every payables check. The unit price of 33,900 equals the contract rate. The quantity of 1 matches the PO's received quantity of 1. No earlier invoice from this vendor for 38,400 falls in the last 30 days. The bank details never changed, and the amount is under 5,000 dollars. The total of 38,400 is 4,500 cents above unit price times quantity (33,900), which no hold rule covers, so I'm flagging it for information only.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3413,
+    "output_tokens": 436,
+    "output_tokens_details": {
+      "thinking_tokens": 266
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

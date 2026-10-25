@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013026,
+  "durationMs": 3420,
+  "httpStatus": 200,
+  "id": "T1733",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1021 at SH 130 Plaza 4 within 10 minutes; the prior charge 51 minutes earlier (T1727) was at a different plaza (SH 45 SE), and the last charge at this plaza was on day 27."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1733 at plaza TXTAG-SH130-04 (SH 130 Plaza 4, Mustang Ridge) at 16:04:11Z on day 32, plate TX-1021.\n\nThe duplicate_toll rule only applies if the plate was charged at the same plaza within 10 minutes before this charge. The only earlier toll on day 32 is T1727, which was at TXTAG-SH45SE-01 (SH 45 SE Plaza, Creedmoor), a different plaza. The last earlier charge at SH130-04 was T1617 on day 27, which is far outside the window.\n\nNo other policy rule applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1021 at SH 130 Plaza 4 within 10 minutes; the prior charge 51 minutes earlier (T1727) was at a different plaza (SH 45 SE), and the last charge at this plaza was on day 27.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMssy468Raj5DciyJrYg",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4898,
+      "output_tokens": 323,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1733 at plaza TXTAG-SH130-04 (SH 130 Plaza 4, Mustang Ridge) at 16:04:11Z on day 32, plate TX-1021.\n\nThe duplicate_toll rule only applies if the plate was charged at the same plaza within 10 minutes before this charge. The only earlier toll on day 32 is T1727, which was at TXTAG-SH45SE-01 (SH 45 SE Plaza, Creedmoor), a different plaza. The last earlier charge at SH130-04 was T1617 on day 27, which is far outside the window.\n\nNo other policy rule applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1021 at SH 130 Plaza 4 within 10 minutes; the prior charge 51 minutes earlier (T1727) was at a different plaza (SH 45 SE), and the last charge at this plaza was on day 27.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4898,
+    "output_tokens": 323,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

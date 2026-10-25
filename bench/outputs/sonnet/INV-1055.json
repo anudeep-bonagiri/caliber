@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008682,
+  "durationMs": 4281,
+  "httpStatus": 200,
+  "id": "INV-1055",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1055 matches PO-1002 and the contract on unit price (32900) and quantity (1 billed, 1 received). Its amount of 34150 matches no earlier invoice from this vendor, and it is under the 500000 bank-change threshold. No hold rule applies. Note for the file: the total is 1250 cents above unit price times quantity, which no policy code covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwoKEAgTGAI4AUIIdGhpbmtpbmcSDGjDQnIVquF/EeavlxoM3sXy+r3k3doRrxStIjCCRo4342Ny9OGnsfQ3V4LSU0EgurHZZjTRk5Ez7lRNagumJmhUr/F3Fgx2DBwdxYsqyAlheV9KQB4y6Gs2nt2vh7Tjp7O6HOnpRQmsx/O+upFBUGQFz/qZ1p40BYyLyWiVAqu6YuTrX+MBqDe9+O9XL0eYmY6FObdnCVFa9vvSapR9W090HmFd5Jou+PFhPMb2jh6cmRhWNXlLoERJUU9vhHGft9ouOHnmKRhouLM6WA6ma5gS6v/+mClUpF0d0gqTnoejQM1vjFNVkvfSZdnl6esigpTMaMqlQ0rpVeZUIGjKSPF5wQEtDT6Wi/Jm9dLNUwr9MsJ95YrFCpu7RwWxQBpEJGtQ+m86whLhgNTyMgqv594XJEgKlaLmFXys5kHstEYj40pEjw+jxhFQiRcDUbrjgewqCLDyCeYPjLsQRwXkZ5tV8zOUDxdGwiK6peWgdNh0b3XK2IBwS+QqVj5hgsry/UTa797oF+oUXDS2bLXA1HgQ9u4+AtZCCH4coSHOinF6ANwbVEVopEwzk5C8s/SE+v7jk0etmoyhUaQ+/fNEUYSMCyspeP3UQsoxw/ARjHJmZAnDx8bYQ+9qGQ3iFb0T2RvmByvrVThiKJXYGgCBONG33AhbJZeoh9McyxgVmSwAWKSAROjbCRaGfz3rFJsWAK500XoCM1ntzOVfsJmLjIDYKM/e+t/Zzx3oMhPyjbEvV7EpEbeQmpbayOQWUwYXa7Gbg1VzgcPDGarg8ZjnuhMUcxKoWQaW2acFokmpMfGD5IBHc9Mm0nQpcWAOv2n9u/yJfVOKuh7bGt4CuG3UD8AGdZ3f+PdSgC4bHjzbqyRe4aitwe2tDbXl+cVR48JBLF40RZQoAxEeebfDJUs4WJdvO3QXppq/zrghh6URV8BJtaXulnQThSQLrchrK93uflBa+M5hcuGUFEwNpD2vLS3P61/nLFWeuCUY1CCLQkZN8tVND6hFi/TDKQHkgDncvTuMv8xoBDFbcjLcbjPcAEl9he+hVEzDFtGsLn8FpKEaeOBsBWaZKSoL1EGDLmrWnlR1lrVvxwj8VtGVF/MqVhd+uYhIWM0obOQLN+3zbWBtZpMR2bQZJJAao0Cy+yqX8I7vi/uZ16w81qmkOdAACMNCs50ppiloDsJiroENvLlbcQdZTfigg5AAo2CN1/C9UuU4tEwqxFP8/Uy3Ihtx7woYYk3VCqBW8InVGsJ12QJ3la1M9Yq/tSqwWvIDsIjUiu02oYYr3flEsIIfbH56GJ5LCdE0wq46+aA8k8lyjdeoVLg5dRxWS8ADHf9uUxbCj6jNiN2t2SrqFlaj7N3Ly2I7EyRChwuEuweCXnJ4g56xgLW0rl3yufELosdSVLWFo+E5IQHfB+UICefQ5GiKRtZ02vOm1IqqBT9+QmWfeTOesIO4AKRL7uQ4Fe7EzRPBoGIXH2miNQWG/RpFkpFih7p6K4i653bBGzMBBkmT6cYqTKtFr3FIY/N+8Lmvz9A75mHHPFpQk30WrXGpj/JfjEfA0Bf72e2H+vyfoPYT0R1+b81YrvrMn9qR8kXBQlIIE2GF5TeOzNFScjjDj7wCcq+EYuppi6WQpUmt2VfypLJwxRhEV+3rKcZ+b4DWI6LF+MUk8jb6dqW0f13d3yCnYAg2l4iUPnYsSnVA6j+dQcNP2aZ6H6UQ9dnGTDae3nvYV0LBHIJsyPMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1055 matches PO-1002 and the contract on unit price (32900) and quantity (1 billed, 1 received). Its amount of 34150 matches no earlier invoice from this vendor, and it is under the 500000 bank-change threshold. No hold rule applies. Note for the file: the total is 1250 cents above unit price times quantity, which no policy code covers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsx3Ts4k6MhcKNgUVuH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2156,
+      "output_tokens": 437,
+      "output_tokens_details": {
+        "thinking_tokens": 299
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1055 matches PO-1002 and the contract on unit price (32900) and quantity (1 billed, 1 received). Its amount of 34150 matches no earlier invoice from this vendor, and it is under the 500000 bank-change threshold. No hold rule applies. Note for the file: the total is 1250 cents above unit price times quantity, which no policy code covers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2156,
+    "output_tokens": 437,
+    "output_tokens_details": {
+      "thinking_tokens": 299
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

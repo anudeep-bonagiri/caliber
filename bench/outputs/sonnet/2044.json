@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009214,
+  "durationMs": 3330,
+  "httpStatus": 200,
+  "id": "2044",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Nearest ping within 30 min (13:00Z, 8 min after purchase) puts truck 30 in Dallas, about 56 miles from the Hillsboro station (limit 25). Ask dispatch whether another unit or driver used card FC-1030."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwwcKEAgTGAI4AUIIdGhpbmtpbmcSDE2ZszAJ/z6r0QmmfhoMV06nxOpf+5gKFZXdIjAXArJ0nkuPkztePFXd58nsjehLjsbahuDAMzfcPQVR9UF8XLRPSUmkW18L14toZHoq4AYdx5nfx7getf1oWMNB9vCXtVkHYZVWb4+WmsYersm3JA0LXM+iPl4lsqiCTz6+ppEtXiZ8rVY/ejh5z6cqphWjB22a3jDS5dUAz1oxYSOp0VEYsJn6JlZjDgoWaWmcE0MbYlWQG6KdyQiUaltje96kPD8IFc9oZvfMsGtoI0aefXQ1EEc2FAfewOKwJYeS0KkR5HKm72ai3vXWsvvgFh9XyFwMkwXi8KJnaQkuiXUbrdEJN2llaE+bGgkcpkM4EbK0Z9rVLpZfdstOQsQaHhfkdadAzbbaBVW/Kw7Fuzu7Cnnw9YQyjI2DSrezpc8yx2NZ+u0EJ4TWGP+rrPn6INNfuptB3Cmqi3T4Pc1JjqvQrIZBBQej9DUTwSvzXNqb+yYzZWn3cgOso/l1roXeWC3fBKM8/JX+zR1E3LNvE8otd7uTtCCBDaAz7MCcO2dH3nB9uXmskrMzyfNza2cgbHvFUFGwq8o5j9zUp8/x92kbXaYp23Q7EFZ66efwv6TGEF8j7o0FiPnA4OENngTebtyp8iwoP1wNNfNE5PPwjCwLTPPzT2ry2n7RbJMDUybjkU63EFt83uoaafIHPIap4qYJOU0NlJs9DRNxt1NImXFy6ahrvoznAp1Vfd0HjopgKzgOyXu1YYF4n4U6e9nh081XX1u1SImy+vyr4eZvs20MdrAZOUVPOMR1D76XNLGka09+GM9l0idCgbldfIJKLif9gFhUuCsCLr428c/8InZZfYmL7EmzC/IvIDGiozbUNhljazP+8fDOrEHMv4eXDSZyMKgKKIzG4NxkCyu08C6R0eJttdro/2y234t0kDPA7bZoa76hwHriEyuW4cbGysps/whEGjPXFOrmG8y/D9nf/oKeakKP8PZLV9HQGovNzs7luqvQ1qIWXEbd8Qk8gHnjFznBxr5SWqvflEylWHNSVJOpS2XWimYQp+vyh+zYgIdHe6M56m+f9UBnyEShr68yMJ705qfGrabRKZWC3m2tT2qp9tEsBpa8ePhDHouvbFg3voGF2cWokZk4FebBvVQ791SnuNF/SYU9xJGHq8KIhq6aDWE8vGLf8mwsJkYvMGJHc6AMbJGwnyMfCIZddwJdYRL1fyUGabNOfWEXGkg/cBQnk/9FUdHytBipqGXFWU4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Nearest ping within 30 min (13:00Z, 8 min after purchase) puts truck 30 in Dallas, about 56 miles from the Hillsboro station (limit 25). Ask dispatch whether another unit or driver used card FC-1030.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskzSz9wMvH1ytV3JT6",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2987,
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "thinking_tokens": 214
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Nearest ping within 30 min (13:00Z, 8 min after purchase) puts truck 30 in Dallas, about 56 miles from the Hillsboro station (limit 25). Ask dispatch whether another unit or driver used card FC-1030.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2987,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 214
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

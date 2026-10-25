@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012868,
+  "durationMs": 4815,
+  "httpStatus": 200,
+  "id": "INV-1118",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1118 is $1,190.00 at the $1,190.00 contract rate, and its quantity of 1 matches the received quantity of 1. No other invoice from this vendor for $1,190.00 was received in days 33-62 (INV-1025 is day 16 and on the same PO). It is under $5,000, and the bank change on day 71 falls after the day 63 receipt, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1118 is $1,190.00 at the $1,190.00 contract rate, and its quantity of 1 matches the received quantity of 1. No other invoice from this vendor for $1,190.00 was received in days 33-62 (INV-1025 is day 16 and on the same PO). It is under $5,000, and the bank change on day 71 falls after the day 63 receipt, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsv88qstyZoYSeArcCr",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3719,
+      "output_tokens": 543,
+      "output_tokens_details": {
+        "thinking_tokens": 394
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1118 is $1,190.00 at the $1,190.00 contract rate, and its quantity of 1 matches the received quantity of 1. No other invoice from this vendor for $1,190.00 was received in days 33-62 (INV-1025 is day 16 and on the same PO). It is under $5,000, and the bank change on day 71 falls after the day 63 receipt, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3719,
+    "output_tokens": 543,
+    "output_tokens_details": {
+      "thinking_tokens": 394
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

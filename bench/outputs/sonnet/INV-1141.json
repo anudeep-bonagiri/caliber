@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012032,
+  "durationMs": 4036,
+  "httpStatus": 200,
+  "id": "INV-1141",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1141 bills 4 tires at 54,500, which matches the contract rate and PO-1010, and the received quantity of 4 covers it. The only earlier invoices for 218,000 cite the same PO-1010 (INV-1035, INV-1110), so it is not a duplicate_invoice under a different PO. The bank change on day 18 is far outside the 7-business-day window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwwoKEAgTGAI4AUIIdGhpbmtpbmcSDEBNBwWZet8VuCvExBoMKGnUKv3gyau98N2DIjC4Ow4ndrP313BhvfwH4jzXPlO6BmYfIzAnwgRvxLwYeXbAnU6syut951K0wPghoSwq4AnImPPZp5LeTVZ4fns/N3h0ke/bAXfRRFg6sZnYf08gJFyYnN8RhBHs+zbKIbei1FAdmP6bM1VR9fdxwX1AP4lqVxfSlmkXLJXu2UsqeTNlz+QZk6ZupYVmG4CKs8nreIHZnf88qpqjONkfnn+nlaqzYdTrMu35008aow8wcxwPM1JYUWEFsmHG5HwzMjzcVxDA+0Sa1B9B0yD3m7xMuj7DrQF/F13AhTMRFFwgjRU4uK2RcHC49xVtZAvAVwuv1ouqWiw368dnxKJapyQHdLFioybg7for7N8rSiJJQF+ksw5e4mH3ZR/9Sd8ATy0dW2xxbDdRNTZGBORn7Z/d3ccPZb4VEKmIPuZccldDUB5jPypont2ZdTtqhsgSUktyRjGr9sf7/N9dzyKMwOUU0msyhYZVc/5WFQxb2iqd2HN5uKJnEsEnbbDDzYNll1408puTcww2vY5tLt+cq7b6SFcaiPmkcfStjhGXSh/k/WyrIoM5ZiUtXRSqZifhRvTJOYH0NHXEuX7sX8TG63NEG2FKfHuVykSZQq3yCjrboXSQxusQr+CMd45Fk8R2LZ4RihFJ4J8+zdnysnX/FZEalovSn7Jhiuw++6QFqwd3nNs9TtsrqMd/+BGjz+7ESbAdxEtj6FDqY0ai1926mTZlJZeRKb/rJb3TRczzwRQ2zL8VQ+QpQAssgWdaSRSu+dl6YQwZ4NuNBntMHa8N87Bw/VPxGrP7Dg36rqYLhCgRM1wmtVj6ue8B90d8bXn8hG0BUNZuJCmLu59HfGb1NrgKc5hr9L7HyYVYSZFHol4V/jYHuKdhvifQ1Ga/9YOtFQtIYhGqNJ3O8tAZVh6Yy5daAbYNQ4OTsHcYkj6VgaVoqR+o/t258EVUjz2nine5WoM6Di5nYcIq/Kysh0iUNgyH8CznwiF0vVRNK4BFxLLV4JWv+Urc6tXVZd77XJikeXzrFDEGb7qZuC0tud2GcEgADJL6trja4iZDMAe3sGz/hb2DCFImdOYP36nGHxrG731D9dNpOmAYLJNcskHSXNyjhPCsT5ex2bPZOVnNxYeaywebhngjBVQKIMz8Qc94+WvFAlBUogPW7yrtYGxqaKUhwG0gxIrl1+YQ7J1erUAhqDM+B2dtWA2cKHw/QTz2odNwIwJaC793voXlD0n15f06UHd3H4FDyqKoJYp2DhAG8LahVxdd6H1xHElrcdAHUhjXPR0yaylIHgr61BabjnH+BIYxBLNbNZstN4LvUK3SgdHWgAe0N/yvsqLytb0y75qdrKn+gQSiFYdWc9QTrOVziOYI8xD6CkH5FMG0CH9HtuFFbjFUSLkYhphM7ypGaIJI33wGjIBO4ZC6fEQ4BtQvnAIuaYwNdWj9Cdx3yCBqfxTDAn33gCMOHa9IixhmIOeAlqANV4LM9Ddf0wj6BKa6dlLd7JsjIdfaJ3JBoofxTPj8xwrydcBmMJkMNV37wQbAUC0vuj0SNAL9LOdAjx68x8YnGjeVWGv8J1G0W2ihKNHNyoAdu4EIjFExTDJGBxYgqybvu6awXSNx23Xr8IK8nAjnrNFfIBMjTCPsVUN6bfBdM5sqIWIFO/hLEqG+Fb9uvAV11/RoiP2mH0zEhBeGm6CJApQaSZAhnvO+TwXUi/iN9IziVqeVdO8dFh0x+weVtjAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1141 bills 4 tires at 54,500, which matches the contract rate and PO-1010, and the received quantity of 4 covers it. The only earlier invoices for 218,000 cite the same PO-1010 (INV-1035, INV-1110), so it is not a duplicate_invoice under a different PO. The bank change on day 18 is far outside the 7-business-day window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMss1b6uaWqvkECxUfXT",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3676,
+      "output_tokens": 468,
+      "output_tokens_details": {
+        "thinking_tokens": 326
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1141 bills 4 tires at 54,500, which matches the contract rate and PO-1010, and the received quantity of 4 covers it. The only earlier invoices for 218,000 cite the same PO-1010 (INV-1035, INV-1110), so it is not a duplicate_invoice under a different PO. The bank change on day 18 is far outside the 7-business-day window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3676,
+    "output_tokens": 468,
+    "output_tokens_details": {
+      "thinking_tokens": 326
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

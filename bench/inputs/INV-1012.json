@@ -1,0 +1,39 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 2,
+    "item": "oil_service",
+    "rateCents": 31500,
+    "validFromDay": 1,
+    "validToDay": 44,
+    "vendorId": 1
+  },
+  "earlierInvoicesSameVendor": [],
+  "invoice": {
+    "cents": 33950,
+    "docRef": "evidence/invoices/INV-1012.txt",
+    "id": "INV-1012",
+    "item": "oil_service",
+    "poId": "PO-1019",
+    "qty": 1,
+    "receivedDay": 9,
+    "unitCents": 31500,
+    "vendorId": 1
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1019",
+    "issuedDay": 6,
+    "item": "oil_service",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 34,
+    "unitCents": 31500,
+    "vendorId": 1
+  },
+  "vendor": {
+    "bankChangedDay": 18,
+    "bankLast4": "4471",
+    "id": 1,
+    "name": "Alamo Fleet Service"
+  }
+}

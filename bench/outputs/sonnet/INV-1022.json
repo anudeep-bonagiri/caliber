@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008556,
+  "durationMs": 4367,
+  "httpStatus": 200,
+  "id": "INV-1022",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1022 unit price 36,800 equals the contract rate; billed qty 2 equals received qty 2; its amount (77,350) matches no earlier invoice from this vendor and it cites the same PO-1014 as INV-1008; it is under 5,000 dollars and the bank change on day 71 is not before day 15. No hold rule applies. Note: 77,350 differs from 2 x 36,800 = 73,600, which the policy does not cover."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzgoKEAgTGAI4AUIIdGhpbmtpbmcSDADBziPl5h0sQFOD/RoMoSLbkSPnveljRD1vIjAdNdpwv/2ZCCeyrXSChmrsjIiQxIyHoeAHUWBn982vW6ApTN0OH6CzhJbGWxI7xCAq6wl/MOxDS1eXy9rKrCjDoVPa4n1e0njPdjs6H94XvArOB9LWon4hf99t3j3G0pxtiW90d+cy5gzxj+NQcYnvpEWmTZTwGU+54pcCtu7b+O6jnmJ2SAP3Ed5Eg+tk93d3KBrnxvExceC7YF35ScFaDXPeMiq6ER0SoSwbBRR/nrtgsuHzmcLnPu8C1q5v2Bz7VAD1OWwDE6yTeAH1+C2+SbmQShBuSkg7VBRoU7a+Q7BOkqOdC3d/p9UOwYEVq4XhIxwgSm/GcnQHFqaMfANO0NoAEkryFG5yPpRREUflNLJPAksGlcvQy9QwYVa8nK5w5NMRsAyYgCB5nkcW6zu0l2mFLqGARQFTP6oQRCROPDeOXT4ItdmbSqoR4yDhyhsjvsT5HEDfSDeKpvxddO682m0l7XAkVvwjB6Q7Rj++Z+Q0Q2M59RK4bwUyhyrismyA4+EA/pa8NT5r+0Kx/V+xpaJkByohXpOF52fbdrLaVO/aMIAadAmnB2XBimOM1gaisss/fyE63UOhLyvtqGYZa389iF4xnR8VjpPz6RBS0BsWukWmzjffC/d9l2yAUihNKh1/OEv2diWFmXclDDTHFR7eqGUxyRdh/wwEx9hfslW3MriA8mm15V5LXDp5CPCOcNkTZgSPs0zJlS2PMvMcQWJvSLrnBrjKJUOgnIIfgmTNdM+6O18BpBdPUfXHfreisaLwZ/wOGGGNHl1Z3Y5hoppPHbrnOxgbUmtpMOqjfj5F0yekiZtBn66x7MMS0FbVLx0s7c6wiRkjvmGlY8zeNtFsZ/HKW4wl6mkPWWmE2W+jT7uKcFoAop6ZvEnfpOLW+aWnkmr1qwXHNr8G/gS/bL9K0ydZbOpCx9Vd7tFNlXUzjdJWhTSplnwInjD+DbFmYcwVySpX+85khJrnCsHn0F7qKQR0xGWJYHwgwBEbOjYAzTJG3Blaym0DKnqpBzgD/hnpmMQXDiRiK1sch054iC2amgkTLL3tRRhkRc2UlQFVG4tH9urxX6f6fbgPm8GT25HwWxZog6FB4kFj61IUtBIDV/Tj0v9AWFgSj8NdL9jmnrCWCji3cN6I9saEg4IMYB8+9OYL4rFVyC9b9PAUgIZd0QVF+f4jXMPuH4yq8Ppxl6IANGJnogEeD0koas6NFRF9a87qu23gCOU9NpFXXPWFJHNJRejWTfO80gJOpKtsX9GGjK7aN5pHFEe0Y1PaNwKF4rtaj+HB1chOSB3fXLXIzvL8lno7dCttSfHL/KCZfxvVgkwA1ReGQjKqKyKI3SNcWjLeMZeC7RmOTZ1IOcfGkSygi5wR/RbNyFZaq/mI7nTuxrwz3dKrWgRirBErMK2zVJzJp97+Qy6QQkDzUzIlgvjMxLNqXtvcANqKTZDkMlj7sEAeRxgSWPZOZAAqVi56390HzuRjAdaTzeyqtgfXaFk0qe8ir/EriVLzkteyC2ogC8Kznq0wmb2Ge6wGy2t1iTcH5xXWW7UJCmypBJoBL9l28fCv92ZESC1nyX5EUlhm4PS3uXPH6bPn11Vha6PP1SlV4EIv3xpPTsZPBLDKBzJsFmVL7P4aquvph6CIfqM8KPorGF3Mfl+7KsC2ksL+N6NDA4lSaT/I2vttvZCFTF7fsHhAJqTdR9q3DPgShAs+QyIs5BnmAp7K4FLM6xzsL/Z85f2InUKQZRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1022 unit price 36,800 equals the contract rate; billed qty 2 equals received qty 2; its amount (77,350) matches no earlier invoice from this vendor and it cites the same PO-1014 as INV-1008; it is under 5,000 dollars and the bank change on day 71 is not before day 15. No hold rule applies. Note: 77,350 differs from 2 x 36,800 = 73,600, which the policy does not cover.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyrxPsfWFKSbSJhkSR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1813,
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "thinking_tokens": 328
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1022 unit price 36,800 equals the contract rate; billed qty 2 equals received qty 2; its amount (77,350) matches no earlier invoice from this vendor and it cites the same PO-1014 as INV-1008; it is under 5,000 dollars and the bank change on day 71 is not before day 15. No hold rule applies. Note: 77,350 differs from 2 x 36,800 = 73,600, which the policy does not cover.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1813,
+    "output_tokens": 493,
+    "output_tokens_details": {
+      "thinking_tokens": 328
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

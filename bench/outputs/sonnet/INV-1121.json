@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009406,
+  "durationMs": 3262,
+  "httpStatus": 200,
+  "id": "INV-1121",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1121 bills 2 alignments (49,000 cents) against PO-1028, but only 1 has been received. Propose paying the received quantity: 1 x 24,500 = 24,500 cents. The unit price matches the contract rate, there is no duplicate amount, and the invoice is under the bank-change threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QcKEAgTGAI4AUIIdGhpbmtpbmcSDIGdsUUOVXDD9dmQ3hoMbenHZ8QRT4s1COt8IjDcBhNtHbjeXgxmUw9RwhGtmg6pQ7yJk9yK37fVb6fyXNg+9rdyU8P8uZdB2yhi3s0qige+aP4azj4VCSoYTsGAXku5xg7LFCOglO9LGdy1WuHmuYm4s197gT/XBFrIVRxBylWEtFfVbVIIjymU577TiNaiMQBKygJE2CAR6NVn8Fl4l2YrDeojZ0J9o7tpxJoHGNG2ZsjNiapo6DRAcRAGG/uxG3kGwagwQt+z4Dx/UVWamWBkaMe6h0OGas+Qg8q+UTV5TczAqPqJ9x6d3i/B7ANEA8JUwv+JS9xjt9Q6SOvB2MNish+/mLTrcztRPRuTUlkV5Qr2a7Bti+wPgu03Yhaz0605RC5fm2u1/Yyzq2DF+wHdbAeGqKn4YYGh7GHlM3b8XNgvDSB4qnB1mEWFuPTHBh9RWmaEPvgSTFkIUCWHVxHII0KYxkNoTO8OVetVguiPwYNzbk5NrZonZTg+EMEXjwARKNpqe2FuicO3G1vgjTh4JFTmDasLyKIz4xs4sAoJigZjcmNjdSaugnPS+yxQyaX0lxjRGM/1mqThAwzGDacgd8lpPd+9zW8owJOnQwrJf0253UcnHuspQoJQP1saajMGwqJ8gMd2LmIHOQzb6WnTa5P6smgnbgY6OWv9RoNCq3AMQX5JUBBoBZuirBChrXyOdJSkT8TRfsXLlOJ2eoBRf8XgwgBqv/kfKqehLnh8uVKIwvaQ4nOye6ETqU3lBXyUoaemiGeKAGDMOl+pY+uNo4Pca3E9jKrsrOq2HFbzbMNolm7xd0a1W7et4itKQsIlCDuQEi+uNJGqwwhXudda7GLqe/OGvmwmmq0Zbbftmv34lIP/YBzBeMhqzIaJAX9iJ6P5VkYPaIElRmio0Rv4/tmu5OZGgOEl48ODotqfvD82kb0FiO+PmuOxbs3+ZS41buavD4SXhix2SVI/eIr5ZfQbiNOXYNrwcRjnAzK2oSaQMEQUALkSukGwMKY/9sL8GppurdUFtV/CTFFT/kRaqm7ulZiNwOuKg0uHsIlp48PfIuWqMC+GcfA6gC07IEL5kvTcUdWg4iA81u+asOqSukoezco/jWvy4aJCEBk0pyXbXyZJcUADXTkCqoUKhtQF5dc5+SnCNy7TXUZz3DotVzGMJtLwtJl4/bUAP7QjkWeKX2AB/o5rMB9FCAgQyfOikeKQIZUzfnM37zLsPis0ufSLh7IEeCLcaitu80mfwBIuTr/XScpRS4cZad8Gb4p/RszshU9cd26aJm6XTe/njL+pEyynRwYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1121 bills 2 alignments (49,000 cents) against PO-1028, but only 1 has been received. Propose paying the received quantity: 1 x 24,500 = 24,500 cents. The unit price matches the contract rate, there is no duplicate amount, and the invoice is under the bank-change threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMssp2cDdLwnZHJXJSyb",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3158,
+      "output_tokens": 309,
+      "output_tokens_details": {
+        "thinking_tokens": 181
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1121 bills 2 alignments (49,000 cents) against PO-1028, but only 1 has been received. Propose paying the received quantity: 1 x 24,500 = 24,500 cents. The unit price matches the contract rate, there is no duplicate amount, and the invoice is under the bank-change threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3158,
+    "output_tokens": 309,
+    "output_tokens_details": {
+      "thinking_tokens": 181
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

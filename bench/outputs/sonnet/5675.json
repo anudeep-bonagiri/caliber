@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01183,
+  "durationMs": 2667,
+  "httpStatus": 200,
+  "id": "5675",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged at the Waco station at 14:40:50Z and again at 14:50:00Z, within about 0.02 miles of the station and within 6 minutes of the 14:46:49Z purchase. 79.8 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QYKEAgTGAI4AUIIdGhpbmtpbmcSDFavockjjSdY1U1GRxoM8as+wyxmxFkGtJLkIjBsII9JUbQtEqGtjweSXpl8rf+3hKq4qHwof1cLyZxr8DTLpuHAtLGv1iJ1eWXRO7gqigY8zU4yBBVf+8APDUEfFS4U5OadCeLZjje6xYfvwG2Iusq0D1lxnR6zxMT6uy3FJFWou0gYlU0yhJHy2tUoCevNnr3IVom3iuW5jvz1d1E9erQP2k7qvTEnnV3e89pDAcwYvTj6nVQpE5+OO7pROkolVxP5ptX7fMVRIg79fRkcpK1rmnSkvifNPuWNiaRiJmmISvF2HS02M1B+fOkQB/zbdQ6vE7sAVJJoYM2KapMQwsqzwQpnUgk0Uy7mHWDRTWSq8ZU7HKU+jf9aV6ozoxJP2mvshi2dfIkfMcmRP1hV+mTDMHz/d6TIeJmrv/U3euniOmKU4BJDVFAYuIzQONStSc8FKAwVXmWblS+WebYpYn44eeGuOsbdgNFY4s9iQ+BLUR+xi3CG3IEenfegiHAF73A/s4Q9bx4RlAZlBAgY3JxmFlN71PGxEuBEgl63l3hUK3Al0Bng0yLIFA8qPFEXk5nbOX+0NEWMdDk7EbXu16Hbueq1mIZlRHUt/+/faVmtNOJpqdnVPzedQ8lhedAr68Hnr3oBOwp/2Z415MUH4kkrHILVssnIiamLRXFi0EGj9D6R053ZpLV0a2ysv5xvlnW21DN3PX9MhGjxjuuKF4XDpBit3zeY0Psr9+M5xCXPGGwClSL2x6upFRME2wqD/JPrxC3JkGxz5Lzy7bQyA9il6q18Fhkd8ohSv1fg5jimWOZGYH3MviaI3doHA/1zYAKNW2BC39FHvFklCrIKIxEsyy4yObiyt3pBlNacBhtq4PKghCYDiVJ0saBLtF1VF3BEVZYNgyNKJmHXgCZV540/gMDqEEGCH9pADA3lCdaB063a/XTV4x14F0Yjb0kcRjuv42C5vqOqwg5D5Ny+lTLtqvo+ka2Ky06HKGhhbXII3LEMAJxo9ebqgL6HcYfxqsajo5rWgUiMXEnLdEBV+8fPyoLbYBW2YdL4lXFxfNY/HP5dF2USkPNA1NNHInJ2hEq5BOrjVv1GGRniqoS4I+4VAMQv3Ak0MRIG34wymYCcJZVWKAO23TbJGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged at the Waco station at 14:40:50Z and again at 14:50:00Z, within about 0.02 miles of the station and within 6 minutes of the 14:46:49Z purchase. 79.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmJK2YU52yrCXEwrEq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4525,
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "thinking_tokens": 161
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged at the Waco station at 14:40:50Z and again at 14:50:00Z, within about 0.02 miles of the station and within 6 minutes of the 14:46:49Z purchase. 79.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4525,
+    "output_tokens": 278,
+    "output_tokens_details": {
+      "thinking_tokens": 161
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

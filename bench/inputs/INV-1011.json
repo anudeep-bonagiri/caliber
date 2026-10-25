@@ -1,0 +1,67 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 10,
+    "item": "brake_job",
+    "rateCents": 135500,
+    "validFromDay": 1,
+    "validToDay": 49,
+    "vendorId": 2
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 24509,
+      "id": "INV-1001",
+      "item": "shop_labor",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 2,
+      "unitCents": 24509
+    },
+    {
+      "cents": 37025,
+      "id": "INV-1002",
+      "item": "oil_service",
+      "poId": "PO-1001",
+      "qty": 1,
+      "receivedDay": 3,
+      "unitCents": 33900
+    },
+    {
+      "cents": 42850,
+      "id": "INV-1003",
+      "item": "oil_service",
+      "poId": "PO-1001",
+      "qty": 1,
+      "receivedDay": 4,
+      "unitCents": 40400
+    }
+  ],
+  "invoice": {
+    "cents": 138625,
+    "docRef": "evidence/invoices/INV-1011.txt",
+    "id": "INV-1011",
+    "item": "brake_job",
+    "poId": "PO-1007",
+    "qty": 1,
+    "receivedDay": 8,
+    "unitCents": 135500,
+    "vendorId": 2
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1007",
+    "issuedDay": 2,
+    "item": "brake_job",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 13,
+    "unitCents": 135500,
+    "vendorId": 2
+  },
+  "vendor": {
+    "bankChangedDay": 0,
+    "bankLast4": "2098",
+    "id": 2,
+    "name": "Lone Star Tire"
+  }
+}

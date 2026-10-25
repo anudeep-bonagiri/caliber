@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009552,
+  "durationMs": 5241,
+  "httpStatus": 200,
+  "id": "INV-1030",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1030 bills 29,900 cents for qty 1 on PO-1022, which matches the contract rate and the received quantity of 1. The only earlier invoice with the same amount (INV-1018) cites the same PO, so it is not a duplicate_invoice. The amount is under 5,000 dollars, so the bank-change rule does not apply. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1030 bills 29,900 cents for qty 1 on PO-1022, which matches the contract rate and the received quantity of 1. The only earlier invoice with the same amount (INV-1018) cites the same PO, so it is not a duplicate_invoice. The amount is under 5,000 dollars, so the bank-change rule does not apply. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskSyPEAJcNJF3vSisP",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2151,
+      "output_tokens": 525,
+      "output_tokens_details": {
+        "thinking_tokens": 387
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1030 bills 29,900 cents for qty 1 on PO-1022, which matches the contract rate and the received quantity of 1. The only earlier invoice with the same amount (INV-1018) cites the same PO, so it is not a duplicate_invoice. The amount is under 5,000 dollars, so the bank-change rule does not apply. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2151,
+    "output_tokens": 525,
+    "output_tokens_details": {
+      "thinking_tokens": 387
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

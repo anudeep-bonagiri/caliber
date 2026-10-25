@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010678,
+  "durationMs": 5113,
+  "httpStatus": 200,
+  "id": "INV-1127",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 51,900 matches the contract, qty 4 equals received qty 4, no earlier invoice in the last 30 days has the same amount, and the vendor's bank details never changed. The invoice total of 210,725 is 3,125 cents above 4 \u00d7 51,900 = 207,600, but no hold code covers that, so it is cleared with a note for follow-up."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7gkKEAgTGAI4AUIIdGhpbmtpbmcSDMO/HtdgLItXRwsUNRoMEFbgEDbi+SLj6EHUIjBHFwLE2h0VvDpLydj/eyZ1iTuGVh7kY44mrFk0QA+ugaHuPQ+taPmvYfxlASckrMYqiwlrW3ivYpLdYF1lJqOZ1RBfTVbwCAeKdcb1yIbRfg8uxWLhTWPhCr3oybU10vJOcCPqai4xIJTrV4mw2Ts8mfFTf+lrBZVrpkXAxozn2mEghZXVw187MqGQNr1S4SXXiewIGbCR9dgGyeqnGMd79GQDryq3cri1v6ttngUaRzGzfAffahWUzTgcoQ+vDNV286HZZ6L+AkEr3dZJf+Kv2dzuqg3F5+O2ZabtbLe/Ct3T+NntG3UK4Iu7NGxHOWl/+6l+4aFpCYv4AElchkKWUsTTU+hDvEKrduBYAlweQG721NfiD1MQbfgoq+H9VdyCwLeu067ovMuIZoVhwKzRL1LzAL11cMfn9PgXSQWhXimfbuqGE4spnappl3Sa+SOdOYuojOZlALAUUnzwQUTHKqMuw4zuH4r6yLf1pSGJr3mBEtJLe81YHBzgL/4OXbWWbkuHJaHm5jWNKr+S0DbVgn6mc4bAQ6wZbBgush1+ohUOY8VmZqkZnAFEthaOC3P1k0oV2UzdyxgLbHxpFgera8NdCy63Ddq3DUNgV8UT0xeLGr8Wvkt44WBACGJQMbEetQsYQyFktA7GpqC+kPG5fvFyKpVaIf3BTvyauY5DpHN4mTieY3WaEgLWRODho5h4aDksx9tYEOrBMRfjpxSEgB5rCN2dV+bRqFqMdVYvWNVRIf3pecDbU6vt6KORIs5XT0H7o7Y+p3C+16Rri4XU/zFxsq4FCSsu3j1FzXCeAssJGzhhEdKSc3d//WeOupULj9+tThSAHpRwMA5Jj1f/RnbzS0cpGZm63UGW78NxBHZJaIn2Rj2gZY3VuwL/REwOmLjMt0qvZF8pSK5kfMWhvGGRUpgODA2+B3CttwhM2+eKb7BRznJfii8s/3dazlF27EPvUManErYKf+LAeCxlqxZ8UxEmQL/85SdYAlpYByaKT5vXZNRCXPS3lrCi69h8x6oni6lnnTCEarn0vTKob4EZoVmpM1uoSp90fmWtqMxEqDclJQ+As1HNrNn5CR4J4ceLmorgB4cveinijzG9pTglkSwev9NKFoqTmj3ISXhp8Co8DMnwL60vUF7Ne8GGIsPXS8+sLWBKJmUHRv8+ytm1Wq/eE54tWK0FHcpvY14TnPOKboiUDM2iMfS6SNzWH7+OYAXHSuHaETL8RDD+dpIxJz1Jf/93SdlofhTogwGF8h/CQaYm0+HItSWaIJ3Xa5Fr2czgUkL59QRb8D5OKsNgGJxw/fLninWQZvNTnDa15y4TO9Jwg+b4q1VnSnbha2kUxyBm1CEGyTbzzbnhBSmrMy3ST2KbgqCIlIvQEDz+qshXAy1dhwY2mSidqQPmR6PT/wK3UzV5XUTyWIi86Olrb8AxHIzTgOX/GTECgtnd1dlZxP0TU5wobS5evzeXwbSlErLaAXt8NIv2x4ZbjYW/lSiHidbM9nJxPkZYSiTnHZW6wkdLIVmbDIGxAmllXkZlNFrdFpWHTNx9FqXXML2i75mFy3+RKWeQuIlnPGxNSlBNo9BNt4aIFMocsZCKWsmeoq954BQ6PkeHohgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 51,900 matches the contract, qty 4 equals received qty 4, no earlier invoice in the last 30 days has the same amount, and the vendor's bank details never changed. The invoice total of 210,725 is 3,125 cents above 4 \u00d7 51,900 = 207,600, but no hold code covers that, so it is cleared with a note for follow-up.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrQh8ZyJsyUfqEYYPy",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3249,
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "thinking_tokens": 275
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 51,900 matches the contract, qty 4 equals received qty 4, no earlier invoice in the last 30 days has the same amount, and the vendor's bank details never changed. The invoice total of 210,725 is 3,125 cents above 4 \u00d7 51,900 = 207,600, but no hold code covers that, so it is cleared with a note for follow-up.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3249,
+    "output_tokens": 418,
+    "output_tokens_details": {
+      "thinking_tokens": 275
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

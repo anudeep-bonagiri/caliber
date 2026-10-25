@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011422,
+  "durationMs": 5057,
+  "httpStatus": 200,
+  "id": "INV-1112",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies: unit price 54,500 matches the contract rate, billed qty 2 equals received qty 2, no earlier invoice from this vendor in the last 30 days has the same amount of 110,250, and the vendor's bank change on day 18 is far outside 7 business days and the invoice is under $5,000. The total is $12.50 more than qty \u00d7 unit price, and PO-1018 already has two earlier invoices, but neither is a hold condition under this policy."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAsKEAgTGAI4AUIIdGhpbmtpbmcSDCVxrTFsl5P003bPTxoMbdBogdC1piCw4W3uIjDuCXFVYjrAzjV89Q9h7p9Q9UgPRGCI+tpil61y+bkffH9d/cLP8XaAkqlZlXOksPYq5QrgkKL4SfYMe7cILrpEFP8Bg3TnwagmUK0M4nmkkDf3qA3o8KT7lx9Aa5HmMAgVS/F9tj2ZxFjzoLK4M1zQJ1S3XK8FtE2cXPZtzFChokqriTVrgW//150Sla/kqoCuW7gLHH/uOVsD7rkiIIArhiyMQcq1LDhcabeY2iIDZVIclZxddO/uwe7YkAEeFo2IQFeqZ/C69THXyFiQ5asnWTmgnykyqPtpffiRXuDMSRfV98Y/ns+o/dhmBePmQMWUNZYdaEWM+9ShaYL9MAmqOkDxOZ3zh2tEvrdKv4DZNLZNEx5XHTRHK7vNuIjBE7UldwswB6dYEv5zJTGNg0YkvGf/2qXKmCOjDJNmfth7204mK0gtVEiYaLTwCKI+KKWMB/Sj9Q8rR5GdPDdKi/7SoP8JrV+HF2pprFK9p9KE+tupzvCHV6nkkv7LWHaGcpxbah7tdjOsZzQM59OkmAtd2NU0UtETBFYSenm68mJz4UjV0zX9XZf4wmOvtNDr+IO4k+kJV8Zb87r/ce6x+aOPWLplB4uTaAree4rUYgL5QtzrVc99XHvSU4M80Tbdbra7en13H6noh4/A/5J1FapPDcr/X9GEHSP7OErzfDV2tT6ipIg3b7NmFxe5giUuSO6Otz/xtvxnY+xV/2AOvUvKw+yA82hhCkJznndX4NOgX38GhblEJmzY49oxOnxa7i4cJFU/SXRvD5AaV5rdBTL2am1U+vIZTSsFG72m+NMdhF9+gudoA2jMJSkQVBFEKzKxoz+iXVfMsCY6nziolgk6jBptwkYrHkIogWnDHfBYgFrMPWniw9aPm0WU58pLfK1GiVhJnRk38dHNOEf6otG40uiMN5PSj/q7/D55rwJpfrCOwnlIECrqyKVtAy4lYip4P+AVgckwnqC0t8J/xQ1UU+JOiPZbkXL5M88eIYYlLd0TZyuFJT9WGxNU1KiaaeNcCkIr510a3A5jaoDOf+EKugZOBwbVxcidMITTSX5wkynYLSTTQ6/T6tAWiwDLT/Bm5agP8qtM/m9YerUpt9gEEeZMCv/gWxkDDx+6dDry1SsnbMz1MXh+vaMO0Bp8cG2DLWENIm8NluUcqbYtOF1AAFosjH2nswQfQEafcMnk0K6FjSCsVm3XRSQ0IOJsReQEJbC4DOKAdDc9Uoglo1LualnUpIIeHGyHdAB9jUa4UVidbUF+dsUUIYXJcjWiLURrvZowqbCREwALp2J1aboCKFZMPxoDK1FhMrOm/UL0bFUFSbguA02r6hie9QsMeK6n6TAzMLFrMdvLBe4Cclo9KCui/C3lOQRCPI5LQ2s7K/ztu9OYWM6Ut11k9q8IQcyt66/l4ATZzR26cXQPgv8AcjCc0a7hNYyxa2YgK0s9rVEwu6B/6kH/tZ4xjG49Engqw2pCcQdgNg9Y2K+XuDJ5eFTZ9GrrKgJWUmoK9B8oI8m/XQNWWhniu7J9oGyTUHrKjxjXmbQ7rtVKSjZH+sNmHM6VaM/rQENA/O8qEAz4ehjNObX1hFnAx1bbxRTmoCl5Rg9ebJmoVrDUxM1T0RM+5Z0ZYhaFDeO5SklwoWbRs3v8yBIj6nQIjDoFnGAxXbnklN3Z1kyhTSgY8PvgAv/7W+TB4JerIfpkuPhGei4atdI2tRfYNy5mRNybT8uENRwI+sL2v2NAToq7ncc+7ZE/8V9YW5m5kkgCmWHAKwgi/ssG8oBpsIr9lLxo19f6hw/d4Vr1RwvPDkBwSdVsB1nB+ZCoJM9P6SlI2kOeA5Kay4BeZpZVJpiYqPt9jL30ZTX1dgjnr5nx8D5fiKl0LysTxiqMYALvc349IfVIVQIJ8e/tQ83NttqgGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 54,500 matches the contract rate, billed qty 2 equals received qty 2, no earlier invoice from this vendor in the last 30 days has the same amount of 110,250, and the vendor's bank change on day 18 is far outside 7 business days and the invoice is under $5,000. The total is $12.50 more than qty \u00d7 unit price, and PO-1018 already has two earlier invoices, but neither is a hold condition under this policy.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsf5rzZD26sXKqZN3ka",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2911,
+      "output_tokens": 560,
+      "output_tokens_details": {
+        "thinking_tokens": 392
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 54,500 matches the contract rate, billed qty 2 equals received qty 2, no earlier invoice from this vendor in the last 30 days has the same amount of 110,250, and the vendor's bank change on day 18 is far outside 7 business days and the invoice is under $5,000. The total is $12.50 more than qty \u00d7 unit price, and PO-1018 already has two earlier invoices, but neither is a hold condition under this policy.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2911,
+    "output_tokens": 560,
+    "output_tokens_details": {
+      "thinking_tokens": 392
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

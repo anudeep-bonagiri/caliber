@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007114,
+  "durationMs": 3079,
+  "httpStatus": 200,
+  "id": "INV-1025",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1025 ($1,190.00) matches no earlier invoice amount from this vendor. Its unit price equals the contract rate of 119,000 cents. It bills 1 unit against 1 received on PO-1004. It is under the $5,000 bank-change threshold, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpAgKEAgTGAI4AUIIdGhpbmtpbmcSDBngq3IXtorDnDJTfxoM8FOCATDNrIyV6cG5IjCyhA/JK3jFNdiMtd4eBDZds0t8NmXVDls4Un/QJqRV0wu85UVqXHId5TV9Z6q0aCoqwQdtVceGyP/hF7k4NjEHS+1kVF5hBJ+o8M3LF2HAmI8EAWjIwqcE0leIlSR4juo45RpROc8r2vHFL0FXXK8x+FzxxGNKOq2/E4Fedia+D9hTmaHrmyTeAfVDBcKHOMdEzvqK2Uy0BAnkP1Sv4v88DWNGaoeo67MYUTVTB53k7I5vP8r7WlXI+uoVBlgkur0bHy1tYV3dfeb/9X3xxspkSYArN2ZKV4d8UjDQKq3TW+Bbn/q0VL+uCjY+cTUjMwaEJ+X2azI/fdnmPDXThJ+LgeWcoRwK1uw3MDX5u1Pj2p131m48lVcTvX2I6ZyomYg8iM/2qZ5fOFiVXcN3dNw/BO68fXbIqCIkkfzaevgv+JCSPNycHMIRe11pWBT2lWlIFKdKBlEvf9LMlnTmtKsnWPkesXQIONhMBxcBlpeKYzZmizdXBSTY41kB20gN85LH8jKvEhJ+k9Bbij+z38pxYYYDh967GF82VQc3N3ocFRVoG+j50h1IIQSyxSYSDi8lQ56KVVgrZogn8UjCL2wO+VXKrIgAnuAHMS9WemLZgsk9g99EhTG9aDhfJfw0EZA+1YBmpqt6tZLEwzbQYDqMtgxOy09zJUzlSynqxxk+aPac2uSdHqr3RGigY04/gsBZPUXCz1FdMbTiMY6KFZ7vsIclS+ppK7xNOcUSmsG3ra/3rdDDA6rODYWm+qC8tXVeFaXf/IZAPpWtGI2xGm8PQ5GwaDRajNSTzvVCyQqFvqyqoFhSKJSivZnbhbkZ7UgoVjRIyeqjt5U9jpIUWgzVSQeE9QUOKchprUbn0SlHgqjippyc27w78ighrc4ijuom1xgHfsZuUnfl6QfUPa2Gz+DWY+FynOMPAA/z+aG2cG+oUxOk5BGDcosPCYE+jtoOSeubIpvppDKtFjAV/ZatgTpBtnoOktra5TIKdS0JYCc4FtHSHyfV3FMY+aWQOKNJfUdEONyn3KZfFZv3COn53+i4HCGevDk6/rW3mr25amZwkl0lh0DcXEKere4BH4eUsAHjqra2wSx3WIi9ieItTE77oe73lrBYCyNELFTlRix+j3PMTLiFrfK9ZhMbRbtlvUGEaRFgtbd8T/w3Shtn4hGSz651QUDpFFZp4Ml2GRwR2aHoDOcR5ho+A2WCUuz04Q/64CrOS9BnDLnhOVhsFjCLqpDLrX7/Vlax/Sd85OoGobAiV5FLbiLrKDXIfI9C0Gxww8Y9tCkz2Jue2kQ9HJi3T7Fcewr2YX1oEKU5T+k8yQXu2YLcFrnCfhG3P+JqPwV4GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1025 ($1,190.00) matches no earlier invoice amount from this vendor. Its unit price equals the contract rate of 119,000 cents. It bills 1 unit against 1 received on PO-1004. It is under the $5,000 bank-change threshold, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsz4oXnNyTQ3WTp8QYj",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2067,
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "thinking_tokens": 184
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1025 ($1,190.00) matches no earlier invoice amount from this vendor. Its unit price equals the contract rate of 119,000 cents. It bills 1 unit against 1 received on PO-1004. It is under the $5,000 bank-change threshold, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2067,
+    "output_tokens": 298,
+    "output_tokens_details": {
+      "thinking_tokens": 184
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

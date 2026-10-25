@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12110,
+  "httpStatus": 200,
+  "id": "T2857",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2857 at TXTAG-SH130-04 is within 10 minutes of earlier toll T2662 at the same plaza on day 73, but checking the list for same-day or close proximity duplicates: T2854 (day 80, 16:50:56) and T2857 (day 80, 17:02:26) are at different plazas. However, looking at day 74, T2692 and T2704 are different plazas. Let's re-read carefully. The rule is 'same plate at the same plaza within 10 minutes'. T2854 is SH45SE. T2857 is SH130-04. Not a duplicate. Wait, look at T2662 (Day 73, 16:30:00) and T2857 (Day 80, 17:02:26). That's 7 days later. Not within 10 minutes. Look at T2692 (Day 74, 15:42:03) and T2704 (Day 74, 19:24:37). Different plazas. Look at T2392 (Day 63, 13:30:13) and T2393 (Day 63, 13:31:13). Different plazas. Look at T2137 (Day 53, 16:48:40) and T2139 (Day 53, 16:56:27). Same plaza TXTAG-SH45N-01. Time diff is ~8 minutes. This is a duplicate. But the transaction in question is T2857. Is there a duplicate for T2857? T2854 is 16:50:56. T2857 is 17:02:26. Different plazas. Is there another one? No other tolls on Day 80. So T2857 is not a duplicate based on the provided list *unless* I missed one. Let me check T2662 again. It is Day 73. T2857 is Day 80. Not within 10 mins. What about T2692? Day 74. No. What about T2704? Day 74. No. What about T2725? Day 76. No. What about T2736? Day 76. No.\n\nWait, I need to check if T2857 itself is the *later* charge of a duplicate pair.\nThe list `earlierTollsSamePlate` contains all previous tolls.\nI need to find if any entry in `earlierTollsSamePlate` has:\n1. Same plate: TX-1009 (Yes, all do)\n2. Same plazaId: TXTAG-SH130-04\n3. Within 10 minutes of T2857 (2026-10-20T17:02:26Z)\n\nLet's filter `earlierTollsSamePlate` for plazaId `TXTAG-SH130-04`:\n- T1554: 2026-08-03T17:34:26Z (Day 24)\n- T2021: 2026-09-02T17:04:04Z (Day 46)\n- T2401: 2026-09-25T16:39:28Z (Day 63)\n- T2692: 2026-10-12T15:42:03Z (Day 74)\n\nNone of these are within 10 minutes of 2026-10-20T17:02:26Z.\n\nDid I miss a toll?\nLet's check T2662. Plaza: TXTAG-SH130-04. Time: 2026-10-09T16:30:00Z.\nT2857 Time: 2026-10-20T17:02:26Z.\nDifference is 11 days. Not a duplicate.\n\nIs there a duplicate *within* the list that I should have caught, but the question asks about the *current* transaction? Yes, the current transaction is T2857. If it's not a duplicate, is it anything else?\nIt's a toll. Only `duplicate_toll` applies to tolls.\nIf no hold condition is met, it is cleared.\n\nHowever, let me double check the `duplicate_toll` definition: \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\"\nT2857 is the subject.\nEarlier charges at TXTAG-SH130-04:\n1. T1554 (Aug 3)\n2. T2021 (Sep 2)\n3. T2401 (Sep 25)\n4. T2692 (Oct 12)\n\nNone are within 10 minutes of Oct 20 17:02.\n\nTherefore, no hold.\n\n{\"decision\": \"clear\", \"reason\": \"No hold conditions detected for this toll transaction.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883131,
+    "id": "chatcmpl-50bf46c7-58ea-474d-9456-3d02af2d5bb9",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1289,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 6964,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 5360,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 8253
+    }
+  },
+  "startedAt": "2026-10-24T23:05:22+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2857 at TXTAG-SH130-04 is within 10 minutes of earlier toll T2662 at the same plaza on day 73, but checking the list for same-day or close proximity duplicates: T2854 (day 80, 16:50:56) and T2857 (day 80, 17:02:26) are at different plazas. However, looking at day 74, T2692 and T2704 are different plazas. Let's re-read carefully. The rule is 'same plate at the same plaza within 10 minutes'. T2854 is SH45SE. T2857 is SH130-04. Not a duplicate. Wait, look at T2662 (Day 73, 16:30:00) and T2857 (Day 80, 17:02:26). That's 7 days later. Not within 10 minutes. Look at T2692 (Day 74, 15:42:03) and T2704 (Day 74, 19:24:37). Different plazas. Look at T2392 (Day 63, 13:30:13) and T2393 (Day 63, 13:31:13). Different plazas. Look at T2137 (Day 53, 16:48:40) and T2139 (Day 53, 16:56:27). Same plaza TXTAG-SH45N-01. Time diff is ~8 minutes. This is a duplicate. But the transaction in question is T2857. Is there a duplicate for T2857? T2854 is 16:50:56. T2857 is 17:02:26. Different plazas. Is there another one? No other tolls on Day 80. So T2857 is not a duplicate based on the provided list *unless* I missed one. Let me check T2662 again. It is Day 73. T2857 is Day 80. Not within 10 mins. What about T2692? Day 74. No. What about T2704? Day 74. No. What about T2725? Day 76. No. What about T2736? Day 76. No.\n\nWait, I need to check if T2857 itself is the *later* charge of a duplicate pair.\nThe list `earlierTollsSamePlate` contains all previous tolls.\nI need to find if any entry in `earlierTollsSamePlate` has:\n1. Same plate: TX-1009 (Yes, all do)\n2. Same plazaId: TXTAG-SH130-04\n3. Within 10 minutes of T2857 (2026-10-20T17:02:26Z)\n\nLet's filter `earlierTollsSamePlate` for plazaId `TXTAG-SH130-04`:\n- T1554: 2026-08-03T17:34:26Z (Day 24)\n- T2021: 2026-09-02T17:04:04Z (Day 46)\n- T2401: 2026-09-25T16:39:28Z (Day 63)\n- T2692: 2026-10-12T15:42:03Z (Day 74)\n\nNone of these are within 10 minutes of 2026-10-20T17:02:26Z.\n\nDid I miss a toll?\nLet's check T2662. Plaza: TXTAG-SH130-04. Time: 2026-10-09T16:30:00Z.\nT2857 Time: 2026-10-20T17:02:26Z.\nDifference is 11 days. Not a duplicate.\n\nIs there a duplicate *within* the list that I should have caught, but the question asks about the *current* transaction? Yes, the current transaction is T2857. If it's not a duplicate, is it anything else?\nIt's a toll. Only `duplicate_toll` applies to tolls.\nIf no hold condition is met, it is cleared.\n\nHowever, let me double check the `duplicate_toll` definition: \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\"\nT2857 is the subject.\nEarlier charges at TXTAG-SH130-04:\n1. T1554 (Aug 3)\n2. T2021 (Sep 2)\n3. T2401 (Sep 25)\n4. T2692 (Oct 12)\n\nNone are within 10 minutes of Oct 20 17:02.\n\nTherefore, no hold.\n\n{\"decision\": \"clear\", \"reason\": \"No hold conditions detected for this toll transaction.\"}",
+  "usage": {
+    "completion_tokens": 1289,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 6964,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 5360,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 8253
+  }
+}

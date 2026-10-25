@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008316,
+  "durationMs": 2369,
+  "httpStatus": 200,
+  "id": "T1407",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1407 at Mountain Creek Lake Bridge has no earlier charge at the same plaza for this plate within 10 minutes; the most recent was 2026-07-14."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1407 at NTTA-MCLB-01 on 2026-07-27 at 11:34:05Z. The only earlier charges at that plaza for this plate are T1208 (2026-07-13) and T1246 (2026-07-14). Both are days earlier, so none falls within 10 minutes. The charge is not a duplicate and can be cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Toll T1407 at Mountain Creek Lake Bridge has no earlier charge at the same plaza for this plate within 10 minutes; the most recent was 2026-07-14.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsboCZhgVY2BmLb4Cxw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3173,
+      "output_tokens": 197,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1407 at NTTA-MCLB-01 on 2026-07-27 at 11:34:05Z. The only earlier charges at that plaza for this plate are T1208 (2026-07-13) and T1246 (2026-07-14). Both are days earlier, so none falls within 10 minutes. The charge is not a duplicate and can be cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Toll T1407 at Mountain Creek Lake Bridge has no earlier charge at the same plaza for this plate within 10 minutes; the most recent was 2026-07-14.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3173,
+    "output_tokens": 197,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

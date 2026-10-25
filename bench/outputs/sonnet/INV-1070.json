@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01095,
+  "durationMs": 4791,
+  "httpStatus": 200,
+  "id": "INV-1070",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1070 (36,800 cents) is at the 36,800 contract rate and bills 1 unit against 1 received. No earlier invoice from this vendor in days 8-37 has the same amount under a different PO. It is also under 5,000 dollars, and the bank change on day 71 is not within 7 business days before receipt on day 38. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1070 (36,800 cents) is at the 36,800 contract rate and bills 1 unit against 1 received. No earlier invoice from this vendor in days 8-37 has the same amount under a different PO. It is also under 5,000 dollars, and the bank change on day 71 is not within 7 business days before receipt on day 38. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsjtG8PEX3QpjHuP3oS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2895,
+      "output_tokens": 516,
+      "output_tokens_details": {
+        "thinking_tokens": 382
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1070 (36,800 cents) is at the 36,800 contract rate and bills 1 unit against 1 received. No earlier invoice from this vendor in days 8-37 has the same amount under a different PO. It is also under 5,000 dollars, and the bank change on day 71 is not within 7 business days before receipt on day 38. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2895,
+    "output_tokens": 516,
+    "output_tokens_details": {
+      "thinking_tokens": 382
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

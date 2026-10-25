@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011918,
+  "durationMs": 3709,
+  "httpStatus": 200,
+  "id": "INV-1170",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1170 matches no hold rule: no vendor invoice in the prior 30 days has the same 70,250-cent amount; the unit price of 33,900 equals the contract rate; billed qty 2 equals received qty 2; the bank details never changed and the amount is under 5,000 dollars. The total is 2,450 cents above qty \u00d7 unit price (67,800), but that is not a hold condition under policy, so it is worth a note to the vendor."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9ggKEAgTGAI4AUIIdGhpbmtpbmcSDP6q7IVoyvjF7pMAtxoMr6bYG6a7dT3+kwmpIjD0irWQW+86QlkbMDqWH9i8+xssXfYRaDR5ponRBtSngt/hOSaAl730mj4I2Q0vp8gqkwh/l0DUEPn0XhnVx3kDYITjr1QfkI6O9YPvpuy/42ToDG10YSJ927jIUieW/Lew9osbV8gox00pyMRHudj3NxL0Zj0gze94XH30QRtqrdZnGwjYhJYv77b/GUkkX1GByF76fEiNQw7ZJKkJglO2rIK1fO0Z2kk+92kvGfSN2Dw92sKcJbLWRBiiRo6DeSN2NFOjX3qrh16jkweE3huTBwJoRbkhX4SqR8njGLg+qxbuWO/3evcw6c0nXU6qxZatGGPmQYTsXMOQgjO//1EJDnpxPOWnEUmpOyVDKxtWFGEZJrr+9Pjb3M3iGLEqxKeCtNbwnH8Vgl7Nrecm0aYuepR1upPDLXJyWT0Wum740ANnPZ6zMEc+58TtjilR9qQvGTX8gpFqtKgWJ/4dV36jtXSVd89/+/FDxVvmgc2f7k9y8cuYoZVb6d7W9xEtLz1nNoN/8qmXzT9UPoKwearpG/fjE6hYo6gqxgCe/dsTqrTPvubnTK5HCZkggWDkIhSk2q5/R01GfrCuFV3dg4G1cSlOTl9T2ne6gYPN9zeh9+1twRwDyU/tsOtm3K6ZA2X+uObvDC2oDvPennNlPhRiuwSTg2e95m2WSbv64O+x+HfL5+tZ8SNL8O/VobS3mwLZAgIBPlPC1E1oAv5tSyyMeD9SC0MHeCVflFB6tu9IfkGlplDNiax9l1Z47YpTN7H7ONztEu27ejYScxnrcfZ/USoVSZPFVxwzqkyVOXIblexfsT/RNZnXhq7pGC3pVW76DvYR3w5J8nisvFQ+a/38NN7RF/hxbSSysKSHgLxKqDs1PuqidPvUF+JgaOSC9k2L6zG7BooF1uOudhj/z0yCJJcaknG0YFnw+9E4mX+hufEo3WPIdbsoUj+Lrjt7FfOL6GAlPnSslsUWysRuqq2McK1d0bDQaNXTP4TDHpQ+rr4DCorbryset3IcKhbj3Vgn3GBvclHvyJoUYpAHywDutdu0cXv+pdoXY6IcsCBYvZTsinGmKU2rra2zJ/gK6z86iNs3zowfnaZj31po+4EUDhobFdnUh5eUNXGXKZBQBErQha0CAsAjN8+D6wvRInigP7M9fgfXXegCT1chms78DoasDbtZJgjFeKvH9GQVpGHPHJkD0yIsuhKE5Rg/EoGoTwWUvLCNGDHWO+z5x3TyZFQq/QmE4/fV0rDqGhpNn8v+gzByxpKmTvOJ3H1DvDZ76ilzvaAVbHKHA2xd6Xd+A4QQQJ3qlKnBzAOxc59JQx5nWnaNbBkQRMZJUZD0BT1XSRKsf6tD8YvPVK91T4yU3qxNhZIfWcN7xb8NxatlaSDwl8R3OUAeh2r0zZNN8+I7426cPmN0Tk1MqsmwdpDiKKlagJp5XvXZ3Rp1FCb3t45+A+CgOBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1170 matches no hold rule: no vendor invoice in the prior 30 days has the same 70,250-cent amount; the unit price of 33,900 equals the contract rate; billed qty 2 equals received qty 2; the bank details never changed and the amount is under 5,000 dollars. The total is 2,450 cents above qty \u00d7 unit price (67,800), but that is not a hold condition under policy, so it is worth a note to the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt25hR59b4TKt9KBm6z",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3999,
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "thinking_tokens": 231
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1170 matches no hold rule: no vendor invoice in the prior 30 days has the same 70,250-cent amount; the unit price of 33,900 equals the contract rate; billed qty 2 equals received qty 2; the bank details never changed and the amount is under 5,000 dollars. The total is 2,450 cents above qty \u00d7 unit price (67,800), but that is not a hold condition under policy, so it is worth a note to the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3999,
+    "output_tokens": 392,
+    "output_tokens_details": {
+      "thinking_tokens": 231
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 14,
+    "item": "tire_replacement",
+    "rateCents": 56800,
+    "validFromDay": 1,
+    "validToDay": 59,
+    "vendorId": 3
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 245000,
+      "id": "INV-1007",
+      "item": "brake_job",
+      "poId": "PO-1012",
+      "qty": 1,
+      "receivedDay": 6,
+      "unitCents": 245000
+    },
+    {
+      "cents": 57000,
+      "id": "INV-1020",
+      "item": "dpf_clean",
+      "poId": "PO-1023",
+      "qty": 1,
+      "receivedDay": 12,
+      "unitCents": 52500
+    }
+  ],
+  "invoice": {
+    "cents": 113600,
+    "docRef": "evidence/invoices/INV-1021.txt",
+    "id": "INV-1021",
+    "item": "tire_replacement",
+    "poId": "PO-1011",
+    "qty": 2,
+    "receivedDay": 14,
+    "unitCents": 56800,
+    "vendorId": 3
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1011",
+    "issuedDay": 4,
+    "item": "tire_replacement",
+    "qty": 2,
+    "receivedQty": 2,
+    "truckId": 19,
+    "unitCents": 56800,
+    "vendorId": 3
+  },
+  "vendor": {
+    "bankChangedDay": 42,
+    "bankLast4": "7730",
+    "id": 3,
+    "name": "Gulf Coast Diesel"
+  }
+}

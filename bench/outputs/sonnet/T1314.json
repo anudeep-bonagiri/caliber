@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006116,
+  "durationMs": 2392,
+  "httpStatus": 200,
+  "id": "T1314",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "T1314 is a second charge for TX-1012 at SH 130 Mainlane Plaza 1 (Hutto), 8m41s after T1313 at 18:53:01Z, which is inside the 10-minute window, so the later charge is held as a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Toll T1314 was charged at 19:01:42Z at plaza TXTAG-SH130-01 for plate TX-1012. The earlier charge T1313 was at the same plaza at 18:53:01Z. The gap is 8 minutes 41 seconds, which is under 10 minutes. T1314 is therefore the duplicate and is held.\n\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"T1314 is a second charge for TX-1012 at SH 130 Mainlane Plaza 1 (Hutto), 8m41s after T1313 at 18:53:01Z, which is inside the 10-minute window, so the later charge is held as a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMswFDmNL6me7P4RkxjL",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1903,
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Toll T1314 was charged at 19:01:42Z at plaza TXTAG-SH130-01 for plate TX-1012. The earlier charge T1313 was at the same plaza at 18:53:01Z. The gap is 8 minutes 41 seconds, which is under 10 minutes. T1314 is therefore the duplicate and is held.\n\n{\"decision\": \"hold\", \"code\": \"duplicate_toll\", \"reason\": \"T1314 is a second charge for TX-1012 at SH 130 Mainlane Plaza 1 (Hutto), 8m41s after T1313 at 18:53:01Z, which is inside the 10-minute window, so the later charge is held as a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1903,
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

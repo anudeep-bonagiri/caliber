@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010048,
+  "durationMs": 2697,
+  "httpStatus": 200,
+  "id": "T1989",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1005 at NTTA-DNT-01 within 10 minutes; the last charge there (T1655) was on 2026-08-10, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1989 at NTTA-DNT-01 on 2026-09-01 at 13:25:23Z. The most recent earlier charge at that plaza is T1655 on 2026-08-10, about three weeks earlier. No charge at NTTA-DNT-01 falls within 10 minutes before this one. The last charge on this plate, T1977 on 08-31 at a different plaza, is not relevant to the rule.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1005 at NTTA-DNT-01 within 10 minutes; the last charge there (T1655) was on 2026-08-10, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszDgKpWLFVD7hQ8zaX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3914,
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1989 at NTTA-DNT-01 on 2026-09-01 at 13:25:23Z. The most recent earlier charge at that plaza is T1655 on 2026-08-10, about three weeks earlier. No charge at NTTA-DNT-01 falls within 10 minutes before this one. The last charge on this plate, T1977 on 08-31 at a different plaza, is not relevant to the rule.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1005 at NTTA-DNT-01 within 10 minutes; the last charge there (T1655) was on 2026-08-10, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3914,
+    "output_tokens": 222,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011162,
+  "durationMs": 4717,
+  "httpStatus": 200,
+  "id": "INV-1094",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1094 (329.00 USD, PO-1002) matches the contract rate of 32900 and is within the PO's received quantity of 1. The only earlier invoice for the same amount, INV-1064, cites the same PO, so it is not a duplicate_invoice. The vendor's bank change on day 42 does not apply because the invoice is under 5,000 USD. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/goKEAgTGAI4AUIIdGhpbmtpbmcSDImfeHFe1LTER1NLZhoMah0jiwqmtKySCqnvIjAAK0nsXvFnWLiXKu7zVBI8H6F6OBK8h5j6/zxUYtxmdLR/XDyzQq/nIn0LL5TzSdkqmwp1wupcYvWgX8AWQTSV0yMI6TUlOTn5cbF+HoziZRBo/QugyNYqbWV6Sy1C/DiiqosKI0HLkAY01CfR+RQNpbtgc8yEGAJJEG/rS+gZMxGbjqX7KSb1EW/sjpSCYKDUScPGmiqiJrGTrPpLEiNFZEN/i9Gnqfkaen0ekw71kqN4AQJEFJT5hM/BLUyKIihq2sivxKhDKLJD9SbWdluYnH0j/j7hHNdl+BxzveWsVve0ciCoL/SFGz7FSv3/MaMyniqeqtJ1/Qg8SG03TWnTYTDAODZZJh7aNf8aU+9KQuNMJD+aXoMJv9jir7gAoKrZnzDO0KfoItDkSbyLcF7ox2oR8S3cH2e6S+AwFd1xD8RXXZ98Hvv8LmTJioEXYJ6LHsKrlMGei0ZREfWYwQf3Pznp6Z1/JtYSaHzkl5bfIKVWRiBowMd4/vSbARzDtUFuL6wf62SfVORHT1KzsmSWXxRKXunCbUygCeuArLrEOTMuIOpwveDk06KQW+7kyWRqKooo8C/35iWSLI9/rgaBuQRpXf9944hGEJpEOJi2LA5muK5VqI9l5CUZtKOJLaYhTJskVr91Bl7sDFXe3UbaMx7OLq2P0S+4/PPZObbMG6hX5QaZb4SxZYC7Q4c0FZoSLswBd5rYdILw7AFma7dGiCJvR2tpRNyiiycYyGOMSbKi5L0kU1/2yaFp6j/O0dkOuiURvkbiSJPdm7cxMNRmGq7WfTffIaXm021vgUxX8fcBnkpr+VfbYZSX5hrI9x5HJGvEJ9qWBBFrH+M2pPPww6L67tg5fuZVE20jgk4zVSC52tGYyEG8OQWXTlhYbAjANDxpbgQ43rPSB9wshY2HNNw8qOMVM/2nTRhGypRKdwYjgBwiJCBcQXcWtb/51+BiUFuUwA9r8cD5eQJc6DW7Sj29L0z7xP66DPAV6B8Z4qAER0/dyFjnHS3+xHdpOB9luaiTtP2hlzxf95s3sJvcUILFfdjifjrlvdfgjLxpyfqWub0GYk47ZeiBoCrGXMd7nQZTJdzcwBRqVeZZWG9UwumxLUcO8I02P9xXZ1yNLFNOUj8OSoxURXJFMqxg9Xc0W2T5KCPNBreVtE0x2yHqarnIHyJJ7ZC6qh3HC0cXXfndsHTIiO0qMaUr8VhpSnKlXg+RxWkCMtvdgcl17iL1KsEk2aciBiLEeZ/xH1JfGHDNGYn43uRY/V1+VKFOTJ7s4fjKPO+7C/iq05lZ3A0TrjPu1XZeRZzgs7oWPOY8q4Z6JVinWT9iHrWpteAVhHOFwHZVaHBdjYLoqJQw+EzLMhGrgfTnPZf47FxixOEZj6qLsFNXNlEDb4NhbaO76UFt/8SpY5zJxzEZxmdIkseCWRkyLvE/0lQbBoYA0/eGDD8D3/Sq2LwGlDTtXnBsifgzDDxcVP49yyDB7L4ZN0pYNxrAoSy7biOfkSNnelrEA21BGfotAv+S5/6vDUJIUr5UjbCJXRpva9UCiwE71k/l5qHn/pLc1VFWcxw+Vt27C3iIJjDyuizFwoyJh4mH/aQXEK76I21hRcg01WmvLEsT9zvK4mzuqb1Mi0Am8P7rMQvMWdxU0lP0RueZKYY3yIwY4tNHIjGVkUA2tcdsElJzlvHRdguMHvi6WbZBcrpeBcpLf2FM8uPLddCQvxCcWXDt39F4400FPSzAXPKThNzkYYaKvF9J1stCMcnsNefUZyhKvViGcew9xPQmu6IcaHogdyyZbC1AlvCHmLT6DxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1094 (329.00 USD, PO-1002) matches the contract rate of 32900 and is within the PO's received quantity of 1. The only earlier invoice for the same amount, INV-1064, cites the same PO, so it is not a duplicate_invoice. The vendor's bank change on day 42 does not apply because the invoice is under 5,000 USD. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskx95WBCoC6bwssZNX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3161,
+      "output_tokens": 484,
+      "output_tokens_details": {
+        "thinking_tokens": 340
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1094 (329.00 USD, PO-1002) matches the contract rate of 32900 and is within the PO's received quantity of 1. The only earlier invoice for the same amount, INV-1064, cites the same PO, so it is not a duplicate_invoice. The vendor's bank change on day 42 does not apply because the invoice is under 5,000 USD. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3161,
+    "output_tokens": 484,
+    "output_tokens_details": {
+      "thinking_tokens": 340
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

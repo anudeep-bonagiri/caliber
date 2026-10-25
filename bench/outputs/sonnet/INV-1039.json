@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008124,
+  "durationMs": 3155,
+  "httpStatus": 200,
+  "id": "INV-1039",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1039 ($275.18, no PO, no contract) matches no earlier invoice amount from this vendor, has no PO or contract to test for rate variance or short receipt, and is under the $5,000 bank-change threshold, so no hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnwkKEAgTGAI4AUIIdGhpbmtpbmcSDAAqYMmFNL1H/3+qyBoMmb/bJImEGxqIj/ygIjDSgkoWruxQ4p//BQoXv5ZHlENa1/0wX3jlt7BcN7+xljDHWUmoRXWmvPkgAjG5I7UqvAimhHvy8c4/w/v3HRNEEy6CzeiSfVlAu+oEso2kgJVb2YMYBfUSyFruLpf+q0lrGxRvSI3dPggHS7LlsSz2ber1a1NNCPYg04BzHjP7xsJ14wOu4nBxRp2V2i0nhnvLwkZx0OYMjPqJRQA0Q0hqi5kNASqPJtmtefxd11+g7qJ5VztijjoyB/aCXnGrJHIRTjJd8CU6qNffm10a7Dg+eU89zfTT69Or1aCV98iTKnKIP0Vy4SNlutYvEe0BjtvFJ52fZFyt0r8S3nVjGxPGIWcOQ5O+ynVdScsmOx2P9Eyb41AZUGJdzgLS5Xr7djp4Lr/UpVSaVtp2Ahm8AXlIrQTE2pO29RFmZMZGWL3bdxue22QgQVHYMz2OQn/2FLXnh3Jx6az34yxJst3Bk3MASq1XaLAEmZ6tX02FGL6woPLZEXvHSTkLpTrVEZedIMVyLzVlEO3ui4s0IyvTKgBxbvOniWbQhNd+meYTAQrtyHb5l2anuiwnRu8rPCBDqZse/lSAwr/vifA5e7qesXXZplHWxlKLjZ13YgV62XmWjsKcOHwc4t8FK1SvdkVWH/BNe2IqgaSH62fy3QNwBaW5wWWkDsLumeOLyWEzWYyMXuWENnVqvGOzsKHb4R9bDOF8dwdwcHbtGEiJ5ndygigKI2t3mE6ZBhvlk9Ttc8JBdyJ1P36AxadviQvwLJgKVV/N5VY2gLRz1eRAEp5uoxADonjPwBZLiP1B/he1oPNIwVFHSQC4nXcF4EJ6PrBZhtNNYElwHpFRbIjtCyvKbj46m68eQ22ziTADK55qPcaCfeTdmqhoCTeYENWhUVKUSAWyMxNepaiRhWzBfP1lOP+59xHcedzENX2i7h5/IVhDxFP14n9LuKG/cxZJsZV/m2L7pQCBZpSunKL9TwMoUJt9owkIlbN8q41An4rJgvChSwVAT7dXSHAVfoSG31jXJney8914UqGWECHmvk/b39VqSFnaw6xJ/bJlPHFnnFhwNYCBMyp47ar3ZF4764jC0m2LZ24NFTIe8TNyKDsaxns+c9m1HeFiMS/2Fyftuo3ve0DmbtxMoqu42OU7XvhJHdf5P4EITVKoZH9jq61SWxVpqYcsquocHvV1m58PkW6Ij6P732FEgSQcwLYLpubxms/xgf1l75LEJrAORVGOZ4CPEfBeLoJ6dWC/JwSheSVgTEquHRtIrVbp2ODey87kOF03mqc/ciYVWzd4+RqOo0sx8VvsSRJydPi7J88DwVtR6OQgqxx6TlK+bpFf0tzjfIikTbL6tATDvAdmkv4YpjhjvU3dzonkmPCpJYgQZbT3FG86YlX/uoNLunbCNw1h0N6yIeCrI/QfzxMAHorL61z1TsDjZkPk3nG8jf1PV4z6vnggSQhyAVRVOOSJjtzKSxf9evkLlq1ywZRp9VCgAle1jcPBlRY8pdQh0RdvBJBLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1039 ($275.18, no PO, no contract) matches no earlier invoice amount from this vendor, has no PO or contract to test for rate variance or short receipt, and is under the $5,000 bank-change threshold, so no hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt78FM79tmwdi8sbs64",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2322,
+      "output_tokens": 348,
+      "output_tokens_details": {
+        "thinking_tokens": 251
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1039 ($275.18, no PO, no contract) matches no earlier invoice amount from this vendor, has no PO or contract to test for rate variance or short receipt, and is under the $5,000 bank-change threshold, so no hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2322,
+    "output_tokens": 348,
+    "output_tokens_details": {
+      "thinking_tokens": 251
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

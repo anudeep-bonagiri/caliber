@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012616,
+  "durationMs": 2527,
+  "httpStatus": 200,
+  "id": "5439",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33's ping at 15:34:37Z, about 5 minutes before the purchase, was at the New Braunfels station (well under 25 miles). The 40.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%), and the card matches the truck."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwYKEAgTGAI4AUIIdGhpbmtpbmcSDPnyfRtDFW67gPnilhoMallAzzWv4rHdYPHwIjCemcsbVBcb1xcLwuvM1gGQyA651x7LK3Y6f06S6tJ81lfBhecr+tcc5iwaAbEu6VQqtAW2F1buYYT3KGZEbb5Cwl7qzyeQ+d1LL5+zzvAaOXRPADfkUiZNPJ9ee9/h7DUkInjAEuWJLU6Itq5KxcvJkgRXZNGISO3huvPGTEnL+eXok3uFcA0mA4nPGoZFi33bErMHyoIolNAwjYm/GZicNmHKP3LBlnRxF7iKJp5DCuWT3eqnX9gv53MFlc1QrFXny6YaBLNox/zebp3CYciXt7PZsSmqMRIDCDlT13SgOC7f6mU9R3dYh2SirQfoy1AU4dtFwAuc9+27V/0gLQIJZgFgy2UxmnMR9/tiTWQxtwj8/i2OBMdq1C1FSi+zbWV9a3PF1hXtWeAHj2/2VHTkhbGCrrwWgGB9JbPmwfEmiaBXxzonph9VJUvdxnMaaHOcFpEKTg0L9F5oPYCNA1TKsoFdk7dPN9svejzFtg+Stsiv9EZ+44FaGghJDQGQfkg+i4oqBxUi1iZ3F5qLMBGgmcdxsNMbrHibJj7DpzbBq4hg0JAozt3wfF1R/HW3DScuh7P2w2mUSriVzZudlcNib4/FLVRKKuTrIu5xO4wcijElxjQ/ClYPTW9PfYnPYPOHeEGxD6nI/EuwGN08LfwVIvSP/8de7IPA5ypRXpOxzDevWok3NeTs3rSWpEYxJroUB/aiDkzqkVvb+VjGK7ieoUwjPrQnhUuyrt/NEB/DAJ1V1S4Z1zFEgLWvhl/FEPHyBeyLuwOMusYo+b7r2mgcwmRv7JUYoLx49TJSeViQFAfqsU92EpEldvGc+pvIrcAZVcdFh1id982vyVtSYvcgznmN0nJPG8tt/GzaiC5+zb21lPw3YY3oFtFA0ac7t3FqO5SHDZ0j5HCH+EsmoIxshB1v0cXLXX0HeurnXN+08Qyc3NjqU7lW53tTwralsDWfeuw1ogR9v2HCUzxaa0HAi5tljV9TyRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33's ping at 15:34:37Z, about 5 minutes before the purchase, was at the New Braunfels station (well under 25 miles). The 40.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%), and the card matches the truck.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4PW3B4TgFgz1AGKqA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5253,
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 102
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33's ping at 15:34:37Z, about 5 minutes before the purchase, was at the New Braunfels station (well under 25 miles). The 40.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%), and the card matches the truck.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5253,
+    "output_tokens": 211,
+    "output_tokens_details": {
+      "thinking_tokens": 102
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

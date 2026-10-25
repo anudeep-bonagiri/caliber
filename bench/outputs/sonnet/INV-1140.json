@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01303,
+  "durationMs": 5535,
+  "httpStatus": 200,
+  "id": "INV-1140",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "INV-1140 is for $2,226.25, the same amount as Alamo's INV-1114 (day 62, 14 days earlier) which cited PO-1010, while this one cites PO-1018, so ask which PO is real. It also bills 4 tires against PO-1018's 2 received, so if it is valid, pay only the 2 received."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1140 is for $2,226.25, the same amount as Alamo's INV-1114 (day 62, 14 days earlier) which cited PO-1010, while this one cites PO-1018, so ask which PO is real. It also bills 4 tires against PO-1018's 2 received, so if it is valid, pay only the 2 received.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyLGBhbm2DQLhsxNaT",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3590,
+      "output_tokens": 585,
+      "output_tokens_details": {
+        "thinking_tokens": 447
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1140 is for $2,226.25, the same amount as Alamo's INV-1114 (day 62, 14 days earlier) which cited PO-1010, while this one cites PO-1018, so ask which PO is real. It also bills 4 tires against PO-1018's 2 received, so if it is valid, pay only the 2 received.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3590,
+    "output_tokens": 585,
+    "output_tokens_details": {
+      "thinking_tokens": 447
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

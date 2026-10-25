@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018962,
+  "durationMs": 3210,
+  "httpStatus": 200,
+  "id": "T2217",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1014 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was 2026-08-26 (T1914), so T2217 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll charge T2217 is at Mountain Creek Lake Bridge (NTTA-MCLB-01) on 2026-09-16 at 20:10:31Z for plate TX-1014. The duplicate_toll rule applies only if an earlier charge for the same plate at the same plaza falls within 10 minutes.\n\nThe most recent earlier charge at that plaza is T1914 on 2026-08-26, which is far outside the window. The most recent charges overall are T2203 (15:25Z, Creedmoor) and T2206 (16:29Z, Hutto) on the same day. Both are at different plazas and more than 3 hours earlier.\n\nNo toll rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was 2026-08-26 (T1914), so T2217 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6HWBUshKtfQ2ZjtN2",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7916,
+      "output_tokens": 313,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll charge T2217 is at Mountain Creek Lake Bridge (NTTA-MCLB-01) on 2026-09-16 at 20:10:31Z for plate TX-1014. The duplicate_toll rule applies only if an earlier charge for the same plate at the same plaza falls within 10 minutes.\n\nThe most recent earlier charge at that plaza is T1914 on 2026-08-26, which is far outside the window. The most recent charges overall are T2203 (15:25Z, Creedmoor) and T2206 (16:29Z, Hutto) on the same day. Both are at different plazas and more than 3 hours earlier.\n\nNo toll rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was 2026-08-26 (T1914), so T2217 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7916,
+    "output_tokens": 313,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009706,
+  "durationMs": 4191,
+  "httpStatus": 200,
+  "id": "INV-1083",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1083 ($1,136.00, 2 tires at $568.00) matches the contract rate and the PO-1011 received quantity of 2. No other invoice from this vendor for $1,136.00 under a different PO was received in the prior 30 days. The amount is under $5,000, so the day-42 bank change does not apply. No hold rule is triggered."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3wkKEAgTGAI4AUIIdGhpbmtpbmcSDE8k9Se3iX7tpcEjMBoMmttrG11WqLDD/Or1IjBy8eC64agbDEJJ9vUR9z6qOZxYtcEzHRJ2/GRBJVQMER08pCNRa+0tFByrwQ7u0S0q/AiypsY+CmxGZKsPPSXMkguQNvMTTuqTEi+8UTsTz1bndz032PukibZnyzgkgRr/mJIXv4PrUkMHMS2qnimFeoLG+DwpG2ZtO1Oq5jc5vJc0HLKvawbjrhiJZmldFr/MvzOeK2KddLiS/2DFbJJyQkWqneb8bLVW6j+dm8Rag++BCMZPmRiWBAZD5ZZeRQmEdi52MreyoQGH4I71tNrP5ZOmNP+qIDWbNcuam8nKlxdRt7vdCvPGS9MTzpsZSPapDVgD1+R6kg6mSfMW0yMw1GkO5x+m72wx3C6XJMHOIlwydsD7sRWNsjIKk194s/LV+LgKVdzBwG+F7eb9Lec6xxLNS6digy0Lflwd18Xe4K9OgwRUUVTggUAoB/6zyw3OKUredYs4yaW7Uq3RB465hC0QqmjUJgjlB6vaNZBS0Bs/gfzplQ7vaW0mbocxTYSHvqNmUmnrklI7Hg4nYl3DxPbXRZB7gm14G4GjFaBNSZ9KzL+Ou0VHtdPgx3EJ4f6naTIE2kZPqw4+QsEi5WprZMZQU5mkV1iZvADhJ8ZJTxVncUd6uGvqQbNmzVl4pVUlT18GL/iO1KEMCakhWls9XjeR9Qx3xNXX5OU2HHEBtFlttDRt6djg1OTIVLAJbA0nuDf+VvN5M/9+lnwxHXY3KINUCMXPDL+C8CWDp/SKBuTTRys3/xCsQ01fLuvcCsmD/2kdcj4AJ/Sx57ReP7s1WM9F2hzu8fD8qQPQ1zNjXKYJ6up56hkquO5xDewVQjImCcvoIg21Hv+10bIIeNl9nC3pfudPyB1DZmYRDqdmQP+VADmGsKed4zi1aA4ZrO0xGWN5TrHReOJCf6188kvUz1Ue/bssY2InWEbNaaQG7Aum2/P6vYhXFIVn8Ko81movwIZgC/R/x9MGq+wfl3M6ULcPsc1vmTifY4w01p5sByYM12MUyibeokmxQ+EQLEr8BPkv/iHD5U7jeGjLTk/U63ZxwF77TLBkJolrq99zgzlmNVnfO5+iGcXhDb02y3RXhNJ6XQEzFvHN/LRmropuhSCCpVnY45vjUl+FcibpttFqTks4c2BUEm91McQXpQhfCjJpcHba1MEzZaMzx4imXygdyhcrf7nMb6mEtSkVlU9g7iOXelYP3QtLbtheos7TZJ2wXte3Ifww3zw6xyBS8RN7lQbxhDLxwrT9QXg5xbrZIttw0ml9Y9Wtb6nPPcYD7/x/hZi+FK8QQHpjYHjn/bvmGX1pHK+XNtUr1ymBjPhHjqjbgpXF/le5l2mmPRDQ16+kG9kzRz1PKvZA4ac20Tpy3lC65k0DdIh59mlCQ82ZGUDi8ADlBaPQE+kf5DtdP5FSvw915wOFBYluJYlqNIKbzWh6Ghj8C9uUSek8bTiW1hCxe7Ujp92z7QoQVY3/bZgjru54xO0DYejVZrUkoFAuTh8Y1UAOUah0Rdq20QLaVmNyWrf9lPkvTUGF116KbkioeRpZPBqobXO3KAlLnKNnl9JAarPejGAEGajeEe07/dyiGWYugfzoPOZpzRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1083 ($1,136.00, 2 tires at $568.00) matches the contract rate and the PO-1011 received quantity of 2. No other invoice from this vendor for $1,136.00 under a different PO was received in the prior 30 days. The amount is under $5,000, so the day-42 bank change does not apply. No hold rule is triggered.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5HxvpMDNFJWT23USB",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2748,
+      "output_tokens": 421,
+      "output_tokens_details": {
+        "thinking_tokens": 289
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1083 ($1,136.00, 2 tires at $568.00) matches the contract rate and the PO-1011 received quantity of 2. No other invoice from this vendor for $1,136.00 under a different PO was received in the prior 30 days. The amount is under $5,000, so the day-42 bank change does not apply. No hold rule is triggered.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2748,
+    "output_tokens": 421,
+    "output_tokens_details": {
+      "thinking_tokens": 289
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

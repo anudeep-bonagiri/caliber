@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008146,
+  "durationMs": 3712,
+  "httpStatus": 200,
+  "id": "INV-1051",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1051 matches the contract rate (34,500) and PO-1013 (qty 1, received 1), and the vendor's bank details never changed. It has the same amount as INV-1046, but both cite PO-1013, so the duplicate_invoice rule (different PO number) does not apply. No other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QkKEAgTGAI4AUIIdGhpbmtpbmcSDLEwWbzyNc+ypB82GBoMElYGA61USV0ZLiE0IjCfRrym8ReOZIzKhqUSrvPku0ziHYDgrow8n73ePz0JD3JLFlKJuxo6UluPDxuRAloqiglJQd+k6xBRxxlXGPRJEanokLnEcQHkdfeDCKcVr7l3zOs3jiJvRtJ24Dk5uJh9l7KvnYs4ZokmNWvdsSkIFAH/+2gWDkf8QDT3zeb+JqfgCpaCkd2LgGjHm7KkjkGsTyAv+7BiKtiQOEhUSpxOy66klaL28AOJEjqsP9WQPcxibrTWcZWCtf8N7QX4GUzxuZ5hVIIicdP/zOu/ay4zA6YWgRPpEXtSm1wkutO/kq2CoEscj2DGilMrFEKn0ikMLWNnAOPEpRr4sykQJPkZWSxArtyEX8lipULuyE7ULpB8VQZ8ewn2NFgGPJhy+6GMF/r+WL/n0h3dNv3OWL1gJdXaEQ1rHNahi3hQzlNAElYm0j8ZFU65xvq/0zf7OlitKqOgHAh8kMZ7URhX2EPjZ6fDrMnpBnjf9pzxPefdkIwfwI3anDxyceCz28IkOOqr1o0jCnndyF2g3U9uyB4ia95aa78Wwmy60SOuhGJbNSkZgg75UtrLrPcuJ+XF+5sIcBE64GZaMNjOzvcQvoLx5y0yiWnBI7H1mEda3q9sCEjIEBOHFeGxzz94QEd7Bpfxk+6uyjO4XwGqQNY7m5QnjaJtgJnLNzV+tdT1MD7EoPuBaGlWsm/cejPybbmb9yCyWc0meQXQXw4CVZSfpDujUj8X0GPzIxAzX+vUaHK4Y+KiCWiAttWjr0tUe6lKEDLh7aX/I9xGX0ZXy7EiHXaO3OQkEx2EgrP6YdTADDpe0Bqh06rt6Xb97BAQaZ8oYwj5urXImPkKUN8sFTk/JEzEegvBcgw1rVSVvyURwpDFs/Rd4le/YiUpMvzW223rqkV87eVPPSuwaU8f7t1w/2xq9ocZ7Q5IwzfgtH1dbO0yKL154+mg5KbO8GZl2T+TxvgOC0haX1x9Go/2DfeEPVLF7YHdRLfx5TO/CHdPxXCeZN+IrRJm+ve+6YmVYStYLpWwvvbmfqLtibXy0rVVJtduMUBUUyqDMDBicYwG57Te1pgBTBlNcuTqzXPWsrPUyBDenwEpkUpktu+kJrBVpI23MP5rbohj3cwwjjRHTex41kdzp7i1LjhTvCrWbzf6ACdYc0gx7LaXLMa0Wp5b3VtP6iGTofMuYJNQPM3kicr0lI7ViNQwamnX0Bb/OOxxDCTE2ORWMHsJO/RqY7smbpA3/A7QHxGprU44ndaFhxdShXIHQYLh+Z/gck5b7m76LJmKBgga7MCjq/x+QLbMa0xT9x+5Q/y+5XXj03W667kPh+tKWnup57gwhyg2dgJLfc0oXHHjfkaxHY9HTgZBlL9ux+itVipg9WnETcslBTHk6HYhcuRoEsAQCoov8O0L35L44dhVQWg1vdylzGIFLfNRYw8U/fmPueb1hRoX2RHkdLptu3VKd+FAFciyJpnX/EyX5J9cgjU1iVUOliwlJQipCcTduoGMCr7fUDWizGKj67xEXM8MRllm7sZUyclVMH31QgHYeO67FwqZwJDUGF+c5u4fv2DfK7RrBbIS7JDszzCafvU4odFX7bm7YD+vI3XbBauyxA3J6QuljD3lGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1051 matches the contract rate (34,500) and PO-1013 (qty 1, received 1), and the vendor's bank details never changed. It has the same amount as INV-1046, but both cite PO-1013, so the duplicate_invoice rule (different PO number) does not apply. No other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt433UGjdMH9TesxYfK",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2143,
+      "output_tokens": 386,
+      "output_tokens_details": {
+        "thinking_tokens": 267
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1051 matches the contract rate (34,500) and PO-1013 (qty 1, received 1), and the vendor's bank details never changed. It has the same amount as INV-1046, but both cite PO-1013, so the duplicate_invoice rule (different PO number) does not apply. No other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2143,
+    "output_tokens": 386,
+    "output_tokens_details": {
+      "thinking_tokens": 267
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

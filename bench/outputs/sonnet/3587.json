@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011642,
+  "durationMs": 2890,
+  "httpStatus": 200,
+  "id": "3587",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 31 pinged within about 0.02 mi of the Buc-ee's station at 16:18 and 16:25 UTC, either side of the 16:22 purchase. The 142.2 gallons is under the 330-gallon limit (300-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AYKEAgTGAI4AUIIdGhpbmtpbmcSDMoPMUjVYQrE9vhl9xoM0WmOBMQasVe2sMizIjCIhtSGlgLJfqtBzymozYOXOvp35XJtTyTxX1MUxwxArYUVJ2/hVsFP42hUnR0LAWcq9QV1d+aSecXrc6jHaMbZ1MMEC2s/ITXJgGhBvC/DZb3IA8PJQtm4Ot98IIPrlfKYfpaI1YtvCM22ibRJTF2kHw8F4sYtHz9hG3cKSRlRytiOb/OKaRiidv+BZ7Wn/hOy1zlsUVLjZhPtJIm+/nB+l9DRBpuCrPxzf43m7JDdFiWM3gg1mN2gCKDF0+rYvXn87RkMMJLOgl8lQ3f6V1p71aki3PzfjGhHY2ri8Y0f8CjIg0oNUG857GIpGupBWuDRbKUFCKv5Mci0UYRLeKOUp37q+Etgi7K+rVbuXBjhM/9j45qelCQ7Cuj5kocxNkyG1VHC4GvYG5e1iDxosM97AbLITMaT+Vv6pigdZ8sYVBe/zK62UdmCKBJnyoqzd91mdbKKDV7WgyVmrp9oe91zFWD66IdEBiKKGBKzOovMT7ddAcX96osx74XBm+DKcgMddQqExYZr1EZ7aZrnbZEGpcsI8U988vNW8bvFZvyAQpzko6S8sZDOEXjT3eGDJAitIrvJkJpsnashQ8psdQo2DFxpCysoay7jflk9wLigseascR12/jxq8fVnh5Yf8sNzAHFOmh69+QJYjjbas4EKW4F1LxH0CV2jWLhxcNhHEDaK/kcPR1P7keZGuKC0pDx1wugQChY8DA13cDNq2PD5IWADk/DB2D8WVfX6EQFrj4NmY7RJP8iktyvhU/wg0smBM9CNO7QfcqbxErayL3+tburpkmwj8tBwWAwJEZe0nGEDz7S1g/onzTDmLZUPQR6Wk7Y3UUHpRwLbM/75zs5w9HfM9vJ1QBy2vDjkKcgCtyorvE9es16oWFGt67QQ8fMIXcQkEBFY6cozUcarU91s20pSSct3OkcFNDI7LQtYZSkGqAqp1Ep6sdcU9a768lrum/0qwKsIo/523dBgzz4XonnwKWf5+r6yVuCQwhxunS3BMsAJpYraVm/c6xq+VFSwibLOqImd4+p7wGzhkNSN8groscw6JzVG5UaSV8Z6oyMML3M7DuVEGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 31 pinged within about 0.02 mi of the Buc-ee's station at 16:18 and 16:25 UTC, either side of the 16:22 purchase. The 142.2 gallons is under the 330-gallon limit (300-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspFF4StbmkxCFW55Uq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4526,
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "thinking_tokens": 149
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 31 pinged within about 0.02 mi of the Buc-ee's station at 16:18 and 16:25 UTC, either side of the 16:22 purchase. The 142.2 gallons is under the 330-gallon limit (300-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4526,
+    "output_tokens": 259,
+    "output_tokens_details": {
+      "thinking_tokens": 149
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

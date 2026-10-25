@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007472,
+  "durationMs": 2969,
+  "httpStatus": 200,
+  "id": "INV-1089",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1089 (4,282 cents, coolant) matches no earlier invoice amount from this vendor, so it is not a duplicate. There is no contract or PO to test for rate variance or short receipt. It is under the 5,000 dollar bank-change threshold, and the bank change on day 18 was long before receipt on day 50. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxwcKEAgTGAI4AUIIdGhpbmtpbmcSDIzxmYYoaRZrCcAzjBoM7yiR6sM3bnGXZPLCIjAZFBCaGJIiRgMMHTZYr2e4xW4bYUNaKUWpKo5MmKKolrg16tf7PN0q3HUut9tLMwAq5AY65pklnHgWA31p/VZmCXwlg2oZNBfV2BRqS2EdQaduesYDNVR/AJfKWftllGy/p5j/kaHbgI/1RrH+QGluKr4JmlGk1spItaSF6NfI3I4kbqVaTRAZv1JwEWsy1+SfQ8wX6PZuOnOCVhakIRmAgeJokOJXaRFyOOZDxJXJwH5gLOQZznIZiDCy+TVnJCH6u6HNjW0K3kF1UkMYQ2g9WliRFsYVVu+jBe13KtE48sZs9WO6AQuTZTEdnjdketirB1AIUzqiipBp28e4DjRq95zzO/QD8DFqPN05yeKQe8dhiHekyjrCGhrr3t2twVbp7dm4CO4Pul4ISHUmN/3e0SXuNiC9LItV2ZbA8+CVwS9yVhHExmYUNDU0m3W6vr5I9ie7bRP+bT9X0CAQLJOkCItvUwbLAcHo65j18E6P9+Phqlx0DElBkii6aZ4QU41U9bx3FXFhki/MxwsnXWHtyzJ+FF/eWM3+fMq4Vx4ROTuxTkieZMHQsdOmb5XQl5YzrgVdVqbn/ZPuZxIYWq0udFb0LN4KDvUslUGyFuBTCy8CSeaQsZ6cNGMwiJ6WmNcjCekssbTf7UZBivixKlCtrpvni4J2YE4tMi4Fq2jY5JKXjnWITZx8/NxMtKsiL4vV/NT9VUP4/Hn/hixFrQOJ9MK061dg6lwp8OrjO8ZI/L3mxZ5i4rNS/iCsSb7HIShSVeSP2PG+n0HB5NEsXE0RHwbhHJqeqNR9iCtqtQIqlf/UMuTKO6INAQ87BQcnyg7CEIlsm0vFA1gYi1zX4/Unvpq9Hd3mqeD4nftzoSYdUdrsdx9oxq7ffyLKXmLKbaydM1X3PnJtV0hdiHrcHCFyu1j4mCJSYrdKyUWOUkLSOR4ABq+7q2nc0OU07pf5qAOqYfIJlV4FSCIEEuf0bOc7QNGpULd0cIXEhdHdeJxTvv8HyY46vJX87jRNtc/lccUQVK8+3NAS/xeczxF9My6KTqy7QQCLtmDV6MoN2y0DvV08hWLtrTcixZ2wNkms3xQG/8XBalGPTlAXm6c54DWFnbWutcgGjufi4BTo033rKbX8XALY7rapxB3c2mtyVkweBWYCbJFrw6+dKxGNhJPACG+wLv3CtyQoXcqHuCx+6ZO1Q9Ek/twNrck6IHTo0hy+P2y2RW2DGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1089 (4,282 cents, coolant) matches no earlier invoice amount from this vendor, so it is not a duplicate. There is no contract or PO to test for rate variance or short receipt. It is under the 5,000 dollar bank-change threshold, and the bank change on day 18 was long before receipt on day 50. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstDitU4nuKeNaG9ajx",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2326,
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "thinking_tokens": 151
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1089 (4,282 cents, coolant) matches no earlier invoice amount from this vendor, so it is not a duplicate. There is no contract or PO to test for rate variance or short receipt. It is under the 5,000 dollar bank-change threshold, and the bank change on day 18 was long before receipt on day 50. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2326,
+    "output_tokens": 282,
+    "output_tokens_details": {
+      "thinking_tokens": 151
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

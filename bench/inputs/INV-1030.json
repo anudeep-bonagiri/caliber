@@ -1,0 +1,121 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 30,
+    "item": "oil_service",
+    "rateCents": 29900,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 5
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 16937,
+      "id": "INV-1004",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 4,
+      "unitCents": 16937
+    },
+    {
+      "cents": 78100,
+      "id": "INV-1008",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 2,
+      "receivedDay": 6,
+      "unitCents": 36800
+    },
+    {
+      "cents": 149400,
+      "id": "INV-1010",
+      "item": "tire_replacement",
+      "poId": "PO-1005",
+      "qty": 3,
+      "receivedDay": 7,
+      "unitCents": 49800
+    },
+    {
+      "cents": 117750,
+      "id": "INV-1015",
+      "item": "tire_replacement",
+      "poId": "PO-1020",
+      "qty": 2,
+      "receivedDay": 9,
+      "unitCents": 58250
+    },
+    {
+      "cents": 29900,
+      "id": "INV-1018",
+      "item": "oil_service",
+      "poId": "PO-1022",
+      "qty": 1,
+      "receivedDay": 11,
+      "unitCents": 29900
+    },
+    {
+      "cents": 77350,
+      "id": "INV-1022",
+      "item": "ac_service",
+      "poId": "PO-1014",
+      "qty": 2,
+      "receivedDay": 15,
+      "unitCents": 36800
+    },
+    {
+      "cents": 100850,
+      "id": "INV-1023",
+      "item": "tire_replacement",
+      "poId": "PO-1020",
+      "qty": 2,
+      "receivedDay": 16,
+      "unitCents": 49800
+    },
+    {
+      "cents": 33650,
+      "id": "INV-1024",
+      "item": "oil_service",
+      "poId": "PO-1022",
+      "qty": 1,
+      "receivedDay": 16,
+      "unitCents": 29900
+    },
+    {
+      "cents": 119000,
+      "id": "INV-1025",
+      "item": "brake_job",
+      "poId": "PO-1004",
+      "qty": 1,
+      "receivedDay": 16,
+      "unitCents": 119000
+    }
+  ],
+  "invoice": {
+    "cents": 29900,
+    "docRef": "evidence/invoices/INV-1030.txt",
+    "id": "INV-1030",
+    "item": "oil_service",
+    "poId": "PO-1022",
+    "qty": 1,
+    "receivedDay": 18,
+    "unitCents": 29900,
+    "vendorId": 5
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1022",
+    "issuedDay": 7,
+    "item": "oil_service",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 12,
+    "unitCents": 29900,
+    "vendorId": 5
+  },
+  "vendor": {
+    "bankChangedDay": 71,
+    "bankLast4": "8823",
+    "id": 5,
+    "name": "Border Fleet Repair"
+  }
+}

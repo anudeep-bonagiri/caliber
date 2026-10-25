@@ -103,6 +103,56 @@ def _strip_clock(bt):
     return bt
 
 
+def baseline_block(path: Path) -> tuple[dict | None, list[str]]:
+    """The model-only baseline (Task 22) copied from bench/BASELINE.json, which bench/score.py writes from one
+    committed run. Returns the block for FACTS.json and the FACTS.md section, or (None, []) when no baseline
+    exists. Nothing is recomputed here; the numbers are copied so Devpost and the site read one source."""
+    if not path.exists():
+        return None, []
+    b = json.loads(path.read_text())
+    systems = b.get("systems", {})
+    block = {
+        "source": "bench/BASELINE.json",
+        "generatedAt": b.get("generatedAt"),
+        "sample": b.get("sample"),
+        "modelIds": {k: systems.get(k, {}).get("modelIds") for k in ("sonnet", "asi1")},
+        "table": b.get("table"),
+        "partial": b.get("partial"),
+        "tiesOrWins": b.get("tiesOrWins"),
+        "failures": {k: systems.get(k, {}).get("failureSentence") for k in ("sonnet", "asi1")},
+        "cost": b.get("cost"),
+        "footnotes": b.get("footnotes"),
+    }
+
+    def fmt(x):
+        return "n/a" if x is None else f"{x:.2f}" if isinstance(x, float) else str(x)
+
+    def pr(row, k):
+        return f"{fmt(row[k]['precision'])} / {fmt(row[k]['recall'])}"
+
+    lines = ["", "## Model-only baseline", "",
+             f"Copied from bench/BASELINE.json (generated {b.get('generatedAt')} by bench/score.py from one committed run; "
+             "prompts under bench/prompts, raw responses under bench/outputs). Precision / recall, code-exact.", "",
+             "| Code | Planted | Caliber P / R | Claude Sonnet P / R | asi1-mini P / R |", "| --- | --- | --- | --- | --- |"]
+    for row in b.get("table", []):
+        lines.append(f"| {row['code']} | {row['planted']} | {pr(row, 'caliber')} | {pr(row, 'sonnet')} | {pr(row, 'asi1')} |")
+    ids = block["modelIds"]
+    lines.append("")
+    lines.append(f"Model ids: Claude Sonnet {', '.join(ids.get('sonnet') or []) or 'none'}; asi1-mini {', '.join(ids.get('asi1') or []) or 'none'}. "
+                 f"Partial: {b.get('partial')}.")
+    for k in ("sonnet", "asi1"):
+        s = block["failures"].get(k)
+        if s:
+            lines.append(s)
+    cost = b.get("cost") or {}
+    if cost:
+        lines.append(f"Anthropic spend ${cost.get('sonnetUsd')} at list rates {cost.get('sonnetRates')} (cap ${cost.get('costCapUsd')}, stopped for cost: {cost.get('sonnetStoppedForCost')}); "
+                     f"asi1-mini requests {cost.get('asi1Requests')} against the free-plan quota.")
+    for i, fn in enumerate(b.get("footnotes") or [], 1):
+        lines.append(f"{i}. {fn}")
+    return block, lines
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--uri", default=os.environ.get("STDB_URI", "http://127.0.0.1:3100"))
@@ -285,6 +335,9 @@ def main() -> int:
         "unreviewedPlanted": unreviewed,
         "complete": not unreviewed and clock and clock[0]["day"] >= 92,
     }
+    baseline, baseline_md = baseline_block(ROOT / "bench/BASELINE.json")
+    if baseline:
+        facts["baseline"] = baseline
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     (out / "FACTS.json").write_text(json.dumps(facts, indent=2, sort_keys=True) + "\n")
@@ -312,6 +365,7 @@ def main() -> int:
     md += cost_lines(cost) + [""]
     if unreviewed:
         md.append(f"Unreviewed planted rows (the run is not complete): {unreviewed}")
+    md += baseline_md
     (out / "FACTS.md").write_text("\n".join(md) + "\n")
 
     # Evals in the winners' format: run date, rerun command, metric/result/target, hard negatives, history, caveat.

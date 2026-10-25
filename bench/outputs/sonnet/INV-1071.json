@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009602,
+  "durationMs": 4063,
+  "httpStatus": 200,
+  "id": "INV-1071",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1071 (25,604 cents) matches no earlier Border Fleet Repair invoice amount, has no PO or contract to compare against, and is under the 500,000-cent bank-change threshold. The bank change on day 71 is also after the day-38 receipt, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS6QkKEAgTGAI4AUIIdGhpbmtpbmcSDEOEZSsJeyhCdWWBwxoM2KpCXB8sO99Bjx2+IjCjGJ8SkkHew9TXVso2Puuiw3G8UIf7A1A29Yy7nQfFRT1Pb28Nvxpb0ACCKhx8GkIqhgkVc783YVjvIYj1G2/cRKUoC2OQWUd8mdK7wxg7ybA9Z+EfpqBMQHtdLk2T39CBL+ubKWlCObAtPCxGuEoGnqcF4GD3RjDT5bMZ0k0FFF2DmGam/b3AW03pVwpi+buZXhey6HjyhdsYKN5QJaGmel5LZIdHznI0LAaGxFhF3ugqNfkT/XQiX6HbCzEzMJe5BldtFiFiD+HpvOqIuRyoJWsqjJdmgy75GD7kdfjL/uj6oNG2091W/Rz0sO1A/rkmcthlXwCl1Go76YUyP7kMKwu3RrPQvaqXQGQQT5JModP8wXrmi3oDmmgTyF5u8ITYLVKIeI/N1jZ3udgLjqmktSTsLhS9OxDyE1cJL5ZvMKQJhHEFruHJhIrQ//iJKkQ603iUKWj6A0tNVgVsoRHWGLu69EqUQ3vsj3uqS2BF1PzeEd8Qva0yGJfVduq/7gBlWWX6vCdI0moDC0uuNkXRLAIOGHZquEOa2RAnYtbrzNcbgdmXEmTMSjgXJWV+hJy4QlZwpcntu8D2qnV8QTOaQf9haSqNsai00pv8Xmw1uRZrEH6U7OcpXe1IbgkYEB6F1cwqQ693cE9DMmqjUIJGxWAnUojC0I1OrlWSYfBQqkZtSfOXCg8RFA2+yKnrSlc6oJUKHO8ujcIZg/DFZiu4dk93K/P3izRsBGd/BdOSn/9FSvgZ9zHpI8LhhaBEsioMpOqqoEN2d93CYw5kJrgHWjKOCADPI5YS4EN7Flgw0Lgzp1mXTHU5n6aBCL7cEs8B+WOpynwaRc6FPZImTPP3ynFz6ACENXL5v+BjYR2lbfR9wje9+tWZuYwIgAegwy6BBGGf/uz3UQng/2A4f+6lt9tujFqzBlUnZ2ErHFqFGYLRUqvvSxxvB2u3yxClUuJVXYJ1zyRjHyq3v5b1gFz3SQwNOSO9U8TFuwW4hctyCWqdAE/uqyQusiJbxLl2mTW8XtABiRvz+luPnQMxWh9r4fyj9CXaGozJfOJW8b86N8Mbe29QniHtUFhjr8djBlExTEDXdVx0QEpZ5wGqGk11LdhUqdZz4LAzxTWt7OfTzf2HUAhn5x1FSpPv/q/tiSO7jCXDSeDgEAxRNydQUhj7TGGa55rHNPzLWZTy5XKkGOVLwRtVRcWeyHswZ5PHQ627FRXloiZ1YCa4ybR+/qCE3mrG0POWZc7Tw7Yo7GxeCx7xGhgZlzBQLMHX3vd/bIlE48oMTnilbTKKV4Tvv+gV0diO5A+O3PAZXKUrYLcNMiL6Oqu67WWk5q5TpVQC9/uNi4MDc7Itqje2WiG2Uu+7EclBh1osJvKznv//UjRC+O7SI3A+QKaN7xklsAdwLTy3A1uGnZRz1VedPR0g6pNjX1VMDcwhsihgIE+8I5s8hFnt2un+Z55ww2Dz8TYlssufY/JEBn+0fE1CdtbYbMbfWMhIMPwtxoLVucpN6e8G/eRr4Zu5KQTw3xe8hTvE+i/W4h0E48+fcbijD8wLAKfiuGlkZ1cun+eNWRoeugGhhxn2Gh1BcznrS+PEPqwsOE1KF8tHti0CCYAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1071 (25,604 cents) matches no earlier Border Fleet Repair invoice amount, has no PO or contract to compare against, and is under the 500,000-cent bank-change threshold. The bank change on day 71 is also after the day-38 receipt, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyKrs5gyQJmLy7UPNz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2816,
+      "output_tokens": 397,
+      "output_tokens_details": {
+        "thinking_tokens": 285
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1071 (25,604 cents) matches no earlier Border Fleet Repair invoice amount, has no PO or contract to compare against, and is under the 500,000-cent bank-change threshold. The bank change on day 71 is also after the day-38 receipt, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2816,
+    "output_tokens": 397,
+    "output_tokens_details": {
+      "thinking_tokens": 285
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

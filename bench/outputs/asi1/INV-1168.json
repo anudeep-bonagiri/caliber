@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 8707,
+  "httpStatus": 200,
+  "id": "INV-1168",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The invoice matches the contract rate, is not a duplicate of an earlier invoice within 30 days under a different PO, and the vendor's bank change occurred more than 7 business days prior to receipt."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"clear\",\n \"reason\": \"The invoice matches the contract rate, is not a duplicate of an earlier invoice within 30 days under a different PO, and the vendor's bank change occurred more than 7 business days prior to receipt.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882903,
+    "id": "chatcmpl-d9793e15-dc25-4798-88c6-ae4b2c61e47c",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 58,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4121,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2144,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4179
+    }
+  },
+  "startedAt": "2026-10-24T23:01:35+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"clear\",\n \"reason\": \"The invoice matches the contract rate, is not a duplicate of an earlier invoice within 30 days under a different PO, and the vendor's bank change occurred more than 7 business days prior to receipt.\"\n}",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4121,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2144,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4179
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0067,
+  "durationMs": 3538,
+  "httpStatus": 200,
+  "id": "INV-1021",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1021 is $1,136.00 for 2 tires at the $568.00 contract rate, and PO-1011 shows 2 received. No earlier invoice from this vendor has the same amount. It is also under the $5,000 bank-change threshold, and the bank change (day 42) came after the invoice was received (day 14)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnAkKEAgTGAI4AUIIdGhpbmtpbmcSDFvxYwAHUQT2YHsCBxoMLO5XfO8XaXYaHsA8IjD2Av5JvF20zuCT+CwQE5NZe8b14MKz6tgWE9iM7H2zJ9YY/cdIoKZlEp37prkNbDwquQgJlawe8RmPtasirZOiSy0a81S20ZaIZMR5r8w4bbkyQQN4yjSQs6vJZlOX4B5IJhRdDbMOqHryxrg9ZsbzkI6b38qMejG1FnNag88whmCftRui7dh2vrRyxYD4+KzWU8OTiZ0PXVXukNtcvkIwFg+kBFF3uwQ7897cyd64LQ9zGKC34s5XAP47SKW/3OyFrQcne0VU1od63vXIMGYn9oe/DZ5Y1V4DxUkX+yaySU061zuk8NjE3+CnbrgdYfGxGSz2hta1zKiTpACno36D9Vk1avS8ltSkk2VH3w9ufrC+neM6+l9mDfq9ji322vkYuuU3v7iiV9a0NxFFZAm1wCyW3K79WmFjL/DiBjAHr+LPeisbAxMDvIyg6uJcSsuehU4O43dhy73xyVtHANVJpyZ/Aec70l5SDOMto9HBKyTFfQjv13GLcRnz7z5RxNkdHjmmC75K9hw0bmEhPQ6gpwv7r8dr9xYENWGFyyzPKrMyu/HROObfO92Q50aWsQ1tChAeyQER+mV8D5KtmohBiGUC4wtlgFEYzafA07PSnq2FU8VnBbM6HJIG1m3E7e3DlA5zpSc88HlOhHH/4c5jO083mPPQFkPEYykwfXVt3Qt7eOS8fJveMZtdPbJr1nMyTS9eE0jSeNPlSr9B9wZ+LC5lLxqOLKA1coDVzuym61YADgMi5JffvLYPrgDswSwLVZqH5rdUZibGp3uVI6WTSjm0hDefOvxEjoCRQJYUCXGv/bVqdSdEUDgHVRqkC1eOiQKTDOe0jdzTSOkkhVA2dzwRcx4QEixi688euU1z26eB7MVSwlblgY6cavwuaaIDLXeRJimBWaaUsVzcIkZCoxtExhOYYgccEl1Q7CKytT61G081GXzNZziJILUrv9BxCFRfccDdzLOatvW5WK80n7/VySHIDpkFsXLwldVR1TlBmPLLxLCKvf9y5NYcEYcz+Ti3hplL+NWVz56TNcvc4TKaZqC+DHjD6UfU5ujLFc6mGk05TmSh4f5uyq7FkhYdUtmXEuJVmDccUITeKU2+VPeYU/iASWZCAQ+j9784H2ruW4c5wl5oC2e+A2sKiPBVSEEIZFBSOgpU79FyHoSquiraD/tE6AvGYTGYoZnhSIBQguvzDymi5/QXS8djjqFi/dmFfiz0MRQpCNEo2bPRBLmo3vLsGhng9iFbz6I2kAgdh904DLdKHCccKWPo7MMSfSY+lp1Pa8vBYTBLwYqMpUstlgZrT2EvM4HUS1tN2/kVFBO4/U+qIIk0Y8G7pQEVehcstwUewBkw5twX7V29PtBMSu6/uErJs9Ekr/6gVDEw3l0Un8xVHgF8IZjwDvR/Jwg6vsSMsj+RT9OXN9xMm/Z73wDCnWiBGgJdpohlWlf8+9khHx8V4nj0RjUmgC9fLqiTgZNa09tqMrl5WxvFOgwD5Pp9ZlDnvnAJGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1021 is $1,136.00 for 2 tires at the $568.00 contract rate, and PO-1011 shows 2 received. No earlier invoice from this vendor has the same amount. It is also under the $5,000 bank-change threshold, and the bank change (day 42) came after the invoice was received (day 14).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsoQLUDRPMYyHuXjDSo",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1570,
+      "output_tokens": 356,
+      "output_tokens_details": {
+        "thinking_tokens": 234
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1021 is $1,136.00 for 2 tires at the $568.00 contract rate, and PO-1011 shows 2 received. No earlier invoice from this vendor has the same amount. It is also under the $5,000 bank-change threshold, and the bank change (day 42) came after the invoice was received (day 14).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1570,
+    "output_tokens": 356,
+    "output_tokens_details": {
+      "thinking_tokens": 234
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

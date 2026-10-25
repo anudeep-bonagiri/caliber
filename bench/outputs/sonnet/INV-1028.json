@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008072,
+  "durationMs": 7225,
+  "httpStatus": 200,
+  "id": "INV-1028",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies: unit price 56,800 matches the contract rate, qty 2 equals received qty 2, the amount differs from earlier invoices and cites the same PO as INV-1021 (not a different PO), and the bank change (day 42) is after receipt (day 18) and the invoice is under $5,000. Note: the total of 117,350 is 3,750 more than qty \u00d7 unit (113,600), which the policy doesn't cover but is worth flagging."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2woKEAgTGAI4AUIIdGhpbmtpbmcSDMH1efSdSt02aTSV9BoMnYB9HLOa/jzNwRlvIjDMi8ms6/b0x5z55seDkYnlGWxE+z9EbbZejyjMdJCeMShGTh583zhDCKlk8lWs9e8q+AkkYoKS3f/SYwIOzkM/jaw4tM3Isg+X9uuv058t87ySzR/WqPunUtmjCZkgJrwMB261312WFzsNiHuSdkBJC0mFxwo3+12ZjvULnbStjCt9/6+p6/Bt6fDBWEjJUlsysKYcoGqubx8qq55uWKT32W5zk90pQm8Ph631YpoIKnjWU43knthUBnTlKLEyryePiV0QqJFs1g+W4NAdXJVL/8x2LZwHHtxvkeBB9aIJqYTgm+RfWrvOF1+xTsjsxyyP95gZNcOqpKf3snG2aHqPYNwjML29SLoF/cCDourQtw5X1wo0s40wgjWUHb37glvExdHIh1IcJVUkECOIlwfI7mQ3HRpwcfGdj5qUibJiMD98RBIXa5jOnXaAk1e24fZhWo67uISyrkFJdaOMkLKgfcvpqiLzYP4C/RschNfX0xR7dUgyXLPJA4tb7r7bPY6McSL2P3BlC2e2IkZtVSbzY8w2bD/ilcMCz9BdgpvI44DnZBqAYv28a+LhtCBtoj2ugnqhl+2Y7qpx1/4stCOEYvdO1eJYFvSC4ImoRmcwoj9HAVumj5DjmOEVdsxGLzUS+YBtD2oPXNS5y43EhRmzhGop1uJhUGSAXpln7iGIPXXD3uheLBX0Cpf0pX+acvxvBD9bQaq2NstmG/uZqq8+5enT85F9RcL13ADUdTqZL9lCGAGq1JU1Nu2R48UM1F8XtAqZ83Xs1XdbESYNOiOGctY5RDUHK5hRkKnbnWZP1ryF5cq3PJXpJh0bGylkDP69FS/Ju12OVXljD2FPhsGBDIu3rSsmf6Wi678xjvrsJO/b7q6mBugMta+MU6/LypuooucKPjttpAKo4fO7B6XS/gYf4nXbroFALkmjeg+4pud5kNS3rEnNj2sV9D4dfW3K5oG1wKGHf45dLKx/AA2vmYiRgJKsmgshhOcqG8tl+YBfblMdNxKlDIZ3EQfPAtY0wzEw0X6JBB7RTv1wi2rpQvk5k28ajyFCZs6RkOpsMU4jICmhtkU8PuWtlbxUU8c9WA1zZnODQZ+H8k8bCR819m/M+e/+iZptPyJFgeJE5q3kqzxJ/dCyzc2jGvx0htBaYeAMJPHdtbPx0WT6g9eXvqJ2GfUdysSa4BBhZU/o6N076wNgKy1rWp4ADdCDEHVRGtskVJpAWYMoE/Tqq75jMWz7ER8ZCB9J8mIeJZGHrBs5K7+aaMgY7J7wwgdcVXJGpGRUZzLkx90Sxenuf1luzNEoPrUWNBT5gsEGizG1cx8+y3WoXSEtdKFf92ba1KC12pgUUxZh985UC1bRopruzqctANUfVyFFuwnOpMvnD7Oc81CjuIoY8oUoq8M5ze26HtvX3gyqHoqEU8tr56rGdQkMssHgCeWeaBY3CVW7+436yXyQxZE6i+qZRej2HQsg5LCggtFKNa8wjQk3cU9yC5C0TwlfnoBW+noE6ZMcr5YPYDb9pmr7rG6brQR9Tdvn/L7XyDDXXoVQK1jTCW3g5xlZVsIrt3I0S2unlQHi8dpq9wS1/yZsw1oCyjwmExISX02eU5+nmLbRMcgExN2f5084RhRbtXjdp7DNXomGIUKngfuZg4gRBa3u5CZX4cruX7upSUghL939Niq4PSsH9tng6Bl6VS8ttTzoWyMfcMvNKk4EAVuKGNQVXEDbRhBofjIEWVbQtGh1kSDI2U5QatJ4YvHVnuA2u80YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 56,800 matches the contract rate, qty 2 equals received qty 2, the amount differs from earlier invoices and cites the same PO as INV-1021 (not a different PO), and the bank change (day 42) is after receipt (day 18) and the invoice is under $5,000. Note: the total of 117,350 is 3,750 more than qty \u00d7 unit (113,600), which the policy doesn't cover but is worth flagging.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt92yeZigkG5qYno1aX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1656,
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "thinking_tokens": 311
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 56,800 matches the contract rate, qty 2 equals received qty 2, the amount differs from earlier invoices and cites the same PO as INV-1021 (not a different PO), and the bank change (day 42) is after receipt (day 18) and the invoice is under $5,000. Note: the total of 117,350 is 3,750 more than qty \u00d7 unit (113,600), which the policy doesn't cover but is worth flagging.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1656,
+    "output_tokens": 476,
+    "output_tokens_details": {
+      "thinking_tokens": 311
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

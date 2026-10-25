@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011962,
+  "durationMs": 2461,
+  "httpStatus": 200,
+  "id": "3510",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "capacity_exceeded",
+    "decision": "hold",
+    "reason": "Purchase of 141.9 gallons exceeds the truck's 100-gallon tank plus 10 percent (110 gallons). The location check passes: the 13:20:37 ping is at the Laredo station, within a fraction of a mile."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsgYKEAgTGAI4AUIIdGhpbmtpbmcSDD26nwGSxriSi3xVjRoMFx5r7OD8kuBSxIvgIjCLKvTX7SLDCXba83Fv9BM6G6g5swVq1zOM8L9QgoMn9Q23ysKjyNy5Sgi5tm93Dd8qzwWOgERXiPPjI18aMyAwnO7d5aJIYgt4FBpvypNGWnVpUkxEwVex+neSIeouvTzF67LM4j7f71FK/Ber7r0xnAy9Geuj/kbOTvYxyc5BcdRu0Z+Xu9alU2zYi7A6vRuaYw9EnZ51qdsiitfXtfCfZiEaxIojJw/glI2Lc+hIL5XWd+IfKC/O4Gz75BR6BTjL6rSLB6Mc7TGYVBQwSZEOQHCbKWO89F33sRo/NXGmjL8ukhcYSv/kXDmEmVP9Kxg+cmSILbEYWzvLehRjLhrTd5qV5nNvUH9/t5DY9JXo92oF3tzXA8akRgx7OEuFXsRPHn1iYwx3UgIEoIAz5I4/LCXiCVHf0ALkBzTBt9ZeBNOp3EVP7d4Oua5GKK6sYLUn1pSu5UUNlmdR6GbgDu0v+rC61qxdWppnivefb/r6iTf5ESLENAaZh9Ikb+HJwdoNxK/AKa7Fn8j80uuunV2sZBTM8JGVO658/mkXz5t6lFfWlVVY3052NDXt4gv7Do/hpl24hW/jE+hFv4xcM/Za3FxVwrqBA4r5MaDAKswV5pH45Z2ZOxQqdudheP7bw+cgvknly4T4yJnQD+M3vojNcn+X9la0HUWh+IASkwH2RUyhy6De4s4TzakEJxLURtfsYs16hnewaOMs9YYTm35SKWV3UuaC43br7oblU66min61yanEGO+5u0aJ/ysv/Fw4BDeFFaGeq4Jv2hpeTrA5AumTUJ9sc3/NfBDWZSs0qfB28T54A9UzCf+j9d454CfJO68800M+9mlWuWHmZuwJi9Abw6ScJ6KSe161kMx70Pr/5G/tUv7xAA0rtod6qUUFUOKx1EwYoKppckyRkbwILEUeCPwjQksJOUOFAAy1ttDKdrKUHVInzZvmb0Azp3sBoCgNCsU0hKG+SxlCHX10ZIhim3+L6yM5GQXH4MODlGc+Y0jBg/MzPeY6H2ErLQ+9XhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"Purchase of 141.9 gallons exceeds the truck's 100-gallon tank plus 10 percent (110 gallons). The location check passes: the 13:20:37 ping is at the Laredo station, within a fraction of a mile.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsoBfy1rbywm8yVcBAa",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4886,
+      "output_tokens": 219,
+      "output_tokens_details": {
+        "thinking_tokens": 113
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"Purchase of 141.9 gallons exceeds the truck's 100-gallon tank plus 10 percent (110 gallons). The location check passes: the 13:20:37 ping is at the Laredo station, within a fraction of a mile.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4886,
+    "output_tokens": 219,
+    "output_tokens_details": {
+      "thinking_tokens": 113
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

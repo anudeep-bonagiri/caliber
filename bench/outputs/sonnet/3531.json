@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013,
+  "durationMs": 3666,
+  "httpStatus": 200,
+  "id": "3531",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 26 pinged about 0.02 miles from the Freer station at 15:51:27, five minutes before the 15:56:30 purchase, and again at 16:05. The 37.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAcKEAgTGAI4AUIIdGhpbmtpbmcSDIAj0beCltTeGp0EdRoMbuCd+CeIW/4EqSEZIjCK8Jdbei0iPR1gpt3fSBX0eRqsWsPS48/2Hn5aLNMBEjcWxezNUv38UdaiBivcrdIq6QYuhE3BiQVo56/rFsKXtAjodZ2b8M2NRSF7XnfiX1q4e8L8i+it1QJgNEjdNdm2bcEC/YRLLk/RnmeiEPy2NF0jc0d0lZkLbMkOo3oju17qtfx5qa2QxxE150Rh7VVDzU7a5RmxxbDsjnyLE8peGqaKA8SSR2uS9BdDw6D30oce/7SHV5+yzbCO9M0CIejXlxE3yec2ZG1cNBe9mPfSTqWWSwwHZLPIyYoNigMmHns2sGDw4qofm2NaK3+dXAuqDHXUCZ0ZuH/nSX4YvDH43bz2OFrVgvTtgQ0biuoUWQnVFmZoIEhIB74j4KYkG9G2mc6uG0lh03Fsv8n4vlIY40hy+OddA/SCN4HiEIccC08QrrqPSo2VsVpN4BAOMStD366fMHNskY/Dig9cx1FTG8SJVE8g8B+S4ut+Uw9KfFB+kQpuYSv0vH4+qUaZRIgpUL0pbukm3/XXgMWr+MMfS6UQL5jK8Tsp3nl+z8o4eAZT1WrtOincGwZ2CQBqk4mnUc1DmJgNwNtn9AgOovDz1fOj6ktqtigQSFhNRo8b/Lbdv33RS9KmnItna4k2DWRhR+yVoW902fmtv8CRrFHc6bYa2zqCxdc1ngyAktltFIN1wVScKKgpiquqNoRQ1t7yDZYJXOg3Eplwewhvoz4x7vfDW00tX12RX+cNI87wPSxbJb/C7u1eUquu+q4D5+AJEmNteCbPOiC1PXoGR4LVHMPajCJebTffeApHPFNGZHeU2jKNGIzeNr+qX45tmu0biXdnGPivRuM04UfyaOpnCmb1Ih75Sfu+MRhJmZNRKhRivshVx0Iuvw8kbZ3Fl7+kze5mMNPROVMYoJ7Eyvq7ZF85ZfchayFC3AaIGwaKy1HdzSnlWtDts1RXGRhXvQlVNHROLr2HElpf9gho6WHIYJqz9GObgyRf2T4xgpcpAeENR25qExejg9N4kB/EuU5RN5eBZo/l4e1flQzLviNVBuK1d1Xf8qQUYcyxwRUCQ7zfYJ6voitotuOTODZEsVzMJ8FJlfDmb6joBMC0xfKA0oJfax6ttDPLNeCcJKxmXX7+OdCgIaw3OXTUVZ9Lp66cCUyyx+qQETgfluVrCni7iiLRL0uL36zRl/mGD8cmtM5i7cRhkXPjkIP0IKWDJTwXO3mDOChSZddy5foYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 26 pinged about 0.02 miles from the Freer station at 15:51:27, five minutes before the 15:56:30 purchase, and again at 16:05. The 37.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9uQ1ZyUv5yMxRovac",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4890,
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "thinking_tokens": 207
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 26 pinged about 0.02 miles from the Freer station at 15:51:27, five minutes before the 15:56:30 purchase, and again at 16:05. The 37.8 gallons is under the 110-gallon limit (100-gallon tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4890,
+    "output_tokens": 322,
+    "output_tokens_details": {
+      "thinking_tokens": 207
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

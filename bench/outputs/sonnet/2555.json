@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015074,
+  "durationMs": 4256,
+  "httpStatus": 200,
+  "id": "2555",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11 pinged within about 0.1 mile of the Pilot 405 station at 12:50 and 13:05, within 30 minutes of the 12:55 purchase. The 30.9 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wkKEAgTGAI4AUIIdGhpbmtpbmcSDAtf8k3kZeT6CMkcRBoMe5MYheaMbF5Gyei/IjAcbF+mHuFxfiVSiWfKkZRED8ICa8ANqpuqlaRfowQSaioUngjvyQNeid5Az3o1MgQq+Ai4RiWKePZESvI7aScV4Q4B78kL7kEwsUjWY4MEPenqlU4x+YrN5wrm6SrAcodpbPBlni6ec4d2fQIGcwABw1iHNYlXYBVRKQJMq3H7/doC4HvB8n187lCC7vCoWHJE1lqoAGxCDzVw15B7ggVAoEBA+pPha4KKkwyilTmPb440E2uH66zCP3QkJa/hmYA+SLQijmMrhG5OKLnTklTYtRoHIcUNPtRqtByr1AOGJXcekAO+V3/R0Ea+bNhCgMI6m7mZE+JoUcaTg+ZjPGqX11vSveNz/ZK0/M4xsvfPjs02d4q71zPU67x5SzznIyOQXBeu15XiPY+wTqUYoByNCa7zg40v7Fe8ad7p/mWzgtQj7/9hchl7EFh4ixis+w3Bpxh5rVHXL13dwitfzB162Lk5NotGMBkdHVi0n17F6d1334iiXbXz4ZRyKPvYmgOaccOmSRyX7CeUDE4/TI4UKSoRxTF/fOwe3hOFhs7u17zmJbd0QIZp9fTlC2W6ywMMtrrjyUYveDg/F3eztIS/9xRk0taHYa1/gBtpTk/BPpMXYqxbs67ncvYKf1w4cHnDmpvozk9C8XeZ4GOXIzScTQbSoPUGVjZPqguYYOAfO8yEeEKmwnKveC3V5jWI5NI3bzKDTGc5Tll3Kure7RTUQN+zQZ49CYj3rfzBLSmUm5g23X88L7bkUqwdj3vN/p9Rk3X7Sa9Slx66ZAGDN7j7U0jkpYm9v/hOFM8wtaDuKY/VpaEdFbaZqdu83WOPV2GGqaMjU29bQvsRgwoc+8+xcpv0UVlEZsilvPwoazuaV0elB2BjB93wr0lbXik/V/BNojz3PD1CwLDN/iMLifWrxZ+WLUt9t1oIGaYm+Pk4foWdq9d2g/2DdFFsmZsmszZ4/8w7YwU4aijdBcHgn/TLj8Jgrlo3+5PIYwM+IQEA79fZMrA4PjJJER2wqNqxwsEoQ28eCdOtQfA0S00AASVVDybaytPDK1DlzRhg9xZ3nX0ZFjCYc0LV0lU5UqZbVh+VhPVu8FBKx8J8AFeBILXzkD5rkJtiZUwAI1/AQdh/BF31hcUlevRDEqiH/BKvEV0IHCD80s8WV8HiAdVNdgyi/tiqe6rXsg0FyPR60jd3Ngz9kCSAUuINpZgy3yh+5N0UKyZ62HdSSYH03qVDw0l1bc4nl6HUk6rUyzNOC510AIEb2gkMeWZIZMK0wT4MMRa28Lc6+kgYhp1Z7adjEBdHM+eZl/dch7W1w4/MJ83+AiZSQQESjSSwG6B17lnkt4HCMCPnAVAoUg9uEyuytiA7WefRXoBRtYGiQeBtttqWe/K+zUPm+xyRFS71DZVatq/SovwFg8INHKt6uxfLC6ulvNidOqvXUn2iM6MO02B7PZ/HwZAENR62HZaIBIKXrLlLJ2YquZhY/m6+EDBODgUwoN5NaL0to+RDelPE7WmZJAHGam3SZCwO60XRMlYlPu6c5NKLcRlKfyQVmv9n6qHFlaVy+r/4/Iy0sKjW+RcAN8K6c6VQyKU45GXKGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 11 pinged within about 0.1 mile of the Pilot 405 station at 12:50 and 13:05, within 30 minutes of the 12:55 purchase. The 30.9 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdNADtdoLKG7uvxJad",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5397,
+      "output_tokens": 428,
+      "output_tokens_details": {
+        "thinking_tokens": 308
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 11 pinged within about 0.1 mile of the Pilot 405 station at 12:50 and 13:05, within 30 minutes of the 12:55 purchase. The 30.9 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5397,
+    "output_tokens": 428,
+    "output_tokens_details": {
+      "thinking_tokens": 308
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

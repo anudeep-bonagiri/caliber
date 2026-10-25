@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00667,
+  "durationMs": 2944,
+  "httpStatus": 200,
+  "id": "T1313",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Earlier toll T1312 was at a different plaza (Plaza 4, Mustang Ridge) and 21 minutes before, so it is not a same-plaza duplicate within 10 minutes; no other hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The new toll T1313 (SH 130 Plaza 1, Hutto) was charged at 18:53:01Z on day 13. The closest earlier toll for the same plate is T1312 at 18:31:45Z, about 21 minutes earlier, and it was at a different plaza (SH 130 Plaza 4, Mustang Ridge). The duplicate_toll rule needs the same plaza within 10 minutes. Neither condition is met: the plazas differ and the gap exceeds 10 minutes. No earlier toll was at Hutto Plaza 1. The remaining tolls are at other plazas and on other days.\n\nNone of the other hold rules apply to a toll charge.\n\n{\"decision\": \"clear\", \"reason\": \"Earlier toll T1312 was at a different plaza (Plaza 4, Mustang Ridge) and 21 minutes before, so it is not a same-plaza duplicate within 10 minutes; no other hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscrQKYK8riuo2owezS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1775,
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The new toll T1313 (SH 130 Plaza 1, Hutto) was charged at 18:53:01Z on day 13. The closest earlier toll for the same plate is T1312 at 18:31:45Z, about 21 minutes earlier, and it was at a different plaza (SH 130 Plaza 4, Mustang Ridge). The duplicate_toll rule needs the same plaza within 10 minutes. Neither condition is met: the plazas differ and the gap exceeds 10 minutes. No earlier toll was at Hutto Plaza 1. The remaining tolls are at other plazas and on other days.\n\nNone of the other hold rules apply to a toll charge.\n\n{\"decision\": \"clear\", \"reason\": \"Earlier toll T1312 was at a different plaza (Plaza 4, Mustang Ridge) and 21 minutes before, so it is not a same-plaza duplicate within 10 minutes; no other hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1775,
+    "output_tokens": 312,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

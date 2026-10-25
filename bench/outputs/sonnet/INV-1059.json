@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00966,
+  "durationMs": 4584,
+  "httpStatus": 200,
+  "id": "INV-1059",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1059 matches contract and PO rate (52,500 cents), qty 2 equals received qty 2, and it is well under the 500,000-cent bank-change threshold. The only earlier invoice with the same 105,000-cent amount (INV-1045) cites the same PO-1016, so it is not a duplicate_invoice under policy. The bank change on day 42 falls after receipt on day 34. INV-1045 and INV-1050 were also billed against PO-1016, which may merit a courtesy note, but no hold code applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzQoKEAgTGAI4AUIIdGhpbmtpbmcSDNNj19GhDgwDXOL+IhoMAG+rh59YxOeQJhrhIjAP/T0tWKzQ9mdTi6SGUTT4tzyXdzF9wBTN4r7QtnlQzuomVoS2DE7Cqy758yzVSAwq6gnB7sZZxDAP1pWWpAr0U9SFjbLknuu2HiUxEzDAZtm6gmIQAnq1cL5+GSt+Fi4z9KwiCTFTomrZ+OSN/1y11Rc97ShS00o9dNy6xmK6qMQs/rPLoomb9ogECF/YyG1ItyV5pUU8d/Uk+VJ3BiHPf8/dLSrd15lnHX/ePDRe1SYmX8lpyoqGf1y6BGTaYgUnmbqmOuCD3yDJpqn+Zlnq8BjI2WkWj9/SaxfM1J8dzH+wcfQLQuSiuAGmHnENe9hUguvZIyCHjhnTcYLX3kwr1fcFdZVqxdKqnd2NiZjjpthZB9iTzkZZ1NbKSl//0vbkJg10hnlGWkYOWdxGGoh6eihyt4wJNJelyiT9LEnsWjScplx/q1oyBsuZEoc/Xq+q3YMMk8RutKf+Z+nu1E6LmRvyScfufsSWjHOcxaOkNKRA7ReX4oS9JVf3YiC/hmDOX2HnCAebiOeNR0fs2azXoulGwMk52UHvaZGFQWctZbUGSIztQPRqpbBjj5y9SOTT9pacfUjad6CVRLqox872QiJ4nUvj2Ogeb5WjcxcbpyqVtkJQiFpYr840jMZeP+ZjoxZWM/vsfLhaFN1fLnljoSPEbVUzc4ndFnAwVxMM9vbvVq5L4LpuqwMAhP09+PWPLW+nuvJF0VxbO7T+h/HRwfaxOVcHRLKVI/xoAp2tyQzTh/39FD/LwKFMaW8gwktJxOEAzHr54mpx+Z0tluOVNMj+ya0OeMNr0zjQ1lmrSFKQoHzqg/aWy59piVwPp8xWX+i+H5E/Cyo+++UxZFQi4U+DlISROVYIoBqhe6jKBTEg1JFb3hejdcP/AqLKqV2iv+WPepu1L+FQjLtBxvhpT5GNHi88PVcE4zSaQoIpDRJo6di1FVDXuesAkvJZXtnp2dvZuYnCrcGN7axBM6B9Jb7cy6WnBYKFsIAUoDJT/kF/LCc8cK+J5sotH7gYfYtW94pKlglvbnIApFRyasWSpFGPE71pwHGxr2ec1BfDTtcLGP+NGy++Thc/Zw8/to3H9SpF4QANmv3IHqrW3LGLBieC2PR29cLaLcpRQLczzQpYfKSG1+a8G514MkweICZSGM3YDow7tpNezBIdIg83ebxYNguXkA0oNCjfaX1izycv1fESa3SIhk928H8ekRoY+OFaVlZiUOlMK+esX33W55bB3Btght+CV2X46nMvz+uiZM1k5p6E5MMNCZRhqAgKYWFSpdqYix8noxgMDKPjnb+ntXqxUWPp7/eJCai1FL521Je9E3ihS3sQ+gSON8zml0hXQFx5Vovd2KE/sC3jqReFFU3avF/xrL0w7ruKyleBJAwoVIUFAg51iNHihvvaGdfn2wgF8zVSGCJDETaTeWAqOvKMFLWBicyoME71Ad4zbxmC0rehSBt4Nym8EemgvCIzLXhCjq1zdvInTRWnvG/Zh9u/69vi9Jn8EMMC/qmUh9c5prtrJEERGOOFCGQEW/6IUga2Ua+0PXfGUBAeKkP7BUomngx8aNHdLNmkxlfJaufko0nM7x8eQzGMQUIyOCiye/61t8Eg3jcL/ih2TSTvqWbWyFPC5iVqnyKGkDfxzb5NSq0O4ZSEMNQYI7RJvkk2RcLUU7ul4ymbtbYouRk66l3J7VHwj2MJpuTX7xPNYDCa4SnqSJwtBkdhIZJtg40a9FxL8M8/+E6PGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1059 matches contract and PO rate (52,500 cents), qty 2 equals received qty 2, and it is well under the 500,000-cent bank-change threshold. The only earlier invoice with the same 105,000-cent amount (INV-1045) cites the same PO-1016, so it is not a duplicate_invoice under policy. The bank change on day 42 falls after receipt on day 34. INV-1045 and INV-1050 were also billed against PO-1016, which may merit a courtesy note, but no hold code applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxwUDqxz1KxKqU3Cyo",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2330,
+      "output_tokens": 500,
+      "output_tokens_details": {
+        "thinking_tokens": 310
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1059 matches contract and PO rate (52,500 cents), qty 2 equals received qty 2, and it is well under the 500,000-cent bank-change threshold. The only earlier invoice with the same 105,000-cent amount (INV-1045) cites the same PO-1016, so it is not a duplicate_invoice under policy. The bank change on day 42 falls after receipt on day 34. INV-1045 and INV-1050 were also billed against PO-1016, which may merit a courtesy note, but no hold code applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2330,
+    "output_tokens": 500,
+    "output_tokens_details": {
+      "thinking_tokens": 310
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

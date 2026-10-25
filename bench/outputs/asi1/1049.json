@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9206,
+  "httpStatus": 200,
+  "id": "1049",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The truck's nearest ping within 30 minutes of the purchase (11:15 UTC) was approximately 4.2 miles from the station, which is less than 25 miles."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"location_mismatch\",\n \"reason\": \"The truck's nearest ping within 30 minutes of the purchase (11:15 UTC) was approximately 4.2 miles from the station, which is less than 25 miles.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884019,
+    "id": "chatcmpl-3f162fd6-9e8e-43cb-b780-5409d7ed338e",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 66,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5074,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5140
+    }
+  },
+  "startedAt": "2026-10-24T23:20:11+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"location_mismatch\",\n \"reason\": \"The truck's nearest ping within 30 minutes of the purchase (11:15 UTC) was approximately 4.2 miles from the station, which is less than 25 miles.\"\n}",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5074,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5140
+  }
+}

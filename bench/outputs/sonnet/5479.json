@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011696,
+  "durationMs": 2823,
+  "httpStatus": 200,
+  "id": "5479",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 22's ping at 13:23:40Z, about 6 minutes before the purchase, was roughly 0.1 mile from the station, and 103.2 gal is under the 220 gal limit (200 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AYKEAgTGAI4AUIIdGhpbmtpbmcSDGK9Z9fEzKSjQZ/Z6hoM0Vyz/BGn78aSVh0zIjA0nXVmZ5bLvtp0vkuXY+CyovdSQiBpPjAzW67Ish3Q46cyK+0cpmQ5vyn4D31FWqIq9QX+WuHwWDSSAf7P6G31/bnaAmGeRiHgjMQXtF9qz1UvAz5QjMbbPGnUxlfLJ/+v+Cn7I1p7/zoKODOKEDnDbOmagrwVZs3xZD3FR/s3DbbZe6BQVwUuHgOYSFhgfhenXW4TgFaC2eMS5NIFCnNOcKAhQV2IhyooGSXlp2pHmQyR/OFWAXIomxfKaIvqXqtT4OiMU+x8ZgOwoOPm+/wa2w/r2WuvwrAPZuBLH+6EDALHcltgcjwUNqlvSRahVJArGvG74ebUjgV5qwf7ecYK+evdxftcVti5SxOJjMXDWr2YcKo3xAUskREHFsZOjGxkxJ3eF8YpLABCsOPQUSx1zK+gdO+VOGT5cx65Uq4PN0CHsSADScNhLGIMzoZUqkcdk1Qs3fMn2f4wNYDOplCu0B46fSpEg53WXA9eDYbWMq7X6mo+Z7FjedNHPgLPseIG3xmYEhmZFAIGRvWPMNg8zs+O9SlIzCWZwWEIQlsxVe52o5yAfdajZgPcr00Aqh7Jox9HyIFp+GA5xs0MlTVWYv4mBSdjsWzUiIqOqhDn/4KE82g4xCxH4EAtdBupTRfBTr58+2B6nqyaa9AFewEmMRxYQ4/0FLuqXHaSISdJ/WG+LwISDucn+Eja/Z8bv1Glaq1VCM2dQt9wXAfNaQtZAmc9Kgx05FvD3Ndi+0+AEowLtJOzjOjn1OCnducvIQSLg9je6v7uvTqTyOCM6e1IYVJ+tABxIdecnwrjMCqikWWk86S3UAEPurdARwWdZVDgk2BP5kqGEyhEbPMbil5IrLrIXOQz/SOZmtw1Eshr9qRrtKpD4Xbk2qxFqnKZg/ngKhxmW6ncKx4pttcX4exsHjMFyQpXSF4GweK/PzNsSEPxvKLF6cBXtygiOtTeTM974wHLLQVmj4WuEUBdx38VQ9bkqDBi8tznvwKuMNp1tUsQ9eyJzjDrI74+NA5p6AeMhtyj9kGYyB1GPY8bRsDh1DlHpwZTH5LhFGpLbKs1BpHbFIXTtDvyGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 22's ping at 13:23:40Z, about 6 minutes before the purchase, was roughly 0.1 mile from the station, and 103.2 gal is under the 220 gal limit (200 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstrHppHoJFUdLXqS35",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4673,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 141
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 22's ping at 13:23:40Z, about 6 minutes before the purchase, was roughly 0.1 mile from the station, and 103.2 gal is under the 220 gal limit (200 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4673,
+    "output_tokens": 235,
+    "output_tokens_details": {
+      "thinking_tokens": 141
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013434,
+  "durationMs": 3042,
+  "httpStatus": 200,
+  "id": "3668",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged within about 0.1 mile of the Mathis station at 20:02:57Z and 20:15:00Z, either side of the 20:06:03Z purchase. The 47.4 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QYKEAgTGAI4AUIIdGhpbmtpbmcSDB147foltYqeTvS5VxoMfK9yWK4Z7OOKPadRIjBGhzHxsOiOlT09UBI40wrCterWuHRkDQ4xwuSFad3HFZnZwAvEzPAIo2tD94FaXfgqigZRAv+ZUt/7M1pEQzNkz0Ba8Qlws+oB19sVvPdlZ6s+M6VcqvDHDvMtQY0nQ8+smgG0p908E/v/U2XZeK4BT360lSBQsaz4pHVzSqmo0i1XbgmqC/8T+gDOPetRqAsqB1FBD+e/uQhfgyqNPuLKF8DXvRSIMJQeOtYc5Heka70U5Fcq1hEQosie7iRdWEfUmtljK8BCu1xqPoPwfBOTl6845S3Asey5HDIL3So3+UO9EY3GA3wz2EYYmZCveos4VORDXFzsMDaCOWYm0hEV3+BBPNSX890DlsUUcf9suV4j2CGcGW8V1xQCt5V9ONGJ4Ofw1Z8tBjJpWDXrYKAMsUCAx8Tn+xruXR+FhPOYQkTnzr2aTH5eJ0CQXzgtl+cJVX5SDQaJXf72KQeDw0mz/XDuvWxwk1cf2FBK7uiXzR0qMLGUkk2jDuJHjjs35H0zBo4GvMwd/M72AaWeIQIT2LL+63qJiYj50BmJKT4ATn3JytB31v9nQ5a1EGZnP3p35mc/aXn7AJ9g9unFHEMUk/TPW26vrTiEL78JuV02LttnXroJ+wDccsrnPQR2dWkdDaUZTYjb/Ebh0i/tX0CEckE8zTB6YgD6sBhLyxzgdbzcl/6cZlw4cAzt03/O7f/c+FdQ4wM8KvltfvyzZhRepqtSUGFdZ83JJJK4IFpsYahkpxKKnaYI47AnS5/iIQaKVJKzpdJQITINFkau6XuWOplVnqgykf/2pdEX9faLqT6Mlr/2/wfixYmcd+/PX70PBlfh00lIF1cL8AjZ5A/YJOJJ2tLMpViSwQFOyNrcTgwOj1y3gBrWSXV7irZJ7c3p9rwPHpnwu7bQ0Y51QcVsaP5Z+BqWdAARMfwo21zMXkcHo/nmhelwJrzSp+i1pV4iaP1CdI4e5qkBNp8aNuSTpyNeBecmZ8ayU/nlJIVEhydjMZ5o5kY2w3+Ydm6MvTsEHCrMKYltodtAO9hQDETDG5i1fPkOqOfuC+q5IGsKthuWKiBTNPmfCMJ4bQvdY3fxJCUOOP60JNOpLAreGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged within about 0.1 mile of the Mathis station at 20:02:57Z and 20:15:00Z, either side of the 20:06:03Z purchase. The 47.4 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsgLWLHckWJMtPrTxAn",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5327,
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "thinking_tokens": 156
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged within about 0.1 mile of the Mathis station at 20:02:57Z and 20:15:00Z, either side of the 20:06:03Z purchase. The 47.4 gallons is well under the 132-gallon limit (120-gallon tank plus 10 percent), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5327,
+    "output_tokens": 278,
+    "output_tokens_details": {
+      "thinking_tokens": 156
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

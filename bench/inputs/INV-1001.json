@@ -1,0 +1,23 @@
+{
+  "contractValidOnReceiptDay": null,
+  "earlierInvoicesSameVendor": [],
+  "invoice": {
+    "cents": 24509,
+    "docRef": "evidence/invoices/INV-1001.txt",
+    "id": "INV-1001",
+    "item": "shop_labor",
+    "poId": null,
+    "qty": 1,
+    "receivedDay": 2,
+    "unitCents": 24509,
+    "vendorId": 2
+  },
+  "kind": "invoice",
+  "purchaseOrder": null,
+  "vendor": {
+    "bankChangedDay": 0,
+    "bankLast4": "2098",
+    "id": 2,
+    "name": "Lone Star Tire"
+  }
+}

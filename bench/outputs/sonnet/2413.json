@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01255,
+  "durationMs": 2621,
+  "httpStatus": 200,
+  "id": "2413",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged at the Wharton station (within ~0.1 mi) at 18:29 and 18:35 UTC, and 22.9 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 18:34:45Z at the Wharton station (29.3116, -96.1027). The nearest pings are 18:35:00Z at (29.31174, -96.10261) and 18:29:18Z at (29.3116, -96.10246). Both are within a few hundredths of a mile of the station, so the truck was at the station.\n\nCapacity: 22.9 gallons against a limit of 110 (100 gal tank plus 10 percent). That is within the limit.\n\nNeither location_mismatch nor capacity_exceeded applies, so the payment can be released.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged at the Wharton station (within ~0.1 mi) at 18:29 and 18:35 UTC, and 22.9 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsh6pLy8GZje482x1n4",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4890,
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 18:34:45Z at the Wharton station (29.3116, -96.1027). The nearest pings are 18:35:00Z at (29.31174, -96.10261) and 18:29:18Z at (29.3116, -96.10246). Both are within a few hundredths of a mile of the station, so the truck was at the station.\n\nCapacity: 22.9 gallons against a limit of 110 (100 gal tank plus 10 percent). That is within the limit.\n\nNeither location_mismatch nor capacity_exceeded applies, so the payment can be released.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged at the Wharton station (within ~0.1 mi) at 18:29 and 18:35 UTC, and 22.9 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4890,
+    "output_tokens": 277,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

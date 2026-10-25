@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9102,
+  "httpStatus": 200,
+  "id": "2540",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The truck's nearest telematics ping within 30 minutes of the purchase (20:16:30Z) was at 20:00:00Z, located approximately 175 miles from the station, exceeding the 25-mile limit."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"location_mismatch\",\n\"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (20:16:30Z) was at 20:00:00Z, located approximately 175 miles from the station, exceeding the 25-mile limit.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792887043,
+    "id": "chatcmpl-ae77e0c6-9e63-440d-b43c-9fd55345e5fc",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 83,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3188,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 3271
+    }
+  },
+  "startedAt": "2026-10-25T00:10:35+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"location_mismatch\",\n\"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (20:16:30Z) was at 20:00:00Z, located approximately 175 miles from the station, exceeding the 25-mile limit.\"\n}",
+  "usage": {
+    "completion_tokens": 83,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3188,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 3271
+  }
+}

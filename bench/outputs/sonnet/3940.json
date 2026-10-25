@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01256,
+  "durationMs": 3002,
+  "httpStatus": 200,
+  "id": "3940",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 37 pinged at 11:11:12Z about 0.02 mi from the station, 3 minutes before the 11:14:06Z purchase. The 54.8 gallons is well under the 165-gallon limit (150-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS1gYKEAgTGAI4AUIIdGhpbmtpbmcSDIJHcVg/0Mo6PnfDEBoMx2hKsQhdU4h1zHu5IjCh1r/lXjetJiKdoHtNEVcK9WV7/UocS0hsFs07iUNNNjeBiaCKURTypJgcNZPITvoq8wW2qv317MEj6BRHsC7xBThm4VFU5yp64aVuSx41oGOKQohHE0NaqQcUM07UZiNG0cq9dDVHZBM36B9FzVGnuhytI5Zf4rJir+2xJTKhZp2mUKCZ71AfTYD7hOTetLGnKrqtm1RiSE1wfUfvKaF8lfR4w+HovtonpISya2ZwBthzyKks8p8dec9bT7DKodNQgC77Ux8MPbUL/qPtMTK1wVbajdErs5WvrV+Zjr5EIFszLkmp1k2ysZq1hUCxarLqIF1nt5NPgwTlmilo0NYJzBFUEAOU+NqqwILt8QT4NDX43LEsubr8D7io7ynYCBfeGcEk7kVvyC8/uiHD2mnI9LxpYlwBLqSU09vC68N0jLoXsDcpvlMGLaybzff7/PQHKtmVAlX4QbwCbE7Zd7HYo7VzV/DRsSbqBeN46Ozr5CcafOganfdfdjmZ4CBpxumdNPX69AQtEF9FvqsctdA8Sp5E4Ro5DZjDuobn0prX1gTfJ3ienOGwHIOFTx0w8R+rcLz6XBmvCCnWsRuq90PWaI+oT2/H3EAhwEnBK1Qq8GmWG25Dl9qe6j8HUMQj7ZngbBmKcXWdDNEp05oHVS2jMghHGo+BN/kkP2Tq4vDxokAIf6sPx2eoyRnskRbxeyA2lAdaZlUmKuq9edPs8A3hrOr5Ttt3WIZqTkboWnJdckGFfFFUOzrh/bK0RKHqDVIyB1+lZ1dyd+g8zidkvbbDxgJrjqq/xxHqZLb3Sg8y+QtPxfQqI4a/DGmZ5JugeaOQkJhAxyx2eRxWf40kIwxBAgLFUgjPxrGLVUfpCWOEHifXTM/k6VgIsBiDhPt5j78sdjkA27WeJXrJzBzhwLE4vKD/EWZOB51bCUts2NvYtqvo53PH6C1Ut+9p/UXbuKGanu5Ycvv1DTwQMgfSuxtT1Be0uaxJsCmHfpIYeKERY6Epwu8v0/6PrxG+11uWVA18BrfdKnX0iXYPlktZt1KF4YO4RTF1JFdGkSsxoUi4I0seTxUNoBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged at 11:11:12Z about 0.02 mi from the station, 3 minutes before the 11:14:06Z purchase. The 54.8 gallons is well under the 165-gallon limit (150-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt8bsn8bPWZ7rFv6fW9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5035,
+      "output_tokens": 249,
+      "output_tokens_details": {
+        "thinking_tokens": 145
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged at 11:11:12Z about 0.02 mi from the station, 3 minutes before the 11:14:06Z purchase. The 54.8 gallons is well under the 165-gallon limit (150-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5035,
+    "output_tokens": 249,
+    "output_tokens_details": {
+      "thinking_tokens": 145
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

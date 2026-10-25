@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009276,
+  "durationMs": 3669,
+  "httpStatus": 200,
+  "id": "3955",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 35's nearest ping (13:00Z, 13 min before purchase) was in Laredo area at 27.5305,-99.4804, about 58 miles from the Freer station (limit 25), with the engine off and the odometer unchanged all day. Ask dispatch whether another unit or driver used card FC-1035."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvgcKEAgTGAI4AUIIdGhpbmtpbmcSDPh7vVUI5z7/IyGgJxoMmsXSkDJNeLAAj3kgIjBz/xLxXPO93H+ThpAU7Hdvpfx8+Lr5KJmSKy0ysLY52ZoiqzDs8WTGtMRkgG4IT1oq2wYvG3q8Cu8gI6Qpk9KqnKcndmpodFf1YzUXEbqsh7HvgoHYkPpWXuWQq7lYuD+cXnrQoYR0qfxq/x9wWqyebtouPEb++fl8ZJKnLgLNCmTQ364Bah9R0vgoR/TK5eUvsVg+T6+hy+ikY69PjCcgw0Vy1Poht15QIfgkbnlh6O1yi05uunJjaSOCvhgSU8Ge2ES69SalmdayV9oy8rf40AzGQRZoYN2MwF95ro29CzhkXYMrow/aLbm2zomg6Y9IeevP3iIsEDhDx/Mu5zqIdwja8W6fRf5SFxPbYwCHNjADJnMSEXW07JzVPqGYdgQp0WsKrnvSSvgHKPj2c+IlsMYg67Tp6slmK/rI6cSPYMCOGgQE5rCKEu45ymvxvk53z7p2FBaZty2/hDq6jERxvb/JHo4TwUXAfp0i1w5HvD3omAeOFQEpgvnvyzZtgE64ta4MQFQC/8mVamqSSRMTCAoUa86892JuFpd1Fr0p8BoDEDQhxluLouU7zw9HSpvPwHqgoQHYV2fGjdPzL6au//WDuDieaz4MprkQ62pEVCveI4owoubzWhDi2s/qnA3O8Fyx9dFnGkltJDlI4Ar8xlhrri/9skKxLeb06SqeZkIwf2VaBarBxYWdSUYY+1QU5rLfNX51dIJzg5wDaRL231cTV98Z6gmERYe83dtN3k08tg37xgEPsUflYxMZeFuuAC0JXkjvdsfMz6r4KLgvMqkopG7q0R+4XJmeoyMsArTOlo2MzfYmEifykCEkxwQamQb5HmJcm+vCrYhRB0VVWj/9BIdnY1I9xWYh4rK5Jn7qu0nvZe6EPgWEtNdtDzc5lt2Ra0umusKXCzFYn5w47051xKHo6h/7qDg/Pa3cziVzcd+eIxrQpfb7E6qgdqWea+6HIBUVvEnZ18NEZhrzLxhG+nCu0k58f09jJMAoJYoz727cApvbQoPA1lLTbwMz5utHLoQVxBuEfZwXQLDFT3T6c6JxVB/olgs24p2ahMBKTiHJaSaVpxD5Vfh3n6bvDsr5ROsxDFgcrauJyCy8wr2epXpDMTm4AVoA4Pbwfh/WfxE9A5NysN+QfcrCgxxmlVpHXNch4JY5wX4R9CKfhYZf4MgfouyA45Bdsr6H3aYRMQGigcLBBS8lIoWLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 35's nearest ping (13:00Z, 13 min before purchase) was in Laredo area at 27.5305,-99.4804, about 58 miles from the Freer station (limit 25), with the engine off and the odometer unchanged all day. Ask dispatch whether another unit or driver used card FC-1035.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstjz3zcQAcPrVSQfoF",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2993,
+      "output_tokens": 329,
+      "output_tokens_details": {
+        "thinking_tokens": 198
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 35's nearest ping (13:00Z, 13 min before purchase) was in Laredo area at 27.5305,-99.4804, about 58 miles from the Freer station (limit 25), with the engine off and the odometer unchanged all day. Ask dispatch whether another unit or driver used card FC-1035.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2993,
+    "output_tokens": 329,
+    "output_tokens_details": {
+      "thinking_tokens": 198
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

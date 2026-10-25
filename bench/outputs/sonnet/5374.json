@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013384,
+  "durationMs": 2788,
+  "httpStatus": 200,
+  "id": "5374",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11's 14:05:00Z ping is about 0.02 miles from the station, 2 minutes before the 14:06:55Z purchase, so the location check passes. The 44.7 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgQcKEAgTGAI4AUIIdGhpbmtpbmcSDPR4yEUSIERZlbl/exoMT7A5FD+jaMuFxMwoIjDEbS4ZGGG35aKI3WwQqHOV6ge+pIzQ93nmsCGPPnbtcgn6UMQUfP8OEL/ch5Z7LTIqngb5zNys4pSaMnBYHIVwvWxGmp3ictOh0eokQwVOp14NNFZG4jKje2+IIzmsUmZb991PRyDq/2fUibbzpN14v5UhkomI+XhkECQaYMpvbpm5N3TaSQz8dT74+tEzC/SI00HBVzFU2KvbC7cbIJiJnSHEVpaqpd0BtP/3PfBWjC7ARvhht1Sa8GYXqH3bSmlJJI7u+xXuBCh3Sj1CNXvBOznDofpSSDNElThxPj3uuCAGRFMt5RenYMPM55+0FEHOUqH2xApJfw6L5y350lQMC67DxXWHEUgPAsctRkFYn1hORac5L6AHo3cOq0Fnc30RPZz1zFWW2j2Q6MS1kC6+KhWEJedTcQ5nW/oGh2pG9Uw7WvvbHshGkWyF7jcVrN1zCtpjwz1ZPmr2KbPhuM6p2RMtchjXXh/+w56Hrn8CqYeMUkld17ElHI+dclT3bTThPE2LE3Mmyb/vU3QaguUqvk9Wc3O+WlNpfGtPrtyYBwgt5aZI1fJs4EenbI8i3lOMBkVlnldxqJtyygCcK4WuelaQdKupUktv97VgwTMn4Qud83KNNafWdJ4WkhQz6lV/+cBQFC/pDhqnZr5E3uWpff13k9H5c+U8L8MR+FHYaPbAZEd6MvcPS8m+Y/rJNiEGL33DUTHhoVtuOZ+YfJY9nvUyfoWeU0E0DZA6R1NneV/7eyFzrSiaJeMpXapZlD5JaXUPGoJFJ3NehWW2Wfw/605zde9AbCi++zMv63mW1zMrHbS7pQNQKXrj42ZQKvET9mIugObapmYT8NBrzoXRSL0zPFlBWoJ1d8EV42kw9YMY6hwV8CVAk1dFv9gkNp141ZttcDsx5ALKp2M83XGQJp/xUNq6mgtR/ccBsCsI618mn8c9W/3AeFbHd586LNTu4IkqeBcJMZtma+M90qogGDmc6FDRpcXU1pnOp998RXqP4eq4TKW/UJvYxH4cOm4mS+OeoRzrmM3wkN7s19C0lMEei14N8zPZbM043rdLRgEKCmI/v7JfuKb2BXLHUN3BL2ppGPE3oPx87GW8/Ih5sI0IW0Js5mCWUC96F7dMpGcYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 11's 14:05:00Z ping is about 0.02 miles from the station, 2 minutes before the 14:06:55Z purchase, so the location check passes. The 44.7 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9BMvo79b86cwcPw2k",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5327,
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "thinking_tokens": 166
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 11's 14:05:00Z ping is about 0.02 miles from the station, 2 minutes before the 14:06:55Z purchase, so the location check passes. The 44.7 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5327,
+    "output_tokens": 273,
+    "output_tokens_details": {
+      "thinking_tokens": 166
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

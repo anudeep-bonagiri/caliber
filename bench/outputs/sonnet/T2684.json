@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.018926,
+  "durationMs": 3087,
+  "httpStatus": 200,
+  "id": "T2684",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll at Mountain Creek Lake Bridge within 10 minutes; the 12:14:18Z charge was at a different plaza (PGBT-01) and the last MCLB-01 charge was on day 71."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at NTTA-MCLB-01 (Mountain Creek Lake Bridge) at 12:24:00Z on day 74. The duplicate_toll rule only applies when the same plate was charged at the same plaza within 10 minutes of an earlier charge.\n\nThe most recent earlier toll is T2683 at 12:14:18Z, but it was at NTTA-PGBT-01, a different plaza, so it does not count. The most recent earlier charge at MCLB-01 is T2626 on day 71, which is far outside the window.\n\n```json\n{\"decision\":\"clear\",\"reason\":\"No earlier toll at Mountain Creek Lake Bridge within 10 minutes; the 12:14:18Z charge was at a different plaza (PGBT-01) and the last MCLB-01 charge was on day 71.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsjPN4i1JdqXAs7Pzzm",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8083,
+      "output_tokens": 276,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at NTTA-MCLB-01 (Mountain Creek Lake Bridge) at 12:24:00Z on day 74. The duplicate_toll rule only applies when the same plate was charged at the same plaza within 10 minutes of an earlier charge.\n\nThe most recent earlier toll is T2683 at 12:14:18Z, but it was at NTTA-PGBT-01, a different plaza, so it does not count. The most recent earlier charge at MCLB-01 is T2626 on day 71, which is far outside the window.\n\n```json\n{\"decision\":\"clear\",\"reason\":\"No earlier toll at Mountain Creek Lake Bridge within 10 minutes; the 12:14:18Z charge was at a different plaza (PGBT-01) and the last MCLB-01 charge was on day 71.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8083,
+    "output_tokens": 276,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006034,
+  "durationMs": 3154,
+  "httpStatus": 200,
+  "id": "INV-1009",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: amount 12,104 matches no earlier invoice from this vendor, there is no contract or PO to compare against, the invoice is under 5,000 dollars, and the bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Checking each hold rule against INV-1009 (12,104 cents, wiper blades, no PO, received day 7):\n\n- **duplicate_invoice:** No earlier invoice from this vendor has the same amount. The earlier amounts are 160,850 and 21,807.\n- **rate_variance:** There is no contract and no purchase order to compare against, so the rule does not apply.\n- **short_received:** There is no purchase order, so there is no received quantity to exceed.\n- **vendor_bank_change:** The invoice is under 500,000 cents, and the bank details never changed (bankChangedDay is 0).\n- The fuel-card and toll rules do not apply to an invoice.\n\nNo hold applies, so the invoice is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: amount 12,104 matches no earlier invoice from this vendor, there is no contract or PO to compare against, the invoice is under 5,000 dollars, and the bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4aJuuPAbWNzJD3Mg8",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1397,
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Checking each hold rule against INV-1009 (12,104 cents, wiper blades, no PO, received day 7):\n\n- **duplicate_invoice:** No earlier invoice from this vendor has the same amount. The earlier amounts are 160,850 and 21,807.\n- **rate_variance:** There is no contract and no purchase order to compare against, so the rule does not apply.\n- **short_received:** There is no purchase order, so there is no received quantity to exceed.\n- **vendor_bank_change:** The invoice is under 500,000 cents, and the bank details never changed (bankChangedDay is 0).\n- The fuel-card and toll rules do not apply to an invoice.\n\nNo hold applies, so the invoice is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No hold rule applies: amount 12,104 matches no earlier invoice from this vendor, there is no contract or PO to compare against, the invoice is under 5,000 dollars, and the bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1397,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

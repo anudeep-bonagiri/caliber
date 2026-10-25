@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12952,
+  "httpStatus": 200,
+  "id": "INV-1092",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 7813 cents is over 500,000 cents? No. Wait, 7813 cents is $78.13. The threshold is 5,000 dollars (500,000 cents). 7813 < 500,000. So vendor_bank_change does not apply.\"\n}\n\nLet's re-read carefully.\n\"vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\"\n\nInvoice cents: 7813.\nThreshold: 500,000.\n7813 is NOT greater than 500,000.\nSo `vendor_bank_change` does NOT apply.\n\nLet's check other holds.\n- `duplicate_invoice`: Invoice from vendor 3 for same amount as earlier invoice within previous 30 days under different PO.\n  - Current invoice: INV-1092, item \"filters\", cents 7813, poId null, receivedDay 50.\n  - Look for earlier invoices from vendor 3 with cents 7813 in the last 30 days (days 20 to 49).\n  - Scanning `earlierInvoicesSameVendor`:\n    - INV-1007: 245000\n    - ...\n    - INV-1066: 30984\n    - INV-1076: 245000\n    - INV-1077: 980000\n    - INV-1083: 113600\n    - INV-1084: 34150\n    - INV-1088: 109500\n    - INV-1091: 118100\n  - None of the earlier invoices have `cents` equal to 7813.\n  - So `duplicate_invoice` does NOT apply.\n\n- `rate_variance`: Unit price > 5% above contract rate.\n  - `contractValidOnReceiptDay` is null.\n  - Rule says: \"compare against the purchase order unit price when no contract applies\".\n  - `purchaseOrder` is null.\n  - If there is no contract and no PO, what is the reference?\n  - Usually, if no contract and no PO, we can't determine variance unless there's a standard rate. But the rule implies a comparison exists. If neither exists, this condition likely doesn't trigger or is considered clear by default absence of data to violate. Let's assume it doesn't trigger because there is no baseline to compare against.\n\n- `short_received`: Bills larger quantity than PO's received quantity.\n  - `poId` is null. No PO. Cannot be short received relative to a PO.\n\n- `location_mismatch`, `capacity_exceeded`, `duplicate_toll`: These are for fuel-card purchases or tolls. This is an invoice (`kind: \"invoice\"`). So these do not apply.\n\nWait, did I miss something?\nIs there any other hold code?\nThe list is:\n- location_mismatch\n- capacity_exceeded\n- duplicate_toll\n- duplicate_invoice\n- rate_variance\n- short_received\n- vendor_bank_change\n\nI have ruled out:\n- location_mismatch (not fuel)\n- capacity_exceeded (not fuel)\n- duplicate_toll (not toll)\n- vendor_bank_change (amount too low)\n- short_received (no PO)\n- duplicate_invoice (no matching amount)\n- rate_variance (no contract, no PO)\n\nTherefore, the decision should be **clear**.\n\nLet me double check the `duplicate_invoice` logic.\n\"an invoice from a vendor for the same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\nCurrent: 7813 cents.\nEarlier invoices:\n...\nINV-1066: 30984\nINV-1076: 245000\nINV-1077: 980000\nINV-1083: 113600\nINV-1084: 34150\nINV-1088: 109500\nINV-1091: 118100\n\nNone match 7813.\n\nLet me double check `vendor_bank_change`.\nAmount: 7813 cents = $78.13.\nThreshold: $5,000.\n$78.13 < $5,000.\nCondition fails.\n\nLet me double check `rate_variance`.\nUnit price: 7813.\nContract: null.\nPO: null.\nIf there is no contract and no PO, is it held?\n\"Anything else is cleared.\"\nThe policy defines specific holds. If none apply, it is cleared.\n\nOne potential trap: Is \"filters\" a recurring item where a standard rate might be implied? No, the policy relies on explicit contracts or POs.\n\nAnother potential trap: Did I misread the amount?\n\"cents\": 7813.\nYes, 7813.\n\nDid I misread the bank change day?\n\"bankChangedDay\": 42.\nInvoice received day: 50.\nDifference: 8 days.\nEven if the amount was high enough, 8 days is outside the \"within the 7 business days before\" window (days 43, 44, 45, 46, 47, 48, 49? Or inclusive? \"Within 7 business days before\" usually means D-7 to D-1. Day 42 is 8 days prior. So even if amount was high, it might be on the edge, but definitely amount is low).\n\nSo, decision is Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No hold conditions met; amount below vendor bank change threshold, no duplicate invoice found, and no contract/PO for rate or quantity variance checks.\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883240,
+    "id": "chatcmpl-b51d872d-cdb7-4c4c-a556-0b121750d3d2",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1410,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2784,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4194
+    }
+  },
+  "startedAt": "2026-10-24T23:07:12+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 7813 cents is over 500,000 cents? No. Wait, 7813 cents is $78.13. The threshold is 5,000 dollars (500,000 cents). 7813 < 500,000. So vendor_bank_change does not apply.\"\n}\n\nLet's re-read carefully.\n\"vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\"\n\nInvoice cents: 7813.\nThreshold: 500,000.\n7813 is NOT greater than 500,000.\nSo `vendor_bank_change` does NOT apply.\n\nLet's check other holds.\n- `duplicate_invoice`: Invoice from vendor 3 for same amount as earlier invoice within previous 30 days under different PO.\n  - Current invoice: INV-1092, item \"filters\", cents 7813, poId null, receivedDay 50.\n  - Look for earlier invoices from vendor 3 with cents 7813 in the last 30 days (days 20 to 49).\n  - Scanning `earlierInvoicesSameVendor`:\n    - INV-1007: 245000\n    - ...\n    - INV-1066: 30984\n    - INV-1076: 245000\n    - INV-1077: 980000\n    - INV-1083: 113600\n    - INV-1084: 34150\n    - INV-1088: 109500\n    - INV-1091: 118100\n  - None of the earlier invoices have `cents` equal to 7813.\n  - So `duplicate_invoice` does NOT apply.\n\n- `rate_variance`: Unit price > 5% above contract rate.\n  - `contractValidOnReceiptDay` is null.\n  - Rule says: \"compare against the purchase order unit price when no contract applies\".\n  - `purchaseOrder` is null.\n  - If there is no contract and no PO, what is the reference?\n  - Usually, if no contract and no PO, we can't determine variance unless there's a standard rate. But the rule implies a comparison exists. If neither exists, this condition likely doesn't trigger or is considered clear by default absence of data to violate. Let's assume it doesn't trigger because there is no baseline to compare against.\n\n- `short_received`: Bills larger quantity than PO's received quantity.\n  - `poId` is null. No PO. Cannot be short received relative to a PO.\n\n- `location_mismatch`, `capacity_exceeded`, `duplicate_toll`: These are for fuel-card purchases or tolls. This is an invoice (`kind: \"invoice\"`). So these do not apply.\n\nWait, did I miss something?\nIs there any other hold code?\nThe list is:\n- location_mismatch\n- capacity_exceeded\n- duplicate_toll\n- duplicate_invoice\n- rate_variance\n- short_received\n- vendor_bank_change\n\nI have ruled out:\n- location_mismatch (not fuel)\n- capacity_exceeded (not fuel)\n- duplicate_toll (not toll)\n- vendor_bank_change (amount too low)\n- short_received (no PO)\n- duplicate_invoice (no matching amount)\n- rate_variance (no contract, no PO)\n\nTherefore, the decision should be **clear**.\n\nLet me double check the `duplicate_invoice` logic.\n\"an invoice from a vendor for the same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\nCurrent: 7813 cents.\nEarlier invoices:\n...\nINV-1066: 30984\nINV-1076: 245000\nINV-1077: 980000\nINV-1083: 113600\nINV-1084: 34150\nINV-1088: 109500\nINV-1091: 118100\n\nNone match 7813.\n\nLet me double check `vendor_bank_change`.\nAmount: 7813 cents = $78.13.\nThreshold: $5,000.\n$78.13 < $5,000.\nCondition fails.\n\nLet me double check `rate_variance`.\nUnit price: 7813.\nContract: null.\nPO: null.\nIf there is no contract and no PO, is it held?\n\"Anything else is cleared.\"\nThe policy defines specific holds. If none apply, it is cleared.\n\nOne potential trap: Is \"filters\" a recurring item where a standard rate might be implied? No, the policy relies on explicit contracts or POs.\n\nAnother potential trap: Did I misread the amount?\n\"cents\": 7813.\nYes, 7813.\n\nDid I misread the bank change day?\n\"bankChangedDay\": 42.\nInvoice received day: 50.\nDifference: 8 days.\nEven if the amount was high enough, 8 days is outside the \"within the 7 business days before\" window (days 43, 44, 45, 46, 47, 48, 49? Or inclusive? \"Within 7 business days before\" usually means D-7 to D-1. Day 42 is 8 days prior. So even if amount was high, it might be on the edge, but definitely amount is low).\n\nSo, decision is Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No hold conditions met; amount below vendor bank change threshold, no duplicate invoice found, and no contract/PO for rate or quantity variance checks.\"}\n```",
+  "usage": {
+    "completion_tokens": 1410,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 2784,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4194
+  }
+}

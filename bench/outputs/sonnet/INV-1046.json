@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008496,
+  "durationMs": 4323,
+  "httpStatus": 200,
+  "id": "INV-1046",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1046 for 34,500 cents is at the 34,500 contract rate, bills 1 against 1 received, matches no earlier invoice amount from this vendor, is under the bank-change threshold and the vendor's bank details never changed. No hold rule applies. INV-1029 (42,225 cents) also cites PO-1013, but the policy has no hold for that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgwsKEAgTGAI4AUIIdGhpbmtpbmcSDEJTpAIDcEYVgAx7OhoMKud2KFwRyj356rUKIjD74rFBIcdpHmyD9ogK+vzfUOlv5IHGcVyXxHK2QCumZ/UzTs6RAg//lAsH+LkgawQqoAqvappyXxMDqeuuEtPsZ0a9V9crV1QSxY4T351L6bxMmjqmPxSXc0EEyaaFH8tOptbgl9AfoxZNgxILITJBWjudKutu11x/XHgRVI8XmNdQYiTp3h7voVKnm49N9EljJRXJO03C0d2eB+uH0rurIPxsaLdJ4uYMIeSStPTK1m5tGDuFA/h8g6lViNHRgSpS9CnX26fa7FrlDAA0txtmk3E0m1qOC3hlpnNoH6d0YJC+8aUjDPaXG/Wh5DymwOe0jr224VNvydcJQzt7OOLEQDyE9Se6MWSTGedg36NIq4DsFxqaoTNGoJ1JI5FLRhl/XmlsVSUuBD8ol/jsnx6HuyzGU+7nFicZqulu8zQ0gGIDMC1k2MWjoAO2zkUGswnlxCMNc7oOJxyaLoaUcap3u+uCdKDfTe89kBcNvKIWLQ0agklK+QTT3kvwoBZqizSUjhy7NvhRADbB9yb6lfyZWYvGVVapTgpek0yDGELrJAJEU4/eUgZA9b1xvAHHoldfgUAE/YjzyxsKWQwAszqszrrxn3j3tcnauVbTNaUsf40seCIhQ0oSE6RPy5eBJgJ7d/oUmGVcIwudCGR7+YaDqAQ2n5j7Ref/12U8uoie2/83l3EaAzOMd4VGWdxEGwPh8dNVGB3EGfLyB/uXNLD8aa3/LFzusNUk0DW7AR2OWV63AxL3MLc/4ntb8V40OS4A8WH9HqY7KdlIl8EBoXa0Ew0EGzu39nghVSxf0B0divHUSfYTnN3TwuxeK0sh9613r6VEZRDB2TqUfptgikAfQiTMv3WGn+LeJziEHnF2e9NqC1PSrvUK0pop8UasHzrMmC7fOAnjIulAR6ffphx0ZWci+dHZKGg8in25/GuKnZu7JZzwNOw9sqUWY//stJCLg4QHP55F1LmfYXwzbLeNArCQd9IZKlrG6vCJhzhOimyueUiU1pAZooMyjBPozM2w6NeOLwfKWDnIuvwaZVhlvS8XuL9L9sXWqug2GeZUYkeCKu/Lu86QM2mctJfXle+UBSQdO5UVViZlksgxF8B8qL80NIF28XzzYaCjZs3G6AT2Sxif1KBgK2BdQOIs2iOSwkjlgT5hmUfyndzUDbFXW47Ae/yTo/EadnarHFWsU0oQDgDlxvZ/7w82kPhHVbf3+cdurTJbsODF26VfqLOCf9W4jCK2KaloEgAvwqW4Iq4VG0Xtgi72ssI90wluiIOnWrt3clteQjXGPUqBYkNdCkrdMOUXUBz1eBnqGJtznPt7rILEAqSCATMy7D+rpicGrnIZu08VTOpn4JmOPCBlkqkj/cC8bxECij3tYQWx4M+QYWGri4fSD53LOwkffz3CoPJ45fcEDNzM/aQhE8Tr638/BQN8KQiRlvdHYTHxyGIpso00P1nZOGnKmuA9DgwmLiId3uDn/opYmrtu33MRX9UaIDhzHUHlHyE9fRID0PnGJ1SuZLhZAzfeenZo2MRZmqTRhhIBw5Ea263QaHlHmDn1vTm+E4+lWL00P1+2N3UNDJVu9pVpaMHm35FZMiBvlTIjZLPCN+E+MTlruByM0X4xsdTaHnwE+i/U2gZm65xnlATPkFyU/WWbjYRnpE+kwlGnoQfGfySstzkBCnTbWHOTslYpm/bVX3erd+MK54nDQwTGH+Rkhrrr1Qg4cM8exFxeB6guKzWh1JZrMnweLK7ZiO1bs/TXGlwZTWRUpWog47ymprqe+AnQKXoCPLgedoVsKQ60wcJFbErNY0bXgRyVGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1046 for 34,500 cents is at the 34,500 contract rate, bills 1 against 1 received, matches no earlier invoice amount from this vendor, is under the bank-change threshold and the vendor's bank details never changed. No hold rule applies. INV-1029 (42,225 cents) also cites PO-1013, but the policy has no hold for that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxHd9SqvzXmEUMCYfC",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1973,
+      "output_tokens": 455,
+      "output_tokens_details": {
+        "thinking_tokens": 319
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1046 for 34,500 cents is at the 34,500 contract rate, bills 1 against 1 received, matches no earlier invoice amount from this vendor, is under the bank-change threshold and the vendor's bank details never changed. No hold rule applies. INV-1029 (42,225 cents) also cites PO-1013, but the policy has no hold for that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1973,
+    "output_tokens": 455,
+    "output_tokens_details": {
+      "thinking_tokens": 319
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

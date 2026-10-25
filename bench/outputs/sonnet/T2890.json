@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02503,
+  "durationMs": 2993,
+  "httpStatus": 200,
+  "id": "T2890",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1014 at SH 130 Plaza 4 within 10 minutes; the last charge there was 2026-10-14, so T2890 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2890 at SH 130 Plaza 4 (TXTAG-SH130-04) on 2026-10-21 at 17:49:33Z.\n\nThe most recent earlier charges for this plate are:\n- T2870 at NTTA-DNT-01 on 2026-10-21 at 13:04:53Z\n- T2869 at NTTA-PGBT-01 on 2026-10-21 at 13:04:00Z\n\nThe most recent earlier charge at SH130-04 was T2745 on 2026-10-14, a week earlier. No earlier charge at this plaza falls within 10 minutes of T2890, so it is not a duplicate toll.\n\nNo other hold rule applies to a toll, so the payment can be cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1014 at SH 130 Plaza 4 within 10 minutes; the last charge there was 2026-10-14, so T2890 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4s2zYp7cCZgRBBnRp",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10905,
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2890 at SH 130 Plaza 4 (TXTAG-SH130-04) on 2026-10-21 at 17:49:33Z.\n\nThe most recent earlier charges for this plate are:\n- T2870 at NTTA-DNT-01 on 2026-10-21 at 13:04:53Z\n- T2869 at NTTA-PGBT-01 on 2026-10-21 at 13:04:00Z\n\nThe most recent earlier charge at SH130-04 was T2745 on 2026-10-14, a week earlier. No earlier charge at this plaza falls within 10 minutes of T2890, so it is not a duplicate toll.\n\nNo other hold rule applies to a toll, so the payment can be cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1014 at SH 130 Plaza 4 within 10 minutes; the last charge there was 2026-10-14, so T2890 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10905,
+    "output_tokens": 322,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

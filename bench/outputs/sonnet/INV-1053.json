@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00957,
+  "durationMs": 5086,
+  "httpStatus": 200,
+  "id": "INV-1053",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1053 (52,500 cents, PO-1023) matches no earlier Gulf Coast Diesel invoice amount, so it is not a duplicate. The unit price equals the contract rate of 52,500. The billed quantity of 1 equals the received quantity of 1. The amount is under 5,000 dollars, and the bank change on day 42 falls after the day-31 receipt. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1053 (52,500 cents, PO-1023) matches no earlier Gulf Coast Diesel invoice amount, so it is not a duplicate. The unit price equals the contract rate of 52,500. The billed quantity of 1 equals the received quantity of 1. The amount is under 5,000 dollars, and the bank change on day 42 falls after the day-31 receipt. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsiFGNUNfVNbSiR4ppi",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1995,
+      "output_tokens": 558,
+      "output_tokens_details": {
+        "thinking_tokens": 407
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1053 (52,500 cents, PO-1023) matches no earlier Gulf Coast Diesel invoice amount, so it is not a duplicate. The unit price equals the contract rate of 52,500. The billed quantity of 1 equals the received quantity of 1. The amount is under 5,000 dollars, and the bank change on day 42 falls after the day-31 receipt. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1995,
+    "output_tokens": 558,
+    "output_tokens_details": {
+      "thinking_tokens": 407
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

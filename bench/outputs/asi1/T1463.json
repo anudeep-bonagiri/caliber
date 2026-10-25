@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9032,
+  "httpStatus": 200,
+  "id": "T1463",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No duplicate toll found; the transaction is at a different plaza (SH 130 Plaza 4) than the previous SH 130 Mainlane Plaza 1 charge, and no other tolls for this plate occurred within 10 minutes of this transaction."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"clear\",\n \"reason\": \"No duplicate toll found; the transaction is at a different plaza (SH 130 Plaza 4) than the previous SH 130 Mainlane Plaza 1 charge, and no other tolls for this plate occurred within 10 minutes of this transaction.\",\n \"code\": null\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885250,
+    "id": "chatcmpl-f15acef8-ec77-417e-824a-75dc7520e7c4",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 76,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2736,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2812
+    }
+  },
+  "startedAt": "2026-10-24T23:40:42+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"clear\",\n \"reason\": \"No duplicate toll found; the transaction is at a different plaza (SH 130 Plaza 4) than the previous SH 130 Mainlane Plaza 1 charge, and no other tolls for this plate occurred within 10 minutes of this transaction.\",\n \"code\": null\n}",
+  "usage": {
+    "completion_tokens": 76,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 2736,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 2812
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013072,
+  "durationMs": 2788,
+  "httpStatus": 200,
+  "id": "4291",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14's ping at 17:29:41Z, about 3 minutes before the purchase, was within about 0.1 mile of the Temple station. The 34.8 gallons is well under the 132-gallon limit (120-gallon tank plus 10%), and the card matches the assigned truck."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSygYKEAgTGAI4AUIIdGhpbmtpbmcSDI15ip9GFHINdV1CKRoMYOLVOtVm+/RiLmnTIjA9ITxAU6k6BiP6sIOwEIhxsdpLAsGPqLqpR3N5qdzNpULTgqmPGxy0Yubuk78Ifb4q5wXL2fQ+eoAo70kyFYHQTGRpvsJUl5DvZYYYvH0ivLDNuxdVaYhmbadF2E39DiwX4lbWf2a2WkXv29JK9+v1x9gsnWU6DIcBK3HgsquslZQ/PDNK7Pv/SFRHdMwYJgu0/0WA9jWS70Yo5ELZrws7IyEKrYIpBr2HYnG+1ZdCCRUGctOaEjByBqX8e3pPSlUK3FJjK/214unODGAo5bb2zzK1v1FhKz04LFbGYARrUGk8i2S8U0dwqc2nEK6C3lUnJeLYwXTk/hVyfU/HGN+AjxrGJ5s8RMVP3334gSHMftnljwPdsw9lkh91ghjejeNwYvO3PixSC6F5grOQ+iFO+gF5lnu0OnuYMbrtBeSRc1ZWjulq2dsd6uDlhAFN0mKFJWkBvu9Uocynvv9nt6qnCIfNjy+db+w6udOHzQ+N0pXe8IAyg+SBiawASeVWEPM1pvwub1gjMyRkgWctrM5A/y1tRuHnRJKEb+6yIRXLlaErXqEOfkcjzySICkJB6CTICEk7daQZ8oqzk1W+7+Ch4u0deFAYNyue1M3rSznWG7f3ao9tc+bKQzEiZcy2IfRhr7FEUKEw1NmpEsCYgQ7xOAOmcJvlOL1dl7vUuyC41qSdsLqb2Z4CqYdQ4dc79yfbY83mSI67zWvbS1odfZbV7akxtBLKTT6D50QZ7scFpIvM4FK4qGIsF9bM8r406kA7BsduV5zDM6iIfUGcTlUgbv8aM+txOwLNcuFnDar1AN6aovMlfGiX41NF7lWZTcQHCk/q7jya7JwZwRBR3ZlaqkTrO8znIYkhoTEj2qEfilyWxoVyB2TeGdD/ispdysVyW/JkY5V0s2yvumMd6Zav64/YH5CRZ961wD9L2/R2Sn12Ka982luRp+3YGN12xEiEHVPW7tmSJP4GzgM8ZM+mZVua9C8Dk19HzH37Keia5d0+RGFeUD8gqeBkWu28CGCNJ/nRl9ONioEZUGcBKuZ0sx+qVSmg+HwiAhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14's ping at 17:29:41Z, about 3 minutes before the purchase, was within about 0.1 mile of the Temple station. The 34.8 gallons is well under the 132-gallon limit (120-gallon tank plus 10%), and the card matches the assigned truck.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspK8DvAstdpoPjouX9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5326,
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "thinking_tokens": 131
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14's ping at 17:29:41Z, about 3 minutes before the purchase, was within about 0.1 mile of the Temple station. The 34.8 gallons is well under the 132-gallon limit (120-gallon tank plus 10%), and the card matches the assigned truck.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5326,
+    "output_tokens": 242,
+    "output_tokens_details": {
+      "thinking_tokens": 131
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

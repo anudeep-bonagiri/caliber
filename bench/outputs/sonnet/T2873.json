@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01268,
+  "durationMs": 2494,
+  "httpStatus": 200,
+  "id": "T2873",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Last toll at SH 130 Plaza 1 for TX-1017 was about 22 hours earlier (T2849), well outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Toll T2873 is at SH 130 Plaza 1 (Hutto) on 2026-10-21 at 13:35:44Z. The most recent earlier toll at the same plaza is T2849 on 2026-10-20 at 15:40:28Z, which is about 22 hours earlier. That is well outside the 10-minute window, and no other earlier toll is close in time. So there is no duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"Last toll at SH 130 Plaza 1 for TX-1017 was about 22 hours earlier (T2849), well outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMss9FEjtE3A29o1VcV3",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5325,
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:47+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Toll T2873 is at SH 130 Plaza 1 (Hutto) on 2026-10-21 at 13:35:44Z. The most recent earlier toll at the same plaza is T2849 on 2026-10-20 at 15:40:28Z, which is about 22 hours earlier. That is well outside the 10-minute window, and no other earlier toll is close in time. So there is no duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"Last toll at SH 130 Plaza 1 for TX-1017 was about 22 hours earlier (T2849), well outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5325,
+    "output_tokens": 203,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

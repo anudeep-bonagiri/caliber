@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0122,
+  "durationMs": 3444,
+  "httpStatus": 200,
+  "id": "4433",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged at the Corsicana Pilot station within about 3 minutes of the purchase (under 1 mile away), and 32.1 gal is under the 132 gal limit (120 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 16:36:43Z at Pilot 299, Corsicana (32.0954, -96.4689).\n\nNearest pings to the purchase: 16:33:52Z at (32.09538, -96.46896), about 3 minutes before, and 16:40:00Z at (32.09537, -96.46866), about 3 minutes after. Both are essentially at the station, well under 1 mile away, so the location check passes.\n\nCapacity: the limit is 120 \u00d7 1.1 = 132 gallons. The purchase was 32.1 gallons, which is under the limit.\n\nThe other policy codes apply to tolls and invoices, not to this card purchase. The price is about $3.52 per gallon, which is not something policy checks.\n\nThe truck's odometer also fits the movement from Houston to Corsicana, so nothing looks off.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged at the Corsicana Pilot station within about 3 minutes of the purchase (under 1 mile away), and 32.1 gal is under the 132 gal limit (120 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsq3jniaRLbMQsYFAx3",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4305,
+      "output_tokens": 359,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 16:36:43Z at Pilot 299, Corsicana (32.0954, -96.4689).\n\nNearest pings to the purchase: 16:33:52Z at (32.09538, -96.46896), about 3 minutes before, and 16:40:00Z at (32.09537, -96.46866), about 3 minutes after. Both are essentially at the station, well under 1 mile away, so the location check passes.\n\nCapacity: the limit is 120 \u00d7 1.1 = 132 gallons. The purchase was 32.1 gallons, which is under the limit.\n\nThe other policy codes apply to tolls and invoices, not to this card purchase. The price is about $3.52 per gallon, which is not something policy checks.\n\nThe truck's odometer also fits the movement from Houston to Corsicana, so nothing looks off.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged at the Corsicana Pilot station within about 3 minutes of the purchase (under 1 mile away), and 32.1 gal is under the 132 gal limit (120 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4305,
+    "output_tokens": 359,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

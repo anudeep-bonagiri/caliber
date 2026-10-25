@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0092,
+  "durationMs": 4834,
+  "httpStatus": 200,
+  "id": "INV-1058",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1058 matches contract rate (245000) and PO-1012 qty 1 is fully received. The only same-amount earlier invoice (INV-1007) cites the same PO, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change (day 42) is after receipt day 33, so vendor_bank_change does not apply. No hold rule applies. Note: PO-1012 now has two invoices for its single received unit, which may be worth a courtesy check outside the hold policy."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwgoKEAgTGAI4AUIIdGhpbmtpbmcSDFLluklMnVamMaYIaBoMzrr0o6ySBX+PjSn4IjBHnhRYV2hsk6cX1Fo0OndMSuOTGeVXrk+Vsm8/h6TNbqDU531+lQtzhc9GLvIG1ZMq3wmth6eSxds+E30PMTDTrg53pZqanyVZKTUGMxFk2k6AOGJEBeEgchnVPA8PlEhAe18ZclGdBZqBjiKlMU0WfHN3TYeH8NLHEcpXxkQO3XWVXPqQi6XjOMJ152JXpe/m/+G7BFwKw22e777HpRFdu0kzB9p4NbiUi4P6vRSl/KdDNSXKV6ziGqmeICuqAk+DKh/pFah0of10rfjasxvyNm58TVjLh7vin8pI/cOuNKVdf5jR3vUDFtJ2CscRtYoRQ5crcj3//9XDkA7d2w5v121VC0SiOSh64PYE0VlSMevqw2dj7DY9lSBfbYFgmd6162bfjYXKMbJRN+qx3weP5p43DxKPTX70Gc2H3qIn92agVvJ2yYT9yofC761BACF9WKNXd2W9x0Ef5zMxRBmoObdksjZULpOGxg2NtWQ+n64rVw/GXuU75QgkzJsvBO9m2sF2sv4EqcbLKpVoYf+6OqdYVAi7yT9jwzq1er/pE8EgrzOG5sQYrUDs6rqeLyHE2Fx3oDoVSuhru6cwfjmNqYkLTcnpxXOCH9K2QenLDHDnvGwx5v9rpr+fAH6xwvhp/vjV5SSMkLJCGD+sjjaZTU/djbocxMcpxsm3m9Fshq8m/j/W8/6t1DvCxgbd25iwK2D7FiaEfkNXNQpD1ygZM4O0Ow1mXmxL+U4pCXrXUabJrJklnjmnnKXpxz90kMB70QQp+DB/Wyq/x/AHOpVVf5rntTHlMSh77qdq5Dvv3xeUoogRK8CHuwk+wQ6B9rRjwtYUtO5TeFdftYrZAY727zp4cBRh8Eewr+Lj11qW0+P0bsI9U0ae6mpKVJYNom2iU3jM0/ZQ75jJZ1wFmRijhTmJDWflMJJpNz/lNEnS83MQc1ktpQRZlxaBpBpNEGdqz8TMe6u7CDzqOff7k2igiWQ2+llHwo1MKYv1iIo4UHDsj/j2J7enx4VVggTs8+vsIBJ8x4CMdsKT9LLuFpSi9V3/i4YbW+XoRe/KQ2tRFa21fzD3zZstWpDHhiwv+4yHHyLHSII6aKCIFen11ETH+2uyVhjXxgm7JEa9eXSAx1NQ6MT6gzMYzjqokKDmi/X9u3KrDyffHtk4RHutYRl/M6/UNb7FZxmuyl7RtUj8Rgv7F1dQd+dAe5Fg28oTMfc06vnlph1P+2Ph0IW7QQhNMvs7B4JDuoAnQ93OAKJknizn/0cluu03Ryar5T5beywOEOIp2Jeh13NCgQXkCgp0PZxUbDIIGzGGM5kjPrwGm3kA0XyfMv3J52wF3j6nQ00kej3ppudSxdvXofbKHpYAvTm0tBWKmIGR58LPRiYvDgsW7vMvB4Ne1Gt/1tNZNGBzawrKBnqDB7h5Incl90rAPa3JERf8Ya/FJH14w2tn+WRV0I3csA5JfBhiegP3oOEB1g0R23d1PPSHqi0gcFfeS5WE8AMqH92ER6LMDFxvsrbLRLvr89Q5N9fWi75Rp1KvnRGGu1hCQ1IxWk4jxRZHdUwF4HVJxtQrzdcSB4/HyncOdER6z6x9gBUKLPsEHKP+QfnOMlAYt2JKl5YKHnh9mV18J4thlHp6ncBm9MUUBLvy0C8pwgaXckkwStW3MMnFNfqeHr33t7uqMWueRBvC8LZspowWfFQfGMBVeOj23LI37KgPf7zX063vl3k9RwgoLBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1058 matches contract rate (245000) and PO-1012 qty 1 is fully received. The only same-amount earlier invoice (INV-1007) cites the same PO, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change (day 42) is after receipt day 33, so vendor_bank_change does not apply. No hold rule applies. Note: PO-1012 now has two invoices for its single received unit, which may be worth a courtesy check outside the hold policy.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnd4AwEHdCZYd2NNZH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2240,
+      "output_tokens": 472,
+      "output_tokens_details": {
+        "thinking_tokens": 291
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1058 matches contract rate (245000) and PO-1012 qty 1 is fully received. The only same-amount earlier invoice (INV-1007) cites the same PO, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change (day 42) is after receipt day 33, so vendor_bank_change does not apply. No hold rule applies. Note: PO-1012 now has two invoices for its single received unit, which may be worth a courtesy check outside the hold policy.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2240,
+    "output_tokens": 472,
+    "output_tokens_details": {
+      "thinking_tokens": 291
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

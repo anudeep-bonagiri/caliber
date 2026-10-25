@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01149,
+  "durationMs": 2844,
+  "httpStatus": 200,
+  "id": "3650",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23 pinged at the station (~0 mi) 3 minutes before the purchase, and 45.2 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 16:27:44Z at station (31.0982, -97.3428). The nearest pings within 30 minutes are 16:24:51Z at (31.0982, -97.34273), about 0 miles away, and 16:30:00Z at (31.0984, -97.3425), also a negligible distance. So the location check passes.\n\nCapacity: 45.2 gallons against a 100-gallon tank (110 gallon limit), so it passes.\n\nThe toll, invoice, and other checks do not apply to a card transaction, so the payment is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged at the station (~0 mi) 3 minutes before the purchase, and 45.2 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrw5zXgZx3zEGqsCzv",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4450,
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 16:27:44Z at station (31.0982, -97.3428). The nearest pings within 30 minutes are 16:24:51Z at (31.0982, -97.34273), about 0 miles away, and 16:30:00Z at (31.0984, -97.3425), also a negligible distance. So the location check passes.\n\nCapacity: 45.2 gallons against a 100-gallon tank (110 gallon limit), so it passes.\n\nThe toll, invoice, and other checks do not apply to a card transaction, so the payment is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 23 pinged at the station (~0 mi) 3 minutes before the purchase, and 45.2 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4450,
+    "output_tokens": 259,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

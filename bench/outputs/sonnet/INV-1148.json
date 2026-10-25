@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01356,
+  "durationMs": 4559,
+  "httpStatus": 200,
+  "id": "INV-1148",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 49,800 is under the 50,800 contract rate, qty 2 matches received qty 2, the amount 101,475 matches only INV-1101, which cites the same PO-1020 (not a duplicate_invoice), and the invoice is under the 500,000-cent bank-change threshold. Note: 101,475 is 1,875 cents above 2 \u00d7 49,800, which is outside the hold rules but worth a look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSowsKEAgTGAI4AUIIdGhpbmtpbmcSDDfppczxwOEqtPZtRxoMg7TE+x3WGKzg2hj5IjDHqSy1KbqIH6gK2jiOLqTrVIFMs1t8q9NRkcQSxOMN6UNP9wZI/FHB/0VkfkLEHHcqwArpL4KeDB3z9TIzMoWazN5kwwUzA0Y59ovgI030SpX21U0cBfDNgk5jktr2gpMfcLShs+T0ySrSNyc2e45DV62Yl0vgi6ziEGmWZpTcDYJqFMufA98PrKiYb4XPeALBN5ufRTFF+l8EnuZ3BytH2CGULwOwWiKHKkQkf+Voj81ahSk0F04epg+7wJpqMKnuz/EhWS/ELMj1xWAiGe+PX0C6qZC8i6dRhhQb+6A7I3ecJmRRuuRz8roYwVZvay56aIqiTYsPxWjMxWxVqRRSrskWYzBBMYMWFjlyqLv54nvH7MtwhFhBpN6xQufB498h30Qx4hMhXAoz7V/WywoskXnzKwcYmnJAVRQsWIRmUpofoRZe5mG1l6T5/G3d4ev8pLvDj6mxJ3sGFXFVs8e4XM/ikeSyEYF+RP/Qo/przLArGsq0AdBJVNZM6Nzy48Dcpledet2fusJ5y8MxM0F8ipUZAx5B3FnJVHvd1gLHX1Aq51tXFLccxu0z4hh8P3usZmbWU1ibbdeXLfT2eB9hTyJmiYastxVJJMRRpL+KZ7fITjTbJR6e0zbXMtwUIB3NqGsObIaMiKSIeDedjVgCrhVD77xfX2rSdzceqOXm+C5JJzT47DwVtpoTE4PZRGrotZue8E5LbRwNw4RUDv2DKy48LkfphbBFo96lXwK2D0Y327K3+wfuGhd4QeCR0ZUQ1atuW3HEyIioI3Lh/n5jp4fB0FLSCgp85PkNC26OAbABvOn6Lsl7GWRhbdLBWHhiPlT1LILrCN9QDjV/GIjvQnU6WjnRjsCcTlWqQ8sae6q2QaKxJi+ESBCJ4HSdU8HfM6vsr0Z41R4rJufzkqLmJtLq00ajYkoTrNTmqHQV5YZS7E+J4gZVXcdn5LWJM9XexmFCR6xIGsfdLM7zeDmb91XAhwdf/LyQRoVqsOJXT6ngp5MpkhYoHMJ+8hKJUsDoxf/4CBtZcdHBzoMlzvTvTgYZmqm4iJzfsPkZ62N01F2uf75ThpYpz9E5dlPjMUDNBKn5ahkCQ3uM6RV9wGJolcmXVBovIHxaz1s3EoeEcgkPZYMzSg97IyMmX5OVsTUvkXJbfkqLxIjPj9WtvjM/k3qnoxPViuKHc14PNi7CXEXbU7w8yeA8jwnBVg9qlASIS6EDmuB5mid/FnqXeoGrIw31ZNuWCYZcdlNf87IBXjnW4oRA4SFTxPgvhCH8pjfTQUR7Bd/b45VkxRvJFiS+1tA+TKY9DvTaTq6L3GItVj1rY1NAwOsjkdNnEQ6wbJg/c02wi5g3NwIzntuSVvdq0lts5tv0VadEsNPaEylpGe2QkNzgEFY4yWIgSQUp6m1t3bXeGFPE/CWT8jtkvUiIR7OJKyLB3EG2uMaCQLOk+7wbcL2W69dt5/COZj8ijSMya4gSki+Ctemd6MCIeGCl0Xzfxb7s754am3eNFVzCdTKIWunvy/vuDrwpUB1QGysHEv+pyNJCC318xJiF5tV3OGEs+MhnPZHqW5bKJBN794TOFNzdjY56G9uvdYyaWsdKmI6YyGvwwOVHCctH9xpQrSUuYRwDvVyy/7IGnFwzI9onJY3eij8G/F9xXdaBxDSS95kU7F2AsCJa6/mOjLZusousqUVo46wFESzo+wHd8Cc3UCCI9B4lCO23/Q0MhAXSnC2GdE51FiIval3xYc6evrem88pfVc/P8fT8Opqesg5KW+dkIwDDdCdfIf7IF+nqPGI6uXiVZWGXhVksz/0HAOTxR6fxs/oLADyRB02ZrllnU9UJc6RLtov7QfIbrxbe0D8YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 49,800 is under the 50,800 contract rate, qty 2 matches received qty 2, the amount 101,475 matches only INV-1101, which cites the same PO-1020 (not a duplicate_invoice), and the invoice is under the 500,000-cent bank-change threshold. Note: 101,475 is 1,875 cents above 2 \u00d7 49,800, which is outside the hold rules but worth a look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnHVRvfTkRY9uGeUsi",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4145,
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "thinking_tokens": 365
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 49,800 is under the 50,800 contract rate, qty 2 matches received qty 2, the amount 101,475 matches only INV-1101, which cites the same PO-1020 (not a duplicate_invoice), and the invoice is under the 500,000-cent bank-change threshold. Note: 101,475 is 1,875 cents above 2 \u00d7 49,800, which is outside the hold rules but worth a look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4145,
+    "output_tokens": 527,
+    "output_tokens_details": {
+      "thinking_tokens": 365
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

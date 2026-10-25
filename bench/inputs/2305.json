@@ -1,0 +1,410 @@
+{
+  "kind": "card",
+  "transaction": {
+    "at": "2026-07-31T13:35:10Z",
+    "cardId": "FC-1006",
+    "cents": 9644,
+    "day": 23,
+    "driverId": 11,
+    "gallons": 27.0,
+    "id": "2305",
+    "merchant": "BUC-EES",
+    "stationLat": 30.1105,
+    "stationLon": -97.3153,
+    "stationName": "Buc-ee's, Bastrop TX",
+    "truckId": 6
+  },
+  "truck": {
+    "fuelCardId": "FC-1006",
+    "id": 6,
+    "plate": "TX-1006",
+    "tankGal": 100
+  },
+  "truckPingsThatDay": [
+    {
+      "at": "2026-07-31T05:00:00Z",
+      "engineOn": false,
+      "lat": 30.26742,
+      "lon": -97.74309,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T06:00:00Z",
+      "engineOn": false,
+      "lat": 30.26697,
+      "lon": -97.7434,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T07:00:00Z",
+      "engineOn": false,
+      "lat": 30.26749,
+      "lon": -97.74333,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T08:00:00Z",
+      "engineOn": false,
+      "lat": 30.26698,
+      "lon": -97.74294,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T09:00:00Z",
+      "engineOn": false,
+      "lat": 30.26695,
+      "lon": -97.74333,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T10:00:00Z",
+      "engineOn": false,
+      "lat": 30.26736,
+      "lon": -97.74327,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T11:00:00Z",
+      "engineOn": false,
+      "lat": 30.26739,
+      "lon": -97.74305,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T12:00:00Z",
+      "engineOn": false,
+      "lat": 30.26723,
+      "lon": -97.74303,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T13:00:00Z",
+      "engineOn": true,
+      "lat": 30.26847,
+      "lon": -97.74185,
+      "odometer": 349849.9
+    },
+    {
+      "at": "2026-07-31T13:15:00Z",
+      "engineOn": true,
+      "lat": 30.19296,
+      "lon": -97.54128,
+      "odometer": 349864.5
+    },
+    {
+      "at": "2026-07-31T13:30:00Z",
+      "engineOn": true,
+      "lat": 30.12052,
+      "lon": -97.34175,
+      "odometer": 349879.0
+    },
+    {
+      "at": "2026-07-31T13:32:01Z",
+      "engineOn": true,
+      "lat": 30.11067,
+      "lon": -97.31552,
+      "odometer": 349881.0
+    },
+    {
+      "at": "2026-07-31T13:45:00Z",
+      "engineOn": true,
+      "lat": 30.11031,
+      "lon": -97.31558,
+      "odometer": 349881.0
+    },
+    {
+      "at": "2026-07-31T14:00:00Z",
+      "engineOn": true,
+      "lat": 30.14288,
+      "lon": -97.14224,
+      "odometer": 349892.9
+    },
+    {
+      "at": "2026-07-31T14:15:00Z",
+      "engineOn": true,
+      "lat": 30.18279,
+      "lon": -96.92837,
+      "odometer": 349907.5
+    },
+    {
+      "at": "2026-07-31T14:30:00Z",
+      "engineOn": true,
+      "lat": 30.17519,
+      "lon": -96.71017,
+      "odometer": 349922.1
+    },
+    {
+      "at": "2026-07-31T14:45:00Z",
+      "engineOn": true,
+      "lat": 30.16989,
+      "lon": -96.49333,
+      "odometer": 349936.6
+    },
+    {
+      "at": "2026-07-31T15:00:00Z",
+      "engineOn": true,
+      "lat": 30.14239,
+      "lon": -96.27967,
+      "odometer": 349951.2
+    },
+    {
+      "at": "2026-07-31T15:14:18Z",
+      "engineOn": true,
+      "lat": 30.0976,
+      "lon": -96.07806,
+      "odometer": 349965.0
+    },
+    {
+      "at": "2026-07-31T15:15:00Z",
+      "engineOn": true,
+      "lat": 30.09733,
+      "lon": -96.07807,
+      "odometer": 349965.0
+    },
+    {
+      "at": "2026-07-31T15:30:00Z",
+      "engineOn": true,
+      "lat": 30.0973,
+      "lon": -96.07814,
+      "odometer": 349965.0
+    },
+    {
+      "at": "2026-07-31T15:45:00Z",
+      "engineOn": true,
+      "lat": 30.04896,
+      "lon": -95.93451,
+      "odometer": 349975.4
+    },
+    {
+      "at": "2026-07-31T16:00:00Z",
+      "engineOn": true,
+      "lat": 29.9807,
+      "lon": -95.73292,
+      "odometer": 349989.9
+    },
+    {
+      "at": "2026-07-31T16:15:00Z",
+      "engineOn": true,
+      "lat": 29.87646,
+      "lon": -95.55303,
+      "odometer": 350004.5
+    },
+    {
+      "at": "2026-07-31T16:30:00Z",
+      "engineOn": true,
+      "lat": 29.76446,
+      "lon": -95.37798,
+      "odometer": 350019.1
+    },
+    {
+      "at": "2026-07-31T16:30:40Z",
+      "engineOn": true,
+      "lat": 29.76051,
+      "lon": -95.36976,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T16:45:00Z",
+      "engineOn": true,
+      "lat": 29.76051,
+      "lon": -95.36986,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T17:00:00Z",
+      "engineOn": true,
+      "lat": 29.76056,
+      "lon": -95.36981,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T17:15:00Z",
+      "engineOn": true,
+      "lat": 29.76068,
+      "lon": -95.36991,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T17:22:27Z",
+      "engineOn": true,
+      "lat": 29.76033,
+      "lon": -95.37002,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T17:30:00Z",
+      "engineOn": true,
+      "lat": 29.76027,
+      "lon": -95.36975,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T17:45:00Z",
+      "engineOn": true,
+      "lat": 29.76054,
+      "lon": -95.36956,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T18:00:00Z",
+      "engineOn": true,
+      "lat": 29.76063,
+      "lon": -95.37003,
+      "odometer": 350019.7
+    },
+    {
+      "at": "2026-07-31T18:15:00Z",
+      "engineOn": true,
+      "lat": 29.83387,
+      "lon": -95.48623,
+      "odometer": 350029.4
+    },
+    {
+      "at": "2026-07-31T18:30:00Z",
+      "engineOn": true,
+      "lat": 29.94501,
+      "lon": -95.66055,
+      "odometer": 350043.9
+    },
+    {
+      "at": "2026-07-31T18:45:00Z",
+      "engineOn": true,
+      "lat": 30.02236,
+      "lon": -95.85617,
+      "odometer": 350058.5
+    },
+    {
+      "at": "2026-07-31T19:00:00Z",
+      "engineOn": true,
+      "lat": 30.09232,
+      "lon": -96.0589,
+      "odometer": 350073.0
+    },
+    {
+      "at": "2026-07-31T19:01:23Z",
+      "engineOn": true,
+      "lat": 30.09737,
+      "lon": -96.078,
+      "odometer": 350074.4
+    },
+    {
+      "at": "2026-07-31T19:15:00Z",
+      "engineOn": true,
+      "lat": 30.0973,
+      "lon": -96.07811,
+      "odometer": 350074.4
+    },
+    {
+      "at": "2026-07-31T19:30:00Z",
+      "engineOn": true,
+      "lat": 30.12201,
+      "lon": -96.19325,
+      "odometer": 350082.2
+    },
+    {
+      "at": "2026-07-31T19:45:00Z",
+      "engineOn": true,
+      "lat": 30.16831,
+      "lon": -96.4029,
+      "odometer": 350096.8
+    },
+    {
+      "at": "2026-07-31T20:00:00Z",
+      "engineOn": true,
+      "lat": 30.17386,
+      "lon": -96.62159,
+      "odometer": 350111.3
+    },
+    {
+      "at": "2026-07-31T20:15:00Z",
+      "engineOn": true,
+      "lat": 30.18062,
+      "lon": -96.83681,
+      "odometer": 350125.9
+    },
+    {
+      "at": "2026-07-31T20:30:00Z",
+      "engineOn": true,
+      "lat": 30.16088,
+      "lon": -97.05333,
+      "odometer": 350140.4
+    },
+    {
+      "at": "2026-07-31T20:45:00Z",
+      "engineOn": true,
+      "lat": 30.12084,
+      "lon": -97.26418,
+      "odometer": 350155.0
+    },
+    {
+      "at": "2026-07-31T21:00:00Z",
+      "engineOn": true,
+      "lat": 30.16798,
+      "lon": -97.46887,
+      "odometer": 350169.5
+    },
+    {
+      "at": "2026-07-31T21:15:00Z",
+      "engineOn": true,
+      "lat": 30.23864,
+      "lon": -97.66951,
+      "odometer": 350184.1
+    },
+    {
+      "at": "2026-07-31T21:20:34Z",
+      "engineOn": true,
+      "lat": 30.26691,
+      "lon": -97.74326,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-07-31T22:00:00Z",
+      "engineOn": false,
+      "lat": 30.26713,
+      "lon": -97.74302,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-07-31T23:00:00Z",
+      "engineOn": false,
+      "lat": 30.26735,
+      "lon": -97.74294,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-08-01T00:00:00Z",
+      "engineOn": false,
+      "lat": 30.2672,
+      "lon": -97.74305,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-08-01T01:00:00Z",
+      "engineOn": false,
+      "lat": 30.26712,
+      "lon": -97.74292,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-08-01T02:00:00Z",
+      "engineOn": false,
+      "lat": 30.26739,
+      "lon": -97.74282,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-08-01T03:00:00Z",
+      "engineOn": false,
+      "lat": 30.26723,
+      "lon": -97.74316,
+      "odometer": 350189.5
+    },
+    {
+      "at": "2026-08-01T04:00:00Z",
+      "engineOn": false,
+      "lat": 30.26706,
+      "lon": -97.74283,
+      "odometer": 350189.5
+    }
+  ]
+}

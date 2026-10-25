@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007276,
+  "durationMs": 2642,
+  "httpStatus": 200,
+  "id": "T1348",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Last charge at SH 45 SE Plaza for TX-1023 was T1323 two days earlier, well outside the 10-minute duplicate window; no other policy applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1348 at TXTAG-SH45SE-01 on 2026-07-22 at 11:54:38Z. The only earlier toll at that plaza for this plate is T1323 on 2026-07-20 at 15:39:41Z, which is about two days earlier and well outside the 10-minute window. The near-timed pairs in the records (T1292/T1293 on day 13) are at different plazas, so they don't matter here.\n\n```json\n{\"decision\":\"clear\",\"reason\":\"Last charge at SH 45 SE Plaza for TX-1023 was T1323 two days earlier, well outside the 10-minute duplicate window; no other policy applies.\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsboGXdJeiAM7pScey6",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2523,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1348 at TXTAG-SH45SE-01 on 2026-07-22 at 11:54:38Z. The only earlier toll at that plaza for this plate is T1323 on 2026-07-20 at 15:39:41Z, which is about two days earlier and well outside the 10-minute window. The near-timed pairs in the records (T1292/T1293 on day 13) are at different plazas, so they don't matter here.\n\n```json\n{\"decision\":\"clear\",\"reason\":\"Last charge at SH 45 SE Plaza for TX-1023 was T1323 two days earlier, well outside the 10-minute duplicate window; no other policy applies.\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2523,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

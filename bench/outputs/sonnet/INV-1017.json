@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005896,
+  "durationMs": 2864,
+  "httpStatus": 200,
+  "id": "INV-1017",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1017 matches no earlier invoice amount from this vendor, so no duplicate. Its unit price of 48800 equals the contract rate and PO price. Billed qty 1 equals received qty 1. The amount is under 5,000 dollars and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiQcKEAgTGAI4AUIIdGhpbmtpbmcSDEskLC+0FJ4qAgJkshoMwE+DU3y1aUk9zj8wIjBuTFnpADEihp2TKG9znIMCCL8AYxepCiaiXw/c1IK0zdB+zTLwNDI+XNdUxgpFdPsqpgZALVGh+2QpqvwY9MVU2/dgpsu1N/R/AC4Mxop4yGiU38quaZiDU3MI8ef8vuyL7fDXwYHpX7l6RkPAVFSSyE+djebulgqFXNMYt9tPKNKE/cdOh17saqmNKpo8KNAfFNeTK60yA4pymtuigoEJeEtNxLeor3GLrJiACwv5+nFcLZhKEnmkYwJW8aN9PKC4rYA1s0e8j51EmXm1O3aL5SiYOI0y7cTGLI02NP/QfL0+QV9aGKZxTPINjCXux6lEtIi3swIJ1zD6EtijMSN4mLe9daDqUY6KnKb2hSYtw4MrS2xLvZDqVD/88e3VzvXAlWeJqxh8BdnII4KAtV4JI/r4ymiU73syhufN+uYkEzkCdAfDIVv8pVshRxppnd2CAfAWllqnLPq3vBEuRLfBB1mxk/L02MtBvxsuu8WVON8iKlYKCEosTkg6I8d0FO8L5QOKrCHRYmfNqalcR/VzYduMn3sgE6UTU8QvtLYVhesJK9svBEWtBb0zmvL2+mNKVm7gHJ6kd2mkhM57tG/af9qyLLD1pnXwcjzyqWozeVVCpJ0RGPGXoSM7BBCgjJE8FRDgoP1wOIZtihoauyr/UQ5VvLTgEM8OuOzp6VvZKR1rG+r++AUoA6nEepvX9NZXFfLekcZGXWvlqjJMbJKm2x9zDxL6GmekG39dUedFN7p9x0INe0DWLuD+Vm4Y/WY5y7mtBUlcCU2dBGtkuUr38mwLmIDn6M6ycqRtuder4lMiDE47aKATTmCq9kwCFXkEIRtU2kDCWV4dCpOPlXhUZ0U8E1SiwEWAWVFLoHuddxoKjQKn0b5tA+G9SBsmYRReFS1WnZRbETtL90rA5qxOXyPkoEkhmqLMRTaysfmwIVQhxPwt/Zm7XZ8GCqE678/qBlmhnab4jew3vizKt6Tu59dZl3Oj9rZggrvzPmXRYDUMRY7sbr9cYeXUZ9/89nLLSYx3J++G+XRKGpyWCCLG6qJtVkMnQquOugSNhdC7dqJae25b/LP8G0Zcn+Vpk0XmfkAWZ4HC7fHxndPqDkucoynMv/fycUUfzRTXOu80aX6V6yoBaP2VuxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\": \"clear\", \"reason\": \"INV-1017 matches no earlier invoice amount from this vendor, so no duplicate. Its unit price of 48800 equals the contract rate and PO price. Billed qty 1 equals received qty 1. The amount is under 5,000 dollars and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsx6pX9n7ct5DQ3zdKt",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1723,
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 134
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\": \"clear\", \"reason\": \"INV-1017 matches no earlier invoice amount from this vendor, so no duplicate. Its unit price of 48800 equals the contract rate and PO price. Billed qty 1 equals received qty 1. The amount is under 5,000 dollars and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1723,
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 134
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

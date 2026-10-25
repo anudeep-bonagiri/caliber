@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011416,
+  "durationMs": 3915,
+  "httpStatus": 200,
+  "id": "INV-1100",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1100 matches none of the hold rules. Unit price 52,500 equals the contract rate, and qty 1 is within received qty 1. The amount 54,375 matches no earlier invoice from this vendor in the last 30 days. The bank change on day 42 is irrelevant because the invoice is under $5,000. The extra 1,875 cents over unit \u00d7 qty is not a policy hold trigger."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShQoKEAgTGAI4AUIIdGhpbmtpbmcSDI/WIbcasHxBbr/nlRoMTFjP7mJC1JT5jcW2IjCd4dFJlHc4w2HtIt1Vk3KAnSOv4KRFoWKRAzr0hUwca2/Du27q8qGkxvkYQjz/8uwqognnCrhB59inxqvqqbDWAa9NG+gJSlSCKQOqfug2gY8azl6c3mVl54X3fe8+PgQRr1vsTCUtIieco7zqYSswzEYWv+y2mvKmA+eQd2ddFf8sn4QEqqVtwABTbzyRrsBmRdIUrHYO3uXQA9pNACruv40KVZ/aByoLf5KfoE96MCXmfB5iZTol8R89vTIz1IJKVJMhJ9wyZVcesazaK32tM2R/hCVlEkuamW54FgeJm0VzU1U8820CCwHQYP5txQMhkbi7zL3TnvzfmcOA32Ksd2ZqCD1h85gTG7eQPREWYuWEQ+gxyubyL4W7QjhqIrECdL6F/BTDGXQyEcebT2JqGpu8qPWTHU/s1vg4nVaTaI5edxGSBqo/LNkibBoEMMHNqf9DB82II4D3vzuzXdK+NMEEdK2vP/kLOA1FgPNTn8gcTL1+OlOqcwf0uq6SbWF+0DgNljHeJEEB63gUZ3LI1kxc9GuMGzuONtFYPUIyPdKRTKa2YMQqZV6s5bmvjAkEkAWpoaeEL7TfrBuXIejGgXxgBFYlfmsvCi2/q+bZzzNtk5o53q5HqfQ5Lo/JlvJCqZhY+do7bl0fFHdG35U+UEEKebO67gxdVwkwGugY7DV0wgNqnduakjSXRMFB7iICfz46QxdGWX8HyuplqlyhTrdgd1JErScwYjEslXtDDgnjVU5zwVgCUu36ldnE+cuE4Y9f/insiBWrHBkyAaswsHfNJw6M879vPm1U7EOWGjJDmNk6szrDBJJh3eox7rfX9nq97Q2AJsXYdq6m0Srk/L1jBOZZnyryOSHxaXAwdJBwVhLlwwCB+r1rSkabcEa94Ma108Fv9V7cg3CXFEUM1ggdGu6SNturszP0AxjEp7fTqW+14uoVYYHFO/nZOLtZjKRphwsknWaB8lvBl1cyIzt/dSAhTnOKxS3qP8GRjjARMj3ExS9hiV3Ig7kn7/SJ0vDgS9llLYERWzSz5apjO7H0w9U0IK5BujTMeZ2Sax2pnQSp3uZ9eKjuGGN2MLLXhQ8pkXINftleOK9nMCDStozM5SGPZnt6YOnatWEDMNIrv6f+o7y+O8ZKPOROcV3RahhzlhhzvtwEW+ux8ZcLgi4FTd57YUajLonSm1hq09LXNOycLdRj2szKOkkNVWn1PFRftLt3D1cBzP/mp0mMCz+LukcdqfjtqP8aEYqzQ0gGLUgEuf7h9qsA465AqIOGwA+nERvkb1ohtakayDpnDUn/w7ldKbYqxE8BxhEXeEFyfRx6IAoEiyfAoxV0ot+LEu6oc3WkPtFHWlCVx/lZBgzpju4jdnYLPpcq/v1L9G3ak62KdiwWpcNnQf0ogebt6zELqnEZgW5MibyJalDHJ6YkHI3lS1cUjlu6widu0VvWtIUw1vRrsFPpNc9Hd99R+aR0n86buta5bC2Hor7lwUb0SP0uke8YQkkS/xvWjXqg7BlHrRBEwpUiF17POEm5T9klIxf6QqnS8xdn5gWfuJfx4qLtVeUgdx66J8i8dS0KRqk2oQ8wCgJUHx4yeQ4hvGhIt7Sr9Pl4izbT9MVw/VFNEwAytMOQM88VeZv7uteZkNmYGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1100 matches none of the hold rules. Unit price 52,500 equals the contract rate, and qty 1 is within received qty 1. The amount 54,375 matches no earlier invoice from this vendor in the last 30 days. The bank change on day 42 is irrelevant because the invoice is under $5,000. The extra 1,875 cents over unit \u00d7 qty is not a policy hold trigger.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspX3aNx4Lai2hJg8d7",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3423,
+      "output_tokens": 457,
+      "output_tokens_details": {
+        "thinking_tokens": 310
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1100 matches none of the hold rules. Unit price 52,500 equals the contract rate, and qty 1 is within received qty 1. The amount 54,375 matches no earlier invoice from this vendor in the last 30 days. The bank change on day 42 is irrelevant because the invoice is under $5,000. The extra 1,875 cents over unit \u00d7 qty is not a policy hold trigger.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3423,
+    "output_tokens": 457,
+    "output_tokens_details": {
+      "thinking_tokens": 310
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

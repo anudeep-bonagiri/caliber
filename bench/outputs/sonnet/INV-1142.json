@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012762,
+  "durationMs": 4717,
+  "httpStatus": 200,
+  "id": "INV-1142",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1142 ($315.00, PO-1019) triggers no hold rule. No earlier $315.00 invoice from this vendor within the last 30 days cites a different PO. The unit price is below the contract rate of $328.00. Billed quantity 1 does not exceed received quantity 1. The amount is under $5,000, and the bank change on day 18 is long past."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1142 ($315.00, PO-1019) triggers no hold rule. No earlier $315.00 invoice from this vendor within the last 30 days cites a different PO. The unit price is below the contract rate of $328.00. Billed quantity 1 does not exceed received quantity 1. The amount is under $5,000, and the bank change on day 18 is long past.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsgZThjDaPY8Poiv6mA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3756,
+      "output_tokens": 525,
+      "output_tokens_details": {
+        "thinking_tokens": 389
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1142 ($315.00, PO-1019) triggers no hold rule. No earlier $315.00 invoice from this vendor within the last 30 days cites a different PO. The unit price is below the contract rate of $328.00. Billed quantity 1 does not exceed received quantity 1. The amount is under $5,000, and the bank change on day 18 is long past.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3756,
+    "output_tokens": 525,
+    "output_tokens_details": {
+      "thinking_tokens": 389
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

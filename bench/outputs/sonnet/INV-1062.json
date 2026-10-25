@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007784,
+  "durationMs": 3012,
+  "httpStatus": 200,
+  "id": "INV-1062",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1062 bills 4 tires against PO-1025, but only 3 have been received. Propose paying 3 \u00d7 $519.00 = $1,557.00. The unit price matches the contract, no earlier invoice has the same amount, and the bank details have not changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/wcKEAgTGAI4AUIIdGhpbmtpbmcSDLNulY5uWw70nmVDLhoM9vDXb+3N46aZ+ztxIjAhuMfjo9nt7Oj2nHEQQyw1mY+NWAOq8/c2JTFuubQ0+WcdkcSNGq8A9aDCJ06qj74qnAcANlrhf0YbZVB0x2wsxFO1HSSThsclnEztc7cJ5eFeDr/1wtoaGp65VC21UuYRyrGdw7nZGUg0HDRW3Qj1//ZRrQrupk95lB/wTvkIzmokbMJm7SFeziHoSF4kDVfiPwyArBEKweZLH6KNE+lupKYHVSs96Mnomhvd586aG356iYLjSSSWO2WfC0MudieSB/trwnIbVAv7J5YBywiSupCVqxfqq7Ql3TRCf0B0BupT6k3eriMSy+54VwwTNdE+ns6hMB2ALdoa+7Z3t5QMEPHxcMpAq01cd/buU7HCoVVdtqyBhPnrVRpsScJGTACk5nv3AWoRnkfU9bNoXF0r0kNUXcM5R6xanYCMcD9RXoSTY+CX7am+EHwlb92LS9vp7uW0YrBv9TKPvrbuc940XELOxH4NeZsrJ80tKaD2M1AE/yZ5749luGx25C5H+6QZtgZQHcZ42/kwd1emdzz5YMwlRkZRgijmo2it/W/Uc7cJrG/OGsDfbASEh4JlbICl9TxDTkpNS6S3yE+ET7cei2QKy3BbuObzx7O4Nw+vAuRQgr45o7Iwqe7N4QveSqc2p8Bko+8jcWNAQsLAnxnx1s0COLYPvMgYsesVQUT64iiuXkKHmYKCTnyaXfnPoyh/3cEijCMEMMh+eF6zEH1gdv4F2fqOCYbgBietuFr5mYPy5qQ2d9c+hJG//BFBGNQXQk++VzOSfuOsf+3UAPcF2zFUNVbCl23cIJqSdrC/lLwOO52hYLPckCPgpfeereZexv2/NSy0wFLIPMEi36gmZ3PabnpC5eiTrLjzCx1MdNkkgu5s8FCwB1vLJwmALJRj/4CgY6rDM30q7Mxfbmikf3Z7fTpp74VzehneFZ4AmXV9rl2XxJ8meIRJZpiZumT2s+otBtTB94OD/iPkYYYmSoMy7jST4VdVBA3jwYzOerDIL+ll3izszjTxcfGOHhWpi+ryAt8WOhG0UO0dHt47XkAcyr1SlKML1uSl89XLxzIUx5uDJfLBdIwdRRc3QIi7fHL0zS8ONLDNU5UcGWCmggivnfdR2EPlWh/wQZMnQT634T6tS84fp/dFWnHy/VTCt/8hC4NCs2s7u8jjdSA6LGgO6iWwkq79DKbFTn6/qi5jxFCN7hjmynaAddehjAj0FctWlzv0fcsLEPBe1jWvb9g9jMxIlEGXJhDCQng5z/gnnsqYnQinkUNedOXl1yrsXaMEhtwwTP4CpLQ/DnUYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1062 bills 4 tires against PO-1025, but only 3 have been received. Propose paying 3 \u00d7 $519.00 = $1,557.00. The unit price matches the contract, no earlier invoice has the same amount, and the bank details have not changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsitWjK71bdXZSnHf5W",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2407,
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "thinking_tokens": 190
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1062 bills 4 tires against PO-1025, but only 3 have been received. Propose paying 3 \u00d7 $519.00 = $1,557.00. The unit price matches the contract, no earlier invoice has the same amount, and the bank details have not changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2407,
+    "output_tokens": 297,
+    "output_tokens_details": {
+      "thinking_tokens": 190
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

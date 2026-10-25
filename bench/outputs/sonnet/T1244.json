@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007714,
+  "durationMs": 2822,
+  "httpStatus": 200,
+  "id": "T1244",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1013 at SH 45 SE Plaza within 10 minutes; the only prior charge there (T1166) was 5 days earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1244 at SH 45 SE Plaza (TXTAG-SH45SE-01) on 2026-07-14 at 17:11:31Z.\n\nThe only earlier charge at that plaza for this plate is T1166 on 2026-07-09 at 16:58:39Z. That is about 5 days earlier, far outside the 10-minute window.\n\nThe T1169 charge at 17:11:14Z on 07-09 is at a different plaza (SH130-04), so it does not count.\n\nNo earlier toll at the same plaza falls within 10 minutes, so the charge is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1013 at SH 45 SE Plaza within 10 minutes; the only prior charge there (T1166) was 5 days earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscFBzZ2oaE1sCuLEoC",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2527,
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1244 at SH 45 SE Plaza (TXTAG-SH45SE-01) on 2026-07-14 at 17:11:31Z.\n\nThe only earlier charge at that plaza for this plate is T1166 on 2026-07-09 at 16:58:39Z. That is about 5 days earlier, far outside the 10-minute window.\n\nThe T1169 charge at 17:11:14Z on 07-09 is at a different plaza (SH130-04), so it does not count.\n\nNo earlier toll at the same plaza falls within 10 minutes, so the charge is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1013 at SH 45 SE Plaza within 10 minutes; the only prior charge there (T1166) was 5 days earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2527,
+    "output_tokens": 266,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

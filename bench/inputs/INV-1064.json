@@ -1,0 +1,148 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 16,
+    "item": "oil_service",
+    "rateCents": 32900,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 3
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 245000,
+      "id": "INV-1007",
+      "item": "brake_job",
+      "poId": "PO-1012",
+      "qty": 1,
+      "receivedDay": 6,
+      "unitCents": 245000
+    },
+    {
+      "cents": 57000,
+      "id": "INV-1020",
+      "item": "dpf_clean",
+      "poId": "PO-1023",
+      "qty": 1,
+      "receivedDay": 12,
+      "unitCents": 52500
+    },
+    {
+      "cents": 113600,
+      "id": "INV-1021",
+      "item": "tire_replacement",
+      "poId": "PO-1011",
+      "qty": 2,
+      "receivedDay": 14,
+      "unitCents": 56800
+    },
+    {
+      "cents": 117350,
+      "id": "INV-1028",
+      "item": "tire_replacement",
+      "poId": "PO-1011",
+      "qty": 2,
+      "receivedDay": 18,
+      "unitCents": 56800
+    },
+    {
+      "cents": 33761,
+      "id": "INV-1033",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 19,
+      "unitCents": 33761
+    },
+    {
+      "cents": 105000,
+      "id": "INV-1045",
+      "item": "dpf_clean",
+      "poId": "PO-1016",
+      "qty": 2,
+      "receivedDay": 27,
+      "unitCents": 52500
+    },
+    {
+      "cents": 57000,
+      "id": "INV-1050",
+      "item": "dpf_clean",
+      "poId": "PO-1016",
+      "qty": 1,
+      "receivedDay": 30,
+      "unitCents": 52500
+    },
+    {
+      "cents": 52500,
+      "id": "INV-1053",
+      "item": "dpf_clean",
+      "poId": "PO-1023",
+      "qty": 1,
+      "receivedDay": 31,
+      "unitCents": 52500
+    },
+    {
+      "cents": 2860,
+      "id": "INV-1054",
+      "item": "wiper_blades",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 31,
+      "unitCents": 2860
+    },
+    {
+      "cents": 34150,
+      "id": "INV-1055",
+      "item": "oil_service",
+      "poId": "PO-1002",
+      "qty": 1,
+      "receivedDay": 32,
+      "unitCents": 32900
+    },
+    {
+      "cents": 245000,
+      "id": "INV-1058",
+      "item": "brake_job",
+      "poId": "PO-1012",
+      "qty": 1,
+      "receivedDay": 33,
+      "unitCents": 245000
+    },
+    {
+      "cents": 105000,
+      "id": "INV-1059",
+      "item": "dpf_clean",
+      "poId": "PO-1016",
+      "qty": 2,
+      "receivedDay": 34,
+      "unitCents": 52500
+    }
+  ],
+  "invoice": {
+    "cents": 32900,
+    "docRef": "evidence/invoices/INV-1064.txt",
+    "id": "INV-1064",
+    "item": "oil_service",
+    "poId": "PO-1002",
+    "qty": 1,
+    "receivedDay": 36,
+    "unitCents": 32900,
+    "vendorId": 3
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1002",
+    "issuedDay": 1,
+    "item": "oil_service",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 18,
+    "unitCents": 32900,
+    "vendorId": 3
+  },
+  "vendor": {
+    "bankChangedDay": 42,
+    "bankLast4": "7730",
+    "id": 3,
+    "name": "Gulf Coast Diesel"
+  }
+}

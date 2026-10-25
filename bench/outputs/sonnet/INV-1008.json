@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007156,
+  "durationMs": 4238,
+  "httpStatus": 200,
+  "id": "INV-1008",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 36800 matches the contract rate, qty 2 equals the received qty 2, no earlier invoice has the same amount, and the invoice is under $5,000. The bank change on day 71 is after the day-6 receipt. Note: the 78100 total is 4500 more than 2 x 36800 = 73600, which no hold code covers, so it may be worth a courtesy check."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmwoKEAgTGAI4AUIIdGhpbmtpbmcSDE+eK8DtaYFNwkCN5xoMt9vVO0U+ZW7s2op8IjBMowzJf7sMCYJo/cjKHnDq7/2e+PZxPWYcP6jMIC+kJeqa47mI8dwy0fFBCctzbfgquAkp9ait4Ln6Ww14k6d7pkVARhZgRVO4rYgufHYSwJP+zTLPAMbCUj5ttPnmC5Ex/LUlZUOCRXCHh6VLIOLp96DaPIYUWoVnP1rCoLnHbhlIybeCiDuyrx+AZmmWlkPa9BlO+pC/lYgetTUDNouE/z9ipM9+eOHi4sZfi7rocokwkZh9Uj2wl8D7zx2hzLNIwXeCeoSJR5cgGmcdoIjVGaLdWg9YYnZo3e1qjLPE0Zp+Ot+c8VH1mpQ+zyLYbTg/jimjn5Vib9Ezb4oXVe0qI9kjXm3r3u6FTqafQ5U6mH8cnTkjpY/TBmJbgnZInryGh8ZMjtSNXUgzRHLMd1o0sYYWfxHmPpr9cFW01ieSVXf3m0WOi/Kvfm81oXpNS7lMaVsBrdocpbnd4qQjk+IhUU9e2QGMYyaiU18mba9oVirSa6HlPF/T4hnQU3pb1nw/eCnK2A7UajiTogsqSWM5J2joCQsrTWLkftCDshtfZBIaIqeXzhn6myZABEd6T1Yc+vNYDNX9i5+4Ywh+LfEyMUMVyc7sYhBUXXVF/FFLTekrVQRgWeacOIyU5DtTlwMYBpV/df22ztHRqIoXyVOFEyzYrIBJh0MTjGujXCm4zx9Z6xtbNGEBhXm7pb6hMQSkTefxSSFjDJ2IBJzsba5bnmK+rCOH24nCzUc9bq7f00kA4T6pXq50pIvF4P5YfAa/VFIKQdzNJlWIoNkPopPT6GHWMcSL3g5dh+nC2j5YT8S/B2P6JrW6D/y3w/2tu2oG3gTrhUw1e5j78thS9132/L+pXZJq6nhX7UVkYPGhG2sXABzLOto13iJO2qtg6GlfjgPigGhTmj3MYGRT3si/5pG4HlNLwCGxmuwlNCS5+KTwvmy0ZfaUIHjpL44ylEtPUECjMl+N27fasSF+O7BdGgzeU5t1FA4tCyDrJ/GAFVLeDp1gAnPkAbWsSypkgrmhmV3ijm0n2thBOF2w9epOpIVQZDfQH5B1CgRZ4Uaujhnm70fuVFRVRIAd5pVzaNOTGVJoTKRly6jsaW6LSKAhlNm5aKrN/sexcWTWg4BANndUgwW1d8knYnJ8z9bav1NyQYjPp/GUsPrnfZDV52iIhJzTlHqoYQJ2dke0HRcWVAsWWcysNTWMdkVJoJ+ge1h1f+930X+Jo8JcVyt0p0OLLdiet/odpuMHD1TGokRqNynUOTZMYjMUPJVs2DMqWjmhjZoiEO7KMEr62gokxU3eKGUIAlDxlXER4EfnNt20WM5hqdE0SmhngfxiJiBODSjQ6GxQj+5PFQus0OyVxC0vt+ta4kpiz1LVyP5M7ieG7PJjYcKjSNIPrMfLGp8V6GIcVbIrDhuXqEpZFvvTQPjaVjLH3Fh2//F5IyDI/2bLqbtmt3Q0IwwRvqPVmvNHOJV+6FdlR62U97Yis3R9UahlKcPrcyhDutxoqcqBExzc19CF6pukhrnRXIFaS8GNp82L9iRAfw3zgvIWY50IXEgPK1A+aGus+HbiynBkFUy45ExtrsvS2eiHu83fbHkSqIH+dGtRhEhi2WmU799TtWvqucqKJuqCWY4BZJfm10ommnzRQm8oz5bwbKBNfylqkeKRItuV5G2+WTahCxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 36800 matches the contract rate, qty 2 equals the received qty 2, no earlier invoice has the same amount, and the invoice is under $5,000. The bank change on day 71 is after the day-6 receipt. Note: the 78100 total is 4500 more than 2 x 36800 = 73600, which no hold code covers, so it may be worth a courtesy check.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxCpBpkaT4Uuvxdp8g",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1473,
+      "output_tokens": 421,
+      "output_tokens_details": {
+        "thinking_tokens": 273
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 36800 matches the contract rate, qty 2 equals the received qty 2, no earlier invoice has the same amount, and the invoice is under $5,000. The bank change on day 71 is after the day-6 receipt. Note: the 78100 total is 4500 more than 2 x 36800 = 73600, which no hold code covers, so it may be worth a courtesy check.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1473,
+    "output_tokens": 421,
+    "output_tokens_details": {
+      "thinking_tokens": 273
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

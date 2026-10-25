@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01364,
+  "durationMs": 2801,
+  "httpStatus": 200,
+  "id": "6205",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged 3 minutes before the purchase, within about 0.01 miles of the Luling station, and 76.9 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwQYKEAgTGAI4AUIIdGhpbmtpbmcSDBHCqvN92GpRu0xt8xoMiZl8Gch3fxbrFAy9IjB4hY1w7f2uPJZarlU6XmWqvMMkkM15ZnqlpSdnB2Ouez0DJixbsXY1B6msdbKqy7sq3gWxsS3AhFfFWlPQOHF1GT8oM5Ar+MdjQWqBlUYbsH8Hfczh/2Hi2lv2g1+QrcjklDbldb7cfTwdb+lQ9o0RyclzbkljfJIXFZcxKoSLnefNd3V5TGwXxP8fjfL0AbcbVoppB14GSvYR/5KxIaxN3YXg99RJK/j0U7LUt3l8uOwU7La+jS4og+yvNxnB3XGGcnzrKhQsLSVKfcl4oXUF0G8QAM/O40r5iVKQF3o5VUwaQl50mDjbUtn6uBNUgR670xfWVDtkcEuWIxC5nTXok+na+HQSPpiuvahbE29xE9BLqXly+UHRzZFH+KFEJZOBBkqKwKyLYEaX4MqjIe+cbYGa5yAFqYD7aZsho9Z1kSUGiiZvZrURppBRIa+cFJ5xldZY7sQ2s0BQF7Kc7nM7n79FcAd6BJUaUfIYDiQaCmYMjG/stbv/Q8cpcS/AWrLEAEI7AECgCDrBtrAxViQpfJO3kL6f5M6LG6hVKtPRIG6Ui9cTcYvPhi/ut2R6i8NaYks6twO3hdlpfjxvdOiXzqDC9m8a4oXKFXb2Mv+yErXiD2IgTCfolyxSLZLSxGKVDj+/hrYeedOIXGOplnriVGuJSEJXKM4Djk6wQLfTt7LnGXDthRI7/O45Xxn+GyK6nW6FnVZoCYHA0Gieplvp2/f+4uEJsIqFMcHQxb9EL5Bt+PnFfpt5ZmILhVWP54P4Tofi2JiGZX0YF1NKbHNbBa7PFKURO/kmzKH3a5AHMSQTU85F7Racert/u7C1ZOa9fgSBziXQMAe8RaAb147tmEWXr8T5mnfFEpub7+Tsc084RLoG7tuHjos4I8HfOqbWdf6sqv3u0zk3M5+gCYWjKfRHagoxPfvRfRsbchipzLfQvqSh/b4IxXs95ckUgykIhefzd7OWXEBsgRrmxUoJ135exJQpyFQMO7hhgTBTpJNeJXRrM4uW9vpXIWSzxI4lAZjX4nFPUGM5hu2fueuelhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged 3 minutes before the purchase, within about 0.01 miles of the Luling station, and 76.9 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt92Xc67NLDSY4U3X7D",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5765,
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 129
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged 3 minutes before the purchase, within about 0.01 miles of the Luling station, and 76.9 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5765,
+    "output_tokens": 211,
+    "output_tokens_details": {
+      "thinking_tokens": 129
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

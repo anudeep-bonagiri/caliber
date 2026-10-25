@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010062,
+  "durationMs": 4053,
+  "httpStatus": 200,
+  "id": "6065",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 26's only ping within 30 minutes of the 17:11Z purchase (17:00Z) was in Corpus Christi area, about 120 miles from the Encinal station with the engine off; ask dispatch whether another unit or driver used card FC-1026."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 17:11Z. The nearest pings within 30 minutes are 17:00Z (11 minutes before) and 18:00Z (49 minutes after, so outside the window). The 17:00Z ping places the truck at 27.80044, -97.39656, with the engine off.\n\nThe station is at 28.0405, -99.354. The latitude difference is 0.24 degrees, about 16.6 miles. The longitude difference is 1.9575 degrees. At latitude 27.9, one degree of longitude is about 69.17 \u00d7 cos(27.9\u00b0) = 69.17 \u00d7 0.8836 \u2248 61.1 miles, so the longitude gap is about 119.6 miles. The total distance is roughly 120 miles, well over the 25-mile limit.\n\nThe gallons (43) are under the tank limit of 110, so capacity is not an issue. The location mismatch alone triggers a hold.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 26's only ping within 30 minutes of the 17:11Z purchase (17:00Z) was in Corpus Christi area, about 120 miles from the Encinal station with the engine off; ask dispatch whether another unit or driver used card FC-1026.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4JvhH7um1dajEDm2q",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2991,
+      "output_tokens": 408,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 17:11Z. The nearest pings within 30 minutes are 17:00Z (11 minutes before) and 18:00Z (49 minutes after, so outside the window). The 17:00Z ping places the truck at 27.80044, -97.39656, with the engine off.\n\nThe station is at 28.0405, -99.354. The latitude difference is 0.24 degrees, about 16.6 miles. The longitude difference is 1.9575 degrees. At latitude 27.9, one degree of longitude is about 69.17 \u00d7 cos(27.9\u00b0) = 69.17 \u00d7 0.8836 \u2248 61.1 miles, so the longitude gap is about 119.6 miles. The total distance is roughly 120 miles, well over the 25-mile limit.\n\nThe gallons (43) are under the tank limit of 110, so capacity is not an issue. The location mismatch alone triggers a hold.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 26's only ping within 30 minutes of the 17:11Z purchase (17:00Z) was in Corpus Christi area, about 120 miles from the Encinal station with the engine off; ask dispatch whether another unit or driver used card FC-1026.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2991,
+    "output_tokens": 408,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

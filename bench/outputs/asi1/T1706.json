@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 11118,
+  "httpStatus": 200,
+  "id": "T1706",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T1706 at plaza TXTAG-SH130-04 occurred 18 minutes after earlier toll T1572 at the same plaza on day 25, but policy defines duplicate as within 10 minutes; however, checking closer: T1572 is day 25, T1706 is day 31. Wait, let's re-read carefully. The rule is 'within 10 minutes of an earlier toll charge'. T1572 was at 15:04:52 on Day 25. T1706 is at 16:22:52 on Day 31. That is days apart. Let's look for a closer one. Ah, I missed scanning for same-day or very close timestamps. Let's look at Day 31. Only T1705 and T1706 are on Day 31. T1705 is at 16:11:19. T1706 is at 16:22:52. Difference is 11 minutes and 33 seconds. This is > 10 minutes. Let's check other days. Day 22: T1499 (21:54:04) and T1500 (21:55:10). Same plaza? No, DNT vs PGBT. Day 15: T1342 (18:34:34) and T1343 (18:35:50). Same plaza? No, DNT vs PGBT. Day 5: T1111 (13:06:40) and T1117 (16:44:04). Different plazas. Day 20: T1425 and T1440. Different plazas. Day 25: T1570 (14:44:17) and T1572 (15:04:52). Different plazas. Day 21: T1458 and T1462. Different plazas. Day 10: T1231 and T1235. Different plazas. Day 8: T1177 and T1186. Different plazas. It seems there are no duplicates within 10 minutes at the SAME plaza. Wait, did I miss one? Let's re-scan strictly for same plazaId and time diff <= 10 mins. Plaza TXTAG-SH130-04 appears at T1111 (Day 5), T1218 (Day 9), T1572 (Day 25), T1706 (Day 31). None are close in time. Plaza NTTA-DNT-01 appears many times. T1117 (Day 5), T1342 (Day 15), T1440 (Day 20), T1499 (Day 22), T1510 (Day 23), T1680 (Day 30). All separated by days. Plaza TXTAG-SH45N-01 appears T1083 (Day 4), T1186 (Day 8), T1235 (Day 10), T1494 (Day 22). Separated by days. Plaza NTTA-MCLB-01 appears T1176 (Day 7), T1177 (Day 8), T1231 (Day 10), T1562 (Day 25). Separated by days. Plaza HCTRA-SHT-N appears T1042 (Day 2), T1425 (Day 20). Separated. Plaza NTTA-PGBT-01 appears T1343 (Day 15), T1500 (Day 22), T1624 (Day 28). Separated. Plaza TXTAG-SH130-04 appears T1458 (Day 21)? No, T1458 is SH130-04. T1572 is SH130-04. T1706 is SH130-04. T1458 is Day 21. T1572 is Day 25. T1706 is Day 31. All separated. Plaza TXTAG-SH45SE-01 appears T1462 (Day 21), T1673 (Day 29), T1705 (Day 31). Separated. Plaza HCTRA-HARDY-01 appears T1523 (Day 23). Only once. It appears there are NO duplicate tolls within 10 minutes. Therefore, it should be cleared.\n\nWait, let me double check the definition of \"within 10 minutes\". Is it possible I miscalculated a difference?\nT1705: 16:11:19. T1706: 16:22:52. Diff: 11m 33s. Not within 10.\nT1342: 18:34:34. T1343: 18:35:50. Diff: 1m 16s. BUT different plazas (DNT vs PGBT).\nT1499: 21:54:04. T1500: 21:55:10. Diff: 1m 6s. BUT different plazas (DNT vs PGBT).\n\nAre there any others?\nLet's check T1111 and T1117 again. 13:06 vs 16:44. No.\nLet's check T1176 and T1177. 21:46 (Day 7) vs 11:58 (Day 8). No.\n\nIt seems clear.\n\n\"decision\": \"clear\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882976,
+    "id": "chatcmpl-6594e713-d4bc-48b3-b2f9-ef800a8b1825",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1385,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4539,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5924
+    }
+  },
+  "startedAt": "2026-10-24T23:02:47+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T1706 at plaza TXTAG-SH130-04 occurred 18 minutes after earlier toll T1572 at the same plaza on day 25, but policy defines duplicate as within 10 minutes; however, checking closer: T1572 is day 25, T1706 is day 31. Wait, let's re-read carefully. The rule is 'within 10 minutes of an earlier toll charge'. T1572 was at 15:04:52 on Day 25. T1706 is at 16:22:52 on Day 31. That is days apart. Let's look for a closer one. Ah, I missed scanning for same-day or very close timestamps. Let's look at Day 31. Only T1705 and T1706 are on Day 31. T1705 is at 16:11:19. T1706 is at 16:22:52. Difference is 11 minutes and 33 seconds. This is > 10 minutes. Let's check other days. Day 22: T1499 (21:54:04) and T1500 (21:55:10). Same plaza? No, DNT vs PGBT. Day 15: T1342 (18:34:34) and T1343 (18:35:50). Same plaza? No, DNT vs PGBT. Day 5: T1111 (13:06:40) and T1117 (16:44:04). Different plazas. Day 20: T1425 and T1440. Different plazas. Day 25: T1570 (14:44:17) and T1572 (15:04:52). Different plazas. Day 21: T1458 and T1462. Different plazas. Day 10: T1231 and T1235. Different plazas. Day 8: T1177 and T1186. Different plazas. It seems there are no duplicates within 10 minutes at the SAME plaza. Wait, did I miss one? Let's re-scan strictly for same plazaId and time diff <= 10 mins. Plaza TXTAG-SH130-04 appears at T1111 (Day 5), T1218 (Day 9), T1572 (Day 25), T1706 (Day 31). None are close in time. Plaza NTTA-DNT-01 appears many times. T1117 (Day 5), T1342 (Day 15), T1440 (Day 20), T1499 (Day 22), T1510 (Day 23), T1680 (Day 30). All separated by days. Plaza TXTAG-SH45N-01 appears T1083 (Day 4), T1186 (Day 8), T1235 (Day 10), T1494 (Day 22). Separated by days. Plaza NTTA-MCLB-01 appears T1176 (Day 7), T1177 (Day 8), T1231 (Day 10), T1562 (Day 25). Separated by days. Plaza HCTRA-SHT-N appears T1042 (Day 2), T1425 (Day 20). Separated. Plaza NTTA-PGBT-01 appears T1343 (Day 15), T1500 (Day 22), T1624 (Day 28). Separated. Plaza TXTAG-SH130-04 appears T1458 (Day 21)? No, T1458 is SH130-04. T1572 is SH130-04. T1706 is SH130-04. T1458 is Day 21. T1572 is Day 25. T1706 is Day 31. All separated. Plaza TXTAG-SH45SE-01 appears T1462 (Day 21), T1673 (Day 29), T1705 (Day 31). Separated. Plaza HCTRA-HARDY-01 appears T1523 (Day 23). Only once. It appears there are NO duplicate tolls within 10 minutes. Therefore, it should be cleared.\n\nWait, let me double check the definition of \"within 10 minutes\". Is it possible I miscalculated a difference?\nT1705: 16:11:19. T1706: 16:22:52. Diff: 11m 33s. Not within 10.\nT1342: 18:34:34. T1343: 18:35:50. Diff: 1m 16s. BUT different plazas (DNT vs PGBT).\nT1499: 21:54:04. T1500: 21:55:10. Diff: 1m 6s. BUT different plazas (DNT vs PGBT).\n\nAre there any others?\nLet's check T1111 and T1117 again. 13:06 vs 16:44. No.\nLet's check T1176 and T1177. 21:46 (Day 7) vs 11:58 (Day 8). No.\n\nIt seems clear.\n\n\"decision\": \"clear\"\n}",
+  "usage": {
+    "completion_tokens": 1385,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4539,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5924
+  }
+}

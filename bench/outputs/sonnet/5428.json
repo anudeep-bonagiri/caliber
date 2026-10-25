@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009988,
+  "durationMs": 3904,
+  "httpStatus": 200,
+  "id": "5428",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 6's nearest ping within 30 minutes (14:00Z, 20 min before the purchase) was in Austin, about 48 miles from the Giddings station, which is over the 25-mile limit. The engine was off and the odometer unchanged all day. Ask dispatch whether another unit or driver used card FC-1006."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQStggKEAgTGAI4AUIIdGhpbmtpbmcSDHNPTuo1SAuINOGaEhoMUaa+ifnSIJuUxZSmIjB2AiANInUrOOsokP2gxpTwmW9rPJWyXSv/SlDnZD1uzJI/CdVZ2viA9BCm50qIJSIq0wcI4tFZWh98gAitCD/FuiGwIRREzG8chG3hcuFrRxwEm79I39zoOOIbxdjF5raeJ8rxQgvfz1gStSwnYPRb7IeLyu8O57CcbjeMeychLfeN884KtcMONHPHPQ5Jd4hOPQnjmN300LSiRuetCVa2og9npaGs4tgvZT78FmJZ4t0PUABtg5K7u+4iiQeqQk5yVwWOxWMhS3/hDp/fXCZj9MRxJwoVVrtMSw/11/kIs7JdouNXNrJ2aMgGsCpUd/tven7yMnhWg+ENz1Bt+itiIMUIv0S83U+GON1bMlAik/RrDZr7dNR2MgZud7pKOgAWkIEajwx/N/YQg7tlauwcfbbjfjXTaytKJqPb6qfr++me8Sp8Het67HNyZvz7EzsaupB+Mr7PprrJM6A96QHABtKHX2FD8DCOkDtpJZoZxdveIXg+U8RuOoJBqgqc+qnxXqZZjyxgxX0hYeURqlKZ5ydYpMmzT5zU+WEcl3IMVueSY14alkoNoJGkgMtePBlSbgo71TVa9EHKeUBkj04RWlO02GV+0koQPEnKKqALNHCzJCmWPwijXUBQzNj4dfVjzKHoy/dggmekFHBTkQ4qe6lvNUvjzqKJiqYt86kDFcsdPsuIVYymCnT8Rg2WWcaePKvuO8eu+gZVq9ooQEkshw4pl5gnkC2ni9H0QJyCE85irR41liCLK9TjICRuSZYhW0XPZKkVDe5mE2THtGTnVV8Bqff1X8w3MQVF7MYso9a7dTKXiF6ALmij7l6+ws8HklsCfXHWSaTeWi6gGibjZH3+baFJn3YsOHBXHf/ml30i7Y8n1Jk3sWVnLJs/sTbUsN0VEuRypdmaq+74MAoab9HWMZQwUFkcXntii1gLoPpUNx2lD69z/3ku7jhNo3iv/Ei/nLf5MGDxM/fj4xhwPwfLKZ9y+ZPZflHmk+e382C7Ce90BNbLR5il/dlFroKQ0cP+tBYMNVk/awwipR2HHED1I/I7LZNKZc+1JXPyOLAVLPlxzoot+W/W7p1oSJqCdC8r/wffFDxV3alFiaAmighk/yvbbNXs4pdjsO34/tkwJX1fTmvuAvKdOZafBBSyX2Q5y+gSOWbnSSNRgeOKHsZw0vR3tdWuxIyiuHgQqGWFoOc96gvcbAc8atZpnsnlAM/BeYfOonOfLXMVtYxFKEx8xqatuCs71FqFltDMijv5+XSZoKC2veLqacg7Q3fQkEYrhD5yJHTYEeB9saShNySg2yg4UkVcHYlN4RnrsbD6nPXx9aVLB7nq4FGctUfF67hUlXQcmpt1qP1So9qICK7YESIIGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 6's nearest ping within 30 minutes (14:00Z, 20 min before the purchase) was in Austin, about 48 miles from the Giddings station, which is over the 25-mile limit. The engine was off and the odometer unchanged all day. Ask dispatch whether another unit or driver used card FC-1006.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2XHo94fy4o6qaraDC",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2999,
+      "output_tokens": 399,
+      "output_tokens_details": {
+        "thinking_tokens": 266
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:54+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 6's nearest ping within 30 minutes (14:00Z, 20 min before the purchase) was in Austin, about 48 miles from the Giddings station, which is over the 25-mile limit. The engine was off and the odometer unchanged all day. Ask dispatch whether another unit or driver used card FC-1006.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2999,
+    "output_tokens": 399,
+    "output_tokens_details": {
+      "thinking_tokens": 266
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

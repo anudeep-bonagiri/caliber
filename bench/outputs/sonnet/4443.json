@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013182,
+  "durationMs": 2809,
+  "httpStatus": 200,
+  "id": "4443",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 37 pinged within about 0.1 mile of the Georgetown station 2.5 minutes before the purchase, and 53.6 gal is under the 165 gal limit (150 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 17:32:34Z at Love's 806 in Georgetown (30.6333, -97.678). The nearest pings are 17:30:00Z at (30.6335, -97.67827) and 17:28:09Z at (30.63328, -97.67817), both within a fraction of a mile of the station, so the location check passes.\n\nCapacity: 53.6 gallons against a 150-gallon tank (limit 165), so that passes too.\n\nToll and invoice rules do not apply to a card transaction.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged within about 0.1 mile of the Georgetown station 2.5 minutes before the purchase, and 53.6 gal is under the 165 gal limit (150 gal tank + 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMswGUvHx5MJ9PBpuBzS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5326,
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 17:32:34Z at Love's 806 in Georgetown (30.6333, -97.678). The nearest pings are 17:30:00Z at (30.6335, -97.67827) and 17:28:09Z at (30.63328, -97.67817), both within a fraction of a mile of the station, so the location check passes.\n\nCapacity: 53.6 gallons against a 150-gallon tank (limit 165), so that passes too.\n\nToll and invoice rules do not apply to a card transaction.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged within about 0.1 mile of the Georgetown station 2.5 minutes before the purchase, and 53.6 gal is under the 165 gal limit (150 gal tank + 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5326,
+    "output_tokens": 253,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

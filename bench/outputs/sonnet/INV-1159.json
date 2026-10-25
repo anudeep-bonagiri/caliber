@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014356,
+  "durationMs": 4826,
+  "httpStatus": 200,
+  "id": "INV-1159",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1159 bills 119000 cents for 1 brake job at the contract rate of 119000, and PO-1004 shows 1 received. The only earlier invoices for the same amount in the prior 30 days (INV-1118, INV-1132) cite the same PO, so it is not a duplicate_invoice. The amount is under 5,000 dollars, and the bank change on day 71 was 11 days earlier, so there is no vendor_bank_change. Note: PO-1004 (qty 1) has been invoiced repeatedly, but no payables rule covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9goKEAgTGAI4AUIIdGhpbmtpbmcSDIdCIbdqj5tkj5wXRRoMYdmQ2dj1cC2ZoymIIjB2i2GccQr0ajy6/iCYasqkqNlof1LTM48Uyydf9hxFNStzCnZW+JBtQoMxVn9EQP8qkwq9tFZrtd1aDtxaXOuSReC+iysVZjWWGK/BpYiF7TP8xg7BVZ3LWCdVVRJdG6Fp/6KeZiSI5CVPn4fNjzFkn5eYQbR30VJJoxp90zQtPVEWfJcZyanlocqi6IWoChPy1HEOrzb1WOBcLid0VobMzDtkPB/AI8wrQ1++XM+CVomqSwxMfZVIcRzLvomTp7VEW1W5uBn6dKs+v216mqYlqpPiSoPr1A8L4VOG/S4ngEN8FDoUyR/8uxq5+Em1vehwb7/8be3TVdzhKvpXQ/PMcPlUG+zMyZWpvVzizmsY8YB6mg9aPyIDTEv5FbU2aoHW02/W7I7vbL3Au3YJOF4mJYX3+MUCm1Pc3pcq8XUkw5YHGQ0h8rxC2x4CkYJQXx50vZvxLwFviSqdhS8HcBQ9k3VTgM+DaIa1T7ZRlW3bGlhBAxer2rkCYGsweHHOGZpcf622MYibyo+ksztmESn2h9oajYj2SQKrYiaDDFnjWTL+N0NH4MQVT1abGyNWn81W5woefJkr4WXBKtkw4zuI3o1daeJiem+eLWUhwjkuTBbR6qIgvGpKWUcK3x3Zeduchf8QFps2kYKSSiPbEb9Mwzi/ApVMFUzC7c9sv4eKfd26RmPDx4BKg1MZvk8k0YLHYI4ov/dv47PaJsv7besWEXJdVU5D5v9xVU7B0Pr9903jfVyVMXMpBpqky8xHlZLU0TQvijc4x3zl8xgjG17yV3OFiJST+5MVUEe+2rcoTHILOzLj29s2ChQZh3CVK6GR1wyWO6X4pvQMbe7ogivpYgIRqYu/aYTLJ+3H7kNbnxQBZbCq+1YwLHiVU6Ra2uH0jhIqM8pylgh0QYgdUV0u/3iKN9thXZEiAvobyBQG5aMsXxevm9iQZglgOqcnzHklyjhGRBYbfJrfWzIe5EDnRdxUOZGSmbEpwc9r4MerP1y1ZPxsvvr976eHDCzloy0LMJ4wDo4SqftXro6LurjD1kV0U/6BNjrhkze6sf2d+9cIMfZHklKHvrvO1f6NDgSZhuUOfdgBXxo7367rAX4boEEVNKf0T9nfbKtEiib8Kk3Jaja7EqQcBg+F6zIEzs0zeQVF+1cSdCxHaGWwMY9ABimQ8vlW+efPRgylO0+s0jeqUiYWnSwbTorryB5D1RXYLTSYOVwkRXKNBIuzk6H3kmLYKtBnbQxG6H1Cf16TMRD9m0RmlNWPszuaZBV6HmRqg/A5aqiwqj6YpJip5fyZOA3BnnogRKTj2Sn7ZkVFLJAhZrW0xgglboa4nSQoUd80UbLo6LlWgeVo5Fpm7U20TVM56VimMTLesh8gnSbDjNZaJK9Kj7N7Zxd36Bwkawy/Nm1JA2EEB+Ov9ZDhfZseH928i8rvmKdHVqMTH4S9Dx+MpaGMQUwfJaDMajAzhE6lxyLHnBC/0Vc1OvKN3nWTSDv//KXubOpGAGoAVlW/RHD8C72heDsqAZe9XnT/tEIpZYpFHlLA5ntS9QoC9csApsUtBFQDMMqYj+NcmYpiev/8EA2jODPNurCKNVwgi5xTUWicwxPSsObZAx4aiYjLBUTuP2viU/L51xiZL1AjgNHjI3o+yk49rGtiM07/I1dwKhro5UNrn/I72c6kSKpGbMnjCBMSBd2da0AiRZtHXakORIper6vu7Cff6/HxaoxgSOQQPooveTGOLa8pdsGYH6bqOkWK366KOZ6Z5n0WK3DudPWMxZUZiwu6V7UpKLAcxBX26awYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1159 bills 119000 cents for 1 brake job at the contract rate of 119000, and PO-1004 shows 1 received. The only earlier invoices for the same amount in the prior 30 days (INV-1118, INV-1132) cite the same PO, so it is not a duplicate_invoice. The amount is under 5,000 dollars, and the bank change on day 71 was 11 days earlier, so there is no vendor_bank_change. Note: PO-1004 (qty 1) has been invoiced repeatedly, but no payables rule covers that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMssKtCTQHzbhDTBjtSw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4393,
+      "output_tokens": 557,
+      "output_tokens_details": {
+        "thinking_tokens": 357
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1159 bills 119000 cents for 1 brake job at the contract rate of 119000, and PO-1004 shows 1 received. The only earlier invoices for the same amount in the prior 30 days (INV-1118, INV-1132) cite the same PO, so it is not a duplicate_invoice. The amount is under 5,000 dollars, and the bank change on day 71 was 11 days earlier, so there is no vendor_bank_change. Note: PO-1004 (qty 1) has been invoiced repeatedly, but no payables rule covers that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4393,
+    "output_tokens": 557,
+    "output_tokens_details": {
+      "thinking_tokens": 357
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 8721,
+  "httpStatus": 200,
+  "id": "INV-1166",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy violations detected; invoice amount, unit price, and quantity match the purchase order and contract rate, and no duplicate or bank change issues apply."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"clear\",\n \"reason\": \"No policy violations detected; invoice amount, unit price, and quantity match the purchase order and contract rate, and no duplicate or bank change issues apply.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883531,
+    "id": "chatcmpl-4e91d79a-a43c-4238-a7ee-e0fd3e9a1df5",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 46,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4035,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1072,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4081
+    }
+  },
+  "startedAt": "2026-10-24T23:12:03+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"clear\",\n \"reason\": \"No policy violations detected; invoice amount, unit price, and quantity match the purchase order and contract rate, and no duplicate or bank change issues apply.\"\n}",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4035,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1072,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4081
+  }
+}

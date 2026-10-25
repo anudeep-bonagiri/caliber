@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012508,
+  "durationMs": 2614,
+  "httpStatus": 200,
+  "id": "2545",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 3 pinged at the station (about 0.01 mi away) at 12:00Z, 4 minutes before the 12:04Z purchase, and 41.4 gal is well under the 120 gal tank plus 10 percent, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2AYKEAgTGAI4AUIIdGhpbmtpbmcSDCz455vNb3l9gBTHmRoMNLXM+hAKiPOWvkDLIjC0hUF7KsNkGXv0judLsq895BFizsan+mm2t9YjdY4rsGIJ+o7gJp51MH8GLk5TtU8q9QWF8qcAaS61lXEPB8qRvRolWjb1af6YXkhF0LcIftcr51rtYBKrNrTfnxe/P7+3z9+MoFlRltcdVMkq17z0pMeldnomNXYJwTBaZJHAdzOQ7hSw1ccmeJUBJtF0Rc1V8S7ky7z8zrXtml+QBhTnvUpSd2oXOCSa/42fcGEca7qg2IFT016uIwzJp4qGwGzmQOt6WyN+ceL50cRAYGKXDsr4T17olay/3y+eCkCi0NUE8kYU+WbnzxpCvk+/2sZ3K2TMWswdVaQMsHZ8nZyG6ibO14To/Z6wIlVkVUY1niiesaAJ5nG/I1GBwFybHIKbHxTI4XoD2F3boAvt4uBE3KEUAAvib3vdqeOfJBvv+5dZr+hV3dVYBoj4XGzNAEZTouGwgsfJ/ExkpsJVgEvBR2I4eHthO86kr6QevAxedwJQojehoNbTrtZ88909tRLuSLUN7sVMdfs5BffaGhVAr3U9R21WsNuKwUWfNVv5CBnWOjLm+jj6EpoqcTo0d7P+9v4fqrnVUKuikTOlCI3KMEp3mpptZErXX5xI2q8YJacQWPgdmtI8V5b13p7fh/ffCHqWxOkhyzqzYlpsE6dT4VSFEugxuS5OmPs8wJ6h3bFvJANNGIw9wDdWBfb/RNcSxCIYYYvtBAQxq1fPGoLRDbi/earsYYuSI3xzCw/46AudGEj6fK9eqpr41xmozBKtQOouXDKj4tmC8Sk1jAi7OJhAwgKl16BXqTQEN8FiYIkeibzfxyHQSTqZCHkh1/Lz3bsneLO/AUgsJ2tXJ/eqCLNywmSswIphcB9zjwcrDacGg5KEiExDRHq9AQ2v8stxqvW9CpYxhm8zSpJ0RyxJLWUM3WlJaic96rwyZOehzTMvvsMF6u8iS+/0zms5vAkNqCQXj6fY/lPLywuAUhPz9naJGtdw7z5KFS91Kw4971k5YtQ3EKuRn5cj6idZ/t6N5VoFr+R8S3Duzo1c8cORvW+BXWVFZaYoIATcCnDWQ8eixfDVU0QHGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 3 pinged at the station (about 0.01 mi away) at 12:00Z, 4 minutes before the 12:04Z purchase, and 41.4 gal is well under the 120 gal tank plus 10 percent, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsjcZpUcp3mMgZ29AXe",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5104,
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "thinking_tokens": 129
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 3 pinged at the station (about 0.01 mi away) at 12:00Z, 4 minutes before the 12:04Z purchase, and 41.4 gal is well under the 120 gal tank plus 10 percent, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5104,
+    "output_tokens": 230,
+    "output_tokens_details": {
+      "thinking_tokens": 129
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

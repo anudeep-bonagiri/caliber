@@ -1,0 +1,3377 @@
+{
+  "counts": {
+    "clean": {
+      "card": 174,
+      "invoice": 153,
+      "toll": 173
+    },
+    "cleanAvailable": {
+      "card": 5581,
+      "invoice": 153,
+      "toll": 2146
+    },
+    "cleanTotal": 500,
+    "decoys": 6,
+    "planted": 52,
+    "total": 558
+  },
+  "excludedLimitHolds": [
+    "INV-1075",
+    "INV-1080",
+    "INV-1106",
+    "INV-1109",
+    "INV-1117",
+    "INV-1171"
+  ],
+  "rows": [
+    {
+      "day": 22,
+      "id": "2251",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 36,
+      "id": "3093",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 43,
+      "id": "3510",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 76,
+      "id": "5557",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 82,
+      "id": "5908",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 90,
+      "id": "6390",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 21,
+      "id": "INV-1037",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 30,
+      "id": "INV-1050",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 30,
+      "id": "INV-1052",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 76,
+      "id": "INV-1140",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 13,
+      "id": "T1314",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 17,
+      "id": "T1368",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 44,
+      "id": "T1973",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 53,
+      "id": "T2139",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 56,
+      "id": "T2195",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 62,
+      "id": "T2380",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 70,
+      "id": "T2598",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 73,
+      "id": "T2667",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 84,
+      "id": "T2956",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 89,
+      "id": "T3067",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 92,
+      "id": "T3152",
+      "kind": "toll",
+      "stratum": "planted"
+    },
+    {
+      "day": 2,
+      "id": "1068",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 8,
+      "id": "1468",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 14,
+      "id": "1793",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 17,
+      "id": "1971",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 26,
+      "id": "2540",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 31,
+      "id": "2830",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 37,
+      "id": "3209",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 49,
+      "id": "3884",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 54,
+      "id": "4177",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 57,
+      "id": "4363",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 68,
+      "id": "5041",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 77,
+      "id": "5620",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 84,
+      "id": "6065",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 88,
+      "id": "6294",
+      "kind": "card",
+      "stratum": "planted"
+    },
+    {
+      "day": 4,
+      "id": "INV-1003",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 9,
+      "id": "INV-1015",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 18,
+      "id": "INV-1029",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 40,
+      "id": "INV-1074",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 44,
+      "id": "INV-1078",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 48,
+      "id": "INV-1086",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 51,
+      "id": "INV-1096",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 63,
+      "id": "INV-1116",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 71,
+      "id": "INV-1130",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 7,
+      "id": "INV-1010",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 35,
+      "id": "INV-1062",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 53,
+      "id": "INV-1099",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 65,
+      "id": "INV-1121",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 85,
+      "id": "INV-1163",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 19,
+      "id": "INV-1032",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 44,
+      "id": "INV-1077",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 74,
+      "id": "INV-1138",
+      "kind": "invoice",
+      "stratum": "planted"
+    },
+    {
+      "day": 8,
+      "id": "1421",
+      "kind": "card",
+      "stratum": "decoy"
+    },
+    {
+      "day": 19,
+      "id": "2044",
+      "kind": "card",
+      "stratum": "decoy"
+    },
+    {
+      "day": 41,
+      "id": "2231",
+      "kind": "card",
+      "stratum": "decoy"
+    },
+    {
+      "day": 51,
+      "id": "3955",
+      "kind": "card",
+      "stratum": "decoy"
+    },
+    {
+      "day": 74,
+      "id": "5428",
+      "kind": "card",
+      "stratum": "decoy"
+    },
+    {
+      "day": 83,
+      "id": "5986",
+      "kind": "card",
+      "stratum": "decoy"
+    },
+    {
+      "day": 1,
+      "id": "1007",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 1,
+      "id": "1040",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 2,
+      "id": "1049",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 2,
+      "id": "1099",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 3,
+      "id": "1121",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 3,
+      "id": "1166",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 4,
+      "id": "1201",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 4,
+      "id": "1232",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 5,
+      "id": "1235",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 5,
+      "id": "1239",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 6,
+      "id": "1275",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 6,
+      "id": "1280",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 7,
+      "id": "1375",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 7,
+      "id": "1396",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 8,
+      "id": "1444",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 8,
+      "id": "1445",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "1496",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "1527",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 10,
+      "id": "1573",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 10,
+      "id": "1599",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 11,
+      "id": "1651",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 11,
+      "id": "1652",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 12,
+      "id": "1663",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 12,
+      "id": "1698",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 13,
+      "id": "1731",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 13,
+      "id": "1740",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 14,
+      "id": "1764",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 14,
+      "id": "1798",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 15,
+      "id": "1837",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 15,
+      "id": "1856",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "1881",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "1883",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 17,
+      "id": "1928",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 17,
+      "id": "1970",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "1988",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "2031",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 19,
+      "id": "2056",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 19,
+      "id": "2060",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 20,
+      "id": "2105",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 20,
+      "id": "2124",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 21,
+      "id": "2163",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 21,
+      "id": "2190",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 22,
+      "id": "2238",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 22,
+      "id": "2284",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 23,
+      "id": "2305",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 23,
+      "id": "2311",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 24,
+      "id": "2375",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 24,
+      "id": "2413",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 25,
+      "id": "2429",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 25,
+      "id": "2455",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 26,
+      "id": "2506",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 26,
+      "id": "2529",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 27,
+      "id": "2545",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 27,
+      "id": "2555",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 28,
+      "id": "2605",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 28,
+      "id": "2617",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 29,
+      "id": "2664",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 29,
+      "id": "2692",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 30,
+      "id": "2715",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 30,
+      "id": "2718",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 31,
+      "id": "2791",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 31,
+      "id": "2821",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 32,
+      "id": "2872",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 32,
+      "id": "2900",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 33,
+      "id": "2952",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 33,
+      "id": "2970",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 34,
+      "id": "3019",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 34,
+      "id": "3023",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 35,
+      "id": "3060",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 35,
+      "id": "3073",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "3105",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "3143",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 37,
+      "id": "3176",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 37,
+      "id": "3188",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "3245",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "3250",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 39,
+      "id": "3276",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 39,
+      "id": "3298",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 40,
+      "id": "3346",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 40,
+      "id": "3369",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 41,
+      "id": "3395",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 41,
+      "id": "3411",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 42,
+      "id": "3463",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 42,
+      "id": "3492",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 43,
+      "id": "3531",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 43,
+      "id": "3540",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 44,
+      "id": "3587",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 44,
+      "id": "3604",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 45,
+      "id": "3650",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 45,
+      "id": "3668",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 46,
+      "id": "3674",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 46,
+      "id": "3698",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 47,
+      "id": "3719",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 47,
+      "id": "3720",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 48,
+      "id": "3783",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 48,
+      "id": "3787",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 49,
+      "id": "3866",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 49,
+      "id": "3871",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "3901",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "3910",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 51,
+      "id": "3938",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 51,
+      "id": "3940",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 52,
+      "id": "4013",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 52,
+      "id": "4072",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 53,
+      "id": "4080",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 53,
+      "id": "4081",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 54,
+      "id": "4142",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 54,
+      "id": "4153",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 55,
+      "id": "4212",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 55,
+      "id": "4215",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 56,
+      "id": "4291",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 56,
+      "id": "4300",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "4340",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "4374",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 58,
+      "id": "4433",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 58,
+      "id": "4443",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 59,
+      "id": "4485",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 59,
+      "id": "4510",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 60,
+      "id": "4553",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 60,
+      "id": "4554",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 61,
+      "id": "4625",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 61,
+      "id": "4627",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 62,
+      "id": "4665",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 62,
+      "id": "4668",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 63,
+      "id": "4707",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 63,
+      "id": "4729",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 64,
+      "id": "4781",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 64,
+      "id": "4811",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 65,
+      "id": "4836",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 65,
+      "id": "4842",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 66,
+      "id": "4901",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 66,
+      "id": "4948",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 67,
+      "id": "5003",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 67,
+      "id": "5016",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 68,
+      "id": "5035",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 68,
+      "id": "5063",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 69,
+      "id": "5096",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 69,
+      "id": "5127",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 70,
+      "id": "5200",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 70,
+      "id": "5215",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 71,
+      "id": "5243",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 71,
+      "id": "5268",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 72,
+      "id": "5307",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 72,
+      "id": "5326",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 73,
+      "id": "5368",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 73,
+      "id": "5374",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "5432",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "5439",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 75,
+      "id": "5479",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 75,
+      "id": "5492",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 76,
+      "id": "5542",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 76,
+      "id": "5558",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "5595",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "5625",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "5665",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "5675",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "5713",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "5763",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 80,
+      "id": "5826",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 80,
+      "id": "5834",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "5853",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "5877",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 82,
+      "id": "5911",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 82,
+      "id": "5934",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 83,
+      "id": "6007",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 84,
+      "id": "6060",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 85,
+      "id": "6143",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 86,
+      "id": "6205",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 87,
+      "id": "6219",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 88,
+      "id": "6320",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 89,
+      "id": "6350",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 90,
+      "id": "6449",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 91,
+      "id": "6503",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 92,
+      "id": "6561",
+      "kind": "card",
+      "stratum": "clean"
+    },
+    {
+      "day": 1,
+      "id": "T1011",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 1,
+      "id": "T1026",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 2,
+      "id": "T1050",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 2,
+      "id": "T1053",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 3,
+      "id": "T1069",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 3,
+      "id": "T1070",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 4,
+      "id": "T1082",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 4,
+      "id": "T1094",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 5,
+      "id": "T1118",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 5,
+      "id": "T1125",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 6,
+      "id": "T1133",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 6,
+      "id": "T1135",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 7,
+      "id": "T1160",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 7,
+      "id": "T1161",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 8,
+      "id": "T1182",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 8,
+      "id": "T1192",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "T1202",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "T1223",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 10,
+      "id": "T1235",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 10,
+      "id": "T1244",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 11,
+      "id": "T1248",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 11,
+      "id": "T1263",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 12,
+      "id": "T1269",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 12,
+      "id": "T1273",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 13,
+      "id": "T1307",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 13,
+      "id": "T1313",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 14,
+      "id": "T1316",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 14,
+      "id": "T1328",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 15,
+      "id": "T1341",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 15,
+      "id": "T1344",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "T1348",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "T1362",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 17,
+      "id": "T1374",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 17,
+      "id": "T1379",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "T1401",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "T1406",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 19,
+      "id": "T1407",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 19,
+      "id": "T1415",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 20,
+      "id": "T1433",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 20,
+      "id": "T1442",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 21,
+      "id": "T1463",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 21,
+      "id": "T1466",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 22,
+      "id": "T1469",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 22,
+      "id": "T1477",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 23,
+      "id": "T1519",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 23,
+      "id": "T1521",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 24,
+      "id": "T1550",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 24,
+      "id": "T1556",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 25,
+      "id": "T1565",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 25,
+      "id": "T1580",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 26,
+      "id": "T1590",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 26,
+      "id": "T1593",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 27,
+      "id": "T1608",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 27,
+      "id": "T1620",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 28,
+      "id": "T1644",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 28,
+      "id": "T1648",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 29,
+      "id": "T1656",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 29,
+      "id": "T1659",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 30,
+      "id": "T1682",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 30,
+      "id": "T1695",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 31,
+      "id": "T1702",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 31,
+      "id": "T1706",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 32,
+      "id": "T1733",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 32,
+      "id": "T1738",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 33,
+      "id": "T1748",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 33,
+      "id": "T1760",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 34,
+      "id": "T1781",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 34,
+      "id": "T1784",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 35,
+      "id": "T1798",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 35,
+      "id": "T1803",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "T1817",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "T1819",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 37,
+      "id": "T1828",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 37,
+      "id": "T1831",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "T1842",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "T1850",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 39,
+      "id": "T1864",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 39,
+      "id": "T1868",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 40,
+      "id": "T1875",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 40,
+      "id": "T1885",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 41,
+      "id": "T1898",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 41,
+      "id": "T1899",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 42,
+      "id": "T1921",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 42,
+      "id": "T1932",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 43,
+      "id": "T1937",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 43,
+      "id": "T1944",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 44,
+      "id": "T1969",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 44,
+      "id": "T1977",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 45,
+      "id": "T1989",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 45,
+      "id": "T1999",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 46,
+      "id": "T2016",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 46,
+      "id": "T2019",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 47,
+      "id": "T2026",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 47,
+      "id": "T2029",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 48,
+      "id": "T2047",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 48,
+      "id": "T2054",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 49,
+      "id": "T2062",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 49,
+      "id": "T2071",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "T2076",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "T2087",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 51,
+      "id": "T2103",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 51,
+      "id": "T2104",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 52,
+      "id": "T2123",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 52,
+      "id": "T2126",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 53,
+      "id": "T2136",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 53,
+      "id": "T2140",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 54,
+      "id": "T2152",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 54,
+      "id": "T2165",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 55,
+      "id": "T2169",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 55,
+      "id": "T2170",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 56,
+      "id": "T2203",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 56,
+      "id": "T2217",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "T2227",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "T2241",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 58,
+      "id": "T2263",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 58,
+      "id": "T2275",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 59,
+      "id": "T2284",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 59,
+      "id": "T2289",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 60,
+      "id": "T2310",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 60,
+      "id": "T2318",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 61,
+      "id": "T2343",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 61,
+      "id": "T2349",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 62,
+      "id": "T2358",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 62,
+      "id": "T2379",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 63,
+      "id": "T2395",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 63,
+      "id": "T2409",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 64,
+      "id": "T2416",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 64,
+      "id": "T2426",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 65,
+      "id": "T2451",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 65,
+      "id": "T2453",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 66,
+      "id": "T2473",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 66,
+      "id": "T2482",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 67,
+      "id": "T2498",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 67,
+      "id": "T2509",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 68,
+      "id": "T2522",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 68,
+      "id": "T2524",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 69,
+      "id": "T2551",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 69,
+      "id": "T2552",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 70,
+      "id": "T2568",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 70,
+      "id": "T2594",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 71,
+      "id": "T2611",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 71,
+      "id": "T2618",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 72,
+      "id": "T2634",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 72,
+      "id": "T2644",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 73,
+      "id": "T2649",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 73,
+      "id": "T2673",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "T2684",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "T2706",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 75,
+      "id": "T2714",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 75,
+      "id": "T2715",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 76,
+      "id": "T2724",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 76,
+      "id": "T2751",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "T2762",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "T2769",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "T2780",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "T2797",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "T2815",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "T2823",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 80,
+      "id": "T2850",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 80,
+      "id": "T2857",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "T2873",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "T2890",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 82,
+      "id": "T2918",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 83,
+      "id": "T2934",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 84,
+      "id": "T2952",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 85,
+      "id": "T2966",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 86,
+      "id": "T3000",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 87,
+      "id": "T3014",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 88,
+      "id": "T3037",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 89,
+      "id": "T3048",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 90,
+      "id": "T3102",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 91,
+      "id": "T3115",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 92,
+      "id": "T3134",
+      "kind": "toll",
+      "stratum": "clean"
+    },
+    {
+      "day": 2,
+      "id": "INV-1001",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 3,
+      "id": "INV-1002",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 4,
+      "id": "INV-1004",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 5,
+      "id": "INV-1005",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 5,
+      "id": "INV-1006",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 6,
+      "id": "INV-1007",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 6,
+      "id": "INV-1008",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 7,
+      "id": "INV-1009",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 8,
+      "id": "INV-1011",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "INV-1012",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "INV-1013",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 9,
+      "id": "INV-1014",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 10,
+      "id": "INV-1016",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 11,
+      "id": "INV-1017",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 11,
+      "id": "INV-1018",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 12,
+      "id": "INV-1019",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 12,
+      "id": "INV-1020",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 14,
+      "id": "INV-1021",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 15,
+      "id": "INV-1022",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "INV-1023",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "INV-1024",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 16,
+      "id": "INV-1025",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 17,
+      "id": "INV-1026",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "INV-1027",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "INV-1028",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "INV-1030",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 18,
+      "id": "INV-1031",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 19,
+      "id": "INV-1033",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 19,
+      "id": "INV-1034",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 20,
+      "id": "INV-1035",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 21,
+      "id": "INV-1036",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 21,
+      "id": "INV-1038",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 22,
+      "id": "INV-1039",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 25,
+      "id": "INV-1040",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 25,
+      "id": "INV-1041",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 26,
+      "id": "INV-1042",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 26,
+      "id": "INV-1043",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 27,
+      "id": "INV-1044",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 27,
+      "id": "INV-1045",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 28,
+      "id": "INV-1046",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 28,
+      "id": "INV-1047",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 29,
+      "id": "INV-1048",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 30,
+      "id": "INV-1049",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 30,
+      "id": "INV-1051",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 31,
+      "id": "INV-1053",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 31,
+      "id": "INV-1054",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 32,
+      "id": "INV-1055",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 32,
+      "id": "INV-1056",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 33,
+      "id": "INV-1057",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 33,
+      "id": "INV-1058",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 34,
+      "id": "INV-1059",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 34,
+      "id": "INV-1060",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 35,
+      "id": "INV-1061",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "INV-1063",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "INV-1064",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 36,
+      "id": "INV-1065",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 37,
+      "id": "INV-1066",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "INV-1067",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "INV-1068",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "INV-1069",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "INV-1070",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 38,
+      "id": "INV-1071",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 40,
+      "id": "INV-1072",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 40,
+      "id": "INV-1073",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 41,
+      "id": "INV-1076",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 44,
+      "id": "INV-1079",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 45,
+      "id": "INV-1081",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 45,
+      "id": "INV-1082",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 46,
+      "id": "INV-1083",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 47,
+      "id": "INV-1084",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 48,
+      "id": "INV-1085",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 49,
+      "id": "INV-1087",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 49,
+      "id": "INV-1088",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "INV-1089",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "INV-1090",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "INV-1091",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "INV-1092",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 50,
+      "id": "INV-1093",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 51,
+      "id": "INV-1094",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 51,
+      "id": "INV-1095",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 52,
+      "id": "INV-1097",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 53,
+      "id": "INV-1098",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 54,
+      "id": "INV-1100",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 54,
+      "id": "INV-1101",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 55,
+      "id": "INV-1102",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "INV-1103",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "INV-1104",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 57,
+      "id": "INV-1105",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 58,
+      "id": "INV-1107",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 59,
+      "id": "INV-1108",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 60,
+      "id": "INV-1110",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 60,
+      "id": "INV-1111",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 61,
+      "id": "INV-1112",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 61,
+      "id": "INV-1113",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 62,
+      "id": "INV-1114",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 62,
+      "id": "INV-1115",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 63,
+      "id": "INV-1118",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 64,
+      "id": "INV-1119",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 65,
+      "id": "INV-1120",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 66,
+      "id": "INV-1122",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 66,
+      "id": "INV-1123",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 67,
+      "id": "INV-1124",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 67,
+      "id": "INV-1125",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 68,
+      "id": "INV-1126",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 69,
+      "id": "INV-1127",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 69,
+      "id": "INV-1128",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 71,
+      "id": "INV-1129",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 72,
+      "id": "INV-1131",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 72,
+      "id": "INV-1132",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 73,
+      "id": "INV-1133",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 73,
+      "id": "INV-1134",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "INV-1135",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "INV-1136",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 74,
+      "id": "INV-1137",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 75,
+      "id": "INV-1139",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "INV-1141",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "INV-1142",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "INV-1143",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 77,
+      "id": "INV-1144",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "INV-1145",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "INV-1146",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "INV-1147",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "INV-1148",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 78,
+      "id": "INV-1149",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "INV-1150",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "INV-1151",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 79,
+      "id": "INV-1152",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 80,
+      "id": "INV-1153",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "INV-1154",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "INV-1155",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "INV-1156",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 81,
+      "id": "INV-1157",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 82,
+      "id": "INV-1158",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 82,
+      "id": "INV-1159",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 82,
+      "id": "INV-1160",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 84,
+      "id": "INV-1161",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 84,
+      "id": "INV-1162",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 85,
+      "id": "INV-1164",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 85,
+      "id": "INV-1165",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 86,
+      "id": "INV-1166",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 86,
+      "id": "INV-1167",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 87,
+      "id": "INV-1168",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 87,
+      "id": "INV-1169",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 87,
+      "id": "INV-1170",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 88,
+      "id": "INV-1172",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 89,
+      "id": "INV-1173",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 90,
+      "id": "INV-1174",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 91,
+      "id": "INV-1175",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 91,
+      "id": "INV-1176",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 92,
+      "id": "INV-1177",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 92,
+      "id": "INV-1178",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 92,
+      "id": "INV-1179",
+      "kind": "invoice",
+      "stratum": "clean"
+    },
+    {
+      "day": 92,
+      "id": "INV-1180",
+      "kind": "invoice",
+      "stratum": "clean"
+    }
+  ],
+  "seed": 42
+}

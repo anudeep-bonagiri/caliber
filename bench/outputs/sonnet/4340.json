@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014228,
+  "durationMs": 2706,
+  "httpStatus": 200,
+  "id": "4340",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 1 pinged within 0.1 mile of the station at 14:49 and 14:55 (purchase 14:52:57), and 24.4 gal is well under the 110 gal tank limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 14:52:57Z at Columbus TX (29.7066, -96.5397).\n\nThe truck's nearest pings are 14:49:17Z at (29.70644, -96.53969) and 14:55:00Z at (29.70669, -96.53946). Both are within 30 minutes of the purchase and well under 1 mile from the station, so there is no location mismatch.\n\nThe purchase was 24.4 gallons, and the tank is 100 gallons. The limit is 110 gallons, so capacity is not exceeded.\n\nThe other holds (tolls, invoices) do not apply to a fuel-card purchase.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 1 pinged within 0.1 mile of the station at 14:49 and 14:55 (purchase 14:52:57), and 24.4 gal is well under the 110 gal tank limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsiD4RK3wWbxtadWJZz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5689,
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 14:52:57Z at Columbus TX (29.7066, -96.5397).\n\nThe truck's nearest pings are 14:49:17Z at (29.70644, -96.53969) and 14:55:00Z at (29.70669, -96.53946). Both are within 30 minutes of the purchase and well under 1 mile from the station, so there is no location mismatch.\n\nThe purchase was 24.4 gallons, and the tank is 100 gallons. The limit is 110 gallons, so capacity is not exceeded.\n\nThe other holds (tolls, invoices) do not apply to a fuel-card purchase.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 1 pinged within 0.1 mile of the station at 14:49 and 14:55 (purchase 14:52:57), and 24.4 gal is well under the 110 gal tank limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5689,
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

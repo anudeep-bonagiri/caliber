@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008578,
+  "durationMs": 3017,
+  "httpStatus": 200,
+  "id": "INV-1099",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1099 bills 2 DPF cleans (103,400 cents) against PO-1027, but only 1 has been received. Propose paying the received quantity, 1 \u00d7 51,700 cents. The unit price matches the contract, there is no duplicate amount, and the bank details are unchanged."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4gcKEAgTGAI4AUIIdGhpbmtpbmcSDGdilUZBcQaj2ayPpxoMnnxP+6D9TgUkmA6oIjAbc29fl+urnlGrz9lrSzOg38HSyhFaIpYn9V91DKOM7a+Qt6jFvcGcWxeZivPLEOwq/wbGGKluwr0SX6SfQly0hPx4tMmtiF7OLUi67sfB83wfETranKUolR7jjuJQ4wA1A4ZxWFXRuuJO9d9Ah78/C4+0vRGlK38JRBT4UkDTDYkaoCqWUMTvl9VlEebj8Aev/blwEKfObPXrX9zwMSQQjigksR2blEGFUiPl2ltEIrU7ODCgdMdiZvb3SIvCc7aS3lfHvo8LUZmqIJtA/lQTkVdrLRmnf2Bx74dIArYMOO3ew/7mG20Vs4kpYQotRU6oMI8lBFjSySeBHAajPwwhAA5okS9zA1ub+EZfOZhEgH52x8qMLniAlpF4s6b830z8vOz5ZRobts4jqvCdcBIw2DORAmxCToyMbmNVmfznKVqu1+GvGCM4R7pNWUb5kOKt2qfWh8bGV1TTNAbUBGq5re6KYOHrWDqlcvGnUJAumgydwZFOa2b/j4JRS2ao9EgyaVu+UU52T8cloXvxMDHQNvU4nJKK5FhthO935TUISIaWWbnRHcXQP7GMzwOtVQJYPTLfBDyvGcYgotFrATcNDp6XJ6wOjTrgC3xdUaDEIBAMGXWkWGIL0bMdufil8PhJp0CWGjEOlJmY2lmphG/HQUCmVXk3QJwCxQiqUvWiATrBO7L20TxCswqbp44CAuv2i7tsGCq96GR+kxDMI39rULv3M8ddCzlyxtriZSwhh5L68BfuSk8PzZk/AH7+Xr5hptjzNbMZ8RGbmRhjBsmKaBlQ/cdy4lG+k/Jju222b6YXBjLj48rYOPZGdTDsgvkZULkGGpeMumSQLeJmRbC3+5bRxTaHQMDyqvbznSosARt9vSbKyfFgsurC031s1tLUUpKoSU+aHAs95F7/rkaCeQKIUjim+ezuUH36AfbzcC4EDisVX/NLN2fr0SxFkClsNEEkXv7UpHJhyR9MZgrdjaiIORkn1oWpGmKSet7bBxdHcMFrRmOmXyk/79JGG513VB1sOVM6WkWjfUs+yfPgqjZ5+iCHZOABtBQuC2rfYGLuTc03Uvndt8mWGwYYoUU9KtALAz/PSj4cqLrmecldyZO7wxvPP+G/nATexUxjKK3Zd2Aw4q3iKFUANocjoFTaYAc1qnSjfengZDI4GEgzDeaiaS4jHK16MeXd78ZfUf711JaE0xucmET0RdB/qY+aknDekAHeEnsBZ0tt5QWxe3SpvoTTR5IP4+BObVK0VL9lGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1099 bills 2 DPF cleans (103,400 cents) against PO-1027, but only 1 has been received. Propose paying the received quantity, 1 \u00d7 51,700 cents. The unit price matches the contract, there is no duplicate amount, and the bank details are unchanged.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7V6ioiHmrz4hTFRDH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2829,
+      "output_tokens": 292,
+      "output_tokens_details": {
+        "thinking_tokens": 174
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1099 bills 2 DPF cleans (103,400 cents) against PO-1027, but only 1 has been received. Propose paying the received quantity, 1 \u00d7 51,700 cents. The unit price matches the contract, there is no duplicate amount, and the bank details are unchanged.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2829,
+    "output_tokens": 292,
+    "output_tokens_details": {
+      "thinking_tokens": 174
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014122,
+  "durationMs": 2427,
+  "httpStatus": 200,
+  "id": "4485",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23's ping at 14:04:31Z, about 4 minutes before the purchase, was at the station (29.56885,-97.96468, essentially 0 miles away). 42.6 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AYKEAgTGAI4AUIIdGhpbmtpbmcSDBo0RHlTwTlxmq52LBoMRoFDgDvFFUhISVlxIjDjfGWyT7Fii2WqlH7nuBRKumEnQm1T8zExGztBpRz/UI7va3tk3BGvA03gTIAv90oq7QWO5ElLSRtV1zRScMs9XGNa8WwgUd4iomZHeFOll/HZHqqfWRljrm5ynPdLQGzokJazFde2ABjh2ZAVPbUxtlfOVpP0839iIRf+yZtaWeA+VGkY9KwBjl3/dsk9e9oCKs0HlAnPMri5oh8M8Zw34r26T0hWdXGpGNVxf7/wZv4qQ6qB4trWvMxJDTjjV0vRMvLS4O6KRI4TCD3WUvL+2LF7PLIQm+ILWdipGTx2Jl8mU6mb2OpyvMMCPR7v5VPmYm3XlyvNQEtAve5Nmx/VwsOWJpLYp2noG7IujoN/zNYnUC8bI86ea/vOQstLZ9dXuDOGofL7CUXKI61/WvHNLD2kqm0NhSTA9Pw1pe/n8MeS85m/YbEPRki1TaLHnBwvGQO0yQMaKThXpC+sC7VFZRzUtKo1NAZ8mbPfEvyI9TOuMG1ZDQUKFcUqEIYbHBc854CIpLlV7jv4zqHGFBFUZrkGNE2HVnRW9havra04nKXCMb7gwLiJRCQ+U/Urw8M5rwX3aJ+DV4vbTsuZxJCyT0Syeitgc5hm0xUsRYQzDwvUynGIzYLvyC/CVKYI7+SF4U2t0eI8leyXTzzuAro+Svn4pebF8z+KYgaFc+e6x4ut0YqiGd+1BcoKteJ4eu3P5EZ98C02CQJ5A7mvhspVEuhMgU2TCpX97VKD05SHie8qNflkOcuyYTWptaGerdwlJTWoYgnqqbVuROmxrdPk6hqlQzKUE5hI0tP/NM63rzOoSuo7+K80M4j+Nc84ir/YZ3pgPg4TuMPOaHnkBCOIlNX48cncCYCvRzxPMYiO9icVNpDBjpaLR5wEf6YsETjul0w9ApmIGZ7UEiWFUB2FIicdHUmOKhq/5gE54jnTnkbvvr5nhYp+m5vnR+XCLB+9TstAWF4vrEW8k8ay0r/6A89FLXNmNHvKJxHxeft8pi1oXM3QupO/WFrHrGXTtKMZWYRoc/eW+s2VXYn67x5Hl8IRiNcsPOYr11q2yXwDTRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 23's ping at 14:04:31Z, about 4 minutes before the purchase, was at the station (29.56885,-97.96468, essentially 0 miles away). 42.6 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt12uTUSQNvnMd7jdgz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5836,
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 140
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 23's ping at 14:04:31Z, about 4 minutes before the purchase, was at the station (29.56885,-97.96468, essentially 0 miles away). 42.6 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5836,
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 140
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

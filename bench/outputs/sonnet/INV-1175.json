@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012926,
+  "durationMs": 4429,
+  "httpStatus": 200,
+  "id": "INV-1175",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1175 is for 33,900 cents at the 33,900 contract rate, and its quantity of 1 matches the PO-1001 received quantity of 1. The only same-amount invoice in the prior 30 days is INV-1151, which cites the same PO, so it is not a duplicate_invoice. The vendor's bank details never changed and the amount is under 5,000 dollars, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoAoKEAgTGAI4AUIIdGhpbmtpbmcSDN+UmGZpnhVCkEgoYhoMrSM2bYu35/q+G1WkIjDiKxfWdQ4WFPJyrE9f795nR7WXLfJKV36tS38/pj4epSS33XacGmDYhhUivAHkF5YqvQl4yGzOC4CNx/QuLQcjocLu57ula7f34h0YAA5E7tzUb6DTM2rSiQuukeS0rqiXIcpGMtzMxmShcVb0LPedC9loj83Y3dHvNNiJtT/z8/pmNM0/J0KPfFhxGzPbL11S1HyEPdjVdhQVCm7eqXa/C11AcGGJiksPlq4OuashGeR/lITEj6vBg9gYQ7xnx0H9X6eOqfqksRmDXK909isuEQz2Pu23goZOz3XX1Rl0/w3oFgpCDNxWjM58TXVCECyX/mPI61f8Fod6e9yYUhYQbn35NruopFk2sxrsrycDUXt6U38CL2yhzN/HAfJJbxPXVqDZAhM8KBloy0+8LKxYWSLAAZaVd8ZdaHBq19e640lzTKfIspYU0Cjyp/axZLuV5bzS1wnlOBEZt7YB62EfybiXKdhgb45JMGJLoxz7dE/UKa5GItAFdy2530Ip13ASnNdwwuwXupFvj+luqupAFZDtnWQH78sJPtfFJEXNCNAnZVznf34tL5HEBHRxfbogbgcB7ZzVziNIpCgRODlOvsPMSRRpXRc7yqvexBV7CEHaJYHSgiHGAu6K+VM4yM7+OpmsQ1gkjNfsXHcarZIFuOeTK9v2CuMYjw72K3k2cVPvvmXhPkHuRXUZ6iF5IQNHaUW0xRahJUp0K2evON3L94tdqasTOH4+ayZWtb/j7075kGui8vqf2YihaFApAMng/hO/mQlbOHyRfodrqC8SpwG4oISSYiKiZFmrCrGwr8k9nBFpmAkWWRpy36r2Lwx2HHi/P2ZZSwlNIdDloeF4ibMMz9W7K0Jld74A7l8mnksgLr1DPhj8+qKsLQ+d3mLb3PuEdS0/Kw2KuDax+veTYzToBuLQUqFMTa1089YErPvrT2OJIYGgg1LkMQOF7lEroK7DhkahS/0ATWJCLJNfl04OKr8gTa2d2Z3DfuYHWnJmDOUfp5j+SZ5aM6PiRdD4fmUxFOCPop+e4aA3knnUThJpwK4rtG5+TORA3RtcoeNYELXhJHTUdpOSe9Nwc/4ISfBtDfuyOouLrqQj8yn7gtORKLT8OlO1Z5rcnmSaiQOVEFhEozs/H8IVLf75wfp36ZAVmj6V6oBxS8Te9GEEP7MicmMobJNtVrOQ9XRZF3RXEEr9lDQvpZwXhl//olVIdSP1yMlfek7oBAAMCAfD9iZfuoT+yroOqqEyJYzfybhnvn+qLSBLK868CD84Rjr7pD9l6zW7aTHvdmfaKatD5Cjco20NcMG93PkGwNqAMm/X9JlXYmcMOBEJ8DYhnBEgFKmF9raKZ7MWOQqj8j6qz4wz+NdkQbGFxWPufRXlgzODUXeXIV92ndm0oFsyclCrRn5BK21XJlAW4BixFjWEAJ4V9LSNeoeUQUx4t3M0bzD6RUpvH2NlnlDRgnAtt4TqVj+7FsalnxFaGGbosCJa6y+7Jg/QN563GMbGvKLVr2flMYtR9RLDD2k6wAL8Fk4EL3j5m4F22I9oUma6Nk6zaiMw+tXsmc/VH6Jb/53McjT2+N1hKHZ0oe40jQrshr28u1A8Vt7E975GC44rHxzwwx+RDCqOdiV+2MYdPvqFwF3Z+loS1/8owbzwnxB7rYov3iJ6JPi8rUpZuKOwwru5GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1175 is for 33,900 cents at the 33,900 contract rate, and its quantity of 1 matches the PO-1001 received quantity of 1. The only same-amount invoice in the prior 30 days is INV-1151, which cites the same PO, so it is not a duplicate_invoice. The vendor's bank details never changed and the amount is under 5,000 dollars, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6qr7jA7eptqTJhQq8",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4083,
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "thinking_tokens": 326
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1175 is for 33,900 cents at the 33,900 contract rate, and its quantity of 1 matches the PO-1001 received quantity of 1. The only same-amount invoice in the prior 30 days is INV-1151, which cites the same PO, so it is not a duplicate_invoice. The vendor's bank details never changed and the amount is under 5,000 dollars, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4083,
+    "output_tokens": 476,
+    "output_tokens_details": {
+      "thinking_tokens": 326
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

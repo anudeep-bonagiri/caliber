@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009598,
+  "durationMs": 5126,
+  "httpStatus": 200,
+  "id": "INV-1042",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1042 matches the contract rate (51,900) and PO-1015 quantity (4 received), and the vendor's bank details never changed. Its amount equals INV-1036 but cites the same PO, so duplicate_invoice (different PO required) does not apply. It may be worth a courtesy look at a possible double-bill of PO-1015, but no policy hold is triggered."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1042 matches the contract rate (51,900) and PO-1015 quantity (4 received), and the vendor's bank details never changed. Its amount equals INV-1036 but cites the same PO, so duplicate_invoice (different PO required) does not apply. It may be worth a courtesy look at a possible double-bill of PO-1015, but no policy hold is triggered.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsg3bMfpHUPVHVxhXcV",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2069,
+      "output_tokens": 546,
+      "output_tokens_details": {
+        "thinking_tokens": 407
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1042 matches the contract rate (51,900) and PO-1015 quantity (4 received), and the vendor's bank details never changed. Its amount equals INV-1036 but cites the same PO, so duplicate_invoice (different PO required) does not apply. It may be worth a courtesy look at a possible double-bill of PO-1015, but no policy hold is triggered.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2069,
+    "output_tokens": 546,
+    "output_tokens_details": {
+      "thinking_tokens": 407
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

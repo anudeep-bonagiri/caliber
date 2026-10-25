@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005232,
+  "durationMs": 2606,
+  "httpStatus": 200,
+  "id": "INV-1007",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1007 matches PO-1012 and the contract rate (245000 cents, qty 1 received 1). There are no earlier invoices from this vendor. At 245,000 cents it is under the 500,000 cent bank-change threshold, and the bank change on day 42 falls after the day 6 receipt anyway."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnQcKEAgTGAI4AUIIdGhpbmtpbmcSDDkse00O9oPe3W2BIxoMmoA1JOtP/3ZeUNivIjCdQEXs+SmvgRRB13Kd348bytlFpAqCd+sxhMWZDiQoItJi+VWNJO6XKrV5hTqpK3squgalT+qA098xNASZuIFs/Bm2ucidUe6zaNH+0ojUotShy1M4LV7NxJ0lFWc4tVFuc1MRPK/+1RmcYPvMV00RBuc1INv6CYb1W2a5m153C+L81r11gnm4vNGcwyv36EJOY7pCarZmxuglerIBC9UtmA9gq+SsGauHQqLbVqBNQ2Ev6Kwpu2tGu6LPhSMq5VikDeFfMBLTUPvwqO3rUY6/ruGSPzbD84bboR0j62V41+rVwVIlBhpisGsBIplEXBsTglakIy5bmIQo+wT2XSEG6X/D3Xee7h3HHNM72KPNJ7oeDjyrA3I1MjkC3opzpdeIRe1d5Rlfl0iTLvPnR8kjYem92uGa8F/PaH8LKRRg5AdweFNrl8RfRwj9Rak06j98V6yVDAn6fGxvcvU5wpd2Iv1VX2ZS9dU0MBRRne+1G5MkCTGraW1jsEjpHK/MvfqTo08M0zywcvDu9I0vKpzPMlGzypZjFE2voAEk99OJ/y4Y5/x7LI4cdavR4nz4p64Fu646yyrnXzM6lx197kGBJ63QaPZuwtZL6XLWDnuj1lc1P++oKFi9ALlGJi51TFsWmb8q3rIIZYMW+RKf9OwbbnycjlFC/5O4wLlCU9L6TDPOEf1VwdGq6DD8XSiGt1W97PEajdRDhw3k/na+jylGMPxNzdojon3tjIk7Tc1rMccRTvIX4uWuX9r8MqU6fK6wTAm0raV/JMyj3oGF3/UDoTqwlfsAqmyO/DPYzaHZ5CsvmK+qA56JoQPi7OY6OO5HgEngOCFev3SbmUa/FoxOgR5BHx/sRTcsV8/WhAXsI5H3yLjN9UvLhQDN+x2wXP1QZKz4LmClH1wMi/YzoXYIumaFOJ9yomSSTLey8WT1KH5W9EexfZCyxPVhsIBpQXOtRDeqxE+G5IarW6FrTAlCU9Ad4AuatIj6gCgMj18Kxcm4VrYIu1nDyHFluzp2tQ/Ulay+XWWcaKKXoDryxYV1gQvi0YnrXglZ5WZaxgNDK+j56ViJ/CGe1YxIkyWkbDC7SVMBo29RSirm9vPuUZyjizxHqMLhl/NO+g0zsdXXVndhGLPXSNvlodr129Te4v8zIP7E3bCSic5WVv5pGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1007 matches PO-1012 and the contract rate (245000 cents, qty 1 received 1). There are no earlier invoices from this vendor. At 245,000 cents it is under the 500,000 cent bank-change threshold, and the bank change on day 42 falls after the day 6 receipt anyway.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsqqTsMg2oRkDSHWdZz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1391,
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "thinking_tokens": 126
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:29+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1007 matches PO-1012 and the contract rate (245000 cents, qty 1 received 1). There are no earlier invoices from this vendor. At 245,000 cents it is under the 500,000 cent bank-change threshold, and the bank change on day 42 falls after the day 6 receipt anyway.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1391,
+    "output_tokens": 245,
+    "output_tokens_details": {
+      "thinking_tokens": 126
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

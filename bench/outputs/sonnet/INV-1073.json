@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009368,
+  "durationMs": 4332,
+  "httpStatus": 200,
+  "id": "INV-1073",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 46500 matches the contract rate, qty 1 does not exceed received qty 1, no earlier invoice from this vendor has the same amount, and the amount is under the 5,000 dollar bank-change threshold. PO-1006 already has two earlier invoices (INV-1019, INV-1067), but no policy code covers that, so this is only a note."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwsKEAgTGAI4AUIIdGhpbmtpbmcSDP8K5Wo+2kPY83I1bBoMpYzFToqE4pg/wVamIjCocyV9XI3fZWoccCsM8MytNpqSUh1kbsBRGtf3LO7iHGcX4Qt+uo++kDo1DMzOHiIqxAq8PBoIHz5GE4bsEaX9/LM0tQ1LmczdVmT1F1IKw6eZjw0G82f0EBEedvtYos/sV6vIrGKAnjHUpJTRC6lO6I8J25k07IFga2p/OPZ9Zn+HBCybwtp6KI7WtYDv2fz6uBEPIul8JwcSb3j8hmVSHHwKzqZGf2Ubnjb0WUDSdnEt9KE1YskTZPihMsrhNtiyHdEWjy1BhKf5OUTTIsAf4Z7cmURl6fr0akADSgPwOYGRa01vIn7UEQ+CAIz8lxClJoIj1Aibib5Bva2u44RgzJtClg1P5rqsvK2KmNB0dPGSvdnZu5fIbMlwxn4L1qnsFrf1Nu65jYyDtxsNeqtvZx2A1II+/xDlihQ752EdSPbFWsLu8hTjUbSgw6bpn/4c7I8ci+WOEIk4JvZqxZPhsj0rUzEDdAQNk27u7hBQPziZ23PP5/fJAQPAI5zw+cg8JuMlvbHCn2X/I6ACmoKbXF4dGu57nG08sG3NBzAYxL6Dqeblg749Csr6THYKt5pWxe8/YfK4ZaRZ1lyQlPWPr+0Wj63WTzz5nVaCN6NyHa4sjA8rDM/TtxBU1ZJIBdCxoT+LNYKpaPjlQEv0GPOArbZdK4kfCxE9UnofuL2gkqBEXS22ZpTy4BoNaDyzymN6R0yJeAT67tg8l1g8g/8eFDtRK1aq15hb2zraZQNIjcxRcmyPzbkQR6RN5MeD+cKVUHKGlF9+TgvH6OGiP0NdzE3+iGvZL2uitRyn4byjsN6oytcwF9CJEQ8LcbHwrPOZY2yy2bkLS5D2229Y/mqcF2iX3ccGl4HSWt3vtBRmzlQmjSa03Bz1u7RYgyeQh8dEUuRqBo65tEfU3gxnt3VmxR30AXMDjdF0d7HDMo+VGj5F/v+dsltl8VVi9etYhQuj9GGWioHEex4QZAD2FstKMvnuF1kW0sOK1E4p5l/LP7rbrMDqlr6ttuobMjqtvSyarF3lzLOH28uwxfDAf3mSv/cVkky04RielO/g8lX3XMPQJcIBv9kNqofRhmj8Ve2DvtaXYmALJfy+l+PvwpaazUTRxzm2QT4/uDhDznOG3EIDn1MTS+OwwTz8B4u6ihoMA5+3uhs7+YXDsO+p5QxzC3vFpNgcaS+taCby2eJxm83zeGoMj0zVhIl9JdcG/MX8kJ7cAwwPRdEpPvDTb4Tt3HiD8oHagmB3c65x2MCmP0wuutHdKhbBnvFTUjxaJs8xcU9RtMlqN84KoKcCmzqguLhaZOgjAendDGRZFFNwUnKF3tzpwZ5n9C6mgh/2JNSKH5qrJPUusuWFJ5zYolI/4YWh9i1dUNMeXXtRWdwCFpnwL5woFhranrwqbbqZ4WeQw33w359VW4wCywCfpiRKPlYJgUn3PBEoHG5c5gOxSMZkBttWn93r5rde4fSrd2/v51DyKwFtIGxct0I0tDmCsioae+C1JeAH4UidgxamwgHHfhN4H95X6PbyLMXzcyrfDrQWte9zcqy3ff1DV8lQzSnAzUuVHkkhvQ+R/a8C3q1z+ujKYT3Wume+dhYM1SPjiwakMgZtnvUUgbMgd5ABwl1juHGFyDyjYLW85S+ioBroR0bxx/hIXoJHEESSDTsG5INFuLTUrlvU0VR9K1lW84UPD7gy1PI0FW+ogGVuhSluYxKicbDzSf8CfesH5DG42+uWyfFauM1Vx1VlCMpde2mrf3EBiaNsmVEZ3zQKx+HcavIaFlQnIeH0BAzOScEjVAPgGLw1bE8EVGIetpP/6ToUuRVRExnjKCW3DGTjEm8xIwO9VFmampF6U2dJUvOjd8M2CRVuGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 46500 matches the contract rate, qty 1 does not exceed received qty 1, no earlier invoice from this vendor has the same amount, and the amount is under the 5,000 dollar bank-change threshold. PO-1006 already has two earlier invoices (INV-1019, INV-1067), but no policy code covers that, so this is only a note.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvsX3B3NfKJp4btVrX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2244,
+      "output_tokens": 488,
+      "output_tokens_details": {
+        "thinking_tokens": 348
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 46500 matches the contract rate, qty 1 does not exceed received qty 1, no earlier invoice from this vendor has the same amount, and the amount is under the 5,000 dollar bank-change threshold. PO-1006 already has two earlier invoices (INV-1019, INV-1067), but no policy code covers that, so this is only a note.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2244,
+    "output_tokens": 488,
+    "output_tokens_details": {
+      "thinking_tokens": 348
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

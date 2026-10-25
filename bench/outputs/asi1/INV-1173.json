@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 10996,
+  "httpStatus": 200,
+  "id": "INV-1173",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 23541 cents is over 500,000 cents? No. Wait, 23541 cents is $235.41. The threshold is 5,000 dollars (500,000 cents). 23,541 < 500,000. So vendor_bank_change does not apply based on amount.\"\n}\n\nLet's re-read carefully.\n\"vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\"\n\nCurrent Invoice:\n- Cents: 23,541 ($235.41)\n- Received Day: 89\n- Vendor Bank Changed Day: 71\n\nIs 23,541 > 500,000? No.\nSo `vendor_bank_change` does NOT trigger.\n\nLet's check other holds.\n\n1. **location_mismatch**: Not a fuel-card purchase.\n2. **capacity_exceeded**: Not a fuel-card purchase.\n3. **duplicate_toll**: Not a toll.\n4. **duplicate_invoice**:\n   - Current Invoice: Item \"filters\", Amount 23,541, Received Day 89, PO null.\n   - Check earlier invoices from same vendor (ID 5) with same amount (23,541) received within previous 30 days (Days 59 to 88).\n   - Look at `earlierInvoicesSameVendor`:\n     - INV-1107: Item \"filters\", Amount 23,560, Received Day 58. (Amount mismatch: 23,560 != 23,541). Also Day 58 is outside 30-day window (89-30=59).\n     - Any other \"filters\"?\n       - INV-1071: Filters, 25,604, Day 38.\n     - Any invoice with amount 23,541?\n       - Scanning list...\n       - 16937, 78100, 149400, 117750, 29900, 77350, 100850, 33650, 119000, 29900, 73600, 15216, 36925, 27518, 29900, 73600, 36925, 26439, 36800, 25604, 120875, 36800, 37450, 101475, 29832, 99600, 23560, 73600, 119000, 119000, 25357, 550800, 99600, 101475, 36800, 36800, 119000, 36800, 74850, 119000.\n       - None match 23,541 exactly.\n   - So `duplicate_invoice` does NOT trigger.\n\n5. **rate_variance**:\n   - Invoice item: \"filters\".\n   - Unit Price: 23,541 cents.\n   - Contract Valid On Receipt Day: `null`.\n   - Policy: \"compare against the purchase order unit price when no contract applies\".\n   - Purchase Order: `null`.\n   - If both contract and PO are null, there is no reference rate to compare against. Therefore, rate variance cannot be determined/triggered. Usually, this means it clears unless specified otherwise. The policy says \"Hold... if unit price is more than 5 percent above the contract rate... or purchase order unit price\". If neither exists, the condition cannot be met.\n\n6. **short_received**:\n   - Invoice Qty: 1.\n   - PO: `null`.\n   - Policy: \"bills a larger quantity than the purchase order's received quantity\".\n   - With no PO, we don't have a \"received quantity\" from a PO. This rule typically requires a PO to define the expected/received quantity. Without a PO, this rule doesn't apply.\n\n7. **vendor_bank_change**:\n   - Amount: 23,541 cents ($235.41).\n   - Threshold: 500,000 cents ($5,000).\n   - 23,541 < 500,000. Condition fails.\n\nConclusion: None of the hold conditions are met.\n\n{\"decision\": \"clear\", \"code\": null, \"reason\": \"No hold conditions triggered; amount below vendor bank change threshold and no duplicate or variance issues found.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883587,
+    "id": "chatcmpl-4825688d-37dc-4041-a5e7-5bfebecf33b6",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1180,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4456,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5636
+    }
+  },
+  "startedAt": "2026-10-24T23:12:59+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 23541 cents is over 500,000 cents? No. Wait, 23541 cents is $235.41. The threshold is 5,000 dollars (500,000 cents). 23,541 < 500,000. So vendor_bank_change does not apply based on amount.\"\n}\n\nLet's re-read carefully.\n\"vendor_bank_change: an invoice over 5,000 dollars (500,000 cents) from a vendor whose remit-to bank details changed within the 7 business days before the invoice was received.\"\n\nCurrent Invoice:\n- Cents: 23,541 ($235.41)\n- Received Day: 89\n- Vendor Bank Changed Day: 71\n\nIs 23,541 > 500,000? No.\nSo `vendor_bank_change` does NOT trigger.\n\nLet's check other holds.\n\n1. **location_mismatch**: Not a fuel-card purchase.\n2. **capacity_exceeded**: Not a fuel-card purchase.\n3. **duplicate_toll**: Not a toll.\n4. **duplicate_invoice**:\n   - Current Invoice: Item \"filters\", Amount 23,541, Received Day 89, PO null.\n   - Check earlier invoices from same vendor (ID 5) with same amount (23,541) received within previous 30 days (Days 59 to 88).\n   - Look at `earlierInvoicesSameVendor`:\n     - INV-1107: Item \"filters\", Amount 23,560, Received Day 58. (Amount mismatch: 23,560 != 23,541). Also Day 58 is outside 30-day window (89-30=59).\n     - Any other \"filters\"?\n       - INV-1071: Filters, 25,604, Day 38.\n     - Any invoice with amount 23,541?\n       - Scanning list...\n       - 16937, 78100, 149400, 117750, 29900, 77350, 100850, 33650, 119000, 29900, 73600, 15216, 36925, 27518, 29900, 73600, 36925, 26439, 36800, 25604, 120875, 36800, 37450, 101475, 29832, 99600, 23560, 73600, 119000, 119000, 25357, 550800, 99600, 101475, 36800, 36800, 119000, 36800, 74850, 119000.\n       - None match 23,541 exactly.\n   - So `duplicate_invoice` does NOT trigger.\n\n5. **rate_variance**:\n   - Invoice item: \"filters\".\n   - Unit Price: 23,541 cents.\n   - Contract Valid On Receipt Day: `null`.\n   - Policy: \"compare against the purchase order unit price when no contract applies\".\n   - Purchase Order: `null`.\n   - If both contract and PO are null, there is no reference rate to compare against. Therefore, rate variance cannot be determined/triggered. Usually, this means it clears unless specified otherwise. The policy says \"Hold... if unit price is more than 5 percent above the contract rate... or purchase order unit price\". If neither exists, the condition cannot be met.\n\n6. **short_received**:\n   - Invoice Qty: 1.\n   - PO: `null`.\n   - Policy: \"bills a larger quantity than the purchase order's received quantity\".\n   - With no PO, we don't have a \"received quantity\" from a PO. This rule typically requires a PO to define the expected/received quantity. Without a PO, this rule doesn't apply.\n\n7. **vendor_bank_change**:\n   - Amount: 23,541 cents ($235.41).\n   - Threshold: 500,000 cents ($5,000).\n   - 23,541 < 500,000. Condition fails.\n\nConclusion: None of the hold conditions are met.\n\n{\"decision\": \"clear\", \"code\": null, \"reason\": \"No hold conditions triggered; amount below vendor bank change threshold and no duplicate or variance issues found.\"}",
+  "usage": {
+    "completion_tokens": 1180,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4456,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5636
+  }
+}

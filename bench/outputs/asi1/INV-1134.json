@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12600,
+  "httpStatus": 200,
+  "id": "INV-1134",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 25357 cents exceeds 500000 cents threshold? No, wait. 25357 cents is $253.57. The policy says 'over 5,000 dollars (500,000 cents)'. 25357 < 500000. So vendor_bank_change does not apply based on amount. Let's re-read carefully. 'an invoice over 5,000 dollars (500,000 cents)'. The invoice is 25357 cents ($253.57). This is NOT over $5,000. So vendor_bank_change is NOT triggered by amount. However, the bank changed on day 71. Invoice received on day 73. That is within 7 business days. But the amount condition fails. So this code doesn't apply.\n\nLet's check other codes.\n- duplicate_invoice: Same amount as earlier invoice from same vendor within previous 30 days under different PO?\n  Current invoice: 25357 cents, item shop_labor, poId null.\n  Earlier invoices:\n  INV-1034: 15216 cents.\n  INV-1056: 26439 cents.\n  None are 25357.\n  Wait, look at INV-1039: 27518 cents.\n  Look at INV-1102: 29832 cents.\n  Is there any invoice with 25357 cents? No.\n  \n- rate_variance: Unit price > 5% above contract rate.\n  contractValidOnReceiptDay is null.\n  purchaseOrder is null.\n  Policy: 'compare against the purchase order unit price when no contract applies'.\n  If no contract AND no PO, what do we compare against?\n  Usually, if no reference rate exists, we can't determine variance. Or perhaps it defaults to clear?\n  The policy says: 'Hold and ask which purchase order is real' for duplicate_invoice.\n  For rate_variance: 'Hold'.\n  If there is no contract and no PO, there is no baseline to compare. Thus, likely clear or not applicable.\n\n- short_received: Bills larger quantity than PO's received quantity.\n  PO is null. Cannot compare. Likely clear.\n\n- location_mismatch, capacity_exceeded, duplicate_toll: Not applicable for invoice kind.\n\nSo, is it clear?\nLet's double check the vendor_bank_change rule.\n\"an invoice over 5,000 dollars (500,000 cents) ... Hold for a call-back.\"\nThe invoice is 25,357 cents ($253.57). It is NOT over $5,000.\nTherefore, the vendor_bank_change hold does NOT trigger.\n\nAre there any other holds?\nDuplicate invoice: Needs same amount. 25357 is not in the list of earlier amounts.\nRate variance: No contract, no PO. No basis for hold.\nShort received: No PO. No basis for hold.\n\nConclusion: Clear.\n\nWait, did I miss something?\nLet's look at the earlier invoices again.\nINV-1034: 15216\nINV-1056: 26439\nINV-1039: 27518\nINV-1102: 29832\nCurrent: 25357.\n\nIs 25357 close to any? No.\n\nIs there a hidden trap?\n\"vendor_bank_change: an invoice over 5,000 dollars...\".\nMaybe I am misinterpreting \"over 5,000 dollars\".\n5,000 dollars = 500,000 cents.\n25,357 cents = $253.57.\nIt is definitely not over $5,000.\n\nSo, decision is clear.\n\nOne final check on duplicate_invoice.\n\"same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\nReceived day 73. Previous 30 days means receivedDay >= 43.\nInvoices received day >= 43:\nINV-1081 (45): 120875\nINV-1082 (45): 36800\nINV-1086 (48): 37450\nINV-1101 (54): 101475\nINV-1102 (55): 29832\nINV-1105 (57): 99600\nINV-1107 (58): 23560\nINV-1115 (62): 73600\nINV-1118 (63): 119000\nINV-1132 (72): 119000\n\nNone match 25357.\n\nDecision: Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No hold conditions met; amount below vendor bank change threshold and no matching duplicate invoice or rate variance baseline.\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884192,
+    "id": "chatcmpl-c29a347a-fa02-44df-9e34-772d45a474ad",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1206,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3601,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1072,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4807
+    }
+  },
+  "startedAt": "2026-10-24T23:23:03+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 25357 cents exceeds 500000 cents threshold? No, wait. 25357 cents is $253.57. The policy says 'over 5,000 dollars (500,000 cents)'. 25357 < 500000. So vendor_bank_change does not apply based on amount. Let's re-read carefully. 'an invoice over 5,000 dollars (500,000 cents)'. The invoice is 25357 cents ($253.57). This is NOT over $5,000. So vendor_bank_change is NOT triggered by amount. However, the bank changed on day 71. Invoice received on day 73. That is within 7 business days. But the amount condition fails. So this code doesn't apply.\n\nLet's check other codes.\n- duplicate_invoice: Same amount as earlier invoice from same vendor within previous 30 days under different PO?\n  Current invoice: 25357 cents, item shop_labor, poId null.\n  Earlier invoices:\n  INV-1034: 15216 cents.\n  INV-1056: 26439 cents.\n  None are 25357.\n  Wait, look at INV-1039: 27518 cents.\n  Look at INV-1102: 29832 cents.\n  Is there any invoice with 25357 cents? No.\n  \n- rate_variance: Unit price > 5% above contract rate.\n  contractValidOnReceiptDay is null.\n  purchaseOrder is null.\n  Policy: 'compare against the purchase order unit price when no contract applies'.\n  If no contract AND no PO, what do we compare against?\n  Usually, if no reference rate exists, we can't determine variance. Or perhaps it defaults to clear?\n  The policy says: 'Hold and ask which purchase order is real' for duplicate_invoice.\n  For rate_variance: 'Hold'.\n  If there is no contract and no PO, there is no baseline to compare. Thus, likely clear or not applicable.\n\n- short_received: Bills larger quantity than PO's received quantity.\n  PO is null. Cannot compare. Likely clear.\n\n- location_mismatch, capacity_exceeded, duplicate_toll: Not applicable for invoice kind.\n\nSo, is it clear?\nLet's double check the vendor_bank_change rule.\n\"an invoice over 5,000 dollars (500,000 cents) ... Hold for a call-back.\"\nThe invoice is 25,357 cents ($253.57). It is NOT over $5,000.\nTherefore, the vendor_bank_change hold does NOT trigger.\n\nAre there any other holds?\nDuplicate invoice: Needs same amount. 25357 is not in the list of earlier amounts.\nRate variance: No contract, no PO. No basis for hold.\nShort received: No PO. No basis for hold.\n\nConclusion: Clear.\n\nWait, did I miss something?\nLet's look at the earlier invoices again.\nINV-1034: 15216\nINV-1056: 26439\nINV-1039: 27518\nINV-1102: 29832\nCurrent: 25357.\n\nIs 25357 close to any? No.\n\nIs there a hidden trap?\n\"vendor_bank_change: an invoice over 5,000 dollars...\".\nMaybe I am misinterpreting \"over 5,000 dollars\".\n5,000 dollars = 500,000 cents.\n25,357 cents = $253.57.\nIt is definitely not over $5,000.\n\nSo, decision is clear.\n\nOne final check on duplicate_invoice.\n\"same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\nReceived day 73. Previous 30 days means receivedDay >= 43.\nInvoices received day >= 43:\nINV-1081 (45): 120875\nINV-1082 (45): 36800\nINV-1086 (48): 37450\nINV-1101 (54): 101475\nINV-1102 (55): 29832\nINV-1105 (57): 99600\nINV-1107 (58): 23560\nINV-1115 (62): 73600\nINV-1118 (63): 119000\nINV-1132 (72): 119000\n\nNone match 25357.\n\nDecision: Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No hold conditions met; amount below vendor bank change threshold and no matching duplicate invoice or rate variance baseline.\"}\n```",
+  "usage": {
+    "completion_tokens": 1206,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3601,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1072,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4807
+  }
+}

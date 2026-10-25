@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 11224,
+  "httpStatus": 200,
+  "id": "T2815",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2815 at NTTA-MCLB-01 is within 10 minutes of earlier toll T2672 on day 73, but the rule applies to same plate/plaza within 10 minutes. Checking day 74: T2686 is at 12:49:05Z. Current transaction is day 79. Wait, let's re-read carefully. 'within 10 minutes of an earlier toll charge'. The current transaction is T2815 at 2026-10-19T11:19:34Z. I need to check if there is ANY earlier toll for the same plate at the same plaza within 10 minutes. Looking at the list, the most recent tolls are on day 77 (Oct 15). There are no tolls on day 79 or close to Oct 19 in the provided list. However, looking closely at day 74: T2685 (12:39:50), T2686 (12:49:05), T2698 (16:17:36). Day 77: T2764 (15:37:01), T2766 (15:57:07), T2775 (19:28:09), T2776 (19:28:58). The current transaction is T2815 on day 79. There are no earlier tolls listed for day 79 or immediately preceding it in the `earlierTollsSamePlate` array that are within 10 minutes. Wait, did I miss something? Let's look at T2686 and T2685. They are 9 minutes apart. But they are different plazas? No, T2685 is NTTA-DNT-01, T2686 is NTTA-MCLB-01. Different plazas. T2775 and T2776 are 49 seconds apart. T2775 is NTTA-DNT-01, T2776 is NTTA-PGBT-01. Different plazas. The current transaction T2815 is at NTTA-MCLB-01. Is there a previous toll at NTTA-MCLB-01 within 10 minutes? The last NTTA-MCLB-01 toll was T2672 on day 73. That is 6 days ago. So it's not a duplicate. Why would it be held? Let me re-read the policy. 'duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' If there is no such charge, it should be clear. But wait, look at T2686 (day 74) and T2672 (day 73). Not within 10 mins. Look at T2124 (day 52) and T2133/2138 (day 53). Not within 10 mins. Look at T1651 and T1652 (day 28). T1651 is NTTA-MCLB-01 at 20:41:52. T1652 is NTTA-DNT-01 at 20:50:43. Different plazas. Look at T1209 and T1210 (day 9). T1209 is NTTA-DNT-01. T1210 is NTTA-MCLB-01. Different plazas. It seems there are NO duplicates in the history either. And the current transaction has no prior match within 10 minutes. Therefore, it should be cleared.\n\nWait, let me double check the timestamps for T2815. 2026-10-19T11:19:34Z.\nIs there any toll on Oct 19? No.\nIs there any toll on Oct 18? No.\nThe closest is Oct 15 (Day 77).\nSo, decision is clear.\n\nHowever, often these problems have a trick. Let me check if I missed a toll.\nT2686 is day 74.\nT2698 is day 74.\nT2764 is day 77.\nT2766 is day 77.\nT2775 is day 77.\nT2776 is day 77.\nT2815 is day 79.\n\nThere is no duplicate.\n\n{\"decision\": \"clear\", \"code\": null, \"reason\": \"No duplicate toll found within 10 minutes at the same plaza.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883974,
+    "id": "chatcmpl-3773e7e3-197e-4109-89c5-f6e3b15e8bd8",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1093,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 7274,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2144,
+        "created_cache_tokens": 3216,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 8367
+    }
+  },
+  "startedAt": "2026-10-24T23:19:26+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2815 at NTTA-MCLB-01 is within 10 minutes of earlier toll T2672 on day 73, but the rule applies to same plate/plaza within 10 minutes. Checking day 74: T2686 is at 12:49:05Z. Current transaction is day 79. Wait, let's re-read carefully. 'within 10 minutes of an earlier toll charge'. The current transaction is T2815 at 2026-10-19T11:19:34Z. I need to check if there is ANY earlier toll for the same plate at the same plaza within 10 minutes. Looking at the list, the most recent tolls are on day 77 (Oct 15). There are no tolls on day 79 or close to Oct 19 in the provided list. However, looking closely at day 74: T2685 (12:39:50), T2686 (12:49:05), T2698 (16:17:36). Day 77: T2764 (15:37:01), T2766 (15:57:07), T2775 (19:28:09), T2776 (19:28:58). The current transaction is T2815 on day 79. There are no earlier tolls listed for day 79 or immediately preceding it in the `earlierTollsSamePlate` array that are within 10 minutes. Wait, did I miss something? Let's look at T2686 and T2685. They are 9 minutes apart. But they are different plazas? No, T2685 is NTTA-DNT-01, T2686 is NTTA-MCLB-01. Different plazas. T2775 and T2776 are 49 seconds apart. T2775 is NTTA-DNT-01, T2776 is NTTA-PGBT-01. Different plazas. The current transaction T2815 is at NTTA-MCLB-01. Is there a previous toll at NTTA-MCLB-01 within 10 minutes? The last NTTA-MCLB-01 toll was T2672 on day 73. That is 6 days ago. So it's not a duplicate. Why would it be held? Let me re-read the policy. 'duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' If there is no such charge, it should be clear. But wait, look at T2686 (day 74) and T2672 (day 73). Not within 10 mins. Look at T2124 (day 52) and T2133/2138 (day 53). Not within 10 mins. Look at T1651 and T1652 (day 28). T1651 is NTTA-MCLB-01 at 20:41:52. T1652 is NTTA-DNT-01 at 20:50:43. Different plazas. Look at T1209 and T1210 (day 9). T1209 is NTTA-DNT-01. T1210 is NTTA-MCLB-01. Different plazas. It seems there are NO duplicates in the history either. And the current transaction has no prior match within 10 minutes. Therefore, it should be cleared.\n\nWait, let me double check the timestamps for T2815. 2026-10-19T11:19:34Z.\nIs there any toll on Oct 19? No.\nIs there any toll on Oct 18? No.\nThe closest is Oct 15 (Day 77).\nSo, decision is clear.\n\nHowever, often these problems have a trick. Let me check if I missed a toll.\nT2686 is day 74.\nT2698 is day 74.\nT2764 is day 77.\nT2766 is day 77.\nT2775 is day 77.\nT2776 is day 77.\nT2815 is day 79.\n\nThere is no duplicate.\n\n{\"decision\": \"clear\", \"code\": null, \"reason\": \"No duplicate toll found within 10 minutes at the same plaza.\"}",
+  "usage": {
+    "completion_tokens": 1093,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 7274,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2144,
+      "created_cache_tokens": 3216,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 8367
+  }
+}

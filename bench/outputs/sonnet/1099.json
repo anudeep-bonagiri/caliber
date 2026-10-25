@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01341,
+  "durationMs": 2716,
+  "httpStatus": 200,
+  "id": "1099",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 37 pinged at the station (30.6335,-97.6782) three minutes before the purchase and was stopped there with the engine on, so it was well within 25 miles. 41.8 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QYKEAgTGAI4AUIIdGhpbmtpbmcSDK8v6ADVWbBv7BHevRoMftNQYnxxi7k8N6pKIjCHSJT5F0x07j1NQfPG/fdT6+GSVhO+fG93e+/LKJBATuQHddYG3VxQekMJiQ0rqKQq9gVKumoxyuEfmKwr1Zj3DuulSz1YszopBwoRtPZDpw6J5+qMFd/qjB+GiyO1lEILRYjTonIUPGM2J8GWnjRhjW1jcYSibK961a4BG1M+0aDguVF7nsNh5au98lJ892YgTFKsI4cx+a848aIM7opT0UaPEhr9DLJL0DdHzM4qwHTf6g04hexPiZSan8U3h04xjqtGuHoVV5Bs/zGZq9uPdmF8Vfsanyt7wxVwapcf61vfCVY5L5tMgtEQEWKWQjpJIan1Lw6J37xudj+qML87zJH8rciHzeD9g5ZF8gk89DGKfxSJugXMapb8xz7tml4qFKG0Jf+rZDxgfTg5f68gnE1IuAo4aEl5QsthYnByPp/ZqO/APx8RpkvSL/3KuY0P8ITp3OV9Atb52lYWjcfB13Dgcr2RNZRqQ+pxtQbUW1ETaKaDy5rZud+OIKDw/D7ko+Ii4fNZ5efkS9J2TT0YqD2jfEUN//4iM1saTBTYlDrctxI/vXB96BOLD9KzRxu3xxozAFQzcf3r+cuBAN/rnvLIjTeNFJQhxwppLY4jwYrBZpRRUgA3XMqApVzt8OePq0+IyD988zJNIsLwafBZmcsvrjooy3Ail8sbD1Jyul3xTnR9nE4WncP/DDcUFwjdC2iGVZk3KZ+K9xtA5FY1NQlWtKQhTFMaNohh6CZ6cH43ErN2dZONoEyHUbiQ1sqZ91pcW+EICG0c3j7kipeaSM4B0E6sWo1GnCBZ561tJ0GYAoDjkIwAjXP9vXYY3qjUrtl02SIBaP4y/Sz8t4rj1SxZekTlI3SQYDg4IjPnC3zUBSnEFM9Q6qspIvBp73ud3j/MPLOTWfMvqZvEtmlo3hHy+5VkizrGwJNCsEOjphy6ZmnS6HbttZf2EMg1AZka/mf9FvQ5a/f/SW6Txt9twe0uIxclnCem/upI5KhTr3bEkB9nm9E/BRUXvIjKZuNKrgAEMhm/rPoOiTcCyhvXU/fh/V7M+nehl9IjKzei6HXfroi8OU7u6BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged at the station (30.6335,-97.6782) three minutes before the purchase and was stopped there with the engine on, so it was well within 25 miles. 41.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMswUJpFucQJY3B6EoYy",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5470,
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "thinking_tokens": 144
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged at the station (30.6335,-97.6782) three minutes before the purchase and was stopped there with the engine on, so it was well within 25 miles. 41.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5470,
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "thinking_tokens": 144
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

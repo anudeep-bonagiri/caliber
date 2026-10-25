@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.023228,
+  "durationMs": 3505,
+  "httpStatus": 200,
+  "id": "T2482",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1011 at SH 45 SE Plaza within 10 minutes; the most recent charge there was 2026-09-25, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Transaction T2482 is a toll charge for plate TX-1011 at SH 45 SE Plaza, Creedmoor, at 2026-09-30T16:36:19Z.\n\nThe policy holds a toll only when the same plate was charged at the same plaza within 10 minutes earlier. The earlier charges at this plaza (TXTAG-SH45SE-01) are:\n- T2398 on 2026-09-25 at 14:50:36Z\n- T2293 on 2026-09-21 at 16:43:14Z\n- T2161 on 2026-09-14\n- other earlier dates\n\nNone of these is within 10 minutes of the current charge.\n\nThe only charge from the same day is T2469, at 12:17:53Z at a different plaza (PGBT, Irving). That is a different plaza and about 4 hours earlier, so it does not matter for this rule.\n\nNo duplicate exists, so the charge is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1011 at SH 45 SE Plaza within 10 minutes; the most recent charge there was 2026-09-25, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshNXuVCrULz4p3Lg4P",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9744,
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:34+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Transaction T2482 is a toll charge for plate TX-1011 at SH 45 SE Plaza, Creedmoor, at 2026-09-30T16:36:19Z.\n\nThe policy holds a toll only when the same plate was charged at the same plaza within 10 minutes earlier. The earlier charges at this plaza (TXTAG-SH45SE-01) are:\n- T2398 on 2026-09-25 at 14:50:36Z\n- T2293 on 2026-09-21 at 16:43:14Z\n- T2161 on 2026-09-14\n- other earlier dates\n\nNone of these is within 10 minutes of the current charge.\n\nThe only charge from the same day is T2469, at 12:17:53Z at a different plaza (PGBT, Irving). That is a different plaza and about 4 hours earlier, so it does not matter for this rule.\n\nNo duplicate exists, so the charge is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1011 at SH 45 SE Plaza within 10 minutes; the most recent charge there was 2026-09-25, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9744,
+    "output_tokens": 374,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

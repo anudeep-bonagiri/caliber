@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009024,
+  "durationMs": 3368,
+  "httpStatus": 200,
+  "id": "4177",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 7's nearest ping (22:00Z, 6 min before purchase) was in Houston, about 195 miles from the Robstown station, which is over the 25-mile limit. The engine was off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1007."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmAcKEAgTGAI4AUIIdGhpbmtpbmcSDB4ZnaVT0179u+2HWRoMdLhLkWY7TZ6pwc6kIjC/8NNY/RaJqXjoqSRsBXY1T70rJ/5GhueQdPZ6j2ljVIXAEmL97DwiZr1bMdoigR8qtQachaQp0SbVY/cYarPDQO0vz4Ikv/CxCnCPJicwoo5TCTR0p6bz3m9MhFGfBM94z3TpfVr1ZxPvtpHFmbvynA5lQpFi57Pz0aWQbkbWZSB9rVP+cyXtKxyRbcaQTX+BlEwuc0WQmEwjBoSwtHfW6Q8fwKpUFZSfk77R8OrlHQpluNMWnnsTpManbqiamVFnqE2T+oyUE/x9L6mvJmVoFax7IFBW2nD0XCC2seR4YyfxB9CMIlZ8AVGTrTGf4P5LFfQ7tlajXrNRrS9IoazCdIW4XCmKTeKhVunzVKVvrg9EWAtZhKVpDGYkQ0o5zfABBiHGc/K/WI5fH8nwG9/3AYeBPLYC7TWEMHzaUCQpn4NrtwLFF3+mSXnHVltLc/q2/wna+IVN539qhs5TmOQRMEhuHO7HW3xnhUJAGGBoDq+bUiBtNotQZ8RgFiewmeUjvYs4biK+YSYo9pZtOD2RlcJ79T/sA4GhktJcloVD5LPdJLnZD383nnMQhVBvthXoDWdZdlV0rl0I84pocbx6MTfRlv+Kg5/Fy4HYyt3T8mjUaGfRcQCqbymEKi3Z0vc5qLKia2vPQ4PkGv2n/sNqk7ihPPfg8+wv7DAvQAXpvOy12/Zlu/VtYpEBVyXE0ihiD5JgqPG+xowWQC5M4Yg9OR6GeXN6WUjH0SYC2Wei/SPpkO8Tz+G6OwKvaR0pXTy6sgqQG6asxI8Fr9TZwyTzNRPCky24lKXnL5ymKHYOJDnPyMV0yrY8tWPMIFORakn0jYIouCpl66NGasVQIllve9dhYenZzSnamxBI4J2QllTnwDxVDG68kjOgwoddWel2ebh9Y6oO/OeYmJOuPyCZowAvX7umne+IpqROri2qFDBYYze/r9ERxDarj7VLzR+mVUxyrU+MCn+d7Z1gOTN+tCTzdfahSRHGoVE5gDY2uRzFmRpSNvWBottnNBLnvxJjzSzq7rW3MnrGmNO7rj/NJzdGb9bUQwj176KKojelsXbRI/YOfMR5ws356sjT7PBWXn8s6vzNX1Xo4VtAloQCI/q7EMkApVTjL568VG34nlD0QPh4V1l9O5IFH9Z3SfQe7JdN8e5ncxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 7's nearest ping (22:00Z, 6 min before purchase) was in Houston, about 195 miles from the Robstown station, which is over the 25-mile limit. The engine was off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1007.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsy6DqJBhF1GFmtWzFf",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 304,
+      "output_tokens_details": {
+        "thinking_tokens": 179
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:07+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 7's nearest ping (22:00Z, 6 min before purchase) was in Houston, about 195 miles from the Robstown station, which is over the 25-mile limit. The engine was off and the odometer unchanged all day, so ask dispatch whether another unit or driver used card FC-1007.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "thinking_tokens": 179
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

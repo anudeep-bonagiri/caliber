@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01131,
+  "durationMs": 3371,
+  "httpStatus": 200,
+  "id": "INV-1125",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1125 unit price of 245000 matches the contract rate, and its qty of 1 equals the PO received qty. No earlier invoice from this vendor has the amount 248750, so it is not a duplicate. At 248750 cents it is under the 500000 bank-change threshold, and the bank change on day 42 was 25 days before receipt, outside the 7-business-day window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3wgKEAgTGAI4AUIIdGhpbmtpbmcSDIaCjrmsT3zl+2dPZRoMmh9JW4nXaXG3TdcDIjA9EvVoVgTY7UmylqPg9BoVaRllKhnNwoO7ECNkr4GQvQd5kgeRkLjsIPdsh/8X6x8q/Ae0Ib3+3FjUkLMadLdD9RVbZYBUKSsQ+P4u/uY4LVu1n6ZMbbQvFMLLHaKPJVCyyUjdaXVeHFwPpelFB7NX6LmRttcz98AL3b5fpCP0A54hNOuuBkTl5cQ3qLct1mTGYptUwkC7IGvaqRHPkHn4SQr+9TitfBki0jcyoddwvCxqD+LEBTB5QyLvQcpQrFF1Q/lVt6RD0CzFj+xOF8P4XBzZXzUWFOFhHmKivX7ws9xKj7HIOE7f0cCVi9InouY+WrJtfjAqrHyDhPfhWD9nG3rcQeUjkPY3jNlVRDhZxcPn8TMo0ZHzy5tebPgdsNm/VW+mx/NLZ+TluW9h1+44kJBdaK8cFK4GeydoabzpKgEbjcBrhRXqGqV8SCZckvW1BNA2rAKQ7DQZuN1tXWGJTHrWJFwL8lmDPk8wzpi3VQckyEmhHKkrxbGX15dxLjreP9+q2L/6w4GySkQXf5xFmnxMseFAQC9471bS6d76E3L3ZsM9J4LiuLaPtp9+esleFdQDqost72dJ902c8lIiX7KHhPv6feILSpVwARSgLbnJPe42/gVR9cY3phGInkfwdj5QAxx6Zg7lpGq352Y40TbmM9CgMHOP8WBkLJ7s18g6Jls7K1qCXzd3lkY9CSQ0uvG6Mb2SF7CaFS2FE01D1jJz5aMNsBxIQG7psmC2KQ4XJiHpmmNuG41lI9188Y9qvooHT/lcxpBpYPXSHqFXTjdlKz3BLeAHlSBuNhsTDUTb6GdLcU/76Xku+QrT5rUKtFMthyrMLIV6kjXqkW6XA9d50fGp+EgUarg5R5zX5VQyKlxL88oPiEnG0wLvnqTuXJLae6PHOojWONYpP6oosNO3LN+oJDU8AAAP7MPiEX2L/QLImTXUa2MzeCMuTNNes9tOM2DYS+W+fcdNyXzJR8ZrAKLrkwefKFOtHIRCXh6A/E0S6EZ12Xv7VmPDwD86zxrLVJ+5z/Im4Qnx3f6RWNEEAFHTbOADbEReE8jQHUG9MjWjaWX3+x72Pgaixd/OH2fjYmuMK3NTO1+eSXvOL6cSnf5iFifS+9sbHRXypo4oZIf+ZnO0y5nMJPwE/Wi1PEFojCTpUSXQDA3v3ie9Zy3eabxWpqrUJyzKtAxLCb8Zg9UNu0HukrDzsPZRsOFOq6hwPnMOoIfuol47zohhJaVY5Kp1652/6mYaE4zjqnlXk97LrdM0LrteBSwU/NqWDYQY9K2HGgpM/c9DHj21CR6IKSovGAMOyaqLifxcBgcPawR2yPmj4XvnyYBStN5WghYtFF9VFoJ6NVyFEW6FR1UR4N2Oa/gZQRYiiLQUvQeHvomwn+9Og/8LLJGuV05qH2eb136lDhi8BoyDweYYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1125 unit price of 245000 matches the contract rate, and its qty of 1 equals the PO received qty. No earlier invoice from this vendor has the amount 248750, so it is not a duplicate. At 248750 cents it is under the 500000 bank-change threshold, and the bank change on day 42 was 25 days before receipt, outside the 7-business-day window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxtrxHMCCGHWCuAb4g",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3845,
+      "output_tokens": 362,
+      "output_tokens_details": {
+        "thinking_tokens": 223
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1125 unit price of 245000 matches the contract rate, and its qty of 1 equals the PO received qty. No earlier invoice from this vendor has the amount 248750, so it is not a duplicate. At 248750 cents it is under the 500000 bank-change threshold, and the bank change on day 42 was 25 days before receipt, outside the 7-business-day window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3845,
+    "output_tokens": 362,
+    "output_tokens_details": {
+      "thinking_tokens": 223
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

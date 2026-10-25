@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013156,
+  "durationMs": 2993,
+  "httpStatus": 200,
+  "id": "T2409",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Only earlier toll at the same plaza (T2384) was about 9 hours before, outside the 10-minute duplicate window; no other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is T2409 at SH 45 N Mainlane, Round Rock, on 2026-09-25 at 20:17:03Z.\n\nThe only earlier charge for this plate at the same plaza (TXTAG-SH45N-01) that day is T2384 at 11:05:54Z. That is about 9 hours earlier, well outside the 10-minute window.\n\nThe charge at NTTA-PGBT-01 (T2400, 16:27Z) is a different plaza, so it does not count. No other charge falls within 10 minutes of T2409, so no policy hold applies.\n\n{\"decision\": \"clear\", \"reason\": \"Only earlier toll at the same plaza (T2384) was about 9 hours before, outside the 10-minute duplicate window; no other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscddN6YXH6ngaEfTrP",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5298,
+      "output_tokens": 256,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is T2409 at SH 45 N Mainlane, Round Rock, on 2026-09-25 at 20:17:03Z.\n\nThe only earlier charge for this plate at the same plaza (TXTAG-SH45N-01) that day is T2384 at 11:05:54Z. That is about 9 hours earlier, well outside the 10-minute window.\n\nThe charge at NTTA-PGBT-01 (T2400, 16:27Z) is a different plaza, so it does not count. No other charge falls within 10 minutes of T2409, so no policy hold applies.\n\n{\"decision\": \"clear\", \"reason\": \"Only earlier toll at the same plaza (T2384) was about 9 hours before, outside the 10-minute duplicate window; no other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5298,
+    "output_tokens": 256,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

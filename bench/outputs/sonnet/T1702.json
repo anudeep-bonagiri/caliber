@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008108,
+  "durationMs": 2801,
+  "httpStatus": 200,
+  "id": "T1702",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1038 at NTTA-MCLB-01 within 10 minutes; the latest there was T1311 on 2026-07-17, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Toll T1702 was charged at NTTA-MCLB-01 on 2026-08-12 at 15:33:49Z. The most recent earlier charge for this plate at that plaza is T1311 on 2026-07-17 at 18:29:01Z, about 26 days before. That is far outside the 10-minute window. The charge at the same plaza closest in time on the same day pattern (T1300 and T1311) is also well in the past. No earlier toll for this plate at this plaza falls within 10 minutes of the new charge.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1038 at NTTA-MCLB-01 within 10 minutes; the latest there was T1311 on 2026-07-17, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuoNUTryJB8arkHhsA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2794,
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Toll T1702 was charged at NTTA-MCLB-01 on 2026-08-12 at 15:33:49Z. The most recent earlier charge for this plate at that plaza is T1311 on 2026-07-17 at 18:29:01Z, about 26 days before. That is far outside the 10-minute window. The charge at the same plaza closest in time on the same day pattern (T1300 and T1311) is also well in the past. No earlier toll for this plate at this plaza falls within 10 minutes of the new charge.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1038 at NTTA-MCLB-01 within 10 minutes; the latest there was T1311 on 2026-07-17, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2794,
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

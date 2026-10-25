@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007314,
+  "durationMs": 3395,
+  "httpStatus": 200,
+  "id": "INV-1063",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1063 (10,233 cents, def_fluid) matches no earlier Lone Star Tire invoice amount, so it is not a duplicate. It cites no PO and has no contract, so there is no rate or received-quantity check to fail. It is under 5,000 dollars and the vendor's bank details never changed, so none of the hold rules apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsQcKEAgTGAI4AUIIdGhpbmtpbmcSDCAAoK+Y0R+oHcBpwRoM7ThoZUhdyaIV5RC3IjD11Ar49lWoMfOrlldI/P0wAlgnBd0uWEygraxTV/0T+eKqANZvwxDUNXllSZux0TwqzgaomstAQMtyrpdQWDb6VqyIxUWDU9o5bbs7XVjaoD/F4YaWBed4PYVBF5VJJ3KoS4L5QFGs+3nT6s9LCOZHPGHxuZF6Nac9zrXpAKoXm0maQJa+8fZ5Zg8741KC9uvGBix27i2wZJJyX6REb+fMJvpUNrbPkHdmGO7HIBjo4/ps6CSugjVuCkDzK9mB32bmd0kUHLJvl0aI/bXq+IsRLWEaroAp3ORJsqVSjdE3mU++AGtNsPh7Jgq0M24Izl5KPN20YgzXq8wLOPaw8bCuZHiupS9hKoiOahVaLkvqwieKw0VLFM1bJUZ2crqwEZWlExgFucUPvTK9SUMwcNNpkPwuA5D/qtQPiwwcbA+lgXJysXRctgKBdzkpYou6KwNCQAxW/FCgUwxf58S5W5nnlEca0T142q8T/iNwD/t4qB4br9X7miQ3+nsPpPsVoH6La6DT258GEsg8JopYKzxZfUifJjGiq8nRzffCKJtVse920e/TY2rkSyn0rGWhkEN/JJEdH8q1zi9jiEMJRssNRRwbfw3RczNY0vMs8bRf3LcS60iyEJ8i7tq43mjQM/DUKDCxtD/cx/uNsKyHBA3uSwMzT3MYps7JhNQaZp1MMRYmJ579IzkaKxzKnUt55veKl8jVQI2Sg1mK92TvWCpB9qZokq+uYVjjrD/Jz5yazci/Mw+D+bbFPg9By1YqhGtVbtZtwDXwmPUq2NynaKwhwQrkjlFjxre44yBxSHLMQW9Dmm6Z4Rd52RQeqVXfdSS64RN0QzSezKsbB/INA79zBg+qKdPvfRvXF55p9gh2QUxDEXfqymIcT1j2fHNP43x8IMaC1hEmU3Gl764Xj5gjF86Ioc2AUgnzAkaxi7xWMnOm/VCd8vAUvEAfaXpn9GoBQWwwDgG3qurX8bgppo6XejvL1Ec8gWFGerYn0kMDcwG82L5z4H3xYuvswSFuDwz+iV9U1AuHKiUs2Gt69DeNmLggWEcOS4bQEBQ5F07Pp3k0a8NTHoG0IQK4EllF7rPpRJq1g+QHH/3gKtoSS6EmeDvz9Ax01mcfDYq346msw1ib158LsbIJNWrX/RRN7rvduEpApgFWIQDjbdGL6D6rLFDXeTbYzwzqFM6UJU9PkYgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1063 (10,233 cents, def_fluid) matches no earlier Lone Star Tire invoice amount, so it is not a duplicate. It cites no PO and has no contract, so there is no rate or received-quantity check to fail. It is under 5,000 dollars and the vendor's bank details never changed, so none of the hold rules apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnpS37SjD3vqaxppF8",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2327,
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "thinking_tokens": 136
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1063 (10,233 cents, def_fluid) matches no earlier Lone Star Tire invoice amount, so it is not a duplicate. It cites no PO and has no contract, so there is no rate or received-quantity check to fail. It is under 5,000 dollars and the vendor's bank details never changed, so none of the hold rules apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2327,
+    "output_tokens": 266,
+    "output_tokens_details": {
+      "thinking_tokens": 136
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

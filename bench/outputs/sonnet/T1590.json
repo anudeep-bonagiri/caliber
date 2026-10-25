@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010704,
+  "durationMs": 2775,
+  "httpStatus": 200,
+  "id": "T1590",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1031 at SH 130 Plaza 1 within 10 minutes; the last charge there was 2026-08-03, so T1590 is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1590 at SH 130 Mainlane Plaza 1 (TXTAG-SH130-01) on 2026-08-05 at 13:24:46Z. The most recent earlier charge at that plaza for this plate is T1533 on 2026-08-03 at 12:33:49Z, about two days earlier. The most recent charge at any plaza is T1571 on 2026-08-04, which is a different plaza and more than 10 minutes before. No earlier charge at this plaza falls within 10 minutes, so it is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1031 at SH 130 Plaza 1 within 10 minutes; the last charge there was 2026-08-03, so T1590 is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscRjFtFdJDtQme3TpT",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4047,
+      "output_tokens": 261,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1590 at SH 130 Mainlane Plaza 1 (TXTAG-SH130-01) on 2026-08-05 at 13:24:46Z. The most recent earlier charge at that plaza for this plate is T1533 on 2026-08-03 at 12:33:49Z, about two days earlier. The most recent charge at any plaza is T1571 on 2026-08-04, which is a different plaza and more than 10 minutes before. No earlier charge at this plaza falls within 10 minutes, so it is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1031 at SH 130 Plaza 1 within 10 minutes; the last charge there was 2026-08-03, so T1590 is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4047,
+    "output_tokens": 261,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

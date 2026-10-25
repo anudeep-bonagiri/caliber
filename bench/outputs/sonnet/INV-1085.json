@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009618,
+  "durationMs": 3845,
+  "httpStatus": 200,
+  "id": "INV-1085",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1085 ($1,355.00, PO-1007) matches the contract rate and bills 1 unit against 1 received. The vendor's bank details never changed, and the amount is under $5,000. The earlier $1,355.00 brake-job invoices (INV-1043, INV-1069) cite the same PO-1007, so none is a duplicate under a different PO. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwkKEAgTGAI4AUIIdGhpbmtpbmcSDBpZ5xdPWDJzxf8dvhoMVuJENpjXkOJ4gOs7IjAdxGbIlDLL2W6bQK4JlqVGDzq/+UeeURJnvEefqpRBhI+kIo8HEixCIoudZStVVzwqxAi9eekUrKcXzrxURiXflAwSJxKTE6wbSK2fNX9yEH1ENbpwudo3Y8DUk7PAqxI+e4ZFiQeaLrqb04APvhv4DswN2wnrINCOLfLyA8OCcuyxVzTW7qM0vv1x5fXgb/TByvyC9pElCrTX9yyE9TcV47E0l2a0qMO4qLNZRIGRDQ/cwV+rkeGfXPSbt44cmsuk9iW6cPcA5xAEVEQjXCOZEGX/piTceaVrszFvg9YJ7IxX+cNWdtVKsu5R99GAyy0IDOHkSKBY8wTvxpS0Smt6C65CKO8zgCGq06hdZQtF3B7PHl6RClDo1TebCuTfv/46PWvLyxM+3Y150cMUi15YvTnCyqdRZzIHdz2pDK9NBxPI2cFUbMnxZ8T0jOlGoncseOG/+U4HSk2o0fzyv7JIcXKWVdbPZ48GlgYxuWTy3osuqws64gm0P3ctD6dUohT5hfPnO1T5geAgdZIPgCUD4pUtOtJhZbUPd+Lmfoub+A4cXItzAUZM5vto5YB/vZnklInUjfGHS1QuZasG/cDS9oJ0RHhpe3AAYC+gkgK6Wj1NRhM+HwAbeDcXzjp3E0qNnetuu3u5E0wfFkE4BIa5WwMvrjdiua1MzQ87SN3eV4rDYv0lnTAdmZvqunc1mLh7nKx65iaJw+TLr8o2elZTTVRywxagj6r4H6b2h9O4TBr+CPGgFgTxkjpklTT9w80v26K0/7RDOC0W8wCaauxRI5pKZpSAtN3YdA3RWZDKizWFTjnYo7zxNT9h8NUWCQDkk9egAG8PKSYGbCWGmadgl3SfGuuPi6YiYvL7OOOGmiszCOZi3TKNH5SKbaAeVKfCVZ21toYPMksdU+U9XlTxwNQhE5x7q0Ycy9Cn61pExq7GQZoRcUE021k9oRWTYFfBB3DytSK9lL77Goa3bBiVqs7c0So0lWZV3WtwOjD92n8ezyNHSNOU8wa22d3As3vwjid7RuuZpZpEXhbknAB2jfIMa9mZh2uRa5PYNALcI6NBjORv2+sn7UEun66UFiBjUymdVk7qupSy13wKWZJDI8QWwnIqMY1p3Ff/39cvx/iSM2R0p7M6yEVjzUvl0AW8o5mBG7d/oPoa27I5A8PzwL60V9CbTnDD1yS9iUTbgB7TcuQY/z0W0/1+jnrDKbfFNOzgIW95ZxiGkeKNzTW3SemF2Vpo/zuGPV0R6n0UltMoJ8k9Ra641RboYuUPOfbpSEr00oZHJIj6rLx4JcgX2M0UBwvx6rJOh0S/pxeZcgtn+rWB9Fm2Sl9QSed+c8fQEYB4RzQuQjBiL1yaH57epHD0Y9rCPjmRVXHm+YUhKWHleTPV9ldxbq/xRxk14DX5FUn6D4pKR4wGFeX7TFeDyBll1rHnS6/EY6rggBHc6Bh0kht6ZsflYw/yT1BEPGZOWPbO9s6nA3slKBRd/baBDUwuZz7nowORkvtM+Mu5JvbO7HReXrwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1085 ($1,355.00, PO-1007) matches the contract rate and bills 1 unit against 1 received. The vendor's bank details never changed, and the amount is under $5,000. The earlier $1,355.00 brake-job invoices (INV-1043, INV-1069) cite the same PO-1007, so none is a duplicate under a different PO. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfTU1Wgm4ctq1yfR4e",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2819,
+      "output_tokens": 398,
+      "output_tokens_details": {
+        "thinking_tokens": 255
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1085 ($1,355.00, PO-1007) matches the contract rate and bills 1 unit against 1 received. The vendor's bank details never changed, and the amount is under $5,000. The earlier $1,355.00 brake-job invoices (INV-1043, INV-1069) cite the same PO-1007, so none is a duplicate under a different PO. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2819,
+    "output_tokens": 398,
+    "output_tokens_details": {
+      "thinking_tokens": 255
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

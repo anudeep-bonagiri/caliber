@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01741,
+  "durationMs": 2519,
+  "httpStatus": 200,
+  "id": "T2815",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1020 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was T2686 a week earlier on 2026-10-12."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2815 at Mountain Creek Lake Bridge (NTTA-MCLB-01) at 2026-10-19T11:19:34Z. The most recent earlier charge at the same plaza is T2686 on 2026-10-12, a week earlier. The latest earlier charge for the plate overall is T2776 on 2026-10-15. No earlier toll at this plaza falls within 10 minutes, so it is not a duplicate.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1020 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was T2686 a week earlier on 2026-10-12.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspftdfgG3KXqpweeMU",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 7580,
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2815 at Mountain Creek Lake Bridge (NTTA-MCLB-01) at 2026-10-19T11:19:34Z. The most recent earlier charge at the same plaza is T2686 on 2026-10-12, a week earlier. The latest earlier charge for the plate overall is T2776 on 2026-10-15. No earlier toll at this plaza falls within 10 minutes, so it is not a duplicate.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1020 at Mountain Creek Lake Bridge within 10 minutes; the last charge there was T2686 a week earlier on 2026-10-12.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 7580,
+    "output_tokens": 225,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

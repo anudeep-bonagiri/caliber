@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010514,
+  "durationMs": 3769,
+  "httpStatus": 200,
+  "id": "INV-1137",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1137 matches no hold rule. Unit price 34,500 equals the contract rate, billed qty 1 equals received qty 1, no earlier invoice from this vendor in the last 30 days has the same 39,000 amount, the bank details never changed, and the amount is under 5,000 dollars. The 4,500-cent gap between the total and the unit price is not a policy hold trigger."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSowkKEAgTGAI4AUIIdGhpbmtpbmcSDOVUw5rQgMDCytipNBoM63Lsq2ViALKUlIJMIjCbivn1zS154OPu817MBJ2P73jL4wskXZq0+00XXGXktuxF9VALmKxhFK9cLyf529kqwAgDh+bVjIE5Icnvj2eHnGqYgyRFYUIbzIHAsmuqfWXWMOj/4egpKfMndzv21FYxGUpvRcTeDGpqcpayq+HV11nPhMWEYrVwXmVy3sk/U2TtHW69dsjqJDshaPGQ9qOpQKk9fBPDqrNWHi9DF7Njh4WQ+3IY6rjmGdiJ8/yEv48OmkwweQy4GrHGvKCoecmQgpMegjPcmYqyB2+uH4+iUFF7f2D0d3cfi9Ss//LYAtxrr+EMjYj7k0S9l3eq1VKpFE5IGuND+KVQpWsC8raSaipiNZjp2R8di/MhOLjsqHM8OVU0jsst6igMhWckQYGVHH5INGEFwKeLnifNwAYW1r3KXbp0BuIlfkQOWSwnoBOqZd06JcYojTxW70e2jb/ILEsu5zkxI/6FV+9+JeYoCpA1x1wsZ4GvehQTLkovOoGHLZxApRx+UoPb6b+/ljSD4zIgsmj3qTrdSZ3/ilzNcCBuKKp4J4MRDjkIShrrB+Mhu0anoevtaomyMiJdJcA211tcuPBJxihlf0sEazN/eFTF8B4aNVBuxkCYcnrYey00amPXmQ0+/t508MXTS6U6+oItl9K8GeprXAhCkJDoHPu3CeeE6Zeq726A2QhN1xbXJPf4psGFQEYL2b9YFlPxWE8qudRm0k/ZF+VNlDac3z/NUxPZIlYbxN323pEpVsRd0CmKnGx4gqxefzB92SSGDLwDsb6+wvC6wgW7Pl+Z5/hUTKoyaHNUEg9eOS51LKm1yxDT3Rqi9g7sA5Ch+X4JeR28jQ6gkLLc5Qxucx/Voww481Uq12sqN59vqobpd23dJmYlJWS36xBtz7pmrn+foJE4SbOcm1Dr0KTsJ2oNlGvUH/rIR96MyEZtYAgUeVzwyrk924jHnsdBXK3dIRT0z+2vCwGA23xx+U0+E+45rfr/WN8UBv/1lFShFX4bLgAbjgRA6VbhmiXpmqW7fm4YJbnxZaPfjlnFDqkaX6mpCFCHdqrO66QT9UL4e89rpgiwppl76rPlzviUGD0FJwwUufMLgBsHEO+Lx1iz3bfq4CNViwUBGs1u35FuSZJao31BfbWWMhqp3+JDnvz1jg94U9P2FXO5b2+FdgEPx4PeVIQgi6YOMQdHORzIJjq0En1j89giusjs1/X79wyIaL3GTrcmQSssPUG2Wsvg/LCBhDreZ/rVSUtOtKTPXo0kKLR1W/ZxHocpsuRrXBZ0X7OWexoL9egSCJT7ELoq2Wf/O0i+lFWFrt9Boq0Y29gslz9dplPu+qXrjDin1a0J1LKT0fKUpxym6SozhfivBMb6bt2PYhbE0GMzkMEYfdH27H/Pae4Q8jfZRCIKv6wTBNgRRk1vd0fM0uznZ40NP/okG4lyOkUktMHnpeXb8xfsVu046gwg3ZFmhnRkyNljG7PYmTZHtZAqq/1cvzOEVt9/JJTUNKg2u/s3py61Zqzm3f3nyxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1137 matches no hold rule. Unit price 34,500 equals the contract rate, billed qty 1 equals received qty 1, no earlier invoice from this vendor in the last 30 days has the same 39,000 amount, the bank details never changed, and the amount is under 5,000 dollars. The 4,500-cent gap between the total and the unit price is not a policy hold trigger.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsebDKVG54eFYHKnApk",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3247,
+      "output_tokens": 402,
+      "output_tokens_details": {
+        "thinking_tokens": 258
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:56+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1137 matches no hold rule. Unit price 34,500 equals the contract rate, billed qty 1 equals received qty 1, no earlier invoice from this vendor in the last 30 days has the same 39,000 amount, the bank details never changed, and the amount is under 5,000 dollars. The 4,500-cent gap between the total and the unit price is not a policy hold trigger.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3247,
+    "output_tokens": 402,
+    "output_tokens_details": {
+      "thinking_tokens": 258
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

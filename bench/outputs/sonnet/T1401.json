@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008408,
+  "durationMs": 2664,
+  "httpStatus": 200,
+  "id": "T1401",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Last toll at SH 45 SE Plaza for this plate was 7 days earlier (T1298), well outside the 10-minute duplicate window; no other policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1401 at SH 45 SE Plaza (TXTAG-SH45SE-01) for plate TX-1011 on 2026-07-24 at 17:47:24Z.\n\nThe most recent earlier toll at that plaza for this plate is T1298 on 2026-07-17 at 16:00:16Z, seven days earlier. That is far outside the 10-minute window. No other earlier toll at this plaza falls within 10 minutes either.\n\nThe same-day pairs on day 4 (T1102 and T1103) are at different plazas, and they are not the transaction under review anyway.\n\nNo policy hold applies, so the payment is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Last toll at SH 45 SE Plaza for this plate was 7 days earlier (T1298), well outside the 10-minute duplicate window; no other policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmWsphhvRog7TMXrCb",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2759,
+      "output_tokens": 289,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1401 at SH 45 SE Plaza (TXTAG-SH45SE-01) for plate TX-1011 on 2026-07-24 at 17:47:24Z.\n\nThe most recent earlier toll at that plaza for this plate is T1298 on 2026-07-17 at 16:00:16Z, seven days earlier. That is far outside the 10-minute window. No other earlier toll at this plaza falls within 10 minutes either.\n\nThe same-day pairs on day 4 (T1102 and T1103) are at different plazas, and they are not the transaction under review anyway.\n\nNo policy hold applies, so the payment is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Last toll at SH 45 SE Plaza for this plate was 7 days earlier (T1298), well outside the 10-minute duplicate window; no other policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2759,
+    "output_tokens": 289,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

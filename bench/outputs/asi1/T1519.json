@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 13507,
+  "httpStatus": 200,
+  "id": "T1519",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1519 at plaza TXTAG-SH45SE-01 occurred 31 minutes after T1431, but the policy defines duplicate as within 10 minutes; however, checking closer: T1431 is day 20, T1519 is day 23. Wait, let's re-read carefully. The transaction is T1519 at 2026-07-31T15:39:31Z. Earlier tolls for same plate include T1431 at 2026-07-28T15:12:09Z (Day 20). This is > 10 minutes. Is there a closer one? No other tolls on Day 23 are before it except T1517 (SH130) and T1515 (SH130). T1519 is SH45SE. The only previous SH45SE was T1431 on Day 20. That is 3 days later. So not a duplicate by time. Let me re-read the definition: 'within 10 minutes of an earlier toll charge'. T1431 is 72 hours prior. Not a duplicate.\n\nLet's check other codes.\nKind is toll. Only duplicate_toll applies to tolls.\nIs it possible I missed a toll?\nList of earlier tolls:\n...\nT1430: Day 20, 14:47\nT1431: Day 20, 15:12\n...\nT1504: Day 23, 11:24\nT1515: Day 23, 15:08\nT1517: Day 23, 15:28\nTransaction T1519: Day 23, 15:39.\n\nPlaza for T1519: TXTAG-SH45SE-01.\nEarlier tolls at TXTAG-SH45SE-01:\nT1323: Day 14, 15:39\nT1348: Day 16, 11:54\nT1431: Day 20, 15:12\n\nTime difference between T1431 (15:12:09) and T1519 (15:39:31) is roughly 3 days.\nTime difference between T1348 and T1519 is roughly 7 days.\nTime difference between T1323 and T1519 is roughly 17 days.\n\nNone are within 10 minutes.\n\nWait, did I miss a toll in the list?\nLet's look at T1517. Plaza: TXTAG-SH130-04.\nT1519 Plaza: TXTAG-SH45SE-01. Different plazas.\n\nLet's look at T1431 again. Plaza: TXTAG-SH45SE-01.\nDate: 2026-07-28.\nTransaction Date: 2026-07-31.\n\nThere is no duplicate toll within 10 minutes.\n\nTherefore, the decision should be clear.\n\nHowever, often these problems have a trick. Let me double check the \"within 10 minutes\" logic.\nMaybe I misread the timestamp of T1519 or T1431?\nT1431: 2026-07-28T15:12:09Z\nT1519: 2026-07-31T15:39:31Z\nDifference: 3 days, 27 minutes. Definitely not within 10 minutes.\n\nAre there any other hold conditions for tolls? No.\nThe policy says: \"A transaction is held when any of these applies... duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\"\n\nSince no such condition is met, the transaction is cleared.\n\nOne final check: Did I miss an earlier toll on the SAME DAY (Day 23) at the SAME PLAZA?\nDay 23 tolls:\nT1504: NTTA-DNT-01\nT1515: TXTAG-SH130-01\nT1517: TXTAG-SH130-04\nT1519: TXTAG-SH45SE-01\n\nNo other toll at TXTAG-SH45SE-01 on Day 23.\n\nConclusion: Clear.\n\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found within 10 minutes at the same plaza for this plate.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885405,
+    "id": "chatcmpl-400401e4-6232-4161-8551-7f342691120a",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1115,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3846,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 2144,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4961
+    }
+  },
+  "startedAt": "2026-10-24T23:43:16+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1519 at plaza TXTAG-SH45SE-01 occurred 31 minutes after T1431, but the policy defines duplicate as within 10 minutes; however, checking closer: T1431 is day 20, T1519 is day 23. Wait, let's re-read carefully. The transaction is T1519 at 2026-07-31T15:39:31Z. Earlier tolls for same plate include T1431 at 2026-07-28T15:12:09Z (Day 20). This is > 10 minutes. Is there a closer one? No other tolls on Day 23 are before it except T1517 (SH130) and T1515 (SH130). T1519 is SH45SE. The only previous SH45SE was T1431 on Day 20. That is 3 days later. So not a duplicate by time. Let me re-read the definition: 'within 10 minutes of an earlier toll charge'. T1431 is 72 hours prior. Not a duplicate.\n\nLet's check other codes.\nKind is toll. Only duplicate_toll applies to tolls.\nIs it possible I missed a toll?\nList of earlier tolls:\n...\nT1430: Day 20, 14:47\nT1431: Day 20, 15:12\n...\nT1504: Day 23, 11:24\nT1515: Day 23, 15:08\nT1517: Day 23, 15:28\nTransaction T1519: Day 23, 15:39.\n\nPlaza for T1519: TXTAG-SH45SE-01.\nEarlier tolls at TXTAG-SH45SE-01:\nT1323: Day 14, 15:39\nT1348: Day 16, 11:54\nT1431: Day 20, 15:12\n\nTime difference between T1431 (15:12:09) and T1519 (15:39:31) is roughly 3 days.\nTime difference between T1348 and T1519 is roughly 7 days.\nTime difference between T1323 and T1519 is roughly 17 days.\n\nNone are within 10 minutes.\n\nWait, did I miss a toll in the list?\nLet's look at T1517. Plaza: TXTAG-SH130-04.\nT1519 Plaza: TXTAG-SH45SE-01. Different plazas.\n\nLet's look at T1431 again. Plaza: TXTAG-SH45SE-01.\nDate: 2026-07-28.\nTransaction Date: 2026-07-31.\n\nThere is no duplicate toll within 10 minutes.\n\nTherefore, the decision should be clear.\n\nHowever, often these problems have a trick. Let me double check the \"within 10 minutes\" logic.\nMaybe I misread the timestamp of T1519 or T1431?\nT1431: 2026-07-28T15:12:09Z\nT1519: 2026-07-31T15:39:31Z\nDifference: 3 days, 27 minutes. Definitely not within 10 minutes.\n\nAre there any other hold conditions for tolls? No.\nThe policy says: \"A transaction is held when any of these applies... duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\"\n\nSince no such condition is met, the transaction is cleared.\n\nOne final check: Did I miss an earlier toll on the SAME DAY (Day 23) at the SAME PLAZA?\nDay 23 tolls:\nT1504: NTTA-DNT-01\nT1515: TXTAG-SH130-01\nT1517: TXTAG-SH130-04\nT1519: TXTAG-SH45SE-01\n\nNo other toll at TXTAG-SH45SE-01 on Day 23.\n\nConclusion: Clear.\n\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found within 10 minutes at the same plaza for this plate.\"}",
+  "usage": {
+    "completion_tokens": 1115,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3846,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 2144,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4961
+  }
+}

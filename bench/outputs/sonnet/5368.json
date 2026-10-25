@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012538,
+  "durationMs": 3121,
+  "httpStatus": 200,
+  "id": "5368",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 4 pinged at the Freer station (about 0.01 mi away) 3.5 minutes before the purchase, and 72.2 gal is under the 275 gal limit (250 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 13:22:56Z at the Freer station (27.8828, -98.6178). The truck pinged at 13:19:22Z at 27.88273, -98.6179, which is within 0.01 miles of the station and within 30 minutes of the purchase. The 13:25:00Z ping is also at the station. Location is fine.\n\nCapacity: the tank holds 250 gal, so the limit is 275 gal. The purchase was 72.2 gal, which is under the limit.\n\nThe price is 26043 cents / 72.2 gal \u2248 $3.61 per gallon, which is plausible. No policy rule covers price anyway.\n\nNo hold rule applies.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 4 pinged at the Freer station (about 0.01 mi away) 3.5 minutes before the purchase, and 72.2 gal is under the 275 gal limit (250 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt3okXQNxNUpgpNSPg2",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4744,
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 13:22:56Z at the Freer station (27.8828, -98.6178). The truck pinged at 13:19:22Z at 27.88273, -98.6179, which is within 0.01 miles of the station and within 30 minutes of the purchase. The 13:25:00Z ping is also at the station. Location is fine.\n\nCapacity: the tank holds 250 gal, so the limit is 275 gal. The purchase was 72.2 gal, which is under the limit.\n\nThe price is 26043 cents / 72.2 gal \u2248 $3.61 per gallon, which is plausible. No policy rule covers price anyway.\n\nNo hold rule applies.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 4 pinged at the Freer station (about 0.01 mi away) 3.5 minutes before the purchase, and 72.2 gal is under the 275 gal limit (250 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4744,
+    "output_tokens": 305,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

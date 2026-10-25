@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010138,
+  "durationMs": 5311,
+  "httpStatus": 200,
+  "id": "INV-1067",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1067 unit price 46500 matches the contract rate, qty 1 does not exceed the received qty of 1, and the amount 48950 matches no earlier Alamo invoice. It is under $5,000 and the bank change on day 18 was well outside 7 business days, so no hold rule applies. Note for follow-up: INV-1019 also billed PO-1006 for the same 1 dpf_clean, which no hold rule covers."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+QwKEAgTGAI4AUIIdGhpbmtpbmcSDC9nipfwLBnXYedtixoM8DIVl1N4jOl7BzeMIjAvCDwTXTnxk8Z9kc/fxvu2ojoFiA4r8QAn1TZTwQmIMz3goY8DCAQKmbFTAjjaFykqlgziKhRasTWzqC5alGksJHskUjzWJu82Ze3y3gF6GWdR1Qa+ynWc02v2yAbjuS35uTDG2PgSRDwOndpmtuJInqZyBlgM6QNM4+WOiN3ZE5KXYR/DIDGtM25ZN7d1azW9Pl0iPv813OhpDeQWzXqJ7md5m9D2JDpf92ifuqCCFC5WGOS/BBWFjImXFoYaK9YRTgNWCWzP5CgQX26sbRbq2dAeN5zo2mH9wXe4mgtZg5ONNC/2zRaf54yC+arg8K1gC/YvCETqGq+d9KSqyG+AwOGF6e62XXfsLY3Omaq4w2JW5EKnJSdwFRglc4IvqRSQft0tSzipPK2JMIa75cpcLuF68XKKl7lkORUUEh23hoYHRDkMcmMd28K1wK73pNujcrfiznEfFp3jGpNPsAyiF3X+MxpcST+oE5OmIHj3id+3XUTDeJmCeV2TcqJJU5Mt3QcJ4TVR/4rbublLZ9xJcW0M6BwMlmFg6gqH9BrDIDJPuQoAoCfSuHe6WkMEjSzFJL7HPzCBjyhsOQwLsYvCXoZ3YdtEFzCrxm1JjcFKn3XTMGAw7s/B6phs1bZSSXziJmMGDeRKzovUVDR31kr+iSo/VLZkfRBK8Zg7jKco2gt0f6WeVnkBjEtzTfrgBxokR/MUYEi3txDaIJuPMY38TU2s4ZUlhhz49ZgC5Jl8FY6BJ4xak7ALTGujsEyeu6uQNbnCFh95tVJR5C8HcpbXlZEZeoUEBLYWxuBDDuyGOqJ5OKmG9W2LsvEP8CN3YfWFOB2RIVm0n5gozCXD3jtwTpjEArVtdVBxTSzaqoZwG0PxPKoUVimiLr00QmQYaMMp4MXjfQJ3y5JwUQmGi080M5zmIxdR+PT0wJa8vx0BpVgZ/h+Pn/AWcK97wiOvD3HOj62Wpudq6Ur42l7uOqjJRhKBc2ncXUsm4b2AnOpUVud2WkIjwCzMjI1EKyPHHMoPg0qolvg2bej8Ga+TbKVgzl6uBJPnMWzsbN5IeVKqxjY/jUKq4vOFfuyGAO8s5QKpe9iKB/kMoDunFBbq4R66fD6wkfMd3qIKVlhxYMn7quWeecpMz9tNUqpGOiL6oMah1ISMUnwjalGNNpywkE6yUkrfR9af0GYZvazzokDsfuQyrtv3vt9wWgPQKih+BWVKhEDU2MzAQ4XL7ZmWiZO7JmHG9gInPJpV/Va0sVyrphPI/QO5IKAtxmOIqap1wd0Te8Gccq1O5lo0OA+cF/fPyyKHyYksizo2Whtw+J0JUP1EUbOawzD0w0v3xyx8psehQZn6Tta56lgzV32t2XwZ5GXni9hBZc5cCETJxmhZjmuiZyBAGyTNwyL266PdGDWLq+PlSg6qXq9IJXYCRkdHdGtHntifEPqrRuF+KgLdXGzsLU0YLvyNg4ZJNuD0lgD3tmGoudmXkYqPzGr4gy4bf4c3W4oFFN9n7gvOR1Sfwsp1QOuuV0+xvj5EAf1/BbQXxekKV+c77ocPt/9mXTNCiccL0d6dDp7ZYc4vwP78N0HkESRPmNtnTNKHmjSC/06mEsco2crkBfUX4UbQ4aym9MS4SNzV72jkWRlSBZ1HTq0/krmI5sKbKB21kUeo/yQzdDSfVSXved3/icQj55TTf5dXylmLJCRk7qswZmsd4K3Tyn+2eo0wy6oIXFXk8gGWXo1bBP3IPqsZ3nEMVUx36r4l/JUtzsPAzoDt9p+yAYJpkUJvEtxHhI2QFwNY6ZAp/dfTwZmYkG3s8ilJvExepmC/IKTe2mIIRNipr7qhMITxGz3VtAQA2a6Yy21+fmmKZe/rq5TcisOVAn17Y4feGYjbi6XX2XP/nC0++BBAJ5a5RBPS9CYXMJlB3XDlyA1Q3U8CQwWaXigvctjGl5xzQZjtVetQd4JEaAlZAJ4POgc5aJW25kSESYrVAJ+grKad9FJukx99DmoRdljOr6eNwbDnw4rj3KUQKalr91/6v2OtsOIrmS2WaO+tBg6huUSBjDkD1UMV4f15DmuWMFTucr9J40CWvN5fba35sNZE5wavf4O7RMsb2MZWqikaOZ5xZn5GtGNxt+dsTEcg8gvfvGcuW37H2nQwGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1067 unit price 46500 matches the contract rate, qty 1 does not exceed the received qty of 1, and the amount 48950 matches no earlier Alamo invoice. It is under $5,000 and the bank change on day 18 was well outside 7 business days, so no hold rule applies. Note for follow-up: INV-1019 also billed PO-1006 for the same 1 dpf_clean, which no hold rule covers.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvNMrNnEWxnexY4QLV",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2074,
+      "output_tokens": 599,
+      "output_tokens_details": {
+        "thinking_tokens": 440
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1067 unit price 46500 matches the contract rate, qty 1 does not exceed the received qty of 1, and the amount 48950 matches no earlier Alamo invoice. It is under $5,000 and the bank change on day 18 was well outside 7 business days, so no hold rule applies. Note for follow-up: INV-1019 also billed PO-1006 for the same 1 dpf_clean, which no hold rule covers.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2074,
+    "output_tokens": 599,
+    "output_tokens_details": {
+      "thinking_tokens": 440
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

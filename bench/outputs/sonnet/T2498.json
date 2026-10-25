@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.020636,
+  "durationMs": 2567,
+  "httpStatus": 200,
+  "id": "T2498",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T2498 at SH 130 Plaza 4 has no earlier charge at that plaza within 10 minutes; the last one was T2018 on 2026-09-02."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at SH 130 Plaza 4 (TXTAG-SH130-04) at 2026-10-01T15:09:09Z. The duplicate rule applies only if an earlier charge at the same plaza for this plate falls within 10 minutes before it.\n\nThe last charge at that plaza was T2018 on 2026-09-02, and the most recent charge of any kind was T2478 on 2026-09-30. Neither is within 10 minutes, so no duplicate exists.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T2498 at SH 130 Plaza 4 has no earlier charge at that plaza within 10 minutes; the last one was T2018 on 2026-09-02.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmViri5aQTfGRVVTU7",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9148,
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at SH 130 Plaza 4 (TXTAG-SH130-04) at 2026-10-01T15:09:09Z. The duplicate rule applies only if an earlier charge at the same plaza for this plate falls within 10 minutes before it.\n\nThe last charge at that plaza was T2018 on 2026-09-02, and the most recent charge of any kind was T2478 on 2026-09-30. Neither is within 10 minutes, so no duplicate exists.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T2498 at SH 130 Plaza 4 has no earlier charge at that plaza within 10 minutes; the last one was T2018 on 2026-09-02.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9148,
+    "output_tokens": 234,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

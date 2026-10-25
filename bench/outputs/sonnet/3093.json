@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011718,
+  "durationMs": 2633,
+  "httpStatus": 200,
+  "id": "3093",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "capacity_exceeded",
+    "decision": "hold",
+    "reason": "Purchase of 272.1 gal exceeds the 220 gal limit (200 gal tank + 10%); truck was at the station, so location is fine."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Location check: the purchase was at 11:57:21Z. The truck pinged at 11:52:02Z at 27.88263, -98.61799, which is about 0.02 miles from the station at 27.8828, -98.6178. That is well inside 25 miles, so there is no location mismatch.\n\nCapacity check: the purchase was 272.1 gallons. The tank holds 200 gallons, and the limit with 10 percent is 220 gallons. 272.1 exceeds 220, so the purchase is held for capacity_exceeded.\n\n{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"Purchase of 272.1 gal exceeds the 220 gal limit (200 gal tank + 10%); truck was at the station, so location is fine.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszbPYcax4Tq4cYTDBr",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4599,
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:28+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Location check: the purchase was at 11:57:21Z. The truck pinged at 11:52:02Z at 27.88263, -98.61799, which is about 0.02 miles from the station at 27.8828, -98.6178. That is well inside 25 miles, so there is no location mismatch.\n\nCapacity check: the purchase was 272.1 gallons. The tank holds 200 gallons, and the limit with 10 percent is 220 gallons. 272.1 exceeds 220, so the purchase is held for capacity_exceeded.\n\n{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"Purchase of 272.1 gal exceeds the 220 gal limit (200 gal tank + 10%); truck was at the station, so location is fine.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4599,
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

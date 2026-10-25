@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013138,
+  "durationMs": 2108,
+  "httpStatus": 200,
+  "id": "4142",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged within 0.1 mile of the Sealy station at 14:02 and 14:10, either side of the 14:08 purchase, and 69.1 gal is under the 165 gal limit (150 gal tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrgYKEAgTGAI4AUIIdGhpbmtpbmcSDKk/pHpJDAidwhodBhoMrOxG4zDQGlH26cREIjBfZ5C/0ca5Xeq38kcro+DUZr80EFFl6ro0vqyZLKAAOrmkI0Ca90RF7BfziSF7+3MqywUgnGl4vwB2InXod3XIHm0HgFkgMI5sI1Y6kRsLtw8L94bF/6BC8OvK76e0O46pKJjarjAPXVUKPnqrpLXP1L8GLGXUDNgENTtp8feyrBFQsfosYVzAEmeuUcvmWcvy/RU7Rp6lyexcgGg93/4ie337m2VzR59btQcf8kDJCGp9glcpuKDSDPaHYcdZhoFQYnZnO0YGD2N7ga9LUK7pag+pbqYiJBCQiseWQVCOuytLxaWo5XWsmUf5Ki7STLYqJkQjSC53JtRPqPaEs/exhUz/6zcAxkR9CjK2ufiZR3CnyJf5jKFHFnsr6mrytTt6tLr1KB9eikeC08py4Bs1s6CGfacnFqIHFmCr2pQoujVWqVEsi7Hju5EzbjHCTG4dSntyeM9+J8a7idZ7/i2MaIQbCfbq/WnLrRklJpLwC8t2aPTUmJmfSLzA6SOBF79Bzj/txd10D+mzYOqokFnY2CrpHxz0snqgCsopfzQYfupPMoGKit1eOrxhbJoqlf6EZuVy9utzxsaYcHZolvoiYd41KJ3WVi4DpFKhbJh1awrd79UaZV15WN7+K2x6JOeDsTMzEZCUEg9eWrQmRRkI02v/RPTWHrHazAiExRYI3YEyQe9S+5eYsyP9X75B23TnLwBPkzybMCH9/QbM1bGVIrZ6yx3qnYCi7k19q0XsnSW829/7OuDIV9bYhMHUQP40Iwy7vdse/9XGgKFjEeAE2Zdw2+Hoobsc2YCfD0PdDNZ2iPxKGs3nTHmJTd7h+9Weu8V/iMlL5hFOcS6MQd3PNhzJsSBzJmp9C+vkvzNFatN5gKNPawtl6io7ytEolfcwaX4+5NgiueLrdEwGIg2Gr/wXG4RR90gAQwcnsBwwJqhuSZ8G+oLdC+Navkmv8gBVyqjH2prNGc9671tyo5Oaz2Yr1n/WWOswhtSdmkU7Zp7kbRPhAp4c6kMxkAaMGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged within 0.1 mile of the Sealy station at 14:02 and 14:10, either side of the 14:08 purchase, and 69.1 gal is under the 165 gal limit (150 gal tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskqRkQ6pdwvR9j8bad",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5474,
+      "output_tokens": 219,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged within 0.1 mile of the Sealy station at 14:02 and 14:10, either side of the 14:08 purchase, and 69.1 gal is under the 165 gal limit (150 gal tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5474,
+    "output_tokens": 219,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011958,
+  "durationMs": 2318,
+  "httpStatus": 200,
+  "id": "T2426",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1025 at Mountain Creek Lake Bridge plaza within 10 minutes; the only same-day toll was at a different plaza about 4 hours earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at NTTA-MCLB-01 on 2026-09-28 at 16:56:59Z. The only earlier charge on that day is T2412 at TXTAG-SH130-04 at 12:36, a different plaza and about 4 hours earlier. No earlier charge at the Mountain Creek Lake Bridge plaza appears anywhere in the list, so this is not a duplicate toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1025 at Mountain Creek Lake Bridge plaza within 10 minutes; the only same-day toll was at a different plaza about 4 hours earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6D24LRwxPwVe4FfZt",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4894,
+      "output_tokens": 217,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at NTTA-MCLB-01 on 2026-09-28 at 16:56:59Z. The only earlier charge on that day is T2412 at TXTAG-SH130-04 at 12:36, a different plaza and about 4 hours earlier. No earlier charge at the Mountain Creek Lake Bridge plaza appears anywhere in the list, so this is not a duplicate toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1025 at Mountain Creek Lake Bridge plaza within 10 minutes; the only same-day toll was at a different plaza about 4 hours earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4894,
+    "output_tokens": 217,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

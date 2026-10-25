@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010374,
+  "durationMs": 3688,
+  "httpStatus": 200,
+  "id": "INV-1134",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1134 is $253.57 with no PO or contract. No earlier invoice from this vendor in the last 30 days has the same amount, so it is not a duplicate. There is no contract or PO price to test for rate variance, and no PO received quantity to test for short receipt. The bank change on day 71 is irrelevant because the invoice is under the $5,000 threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QcKEAgTGAI4AUIIdGhpbmtpbmcSDFqd6paTm3jgMkLdPBoMl92TMXcAv0bIqfW/IjAR0q22mEf8Z6Igob38xpC9ShohAoSeq65yZSijuEzm3B6R1acdzdi5SAeTJarFGjQq9gYaPL1pvq6n2GqP9JLpqv9/tdLOLN8Mp0XOepzJpN3N41lvhpfH7RxRX7H1oRWZU2/y2iEqEPSxprApi7Yug4+3ANvj3jGffxBONZRyzHT32ebcpttNlKPQC+doKv43omA7KRJkYBQ9Ag1+3vHphA97RfKGVNE9IAIOEwuyndwMoCuY+HAXtS3xFNKuQfqss7M9mqCYcLcPyu7qXvMiVFff4cxz8s2nC2Ynh83Xwfg6cBW9aGxGvFHekn7HifsFOLtiqc9eINzlAqnMpGCcbCBzTJ+OvtCDdd7TK46/VEpwUE10jEyQ9pZTeiAV8D497Rf3EKxDtbi4+T0Ev94mVRMDgA4yQ71zQv5HrEGPeC7bMMc/2K4JEysU2g8RCj+R7I4HEJ0Bisu1nPXxBtME6Xnn5AJBjwYyJCg7mBvmTJ5DfvW0WoyIxsY0LlGz7+3DiZCJMmOVDqbncFHfDyghm4W9qh0kWiqAJgVp0Iv6sStY1Ad9EE251QG3KKOXYQlDjh/U5Bq0ttl+ZdxznDZV6o8xZIthVftAkBTIMYQEBJ6mIpO+7SkG+YaGC8Cf2kFXv91TnbYr5fw2OrAm6Vgd/u1+EkDGO3JDXbwY3YZMULBfPr6d3ieatgfwguYsXQSft+iHjpEwSg2XrmRdvZo9Lyohhc+29spBp+lpPRD129KIqMU2RiYMs1wpMrhXmi69yZeMGGQGt3g8xOQt/st2Fk0/6uPd9BC3sgEtCMi0AaSndpOsCQQzk9JLA9bGeuh4BCsZDYD/wuuvDqBTgd1Eet+4H0FO5FSIdjx5wT9D9DQUTrkexoLfeq+qDr6U17vVnddgjPYWcVbE+GDSaPOmjSRig6BcvhPC9eJwumHI4lQI0Ys7ZAKDLQkZeWxZVUxE1oE6M3X1PQL+4ZRD1wnVRiynf3I6hqHayEdCU2SBiZPD/tiM1d/2uIakjXecyuJYzYLqoSaIMyy26GhQ4FDKkx9OukrEWKLAy5Z9TFEkoL1G6x/YZ1Bb8i9DN1sWwo6U4e+kqGumNw9FN26EqdDGyjYIhIaxmtNihnOU5kBncMHGGex/XfSQHwUwV8qakfsRnX2isq6twl4Eo48Q8qTgxPeAPpePNssGcKC6JGnL7hCOuS2Is1TetnFRVSfuMS+InNc2BkvOgSTVwgYfO+smP62JekcBryN8GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1134 is $253.57 with no PO or contract. No earlier invoice from this vendor in the last 30 days has the same amount, so it is not a duplicate. There is no contract or PO price to test for rate variance, and no PO received quantity to test for short receipt. The bank change on day 71 is irrelevant because the invoice is under the $5,000 threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsr3yhPVXdJ2e2ZT2wX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3727,
+      "output_tokens": 292,
+      "output_tokens_details": {
+        "thinking_tokens": 156
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1134 is $253.57 with no PO or contract. No earlier invoice from this vendor in the last 30 days has the same amount, so it is not a duplicate. There is no contract or PO price to test for rate variance, and no PO received quantity to test for short receipt. The bank change on day 71 is irrelevant because the invoice is under the $5,000 threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3727,
+    "output_tokens": 292,
+    "output_tokens_details": {
+      "thinking_tokens": 156
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009084,
+  "durationMs": 2535,
+  "httpStatus": 200,
+  "id": "INV-1146",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1146 ($170.55, shop_labor, no PO) matches no earlier invoice amount from this vendor in days 48-77. There is no contract or PO to test for rate or quantity, it is under $5,000, and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSuAcKEAgTGAI4AUIIdGhpbmtpbmcSDOrc2GLvxEBZOxzukxoMcE6Q6Mss57zU6moRIjDKqKa5h3JgYp1IZEZol96MXoGUvgZdv11Fut7CARbfYuc8uP4M+rhBA1LHH54veLwq1Qau+ppYqzm1o781XojXo519KdQyO1g7hggEMYUiUOU3triXepEW24C3HVCPVDgE74B0/gjGVSCzh9E5AR+1gD5TIHya1IaDqumWwsYv1TjfEailCyPea4apT8aIjbe8eAnoqmbRstYSPFuVqiIPSFpcF6TUqpGCpwzEYe3ZZhFSfzoWWCnRk7eby/C63EHWIvyKpuSfbro9Zz2ulzTMQXsQUbAKdGxCzdlHuz4ndq8QlChrel4PMpfK1SAB88whdqtH/ECtVayrVZIRqVZfO1hf+2DYdwp/R1qUosioPQIcxJILfaHNUHob/W3KiZhj0ZuQf3hJVHbEBEP2jkyoEIBgj+9Dd6p/4BmLhFnHPidva8bPAlSQ4zFniwmBzl9NHKlA2DGcI484JHGH6X8cHawyHcTcEtY01B5H7pIh67RmvNsG1wax7My/Alinh2PRRo22uaLohRQ2DATZH8aV1eMwnoG7sN/gEvxQtDdslc7Im1ERW8L2hfLY3M461eYBzZlNndE47qvNfhEWIFlZXSH7s3QXOyhKt7R2DINLPOEl3YB0Ueck/a/IwJjhbaS7O2HBV8NfUL0TxYoGRTdn3mED5ZwI9gqhGtDROhs9xc8e1Diez1stVG/nHmwzJbvo0dvvm+d5jpf9wO0gMZrhzgxyPkBJI6AwvBbQB5vz2SpgsP6MGFi+R4WXDoSTPwwj+cyam8b3i0ZqNqC3vpIBM4u3NjqT3MxXnoxG84YYlnrZg3DmMEvXz96b6p+NrJ+EuFaI2y7BykIsgdx/UNlZuGyq76oI/0yElNDS52e3iAmC6vPJnWfOK6STmnHzdfM7mAsKosxeRCNiWcS1u9u/eX1JMj7bNPOZd3fGYj7ARskR0xyKpX58eI0OMxT/Njc5psUqjAJoRnFEu7wmcGDkyIJFJP3YYKFMkTdni1vZVoRUE7ZneAXNJ3o9mxeLzJgZqgsmSi4HTKh+YKW9uHjsuHCnYfQL6I1Qlqgp8gp2YK+khuHdmqwlIV7kmFEj05bMmEi8WpD3xQ3IvhNPKAKfKJ87Zqum9UA6bO75F1X4V9e7L3Ak80R0ZPRRAVT0Blvug9v6YyG0XbpKhx0nKnU18ofKm5I9/CUvRnkQx1y7s+MopliULLeBGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1146 ($170.55, shop_labor, no PO) matches no earlier invoice amount from this vendor in days 48-77. There is no contract or PO to test for rate or quantity, it is under $5,000, and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsiV9oSzSJpbmdxTi6P",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3337,
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "thinking_tokens": 141
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1146 ($170.55, shop_labor, no PO) matches no earlier invoice amount from this vendor in days 48-77. There is no contract or PO to test for rate or quantity, it is under $5,000, and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3337,
+    "output_tokens": 241,
+    "output_tokens_details": {
+      "thinking_tokens": 141
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

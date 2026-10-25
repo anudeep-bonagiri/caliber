@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012834,
+  "durationMs": 2790,
+  "httpStatus": 200,
+  "id": "1445",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33 pinged within about 0.1 mile of the Love's San Marcos station at 15:46:48 and 15:55:00, both within 30 minutes of the 15:51:36 purchase. The 47.2 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QYKEAgTGAI4AUIIdGhpbmtpbmcSDOohD7euE1fTrUXiIhoMckKE2GAyIs3RCnsfIjAMyCW9gJezz2CgFOCnhVTCfKk1KVIOzsGLvPBG2DesR+uPodUlg/PaK0ZGmgCryjwq9gXZyemOUBbLD6KMBEyL4FKLfT7WdRAsPFrjad+Hm4IcCJNFk3ANnPyzE21rtfGpf7MYf0aSTR6R0nDXu/F6V0Y+ZS3Q8oP1n/TPgbd+m+ndaxurOfiANdo79trJvbNX6RcPh7/G6HFGi02UZ6VlZHF4helSvNPSnLIFY8RgCl13GerVeKe+TPbl+k8QcU3sD2r24YJv5myKhdr4x7p0TOWcGhf2WYe9sRqIOgVu0okCNNxFaiCvv602rPcX0dKM8dPIuKc6aylzWDXiAWffJXGvSxDABiuATO6k2SYQ7q+oX6z/FlgmxJ719YaChRyZ9eEGXRmFCX02zQXyWAjwVVa5DM82jODK8Xn8dZHbp5U2Z/Ze7NivNkBz549YDPB4IgvxO6OSA4aI8j1m5kVP2ctavhMdR2IBGhxU6nC95aiufSU54FpFABvPZjwlcw0apndTJx2tj6qGpV+vScnMySggTKd7QbO+5FwYqoe6OTQeeG6qV5gDvIO4/IoLK8qR4OQ8uJ149OJosnNKmGPwLVA8S4yYKso6XZHgj1jzfW2STt/AiHGe4GQfMd7SKnTLzRmVb04mhSKJSgpXMzxCniAtjHk8jW6zc+AcPywpZ4Auu1R4Au5Stk/ZgEPMVaRqCyJ3FnZTd8HzqmD4sM5fAqMfXwaAoC9wYK4mw0UzmDgjbEFs4382KHhb8tRm2Ii9XCGZf07pK+V3Q1vKYg4K/scCBidQ6yyHpDBLWnwMk+aczMzdD7I0z+LmkX39Clqkm1QuBlRB7v4NA29KiBDnOS3BsG1L2gDstpnjMSL8P8O+Lr2F+qWLxB53caGXFarbcy1psHk4DpvxsjmS2WstaQ+owMs6gqwqbCApdhj2NC19UgGAY4Q8E6v/v7XReKdsN9W9qXSq2U6EBMfPXK4+9nl+M42//Q5Dvm6m6z+InlDXO0YPxTbnq+apuJpFkq8scUgpaDCzj4f2aSVedqor9IKQns+AsmaPoUmgEKJ27ZtNxI0FKyR2ZhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged within about 0.1 mile of the Love's San Marcos station at 15:46:48 and 15:55:00, both within 30 minutes of the 15:51:36 purchase. The 47.2 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt3cjzSCKbXwTf3VyCd",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5107,
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "thinking_tokens": 142
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:09+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33 pinged within about 0.1 mile of the Love's San Marcos station at 15:46:48 and 15:55:00, both within 30 minutes of the 15:51:36 purchase. The 47.2 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5107,
+    "output_tokens": 262,
+    "output_tokens_details": {
+      "thinking_tokens": 142
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

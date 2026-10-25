@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013516,
+  "durationMs": 2935,
+  "httpStatus": 200,
+  "id": "T2103",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1034 at SH 45 SE Plaza within 10 minutes; the last one there was day 46 (T2014), and the toll just before this was at a different plaza (SH 45 N)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2103 at SH 45 SE Plaza (TXTAG-SH45SE-01) at 17:26:50Z on day 51.\n\nThe most recent earlier toll at that same plaza is T2014 at 15:52:15Z on day 46, which is several days earlier and well outside the 10-minute window.\n\nThe toll just before this one, T2101, was at a different plaza (SH 45 N Mainlane) at 17:02:54Z. A different plaza does not trigger the duplicate rule.\n\nNo other policy applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1034 at SH 45 SE Plaza within 10 minutes; the last one there was day 46 (T2014), and the toll just before this was at a different plaza (SH 45 N).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMswkLyJ8HZ2xHy4BisG",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5418,
+      "output_tokens": 268,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2103 at SH 45 SE Plaza (TXTAG-SH45SE-01) at 17:26:50Z on day 51.\n\nThe most recent earlier toll at that same plaza is T2014 at 15:52:15Z on day 46, which is several days earlier and well outside the 10-minute window.\n\nThe toll just before this one, T2101, was at a different plaza (SH 45 N Mainlane) at 17:02:54Z. A different plaza does not trigger the duplicate rule.\n\nNo other policy applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1034 at SH 45 SE Plaza within 10 minutes; the last one there was day 46 (T2014), and the toll just before this was at a different plaza (SH 45 N).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5418,
+    "output_tokens": 268,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

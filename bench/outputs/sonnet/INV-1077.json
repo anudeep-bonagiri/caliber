@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008556,
+  "durationMs": 3366,
+  "httpStatus": 200,
+  "id": "INV-1077",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "vendor_bank_change",
+    "decision": "hold",
+    "reason": "INV-1077 for $9,800.00 is over $5,000, and Gulf Coast Diesel changed its remit-to bank details on day 42, 2 business days before it was received on day 44. Hold for a call-back. The unit price matches the contract, the received quantity matches the invoice, and no earlier invoice has the same amount, so no other hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS+AcKEAgTGAI4AUIIdGhpbmtpbmcSDGRxeFK6hsoZlARu6xoM6gZaj7Ur/fCyCMpUIjD+ISouep/aYvS6fo3HR2OaH88gspZ2tbbMeu1JhnL48p3KGnWGZHVucGjDT1xdzRwqlQfRiGUcczI5kA09dW0BfbKwwITvq3IST5DvQalSJjAJfdiPmmaVQkxIzhukp0CIvrf8ApSFKnXJECcqq6ciXXeITa2mgxE0oq+DMHc7EsyQcdhuK4xgcv1Krebmehs4pH9cHecD0GSzwQxlchxfHh+Zmr6UZN2ZzFFg9tzq/bXfl88IZXKs9zCuSZhyHZvGogsMyn0zuKUZ+mrgcf2vo7gUPqxxTygksYlasZJccxEAOY5z3iNw7dOau8Cq16qvNpKGO4yxcl7v7yYA+DvTyTY0DHIrvVeMJAscRTRTCnn5HVbGZPg76y4C6z/xT2N2HM6AWR4jr2anwS9d4g6UWSEaCZGrWjQmunY83HZ58N9kElTlPWWykDGxFSkdhXSM6TmneCPVZcKFJWPKV6mXuESKSch0RTibNTciNLbpCPJ8UFrSPgcjFkw5Qo10ibZHjQ6Kw7uDd4G29GjaAXV218KpH5IN6tXqn+KQ6TKALbAhqSvBGT6qbUW8DssiWeyoTgdKalO+XyCnu0wD+wE/fe4KI3TgRVYb9LB8Dhuzc+qS1OhsJweq40jzhCudZh70DvIN3XUelSTQ4hXY2pFhYjItlX6ztjvIu9JYWADCbCmCrOY6Igo6pdozYuaI0oA/BOy6yOjGNK5feimBaftocp0QAkeW+U/WbPY97VhQvHghb2DOGqre1bwIEhggReUsvxJwvL7DR5ulILhCUazDTwfcafctwudkfiWSVeCEVdPg/w7x8k0DM5SY8cc5W5eIODpBbmJzMTRfO6gBThztZnNQoCH23bMoX4tSjOr2DMQeF85y/2PedF1jAGontuPDGPaeAR+oP+7N0fwe7Wp44YU6IZsf3Qrfi3UQ5ay+8p6hbJPIUvYlQb3HW6AIPJvwdHSSyDatVD6BYrpKPUrSk86UQkCyCOBT0e0zBT077mUn+nXU76DxFmJo9USUOsVtMhSw8vIWdnyIA+eV3O1aeOlydCEGVmD1opC4GG8imPjg5KkGhkfrOMzIdTlQ5Ic2f/QpipDzJk1XkONvg0LP4S8sF9DgrtnR1EC3uTNeF2U3486W2bltx2vNCNgX/yNU5KnYextoSiqEfL9RFU8rsussrEHl+JMEUKLAIEUIXKwJLVKTcRGyEvSBAhADtBBqbDWhge70cvo6KRsuof92H4Nj+d2niSw7i7LcwxSn3H1NpRIhlhvCIppiApFyf6QQPXESaSDeehgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"vendor_bank_change\",\"reason\":\"INV-1077 for $9,800.00 is over $5,000, and Gulf Coast Diesel changed its remit-to bank details on day 42, 2 business days before it was received on day 44. Hold for a call-back. The unit price matches the contract, the received quantity matches the invoice, and no earlier invoice has the same amount, so no other hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsu1ceTx5KpzhLSjrEe",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2658,
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "thinking_tokens": 181
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"vendor_bank_change\",\"reason\":\"INV-1077 for $9,800.00 is over $5,000, and Gulf Coast Diesel changed its remit-to bank details on day 42, 2 business days before it was received on day 44. Hold for a call-back. The unit price matches the contract, the received quantity matches the invoice, and no earlier invoice has the same amount, so no other hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2658,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 181
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

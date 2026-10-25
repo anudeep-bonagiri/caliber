@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012678,
+  "durationMs": 3179,
+  "httpStatus": 200,
+  "id": "T2379",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Nearest earlier toll at the same plaza (T2370 at 17:15:33Z) is about 2h36m before this 19:51:25Z charge, outside the 10-minute duplicate window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2379 at SH 45 SE Plaza (TXTAG-SH45SE-01), charged at 19:51:25Z on 2026-09-24.\n\nThe most recent earlier toll for the same plate at the same plaza is T2370, at 17:15:33Z on the same day. That is about 2 hours 36 minutes earlier, well outside the 10-minute window. The charge before that, T2363 at 13:49:53Z, is further back still.\n\nNo earlier toll at this plaza falls within 10 minutes, so this is not a duplicate toll. No other hold rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"Nearest earlier toll at the same plaza (T2370 at 17:15:33Z) is about 2h36m before this 19:51:25Z charge, outside the 10-minute duplicate window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfkuWVLNBHdjsZtsVa",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4939,
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:12+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2379 at SH 45 SE Plaza (TXTAG-SH45SE-01), charged at 19:51:25Z on 2026-09-24.\n\nThe most recent earlier toll for the same plate at the same plaza is T2370, at 17:15:33Z on the same day. That is about 2 hours 36 minutes earlier, well outside the 10-minute window. The charge before that, T2363 at 13:49:53Z, is further back still.\n\nNo earlier toll at this plaza falls within 10 minutes, so this is not a duplicate toll. No other hold rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"Nearest earlier toll at the same plaza (T2370 at 17:15:33Z) is about 2h36m before this 19:51:25Z charge, outside the 10-minute duplicate window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4939,
+    "output_tokens": 280,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

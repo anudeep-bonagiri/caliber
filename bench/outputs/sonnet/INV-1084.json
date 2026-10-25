@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011996,
+  "durationMs": 5615,
+  "httpStatus": 200,
+  "id": "INV-1084",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies. Unit price 32,900 equals the contract rate, and billed qty 1 does not exceed received qty 1. The amount 34,150 matches earlier INV-1055 but that cites the same PO-1002, so it is not a duplicate_invoice. The bank change on day 42 is recent, but the invoice is under $5,000. Note for follow-up: PO-1002 has now been billed three times (INV-1055, INV-1064, INV-1084) against a qty of 1, which falls outside the listed hold codes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. Unit price 32,900 equals the contract rate, and billed qty 1 does not exceed received qty 1. The amount 34,150 matches earlier INV-1055 but that cites the same PO-1002, so it is not a duplicate_invoice. The bank change on day 42 is recent, but the invoice is under $5,000. Note for follow-up: PO-1002 has now been billed three times (INV-1055, INV-1064, INV-1084) against a qty of 1, which falls outside the listed hold codes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszBMgCykpXcqd9jp5q",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2828,
+      "output_tokens": 634,
+      "output_tokens_details": {
+        "thinking_tokens": 443
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. Unit price 32,900 equals the contract rate, and billed qty 1 does not exceed received qty 1. The amount 34,150 matches earlier INV-1055 but that cites the same PO-1002, so it is not a duplicate_invoice. The bank change on day 42 is recent, but the invoice is under $5,000. Note for follow-up: PO-1002 has now been billed three times (INV-1055, INV-1064, INV-1084) against a qty of 1, which falls outside the listed hold codes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2828,
+    "output_tokens": 634,
+    "output_tokens_details": {
+      "thinking_tokens": 443
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

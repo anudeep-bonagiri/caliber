@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.02827,
+  "durationMs": 3193,
+  "httpStatus": 200,
+  "id": "T3134",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1033 at Dallas North Tollway within 10 minutes; the last charge there was 2026-10-28, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T3134 at NTTA-DNT-01 (Dallas North Tollway) on 2026-11-05 at 12:40:38Z. Duplicate_toll applies only if the same plate was charged at this plaza within the previous 10 minutes.\n\nThe most recent earlier charge at NTTA-DNT-01 is T2985 on 2026-10-28. The latest earlier toll of any kind is T3111 on 2026-11-04 at Round Rock, a different plaza and a different day. No earlier charge falls within 10 minutes of this one.\n\nNone of the other hold codes apply to a toll, so the payment can be released.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1033 at Dallas North Tollway within 10 minutes; the last charge there was 2026-10-28, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscCR4vy2SACTnGTVFS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 12715,
+      "output_tokens": 284,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T3134 at NTTA-DNT-01 (Dallas North Tollway) on 2026-11-05 at 12:40:38Z. Duplicate_toll applies only if the same plate was charged at this plaza within the previous 10 minutes.\n\nThe most recent earlier charge at NTTA-DNT-01 is T2985 on 2026-10-28. The latest earlier toll of any kind is T3111 on 2026-11-04 at Round Rock, a different plaza and a different day. No earlier charge falls within 10 minutes of this one.\n\nNone of the other hold codes apply to a toll, so the payment can be released.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1033 at Dallas North Tollway within 10 minutes; the last charge there was 2026-10-28, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 12715,
+    "output_tokens": 284,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

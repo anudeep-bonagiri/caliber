@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011774,
+  "durationMs": 3209,
+  "httpStatus": 200,
+  "id": "1883",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged about 0.01 mi from the station 2.5 minutes before the purchase, and 23.3 gal is well under the 110 gal limit (100 gal tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 13:41:08Z at Pearsall (28.8922, -99.095).\n\nThe nearest ping within 30 minutes is at 13:38:22Z, at 28.89229, -99.09473. That is about 0.01 miles from the station, well inside 25 miles. The truck was stopped there and the odometer didn't move between 13:38 and 13:50, which fits a fuel stop.\n\nThe purchase was 23.3 gallons against a 100-gallon tank, so the limit of 110 gallons is not exceeded. The price works out to about $3.37 per gallon (7861 / 23.3 = 337 cents), which is reasonable.\n\nNo other hold rule applies to a card purchase.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.01 mi from the station 2.5 minutes before the purchase, and 23.3 gal is well under the 110 gal limit (100 gal tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9qjzUMPJgEYu23xfW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4307,
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 13:41:08Z at Pearsall (28.8922, -99.095).\n\nThe nearest ping within 30 minutes is at 13:38:22Z, at 28.89229, -99.09473. That is about 0.01 miles from the station, well inside 25 miles. The truck was stopped there and the odometer didn't move between 13:38 and 13:50, which fits a fuel stop.\n\nThe purchase was 23.3 gallons against a 100-gallon tank, so the limit of 110 gallons is not exceeded. The price works out to about $3.37 per gallon (7861 / 23.3 = 337 cents), which is reasonable.\n\nNo other hold rule applies to a card purchase.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged about 0.01 mi from the station 2.5 minutes before the purchase, and 23.3 gal is well under the 110 gal limit (100 gal tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4307,
+    "output_tokens": 316,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007728,
+  "durationMs": 4388,
+  "httpStatus": 200,
+  "id": "INV-1015",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1015 unit price 58,250 cents is about 17% above the 49,800-cent contract rate (and PO price) valid on day 9, well over the 5% tolerance. The invoice total of 117,750 cents also doesn't match 2 \u00d7 58,250 = 116,500, which is worth raising with the vendor. No other hold applies: the amount is not a duplicate, received qty 2 matches billed qty 2, and the bank change on day 71 is after receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvgkKEAgTGAI4AUIIdGhpbmtpbmcSDBXvXic9WOx2GtiW7xoM3oZw/65wdDBPyOxPIjCoA8+j/1+lU5sm5FxwnLw3l19QVVbNFcZUNKk4W1OCajz4mX9zhGreGaKQYeYtPDgq2wjTtIOQofyTjlf7TRLqtFNX227ltt7tHfqSFOPQVC/70Uo+BKXLcK2lIDksjMDQ5TG45QvjdA5EzffjyfNNzTEBvTeFtHiAJKFgXVk3/cqX40GHUDmm74qkH0J476e8n4m5f1SDZMcSh6d6E5VC90vXd2Ka87HGYwxRUirmraOQ0H7BnCfLjzAcX2vvJQBQ1ht/Am8ZytQ4H2jGXyD7inusdxsIFJggWHpKPT1vTsELlJjuYvo26My3CzKJs9ODXlaiJZ5Rl7fHtmfADn3ltb+XGLt7bOvPKZzi4EwD4As1XyN+s78cOQaHP4mxNs7zl0SGEuf5ZwMo5J6DT/Deg2qBM52LwDPCeLwyHRqNrcHji9IAj7B7ddskVbnlzKXaMPnckG+B1lnKT4tjhNhDooXdjnh0yU/P9RmJNB0QLY+uQIY7/v99NG1UzAEggtoV01ZCdWIjSq8wCxI8LdlRHzdFm+3a2uRuzj9PifmOMXf9D5dZIabPcAlCyAnYlTUi/nIHymQ/R/vEHkpNr8kRE+60YtroJZyzSxENmoj97z3eka2VT8rdliAMcFwPZy6FFXKfdX+m/Qxqg29zmHdmWDdev5uyO30/Uv9ImV9/uQu+NxuQ+LBqPqGjMleMqgC5quU02pY2RcuFWegc9hXE1Kqx827lOrSjWGsJPHVWbNncBttKRrR/OupVbM3M/o9KH03d3EtaAwSXcYbSh9wdj9P7yBFaJGRktKmDYECGxfUxboj1tg035locQ5ueAnx6D0cC/NSe65kXD20UzVnlMGDJUeT7BXmKd+2pO9KFmVoQPUA5lrJw7+cwiDlY3qRhRcNBxAy1EDzIErpkMOQDgiN+tYZ+TJcZw03gvLkM3s3QeZj6GiJTjF2v1SCGKof4cA9wR1R33JnosmCUAu2QPgiDyGNZ73/kjqsAjWfDIzc6+2WIQQRktbzTFV9WYO4h+EnGcJLl02fUfxlbOQ+/yndz5PC5bf2qdYskXGdOzErbXr4oTSwHqrQdqvxPgwPA7fTFo0VXse0ivnUEX8YxU6k4DpqIScUP9H4BkFDwdEVSmLum7B2mn6iq3/yfX5P9Aw4a8TKWFtcX5xvJLOvmkdT3DF5viSz8YDIbV/s8rio0TAtTWVjSwNSlGVqD6IJ+Rba1ElcX4LGgqHNDdPkUdVI1PuEhNUL0Z7ZUoqIF4ZiLH32BXO6+cbDcRQjswNfpJVRHQ9cFFnj+avluFdLgTXleLO2K4Y07s2PIFTIntkeSZ5iu0Nrf5LIKjrgU2o0lcZYTiL/HJVQbMcaa8Qrr3yE6lucJ8TmAQD4qugVxhOuFPfU8RcPClWsHCfry7/B1QCM/IZ2uPpCE7i30qsiWiiw/jPCwA04MnqJt6775Q/B1VwbU9LelIMCpTE3u62EfdEn+JXV2OVrcwulpYmI653rUplEjsf3DcupC9Js0SCc3NX4GnEaP2TjFEudrr7mJcJ1r0zFbJy5603WPnxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1015 unit price 58,250 cents is about 17% above the 49,800-cent contract rate (and PO price) valid on day 9, well over the 5% tolerance. The invoice total of 117,750 cents also doesn't match 2 \u00d7 58,250 = 116,500, which is worth raising with the vendor. No other hold applies: the amount is not a duplicate, received qty 2 matches billed qty 2, and the bank change on day 71 is after receipt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5tRrpJchM384bU17S",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1649,
+      "output_tokens": 443,
+      "output_tokens_details": {
+        "thinking_tokens": 265
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1015 unit price 58,250 cents is about 17% above the 49,800-cent contract rate (and PO price) valid on day 9, well over the 5% tolerance. The invoice total of 117,750 cents also doesn't match 2 \u00d7 58,250 = 116,500, which is worth raising with the vendor. No other hold applies: the amount is not a duplicate, received qty 2 matches billed qty 2, and the bank change on day 71 is after receipt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1649,
+    "output_tokens": 443,
+    "output_tokens_details": {
+      "thinking_tokens": 265
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

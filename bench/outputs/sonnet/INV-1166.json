@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01331,
+  "durationMs": 4907,
+  "httpStatus": 200,
+  "id": "INV-1166",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1166 meets none of the hold rules: the unit price of 54,500 equals the contract rate, and the billed quantity of 2 matches the PO's received quantity of 2. The only earlier invoice for the same 109,000 amount in the last 30 days (INV-1145, day 78) cites the same PO-1018, so it is not a duplicate_invoice. The bank change was on day 18, and the invoice is under $5,000 anyway."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4AoKEAgTGAI4AUIIdGhpbmtpbmcSDJwyHrz9XU5eXArSfRoMhjMBMy/YfXn932faIjBO40OursWstgrqIEwuBrELoK/LgIP4UZaiYp5Jd6HhKXyw1NPnEuFYYzYcNh9Ldecq/QmszTJQSyX9//azvIz2UouaBSXToHCHVLGiCxCUaFj0QV9I7UnXk1qQHAMnHykUPkKvDvyfuqpdTbAANKxaJXOLcOrJk22UE/jxycNLgDRcHi++CA0w61cXGDdnNOvMCC2i1K/fuxBJw/+9u2mGCjn0Vn68XSOenwhHXlIxien1r1TU6DYJfDxLZdbrVfDeSYxIMdlPPpLmEAyqxUsvpQNe0TeGye7EbAtJ4HaQtUYd/0SuA1E31//1/asRgKsdW2oCqm5xAjd2p56E9IPmp/QPvy2Efq9rfSOsV3ij61iPvyw2YendecxyNQpYdenWbci+CN3AiJwDD5MxKdIA8+A+hFgdGOTcsvznFAjdvFmicRScuUC9XE6wi29J60pYKOJcn4yM+3RVLjGfFcHdYLVU4SIWAOVmOgYpq22/OKJWm2OYqWDj0rEZ/93rr9HMVGkBWBWYjahLKzIVWECDEQmir8wtYB/u/aPqb3ICwZI1vufRltj6ArPET0Fhvl89dVH328pBIOwK5V9CfXMx0eua0uN60Nk5Ry3fBNVH99MtnrlkZM2p3RJXH4Jz3rlnGQz7LTr6BNwQpbUzJdHGVq1lbGsrV4Vr7E4fSd/nWjjkzXJ7ciemBf9fdv55X7oyMS7atUDlspS1MoUc6aKP+a7Gzm7iX8tF9T4s0wmLok+iTJwWmM964B3LinOiXZobEWd8sCPx7+NomLfpH7hsdTz4slZ/AjsBrVdGkdR7bco4vlX4khU6SMkvBpLhuxONo0jplk0AVbkfIjhai0fOZjMW+gkHWUwzEHIX7qFj3iU5tLLaUPwQ5eAlZ2mpVDXkUa0I+dqhKbrtXHuRfr57BnoFuJS7YhB85JOBG11x/swbFg+D2xPPFtyPzllYrD+ZqR9ATPRHde/0VpcW1bOv7Gxk/1/oBzUtbCwRLxH/fBZrP5W8Invt+h0rfqY1tA8GKrO5ubiyx4jCc/N8h06fWlK71u6yY+tExntGz3tp2QAsYsdMJNV1WuSnw+sC1cYU8Jua+65XPjRy31ydgP9msdoAu7kr0hwQF6R28EY6+16T5XHSJVma4PFWlCwsH256Seh7A6Wm4fa9lqmL80Zbw30BVjZ0UyXCmiPHIA8taCP8RlQ/rqmSHrPPYr8EVL55Vxh2n5W30BPjFX+SWQMMVstNSTEf/Yp7WqJtiDVNZyzl1aLPJCMHmiKHDviong8NWf7j4cozTUaT69FHds99qH4EznO3Hufohu69OD2ryo10sFkNEUwVB+KQlCwcRJMjdtm/uRxcHvMbUWEBdgWeHxvZIyMv+LPDdLcoaXgFtSV6vbeVidnyWO6Gpsrs0rzuDlsNSFSPAeBGdymhPgaYO+Dr+MFOnJWKjqhj2SX75XklhLb6tbQ4OSBIYkcJrVDilFS8LFEGgFlYDiUAtHZC2eYexnZgdzFhEnlAP1+iRTq+jl/lPd+WSsRF3GfINxOLFgSucOb/Fy1rplh9xjzeU+PBkLmJiIOdl2RwO8hWK8tm6Kikmn1cQ7AfRoi4DxBW+vt+uEMSPrA/MjlTlkRbh1IZ2SY75sL0D64AYqdNQXnr1UjAB96hq8SLC5EQZ/NzENn6DCCChiYppFL72AA+30nMdBB5WttEMQSgmMubH9bKVPJ8mHYAfjsMFhcmo+YAGflLlCjdT2gvOC6RUGG31IOeywyiCHZqNoxc0GSn3BgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1166 meets none of the hold rules: the unit price of 54,500 equals the contract rate, and the billed quantity of 2 matches the PO's received quantity of 2. The only earlier invoice for the same 109,000 amount in the last 30 days (INV-1145, day 78) cites the same PO-1018, so it is not a duplicate_invoice. The bank change was on day 18, and the invoice is under $5,000 anyway.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsn9sJ1JuF9V3cmXRZZ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4185,
+      "output_tokens": 494,
+      "output_tokens_details": {
+        "thinking_tokens": 333
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1166 meets none of the hold rules: the unit price of 54,500 equals the contract rate, and the billed quantity of 2 matches the PO's received quantity of 2. The only earlier invoice for the same 109,000 amount in the last 30 days (INV-1145, day 78) cites the same PO-1018, so it is not a duplicate_invoice. The bank change was on day 18, and the invoice is under $5,000 anyway.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4185,
+    "output_tokens": 494,
+    "output_tokens_details": {
+      "thinking_tokens": 333
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

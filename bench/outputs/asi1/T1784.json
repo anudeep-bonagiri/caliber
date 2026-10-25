@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12613,
+  "httpStatus": 200,
+  "id": "T1784",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1784 at NTTA-DNT-01 is within 10 minutes of an earlier toll for the same plate? No, check times. T1784 is 2026-08-17T16:56:43Z. Earlier tolls for NTTA-DNT-01: T1743 on 2026-08-13T19:40:25Z. That's 4 days ago. Wait, let me re-read the policy. 'within 10 minutes of an earlier toll charge'. The difference is huge. Let me check all earlier tolls for the same plate and plaza. Plaza: NTTA-DNT-01. Earlier tolls: T1120 (Day 5), T1130 (Day 6), T1743 (Day 32). Current: T1784 (Day 34). None are within 10 minutes. Is there a duplicate elsewhere? Let's check other plazas. TXTAG-SH45SE-01: T1086 (Day 4), T1110 (Day 5), T1390 (Day 18), T1489 (Day 22). Current is NTTA-DNT-01. So no duplicate_toll based on time proximity. Let me re-read carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge'. T1784 is at 16:56:43. Are there any other tolls for TX-1034 at NTTA-DNT-01 around that time? No. What about other transactions? The input only contains one transaction object which is a toll. I must have missed something. Let me look at the timestamps again. T1784: 2026-08-17T16:56:43Z. Previous NTTA-DNT-01: T1743 on 2026-08-13T19:40:25Z. Not within 10 mins. Is it possible the question implies a different rule or I am misinterpreting 'earlierTollsSamePlate'? It lists ALL earlier tolls. If none are within 10 minutes, it's not a duplicate_toll. Let me check if there are other holds. capacity_exceeded? No, it's a toll. location_mismatch? No, it's a toll. duplicate_invoice? No, it's a toll. rate_variance? No. short_received? No. vendor_bank_change? No. So it should be clear? But wait, look at T1743 and T1784. They are both 1850 cents. Same plaza. But days apart. Policy says 'within 10 minutes'. So it is NOT a duplicate. Therefore, decision is clear.\n\nWait, let me double check the definition of duplicate_toll. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge'. T1784 is the current transaction. We compare it to `earlierTollsSamePlate`. The list includes T1743 which is at `2026-08-13T19:40:25Z`. The current is `2026-08-17T16:56:43Z`. The difference is ~4 days. This is not within 10 minutes. So it is not a duplicate.\n\nIs there any other reason to hold?\n- location_mismatch: applies to fuel-card purchases. This is a toll.\n- capacity_exceeded: applies to fuel-card purchases.\n- duplicate_invoice: applies to invoices.\n- rate_variance: applies to invoices.\n- short_received: applies to invoices.\n- vendor_bank_change: applies to invoices.\n\nSo, by elimination, it seems to be clear.\n\nHowever, often in these tests, there is a trick. Let me re-read the timestamps.\nT1784: 2026-08-17T16:56:43Z\nT1743: 2026-08-13T19:40:25Z\nDifference: 3 days, 21 hours, 16 minutes. Definitely not 10 minutes.\n\nLet me check if I missed any other tolls for the same plaza.\nPlaza ID: NTTA-DNT-01\nT1120: 2026-07-07T17:23:43Z\nT1130: 2026-07-08T13:19:58Z\nT1743: 2026-08-13T19:40:25Z\n\nNone are close to T1784.\n\nTherefore, the decision is clear.\n\n{\"decision\": \"clear\", \"reason\": \"No hold conditions apply; the toll is not a duplicate as it is not within 10 minutes of any previous toll for the same plate and plaza.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885951,
+    "id": "chatcmpl-28e2fa6c-a9c6-433d-9f45-8b24a1095490",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1167,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3337,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 2144,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4504
+    }
+  },
+  "startedAt": "2026-10-24T23:52:23+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1784 at NTTA-DNT-01 is within 10 minutes of an earlier toll for the same plate? No, check times. T1784 is 2026-08-17T16:56:43Z. Earlier tolls for NTTA-DNT-01: T1743 on 2026-08-13T19:40:25Z. That's 4 days ago. Wait, let me re-read the policy. 'within 10 minutes of an earlier toll charge'. The difference is huge. Let me check all earlier tolls for the same plate and plaza. Plaza: NTTA-DNT-01. Earlier tolls: T1120 (Day 5), T1130 (Day 6), T1743 (Day 32). Current: T1784 (Day 34). None are within 10 minutes. Is there a duplicate elsewhere? Let's check other plazas. TXTAG-SH45SE-01: T1086 (Day 4), T1110 (Day 5), T1390 (Day 18), T1489 (Day 22). Current is NTTA-DNT-01. So no duplicate_toll based on time proximity. Let me re-read carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge'. T1784 is at 16:56:43. Are there any other tolls for TX-1034 at NTTA-DNT-01 around that time? No. What about other transactions? The input only contains one transaction object which is a toll. I must have missed something. Let me look at the timestamps again. T1784: 2026-08-17T16:56:43Z. Previous NTTA-DNT-01: T1743 on 2026-08-13T19:40:25Z. Not within 10 mins. Is it possible the question implies a different rule or I am misinterpreting 'earlierTollsSamePlate'? It lists ALL earlier tolls. If none are within 10 minutes, it's not a duplicate_toll. Let me check if there are other holds. capacity_exceeded? No, it's a toll. location_mismatch? No, it's a toll. duplicate_invoice? No, it's a toll. rate_variance? No. short_received? No. vendor_bank_change? No. So it should be clear? But wait, look at T1743 and T1784. They are both 1850 cents. Same plaza. But days apart. Policy says 'within 10 minutes'. So it is NOT a duplicate. Therefore, decision is clear.\n\nWait, let me double check the definition of duplicate_toll. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge'. T1784 is the current transaction. We compare it to `earlierTollsSamePlate`. The list includes T1743 which is at `2026-08-13T19:40:25Z`. The current is `2026-08-17T16:56:43Z`. The difference is ~4 days. This is not within 10 minutes. So it is not a duplicate.\n\nIs there any other reason to hold?\n- location_mismatch: applies to fuel-card purchases. This is a toll.\n- capacity_exceeded: applies to fuel-card purchases.\n- duplicate_invoice: applies to invoices.\n- rate_variance: applies to invoices.\n- short_received: applies to invoices.\n- vendor_bank_change: applies to invoices.\n\nSo, by elimination, it seems to be clear.\n\nHowever, often in these tests, there is a trick. Let me re-read the timestamps.\nT1784: 2026-08-17T16:56:43Z\nT1743: 2026-08-13T19:40:25Z\nDifference: 3 days, 21 hours, 16 minutes. Definitely not 10 minutes.\n\nLet me check if I missed any other tolls for the same plaza.\nPlaza ID: NTTA-DNT-01\nT1120: 2026-07-07T17:23:43Z\nT1130: 2026-07-08T13:19:58Z\nT1743: 2026-08-13T19:40:25Z\n\nNone are close to T1784.\n\nTherefore, the decision is clear.\n\n{\"decision\": \"clear\", \"reason\": \"No hold conditions apply; the toll is not a duplicate as it is not within 10 minutes of any previous toll for the same plate and plaza.\"}",
+  "usage": {
+    "completion_tokens": 1167,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3337,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 2144,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4504
+  }
+}

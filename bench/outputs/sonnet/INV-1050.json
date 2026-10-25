@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008578,
+  "durationMs": 4278,
+  "httpStatus": 200,
+  "id": "INV-1050",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "INV-1050 (57,000 cents, PO-1016, received day 30) matches the amount of INV-1020 (57,000 cents, PO-1023, day 12) from the same vendor within 30 days under a different PO, so ask which PO is real. Also note that 57,000 does not equal qty 1 \u00d7 52,500 unit price."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSyAoKEAgTGAI4AUIIdGhpbmtpbmcSDOSSVpG28HOZ2rIjTxoM5pELkIzTXVWucbmAIjAsAFGzelnaDOSHZ2oC0h35HvrTqPkXn6MAKJZoQvy/dEC9PWrgBL0XeaBH4tGFRDgq5Qnure+0AAoYvcf2r1/5JTq4TnXZc0UVfAK0+Ax0LEIyPiTOkwketSECMZfsse1+q8gUbYKqEzNdk+izBDOp9mIZd5cZDMaQMUxYtNuMrbbj7tXkIc0SPMy/lwJgpHxlRePuoRGt6TyUdfZNpbyToTwjj/cnuGDg9So3YRPCdGxsKUK5fTkiP/LDcxRKfbqB9XXS4iglXGc05QhrxMcnsvGOzDiMCVzbjeXg8JVQj7cUCEQJ+P7yGCoaupkY/WcYUhh7Nu2q2fynQJTvoeLjPIogXLddY7MpMU8YxBkzJFMloktOjPrjypqK1FmB7vtfHq7NosF1ESLqGocEMJX+GDVMECZ2sXJkSyfTnHFsrP+twfLK0zv4i5FCBVYS4Vrcjyymjlb6rY/MofgAMyX/4QBOutXGzpEGSc3rO1P2j3mj27u4v0GIc6KRucD9GyXtwhpngAOGQ8w2I3H6lMYCb1cqm6dpUz2NfuHoRMw2Ur+UTNr7C4pbPi1eNx97kty4K3DqNDLgcjcAo8wr2lFaz4ydqNlJqkO4ODdPV38/oC/TIx8t8csMuODMRqfyK7pt9qWMF8ztuHM3LL+TQUQcSlbVlgeJ52I2wo6Xt9WZqFnMOSMEb2uX3rdfgUG2+DA+X6wcY9sSw907PCAGtZxfxMvMddpHfphXC+Xw+NtttMEqwIMCOFrkrpjBwlHSYU3k89OFcdIofay3a5xwLMPU/TbWRD8Y560sjnEnYq5ySwGKoLpME3Mdh/k4ZcGBD7KlKo8BZkA7gVbd1/af8FaE1+koGRYshjaA0x4D1h5Q7txW3G7pEYjE6lhTLove4FY4TJsRj94jJe1xxjUN7goVBS0//y/4ipEGsbDJrHUmKu2u6mN4l01ecFVd7FfyJLYlaRe5dxNFeUm7iJFbeFblzZFTa00qk5r3XE5nkQvPm0K81eGimercl9iBRD0PCiQm/jXSlPL3YwaswVKJTP2isLwHUvL+Ooj8WDSINDEHtyScNJDofX1whexHZ7xOG51YCyIdLCSmENeNwcjpuYjjYibwsIUT5ne2wBnh3MmjDhhxFljLQDiydIhb2ed9LcyvwVeOFaxAUJSnElE0P1BCj/80eSMgwB4CLiEGezUjPEff7eZnEyzpa2jxz+DEV0dOXGRPfu4zX9MSR4JQvvV2juA4Z4N/GVQS5maQiaarlA+nrDpW4IwC8ASKrch3aUv1LWZKU9coC2vC/gFkS+Wrb1gJeXBwM4DNIHW7stn8C8sdXAgijuNdp6R3BgnvtGFGX5yds7BVVbbNJksBV69bG0f7oAd5qYa2QW1NVK3zSxipJhhp2GM7xAwmvxC9RBkXp5lCaXQ2NnloV12mqjhCanETWf7OdoxnE5El8lbi03nAYGk91EnQvo2LAIHtg4NfHHdTO+C7ZmBGPvaUrrqJQUqoqyWDCB6yrT0gMHlAAnNR5jbHwE44/SJt/YSiQ10EWGsUvevgqtNLvJNjrRbAe7XUUw2cEn2eoZbYIdCDy3R7JVNitWlkfZBz0c08hRLu5+6Wv4gGI/Y+eD+9+8F8SyvNROpotUs9jIYEkeGeUgiXy6hA+7YJ9ZSQ4SCSsdAiOhP5zPVarF/Hsq+ncFnrHxzAssdftewufjY+euS3MA/ttahCb9DaRnzfdFkWFlGw9N0c/Q60WBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1050 (57,000 cents, PO-1016, received day 30) matches the amount of INV-1020 (57,000 cents, PO-1023, day 12) from the same vendor within 30 days under a different PO, so ask which PO is real. Also note that 57,000 does not equal qty 1 \u00d7 52,500 unit price.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsssZwK6Wo2ZytFjrUW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1909,
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "thinking_tokens": 339
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:57+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1050 (57,000 cents, PO-1016, received day 30) matches the amount of INV-1020 (57,000 cents, PO-1023, day 12) from the same vendor within 30 days under a different PO, so ask which PO is real. Also note that 57,000 does not equal qty 1 \u00d7 52,500 unit price.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1909,
+    "output_tokens": 476,
+    "output_tokens_details": {
+      "thinking_tokens": 339
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

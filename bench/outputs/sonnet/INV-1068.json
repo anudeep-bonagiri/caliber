@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009384,
+  "durationMs": 3840,
+  "httpStatus": 200,
+  "id": "INV-1068",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches the contract rate. Billed qty 2 equals PO-1021 received qty 2. The only earlier invoice for 67800 in the last 30 days (INV-1049) cites the same PO, so it is not a duplicate_invoice under policy. Vendor bank details never changed, and the amount is under $5,000."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAoKEAgTGAI4AUIIdGhpbmtpbmcSDFHoPX0CzlrINcXzSRoMGjqiiKMSEDbiSsftIjAHWVatQ9+9B2NxqwU8rFucaLE5hpQOPX+NFl9HP1Si/kVcCuZuCnTXyPZ2li3+Sk4qpQmaRsTM7gg4hPAKu+3oTlOzICFd90CKD3QQSRR1otSblaUbmJG6kii5McIwNt1Q/euUfV9P5w3tSGMUajIKWkF0IzVqr1yrwZ5vcfASpVEA2gLkF9BcSfExm5S4Oban/1n37wd6LodWAPGpZ1dIz/Nxib3X2GO1Leh4emDyDvfUrSdry5VrJAxRQ85Z/tZA4Cesqk+eWI/Xk5VCvD5zrXwLNPeNKTvjnu5a388uKxSAkmnhZvDZQuCBh20F8+0KhA1cHGxerdIQHE3tmSH4+27LD5zXyzMMjfp/Cw9JL8y13PIkm/D1dmxP+Z7lqarYceW/fD2wLlqqMjEz9Fc08L4MEb+N418WbwFG2fcgOuNSe/EKbrwWBSzOS+gYFMPgUby5kxau7em6VWQi4hD+7/ncuh4Uf5tbAVe0XM65OuUXyyjEEQ9nMi/7mFtUmyqFWrZFIDmO5lfjgjVApXVaRkW2MFenwG/3j21YoVeC4MzAWMDoPN1W9KgyOekjt1NNuuhzuiZD+Np0FLut1QSd+vDeEjFWezS0zzSXA0TwLzq5fF957gCbozAK5AN+tJE4RB05O3K0wVibLa5GArv6hb3f8yTSqZ6HlsAxyberDL5OjDKO3kuys+PVaJwu7AMA+vQUuB6nlEyz8SlCPfH0Qbm6viTv72gSWy329BhnK3e5Ht9w0nYBVUo5oN2NAvWyKTSXLtWuG6+m+bmS8aO0hBWLzUp7F/MpLqNBCvgDQgPwsYUJqnMox+E2IQO60B+tHnZiBI1+pJzbs8qZnsV42F1RXJ/Tz2dLYLZ3v7TgXV8i/+HI/Ouf9ny931yIKGonwda3q+rXbvctjWwEx2S2WHXAxy7aZTC0swwgNodrfeyasOuqaVQ4EYaeQYZBCH4LK17QwksxVncvXDGWMU7Qh8CrRUtQFYMqAkCoNgpnBR1QDKi5HC5CyZ+VyQzk7QGxg4umL+H9hgxBrmvrPVXFtdIwNG9U/HtzB2M+pkgr6IjKe0pt2MyZsl4HRDKK7pEedQQAcjifr1EllHnS0x/vJ1ErzeaBwtaYVDk1dR+jn/tCFe0lF6NqXY4TFwXoWDg40RpvEBhBPrNxjVmGe8mKf7ljWyRfgmkkt9o0ixgmOdWYqLTwGv9svFFiY8YBmoNNLtW7lXe0W5hXpl01FnFUSqmln8GYRV9jCY8CfYRnG4dci/mH+TDjpVWEsDIIpUmC9VYv/ZH55vJmquYc66mNNK9ymQmv88JcEh0MKSxN0mAVzwSBXEMQOBhWbEUs/NMAgb+L9Pl+UEa/D7Y/LQQ5JjBJyu0pGIyVRy8VCbXeKxAFJMI4EvhpIqfqMedw9uyXLjJpxwqlXuISbkLO9WG7qE97oL919CvjzUrMMtEwS1BTp3zDYFkzuMDJ3j/AKpv6EHXn2YYapSYTOxmdM/JuyXO8g/73PRDQA/OEYwfpiLKYFe4DQqAADG3FMtXkjer6tZq3S5Bj/dhJuoi9J5z9bBk0BFboYYDs6Th1GtrnbPtkIj3YOwy+qh1hjjupkcQ0EukhkJXFv+XHzH2qXdzVstIrLY+czm9Qt+nAB/9mYI570r7bRw9bGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 33900 matches the contract rate. Billed qty 2 equals PO-1021 received qty 2. The only earlier invoice for 67800 in the last 30 days (INV-1049) cites the same PO, so it is not a duplicate_invoice under policy. Vendor bank details never changed, and the amount is under $5,000.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsgaB7hbkpoBfbjfa4M",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2567,
+      "output_tokens": 425,
+      "output_tokens_details": {
+        "thinking_tokens": 298
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 33900 matches the contract rate. Billed qty 2 equals PO-1021 received qty 2. The only earlier invoice for 67800 in the last 30 days (INV-1049) cites the same PO, so it is not a duplicate_invoice under policy. Vendor bank details never changed, and the amount is under $5,000.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2567,
+    "output_tokens": 425,
+    "output_tokens_details": {
+      "thinking_tokens": 298
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

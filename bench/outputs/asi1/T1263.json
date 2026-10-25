@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9318,
+  "httpStatus": 200,
+  "id": "T1263",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T1263 at 2026-07-15T18:58:02Z is within 10 minutes of earlier toll T1262 at 2026-07-15T18:49:29Z for the same plate TX-1026."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T1263 at 2026-07-15T18:58:02Z is within 10 minutes of earlier toll T1262 at 2026-07-15T18:49:29Z for the same plate TX-1026.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882530,
+    "id": "chatcmpl-bc791656-4a67-43c4-8ce9-408332dd45e2",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 101,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1875,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1976
+    }
+  },
+  "startedAt": "2026-10-24T22:55:21+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T1263 at 2026-07-15T18:58:02Z is within 10 minutes of earlier toll T1262 at 2026-07-15T18:49:29Z for the same plate TX-1026.\"\n}",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 1875,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 1976
+  }
+}

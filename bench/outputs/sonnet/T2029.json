@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.016376,
+  "durationMs": 3054,
+  "httpStatus": 200,
+  "id": "T2029",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1014 at SH 45 SE Plaza within 10 minutes; the last charge there was 2026-07-31, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2029 at SH 45 SE Plaza (TXTAG-SH45SE-01) on 2026-09-03 at 14:48:23Z. The earlier charges at the same plaza for this plate are T1358 (2026-07-22), T1528 (2026-07-31) and nothing since. The most recent earlier charge on any plaza is T2017 on 2026-09-02 at SH 130 Plaza 4, a different plaza and the day before. No earlier charge at this plaza falls within 10 minutes, so it is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at SH 45 SE Plaza within 10 minutes; the last charge there was 2026-07-31, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6hgyeefj4nKmBcAY1",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6903,
+      "output_tokens": 257,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2029 at SH 45 SE Plaza (TXTAG-SH45SE-01) on 2026-09-03 at 14:48:23Z. The earlier charges at the same plaza for this plate are T1358 (2026-07-22), T1528 (2026-07-31) and nothing since. The most recent earlier charge on any plaza is T2017 on 2026-09-02 at SH 130 Plaza 4, a different plaza and the day before. No earlier charge at this plaza falls within 10 minutes, so it is not a duplicate.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at SH 45 SE Plaza within 10 minutes; the last charge there was 2026-07-31, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6903,
+    "output_tokens": 257,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

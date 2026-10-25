@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011944,
+  "durationMs": 3363,
+  "httpStatus": 200,
+  "id": "3276",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged about 0.02 miles from the Corsicana station two minutes before the purchase, and 43.8 gal is under the 110 gal tank limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 12:22:07Z at Pilot 299, Corsicana (32.0954, -96.4689).\n\nNearest pings within 30 minutes of the purchase: 12:20:00 at (32.09559, -96.46911) and 12:18:49 at (32.09512, -96.469). The 12:20 ping is about 0.0002 degrees from the station, roughly 0.02 miles, which is well under 25 miles.\n\nCapacity: the tank is 100 gal, so the limit is 110 gal. The purchase is 43.8 gal, which is within the limit.\n\nPrice: 14726 cents / 43.8 gal is about $3.36 per gallon, which is plausible. No policy rule covers price anyway.\n\nNo hold rule applies.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged about 0.02 miles from the Corsicana station two minutes before the purchase, and 43.8 gal is under the 110 gal tank limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt3EzXgtEhTndDR9ocd",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4377,
+      "output_tokens": 319,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 12:22:07Z at Pilot 299, Corsicana (32.0954, -96.4689).\n\nNearest pings within 30 minutes of the purchase: 12:20:00 at (32.09559, -96.46911) and 12:18:49 at (32.09512, -96.469). The 12:20 ping is about 0.0002 degrees from the station, roughly 0.02 miles, which is well under 25 miles.\n\nCapacity: the tank is 100 gal, so the limit is 110 gal. The purchase is 43.8 gal, which is within the limit.\n\nPrice: 14726 cents / 43.8 gal is about $3.36 per gallon, which is plausible. No policy rule covers price anyway.\n\nNo hold rule applies.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged about 0.02 miles from the Corsicana station two minutes before the purchase, and 43.8 gal is under the 110 gal tank limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4377,
+    "output_tokens": 319,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

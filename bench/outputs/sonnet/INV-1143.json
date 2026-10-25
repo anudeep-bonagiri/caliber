@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010262,
+  "durationMs": 2938,
+  "httpStatus": 200,
+  "id": "INV-1143",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1143 ($268.73, no PO) matches no earlier Alamo invoice amount in the prior 30 days. No contract or PO exists to test rate or quantity against. It is under $5,000, and the bank change was on day 18, long before day 77."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqQgKEAgTGAI4AUIIdGhpbmtpbmcSDN4Kf4oIeHMjtLnHbRoM3OdBm9iYYMMoOGX9IjBFfsvHnyk8YPkhhWyemRnyNitBxjkQF33OLa8hS5TR/grpb/IiuAkKOupXNHW8sZUqxgdRyA6D5q6kpFqoWIYxPgPW43bTB5eYnOxY0k7x2PAwrFjvEBxHPKsP1glAG2VFZ7AFJHecnLHoISpO+/W3B9KoZnDWYTBi30uL1XXGNW6f64/l0c7sAygBfdGMWNUBG54n8uE8JMiAB2YfjP8370IeH4B6Z8vn/ic9BwJKU5Osje5rthaiJLo17CjoppQ0RoEYMUyfuMPRHP0llRSOLGH8ipsfAn1C7m2wAKC/HwEW0Its88CB+OvXEGQ6/CmPVAH6dlfnKy5bA4w3siBPp3qgVa8uVHFFkesC2CqN8IToScN6cCosR/9+UNjkcx/WdWR6U+Q2RyIRSTdtY/Z0CZaTOQiEf2soeLhWNQC+qVmxZi7JrYyuDWUEg+7xaQ0WQTEdxxCaeVMsRu3BCPAQ6O6m7WnQVjYbRXq4QTOwZ2pJoMQbRwlITNKoJ/kGtqWhX+FqmFPGqA57EbHrWeMqUzfEKKNMP6zO0iq8/GgAPwPuPdAYQ0DZeEKCYMZuLqDa5f4sJqCHHR3phw6bgavC7BowFB/Ela8DX6/eNIKQZT2qMycxmZjkpiHM0hwIi7r1G2Hw2FlQ2lgndFpa9aig8jqJHBLIGA1G4aP1+aymytJO2S//+qzgvTZoy+NfqC6BtqIODnvtdH8UzYuTfdB5+C6rSAP6OdTJhyLG0MPDQ5DNm9hgkNTXcK1pfmayjNyb+eTYOM67FLk2JMO448zdjf9i/Bx2JcVCkjCQr2+qgbtwC5FKxcsMQBTIqnIMir2GqYrrBCOeJ7qzKQkDvITWKXp+ngUF7d8teyJM8iY8ryf/3XWZYBy5AXaf14mNurKMvCK9GAPop8E0hvTK2HIHdUDWOYf9J1G4JPNIGnGCGxJlZEc5q54xvP2JnGn9EjuaCGmSdwpjCr9y6ZH6dfbZGAtpffN1T3bBSyJkQX3EEf5se58uOTe9lqTd8gx3PcrLhnNQ5jGRRRPjXDVvUoidhGbOwSXgPkj6INp4hIVa+rMNQzdUy1DX6QWYGspptgSGW6tepfFGyQfUwX2KMTFRQfCa3L+PcRbM06CFKBv05pUrwhvbsGH7vgxS07uXIhWyf0J9qjjRu0zOHrE72VozweEP3BeHMaZ624+Ne+JPndcUuAx9Dc6qO2TFkT1i3/VPxQpR4qGUWv8III9TBx7NISbE13ornu5WM6cP5yN5zHtdHF0lhUoDuKn2dvUjQ4Ix2JQeeXxJE+zg8Cvn/I1RNDRUKGv90dyva4pXgdFywxHW9UyQfs2iNSPqlwE314Oo+yuNw13dXQEYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1143 ($268.73, no PO) matches no earlier Alamo invoice amount in the prior 30 days. No contract or PO exists to test rate or quantity against. It is under $5,000, and the bank change was on day 18, long before day 77.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1kktRHfSfwMp7WQAW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3681,
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "thinking_tokens": 191
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1143 ($268.73, no PO) matches no earlier Alamo invoice amount in the prior 30 days. No contract or PO exists to test rate or quantity against. It is under $5,000, and the bank change was on day 18, long before day 77.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3681,
+    "output_tokens": 290,
+    "output_tokens_details": {
+      "thinking_tokens": 191
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

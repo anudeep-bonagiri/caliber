@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012728,
+  "durationMs": 2668,
+  "httpStatus": 200,
+  "id": "1881",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14's 13:25:00Z ping, about 4.5 minutes before the purchase, is within about 0.01 miles of the Waxahachie station, and 51.5 gallons is under the 132-gallon limit (120-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QYKEAgTGAI4AUIIdGhpbmtpbmcSDINtNTCA3Ij+1VrOoBoMS9l03KjoraSICmd3IjDcViJst/wVHjqRntW1R426Lxyla+hSi9+9E276fjnyFxSwQcpei4BAlpiGjcVAShEq9gUZ3UzNp1b+wpEFH2W+eO5tAJBSDsiG5b9rZpgv5Z6TCk2XEgEGSv3OCOrSNIy3Ss/cUa5n9TV9mKEYQylEuiEQTxW6eoUg1mw8wQUG5kebUQg5UwoxxxCHUlXwn4ijRCvzC6gutT7LZBqV2nwtrhjAkkFxtqcEARH5imhznv516sVy9iY67fP/xLEf86CaZycWHQVCoOVyu2FNFwuMsILsYJVO6qT/mGGQ+KmGcel8Acv56elM3RuxNFpHYei1DCq5QhzKvmoRCVgfUbwYpkJGZIZLX5owAtAtxDwL/VYvW7YD00dIWf9xUPZp1nCcS9/trEIXqrwQXD52msMWUVPtN6UUyUt7J9+4AyNQ7OVR40bX61FJp7mxZ/s1B5R8Pc1WMKeyTfjv5ZsW+MK6T3vsV3ghtnidSk4JiBQ+61NJYjOZaUAJXk6nEmBN2bPkDVIvjATq8gXE7dPub9HoOSRS4+1sOUzIwTVU4+J63TeW/CNpNSOJ0dsGqHbONrUylG/Wyrliq1RI5r1lbDKl27ImLwZbypwzihgqoUbftkg/E7zM1SX6JWRTkbYOPr/DabKqPSGi0he3fdbaie1YK/fppirmAmq9Agx7e8K/LcH9FqC7BktmH652oGNbptwY2lYe3RViqQ7nJfRey9cCfiMc4jN61jIUdlaCBrn98zvPa8vIH4pOP5kE0y4IezeFmax8c61j0ctpxmGOSxPlH0FtcZgwYoU9BiVz+3cFuEyU4bkNNsl8jt3KW2uJLwbnQwHSgvHm7mWoR78GFXQ87e2scW101TIapjuGVLqqAsoMuaEEJiOWRCLe/87BXUDtXHKQ1NshL3uBhV0tymhI9cXNGcQ4H0JZAC9V2n2ove7jDhlCOnYD67YzhAze+/eYilEmwxg9fBUakTke3+5mxJxZLTJEBoRejRUxt0a8VKOllOhMkeGzBD4pDDB3fU9wQt1qYDDuSXM+4jjDvFAttgD8s4ZcNO7wABVDYl9HTsApkBMQ8LxzfxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14's 13:25:00Z ping, about 4.5 minutes before the purchase, is within about 0.01 miles of the Waxahachie station, and 51.5 gallons is under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdSkJBvf9AmS2zottW",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5109,
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "thinking_tokens": 148
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14's 13:25:00Z ping, about 4.5 minutes before the purchase, is within about 0.01 miles of the Waxahachie station, and 51.5 gallons is under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5109,
+    "output_tokens": 251,
+    "output_tokens_details": {
+      "thinking_tokens": 148
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

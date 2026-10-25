@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01224,
+  "durationMs": 2957,
+  "httpStatus": 200,
+  "id": "T2451",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1038 at SH 130 Plaza 4 within 10 minutes; the nearest prior charge there was 2026-09-24, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2451 on plate TX-1038 at SH 130 Plaza 4, charged 2026-09-29 at 15:52:26Z.\n\nThe most recent earlier charge at that same plaza is T2368 on 2026-09-24, five days before, so it is well outside the 10-minute window. The latest earlier charge on the plate overall is T2411 on 2026-09-28 at SH 45 SE, a different plaza and a different day.\n\nNo earlier charge for this plate at this plaza falls within 10 minutes, so there is no duplicate toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1038 at SH 130 Plaza 4 within 10 minutes; the nearest prior charge there was 2026-09-24, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsboDoNB8a7KPLr83SK",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4815,
+      "output_tokens": 261,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2451 on plate TX-1038 at SH 130 Plaza 4, charged 2026-09-29 at 15:52:26Z.\n\nThe most recent earlier charge at that same plaza is T2368 on 2026-09-24, five days before, so it is well outside the 10-minute window. The latest earlier charge on the plate overall is T2411 on 2026-09-28 at SH 45 SE, a different plaza and a different day.\n\nNo earlier charge for this plate at this plaza falls within 10 minutes, so there is no duplicate toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1038 at SH 130 Plaza 4 within 10 minutes; the nearest prior charge there was 2026-09-24, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4815,
+    "output_tokens": 261,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

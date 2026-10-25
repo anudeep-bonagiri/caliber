@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012598,
+  "durationMs": 2701,
+  "httpStatus": 200,
+  "id": "3866",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged within ~0.1 mile of the station at 16:30 and 16:35 (purchase 16:33:57), and 45.5 gal is well under the 100-gal tank limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 16:33:57Z at the station (28.3325, -98.1178). The nearest pings are 16:30:07 at (28.33228, -98.11783) and 16:35:00 at (28.3326, -98.1176). Both are within a fraction of a mile of the station, so the location check passes.\n\nCapacity: 45.5 gallons against a 100-gallon tank (limit 110) passes.\n\nNo other policy applies to a fuel-card purchase, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged within ~0.1 mile of the station at 16:30 and 16:35 (purchase 16:33:57), and 45.5 gal is well under the 100-gal tank limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsm3UYdc2XRmeJ7ckuy",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5109,
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 16:33:57Z at the station (28.3325, -98.1178). The nearest pings are 16:30:07 at (28.33228, -98.11783) and 16:35:00 at (28.3326, -98.1176). Both are within a fraction of a mile of the station, so the location check passes.\n\nCapacity: 45.5 gallons against a 100-gallon tank (limit 110) passes.\n\nNo other policy applies to a fuel-card purchase, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged within ~0.1 mile of the station at 16:30 and 16:35 (purchase 16:33:57), and 45.5 gal is well under the 100-gal tank limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5109,
+    "output_tokens": 238,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9275,
+  "httpStatus": 200,
+  "id": "T2673",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T2673 at NTTA-MCLB-01 is within 10 minutes of earlier toll T2417 at the same plaza on day 64."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2673 at NTTA-MCLB-01 is within 10 minutes of earlier toll T2417 at the same plaza on day 64.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885095,
+    "id": "chatcmpl-b6724290-4f50-4d11-8e14-673fee18b040",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 65,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 9816,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 3216,
+        "created_cache_tokens": 5360,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 9881
+    }
+  },
+  "startedAt": "2026-10-24T23:38:07+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T2673 at NTTA-MCLB-01 is within 10 minutes of earlier toll T2417 at the same plaza on day 64.\"\n}",
+  "usage": {
+    "completion_tokens": 65,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 9816,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 3216,
+      "created_cache_tokens": 5360,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 9881
+  }
+}

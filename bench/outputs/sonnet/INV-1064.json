@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00989,
+  "durationMs": 4737,
+  "httpStatus": 200,
+  "id": "INV-1064",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1064 (32,900 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. Its unit price equals the contract rate of 32,900. Quantity 1 does not exceed the received quantity of 1. The vendor's bank change on day 42 came after receipt on day 36, and the invoice is under 5,000 dollars. No hold rule applies. INV-1055 also billed PO-1002, but no policy rule covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiQsKEAgTGAI4AUIIdGhpbmtpbmcSDPWeC16cDtVtja9jrRoM3EPGJMRRlS7KjRKgIjAdAQvmx+DJp5jOUmzUVEjlAENUSckOTn6NAr/601eBLr03yo87Fs0JaT5cHhu2pdIqpgq20PHNwQ4Si4S5hyJZX+O4+LJeB9uJ3azq7IsiXemQx6GGaHaKF/X+2FlUktFy6U6JfmIvBbe36pF1btbY3WbO699ddQtSnQATuN+DG3Lj/Ci3WVXAH3uPiT6j30QT8aSGQWe4YhB+xSj119VcHnYYwlpqnWuuRyPGRrMrHdtGOPWvAz9cA8mTNLOE33IyO0iVMMlIrOdRWIroeixJ9530+QLDdrVQoL9Gwg60QX/KZfUkP5KRtbRURYPyGw3jTWIQYWRNGnaO5VGmsy/r+nWAAnDY3ONvm9Of0WPls7ZxFJxTRGh7CDDZgv0BWFownOU9jQC5LCgF1qkOdMVqDBzR3lO5QDLPg3zqiFWw/uHiU2ILQbUohktaDk6nVt1njzHz5ZBynX9a2hkBUFgznVrisVGvFsjsrPCpk3puQVJH9ezGWE1Pp1/sIjJHffWRI7Gx07QnS66IovpRj47lxW0ivCcdf7iXdQAu4UM+qylWL1jB2KxFGdZvoHy8/fcDe+0aQkLe7COe2SUCD3YkBxwBayRtxRvXOp61H8e4sW9Bnkhbhh4+rbuBIcholkWPcyfcfcSPIy2kyuALSQQ6l7Hiccqpt8qFgqLePSj91L23BGAsWwGTC9wLCbHVBsfydanosNv9tqVFrcdbxs9pAppoRgYfQWv1flW/2AUqBvZ1MKi/8lG6aA82uI48PveWtPQwLvYZeSsfPHmzJ5wAFjH2Lh4M/2lAikxtjHYmEjeNTSWG927N+e8zyFrdG3DEIfUGKfYMYq8rbxweiOlAuw6cb11CpQ0IBl8St/6yK986pxZBHJTMNnk4gBGTs9v8gdrtqo0Y4jZY1C2lUYz88f3jmI1VF4pqoRxiaZid+s5guawRN78+g1fVnmN2SGqY6wDpRaqpl4lxRMnb3iIr0gVum/e0cvD+m+NV6pr/Tfx8iQ6Lt3Jsmpm/tjrV5z+bnfU0h/cQLRdmi64oom0r36I+lhZSZ3v8/J+ZXBN1lk+vXozdG8rhsGMoPybx5ut+F8grnCjgdAozH1gD8TzCSsRoeJEz4cHvlEZxA5gkkY8INrwJ4Oh7UaUFJsZO/6HZmZ5AdW4c2hR3CnyKm/sWQMrBDmF6BXPf9pW+0jN54iIdRhqsXTHmmPVj/QBKN3OftSIdR1RXMe3tW4sa34X8Wv1fYPcFlPLbJ8A3Rg91HIIumHa2TYgzIojifubXWP0hFYxsxX8xHXxQthyOCyecnWEU917tQlrPvqkHzjL2r39ZKlsZTnseZKOOkEveKBlqzW1ls2NAJ/LQk3Ooe3uiQ8V/u+O10F5I5aQXF27E1+0LRwSych1L5YGZYIh2mWF7JgvYMjT1LdHtYh+r/rz+e5EpkmSUCZnQJ3f5BqFF0F7rc7NGJxIasE3EY933//gEh97Pbdo6jLnneNCyfosmV/tCFyPbh0vcpHqasqx2IFmXxaCOO/5GyWeuwlnpLx9k1F4sUleDMIfIajEZwjFREQH7Y4hPF0WERVgZdWNmn0ZkyJjUy63eMJ8zkNM38ApEPEhoWVpw/tsGuRhQ9XMzynkVh0EHSu+EPNGUviqg3NHeTLCsHBTIBSzK03Hv6bwSuyobELgVhbU3jezS8t1omgUi2BOVt6/nhG7DrrE+g8bHzaw7BdlX/csqCla4gZsPo/o2cM74AIfQn8zrIhD11MDfZLFpSQDldQyvX5lUbUDMh0fW0Xovs9QOptoegtbwQwjocIiUaPDCItxZknaBdIQ/VlvGORsHGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1064 (32,900 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. Its unit price equals the contract rate of 32,900. Quantity 1 does not exceed the received quantity of 1. The vendor's bank change on day 42 came after receipt on day 36, and the invoice is under 5,000 dollars. No hold rule applies. INV-1055 also billed PO-1002, but no policy rule covers that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt91svE5fJGM2GqQfDb",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2410,
+      "output_tokens": 507,
+      "output_tokens_details": {
+        "thinking_tokens": 339
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1064 (32,900 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. Its unit price equals the contract rate of 32,900. Quantity 1 does not exceed the received quantity of 1. The vendor's bank change on day 42 came after receipt on day 36, and the invoice is under 5,000 dollars. No hold rule applies. INV-1055 also billed PO-1002, but no policy rule covers that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2410,
+    "output_tokens": 507,
+    "output_tokens_details": {
+      "thinking_tokens": 339
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

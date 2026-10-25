@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012398,
+  "durationMs": 3888,
+  "httpStatus": 200,
+  "id": "INV-1144",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies. The unit price of 49,800 is under the contract rate of 50,800. The billed quantity of 2 matches the received quantity of 2. The amount of 99,600 is below the 500,000 bank-change threshold. The only earlier invoice for the same amount (INV-1105) cites the same PO-1020, so it is not a duplicate_invoice under a different PO."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2wkKEAgTGAI4AUIIdGhpbmtpbmcSDCqj/gbZsKb4ReRHhBoMwocgTJCriYGO6/7EIjA3wjpBQpQfGT7ZN0FefU8/RU0U4jpJVg6aAJSj+tvnNT+nOUFHTpSKlvrBURDXi40q+AjMy87dGp5uidiD9M+Kq+LN1wlXSMHJ/YxXuDpqbrTZocTB2oZGWG6+1z0c5a9qeMBCYnAw46bqzjeDsGMvKB4ahxAL+YJiLy0WrCLhoINlSAMKs9P6nIzEC3je9ZZzGP3Y8AuKy7vD8PWZ1Yjw17IRapVV4IA1MYRCuFWJ1RQNzluAD2VOlc6y6WAxz99oojNIjLmK7jgbjsDcrYZ84oRzk4G997+fkd2CihrT7MyJKc1YaS6WVRpnA2xG00ZsogW/WrKZBOnhhVCilTx5/zqEg4RlhaVg2tnihNn0L2nIrvGd/VSCS8ejt/nUdlBVKazXyuLC/5kj9mavOFp+Ha+9zUU4Vu/Ui+KTiOaAJD4hb4R7ul9U3EbHA9tESSd+RhdbyziQzpodY8gNGTxK9Gz2xP/dErnO0cdY9miHILzvhlCGBJuLLSRVlEwaI/xwnTiROS+X58zvx7BXCSgFv2QSxUHLJRKU+r2Oi0OZem5poSK730vw8k8VlHMCsYY4a+h4dk406JLQC0a2ur8ivhRLZLBiWFhS6fgQnDfT1Cy1BG4Dn94vMAxLyjFZwfMbiOl5F3lVG4AO68Ldli9gNifCSu4DdZgcoPZjlpJjIL84znQE+/Pnf337Nqo6lmHrAbAEDHMgbxIaJMyAsWb7ML6VUFNXvzagt2iSVHz8kujepZyMzEprJbV6TSi/JRjUvxzz8KPqn2+avvt9e7Gkm42JuLzzXnBw1BmlASq6D4YA4LiPR4RmXGBVx3WVd5v2N7nR6HbYZqdEdzBtVh34EaPDENgsS0oqXxC5Pp+INchcVjooxpfvG5q73j41AmC4qvNl0duBrv5zrLxGoduXb+fSQrn/baJMiutq9crraQO792Hg6Q5mNwvvf5YOoqWqLTQl92km3aCWrN6LZ2tsysCbfVnlOSv6aVodo/NjfABT5x2RBTCjE/KLodEveoE7l9rvyrxxcyNlUfAwo8xXHN9vtAXsNuTjWiWAbyxEXWURPlgNGJ+JMb4ngj4/SfOC4DiJs1Vg6rNXWBXgXD/GPY5DvMeBzO+lTMsgra8GkgyZlcwtXlzc7ppnBGlrXUP0ViggvaE2ujX+Usy3tjUXc0TmANjrAXwyl4xCTWolzkS1Oy5prKfw9y+2hynitBrfzReoGEkmnCD+fggvXQqvFHLXHaTm3mFRhJlxnBteHu7t+ZOMU8kuYPWSd9GtVyPUmtVQ87eK5eRQRPLdiS5imJrWBfw3Qke14ImlTyT6pJns3elXogIov119WU/xbQgebVa9ACArxvGovSKxxk0YYdqoVOPT7svFmYaIDY0rWPSyB8C8ofGRbzsWodPqtsVojMw3fwbLPjvilXTM5lX6CAFrZ/dYXmm3bd7bdN2W44jFAl6PlVQ4RiffOF07WCUfMBJIV1I0httDvBYZcuBxAGqDqSPJ7Scw2IBYgs2+Zl2iOSD3C1V/tFQFed7i+Buwcs77LGYOg8nmE0cUTSW1uhBfN88MbirkB1MXCC8snlnA+GWIgLzOtZgLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. The unit price of 49,800 is under the contract rate of 50,800. The billed quantity of 2 matches the received quantity of 2. The amount of 99,600 is below the 500,000 bank-change threshold. The only earlier invoice for the same amount (INV-1105) cites the same PO-1020, so it is not a duplicate_invoice under a different PO.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5ESc8H5gKG1oBUPF7",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4059,
+      "output_tokens": 428,
+      "output_tokens_details": {
+        "thinking_tokens": 286
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. The unit price of 49,800 is under the contract rate of 50,800. The billed quantity of 2 matches the received quantity of 2. The amount of 99,600 is below the 500,000 bank-change threshold. The only earlier invoice for the same amount (INV-1105) cites the same PO-1020, so it is not a duplicate_invoice under a different PO.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4059,
+    "output_tokens": 428,
+    "output_tokens_details": {
+      "thinking_tokens": 286
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

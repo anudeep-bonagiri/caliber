@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011612,
+  "durationMs": 3071,
+  "httpStatus": 200,
+  "id": "1988",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 3 pinged within about 0.03 miles of the Pearsall station at 13:45:00Z, 37 seconds after the purchase, and 61.6 gal is under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 13:44:23Z at Pilot 1029 in Pearsall (28.8922, -99.095).\n\n**Location:** The truck pinged at 13:45:00Z at 28.89237, -99.09507, which is within a few hundredths of a mile of the station. Its ping at 13:41:30Z was also essentially at the station. The location check passes.\n\n**Capacity:** The purchase was 61.6 gallons. The tank holds 120 gallons, so the limit is 132 gallons. The purchase is under that.\n\nNo other policy rule applies to a fuel-card purchase, so the payment is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 3 pinged within about 0.03 miles of the Pearsall station at 13:45:00Z, 37 seconds after the purchase, and 61.6 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdr6zaPqw29rSbqk7A",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4306,
+      "output_tokens": 300,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 13:44:23Z at Pilot 1029 in Pearsall (28.8922, -99.095).\n\n**Location:** The truck pinged at 13:45:00Z at 28.89237, -99.09507, which is within a few hundredths of a mile of the station. Its ping at 13:41:30Z was also essentially at the station. The location check passes.\n\n**Capacity:** The purchase was 61.6 gallons. The tank holds 120 gallons, so the limit is 132 gallons. The purchase is under that.\n\nNo other policy rule applies to a fuel-card purchase, so the payment is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 3 pinged within about 0.03 miles of the Pearsall station at 13:45:00Z, 37 seconds after the purchase, and 61.6 gal is under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4306,
+    "output_tokens": 300,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00807,
+  "durationMs": 2850,
+  "httpStatus": 200,
+  "id": "INV-1074",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1074 bills a brake job at 148,250 cents against a valid contract rate of 135,500 cents, which is about 9.4% over and above the 5% tolerance. The other checks pass: no earlier invoice has the same amount, billed quantity 1 matches received quantity 1, and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShgcKEAgTGAI4AUIIdGhpbmtpbmcSDIhxOLrRNvC3V7w/IRoMQZDj6L1wpa5lUx7SIjAdq/lE/K7qLLVuWHb9cskn3nIm5Y47edtlt4k9YOaq4/XqkdnCMCDOdTuXwnQf+QMqowYAyJkMv9m41PCbYFHsJiP0/B6D10MAl+d3tUy0aZyLk+M4QWAAqg9T7AvRaRRx08mx1szEsC7+RzqFNPGGpoQY72+TnOtZGVJscE+bRPq+KU6RGtYbvc79SoqBEkHpeuECUjgBlefIU9Mg9SBtScsrVpqFooq8T/EvpoC+9rVgv/nGmi0OtQ0FvDujZh9k0+YZ6+XFblk4naWAx814YCazSSUATTPhJiUO/9e1tQ8xE4NtEuR+iLBWY8jxJF1BgghYzERgQQJO+B3okXQWSwpjLMX81NHjLrNQ4GfKhEeWRxkzdsICw1z1NsJKLoOUN1EJ2eqkmWVjVFByw6OqTJsW3j3RRTcX1ja+yH4b7ITbR1EfGcxaR7zVxqUIyYo5oU4PKqwHbBE+uFoUOVil3t8CyGy5gsi57TuEeribMb47ngV9oJ7mHuKgexcT+3+1FBt3yHB2iSBEyixTpUC5Ir4mlmVpgQ3V4cNDduujJ57GbFp6wQUjvUfBjNmL8yG2ivM9ytO8xChL3ChezsaHyKZIYaWanFSwZrmGdyOuW4DtwGo4b6RpFUDTnNWkCyyOfobOM9D72aCQP9GgjkIMJ13Sf4Yptu+HHKmkLvVUMtvvY/WEqIONaBjifdOeUazsixAMqNE0rxkAFncTysKXBfRhgX1QIGjaqUYpoV3bvlA0hFpG3y7s9zIb6o01OX33RNTsp/wJUpGlaytoqJbMc7SmbOD4h7zWWtFT3LSAZSAO4RvJlJ67UHTpMKmzi4RAHQm5CBuFizkD5lPv/BdClgEeXzi1cWds4qKHCOlQcWUr42yqZE3a/W4jkYG4pGLdBZx0iVEvWvs0+Rs9rB+S9XU17TsrDIW2lqA7sotThXuia/jnPT4Ub/CjlJen8wVrBxPZ0jvbRkiWJBSeTBqIi4beHylHKR0Wg27TsKaiCSf58YvitCn0dPL5of4FptCe5My13ZaHcIrHYEm4LPZAf/sqQOmCFeJ22Vi3nkYMGOLs8n9aOy4F2aVkzNAmvAXKwi5dLxOJJ6ANJWm3Y9ynxknkWtEX4APWudUJyXmLHtQV/7GDJRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1074 bills a brake job at 148,250 cents against a valid contract rate of 135,500 cents, which is about 9.4% over and above the 5% tolerance. The other checks pass: no earlier invoice has the same amount, billed quantity 1 matches received quantity 1, and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMst92cqwEsS1b2ofeiS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2735,
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "thinking_tokens": 128
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1074 bills a brake job at 148,250 cents against a valid contract rate of 135,500 cents, which is about 9.4% over and above the 5% tolerance. The other checks pass: no earlier invoice has the same amount, billed quantity 1 matches received quantity 1, and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2735,
+    "output_tokens": 260,
+    "output_tokens_details": {
+      "thinking_tokens": 128
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

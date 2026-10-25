@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013236,
+  "durationMs": 2986,
+  "httpStatus": 200,
+  "id": "5432",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The assigned truck's 14:40Z ping, 4 minutes before the purchase, was about 0.02 miles from the Temple station, well inside 25 miles. 49.5 gal is under the 220 gal limit (200 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiwcKEAgTGAI4AUIIdGhpbmtpbmcSDOsFCAlcbg7eH6l05RoMBN3AdW7DpJ/0FMAMIjDdlR2XjBfIfFDY/4zpoOwPJvdRK16WYF6mNTXDhnZMLz4NTWLqj4vCGz1jqucBpcQqqAajT8flQVXRD8Fq2+lfwgAz7I7KaE4+PxjtbjXLIVvqGQVRM3dPk9DS7y4ugXmKYGtscLw2nGfaxd8CvoaoxrS1cY8KogIqrzO4wrrJKEk9UHrh5U8zzn8qmIY3Qm52NV7UH2TJQwv8ftG2YqQm4OrZl/UCPmu2b559m9XDqmz/0YdR1zv0vJ93EzwjscLRLWJNmTzEIlSbvTJI5bTtHjVBEwEzQOfHIKuHosDNMiW4en5Q2+Pi/dLWoLDpX+J8bdaHF4jusLiBuK444MIZpLkF2z+uUd5SdTd04mHPZtsIQm9oUoIhIUwoKP7jjd0eG+bpUEaJsld0Bp5qapOja28anoNHTqrRmoeGTwkmBngxp+ZjZsPNclG8MeQHh/2w7431ILGC2c80FTNVAsjXSmfuvOBWVWjN1WJVrDUoA8wzdRB+ogLOEgzJWnHD0qYxcCEoUdtmA2IBT9/YtQ9RiSXA7gl/0fHx16KCBcG+oJaErZSfnQAiUkLKjwGTV4vFR/UAIHyNTkwVu2W9XwIPR/JxOPa2LFmL85dIy6rXpoTIGwn08bVYFEga4FQ8I4qvqn7Ms0p4xQEyEYAynEY4UxLtcQOS5IU81aiwAq2TR0/LOMt8FPvW7fLllcJBmOx7ak4mQBUKDA9N2ggMnkMXR/yE/bJ7QQOCsmpmBTLKrf+S6psMUZ/kSLKE1tDja2icbFoyjashgQ0Nz7eLaNxurwZo1rbF3GfaUnCncP29xVr3ZYQky+IGmnze2935JLX/PF7lg6hhhOC8HAR2LBHb3s+Pb3URzmIjQbleOAd4LcHfd8AFzUyYfLihNVTi2pGlN2HasNL/I0SF5pFoI157ZFXTNAufLsV3RgX6wx9ZNRAX7PihzYfI4ZDecl7qU35millY2IffZOL0OGXPpBopyzYcxLATwVMxKYkPckdT6ZcPK1aPHKwDTgZgSuhvLx/s4KMMS/ngoUwHCV7j5dMSlC3MksHmxpPeXQ8JpvSqmPsPN7uJZwJgi15c0YvSTJ4jZ3dbBQj98bFgGlCk7oZxYIAJ5yIvb1BH30OL3unvrzUy0UViKZw4wRJBGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The assigned truck's 14:40Z ping, 4 minutes before the purchase, was about 0.02 miles from the Temple station, well inside 25 miles. 49.5 gal is under the 220 gal limit (200 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt313PpxHGaPw74ed26",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5253,
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "thinking_tokens": 173
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The assigned truck's 14:40Z ping, 4 minutes before the purchase, was about 0.02 miles from the Temple station, well inside 25 miles. 49.5 gal is under the 220 gal limit (200 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5253,
+    "output_tokens": 273,
+    "output_tokens_details": {
+      "thinking_tokens": 173
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

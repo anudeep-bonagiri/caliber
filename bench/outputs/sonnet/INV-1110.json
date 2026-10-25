@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010818,
+  "durationMs": 4825,
+  "httpStatus": 200,
+  "id": "INV-1110",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1110 matches no hold rule. The unit price of 54,500 equals the contract rate. Billed qty 4 does not exceed received qty 4. The only earlier invoice for 218,000 is INV-1035 on day 20, which is outside the 30-day window and cites the same PO-1010. The vendor's bank change on day 18 is far outside the 7-business-day window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1110 matches no hold rule. The unit price of 54,500 equals the contract rate. Billed qty 4 does not exceed received qty 4. The only earlier invoice for 218,000 is INV-1035 on day 20, which is outside the 30-day window and cites the same PO-1010. The vendor's bank change on day 18 is far outside the 7-business-day window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMse3MumFenq7MZZNPKq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2739,
+      "output_tokens": 534,
+      "output_tokens_details": {
+        "thinking_tokens": 394
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:49+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1110 matches no hold rule. The unit price of 54,500 equals the contract rate. Billed qty 4 does not exceed received qty 4. The only earlier invoice for 218,000 is INV-1035 on day 20, which is outside the 30-day window and cites the same PO-1010. The vendor's bank change on day 18 is far outside the 7-business-day window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2739,
+    "output_tokens": 534,
+    "output_tokens_details": {
+      "thinking_tokens": 394
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012072,
+  "durationMs": 4297,
+  "httpStatus": 200,
+  "id": "INV-1156",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies: unit price 33,900 matches the contract, qty 2 equals received qty 2, no earlier invoice has the amount 72,300, and there was no bank change and the amount is under 5,000 dollars. Note for follow-up: the total of 72,300 is 4,500 cents more than 2 x 33,900 = 67,800, which is not a listed hold condition."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzAoKEAgTGAI4AUIIdGhpbmtpbmcSDIY7VzUpMxOpg1t4hhoMmJawCRRgMd0iLXXzIjBzgxhuYWbCL3wgpUaD7RO/Iid8zSqWreNdHcVCAnYykgT0x8kxIt+iDpjUld3Dc5Uq6QnDYPAcZHsvGmoJOSJ7Yz8MOhwH7JAepDps2TCjDkKGrUfcT45I1ZHF9FsBYBfC9jlWEmeumyUTdxMXzhiS/45SieiTRbFlWPFHJc7pf6M8O0+y3CulUcjMXNaMlt+yz5kkvpOCQHxdUcZcvEG6lbXT75ko7KGMQF/NeVGmjuPgRM8ayJvHyMdLQumcPphrfyEGsY7eGPjLc/JvRx93DGzPvobHan/w8gnBcTIutXQboc8yDS5oNT9rKQbREbblwMrDGAj7QXacjCEaknSB2sMKQNC7JQbRhGbfC7k5sosGVE4D1iNOBC/wHwbyj7R5RHM4bNoo6RQ66i/6PS9mPhmbwzBCznXFBnNjXQcFNSZcYGxHCxl07kAktibsGE4d5QMKZG1BRPyEfxgb8r0BtoG7pLku8X31qqpuoE7aEWAGli0FnEYTfYrLOW3GI2OBVFTshEmetpXQsj29ldV9cZcVhMTHeJjb8V2nX/Vx/CNSo96wdVTqChi6COAVJcCBXmEFXYPh9u9gOSGoDZtnWqNzDZcAIgfHx9hnl9CKpCCOqDEoxPG/t59QUbtkeZfDFgIPyXoSJkv8aSoSidqIGr3la+nkHUvOMxEdIgwcAWeIze5vZMcID8xTSDRc8W/i8t3dE1+94UcrHMKDNf1OB9iZuOp/1CLf0545ttOYy+r386p7EKeftZahRKR1NjxrLUPnxmovRormnC6fyWqn6nZNAD8gbpD1cSlfw4PlwFuhaRzh/7S7K6NbB1rYAHslVAuRJYG3sW0Qa5Xe8cs0l9TvlXzreyvJyYyC9VXAD8YZQT5OMtTwV2pKDY4pbN0vl1PBCwhzKGK++wmIH+SJq2DqBIV3Hg9Ocjitsey+VTNmBhz9L1/hE6a36sQi50v+SjuTh3hO0F/E8pgB4rsCgGN0C5NurvSCpwPQPdNuDBKWZEdO/kyUodbJN9LXR9qA/UizTGpRKrQPixiD8yfNXbKOAglU43k4zmvVZqO0D/8+7VoBxEKhvqDA0fQ545zqSUMPy3D6dGZ0donBCW9Kv4wiv418rMmPNsYwPVEw3dln1lTSHc5aClUufPnj9fPZj18Jw0PG7Sd1F933S6NTPaUl2qN03Dg43XWZhBmd+e0zUyA9yT90UoaIZy7Qn5c5c65tW3Xr/QbRB6SWsZTq0AmZwmuJSieo9Ac1f/1wUSENb+BBReBPRH2iiy3SE+CnFALNVwjCk1Cl2eJRz+8pVJnqmSW3HscJhy2J50fSni1RKzE1SEuW0qpWAaOrP/0SPWDjDUiN+BKvLxWcf+8W1OFuhvAFRJZ7lFhNig3XIGj3LV4tZiuTiNhIoSnLx0YixOLBOfhW9BgQgmh1MdFe7Ss06VKZ2YIahvfHzl/2HsJ7ciS8H9dTs/ZNgM+Nm+uH3biUrlnn8HEYj105MeoqFrntmaCRodCodNcdDKayKlqmNgFmEL01NSFePKf4RrkrrIuvo76fAS2JIG0siLGASd2ka3BHy/VEUjM16agUvka9v1gn2w+6Hdvt+66FcK5twUP+c5Qj/wS0Po6w2JBHWU2qID/xwt5eA2kWX9NSGUvjtodS7Q7yuIf6+/yYNxT5IkQVh0Mq2IZ7bJP9cJ09B+PoK9g1u6qmSpUWLJvJn/xj1unpARBy1AxY808cNNZsMQ0eQxuIx453vFIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 33,900 matches the contract, qty 2 equals received qty 2, no earlier invoice has the amount 72,300, and there was no bank change and the amount is under 5,000 dollars. Note for follow-up: the total of 72,300 is 4,500 cents more than 2 x 33,900 = 67,800, which is not a listed hold condition.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsgRWyEW7kgJy7k5n9w",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3831,
+      "output_tokens": 441,
+      "output_tokens_details": {
+        "thinking_tokens": 300
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:21+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies: unit price 33,900 matches the contract, qty 2 equals received qty 2, no earlier invoice has the amount 72,300, and there was no bank change and the amount is under 5,000 dollars. Note for follow-up: the total of 72,300 is 4,500 cents more than 2 x 33,900 = 67,800, which is not a listed hold condition.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3831,
+    "output_tokens": 441,
+    "output_tokens_details": {
+      "thinking_tokens": 300
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

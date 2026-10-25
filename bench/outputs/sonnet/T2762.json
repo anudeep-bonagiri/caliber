@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.021128,
+  "durationMs": 3168,
+  "httpStatus": 200,
+  "id": "T2762",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1037 at SH 130 Plaza 1 within 10 minutes; the last charge there was day 73, and the nearby T2758 (33 min earlier) was at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T2762 at SH 130 Mainlane Plaza 1 (Hutto), charged at 14:49:37Z on day 77.\n\nThe earlier tolls for this plate at that plaza don't fall within 10 minutes. The most recent one at the same plaza is T2655 on day 73 at 15:04Z, four days earlier.\n\nThe closest earlier charge in time is T2758 at 14:16:45Z, about 33 minutes before, and it was at a different plaza (SH 45 SE Creedmoor). The duplicate rule requires the same plaza within 10 minutes, so it doesn't apply. No other policy rule covers this transaction.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1037 at SH 130 Plaza 1 within 10 minutes; the last charge there was day 73, and the nearby T2758 (33 min earlier) was at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1GP5DXiEu3m1qV55d",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 9059,
+      "output_tokens": 301,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T2762 at SH 130 Mainlane Plaza 1 (Hutto), charged at 14:49:37Z on day 77.\n\nThe earlier tolls for this plate at that plaza don't fall within 10 minutes. The most recent one at the same plaza is T2655 on day 73 at 15:04Z, four days earlier.\n\nThe closest earlier charge in time is T2758 at 14:16:45Z, about 33 minutes before, and it was at a different plaza (SH 45 SE Creedmoor). The duplicate rule requires the same plaza within 10 minutes, so it doesn't apply. No other policy rule covers this transaction.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1037 at SH 130 Plaza 1 within 10 minutes; the last charge there was day 73, and the nearby T2758 (33 min earlier) was at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 9059,
+    "output_tokens": 301,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

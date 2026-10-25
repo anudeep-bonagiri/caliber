@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011742,
+  "durationMs": 3952,
+  "httpStatus": 200,
+  "id": "INV-1162",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1162 bills 1 DPF clean at 48,800 cents, which is below the 51,700 contract rate and matches PO-1009's unit price. The billed quantity equals the received quantity of 1. No earlier invoice for 48,800 from this vendor falls within the previous 30 days (days 54-83). The vendor's bank details never changed and the invoice is under 5,000 dollars."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSngoKEAgTGAI4AUIIdGhpbmtpbmcSDIhgVhWAfbwakvzvQxoMMwTvQDmI0Ryme67zIjDJ1ho9XflwFukl7jU4SJBJ7koal6TrlXSWTqqtfHxZMGbwxc0qhD+gm95qvG5LmvAquwnLgpCSwQpc6UothHBLKWZtOBHrjivNobkZXCl2cypK5maUPEaCFkmnfhfkvtOYamKtHGtDzHY26ATbzormlvDc0NV+oJ/rGqtow+LlqvoQ22H2AzS3TuCIzfm0joautK3HF7Cd47btKaGIR4RtLM+21J+Bu5gabuodXOcASlc9fKK9t/jc9MXll8ODmFEwSmehH7cgTUUPAg352TWH6TRuh71v1MzyRl6ySMuzBtZSKVpVOdM0lGI3+ttbcC7zuVbZOVsUyXuK4Z8D2omjwYYYQOg3KbUh9QhnpuvOMrgGEdNT2na9nUg/+68ptW5a5DKDFBNxIgY2PNVpEemuKySkc+Z8ID0Vi6GHjs3gN2gGAIKoqvSEsuMuZBL5s4ZPQT950xQG0Lo8aAIx54GxSOJX1asoh+OqMyERBXIVRh1RzDSlh6uMJGVLALN5IF1y8TSew4lpF9K705SIUTX7KuyJ7bQ5xuKmEgjOVhrawz9c+XsXw/rUXPQL1Cd0kesb/Hu+5DlVzXvvVPZYKwxVxyu6jS7DUZMtq2iIHb8a/51NB+S0CuvVYq4vsRfYEFRlDwD1OV+tfmn1uh8OYV0GOj+UcSgJFyvySA5PG3IeEjKtDmdEQ3TaHXxbhpoyr3IrK+t9xZeaDNBy2j5Yof2pvmtq/L5q+n12RvD2YKF/NA0FHsUpPUWpGKAsU8SXgNGTdi1FC2XcISnSr9d/5dl6yeL8OEQUajP3AoXox3pxdme9pHPWPuI36v5voCk/lcvq+3WgCblp+HHhtQlifVETkblK4SR1xmUUMIggFuFSgQofyFjyPB3ZNUrTIwOqaP2kjUQdXUs4jclhdzFKscZ2gRDON+p3EuaGz8KRFKaHWGkyVfSuTyl+7l2ngEudocx81CIPfUzyYo/HmbzwpBbRjkS/I2DA4LLqXLiVEDUkhktVZM92XtP38jaolxF5Be0iG0UTJ2TB9hYUlk8B8z743/fDX4o0+HKAOvOK0Eggt1LOML8UjyaC2JX21el9c09+fkYVkJpdz2oIl5DXv6BOsCUy3C13mz3mScQp4A7dfXv3Xu8Ut85Om/Uo0zNQaYVDIa4cIhcIUx3m1WU5EurM5x4911g5nAY1LImRjlWPGGN2V1gbqu8/su+TZgaaDnmm9cQVgGC7oq5ZtTlcn0YIQeG4WiDb+KaoGSy9SkRGRNLVxr4ZyP5Gz1lSk6MTK/mz8B3uDFHTlfH3Wnnib9Na04ItPszaCdrogCYOuhP5fcYtO3L+bvZcPzQ+4zm6ECc0hSW3qqnpFsapJd6g42Q5pv4cvNfgJbfZA6UazlMrFWzfibVqCmdcEqp9uPLLx2wM/59pTwvYml70YmHzNimxwcbeKqhUlm7P8++XTU5UiL8PcfHrMlXKK/69+WvIA2mWEbsgkOiU8n9+Kz3LG8kj4nE0OL94eyBe8r93RMUsqgSPtYcJqJdtBd+VmUaT8cl3XOeLRkib1fUewZxc+49WPuFt7+yAt7H3VpoMxp1vqYpfmxgUpZbV+HpY9teuRJX8OqFgdNgdGVHajIzW3FciUS5uLptm4eUyXEDtE4dILBN9BRd+KoWqa3BCuCdfCiJ0b+Ksmzn5JZmQr/0rrhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1162 bills 1 DPF clean at 48,800 cents, which is below the 51,700 contract rate and matches PO-1009's unit price. The billed quantity equals the received quantity of 1. No earlier invoice for 48,800 from this vendor falls within the previous 30 days (days 54-83). The vendor's bank details never changed and the invoice is under 5,000 dollars.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsfD36irhp4ADJynvnw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3501,
+      "output_tokens": 474,
+      "output_tokens_details": {
+        "thinking_tokens": 328
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1162 bills 1 DPF clean at 48,800 cents, which is below the 51,700 contract rate and matches PO-1009's unit price. The billed quantity equals the received quantity of 1. No earlier invoice for 48,800 from this vendor falls within the previous 30 days (days 54-83). The vendor's bank details never changed and the invoice is under 5,000 dollars.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3501,
+    "output_tokens": 474,
+    "output_tokens_details": {
+      "thinking_tokens": 328
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009232,
+  "durationMs": 3030,
+  "httpStatus": 200,
+  "id": "INV-1139",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1139 ($315.50, shop_labor, no PO) matches no earlier Metroplex invoice amount in the prior 30 days, has no contract or PO to compare for rate or received quantity, is under $5,000, and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjAgKEAgTGAI4AUIIdGhpbmtpbmcSDNH8cEHV9KEjM35OhRoMSt34284lY4MzlFqSIjAKrrhdyIcKribfn0VRxb3DoDZ6f32E1lL0w4bvdrs/J4fgFAP45ROw2xe5Z6HUsNIqqQdDxORtoivbDYAPrtiSven6e1LHZLkPG3AEMv1fWkb2ZgQ/1edGSlOQpV6IECkDP0JSYBEwEuJmAZmx4pGSEZnlCrUmFLMCiry6bG3360HDFZLOorhQcJOVJzuyY9xaoG3XtMz4RB5BImWlO6waLp55SAo8d6jhKEXxQcdqMpv07tDwjDnpS0ZzXMjKLg2ZhrGQU5bFnvtQx+Ry1w5sXQAkJ4HfbUxBwGRsKNmfhxMSRKN8V/72vb4IY9YyZVzFkltJKujh+xo8oJE3dJ0qC1fzViboKo3Dc7+DdcRg3ZDVTIEJU18/Xy+ounLQploRcvst7/p5BKnRetPS01xJl09mBzwA546F8LU4uKLrnR6OqQ7W/JgR7GMPfDg+xPOouz8hIT/IECSzcRSefWQ1UuTB4Gm3k6KSjcVvddFyXuRZzJ02zX4N2oQLIIp8dQ7eePEGR9Qp69Bk+6bHlT0XcliIXSgIqerGAW9pXhEnfWNPSWSoxp/qHVLs4UtgSO58KDzdAYrRUzjYQ71jIZ3FU/9Z4VMzTIooNPMChPU89OiwSPwx+WeL5WAAeer8pgcHTyiNCHNlx0BVBNJkAfykQnOxSCDqb9H1M+IuJlY45ppohuwuXxEbj5MpBF5XrGwhOnGIrbD91AP8/AVR8FrNR7ActjXP2XmRfaeT8gIr/SkZ+uXd1/ETDgZJWL1dFdubpTKuNsGdxh5pAqB2uSY1Cv5DfJWuunKSh6dVPwt3tHJywl2gNVdymL5MihS+1ZrW01LGghp812BaZysr6KwitjtTm1CoLMY+vJlDM8wH9qcnnspR0MFkQUsjrikkhovkplW5zT3NGwQq9AOv0zGvxLT0f+/NM21UzjKz59wqd/yKhtQQOT88XF88f3u+yBmQ+Es5EZ7FAI48aEdeK7U+rsn81ETmfrMbHi0hnRicsusv5X08fhCfNunNPWJfxmo3rctqfciElqd4Hb77MR/2o6f5R7qd1ZDc99tsQRClkKXuKe6tW9bjAYsKsnJR+W+KpzOfLc6bpHriSddDXxgwbH28fU8h9/i04LGjHaIvn7GO9bOJTHF5xembuhCfTAVK1LmQWt0F0CCM3Kc5ZHg+ytnYoLi2tUy6i9rxlm7+ioXnfyIAvFrxp/hIFRCnml48hbNkF+/rjsZlfaOh2iTx3DxU1X0oW8pg1Jf7Yu3OEYSBJHOA6LnVxz3l+UHkZn5C+SUqZ2MA0MGyqreM+ENKbNmD3F8pNLmays8uGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1139 ($315.50, shop_labor, no PO) matches no earlier Metroplex invoice amount in the prior 30 days, has no contract or PO to compare for rate or received quantity, is under $5,000, and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstgqY8QptBNwdgPzLq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3171,
+      "output_tokens": 289,
+      "output_tokens_details": {
+        "thinking_tokens": 187
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1139 ($315.50, shop_labor, no PO) matches no earlier Metroplex invoice amount in the prior 30 days, has no contract or PO to compare for rate or received quantity, is under $5,000, and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3171,
+    "output_tokens": 289,
+    "output_tokens_details": {
+      "thinking_tokens": 187
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

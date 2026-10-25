@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014178,
+  "durationMs": 2982,
+  "httpStatus": 200,
+  "id": "3492",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged at the Waxahachie station (within about 0.1 mi) at 19:29:48Z and 19:30:00Z, and 32.2 gal is under the 110 gal limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 19:34:30Z at Pilot 283 in Waxahachie (32.3865, -96.8483). Several pings fall within 30 minutes of it:\n\n- 19:29:48Z at (32.38632, -96.84804), about 0.02 miles from the station.\n- 19:30:00Z at (32.38624, -96.84856), also well under a mile.\n- 19:45:00Z at (32.38621, -96.84822), also well under a mile.\n\nThe truck was at the station, so there is no location mismatch.\n\nCapacity: 32.2 gallons is well under the 100-gallon tank plus 10 percent (110 gallons).\n\nNo other policy rule applies to a fuel-card purchase, so the payment clears.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged at the Waxahachie station (within about 0.1 mi) at 19:29:48Z and 19:30:00Z, and 32.2 gal is under the 110 gal limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsmiAxxuXgc2uYZFYxf",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5474,
+      "output_tokens": 323,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 19:34:30Z at Pilot 283 in Waxahachie (32.3865, -96.8483). Several pings fall within 30 minutes of it:\n\n- 19:29:48Z at (32.38632, -96.84804), about 0.02 miles from the station.\n- 19:30:00Z at (32.38624, -96.84856), also well under a mile.\n- 19:45:00Z at (32.38621, -96.84822), also well under a mile.\n\nThe truck was at the station, so there is no location mismatch.\n\nCapacity: 32.2 gallons is well under the 100-gallon tank plus 10 percent (110 gallons).\n\nNo other policy rule applies to a fuel-card purchase, so the payment clears.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 35 pinged at the Waxahachie station (within about 0.1 mi) at 19:29:48Z and 19:30:00Z, and 32.2 gal is under the 110 gal limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5474,
+    "output_tokens": 323,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

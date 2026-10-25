@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.004326,
+  "durationMs": 2277,
+  "httpStatus": 200,
+  "id": "INV-1001",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier invoices from this vendor, no contract or PO to compare against, bank details never changed, and the amount is under $5,000, so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSjQcKEAgTGAI4AUIIdGhpbmtpbmcSDKPgXJ5TLdWuSjH72hoMeLhBOjLWKBRscWCyIjBWbqDD/wYsqNmppq1u3m2Oiz/sBln74pb1yx+kBkTCZtd4o3gDi8nhU0cNFkAaoTUqqgZ3GLzkXcWBl5OrjmCXE3OeZDxU6V5+6QGeq/bNDWe7mXMB7hyD1NmNutbPVY7wcBmlwS5U4Qpu08Qs12BHQ+1EkzIpzDZ5L3sNJIy/SbFgbLwQSJqD+I7aplAymQYUsSFyjmg24IsflCXhVUJUlkBf/FsqTrvZrwgy2lk5VZaSkQ7MOin3RU/mO2FoC5TWpg7040bbheLBcMmx2OplpVAHRsRS99i2y3gjLDuyDJUAIZeLEcLFpbLXmm24fH+ALqGSE24+3gq/DoYCnyGhbjHimyKONl3TlX5nDgbYWXGmDsScvMvtcGMDyFuzNP/oJhyUqoSZbNgNW+uZ+n8PAgSyqSkEXrwnAOGThUwZCnYkpYyjfdLQY3Ac3ZPx4QTQGIGtPooTgvd5/dW25nR3b2l2PVIkvND8TtMuErIxWGhCI0ryUMI+j6BC8dKAGnby+TfG1uXD1KNP7xVUKMd/4ABbMO41c+T5Be5PE2yQMvFCEBS8nKRhZ0tIMI4TFn1dq6WqWvRyMSI6jImcQLDYDViTagwxkSNZwzRUxhwcyC0GeMlUMtsSu8yYFOS9Ri0NbwKEj2FHOj3XJ0Le3gzxmxPr2F7JoxB2vlirmwNlBMrbyAWM4pU8tNv1IRj4XxQXzk6SH1/PzpnBbPsv+j3+pLahcPAzgjPgcXdJ+M49ZO3qvgFUnsK1CkguekWCRnbREfUNMNtNI5brkXrMd4XO+q1xmkHeMxVSBDJWOJhZjN7FWx9hbOXfJ1aDMrj7s5yOqNLvj36zS/FhdwPfaxudJg7n7i/EJi7sZEK2ceDIwE2pZJJahePzCiKYTGBPr7MRHCyovHZyq3UNvMl32L5dkxmtbteiivpoHDhrq4nbACHK0CP1faVVbh18ffucL6a2/1R3/h0mE+DD0yRJbN6lSLncdA+1vW9CR9A3bComUQwdYdtN1ZNATo4BlJOCxupQ4XBPG5fsodk6CT4WRbt6n9QWJikKjZhfyfGeTsaUP8HtfJW4JWj72YTE559MFcllSutz3t5HFT5FFP0YG9vZmIfgZX0J0OJLmk+ydj/+Qc12BBm6j5VZUXTKZHgYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No earlier invoices from this vendor, no contract or PO to compare against, bank details never changed, and the amount is under $5,000, so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt2MaPNcLp4KSBGiHYY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1228,
+      "output_tokens": 187,
+      "output_tokens_details": {
+        "thinking_tokens": 120
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No earlier invoices from this vendor, no contract or PO to compare against, bank details never changed, and the amount is under $5,000, so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1228,
+    "output_tokens": 187,
+    "output_tokens_details": {
+      "thinking_tokens": 120
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

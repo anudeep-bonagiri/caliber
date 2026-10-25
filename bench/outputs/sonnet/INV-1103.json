@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010528,
+  "durationMs": 4552,
+  "httpStatus": 200,
+  "id": "INV-1103",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 33900 matches the contract rate, and billed qty 2 equals the PO's received qty 2. The vendor's bank details never changed. The earlier 67800 invoices within 30 days (INV-1049, INV-1068) cite the same PO-1021, not a different PO, so duplicate_invoice does not apply. No hold rule is met."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwwoKEAgTGAI4AUIIdGhpbmtpbmcSDF088RrSO1w7+PYe1xoM53IrFs+yc2mMVbaOIjBheEGjkxKJIwnfRXN+EPFZ1Osu973UAp2sA3WAUEcqye2ygjdZTq1Cvtjm3+52yvkq4AnieiHccAS8zJemayLbH0+1fxfjMpBwf5woq8/bN4rLP3Uxj3TzcvQURNj2KalUw73xNqQWzV83I0tt/s4T+VYGpCaN2zxcfnrMD5fNsRSQF9SUEB6EmfCIl++xRAfJAz3WQHJ8WChHhjpG6UCQojbcxD+G92d4AMFVNxK1zIaVCbzOl5NU8TEx31y/lC9aGx5F84LNEIw8Q+TiGhiiFYdD2JS3pT7BVkBdm99K+Jocaq1+uAUtwwAQqdDIClax8PN5wQo/8TsH+vTUh1woiDLdsTOQU6nuKsxoindIOEhazkENVWZRqhcIo+gS2ZuTlTPjA47oTftOXOmH+UCHQ0veBHBOX0vHuehrFZGFa423idpoekdChGedUuJIqH71y7/xagZcdA3pDd0lqFqIc9UBTbyYRR2htLbc5b73LoFkbJGy47MgmlRTO2esmH1IF9zpzRS5/bbCVMZx5Y7H318nBhZlc6l6IDPjfyJz2saaLe4XaCVZbO1esEruD4oFgKR9eFpOitEwQ57T1jb8wfH+rGKToFpNYEv5MvCnv5H8m9w1GxSFzrpUdH6mQNhsPqUwKFigmzY4+OgkuLwSMrypjwE5z1ZpLjX5ISCg5Dgt6Ej1k/soIHEi8Ydag7e+m5Ltyf2FlXYqK8aJAwAUF4h3Mk7TSGNuXYEbgxTdgk5/Io0nrekNF5WT4KCcXaMlUineA3av8LcWX6t7Nk1XuNGNHjCIxg1GrjGc1PMR68IAdRvBF1gAr+FdVX6AizptASdUuUmGsWQyzbOcJyB8GwJu6k2t1Jhb3oNbijmBbv1HjhxtazwrIWVGYLjHW2uyQQA3gfrvl+PHJgiA1Ny93DXYBmrTofPXG9pWKt3R1Yd2CXwGK/XipyiImge8ZfNde+RFzLaIYj6oaTcVBL0+jwAaaw9sdwebJV4V0YJpqhRJa9IKKI5qeTOQWPKNB+kB3JC3ZDHg9lh+zYxvldHawwc+F+IAa75hJvhfMkm+H8lvk1JzvDKpVlg0yN1x7Kh+87SureGDigDRP5rSydHzPBX8OneA3JHPhRZrMVblqz6ZytOEjmQCkGkg2K+rY1oJmRUqPLzym0IeXtDeiOcFZjYTeWXvhHprahqUYS+F/7QepAe4fzyMmcCERhVTNXmYaDPza2ZbHEdLNkfRgL0b0D+Wj8ObCBbSbRyf3qnAgV4HnQFVHsQvjGCgVWj2KDtTjPmK/yJD7sqrl+3Rb7ZlwGSeFQonDTALhbCK5QKqVXmp54VcWg4xr2eMEz9V34VHg15AEXwp2F3EjGBomnLcPrx62zOlXjfvJIWcfWQiPq2k+C5xDQnNI17kYl5iZvhM3vUHbU3iQQzZ9/7JHYp3gTdzYNbcVnnaLoK38wYqjh3NFpjukutjVPEql/t56ojGihdMCWYmxQOJQ/Sa65tHF1I8kn6FkmoimZ2LDApMBSqpfwyfUhG6T7JKa1zC6IlEmEl0efXnLElkPi6vGYJRdFy9f9bRViSc11gjsw4NRbiiheTv4f8FS90Ew+19463X8BRTqIKnmCKghAh4qzixFclZQD7T7X1JoMw81eo5yDjl72WNYFbDqmp7+y/Vwve2CNzzct2jPp3FUbj3+uwgN8OapRZReru0OqrGC1aseEcigO5YlKzv8D/4RWKTrzkVBXsYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 33900 matches the contract rate, and billed qty 2 equals the PO's received qty 2. The vendor's bank details never changed. The earlier 67800 invoices within 30 days (INV-1049, INV-1068) cite the same PO-1021, not a different PO, so duplicate_invoice does not apply. No hold rule is met.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsv1KZeNeQRETru7QZB",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2989,
+      "output_tokens": 455,
+      "output_tokens_details": {
+        "thinking_tokens": 324
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 33900 matches the contract rate, and billed qty 2 equals the PO's received qty 2. The vendor's bank details never changed. The earlier 67800 invoices within 30 days (INV-1049, INV-1068) cite the same PO-1021, not a different PO, so duplicate_invoice does not apply. No hold rule is met.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2989,
+    "output_tokens": 455,
+    "output_tokens_details": {
+      "thinking_tokens": 324
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

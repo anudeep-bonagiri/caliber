@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011406,
+  "durationMs": 2705,
+  "httpStatus": 200,
+  "id": "3250",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged at the Georgetown station at 15:56 and 16:05 UTC (well under 1 mile away), and 33.9 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 16:02:35Z at Love's in Georgetown (30.6333, -97.678).\n\nLocation: the pings at 15:56:14Z (30.63346, -97.67816) and 16:05:00Z (30.63337, -97.6778) are both within 30 minutes of the purchase and essentially at the station, so the distance is well under 1 mile. The location check passes.\n\nCapacity: 33.9 gallons against a limit of 150 \u00d7 1.1 = 165, so it passes.\n\nNo other policy rule applies to a fuel-card purchase, so it is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 17 pinged at the Georgetown station at 15:56 and 16:05 UTC (well under 1 mile away), and 33.9 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsp8BeGZqheJQmhnVMQ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4303,
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 16:02:35Z at Love's in Georgetown (30.6333, -97.678).\n\nLocation: the pings at 15:56:14Z (30.63346, -97.67816) and 16:05:00Z (30.63337, -97.6778) are both within 30 minutes of the purchase and essentially at the station, so the distance is well under 1 mile. The location check passes.\n\nCapacity: 33.9 gallons against a limit of 150 \u00d7 1.1 = 165, so it passes.\n\nNo other policy rule applies to a fuel-card purchase, so it is cleared.\n\n{\"decision\": \"clear\", \"reason\": \"Truck 17 pinged at the Georgetown station at 15:56 and 16:05 UTC (well under 1 mile away), and 33.9 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4303,
+    "output_tokens": 280,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

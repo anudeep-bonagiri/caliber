@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011486,
+  "durationMs": 2703,
+  "httpStatus": 200,
+  "id": "1740",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23's ping at 15:53:36Z, about 2 minutes before the purchase, was roughly 0.1 mile from the Hillsboro station. The 48.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3QYKEAgTGAI4AUIIdGhpbmtpbmcSDB35WE7BOrEtlOfTRhoMzDwp9dPVC1Bl860SIjDErsiLh6cennPG2fjcqAvpsRkWUj5Op6/z6yGJ9plw33pVOxLJE3vA1EM58qXhSDoq+gV1CtvPi3LeTl4cVapdVUXOWcx/vdM3cYoLl/3ThtT6Gfd/Uuhp2o8Vpz08QjqtwTMGsOjoq8Iqpqp3L4iS4jFdkE6MYheBBGuHb8uZVBWhTyFyRM3K8n1LbQXtWtW1ZJuK25Hjf6fCW3NwUnxiTLnVvwG46uYoZ6NSht0UIKr3L2c/ADf2WeVyoJa+FKBoAE+leZ9+LG0UL8LRC7R1ac6pXBKyQ+oIxJsfd5wImDAxFtxnm4GSVxwYYCIRK9Zh5xVTl2LlE9xAnpveOGJ79DOXUPRP8e7nG7ilZDu7OCbBxGoXa6YWWkH4FrkJZtAlsizfsV1gqprhXP5CHEAGwFk0awukHrLsD8vNB+vtL2+JLO90p1MxYIksKaRBqIpqQP3ke5vThgtcBXOHCn1gzwu7kOzBYXblP5BLXoxoD42ZsamVfiJglgejQVe+1vge9IcWr9xhul7VGH2BhyTCFNMhOcp6VmlcEuuZGij79RzH/AtEMj4Np2HD6o4Av6iNKEmQ1zmxj4dFMwGtYnoG0htzCPX+2UAVzM4nZNc9kZKjdrs8qv4VgfxDKj9HXY6oSnRBJ9J/8X7DPOfw+Q7Fe+dPirdwSndGFe8VMdUb2/Z9XvhiYtp/lKlfttrND2zTso3KeZg2ojKFAAHQsdO5Z/jJ92AMByblTVzC76s6tJ6QzmNN8rt8Rl6xGHy6tbbc5z6yvZAIXFflWnzQEptWT0Qe43wacdY4SQ44/DHkd/20noUoFnhzsmgLzMCi990Uh4zXvv47Wg8/MhCegAwMuUBBFZ9kZpexgL5BXs+HZHuIbgY15ky8bilqUKhG6cB7D0SyxBNlQj3zqEjY3kTZCSJUHVBkeyyo5HfSeRfyphmqqfk/ijbtenM+w9SQXLbHLAi1uHKGIcLcL2mRCvK2Vd28rERxEV+4nfJUcaGWiCdveQ1KYGfnMOxn8tpKSX4PHxDWvbblvt4vtFINtBg9/tyHezDt6tSTNWep21wgZooye/SRYeUDf36qoV4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 23's ping at 15:53:36Z, about 2 minutes before the purchase, was roughly 0.1 mile from the Hillsboro station. The 48.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6YMPo8z3vtsMRANzR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4523,
+      "output_tokens": 244,
+      "output_tokens_details": {
+        "thinking_tokens": 138
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 23's ping at 15:53:36Z, about 2 minutes before the purchase, was roughly 0.1 mile from the Hillsboro station. The 48.7 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4523,
+    "output_tokens": 244,
+    "output_tokens_details": {
+      "thinking_tokens": 138
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

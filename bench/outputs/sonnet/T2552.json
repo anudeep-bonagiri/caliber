@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011102,
+  "durationMs": 2915,
+  "httpStatus": 200,
+  "id": "T2552",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1016 at SH 45 SE Plaza within 10 minutes; the last charge there was on day 61, and the day-69 charges were at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Toll T2552 is at plaza TXTAG-SH45SE-01 on 2026-10-05 at 18:48:45Z. The earlier charges for this plate at that plaza are T1650 (day 28), T2329 (day 61) and no others. Both are days or weeks before this one, well outside the 10-minute window. The charges earlier on day 69 were at a different plaza (SH130-04), so they do not count as duplicates of this one.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1016 at SH 45 SE Plaza within 10 minutes; the last charge there was on day 61, and the day-69 charges were at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1Vvf959hih8GTVuS9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4431,
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Toll T2552 is at plaza TXTAG-SH45SE-01 on 2026-10-05 at 18:48:45Z. The earlier charges for this plate at that plaza are T1650 (day 28), T2329 (day 61) and no others. Both are days or weeks before this one, well outside the 10-minute window. The charges earlier on day 69 were at a different plaza (SH130-04), so they do not count as duplicates of this one.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1016 at SH 45 SE Plaza within 10 minutes; the last charge there was on day 61, and the day-69 charges were at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4431,
+    "output_tokens": 224,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

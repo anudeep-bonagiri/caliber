@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008364,
+  "durationMs": 2512,
+  "httpStatus": 200,
+  "id": "1468",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 19's nearest ping (19:00Z, 12 min before purchase) was in Houston, about 150 miles from the Waco station, well over the 25-mile limit; ask dispatch whether another unit or driver used card FC-1019."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0wYKEAgTGAI4AUIIdGhpbmtpbmcSDF6dMNNSahcOtnfp6BoMmg3DQz93R09pgvbpIjCWoLPD+bJZQoKhrF3oQxmC/Nt6TyRXAQNWYz1gIX+0zP+1ggdzcQN8L105+OzJe/Qq8AUb7lhp7gEWg4fmxTX9ACojgD6BkuvsIG2x1MnI3+880ser6mUXknVpXcTchIEwehYe8ANWXlAcGYr4nBpvfKal30xAQDwAqj1XZMnhYjCopCQuIi4RwXmWGYcWxlMd2iy/yCVDBYzsQO2msTpPAOQHyl9jBTV+DHwLPEZ9/2O2phO2a7+iiGmHEGXvLevKWpGi5DkA7tTmjnkoqehF0yLTBZOD4QNzEkKDiNAxTnEZ1KDbFX4V5JVeG2jFLTl/i0u043tsLY7zQKYqvXJUkbxmHgGQfCEUbzxP9FAYdLpKBhvpENIWIDJq3pf9NL+5Sgx6lhaPuqKdka2Y55cDQPlHYIsUZXn4w1VJkwu7FCfb7oBotM0sjRSHFWHEj1hcNJF8FoOsqH4WAgPvJp2ePdjTEmYrFspSe3DUAlj+AtspV+eaamTmgf2GBO5VirdkwlDD0vX/JVbYJEr4HS5lzv+B8zTiOV4S083g4LIRvbRK9caH3yAkp8t2IZfe/OJndPk6pfotut1CpVACvzq6ys+5GyhuiRa+et3lks2meyMZcdrZ+L7HgvRjheR+sBnUu28PrIvcqTTq7qW80Zrtw7uYBwtf291TXZ4WCWjkL1Ri9deyZzy+YZqmdQi6cgayhbVhSkKuzVZiBaYYjQuRMoWXwVnzFs6qgQaHk7qO88IVhVVTMdMw+AI/NuvEWFaIt/60cuVFjcsY2hU0n9hD60eDhxi5Pm6LPqq4409/Qe462SL+NB6M4MM95MwHhdhpJ1EgSm8bC4xhKNov/WY7ydeijk0sGZuLk3Lu3/nMj0fc/s+W4/XSpwhTltB9iVmkBhumgtTBKBLxmF0c0BCofxkpgA3PJqQxSL/fpopUThT9hKZ4mG3KG+usjtsO2iFCoPDKBlTmpHKvnqq9zf1dJC+ffWakG/bMDi/6QM21vyIjpzC4FKTPwcCp8F04V2QlCxYe1gb1uGqRAh7QTXqyb4AFlSYn4Y9oIR/eKpj6yW2wRRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 19's nearest ping (19:00Z, 12 min before purchase) was in Houston, about 150 miles from the Waco station, well over the 25-mile limit; ask dispatch whether another unit or driver used card FC-1019.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshmdDXnC4LVdPN5r5f",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2992,
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "thinking_tokens": 133
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:40+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 19's nearest ping (19:00Z, 12 min before purchase) was in Houston, about 150 miles from the Waco station, well over the 25-mile limit; ask dispatch whether another unit or driver used card FC-1019.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2992,
+    "output_tokens": 238,
+    "output_tokens_details": {
+      "thinking_tokens": 133
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

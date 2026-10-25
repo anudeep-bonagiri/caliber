@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00537,
+  "durationMs": 2825,
+  "httpStatus": 200,
+  "id": "T1118",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Earlier toll at Hardy Toll Road for TX-1024 was on 2026-07-01, days before this charge, well outside the 10-minute duplicate window; other earlier tolls were at different plazas."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll T1118 is at Hardy Toll Road (HCTRA-HARDY-01) for plate TX-1024. The only earlier charge at that plaza is T1007 on July 1 at 13:40:50Z, about six days earlier, which is far outside the 10-minute window. The other earlier tolls are at different plazas. This is not a duplicate toll, so it is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Earlier toll at Hardy Toll Road for TX-1024 was on 2026-07-01, days before this charge, well outside the 10-minute duplicate window; other earlier tolls were at different plazas.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshkEsnoqeAcpoq2oiv",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1630,
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll T1118 is at Hardy Toll Road (HCTRA-HARDY-01) for plate TX-1024. The only earlier charge at that plaza is T1007 on July 1 at 13:40:50Z, about six days earlier, which is far outside the 10-minute window. The other earlier tolls are at different plazas. This is not a duplicate toll, so it is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"Earlier toll at Hardy Toll Road for TX-1024 was on 2026-07-01, days before this charge, well outside the 10-minute duplicate window; other earlier tolls were at different plazas.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1630,
+    "output_tokens": 211,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

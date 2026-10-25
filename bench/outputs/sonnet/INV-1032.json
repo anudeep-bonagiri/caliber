@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0058,
+  "durationMs": 2832,
+  "httpStatus": 200,
+  "id": "INV-1032",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "vendor_bank_change",
+    "decision": "hold",
+    "reason": "INV-1032 is $5,450.00, over the $5,000 threshold, and Alamo Fleet Service changed its remit-to bank details on day 18, one business day before receipt on day 19. Hold for a call-back. Rate, quantity and duplicate checks are all clean."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4gYKEAgTGAI4AUIIdGhpbmtpbmcSDPLBVpZ7WdsVJYfuNBoMvJOAmvCo0rU2AqZIIjANhrE0JnihylDR/liar/hjTuh70Ou2fJys50gyl73QcHTIpB/p7eY3MVVxohe2yeEq/wUhUIyw2HFTG5aNwKDSelNU6Z3sVGpA+Tgdi1CAM67Sv4XacXSUm+f6waGKZDI4Pk8SkKK+s4+GyTMCwou3QYp8qyGIFERNUZ3PWmA62ZJQwLmokRfrMF3xkKMrOXPsmsGUTuHxg8W5i2IAPfpOc+JHzee0BqR5YeaLfvcn+0+IP07L5UCehLRWQWA/y7k0EcFbhbWXDiy2tYLQ9GyzDqatxO1uC3Gn6F0mn3tkG2+ehy4Pphqkend4FtoRjQGB2ZDP+p337rU+GVvVIbmuR1zi8MjVAH0OmMyYUeY7BirLhlQSB3UGF5NMKUP61xtV6zBPF6Yttd7+rowzvnhIUcdKtAgpgz0rBcA+wuf/HIs4ntWJrXVF6ZVtj2mH3EbSm2hINJMCMahSvICU/7x7F5bbuisko++i0Lt0zydka3gSOsvbL94m6WTASmJ1nMcFe22go8paxIm2cdnfqT1BHWMYXBxdkQv1ZyLwW/9DA8r3I3/7PYHH2xdA37a+3Jbs6GvYHdx2g1DZ8xqC0fCCKX1e0Yip0a/mou6YM/CSnBxsfj/7sKoe6vPDR5b8b4utZVCjbRugfRs0hkoxzzvu4Vc1wcr0+04ShCh4iJqFbvdwOUBYTMd5Z9/RjcDhTZeiSA/nuFkJu2PCMlVkboF2w6IIhmNT0mwbWpb3KFOeEkcP05zphg3ME3KgKPfuqk/VkXb+gJ//VlaYmSXiKG0v0KnezlTbb5Cj6SXt6EBLbcELfWRbZ21Mn/3rPJQKKyRbguJ+yL030iJtrUpgsuKqr7MiSMXmNDnODkkO8WqB4pfczFyLJ7vlx0PS/AwSE5yn0Q1CYqt8vlpgxDxv1uPJFOvlbbyzhiRa2HjWibA+4HYOaB+euWG72mwml6jXH60oYpW4QjTdo21KmQH6dfA/sXWq0Dr/CIKPeDBlDOxOUTBOu8iO6tLFQksjGdlrk6YbnDE7QhmZTaP2MRqJEKa3894HQ9f15fM3FQGpObtpk1WzFhBoaCX9PRaQ7Ae1B0ixbBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"vendor_bank_change\",\"reason\":\"INV-1032 is $5,450.00, over the $5,000 threshold, and Alamo Fleet Service changed its remit-to bank details on day 18, one business day before receipt on day 19. Hold for a call-back. Rate, quantity and duplicate checks are all clean.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuLpK9kS8grX6bcbkr",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1730,
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "thinking_tokens": 115
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"vendor_bank_change\",\"reason\":\"INV-1032 is $5,450.00, over the $5,000 threshold, and Alamo Fleet Service changed its remit-to bank details on day 18, one business day before receipt on day 19. Hold for a call-back. Rate, quantity and duplicate checks are all clean.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1730,
+    "output_tokens": 234,
+    "output_tokens_details": {
+      "thinking_tokens": 115
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

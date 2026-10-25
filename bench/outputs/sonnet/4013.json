@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0141,
+  "durationMs": 4707,
+  "httpStatus": 200,
+  "id": "4013",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck's 11:20Z ping, 4 minutes before the purchase, is within about 0.1 mile of the Laredo station, well inside the 25-mile limit. The 61.7 gallons is under the 132-gallon limit (120-gallon tank plus 10%). The odometer does not move between the 11:00Z and 11:20Z pings despite a position change, but that is not a hold condition under payables policy."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSiAoKEAgTGAI4AUIIdGhpbmtpbmcSDJBQ8mst5JqvChbisxoMbQ7jBJJgB3CiPS9rIjDG0Vlik68PZX9zAtKdDCb/iOmD0AWCZ9eHqsFrdK2pyxu0eRwkGQOhnK/FSb9mZwQqpQk2fOduNH2qLeobVUfladw6s+2YZ8ZVekt/slgjGb7tTmji5uiBoq4Tr47jDzup1tQZrml0ENQjSvHLOBsjJC1boK71TlJRqZx/G5IU0vfZLQQoqK+k026a5nvc8gcrh4/fnNtz1Yjh4FygqhiRWycuBDuAHPQJbGUEVwUoJ7TMUYrTDRejIc4yiexkMz18f4CDMR8+uTtyuVKixAV4KaocXQo7/nlsQxxuKLdR7uZZ9kl3bjozqYRyZCIpV8Ku+jaEhrt7DKLUmvDryxmhCrNCStRS7LwOg1E9JStj6AIpf23rbiFgypPd6TNr6XAE4nHwnC5uZrH6sqZJSy+yqZvQgoX6CxMzK2FY9+4TWfzULOvOopecSKhdlPlhN3elz7At5/W3UwLiCcz6gUgXMTLubbWPNs/Q/k12A1RmZmK3dDSYGc4VJqwKxlFWfj0KHw5YZTCuZjqwFX+WaZb9XEe6c7OTGYezsv5fLgBg/00ILgyQkAFerE/GjuOwZmhScldVDaRoBeUm8sNXJW4KF2asGZI/DNaCXy2RM/iJ4pxe8qsn1pJ2qCNmFQ0yvNcIXrAmvEi8hZ2UYaNsXRzMaHMEY9qtutJCA/Ry180JvzL+sYnaId3EpiJIBruMJhugT75zg1r0LZFqvj+nw27yAR6WhuaPxYqcOCCnEwBZvm0qI0HLoAgBhmQy4zZYEgMDmtcdFGC1pQu+LjbNauZ3joIdbDVaxmx4173OtFUZLYYeFrCLCa+Ao1+O3rhUyMeaaV2ORpnhpvlGMN4f2xLMtcS9m64/PYm9b0hmLC+nurQ9GVN9+4TBkhPJQPeRbarFGH3UNs6+d2qEiUiH+VBGcSoI/8cjDkDIehU5h5fQJ7EhUn6tJ+cbY2DwjqxxGX6km3Uh3oc4YMWuRr6nJElrlIIojkmmwTngLQed03nYh8pYTrl6PbiUHUxh+Gj/3IEA+D6Zy6GZ4xw+PRHmKhjJATiblQF1JpzBgpkZR1dw6AdxpL1+2xajIIBnAWB1BilGr/zm1UWWSmK2eWOr4sU/T0t99jALQiv2xKNwOGQJCY6Egy1FUDV/92RLG9lsWwowEnLOAWHqtI1XnkVasY+uznB7dYnsCLGmdXdER0owHPxvHHw4aeDy9wzMcHiALg9NLu5UzQZA8ez//ctyqL9izQ+b6R2v6hl9O845xLbPPhjgU0VIh0kdwcy3DRFQgMwOV0qwTtND7W5/1KY58BUR2jPaHbjxnZ4wFZfBR6o1JTw6KtglQtkwaYikyiEWy0E8YLu7QknxJJbZhzLBHAR9C3y40pQaHJa4IlH46HDXc4/EcaDISF82AAPz/LlANU6McyiHGBpD+sG+9PaXVHQes86GPb215zsm7oXGSeMzI0tXhmaRa94IqjiDb6Q7djTrPBbqluM14lV9KyrDo+ykGqrMAMSe+VQruzEiilrKstdBjlC+Ncf40dimifLsIKeuhvI9kD8PYT+46+lRbS78CC13VTBtL8z8n2ncnb6Sy7wlQky6SCKrDZpLu2a0C/6iexZUkc5FpUCcWxrZZYTUhwoc199gXMY3TR2cgoScUOGErd+N79+FGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck's 11:20Z ping, 4 minutes before the purchase, is within about 0.1 mile of the Laredo station, well inside the 25-mile limit. The 61.7 gallons is under the 132-gallon limit (120-gallon tank plus 10%). The odometer does not move between the 11:00Z and 11:20Z pings despite a position change, but that is not a hold condition under payables policy.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsgZ4PbPSNiRhaCharK",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4595,
+      "output_tokens": 491,
+      "output_tokens_details": {
+        "thinking_tokens": 341
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck's 11:20Z ping, 4 minutes before the purchase, is within about 0.1 mile of the Laredo station, well inside the 25-mile limit. The 61.7 gallons is under the 132-gallon limit (120-gallon tank plus 10%). The odometer does not move between the 11:00Z and 11:20Z pings despite a position change, but that is not a hold condition under payables policy.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4595,
+    "output_tokens": 491,
+    "output_tokens_details": {
+      "thinking_tokens": 341
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

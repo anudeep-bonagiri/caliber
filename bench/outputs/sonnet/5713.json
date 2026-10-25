@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01332,
+  "durationMs": 2881,
+  "httpStatus": 200,
+  "id": "5713",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 22 pinged within about 0.03 miles of the Pearsall station at 12:19:25, 12:20:00 and 12:35:00, all within 30 minutes of the 12:25:10 purchase. 63.3 gallons is well under the 220-gallon limit (200-gallon tank plus 10 percent), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AYKEAgTGAI4AUIIdGhpbmtpbmcSDNoAvSxleCUNCs/FlBoMiSgyuwZFkVsV7NN6IjC581/pdQTcdmYFGyAF1Xi+wOxyF+qJ1fnBvp9WiBF+ohAU0zCGkGywCidD7ttPe0kqjQZbttp0g2hBgzMWwNgGYRy9So78fpQZhs34aQOmcxKnOC5mGDddrexaq6u1PUAeIlDvmcJISEiwruwF3WwgQahgTMisMzpkrsuRHrzci8ID/6yygTcvgWunFrT80otj0uqOcwx2D2trJZt3Qqhsv4UyEheZqpftzuO1r0WY10lbgw0HDN6wkMpSe6pWtNocFLBLGV8kzR5qXXo4PLwt+aCHUeQ+Q//cUf6p8oNf/fAkuQ/QX5UTzQJ8rAPuucbNe2d7DSo9XfDNBd1BbTeyY2e/xkjFovi7YpBPjqvmGKBPmnt1RACPHvffTornnG20hRYYHoJ9EIVRDLVuei1IKY28iLe2DdsCNaFCWkXg0PjPc1Ug8NPPgX2Te13lSuCO+MyacoVrzB3b5slIWBD9tFvf7jAXKyhvzwb7UFV2tmTiQQnnkQPjaxJgkmhRvEEhKG7PLVmSiUb81+WkVv41GOfbOpPe/oHMUX1a20zQ/AuUeuLkT8YWj7/sEMez8hUEuDIdwKGZzSXrn8x5RgT8uvjJUIuiZWrj0jf3kW7saDa/hUtfs4yoHNZCde6vyELKVeS62+bTFSbPELzrPMTcyK2PY6VzlF4+zdPxDqPv4VQiW0cTmx7KeL+GXQIcF+J6/WSdzy41I5bs/oqLNXTNJxljbeG0MMVmPXpBVYXzclznTqmAkCDoYQXoZoKKyh1h6Ex0FuYyo/ngJ9M+p2m3s/qbwKYUx8mPghSzGl2Koxb45dNsIDPkMIegtVK7SkNh0E82V7cWKoKp18BodzbzyLFU4CSFQdNL+PTUie+y6umcG5QJr7Ff/vsz2nrfr9v0RUXDTGK5BOkG/1XoxvyiZaDyBXdbRtiIVN/Xocgt6/lZexBKxcwzRW+SJNWJgoYTAihy2HcyAj2aSbiygtEu9iJ6hqyPcRsWtGaxLi+To9G1mcD8t95APE/Jw00vqQ+bzvsb55zDxzelgpU73jgnXZyBONowXbTCqUCw/qsjEFgoqy5OOmMpH6+OT2GENdIrbkKUozres0CP/ajmiIfLGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 22 pinged within about 0.03 miles of the Pearsall station at 12:19:25, 12:20:00 and 12:35:00, all within 30 minutes of the 12:25:10 purchase. 63.3 gallons is well under the 220-gallon limit (200-gallon tank plus 10 percent), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdSHmqf9WM6q51mhWY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5255,
+      "output_tokens": 281,
+      "output_tokens_details": {
+        "thinking_tokens": 150
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:41+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 22 pinged within about 0.03 miles of the Pearsall station at 12:19:25, 12:20:00 and 12:35:00, all within 30 minutes of the 12:25:10 purchase. 63.3 gallons is well under the 220-gallon limit (200-gallon tank plus 10 percent), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5255,
+    "output_tokens": 281,
+    "output_tokens_details": {
+      "thinking_tokens": 150
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

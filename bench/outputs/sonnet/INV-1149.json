@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0152,
+  "durationMs": 5766,
+  "httpStatus": 200,
+  "id": "INV-1149",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1149 ($368.00, PO-1017) matches no hold rule. No other invoice from this vendor for $368.00 under a different PO falls in days 48-78; the earlier $368.00 invoices cite the same PO-1017 and are outside 30 days. Unit price equals the contract rate of $368.00. Quantity 1 does not exceed the received quantity of 1. The bank change on day 71 does not apply because the invoice is under $5,000. PO-1017 has been invoiced several times before, which may be worth a look, but no policy rule covers it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1149 ($368.00, PO-1017) matches no hold rule. No other invoice from this vendor for $368.00 under a different PO falls in days 48-78; the earlier $368.00 invoices cite the same PO-1017 and are outside 30 days. Unit price equals the contract rate of $368.00. Quantity 1 does not exceed the received quantity of 1. The bank change on day 71 does not apply because the invoice is under $5,000. PO-1017 has been invoiced several times before, which may be worth a look, but no policy rule covers it.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshbiAXG9smnz95tVy1",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4225,
+      "output_tokens": 675,
+      "output_tokens_details": {
+        "thinking_tokens": 475
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1149 ($368.00, PO-1017) matches no hold rule. No other invoice from this vendor for $368.00 under a different PO falls in days 48-78; the earlier $368.00 invoices cite the same PO-1017 and are outside 30 days. Unit price equals the contract rate of $368.00. Quantity 1 does not exceed the received quantity of 1. The bank change on day 71 does not apply because the invoice is under $5,000. PO-1017 has been invoiced several times before, which may be worth a look, but no policy rule covers it.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4225,
+    "output_tokens": 675,
+    "output_tokens_details": {
+      "thinking_tokens": 475
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

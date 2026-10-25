@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006148,
+  "durationMs": 2941,
+  "httpStatus": 200,
+  "id": "INV-1011",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1011 matches no hold rule. The unit price of 135,500 equals the contract rate. The quantity of 1 equals the PO received quantity of 1. No earlier invoice from this vendor has the same amount. The vendor's bank details never changed. The 3,125-cent difference between the total and the unit price is not covered by any hold rule."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzQcKEAgTGAI4AUIIdGhpbmtpbmcSDPXGkzxgegU/Tx994RoM3wXEnMr9ykq+RJbFIjDv6qZbq4RKDm1XfUgoX0yTDemF4nVbQMhDRxqYBPTaM/Ql1qFBHvq4SSXwL2HPjvgq6gZuFbg7r6IznK7EYAONZoadeAWbF6pswgc6B7VI48YBAPnwEHN4dO18xUvr+I/deFnKZdJ7d+U2dPRo6c2q08a7vHCqFkt5V6xNQ4JkDrhydt+E/D0m6A63X3te93Et7i2U4qDkZcqgKb5pQO0OWCOqG1U+Mpab2w/OLx4iB2LZaKQUPaPLng0Lk+hW/Wxt9mqFi5OE4Cuo/9qh6w5p6AEwJ9iReLye0ZWY5OIHjoHtZNfU/N0gsuBowbC9ijL1LDDfQLOuJW3nXDq6HLFNYFPcnl7yJ/xnyM72q3+gzfaTnWl8UDKpT1fTPRD8/OajTgpJeQ12eLQIaG/B9Hupl0eA+2EfdZL8jtI8QOreRImwxXVGhMPD2kXgW1cmQK/jW1cFCP7x6qCecoX/z/+wCklW3OyI6s3EApkxFQJlIycyv9zvlHQpsCNt2WkX0AawTypacmyAh7n7NDwZfSp9zA5sSnSejv2s++nMksSzYbgbSgYJeiRX3IaPFYtPgrIPkLHGfCneapp9XUDBEf3JnlDPZJsSzqYYaz9SL4eav0fKQixmOEHvkLHKoyr5lQD1JF4KKtFVMJiD0JAUWenr8s5D5yXcWY4UziQZmUKTpFIEpLeBKD3z/1OneN7xDcsENmL86DG1NOTfsSZaMY89R+EtM9446yQF55Ry/uOjrXJ3Xo0n4AowzKnXleQycCcHuJ5T49L9wzuaaLZ59FXoRZizyMrxwvXaC03zFeDNxJJhARlmr7WNG4ULTE78lQuq5YPZlfOaJmSeYOe9jZhfXd5B89r1nXe+0ZbfRhyeZoTUtEUUs2v5FzG3AuZO3NyS7Ehut+GvT9FGGUwmqsGoAt+Hr5KDx469bDAiBZp/bq8X6MussgdLRQGOX+Dt6ef7XLXzIFGsnoDs2x268GOJrO1oLxiOHqBdSuekuUFMw2ozzvcLPXemlELHRVwHLa4r0W9R3DWxXif5Ri+Bmel11VhSmtk7Rjb1ck2Ik4MfyE4OQEyy7DjmqdAG2c+Fzhl1u89RlOp2UsyMyUdfwB8F/y1dnt/xJ0yGMi4MYgsslzGOo6eLODIijDctHO5giIlV0+JEAaNhidPdxhRFlJPRjJAtf5Xnq2BP0pviTpGpUkj97WXk4yXaJRhYskZUW9LlA7760q7RT5Yt5U3IGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1011 matches no hold rule. The unit price of 135,500 equals the contract rate. The quantity of 1 equals the PO received quantity of 1. No earlier invoice from this vendor has the same amount. The vendor's bank details never changed. The 3,125-cent difference between the total and the unit price is not covered by any hold rule.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseHKHmM1L9hzwFKa2p",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1639,
+      "output_tokens": 287,
+      "output_tokens_details": {
+        "thinking_tokens": 159
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:52+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1011 matches no hold rule. The unit price of 135,500 equals the contract rate. The quantity of 1 equals the PO received quantity of 1. No earlier invoice from this vendor has the same amount. The vendor's bank details never changed. The 3,125-cent difference between the total and the unit price is not covered by any hold rule.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1639,
+    "output_tokens": 287,
+    "output_tokens_details": {
+      "thinking_tokens": 159
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

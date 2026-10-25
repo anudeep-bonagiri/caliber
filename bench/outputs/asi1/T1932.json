@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 17278,
+  "httpStatus": 200,
+  "id": "T1932",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1932 at NTTA-DNT-01 (Sam Houston Tollway NW) is within 10 minutes of earlier toll T1657 at the same plaza on day 29, but wait - checking dates. T1932 is day 42. T1657 is day 29. They are not within 10 minutes of each other in time? No, the rule says 'within 10 minutes of an earlier toll charge'. Let's re-read carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' This implies temporal proximity. T1932 is at 2026-08-27T17:54:54Z. Is there an earlier toll at HCTRA-SHT-NW within 10 minutes? Looking at the list... T1558 is at HCTRA-SHT-NW on 2026-08-03T19:38:23Z. That is days away. Wait, let me check T1657 again. T1657 is NTTA-DNT-01. T1932 is HCTRA-SHT-NW. Different plazas. So it's not a duplicate based on plaza match with T1657. Let's look for any earlier toll at HCTRA-SHT-NW. The only one is T1558 on Aug 3. That is not within 10 minutes. Is there another one? No. So why hold? Let me re-read the transaction. Transaction T1932 is HCTRA-SHT-NW. Earlier tolls at HCTRA-SHT-NW: Only T1558. Time diff is huge. So not duplicate_toll. Let me check other rules. It's a toll, so fuel/invoice rules don't apply directly unless I'm misinterpreting 'kind'. The kind is 'toll'. So only duplicate_toll applies. Did I miss a toll? Let's check T1657 and T1656. T1656 is NTTA-PGBT-01. T1657 is NTTA-DNT-01. T1932 is HCTRA-SHT-NW. None match. Wait, look at T1657 and T1932? No. Look at T1558 and T1932? No. Is there a duplicate I missed? Let's check T1657 (NTTA-DNT-01) and ... is there another NTTA-DNT-01? Yes, T1643 is NTTA-DNT-01 on Aug 7. T1657 is Aug 10. Not within 10 mins. What about T1656 and T1657? Different plazas. What about T1657 and T1932? Different plazas. Let me re-read the policy. 'duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' Okay. Let's look really closely at the timestamps. T1932: 2026-08-27T17:54:54Z. Any toll at HCTRA-SHT-NW before this? T1558: 2026-08-03T19:38:23Z. No. Is it possible the question implies something else? Or did I miss a record? Let's check T1657 again. 2026-08-10T11:34:49Z. Plaza: NTTA-DNT-01. T1932 Plaza: HCTRA-SHT-NW. Distinct. Let's check if there is a toll *after* T1932 that is a duplicate? No, we are evaluating T1932 against *earlier* tolls. Let's check if T1932 is a duplicate of *itself*? No. Let's check if I am blind. T1558 is HCTRA-SHT-NW. T1932 is HCTRA-SHT-NW. Dates are Aug 3 and Aug 27. Not within 10 minutes. Is there any other HCTRA-SHT-NW? No. Is there any other plaza match? T1657 is NTTA-DNT-01. T1643 is NTTA-DNT-01. T1643 is Aug 7. T1657 is Aug 10. Not within 10 mins. T1656 is NTTA-PGBT-01. T1668 is HCTRA-HARDY-01. T1628 is HCTRA-HARDY-01. T1628 is Aug 7. T1668 is Aug 10. Not within 10 mins. T1585 is HCTRA-FBT-01. T1503 is HCTRA-FBT-01. T1404 is HCTRA-FBT-01. T1890 is HCTRA-FBT-01. T1683 is HCTRA-FBT-01. All separated by days. T1529 is HCTRA-SHT-W. T1444 is HCTRA-SHT-W. Separated by days. T1291 is NTTA-SRT-01. T1280 is NTTA-SRT-01. Separated by days. T1003 is HCTRA-HARDY-01. T1628 is HCTRA-HARDY-01. Separated by days. T1922 is TXTAG-SH71-01. T1550 is TXTAG-SH71-01. Separated by days. It seems there are NO duplicates within 10 minutes. Therefore, the decision should be clear.\n\nWait, let me double check the definition of \"within 10 minutes\". Does it mean the difference in timestamps is < 10 minutes? Yes.\nLet me double check the plaza IDs.\nT1932: HCTRA-SHT-NW.\nEarlier tolls at HCTRA-SHT-NW:\nT1558: 2026-08-03T19:38:23Z.\nDifference: ~24 days.\nSo no duplicate.\n\nIs there any other reason to hold?\nIt's a toll. Fuel card rules don't apply. Invoice rules don't apply.\nSo the answer is Clear.\n\nOne final check. Did I miss a toll in the list?\nList:\nT1003 HCTRA-HARDY-01\nT1280 NTTA-SRT-01\nT1291 NTTA-SRT-01\nT1404 HCTRA-FBT-01\nT1444 HCTRA-SHT-W\nT1503 HCTRA-FBT-01\nT1529 HCTRA-SHT-W\nT1550 TXTAG-SH71-01\nT1558 HCTRA-SHT-NW\nT1585 HCTRA-FBT-01\nT1628 HCTRA-HARDY-01\nT1643 NTTA-DNT-01\nT1656 NTTA-PGBT-01\nT1657 NTTA-DNT-01\nT1668 HCTRA-HARDY-01\nT1683 HCTRA-FBT-01\nT1890 HCTRA-FBT-01\nT1922 TXTAG-SH71-01\n\nTarget: T1932 HCTRA-SHT-NW.\nOnly previous HCTRA-SHT-NW is T1558.\nTime diff > 10 mins.\nDecision: Clear.\n\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found within 10 minutes at the same plaza.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884465,
+    "id": "chatcmpl-74e45ea8-52eb-4cab-a1f0-c5bd52642e42",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1849,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3172,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5021
+    }
+  },
+  "startedAt": "2026-10-24T23:27:37+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1932 at NTTA-DNT-01 (Sam Houston Tollway NW) is within 10 minutes of earlier toll T1657 at the same plaza on day 29, but wait - checking dates. T1932 is day 42. T1657 is day 29. They are not within 10 minutes of each other in time? No, the rule says 'within 10 minutes of an earlier toll charge'. Let's re-read carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' This implies temporal proximity. T1932 is at 2026-08-27T17:54:54Z. Is there an earlier toll at HCTRA-SHT-NW within 10 minutes? Looking at the list... T1558 is at HCTRA-SHT-NW on 2026-08-03T19:38:23Z. That is days away. Wait, let me check T1657 again. T1657 is NTTA-DNT-01. T1932 is HCTRA-SHT-NW. Different plazas. So it's not a duplicate based on plaza match with T1657. Let's look for any earlier toll at HCTRA-SHT-NW. The only one is T1558 on Aug 3. That is not within 10 minutes. Is there another one? No. So why hold? Let me re-read the transaction. Transaction T1932 is HCTRA-SHT-NW. Earlier tolls at HCTRA-SHT-NW: Only T1558. Time diff is huge. So not duplicate_toll. Let me check other rules. It's a toll, so fuel/invoice rules don't apply directly unless I'm misinterpreting 'kind'. The kind is 'toll'. So only duplicate_toll applies. Did I miss a toll? Let's check T1657 and T1656. T1656 is NTTA-PGBT-01. T1657 is NTTA-DNT-01. T1932 is HCTRA-SHT-NW. None match. Wait, look at T1657 and T1932? No. Look at T1558 and T1932? No. Is there a duplicate I missed? Let's check T1657 (NTTA-DNT-01) and ... is there another NTTA-DNT-01? Yes, T1643 is NTTA-DNT-01 on Aug 7. T1657 is Aug 10. Not within 10 mins. What about T1656 and T1657? Different plazas. What about T1657 and T1932? Different plazas. Let me re-read the policy. 'duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' Okay. Let's look really closely at the timestamps. T1932: 2026-08-27T17:54:54Z. Any toll at HCTRA-SHT-NW before this? T1558: 2026-08-03T19:38:23Z. No. Is it possible the question implies something else? Or did I miss a record? Let's check T1657 again. 2026-08-10T11:34:49Z. Plaza: NTTA-DNT-01. T1932 Plaza: HCTRA-SHT-NW. Distinct. Let's check if there is a toll *after* T1932 that is a duplicate? No, we are evaluating T1932 against *earlier* tolls. Let's check if T1932 is a duplicate of *itself*? No. Let's check if I am blind. T1558 is HCTRA-SHT-NW. T1932 is HCTRA-SHT-NW. Dates are Aug 3 and Aug 27. Not within 10 minutes. Is there any other HCTRA-SHT-NW? No. Is there any other plaza match? T1657 is NTTA-DNT-01. T1643 is NTTA-DNT-01. T1643 is Aug 7. T1657 is Aug 10. Not within 10 mins. T1656 is NTTA-PGBT-01. T1668 is HCTRA-HARDY-01. T1628 is HCTRA-HARDY-01. T1628 is Aug 7. T1668 is Aug 10. Not within 10 mins. T1585 is HCTRA-FBT-01. T1503 is HCTRA-FBT-01. T1404 is HCTRA-FBT-01. T1890 is HCTRA-FBT-01. T1683 is HCTRA-FBT-01. All separated by days. T1529 is HCTRA-SHT-W. T1444 is HCTRA-SHT-W. Separated by days. T1291 is NTTA-SRT-01. T1280 is NTTA-SRT-01. Separated by days. T1003 is HCTRA-HARDY-01. T1628 is HCTRA-HARDY-01. Separated by days. T1922 is TXTAG-SH71-01. T1550 is TXTAG-SH71-01. Separated by days. It seems there are NO duplicates within 10 minutes. Therefore, the decision should be clear.\n\nWait, let me double check the definition of \"within 10 minutes\". Does it mean the difference in timestamps is < 10 minutes? Yes.\nLet me double check the plaza IDs.\nT1932: HCTRA-SHT-NW.\nEarlier tolls at HCTRA-SHT-NW:\nT1558: 2026-08-03T19:38:23Z.\nDifference: ~24 days.\nSo no duplicate.\n\nIs there any other reason to hold?\nIt's a toll. Fuel card rules don't apply. Invoice rules don't apply.\nSo the answer is Clear.\n\nOne final check. Did I miss a toll in the list?\nList:\nT1003 HCTRA-HARDY-01\nT1280 NTTA-SRT-01\nT1291 NTTA-SRT-01\nT1404 HCTRA-FBT-01\nT1444 HCTRA-SHT-W\nT1503 HCTRA-FBT-01\nT1529 HCTRA-SHT-W\nT1550 TXTAG-SH71-01\nT1558 HCTRA-SHT-NW\nT1585 HCTRA-FBT-01\nT1628 HCTRA-HARDY-01\nT1643 NTTA-DNT-01\nT1656 NTTA-PGBT-01\nT1657 NTTA-DNT-01\nT1668 HCTRA-HARDY-01\nT1683 HCTRA-FBT-01\nT1890 HCTRA-FBT-01\nT1922 TXTAG-SH71-01\n\nTarget: T1932 HCTRA-SHT-NW.\nOnly previous HCTRA-SHT-NW is T1558.\nTime diff > 10 mins.\nDecision: Clear.\n\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found within 10 minutes at the same plaza.\"}",
+  "usage": {
+    "completion_tokens": 1849,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3172,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5021
+  }
+}

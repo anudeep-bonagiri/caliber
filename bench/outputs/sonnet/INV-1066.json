@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007838,
+  "durationMs": 3776,
+  "httpStatus": 200,
+  "id": "INV-1066",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1066 ($309.84) matches no earlier Gulf Coast Diesel invoice amount, so it is not a duplicate. It has no PO or contract to test for rate variance or short receipt, and it is well under the $5,000 bank-change threshold. The vendor's bank change on day 42 is also after the day-37 receipt."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsAgKEAgTGAI4AUIIdGhpbmtpbmcSDGwB0gvNB8XNboV7mBoMk8xx/p/RWOtbjG4mIjDzU0hj0MlKgWeMMO6ponwzPMT9ppnzus6gqi8EPLG8bYCPAkl4Lk7OhDRtVx85t7oqzQdrM/L36RpxvUMy7A2vLRynqOAb1tUlxmRwCmat6VRjsR1t6LN7gktqc3S9tSlusx9jt6dCeKsWUi2ffqNnYI/paFkq1UKc9gAXwFh/ipvF0t/0c95OrQt8ciHmqgKjq6OZ4JJSJPHdNKT027YSJbeXPm0SX61MSROP/p2HgZsOELYJa8e3ZpxLgSbLevsJNG7xoDgqs+n7eWSz7c1RIcKhj6ti1i1YL2saTLA5iixFH6/Tw3KAO5zerAjvN8gxO+Zp/v0y9uXP38Ap4NzerXNmg3Yr53xbOjzM81R2w0SwSHP5St5DkRKWVJXXPWzfQPs8Rsjqgqq8t8vfpq37y1zjrbwxw1K+nUQihOIHczuSqG7HMQK2zwrahN/Rdev391g2JwvXjOt1A2LXqtTnmoBtx2ICUH3oGuo81ObvgoHDmsKxq+Tg0WsS8ZERd5FfcX5Yk56fFWgh81jc4pOUHCEhB1+dzJGDWKGqlz8LceUMIhs07e+pmMsDwCMIieG6Zax0hU3jicZTtLh6eYzr0oRSyzEjkyGuiZuZG5TX5ILDXPoXx8oaQ2SBymaLroPmrj8uglro63s8eYaAB2IwoeINaaqLux7IuSzO6BMFCHH0UB7FybctRKU1Heako0xyGdZnXGihG8euOIlougAlWt1pWpR1yOnC2vDRHYQbehwox3n8+HQr9NArSPq4oDgpQXHsXzzSNQcoliWGdnK3v6MrzWuEz+SpeuFkTzDeX4kkY7l4EpQRBMt2E9B6pH9O5jTBiwwCQnpjxC+qRVhnlYlphW0PBWYAqCZvGQf7a3pYC9ICKgEbwDXtaUg5SUs9YzaXYZ/TKAQ0xKU082Scl5sJHeHE9ghWBZAEXHu9/bqKleqdUP7kCvon8mY9+FAAwRBZbiiysOD5vzNbM1KbO8zFIxzQrAdr1h/iz6bNMQjDQzKpdUusQgUli8fp8AYwI2kVbe20XEzU1OjOjgG0WLQKeI2e9f0G6xj9SROcSkUutv5TwFUoAYbYDKAZboWTx6HOj1tP39nEmqWYdt3oLo+NTpIB5j7e+rWRO6fV3Lt8/f4PFKjr69z/MFrBzcu7gXaaLwsWansjxKTBjRoRpepG1wUQ9eyLNn39fYmCaXzMCkhjpfuWGvRjFFW3IbNs3ojKRcZrjcxhdjGfqU9NE4RmRfaM9lVgoCuHZ1T9tEczdYgM/5AAOqOG2j+RnXXte+UAlqFZaBGvbtGVTuyEFzpDHx7AWRR8ZI+ndEsA6F8nUHTq+gghioydZcyeB1K0inISgbcf1CLVMROSsUOIGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1066 ($309.84) matches no earlier Gulf Coast Diesel invoice amount, so it is not a duplicate. It has no PO or contract to test for rate variance or short receipt, and it is well under the $5,000 bank-change threshold. The vendor's bank change on day 42 is also after the day-37 receipt.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsu4JPFY74FuMjkRagq",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2334,
+      "output_tokens": 317,
+      "output_tokens_details": {
+        "thinking_tokens": 191
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1066 ($309.84) matches no earlier Gulf Coast Diesel invoice amount, so it is not a duplicate. It has no PO or contract to test for rate variance or short receipt, and it is well under the $5,000 bank-change threshold. The vendor's bank change on day 42 is also after the day-37 receipt.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2334,
+    "output_tokens": 317,
+    "output_tokens_details": {
+      "thinking_tokens": 191
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

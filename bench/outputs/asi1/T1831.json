@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 15001,
+  "httpStatus": 200,
+  "id": "T1831",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1831 at plaza TXTAG-SH130-01 is within 10 minutes of earlier toll T1825? No, wait. Let's re-read carefully. T1831 is at 16:17:46. T1825 is at 12:54:33 on the same day (day 37). That is more than 10 minutes apart. However, look at T1800 and T1802 on day 35. T1800 is 17:13:41, T1802 is 17:34:53. More than 10 mins. Look at T1771 and T1772 on day 34. 11:51:42 and 11:53:28. Same plaza NTTA-DNT-01. Time diff < 2 mins. This is a duplicate. But the question asks about the transaction in front of you, which is T1831. Is T1831 a duplicate? It is at SH130-01. Previous tolls at SH130-01: T1800 (day 35, 17:13), T1774 (day 34, 15:21), T1222 (day 9, 17:02), T1238 (day 10, 15:39), T1555 (day 24, 18:07), T1354 (day 16, 14:17). None are within 10 minutes of T1831 (day 37, 16:17). Wait, did I miss one? Let's check T1825 again. T1825 is NTTA-PGBT-01. T1831 is TXTAG-SH130-01. Different plazas. So T1831 is not a duplicate toll based on the provided list. Is there any other rule? It's a toll, so fuel rules don't apply. No invoice data. So it should be clear. BUT, looking closely at the list, T1771 and T1772 are duplicates. Does the prompt imply I need to flag *any* duplicate in the history? No, \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge. The later charge is the duplicate and is held.\" This applies to the transaction being processed. T1831 is the transaction. It is NOT a duplicate. Therefore, it should be cleared.\n\nWait, let me double check the time difference between T1800 and T1802. 17:13 vs 17:34. > 10 mins.\nLet me double check T1771 and T1772. 11:51 vs 11:53. < 2 mins. Same plaza NTTA-DNT-01. These are duplicates. But they are in `earlierTollsSamePlate`. They are not the current transaction.\nThe current transaction is T1831.\nIs T1831 a duplicate of anything?\nPlaza: TXTAG-SH130-01.\nTimes:\nDay 35: 17:13:41 (T1800) -> ~3 days ago.\nDay 34: 15:21:08 (T1774) -> ~1 day ago.\nDay 24: 18:07:48 (T1555) -> ~13 days ago.\nDay 16: 14:17:52 (T1354) -> ~21 days ago.\nDay 10: 15:39:40 (T1238) -> ~27 days ago.\nDay 9: 17:02:22 (T1222) -> ~28 days ago.\nNone are within 10 minutes.\n\nSo the decision is Clear.\n\nHowever, often these problems have a trick. Let me re-read the policy. \"duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\"\nT1831 is at 16:17:46.\nAre there any other tolls on Day 37? Only T1825 at 12:54:33.\nDifference: 3 hours 23 minutes. Not a duplicate.\n\nTherefore, the transaction is clear.\n\n{\"decision\": \"clear\", \"reason\": \"No hold conditions met\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885778,
+    "id": "chatcmpl-e58f57ff-23dd-409b-ac6b-16707671b96c",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1096,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 6035,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 7131
+    }
+  },
+  "startedAt": "2026-10-24T23:49:29+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1831 at plaza TXTAG-SH130-01 is within 10 minutes of earlier toll T1825? No, wait. Let's re-read carefully. T1831 is at 16:17:46. T1825 is at 12:54:33 on the same day (day 37). That is more than 10 minutes apart. However, look at T1800 and T1802 on day 35. T1800 is 17:13:41, T1802 is 17:34:53. More than 10 mins. Look at T1771 and T1772 on day 34. 11:51:42 and 11:53:28. Same plaza NTTA-DNT-01. Time diff < 2 mins. This is a duplicate. But the question asks about the transaction in front of you, which is T1831. Is T1831 a duplicate? It is at SH130-01. Previous tolls at SH130-01: T1800 (day 35, 17:13), T1774 (day 34, 15:21), T1222 (day 9, 17:02), T1238 (day 10, 15:39), T1555 (day 24, 18:07), T1354 (day 16, 14:17). None are within 10 minutes of T1831 (day 37, 16:17). Wait, did I miss one? Let's check T1825 again. T1825 is NTTA-PGBT-01. T1831 is TXTAG-SH130-01. Different plazas. So T1831 is not a duplicate toll based on the provided list. Is there any other rule? It's a toll, so fuel rules don't apply. No invoice data. So it should be clear. BUT, looking closely at the list, T1771 and T1772 are duplicates. Does the prompt imply I need to flag *any* duplicate in the history? No, \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge. The later charge is the duplicate and is held.\" This applies to the transaction being processed. T1831 is the transaction. It is NOT a duplicate. Therefore, it should be cleared.\n\nWait, let me double check the time difference between T1800 and T1802. 17:13 vs 17:34. > 10 mins.\nLet me double check T1771 and T1772. 11:51 vs 11:53. < 2 mins. Same plaza NTTA-DNT-01. These are duplicates. But they are in `earlierTollsSamePlate`. They are not the current transaction.\nThe current transaction is T1831.\nIs T1831 a duplicate of anything?\nPlaza: TXTAG-SH130-01.\nTimes:\nDay 35: 17:13:41 (T1800) -> ~3 days ago.\nDay 34: 15:21:08 (T1774) -> ~1 day ago.\nDay 24: 18:07:48 (T1555) -> ~13 days ago.\nDay 16: 14:17:52 (T1354) -> ~21 days ago.\nDay 10: 15:39:40 (T1238) -> ~27 days ago.\nDay 9: 17:02:22 (T1222) -> ~28 days ago.\nNone are within 10 minutes.\n\nSo the decision is Clear.\n\nHowever, often these problems have a trick. Let me re-read the policy. \"duplicate_toll: a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\"\nT1831 is at 16:17:46.\nAre there any other tolls on Day 37? Only T1825 at 12:54:33.\nDifference: 3 hours 23 minutes. Not a duplicate.\n\nTherefore, the transaction is clear.\n\n{\"decision\": \"clear\", \"reason\": \"No hold conditions met\"}",
+  "usage": {
+    "completion_tokens": 1096,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 6035,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 7131
+  }
+}

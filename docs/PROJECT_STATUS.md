@@ -561,3 +561,60 @@ Four indices on a Serverless project (`my-elasticsearch-project-b5e003`): `telem
 ### JUDGE_QA block (verbatim, for builder-23)
 
 **Elastic Workflows?** One Workflow, `caliber-stale-holds` (`elastic/workflows/stale_holds.yaml`): every hour, and on demand, it finds holds open more than two business days in the `holds` index, has the Agent Builder agent write a one-paragraph brief per hold with the ES|QL tools, and indexes each brief into `escalations`; the controller agent's `status` reply ends with "N escalations, newest: ...". It ran on the Serverless project on 2026-10-24 (two executions, six briefs); a new brief shows in `status` about a minute after the trigger, not 30 seconds, because the agent calls the tools before writing. The scoped MCP key waits on a Kibana UI step; until then Droid uses the project key.
+
+## 2026-10-24 17:15 PDT Builder-22: model-only baseline (Task 22)
+
+Brief: context/briefs/2026-10-24_1550_task22_baseline.md. Acceptance: bench/BASELINE.md and the FACTS baseline block exist from one committed run with prompts and raw outputs on disk, and the README line quotes the table. The run is committed (bench/**); the FACTS block is wired in scripts/facts.py and emits only when bench/BASELINE.json exists; facts.py was not run against the ledger (builder-W owns it). The README line is below for the director to apply.
+
+What was run (one committed run, 2026-10-24, 15:46 to 17:08 PDT):
+
+- Sample (bench/sample.py, seed 42): all 52 planted rows, all 6 decoys, 500 clean rows: 174 card, 173 toll, 153 invoice (every clean invoice there is), clean card and toll rows spread over all 92 days, invoices over 81 days. The 6 auto-pay limit holds were excluded (policy holds, not exceptions). bench/sample.json.
+- Inputs (bench/inputs.py): per row, the rows index.ts hands the kernel: the transaction; for cards the truck (plate, tank) and the truck's pings for that business day (pingsFor loads the day, the kernel's rule then uses the 30-minute window); for tolls every earlier toll for the plate; for invoices the PO with received quantity, the contract valid on the receipt day selected the way index.ts selects it, the vendor record with bankChangedDay, and the vendor's earlier invoices. Fields allow-listed; a walk asserts no code, expected, note, planted, finding or txnRef key. 558 files under bench/inputs.
+- Prompt (bench/prompts/hold_or_clear.txt): one prompt for both models, the payables policy with the seven codes and the kernel's thresholds (copied as prose, thresholds.ts untouched), a guide to the record fields, and the JSON shape. The policy is in the prompt because a clerk would have it; without it the test would measure threshold guessing.
+- Models (bench/baseline.py, over httpx; no Anthropic SDK exists in any project venv, agent/.venv used): Claude Sonnet, requested and accepted id claude-sonnet-5-5, concurrency 4, no temperature sent (Claude Sonnet 5.5 returns 400 for a non-default temperature), thinking and effort at API defaults, max_tokens 4096; asi1-mini, temperature 0, one request at a time paced to 9.1 s (free plan 100 per 15 minutes, 1,000 per day), 561 requests today, 3 rows retried once, every row ended 200. Every raw response under bench/outputs/<model>/<id>.json plus _meta.json.
+- Scoring (bench/score.py): positives are the 58 key rows, decoys count as correct holds for every system; code-exact is the headline (same definition as docs/FACTS.json), detection (any code) beside it; the first complete JSON object in a reply is the decision, no object means not held; Caliber read from docs/FACTS.json, never recomputed.
+
+The table (precision / recall, code-exact), bench/BASELINE.md:
+
+| Code | Planted | Caliber P / R | Claude Sonnet P / R | asi1-mini P / R |
+| --- | --- | --- | --- | --- |
+| location_mismatch | 20 | 1.00 / 1.00 | 1.00 / 1.00 | 0.71 / 1.00 |
+| capacity_exceeded | 6 | 1.00 / 1.00 | 1.00 / 1.00 | n/a / 0.00 |
+| rate_variance | 9 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 0.89 |
+| duplicate_toll | 11 | 1.00 / 1.00 | 1.00 / 1.00 | 0.12 / 1.00 |
+| duplicate_invoice | 4 | 1.00 / 1.00 | 1.00 / 1.00 | 0.29 / 0.50 |
+| vendor_bank_change | 3 | 1.00 / 1.00 | 1.00 / 1.00 | 0.11 / 0.33 |
+| short_received | 5 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 |
+| overall | 58 | 1.00 / 1.00 | 1.00 / 1.00 | 0.31 / 0.81 |
+
+Detection (any code): Caliber 1.00 / 1.00 over 7,944 rows, 0 false holds; Claude Sonnet 1.00 / 1.00 over 558 rows, 58 holds, 0 false holds, 6 of 6 decoys held; asi1-mini 0.33 / 0.84, 150 holds, 101 clean rows held, 6 of 6 decoys held.
+
+Where each model failed:
+
+- Claude Sonnet failed on nothing in this sample. It tied the kernel on every code and overall. This is what the table says and the README line says it.
+- asi1-mini missed 4 of 6 capacity_exceeded (and held 2 more under the wrong code), 1 of 9 rate_variance, 2 of 4 duplicate_invoice, 2 of 3 vendor_bank_change; held 101 clean rows, 82 of them as duplicate_toll (it treats any earlier charge at the same plaza as a duplicate), 8 as location_mismatch, 8 as vendor_bank_change, 5 as duplicate_invoice; 22 replies wrote their JSON and then kept reasoning (read by the first object), 1 reply (T1706, a clean toll) was cut off before a complete object and counts as not held.
+
+Cost: Anthropic $6.38 for 558 rows (2,358,546 input, 166,183 output tokens including thinking) at list rates $2 per million input and $10 per million output (Anthropic first-party API list prices, platform.claude.com pricing as cached in the Claude API reference 2026-10-06); cap $15, not reached. asi1-mini: free plan, 561 of 1,000 daily requests used, 2,393,406 prompt and 66,383 completion tokens.
+
+Partial: nothing. Both models answered every row of the sample (asi1-mini 557 parseable of 558).
+
+What this does and does not show: on the kernel's own inputs with the policy stated, the current Sonnet reproduces the kernel's verdicts on this synthetic sample, at $0.011 a row and about 3 to 5 s a row, with a free-text reason that nothing checks. The kernel costs no tokens, is deterministic, is tested on all 7,944 rows, and is the thing the reducers and the audit trail are built around; the baseline does not change the architecture claim (code decides money), it removes the claim that the model cannot do the matching. A smaller model given the same inputs and policy held one clean row in five.
+
+README line, ready to paste (director applies; README.md is builder-23's file):
+
+**Model baseline.** On a 558-row sample (all 52 planted errors, all 6 decoys, 500 clean rows) given the same records the kernel reads, Claude Sonnet 5.5 alone tied the kernel on every code: precision 1.00, recall 1.00, 58 of 58 held, 0 false holds. asi1-mini alone scored precision 0.31, recall 0.81 (0.33 / 0.84 counting any hold), holding 101 clean rows, 82 of them as duplicate tolls. Caveat: synthetic data from the same generator as the clean rows, identical inputs, no fine-tuning; the kernel's precision was measured on all 7,944 rows, the models' on the sample; the kernel is plain code with no model call, the Sonnet run cost $6.38. Table, prompt and raw outputs: `bench/BASELINE.md`.
+
+Checks, each run after the edits:
+
+| Check | Command | Observed |
+| --- | --- | --- |
+| Sample | `agent/.venv/bin/python bench/sample.py` | 52 planted, 6 decoys, 500 clean (174/173/153), 558 rows |
+| Inputs | `agent/.venv/bin/python bench/inputs.py` | 558 files, forbidden-key walk passed |
+| Sonnet run | `agent/.venv/bin/python bench/baseline.py --model sonnet` | 558 saved, $6.38, stopped for cost: False |
+| asi1 run | `agent/.venv/bin/python bench/baseline.py --model asi1` | 558 saved, 561 requests today of 1000 |
+| Score | `agent/.venv/bin/python bench/score.py` | BASELINE.json and BASELINE.md written, table above |
+| facts.py block | `agent/.venv/bin/python -m pytest -q bench/test_facts_baseline.py` | 2 passed (block emitted from a fixture, nothing emitted without the file) |
+| Key leak | `grep -rl "sk-ant\|Bearer \|x-api-key" bench/outputs` | 0 files |
+| Em dashes | `grep -rnP '\x{2014}'` over bench sources, prompt, BASELINE.md, facts.py | none |
+
+Not done, by design: facts.py was not run (builder-W owns the ledger), so docs/FACTS.json and FACTS.md do not yet carry the baseline block; the next facts.py run adds it. README.md untouched. No process started or stopped. Tried and rejected: the earlier JSON extractor took the span from the first brace to the last, which broke on 23 asi1-mini replies that kept writing after their object; replaced by a first-complete-object read, applied to both models from the saved raw text, raw files unchanged.

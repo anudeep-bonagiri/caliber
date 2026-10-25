@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00905,
+  "durationMs": 3463,
+  "httpStatus": 200,
+  "id": "INV-1056",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies. The amount of 26,439 cents matches no earlier invoice from this vendor. There is no PO or contract to test for rate variance or short receipt. The invoice is under the 5,000 dollar bank-change threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS0AkKEAgTGAI4AUIIdGhpbmtpbmcSDKholnY+6Xu9Y9aMzhoMUhR6TzUdMdxPz22tIjALvfB58zvtRD9l1WcYrFnGBIdpdy0Tzj3navgIV2bwpWW5PDHAw+KV6106anCKK2cq7QhjeFmGUwzumrX/nmDOV6nrveu4GONGxikUMdjViE0OwuUEt3j+3XGk60A3YCDeHflRrfhLX8PuGALlqjcrNakhu0q22/qvX3tDQSbX50Pqu7RxiRvZhBwzkt8edVKIE2iWaGC1iIZSGWp/nsj9Fr6ht8NE0489etdY6BNEjx153Q/xVARDQCAi48zpc2SRwELij3qbdfX9VBWWYBKZGx1eNOMNxKvKKD8kqiTK6suVLKdSy6nmNV6n8OAT8NgzZtaPcZMZ3KLCLLW6tTqr61sM5XP54y3Pyt1FMR2DtJcpGcrAEgQMv4IBn1daFKuEV7JqnVN17gIXtEtjdfgA+wUmX+PrlX40A9pPUzsrPg54qLh7Wj5HzSYgnJwJcgCEJBu204POkYEP36kLS8uIUDWInbYKRVTwVZ4VzX/OPw1oXs0Cgtak9f6pNxb3+zhyi7lVad/juc2IoyCJY1H0rpO7SjyglIooLKXQmFdwx1n9EVbHmjX5U91TMNzYT9uqf40+3AWcdUPE7M2+P14wq2Poj4SiYfMl1AlL4p8Kle5UYjlrRbt8B+4lHWQumX6/9V0V2pzgPH5EdO9PD40QTDUcmdyeSC4RPgL3OeEatomF/rmr9Zm1iDJN3raLyG/R3igsPyuqog6sgjE571ucnx/7ADhjOARTEiJXu1cgHGQscgZ/FzogjyiXbGGeCpYVgaGGwltAMWpO6m+fivcucWwBn/q9RDwefzhE09tDj9j8B9A3XnOhXiTIoaO0MO3exwibFRVoWChgFXwtH/BFAR+t3InXcIVJvzhpltxT2SFR11Fp5DCh8pg9y8l64ho67EyUPNY10DJZpbBazISTMHs+uYkRPNuMSAkVv1OTvImoi3hSN+aEIGNrX7vClUUz2zrX0rKdXAzsxa3kFIUyYz14nECKfZOF9zP62ONvb6KGd3l5pn2ZMb7VSNttdwuYEN2bTWPyAs391Zm+vR71eRmG3+XsOu3M8D/fMAJ9SicgeXTD+xnNqAaN7/IViDYk02Wg/xp/qihRwOu54CIwExw55j/oscis4DLxU0DvV87jMcc2dOz+SM0iUOIJLqliFFHoJI8dxO8m7LDSrcBOj+IjuOwOPyOGaEY4n3tJUc07gpfp/x16pteVgP+rsDXLGJ8MQCGaYrgHzsCpOxeipMR3HwmnoWdmWYmkj8X3FFhuvNVdh4RdYPx2mt9N3dCYU7udoRIZr0DaLyxVeWLAGDnwuGkr69ax3M4xz8AYK+11kvfCJjlHY1HyPJtsmURFxdGo0addC7oCG4Z8TxDcsHGssZCWp0SFxJh+T8zvbOhBsqlb3h59fsUBUh3r7dzwHTlKjLw7uCN8E6+4wo7NfrobgYp2fs5F6HA1PjT1mxYKr1yHyasPULXFp8dpipR80KezQwlUjnxI1yygY3SkjOl1Eof43KSUEJ3OiZLcGjJsXTdcfpeZl9tbh2eZ3iS2JXOIN8vUFIRIVWksnzSJu62n2Q2RTbsEkE1jrXMqPBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies. The amount of 26,439 cents matches no earlier invoice from this vendor. There is no PO or contract to test for rate variance or short receipt. The invoice is under the 5,000 dollar bank-change threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdgMMuMnfzMdW2Qctp",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2655,
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "thinking_tokens": 280
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies. The amount of 26,439 cents matches no earlier invoice from this vendor. There is no PO or contract to test for rate variance or short receipt. The invoice is under the 5,000 dollar bank-change threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2655,
+    "output_tokens": 374,
+    "output_tokens_details": {
+      "thinking_tokens": 280
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

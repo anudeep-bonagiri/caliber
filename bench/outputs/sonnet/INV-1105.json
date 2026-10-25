@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011016,
+  "durationMs": 3787,
+  "httpStatus": 200,
+  "id": "INV-1105",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1105 (99,600 cents, 2 tires at 49,800) matches the contract rate and PO-1020, and the received qty of 2 covers the billed qty. No earlier invoice from this vendor in the prior 30 days has the same amount. It is also under 5,000 dollars, and the bank change on day 71 came after the day-57 receipt, so none of the hold rules apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2gkKEAgTGAI4AUIIdGhpbmtpbmcSDBz7b/L7xTABZt+QsBoMYJQQuBSVbyr6eg6mIjDw8YMqdkTjKYljANi/ixiHJpuyoOcLLZKTANMPA9A90gnXb8wySw8TXumfjKk916sq9wgUTGeT/8rRf0XoCtjlwd9KXagvr/fGI6GfTG9SvtPbINPSKnqiEF03Gt7/2NphVcRk/aZYZg1tCWP2MnL5nOFdOtivZakhcdUZRJH5D6luckdb9yqzroObUQEtXosxqK4lXFgbxGJ7WwBEnnEnim3wXuH6hcCwHKGebX/CJV8zuK769dKuDIrvWOMMlrG8AIG9RI3wY52O1kYxaTmJYX810+n4I2MLKXHJA+ncDXoBK4QMZeuzADJ6MuQs/0VYqrifjfimngv/puI0U89sZWGSFLnmXIQMPVlchLlNtVX52MbenVTbW1nMHgd0pdELFtK+6RLo+iXtvJvqh0lZhYn6hsK5DItapi9izUh+FT3rnzJo6mNwqg8Cr7REPrdkXshFCZ7EHRC+lONFY2ZKyBMoTUK5AmySSDO8VE9HKCMatDcQmct/brrhooZwcu9p8VVQUzUm1CIHAPaQcjt6Fp++Ddk9jV/tfa7fznEipwPAlBVBzep//tStdG1XttaNQVDlVfojGEbWd3mlmc9fee5ZuzoavsEKxhGlVIHKyTThoE/aGiBwWpYyO7V7oVW+J3lQQ5DBg4qnAFV1URhZ1gqjUHeXUshtGmN012WKFSC1pdVyuA8zi4LKZ8qiRKUxe3NkGdPrMOHcR1cj23ENPXZM2bxdMyrra/4sjIIxYdfTD0B0kzU6NDG/Cpas6krtU4EvVrn+W5wCGHKwj24vvIFefUo6LW6olMcWkXkPw5TUjkM2dmSTa8UJLwSXV8K9T9JqKInKrsHcBgW1KlynalFAZWsE5ZU/jZhh7rklRsLuF5bpuPPsvW4VJizOVP9kQAXVLhEDpy+GCjgD/p1BLJQOSlGqX+VwL/5CnukkYq0tCZdhmUf+5XDujyuQCPmkxhXo8/Cv2PITDMIXJsc+1ChfhDhyF0Wanz0KgZu2Hx6JhVWSwprousR/zEVO9O1i0pVZJS1TbCmQGEzh4plC+DryD0oNU3+SY6w/idPKOgTslfTNH/7ZF1bQQGMo18WNxVpJmr4irvyMeHIFsjv1k94khPd0SguN1bhw66ramqRwm+P/G7ro3Lt4kbtZD9WdKnoidCxV9ZW3VpaIcHGg25JrE1HlA7FIOZBGd898tHt6x0GllAExJ9Bb25FwdteUSY2Lto60TOxFT3oEZE6grCD6IsUG/YsGC22w5cZceJeP77VARzbwqaf/PonZhv9XMOUnucJ4cUNRo+WvxskxN+PWEIyWkBEXmJ/dGquHmoLavxNlo6qrjzQsxCdDlb00/Mad3r5HsXFFJEiCr9g72RExp2iS27FukOug70h8ncPMWtKuJbClh7zju6oyZ1g2kADT5AfOic0lsreM9m5SFh8lz5yBlsw2WmDm4Gc/1VyjoufYQRcth1X8Hq0Avy29p6sijFQY6v+TE8LnVdjkFtDgJGsnZbLt70Dx0Y1GEAjBuGEQ6isSV6VsnpBgobdHkUAT/l7+L+0PH+epbR9kpYlEmrPtGBR262rp7hUe4KOWbsdMwUHxstMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1105 (99,600 cents, 2 tires at 49,800) matches the contract rate and PO-1020, and the received qty of 2 covers the billed qty. No earlier invoice from this vendor in the prior 30 days has the same amount. It is also under 5,000 dollars, and the bank change on day 71 came after the day-57 receipt, so none of the hold rules apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMso37XbKDUz36nYoGbw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3478,
+      "output_tokens": 406,
+      "output_tokens_details": {
+        "thinking_tokens": 263
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1105 (99,600 cents, 2 tires at 49,800) matches the contract rate and PO-1020, and the received qty of 2 covers the billed qty. No earlier invoice from this vendor in the prior 30 days has the same amount. It is also under 5,000 dollars, and the bank change on day 71 came after the day-57 receipt, so none of the hold rules apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3478,
+    "output_tokens": 406,
+    "output_tokens_details": {
+      "thinking_tokens": 263
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

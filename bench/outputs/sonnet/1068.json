@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00856,
+  "durationMs": 2794,
+  "httpStatus": 200,
+  "id": "1068",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Nearest ping (14:00Z, 11 min before purchase) puts truck 12 near Laredo (27.53,-99.48), about 140 miles from the Seguin station, far over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1012."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS3wYKEAgTGAI4AUIIdGhpbmtpbmcSDFUGlUCedZkZhK54dBoMNZtKPilM9phPvWnnIjALVJ+i5hAnP5fHQ6QeZPjXr89cCwGKIcCO5EaIPAojXamP0K2iBvqYFsSL8/z8yj8q/AWIQ2O51agSdsUTGOCkfZz/wYza6cmB86XCsk4jdnf9i9vC8L7ied4lofY0FfBO4xL+LgJEp/YITqFFXtk6HA+9V/aIANp1YZz1j8wlW1JIC6zfgmFTw8YN/ajJ93+qsnKnd+mzAMz/5eleVp/OQaOmvi3RVSVAGZGX2gHh7qfdRcZ+V//Lbvg8zhx/gUU7DdIMJR8N+znqgO49Cj9ROkG7g/S6SXBRk0GTtrKCRTr1b0kJmCI2LN78JiHU3MH6AL+S1LtebH+tgwQuJThJ9nOa28/RAvpA6mhZXmzjihucbrMUF58rkKYtKq25NONM2Z+gpJGpDXBN/NIifcc+U+tBWFPhSn90xyAkxkVroZo9jrss8AqOPsO2FScQkcCrl9nPbHkc9hf77b65fTWAnVU9P2na8blUMu0rxIHPBuPHxMipu8CBzc0dgkk4j92Sc0u9BDqDeSHzN7DSgjf42SupVlOXVbUJVTnysCy9/XQdLJaKqfNrpPk0ua9LS7fXxcr3ZZXdjLcZd1qSaxxmIVko0qfj1Q1Mqbey7GbPyO6y9O8f/A90pioGil/LiGlqa5gTPdYGwra+jnrM+kHSOT8mS0JAc/hSjaaOWv6lP97640MtTBFHMGUtTetgWPBOg87mLnwxt+FVlChdWnqehs7Y9agXUcucyhLGWaWcGLSN6kA8j9E5uakuflNg41TyXrvo3VKd1lTVJeEuTKAFrIQLA9hCUS8yULnmUQsQzzeps6/w+Uu6Gw/g3ahl6Dfmw/Fy5bOd3S3dibJXW8BkSFwowoGoQ3f5vLn3guSeN9jtQ8vYVpJTUZRbe+3X4K6ArJvPrSynnTVA/iT7/FI/lc2j3mWKlBRLPSzNVaLR2d57g8Bu3i4gNzuDykS+UEOKGcXKOJyBiR9ABAqepA+8gI93Ekd3nnBLVuhfTsgaee1ENGfWFpt5GEqoKmKF9kJgZVTERKeX+n0E2bfnwctFxH6gCX9TF6Hi8b2mXwaW0v8zgpek1T8xbZuu+x5ZSxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Nearest ping (14:00Z, 11 min before purchase) puts truck 12 near Laredo (27.53,-99.48), about 140 miles from the Seguin station, far over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1012.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsde8fT5vuXvdv7WJZT",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2990,
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "thinking_tokens": 140
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Nearest ping (14:00Z, 11 min before purchase) puts truck 12 near Laredo (27.53,-99.48), about 140 miles from the Seguin station, far over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1012.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2990,
+    "output_tokens": 258,
+    "output_tokens_details": {
+      "thinking_tokens": 140
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

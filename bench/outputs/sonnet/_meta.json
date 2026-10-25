@@ -1,0 +1,26 @@
+{
+  "costCapUsd": 15.0,
+  "lastRunAt": "2026-10-24T22:52:41+00:00",
+  "maxTokens": 4096,
+  "modelUsed": "claude-sonnet-5-5",
+  "probe": [
+    {
+      "errorMessage": "",
+      "errorType": null,
+      "httpStatus": 200,
+      "model": "claude-sonnet-5-5"
+    }
+  ],
+  "rates": {
+    "input": 2.0,
+    "output": 10.0
+  },
+  "ratesSource": "Anthropic first-party API list prices, platform.claude.com pricing (cached 2026-10-06)",
+  "requestedModel": "claude-sonnet-5-5",
+  "rowsInSample": 558,
+  "rowsSaved": 558,
+  "spentUsd": 6.378922,
+  "stoppedForCost": false,
+  "temperature": "not sent (Claude Sonnet 5.5 rejects a non-default temperature)",
+  "thinking": "API default (adaptive), effort API default"
+}

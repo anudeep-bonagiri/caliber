@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005348,
+  "durationMs": 3031,
+  "httpStatus": 200,
+  "id": "INV-1027",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1027 is $230.15, so the bank-change rule (over $5,000) does not apply. Its amount matches no earlier Alamo invoice, and there is no contract or PO to test for rate variance or short receipt, so no hold rule is triggered."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxQcKEAgTGAI4AUIIdGhpbmtpbmcSDFCtobEK6cj4oGN43RoMEufgM4oPm9kwyKBLIjClMexuFq+knw/8EaYLm4gqbCrJNK17RfAE7Xx7OivW7Ob1KbpFiTOl5uasiI04OjQq4gYGwKRiVIjxQ2uXOuu/LKtcoRYzoIHIUjSBXxIH1jzjU3S0yuA1EkE50HEQWFNaS8G4g4mSn2tQfHTlWezPaVGCfYJQ6mEbBNtC3ekfphi9zPFdglou0V6ZWBubszljdLaIZKilS2hJRgk1CjFilTL9k1CQZ/7SbBjdzOFu523N9atXI3OHmJsQCdSw8bh7VW4u1KrtzzxXnGG9UYHbTWtrOuDXRrEcaxQ5wkS2k+ogD5jOb/gdqv8KZJdAu2fKRdsAtZYUOEGYj1XW6Dz2eScrBz6A82r6gjLjXSs3z+pLu31tbcto84g6u4DKWmMLda8JtkMHVpehzGgjVYTeroXJUBSw7xhjAXnR91LGlnqpUg80IAhim+g2Fpt+43QMZqgmifH6nfj2vdlgRjlhh9BgPEUqYHLgHU2t6mZvaMZnd9rBTPctYoLN/X1lQkqDXLSI+aB1EbunAvEuAvOXgktfAS+mq9BfpuPodLGIgrc5bOUMEFkr0H6pp0aDK6nKJqQsDnW/OBOk63BRgvl8aEr87moGurv07CYDeeEcUhVrNvCBCPyb97De4pmV+TShMWoz67iagRmby5MtXpyQbog3wyr3ytOtaoTmmXVB69DV8Jpm3bofvNutpCV+g5fm/R5bpOpMJX7U3oto3BAKRWfJnyoNRqyNnsg7zlA3oXRcdRClNVWWTLjYoLi1g01JeyBMQKNN3ThRSnKnj5u5fOmNPS4m94I83cDlW4UDtKKzDE84zJZiJ36pRcJRzuuGL1648lx/RnNGeaRz2VLr1wzfRNUlXq301lyrmeQcjCLS9u0ho0N8k5MAcqztn3DM9UfCBPoJQWzKoivWzmBKLaAFANUspA3Q0axD58pIGZDJvUD0j8mnmn9B6G3F9M/ZeWMYkkLbg2bFRseMkykUtz5AW73R48Hl4q+Ri+UayTPYVz8vyoQMmMsAKDofjOBBd3kgBFj7y2DqKq3anO35igJM7Ki4/N82chXxmZmVFKvw4hTs9Ya8YwOXMzyoInuqv2fVE7dyA2YSWML/JRbnR0MOD/4F/AeiViIaqTn3iN5FjoOgkMtFdYUJyyFKlKuBQeX3wQFFtUYiupkUPfeSJ+GeE3QOazvvUW/1fVf07YU8bLeXFfb3ejt1PHeZ76eC851COxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1027 is $230.15, so the bank-change rule (over $5,000) does not apply. Its amount matches no earlier Alamo invoice, and there is no contract or PO to test for rate variance or short receipt, so no hold rule is triggered.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsd53Kzs3WvEcAppwkT",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1484,
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "thinking_tokens": 139
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1027 is $230.15, so the bank-change rule (over $5,000) does not apply. Its amount matches no earlier Alamo invoice, and there is no contract or PO to test for rate variance or short receipt, so no hold rule is triggered.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1484,
+    "output_tokens": 238,
+    "output_tokens_details": {
+      "thinking_tokens": 139
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

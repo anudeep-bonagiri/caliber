@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011256,
+  "durationMs": 2674,
+  "httpStatus": 200,
+  "id": "2718",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 1 pinged at the Laredo station (about 0.01 mi away) at 12:00Z, 6 minutes before the 12:06Z purchase, and 24.9 gal is well under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSnwYKEAgTGAI4AUIIdGhpbmtpbmcSDMuq8acDSzFXO1EmahoMiibGJBcjAN5sjKwOIjC+R/oQWwy7Uzzm5IJvVsjUr9KAdd6BBkgAiR4t4H4HJ8IufFKeK1U5+Oime3i7i+YqvAWADWiAzI01KrbzEyHFbaM9VzbqkzaPSVGA13eA7atWd9ybSWYsF7sdKxd6E2BMyEp6MECuGv9zOVZAY7u4POJmxnyhW1P71N6x31YXUKonGC6lnPo/1u9GGlHFLWTBFdCwwv5sdw6WIrsD7jNTqMb9Wa9nhklQmwhJO2h9gH0fv7vVhSvT6fZAEKq7ZWVQeV5Cw8tyM1AcmursdlYSWnpo5PyXPkCtYQa1f1hySRi9J/IRiwXsRPfyVMSEtorpi1H/lJ0xs9Rz1pGvYFj5yI56Qr03LGTb6FrOfzaos0eJmth1gvWydcyOPCc5RtXmJGSsXKQAxP2Lp175mjHIPV/qyLUN8b4w0nkBbyBWT15UtyndcMvcrXPvxve/HWoKwpJTFsMqnKqoPTxMf58rfDyjIGUdsdRg0k8erLBo8uDXMoBH4OqMy32B1n69JmVY89I9JabfDsyy+j0ABsz86unfb7lmh7liQsW8MyZspWPsV6ogW2JIaII4GLsadTsMi2wzpKUBVC50sfjS/V54293p3JlaA3VCKNDTVzGO0R1qb6KiZphAJWicAgmklHwnom7jIsUFuLVTkeh2nys1o98Iin7yPPEnzTKnq1vmM2b2+jkaOTI1mi1y0r0Ki+OUOYM5sTH9vEH1OIpNwWBDviZqsDSHqvETXXMMfE8ykNwmi5HACrWSpsnUUYRc1ApaCt2pbGscxEI2xSSecLWbAS2v24bWTS3xgQJ7xe2hrX87YqGz4WDjkcxj55h4ZRwQUL9NWq+d+2dsc1vFYsPUW1wjke2rio8F4O5Gjo9id5lFoMZU6IPG6otnwTmF0HC8TEzVlNDRXG+Dis01Pf127YBMK+F3GBK12jCkGTn3gQ1E+Z8AmR6zwlJ+sKergEUavC5mCfysK1R0G8DrAUM+N32Gz0PTlHmEsY3T54HMGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 1 pinged at the Laredo station (about 0.01 mi away) at 12:00Z, 6 minutes before the 12:06Z purchase, and 24.9 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4fcuK3hBW2xWUdBv9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4593,
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "thinking_tokens": 105
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:23+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 1 pinged at the Laredo station (about 0.01 mi away) at 12:00Z, 6 minutes before the 12:06Z purchase, and 24.9 gal is well under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4593,
+    "output_tokens": 207,
+    "output_tokens_details": {
+      "thinking_tokens": 105
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

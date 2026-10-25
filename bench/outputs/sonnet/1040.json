@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01366,
+  "durationMs": 2718,
+  "httpStatus": 200,
+  "id": "1040",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 3's pings at 19:31:16Z and 19:45:00Z are within about 0.1 mile of the San Marcos station, and 46.5 gal is well under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgQcKEAgTGAI4AUIIdGhpbmtpbmcSDEOa0cMqBYzDGPGPXBoM6yWY7kbaTofe00BQIjCssPs9kqL91Q2kUcXVxul2PUS4yLZMBNQ4+SR6yp8r649hlcyl5t3BtdEeKcqlFt0qngYA1TLcHjwEX2WSkTIYVjGm3CjqiuCNmLO9qXV0MSK0u1RG+URzt28zbpbm0ORfdQu7bf7CBzLYx9cYD2nOmvE38iYhPeWVhG/vI+Q6zWVUKZiG+xOX3R4NGaV1xhz3EZ1MNDsuWZ5wm1SbqaDt2BoDFf1p75SEZjD7oQm2NgHhIvauKFFu7wzDja4KwAIEKtMXOt4HheLeiU9W6Xe2CldXRk0nF+3uQYR6kfC7QE9TZn61inod/SFazhoWLRZLKssxYzfEPgSwKYHGanay3oYLF6ugsGx6C/R6WuTK4ngjuNGzE6xQJCeOi0ADLvOeUq7/1wBeePDQyqs1o3nJevTE5UDf8vDxln7DbFGYavKIHvbbmpr+YgqotZQOVatajrkd513OE3Vj5PCR3gI66VKTe8ylbBdsp737tWtmQ5jln1A5LBpjb7Om5GSvZEcBvVtU0Qypd9eo//Y9j5BsKQ6/wMlFc7gKd4EEXPaQRgTydqIE8ow3maYun6bADAPdIBA32X6UGIoTnuE+pcRuKkyZa9AiEwr1VWqDL6zYgGfu915IBxgeQGT9MFTlf4evn1oE8Z+Fyhm6XiWilIaVsY53Mu+jY3p8p5YL/3KJM0lJZv22RBiMr8LoswNlAVoL4v/+mS+D1mCORpDAcayUezAiEtCCtfMutUhJUik9Pt0+muFqc8mj1kEnrONe118jtRL+BMkxClrxJfWYwnIF+g0gys7tCTbLEQzkub7YCzly4z+IXeQDlfHiO33bfa+B/ABZtBG0lH2qbtZdafjxkqjzmWb6t/NYcFn5JNJnqtpZECGLfwocfJf/uoOYNOQL5nhXqHx8lBtHU84xYTi1/2uA80JGBIQuT41GG4VrQd/cTVEepf7LgF2Ux0ZernjnNX524WIvLyL1MOBvyEDaOKXG9fd7PAvEkpyZkARuBoUGxcZPYL7SMvTT55yxwadje4bsp+JJ81uJjig17W3gDy4Rd05WNNh3EWGUU5XbONPE7fl325Uk2rcT8PN5cFy9sFodjbLQXYhuaPPzA18LzFraGR6fdt+EaAyLWc1YCqIYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 3's pings at 19:31:16Z and 19:45:00Z are within about 0.1 mile of the San Marcos station, and 46.5 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMse8S1PJgY7bF51RdTE",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5545,
+      "output_tokens": 257,
+      "output_tokens_details": {
+        "thinking_tokens": 163
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 3's pings at 19:31:16Z and 19:45:00Z are within about 0.1 mile of the San Marcos station, and 46.5 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5545,
+    "output_tokens": 257,
+    "output_tokens_details": {
+      "thinking_tokens": 163
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

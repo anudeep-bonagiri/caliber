@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 10272,
+  "httpStatus": 200,
+  "id": "1275",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"location_mismatch\",\n\"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (11:55:00Z) was approximately 2.6 miles from the station, but the policy requires a hold if the truck was more than 25 miles away or had no ping; however, looking closer at the distance calculation: Station is at 27.821, -97.43. Ping at 11:55:00Z is at 27.82091, -97.42993. The distance is negligible (< 0.1 miles). Wait, let me re-read the policy carefully. 'more than 25 miles from the station by its nearest telematics ping within 30 minutes'. The nearest ping is at 11:55:00Z, which is 6 minutes before the transaction at 12:01:40Z. The distance is ~0.05 miles. This is NOT a location mismatch. Let me check capacity. Tank is 120 gal. 10% over is 132 gal. Purchase is 35.3 gal. Not exceeded. No other rules apply to card transactions except these two. Is there a trick? 'nearest telematics ping within 30 minutes'. The ping at 11:55 is within 30 mins. Distance is tiny. So it should be clear. Why would I hold? Let me double check the coordinates. Station: 27.821, -97.43. Ping: 27.82091, -97.42993. These are essentially the same location. Stripes 2167 in Corpus Christi is indeed at those coordinates. The truck was there. So it clears.\"\n}\n\nWait, I need to be careful. Did I miss something?\nLet's re-read the `location_mismatch` rule: \"a fuel-card purchase where the truck assigned to the card was more than 25 miles from the station by its nearest telematics ping within 30 minutes of the purchase, or had no ping within 30 minutes.\"\nPing at 11:55:00Z is 6 min 40 sec before 12:01:40Z. It is within 30 minutes.\nDistance between (27.821, -97.43) and (27.82091, -97.42993) is extremely small.\nSo `location_mismatch` does not apply.\nCapacity: 35.3 < 132. Does not apply.\nNo other rules for cards.\nTherefore, decision is clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"The truck was located less than 1 mile from the station at the time of purchase, and the gallons purchased are well within the tank capacity limit.\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882539,
+    "id": "chatcmpl-de73ec23-97bf-4456-8079-896ac74b03a1",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 662,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 5842,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 4288,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 6504
+    }
+  },
+  "startedAt": "2026-10-24T22:55:30+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"location_mismatch\",\n\"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (11:55:00Z) was approximately 2.6 miles from the station, but the policy requires a hold if the truck was more than 25 miles away or had no ping; however, looking closer at the distance calculation: Station is at 27.821, -97.43. Ping at 11:55:00Z is at 27.82091, -97.42993. The distance is negligible (< 0.1 miles). Wait, let me re-read the policy carefully. 'more than 25 miles from the station by its nearest telematics ping within 30 minutes'. The nearest ping is at 11:55:00Z, which is 6 minutes before the transaction at 12:01:40Z. The distance is ~0.05 miles. This is NOT a location mismatch. Let me check capacity. Tank is 120 gal. 10% over is 132 gal. Purchase is 35.3 gal. Not exceeded. No other rules apply to card transactions except these two. Is there a trick? 'nearest telematics ping within 30 minutes'. The ping at 11:55 is within 30 mins. Distance is tiny. So it should be clear. Why would I hold? Let me double check the coordinates. Station: 27.821, -97.43. Ping: 27.82091, -97.42993. These are essentially the same location. Stripes 2167 in Corpus Christi is indeed at those coordinates. The truck was there. So it clears.\"\n}\n\nWait, I need to be careful. Did I miss something?\nLet's re-read the `location_mismatch` rule: \"a fuel-card purchase where the truck assigned to the card was more than 25 miles from the station by its nearest telematics ping within 30 minutes of the purchase, or had no ping within 30 minutes.\"\nPing at 11:55:00Z is 6 min 40 sec before 12:01:40Z. It is within 30 minutes.\nDistance between (27.821, -97.43) and (27.82091, -97.42993) is extremely small.\nSo `location_mismatch` does not apply.\nCapacity: 35.3 < 132. Does not apply.\nNo other rules for cards.\nTherefore, decision is clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"The truck was located less than 1 mile from the station at the time of purchase, and the gallons purchased are well within the tank capacity limit.\"}\n```",
+  "usage": {
+    "completion_tokens": 662,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 5842,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 4288,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 6504
+  }
+}

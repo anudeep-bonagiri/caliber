@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 8942,
+  "httpStatus": 200,
+  "id": "INV-1128",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The invoice amount, unit price, and quantity match the purchase order and contract rate, with no policy violations detected."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"clear\",\n\"reason\": \"The invoice amount, unit price, and quantity match the purchase order and contract rate, with no policy violations detected.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882885,
+    "id": "chatcmpl-a8e3b1ac-1653-47b3-996d-900ef5d5f89d",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 39,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3193,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1072,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 3232
+    }
+  },
+  "startedAt": "2026-10-24T23:01:16+00:00",
+  "status": "ok",
+  "text": "{\n\"decision\": \"clear\",\n\"reason\": \"The invoice amount, unit price, and quantity match the purchase order and contract rate, with no policy violations detected.\"\n}",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3193,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1072,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 3232
+  }
+}

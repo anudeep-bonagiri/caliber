@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01597,
+  "durationMs": 3144,
+  "httpStatus": 200,
+  "id": "T2241",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1015 at SH 130 Mainlane Plaza 1 within 10 minutes; the most recent charge there was 2026-07-23, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at SH 130 Mainlane Plaza 1 (Hutto) on 2026-09-17 at 16:57:19Z. The duplicate_toll rule applies only if an earlier toll for the same plate at the same plaza falls within 10 minutes.\n\nThe earlier tolls at TXTAG-SH130-01 were:\n- 2026-07-08 16:42\n- 2026-07-09 15:18\n- 2026-07-23 15:51\n\nAll three are weeks earlier. The most recent toll on the plate was T2209 at a different plaza (Fort Bend) on 09-16.\n\nNo toll rule other than duplicate_toll applies to this transaction, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1015 at SH 130 Mainlane Plaza 1 within 10 minutes; the most recent charge there was 2026-07-23, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuuzqGg4JUwHNYwJUx",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6425,
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at SH 130 Mainlane Plaza 1 (Hutto) on 2026-09-17 at 16:57:19Z. The duplicate_toll rule applies only if an earlier toll for the same plate at the same plaza falls within 10 minutes.\n\nThe earlier tolls at TXTAG-SH130-01 were:\n- 2026-07-08 16:42\n- 2026-07-09 15:18\n- 2026-07-23 15:51\n\nAll three are weeks earlier. The most recent toll on the plate was T2209 at a different plaza (Fort Bend) on 09-16.\n\nNo toll rule other than duplicate_toll applies to this transaction, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1015 at SH 130 Mainlane Plaza 1 within 10 minutes; the most recent charge there was 2026-07-23, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6425,
+    "output_tokens": 312,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

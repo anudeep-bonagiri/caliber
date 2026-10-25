@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01097,
+  "durationMs": 3763,
+  "httpStatus": 200,
+  "id": "INV-1115",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1115 ($736.00, PO-1014) matches no earlier invoice for the same amount under a different PO in the last 30 days. The unit price equals the contract rate of 36800, and the billed quantity of 2 equals the received quantity of 2. The amount is under $5,000, and the bank change on day 71 is after the day-62 receipt, so no hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9wgKEAgTGAI4AUIIdGhpbmtpbmcSDKW78+4t8q7nyLaKnRoMfMQsKf0bpcghBuOJIjDgrKV0KY8ergSA16gPySSUf77SVVaLyTixXlu1M5pq2gsSYHTNwslzG5xZLGF5Uc0qlAiroeEGtkPkqKWOdrFtdL1Uhol8vLWNhFlsZ6MjQ28Gqf98HIfSnMyHx9js7j/ZMwATXb1Q/ONIhziT6EdcT0oX4STGxPpaAJRo6MZf5o00pYx/NyipYQCgxWoj/IOs++DjF7D1CDePl0W+YRMuxYOU/gYHRdkXUAhr2eL+WiHjw2xu3HPwSvq6GPJa4hNwO5OF4wvgfrYjP9U/iX64I7Xmt7yW6U/P2xdx3TCI8NAW+T9ui9MoHQbIdRGDAQHzB6mU4Yn2+GLzLsKYofy7PeLJ/rB1lz2vI+S1rBfjXp5FWd9NIoRZVajnX4EL7Dl9QaVMNL/ln8hW1RaFAaJs/hq2cnHO+zQkLKRz84kDAanLp0aBRBebiHIk2qcsYPOrynDWg/s4gWD5geYTKdzSyyLhSs2AdRgc4j97OuVG1/ha0RsNBks/XAsNatwSSESRMOLpd4tz7NCwtPnKM9qA4STI0tMLKgTRX3q8kHzJvB2MKdUvFgJ7+xzO7jkiNhx9atBMFCNt2NWKB4Ug7RJks+dcZ9hcc/XlQug5G3gM+8qLbC4Fx/ZRzOdPwmv4ClUSz9OInHhnfnEK9mVxeVJ+lNPaHYiG90ryq8kuJMFnKjK5RQNSCKPpv2jRaYZTzRkwThaGfkk2yvTOrkRJQ71j5oLnnyda8yuXzVO1CdqVs9EfHIKhtlR+2aauTTAJc4NWhBa88W2RGq+NdEur6SF8OzCt1110nsHjEMOc74HNxPG34FS0JPHrGlbpLeczEi8uJNRc7TwtmEWHRaKBD5EX2Hco9Qo7BqEiIISXP3IeqheEmledRYGgnEnSoCj6MLgnUgveDfku2BoXvfgbkjPyv2kpP1XD/TLVdJ6Y9FLB68LUH9OE0ns8fdSFBHL9hLU/8WNxCCZCmaKqIu0Y2QEY0e5ZTGZHh/toi/xaBi6vpbXwPXyUYRglIepY05/OkCFrDpvly4W/IK/Uw7CgpUhfD9PKifEFBAsAt4yYsDE3zFB+8ez7MJ9GBl6rM1RHKARy9QzhzPTlalXWEFbEwaH5FsBeZL/y1VXxzFhGFTOO/BQ/TPwmWAPPWjsPpJpxAWiaSeh76BRH2M7mg6cnKNk7DedoR3HSs6aPvi3IaR8qMedm6kFjWaHl1NkP6r8tyV2ARwb0X7RgUiq6dHOJdjpGqSEt5rE4UUu80UIW9Y+FRoDubJj5UghEWJAztWUqwGXblJ4eB/rU1/uclrhCHjz+aQN5d9vnbx71XX56n6kUmvuafoU8zfSF5W9KuJU+NTB+1jkcMsiFbMppwSEZyWyC6I4zKe7p0iX20enrBF8zmvDivR8gS2SWQMfKmBq6SQAKMIb81nnKhgNe7cOGyPpKnXNdK4vwLdq9Q8akQbkNuWQTGNo5ycQYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1115 ($736.00, PO-1014) matches no earlier invoice for the same amount under a different PO in the last 30 days. The unit price equals the contract rate of 36800, and the billed quantity of 2 equals the received quantity of 2. The amount is under $5,000, and the bank change on day 71 is after the day-62 receipt, so no hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszkuXgw4A7sKzeWwrJ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3635,
+      "output_tokens": 370,
+      "output_tokens_details": {
+        "thinking_tokens": 233
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1115 ($736.00, PO-1014) matches no earlier invoice for the same amount under a different PO in the last 30 days. The unit price equals the contract rate of 36800, and the billed quantity of 2 equals the received quantity of 2. The amount is under $5,000, and the bank change on day 71 is after the day-62 receipt, so no hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3635,
+    "output_tokens": 370,
+    "output_tokens_details": {
+      "thinking_tokens": 233
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

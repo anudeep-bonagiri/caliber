@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01282,
+  "durationMs": 4557,
+  "httpStatus": 200,
+  "id": "INV-1126",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1126 (113,600 cents, qty 2, unit 56,800) matches PO-1011 and is below the 59,600 contract rate. Qty 2 equals received qty 2. The only earlier invoice with the same amount in the last 30 days (INV-1083) cites the same PO. The bank change on day 42 is outside the 7-business-day window, and the invoice is under 5,000 dollars."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSmgsKEAgTGAI4AUIIdGhpbmtpbmcSDLipt3aG3af9tvwrKxoMwUu+LCiIw2qfLtLOIjDzmeHAnMUb62Jua+tGZlJzqPrg84sruXZozWY8a0vE/TLw3iZY78aWwyctMWT6qXkqtwqaQY+WwV3PKnPbkGr12BP8UU3SkvtGXlXw26bAyjLI0Yc5DoYFKixeyQvmCHCmbfYIIjBYNH8CiG+MXB0R/im1KpM3DcOP5BRlKN0BrRD5DnB1YO604VEFMCKW66cdrNzHRkWuTcUaPoGaBFDbxH94gH6suH/UyTO38Ahbqm1LRMeIYX6pbJ4tHqhNTe7deukM9lRlVWikzkyERLVuijhck5ifQRbM5+ki5Xq+03xOk71hPUr4y1qLB/b1zpLEPjxyfnV/LpT/mTh4vVYno0bsIAeEjxOLtQIKub0jwNrJ4LdrQHZVNbgiqxhtYQVQdSIJ8f0qEWSEIHg2LqdWsgr/4zevEcoBWxa6sPD+uGewG7/EIkFG/DnKWN1iMhpG1ZxMAyp2AsU3PZAFXVA3s89sJuGhtf5LE40BZt1OulPVnRwrbqGGrGf2OXX7tQWasH96/VUZgWFtmAEn7XkM0DITFNF95+UmS5dsG8GnmnUv/F/Jl0I09GAG/FpmBCUp5OBhV5YwYkbUkJMz6R777u+rpco2O+r0/KQnx1cowWSpQmDMCQoxNpWipwXQ0Hnb+F1eCrMdlfgrPSLu+1X15c3UwY7kbG+POmILLSRd9BbbEcvOlXKG+jbmZbMZY3NRHX1/VFtqSqXElCJKX9okMT/mZB5OvXTAPS9L+VwgBY66FXdO5bXxiqrOisWgRl65BpW/y5Xt+nT8Ra/0kPlQRT+JSw0TP7TsSrWJxowVO4Gm06M0RQdISuWhgyAZiaqPX968yGUIPDgfiQ5WaYNJ1GPQbV8fhod0BQ4py0J4a1SHNCxivoBl7/X353C94y7tWqomZ+5rSyJ5I4Q37V62PpaTeUDRyBbeOJHuksztTKCCtPF2EgmAjuGPLH9XejUYhu52HEb7uOiMZzy761SbunOTxALrnPP7ZjR3WFnTSeEwW/hJv7DYQVb16uR7Ag4QAJ6pU2qAmJvk03OYQrFMnsAY/urLSEoaCEdqPOiHhQoShoGTU9Dc8ekTbaRoCt7jN4t//NL1LPdPkiGC+V5ezALzm3Q5lSZrGVgSqbvTb0k+OtskEGuO+x27z4tmMw21CZaXk2V+u8OemjOoxxpEwfYo1H27GM6ttSXzV5v05l9DZkPQ0OLa0g+NROp4sJEU8WV2zPGZzRRB96p5q/YJbY33bPNSY6ly3Omk390cSJ58NaWHvN/sFjVD/guBtkxxj5HdnwvsJ7QR2f1jHqHqFGct5NvlNEJxdfU3+RqrrKq0hz5Fc2h52onHBQWcDOmPPTzpl3EWih2cj1xCf+d1ng23Z6cw/6eUlGMI+Vj6HplD4g1DSTY/sN4B1namYdmC2zlxpAPzwCB9UfEl7jHMuuySnPyt67qQELYnXYv0bnTzHXqWC2lWjdBXKhSp7LqkQ6WSw6Kl/6i9PiTigxEbhijES2q8spVeMSu8jh33Wl7LhPBYqO+fS97ovOJnlbH1iIb+rwqOR79ciToiZ0A0Gwx7bbsPsDBQMGq6IGzPYhsJNUChn14s9ssoxYQ1u0dpxcPjvT8oliy8Cq/LWpvRJzdhRrtkVi04FGWemjv1W6D+PYui68bwjbTwA82b7ofdg5MuUSMUs3jOHwbq5+SHgr2IOMQDz6kQ9KyCGKooGzCGZhcf2FD+kOzL7p01m1SyEdraqRYeyErqRDkNxTGNCf1t+JgJMnm5xDrg1JPOVzJNZq87aeh/3+s79/QI6lSl6mYSzPOSZci/mRDeZ7qEMs5n056n/25npxznbpxkGz/aE3fIoRPI6SMYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1126 (113,600 cents, qty 2, unit 56,800) matches PO-1011 and is below the 59,600 contract rate. Qty 2 equals received qty 2. The only earlier invoice with the same amount in the last 30 days (INV-1083) cites the same PO. The bank change on day 42 is outside the 7-business-day window, and the invoice is under 5,000 dollars.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstMuGZ4UzuB3snp4uw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3935,
+      "output_tokens": 495,
+      "output_tokens_details": {
+        "thinking_tokens": 346
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1126 (113,600 cents, qty 2, unit 56,800) matches PO-1011 and is below the 59,600 contract rate. Qty 2 equals received qty 2. The only earlier invoice with the same amount in the last 30 days (INV-1083) cites the same PO. The bank change on day 42 is outside the 7-business-day window, and the invoice is under 5,000 dollars.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3935,
+    "output_tokens": 495,
+    "output_tokens_details": {
+      "thinking_tokens": 346
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

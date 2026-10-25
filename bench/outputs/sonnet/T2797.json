@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.024098,
+  "durationMs": 3666,
+  "httpStatus": 200,
+  "id": "T2797",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1014 at SH 45 N Mainlane within 10 minutes; the last one there was 2026-10-14 and the last toll anywhere was at a different plaza about 4 hours earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2797 at SH 45 N Mainlane, Round Rock (TXTAG-SH45N-01) on 2026-10-16 at 16:09:45Z.\n\nThe duplicate_toll rule applies only if an earlier charge for this plate at the same plaza falls within the previous 10 minutes, so I looked for earlier charges on that day and at that plaza.\n\n- The last earlier toll on day 78 is T2782 at 11:48:57Z, at NTTA-PGBT-01, a different plaza and about 4 hours earlier.\n- The last earlier toll at SH 45 N is T2743 on 2026-10-14 at 16:25:45Z, about 2 days earlier.\n\nNo earlier charge at this plaza falls within 10 minutes, so no policy hold applies.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at SH 45 N Mainlane within 10 minutes; the last one there was 2026-10-14 and the last toll anywhere was at a different plaza about 4 hours earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7jrykvWNq4LJLbAR5",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 10284,
+      "output_tokens": 353,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:05+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2797 at SH 45 N Mainlane, Round Rock (TXTAG-SH45N-01) on 2026-10-16 at 16:09:45Z.\n\nThe duplicate_toll rule applies only if an earlier charge for this plate at the same plaza falls within the previous 10 minutes, so I looked for earlier charges on that day and at that plaza.\n\n- The last earlier toll on day 78 is T2782 at 11:48:57Z, at NTTA-PGBT-01, a different plaza and about 4 hours earlier.\n- The last earlier toll at SH 45 N is T2743 on 2026-10-14 at 16:25:45Z, about 2 days earlier.\n\nNo earlier charge at this plaza falls within 10 minutes, so no policy hold applies.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at SH 45 N Mainlane within 10 minutes; the last one there was 2026-10-14 and the last toll anywhere was at a different plaza about 4 hours earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 10284,
+    "output_tokens": 353,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

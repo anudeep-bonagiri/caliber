@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012362,
+  "durationMs": 5183,
+  "httpStatus": 200,
+  "id": "INV-1095",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 52,500 matches the contract rate, and billed qty 1 does not exceed received qty 1. The invoice is under the $5,000 bank-change threshold. The only earlier 52,500 invoice (INV-1053) cites the same PO-1023, so duplicate_invoice (different PO) does not apply. No hold rule applies. Note: PO-1023 has now been cited by three invoices (INV-1020, INV-1053, INV-1095) for a PO of qty 1, which may merit a separate look."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 52,500 matches the contract rate, and billed qty 1 does not exceed received qty 1. The invoice is under the $5,000 bank-change threshold. The only earlier 52,500 invoice (INV-1053) cites the same PO-1023, so duplicate_invoice (different PO) does not apply. No hold rule applies. Note: PO-1023 has now been cited by three invoices (INV-1020, INV-1053, INV-1095) for a PO of qty 1, which may merit a separate look.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshdeFayixm7wJtgLKr",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3251,
+      "output_tokens": 586,
+      "output_tokens_details": {
+        "thinking_tokens": 400
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 52,500 matches the contract rate, and billed qty 1 does not exceed received qty 1. The invoice is under the $5,000 bank-change threshold. The only earlier 52,500 invoice (INV-1053) cites the same PO-1023, so duplicate_invoice (different PO) does not apply. No hold rule applies. Note: PO-1023 has now been cited by three invoices (INV-1020, INV-1053, INV-1095) for a PO of qty 1, which may merit a separate look.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3251,
+    "output_tokens": 586,
+    "output_tokens_details": {
+      "thinking_tokens": 400
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01153,
+  "durationMs": 4991,
+  "httpStatus": 200,
+  "id": "INV-1082",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1082 bills 36,800 cents, which matches the contract rate and PO-1017 (qty 1, received 1). The only earlier invoice for the same amount in the prior 30 days (INV-1070) cites the same PO, so it is not a duplicate_invoice. The vendor's bank change on day 71 is after the day-45 receipt, so vendor_bank_change does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1082 bills 36,800 cents, which matches the contract rate and PO-1017 (qty 1, received 1). The only earlier invoice for the same amount in the prior 30 days (INV-1070) cites the same PO, so it is not a duplicate_invoice. The vendor's bank change on day 71 is after the day-45 receipt, so vendor_bank_change does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsq5wVqGrhy1YzWGG73",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3140,
+      "output_tokens": 525,
+      "output_tokens_details": {
+        "thinking_tokens": 381
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1082 bills 36,800 cents, which matches the contract rate and PO-1017 (qty 1, received 1). The only earlier invoice for the same amount in the prior 30 days (INV-1070) cites the same PO, so it is not a duplicate_invoice. The vendor's bank change on day 71 is after the day-45 receipt, so vendor_bank_change does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3140,
+    "output_tokens": 525,
+    "output_tokens_details": {
+      "thinking_tokens": 381
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

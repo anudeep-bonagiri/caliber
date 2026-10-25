@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01428,
+  "durationMs": 3419,
+  "httpStatus": 200,
+  "id": "4153",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 39 pinged at 15:17:51Z and 15:30:00Z within about 0.1 mile of the Stripes station, so the purchase is within 25 miles and 30 minutes. 53.8 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5QcKEAgTGAI4AUIIdGhpbmtpbmcSDBF3w394uYZjxquViBoM5Y5EtN2rKZ0NJwmtIjB6S5gyghZoqsMkY1+am45C0QhltuMeqNV9l2HJ1Hq05nF8PNEjbwee5B/Qhb8rnk8qggfAjMKrO2jDeK5VcvcmsT8H+qBCZVqqKM+ZaGMxXGiVf2qEjwO0MsuiH5j5YkrdZvhmq3KwLHVry7nb8kY2tcfQ5q+cH/gMkctv69+2zuijpUnQ+GIhTVsL1xSYKJP71piG4XVhLIcCQly2IVA8tsl7CPrctmHnV272Skl/5EuX/JQPwfyfyT1ASUcOc4Ku/xzTp9Jmvn8TngFSciSc2gdkT9BDIpJDcYs4D2SAHpxZp2BkbBMey5znISnUN+5l9KhwOSSSInIl1MgpMg051RQoAW9rlXEmH2ykg8Ysa/b6WelG7nVWiPetBaMKRG1BCHo/h3s+YVmdeb7fh9A1pUIyyD4ddf4uAdVmfWJQLg1BAt7egoYZStl0nM/jz6ftVOuESUcfoGWLgRwgUJpxGu08jsZGvxvhemT8ZyDl5BjJ+8JuMDXi491jZNz2SUYLR0bYPPpmQhQgGfgv08Zf9FpIbpI5r5317PUxaCjcthFWfRTh7K61fnDiNTBJDZGKGWQHxBzzYX2Yqel3VVVXzCxiOCXiH39Pq7JG85ryXP5DRUWald83CRT5e/LrP3oIK7KXg+Kf7GBZUQLVF0yDGSD9nf/qDHLLbzJ7RgJ4gPf3C4QhurOmdXYxsw6dNdKnRpqsuYNmQeEY5SNzcXKL+W1mPmdYiy3rL7o1BSAIcpaKVDtcbymXfn5bDeDma58j2LNHh6q0PS+TGI4SNNMndsRxK0zinxW0rGQl8GeoTYWPPv8Aax5YbsGPlDUvv+v5gepduWKr9bmYrMA3S4VhIe1l5gPXmc1OYhLqnzkxiQfJHeczlcCwQrwYY2UyG3CIW2SER7AXX70lgFrw5ca0DG4r5zypquHQ7HKjH6637agtzRCLiby0ShuN4lWn2TYWz1MnQ0Rv5mzr8eJMDvaTbKj7Egv4WBoId+33tUjPI5LD48oPtTe/Jg5nmr5EGmz8Vuo6ZD9v6KvDousrWGtL8kJYmGdiLoVANaSDxz1gZjLQfW2aGVdLJs2squw96pQipMqpCYvRiC51UPc4M4qn/+QYh9GKXsggJQey7B1PkEYv2Vd1y1o8P/lB4oU8h41Grctb+Y/Lihi4gVsPf8HYNzwzqK9HNCNKne6PYsZdWivWE7CTaPH3xv7KTD5DofNbbdQUtoe52VVdduNtCVFJugOLYYdknzadfoHcuFbjZTndiLvsGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged at 15:17:51Z and 15:30:00Z within about 0.1 mile of the Stripes station, so the purchase is within 25 miles and 30 minutes. 53.8 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyZ66x36WFZZbytuF2",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5475,
+      "output_tokens": 333,
+      "output_tokens_details": {
+        "thinking_tokens": 217
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:14+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 39 pinged at 15:17:51Z and 15:30:00Z within about 0.1 mile of the Stripes station, so the purchase is within 25 miles and 30 minutes. 53.8 gallons is under the 110-gallon limit (100-gallon tank plus 10 percent).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5475,
+    "output_tokens": 333,
+    "output_tokens_details": {
+      "thinking_tokens": 217
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9707,
+  "httpStatus": 200,
+  "id": "T1269",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T1269 is a duplicate of T1167 (same plate TX-1032, same plaza NTTA-DNT-01) within 10 minutes? No, wait. Let's check the time difference. T1167 was at 2026-07-09T17:04:12Z. T1269 was at 2026-07-16T12:45:28Z. The difference is more than 10 minutes. Wait, let me re-read the policy carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' The earlier tolls are listed in `earlierTollsSamePlate`. T1167 is on day 7. T1269 is on day 12. They are no"
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T1269 is a duplicate of T1167 (same plate TX-1032, same plaza NTTA-DNT-01) within 10 minutes? No, wait. Let's check the time difference. T1167 was at 2026-07-09T17:04:12Z. T1269 was at 2026-07-16T12:45:28Z. The difference is more than 10 minutes. Wait, let me re-read the policy carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' The earlier tolls are listed in `earlierTollsSamePlate`. T1167 is on day 7. T1269 is on day 12. They are not within 10 minutes. Is there another one? T1038 is at SH 45 SE Plaza. Different plaza. So no duplicate toll based on the 10-minute rule. Let me double check if I missed anything. Ah, looking at the data again. T1167 and T1269 have the same cents (1850), same plate, same plazaId. But the timestamps are days apart. The policy says 'within 10 minutes'. This does not apply. Is it a duplicate invoice? No, it's a toll. Is it any other hold? No. Therefore, it should be clear. Wait, did I misread the timestamp? 2026-07-09 vs 2026-07-16. Definitely not within 10 minutes. So decision is clear.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882721,
+    "id": "chatcmpl-ef6d6109-aa94-484f-b052-45fe71372993",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 402,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1259,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1661
+    }
+  },
+  "startedAt": "2026-10-24T22:58:32+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T1269 is a duplicate of T1167 (same plate TX-1032, same plaza NTTA-DNT-01) within 10 minutes? No, wait. Let's check the time difference. T1167 was at 2026-07-09T17:04:12Z. T1269 was at 2026-07-16T12:45:28Z. The difference is more than 10 minutes. Wait, let me re-read the policy carefully. 'a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.' The earlier tolls are listed in `earlierTollsSamePlate`. T1167 is on day 7. T1269 is on day 12. They are not within 10 minutes. Is there another one? T1038 is at SH 45 SE Plaza. Different plaza. So no duplicate toll based on the 10-minute rule. Let me double check if I missed anything. Ah, looking at the data again. T1167 and T1269 have the same cents (1850), same plate, same plazaId. But the timestamps are days apart. The policy says 'within 10 minutes'. This does not apply. Is it a duplicate invoice? No, it's a toll. Is it any other hold? No. Therefore, it should be clear. Wait, did I misread the timestamp? 2026-07-09 vs 2026-07-16. Definitely not within 10 minutes. So decision is clear.\"\n}",
+  "usage": {
+    "completion_tokens": 402,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 1259,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 1661
+  }
+}

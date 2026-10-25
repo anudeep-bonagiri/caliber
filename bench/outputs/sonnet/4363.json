@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009168,
+  "durationMs": 3503,
+  "httpStatus": 200,
+  "id": "4363",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 23's nearest ping within 30 minutes (17:00Z, parked in San Antonio with the engine off) is about 69 miles from the Three Rivers station, which is over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1023."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvgcKEAgTGAI4AUIIdGhpbmtpbmcSDNnEDs+yRn/HmNJRkhoMGUW/vcBvnNmvUnzWIjCp3qaJ4DNBxcvnLfL0x2ixlFQZYxinv15MhD8JBUp/Qhbh8HNuTvfaDkSFR1zWShIq2wbzAbmwgYS8AjZ0yvGBPktG/AgoEyaeZy9o//yOZvRxboxYf6AQgtrwryY3co+o3xTgnnMjyo1dilGpGuRicb25ZVjRoXuAlP2VjMdvSpnWLGAVpPIdOLtNTZ2jF56GfGMQmN1vSTf8B4OJ2wF5Bi67qrC0/+ZNKmBzLC6VM0GeuyBoB/WpdmNsx8GeCdJgVjaDZEi58rSoA4c9JlAXbCpu+QTfA0ehmoxIF8Xxdat1qbTrTiCnQtA+Il1ee5D+9nySjUBNlERR00EV3bC/HOrXHqx57tVDe+oFwJRZkoLvbvN8W/MIze7WZUvhNhkmarCoxb5Sd5KibxI+ALHcsGy0KOV6hYgxDJpU9suPDgb5Vlmr2Kte2AisY/wQbnkmf8YsMhc7tae4az17fg7W+PaIPLxf/KggAe+sx6DcCQU4LHU5Ox/4EkuYoTDeqMokIOye/dQWv34tnYAhcm6lm3D8WnoElDQRjl9PewfEowGVgSru46Y60TwwkcYt6rQKEUVnIleB5Zzea0M8fVgNTpj1uMG5F5XnIHbEGFafk8Z4hUY/3pT4EBBk/gkfr4Cp0BtplO5OpiW6tKPC2yFVj28IAbuSSPaMsIEUyHEsWJsVGg+LhiXPeTIYu94Ku4UvbqPl1WuUMOjikUKBAwiAsuQE1BgnaAEyWzqsyGVDLI2bZBofc+p4wWLqYbunQpHPXT/L0DlFywMtMNF2gfOsj7WenjeIML2pzqeiXQSKdyaEgs2yv1uYspSYRNsK5Bm7PEqhRtyxQLdd1tiYi8tIqEOznd9Dw/YDccJhjVNmqVHkD416O0gdmZKrw2HkzukkKdKzorPJsGNZ6LgILIfo5cyihOko8hTr7Ms2zYw0dBTYftM0BvaaiIHWIMDMLJc62a68UOdBUOpeKMF5nbT7te0Jl6dLf+oNGEttoyW7+T6b+ezic3tqx+S0xBAOKRIMxyDdKD0laumhWd83nohC8tBNtUeif3eLBfiIFbo/Jf2RgiecU5azBgTsYYAlkYcriX+jMFHawQzRXnNCo15tWTVwBNV4peNHKWm+stFR+c4wmbhw3WbFG1Gq1aJ+XMhub6kpCtt03yliJKEEkscHTBaaxsB5eS3rBejNaRTA66upVhzJIiI2paSCKN+0GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 23's nearest ping within 30 minutes (17:00Z, parked in San Antonio with the engine off) is about 69 miles from the Three Rivers station, which is over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1023.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt9eJfH2MBudyHYfwHs",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2994,
+      "output_tokens": 318,
+      "output_tokens_details": {
+        "thinking_tokens": 201
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 23's nearest ping within 30 minutes (17:00Z, parked in San Antonio with the engine off) is about 69 miles from the Three Rivers station, which is over the 25-mile limit. Ask dispatch whether another unit or driver used card FC-1023.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2994,
+    "output_tokens": 318,
+    "output_tokens_details": {
+      "thinking_tokens": 201
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

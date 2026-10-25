@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00902,
+  "durationMs": 3842,
+  "httpStatus": 200,
+  "id": "INV-1038",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1038 (36,925 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. The unit price of 36,800 equals the contract rate and the PO price. The billed quantity of 1 equals the received quantity of 1. The amount is under 500,000 cents, and the bank change on day 71 falls after the day-21 receipt, so it is not within the prior 7 business days."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwwkKEAgTGAI4AUIIdGhpbmtpbmcSDI4U5psNzfeH2xf5/hoMV4owu6fPPdTYtXNeIjCxujV1hz4G+nCyvcGRI5GYl0PUO507vk4K6t2pTbtSDhlXfSMciywPV75UX+TjGGAq4AjminLM9JhV4Y1859xvnGk1pcSjIYa9624HcAL63B0oyLJUNfI6Zt7VnzLZ5tNCXxVcWDSPTeleow4/aEq3y46VXa+6yipiWxHItk3vl6K441+hGQyw/kBLG8N7fWGQiNHSZwcsxOtpQoINsWULtnt2OPH9vLHDYN52u3s+dQIoP9SDnvukNgUy1ENKtQcw7WGTYKCd5Tt8bTXXSUoLVTZ9dAhr5dnfmDLL02tDopnAl+jqKZFtGiUMbpHev3nML9oxijaqO5kzSnOpcS5T9b3Q1FIG/b5WupalsYeCAPVa5OBAhgLc0YAZ01CEW/lQqD55M3KFaH0Ot7pXM4RRhS2QhaZaf8JWiKOtvtzYBfh2Xaa0IDKuzRUlnuE46eRPIwOABBD+qipNhUa1hKhC2VQhNLxVHUhqIbQnbj1s7Lf9F2HSd/0LWTIyqO+joVweIIwQL7rqqZRDEGZ0RQu3zGQsFLnUPSeRRlw5oZJpYUi11bCY391FhN7iKlfbXyyofMr0xNwWnvbwwi9szdTcZq2+GYSV2BOHryhuD/GeXw6dF1Rw+NKkWwTpsy/i1BOlF0M6xxfzDuC2YE4wOeEhRAoacXOUjXn3vj10SS4Z5Hgw3VUk3kX1g2ii8H7t0GZYgCb0LYQX/NvewVgHWCP6d32ZUqLLa/WDxOCmEL5NKHvjAuIQ5PORfKtsfAZBvb7ICsKqkulwnKq/vfkn4g9N/dNK645qmwXqbbSv0f1PZ8YleT8nbdVgwjx5PruQctLich+lRZAIpf7RdHgzy887VC7hKZpI2BRoe1WkHLZcFSnwOHCvldyoerOjCwL699A9gimI7ByWyj9WwG3APG1EC45mfp6AEoOcwE2T17jcheUGAakiXewKi3KgeCJC/euyP5EfYVczgFM9CZGUpb0ieDqKpzg8+lsDorqxNTaNf6uD24WmVw9aWLI8n4rDIoYM+zlTcYg0X0ZN6NM+5zsLqZrN8ly58scQCQgR0r15yJi0kdk9xmnd2BAXRM5Dcc4mNRM4orbB04yo69MpyMUp8wmDSkt7WAulC+x3mZt6z2XufIkVLZBx07Mi8j4HDN8ydM1pddYE+cigbkjKHMdYPbZb7sC8LTtpXxu1csTl3qVMNjU/tmtoEBOj0BbC6JJ0mwbDZ3EbF/e83JNbdV9aFMuKd2MVey8C8ldxL5m0qzHOG+Cwa1QTQ9zOc8FJxXtbHgZ7av/6NfRQfS1sRap3xlkmS5bWiD6FZmwV3saheSZgM7wrQnS3S4Q6y3PoIcCXNlO7tQHW/PEBEle5ciZQMybQKyGqJLIkNljaDrNTMc/WmpD7zlJ+CWqUC64duUdVH+QFnCqdfRDqI7ON47k3a/hsA74KyEcAfJtVeNHABv8dP9+jUfTULQvC/Aja3igR33Hj0vJQJcxeM3gUYiI2OXlyA+q7hjoygJGSD3A0OJoYp5Zl2wPft0YdOzubTtZSNRRlyL07k2XaLmlSZjMnwIamGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1038 (36,925 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. The unit price of 36,800 equals the contract rate and the PO price. The billed quantity of 1 equals the received quantity of 1. The amount is under 500,000 cents, and the bank change on day 71 falls after the day-21 receipt, so it is not within the prior 7 business days.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsh6HbbtzGRPDqmGwRZ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2400,
+      "output_tokens": 422,
+      "output_tokens_details": {
+        "thinking_tokens": 272
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1038 (36,925 cents) matches no earlier invoice amount from this vendor, so it is not a duplicate. The unit price of 36,800 equals the contract rate and the PO price. The billed quantity of 1 equals the received quantity of 1. The amount is under 500,000 cents, and the bank change on day 71 falls after the day-21 receipt, so it is not within the prior 7 business days.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2400,
+    "output_tokens": 422,
+    "output_tokens_details": {
+      "thinking_tokens": 272
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

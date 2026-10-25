@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00841,
+  "durationMs": 3464,
+  "httpStatus": 200,
+  "id": "INV-1031",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1031 is 73,600 cents for 2 ac_service at 36,800, which matches the contract rate and the PO's received quantity of 2. No earlier invoice from this vendor has the same amount. The bank change on day 71 is after the day-18 receipt, and the invoice is under 5,000 dollars anyway."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8AkKEAgTGAI4AUIIdGhpbmtpbmcSDB3GgYyrAgozhymNqhoMtXkWEEn8UzP67zxiIjBXFyhU03CnEprVxp57/iOc5uvnqx+fYxxPBVbIdYSDzRdmYp2+1Z3hSVNbiIPH0wcqjQnD4hAvAabS2Lo5Ob0kEwayk2Hd4Cas3NsZJ82ro3cNEZ4l64LsDy138pmdN/p7eCBl4J9VlMpcQ6mB8eBPpye96h+Llq11GsS09BBlnC7Br5rW9MxUZN96dus67IhP0qstDrChI6SpOkOurGLBLuLQ52OymSST2ic1ABQCoj4Q55jye9Nbk2HKpA05tpB5g8gZ/UUZIryeztfQPXZ1XmGqPrTTtBcEot5oTztbf30M5OsF2ynrdG2izvft98Ln2H9BPcyhJdEKlVXyV/HGzVcW6uWxMAZDwAaaaD4ogHDjGUlZydVrIizoxvqojx2QvRYzSaqHZG6jRt0Y3Jq4OYRdDHudLMD2C4laGvv4bd66UKES+brfwbAs2hoj6+8s7kYSuGPoD5p8yrz/YC5rK62SQgUpwCVxAlzyQDYe5SKdfryB8q81zTQEsNPywapuySgcgy2CVDtsDdkYXRE8aEd4EQWTfjs1QxJtq9Drj2t4aZRGKotKnDfS8PThegNtybkpzkzgNEwAAj0blIJ7KYNZJqsRle6jiOlvlNUWhIWNm6cSQb4tWO/RYafLJo7DDOoRzBjzNGNuphVJ6UXiSowiKYzeQkRHTgLQcTBUzddU2ZdIknxCy5T4s3fS15xKesQcNncnhVsx3rnxi0nLqGBZqajkbeCwu1Pi6Nx+IJrU/vKQmq+4uxDaC0rYAM5oaPZmWNEOPGuHBo037n6iK9HXGgTLsq0QTDeYruaYQnkFvIehY7ZLr500KT4+zTBetRjs6Ob1KWqr7d6qcWqDD4iSm45k647PTGl5Xh4sNXeVNoG2smAObDBhQ4vakt8ObSxbSzZu66tmcPhUfdLLPxqFEpT3kdrkM3lh486ai5l45ea51m3NrLPILhQcF6qtVei4J/q3sBiROxv3vercTod6I4aAB62SIRt/QLSGuLBr2q+2mbjzxXy6TFMXqjCMI3MLlfOsOXRwGEWqNQOnOf/MFqIE7/Dcuc7YtBqN0ln9biWoZeEir87sshXYP00FtL+NKrv0cR4/9FbPZlua+9v6cZ96+MnQKAj9//t583ftCaehLuCKzYQs3pZfFJPqAxPvaTYQHlCmjTUf1now12h4oHo3SBxlyUeDRZXuWsZH6ri2o+ZAywbdIvOQBA91bbjgoi6VhvVdyWUX6RqDS1eYMzKWl1NYkBC6ULIHAgTAEHyHJU+2GD9vi0dGg8UQ0d+95+OceeAIiAiX0MG/EoN+xeSyTb97oMGUzKkSpq9KdxA23QSzmerSCM/Wk/Mia/ThlZcmgTc86i5bupdF5jR/jNNg2UtPrTjUW2wO3anzWbBqLlaGpeugJF2jCqBgGVNI0y1W+fsYQLffst4L8Dda9gS0eBBb6qzoSRY0lOrc2DaERd5npg23N2jIRvq5TYjcrpMQXHxlllEhrWb36Lxl6UCJlFo6L5P6e4uTFAwVlg9ILQXH2CttzBYy62Fh19dU2x5/piF+w3DjJnf6a1eXcqjKh2FJebeUCTcbdc21kQ+3vO0MqPEROACXGGMUFjA0wS8V9RjSCPtK4v5YGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1031 is 73,600 cents for 2 ac_service at 36,800, which matches the contract rate and the PO's received quantity of 2. No earlier invoice from this vendor has the same amount. The bank change on day 71 is after the day-18 receipt, and the invoice is under 5,000 dollars anyway.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4u8zatoy6ur6zKMa3",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2235,
+      "output_tokens": 394,
+      "output_tokens_details": {
+        "thinking_tokens": 272
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:26+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1031 is 73,600 cents for 2 ac_service at 36,800, which matches the contract rate and the PO's received quantity of 2. No earlier invoice from this vendor has the same amount. The bank change on day 71 is after the day-18 receipt, and the invoice is under 5,000 dollars anyway.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2235,
+    "output_tokens": 394,
+    "output_tokens_details": {
+      "thinking_tokens": 272
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011328,
+  "durationMs": 3262,
+  "httpStatus": 200,
+  "id": "T2169",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T2169 at SH 45 N Mainlane has no earlier charge at the same plaza for this plate; the nearby T2168 was at a different plaza (SH 45 SE) 24 minutes earlier, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2169 at SH 45 N Mainlane (plaza TXTAG-SH45N-01), charged at 12:23:29Z on day 55. The closest earlier charge is T2168 at 11:59:16Z the same day, but that was at a different plaza (TXTAG-SH45SE-01, SH 45 SE Creedmoor). The duplicate rule needs the same plaza within 10 minutes, and this fails on both counts: the plaza differs and the gap is about 24 minutes. No earlier charge for this plate at SH 45 N exists at all. No other hold rule applies to a toll.\n\n{\"decision\": \"clear\", \"reason\": \"Toll T2169 at SH 45 N Mainlane has no earlier charge at the same plaza for this plate; the nearby T2168 was at a different plaza (SH 45 SE) 24 minutes earlier, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrAkyxFwCaSC6jhRUY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4144,
+      "output_tokens": 304,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2169 at SH 45 N Mainlane (plaza TXTAG-SH45N-01), charged at 12:23:29Z on day 55. The closest earlier charge is T2168 at 11:59:16Z the same day, but that was at a different plaza (TXTAG-SH45SE-01, SH 45 SE Creedmoor). The duplicate rule needs the same plaza within 10 minutes, and this fails on both counts: the plaza differs and the gap is about 24 minutes. No earlier charge for this plate at SH 45 N exists at all. No other hold rule applies to a toll.\n\n{\"decision\": \"clear\", \"reason\": \"Toll T2169 at SH 45 N Mainlane has no earlier charge at the same plaza for this plate; the nearby T2168 was at a different plaza (SH 45 SE) 24 minutes earlier, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4144,
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

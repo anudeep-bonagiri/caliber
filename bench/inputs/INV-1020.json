@@ -1,0 +1,49 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 18,
+    "item": "dpf_clean",
+    "rateCents": 52500,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 3
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 245000,
+      "id": "INV-1007",
+      "item": "brake_job",
+      "poId": "PO-1012",
+      "qty": 1,
+      "receivedDay": 6,
+      "unitCents": 245000
+    }
+  ],
+  "invoice": {
+    "cents": 57000,
+    "docRef": "evidence/invoices/INV-1020.txt",
+    "id": "INV-1020",
+    "item": "dpf_clean",
+    "poId": "PO-1023",
+    "qty": 1,
+    "receivedDay": 12,
+    "unitCents": 52500,
+    "vendorId": 3
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1023",
+    "issuedDay": 8,
+    "item": "dpf_clean",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 39,
+    "unitCents": 52500,
+    "vendorId": 3
+  },
+  "vendor": {
+    "bankChangedDay": 42,
+    "bankLast4": "7730",
+    "id": 3,
+    "name": "Gulf Coast Diesel"
+  }
+}

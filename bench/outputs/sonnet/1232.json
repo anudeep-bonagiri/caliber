@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014582,
+  "durationMs": 2841,
+  "httpStatus": 200,
+  "id": "1232",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 34 pinged at 20:50:12Z, about 4 minutes before the purchase, within 0.1 mile of the San Marcos station. The 46.5 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwcKEAgTGAI4AUIIdGhpbmtpbmcSDPLdEj9XZk6QFC9SShoMtcofXPl2fi48XZ7QIjCnjlseH46ubxWa4lWSKtbe65tmcZW00tqjKOt+v34ttIYhw6j0Q9TGrPzIs5RWb4cqyAZSLxzglNSo1ezjfYj2XdBNBxBiA+TtstL0XeL3z8aIn/FFJeGHXhJnM6nsSfznCkVuQm/JBN6tZmMneml1X+49iD1afoSm1YPjgwWD/9zl5r1tkqoMUDuy+mT7oPGLpwOXCytWOsQrqKufVj2lhVckmF5R5tOCiOfAvz9HIytOXnVUqZfvByp3GQ7XHbpR0uMxA9u4HfzixOg+jjqzTAyi3GJ/tw0B9lxT0uHFXI5YN+0D7PkyBAco8PO2i/4Nf6rVHmf7885DL/VsW31UczecWRiyjAbfCuY2YtbyvwGAFttsoMvS7/yWRp5AzPu9iuOmVEhzsft+LgWecEEt6WSUiJRhqGK4M4sE9tcwf1SDmH8m4/SAS1Fal4GGkNM66IzbB5AE+PLYGo4rs/CiVC1bpw6OdKG8gEH4K9wtCIPkyYePLHQrYd8nkvLlaAAQvZit3R+1BUqXvr+eYU8X0B5/A+dq+0GogOBcO+VcnReNWQdCX99apwSRjsLocpFg6CBZU97jQl7lediIjhuBJ9MS6OWmtKLtHvc7yfq8DL3xiG0LxOK5o+5Yj+CpJSORTXzNtd0MkH76rlT8E7E+zmOKMWG1YtD5KPZaYfORcl+41NoUW0DW2yDWOjtiOZ9Ebjl2UwHvvbs4cX/Ysox+mh3J16cVVceLmW/RHf7wO07OC+86TgXRScyGpboPVnspgp8Kks+ULv0EXQgI1dQqccOc8kMjbrGiAW2VZ/3mLu8CXUswbyRmhfQSwxwSG1kHfMOhPK45zocYlyZ1SFEUya05y8laVIJCNz+Z4Hko+YNU9ElcpGxd/UB6fllcMhoiK4E2Gjpk/Ex3kmXk5XwR3+rq+0B9OnqhSedXIqm3v+R4+SRWLbWVLiGAmIwLRyD8XIlU4WJeynSFQn0W85ZqZ1UX5+qdkTSc6gtinYzpmFmWqSCPNY9lp1GEEgOsd4vQi2VBwlsD//QC2MUpT+pJBSgibhnA/CsszGuPHelj6N2p8tJCle/rUD57IMipcbCqLAI4+FbzZs+1KdRnuLwdHEhI8DGvb/sVS+ceWP6pK+2lsK6Eip9mPyZEi3goO6cj6drACzD1gVHLZd60iBf7x3pK9QhN1VwazWcYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 34 pinged at 20:50:12Z, about 4 minutes before the purchase, within 0.1 mile of the San Marcos station. The 46.5 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxc1CdAEtaqYXC5cED",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5836,
+      "output_tokens": 291,
+      "output_tokens_details": {
+        "thinking_tokens": 180
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 34 pinged at 20:50:12Z, about 4 minutes before the purchase, within 0.1 mile of the San Marcos station. The 46.5 gallons is well under the 110-gallon limit (100-gallon tank plus 10 percent), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5836,
+    "output_tokens": 291,
+    "output_tokens_details": {
+      "thinking_tokens": 180
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

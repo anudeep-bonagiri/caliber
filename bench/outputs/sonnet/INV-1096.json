@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010724,
+  "durationMs": 3702,
+  "httpStatus": 200,
+  "id": "INV-1096",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1096 bills dpf_clean at 67,350 cents per unit against the 52,500 contract rate valid on day 51 (about 28% over, limit 5%). The invoice total of 137,825 cents also does not equal 2 \u00d7 67,350 = 134,700. Ask Gulf Coast Diesel to correct and reissue at the contract rate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwkKEAgTGAI4AUIIdGhpbmtpbmcSDFuwCjRtbw9h94accxoMOkaZvz9ukNhytngdIjANEO4jqHA1cdwd004sgvjk04v5VIaa2+HQmIBNvNYiRY2GBkkpoJA3dg3x8LmJPxAqxAgJkBFaFulVjTqpzk1QLP1eIh30VkodjCSNA8y5OgRudh+v/qIS+1LQSXswUvdNq59xMoD6zuftA8YerMfyifgJZaUIEIzGv31SkK8qRGwxQuZkVu34KH92WgMKnvK34CNsznXOf9lPFMG279GbGE0/L0n9MbX506ESoih9LsqfInU7b2IX0xziiXyCG9u6vqfi1fEHWBkwZIKqZUPpCMQoBzHKnTHFO3yFLlQGxx6o+Ie0yxLQpUkeGQB5pvcVZq9Qaxwl7vGOExIATr2DmEN6VZypIDLoqYZy2UssbfiNMxLKOwsqHjFHWL8HWI8ezUDCCtF6IN2EuiK6sBh7l2onyEJblMWSwwmHFi+s5TNvfb8VD3YW0toIaiMhLf6XBmDR/9dy78NGJlOwJ56IYWJM1wQz82GMQgNalLDkx/MUOXpCEO686GjmVKYfCOUPmi/4E1CTT8mJfLha2ja86Ic60nRpQcSxAySAuYIvH4AZuV3lO1YPTXAAblq9XpyRng7grSHrNzBgRHGfFwvLB1u7TZThcrK9WuWHUE2Xwg7skUQJ1nBPphYyW2oyykQ4Uw4ARqgVBDtQmuoEf4tSdUqwhAXxxcwTTQjcIp4Cy0/Xwt+eRieCZfn0jTK7XpkxJSsOwd0EBkf30agFb4+2VI2pDqk7NWdq7akAAUgTr9PIVMxeaFsVmJP97qyJEFjj8thkzC19fCcxL8YziFbutR/IDhjYMm6xOe+5v9122JwqXHhiV282F3ebdhTwP9MvJO6UtdSkazo91QYnupEF7JKGJmbw26jAM70+SGPuPtZd2fhR5hKAiL7lUvDmDOxw4Ksbwr5JXopY/3EbWlLRrX33jJiDScXt4jqg9w5vx9+G/PxFWcz6VcDU3HsgccqlZiXskqUvHXYq0gtt6lSUyZ0vCLyWMeUUdaldKAL1ODg5x+T9LXm8tw28n6BCVcL3RttAizz7qBmIdTIRCDWI6fp+Jc3nN9Abp/3DE3U2wxIMhO7IXutlgGHfTyxf/2nOSQsYd6uzbXWy121T7EJfhYdGjy5/lBKPzCQLnpi5rvE3noXnhbkZ86MUSF8yjA5o68OklYsBkSEllah3muWhcA5LMU2LwZCdfNNqIae9jwMLIZTGFJcUkDbb564bTiUzkbW/dpe7zvI9UwOTGlhmGSpYq9XnqCw7X1U103NuZFXulaa0epqql0hz7lHvjCqCP/3ZycZZm9rHqSTjQWh2XWW1lwBwVbvE6iHJg/tX+wtJPdU3MZLimzDJ2ejC19AKGi74qAyISuZuwZWkEFx+i4UudGr8nAIhn5FSvaGZutpM4UjDhafelE3xSbmxrkNtmvUD/CB7/KImo4SX1sbD/2Lz7sSXOGCg0B6RuZBmzw6SgFdV6yiIVZkBmrlM4OUuLiDkUCrfKBGmyc8NeG4pH4UCWLWxxsYNFB1PfFe9xluKU49E/4sYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1096 bills dpf_clean at 67,350 cents per unit against the 52,500 contract rate valid on day 51 (about 28% over, limit 5%). The invoice total of 137,825 cents also does not equal 2 \u00d7 67,350 = 134,700. Ask Gulf Coast Diesel to correct and reissue at the contract rate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsk5U55pkd1bBv2k5t1",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3337,
+      "output_tokens": 405,
+      "output_tokens_details": {
+        "thinking_tokens": 263
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:11+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1096 bills dpf_clean at 67,350 cents per unit against the 52,500 contract rate valid on day 51 (about 28% over, limit 5%). The invoice total of 137,825 cents also does not equal 2 \u00d7 67,350 = 134,700. Ask Gulf Coast Diesel to correct and reissue at the contract rate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3337,
+    "output_tokens": 405,
+    "output_tokens_details": {
+      "thinking_tokens": 263
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

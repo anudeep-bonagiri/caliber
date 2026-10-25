@@ -1,0 +1,35 @@
+{
+  "earlierTollsSamePlate": [
+    {
+      "at": "2026-07-01T19:19:11Z",
+      "cents": 625,
+      "day": 1,
+      "id": "T1026",
+      "plate": "TX-1035",
+      "plazaId": "NTTA-MCLB-01",
+      "plazaName": "Mountain Creek Lake Bridge, Grand Prairie",
+      "truckId": 35
+    },
+    {
+      "at": "2026-07-01T19:28:24Z",
+      "cents": 1850,
+      "day": 1,
+      "id": "T1027",
+      "plate": "TX-1035",
+      "plazaId": "NTTA-DNT-01",
+      "plazaName": "Dallas North Tollway, Dallas",
+      "truckId": 35
+    }
+  ],
+  "kind": "toll",
+  "transaction": {
+    "at": "2026-07-02T17:02:41Z",
+    "cents": 975,
+    "day": 2,
+    "id": "T1050",
+    "plate": "TX-1035",
+    "plazaId": "TXTAG-SH130-01",
+    "plazaName": "SH 130 Mainlane Plaza 1, Hutto",
+    "truckId": 35
+  }
+}

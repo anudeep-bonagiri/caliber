@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01891,
+  "durationMs": 2802,
+  "httpStatus": 200,
+  "id": "T2263",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Last charge at SH 45 SE Plaza for TX-1033 was 2026-09-14 17:18Z, days before this 2026-09-18 15:27Z toll, so it is not within 10 minutes and is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2263 at SH 45 SE Plaza (TXTAG-SH45SE-01) on 2026-09-18 at 15:27:39Z, plate TX-1033.\n\nThe most recent earlier charge at this plaza for the same plate is T2163 on 2026-09-14 at 17:18:21Z, about four days earlier. That is well outside the 10-minute window. The most recent toll overall is T2245 on 2026-09-17 at a different plaza, so it is not relevant.\n\nNo other policy rule applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Last charge at SH 45 SE Plaza for TX-1033 was 2026-09-14 17:18Z, days before this 2026-09-18 15:27Z toll, so it is not within 10 minutes and is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMskVddTBR4JizCUxvh5",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8060,
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2263 at SH 45 SE Plaza (TXTAG-SH45SE-01) on 2026-09-18 at 15:27:39Z, plate TX-1033.\n\nThe most recent earlier charge at this plaza for the same plate is T2163 on 2026-09-14 at 17:18:21Z, about four days earlier. That is well outside the 10-minute window. The most recent toll overall is T2245 on 2026-09-17 at a different plaza, so it is not relevant.\n\nNo other policy rule applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Last charge at SH 45 SE Plaza for TX-1033 was 2026-09-14 17:18Z, days before this 2026-09-18 15:27Z toll, so it is not within 10 minutes and is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8060,
+    "output_tokens": 279,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

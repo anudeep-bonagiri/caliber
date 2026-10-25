@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010214,
+  "durationMs": 4415,
+  "httpStatus": 200,
+  "id": "INV-1093",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1093 matches no hold rule. Unit price 53,200 equals the contract rate, billed qty 3 equals received qty 3, and the vendor's bank never changed. The only earlier invoice for the same amount (INV-1005, day 5) is outside the 30-day window and cites the same PO. Note: the total of 160,850 is 1,250 cents above qty \u00d7 unit price (159,600), which is not a policy hold condition but is worth flagging."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4AoKEAgTGAI4AUIIdGhpbmtpbmcSDLAcNzf+eJVKbmNuOhoM4TD1rI5k1RdHkXyTIjAO3lR+pXvDhxO8x1pQHQFu/5HzRFyEZ5SZdBcJtAlTjRIC5X/lYof9o3CFw6MUbSgq/QmUXVZFB+IXzdL4NSBqcg037gGmjWJO/NEjggRd16T20623Md1KvoT5iUexY8DnJnUXYIpZSmx7GH2/mEpfxpp2DC+Gbbsz/lubpz8ylr6dYSdDtZ3dguaqayclAF643EGGx5/yzF3pM/tDQtfGKKEO5zf1vIzuFGZVJqs+Otl+c8a39Tjipis2NRNtuaie+uIhKlnb07q+RYA/y6YaWfH1T58M1aggHJpbbfLd8mrD/L7zflXR6xCx1587F0olC4h4L16JnEiQ7ac/6g4SQ5ztXB6mnI55ld4APdaF05GPOEQVIlFkRIr3NIPMoDOlxoSCUPeENO1qSk6eMo4eLJQbFB+4qZvCrv5Usx+1/UUBvsGlBrlBDYkneN3hSYUBFAFPRzWcwSJ4s6bxdiHZWBSqPoq23ekGp0ouAvYZh6POKudq7ny20CQ5fzQ9qfZGS5nkCTQbyK0XVaZIEquH20aOoZOtCKxmWU8B8hpLYhHtOG3aWgYVwsuVaA9SAPx0+7hCBYdC54ckxBdNiw1oqfL2je1WbhM+0h9F0JdwAAYr9ThMgn3z6scCFfi5smNebVs4ji9z0bOZEW2EP6fm67aOEDoITYu8aj3664PpZJ5Y6L2BrxHRvIeoZ9ZCX+bVovhkS/o/e2DuoY6SEJI5ZLHUEy4gaDmHB5Fd//9KPhm8S3P+IwmBdUd+oBN9ZBaq1LFoURY9UFcPscbrQ6tf6vOxIBhxura2N7XuiQ8XGg8hsgAgf+HUFQmfY5zMvP+4I4YX9mbuBYK7JIJmIYqDHzOhV1E8l7AJVfBN6ASACz9rZ0uH8Gk8CArz5v1zd7S0F5tqTgVf2qKhkvefeLoSGEUfWbHUumUL2Src+CTq9nsjHIFcHgNx4UeyhCs6H8ujUVjdo+Ul28ZE4joQSdGNk66B/+UQZEDiQGB+bfzr6zba7W+wE9cVa7ULJJrjp82KTGr8a4wuiBFzwmaDyVby+OL4K1dpLWJg3JPFnzYECcCvuOQhlnBcWaLS24P75vIqO+GRhg7EzQE0dONzSNnFRXH42+WtcCUWj4fEQhzIoYqljwkJBdPlPaewXTrtGlJQM+1edw7qw97TrEpFSKc8YHwhtm43X7pPsGj5P8SKtFwd/iUu5bADHXJhZuiSUKwPijJy+VsNGKA5Vx/CGoKwslxuuo9NUOZJU1jdndVPJmWnCnKJBMSP9OZODfEv8Nos1uDYheO6BC0ARVohJmnQljJ8d5I1tg8s24jZoZARJLg2RPMaEx0G6hvHoOrdsiils8ZtFxU+AUg71UTbWNwlGcu7h5DJxq78QLdz611244Nqnt3orejahViJPbinWylbzDD37Kg3g/J4qL9ljDqIMtuh+2bLaTlwemNRuJw0t7JLszOzZDBFydgc4p+VCj8vIr/wgP+kiqUl7zNX9Uiuoya+mSgyL63G7TBe8+GIufM75dD8VAOFTPHBdDeI4TmUVzT+2QObbVYr98SNGTdzko1EFpbgjQT56rmXlbhc+qfsiNr2biysKF1Y3kjpxdw6qzf6YWP92opeScK+14dpKnfQONOMEyUKtpbd6eWnlcDuN5OZbOMkKybuay+ftgC7brtvk0iaLXSk40GtIJER/cHblWDu7dcZUhyanPAUgWxnXK8vgW+A2PVA+CpGqId7ai+n22NJrqp/ZcI6Xv/mzV//+/LBJmAzGzfo9D6iWRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1093 matches no hold rule. Unit price 53,200 equals the contract rate, billed qty 3 equals received qty 3, and the vendor's bank never changed. The only earlier invoice for the same amount (INV-1005, day 5) is outside the 30-day window and cites the same PO. Note: the total of 160,850 is 1,250 cents above qty \u00d7 unit price (159,600), which is not a policy hold condition but is worth flagging.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsqJRaERVz54tpAbVaU",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2657,
+      "output_tokens": 490,
+      "output_tokens_details": {
+        "thinking_tokens": 326
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1093 matches no hold rule. Unit price 53,200 equals the contract rate, billed qty 3 equals received qty 3, and the vendor's bank never changed. The only earlier invoice for the same amount (INV-1005, day 5) is outside the 30-day window and cites the same PO. Note: the total of 160,850 is 1,250 cents above qty \u00d7 unit price (159,600), which is not a policy hold condition but is worth flagging.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2657,
+    "output_tokens": 490,
+    "output_tokens_details": {
+      "thinking_tokens": 326
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

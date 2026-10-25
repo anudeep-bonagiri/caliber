@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009144,
+  "durationMs": 3547,
+  "httpStatus": 200,
+  "id": "3884",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "Truck 21's nearest ping (19:00Z, 21 minutes before the purchase) was in Dallas, engine off, about 186 miles from the Austin station (limit 25). Ask dispatch whether another unit or driver used card FC-1021."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 19:21:39Z. The nearest ping, at 19:00Z, is within 30 minutes and puts truck 21 at about 32.7766, -96.7972, which is Dallas. The station is in Austin at 30.207, -97.756.\n\nThe distance is roughly 2.57\u00b0 of latitude (about 177 miles) and 0.96\u00b0 of longitude (about 57 miles), so about 186 miles. That is well over 25 miles, so the location_mismatch rule applies.\n\nThe gallons are 231, against a tank of 250 plus 10 percent (275), so capacity is not exceeded. The location hold is the one that applies.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 21's nearest ping (19:00Z, 21 minutes before the purchase) was in Dallas, engine off, about 186 miles from the Austin station (limit 25). Ask dispatch whether another unit or driver used card FC-1021.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4n8aCgpDSeW3tz9AD",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2987,
+      "output_tokens": 317,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 19:21:39Z. The nearest ping, at 19:00Z, is within 30 minutes and puts truck 21 at about 32.7766, -96.7972, which is Dallas. The station is in Austin at 30.207, -97.756.\n\nThe distance is roughly 2.57\u00b0 of latitude (about 177 miles) and 0.96\u00b0 of longitude (about 57 miles), so about 186 miles. That is well over 25 miles, so the location_mismatch rule applies.\n\nThe gallons are 231, against a tank of 250 plus 10 percent (275), so capacity is not exceeded. The location hold is the one that applies.\n\n{\"decision\":\"hold\",\"code\":\"location_mismatch\",\"reason\":\"Truck 21's nearest ping (19:00Z, 21 minutes before the purchase) was in Dallas, engine off, about 186 miles from the Austin station (limit 25). Ask dispatch whether another unit or driver used card FC-1021.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2987,
+    "output_tokens": 317,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

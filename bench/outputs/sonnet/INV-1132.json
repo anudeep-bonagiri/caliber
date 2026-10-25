@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010766,
+  "durationMs": 3146,
+  "httpStatus": 200,
+  "id": "INV-1132",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1132 for $1,190.00 matches the contract rate and PO-1004 (qty 1, received 1). The only other 119000 invoice in the last 30 days, INV-1118, cites the same PO, so it is not a duplicate. The bank change on day 71 does not matter because the invoice is under $5,000."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlAgKEAgTGAI4AUIIdGhpbmtpbmcSDNjhnn9VDupjxvVTwBoM3QJwDh+zdsAOVqzQIjCgRRtYHrhvtuC5te+as3/WzLJwGVLHuhXAcTC4fZI2TN4EcNMl6ZMCK7mhwWQc1IYqsQf13nrjjMWCVvOdoco53mJvaKlyUepnTqtrNWruXJl+N5HmMKptLEfbm7F6mmsDsop8kJg/5lgMXEetCIOxwk3xT+oxKpGLwd1y51CEKRbv/BUkhPYpbEYCRe4kD8BKvD8GSmnjSO9rhxaMLg0nVzEC2Qd4ys0p8CduUJEgqtKzLl8AkGZOSYcgtZTD1L5mc2mNgUVE8CEXZ/Zo8/bBJ7w00HFf+GMUSvWMw8SYFIDxahVCZZyfDASunvgFIx2Q22njBJ1yKsxlEsCvAAme8hn8AKqzxJFGAO0yMYuBNB/cGTe7qCmC2zWIExLbcFQDB7m0o51pbXvIjYgcSqYAxTD77emspn4HRphiZt9MLwoCv6biYVR2wGf5a9amXss+jub1cbhqEDWRtxYRQCXGyWnR632lSUtMmciIHNuXwiU9F5mP1z9Uc22izi3qoGmrqlG4CndG50vGrmt7n2hAezM34vY2icxXqdJDSddyXlAots6xAPZMkVUxx/QA2SVi7asJPLGeRpKP9YUOckLU9G9AEGYkXw1KDE1IeUfv5RtylmleDOMZzyUt2exiL7OB99BMq4xFdmZiQYWNFBKoQGekSvoRzcj5hhiQvh0LnAB32QucnDlzRw2ZV/eyfLM8Cu1UhISuskEHH7pJGwUkG8X7KfHPj06hMyhX74o4seCgUpA6+zrWRquAmc6oY/v+kINDgeTQjL/h7h2fDJnn8beB1GOwB7VN9ayiKEeZDXS9X0fCYsCxiB6/IsB+cCD37FALkfAQxpJoghY9Kn56c+XKhDa+ZK/noWB48TCizqlsZ3bPjtZ+sBa95c+yLlSFUZ9qUbUPLBPYIGcN5rvu6vTnl4VwFQi98fJ9cwaLswSrRPN8twjEkfmKMoaOhoA8qDY/O1heWyFphxdKzmbn9Kn8VsV8V5KaGDqOdNxM4nECEImxl9mcF3YMN1I+G16PG09hN6peofkDMPv7CDgXZETvep2L4+wn5Io7q5dQb94WLBxF3LpecA0IQGwzEH1BbbN5Bs6M+IraA1bq5Z0oF8Do/f5ZybajJw/G5zLQn54Mty6eA2vWIC+2XDJU7BiiaKFBIHl01BR3miH1/BtQs6jBnCj7/gK2W6PbMwsWe89tS5YML7EZpYB/TUg0sPqsU7OjDbYcdBi75deghI5utsBzo/ywlZANuowF2yXnA1haCOs/InGdKTyeJiGDx0vHa1Bh7wfs+hl+rf32Hnt61bCzyMs8yFuWJcy01hn+j34fVf4YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1132 for $1,190.00 matches the contract rate and PO-1004 (qty 1, received 1). The only other 119000 invoice in the last 30 days, INV-1118, cites the same PO, so it is not a duplicate. The bank change on day 71 does not matter because the invoice is under $5,000.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt3aEfnmUAeWUTmQwLM",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3803,
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "thinking_tokens": 196
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1132 for $1,190.00 matches the contract rate and PO-1004 (qty 1, received 1). The only other 119000 invoice in the last 30 days, INV-1118, cites the same PO, so it is not a duplicate. The bank change on day 71 does not matter because the invoice is under $5,000.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3803,
+    "output_tokens": 316,
+    "output_tokens_details": {
+      "thinking_tokens": 196
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

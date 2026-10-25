@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.027356,
+  "durationMs": 3244,
+  "httpStatus": 200,
+  "id": "T3014",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1014 at PGBT-01 within 10 minutes; the most recent earlier tolls were on 10/28 (a different plaza) and 10/26, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll at NTTA-PGBT-01 on 2026-10-29 at 12:58:47Z. The question is whether the same plate was charged at that plaza within the previous 10 minutes.\n\nThe most recent earlier tolls for this plate are:\n- T3007 on 2026-10-28 at 18:14Z, at SH130-04, which is a different plaza and a different day.\n- T2958 on 2026-10-26 at 18:26Z, at PGBT-01, which is days earlier.\n\nNo earlier PGBT-01 charge falls within 10 minutes of this one, so it is not a duplicate toll. No other policy rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at PGBT-01 within 10 minutes; the most recent earlier tolls were on 10/28 (a different plaza) and 10/26, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsvYurfxwjQJ6rKeqpP",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 12163,
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll at NTTA-PGBT-01 on 2026-10-29 at 12:58:47Z. The question is whether the same plate was charged at that plaza within the previous 10 minutes.\n\nThe most recent earlier tolls for this plate are:\n- T3007 on 2026-10-28 at 18:14Z, at SH130-04, which is a different plaza and a different day.\n- T2958 on 2026-10-26 at 18:26Z, at PGBT-01, which is days earlier.\n\nNo earlier PGBT-01 charge falls within 10 minutes of this one, so it is not a duplicate toll. No other policy rule applies to a toll.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1014 at PGBT-01 within 10 minutes; the most recent earlier tolls were on 10/28 (a different plaza) and 10/26, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 12163,
+    "output_tokens": 303,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

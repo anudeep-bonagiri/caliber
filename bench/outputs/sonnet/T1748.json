@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01312,
+  "durationMs": 3169,
+  "httpStatus": 200,
+  "id": "T1748",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1030 at Dallas North Tollway within 10 minutes; the last charge there was 2026-08-05, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is an $18.50 toll at NTTA-DNT-01 on 2026-08-14 at 11:04:49Z. The most recent earlier toll at that plaza for this plate was T1594 on 2026-08-05, nine days before, which is far outside the 10-minute window. The toll on 2026-08-13 at 20:16 was at a different plaza (MCLB), and the one at 20:27 was at PGBT, also a different plaza. No earlier charge at the same plaza falls within 10 minutes, so it is not a duplicate and is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1030 at Dallas North Tollway within 10 minutes; the last charge there was 2026-08-05, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsd8g7GTbSjuXRV2XgA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5275,
+      "output_tokens": 257,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is an $18.50 toll at NTTA-DNT-01 on 2026-08-14 at 11:04:49Z. The most recent earlier toll at that plaza for this plate was T1594 on 2026-08-05, nine days before, which is far outside the 10-minute window. The toll on 2026-08-13 at 20:16 was at a different plaza (MCLB), and the one at 20:27 was at PGBT, also a different plaza. No earlier charge at the same plaza falls within 10 minutes, so it is not a duplicate and is cleared.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1030 at Dallas North Tollway within 10 minutes; the last charge there was 2026-08-05, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5275,
+    "output_tokens": 257,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

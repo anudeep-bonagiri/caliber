@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009768,
+  "durationMs": 5538,
+  "httpStatus": 200,
+  "id": "INV-1036",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1036 matches none of the hold rules. Unit price 51,900 equals the contract rate, billed qty 4 does not exceed received qty 4, no earlier invoice has the same amount (207,725), and the vendor's bank details never changed. It does cite PO-1015, which INV-1013 also billed for qty 4 on day 9. The policy has no hold code for that, so it is cleared with that overlap noted."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1036 matches none of the hold rules. Unit price 51,900 equals the contract rate, billed qty 4 does not exceed received qty 4, no earlier invoice has the same amount (207,725), and the vendor's bank details never changed. It does cite PO-1015, which INV-1013 also billed for qty 4 on day 9. The policy has no hold code for that, so it is cleared with that overlap noted.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdmLzU2j284VxNL2Pn",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1899,
+      "output_tokens": 597,
+      "output_tokens_details": {
+        "thinking_tokens": 444
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1036 matches none of the hold rules. Unit price 51,900 equals the contract rate, billed qty 4 does not exceed received qty 4, no earlier invoice has the same amount (207,725), and the vendor's bank details never changed. It does cite PO-1015, which INV-1013 also billed for qty 4 on day 9. The policy has no hold code for that, so it is cleared with that overlap noted.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1899,
+    "output_tokens": 597,
+    "output_tokens_details": {
+      "thinking_tokens": 444
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

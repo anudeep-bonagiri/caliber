@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.017206,
+  "durationMs": 3227,
+  "httpStatus": 200,
+  "id": "T2343",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier charge for plate TX-1037 at plaza SH 45 N Mainlane within 10 minutes; the previous toll there was on 2026-09-09, and the tolls just before this one were at different plazas."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2343 at SH 45 N Mainlane (plaza TXTAG-SH45N-01) on 2026-09-23 at 17:54:26Z, for plate TX-1037.\n\nThe duplicate_toll rule only applies to an earlier charge at the same plaza within 10 minutes. The most recent earlier tolls on day 61 were at other plazas:\n- T2342 at SH130-04 at 17:40:04Z, which is a different plaza.\n- T2338 at SH45SE-01 at 16:56:51Z, which is also a different plaza.\n\nThe most recent earlier toll at SH45N-01 was T2095 on day 51 (2026-09-09), far outside the 10-minute window. No rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier charge for plate TX-1037 at plaza SH 45 N Mainlane within 10 minutes; the previous toll there was on 2026-09-09, and the tolls just before this one were at different plazas.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt81YZ71hGu73E3sa9k",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6918,
+      "output_tokens": 337,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2343 at SH 45 N Mainlane (plaza TXTAG-SH45N-01) on 2026-09-23 at 17:54:26Z, for plate TX-1037.\n\nThe duplicate_toll rule only applies to an earlier charge at the same plaza within 10 minutes. The most recent earlier tolls on day 61 were at other plazas:\n- T2342 at SH130-04 at 17:40:04Z, which is a different plaza.\n- T2338 at SH45SE-01 at 16:56:51Z, which is also a different plaza.\n\nThe most recent earlier toll at SH45N-01 was T2095 on day 51 (2026-09-09), far outside the 10-minute window. No rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier charge for plate TX-1037 at plaza SH 45 N Mainlane within 10 minutes; the previous toll there was on 2026-09-09, and the tolls just before this one were at different plazas.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6918,
+    "output_tokens": 337,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

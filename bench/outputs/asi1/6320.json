@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9581,
+  "httpStatus": 200,
+  "id": "6320",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "location_mismatch",
+    "decision": "hold",
+    "reason": "The truck's nearest telematics ping within 30 minutes of the purchase (20:59:22Z) was approximately 146 miles away from the station, exceeding the 25-mile limit."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"location_mismatch\",\n \"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (20:59:22Z) was approximately 146 miles away from the station, exceeding the 25-mile limit.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792883578,
+    "id": "chatcmpl-306d1d79-c38d-4a90-b8ca-5e5e4a5f5918",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 71,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 6527,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 5360,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 6598
+    }
+  },
+  "startedAt": "2026-10-24T23:12:50+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"location_mismatch\",\n \"reason\": \"The truck's nearest telematics ping within 30 minutes of the purchase (20:59:22Z) was approximately 146 miles away from the station, exceeding the 25-mile limit.\"\n}",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 6527,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 5360,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 6598
+  }
+}

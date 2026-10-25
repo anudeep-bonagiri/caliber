@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008818,
+  "durationMs": 4335,
+  "httpStatus": 200,
+  "id": "INV-1037",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "INV-1037 ($679.25, cites PO-1001) matches the amount of INV-1016 (PO-1021, received day 10, 11 days earlier), so ask which PO is real. It also bills qty 2 against PO-1001's received qty of 1, so short_received would apply too, and any payment should be limited to the 1 unit received."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqAsKEAgTGAI4AUIIdGhpbmtpbmcSDKLUu/VO5yc5/f9EEhoM2Mrh1IwUCBX4tUldIjAiRq9IFgT0912HtkbT/88Xmz86UpL8lZV8gjwBCUkoPZhbzInlv/fufZtJFcOlnUMqxQoRap4zerHI5964j20p4ht2pSzecYQfvjVAeGw7BRTcs9MNGkZUlHz9ErQnZUIb7/KhB65Eopl/BQso3GPnyGS/tKP6LsHm7fddhmEZOQykYgqXm5iFJHCM+AvMH799wsM5rdORPjkuDs/U+OaPb8iozxC4xyAS2KF4UdJqnQDx60NsOuYwPVPqrcNrJRMGeTGGheubK5l/i9mGpGdwttGGlOM/AunqT1wSKObtd4+QGxPkfKp0h52KfDfH3tPBNBpzDlwygn39GQ9x0+C8DLgDd1OW/McYbldF4ryf5gbyjli0s1QzuaejUGBigVpwo8Ylo7mHJK5YSsDEg5W11PSbpINztaOOxTXYj8UVdCEXUSsZui0nw5fuBhDnBksu6YusxXu0NSqPec5ggpIuzTDgToYwrMBhTuDs+9TpAjZpQay2jGSVgsZLQkDtwpYgIWGugYVkSBYH3kz/aYzNWNhy6m+QVVpUVXGsGUdXWGwlF+MnAXGKh2kla36Sl+CjV9WWPrf6DdeHkCOL/KZUp9jGTZdA5ugxMIHpWCaWbtnhXR02l4aIJ804kEeSe6DO0gpSuRqztGKzHRxRCbQGXZyJFAfheQe9W385SglLjtxraOlLkYB89m6omrWBVQSutcYARX+I2mP0L8mwKNtSY+UGYpBhxgq8ePURcgTO7zJC3jnpOmaLuA9S1yrbwz3HQQcgtGRiMqrn4PMMURwRuiYJoSc13bD30jQLVIJIjI5FQpV3GSWZLGIbxRpbW4PlNErg2FC7/qA6pg+nSgWIPQt5nV4r84CFQoIYRYIr9zCNSGRrtRRv6soi4XYlN+i6O+iAJPSJ7ygQtL3Hdq6Nbv3oXTdJFYAfw8IUHxzcsTucDleMIQnS2yq2utq8P4LhS0eiyTKySjeuFYsTrkCW4UqeVIxEYhSaA9+/bFEdfd0KvTJfAY4uPkEL6vvtTAoi4KxzoFR+8PmhV2BefY34yu6C2Iwzo1Xtsi53qlfKos9MTe4c5zsnlLLuZ8l+N8b9pIo4IupRqdMnCRd+AI7T35hzBUytEf6312z1sawLgAlureFZ5taviUgLEf/pEJu+08qVGiDQQX1htP0PS+ou3FWqDVTHzbWXhKnY7y1tApIl78VAmHob8D01wJ0XXchfl84y61vbbthG0ixLrohuDFiSIQArhEStQd/VPIcj4Sa+J5dvyvBMzX2MpCpEe/M/G7GUhHy3ayelmUih4LAADnKrxfZ3WLnQooHQiI5GHPwY/1S4X5EwZQnzjW1Bk61aTfOcv/n/l0hg6u23h8qPqnOeXqoruooMEc3NVXIDj5MBg/slVu+aY5Yj2ULlPzKuzJSm/LB/AHDtSMN62Pf69GAy3QrUQ0saomvZ4D8aCmnS5D5mCPGFzmhHSCbSqhekgPJex+G/fAp5GpBGH/hX5g3l4m5CkEKMnfjK1vn8kjE9DB3UllwUiIEF4YJgTX9tMqer7kI08RPBQ07d+njS9meuMUxxmDKOZNIibWAdTQKJo55M3sWi++60gvQPLpeRVMsi75l3nwea/hth00gec6+nf0bDKGiRSgIXnvGnLgK2CKUYDOWQ/L1R2bqs3/hqguk1qYqBwEepTASY8uvf0niCXE7onB32y9RUFkF/o0U1TtZCWONrNn88ZKxNh1/A2jtc57sy5rqDhCtVkiydPEH+R8rGZOtEadahoSdIff0hUESmZjAkyxZfmbTja4YkcKOuMTOsqltPo6YyPaksQLW1JpxgbtFGUusvKfShZryyIlHWgnfzXglv8agMiP79jATjqoUcGRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1037 ($679.25, cites PO-1001) matches the amount of INV-1016 (PO-1021, received day 10, 11 days earlier), so ask which PO is real. It also bills qty 2 against PO-1001's received qty of 1, so short_received would apply too, and any payment should be limited to the 1 unit received.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt8roiUpWfjbPha1Nfd",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1979,
+      "output_tokens": 486,
+      "output_tokens_details": {
+        "thinking_tokens": 348
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"duplicate_invoice\",\"reason\":\"INV-1037 ($679.25, cites PO-1001) matches the amount of INV-1016 (PO-1021, received day 10, 11 days earlier), so ask which PO is real. It also bills qty 2 against PO-1001's received qty of 1, so short_received would apply too, and any payment should be limited to the 1 unit received.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1979,
+    "output_tokens": 486,
+    "output_tokens_details": {
+      "thinking_tokens": 348
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

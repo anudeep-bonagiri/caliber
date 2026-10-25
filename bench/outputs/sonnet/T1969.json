@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010004,
+  "durationMs": 2413,
+  "httpStatus": 200,
+  "id": "T1969",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1969 at SH 45 SE Plaza has no earlier charge for plate TX-1035 at that plaza within 10 minutes; the latest, T1948, was three days earlier."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll charge (T1969) at SH 45 SE Plaza, Creedmoor, on 2026-08-31 at 16:51:13Z. The duplicate_toll rule applies only if an earlier charge for the same plate at the same plaza falls within 10 minutes.\n\nThe most recent earlier charge at that plaza is T1948 on 2026-08-28 at 17:15:40Z. That is about three days earlier, far outside the 10-minute window. No other charge is close in time.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T1969 at SH 45 SE Plaza has no earlier charge for plate TX-1035 at that plaza within 10 minutes; the latest, T1948, was three days earlier.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsju8U5Zyfyht93oFrf",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3787,
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll charge (T1969) at SH 45 SE Plaza, Creedmoor, on 2026-08-31 at 16:51:13Z. The duplicate_toll rule applies only if an earlier charge for the same plate at the same plaza falls within 10 minutes.\n\nThe most recent earlier charge at that plaza is T1948 on 2026-08-28 at 17:15:40Z. That is about three days earlier, far outside the 10-minute window. No other charge is close in time.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T1969 at SH 45 SE Plaza has no earlier charge for plate TX-1035 at that plaza within 10 minutes; the latest, T1948, was three days earlier.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3787,
+    "output_tokens": 243,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

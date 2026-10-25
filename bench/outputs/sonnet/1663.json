@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.015526,
+  "durationMs": 4120,
+  "httpStatus": 200,
+  "id": "1663",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 17 pinged at 12:25Z, about 3 minutes before the purchase, within 0.1 mile of the Flying J station, which is inside the 25-mile limit. The 46.1 gallons is under the 165-gallon cap (150-gallon tank plus 10%), so no hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8wkKEAgTGAI4AUIIdGhpbmtpbmcSDPdKFzgky6Tar/F7JRoMds/W3rgHRQBTVozPIjB3Ll62nXQzBFlQZ1gIEP8O7lOPUp3Y4mZ5PUtpPt5fMgTh78bIcWapP1dDfJWaxQkqkAk6AE7CLGCVxpOGeoCmcvLllsLT+F1UhbhgBqvch6uEs0spEFYxqE/O94WJNbRh7eF5PKEy+vG41+gApQw9z+cBQ8P+k8p4EFyovuS/QKswGMkIbOJQPqhVFmqtWrATBGFuksjmtRgwsorkKw90K+JEj/L2DwSczN9ujgA8QkVk5lim+GW5iBD4PUCbwcnT6AZvKk317cpRp490gKAkk0S8XUWxa7DDe/PyThQTzk702FmYO1Ui9Sl5YHJsSgtr1dJgx4BkAg6NbEp2h2bZCE0eC9aW8sxUbzyQo4g1KMEH22jJv214s5fQQ+aqWR1TqwPAkMeeP2E+f/7QIZfFRQ2wPsjW54NwvJdJxSoUkin/cI6lwA8dYdWDcX1Ov3wQwl/AxEs6Jthc/TKvwjGLRv+sfvoxPTJCdrpKbJO1oVirtYpt0gGxjoYZyVUm6qbsTqMzW/tRF7zl9clPdWG6HmS2aWrbHxySJMFTgKpPjjHuqLvElIyWXk7YZiR091ZlDuaBpwHRTgDg90mNCOFXXqwTnWmB8fWJwfUaj/UEHQF/sU+fuaWut9fSqv1Q853uKK6I4i94SJQiXOsjWuPa5oowS+DRBS2GqEMqIb3SoDFur+SYv67LgLfgc1kv8unW3jeCePHewAT34WypHV5XDmMGG4ycls9W2AYRFWIVcIjBru3KYhPqAEJaFk2L1oHvCTo3OTFxFyWeAX0TgTTckM49UquRqRP1NsMSarxaGTJyPRajDUZoGKbbvjTcnlKVT21YAtWJa5H7iVRAII/95SQYRuW0ksD0YwdrHhs4dGFFSoYpt05avIqY2DqrGrbZrc2vxq5qENCFnUDCuFNic+CWhf7V+NxVpBPuKO3cf1pMG95ajr33qrM5LcflwOva3y5ZIEWQ5ObBFjeKXcSY+GZFQzkXYciDOv5xUQl41c9njpa/wBrIBu0vytrUxT/uJLGX1tiq9PpVtk6aaP8K+lwNI9qa9VAcOwc6rfDKYcNS55POOtlv3vWmgCLONzLUrj3y1q09H4c4itjeaOMdMXcYmO5YlkxNFTJ16VNggKO50lPWxL3B7oXNhAMJzx/+7A/832bwYUUQl5F+FEhy8J6dZ1KP5iS4SFj0Og8oW3v/p6h/qvF5GrT/oVSVYUZpeEDs5YDavjzbcYfRqp+xu1tJezO1hRmWtkIrCVvvZgxs87IEUe4UAZPNwfqJocKrR/FKJAXrLZhyAaeoh1TPkLrAKvPXR8TUKhIlFykUHHlAUA/F8fw5pxBwTIqq9prrD8JtdvAws/HLTaJ9BRZ9FZa6Y85qTLO5UgcXz4KDF0/dSHMJrPXDFdG5s0sdQGXQcbhehSwF5SRvjSZ3kgRN7W7CwyRDaNDShOp6/Tx++zgqBks8gz4pS4aiwHMy9quY9hqS2QOyBnJxA5pBlni8yR17YbH+8Yom6oIh+BiMuGpP9OKADeGMKLLQPXqn2CEyMY6+SKxsiUp7/q52zYXCPQaLES2ZtmGm/AYDkH6UFFtYhaV6TiKgpB3NHyQEFHPPODLH4uHP0uqRSXdfz+CBZp8bGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged at 12:25Z, about 3 minutes before the purchase, within 0.1 mile of the Flying J station, which is inside the 25-mile limit. The 46.1 gallons is under the 165-gallon cap (150-gallon tank plus 10%), so no hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7htuESzhD5NS1jpw3",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5618,
+      "output_tokens": 429,
+      "output_tokens_details": {
+        "thinking_tokens": 311
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 17 pinged at 12:25Z, about 3 minutes before the purchase, within 0.1 mile of the Flying J station, which is inside the 25-mile limit. The 46.1 gallons is under the 165-gallon cap (150-gallon tank plus 10%), so no hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5618,
+    "output_tokens": 429,
+    "output_tokens_details": {
+      "thinking_tokens": 311
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

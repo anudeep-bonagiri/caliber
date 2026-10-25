@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011428,
+  "durationMs": 4717,
+  "httpStatus": 200,
+  "id": "INV-1090",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 51,900 matches the contract rate, qty 4 does not exceed received qty 4, and the bank details never changed. The earlier invoices for the same amount (INV-1036 and INV-1042) cite the same PO-1015, so duplicate_invoice does not apply. The total of 207,725 is 125 cents above 4 \u00d7 51,900, but no payables policy code covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 51,900 matches the contract rate, qty 4 does not exceed received qty 4, and the bank details never changed. The earlier invoices for the same amount (INV-1036 and INV-1042) cite the same PO-1015, so duplicate_invoice does not apply. The total of 207,725 is 125 cents above 4 \u00d7 51,900, but no payables policy code covers that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6CESCZXRN74qqp9Pt",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2909,
+      "output_tokens": 561,
+      "output_tokens_details": {
+        "thinking_tokens": 418
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:44+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 51,900 matches the contract rate, qty 4 does not exceed received qty 4, and the bank details never changed. The earlier invoices for the same amount (INV-1036 and INV-1042) cite the same PO-1015, so duplicate_invoice does not apply. The total of 207,725 is 125 cents above 4 \u00d7 51,900, but no payables policy code covers that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2909,
+    "output_tokens": 561,
+    "output_tokens_details": {
+      "thinking_tokens": 418
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

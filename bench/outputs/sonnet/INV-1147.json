@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013078,
+  "durationMs": 4006,
+  "httpStatus": 200,
+  "id": "INV-1147",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1147 matches the contract rate of $2,450.00 and bills 1 unit against 1 received on PO-1012. No other invoice for $2,450.00 from this vendor under a different PO in the prior 30 days. The amount is under $5,000 and the bank change on day 42 is well outside 7 business days, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS9QoKEAgTGAI4AUIIdGhpbmtpbmcSDNere+RqSUGjsLkHQhoMyvjckAfszN5dCa0BIjAh+vckC2ruwD9f0wZXKAEz12TGLFIO2N7bH1ab4aT8aJ9lynFtTbwQL+DDRN6EOFwqkgrS9NhDS8/pbhjYVu0gAgo39T6qpY3tX0pIubOZsDky5oOSZYlTopMKj5lgldHqLqYs6OzAF+s1v067YWlcMtluJzefh9y95f3m+CWhp8q6xxbZhiMe13H1oS4UIyh4C3MvNU3fVZs07NdgJg71uEYBgJ9njLXmFzzlduuNy32H+3iBtttK2UMYothD2Rki43zSeQb6VAkyI5FIW8EOXtBJlYPvnUJ+n423C1OIFh00rpcPSakaEBkP4fuFeWiq4YpTURXTBXCB+sCVgdVIlR/bzNs/jdVMoVj2ww9seh3x+l4YBIjgi4BVZPQEQJ/8WH07t8kP+6tQ2tK2YO/41N9u5iDE/rxiFTqSBdV86ZdXI3Sx3Bur3O04B4ovPh4iR0ZLKb3vjJCL2Vho1+6CpP8xCcMqRS3lFQTzA2zgEsvsqtu14uJPDnU30z1IIjAqI+TDMATculHBUy4B7otolnsS6Rb5iFIZw/QIUm7pVtlKxcuf6XOya/tLhwcm9yG4w5z9Jx47d1eyXp86WikE29lBw5DyldGo8dsNXqpRwjhrgp1Py9V3otXt7H8X51TwKsPt9t+vwFAF0dfcXD0y+Atat1kCKMTYr0wsG/jy85v0FyyUSsEbqGd0p2OiW5pQqfpOo+yP/D5kPKgryMRBIgiUf+arzlACd0r4Qd5MNWJ4NjQKsSU/qxtg/OUFfoBDlIcfkoOprYinLS9wn8maliWx3d+t+NYnjlnpKC0C7qsTPP4YoGztvet5h8lAe/ZCM4l3b/QTHlRTbb2LUVoc4i+1j9WVBIhisGjbYPB5Xo9LVRq7wwL9PHVvJ909GYLUJ4iIIu4QDrR72C8zabRfQYaCje0C0yN0rgZhObc3bOtKuIEbL1uEZcTpM77xnqUORKmtDXk7OSbe4SbFoTGhKWLq1lRyfKmSKvu4RtqVCo5TFZy2Fsx/0Uro1mKaq/2WsRhLiibyddG9rxm4bAReo8IckY99+NuEqqAXKj34X2uUHMF62RvEtB1nMfBeEt2xBMHpLM/KVnYhw9RX8EFRjnL5W+tP7GFCKEe8pA+JGblrM4mzabCg4lEpjSzFWOKr3Av5qQGzDgqaAoOEHRM1WdV/hdJUWrQwJtd6+p3tZP3XNrMLvfbLAurNEUQwb2FzlCesjDjjLBp0IVh79mYJxXi23cX3Rgr8wy3sp52ZI16tkoQB5k27Y1iZB/5lJmGMduB9EerRWNYyWtpFkYwfsm62/hTQ1zfKm0jggHZT6nxgwES4GXa9Q4eF6iccO6fgeTgKdJClFpz/NJp00aGrPudfq5xyP4so3IzPUbpuEvF4Ci6a0BgBZaXNg5rL4ufpXGxsNHMy99Zze1Khx06Wp1VHk/iNBVCub/RcToQ7rLn2lk4CbdZ+pJd+2iJZPcDt7kWfVBvsgx2oAwrxS0ZotGY1vkhWBdjWTFHjIzba/65pBIUK03gls8SlSXBo5Gszu9vgWNVXdx1C3C/7Ht/nSVlhj29IR5EocKGX5UJjxh1WgyLfk5Ig/hwz4VbpJBP5p3Ko4joSRmawRNeI0AlZuvJ9rjn12Znd+E2cK22+VkAiJI4pHcTo0pQL+s6OXAb8u73KgisOD4FPnq0ONnzRyyzRBuHiyht5Lsff5h0LzDgwOiT8jYlRW2jkgJ0ELWtpV4dYvmt5JJE4P9LAtliKDnrxu7fO0y//HOlHfc45lSOuZlnaDsX/Nr7yCCdxzfuP6XIkThgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1147 matches the contract rate of $2,450.00 and bills 1 unit against 1 received on PO-1012. No other invoice for $2,450.00 from this vendor under a different PO in the prior 30 days. The amount is under $5,000 and the bank change on day 42 is well outside 7 business days, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseuWA2DzxHpQFBYzjt",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4099,
+      "output_tokens": 488,
+      "output_tokens_details": {
+        "thinking_tokens": 360
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:01+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1147 matches the contract rate of $2,450.00 and bills 1 unit against 1 received on PO-1012. No other invoice for $2,450.00 from this vendor under a different PO in the prior 30 days. The amount is under $5,000 and the bank change on day 42 is well outside 7 business days, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4099,
+    "output_tokens": 488,
+    "output_tokens_details": {
+      "thinking_tokens": 360
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

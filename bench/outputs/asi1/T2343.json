@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9254,
+  "httpStatus": 200,
+  "id": "T2343",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No duplicate toll found; the transaction is at a different plaza (SH 45 N Mainlane) than the previous charge on the same day (SH 130 Plaza 4), and no other tolls for this plate occurred within 10 minutes."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"clear\",\n \"reason\": \"No duplicate toll found; the transaction is at a different plaza (SH 45 N Mainlane) than the previous charge on the same day (SH 130 Plaza 4), and no other tolls for this plate occurred within 10 minutes.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792886743,
+    "id": "chatcmpl-dc285dd8-1986-4476-b9b1-120f256c90f8",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 70,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 6641,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 3216,
+        "created_cache_tokens": 2144,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 6711
+    }
+  },
+  "startedAt": "2026-10-25T00:05:34+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"clear\",\n \"reason\": \"No duplicate toll found; the transaction is at a different plaza (SH 45 N Mainlane) than the previous charge on the same day (SH 130 Plaza 4), and no other tolls for this plate occurred within 10 minutes.\"\n}",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 6641,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 3216,
+      "created_cache_tokens": 2144,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 6711
+  }
+}

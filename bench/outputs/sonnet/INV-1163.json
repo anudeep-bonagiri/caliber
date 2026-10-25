@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011436,
+  "durationMs": 2867,
+  "httpStatus": 200,
+  "id": "INV-1163",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "short_received",
+    "decision": "hold",
+    "reason": "INV-1163 bills 2 units of ac_service but PO-1030 shows only 1 received; propose paying the received quantity (1 x 41,900 = 41,900 cents). The unit price matches the contract, there is no duplicate amount in the last 30 days, and the bank change on day 42 is outside the window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqwcKEAgTGAI4AUIIdGhpbmtpbmcSDNmpeBQ55G4Lr40MLxoMR8fT9jqatTg969QoIjCZLCTTg7wL9QzO72NxVsAKSsqjwmVHhBtDWS70pWrroggeMSNLrfDh5LcF61E1eDkqyAa9rt6VarKjvYXtr88Hmkvb3Rfy89FZSl6kj6IhJx1A0YExJlZRIZEjJaFHIBM5qJAi0f0N5hVsnt/twHJ4sYstzLCGv3wFhLSoGK2dXhbWxYkZBr1DKdD9YIydfVxldcmvUBLm58fjKJEFb0SXBHTV1+IvwYyH4xbRuHZygmjC3z8ZWl2RAZzOB/FBFXlsmC5xOM80DLZigDznpM7Vl4mwJHvLT2MMVK+fs3DeUwsNoIASsE/2/JCQku1tqoZjVQPR6xkUbalfQFMiIJUmxOSwqmP9FvIeT+7xPXL/uM7npA5vYlna0XuraCHwXr+MF96aX8E7ZthZq/8F73Psfr5B9jrU5PZzg2Kk1EkQzmrv5Y5Bk33jkGzBXtLijLpq7jHF4rgW7GIzzXckv+bamBJela09MPWZRz57d9JCxWuCg48jWs6hOGsiLrdIG3ffS5DNCIhIaaednjAwwDwkKwllAgFJrO5Gt5+EQ+PwK1j/rUG1i86PL2MLwDaBSMRCK4oGLaAVd201wZBEEe2uNWL7x1BfeG35pq11HLFigYnZqla5kfEGDSEywhNCXvrio2CQtwMUE+iUZKeVZOHVTWCxVbfIVbWH7FTqJ8U4ieT+b0B7kCWfxmu9rU7XR0VGv0nZvlV6So1Rbq/bco2ynl+ArzTLSQ+doa29iL+Rj3NtgNPLlgXDoEHBxoxtHEV8/OUdywzd9kLVktJcxcckLst6KMvU3/ffJ9cQvwZZYirr34e6D0YDoVjK6UQH7SGjEFqIgA9+90vukSMBB+z0QWqegG8ryxeHbP6DVTwe96fCm2oPRoAmNXY47Bzqrpjhq3E2AwU0XJf4VgXoE3g7g6KsPFo6CkYDjMvOtcfb2DZJklz+p/55WX+ed5se/cY3dz75Mg4mdwSL6yw16RaX3UhiJZrqV6hKu0m9267jhtfsmjvqKlKjotvSscN9uizMBEG6kczFHesB8TvmWFM/TDUTrjlr9l4ClT3pKEFSiuG1v2RcQb9v5JIhx9ACFvQA2o6RZli9ByCyGVysM1zNXYAYuAMXYN9ScIAn+7lD8fQKrKO74jnHKIL6cRmeRxkmli/BsboWLJiQrM+BDEWPCmO7Qeebo6M1H20YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1163 bills 2 units of ac_service but PO-1030 shows only 1 received; propose paying the received quantity (1 x 41,900 = 41,900 cents). The unit price matches the contract, there is no duplicate amount in the last 30 days, and the bank change on day 42 is outside the window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuUyw9QdtadSrgAAUm",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4353,
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "thinking_tokens": 148
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:18+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"short_received\",\"reason\":\"INV-1163 bills 2 units of ac_service but PO-1030 shows only 1 received; propose paying the received quantity (1 x 41,900 = 41,900 cents). The unit price matches the contract, there is no duplicate amount in the last 30 days, and the bank change on day 42 is outside the window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4353,
+    "output_tokens": 273,
+    "output_tokens_details": {
+      "thinking_tokens": 148
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

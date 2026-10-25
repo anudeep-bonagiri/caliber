@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006312,
+  "durationMs": 2733,
+  "httpStatus": 200,
+  "id": "INV-1035",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1035 is 4 x $545.00 = $2,180.00, which matches the contract rate and the PO quantity of 4, all received. The amount matches no earlier invoice from this vendor. The bank change on day 18 does not trigger a hold because the invoice is under the $5,000 threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoQcKEAgTGAI4AUIIdGhpbmtpbmcSDIuAyn3KAFIYfqXqNhoMSryRivt1Y8TYifn0IjBZ2ONMUc8PB8xcgyw6u5mQImQzODxrwujml6/Lmm6zszK5lBGVpVSGpXVYBO6sCukqvgaAbtqBXqhb1OuqL9nehsk2VV39XumBAZw6ifq4i0UX9rQPmBkRwNVZFwZZqW4oy+rDscP7aGPt/gkImYEhbzvj1NicOyGNVsDyEfh5tuVac+AQzkPGtmGuzU/m4m6X9s0d8N3H0V4afFvPiyzoIRjVu2nLVkcw9yAsL9vU+qlZ2naNL8TbtuMlcW1DRjzcxR8g7yZCxyxP9R7hDv9jXgm16hHZs9Cc1lLfgnlC6UBLeeJCD+prQgpxNxM3cUi9+OwxOGbaY6/Y29ZBiZd8zVz1pxiSOxkIGqS0oaqj98woTivOrQZhzjNhKDT3QQo4llChLQ/o0Q0jce8K3GBMMcpLFk6CuRsS4/NRFaF5ejv2RgDSfHlXc9Alu7kBAWPflO+LXBx2Hchx7uEmMH6JpVyfF7l8vCSuE3RKfR/7q5XOics3qMhGVe3B4ddiugjWTRfEGrjoDBBzxY9ahjJ8kDPXtJ7H84lcrMA5sJMltXtbAjranCq1k2OFrhNGZnl4vRe/P18M9zX6h1e9TSFRNLWscwjSIUe2l5BUJDTJ8LSuu1IZhuodL9Cp8ASEhvGW0arYGQEBWxVqnBEB0ZMiLsMO54SsqfjCzoh344AayLbLa9NT4hwDg7jL1nanDL8vwW440SSKRtntxd94w2je7bLFi8SHuBnQ0EuoR58TiqvfTO9XJBGSKec3nd/uaTX11mSjNyMv5qbLM7+tdsmRtbrrWxQHUzijKkKMBxk7+6XRUhSDbVlPUcBBqTzFgpADUDwE3enfzjtJzLM2Wen7uOU8YfPYTu6w+TcENB+YXxr9eVO046e/X/AHJZDQaQp8ZwIoIVMVxNr+0JQ5aMk2G7Gh0PQMmPoU6GRyC1gvdsBB4tIU9B6258LpfEeWIGu+O9DWWDmd9ifsH04CdssSN6Z9r6GzvJdODo1HPRBiYwXSy9GthTSDgs22JpuNgGuH4nfR8vAGWpMnNpJInASpgVuTSA0A4wUf8l8278+MwLBn0NaF4jnjVqTwvBjaP6Sx/M3/RwDWXjxyL8vAr1RhESGOXFDphJKDnZFugRWfuBVefMtltXzuixD1FOvF9MqBAXbsn1vkSZhJuiGCIyaOHRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1035 is 4 x $545.00 = $2,180.00, which matches the contract rate and the PO quantity of 4, all received. The amount matches no earlier invoice from this vendor. The bank change on day 18 does not trigger a hold because the invoice is under the $5,000 threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstM8d1PZZtctwV9g3o",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1816,
+      "output_tokens": 268,
+      "output_tokens_details": {
+        "thinking_tokens": 154
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1035 is 4 x $545.00 = $2,180.00, which matches the contract rate and the PO quantity of 4, all received. The amount matches no earlier invoice from this vendor. The bank change on day 18 does not trigger a hold because the invoice is under the $5,000 threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1816,
+    "output_tokens": 268,
+    "output_tokens_details": {
+      "thinking_tokens": 154
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011016,
+  "durationMs": 2793,
+  "httpStatus": 200,
+  "id": "1928",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck pinged within about 0.02 miles of the station 5 minutes before and 4 minutes after the purchase, and 45.9 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The purchase was at 12:41:27Z. The truck pinged at 12:36:38Z (about 5 minutes before) at 31.46354, -96.05795, and again at 12:45:00Z at 31.46363, -96.05783. The station is at 31.4638, -96.0581, so both pings are within roughly 0.02 miles of it. The location check passes.\n\nCapacity: 45.9 gallons is well under the 150-gallon tank plus 10 percent (165 gallons).\n\nNo other rule applies to a fuel-card purchase, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck pinged within about 0.02 miles of the station 5 minutes before and 4 minutes after the purchase, and 45.9 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdEoD8Z6G5wFdGFLud",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4158,
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The purchase was at 12:41:27Z. The truck pinged at 12:36:38Z (about 5 minutes before) at 31.46354, -96.05795, and again at 12:45:00Z at 31.46363, -96.05783. The station is at 31.4638, -96.0581, so both pings are within roughly 0.02 miles of it. The location check passes.\n\nCapacity: 45.9 gallons is well under the 150-gallon tank plus 10 percent (165 gallons).\n\nNo other rule applies to a fuel-card purchase, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck pinged within about 0.02 miles of the station 5 minutes before and 4 minutes after the purchase, and 45.9 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4158,
+    "output_tokens": 270,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

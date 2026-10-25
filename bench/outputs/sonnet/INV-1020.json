@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006938,
+  "durationMs": 3836,
+  "httpStatus": 200,
+  "id": "INV-1020",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1020 matches PO-1023 and the contract on unit price (52,500) and quantity (1 billed, 1 received). Its amount differs from INV-1007, and the vendor's bank change on day 42 is after the day-12 receipt. It is also under the 5,000 dollar threshold. No hold rule applies. The 57,000 total is 4,500 cents above unit price times quantity, which is not a policy hold but may be worth a glance at the invoice document."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/wgKEAgTGAI4AUIIdGhpbmtpbmcSDEN1mrXc36BZMR7XrxoMc0wqyL7mmweiMOK7IjD5eqPRKh0mc5zTkdwVZl5VInOnJxOQRk3jTDqPN8gA+LV/v5/pAl74bLBOxKAcMekqnAj4xpvh1gCrvSYZeyyOn92IpsKrq2g8a5oSwSAyY67nEWgr/pRnRICaAUIN+8XXQhPbWPqvAbvjaI6+ur85pJL7LXCGXdybHQAkiYaq8+qsduasco0oBqUC54/t4myw6/p3/2ay5Hz9yIiLvIRQgMxe5TiEujELw03aSTJeD29CIdE23NHruS2WzZKrsbmRVMj6n0jg9r+jpN2HL69X+uVv/ImDQtADnZZneAmlMVt9yy0jNLUM0iqmw/38GeTLrg8WZ838zNP9SIx0K0QXFHwuKzp/sk0KJgE4SSjVFKUo4r+iXWUQP5CN4jcQM171c7f18QNAPyUUFDqu7ImE5GnqLX+m0GsbXE2JpPF8mnOGrjzY0t9tlUzWPMAQQBIgI+1a+b/4/s4/vo2zwF0yNSS2mZaDJaNByHnAwkCpn4oKCns/BqhXWqiSrDxZFwfrcFKMcOeZCL3BY4F7/+BikWngQe++YlZLBnWsNj0wwUh5Ch8fCEmhGa3+D0IjV6n42gciO0tkjt32eYR8qpCqUtFf2QCj8KownPrMK2XV/pPr4tMouTpzYolvnN308RHI/bAl2MLP3Y8mEAp0bLbEAcVwWV9gYKFTZHe0ailyIGXaVKYIog3UufkfZH988lnQvzexuRhImIPxkwVXTHhRlZKAMbtj9TfrnaOufrWnyGrbJ/s4AFZBfvrQBBT1SDxMoyCqMgZpxAQhxqp/aklnEPl8kMmpvrr9DBmLQnhbYOOeRkz3IN623HNeDCeDIvVCNU+0pkR7e9QOL4pR0jmIoYs6Rv0mrFmJPlADyVj7dWHRTYN8xuzigFqhUjugtyMMIGCvNIaEmxAqP2qdQ6S21c9WFQD0T5552rCDAPRdvy6am+D0Divr+nI2HrE/o6OgXUMELEq3aE0RErCFoyILtdcZsj7tcGaYZ9XUCfBgob0QaLBsm0gEzTYLMFbTpj25IguFvdrVduTiJW1eyfyvO61HCjnETYh8BrqmLsrbU6YH7RU0LqGhIDkOjccuVzRMbgwnF8O/rWi1M+Yh88mD1f/G87QCxnRCx5YbA4TN/ofyE3ggGmzT/Ca+q3ntUYEXlWjJ8QX9Bw5KLVajbYNCrqc+E/H01njkwdWorpV0wLcvrmaDNZ9qnWx1o/GKqh+iMasuUYLk8HuCgcPp2HuFjVZlr1om5Sr3e6sp1CDOhQK41Dz1SLkfmkrxL1Qk9Pel5LZ7RWZQ3GoCOYwSObnqn0kYceqfC1xwzjZQFsVyiZn0bVR9LHmUzNY3MCG5tI1I7SiNJKboZWE4tX2WCvn2R0g6S4UygJuxQPy+SxxrFfx2tGqdluQ2cUPinutVkHwnQJ1N9v7SQnPvVOEBiCjAVHg1vKOhNhtbY2vW+wmOlRLLuwrB32yt+hDbG2zxjhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1020 matches PO-1023 and the contract on unit price (52,500) and quantity (1 billed, 1 received). Its amount differs from INV-1007, and the vendor's bank change on day 42 is after the day-12 receipt. It is also under the 5,000 dollar threshold. No hold rule applies. The 57,000 total is 4,500 cents above unit price times quantity, which is not a policy hold but may be worth a glance at the invoice document.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsdHzh4EnkkQ4tBJT7D",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1484,
+      "output_tokens": 397,
+      "output_tokens_details": {
+        "thinking_tokens": 229
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1020 matches PO-1023 and the contract on unit price (52,500) and quantity (1 billed, 1 received). Its amount differs from INV-1007, and the vendor's bank change on day 42 is after the day-12 receipt. It is also under the 5,000 dollar threshold. No hold rule applies. The 57,000 total is 4,500 cents above unit price times quantity, which is not a policy hold but may be worth a glance at the invoice document.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1484,
+    "output_tokens": 397,
+    "output_tokens_details": {
+      "thinking_tokens": 229
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

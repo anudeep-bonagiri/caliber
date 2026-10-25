@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007024,
+  "durationMs": 2284,
+  "httpStatus": 200,
+  "id": "T1656",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1018 at plaza NTTA-PGBT-01, so this is not a duplicate toll; no other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll is T1656 at NTTA-PGBT-01 (President George Bush Turnpike, Irving) on 2026-08-10. None of the earlier tolls for plate TX-1018 were at that plaza, so there is no earlier charge within 10 minutes at the same plaza. No other hold rule applies to a toll.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1018 at plaza NTTA-PGBT-01, so this is not a duplicate toll; no other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshKtAuKmGQnvjJKvFU",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2627,
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll is T1656 at NTTA-PGBT-01 (President George Bush Turnpike, Irving) on 2026-08-10. None of the earlier tolls for plate TX-1018 were at that plaza, so there is no earlier charge within 10 minutes at the same plaza. No other hold rule applies to a toll.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1018 at plaza NTTA-PGBT-01, so this is not a duplicate toll; no other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2627,
+    "output_tokens": 177,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

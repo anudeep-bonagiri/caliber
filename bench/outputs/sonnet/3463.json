@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01196,
+  "durationMs": 2897,
+  "httpStatus": 200,
+  "id": "3463",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 16 pinged 3 minutes before the purchase, within about 0.03 miles of the Pilot station in Mathis. The 81.5 gallons is under the 165-gallon limit (150-gallon tank plus 10%). No other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSvQYKEAgTGAI4AUIIdGhpbmtpbmcSDC8Ivn7xW6v6OQteaRoMeqW+LvkxwE3ZB47HIjCtDeD/XgqVYTKWOj1rQKzM3mJOeBIHzBuRvhS5ZRW0Ckap6tg4Ut6ze6C79vesDAEq2gWNKGnn0dQAR4n6aNzJJ3mQqbz3/COgrwDn6wVvuAJY2stnjI7RxmcL+VeKtAWiZku+P1dTz4THzWJt0/BminR9838n2v71SnKhOk/tVaJc1FofojqP0cVIbnpQam20g/TIHZbJTR1x1GnyuwQEKehjYQTj6/N/w9ilxukSgccDFPt9MSq31cHCAfbFVCbpJcLjKwfAp2RhVQjvRoJQDFDlU5NPB/OJCHv9znJjz0MEvRMIdnmdJU3QrsOq5pfq5giBJwTgMRPJmoezw/Nwnl8bSwZ/qcjMp25Gu7XwcZWP52tDvLpuMTtfa8pSNkEzTgXsURH2Pmt0RJaxKZdEGYPM1OTo7rpqqv7Y8XqDz9qEXw83UXkEFQIsPhxJZOqu/4Bq5ZZ09EXizfP/56LdVzPY/RZMwlKazrA/4uxR/aOy2kXPWAH1zcOTbnJEIFYEShMDaug1+Xa27n7Y8fPiwyi/BAQXLboEO99lYwhdi17coec0Qrpy78VBRdDBfpAF2mwVgPfJJQnhRcUIh7yEmVmCAOTjtFEg6ZpeIHMbKKAoLGMfOIVrGvoadHDKo65MQl/Eotxt567SStP+tJrGTGGCiPnGJVHpySGeo+hH1wK2dYMZTeP32Fhe5DsCLy4GLrK0Y/GgYKOsaJ6TRSg0xhJbidu2LrojElhlJGd93Zd1yKWITrBlbb9cf2/eGgvjlwSKnOuK9qj492BPMjDShTSIlR0eFg3SVznMoO6YBy2jTnTOBEfcTBD1r7HVSm+/wuKFknmC1pnK/iMhbqB5i5NzfU20qI0i4Yp/W4GcDMcoAMqc9ttd8jdAY6EsGXYdsxVJEN3mehUQR6+1NRCrVXFTQn54fKgXlfSLbkXWROsLFuDZKmP1GWvm2kkUSuwGWnwtyiEtQ/pDqzMqE9zl4xlGJC+EJiLLRrTuUphqiIEqY2SYKzrX8tWJcYKS7UCfr8Z7fJ5rnRGYeJ6cGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 16 pinged 3 minutes before the purchase, within about 0.03 miles of the Pilot station in Mathis. The 81.5 gallons is under the 165-gallon limit (150-gallon tank plus 10%). No other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscJBpdTbLmZu8MMt76",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4815,
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 131
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:25+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 16 pinged 3 minutes before the purchase, within about 0.03 miles of the Pilot station in Mathis. The 81.5 gallons is under the 165-gallon limit (150-gallon tank plus 10%). No other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4815,
+    "output_tokens": 233,
+    "output_tokens_details": {
+      "thinking_tokens": 131
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

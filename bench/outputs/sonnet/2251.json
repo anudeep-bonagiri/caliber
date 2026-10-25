@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012746,
+  "durationMs": 3036,
+  "httpStatus": 200,
+  "id": "2251",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "capacity_exceeded",
+    "decision": "hold",
+    "reason": "Purchase of 169.5 gal exceeds the truck's 120 gal tank plus 10% (132 gal). Location is fine: the 14:47:58Z ping was at the station, within 0.1 mile of it."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSzwYKEAgTGAI4AUIIdGhpbmtpbmcSDCAtj0ljASt/cXbbARoMJMlxcb43/A3bk1orIjDCIpzLo2cmnInYzEncHi333KiX19n+JMezq8LhJAicAU4nGPONgn5hh589+2hq6FIq7AVGAdOu+oZFHztiB/vzx0XQ8/KYGIEmo0VawQCLTIYqdzw5vrnGEJ2YeaR71ciIoT8fdXea/Hw4b8ozZY2TFw4cxacSP0Tpwhzy70BcEhTPfXu0HR8B0QcqOsSwEW7bKTjNOIw9dTjMKxa/CF+pEV7ohJbUobs7PRBdG+xWncWoz9q5Iu6NsdTNJzL8+fYX27N8N2ijjcOvSp3gD1MfRFUBqRue2fU4zd7zACX4/o7IZfWzPTDqYqFevUM0DQ5uhhK4LRFE3vx8UblHfiI+u54WiZjMk+7yRZJ7E6I4+nWHfLEwKy0tFsJ6T8QK1YBS1+vygrv4SwG0JTx1xvTP2hHzg3xCHKGFe3kzzmdPwp4KpOiUjAzbntzSMdBPB/C6HF93SE01tmZvnDEpKki1DWCpGlohNgOhohbAhf5NietAiPnxZiYKgbvS2EjxLt+EnqKGVF5Aro7tOSJMdo48F5nBk4L4vwN9f2BOWbpOZoIcPjMnj5Tg3UJX9WqzyI1DR5dw1ahd0EgORIKzdsb7kpP80AeVRah7j9QqmM5a8MNxygqFpl3J+QteoWM07mLHilh6NpA2AJLBaX4ymI2Cr1e6nTwpjsoVlz7nSa8d0wUiWq0vPTLF+G83usSscrwLeMmOoL413TuqVS1ptEG35qIegxuipZ7sVSkZyibvO9NdSuYw74AZY95UoCyxsHHCCS1Pn8K8W4QLU03qJNbUDNZkKbO5Ep46re5W0HgsCHhYyEKWaH3Qz3zEUFPvCDK9f6n5yL9Dw4O33r8vp5ZNdQPXfHMKVgPNDhsKaMmrWEGANkuYX1HHqiY7v8B7TMxR0qP9uOrU17dEYBGrAbejE3k3k3D+HeOyyFDkTlrQI08A+yxtxW1YVARoloKbxVBCCkQO9BSjzTMCbqcnKJ/i0S+80UaDTOBew3sSz6LK698ir+nAMEV709O4WaOmiBkaFeHIIEte/gHnJ1LQm8ju4m/UPsSjMS0qkOJqzpD2GAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"Purchase of 169.5 gal exceeds the truck's 120 gal tank plus 10% (132 gal). Location is fine: the 14:47:58Z ping was at the station, within 0.1 mile of it.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsYmtqx1yfFKXbPoZDs",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5253,
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "thinking_tokens": 125
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:44:37+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"Purchase of 169.5 gal exceeds the truck's 120 gal tank plus 10% (132 gal). Location is fine: the 14:47:58Z ping was at the station, within 0.1 mile of it.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5253,
+    "output_tokens": 224,
+    "output_tokens_details": {
+      "thinking_tokens": 125
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

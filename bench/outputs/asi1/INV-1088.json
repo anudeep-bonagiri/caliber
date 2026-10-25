@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 8766,
+  "httpStatus": 200,
+  "id": "INV-1088",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The invoice matches the contract rate, quantity matches PO received quantity, no duplicate invoice found within 30 days for same amount/PO mismatch, and vendor bank change was more than 7 business days prior to receipt."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"clear\",\n \"reason\": \"The invoice matches the contract rate, quantity matches PO received quantity, no duplicate invoice found within 30 days for same amount/PO mismatch, and vendor bank change was more than 7 business days prior to receipt.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884383,
+    "id": "chatcmpl-46d901dc-b0cf-4001-a889-0d6549b3b4f1",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 60,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2765,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1072,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2825
+    }
+  },
+  "startedAt": "2026-10-24T23:26:15+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"clear\",\n \"reason\": \"The invoice matches the contract rate, quantity matches PO received quantity, no duplicate invoice found within 30 days for same amount/PO mismatch, and vendor bank change was more than 7 business days prior to receipt.\"\n}",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 2765,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1072,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 2825
+  }
+}

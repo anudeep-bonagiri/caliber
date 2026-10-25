@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01335,
+  "durationMs": 2179,
+  "httpStatus": 200,
+  "id": "T2706",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1013 at plaza TXTAG-SH71-01 exists, so there is no duplicate within 10 minutes."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The SH 71 toll lane charge (T2706) on plate TX-1013 is cleared. The earlier tolls on file for this plate include none at plaza TXTAG-SH71-01, so there is no earlier charge at that plaza within 10 minutes. None of the other policy checks apply to a toll charge.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1013 at plaza TXTAG-SH71-01 exists, so there is no duplicate within 10 minutes.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsojVtchnexNLkxhdac",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5830,
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:00+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The SH 71 toll lane charge (T2706) on plate TX-1013 is cleared. The earlier tolls on file for this plate include none at plaza TXTAG-SH71-01, so there is no earlier charge at that plaza within 10 minutes. None of the other policy checks apply to a toll charge.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for plate TX-1013 at plaza TXTAG-SH71-01 exists, so there is no duplicate within 10 minutes.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5830,
+    "output_tokens": 169,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

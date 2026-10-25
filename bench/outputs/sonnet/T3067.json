@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014552,
+  "durationMs": 2739,
+  "httpStatus": 200,
+  "id": "T3067",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "T3067 is a second charge at President George Bush Turnpike, Irving for plate TX-1026 about 2 minutes after T3066 (20:22:34Z vs 20:24:56Z), within the 10-minute window, so the later charge is held as a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T3067 at 2026-11-02T20:24:56Z, plate TX-1026, plaza NTTA-PGBT-01.\n\nThe earlier toll T3066 is at the same plaza, same plate, at 20:22:34Z on the same day. The gap is 2 minutes 22 seconds, well inside the 10-minute window, so T3067 is the duplicate.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"T3067 is a second charge at President George Bush Turnpike, Irving for plate TX-1026 about 2 minutes after T3066 (20:22:34Z vs 20:24:56Z), within the 10-minute window, so the later charge is held as a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsjsitD2CC9gwkUbJ1G",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 6061,
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T3067 at 2026-11-02T20:24:56Z, plate TX-1026, plaza NTTA-PGBT-01.\n\nThe earlier toll T3066 is at the same plaza, same plate, at 20:22:34Z on the same day. The gap is 2 minutes 22 seconds, well inside the 10-minute window, so T3067 is the duplicate.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"T3067 is a second charge at President George Bush Turnpike, Irving for plate TX-1026 about 2 minutes after T3066 (20:22:34Z vs 20:24:56Z), within the 10-minute window, so the later charge is held as a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 6061,
+    "output_tokens": 243,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

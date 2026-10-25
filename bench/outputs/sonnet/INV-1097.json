@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007664,
+  "durationMs": 3021,
+  "httpStatus": 200,
+  "id": "INV-1097",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1097 (17,739 cents) matches no earlier Alamo invoice amount, so it is not a duplicate. It has no PO or contract to test for rate variance or short receipt. It is under 5,000 dollars, and the bank change on day 18 is well outside the 7-business-day window."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkAgKEAgTGAI4AUIIdGhpbmtpbmcSDI1l00OwbaKuYByVPxoMQZTbZ+UHvbmiFCYqIjCKQIOedNGfkhN5NrOPNeFTd2gdt2PbdWuD66ti4x5kU9pj+V2j7QoXxmdLtHO7pmIqrQc87FP4J3A4bOZmFS3FGi3ULuVKZYKxj/eJOitc3cC7GLvqgeTX6MHWwMKFmoGiVCKlgbTVeoXD+4osoqqku15+hRhkzNXjUS6zxyxx2ihP3s0Z25gWDKjXu3uEsn6OFrAFovD2oFjGmn2c/4NepYjxg5xFXP0ctwt0xJoPgB1E4wLl7uzW8U5mi1Kh9aUYi3WKFP9/OASViZ/UcliHUxYV6/hihSKGdKi+gAkA0Ju1Ra1XeB/yAELE+xBP3intzd4nC1IH/GQJquAoVrkMeCwhRpyYzG0fLQKiP9ftb8xALwG39QxvIA1FVvFCJ9x5ta+8ywW1s1N4CfMYip7lM1d37Qth0esTmBLNiEkvyLazx2eldFXKdtXfNaKdxvZXyZ4ydZZX1SUW5EEW2JSrLTlWNElLjRWhfEE+89p9xUg4yqHp6EYL30dv/g5j5j2qGx8xwO/X6WWp1eNqIe/vrkSSfUoHtCTAlRjzZgjGOogn84Y4Kl3wKYaxxIdDVDZRRB208gUKBw5GqL3ifNOYpEYS0IS3caZ+e7SiBvOiW9GDloQBJEyXImykhvD7RkAom5kjZRWsvcaqOfOEj7KaFvg4y+IkbRgXl9icHdmDqrIzf2b3rzSoa9NN9s8+eH0nHUc/k82qJQe/EM1Jr03uSg4/jUGFK6FyvA+rsc6UPKFPBGsTDgYk2jwgiHpzkqlOHWogEnXVaxSIUtoBTezcm/2UbtgUdXodgh9iDdoZc3PDCQfUzaGZ4hmFSAm25SSEvBLNhwKSbkxdkTvheXDX8aINgvvPMw0eiQuZqWWeBvJ0yGArqF9pcZmcL46T+gSxjgConIokX0dWIEcYpb6GnWv8IVulVmGzePBDLX1xBaJ/hRjSaiULkmbx7mO4A3AobKRkMma715sFYMBs9T9KWTdgDTx3JcSNDSS7xVUDCcdBos2SFyXSafcnYB7EBXceZcdyLrOGhWVgdMmAIodkTAzK66+xXWXgeBFJjPAcQxzc0fFJ3S6DpS+ajlvqetuG1fWMHhQiUrS+WvC+1Rl3SZ3eQA0a/437HM7ELBQjY+dzNSGXyvVBDWZGLwTaTR1k3eKP1MhsqTKLYJNCqyzvQhb+Mh9gynFVswf6Au27ehUvfJDLLuD/pe5+LJ00+jAA5vCfHN1q+GvDvT/RjrDjSP6I2La9PxXI4qP6gszLOwhVDczN0TPz8eMjq25WhJuste6jUJOQaoBiggvTGofk/wCT1QyL2oxQueis+6eF+xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1097 (17,739 cents) matches no earlier Alamo invoice amount, so it is not a duplicate. It has no PO or contract to test for rate variance or short receipt. It is under 5,000 dollars, and the bank change on day 18 is well outside the 7-business-day window.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyzkSrTXDSN8YqJ21y",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2407,
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "thinking_tokens": 173
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1097 (17,739 cents) matches no earlier Alamo invoice amount, so it is not a duplicate. It has no PO or contract to test for rate variance or short receipt. It is under 5,000 dollars, and the bank change on day 18 is well outside the 7-business-day window.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2407,
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "thinking_tokens": 173
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011626,
+  "durationMs": 2544,
+  "httpStatus": 200,
+  "id": "T2769",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1024 at Fort Bend Tollway within 10 minutes; the last charge at this plaza was 2026-09-18 and the latest charge overall was 2026-10-05 at a different plaza."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll in question is T2769 at HCTRA-FBT-01 on 2026-10-15 at 16:59:05Z. The most recent earlier charge for this plate is T2548 on 2026-10-05, and that was at a different plaza. The most recent earlier charge at this plaza is T2260 on 2026-09-18. Neither is within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1024 at Fort Bend Tollway within 10 minutes; the last charge at this plaza was 2026-09-18 and the latest charge overall was 2026-10-05 at a different plaza.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnmxhXKvZVXtPW2Nfg",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4698,
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:47+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll in question is T2769 at HCTRA-FBT-01 on 2026-10-15 at 16:59:05Z. The most recent earlier charge for this plate is T2548 on 2026-10-05, and that was at a different plaza. The most recent earlier charge at this plaza is T2260 on 2026-09-18. Neither is within 10 minutes, so this is not a duplicate toll.\n\n{\"decision\": \"clear\", \"reason\": \"No earlier toll for TX-1024 at Fort Bend Tollway within 10 minutes; the last charge at this plaza was 2026-09-18 and the latest charge overall was 2026-10-05 at a different plaza.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4698,
+    "output_tokens": 223,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

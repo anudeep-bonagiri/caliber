@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.028866,
+  "durationMs": 2872,
+  "httpStatus": 200,
+  "id": "T3152",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T3152 for plate TX-1033 at SH 45 N Mainlane, Round Rock (18:46:56Z) came 9 min 37 s after T3149 at the same plaza (18:37:19Z), which is inside the 10-minute window, so T3152 is the duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrQYKEAgTGAI4AUIIdGhpbmtpbmcSDDjv6TOsnNTS4jhCURoMkEhSgBd2G1BI7r4uIjCZYcvG47+HrdmOIsvXpJitlHvZAfHv4pw4npi20x6JUszOfBW+2zUbylYq66HHk7EqygXb5Yw03SixYMZSlfTNaL3EOix2FmBBPeE7vkDH0gbUziHoxo10CUECmGNjCLwesS9hysuBY1hqEFpPdZpErpLjUXXP2mcDFnwFD8p8vzjQciWCCXgdblc2kopdfghHlSZj10CvDFmbigLHABlwRBCfOG3Foltb9H6JhIQAFtvIUVE6yDdUzE6tFDNivm6XEBppELod7Rk2NkIFKW93yT3nsaG6KmAJo2EdOogbgHDbwWmTtFACrV1taJXDQ2LunaHPmFrkfXp8KHSiqQL8tJmhf2+lp+k4lTjeAqeWsgeIs/WbZ0VpsAi2bcgf4gIzXUQQ27rJr36FZgHAfdkPWBKItpbBQ5obQqTnknUfQWtsXD6dr/GjQa/v4MXysOrr3oSOi/XVIOs1mW4CbTfEpQ4GxTAwLhyFTLe1K9LX4drBuj0APp5gQMlEMsdQTuCgrqyA+sJ86TooO88G0uaeqbU/VGFUnLYieR00LF5r1GAPPhNJlYbT95+0AfUtrpVvXhPXQGhnzwyJKBbNC8pJgOn5iuvmtCWbNmxlE8RfMYwnlWctONvRWljAUOt0YFZw8XG/jF8ffyKwl7c/FtWPffwxqDT64RpwFXqSvI4pUZ52ULRWrhDx/HYIUmJygE0Mo2cC6gGACK0yfSBU9OheKFHKAHU12T8d6lnmBOZ4uk6hHg9GxN3k1ofq9tXSQYhs8/6Qwrk8F2Nxit7JQg7O6RJtQAnkri6GhJlOFbtmQfPWZD3jXj4D8LH4Lfp0qTKhZSW5GP/IUQEnAzVyWy5aez4Nczn5OqCW9ac0b/2lDByoTVwNvSK4Ui6A67rA39McS3fXsLEfPYHXK/qDkR+HUra0gg/YY0Y3pUd1biHNyesDMFJXnivbOlGg8oevvoYmGPah5Xj4QHu9Gp2VjpT9EDTS5heoeSvXUaU8Ij9hM84P6jmgMTCX2i175x0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"Toll T3152 for plate TX-1033 at SH 45 N Mainlane, Round Rock (18:46:56Z) came 9 min 37 s after T3149 at the same plaza (18:37:19Z), which is inside the 10-minute window, so T3152 is the duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsqTGeFY9AvXVDqNEnQ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 13218,
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "thinking_tokens": 120
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:24+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"Toll T3152 for plate TX-1033 at SH 45 N Mainlane, Round Rock (18:46:56Z) came 9 min 37 s after T3149 at the same plaza (18:37:19Z), which is inside the 10-minute window, so T3152 is the duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 13218,
+    "output_tokens": 243,
+    "output_tokens_details": {
+      "thinking_tokens": 120
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

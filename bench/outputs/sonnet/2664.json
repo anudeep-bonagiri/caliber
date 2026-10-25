@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012132,
+  "durationMs": 2716,
+  "httpStatus": 200,
+  "id": "2664",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 37 pinged within about 0.01 mile of the Hillsboro station at 12:27:50Z and 12:35:00Z, and 54.7 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 12:31:17Z at station (32.011, -97.13). The nearest pings are 12:27:50Z at (32.01092, -97.13012) and 12:35:00Z at (32.01074, -97.12972). Both are within 30 minutes and only a few hundredths of a mile from the station, so there is no location mismatch.\n\nCapacity: 54.7 gallons against a limit of 150 \u00d7 1.1 = 165, so that is fine.\n\nNeither fuel-card rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged within about 0.01 mile of the Hillsboro station at 12:27:50Z and 12:35:00Z, and 54.7 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMtAB1ch96y33HwxKvD9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4741,
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:38+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 12:31:17Z at station (32.011, -97.13). The nearest pings are 12:27:50Z at (32.01092, -97.13012) and 12:35:00Z at (32.01074, -97.12972). Both are within 30 minutes and only a few hundredths of a mile from the station, so there is no location mismatch.\n\nCapacity: 54.7 gallons against a limit of 150 \u00d7 1.1 = 165, so that is fine.\n\nNeither fuel-card rule applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 37 pinged within about 0.01 mile of the Hillsboro station at 12:27:50Z and 12:35:00Z, and 54.7 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4741,
+    "output_tokens": 265,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

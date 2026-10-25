@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.00782,
+  "durationMs": 3416,
+  "httpStatus": 200,
+  "id": "INV-1034",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1034 ($152.16, no PO, no contract) matches no earlier Border Fleet Repair invoice amount (the only prior shop_supplies invoice was $169.37). There is no contract or PO to test for rate variance or short receipt. The amount is under $5,000, and the bank change on day 71 is not within 7 business days before receipt on day 19."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkQkKEAgTGAI4AUIIdGhpbmtpbmcSDIcj3GHp/O2QYCHGURoMHo+oqDF7sBNn9SNnIjC5vdJUAfsEe3W5opIPDChPoSNBvuJncBR/YqjgNKr3WsyS+86ETp1MGVkEv+ijW4UqrgicBDKr0715ipT/KT26zKy9EC9q/Eg4uQoQb51yrsSOaiW7cqPkZM5YWuLDOduDkui2DM2zubFDs9VKJVeHQDNJArOi4WyXeLnHebhTZfUZ4rr03FB5t/YdDbSJLHgGhZSjbNRjJ6rEinJycDh6ThhF3yoXq1zgmbU/fxmzz6flwHYNPQj9vTXWMERL/pWcDU9MWBq1kLlhAfr0m0wSqUeL2tKqFxr87ABefItdoatJAufOBPNrT753EoJPJIqZYLKH2sVE2vBZ9XHoYaKg0Ik4XIbhfbyKxGBapDv/km02iRgEJ/uwua52o+hYLogCB3PNpRBvBbzuUfAIDnkimuBLze0MiH2J2NFyhKZ0NnHPOiZsJKJHbYLGKUwa3dJ/VuQS/5vfnPW9RekqWGODYfRHGnYT6QVwOMuD6QQKkrkmYYOMsV0Soxmyu3SORE/nBDs9LVn9kCpSFWVMDKTC/Htp08RKV3N4YL/fhPfwmGtf+kfIUdBr9iGEP/OzqKNLuVav+ipbv4oWEp2ZtGEhdqRW+IS141KId+0l/NpbWXFR+fN4FeunM49w0wD0cNf8vm05vbGWyGvFM7lGi5u8oEu8nEJx3Bx+NQTMxnAc/N2UgYuAhLRix9zFLa+1wBOt85hKt07nuKg/KsVFUoaiS0eujGAr37B7KzWR162BqY8y50FVOxr9PTLvErDWJP57MEASe5o0L+sIaeREEtokDp/Y6uMPcbwFyYF00eIdsZyC/gJK6H13DPfDYgJTkaESjz/tLhfhBEhkjumfptRbIpoeNXrOB6foqa11dyZ49fuM/UMAyb+jtkJ5Fz5dgNejyDR6hSUbx0kJ+AzHn5tTddr8u9j3kVNFhwdXYTMBUqBCE/t+HXUtnqpGyEaWcpgKdt54UtkAIU2ufRaYtOnmqinz28ir2GoG+Bkpk0nwi7UdbhRjDK8FJwubUKkTCmlfAlnWM5h/VWpqE5jUVKXtfbHv6c2cyLbUU1QPR0R0xF0oAR6WUHcUL8EJVrV+hv5FV2oHyEnklF6eE6ZCuoUbb+hHjG9PCRm2qC2TuXk/3TxPSjh0TpzBNbopz+7p4xnw6nJX+5a5B1NX+eqaYWHXzzIInt++sL03WSnf6iloMtWm2dmbZSFvQxsEuBWYE7Vceaa3dJKGQBuf9F9m+UynY1abnE804TLXp2P0vIrwXt5Kgt8zuUHSGkfryCiqqRyPcIaYgmqc7+Yu5pMJDnOJlPxu/f/L6IYnq1ybf8e8gKPm0nPJy/Kt9l6K6uepL99zit5JiuzOjoimfUTCmmy3dU9bhiWd+L60PsecKnoai5WkytYu8wOFYkG/5tjRpgO3a9iSVpdNnfpwoFXtRDnFi//i8g3m0ZF8xu57GSo6Uf359GAjqRiCJ52E8/qhG/L4t6Yfs3LwqkqCVxFJ4nIcyxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1034 ($152.16, no PO, no contract) matches no earlier Border Fleet Repair invoice amount (the only prior shop_supplies invoice was $169.37). There is no contract or PO to test for rate variance or short receipt. The amount is under $5,000, and the bank change on day 71 is not within 7 business days before receipt on day 19.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMswnp45DDP1Q8xRhgDA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2160,
+      "output_tokens": 350,
+      "output_tokens_details": {
+        "thinking_tokens": 216
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1034 ($152.16, no PO, no contract) matches no earlier Border Fleet Repair invoice amount (the only prior shop_supplies invoice was $169.37). There is no contract or PO to test for rate variance or short receipt. The amount is under $5,000, and the bank change on day 71 is not within 7 business days before receipt on day 19.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2160,
+    "output_tokens": 350,
+    "output_tokens_details": {
+      "thinking_tokens": 216
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

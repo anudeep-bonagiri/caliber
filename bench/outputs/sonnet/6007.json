@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013204,
+  "durationMs": 2911,
+  "httpStatus": 200,
+  "id": "6007",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The assigned truck was parked at the station (pings at 16:07:02Z and 16:15:00Z, both within about 0.01 mi) around the 16:12:51Z purchase, and 34.3 gal is well under the 132 gal limit (120 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSlwcKEAgTGAI4AUIIdGhpbmtpbmcSDIzBRk779nQaNjlWYBoMKN/Zm1EZen7rwJPDIjC2FkM4vYW1nDvvFLDNjNWgCfXERSuwB2WpXkVp7T1t1LQwfkM2BHOFYjl9YG8Zs6MqtAYTHQU1Xub3Roczf4GErOI+qIRxWX291sLk/bHYcn1nryqc0g749UiUWKh6ls4nAAdxTNVjKG8UxjkbvERiFwIAiEoZYLxfWQQmQXljbX2QJWxzNiSZhYoGRahQ6vAQerz6aBctnID/v2MlU4xxvFl+Yp9WCPXM0g2k8QapMWt9cUHxPusg3aMDG0VFgOJCqTiAjksebUAGZ+LrtNh1G/KCGITD0yJULuE8GiA4BjGw4qf8rUmHyQSCsTpSOHtw20647+58lU7uaNBkFRCW178hsk6oGQzs9YsUqQFKNxrwkOdwhY0q6EF9NEoBbyde9UmeOFB1iOkixMziAQSFD8/6h/TBzQc4DxoeVVHx/hS9Nk9im+A9gnwB7X9uHBZa1KOENRvCE7BBPMwX7PaJXUY5X1SeyPOGZX4r/Nk46zpQYwoo9QzZyE+8XsPVylgGE6EYIYKd5TZG/6RZrVbwwz4B3tHjUrNJhXdbdaRsOhADb6a7BBdndFEe2NEFnSzIsNXBtYXYZtJe4Z02UK82lRVn8sV3rK7/fwC4vA5yQhx0DFzrRSHn6/UH4ZVTfiQRtdm89ZfL59kmfvRane7oTWsCXHwu4wsi0h/sCxg37v07WtCRI5jRGt1y0Ou/evNKqZnN/gu6G6HffsjLRs5ALO1iNyswLgSQevjbIwFDkhdxXSp2UfEJZqC4f2a0MgxN8bfCdB9ALv82i5h8njmEx4DThrEfyncfdQcRk/7K9LoFYUMVQHZFcI/SWOP2Kt898Qp8GvPaKRBDjdoZkCU293PXTEz0eEWB++LTcyETHjRbBgwOHj5H6jk0bwzt5h0jfOfUOpafwf4y3mlkycQVTFhic4HsXalKsRuovNwBLLirIXb+RMdwI9faW4nRzbB7KFQ8S696NcuM3tXvCWJdXG/2bm6F5LPq5M6SrHn593jNDyVTXVkPkP3Za/mZ2FW65yfDIfa69tDb4QOsD/v/I12ilRqgnvj4Og5j+g/QgKAQjKWglxiGHGVmvDuDVzB8fIid1DA5omjEOjfDUOTk87ggiJ/gcyk16YUUiTUJqRmYTPxhXQi3KLk1mSHO5E1nSsPAkL6jGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The assigned truck was parked at the station (pings at 16:07:02Z and 16:15:00Z, both within about 0.01 mi) around the 16:12:51Z purchase, and 34.3 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMszncjLoJtDK29mrd8o",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5182,
+      "output_tokens": 284,
+      "output_tokens_details": {
+        "thinking_tokens": 176
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:30+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The assigned truck was parked at the station (pings at 16:07:02Z and 16:15:00Z, both within about 0.01 mi) around the 16:12:51Z purchase, and 34.3 gal is well under the 132 gal limit (120 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5182,
+    "output_tokens": 284,
+    "output_tokens_details": {
+      "thinking_tokens": 176
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

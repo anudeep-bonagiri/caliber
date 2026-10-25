@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014768,
+  "durationMs": 3268,
+  "httpStatus": 200,
+  "id": "5911",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35 pinged at the Waco Pilot (within ~0.02 mi) at 12:38:50 and 12:50, and 24.2 gal is well under the 100-gal tank limit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 12:44:45Z at Pilot 1115, Waco (31.5493, -97.1467).\n\nPings within 30 minutes of the purchase (12:14:45 to 13:14:45): 12:20, 12:35, 12:38:50, 12:50 and 13:05.\n\nThe nearest ping is 12:38:50, about 6 minutes before the purchase, at (31.549, -97.14681). That is only about 0.02 miles from the station. The 12:50 ping is also at the station. The truck was there, so the location check passes.\n\nCapacity: 24.2 gallons against a 100-gallon tank, so the check passes. A 110-gallon limit is not approached.\n\nNo other rule applies to a card purchase, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 35 pinged at the Waco Pilot (within ~0.02 mi) at 12:38:50 and 12:50, and 24.2 gal is well under the 100-gal tank limit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt8UQaRt84mFy6KNP7Y",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5764,
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 12:44:45Z at Pilot 1115, Waco (31.5493, -97.1467).\n\nPings within 30 minutes of the purchase (12:14:45 to 13:14:45): 12:20, 12:35, 12:38:50, 12:50 and 13:05.\n\nThe nearest ping is 12:38:50, about 6 minutes before the purchase, at (31.549, -97.14681). That is only about 0.02 miles from the station. The 12:50 ping is also at the station. The truck was there, so the location check passes.\n\nCapacity: 24.2 gallons against a 100-gallon tank, so the check passes. A 110-gallon limit is not approached.\n\nNo other rule applies to a card purchase, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 35 pinged at the Waco Pilot (within ~0.02 mi) at 12:38:50 and 12:50, and 24.2 gal is well under the 100-gal tank limit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5764,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

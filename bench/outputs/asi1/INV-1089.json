@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 3498,
+  "httpStatus": 200,
+  "id": "INV-1089",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "Invoice INV-1089 for coolant at 4282 cents matches the amount of earlier invoice INV-1087 (also coolant, no PO) received on day 49, which is within the previous 30 days."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_invoice\",\n \"reason\": \"Invoice INV-1089 for coolant at 4282 cents matches the amount of earlier invoice INV-1087 (also coolant, no PO) received on day 49, which is within the previous 30 days.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884538,
+    "id": "chatcmpl-02f5fd13-2a93-4168-80af-426178973ed7",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 76,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2178,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2254
+    }
+  },
+  "startedAt": "2026-10-24T23:28:56+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_invoice\",\n \"reason\": \"Invoice INV-1089 for coolant at 4282 cents matches the amount of earlier invoice INV-1087 (also coolant, no PO) received on day 49, which is within the previous 30 days.\"\n}",
+  "usage": {
+    "completion_tokens": 76,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 2178,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 2254
+  }
+}

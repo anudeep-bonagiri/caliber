@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013164,
+  "durationMs": 3851,
+  "httpStatus": 200,
+  "id": "INV-1177",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1177 (249,500 cents) matches no earlier Gulf Coast Diesel invoice amount in the prior 30 days, so it is not a duplicate. The unit price of 245,000 equals the contract rate. Billed quantity 1 equals received quantity 1. The amount is under the 500,000-cent bank-change threshold. The 4,500-cent difference between the total and unit price \u00d7 quantity is not a policy hold trigger."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS8ggKEAgTGAI4AUIIdGhpbmtpbmcSDLCEvFKMzmjQiD/nIBoMpDlb41HY+5zXZUYTIjBoF89/Y5pyrACX0MjUGRZUXJnxKA/I0hlKgwgyl8dnsNwLm2dhntYBKzEQj2OuQFgqjwhGQsvhCFjQwMKldQ8zv+MSAj1QYxFf5o2VbeEe+eNxMTse+BlCvJ7P+9dl1oXDXE5TUuHZHB5r1mO6jrfP6+AeJgjpoYqsN0gDpJyQYAcTYrPSUyqlVcR0Lhy6WNXwOpVIvUsdMp167cx9Tu1165czCNHoUgO6fOQ9S7gy8VQLpRvm8pmAaeZwzvyVWEhs7ZnJuyoIvHDWHfNmdhI9UTi7/jGZARFeG49nXxLYCxiDm9NFYhrUt7Hi9uuuwahEN+BKKKSZl/mGg11eoqLxhYp5UaXCf737F5Iepi1mLR+vknkApmEEw9u5/a9xsN2NauNhbMoQQbDZLZIL+BQBd1e5Z55EKTZZbm0CZJcA54p3YJqv2isu4YndsDE7Irm2RhdcnupRxXQfR1rAJH5pUom4DLvr2arE32KE2jolBjWcE8rcnqSSAkwnP56O1xqajKBIY7ZrNH1z02/DvRVzDJp97gXt5zNv1mRWxo2t0GAiiNdxoerp3O5caMbDoUkXJs879HU+UjQx6ENqhdsaZnxVkWzGMJY/uAMSEPXhRJv2h8ye0AQaIH5dIfnnYfOeyJraCFP/ImZYZbVzfOMUrS9HJXKauYdoeR9Rp3qcn1SyNQUiJIjIDJk3lkT4TKSyP93puOWFK4Lgt+glhsO9E9HN9NUq2nutq6Wd5fgTDgguUbWykcbBv5e1cINhwEy1Cvra3kxiO4R/SzF/iphrDn0odgyd++vndB9U4KVvXonKQz5m1VIlK5PDTb93CEUej2xCCKCwvpnugGED8iodrPZCiwV3Zwi7Uzpd+nhYGl5KNJ/Mavop3b7EDMAz/xEiiVT6+P0yPXznmqe1VoM9yB8VV7f7q6jMinK6gESFz/dEZr/b+w1E9CSwOsbYV3bw90aMue6jfSk1RcbssmRgtOBQJi3OYjnJnWnfKFYWr8jTJmyDVhN0+5ZAnpBH47V+uAaIq4p+RaIv8qqn3nDaj2FeXRuFiDljQLPb1K1NcC2oiFG+LumA5joeYygLNjWyxmaaqoS7jFezY9MolnD0ZhX/JnCXcTWtDH0JhM3UwvmRsu5oFzVfkdVPKdKI/RvbAyWKiDy6VIEujZLyqxID2+PcpFfPcK/iIWGcJQyNJg4WnW1bquxpq+6uLyV3juCS2+ZS0AdpphGSoLtyGAQejAVAN+bBd6vEevpcvSXETqmS7EcFlmoOcow1o+ZKAYcPo+o+9izSK2GihFA+m/aKthcY89LdbYuIuZ3//CXMe8x4K+z7Q8iylHbTqleUDAeYMW3OO9I3OMzBg2Dw09R5njfp5wpVvvBrbLKeAt6ShZnshuN9xqBZ4+AqjaqlxJw/at2MjUTB10LhvBjO7p9ytBozu69J9X+vB8YtR4v7riQfGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1177 (249,500 cents) matches no earlier Gulf Coast Diesel invoice amount in the prior 30 days, so it is not a duplicate. The unit price of 245,000 equals the contract rate. Billed quantity 1 equals received quantity 1. The amount is under the 500,000-cent bank-change threshold. The 4,500-cent difference between the total and unit price \u00d7 quantity is not a policy hold trigger.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyUcUZKZrxUAQqfA3h",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4607,
+      "output_tokens": 395,
+      "output_tokens_details": {
+        "thinking_tokens": 235
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:13+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1177 (249,500 cents) matches no earlier Gulf Coast Diesel invoice amount in the prior 30 days, so it is not a duplicate. The unit price of 245,000 equals the contract rate. Billed quantity 1 equals received quantity 1. The amount is under the 500,000-cent bank-change threshold. The 4,500-cent difference between the total and unit price \u00d7 quantity is not a policy hold trigger.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4607,
+    "output_tokens": 395,
+    "output_tokens_details": {
+      "thinking_tokens": 235
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

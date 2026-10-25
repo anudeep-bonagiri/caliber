@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013132,
+  "durationMs": 4166,
+  "httpStatus": 200,
+  "id": "INV-1168",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1168 ($465.00, PO-1006) matches the contract rate of 46500 and the PO received quantity of 1. Earlier $465.00 invoices in the 30-day window (INV-1108, INV-1111, INV-1150) cite the same PO-1006, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change was on day 18, so there is no bank-change hold. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS5AkKEAgTGAI4AUIIdGhpbmtpbmcSDOHjoz+EjQKMuthSUhoM24wpL1jWm92tcvXTIjBJxKHvy7Rmv8C5Qg5pfTte7tq0xnmYiPbijNiSlPucigKG5pBn1LfqGSs7X6sm27IqgQl5VZUMMUpx8Ek+FSK82carkEgCALHJt7rnKwj2rguS1vuG9Oa7ilTOKAvyQCZxtACAXVP0ma5QQFIYAEo1x1JPle564PuMoLjB0uaXuxGG6B504p359qbjb3/AqhfN3/nap1VjSXVc0/KmE5JtSHGW1tXIot4cAShUe99a6Xa9cMPh0xcrxn/hZNGCGuyw791EwDKbIDl/qRujXD/dhy0w2uasZoCFX/SdHB8X6zZKE+Y2OtcjvMLSjWEl5me92MpSDStuOwmnPdoVxMFu/VC5NnexkalfJRNJNVuns24zPWXUJJ/xh1D1LJZTJkUnm2V7Z2TfEU44NBNGRR3TUk4qm/B6aT1IGzViNiW6jra06nNMtkqxuliAtMWFmwLNGfSD/JeNagVNDSzEro+7fdUbNoVo+Um+WV4zflh4KJwBLEaQG553kmHlIrQm+SRm0VgPzy8fEokP2q+RC6Q6qrN0tONMPZ+2Ef8I/eGvGywpQElzSrpcnzrG9mJZyGaMbd5Y4boeCUCzhhpEIftL/6idSYEvC4Oag4OIAsp5mmCHMNAp6IFtkwPkKoeu3CenUmjEk5nylmoyBfLBQXzOOD1IXWRuoGg6sKa3ZjzRykacvl+y3rN1WqbBvunzIIjn2NGEjW3HQf4mlXJ8UDlL4MZMFianKMASP96RhTJmDB151ZB/efGMJxi6kAPSz0qg8i2GGCfBYMfG6J6htfxZGrnDwoaSKEI2RZOK8DVPJnhEe3B+Elelqlu+kR94WJIDMyLQHUQ+r33eF5eue0XzZWM/pMPszZnolqmz9/0IUdB/xc6D8gFcdukXTvyr788akyO3JpeqZj9XOQao2Oe/QDc5pt3xeymSEt0KCD1VSxMtTRZD1myQ352dt2RUH2ScR5s95tFBg0sOOnSqtSFBeFUy7DznybmuZmrApRxJtzfD19H8y18DmSnI4w90Vf9SAbD5V8dnsEFtE7dZJ+Bczhxm0sFTvihu1a1ET2eqWSNv8C7vjJehjNy8dnET/U/eWEmwa+niQwGMZuGKGuV20dBgqQ1X+qEmxjYUKEn++CcZnbjrd3yYGEEWZI5NkRM86ftaRClGDKXHBMIlYK9t0zkAPLvseHwmLFIaivr5EEXEJ9R4h7paJBy5kpc5BIaWWbzbHY7YLWSwbtyAr0MoO3b+cuaOspJo0LArpCECLK2FBlovF13VQ9eqZL49wgR5b7fm2V9SRIohQtLaNpdvROBliIADx56DOxbU3Gasnbbpv9HvCpzKk4ik7yalwyCr7S1g7G50+HFwUlkuDOLofTiVvVSTR/ciSzc2pplxZIXkWMMQJlWNPlMRDVl/6xp4dk4M/CxBsOhmu7aE3CL96BilG1krAwVbdujE5bfRC798CxnQFXJEJaIu+/afFxnw17uH/TwPrGBmSOWrXcoSiHWqrmRSWyVwyxidcOqPRyHvvoxP/TBBNPy0jmG7hVAb6/qPQKBINoMyTO7v4STJgPgD6pdYxWORBE1Q6WRjhM22ag2VToy9wlBQRrZKEBNLafRuGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1168 ($465.00, PO-1006) matches the contract rate of 46500 and the PO received quantity of 1. Earlier $465.00 invoices in the 30-day window (INV-1108, INV-1111, INV-1150) cite the same PO-1006, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change was on day 18, so there is no bank-change hold. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsiE9AS45Um7tfGpaVM",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4271,
+      "output_tokens": 459,
+      "output_tokens_details": {
+        "thinking_tokens": 299
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:46+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1168 ($465.00, PO-1006) matches the contract rate of 46500 and the PO received quantity of 1. Earlier $465.00 invoices in the 30-day window (INV-1108, INV-1111, INV-1150) cite the same PO-1006, so duplicate_invoice does not apply. The amount is under $5,000 and the bank change was on day 18, so there is no bank-change hold. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4271,
+    "output_tokens": 459,
+    "output_tokens_details": {
+      "thinking_tokens": 299
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

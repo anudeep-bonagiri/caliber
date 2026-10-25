@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01389,
+  "durationMs": 2663,
+  "httpStatus": 200,
+  "id": "5326",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 23's nearest ping (15:34:08Z, about 5 minutes before the purchase) is essentially at the Columbus TX station, and 29.3 gal is well under the 110 gal tank limit (100 gal plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSxwYKEAgTGAI4AUIIdGhpbmtpbmcSDPzTXlVRrBaDC+mkeBoMuW6nXGOhf3mBJqfFIjCOwspsV104hwn3aOjRei8B4NeNd2G6TocR3yNFbRDgaMOcgjw9pbqqyaDbn9hbu5cq5AV38m8Yqw+Xqo+NRD87muFJtPnRO3MR/Zmad9k0bTVA+y6DiAHgAn3k0A4AfLleZKY/gvIFSuoqK3F2nF7GSjJOU21fQWB2kkDLCV+4vuQ93TM0aA897H6PCPIYH5llvkHdVTBxQ/EJfWWIEnPqbeywVXqpVaCIphkJQGHXbd22dWeF9DOoBai60RiQ+PWGMFrN7g5JMVK6S3UzXziSK2nbcZuKZuVmiUvXKemx+bZDaxvsvYW7m6mWTlDTA0uW0MlvESeoLplr7qS2L0UHMLgRFkHuamUoUNVRx7VyH0UqLsynTkl9D98PG2cVTA4+tZ5oU+59Gq/l+FhFl499g2R3hTBHF32Cn9wYuvFmnn3iJjGP/7iT5W3s0CxGkMcV4B2JwxgSo4cZMFWzJek4uT///CM368K5yhZYNYGnCdaXxBY8geJb0kjYDnC7BJ68vu4XA2KyDufpRvXOIvmrIPcfC4m925VMcdM7pEuEsLM95CkRMxZP/2uhxx9D9vUVCVDCiAkdxKVj31Fs757mG/xbJM9xCWESRGvn49BmRhGcjyPz3uHXN+8Irsbo1BuUz5gXU2Zku2ndH8+X/fumXWVU6pmbQ10WRScPjH9ZCW9s/RTzO5ps16IbI4zhOIr4V+aIdJxug8tJzCfhGYgvhV04L28W2ll8c+YoDl6g7NYm2ErM73pzr1ovEqju7/5UVBw0pdYubLykBZAvvv6C8DBukxNYBUZi3Mm0KmxWOXOiyY+o5zjfu+Z2QGkLDznP+nqEwcVs0azyahaOyl1mcje2IBv0VS96J9ynuaKQHDsApMTkZwrXaNy0lincDu57O9z2M1e7JEY0N/WLt7Rq1nhC91KIXRJF4mxZHMsMrNvx9ZFESSe7wW7QHIvcG93+s6MMDgZFJvallOQhjhcU0JHNEg2QN+t9fwyqbkXZQuhDw5lNWViMVgY3c26FpkFRmd4+kYBKYRdaaNvw0anI43ugDsKo7RgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 23's nearest ping (15:34:08Z, about 5 minutes before the purchase) is essentially at the Columbus TX station, and 29.3 gal is well under the 110 gal tank limit (100 gal plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsj9fJjCRzpwHWNtoNx",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5765,
+      "output_tokens": 236,
+      "output_tokens_details": {
+        "thinking_tokens": 140
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 23's nearest ping (15:34:08Z, about 5 minutes before the purchase) is essentially at the Columbus TX station, and 29.3 gal is well under the 110 gal tank limit (100 gal plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5765,
+    "output_tokens": 236,
+    "output_tokens_details": {
+      "thinking_tokens": 140
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

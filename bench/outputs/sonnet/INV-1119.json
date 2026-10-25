@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010326,
+  "durationMs": 3977,
+  "httpStatus": 200,
+  "id": "INV-1119",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1119 (135,500 cents, PO-1007) matches no earlier invoice from this vendor on a different PO within 30 days; the 135,500 invoices at days 38 and 48 cite the same PO-1007. The unit price is below the 139,600 contract rate, the billed quantity of 1 equals the received quantity of 1, the vendor's bank details never changed, and the amount is under 5,000 dollars."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpwkKEAgTGAI4AUIIdGhpbmtpbmcSDH+lCgrTuxEIdPAfNhoMiXXUghIAZf1DQvsPIjB5qXIjJ1WaLV7XCAcyvPrPOG096E/bck6erGGgXZVB7djLZyr6gCpoRpW5t2gPPQEqxAhflVE29aZoLUDdoV1J/GIWkfnXC3QeQm9mOKZrpDKlUS/p/X5p+BnfVr3BBJ0oJ73mn29d9ZiLISShWipZ+ECYqs7VrJDSMgUTmcmKhwgwcemW58cELgZzSsD1h37NIqZzazScOp4fVqoxxYvrWOLHdH1H3RBBVK9PprM+NhqMo489f5oFnOQboreFfVlDx6sJYtNe5gkDczbclyNBsN0p8GB3UFlxzMnje5WcpSpBbVpVmYqFd3vdOmnZ5NwodLEfhrOmBoSAYq4BaqgMCRfLRTTweVhLt2VGvX2gc+X61pc9eDyVUlRRsQFt3GyrdYWnSRcuqmrC9Uf8NGgU8yG/5jiGpj+Ig2iMlVaGxN4HvYjo7eYDelQ8Z3XXnl70eK6pqWko7vUUyGRNcTKtYLeI21UHEaqepGyN2U/PX5MDKeGSi2XqtXmgnNxAmaL5mSyfD3LUbwx8BSeyykLyN+1e4MqNowz565D6OVETUsKGxG9qRJ5fDFjTU4ASsosa24EAxqPUjGpybMsVrNW03D2nkRB5yZZhabVhcfGZZO/5lntfq2Kt2v8mVvJNA8+7+LPEAlYdDKuKpnnk3mKRnYNglDSRNaKI0b1qjNwSDd9HeLcwwV+1jm4Xt1GJQtr5aw3qas9J95ZwU1xo80lQqbuRsC9tIkWGREvPCGV4OlSkzoJPt+ZFLcuyx4oKwfRSFh+G91Tzkb0XzFsVYk7AcCPwdeG0NOPyeRJbQgudSSE2ZFdvFFB87KbAMe0chrOsZNpgMJrJfFSsAHOBV1QEehWwY8PO1SIkGpOlRYamGOfcaorUtdhQT0f7WsmiIN+76NCM+tkRe7fuzMmAdqBKE4u1VFmmx3PuZs/yy7iQgjdIx1p32APW0+mhFfPlLpWk+N7U1ZMc+lnOfF8mxcGWnxZmMGKmpkRja9Wb/Ry5lw5OZBtWkWI+e6tzt7JN3ampj+Hz4aWqBmUtTOJa1RnhH+2xAjWUwuzci7YQPaFV7iNA2n4xsd/Mp1ZOBpe7NssYRCN0XcVaoZzo+40Cst34PO6kBHfcorirsbuZqMIoSA90erfnYCSR1PXSCV7T0ToKHt2zUsSOqG0XPz+IPN1PIeFwcrWMvseiQUwaWuELBuOHUcghDZPMTBNdeY0Sh0VdLdaJ84Nnc5gNR2SJkl/NoJZoX3/dWFrtNwDhXrHTsx1B0hYI1LCGYu6jR4loXwqQbOXVMeS642SIcfsIvNghYfNsVsDumD/0n83MKZ6aNogxtzNTEM0rOD01efBb6DYKYRaqwtsqAqntxqLXDjhGQYB1KyAAMsxtjMPZXRk6pX/faEAeKjKKEHAfXNU8QIGHuc4QdCkToaaghkcpZ4pbAeQiS0IV+1wLFrbSlftD7352SxeN8D9G158gZXl1r24LNaqiOtvCWYqJ0TqMsNRy7bR+OfKMednt6B5dO0fsyHuouLtDNDwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1119 (135,500 cents, PO-1007) matches no earlier invoice from this vendor on a different PO within 30 days; the 135,500 invoices at days 38 and 48 cite the same PO-1007. The unit price is below the 139,600 contract rate, the billed quantity of 1 equals the received quantity of 1, the vendor's bank details never changed, and the amount is under 5,000 dollars.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt5MncuXQoti1cd78pY",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3073,
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "thinking_tokens": 264
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:32+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1119 (135,500 cents, PO-1007) matches no earlier invoice from this vendor on a different PO within 30 days; the 135,500 invoices at days 38 and 48 cite the same PO-1007. The unit price is below the 139,600 contract rate, the billed quantity of 1 equals the received quantity of 1, the vendor's bank details never changed, and the amount is under 5,000 dollars.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3073,
+    "output_tokens": 418,
+    "output_tokens_details": {
+      "thinking_tokens": 264
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

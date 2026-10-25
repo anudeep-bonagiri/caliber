@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0054,
+  "durationMs": 2771,
+  "httpStatus": 200,
+  "id": "INV-1003",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "INV-1003 unit price of $404.00 is about 19% above the $339.00 contract rate for oil_service (limit is 5%). No other hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSoQcKEAgTGAI4AUIIdGhpbmtpbmcSDIJv/vRO/c8c6286nxoMlJ9JmT3vwgrKGCJiIjD/rLOLv50gbVVe+dKmzXcoutmW59+p/QiQL/RUAglqoClgktFyAOKhfmPz64jYIzQqvga4ZrCmWzfpxthyYVYtchFd+cQ7O4bjPvAfgiW5zGCUWiCDCe9POfariVkpCATIw7SEMPqwRB+gHH8070n8Y/NulITlq+pKNzSxEE3PMvBd6tt57YAdRAvhPvdNGNgW1ng8ABMk/sc9Qmx5TMgpTiKSrB/jg56DO1wLAeUL1c1LuQp7kM0vVVa7Byetcy5uhkmghr7pjDKQ2u2vfjDTZsXwSQrFQh/by8q67UWdeGjywV9wI1aulDKQXEx3p0UqHq3VNvTbOwTk1ZFRT1iHcew/dFkxWCu6Bf2ZqGtVYrPKUvztHboLYHDJgzY8ZTk1rz9gBueXEdkIPV86qgWTdQuMwIJ6SgPiHFjEEvuZxbjfWkSByhM7SiB65ILtZD0Qc71QeO8oh4qs7PeHM3HSSFPrXIjCZTHGqDztn1RyObrSFCJAOglMqATqaqUeye3MCOp2tkK9IKkrENY1RUO9CprFB/m+DBzp7Ie41n7Nr7+hdOusygrgwSxJoRu1SPMsKST80dhi0MEgZ/OdwrTmcwcIQwBTa/1AHRmL4aeJiJMg2v3V2uV0s3ospB8HixcWz5HnwCdjq+6+dnA0H6z7IXP+fQu+oX6hMSaMiFa7VHqi/I3qXpoLOc6pDvq8/ORsJTKpznchPuHvmwy2VM4M1ifs7hv9MGX4FNokVJTGht5Q21a7DIRgF6RpTo67KDuWcSi7/ndgCVICfEiI2ZlhKCS9KF7RdAlZgDQ4ocKXHS2i0eY8SL8Hilsh9IHPgAlsOvuo34O9bYbVA9ftxtWjsNQQOyoF33F/Hvk/qD9z72eJtg7nw0/60Jycdw6FJt60iqQ5eaPB1MDwf0+F4TU86UnsDOralhQyGfpmulXJRCEQkhTRVrkwCjwl9IM3JncUo5pLtWYFecA+elWkxWZPqeEmBGHYFm6+gdouDtttXh5ouDB/ZEbKkvbsZHnhv3hDETSwnerocuhgzLToZD5ieGa63fT1RIOmIBcGsX/DFXHGkSogfFdOQEO5oNfnyYt1x2IPp56cR2mMQqlxmBrdZGsvctZUguSJJQ/79v+AyX4hbZEFnNBf6odbgm+55t4xfFKUPeHIiYO30v/8IrlBJhgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1003 unit price of $404.00 is about 19% above the $339.00 contract rate for oil_service (limit is 5%). No other hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxmyUPjFkFQPTVEjB7",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1555,
+      "output_tokens": 229,
+      "output_tokens_details": {
+        "thinking_tokens": 151
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"rate_variance\",\"reason\":\"INV-1003 unit price of $404.00 is about 19% above the $339.00 contract rate for oil_service (limit is 5%). No other hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1555,
+    "output_tokens": 229,
+    "output_tokens_details": {
+      "thinking_tokens": 151
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011238,
+  "durationMs": 4037,
+  "httpStatus": 200,
+  "id": "INV-1104",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 52500 matches the contract rate, qty 2 equals the PO received qty of 2, and no earlier invoice from this vendor has the amount 106250 under a different PO. The invoice is under $5,000 and the bank change was on day 42, well before day 57. No hold rule applies. The total is 1,250 cents above 2 x 52,500, which is not a policy hold, so it is worth a non-blocking note to the vendor."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwAkKEAgTGAI4AUIIdGhpbmtpbmcSDJPy4AuBjzWII+y62RoMIs81cfIXrpjuRgHWIjD4Qgu83B9PUZCriYNheQUcw4t562BQ0c0JOaTP3YUkgURGWsVx545MkeKN6VzNtJkq3Qguok10j4NmVoZZbBwgeHGtNtvNl+CTrEfT622yoxBxVzjIQIO8WlWG/fsv62fpqGUcqmJypLOx6u/dV2YAo/mOkGjcoR96fs4FNY6moRaBylaALsxdU64PFGQdh9MKFzOQe8miB+gfV8YiKX99XlZfqJ2o5qVbKLs9jMw+x+trwIwfPe95lgeWlxEZAYrAb3HtUHBJxdRfDrftgK96SEoUOCDKlmIj1sc/j00xUdD58tlfMBDtBIJ4DatjUVTkxasHtoFGtGOReuv24QWkhfC2PpqtfgN7HZt8xQ8wKwW7hjqFi27Lo6VwatTxc9EWzvbsDQaDH2Ue5el1KbVhjn1XzJqueDIefCI0Eby06ueHNmTWhtADfhf4u3lHBWuhMKOHWGyGKERrXNP618S30hVPq+UJ1xxrq3yvKgElFVb57dmEdAsdl5dFOfBfBTSS9b+BeTWLLODXRT+LFhAVs54d3vhi2M9pMBBlEh5LLuhf+VIZ+imBmh5DzoDp3txeIJg9ZuMdnSIAkvOv3ieS1c56pXcODDN3XhHpa5pcpOjylTuG83wnFquIhoUtmfhBWkyqw81im0MJHTBuD8u82XvfdEYJOetfEb/tXo1cKtK2EYLGNLKvK7UBpOqIjJOg2iaeguEUbOx0YPwiS/Xt/KxMWmQrHV02+BFhGidXLeNshwoKA+2piow/sT/LvXyf6McslPexKFnLHBzguV3+/GomWAu4X63tGL9LEeopKfedJujrfuNroQ1aemvXFmB9ZSz3dQgk5ggKRaU/tPYKhsvvpWESkGXFlzUJZS29C5js3nCWC9JsyrG5oIGxWqYx41cK+3cfXReW4lOeA+ErsUHFnpoxsa96SUVDrUU8OLUaRVgCx15tk5LJVzDpqUMYtyvdEKduKOJ90yOmDsh+q9gMlDHpBunfQ9DyGfRCGX6VwqUdnnJ5SCKsMgQ22fUUmS79aVUaH97KqVCTY6LUQz1o3eT2ui/N7leL3wg+MKJViHU1HILjq/IoKPuU65hfq3OvXxaZFxUR8TVtDhmF7GIUjp0W75LNPc1T/bdkGMvmyBjGUFMoHYMnAmXBWZMqusPyzOh7bfrmaMqcsrT8fC8JCD21B8lj59C7eZyu4g8HLSGhDVZHRSy6bOK1B1CAKItY4NXutIg17CTG4dqe/5mk0IixL4gR3yX0zK9XFfCTf4eMMpVbJGX+NQxtFKNQjm0hgP00G6VxIFx3SrEiGFXhfBWfopPSS/0I3dlYH/5xk/wss1lVZ1QhNO/kVLE2TJ78i/uZgP9EVlm6MoxTQH1HPgQD8Qp3/mhWQypYn4393ySeumXkrrqEzksMj6VRECicdCarLjRkwG0YLN8lZKq+G1F1J5IH1l4e1/QPCUysNT2aRJcZHeVWBv3VPlioXN4onmFZVFBVpBtme2V2rm9wbPQUlAQPV5DwXCIG4Agx5EDZIOxTGeOMUNmglWafmPrILegqCQCafvjGHkZzGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 52500 matches the contract rate, qty 2 equals the PO received qty of 2, and no earlier invoice from this vendor has the amount 106250 under a different PO. The invoice is under $5,000 and the bank change was on day 42, well before day 57. No hold rule applies. The total is 1,250 cents above 2 x 52,500, which is not a policy hold, so it is worth a non-blocking note to the vendor.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1DH3jBJEmxFP7cn5Z",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3509,
+      "output_tokens": 422,
+      "output_tokens_details": {
+        "thinking_tokens": 263
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 52500 matches the contract rate, qty 2 equals the PO received qty of 2, and no earlier invoice from this vendor has the amount 106250 under a different PO. The invoice is under $5,000 and the bank change was on day 42, well before day 57. No hold rule applies. The total is 1,250 cents above 2 x 52,500, which is not a policy hold, so it is worth a non-blocking note to the vendor.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3509,
+    "output_tokens": 422,
+    "output_tokens_details": {
+      "thinking_tokens": 263
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

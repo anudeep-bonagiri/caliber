@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01023,
+  "durationMs": 3264,
+  "httpStatus": 200,
+  "id": "INV-1130",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "Unit price 37,875 cents is about 15.5% above the contract rate of 32,800 cents valid on day 71, exceeding the 5% tolerance (max 34,440)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Checking the invoice INV-1130 against each policy rule:\n\n- **rate_variance:** The contract rate valid on day 71 is 32,800 cents (valid days 45 to 92). The invoice unit price is 37,875. The threshold is 32,800 \u00d7 1.05 = 34,440. Since 37,875 exceeds 34,440, the unit price is about 15.5% above contract, so this triggers a hold.\n- **duplicate_invoice:** The amount 37,875 does not match any earlier invoice from this vendor, so this rule does not apply.\n- **short_received:** The invoice bills 1 unit and the PO received quantity is 1, so this rule does not apply.\n- **vendor_bank_change:** The bank change was on day 18, far outside the 7-business-day window before day 71, so this rule does not apply.\n\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 37,875 cents is about 15.5% above the contract rate of 32,800 cents valid on day 71, exceeding the 5% tolerance (max 34,440).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsxqTL4WnKyGmxLXWTA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3330,
+      "output_tokens": 357,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:04+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Checking the invoice INV-1130 against each policy rule:\n\n- **rate_variance:** The contract rate valid on day 71 is 32,800 cents (valid days 45 to 92). The invoice unit price is 37,875. The threshold is 32,800 \u00d7 1.05 = 34,440. Since 37,875 exceeds 34,440, the unit price is about 15.5% above contract, so this triggers a hold.\n- **duplicate_invoice:** The amount 37,875 does not match any earlier invoice from this vendor, so this rule does not apply.\n- **short_received:** The invoice bills 1 unit and the PO received quantity is 1, so this rule does not apply.\n- **vendor_bank_change:** The bank change was on day 18, far outside the 7-business-day window before day 71, so this rule does not apply.\n\n{\"decision\": \"hold\", \"code\": \"rate_variance\", \"reason\": \"Unit price 37,875 cents is about 15.5% above the contract rate of 32,800 cents valid on day 71, exceeding the 5% tolerance (max 34,440).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3330,
+    "output_tokens": 357,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

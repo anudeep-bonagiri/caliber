@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005364,
+  "durationMs": 1767,
+  "httpStatus": 200,
+  "id": "T1521",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1521 at SH130-01 (Hutto) has no earlier charge for plate TX-1005 at that plaza within 10 minutes. The nearest earlier toll is at a different plaza (PGBT-01, about 4 hours before), so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Toll T1521 at SH130-01 (Hutto) has no earlier charge for plate TX-1005 at that plaza within 10 minutes. The nearest earlier toll is at a different plaza (PGBT-01, about 4 hours before), so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsd7E3Q4xswjBx5H1LH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2147,
+      "output_tokens": 107,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:36+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Toll T1521 at SH130-01 (Hutto) has no earlier charge for plate TX-1005 at that plaza within 10 minutes. The nearest earlier toll is at a different plaza (PGBT-01, about 4 hours before), so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2147,
+    "output_tokens": 107,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

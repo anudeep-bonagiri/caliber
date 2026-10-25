@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012938,
+  "durationMs": 3382,
+  "httpStatus": 200,
+  "id": "3674",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at 11:15 and 11:30 within about 0.1 mile of the Laredo station, bracketing the 11:21 purchase. 52.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS/AcKEAgTGAI4AUIIdGhpbmtpbmcSDBi+vbC8UysYanHvNBoM8ZdEmlqVsTUG1wiQIjDNqOqrX2ncBBLdMks0iRrCHZvuaQkaQn36V30+Bh9EfscE9dSDpF7wA/7yEkQYSOEqmQclERZ0GWplGGl87W8JY0lKZ006s/MeqicJgxQnyUrnixsdeIf2fLGqf01j2GApuws6xi3Kk/usybCqF4ZVqTRloPX5mslvx3Onms5Ip+YVio7mV4iGMnZWRVYvW0aCG8kqWimQhOrjTkxpyOI9YyfPJ4rqdmzC6RB/ELBFwQ3OliU8f8LDs2H4DnF0aVAXVcv7GiFuwyRbktBJabllabx9T5tplXLjhT/CRHs3+Uvb6XHXUKNgaWqRJ/1Jp7916GQX5c6motd9Q1CIY1nhB1OsPir12WemNySLJ/nsvOe4VZ2rgVfzhAnXcQDeLirv4kHrdALe6f5+MjXEVKI3KayUew/O1eC3GWBGwwumZ8H+umTBB0RV9nsdlLqPrQuNo/McWrfUus8vn0kd2GK/ViqNNO2iswYK8wapa3GNAD9VqjPZo85Xb3P8NaTaF7KROnc9taM5YCr33/Gnu8SU3CdpsRVQBqoQoZ0VKSemWlxHWh4Il+rH3Qppe4qc0NcMySP9BT0I6x+GoBFIh9rcmxZxg4XuxUCE5LJQds1yY11C7vbPLJErCO7uc93ypg+492d3OBbZXq7CxftpPAdV16MTKkBsJevtjT1tbQMBCcxMIb/bIsjHhkbXLZ3P9OvXT4teJcifucaKYje9aLVJ1cHQN9Wk0NI/fQo2xdwOixcyBw0ZZM8Hmyo9Cu1VWJeYRNKsgCBx+Sj+V6mEd14/80YlsVBtxgZiAuAmO6uVru9V6mVnDTHwv5k4bOdHVMkXG37ncdUipMfOip1i8umk+7asll1dRwlnqi37Cg3hmunoSN8XVWa0k8S0mNwOo+1W/3bchYZSVWud9bswDYigVUoiOFMiO73h7sY5MFO9qEACelxbLFk7tY4WjxdZIn3FwZyMdEmDZR4QNamV/OabacHjvUdpemGkH5uWDECMZ8xczhL8bicc8UeyqIZhi2phVoExkL4BtKgG5PhM5hps4a32VW0/ijHqskxhfq3Nl67Foq8uewD16lV7Yo6UKj/l+AaR7RoL+euCdmBb7pkRQ5GBxnNFizgEI7jCnOpZXHnex//LOzQO3Fos6vzNAQFHdmdhjod5HthhYjpf9Ba2oWFB1YQECrRlAmQWjBALmXmjwrPtUukXx3U17iq5dsLH238A/3sLmVR+VvoIy3BDO2W9SX+zJfbpPpdfSwz9CdcMXCJRIQGbkx7zaODPfDNzATsm1vpqZcUSNy0YAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at 11:15 and 11:30 within about 0.1 mile of the Laredo station, bracketing the 11:21 purchase. 52.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7KABZgmaiugyFtrk3",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4814,
+      "output_tokens": 331,
+      "output_tokens_details": {
+        "thinking_tokens": 232
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at 11:15 and 11:30 within about 0.1 mile of the Laredo station, bracketing the 11:21 purchase. 52.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4814,
+    "output_tokens": 331,
+    "output_tokens_details": {
+      "thinking_tokens": 232
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

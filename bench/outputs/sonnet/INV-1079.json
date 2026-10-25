@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010564,
+  "durationMs": 4720,
+  "httpStatus": 200,
+  "id": "INV-1079",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1079 unit price of 48,800 is below the 51,700 contract rate, and its qty of 1 does not exceed the PO's received qty of 1. Earlier invoices for the same amount (INV-1047, INV-1065) cite the same PO-1009, not a different one, so duplicate_invoice does not apply. The vendor's bank details are unchanged and the invoice is under 5,000 dollars, so no policy hold applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1079 unit price of 48,800 is below the 51,700 contract rate, and its qty of 1 does not exceed the PO's received qty of 1. Earlier invoices for the same amount (INV-1047, INV-1065) cite the same PO-1009, not a different one, so duplicate_invoice does not apply. The vendor's bank details are unchanged and the invoice is under 5,000 dollars, so no policy hold applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt7yEQ1nCssyAKuCDUs",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2487,
+      "output_tokens": 559,
+      "output_tokens_details": {
+        "thinking_tokens": 399
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:52:08+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1079 unit price of 48,800 is below the 51,700 contract rate, and its qty of 1 does not exceed the PO's received qty of 1. Earlier invoices for the same amount (INV-1047, INV-1065) cite the same PO-1009, not a different one, so duplicate_invoice does not apply. The vendor's bank details are unchanged and the invoice is under 5,000 dollars, so no policy hold applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2487,
+    "output_tokens": 559,
+    "output_tokens_details": {
+      "thinking_tokens": 399
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

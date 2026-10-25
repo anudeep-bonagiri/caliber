@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014274,
+  "durationMs": 4611,
+  "httpStatus": 200,
+  "id": "INV-1160",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1160 for 36,800 cents matches the contract rate and bills qty 1 against a received qty of 1. Earlier 36,800-cent invoices in the prior 30 days (INV-1149, INV-1153) cite the same PO-1017, and INV-1070 and INV-1082 are older than 30 days, so there is no duplicate under a different PO. The amount is also under the 500,000-cent bank-change threshold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSrQsKEAgTGAI4AUIIdGhpbmtpbmcSDBWUHYbuuz2rfX79uBoMMZ+VGN0zHM3uLEz2IjAROJhOKHWC79W4b5dqu+PWtY5tuMaSsxmQlS2owDy/OfjjOVy6IlS2Ug15UdoS2lMqygrGA+6+UoNvlmxF+udNE714Y0In2CVOo4hggrTREQTTUm6a8IkWINr7Jc8gBf8rB2kj4NSD+7Y0yDEoJxvTVwD4iHLuAxLaB3KCiXlBufX5Nao2QwDVtXiVvUMng9qtL0b3Oj449ymUWaYyKJB7BzTUyEootH+BlvM0sdxjYdLP1cGtL0hLJ5TOCEcpIfaod0syte7fKgN7LYlBdP162jGwleOXM7DuNoPjJ/Og80zMrfwZvXs9Un6oka469iZ+Iyn6/w+2SoHZs4c90Uj3H0juNPmg/vOkmp+AP25M/+tfS4p+3psXP7uXuGFaTxfiRXs02rpDhQLQ6CPNKvIfcCe82ZtQ3IDy3Oaanrl5BxRFZ5CxsS++PTBMTKAf9P1PWxqy0Ue0Ki5LKO/fOeFdX3BP9BG6URBbXEMrHVpczwYF4Mi5ObbsjDAtdvL9DaDFkHRy9rHpuH/DCRGS9jv/YBssffZx3Tizv1ja8lbzrNDmzEE4L2wfJajBYbdFSoQyv5iFFd1Cwd9re9+CJgkiMekId/qZAXztpSlotpFf+2jAoY0iP3cJIL8T+AX/f4wO3Ok6m6iQSG3IWiRjlwDMdGGU/KJJ/Gd2omjDxCnSOB+7fczxfUNrYv/jfebtD6BR9OORDQag4nrTgedSnqRNbL18R83KQ688LoV5kR+v9i1ToHbrV9SO4Bct3BrH1JME1cSG4WEWMhDbBK4Chuxc7WUBRBjTI+1zPxhve96RniY4jVLyLkTS3HZwdHt1RFrYFsb6ALaGW5tvl+Q/RUatNSwIJ0MPsc7taNno/nNeLKK4cQGocIzJSFyrgX1uhM5SZJ0virv42VWkMMwh96NvyPnopq/fpjtrIfPMMlKxjxJP1/xitJEM/7tUSHWX1X0AKkSWXrHhLAVGeC5RwZwow7GmsyIDUk/r2TL2UDOq4JqznCmAxsFTDqjyaAaVh7vlaNkMgf0N42hTu01Up7D9VEmuSoh+56jeHIztT/WcXkXdFScvxVK6mmt/OVtCw8K0uIcZd3jQr/XkZ/4SpXhetg7taG3ncHpoRRo+Jadfxb6FOaaJu1EOT4MQDjQfmJJ4DDkbpy4QAGff1PLF4MHC51VPq2NPcX6gzf4ZLsKuDabTIZMQgiEo3gb1XBDY2poowWw97IZ8WQ75eDIsB5xHylZ+rL6uZVOPvjtHYscHuG90EU3HqOiAnGtaRGdNl7w2WKzMnVshYNukRTZrWVhZfUsrSK/tDcCAjKbGvz/tsR8zL5eIRWLdY/iAgOsIBz+6kWQqLeR9cFnDF/bIvSdpc3zH/U4l8lDBlsa4ULSD44MXjuPOlrWHdmy1oFzWSjBdPDe7N/Ela9UfhLVfWLfuUQvMqjgivp7ciewtAj/HGllnpszDM4aknxWXMxaM1rCFoqzsWiRpUu8+DsavQdI5P2oVNKBAbxupr71oIDNpjwJxQ6RL4Po1JfmyeMXseh2jDFKFQy6V3swJjXVkJttvWr/NSh9sue7CJ2tMqvxC0uVeBPcNpmfkDs2K7DbG3QiWHS7v1rPe2dlOc7o3M4GWsVI0sBKdGMVGsfmjPfeG/kJNoCkU1DMwupW29axRuWWtOHuqCIC+a08o4yACoLefuHlAROOmHGzwaoBuIpDCdI/5r3HhXWyJRhF+oTR9xDrIvLb+7IM5JdeNpOFTBO4V0Erp3eF1nNlZBR0K/LgbuZeK2mtz4Wutk1RXhM8+2vXzcrGcdZVxFgbSZqw+LwEIUnYRC1H1mqGBc3bWWHxYGFAz+aPZYp5pFVm7hCPr2D0Osb4ga5O569chRhMeGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1160 for 36,800 cents matches the contract rate and bills qty 1 against a received qty of 1. Earlier 36,800-cent invoices in the prior 30 days (INV-1149, INV-1153) cite the same PO-1017, and INV-1070 and INV-1082 are older than 30 days, so there is no duplicate under a different PO. The amount is also under the 500,000-cent bank-change threshold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseoENWuCsjJ7TQbSo9",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4477,
+      "output_tokens": 532,
+      "output_tokens_details": {
+        "thinking_tokens": 375
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:59+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1160 for 36,800 cents matches the contract rate and bills qty 1 against a received qty of 1. Earlier 36,800-cent invoices in the prior 30 days (INV-1149, INV-1153) cite the same PO-1017, and INV-1070 and INV-1082 are older than 30 days, so there is no duplicate under a different PO. The amount is also under the 500,000-cent bank-change threshold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4477,
+    "output_tokens": 532,
+    "output_tokens_details": {
+      "thinking_tokens": 375
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013178,
+  "durationMs": 2333,
+  "httpStatus": 200,
+  "id": "5558",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 35's ping at 15:30:19Z was within about 0.2 miles of the Waco station, 3 minutes before the purchase. The 45.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4AYKEAgTGAI4AUIIdGhpbmtpbmcSDBL7XrdY4k8C7kstQxoM/fVvEKfuo+HEjsd3IjCkz7oUl058srg378AWIxoRXWi0ED+g30CVm2Gac+tyHvSHVB6L87ZPHRyLtjh8RAkq/QVE0cNNdb6LVC4E6zhEgbCjo/M7bfyWx3a6FX5BqtSFsBlFn58OCwzAJuSS9MwOjfusK3wEND5fArx8CxSIf8ODrRl60XneKkNUdKgvoUucIRhtKLGBfShDKqrOC8xf7VH2iKKcswM+qGjbJS2e0kS/xL4FqwxbyQs8MtHwmQ1/BKbKn8ajJlrxnzqftCvgpTi9U3Kh6itxzaOKUal68KtO1oUhH278ny54xnIgAwQLr+f/csPYyQ9NV5B1BriUnLLMdo1MeVUlSNdagq84sBomY0EkVnHRlE10lWLAR/j01jECPK6zWAq/VD9p1zGckoGPBM9ANd48zIWrVrT/7aHYE1C/4KOvGukOvjolciisz/TBgy9zS+Piny3MtTCaYkbL295sfnb4Y7pDtz4JdDIVZdjG9K/bUiaOx0kGK780t2JpXTqmS4gbP1gPTJ0EwAtIvKfqK3e4EZFul58QidbSCXxPXbxfDsi5JWnlj4E5iHJVAT1cqfISrwvgbv6DgQUMtTILBA3q0wTkzv9E321oLaRiBQdmnXna4XPxfqXPOJnZ3YVFUVF9CCZWkaQZnurAg9LjTS4tPyKDBZhYOvuB8jzvCv7K1Wlc6qOmerzQRecnuAKwcNFzA0L4NzA9Wgz1Zsi2TCIxvnIsDhtInPy93q2L3XXc5t/ARNkYCKYvvA5N5YK/OA8Q1KWVVbp677/+DvmsyaDhe8sH9eiPCVojQVWLTqp05LdtylKy8yIIVfGlKO39ch4OkCQaL0YnQSBvILQlNMoO/GkQUdiSEsW0SHdbnFgnDdx/Rb797pYnF8tDPZ2BTApamea35ku+DPdWQnEIzX2UfD1VA03ynRSRbmKIxZnIdMobQDlMYM+Fkg3vWHgrJBBGNw45HojsFqbEWpXG/9y2yHwhUcB5j0OJl+/kwtbV7jxmzScnsz7zXdNDMvY17huBYwh/6pwxK1AQXCLISz6aegRELaYpkqxtQ7zWAzExsYj9Vq1uTGGIGmL+9YcvzLZPmVjztLAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 35's ping at 15:30:19Z was within about 0.2 miles of the Waco station, 3 minutes before the purchase. The 45.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsotnVRh5oMe2p8DDgR",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5399,
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "thinking_tokens": 141
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:03+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 35's ping at 15:30:19Z was within about 0.2 miles of the Waco station, 3 minutes before the purchase. The 45.3 gallons is under the 110-gallon limit (100-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5399,
+    "output_tokens": 238,
+    "output_tokens_details": {
+      "thinking_tokens": 141
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

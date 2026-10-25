@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 11831,
+  "httpStatus": 200,
+  "id": "INV-1149",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 36800 cents is not over 500,000 cents; however, checking other rules: duplicate_invoice? No (unit price matches contract). rate_variance? No. short_received? No. vendor_bank_change? Vendor bank changed on day 71. Invoice received on day 78. 78 - 71 = 7 days. The policy says 'within the 7 business days before'. Day 71 to 78 is exactly 7 days difference. Usually 'within X days' implies strictly less than or equal to? Let's re-read carefully: 'within the 7 business days before the invoice was received'. If it changed on day 71, and invoice is day 78, the gap is 7 days. Is day 71 included in the '7 business days before'? Typically, if an event happens on day D, the next 7 days are D+1 to D+7. So D+7 is the last day. Here 71 + 7 = 78. So the change happened within the window. Wait, let's look at the amount. 36800 cents is $368.00. The threshold is 5,000 dollars (500,000 cents). This invoice is NOT over 5,000 dollars. Therefore, vendor_bank_change does NOT apply because the amount condition fails.\n\nLet's re-evaluate all conditions for this specific invoice:\n- **Kind**: Invoice.\n- **Amount**: 36,800 cents ($368.00).\n- **Vendor ID**: 5.\n- **Received Day**: 78.\n- **PO ID**: PO-1017.\n- **Item**: ac_service.\n- **Unit Price**: 36,800 cents.\n- **Contract Valid On Receipt Day**: Rate 36,800 cents.\n- **Earlier Invoices**: Check for duplicates.\n    - Duplicate Invoice Rule: Same amount as earlier invoice from same vendor within previous 30 days under different PO.\n    - Current Amount: 36,800.\n    - Look for earlier invoices with `cents` == 36,800.\n    - INV-1070: 36,800 cents, item ac_service, poId PO-1017, receivedDay 38. Same PO. Not a duplicate by rule (needs different PO).\n    - INV-1082: 36,800 cents, item ac_service, poId PO-1017, receivedDay 45. Same PO.\n    - Are there any 36,800 invoices with DIFFERENT POs?\n    - Scanning list...\n    - INV-1004: 16937\n    - ...\n    - INV-1038: 36925\n    - ...\n    - It seems no other invoice has exactly 36,800 cents except those with PO-1017.\n    - Wait, let's check unit prices vs contract.\n    - Contract rate: 36,800. Invoice unit price: 36,800. Variance 0%. No rate_variance.\n    - Short received? PO qty 1, Received qty 1. No.\n    - Vendor Bank Change? Amount 36,800 < 500,000. Condition fails.\n\nIs there a duplicate toll? No, it's an invoice.\nIs there a location mismatch? No, it's an invoice.\nCapacity exceeded? No.\n\nLet's double check the `duplicate_invoice` rule again.\n\"an invoice from a vendor for the same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\n\nCurrent Invoice:\n- Amount: 36,800\n- Received Day: 78\n- PO: PO-1017\n\nWe need an earlier invoice (receivedDay > 78 - 30 = 48) with:\n- Amount: 36,800\n- Different PO (not PO-1017)\n\nLet's scan `earlierInvoicesSameVendor` for `receivedDay` > 48 and `cents` == 36,800.\n- INV-1070: receivedDay 38 (Too old, < 48).\n- INV-1081: 120875\n- INV-1082: receivedDay 45 (Too old, < 48).\n- INV-1086: 37450\n- INV-1101: 101475\n- INV-1102: 29832\n- INV-1105: 99600\n- INV-1107: 23560\n- INV-1115: 73600\n- INV-1118: 119000\n- INV-1132: 119000\n- INV-1134: 25357\n- INV-1138: 550800\n- INV-1144: 99600\n- INV-1148: 101475\n\nThere are NO invoices with amount 36,800 received after day 48.\nTherefore, no duplicate_invoice hold.\n\nRate variance:\nContract rate 36,800. Invoice unit 36,800. 0% variance. Clear.\n\nShort received:\nPO qty 1. Invoice qty 1. Clear.\n\nVendor bank change:\nAmount 36,800 (< 500,000). Clear.\n\nConclusion: The transaction should be cleared.\n\nWait, did I miss something subtle?\n\"contractValidOnReceiptDay\" is provided.\n\"purchaseOrder\" is provided.\nThe invoice cites PO-1017.\nThe PO unitCents is 36,800.\nThe contract rate is 36,800.\nEverything aligns perfectly.\n\nOne final check on `vendor_bank_change`.\nThreshold: 5,000 dollars = 500,000 cents.\nInvoice: 36,800 cents.\n36,800 < 500,000.\nCondition \"invoice over 5,000 dollars\" is FALSE.\nSo this rule does not trigger.\n\nFinal Decision: Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No policy violations detected; amount below vendor bank change threshold, no duplicate invoice found within 30-day window with different PO, and unit price matches contract rate.\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792882821,
+    "id": "chatcmpl-50f6a432-bec6-4402-a356-eb173706c846",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1563,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4090,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 1072,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 5653
+    }
+  },
+  "startedAt": "2026-10-24T23:00:12+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"vendor_bank_change\",\n \"reason\": \"Invoice amount 36800 cents is not over 500,000 cents; however, checking other rules: duplicate_invoice? No (unit price matches contract). rate_variance? No. short_received? No. vendor_bank_change? Vendor bank changed on day 71. Invoice received on day 78. 78 - 71 = 7 days. The policy says 'within the 7 business days before'. Day 71 to 78 is exactly 7 days difference. Usually 'within X days' implies strictly less than or equal to? Let's re-read carefully: 'within the 7 business days before the invoice was received'. If it changed on day 71, and invoice is day 78, the gap is 7 days. Is day 71 included in the '7 business days before'? Typically, if an event happens on day D, the next 7 days are D+1 to D+7. So D+7 is the last day. Here 71 + 7 = 78. So the change happened within the window. Wait, let's look at the amount. 36800 cents is $368.00. The threshold is 5,000 dollars (500,000 cents). This invoice is NOT over 5,000 dollars. Therefore, vendor_bank_change does NOT apply because the amount condition fails.\n\nLet's re-evaluate all conditions for this specific invoice:\n- **Kind**: Invoice.\n- **Amount**: 36,800 cents ($368.00).\n- **Vendor ID**: 5.\n- **Received Day**: 78.\n- **PO ID**: PO-1017.\n- **Item**: ac_service.\n- **Unit Price**: 36,800 cents.\n- **Contract Valid On Receipt Day**: Rate 36,800 cents.\n- **Earlier Invoices**: Check for duplicates.\n    - Duplicate Invoice Rule: Same amount as earlier invoice from same vendor within previous 30 days under different PO.\n    - Current Amount: 36,800.\n    - Look for earlier invoices with `cents` == 36,800.\n    - INV-1070: 36,800 cents, item ac_service, poId PO-1017, receivedDay 38. Same PO. Not a duplicate by rule (needs different PO).\n    - INV-1082: 36,800 cents, item ac_service, poId PO-1017, receivedDay 45. Same PO.\n    - Are there any 36,800 invoices with DIFFERENT POs?\n    - Scanning list...\n    - INV-1004: 16937\n    - ...\n    - INV-1038: 36925\n    - ...\n    - It seems no other invoice has exactly 36,800 cents except those with PO-1017.\n    - Wait, let's check unit prices vs contract.\n    - Contract rate: 36,800. Invoice unit price: 36,800. Variance 0%. No rate_variance.\n    - Short received? PO qty 1, Received qty 1. No.\n    - Vendor Bank Change? Amount 36,800 < 500,000. Condition fails.\n\nIs there a duplicate toll? No, it's an invoice.\nIs there a location mismatch? No, it's an invoice.\nCapacity exceeded? No.\n\nLet's double check the `duplicate_invoice` rule again.\n\"an invoice from a vendor for the same amount as one of that vendor's earlier invoices received within the previous 30 days under a different purchase order number.\"\n\nCurrent Invoice:\n- Amount: 36,800\n- Received Day: 78\n- PO: PO-1017\n\nWe need an earlier invoice (receivedDay > 78 - 30 = 48) with:\n- Amount: 36,800\n- Different PO (not PO-1017)\n\nLet's scan `earlierInvoicesSameVendor` for `receivedDay` > 48 and `cents` == 36,800.\n- INV-1070: receivedDay 38 (Too old, < 48).\n- INV-1081: 120875\n- INV-1082: receivedDay 45 (Too old, < 48).\n- INV-1086: 37450\n- INV-1101: 101475\n- INV-1102: 29832\n- INV-1105: 99600\n- INV-1107: 23560\n- INV-1115: 73600\n- INV-1118: 119000\n- INV-1132: 119000\n- INV-1134: 25357\n- INV-1138: 550800\n- INV-1144: 99600\n- INV-1148: 101475\n\nThere are NO invoices with amount 36,800 received after day 48.\nTherefore, no duplicate_invoice hold.\n\nRate variance:\nContract rate 36,800. Invoice unit 36,800. 0% variance. Clear.\n\nShort received:\nPO qty 1. Invoice qty 1. Clear.\n\nVendor bank change:\nAmount 36,800 (< 500,000). Clear.\n\nConclusion: The transaction should be cleared.\n\nWait, did I miss something subtle?\n\"contractValidOnReceiptDay\" is provided.\n\"purchaseOrder\" is provided.\nThe invoice cites PO-1017.\nThe PO unitCents is 36,800.\nThe contract rate is 36,800.\nEverything aligns perfectly.\n\nOne final check on `vendor_bank_change`.\nThreshold: 5,000 dollars = 500,000 cents.\nInvoice: 36,800 cents.\n36,800 < 500,000.\nCondition \"invoice over 5,000 dollars\" is FALSE.\nSo this rule does not trigger.\n\nFinal Decision: Clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No policy violations detected; amount below vendor bank change threshold, no duplicate invoice found within 30-day window with different PO, and unit price matches contract rate.\"}\n```",
+  "usage": {
+    "completion_tokens": 1563,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4090,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 1072,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 5653
+  }
+}

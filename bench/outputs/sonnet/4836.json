@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010526,
+  "durationMs": 2724,
+  "httpStatus": 200,
+  "id": "4836",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 7 pinged at the station (~0.02 mi away) 3 minutes before the purchase, and 51 gal is within the 100-gal tank limit (110 with the 10% allowance)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 11:53:03Z at station (30.7235, -95.5508). The truck pinged at 11:50:00Z at (30.72373, -95.55057), about 0.02 miles away, well within 25 miles. The 12:05 ping is also nearby.\n\nCapacity: 51 gallons against a 100-gallon tank (limit 110), so it is within capacity.\n\nNeither location_mismatch nor capacity_exceeded applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged at the station (~0.02 mi away) 3 minutes before the purchase, and 51 gal is within the 100-gal tank limit (110 with the 10% allowance).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6dsn6NUQDCvUSF5Z2",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4088,
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 11:53:03Z at station (30.7235, -95.5508). The truck pinged at 11:50:00Z at (30.72373, -95.55057), about 0.02 miles away, well within 25 miles. The 12:05 ping is also nearby.\n\nCapacity: 51 gallons against a 100-gallon tank (limit 110), so it is within capacity.\n\nNeither location_mismatch nor capacity_exceeded applies, so the payment clears.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 7 pinged at the station (~0.02 mi away) 3 minutes before the purchase, and 51 gal is within the 100-gal tank limit (110 with the 10% allowance).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4088,
+    "output_tokens": 235,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

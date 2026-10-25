@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.005972,
+  "durationMs": 3116,
+  "httpStatus": 200,
+  "id": "T1094",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Nearest earlier toll at the same plaza (T1082) was about 93 minutes before, outside the 10-minute duplicate window; no other rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Checking the toll T1094 (plate TX-1013, plaza NTTA-PGBT-01, at 16:21:50Z on 2026-07-06) against earlier tolls for the same plate at the same plaza.\n\nThe closest earlier charge at that plaza is T1082 at 14:48:21Z the same day. The gap is 1h 33m 29s, which is well over 10 minutes. Every other earlier charge was on a different day or at a different plaza.\n\nNo toll at this plaza falls within 10 minutes before T1094, so the duplicate_toll rule does not apply. No other policy rule covers a toll charge.\n\n{\"decision\":\"clear\",\"reason\":\"Nearest earlier toll at the same plaza (T1082) was about 93 minutes before, outside the 10-minute duplicate window; no other rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1rRCzNK2eUXDN1E1d",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1636,
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:45+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Checking the toll T1094 (plate TX-1013, plaza NTTA-PGBT-01, at 16:21:50Z on 2026-07-06) against earlier tolls for the same plate at the same plaza.\n\nThe closest earlier charge at that plaza is T1082 at 14:48:21Z the same day. The gap is 1h 33m 29s, which is well over 10 minutes. Every other earlier charge was on a different day or at a different plaza.\n\nNo toll at this plaza falls within 10 minutes before T1094, so the duplicate_toll rule does not apply. No other policy rule covers a toll charge.\n\n{\"decision\":\"clear\",\"reason\":\"Nearest earlier toll at the same plaza (T1082) was about 93 minutes before, outside the 10-minute duplicate window; no other rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1636,
+    "output_tokens": 270,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

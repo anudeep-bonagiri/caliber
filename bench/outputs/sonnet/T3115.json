@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01979,
+  "durationMs": 3503,
+  "httpStatus": 200,
+  "id": "T3115",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for plate TX-1025 at SH 130 Plaza 1 within 10 minutes; the last charge there was day 81, so this is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is a toll charge (T3115) at SH 130 Mainlane Plaza 1, Hutto, on 2026-11-04 at 17:40:54Z.\n\nThe policy holds a toll only when the same plate was charged at the same plaza within the previous 10 minutes. The most recent earlier tolls for this plate are:\n- T3107 at 13:28:39Z, PGBT Irving\n- T3108 at 13:30:23Z, Dallas North Tollway\n\nThe last earlier toll at the Hutto plaza (TXTAG-SH130-01) was T2875 on day 81, so nothing at that plaza falls within 10 minutes of this charge. The charge is not a duplicate.\n\n(The truck was in Dallas at 13:30Z and then in Hutto at 17:40Z. That is about 3.5 hours apart, which is plausible, and no policy rule applies to it for a toll.)\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1025 at SH 130 Plaza 1 within 10 minutes; the last charge there was day 81, so this is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMstY4hvG1snv5m7fta4",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 8040,
+      "output_tokens": 371,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:06+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is a toll charge (T3115) at SH 130 Mainlane Plaza 1, Hutto, on 2026-11-04 at 17:40:54Z.\n\nThe policy holds a toll only when the same plate was charged at the same plaza within the previous 10 minutes. The most recent earlier tolls for this plate are:\n- T3107 at 13:28:39Z, PGBT Irving\n- T3108 at 13:30:23Z, Dallas North Tollway\n\nThe last earlier toll at the Hutto plaza (TXTAG-SH130-01) was T2875 on day 81, so nothing at that plaza falls within 10 minutes of this charge. The charge is not a duplicate.\n\n(The truck was in Dallas at 13:30Z and then in Hutto at 17:40Z. That is about 3.5 hours apart, which is plausible, and no policy rule applies to it for a toll.)\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for plate TX-1025 at SH 130 Plaza 1 within 10 minutes; the last charge there was day 81, so this is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 8040,
+    "output_tokens": 371,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

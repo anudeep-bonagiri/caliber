@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9055,
+  "httpStatus": 200,
+  "id": "INV-1074",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "rate_variance",
+    "decision": "hold",
+    "reason": "The invoice unit price (148250 cents) exceeds the contract rate (135500 cents) by approximately 9.4%, which is greater than the 5% threshold."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"rate_variance\",\n \"reason\": \"The invoice unit price (148250 cents) exceeds the contract rate (135500 cents) by approximately 9.4%, which is greater than the 5% threshold.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884520,
+    "id": "chatcmpl-81412df7-ffa4-4086-aa9d-46854f655f80",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 67,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2592,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2659
+    }
+  },
+  "startedAt": "2026-10-24T23:28:32+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"rate_variance\",\n \"reason\": \"The invoice unit price (148250 cents) exceeds the contract rate (135500 cents) by approximately 9.4%, which is greater than the 5% threshold.\"\n}",
+  "usage": {
+    "completion_tokens": 67,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 2592,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 2659
+  }
+}

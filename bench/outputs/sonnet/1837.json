@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011252,
+  "durationMs": 2852,
+  "httpStatus": 200,
+  "id": "1837",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "The truck pinged at the Victoria station (14:50Z, well under 1 mile away) about 3 minutes before the 14:53Z purchase, and 55.8 gal is well under the 220 gal limit (200 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwgYKEAgTGAI4AUIIdGhpbmtpbmcSDN7AeA8QgEqYMYm4QhoMY67tWCZX3eoNPrqLIjBI9ndXCRfUfbA+o0/IwWXnnuLOBv0eT7M9SIByigZLQFnkzbzHD5WYQFlnt2jPapUq3wVJs8RMGpxgaYyUKAqQMF5aK8UJCf24nIPTsbo8gLfG4g+SYfdTipl8RHHW9P0AC8vFW53zRWIJuTU84nd4OdTM3khdBU3PyeOpqqV6UKHYXTlS3+tdOkqjB/Yit4mpoyYBt2Z9RhbHx+Eq3wJw7KfudGbSbZUy07iq2VtzG7F61mApMxT5GTI4O5xeJEnsAZVwNTwBPK87tq/V1tyGoMJDE3Uy84eYDKRa2g7p7EejdGvNiEUL+Lf68IP6EbAfZL2i2WLOq4ky/Q698tCr4qGzhsjpr4XFyXmjkUsE0R3qySDm5JjuO2cIJWtT012nI9/Aew13IQV02KgIsrU2WzaUSbFReOs8CVQ8ijI9pTXFDXqfxaH3o8pO28sB+2jzokRCEuN6z5gmZSmVEzaN/r1mHDy1Vc5YruXFSr+YD/BK+qY6fuA5orJWuv+9B2Lux2KH7z4zf3pNMkjw3UQeUujj9diwzog67UvWSfuEEkvdZn9cX75huTMnhIi+OW5JthyFfbzmaM/3DXV6iga1YMQJRQLszZYffIlmuCkWwHs82My+Ijz0stHhsm+s4CP+bfTYOTh+DF0VSFZZc6x8M2vS8KQ38dqeNWbiM4a3yIhToA6UoLjM8ZXpt+B482/miQFFK2L4YI3t/Itze0WfpmNk9Q0Z3AZd54BC6q7UkTwMNgZKw5OlhSC5O5GoFFPIuT+UM987SZWFfTVEaMoFmDlkSSv0b8kVNePJtKuA1EDb27X3F1qia4ca85ZJiqYq2otsmZBLw5yvxhJ09NisgCsi+obojOEsZoYXRIoLduwK3L/yz525E4naz07Hy8PBFpqynHuUW9ERJ3UobZghOFZgaLnmr9whFfSr0QKNvYqdhycYaGGEJfAGRIT1tTK4IUt7jXI4tvQNOKMp6+0zdI/E1/JDUITLGAThb4jQdY9ciEiNLoa1+foq6vuaKvNyIBDyhH18Mj+5giDNkK06ekAYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at the Victoria station (14:50Z, well under 1 mile away) about 3 minutes before the 14:53Z purchase, and 55.8 gal is well under the 220 gal limit (200 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMseAznQWnqJULEAA4VX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4526,
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "thinking_tokens": 123
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:51+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"The truck pinged at the Victoria station (14:50Z, well under 1 mile away) about 3 minutes before the 14:53Z purchase, and 55.8 gal is well under the 220 gal limit (200 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4526,
+    "output_tokens": 220,
+    "output_tokens_details": {
+      "thinking_tokens": 123
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

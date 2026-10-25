@@ -1,0 +1,346 @@
+{
+  "contractValidOnReceiptDay": {
+    "id": 5,
+    "item": "dpf_clean",
+    "rateCents": 46500,
+    "validFromDay": 1,
+    "validToDay": 92,
+    "vendorId": 1
+  },
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 33950,
+      "id": "INV-1012",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 9,
+      "unitCents": 31500
+    },
+    {
+      "cents": 47750,
+      "id": "INV-1019",
+      "item": "dpf_clean",
+      "poId": "PO-1006",
+      "qty": 1,
+      "receivedDay": 12,
+      "unitCents": 46500
+    },
+    {
+      "cents": 31500,
+      "id": "INV-1026",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 17,
+      "unitCents": 31500
+    },
+    {
+      "cents": 23015,
+      "id": "INV-1027",
+      "item": "filters",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 18,
+      "unitCents": 23015
+    },
+    {
+      "cents": 545000,
+      "id": "INV-1032",
+      "item": "tire_replacement",
+      "poId": "PO-1024",
+      "qty": 10,
+      "receivedDay": 19,
+      "unitCents": 54500
+    },
+    {
+      "cents": 218000,
+      "id": "INV-1035",
+      "item": "tire_replacement",
+      "poId": "PO-1010",
+      "qty": 4,
+      "receivedDay": 20,
+      "unitCents": 54500
+    },
+    {
+      "cents": 222500,
+      "id": "INV-1057",
+      "item": "tire_replacement",
+      "poId": "PO-1010",
+      "qty": 4,
+      "receivedDay": 33,
+      "unitCents": 54500
+    },
+    {
+      "cents": 109000,
+      "id": "INV-1061",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 35,
+      "unitCents": 54500
+    },
+    {
+      "cents": 48950,
+      "id": "INV-1067",
+      "item": "dpf_clean",
+      "poId": "PO-1006",
+      "qty": 1,
+      "receivedDay": 38,
+      "unitCents": 46500
+    },
+    {
+      "cents": 31500,
+      "id": "INV-1072",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 40,
+      "unitCents": 31500
+    },
+    {
+      "cents": 46500,
+      "id": "INV-1073",
+      "item": "dpf_clean",
+      "poId": "PO-1006",
+      "qty": 1,
+      "receivedDay": 40,
+      "unitCents": 46500
+    },
+    {
+      "cents": 145100,
+      "id": "INV-1078",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 44,
+      "unitCents": 70675
+    },
+    {
+      "cents": 28655,
+      "id": "INV-1087",
+      "item": "coolant",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 49,
+      "unitCents": 28655
+    },
+    {
+      "cents": 4282,
+      "id": "INV-1089",
+      "item": "coolant",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 50,
+      "unitCents": 4282
+    },
+    {
+      "cents": 17739,
+      "id": "INV-1097",
+      "item": "wiper_blades",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 52,
+      "unitCents": 17739
+    },
+    {
+      "cents": 46500,
+      "id": "INV-1108",
+      "item": "dpf_clean",
+      "poId": "PO-1006",
+      "qty": 1,
+      "receivedDay": 59,
+      "unitCents": 46500
+    },
+    {
+      "cents": 218000,
+      "id": "INV-1110",
+      "item": "tire_replacement",
+      "poId": "PO-1010",
+      "qty": 4,
+      "receivedDay": 60,
+      "unitCents": 54500
+    },
+    {
+      "cents": 46500,
+      "id": "INV-1111",
+      "item": "dpf_clean",
+      "poId": "PO-1006",
+      "qty": 1,
+      "receivedDay": 60,
+      "unitCents": 46500
+    },
+    {
+      "cents": 110250,
+      "id": "INV-1112",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 61,
+      "unitCents": 54500
+    },
+    {
+      "cents": 222625,
+      "id": "INV-1114",
+      "item": "tire_replacement",
+      "poId": "PO-1010",
+      "qty": 4,
+      "receivedDay": 62,
+      "unitCents": 54500
+    },
+    {
+      "cents": 31500,
+      "id": "INV-1120",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 65,
+      "unitCents": 31500
+    },
+    {
+      "cents": 49000,
+      "id": "INV-1121",
+      "item": "alignment",
+      "poId": "PO-1028",
+      "qty": 2,
+      "receivedDay": 65,
+      "unitCents": 24500
+    },
+    {
+      "cents": 221125,
+      "id": "INV-1129",
+      "item": "tire_replacement",
+      "poId": "PO-1010",
+      "qty": 4,
+      "receivedDay": 71,
+      "unitCents": 54500
+    },
+    {
+      "cents": 37875,
+      "id": "INV-1130",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 71,
+      "unitCents": 37875
+    },
+    {
+      "cents": 112125,
+      "id": "INV-1133",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 73,
+      "unitCents": 54500
+    },
+    {
+      "cents": 31500,
+      "id": "INV-1135",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 74,
+      "unitCents": 31500
+    },
+    {
+      "cents": 222625,
+      "id": "INV-1140",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 4,
+      "receivedDay": 76,
+      "unitCents": 54500
+    },
+    {
+      "cents": 218000,
+      "id": "INV-1141",
+      "item": "tire_replacement",
+      "poId": "PO-1010",
+      "qty": 4,
+      "receivedDay": 77,
+      "unitCents": 54500
+    },
+    {
+      "cents": 31500,
+      "id": "INV-1142",
+      "item": "oil_service",
+      "poId": "PO-1019",
+      "qty": 1,
+      "receivedDay": 77,
+      "unitCents": 31500
+    },
+    {
+      "cents": 26873,
+      "id": "INV-1143",
+      "item": "shop_supplies",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 77,
+      "unitCents": 26873
+    },
+    {
+      "cents": 109000,
+      "id": "INV-1145",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 78,
+      "unitCents": 54500
+    },
+    {
+      "cents": 46500,
+      "id": "INV-1150",
+      "item": "dpf_clean",
+      "poId": "PO-1006",
+      "qty": 1,
+      "receivedDay": 79,
+      "unitCents": 46500
+    },
+    {
+      "cents": 112750,
+      "id": "INV-1154",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 81,
+      "unitCents": 54500
+    },
+    {
+      "cents": 109000,
+      "id": "INV-1166",
+      "item": "tire_replacement",
+      "poId": "PO-1018",
+      "qty": 2,
+      "receivedDay": 86,
+      "unitCents": 54500
+    }
+  ],
+  "invoice": {
+    "cents": 46500,
+    "docRef": "evidence/invoices/INV-1168.txt",
+    "id": "INV-1168",
+    "item": "dpf_clean",
+    "poId": "PO-1006",
+    "qty": 1,
+    "receivedDay": 87,
+    "unitCents": 46500,
+    "vendorId": 1
+  },
+  "kind": "invoice",
+  "purchaseOrder": {
+    "id": "PO-1006",
+    "issuedDay": 2,
+    "item": "dpf_clean",
+    "qty": 1,
+    "receivedQty": 1,
+    "truckId": 16,
+    "unitCents": 46500,
+    "vendorId": 1
+  },
+  "vendor": {
+    "bankChangedDay": 18,
+    "bankLast4": "4471",
+    "id": 1,
+    "name": "Alamo Fleet Service"
+  }
+}

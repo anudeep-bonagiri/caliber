@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.013678,
+  "durationMs": 2567,
+  "httpStatus": 200,
+  "id": "2284",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 33's ping at 19:50:00Z, 7 seconds before the purchase, is at the Temple station (well under 25 miles). The 42.5 gallons is under the 110-gallon limit (100-gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsQYKEAgTGAI4AUIIdGhpbmtpbmcSDJ1QVo4xVR+pteIUHxoMVAcY0TDR6sCzacVIIjA7UXhM22CAhvj3ZDZjguckgNKEgqTvECP7RswsLnb4CjM66rOV72Dy+LMmEeGeKUgqzgWECk9SwZTa2kYGlcWfvhAT+zTsyf9lClqKqFPmJSOSovX16UrjbSqZnAKsreRvpKIFIMy+SP8gvgIB8gna8f2qxXxrpiEJlnaVIAjkUNkk0J3a3qw1Ic8YmNv+6M+GFsMjYbXmMAJ0LVdP6y6Vo5dQDGGXB7mujyUFPzCWKMHoRMAmwnU0fbAFyP24oSMXIH4Jjt0rZ/hpKEtcTF7Q7vh1smYUZA4Rq8vG2du58jxe6LeuQrIysltnDWIQL8Kcwmx212PrPL5ie1PGtIQCP/j7nKO2+RFLsMY1FWABtr1qPQNFAFSAhNMexSw12+TWRwV3R9P+d2l+81jYFDZ+61OGq6KWeDZ2/jQaQomQvTpSziBixDMO36ZwJwWXLfas7mPQJpNluri4a7iVMXZBLAHSNg7bw+12NYpdGiH0HaOCflMJOLfkioy+UbyE70adeq2fCuhCWPRHi7MKAxuLbXb0jyoIHFGkMZg+Hx6xaasMvhEDGznI1psnU9WsPvuNIH/ttyPcC3XmHx/SZTzDHWdZxYkavhsIpUxakGCQJGgC+iVBmIcpBMCN/ccascV5ibBawr0tjx9s3gyPLraMYhjxVZZ4XLigWpKlbIE+ADWHCoHRGlJmIlJLwwbZ833xOAITZtlbUsbL1S6WfC2fLqu+Z9PrtoV2QKk+ZKC+OF0/vSEkTNvtfcMu9BX2Z0fnWMU/OqTPCxOlLkILK7eHTnBGiY2TjwV/t09bNcpK0MqXxt9tVrSAkWv5H6vyc9bqMjrG0Dw++ZvRuiW8iX17seY7A8ago7XOdapQ6ush4WFLurDw0JfETGrzqNUPNsYnARLDYLP9hn96Twt9fyIx88wIIe7SwBCb9uX7y8UfR8trr6n5MdJabsaUJbBjMcN2RqQ7vCiDYgB5NLRSvVMzz6wcgYUAdI0ELAd513Yi3YsYSQcq/2nuwe7fONW8clyIGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33's ping at 19:50:00Z, 7 seconds before the purchase, is at the Temple station (well under 25 miles). The 42.5 gallons is under the 110-gallon limit (100-gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyzM8nLAwTg3PSzGFS",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5764,
+      "output_tokens": 215,
+      "output_tokens_details": {
+        "thinking_tokens": 119
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:20+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 33's ping at 19:50:00Z, 7 seconds before the purchase, is at the Temple station (well under 25 miles). The 42.5 gallons is under the 110-gallon limit (100-gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5764,
+    "output_tokens": 215,
+    "output_tokens_details": {
+      "thinking_tokens": 119
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

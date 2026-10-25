@@ -1,0 +1,51 @@
+{
+  "contractValidOnReceiptDay": null,
+  "earlierInvoicesSameVendor": [
+    {
+      "cents": 160850,
+      "id": "INV-1005",
+      "item": "tire_replacement",
+      "poId": "PO-1008",
+      "qty": 3,
+      "receivedDay": 5,
+      "unitCents": 53200
+    },
+    {
+      "cents": 21807,
+      "id": "INV-1006",
+      "item": "filters",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 5,
+      "unitCents": 21807
+    },
+    {
+      "cents": 12104,
+      "id": "INV-1009",
+      "item": "wiper_blades",
+      "poId": null,
+      "qty": 1,
+      "receivedDay": 7,
+      "unitCents": 12104
+    }
+  ],
+  "invoice": {
+    "cents": 17701,
+    "docRef": "evidence/invoices/INV-1014.txt",
+    "id": "INV-1014",
+    "item": "def_fluid",
+    "poId": null,
+    "qty": 1,
+    "receivedDay": 9,
+    "unitCents": 17701,
+    "vendorId": 4
+  },
+  "kind": "invoice",
+  "purchaseOrder": null,
+  "vendor": {
+    "bankChangedDay": 0,
+    "bankLast4": "1156",
+    "id": 4,
+    "name": "Metroplex Truck Center"
+  }
+}

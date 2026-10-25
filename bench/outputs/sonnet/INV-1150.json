@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012336,
+  "durationMs": 3695,
+  "httpStatus": 200,
+  "id": "INV-1150",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No hold rule applies. The unit price of 46,500 matches the contract rate. Billed quantity 1 equals received quantity 1. The only earlier 46,500 invoices inside the 30-day window (INV-1108 and INV-1111) cite the same PO-1006, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change was on day 18, so vendor_bank_change does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS2QkKEAgTGAI4AUIIdGhpbmtpbmcSDFNVaHXwpdwoIw2pXBoMyAu2v/Ci0OAQwScJIjB4qJIlno4GpdCfUi+ZMLvxD0PwXSVUgAOnvXH8vf5rIMNXFoBPMAV1CC1jbiyyNvEq9ghlyWOfuNS2WrPILtV/F4wyIJCN+Wt/EgIZtn3LmIik+fj/T5rimKHzSyX84NtcbrWmW4HEQ/l+gnect2Q6a+PIhSfP9RVEzQ6BcTebUqW4BoGPb0E+0nvHnJSa0yy6WN0abZm9cl3GxoUhid/A1ouuwsllTbnyLtbQnTC2d9zaSrN+ptOFI1P9E7GPLayYHCnYpaxfS936sD8/7X5D5KPXt6O7aVbBmI4PqixM0v3/02bTqUpdKBwnroOuLZ3LO+7TekEOrozjVdMZkQcJobZq1vHtKkEngrD46snWAQApf2dvzrvhDY6GMvQIW9xQKkhgBp2KLZVsjqt+6qCQB2mDPwOkzaZ2Y9ScbzX5Xxj3Ql9Tgx1ll5YqxEkC5kOOfbM9w1BzGWGvF6OT+RUIZlOrB+0LV14HxEjjnM2Us7gBlY1KV8iNNUClxiNB8BoALsT2u6iP/NWEE9fHFLp+B1cy7v+H36HI+zNrHU0WAzSiaWsx9LYY7SrAhM/8gEnM9EX1lVOvPViQC98uPy2F37VyEIJHAlymGaeyTAEdNjZMiS6aZCvDZMcQYZ0wPdZPy6N8hEOxnlGU4Lum/ZHcwUDIE4zeEvc/VXb1QzbnopE4l/t8BpTIn0UdIcjNm2W3Nw77gAxZFYU1PRpjgH7o6ibrAC7RaNywWduHsUpcPsNrR5DBj1Kbjy18xRVT1WZXsvM43faxKXja4atghMGGgqA59d+D0GmN3JlWXet7IM5PDaJdseiU76ijyaxkDs54lrXJx7qnkTqhD++LXc2IBlNUSJ6QRY6HMAK7LtaM6087g9yAfgQrZEmrAhtThh9Zo7DUl00d0/qV0SQuFg3jcQL20oNrHiM7xyfTmPKkssHeX389md+iXmbk/MEhGR4Rcg9DGwf/syqmuqPAFaURWdioSejTON8anhTWmVaHGn00+Opg7wdcqV4kymN327HkDFOvkLjXWMHm0IKYMOat4LUZU9S1wELRGA6WjaBRWQyHJGC4rxmfYmASRO/Zq2q+OFfXRX/pYuexYxL+wR8AIqpRPCqae7CZj1G/pgs91kK4hELiuqRQxK+E/R16J/YAF5oYr/oFtEq5c2oZ93J23baZ/dH8ARCmQINkqrPdwFFOhhGyaGY8tPTobQQpWvO1BeRww9j8+EB7n6VfQQn88pcIQhaN6DJTi7glF+ZvD5MtjTl1RfnlC42zN3PTeh+w3f/JtJN6WEEk+fF8AwQZhzDzauoiHFoWjGcCjcmSLs8f2c9gjwExlo9Lp0c7LlEeuPmYUdDTjWi5A21rPVJHxSmPldEfkfeLpdHdXUPILh5F1dvTjqqCyxRL/eC8bSjY2Z6xJE/GkT9IIbJC84XRhddoR2hgyoDoeC1xf7g0pZHJw01Bbmzf67+P4/+a8f5rjVAE3YW1jrKVV6RCHlJNoW2sprvn4WMc+3IdgW7SFzRlKqtFBqwquPM2MBxRTod0BLMPTvekzFqjzFSM3CB45X959nYV42R9uxFKqtaFYGzZIMzAfMyVcxgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. The unit price of 46,500 matches the contract rate. Billed quantity 1 equals received quantity 1. The only earlier 46,500 invoices inside the 30-day window (INV-1108 and INV-1111) cite the same PO-1006, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change was on day 18, so vendor_bank_change does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshxLth1Cpz1xnWKsmi",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4013,
+      "output_tokens": 431,
+      "output_tokens_details": {
+        "thinking_tokens": 277
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No hold rule applies. The unit price of 46,500 matches the contract rate. Billed quantity 1 equals received quantity 1. The only earlier 46,500 invoices inside the 30-day window (INV-1108 and INV-1111) cite the same PO-1006, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change was on day 18, so vendor_bank_change does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4013,
+    "output_tokens": 431,
+    "output_tokens_details": {
+      "thinking_tokens": 277
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014844,
+  "durationMs": 3100,
+  "httpStatus": 200,
+  "id": "T2416",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1023 at NTTA-DNT-01 within 10 minutes; the toll one minute earlier (T2415) was at a different plaza (PGBT), and the last DNT charge was on day 61."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The toll in question is T2416 at NTTA-DNT-01 (Dallas North Tollway) at 13:19:23Z on day 64. The duplicate rule applies only to an earlier charge at the same plaza within 10 minutes.\n\nThe most recent earlier toll is T2415 at 13:18:19Z, about a minute earlier. It was at NTTA-PGBT-01, a different plaza, so it doesn't trigger the rule.\n\nThe most recent earlier charge at NTTA-DNT-01 is T2337 on day 61, which is far outside the 10-minute window.\n\nNo same-plaza toll falls within 10 minutes, so the charge clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1023 at NTTA-DNT-01 within 10 minutes; the toll one minute earlier (T2415) was at a different plaza (PGBT), and the last DNT charge was on day 61.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsg2rSqiAsK8Qsgj4Zo",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5887,
+      "output_tokens": 307,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:16+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The toll in question is T2416 at NTTA-DNT-01 (Dallas North Tollway) at 13:19:23Z on day 64. The duplicate rule applies only to an earlier charge at the same plaza within 10 minutes.\n\nThe most recent earlier toll is T2415 at 13:18:19Z, about a minute earlier. It was at NTTA-PGBT-01, a different plaza, so it doesn't trigger the rule.\n\nThe most recent earlier charge at NTTA-DNT-01 is T2337 on day 61, which is far outside the 10-minute window.\n\nNo same-plaza toll falls within 10 minutes, so the charge clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1023 at NTTA-DNT-01 within 10 minutes; the toll one minute earlier (T2415) was at a different plaza (PGBT), and the last DNT charge was on day 61.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5887,
+    "output_tokens": 307,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

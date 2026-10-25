@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 12680,
+  "httpStatus": 200,
+  "id": "T2289",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T2289 at NTTA-MCLB-01 is within 10 minutes of earlier toll T1840 at the same plaza on day 38, but checking day 59: T2289 is at 15:38:29. The previous toll at NTTA-MCLB-01 was T1840 on day 38 (too far). Wait, let's re-read carefully. Duplicate toll rule: 'same plate at the same plaza within 10 minutes of an earlier toll charge'. I need to check if there is ANY earlier toll for plate TX-1017 at plaza NTTA-MCLB-01 within 10 minutes of 2026-09-21T15:38:29Z. Looking at the list: T1840 is on day 38. T1470 is on day 22. T16... no other NTTA-MCLB-01 entries close in time. Let me re-read the definition. 'within 10 minutes of an earlier toll charge'. This usually implies temporal proximity. Is there a closer one? No. Wait, did I miss one? Let's look at day 59. Only T2284 and T2289 are on day 59. T2284 is SH45SE-01. T2289 is NTTA-MCLB-01. They are different plazas. So no duplicate on day 59. What about day 38? T1839 and T1840. T1840 is NTTA-MCLB-01. T1839 is NTTA-DNT-01. Different plazas. What about day 22? T1470 (NTTA-MCLB-01), T1482 (SH45N), T1485 (SH130), T1488 (SH45SE). T1470 is alone at that plaza. What about day 48? T2033 (NTTA-DNT), T2042 (SH130). No NTTA-MCLB. It seems there are NO duplicates based on strict 10-minute window at the SAME plaza. However, often these problems have a trick. Let me re-read the timestamps. T2289 is 15:38:29. Is there another toll at NTTA-MCLB-01? T1840 is 13:04:59 on day 38. That's weeks ago. T1470 is 11:44:41 on day 22. Weeks ago. T16... none. T20... none. T18... none. T14... none. T11... none. T12... none. T13... none. T15... none. T17... none. T19... none. T21... none. T22... only T2284 and T2289. T2284 is SH45SE. So strictly speaking, it is NOT a duplicate toll by the 10-minute rule. But wait, is there a rate variance or something else? No, it's a toll. Tolls don't have unit prices or contracts. They just have cents. The only hold code for tolls is duplicate_toll. If it's not a duplicate, it should be clear. BUT, looking closely at T1840 and T2289. Both are 625 cents. Same plaza. But days are 38 and 59. Not within 10 minutes. Let me check if I missed a toll. Ah, look at T1840 again. Day 38. Look at T2289. Day 59. Is it possible the question implies a different logic? Or did I miss a toll entry? Let's scan all `plazaId` == `NTTA-MCLB-01`. T1470 (Day 22), T1840 (Day 38), T2289 (Day 59). None are within 10 minutes of each other. Therefore, no duplicate. Decision: Clear.\n\nWait, let me double check the \"duplicate_toll\" definition again. \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\" Yes. Since no such charge exists, it is not a duplicate.\n\nHowever, sometimes \"within 10 minutes\" might refer to the *transaction* being processed against a log where multiple charges happened. But here, the logs show distinct days.\n\nLet me check if there is any other reason to hold.\n- location_mismatch: N/A (not fuel)\n- capacity_exceeded: N/A (not fuel)\n- duplicate_invoice: N/A (not invoice)\n- rate_variance: N/A (not invoice)\n- short_received: N/A (not invoice)\n- vendor_bank_change: N/A (not invoice)\n\nSo it must be clear.\n\nOne final check: Did I misread a timestamp?\nT1840: 2026-08-21T13:04:59Z\nT2289: 2026-09-21T15:38:29Z\nDifference is ~1 month. Definitely not 10 minutes.\n\nIs there any other toll at NTTA-MCLB-01?\nT1470: 2026-07-30T11:44:41Z\nT1840: 2026-08-21T13:04:59Z\nT2289: 2026-09-21T15:38:29Z\n\nNone are close.\n\nTherefore, the decision is clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found within 10 minutes at the same plaza\"}\n```",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792886424,
+    "id": "chatcmpl-ed8c682d-89e0-4bc2-8b44-0721d9ddcd8f",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1376,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3483,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2144,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4859
+    }
+  },
+  "startedAt": "2026-10-25T00:00:16+00:00",
+  "status": "unparsed",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_toll\",\n \"reason\": \"Toll T2289 at NTTA-MCLB-01 is within 10 minutes of earlier toll T1840 at the same plaza on day 38, but checking day 59: T2289 is at 15:38:29. The previous toll at NTTA-MCLB-01 was T1840 on day 38 (too far). Wait, let's re-read carefully. Duplicate toll rule: 'same plate at the same plaza within 10 minutes of an earlier toll charge'. I need to check if there is ANY earlier toll for plate TX-1017 at plaza NTTA-MCLB-01 within 10 minutes of 2026-09-21T15:38:29Z. Looking at the list: T1840 is on day 38. T1470 is on day 22. T16... no other NTTA-MCLB-01 entries close in time. Let me re-read the definition. 'within 10 minutes of an earlier toll charge'. This usually implies temporal proximity. Is there a closer one? No. Wait, did I miss one? Let's look at day 59. Only T2284 and T2289 are on day 59. T2284 is SH45SE-01. T2289 is NTTA-MCLB-01. They are different plazas. So no duplicate on day 59. What about day 38? T1839 and T1840. T1840 is NTTA-MCLB-01. T1839 is NTTA-DNT-01. Different plazas. What about day 22? T1470 (NTTA-MCLB-01), T1482 (SH45N), T1485 (SH130), T1488 (SH45SE). T1470 is alone at that plaza. What about day 48? T2033 (NTTA-DNT), T2042 (SH130). No NTTA-MCLB. It seems there are NO duplicates based on strict 10-minute window at the SAME plaza. However, often these problems have a trick. Let me re-read the timestamps. T2289 is 15:38:29. Is there another toll at NTTA-MCLB-01? T1840 is 13:04:59 on day 38. That's weeks ago. T1470 is 11:44:41 on day 22. Weeks ago. T16... none. T20... none. T18... none. T14... none. T11... none. T12... none. T13... none. T15... none. T17... none. T19... none. T21... none. T22... only T2284 and T2289. T2284 is SH45SE. So strictly speaking, it is NOT a duplicate toll by the 10-minute rule. But wait, is there a rate variance or something else? No, it's a toll. Tolls don't have unit prices or contracts. They just have cents. The only hold code for tolls is duplicate_toll. If it's not a duplicate, it should be clear. BUT, looking closely at T1840 and T2289. Both are 625 cents. Same plaza. But days are 38 and 59. Not within 10 minutes. Let me check if I missed a toll. Ah, look at T1840 again. Day 38. Look at T2289. Day 59. Is it possible the question implies a different logic? Or did I miss a toll entry? Let's scan all `plazaId` == `NTTA-MCLB-01`. T1470 (Day 22), T1840 (Day 38), T2289 (Day 59). None are within 10 minutes of each other. Therefore, no duplicate. Decision: Clear.\n\nWait, let me double check the \"duplicate_toll\" definition again. \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\" Yes. Since no such charge exists, it is not a duplicate.\n\nHowever, sometimes \"within 10 minutes\" might refer to the *transaction* being processed against a log where multiple charges happened. But here, the logs show distinct days.\n\nLet me check if there is any other reason to hold.\n- location_mismatch: N/A (not fuel)\n- capacity_exceeded: N/A (not fuel)\n- duplicate_invoice: N/A (not invoice)\n- rate_variance: N/A (not invoice)\n- short_received: N/A (not invoice)\n- vendor_bank_change: N/A (not invoice)\n\nSo it must be clear.\n\nOne final check: Did I misread a timestamp?\nT1840: 2026-08-21T13:04:59Z\nT2289: 2026-09-21T15:38:29Z\nDifference is ~1 month. Definitely not 10 minutes.\n\nIs there any other toll at NTTA-MCLB-01?\nT1470: 2026-07-30T11:44:41Z\nT1840: 2026-08-21T13:04:59Z\nT2289: 2026-09-21T15:38:29Z\n\nNone are close.\n\nTherefore, the decision is clear.\n\n```json\n{\"decision\": \"clear\", \"reason\": \"No duplicate toll found within 10 minutes at the same plaza\"}\n```",
+  "usage": {
+    "completion_tokens": 1376,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3483,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2144,
+      "created_cache_tokens": 0,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4859
+  }
+}

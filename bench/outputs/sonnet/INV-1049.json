@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.007744,
+  "durationMs": 3523,
+  "httpStatus": 200,
+  "id": "INV-1049",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1049 (67,800 cents) matches no earlier invoice amount from this vendor (the 67,925 invoices differ), the unit price equals the 33,900 contract rate, the billed quantity of 2 equals the PO received quantity, and the vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSkQgKEAgTGAI4AUIIdGhpbmtpbmcSDNPIJfI10+gPJoM9URoMSZYffsT8qlTL7VIvIjCGxDBqlQDykJ7HUWHx69XJXeZ68g1I770A1HePRfMoJVcCeNd9iItJvqk2OZuT0HcqrgcDt4WH/BfBL3mHZYsQ+WHQO5mKj35z+GEU2sNTqE2BmOo05OLW0XZLAX2A3wM6ziXrIfWOhBRkmwB52j+zDtqDktt99+/do441vphYTYSB/rfWFYOcJvq/8omcP9d7WgzW/umdJ4YNet1CPpWHIu2QK7UQPQ1NBKsZ0skyadswsX8GUYf8IRPR/IET8I2K9OpE9eh7ddl9AQnnCt5Pr71A1ogHYpqVEUy5OBWvGH3MXJYxcTfvf22V1PDpnc4M0Wrn3tTBSWoFhnQ0WBsvnAGeUTPUG7jZY1uF/zW1UdUV/annK/3/uyGX79A2FSpUAHOAdYTZWwncMFI/rrkkovdqTCdF7XRGifzXZctCTRQankTbhRwWtkBfqGM4oPanv4n0Pra+ApHG1TY9W5VFLtD7axQsSCs8PZHlbqvNo2JvgslrfJyFGpqAhmUxkSY+5A8dvOWh2KaidgIivcQK9GfxyJAIQJprAxFSJFEfmjWVFpRFAIpeSM2WiET7W34wCFn+HAEXHji5BN5VV7WKjgUHHAa3j80yb5wGukjY9Xg2CszvansJzJdNVPKJ8DPzQnv+CXpUu89AhYA691B3Dj6K7mBy29RZyUD1wiTi5mUXujXFh3+bB7FaFQa67NJUVMV+D2wlNAuVnPohtLmv2nzt8NNOmAtLN82Xf1MPS5XHryKOvTOCywNC6qoRm+L7kUzC6rrKk+snM930Cd8nh0ILxu2lRtW4bH41oYrPpZ0Y8un0zLAe2NyGp1rUGXeDLpupO7t3zwSnkIRSYuxO2ca8PDaoEN5dylpwoTPxsycwMllU0/gYzt4n7rvfbtUe6xrV4yHd4EFzjWxJeQdNowR/hfLp97BUFInptXRDAp+4YbJjNQ2HM6rmh8dr5sLFS1nAzntzjX+ivdffwmp2WFjEaa33+U3vnmUVtn5tGbM8zRdPyZ1hsw7uNAAJFAnPKABE7BeQy24sqblX1Cxr1xODWI7kTEZmu+uIKQmszJdkChTzv78HgEEJNcTxNcxQrA3wLrSAanDiriukJW0XUrAxgJeUAbxtNyGJvTyM1jmz9MPI0gPVE9ZIkABslZBhpp0xmYx19YXlaZD5c5lvZt7+N0+ZxsaxFOKZ3Z3LOG/JjrHSWFLyv+lXRTO/xpup1nUOq0XDBeaa2JLyG3byNiepdrUoc7O8KXtlkvVUBLkuNiGekbSbJ195PBbPmqPzps0Nr2TzW1MOn6FpD2klviImRMjSR9E8b1LRkkCyz2YYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1049 (67,800 cents) matches no earlier invoice amount from this vendor (the 67,925 invoices differ), the unit price equals the 33,900 contract rate, the billed quantity of 2 equals the PO received quantity, and the vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsroCUrhfN2G3SV8AZe",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2317,
+      "output_tokens": 311,
+      "output_tokens_details": {
+        "thinking_tokens": 202
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:42+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1049 (67,800 cents) matches no earlier invoice amount from this vendor (the 67,925 invoices differ), the unit price equals the 33,900 contract rate, the billed quantity of 2 equals the PO received quantity, and the vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2317,
+    "output_tokens": 311,
+    "output_tokens_details": {
+      "thinking_tokens": 202
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

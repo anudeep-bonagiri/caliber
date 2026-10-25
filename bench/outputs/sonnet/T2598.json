@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01188,
+  "durationMs": 2288,
+  "httpStatus": 200,
+  "id": "T2598",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "Toll T2598 at SH 71 Toll Lane (plate TX-1040) came 8 min 4 s after T2597 at the same plaza, within the 10-minute window, so the later charge is a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is T2598 at SH 71 Toll Lane, plate TX-1040, at 20:37:50Z on 2026-10-06.\n\nThe most recent earlier charge at the same plaza is T2597 at 20:29:46Z the same day. The gap is 8 minutes 4 seconds, which is inside the 10-minute window, so T2598 is the duplicate.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"Toll T2598 at SH 71 Toll Lane (plate TX-1040) came 8 min 4 s after T2597 at the same plaza, within the 10-minute window, so the later charge is a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt4cKiVm87gViDXYn8e",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4835,
+      "output_tokens": 221,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:22+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is T2598 at SH 71 Toll Lane, plate TX-1040, at 20:37:50Z on 2026-10-06.\n\nThe most recent earlier charge at the same plaza is T2597 at 20:29:46Z the same day. The gap is 8 minutes 4 seconds, which is inside the 10-minute window, so T2598 is the duplicate.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"Toll T2598 at SH 71 Toll Lane (plate TX-1040) came 8 min 4 s after T2597 at the same plaza, within the 10-minute window, so the later charge is a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4835,
+    "output_tokens": 221,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

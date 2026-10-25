@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.025872,
+  "durationMs": 2767,
+  "httpStatus": 200,
+  "id": "T2956",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "duplicate_toll",
+    "decision": "hold",
+    "reason": "T2956 is a charge for plate TX-1014 at Mountain Creek Lake Bridge 6m42s after T2955 at the same plaza (under 10 minutes), so the later charge is a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2956 at 2026-10-26T18:23:55Z, plaza NTTA-MCLB-01, plate TX-1014.\n\nThe most recent earlier charge at that plaza is T2955 at 2026-10-26T18:17:13Z. The gap is 18:23:55 \u2212 18:17:13 = 6 minutes 42 seconds, which is under 10 minutes. Same plate, same plaza, so T2956 is the duplicate and is held.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"T2956 is a charge for plate TX-1014 at Mountain Creek Lake Bridge 6m42s after T2955 at the same plaza (under 10 minutes), so the later charge is a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsoKPZdyzynQMBfeuUy",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 11671,
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:55+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2956 at 2026-10-26T18:23:55Z, plaza NTTA-MCLB-01, plate TX-1014.\n\nThe most recent earlier charge at that plaza is T2955 at 2026-10-26T18:17:13Z. The gap is 18:23:55 \u2212 18:17:13 = 6 minutes 42 seconds, which is under 10 minutes. Same plate, same plaza, so T2956 is the duplicate and is held.\n\n{\"decision\":\"hold\",\"code\":\"duplicate_toll\",\"reason\":\"T2956 is a charge for plate TX-1014 at Mountain Creek Lake Bridge 6m42s after T2955 at the same plaza (under 10 minutes), so the later charge is a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 11671,
+    "output_tokens": 253,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.014084,
+  "durationMs": 3246,
+  "httpStatus": 200,
+  "id": "3604",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 11 pinged at the Waxahachie station (within ~0.1 mi) 2 minutes before the purchase; 36.7 gal is under the 110 gal limit (100 gal tank + 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Purchase at 19:46:45Z at Pilot 283 (32.3865, -96.8483). The nearest pings are 19:45:00Z at (32.38645, -96.84811), about 1.7 minutes before, and 19:40:08Z at (32.38634, -96.84801). Both are within a few hundredths of a mile of the station, well inside 25 miles.\n\nCapacity: 36.7 gallons against a limit of 110 (100 gal tank plus 10%), so it is within capacity.\n\nThe card is assigned to truck 11, and the driver ID is not part of any policy rule. No other rule applies to a card purchase.\n\n```json\n{\"decision\":\"clear\",\"reason\":\"Truck 11 pinged at the Waxahachie station (within ~0.1 mi) 2 minutes before the purchase; 36.7 gal is under the 110 gal limit (100 gal tank + 10%).\"}\n```",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspopd63Snm82fBpzTu",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5547,
+      "output_tokens": 299,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Purchase at 19:46:45Z at Pilot 283 (32.3865, -96.8483). The nearest pings are 19:45:00Z at (32.38645, -96.84811), about 1.7 minutes before, and 19:40:08Z at (32.38634, -96.84801). Both are within a few hundredths of a mile of the station, well inside 25 miles.\n\nCapacity: 36.7 gallons against a limit of 110 (100 gal tank plus 10%), so it is within capacity.\n\nThe card is assigned to truck 11, and the driver ID is not part of any policy rule. No other rule applies to a card purchase.\n\n```json\n{\"decision\":\"clear\",\"reason\":\"Truck 11 pinged at the Waxahachie station (within ~0.1 mi) 2 minutes before the purchase; 36.7 gal is under the 110 gal limit (100 gal tank + 10%).\"}\n```",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5547,
+    "output_tokens": 299,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

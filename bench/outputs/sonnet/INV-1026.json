@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006626,
+  "durationMs": 3469,
+  "httpStatus": 200,
+  "id": "INV-1026",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1026 is $315.00 at the contract rate of $315.00, and its quantity of 1 matches the PO's received quantity of 1. No earlier invoice from this vendor has the same amount ($339.50 and $477.50). It is far below the $5,000 bank-change threshold, and the bank change on day 18 came after receipt on day 17. No hold rule applies."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS4QgKEAgTGAI4AUIIdGhpbmtpbmcSDLHJqyUimTdDVCF2uRoMMbZpDhGf5C17gWI3IjCdkx0iDwni3t4/QmD5ZZdSlvjlniWungU9++KybK6HqBQ/8/CtOOEvpsqlmi/mzGoq/gcy54RTktV7wy3YXLVs5//zto68a3++ahL5b/pJ4od1BSEzwo8FpqbLbgdaFZgrtcf2GKOL/g2xujI5bEYCTRleltVl3ty6+MWlLjKdUuR8R4U+3RQCQUyir8eBaN9oPpvvvxzTjtYlY/uhVnhzKxg6eanHSIC6kp/HQHCdAh1krTt+SxPSzw7EYuorHlJsEszul2TyJaRFRqwLi8O1XUONsLOPTCacQUSKl0dBeuu5WvFFOZJphOq6I2WTxgsRy8/3FPI1TRFS7BeZSIYCQ5y6hNhtmFSlzvHVuhMiom4F635HwyGnKbIjxnmxCALu6lUrBdUGEWw9AtG8EOqmv3tJpjZ0SPw2L3q3CMLb2kPS9bcBtsQTyug0LzhDuG/NRJrahFjV7Mb+BbNfqhdYJfvqTc4a+zkSo3HXnLqTIrvA6E0wB1+/24TYhQckRTO622vA+kyEr24bQeTIg5wfTf7P19PULcemUdqnry/jQdOACPwXHihmKyV5bSN/Qm0I7l91OKb2wbDWJvbxxVWQJgiLufMU4MaA85IDQ0d9hKomayfPUKXU5LxMWFyWzULxA/Vm2Llns6lMCxOeR8UqR+MbQ90L6jCknZRPxSrXzTCmw4bvWpoNqOvA4lnDp6HRShOlMNyXAgPaF8RY2TfRjqv12DM5GLZefp8NBSu2HQ3tl9RHTSA495WHjya75hMK3aXMDAvib3jXGSfcvqACL/zHJf2jIBuiCtZVK3KbPmPuLM253azoba8BppFraZILvlV0PL7BUuvD7i7NL36QUQlccS9RClvt41y+ZtoaE64dCXIixQGY/2zNO/iVeeJGReNqxrO+LVz2d6BCbjff9euNLP/3eRqk6MdNyGiomKWGLgw07AjaKliYmS7sL+RFGlClnKmHMVs4d43V1x0MPDw8BfAn5+7dZDQ+OPO8AkAa0jAgoSF93UFpluz+jROJRmwcJOny0AIyderQdo9MPRCD0jJxp3gi1Oyx6BALnivcfNirhK17eE/YMuwc2WntLYGSghX50FNKwpXYDke9d2VtZA5dm8S/OZM6bGR2/RMErLH2NM5uIhB9QXo5nsCo/j1LJQCU1IgqeRRJPdbFam6+vP3ty5MYD/02iqfyMXTaURPRJvHDkqjJ98/wdydRp2/IXc3REUR9AZhitmOe6sxuiYUbIwDwZxpBnUpyymtz4Y6QRIT4KzAF3JoaDT0AVvbqNx+oIj/RfRzCitdq+9iZtIWvSQfzg4riulVWd1RIi1YPcTBsfMd1qL24TpFLMNMIndvH+10c8+8lnFJv+d11PWWdGZSCBRIAXp6UQm3RT3g5GZpZtg/s44xXlGhmXC42YcycZ9bbmq3+pjqZKBgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1026 is $315.00 at the contract rate of $315.00, and its quantity of 1 matches the PO's received quantity of 1. No earlier invoice from this vendor has the same amount ($339.50 and $477.50). It is far below the $5,000 bank-change threshold, and the bank change on day 18 came after receipt on day 17. No hold rule applies.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6fAAgTzFwoWk1BMKE",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1563,
+      "output_tokens": 350,
+      "output_tokens_details": {
+        "thinking_tokens": 212
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1026 is $315.00 at the contract rate of $315.00, and its quantity of 1 matches the PO's received quantity of 1. No earlier invoice from this vendor has the same amount ($339.50 and $477.50). It is far below the $5,000 bank-change threshold, and the bank change on day 18 came after receipt on day 17. No hold rule applies.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1563,
+    "output_tokens": 350,
+    "output_tokens_details": {
+      "thinking_tokens": 212
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

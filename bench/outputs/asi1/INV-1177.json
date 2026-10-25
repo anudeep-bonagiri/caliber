@@ -1,0 +1,78 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 9163,
+  "httpStatus": 200,
+  "id": "INV-1177",
+  "model": "asi1-mini",
+  "parsed": {
+    "code": "duplicate_invoice",
+    "decision": "hold",
+    "reason": "Invoice INV-1177 for 245000 cents matches an earlier invoice from the same vendor (INV-1058, INV-1076, or INV-1147) received within the previous 30 days under a different purchase order."
+  },
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_invoice\",\n \"reason\": \"Invoice INV-1177 for 245000 cents matches an earlier invoice from the same vendor (INV-1058, INV-1076, or INV-1147) received within the previous 30 days under a different purchase order.\"\n}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792885368,
+    "id": "chatcmpl-ade1d840-5759-4ba0-9625-9d0fc3eb0980",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 85,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 4488,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 2144,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4573
+    }
+  },
+  "startedAt": "2026-10-24T23:42:40+00:00",
+  "status": "ok",
+  "text": "{\n \"decision\": \"hold\",\n \"code\": \"duplicate_invoice\",\n \"reason\": \"Invoice INV-1177 for 245000 cents matches an earlier invoice from the same vendor (INV-1058, INV-1076, or INV-1147) received within the previous 30 days under a different purchase order.\"\n}",
+  "usage": {
+    "completion_tokens": 85,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 4488,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 2144,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4573
+  }
+}

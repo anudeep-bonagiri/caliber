@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011088,
+  "durationMs": 2902,
+  "httpStatus": 200,
+  "id": "6390",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": "capacity_exceeded",
+    "decision": "hold",
+    "reason": "The purchase was 374.8 gallons, which is over the 275-gallon limit (250-gallon tank plus 10%). The truck's 10:55Z ping was at the station, so location is fine."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSwAcKEAgTGAI4AUIIdGhpbmtpbmcSDDHh3Y9Vofh4LnTWjxoMQlbjdi/WqE+LtafqIjCqWfn055xf/LL/rQphxlB3ijyU17xgqCZnF05iCm3lYdviWCMbZEfPfl8hpl6mr0sq3QY0TC6chNs0/u58BU/OqBMNSPZFxGr8dhzHoVCDhjr4pHZkHbd42lfbzPInDqnBhAv2X0dkkHGgDsg/r9f7a0aHu2dHiLzYGUDT8bvpJXrMIMlEh1pvM3rvcM6hdrhAcnlMasjf2BYJrUZhEFbo0rYKraXxGIwE3VowCosHA9YvWR07A7IpAAqhVXw3Dlw0hBj5c3CWC1emrcFaroPBi+/aYIJM0YzwB4hXGzAFLvFKpogk68Rju/J7XGbnJmg/Zzo+ZXSHF5pg2zWHHRVWR0qHBWjAUa+esYsxkA9qQzjcbz8s6NrqyfT5FQ4cZ1QnHksuNBUQzNIXx7nBZphl3/8PWXrYeZJypD1FNzrb8Vom5VxPV0m2GRhvSG6cqfC/ZA2ipLrIKQSXlKc373EbdGeuT4+a9ltOG9fmis8hdUOgDwd6exxWEs8UwBP49dQwQsJOEnTtEWYEPCevTKCerG/surYATVIEtn3FSVEYjAgG0+IGw9wz/+qfXR7QWrQjYt9XifdoXz/4pLCsg1azBEJSTUIYSyNcqSjIAHYoyQAmZo5vrQmgIz8iK4xqDUJIZk57aZiReIhwT2Hx5qp7nGSGAC/cWTahNhus9Nm7MRqUI35Uah0sz8nKWFE9ktDkTzLcX/GUvb3TFKbeWjHwap0NzWUnHdx6ZmfPY4K4yPVxrLm0rLYfSItSab2r53lNNdtr/ce3lpQWcFqpiQ46TCY70fF9ZXj8CW/CZOTThx8rDgKQxmRZz59XjfJBYUF3ney52r0VWxcTSbOCKv1sCD6NBAI+vaWeGKQdXGRws+9LUPowbI/q/4xprEo0Y6HW974upT/cYC+Eeb8VpGo0PlbShsUqu9fqgh++jtx5qLc2zePSBSxat3UPal5cuaogWHl32kjOzLnBFHs3o6gK1zmYCv9XF9bA0/36WM2DI8QUw0j7BsOJU7m2gKLKrmR2HAad1EhXGSJFcbvCjsiXSgHnNldGXZV2/B3XQyIUTo5sLwxHAUOBKWPFY8wqb2MWxnSMYAyqDV3mu8efGKfppGCob9SJ93gJpe6nngVEeVJuV5Zs2xnyrp4G9KquTeBUG2jE3HhV2OgBLpSqYG26KJ5E3OVehesuaoPahFVbMHY+WOvu+pBntQnGrAyeqtwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"The purchase was 374.8 gallons, which is over the 275-gallon limit (250-gallon tank plus 10%). The truck's 10:55Z ping was at the station, so location is fine.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt1gxvhEdotek7MRcde",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4164,
+      "output_tokens": 276,
+      "output_tokens_details": {
+        "thinking_tokens": 185
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:43+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"hold\",\"code\":\"capacity_exceeded\",\"reason\":\"The purchase was 374.8 gallons, which is over the 275-gallon limit (250-gallon tank plus 10%). The truck's 10:55Z ping was at the station, so location is fine.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4164,
+    "output_tokens": 276,
+    "output_tokens_details": {
+      "thinking_tokens": 185
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

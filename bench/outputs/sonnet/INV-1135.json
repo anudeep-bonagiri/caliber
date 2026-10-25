@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.01257,
+  "durationMs": 4951,
+  "httpStatus": 200,
+  "id": "INV-1135",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1135 bills $315.00 at the PO and contract-compliant unit price (contract is $328.00), and qty 1 does not exceed received qty 1. The only earlier $315.00 invoices within 30 days cite the same PO-1019, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change was on day 18, so no vendor_bank_change applies. PO-1019 has been billed repeatedly for a qty-1 order, but no payables policy rule covers that."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSpgsKEAgTGAI4AUIIdGhpbmtpbmcSDEjhAEJUV0tKIa0G0RoMH9ewEz3C3iTY88djIjDPtZkw2coeHwK0tmgb3DPnywvLguB9r3asZe/pJPXJIbHM7UXPJHmTtSfPqQ5931kqwwqV8Nhx0Ep/vtEwCBnXfgruAQ3eIneqUu/aDP+ZYRYLxa8T4CvStG1Xh5A3oPbDTIsAtG6H4ZSeqZOaqiGtNn+0w+tLfw6L6EDG5qmmB+U3FGgpEi/Wp5mX2rIiuw6Hg4WgjtTkYCshAwGMKr9RJLX4SVU09jeF1UwCOvR0NsiLAb5uzpjRZ1Xk53WortuqiQjqR+Vw2IVYywNK8x5eafQM3JfcxU/68PEvydYGId2mmriHjtwfa9IhXNBzlhI5jQuEZ4v9p4kRn3RtLyxEVywuWc4n/60QbegDZTrv/QZ/6ga33CPW1xMH0+l7SZO9INWHCYyDco+uoTzmMHrAqOGE2+xiQ/nQqhd3/HWMZToyOEDaEBgxP5P6/WTHSvBoPfiOSGIWriqpniyNuLOGU0JJZkYMs9LjxSiCrGS6NxFOV+OtFtj0/yzphUPxYP/NqfGVE6Q2tXI9BPWxjDm0ajT1rOGmhUOjR2Ig0azOZlUfsCjdTzZ8LlKOQ5T+rFG1/UabGrTxNvguwvCeLfM7uS7nVgO62sL+H3mYMXnfylMMUFA9m9R1/U4QAFd9g4A7OlDIyyjzjxXv75XlFbesPOMkUmQobVRakHcH/Cubf2t6SDj030KoWqMab8DitNMJEWlY4luxOVPP53rY0srSeMpPtvvhXH48cuP6gd9dMGwinjJSzH8hwzP8zTc53QvLvVTnAv2DRuc8oBapWbyrVDX4DzrB0x03phiCzdghEQoTNVmumppttyfVn29NzTiDCxxNR+Kp+NciNNwWuAD+PGrZE1TEgkerCDIJB3vzEZ471EbSA01xXh03VB9JsyYH1/TXhLQlLSyhsLjB2l+30vektuWvexST9xF4+/o0iv1BZCr2TLwVRKYTt6x7wNVxhNb550iBpKwMWlQ1O1xujvTavrhR5WSLviAq7f7PfyHAzO9RkswZuxj8Ai/8n4OaSibp/RX1pExwyvNtRcvm6/8kVeOIv7nJmsuPEkpvh8XDtc4JXFGtX/+lX38re/3nTwJuwBX2FdscM/3rKRj5y6ooZiXVRNGelhdTPRGfCIpygxxkhwFYNJ9kxVgcZMMvv6QJ+6QT9rvn/IG5+2LhxYMkjVQWlDkIc/r/I3fjseqKnC7Kp3NMUjzDzD+JfeOs05aldlam9KnL18r8nQ2cIlzYlwtB1aCvWGOwp2RNZRYtL5bwpvshpXCwvg9FwqBU5YfSXZ+4s1nt6l56FQV40bRN7W3/uwegrlg8RzdV6qCxq/6MfpNmooB/3EwH92Dp0NkiSuL1P/ZRmpw7KQ45+sWXowvuNgEb5CxbI4ShnbHBW6cOoxEg+dZxWWH8QLDcL4U1fGO4MTeUgZwjTOnUEh4fquITuvjQyb10PXIWod4CWsr/5kGAwAWASKZb3O9es/t40oC4YswVl9aEEhaeCtxxurCY0Aw+BrNc2LbLXe/kvjf2svRKtwJduF2P9oafKHIdMiSiM7mX7mrZu+PeZ0OPsjXT4AoPRQUHbilwQmR0vAKxWxtUbZL/NlgS/onwcdpaoXMOWvSfCiZP6/UB9U84j86FR3sKoxoX02gYBIS9NoxoXpAtdg16Yu4zIqaJc2+UShWfgegJFmEDxuXMGHn6gGrxerM/PvrU524Q5fntl80HGEjIBC4iyQQO5Mvi8tpDNqYaRIVHpYZGH6MJxV6shhwXmnnhr74AY0tbp+qJpoaBi1zsZ4tCN2KXRnmbtcSWWIfyE2MDmaKbXM84rRaSb9AXmSiWS3n3wjULwcqRUyfbea5uzJnVUTB043ZJ6qm2+TwYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1135 bills $315.00 at the PO and contract-compliant unit price (contract is $328.00), and qty 1 does not exceed received qty 1. The only earlier $315.00 invoices within 30 days cite the same PO-1019, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change was on day 18, so no vendor_bank_change applies. PO-1019 has been billed repeatedly for a qty-1 order, but no payables policy rule covers that.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMspw3D71JRSUK2rmjAz",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3500,
+      "output_tokens": 557,
+      "output_tokens_details": {
+        "thinking_tokens": 376
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:17+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1135 bills $315.00 at the PO and contract-compliant unit price (contract is $328.00), and qty 1 does not exceed received qty 1. The only earlier $315.00 invoices within 30 days cite the same PO-1019, so it is not a duplicate_invoice. The amount is under $5,000 and the bank change was on day 18, so no vendor_bank_change applies. PO-1019 has been billed repeatedly for a qty-1 order, but no payables policy rule covers that.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3500,
+    "output_tokens": 557,
+    "output_tokens_details": {
+      "thinking_tokens": 376
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

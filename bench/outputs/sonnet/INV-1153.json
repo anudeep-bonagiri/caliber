@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012928,
+  "durationMs": 3925,
+  "httpStatus": 200,
+  "id": "INV-1153",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1153 matches the contract rate (36,800), bills 1 unit against 1 received, and the only earlier 36,800 invoice in the last 30 days (INV-1149) cites the same PO-1017, so it is not a duplicate_invoice. The amount is under the 500,000-cent threshold, so the recent bank change doesn't trigger a hold."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSgQoKEAgTGAI4AUIIdGhpbmtpbmcSDDf5ZGMb29LNziCfYxoM95Jj/OAv4BgMA4dBIjA8MzIWEOZvTRV45nf7A5lrThz+rtNd92h8EHn1XOwS62vGtTdD43BJTezqEBqIz44qngkyGqW6k0Zo8pVSVzY9f4ekKBCqUu70/dntMa2BFe9RWJfmW6NGF0IdzbrDOINOWf+roEebhNmD0We8eVlvw5f7qlmq5tV5shWjFTqSzt/aIexSLUD8ygHhw8NnvOxIAKMCTf5ceb7hrt6Dh4Yat9U5Q87yPsrYVEXxM6ydI/HIMRr3HJzObQ0mRpN1sZ7XqbG7sbBRYxpMQLkjUjLINZj+xd5XwvzYnuEn1jdUXLlYyuQF4XulX95/BuxVERFTfGALuJyj7Ui/RsMUgLkVttJdaydoT1rggfmhccxlk2t/Kr+LolMF31uQfX2zSEp5t4DV7mVKp7HPYk3KOYUnYuB31/3WHeaHCF1oV5Iu93cGLhl+mkwunONtXPEGvBXqaQaECoUDONd0rOdIL8eLJN05LRakWM75YZ0syOUuzFJxz6EGzEZQ3D/b4B0Ty+vQqHdTSxvwRSPup1lVGiDbrFuHmpjHMUVdHobNhsF9oGf/HhDvzMLUm6CKPqICEBXK5zFZMELGM0CH8gHwhfKnb4htBzQSWBivwn131NcdmJRcXgz3496hpW9JKRKAegfo6Zpgbq6526QiDyk0i79+4zSh5mQwApa/3aS9PX2XlCI0MUjd1xr7ZMq9/SB446iX96cty0HpELIWU0GHweZfXLIkVX2Gb5cQNA9nVcAI9+2LAPZ7V3/CVOS80gLV0uPNqLdojEAm70SZbVx13KKMAp3fN8u/6SC1PsVV/rlDYeRZ/D3kdY47WTOGAbgpmvXsFZr3RUetjZUdGEP6mJuOYDZkESf0ZgSLRehs8J2iC13TwXCe51ESGYc+xAaCK1d4F3gJB8QGLOouLOL/vjDpNX6CKyLgBLIbmMK32mpdLiH1hJz0sAbyh/oxAwSyGQy270/7296tCc2EQmyL3BlyZLUYHvE5a57itYhwCa1TLY1YU5Y0OoSKGHAHWHh/A581tWD7Zsa3cyWFfvaXlDWUOLQ52QNzt6EgN170qdzGPanpocuR2Ajyu+1whh6b8mdeWqcQzRt1WmgPWSYahHGkWfqICldJ0GSJf4cPOdst38dwF57WpjktlVUt06DUVukPCrGaW+n6brfNcg3vp/jcRNviQlzWKJZJYxzYtfqm+0p/zhwKCKBNBLUAvUu7ZmON1686EPsMwgfh9RLjGKpFJiD5lpGey0NyfdcKAZOmCmklbDzp+JHe0A0r9NAB/28YqygPpwdRKpeb4gk2Hm9sULiWFNwURZjmurGyJ/tA4MSFUyzX5srbEjbqv2Vzc1d8I8MIDYoZ4WmJwtHLGeFFT0VxmykvzUSb3mWQaPpqMPBG4zLUXEEXbc7v91Tr8+yvwHDtGnuWVduDtXCkIZY56LEK62KmAGm3X4iGgu92gv68S9lDsxsU8iCa9h60j2Dw4klhOsfMDFRgKcMDjSHZc77lAzzS2EKXprcBW9koy+DTRCHV/o2ZRSU59GuKIzcRlBzYARFI/YD8hJ14IspCIXQ7rJpW+7xUlSyjUxv+Nxv5ZgiVVkMujJqDwiinXI05nCGupXOENp7ObVqOrRSMde78i/0eowRIALXfMZnVCvsYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1153 matches the contract rate (36,800), bills 1 unit against 1 received, and the only earlier 36,800 invoice in the last 30 days (INV-1149) cites the same PO-1017, so it is not a duplicate_invoice. The amount is under the 500,000-cent threshold, so the recent bank change doesn't trigger a hold.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsiQchJWPYoyaq3xk8B",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4309,
+      "output_tokens": 431,
+      "output_tokens_details": {
+        "thinking_tokens": 297
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:48+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1153 matches the contract rate (36,800), bills 1 unit against 1 received, and the only earlier 36,800 invoice in the last 30 days (INV-1149) cites the same PO-1017, so it is not a duplicate_invoice. The amount is under the 500,000-cent threshold, so the recent bank change doesn't trigger a hold.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4309,
+    "output_tokens": 431,
+    "output_tokens_details": {
+      "thinking_tokens": 297
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

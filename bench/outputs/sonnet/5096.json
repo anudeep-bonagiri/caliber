@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010926,
+  "durationMs": 3128,
+  "httpStatus": 200,
+  "id": "5096",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 14 pinged at 12:30:00Z, 93 seconds before the purchase, essentially at the Corsicana station (well under 25 miles). The 50.6 gallons is under the 132-gallon limit (120-gallon tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7QYKEAgTGAI4AUIIdGhpbmtpbmcSDO7xtRocqP4oEA9lRBoMgRo3nL6dOFBSY5xpIjDAAD1UkDhORySkdYpE2U1Xx9Uvvy88mY9xx08CMj/3hjltyJvoI3HCqd+II1OX+u4qigb2J+ggQ36vJjWnsGW5rludedzPbbc5u9PSu/tCiJSfT36QFbAQjNxb+W+N6CvSuSgYzEg2d0PXbHeyYGr3m0h7D0kNde2RUi5diJGb4THB/sRA/eoKjZNif26FLQMqKtafsZ4BWb1sgPBhE+oHV6m7g7qYGWN8oTA2uHYypTniBO0crEOSAbclT/wuvl5N8/ZGJaDgBecYn6m/802N1fyH4AczwI1NowLG+ND6Vpf5oaYXRxPwO404zVHgn3/7F9PU3p3rLgw3BnyDxBXktNbKOqgc6GvXSWCHYFOMhMGgI/ItannyDbVWiwUa4XFtCpFXptjiiXrN9MBEhonvHrgWISi+1leBpP53hFxqY0UnlT1pgzlLnJtun49GU4vWmWytwkkHyfT+qNShip3q1A3p/J5wJWjRyJEhMm6dCc4lw/E/YEfxFPDW22wkltNykRFjW2ePu2BRH3ROr0hqar9l8pjeqvgxTI4QKMAK0tUE49BdVb5IhA+tvO9Hy2HIVRMsRTQA+RQmTzizbbIbgZjmRhIcQxawiP54cPBvnWnKP3NWqeDGwsvFpJhdPsfh/4GNTQ7XDYAxVxp1eBO8qG3UBXlcOKAqlvUNE05ZuRuv9/yUjg79hlgmbe35p1P3tZyGPa+0THZ+xgAdS0w5WFiKLJnnO2MRlrcVX4GoNNP8RNdVABMlnBvx9Ke5YGIU3IPcGeR0aTmcpTvpjNIeNdbWXvG/Hy9100xN06lrh+LtECtEKcEeIVlCEyavXybLGvxBEfs3FSz14mK+KP+VCZvyvmpP/Smu4LvSzNvJ7NeH67UZt6/a0gXHSJ6xkxNpKbREGRu6aUdyarotiSI4wMUV2Q0FHEHjbVGd2xRrgYyHsgAEDZaUaB3knsDXwzlRHr5N4yDInoVVaqjIi6eQstib7gHOK6lr/uXIn3u0bjJzonOYKbMXWdklrYyuxf7OGvWHpua4b7WMmHOPQHb2nJ4OMy0Ogq/t7DUMwUbso2VLT6L+Fdg919A4gM4kMVmP9lP+vdKex0nnpdEQGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged at 12:30:00Z, 93 seconds before the purchase, essentially at the Corsicana station (well under 25 miles). The 50.6 gallons is under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMt6rcVV119oVw1GYjWJ",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 4233,
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "thinking_tokens": 144
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:51:53+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 14 pinged at 12:30:00Z, 93 seconds before the purchase, essentially at the Corsicana station (well under 25 miles). The 50.6 gallons is under the 132-gallon limit (120-gallon tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 4233,
+    "output_tokens": 246,
+    "output_tokens_details": {
+      "thinking_tokens": 144
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.006276,
+  "durationMs": 3135,
+  "httpStatus": 200,
+  "id": "T1192",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Toll T1192 at SH 130 Plaza 1 is at a different plaza than the earlier same-day charge (T1191 at Plaza 4) and 21 minutes later, so it is not a duplicate_toll."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T1192 at SH 130 Mainlane Plaza 1 (plaza ID TXTAG-SH130-01), charged at 18:10:50Z on 2026-07-10.\n\nThe only earlier toll on the same day is T1191 at 17:49:39Z, and it was at a different plaza (TXTAG-SH130-04). The two charges are about 21 minutes apart. Both the plaza and the 10-minute window differ, so this is not a duplicate toll.\n\nNothing else in the policy applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T1192 at SH 130 Plaza 1 is at a different plaza than the earlier same-day charge (T1191 at Plaza 4) and 21 minutes later, so it is not a duplicate_toll.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsrYj5fP1NHtcfxqHA5",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1783,
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:48:39+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T1192 at SH 130 Mainlane Plaza 1 (plaza ID TXTAG-SH130-01), charged at 18:10:50Z on 2026-07-10.\n\nThe only earlier toll on the same day is T1191 at 17:49:39Z, and it was at a different plaza (TXTAG-SH130-04). The two charges are about 21 minutes apart. Both the plaza and the 10-minute window differ, so this is not a duplicate toll.\n\nNothing else in the policy applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"Toll T1192 at SH 130 Plaza 1 is at a different plaza than the earlier same-day charge (T1191 at Plaza 4) and 21 minutes later, so it is not a duplicate_toll.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1783,
+    "output_tokens": 271,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

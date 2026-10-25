@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009442,
+  "durationMs": 3037,
+  "httpStatus": 200,
+  "id": "T2275",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No earlier toll for TX-1008 at plaza HCTRA-SHT-NW; the most recent charge was at a different plaza (SHT-W) about a day earlier, so it is not a duplicate."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "The transaction is toll T2275 for plate TX-1008 at plaza HCTRA-SHT-NW on 2026-09-18 at 20:22:10Z. The duplicate_toll rule only applies to an earlier charge at the same plaza within 10 minutes.\n\nThe plate's most recent earlier toll is T2253 on 2026-09-17 at HCTRA-SHT-W, a different plaza and about a day earlier. No earlier toll for this plate was at HCTRA-SHT-NW. No other policy rule applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1008 at plaza HCTRA-SHT-NW; the most recent charge was at a different plaza (SHT-W) about a day earlier, so it is not a duplicate.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuFz6CrwuvzYPiX5Tw",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3376,
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:15+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "The transaction is toll T2275 for plate TX-1008 at plaza HCTRA-SHT-NW on 2026-09-18 at 20:22:10Z. The duplicate_toll rule only applies to an earlier charge at the same plaza within 10 minutes.\n\nThe plate's most recent earlier toll is T2253 on 2026-09-17 at HCTRA-SHT-W, a different plaza and about a day earlier. No earlier toll for this plate was at HCTRA-SHT-NW. No other policy rule applies to a toll, so it clears.\n\n{\"decision\":\"clear\",\"reason\":\"No earlier toll for TX-1008 at plaza HCTRA-SHT-NW; the most recent charge was at a different plaza (SHT-W) about a day earlier, so it is not a duplicate.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3376,
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

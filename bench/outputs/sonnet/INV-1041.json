@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.010464,
+  "durationMs": 4811,
+  "httpStatus": 200,
+  "id": "INV-1041",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1041 ($299.00) is at the contract rate of $299.00 and bills qty 1 against a PO received qty of 1. The two earlier $299.00 invoices (INV-1018, INV-1030) cite the same PO-1022, so duplicate_invoice does not apply. It is under $5,000, and the bank change on day 71 is after receipt day 25. No hold rule applies. PO-1022 (qty 1) has now been billed on several invoices, which is outside the hold rules but may be worth a note to the buyer."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQShwsKEAgTGAI4AUIIdGhpbmtpbmcSDFlcgjjEzJjmKWSfwBoMjeTamfMIb1w81DxbIjANODU1r1TLUwc/9p0ZZJjzgwTU/2haMJqtIM4vLs2h5qpeCozxj0t0GpuIBWYn/9YqpAqaU3HFYbkFDYqp6d5H1BAZgCJ4N88SVvVJmGxer1G1m1vrp7ku5WmUTwNT3HsQeBPR2wh2QOueM9622ez9aIk5j/CGHq2GXI2bZLus4ufZ0c5z32wtCTt6ToEp543J8Jdwq+AMCdXEwqoWkxM0rOlgQWpslttsq+RnR73bAajJSSq/N0ieJwPrR0sEexoCcZO6rxp6/4+8ID/LXgiXHLvE+ri4FrxAFLk5VDOfKE4V0U3D5wAAIOgF/n4w+65meJOqOIpM/udRpT1jjjbgAjslLXmGe4o5raBYbpkpGlO3UyF/zTbcrb8Ub5XM3sGifJOr/rskr8msnwoRwuJXJrQnYMGM1t2jCpZPX68+vEz9fZp4UE1ZVJQRpxAvKDTzrBJuhA/dRPxalIZSX0ZKUhzs7c4AB6Spck6TpSwFUFieLPf+U21DqL4KDCLoyL37+ACPxaXHhpOk4rQnVQuMXjIAnAgkQXvBNggdW2IV0OJKd8S9q5zK1UueJ0YVxHBmPYE+oBK3hMFPxiQv2kHaVSsVQiDJggR0UGuYcxzYu92WSj0VQHspBAVwBBRJJiDqZI5XYNAHd4fXhysOpfo504TM+7CHYqvI37KTie7XIhGpZVkTIyIT6L/7MNjJOexHrbkTuP33tgB/kJ+LC4iWApCfc8aayhhD/vHXX8S2Uz1t0Cb1R6d56yynjcXPNS2oYL9krfVg8pWljgBe/Pcn1Sn4MXu3s7Ovo4V4Y4hxsesHQh1FG3IUa9SRzFI0zs1yLLHma8rk8UGy18xDBNBNebNXAD9fPDLaJh2xKYFH1LzQaisg/kjmkvNzn1PPa8Vt7/Je+m+WmXMNRES8pWYbZqIOHABXJSztXKYciS8U7v8wISjoqla1Ztu6Catjgwl9WTwXQAYUowFXwlaZ/j3cf2qk8PWhHWcqpqA9OkOq5auaAkD9asgEDWM70mDJSk1Wx81/MvSW7j3dAZIoY6ujUIL9I5PE5lr7AFDZWVIEr34CHiF4NH6mzNZKNyBy7k6iZ27ey5a9C3Jp0ovXlO2tt5DWLLZoKC6giBByvARgRhDo5zRuKSaSH0JuAic1KFSFbUztvZZoJwfZVFqTP8RM+/knqa0c9YT6j+EibHFKQbbWoKdqQd7fX4nBNPp4rsjNNcT7L0eCYHPwny5tctVf21wyyQLY24ZSLLBz6nrXynO/O1NunW4338s2HS24qgLJXcrzHE5XCJH4trvmNp3RqA2oaSjhScdMpXUpsH2+N9M3oHyqDhTGnLDE/xPLcXrFodgNLhFXjN9rKS5V7UjqPtqg/12wbLdFN9R6to5tNoOLUenHiwnJkasFJ1u4/0HP95XZCK+4gbwE4ixadiU+BmnzVqycGsRbmnuSqnTMRUKd3Cu0vz39FcAE3Yt9GxijyopgDj9wcOW8NCJOlcEJS3vsrWv/XMx9Q2e/udsJNu1vE6wYfuQBqKrlTVW77m/8l8pI1KjrGiqn6guVfwABJpvc/Wl9vByMIruRKfLqgfYhEuivcR8oPrkQXkNVs09eB4+ZRKxLlQ2Cls0XGkT9qkAu9O4hamuKavNRBtsh+/f94y7VCqDvVI1/GLS+LLIqR/O5nt854IWlWX6DirHSvyLGeimkosHzRP6MuBA7/8hIOGiwsKpMJ1QBLFmbb50L8gvBT+xRP0UR4+4m/mL/y8YyXu0BuzfVGtFM6Lp9SQflvZUXy83YDROiQk3DI3qHALbaDk96ow0z9qjKS63frvSCcU11phgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1041 ($299.00) is at the contract rate of $299.00 and bills qty 1 against a PO received qty of 1. The two earlier $299.00 invoices (INV-1018, INV-1030) cite the same PO-1022, so duplicate_invoice does not apply. It is under $5,000, and the bank change on day 71 is after receipt day 25. No hold rule applies. PO-1022 (qty 1) has now been billed on several invoices, which is outside the hold rules but may be worth a note to the buyer.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsnxsYJ2uxR4PEqjUKA",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2562,
+      "output_tokens": 534,
+      "output_tokens_details": {
+        "thinking_tokens": 344
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:47:50+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1041 ($299.00) is at the contract rate of $299.00 and bills qty 1 against a PO received qty of 1. The two earlier $299.00 invoices (INV-1018, INV-1030) cite the same PO-1022, so duplicate_invoice does not apply. It is under $5,000, and the bank change on day 71 is after receipt day 25. No hold rule applies. PO-1022 (qty 1) has now been billed on several invoices, which is outside the hold rules but may be worth a note to the buyer.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2562,
+    "output_tokens": 534,
+    "output_tokens_details": {
+      "thinking_tokens": 344
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

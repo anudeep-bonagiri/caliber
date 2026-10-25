@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009874,
+  "durationMs": 5526,
+  "httpStatus": 200,
+  "id": "INV-1057",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "No policy hold applies: unit price 54,500 matches the contract rate, billed qty 4 equals received qty 4, the amount 222,500 matches no earlier invoice, the bank change on day 18 is outside the 7-business-day window, and the invoice is under $5,000 threshold? No, it is over it, but the change is 15 days old. Note for the file: the line total is 4,500 cents above 4 x 54,500, and INV-1035 already billed PO-1010 on day 20. Neither is a listed hold condition."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "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",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 54,500 matches the contract rate, billed qty 4 equals received qty 4, the amount 222,500 matches no earlier invoice, the bank change on day 18 is outside the 7-business-day window, and the invoice is under $5,000 threshold? No, it is over it, but the change is 15 days old. Note for the file: the line total is 4,500 cents above 4 x 54,500, and INV-1035 already billed PO-1010 on day 20. Neither is a listed hold condition.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscixqz8ESn9Y3gTxKH",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 1902,
+      "output_tokens": 607,
+      "output_tokens_details": {
+        "thinking_tokens": 420
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:31+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"No policy hold applies: unit price 54,500 matches the contract rate, billed qty 4 equals received qty 4, the amount 222,500 matches no earlier invoice, the bank change on day 18 is outside the 7-business-day window, and the invoice is under $5,000 threshold? No, it is over it, but the change is 15 days old. Note for the file: the line total is 4,500 cents above 4 x 54,500, and INV-1035 already billed PO-1010 on day 20. Neither is a listed hold condition.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 1902,
+    "output_tokens": 607,
+    "output_tokens_details": {
+      "thinking_tokens": 420
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

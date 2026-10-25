@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "costUsd": 0.0,
+  "durationMs": 14842,
+  "httpStatus": 200,
+  "id": "T1659",
+  "model": "asi1-mini",
+  "parsed": null,
+  "provider": "asi1",
+  "requestedModel": "asi1-mini",
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1659 at plaza TXTAG-SH130-04 on day 29 is a duplicate of earlier tolls at the same plaza within 10 minutes? No, checking previous entries. Wait, let's look closer. The current transaction is T1659 at 2026-08-10T13:08:39Z. Plaza: TXTAG-SH130-04. Earlier tolls for plate TX-1012 at TXTAG-SH130-04: None in the list provided? Let me re-read carefully. Ah, I see T1313 and T1314 are at TXTAG-SH130-01. T1326 is at TXTAG-SH130-04. T1326 was at 2026-07-20T16:33:58Z. That is more than 10 minutes ago. Is there another one? Let's check all entries for TXTAG-SH130-04. Only T1326. Difference is days. Not a duplicate. Let's check other plazas. Current: TXTAG-SH130-04. Previous: T1326 (Day 14). Current Day 29. Not duplicate. Did I miss an entry? Let's scan again. T1137 SH45SE. T1149 MCLB. T1205 DNT. T1250 FBT. T1312 SH130-04. T1313 SH130-01. T1314 SH130-01. T1318 PGBT. T1324 SH130-01. T1325 SH45N. T1326 SH130-04. T1416 MCLB. T1436 SH45SE. T1496 DNT. T1536 PGBT. T1537 DNT. T1538 MCLB. Current T1659 SH130-04. Closest previous at SH130-04 is T1326 (Day 14) or T1312 (Day 13). Both are far away in time. So not duplicate_toll based on time. Is it a duplicate_invoice? No, it's a toll. Is it capacity_exceeded? No, it's a toll. Location mismatch? No, it's a toll. Rate variance? No. Short received? No. Vendor bank change? No. Wait, did I miss a duplicate? Let's look at T1313 and T1314. They are at SH130-01. T1313 at 18:53:01. T1314 at 19:01:42. That's 8 minutes apart. Same plaza. One of them is a duplicate. But the question is about the *current* transaction T1659. T1659 is at SH130-04. There are no other recent tolls at SH130-04. Therefore, it should be clear. BUT, wait. Look at T1536 and T1537. T1536 at 13:08:39. T1537 at 13:10:31. Same day 24. Different plazas. T1536 PGBT. T1537 DNT. Not duplicates. What about T1313 and T1314? They are in the past. The current transaction is T1659. It seems clear. However, often these problems have a trick. Let me re-read the policy. \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\" The current charge is T1659. Are there any earlier charges for TX-1012 at TXTAG-SH130-04 within 10 minutes of 2026-08-10T13:08:39Z? The list ends at Day 24. The current is Day 29. There are no entries between Day 24 and Day 29 for this plate/plaza. So it is NOT a duplicate. Thus, it should be cleared.\n\nWait, let me double check the \"earlierTollsSamePlate\" list to ensure I didn't miss a hidden entry or misread a plaza ID.\nPlazas:\nSH45SE-01\nMCLB-01\nDNT-01\nFBT-01\nSH130-04\nSH130-01\nSH130-01\nPGBT-01\nSH130-01\nSH45N-01\nSH130-04\nMCLB-01\nSH45SE-01\nDNT-01\nPGBT-01\nDNT-01\nMCLB-01\n\nCurrent: SH130-04.\nPrevious SH130-04: T1312 (Day 13), T1326 (Day 14).\nTime diff: > 10 minutes.\nSo, decision is Clear.\n\nLet me verify if there is any other rule.\nCapacity exceeded? No, tolls don't have gallons.\nLocation mismatch? No, tolls don't use fuel cards/telematics pings in this context usually, or rather the policy says \"fuel-card purchase\". This is a toll.\nDuplicate invoice? No, it's a toll.\nRate variance? No.\nShort received? No.\nVendor bank change? No.\n\nSo the answer is Clear.\n\nOne final check. Is it possible that T1659 is a duplicate of something else? No, the policy specifies \"same plate at the same plaza\".\nIs it possible I missed a toll in the list?\nT1312: SH130-04.\nT1326: SH130-04.\nNo others.\n\nTherefore, the transaction is clear.\n\n{\"decision\": \"clear\", \"reason\": \"No matching hold conditions found; no duplicate toll within 10 minutes at the same plaza.\"}",
+          "function_call": null,
+          "reasoning_content": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": null
+        }
+      }
+    ],
+    "created": 1792884529,
+    "id": "chatcmpl-f46b8d36-ddf0-4c4c-980b-e1f358d00737",
+    "model": "asi1-mini",
+    "moderation": null,
+    "object": "chat.completion",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1457,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 3094,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0,
+        "created_cache_tokens": 1072,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 4551
+    }
+  },
+  "startedAt": "2026-10-24T23:28:41+00:00",
+  "status": "unparsed",
+  "text": "{\n\"decision\": \"hold\",\n\"code\": \"duplicate_toll\",\n\"reason\": \"Toll T1659 at plaza TXTAG-SH130-04 on day 29 is a duplicate of earlier tolls at the same plaza within 10 minutes? No, checking previous entries. Wait, let's look closer. The current transaction is T1659 at 2026-08-10T13:08:39Z. Plaza: TXTAG-SH130-04. Earlier tolls for plate TX-1012 at TXTAG-SH130-04: None in the list provided? Let me re-read carefully. Ah, I see T1313 and T1314 are at TXTAG-SH130-01. T1326 is at TXTAG-SH130-04. T1326 was at 2026-07-20T16:33:58Z. That is more than 10 minutes ago. Is there another one? Let's check all entries for TXTAG-SH130-04. Only T1326. Difference is days. Not a duplicate. Let's check other plazas. Current: TXTAG-SH130-04. Previous: T1326 (Day 14). Current Day 29. Not duplicate. Did I miss an entry? Let's scan again. T1137 SH45SE. T1149 MCLB. T1205 DNT. T1250 FBT. T1312 SH130-04. T1313 SH130-01. T1314 SH130-01. T1318 PGBT. T1324 SH130-01. T1325 SH45N. T1326 SH130-04. T1416 MCLB. T1436 SH45SE. T1496 DNT. T1536 PGBT. T1537 DNT. T1538 MCLB. Current T1659 SH130-04. Closest previous at SH130-04 is T1326 (Day 14) or T1312 (Day 13). Both are far away in time. So not duplicate_toll based on time. Is it a duplicate_invoice? No, it's a toll. Is it capacity_exceeded? No, it's a toll. Location mismatch? No, it's a toll. Rate variance? No. Short received? No. Vendor bank change? No. Wait, did I miss a duplicate? Let's look at T1313 and T1314. They are at SH130-01. T1313 at 18:53:01. T1314 at 19:01:42. That's 8 minutes apart. Same plaza. One of them is a duplicate. But the question is about the *current* transaction T1659. T1659 is at SH130-04. There are no other recent tolls at SH130-04. Therefore, it should be clear. BUT, wait. Look at T1536 and T1537. T1536 at 13:08:39. T1537 at 13:10:31. Same day 24. Different plazas. T1536 PGBT. T1537 DNT. Not duplicates. What about T1313 and T1314? They are in the past. The current transaction is T1659. It seems clear. However, often these problems have a trick. Let me re-read the policy. \"a toll charge for the same plate at the same plaza within 10 minutes of an earlier toll charge.\" The current charge is T1659. Are there any earlier charges for TX-1012 at TXTAG-SH130-04 within 10 minutes of 2026-08-10T13:08:39Z? The list ends at Day 24. The current is Day 29. There are no entries between Day 24 and Day 29 for this plate/plaza. So it is NOT a duplicate. Thus, it should be cleared.\n\nWait, let me double check the \"earlierTollsSamePlate\" list to ensure I didn't miss a hidden entry or misread a plaza ID.\nPlazas:\nSH45SE-01\nMCLB-01\nDNT-01\nFBT-01\nSH130-04\nSH130-01\nSH130-01\nPGBT-01\nSH130-01\nSH45N-01\nSH130-04\nMCLB-01\nSH45SE-01\nDNT-01\nPGBT-01\nDNT-01\nMCLB-01\n\nCurrent: SH130-04.\nPrevious SH130-04: T1312 (Day 13), T1326 (Day 14).\nTime diff: > 10 minutes.\nSo, decision is Clear.\n\nLet me verify if there is any other rule.\nCapacity exceeded? No, tolls don't have gallons.\nLocation mismatch? No, tolls don't use fuel cards/telematics pings in this context usually, or rather the policy says \"fuel-card purchase\". This is a toll.\nDuplicate invoice? No, it's a toll.\nRate variance? No.\nShort received? No.\nVendor bank change? No.\n\nSo the answer is Clear.\n\nOne final check. Is it possible that T1659 is a duplicate of something else? No, the policy specifies \"same plate at the same plaza\".\nIs it possible I missed a toll in the list?\nT1312: SH130-04.\nT1326: SH130-04.\nNo others.\n\nTherefore, the transaction is clear.\n\n{\"decision\": \"clear\", \"reason\": \"No matching hold conditions found; no duplicate toll within 10 minutes at the same plaza.\"}",
+  "usage": {
+    "completion_tokens": 1457,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens": 3094,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "created_cache_tokens": 1072,
+      "multimodal_tokens": null
+    },
+    "total_tokens": 4551
+  }
+}

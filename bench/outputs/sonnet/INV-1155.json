@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.011222,
+  "durationMs": 3752,
+  "httpStatus": 200,
+  "id": "INV-1155",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Unit price 51900 matches the contract rate and qty 4 equals the PO received qty of 4. The bank details never changed. Earlier invoices for 207725 within the last 30 days (INV-1124) cite the same PO-1015, so duplicate_invoice does not apply."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSsgkKEAgTGAI4AUIIdGhpbmtpbmcSDO7XH4fRndGmVI5qHxoMlWTIHyaYeNeHB3GHIjB9wTi6ElT15ihjNqLb1Fo3YCvIuJkOmLUFiRoh6wlXeGFOKc/tNhc8BrQOypttyFYqzwgcVDqI6ZRh5RDfDRM/oxHRfq6OC1UQ1pWoUhpJeGdLycE5gweHHaD0Qq3z64rSzzbuezfQp1OOqHh2LrtPH2DthqgB+ZDacaaKvR3tjRdWKKEaAc7fmiNwaXb0/k1hgG+JfDfsG5AdHohVBKXqu6NbXDXyU9xgmicpfGqfNr+saGqgNvtRjx5lXn06lxLGQUHkwkXFBJTwDLIUzpkAe3b6SZbd710EN1RVOotR9ZgKERo0MsfYHpIqU0lccj09/HimNdrPwFU+rPdRXu+AtBBreYaoBF4jqhTiSnnfM7iKk7kqoDqB3NNkXN1UVG71bdF5pWn4hKDtsozbEI961g0TC8Q/93GIEySYIyTLRc5p/7XrDYffWfOavWDDbQBDHjH0SOcHMEQcAiC8HlbFiCFAzJn6vgwCNv0RsGA2SrhJuEZspOz0Ra3cSz6e4ZZXT3Si8gNo23pwQaDZrTpDH8cjC1zGBzI7pVHvjFVhn0pWq2nSZsuDzIJ/vFDykqqacEvRh7h1G9RHqFPld1bBhJEZtUZphReE1WOirpkRzB4PHKIIb6l01uDyo7c1PLPB9MkHTgzq7HZU6EHJWiF0699HmB5bveAtATuHRBel+K5YXiM+U0fVPDMwbhjr1kBv1fvM5Ij0CFJ+FSkc94gvPtT6SdNELTdQb1QDurOKETb7bNDgTsPAZU1R+doKadXo7VcNSjlzNrxKlvoPrVB8HzZc/HT+G3BrNuql6+lc0tUllTwLH1hTZSxOEMdhQZRSr1Abmvbf5cTDqftdn6QjFHV8fSCUYROznC9qAWXre+E4JO2uxiylvzuwji2FpodwKZBbbxFTAgg7i/AckZlQOrDW3OLXk7kQtNByFIlAldpUMag2QWC84zYOcoh0QCuXNk868W4LJ6J3Eb+Y1L8V3pCBzal7NRvVpuDP6nywHJULWeBT+nsxuQAsuaqLhCMFEzOzXKD1dH0Y0VgnzR8YvvjuxdkiTelDGs062QF+DidxfslzKlVpS5Bd5DHg/I55yVDaynl5l3+tzQa3Z4/CMzWPIR713RQZQp86is1d6YfqOghWxRZ/7WqhNq5YBeK3ELmxujBo6agHTbbnrM2sUyFatX5R7ff/5Xn8FK30/VB62Xrh5aDi6qcoSMEUPLlG8NRtLkbA7+8odO+npV4r3NOjlMasU575axtkdoHGB7Py3qC+PN99jDfY1GPiKt/30EasjHMzQRSbZWDIFrL8ZG2iqOKbvnOm2kbpsYekuz4vNd1lOjB9snJTcrSWSQauS2gLNjkgCqz6AuZXmpqfEi9atzHklj7DYKYiXT09TqkUoJHUOOrp7Ynzrccpw90lYNlD2XSWxt/S/h+xbYHe28tq7crQUheE2GXkDTqKdWFr4noHyWptYlwbxhujv06R3NL568jJhQctiBXdUF6y9GdAar5+RsHxHRnK5Um9KTDXaDNk1d/fDRSQx8GX2Ri7TRgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 51900 matches the contract rate and qty 4 equals the PO received qty of 4. The bank details never changed. Earlier invoices for 207725 within the last 30 days (INV-1124) cite the same PO-1015, so duplicate_invoice does not apply.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsyH3xAruDZ6NUbADyh",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3751,
+      "output_tokens": 372,
+      "output_tokens_details": {
+        "thinking_tokens": 265
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:50:10+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Unit price 51900 matches the contract rate and qty 4 equals the PO received qty of 4. The bank details never changed. Earlier invoices for 207725 within the last 30 days (INV-1124) cite the same PO-1015, so duplicate_invoice does not apply.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3751,
+    "output_tokens": 372,
+    "output_tokens_details": {
+      "thinking_tokens": 265
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

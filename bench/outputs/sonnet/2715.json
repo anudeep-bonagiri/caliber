@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012784,
+  "durationMs": 2616,
+  "httpStatus": 200,
+  "id": "2715",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 10's ping at 11:53:06Z, about 3 minutes before the purchase, is at the Hillsboro station (well under 25 miles away), and 48.8 gal is under the 165 gal limit (150 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQS7wYKEAgTGAI4AUIIdGhpbmtpbmcSDHhRB9QbtuaniaC3zBoMbEpicRNOPU6Cx9z5IjCaZ+2naXm86CXhKibQpGPEeLkVCzxUDHKmHmhZiYEfXVALDR4U0WOg0Vis7yFuiqYqjAbYx7UTlR1Jb2iMWMlQFCkbpvHBI3MYJnr9wuau9lNEcarGoh/5pziouGQDeT9nRnZnCVQ0MU/vkPbdVv1H4o3e6jz9o0yyqC7YqDKgQymyDLdnBuY7TU7bAX4ZJSQ9CS3hqf5B4/tQf0cAixUjUV2vdvjxSQxUUsqq2PNwMPJpNOOXc/Agynh8QPuR0wTTtPubDgommw2jULeXWxsS+e7GfWswqPylGFkhDM6bvpdi5CpkZjrReZhrFUe+gJe4ib1Xn/9pWsSTtdMYyoC4qVSlnjxt1YOXMQhVvs6Hftp9pqL1bz7ss9tWvggK2eeBl0ddPKoG1hZ0xesHiDKhmhS1dB0neo0lyGA37Qw+sno4gP9Xj2jnj4DMaWo5NizzZnp7RB5Q8tZU3jegOGWeY0GbuKmr0iVWiP8wtPDJV1QbVqWByzFpnXNSeHk7tPOCCvr9BnKyBd1/wBolP9MNtR966e24RLuUKbujUMzY5ElcDGCGA2PmWwWlFcVT27Rih/0cf6hK0blikbdZsigjskAWjiAlIZio9RnCeARnJ/ABECrjj+qfUaMv/KnMCmt2dUb+qTv2jkh23tStGgPxVhtMMRLobzJXznH5W0WSD69iQ7LsdnQEJtT10ZzUGPDLx24g2VPjRiI9o8NaeIdvkY7Fh1X952mhJdbavAsdSeWWCzW3Kqb19LZxN332qH91RaLduoV9FBokEDVJKYDZRtosj1Pwn0abg1i72BsaQUoaKPXksfR7JJ2GBHhtOvf7WiffZw94+GpXw/C7bgg0lgev7mRO0J9N1NYajKXri/cmTzcjULCXTDAZDWTGq1H90wMP+2NeXNWtwcGiAguGqlltNOtbrFWUCmMeo/bncoJzFyaiYETyKJubG8VErCMoMxXUYgHI15ayI4KSrmoqi+pweogoqKiUMuugBa5XaEX9Kw62oNg8G1Hn4o9OJTYi38KPlXrqqnicb7W1mZFdUPVFjiZwqRZ42vFmk98HXTrUGM3PQStf4S6QECn8PaLVrEOMYNZRhlnv2IU+NKsYAQ==",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"Truck 10's ping at 11:53:06Z, about 3 minutes before the purchase, is at the Hillsboro station (well under 25 miles away), and 48.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMshJa2hKSQvRan7vMYX",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5107,
+      "output_tokens": 257,
+      "output_tokens_details": {
+        "thinking_tokens": 158
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:33+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"Truck 10's ping at 11:53:06Z, about 3 minutes before the purchase, is at the Hillsboro station (well under 25 miles away), and 48.8 gal is under the 165 gal limit (150 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5107,
+    "output_tokens": 257,
+    "output_tokens_details": {
+      "thinking_tokens": 158
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.009824,
+  "durationMs": 3151,
+  "httpStatus": 200,
+  "id": "INV-1123",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1123 is for 159,600 cents. No invoice for that amount from this vendor falls in the prior 30 days; the only match, INV-1040, is on day 25 and cites the same PO. The unit price of 53,200 equals the contract rate. The billed quantity of 3 matches the received quantity of 3. The vendor's bank details never changed."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSywgKEAgTGAI4AUIIdGhpbmtpbmcSDH+oabpCN6a0z22/FBoMe1fSFNC3iC8j7WK5IjC0ZVEjHOAhJGJIq/4kSEaSGnbrzsUiYatnr2dKy6kswUBUJwBe/RjsH950p/oH/oQq6AcYGq9qt+rrOfhI0mxPGc415MR8y2eFrWbia8n0Kb4NF24vVzij2gyVz3lO6U7m1GZmKopGjCv8jB9I0RfqtMjn+54Fu/Qf/iQlX26j4rAjMWD2TMjNlyjnZKIOz/BSJbLU4GcdKPH5TGYz8/dJaYhy0ao/sJWshVo9VlV77PjQ553r4k/q4SNx3UuY0p9gp3R0Y2Xirwcf5+tSQRUy/zyfMXz7VL4lDLckI3F/KW3Y65tVbMa74KFZ3gz3EbwJpi5TqU9MnIq05scF+Mza+R9Ko3Xsl+IjzMRKrT2cPd6wBIFFYJpfFDBGWWCry75V8/PGr/aRR6njsVtzW0rwn274BuOI6kAFS3hVjz6u7U5vnIDngvcA59ysFJ638DawIEx+BkqHzhnjMxmnOKqhcDsIerJqHnBkpAL3zlArbVkJymZQ/bZNFrSVd7wPA8q9Kj/e7GsBRCNIceex5LAVSOI72DrrGi0CBwG+uBdFN7fylJusxr6pU3efWbcuZzA7c7BOIO+wikoSL7fJ2CJKErc1rQzQNnpljvv2knE8N9Vv/PIwPyLoVNfm6zsU6Mi1vUiQA/P8JigFxUndarAAkCpimgXTRqdmUfz9UfEeK7Of/jtLz6yeNiHa9YmLo9ebu+YwNath53ebpUp9LQDUPfQNbnz0dFL0Pc4TI7p8GK2bkLYVl2REAQm8GpoZTciJ02vMI/rDBUBmg8Ya532/CIee4RZnetB7/s+Iv15uPjDAJssPLrgXt3HCcgwtUTgej+l9jsCjKkBAEzb2b6M92oE4Hen5kz2Ymf7E7NWY5rnFc7K85Lm+t7/ijhhdB+PtZ+2ihsj+bOkCfOkjugWyysl5Qie2AxrkXzSVhpsHYBczh5Ug5Ohvv1jpYCAcnaXPnGYirQCJYCKSrpsA1nljmWYr4h/++xzASHOdxiOIXKNG27Y06EJ3zavG9FHEb+7OQCZ/Gf1G4EDVhV0d8YXbU6zYzL8fxQGXcrbbVtASttMOz6EDkDTf7jV3197AgvVfJT4enZx4OWZKe6+f949SFuh6sFNcBDWvTz1y59CoCo2e9/7J8QueTlUOqR0G3j8wL6Fqh77s6Vna4BiH9v3YBTwr230Jlhh1BCS2HevRFxw7T+BGR8GV9Q44w5HkhebdRZGrwJSRwC0gDLgIiGYG13uKwV599InTdBntxaJbQ+yp+Lti9yIsjaIlORg0G2ld9eqYO+C0ZDtkteLzxPnl6xJTlkDFdAVsZY7s8QvX3J7l3D8l8oQQfQr0BP0WylZdWOD3DJ0dxEtC1dnkvJjAehxHg/ET0GuhfP7HVKrE2U+4O4Cdi3CFHYfsGAE=",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1123 is for 159,600 cents. No invoice for that amount from this vendor falls in the prior 30 days; the only match, INV-1040, is on day 25 and cites the same PO. The unit price of 53,200 equals the contract rate. The billed quantity of 3 matches the received quantity of 3. The vendor's bank details never changed.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsj9wB67fULor4eSrDu",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 3167,
+      "output_tokens": 349,
+      "output_tokens_details": {
+        "thinking_tokens": 218
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:46:58+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1123 is for 159,600 cents. No invoice for that amount from this vendor falls in the prior 30 days; the only match, INV-1040, is on day 25 and cites the same PO. The unit price of 53,200 equals the contract rate. The billed quantity of 3 matches the received quantity of 3. The vendor's bank details never changed.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3167,
+    "output_tokens": 349,
+    "output_tokens_details": {
+      "thinking_tokens": 218
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

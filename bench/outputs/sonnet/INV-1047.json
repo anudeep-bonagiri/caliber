@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "costUsd": 0.008546,
+  "durationMs": 4765,
+  "httpStatus": 200,
+  "id": "INV-1047",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "INV-1047 ($488.00) matches the dpf_clean contract rate of 48800 and PO-1009's price. Billed qty 1 does not exceed received qty 1, and the vendor's bank details never changed. INV-1017 has the same amount but cites the same PO-1009, so the different-PO duplicate_invoice rule does not apply. AP may still want to confirm this is not a second billing for the one received unit."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "signature": "CAQSqgoKEAgTGAI4AUIIdGhpbmtpbmcSDPqeqnLGV8kKTVj7tRoMYJBwgs/qTq6JsErcIjDdEhSIPnFQ9Md2nyJGrFbLZG3aMcgT+gdYyMkkuex7/qS97utx5Alej+UNhWON0Z0qxwmV2vOxE1j7GgRELjOAv9WG4NyoNfIAKXgGJsCHe7Mzp66tV3iZRm1XCUpDVSlGEEtnXUHbqwWFA97EnmCI+n5LFozO4Rg97/ADtCku566weh0c8SxtVd1DYQPmIoA/dATPAGl+xtwX/Cio6aCGp73NKJF7pYzSADGKEVm8R97SADxyQteCeO7/SgbUDSS8+OiKKx5rfsvdXs4I0O1PZOl2twHvK0FLyIr5xLXpuhgmqrjdmgsZPISJ04NxvOmq45DKPFshNk4dg4RQWHuq3VcGdc5WuzyGuRuIoEZzImdLHPvqiuVpTeVvM/nOSTw1qxL8t0jRs+k4+5au84baCIt7UCZdbWJdNR6PZQClTnQKnqXF5x/OsiEUSRQ3CQ0ATWVk+R/5BU/NrzgdD/ZV1NE6rP4lAFUmPxpQppw66M5UqMf6vtSuUmG3a/to7UVZns9zHW21iwS5/s53x3dlD4sFNnP+u23n+KmfH5QPNXDl32JDnVhFSGpCyZp9hCqyu8Vi8FfqtT7i7iNJc/2QdZdsAlhHDQpwSBpp8JN1fnSoXnPTkQAORC84EZTbC++cz9JyCE2KOnicP764Ahc4Q5LTaUb4KZs9oTbJvKXqbM8BxDwfJqP5XdNpQnaCr0VO14Wv1uZrWNgOVa2JMD2Jbq+1vU2GOmmE9kWfteYUM2O655kB5nyze77gLJHLRWra7CfpaIuSGPYOyWrUldZnJyUhKYkS6XEJPX98weEY0g8DvTFdjt4XrZDZv0ojgg888CvtaLq9+W8vnc8qYRkecN4Jvtk30Iw6cxxSfhvFjfAxKf4BaF+EvoeYQyYwO2N4jdq8M6vdNTo+HA5buYt5JjlS7jc2hPbL7rPxTNHg5VaatilxBv8jRIHq2o0NNux2+siBsRCBQRQXpNqsmnBh5Trr+3vMXm82Ne3r5nYxH6phg4LwkQvC2Xa8kGE52DL/HhdKhMSVbW2eCqfcnRtGRTfv8OWJgZCu3pyeCXVT83lmAf6r/lc3K19Nfc1y2emabfIfcJvZHPFgqbG30HyDWpNSavRHTHLRPHchsuZH5+uSWuT/SMy76D4OoatZXX4zpkleCyRKMbGpJIaUJb3JhwkKIM+wl4h4F5B6J7+ke3E208MZA6AHkRFwr/Bafx3Hqr4Hu7eq6isUU7fGfQoG8UkxFfxm3NdsnflTnQHu9WwQUpG2jw4yiVbaj/+Fz7zYP0y17zAkRifmfG7Wi6Xpw3aB1IZQ3X7QVaCqac2uPgh17lBxQE9rD87SrVvIH+eP128k40bdTfXJg+6socE4ORSWDo6exX4C/EIhL++P2HvFhkcds6vVEbToizzCeAreNWTnAy3ArprAtEFYQJZX8+iOVI0O3NmX0sE1oSx+5dQuLT2I2O65EuiXffLmljXuuYDB9Dp7zgHVAJBnHuhmLWZWV8b52eQsT5W1ouimp2HWW/RaXAEgGl+RWDfHRj7fC05IHa7VBdEpy13svXDDXL+uPpFq2/47Dlw/iAmK3tZqR+q3r90F9FRLg5U/+3Z+402D7NhJxhcGLcW7wj7Zaau621SMuo0BosRNMAC5yLT4ANLKMzqMhqUcXudC6dNIFm5Mh+H8AkVqzYdMuO0zEci+DUa1szwT6xgB",
+        "thinking": "",
+        "type": "thinking"
+      },
+      {
+        "text": "{\"decision\":\"clear\",\"reason\":\"INV-1047 ($488.00) matches the dpf_clean contract rate of 48800 and PO-1009's price. Billed qty 1 does not exceed received qty 1, and the vendor's bank details never changed. INV-1017 has the same amount but cites the same PO-1009, so the different-PO duplicate_invoice rule does not apply. AP may still want to confirm this is not a second billing for the one received unit.\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMscS7aNPxopR2htBfmt",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 2063,
+      "output_tokens": 442,
+      "output_tokens_details": {
+        "thinking_tokens": 289
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:45:27+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "{\"decision\":\"clear\",\"reason\":\"INV-1047 ($488.00) matches the dpf_clean contract rate of 48800 and PO-1009's price. Billed qty 1 does not exceed received qty 1, and the vendor's bank details never changed. INV-1017 has the same amount but cites the same PO-1009, so the different-PO duplicate_invoice rule does not apply. AP may still want to confirm this is not a second billing for the one received unit.\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 2063,
+    "output_tokens": 442,
+    "output_tokens_details": {
+      "thinking_tokens": 289
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "attempts": 1,
+  "costUsd": 0.012868,
+  "durationMs": 2868,
+  "httpStatus": 200,
+  "id": "2124",
+  "model": "claude-sonnet-5-5",
+  "parsed": {
+    "code": null,
+    "decision": "clear",
+    "reason": "Truck 6 pinged about 0.01 mile from the station one minute before the purchase, and 49.1 gal is under the 110 gal limit (100 gal tank plus 10%)."
+  },
+  "provider": "anthropic",
+  "requestedModel": "claude-sonnet-5-5",
+  "response": {
+    "container": null,
+    "content": [
+      {
+        "text": "Location check: the purchase was at 14:55:54Z. The pings at 14:55:00Z (30.09732, -96.0785) and 14:52:57Z are within a minute or two of the purchase. The station is at 30.0974, -96.0783, so the truck was well under 0.1 mile away. That passes the location test.\n\nCapacity check: 49.1 gallons against a 100-gallon tank (limit 110) passes.\n\nThe other codes do not apply to a fuel-card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 6 pinged about 0.01 mile from the station one minute before the purchase, and 49.1 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+        "type": "text"
+      }
+    ],
+    "diagnostics": null,
+    "id": "msg_011CgMsuYyYMWah1nDXkN3zr",
+    "model": "claude-sonnet-5-5",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "inference_geo": "global",
+      "input_tokens": 5254,
+      "output_tokens": 236,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "startedAt": "2026-10-24T22:49:19+00:00",
+  "status": "ok",
+  "stopReason": "end_turn",
+  "text": "Location check: the purchase was at 14:55:54Z. The pings at 14:55:00Z (30.09732, -96.0785) and 14:52:57Z are within a minute or two of the purchase. The station is at 30.0974, -96.0783, so the truck was well under 0.1 mile away. That passes the location test.\n\nCapacity check: 49.1 gallons against a 100-gallon tank (limit 110) passes.\n\nThe other codes do not apply to a fuel-card purchase.\n\n{\"decision\":\"clear\",\"reason\":\"Truck 6 pinged about 0.01 mile from the station one minute before the purchase, and 49.1 gal is under the 110 gal limit (100 gal tank plus 10%).\"}",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 5254,
+    "output_tokens": 236,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}
