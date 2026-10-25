@@ -50,6 +50,8 @@ The spoken answer is the same at every table. Copied from the Need column of the
 
 **Who approves?** You do, as the controller, from ASI:One or the terminal. The agent identity is refused by the database when it tries, and the refusal is a row in the audit trail with its role on it.
 
+**Can I approve from Discord or Slack?** No. The Discord and Slack channels are read-only mirrors of the audit table. Writes go through ASI:One or the terminal twin, gated by the sender allowlist and the reducers.
+
 **The card issuer drafts fuel and tolls from your account. What does approving a hold mean there?** Fuel-card and toll statements are auto-drafted by the issuer, so a hold on one of those lines is a dispute inside the issuer's window plus a credit memo, not an approval. Repair invoices are paid per invoice and go through `approve_payment`, where the controller's approval is the real gate. The dispute path is not built: `docs/not-built.md`.
 
 **Can it learn?** Only through you. One answer becomes one rule with a scope (driver, truck, card or vendor) and an expiry. The database backtests the rule against every past match before it will even store it, and refuses it if it would have cleared anything you had confirmed as a real exception.

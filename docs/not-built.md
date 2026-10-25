@@ -9,7 +9,7 @@
 - Production identity. Roles are a table of identities granted by the publisher. No OIDC provider, no key rotation, no per-user dashboard login.
 - Rule drafting by a model is optional and off in the offline demo; the deterministic draft (driver scope, five-day window) is what the judges see unless an Anthropic key is present.
 - Live Droid and live Elastic runs are gated on keys the demo laptop does not export. Replay mode serves recorded or scripted findings and labels them as such on every card.
-- A controller inbox beyond ASI:One and the terminal twin (no email, no Slack).
+- A controller inbox beyond ASI:One and the terminal twin (no email, no Slack). Discord and Slack are outbound feeds only (`scripts/discord_feed.py`); they cannot approve or answer.
 - Horizontal scale. One module, one worker (concurrency 2), one local server.
 - A hard sandbox around Droid. Session options disable write and execute tools and the permission handler cancels anything write-like, but Droid's `Read` can address any path; in the live run it probed for instruction files above the evidence folder, and in one recorded run, 770003, it read `~/AGENTS.md` from the laptop's home folder (the file's text was redacted from the committed recording in e2243e1; the read stays recorded); nine other probes found nothing. A read-only mount or OS sandbox is the real boundary and is not built.
 - CRS live calls until the sandbox collection arrives: endpoint paths, request bodies and response fields are placeholders; the vendor check replays hand-authored fixtures labelled as such. The CRS hit has not been produced by the sandbox yet; the hit vendor's check is a hand-authored fixture labelled FIXTURE on the card and in every evidence row.

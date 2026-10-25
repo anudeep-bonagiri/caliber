@@ -47,7 +47,7 @@ Notes on the beats:
 
 ## 2. Two terminals
 
-Both sit in the repo root on the demo laptop. The dashboard is full screen on the same laptop. The second laptop shows ASI:One only; the dashboard and database listen on 127.0.0.1 and cannot be reached from it.
+Both sit in the repo root on the demo laptop. The dashboard is full screen on the same laptop. The second laptop shows ASI:One only; the dashboard and database listen on 127.0.0.1 and cannot be reached from it. The Discord or Slack channel, on the phone or the second laptop, shows one plain line per audit row a few seconds after it is written (`approve_payment INV-1075 by controller, $2,450.00, day 41`, `paused by controller, day 41`); it is outbound only, nothing typed there reaches the ledger, and a finding from a recording carries the word `replayed`.
 
 | Window | What runs | Pre-typed |
 | --- | --- | --- |
@@ -56,6 +56,7 @@ Both sit in the repo root on the demo laptop. The dashboard is full screen on th
 | A3 | live commands | the A3 lines from section 1, in order |
 | B1 | fallback; first line `export FACTORY_API_KEY= ANTHROPIC_API_KEY= ELASTIC_API_KEY= ASI_ONE_API_KEY=`; with `--inbox`, the drop command pre-typed and not yet sent: `cp seed/fixtures/inbox/fuel_card_wex_day41_sample.csv inbox/` | the B1 lines from section 1, in order |
 | B2 | editor | `spacetimedb/src/index.ts` at `checkApprovePayment`, `spacetimedb/src/kernel.ts` at `evaluateCardTxn`, `worker/src/droid.ts` at the options block, `agent/handlers.py`, `spacetimedb/src/thresholds.ts` |
+| B3 | `agent/.venv/bin/python scripts/discord_feed.py` (Task 32, the Discord and Slack feed; it posts to whichever of `DISCORD_WEBHOOK_URL` and `SLACK_WEBHOOK_URL` is set), started after the two agents in A1; the Discord or Slack channel is open on the phone or the second laptop | nothing |
 
 Terminal B makes no paid call and needs no internet: the keys are empty, and a set-but-empty variable wins over `.env`. Each one-shot `python3 -m agent.cli "..."` is a new process that forgets the last hold discussed, so every fallback names its hold. Say "same handler, other front door" and run it.
 
