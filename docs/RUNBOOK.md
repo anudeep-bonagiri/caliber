@@ -116,7 +116,7 @@ pkill -f 'tsx src/index.ts'; lsof -ti :5173 | xargs kill     # before re-running
 
 ## 6. Sponsor tables
 
-`context/JUDGE_QA.md` is split by audience; these map it to each table. One line each; open the file only if they ask for code.
+`docs/JUDGE_QA.md` is split by audience; these map it to each table. One line each; open the file only if they ask for code.
 
 **Hyphenate** (they said they would run their own scenario; that is 03:25 to 04:25)
 
@@ -171,4 +171,4 @@ pkill -f 'tsx src/index.ts'; lsof -ti :5173 | xargs kill     # before re-running
 7. Anything that makes the carrier, the vendors or the money sound real.
 8. "Rule 1" without reading the id from `rules`.
 9. "It learns" without "from your answer, scoped, expiring and backtested by the database".
-10. Anything about Cruze's pilot or customers beyond the one line in `context/JUDGE_QA.md`.
+10. Anything about Cruze's pilot or customers beyond the one line in `docs/JUDGE_QA.md`.

@@ -29,7 +29,7 @@ The six decoys are legitimate unit swaps recorded in the dispatcher's swap log. 
 
 ## Vendor checks
 
-Bank-change holds and the CRS vendor check behind each decision. `fixture` means a hand-authored file in the shape of a sandbox response, labelled FIXTURE on the card and in every evidence row; the CRS sandbox has not produced these values (context/DECISIONS.md, D-3).
+Bank-change holds and the CRS vendor check behind each decision. `fixture` means a hand-authored file in the shape of a sandbox response, labelled FIXTURE on the card and in every evidence row; the CRS sandbox has not produced these values (docs/DECISIONS.md, D-3).
 
 | Hold | Check source | Evidence rows | Hit | Controller action | Call-back note | Hold status | Key expects |
 | --- | --- | --- | --- | --- | --- | --- | --- |

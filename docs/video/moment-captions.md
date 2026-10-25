@@ -4,7 +4,7 @@ Second by second, what a viewer with no audio sees. Times are seconds from the f
 
 ## Fallback: `moment-fallback-dashboard-only.mp4`
 
-Label: dashboard only, recorded by Playwright's own video recorder, no terminal window on screen. The controller seat was the terminal twin, driven off camera (`agent/.venv/bin/python -m agent.cli ...`), so the typed lines are not in the frame; their effects are (the answer on the card, the candidate rule, the approval, the audit rows). Made because macOS Screen Recording was not granted to the Claude Code app on 2026-10-24 (see context/PROJECT_STATUS.md, job 13). The two real takes replace it when recorded.
+Label: dashboard only, recorded by Playwright's own video recorder, no terminal window on screen. The controller seat was the terminal twin, driven off camera (`agent/.venv/bin/python -m agent.cli ...`), so the typed lines are not in the frame; their effects are (the answer on the card, the candidate rule, the approval, the audit rows). Made because macOS Screen Recording was not granted to the Claude Code app on 2026-10-24 (see docs/PROJECT_STATUS.md, job 13). The two real takes replace it when recorded.
 
 File: 1440 by 900, 25 fps, 24.9 s, 1.1 MB (H.264 from the 1440 by 900 webm, no audio). Staging: `scripts/demo_up.sh --inbox`, clock stepped to day 41, worker in replay (the card's badge reads `replayed`: the recorded live Droid run of 2026-10-24).
 

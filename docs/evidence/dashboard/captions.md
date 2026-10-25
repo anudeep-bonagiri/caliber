@@ -9,7 +9,7 @@ Read-only, against the running web app at http://localhost:5173 and the ledger a
 | 03-bank-change-hold-INV-1032.png | A bank-change hold awaiting the controller: `call-back required` pill in the queue and the header, the investigation replayed, and below the fold a vendor check labelled "stand-in, not a vendor check" with three `no result` rows |
 | 04-released-INV-1077-vendor-check-settlement.png | INV-1077 released: "Paid: $9,800.00 on day 44, released by controller", the call-back note, the replayed investigation with "replayed from a recording made 2026-10-24 by droid live run", and the vendor check block for vendor 3 marked `replayed` with three evidence rows |
 
-Findings are in context/PROJECT_STATUS.md under "Builder-W: dashboard honesty audit".
+Findings are in docs/PROJECT_STATUS.md under "Builder-W: dashboard honesty audit".
 
 ## After the worker restart with 2fac596 (job 7, 2026-10-24 14:28 PDT, ledger at day 60)
 

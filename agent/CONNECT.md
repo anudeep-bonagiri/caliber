@@ -42,6 +42,6 @@ Start a stopwatch at the first keystroke. Task 10 says the whole exchange is und
 | 4 | `rules` then `approve rule <n>` | `Rules (<k>):` with the candidate rule and its backtest line; then `approve_rule <n> written to audit_event by controller (...)` |
 | 5 | `approve 2231` | `Refused: hold is cleared_by_rule` (the rule already cleared and paid it; that refusal is correct and is itself an audit row). For a payment that needs a release, use `approve INV-1077 <call-back note of 8+ characters>` on day 44 and read `approve_payment INV-1077 written to audit_event by controller (...)` |
 
-Stop the watch after the last reply. Write the time into `context/PROJECT_STATUS.md` with the five lines as typed. If any line is refused for a reason you did not expect, the reply shows the database's own message after `Refused:`; say it out loud, it is the point.
+Stop the watch after the last reply. Write the time into `docs/PROJECT_STATUS.md` with the five lines as typed. If any line is refused for a reason you did not expect, the reply shows the database's own message after `Refused:`; say it out loud, it is the point.
 
 If the mailbox is not connected at the table, the terminal twin runs the same five lines: `agent/.venv/bin/python -m agent.cli "<line>"`. Same handlers, other front door: `why` and `status` come from the investigator's handler module as the reader identity and carry the `investigator:` prefix there too.

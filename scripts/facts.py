@@ -540,7 +540,7 @@ def main() -> int:
         bt = r["backtest"] or {}
         results.append(f"| {r['txnRef']} | {r['raised']} | {bool(r['questions'])} | {r['answers']} | {r['ruleId']} | {bt.get('n')} | {bt.get('confirmedExceptionsCovered')} | {r['clearedByRule']} |")
     results += ["", "## Vendor checks", "",
-        "Bank-change holds and the CRS vendor check behind each decision. `fixture` means a hand-authored file in the shape of a sandbox response, labelled FIXTURE on the card and in every evidence row; the CRS sandbox has not produced these values (context/DECISIONS.md, D-3).", "",
+        "Bank-change holds and the CRS vendor check behind each decision. `fixture` means a hand-authored file in the shape of a sandbox response, labelled FIXTURE on the card and in every evidence row; the CRS sandbox has not produced these values (docs/DECISIONS.md, D-3).", "",
         "| Hold | Check source | Evidence rows | Hit | Controller action | Call-back note | Hold status | Key expects |", "| --- | --- | --- | --- | --- | --- | --- | --- |"]
     for r in vendor_rows:
         results.append(f"| {r['txnRef']} | {r['checkSource']} | {r['evidenceRows']} | {'; '.join(r['hitReasons']) if r['hit'] else 'none'} | {r['controllerAction']} | {r['callbackNote']} | {r['holdStatus']} | {r['expected']} |")

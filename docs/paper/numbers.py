@@ -10,7 +10,7 @@ Sources (nothing else is allowed to put a number in the note):
   bench/carrierbench/oracle.json      the oracle ceiling
   bench/carrierbench/saboteur.json    the saboteur run
   spacetimedb/src/thresholds.ts       the kernel's limits
-  context/PROJECT_STATUS.md           the one measured escalation latency (Task 26.3 beat)
+  docs/PROJECT_STATUS.md           the one measured escalation latency (Task 26.3 beat)
   worker/src/config.ts                the Droid task timeout and concurrency defaults
   git                                 the two commits named in "what we got wrong", verified to exist
 
@@ -170,8 +170,8 @@ def main() -> int:
     m = re.search(r"CONCURRENCY:.*?default\((\d+)\)", cfg)
     add(macro("workerConcurrency", n(int(m.group(1))), "worker/src/config.ts", "CONCURRENCY default"))
     m = re.search(r"new escalation visible after (\d+) s \(target (\d+) s", status)
-    add(macro("escalationSec", n(int(m.group(1))), "context/PROJECT_STATUS.md", "17:20 entry, 26.3 beat row"))
-    add(macro("escalationTargetSec", n(int(m.group(2))), "context/PROJECT_STATUS.md", "17:20 entry, 26.3 beat row"))
+    add(macro("escalationSec", n(int(m.group(1))), "docs/PROJECT_STATUS.md", "17:20 entry, 26.3 beat row"))
+    add(macro("escalationTargetSec", n(int(m.group(2))), "docs/PROJECT_STATUS.md", "17:20 entry, 26.3 beat row"))
 
     # ---- the measured run (FACTS.json)
     src = "docs/FACTS.json"
