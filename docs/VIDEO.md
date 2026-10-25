@@ -1,9 +1,9 @@
-# Video script, about 4:00
+# Video script, locked 2026-10-25 07:55 PDT, 4:00 to 4:30 read aloud
 
 One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and the sponsor tracks. It opens on the moment in the order the council set: the investigator agent is refused when asked to pay, the controller's approval becomes a bank id, then the hold-to-rule story, then the proof. Staging, typed lines and pauses: docs/video/moment-script.md. Every number below is read off the screen or from docs/FACTS.md and bench/BASELINE.md (runs of 2026-10-25); nothing is from memory. Three dry jokes, no more.
 
 [0:00] ASI:One, the @caliber-investigator chat, the console beside it on day 41.
-Say: "This is Caliber, an accounts-payable clerk for a trucking company that cannot pay anything itself. This is its investigator agent on ASI:One. It can read the whole ledger. Watch it get asked to pay."
+Say: "I run Cruze, a fleet company, and none of our carriers would let software pay a bill. So we built one that can't. This is Caliber, an accounts-payable clerk. This is its investigator agent on ASI:One. It can read the whole ledger. Watch it get asked to pay."
 Type: approve 2231
 Say: "Refused by the database, which wrote down who asked: role reader. The agent that explains cannot pay."
 
@@ -19,7 +19,7 @@ Say: "Business day 42. And I have started Elastic's stale-holds Workflow, which 
 Say: "We could have paid a frontier model to read every fuel receipt in Texas. We did the math, got a little nervous, and wrote three hundred lines of TypeScript instead. That's our kernel. It works in whole cents and never calls a model. It matches every charge against the truck's own telematics, the purchase order, the contract and the vendor's bank details. Clean lines pay themselves. Everything else becomes a hold."
 
 [1:15] Console, click hold 2231.
-Say: "Hold 2231. A fuel card assigned to truck 17 bought one hundred twenty gallons, four hundred twelve dollars, at Love's in Schulenburg, Texas. Truck 17's own telematics put it ninety-seven miles away, engine off, twelve minutes after the charge. Nothing paid. The investigator is Factory's Droid, locked down to read-only, with Elastic's tools over MCP as its only reach into data. It has roughly the permissions of an intern on their first day, which makes it the best-behaved employee we've ever had. It asked Elastic which trucks pinged at that pump: truck 22. It read the dispatcher's swap log. Its finding ends in one question: did Ramon Ortiz fuel truck 22 while truck 17 was in the shop?"
+Say: "Hold 2231. A fuel card assigned to truck 17 bought one hundred twenty gallons, four hundred twelve dollars, at Love's in Schulenburg, Texas. Truck 17's own telematics put it ninety-seven miles away, engine off, twelve minutes after the charge. Nothing paid. The investigator is Factory's Droid, locked down to read-only, with Elastic's tools over MCP and a read-only evidence folder as its only reach into data. It has roughly the permissions of an intern on their first day, which makes it the best-behaved employee we've ever had. It asked Elastic which trucks pinged at that pump: truck 22. It read the dispatcher's swap log. Its finding ends in one question: did Ramon Ortiz fuel truck 22 while truck 17 was in the shop?"
 
 [1:45] ASI:One, the controller chat.
 Type: why 2231
@@ -27,9 +27,9 @@ Say: "The controller agent relays the investigator's reply. The controller answe
 Type: answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.
 
 [2:00] Console, the Rules panel, then ASI:One.
-Say: "The answer is not a payment. The worker drafts a rule: that driver, for that week, one use. The database tests it against every charge the controller has already decided before it will store it."
+Say: "The answer is not a payment. The worker drafts a rule: that driver, for that week, one use. Caliber tests it against every charge the controller has already decided before it will store it."
 Type: rules (read the candidate's id off the reply), then: approve rule <n>
-Say: "The kernel re-runs the same code with the rule in place and clears the hold. It will never ask that question twice."
+Say: "The kernel re-runs the same code with the rule in place and clears the hold. It won't need to ask that again for this swap."
 
 [2:20] ASI:One, the controller chat, at least 63 seconds after the Workflow trigger.
 Type: status
@@ -45,14 +45,14 @@ Say: "So we made up a whole trucking company. Forty trucks, ninety-two days, a d
 Say: "We also gave Claude Sonnet the same inputs with no kernel at all, and it matched us. Which was humbling for about a minute. Then we checked the price: Claude costs money on every charge, and our kernel costs zero. So on cost, we win by infinity. We did the division. A smaller model reached 31 percent precision and held a hundred and one clean charges."
 
 [3:25] Three stills, five seconds each: the architecture drawing, the Droid options block, the honesty chips.
-Say: "One SpacetimeDB module holds the ledger: roles are a table, the clock is a scheduled reducer, every action and every refusal is an audit row. Droid runs read-only on a trigger, with a ninety-second abort and no pay in its schema. The company, the vendor check and the bank are simulated and labelled. The controls are not."
+Say: "One SpacetimeDB module holds the ledger: roles are a table, the clock is a scheduled reducer, every action and every refusal is an audit row. Droid runs read-only on a trigger, with a ninety-second abort and no pay in its schema. Elastic finds the truck with a geo query and the contract clause with Jina embeddings. The company, the vendor check and the bank are simulated and labelled. The controls are not."
 
 [3:45] Console, clock paused.
-Say: "Caliber. The money does not move until the code has matched the line, and the agent can never approve what it proposed. Repo, agents and the facts file are in the description."
+Say: "Code decides. The investigator explains. The controller approves. The ledger refuses everything else. That's Caliber. Next, we want it in front of a real controller, and I know a few. Repo, agents and the facts file are in the description."
 
 Fetch.ai cut: the 0:00, 0:20, 1:45, 2:00 and 2:20 beats must be the live ASI:One chat, recorded only with both mailboxes connected and ASI_ALLOWED_SENDERS holding the recording account (verified 07:41 with an allowlisted pause). If the mailbox drops mid-take, type the same lines through the terminal twin (docs/video/moment-script.md) and keep talking.
 
-Verified before keeping: "caught all 52" is FACTS recall 1.0; "31 percent" is asi1-mini precision 0.31 in BASELINE; "Claude Sonnet matched us" is BASELINE Sonnet 1.00 / 1.00, and Opus is never claimed; "tests it against every charge the controller has already decided" is the module backtest against confirmed controller decisions (D-6); "for that week" matches the drafted rule's five-business-day window; "three hundred lines" is spacetimedb/src/kernel.ts (333 lines, 301 of code); "a driver named Ortiz" because Ramon Ortiz is driver 23 in the swap log, not the dispatcher; the Sonnet run cost $6.38 at list. Never say the kernel beat Claude on accuracy.
+Verified before keeping: "caught all 52" is FACTS recall 1.0; "31 percent" is asi1-mini precision 0.31 in BASELINE; "Claude Sonnet matched us" is BASELINE Sonnet 1.00 / 1.00, and Opus is never claimed; "tests it against every charge the controller has already decided" is the module backtest against confirmed controller decisions (D-6); "for that week" matches the drafted rule's five-business-day window; "three hundred lines" is spacetimedb/src/kernel.ts (333 lines by wc -l, 301 of code); "a read-only evidence folder" because the recorded 2231 stream read receipts/2231.txt and swap_log.txt with Droid's Read tool and used Elastic only for find_trips_near; "a geo query" is find_trips_near (geo_point distance) and "Jina embeddings" is find_contract_clause over the JINA semantic_text field; "zero false holds" is FACTS precision 1.0 with 0 false positives; "a hundred and one" is asi1-mini's 101 clean rows held in BASELINE; "a driver named Ortiz" because Ramon Ortiz is driver 23 in the swap log, not the dispatcher; the Sonnet run cost $6.38 at list. Never say the kernel beat Claude on accuracy.
 
 ## Never say (from docs/RUNBOOK.md, section 7)
 
