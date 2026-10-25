@@ -608,6 +608,31 @@ Brief: context/briefs/2026-10-24_2100_c3_consistency.md. Log: logs/builder_c3.lo
 - context/CLAIMS_AUDIT.md row 14's Claim column still reads "only MCP tool calls allowed"; the recordings show Read, Grep, Glob and LS run without asking. The brief allowed one clause, so the claim text is yours to soften.
 - context/BUILD_SPEC.md:340 quotes the old comment `// every action asks the handler` in its options sketch; context/IDEA_RANKING.md:134 says "a permission handler that allows only MCP tool calls"; context/TASKS.md:289 says "MCP-only reach". None is judge-facing; left as written.
 
+## 2026-10-24 21:00 PDT Builder-B2: council item 3, seat refusal audit row (Task 28)
+
+Brief: context/briefs/2026-10-24_2030_lane_b2_seat_audit.md. Log: logs/builder_b2.log. No module published, no worker, dashboard or agent started, stopped or restarted.
+
+### What changed
+- `spacetimedb/src/index.ts`: one procedure, `try_record_seat_refusal(sender: string)`, after `try_reject_payment`. It runs through the existing `attempt` (committed transaction) with `checkRole(tx, 'controller')`; any other caller gets the normal `<role> may not do this (needs controller)` and its normal `refused` row with ref `controller seat`. For the controller it writes exactly one `audit_event` row: action `seat_refused`, ref `controller seat`, detail `not authorised for this seat: <sender>`, the sender with control characters removed, trimmed and cut to 120 characters, and returns `[true, "recorded"]`. Nothing else is read or written. Bindings regenerated (`module_bindings/try_record_seat_refusal_procedure.ts` new, `index.ts` and `types/procedures.ts` +5 lines).
+- `agent/ledger.py`: `record_seat_refusal(sender)` calls `call_try("try_record_seat_refusal", sender)` inside `using("controller")`, so it is signed with the controller token even from a reader context.
+- `agent/handlers.py`: `seat_refusal(sender, log)` is the uAgent's `on_refused`: it logs the existing refusal line with the full sender, then calls `ledger.record_seat_refusal`; any exception is logged as `seat refusal for <sender> not recorded in audit_event: <error>`. `handle()` now decides the reply first, then calls `on_refused` inside its own try, so neither a failed record nor a broken callback changes the reply.
+- `agent/agent.py`: `_refusal_logger(sender)` returns `handlers.seat_refusal(sender, LOG.warning)`; docstring updated. `agent/README.md` line 42 now says the refusal is an `audit_event` row with `action = seat_refused` (it said agent log only).
+
+### Checks, as run
+- `cd spacetimedb && npx tsc --noEmit -p tsconfig.json`: exit 0.
+- `npx vitest run`: 3 files, 75 passed; module.test.ts 47, including the new describe "10. try_record_seat_refusal" (3 tests): the controller records one row with actor_role controller, action seat_refused, ref controller seat and the sender in detail, and the audit table grows by exactly one; agent, reader, seed and anonymous get `<role> may not do this (needs controller)`, zero seat_refused rows, four `refused` rows in that role order; a 300-character sender with a newline and a BEL is stored as 120 characters with no control characters.
+- `npm run generate`: "Generate finished successfully".
+- `agent/.venv/bin/pytest -q agent/tests/test_allowlist.py`: 38 passed (was 33). With the mock transport: each of the 9 refused write lines makes exactly one HTTP request, to `try_record_seat_refusal`, with body `[<full sender>]`, and no write call; allowed senders and the 5 reads make no such call; empty and unset allowlists make the one record call; the record carries `Bearer <controller token>` even inside `ledger.using("reader")`; a `[false, ...]` body, an HTTP 500 and a connect error each leave the reply exactly `not authorised for this seat` and log the failure; a raising callback leaves the reply unchanged.
+- `agent/.venv/bin/pytest -q`: 280 passed (was 275).
+- Em dashes added: 0 (`git diff | grep -c` on every touched file).
+
+### For builder-W (now builder-S, per e760262)
+- The row appears live only after the module is republished (demo_up does it) and the controller agent is restarted on this code. Until both happen nothing changes live: the running controller has the old code, and a new controller against the old module would log `no such procedure` with the reply unchanged.
+
+### For the director
+- JUDGE_QA and Devpost can now say "an audit row" for a refused ASI:One sender (action `seat_refused`), once the module is republished and the controller restarted. Builder-B's "agent log, not audit row" note is superseded.
+- context/PROJECT_STATUS.md:517 is a top-level `## Tried and rejected` heading inside builder-A's entry (its list is builder-A's); I left it and inserted this entry before the main table's heading after builder-C3.
+
 ## Tried and rejected
 
 | What | Why rejected |

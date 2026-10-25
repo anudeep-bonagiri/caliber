@@ -181,6 +181,13 @@ def call_try(name: str, *args) -> tuple[bool, str]:
     return ok, message
 
 
+
+def record_seat_refusal(sender: str) -> tuple[bool, str]:
+    """Write the ASI:One seat's refusal of `sender` to audit_event (action seat_refused), signed as the controller.
+    Records only: try_record_seat_refusal performs nothing else."""
+    with using("controller"):
+        return call_try("try_record_seat_refusal", sender)
+
 def sql(query: str) -> list[dict]:
     """Run one SQL statement and return rows as dicts keyed by column name, values decoded."""
     r = _post("/sql", content=query.encode(), headers={"Content-Type": "text/plain"})

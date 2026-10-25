@@ -11,8 +11,9 @@ Controller text is bounded here, before any network call, with the same limits t
 
 The seat on ASI:One is open to anyone who finds it, so every write is gated on the sender (Task 28 item 3):
 `may_write=False` refuses any intent in WRITE_INTENTS, including free text that resolves to an answer, with
-exactly NOT_AUTHORISED and before any ledger call. Reads stay open. The uAgent decides `may_write` from
-ASI_ALLOWED_SENDERS; the terminal twin holds the controller token itself and always may.
+exactly NOT_AUTHORISED and before any write call. Reads stay open. The uAgent decides `may_write` from
+ASI_ALLOWED_SENDERS and passes `seat_refusal(sender, log)`, whose one ledger call is try_record_seat_refusal
+(an audit_event row, action seat_refused); the terminal twin holds the controller token itself and always may.
 """
 
 from __future__ import annotations
@@ -69,17 +70,34 @@ def bound_text(text: str | None, max_len: int, what: str) -> str:
     return cleaned
 
 
+def seat_refusal(sender_id: str, log):
+    """The uAgent's `on_refused`: log the refusal with the full sender, then record it in audit_event through
+    try_record_seat_refusal (controller token). A failure to record is logged and never changes the reply."""
+    def record(intent_name: str) -> None:
+        log(f"refused {intent_name} from {sender_id}: {NOT_AUTHORISED} (not in ASI_ALLOWED_SENDERS)")
+        try:
+            ledger.record_seat_refusal(sender_id)
+        except Exception as e:
+            log(f"seat refusal for {sender_id} not recorded in audit_event: {e}")
+    return record
+
+
 def handle(sender_id: str, text: str, may_write: bool = True, on_refused=None) -> str:
-    """`on_refused(intent_name)` is called when a write is refused for the sender, so the seat can log it."""
+    """`on_refused(intent_name)` is called when a write is refused for the sender, after the reply is decided, so
+    the seat can log and record it."""
     text = intents.strip_mentions(text)   # ASI:One prepends "@caliber-controller " to every line
     intent = intents.parse(text)
     try:
         if intent is None:
             intent = _free_text(sender_id, text)
         if not may_write and intent.name in WRITE_INTENTS:
+            answer = not_authorised()
             if on_refused is not None:
-                on_refused(intent.name)
-            return not_authorised()
+                try:
+                    on_refused(intent.name)
+                except Exception:   # recording the refusal never changes the reply
+                    pass
+            return answer
         return _dispatch(sender_id, intent)
     except BadReference as e:
         return str(e)

@@ -832,6 +832,18 @@ export const rejectPayment = spacetimedb.reducer({ txnRef: t.string(), reason: t
 export const tryRejectPayment = spacetimedb.procedure({ txnRef: t.string(), reason: t.string() }, Outcome, (ctx, { txnRef, reason }) =>
   attempt(ctx, txnRef, tx => checkRejectPayment(tx, txnRef, reason), tx => performRejectPayment(tx, txnRef, reason)));
 
+// The ASI:One agent refused a write because the chat sender is not on its allowlist (ASI_ALLOWED_SENDERS).
+// The controller identity records that refusal here; nothing else is written or performed.
+const MAX_SENDER = 120;
+function performRecordSeatRefusal(ctx: Ctx, sender: string) {
+  const clean = sender.replace(/[\u0000-\u001f\u007f-\u009f]/g, '').trim().slice(0, MAX_SENDER);
+  audit(ctx, 'seat_refused', 'controller seat', `not authorised for this seat: ${clean}`);
+}
+export const tryRecordSeatRefusal = spacetimedb.procedure({ sender: t.string() }, Outcome, (ctx, { sender }) => {
+  const out = attempt(ctx, 'controller seat', tx => checkRole(tx, 'controller'), tx => performRecordSeatRefusal(tx, sender));
+  return out.ok ? { ok: true, message: 'recorded' } : out;
+});
+
 // A judge scenario: insert one fuel transaction into the current day and run the kernel on it.
 // The caller is recorded as the hold's requester, so the same controller cannot approve what it injected.
 export const injectCardTxn = spacetimedb.reducer({ row: cardTxn.rowType }, (ctx, { row }) => {

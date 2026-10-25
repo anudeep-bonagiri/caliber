@@ -7,9 +7,9 @@ ledger itself, prefixed "investigator did not answer in time; from the ledger di
 
 Task 28 item 3: every write (answer, approve, reject, rule decisions, clock) is allowed only for senders listed
 in ASI_ALLOWED_SENDERS (.env, comma-separated agent1q... addresses; empty means nobody). Anyone else gets
-"not authorised for this seat" and the refusal, with the full sender address, goes to this agent's log. It
-is not an audit_event row: no module procedure records a refusal for the controller identity without
-performing the write, and spacetimedb/ is not changed for this. Reads stay open to everyone.
+"not authorised for this seat"; the refusal, with the full sender address, goes to this agent's log and, through
+try_record_seat_refusal signed by the controller, to an audit_event row (action seat_refused). If that call
+fails it is logged and the reply is unchanged. Reads stay open to everyone.
 
 Run from the repo root or this folder:  python agent/agent.py
 Open the Agent Inspector link it prints, Connect, Mailbox, Finish. Then paste agent/README.md
@@ -108,9 +108,7 @@ async def _fallback(user: str, text: str) -> str:
 
 
 def _refusal_logger(sender: str):
-    def log(intent_name: str) -> None:
-        LOG.warning(f"refused {intent_name} from {sender}: {handlers.NOT_AUTHORISED} (not in ASI_ALLOWED_SENDERS)")
-    return log
+    return handlers.seat_refusal(sender, LOG.warning)
 
 
 relay = Relay(INVESTIGATOR, _send, _fallback, log=LOG.info)

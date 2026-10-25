@@ -67,6 +67,7 @@ import VendorBankChangeReducer from "./vendor_bank_change_reducer";
 import * as TryAnswerQuestionProcedure from "./try_answer_question_procedure";
 import * as TryApprovePaymentProcedure from "./try_approve_payment_procedure";
 import * as TryApproveRuleProcedure from "./try_approve_rule_procedure";
+import * as TryRecordSeatRefusalProcedure from "./try_record_seat_refusal_procedure";
 import * as TryRejectPaymentProcedure from "./try_reject_payment_procedure";
 import * as TryRejectRuleProcedure from "./try_reject_rule_procedure";
 import * as TryRematchProcedure from "./try_rematch_procedure";
@@ -253,6 +254,7 @@ const proceduresSchema = __procedures(
   __procedureSchema("try_answer_question", TryAnswerQuestionProcedure.params, TryAnswerQuestionProcedure.returnType),
   __procedureSchema("try_approve_payment", TryApprovePaymentProcedure.params, TryApprovePaymentProcedure.returnType),
   __procedureSchema("try_approve_rule", TryApproveRuleProcedure.params, TryApproveRuleProcedure.returnType),
+  __procedureSchema("try_record_seat_refusal", TryRecordSeatRefusalProcedure.params, TryRecordSeatRefusalProcedure.returnType),
   __procedureSchema("try_reject_payment", TryRejectPaymentProcedure.params, TryRejectPaymentProcedure.returnType),
   __procedureSchema("try_reject_rule", TryRejectRuleProcedure.params, TryRejectRuleProcedure.returnType),
   __procedureSchema("try_rematch", TryRematchProcedure.params, TryRematchProcedure.returnType),

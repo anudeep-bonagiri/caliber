@@ -717,3 +717,46 @@ describe('9. ingest_rows: the inbox file connector matches through the same path
     expect(logs().map(l => l.kind)).toEqual(['toll', 'invoice']);
   });
 });
+
+describe('10. try_record_seat_refusal: the controller records a refused ASI:One sender (Task 28 item 3)', () => {
+  const SENDER = 'agent1qtly3w7yc4exampleexampleexampleexampleexampleexample';
+  let w: World;
+  beforeEach(() => { w = makeWorld(); });
+
+  it('controller records one seat_refused row with the sender in detail and nothing else', () => {
+    const before = w.rows.audits().length;
+    const out = w.mod.tryRecordSeatRefusal(w.h.procedureContext(w.controller), { sender: SENDER });
+    expect(out).toEqual({ ok: true, message: 'recorded' });
+    expect(w.rows.audits()).toHaveLength(before + 1);
+    const rows = w.rows.audits('seat_refused');
+    expect(rows).toHaveLength(1);
+    expect(rows[0].actorRole).toBe('controller');
+    expect(rows[0].ref).toBe('controller seat');
+    expect(rows[0].detail).toBe(`not authorised for this seat: ${SENDER}`);
+    expect(rows[0].actor.isEqual(w.identityOf(w.controller))).toBe(true);
+  });
+
+  it('agent, reader, seed and anonymous are refused by role with the normal refused row', () => {
+    const reader = jwt('investigator-1');
+    w.grant(reader, 'reader');
+    const callers = [[w.agent, 'agent'], [reader, 'reader'], [w.publisher, 'seed'], [w.anon, 'anonymous']] as const;
+    for (const [auth, who] of callers) {
+      expect(w.mod.tryRecordSeatRefusal(w.h.procedureContext(auth), { sender: SENDER }))
+        .toEqual({ ok: false, message: `${who} may not do this (needs controller)` });
+    }
+    expect(w.rows.audits('seat_refused')).toHaveLength(0);
+    const refused = w.rows.audits('refused');
+    expect(refused.map(e => e.actorRole)).toEqual(['agent', 'reader', 'seed', 'anonymous']);
+    expect(refused.every(e => e.ref === 'controller seat')).toBe(true);
+  });
+
+  it('an over-long sender is trimmed, stripped of control characters and bounded to 120 characters', () => {
+    const long = `  agent1q\n\u0007${'x'.repeat(300)}  `;
+    w.mod.tryRecordSeatRefusal(w.h.procedureContext(w.controller), { sender: long });
+    const detail = w.rows.audits('seat_refused')[0].detail;
+    const kept = detail.slice('not authorised for this seat: '.length);
+    expect(kept).toHaveLength(120);
+    expect(kept.startsWith('agent1qx')).toBe(true);
+    expect(/[\u0000-\u001f\u007f]/.test(detail)).toBe(false);
+  });
+});

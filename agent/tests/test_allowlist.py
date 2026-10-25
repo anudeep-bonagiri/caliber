@@ -1,6 +1,9 @@
 """Task 28 item 3: the seat's sender allowlist. Writes only for senders in ASI_ALLOWED_SENDERS; anyone else gets
-exactly "not authorised for this seat" before any ledger call; reads stay open to everyone. The ledger is mocked
-at the httpx transport, so a refused write is proven to send nothing."""
+exactly "not authorised for this seat" before any write call, and the refusal is recorded with one call to
+try_record_seat_refusal; reads stay open to everyone. The ledger is mocked at the httpx transport, so a refused
+write is proven to send nothing but that record."""
+
+import json
 
 import httpx
 import pytest
@@ -57,9 +60,20 @@ def wire(monkeypatch):
     return seen
 
 
-def seat(sender, text, refused=None):
-    """What agent.py's on_chat does for a line routed to the controller."""
-    return handlers.handle(sender, text, handlers.may_write(sender), refused.append if refused is not None else None)
+RECORD = "try_record_seat_refusal"
+
+
+def seat(sender, text, logged=None):
+    """What agent.py's on_chat does for a line routed to the controller: the recorder is handlers.seat_refusal."""
+    logged = [] if logged is None else logged
+    return handlers.handle(sender, text, handlers.may_write(sender), handlers.seat_refusal(sender, logged.append))
+
+
+def recorded_only(seen, sender):
+    """Exactly one HTTP request, to try_record_seat_refusal, carrying the full sender and nothing else."""
+    assert [path.rsplit("/", 1)[-1] for path, _ in seen] == [RECORD]
+    assert json.loads(seen[0][1]) == [sender]
+    return True
 
 
 def writes(seen):
@@ -83,28 +97,29 @@ def test_allowlist_parses_the_comma_separated_variable(wire):
     ("step", "try_step_day"),
 ])
 def test_allowed_sender_writes(wire, text, proc):
-    refused = []
-    out = seat(ALLOWED, text, refused)
-    assert writes(wire) == [proc]
+    logged = []
+    out = seat(ALLOWED, text, logged)
+    assert writes(wire) == [proc]       # and no try_record_seat_refusal
     assert handlers.NOT_AUTHORISED not in out
-    assert refused == []
+    assert logged == []
 
 
 @pytest.mark.parametrize("text", WRITES)
-def test_unknown_sender_is_refused_with_the_exact_text_and_nothing_reaches_the_ledger(wire, text):
-    refused = []
-    assert seat(STRANGER, text, refused) == "not authorised for this seat"
-    assert wire == []          # no SQL, no procedure: refused before any network call
-    assert len(refused) == 1   # the seat logs it with the full sender address
+def test_unknown_sender_is_refused_with_the_exact_text_and_only_the_refusal_reaches_the_ledger(wire, text):
+    logged = []
+    assert seat(STRANGER, text, logged) == "not authorised for this seat"
+    assert recorded_only(wire, STRANGER)   # no SQL, no write procedure: one audit record of the refusal
+    assert len(logged) == 1                # the seat logs it with the full sender address
+    assert logged[0].endswith(f" from {STRANGER}: not authorised for this seat (not in ASI_ALLOWED_SENDERS)")
 
 
 def test_free_text_that_would_become_an_answer_is_refused_for_a_stranger(wire):
     handlers.LAST_REF[STRANGER] = "2231"
     assert seat(STRANGER, "yes he drove truck 22 that week") == "not authorised for this seat"
-    assert writes(wire) == []
+    assert writes(wire) == [RECORD]
     handlers.LAST_REF[ALLOWED] = "2231"
     seat(ALLOWED, "yes he drove truck 22 that week")
-    assert writes(wire) == ["try_answer_question"]
+    assert writes(wire) == [RECORD, "try_answer_question"]
 
 
 @pytest.mark.parametrize("sender", [ALLOWED, STRANGER])
@@ -129,17 +144,49 @@ def test_empty_allowlist_refuses_everyone_and_says_so(wire, monkeypatch):
     assert handlers.allowed_senders() == set()
     out = seat(ALLOWED, "approve 2231")
     assert out.splitlines() == ["not authorised for this seat", handlers.NOBODY_ALLOWED]
-    assert wire == []
+    assert recorded_only(wire, ALLOWED)
     assert handlers.NOT_AUTHORISED not in seat(ALLOWED, "status")
 
 
 def test_unset_allowlist_is_the_same_as_empty(wire, monkeypatch):
     monkeypatch.delenv("ASI_ALLOWED_SENDERS")
     assert seat(ALLOWED, "step").startswith("not authorised for this seat")
-    assert wire == []
+    assert recorded_only(wire, ALLOWED)
 
 
 def test_the_terminal_twin_is_not_gated(wire):
     """agent/cli.py calls handle() without may_write: the local operator holds the controller token itself."""
     handlers.handle("cli", "approve rule 1")
     assert writes(wire) == ["try_approve_rule"]
+
+
+def test_the_refusal_is_recorded_with_the_controller_token(wire, monkeypatch):
+    tokens = []
+
+    def transport(request):
+        tokens.append(request.headers.get("Authorization"))
+        return httpx.Response(200, json=[True, "recorded"])
+
+    monkeypatch.setattr(ledger, "_transport", httpx.MockTransport(transport))
+    with ledger.using("reader"):   # even inside a reader context the record is signed as the controller
+        seat(STRANGER, "approve 2231")
+    assert tokens == ["Bearer tok-controller"]
+
+
+@pytest.mark.parametrize("failure", [
+    lambda request: httpx.Response(200, json=[False, "anonymous may not do this (needs controller)"]),
+    lambda request: httpx.Response(500, text="boom"),
+    lambda request: (_ for _ in ()).throw(httpx.ConnectError("down")),
+])
+def test_a_failed_record_is_logged_and_never_changes_the_reply(wire, monkeypatch, failure):
+    monkeypatch.setattr(ledger, "_transport", httpx.MockTransport(failure))
+    logged = []
+    assert seat(STRANGER, "approve 2231", logged) == "not authorised for this seat"
+    assert len(logged) == 2
+    assert logged[1].startswith(f"seat refusal for {STRANGER} not recorded in audit_event: ")
+
+
+def test_a_recorder_that_raises_never_changes_the_reply(wire):
+    def broken(intent_name):
+        raise RuntimeError("logger down")
+    assert handlers.handle(STRANGER, "approve 2231", False, broken) == "not authorised for this seat"

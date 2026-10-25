@@ -9,6 +9,7 @@ import { type Infer as __Infer } from "spacetimedb";
 import * as TryAnswerQuestionProcedure from "../try_answer_question_procedure";
 import * as TryApprovePaymentProcedure from "../try_approve_payment_procedure";
 import * as TryApproveRuleProcedure from "../try_approve_rule_procedure";
+import * as TryRecordSeatRefusalProcedure from "../try_record_seat_refusal_procedure";
 import * as TryRejectPaymentProcedure from "../try_reject_payment_procedure";
 import * as TryRejectRuleProcedure from "../try_reject_rule_procedure";
 import * as TryRematchProcedure from "../try_rematch_procedure";
@@ -21,6 +22,8 @@ export type TryApprovePaymentArgs = __Infer<typeof TryApprovePaymentProcedure.pa
 export type TryApprovePaymentResult = __Infer<typeof TryApprovePaymentProcedure.returnType>;
 export type TryApproveRuleArgs = __Infer<typeof TryApproveRuleProcedure.params>;
 export type TryApproveRuleResult = __Infer<typeof TryApproveRuleProcedure.returnType>;
+export type TryRecordSeatRefusalArgs = __Infer<typeof TryRecordSeatRefusalProcedure.params>;
+export type TryRecordSeatRefusalResult = __Infer<typeof TryRecordSeatRefusalProcedure.returnType>;
 export type TryRejectPaymentArgs = __Infer<typeof TryRejectPaymentProcedure.params>;
 export type TryRejectPaymentResult = __Infer<typeof TryRejectPaymentProcedure.returnType>;
 export type TryRejectRuleArgs = __Infer<typeof TryRejectRuleProcedure.params>;
