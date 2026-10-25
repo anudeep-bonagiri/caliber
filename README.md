@@ -58,7 +58,7 @@ An autonomous accounts-payable clerk for a 40-truck carrier. It matches every fu
 | Planted exceptions cleared by a rule | 0 |
 | Policy holds from the auto-pay limit (correct behaviour, not exceptions) | 6 |
 | Auto-paid by the kernel or a rule | 7886 payments, $1,083,630.52 |
-| Released by the controller | 9 payments, $37,547.00 |
+| Released by the controller | 8 payments, $32,097.00 |
 | Refusals in the audit trail, by role | {'agent': 1} |
 | Investigations by source in the offline run | {'replayed': 47} |
 | Droid cost per investigation, from the recorded live run of 2026-10-24, 52 investigations | 1,033 input tokens, 1,354 output tokens, 70,386 cache tokens (cacheCreationTokens plus cacheReadTokens), 25.6 s; 2,016,204 Factory credits for the 52 |
