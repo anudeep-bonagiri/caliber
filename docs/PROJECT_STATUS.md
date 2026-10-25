@@ -1101,6 +1101,29 @@ In flight: builder-B2 (seat refusal audit row, deadline 1 AM), builder-29 (custo
 - Showing the end-of-run planted count as "among them": the card's N is the backtest at create_rule time, when most of the window was still in the future, so the two counts are over different row sets. The card says "among them" only when facts.py scored the backtest's own rows.
 - First key_readers classification flagged the new test's own `not.toMatch(/answer_key/)` lines as readers; absence assertions in tests are now their own class.
 
+## 2026-10-24 21:24 PDT Builder-29: production build at the table (Task 30)
+
+Brief: the director's message after the Task 29 merge; TASKS.md Task 30, D-8. Log: logs/builder_29.log. Commit a99b61d. No web/ code changed.
+
+### What changed
+- `scripts/demo_up.sh` step 7: `npm run build` with `VITE_STDB_URI="$STDB_URI" VITE_STDB_DB="$STDB_DB"` (Vite reads VITE_ variables at build time, and a production build does not read web/.env.development, so they are passed from the script's own STDB_URI and STDB_DB), then `npx vite preview --host 127.0.0.1 --port 5173 --strictPort`, both into logs/web.log. The step waits up to 10 s for "/" and exits 1 with "web server did not start" if /console is not served; a failed build exits 1 with "web build failed". `--no-web` is unchanged. The step 6 `pkill` pattern is now `vite.*--port 5173`, so a re-run stops either a preview or an old dev server.
+- README "Run it" says demo_up builds and serves the production build on 5173 ("/" and "/console") and why the table never runs the dev server. RUNBOOK boot line quotes the new `dashboard:` line; the `lsof -ti :5173 | xargs kill` line notes it stops the preview server.
+- Behaviour change: `web/public/FACTS.json` is copied into dist at build time, so after `scripts/facts.py` the console charts change only on the next `demo_up.sh` (said in the RUNBOOK boot line and in a comment in step 7).
+
+### Checks, as run
+- `bash -n scripts/demo_up.sh`: ok.
+- Builder-S ran `scripts/demo_up.sh` from 945f1f9 at 21:20: exit 0, build 1.13 s, only `vite preview --host 127.0.0.1 --port 5173 --strictPort` on 5173 (confirmed with `ps`: no dev server).
+- In-page probe on 5173 /console, one light page (a 250 ms interval reading the day number), `scripts/clock.sh tick 500000`, `run` at 21:22:17, paused at 21:22:37.898. Ledger time is the first `audit_event.at` of the day:
+
+| day | ledger (PDT) | page lag |
+| --- | --- | --- |
+| 10 | 21:22:22.107 | +0.3 s |
+| 20 | 21:22:27.108 | +0.3 s |
+| 41 | 21:22:37.607 | +0.4 s (0.1 s after the pause) |
+
+All 41 days were drawn (the dev server drew 11 of 41 and trailed by 32.7 s at day 41 in the Task 29 probe). The probe's own sampling interval is 250 ms, so the lag is at most what is shown.
+- Routes on 5173 after demo_up: "/" is the customer view and "/console" and "/console/" the console (HTTP 200, Playwright: no console errors, requests only to 127.0.0.1:5173 and 127.0.0.1:3100, `/console#event-<id>` scrolls to its row, 390 wide scrollWidth 390).
+
 ## 2026-10-24 21:25 PDT Builder-29: customer view (Task 29)
 
 Brief: context/briefs/2026-10-24_2030_task29_customer_view.md. Log: logs/builder_29.log. Built in a worktree (`../dispatch-ledger-task29`, branch `task29-customer-view`, dev server on 5174), rebased on master 0c50cfb, fast-forwarded into master at 224be4e on the director's "merge go"; worktree removed. Ledger writes only inside the director's windows (window 1, window 2, window 2b, window 1 re-stage, the seeded probe window), each logged and released.
@@ -1542,38 +1565,6 @@ Pages agreed within 229 ms on milestones and 636 ms on day changes; 0 reloads; 0
 - Sorting hold cards oldest first: on the staged ledger the 2231 card fell below older invoices, so cards are newest first.
 - "Caliber finished drafting a rule from your answer" for recommendation `done`: worker/src/rules.ts also uses `done` when no rule was drafted.
 
-## 2026-10-24 21:24 PDT Builder-29: production build at the table (Task 30)
-
-Brief: the director's message after the Task 29 merge; TASKS.md Task 30, D-8. Log: logs/builder_29.log. Commit a99b61d. No web/ code changed.
-
-### What changed
-- `scripts/demo_up.sh` step 7: `npm run build` with `VITE_STDB_URI="$STDB_URI" VITE_STDB_DB="$STDB_DB"` (Vite reads VITE_ variables at build time, and a production build does not read web/.env.development, so they are passed from the script's own STDB_URI and STDB_DB), then `npx vite preview --host 127.0.0.1 --port 5173 --strictPort`, both into logs/web.log. The step waits up to 10 s for "/" and exits 1 with "web server did not start" if /console is not served; a failed build exits 1 with "web build failed". `--no-web` is unchanged. The step 6 `pkill` pattern is now `vite.*--port 5173`, so a re-run stops either a preview or an old dev server.
-- README "Run it" says demo_up builds and serves the production build on 5173 ("/" and "/console") and why the table never runs the dev server. RUNBOOK boot line quotes the new `dashboard:` line; the `lsof -ti :5173 | xargs kill` line notes it stops the preview server.
-- Behaviour change: `web/public/FACTS.json` is copied into dist at build time, so after `scripts/facts.py` the console charts change only on the next `demo_up.sh` (said in the RUNBOOK boot line and in a comment in step 7).
-
-### Checks, as run
-- `bash -n scripts/demo_up.sh`: ok.
-- Builder-S ran `scripts/demo_up.sh` from 945f1f9 at 21:20: exit 0, build 1.13 s, only `vite preview --host 127.0.0.1 --port 5173 --strictPort` on 5173 (confirmed with `ps`: no dev server).
-- In-page probe on 5173 /console, one light page (a 250 ms interval reading the day number), `scripts/clock.sh tick 500000`, `run` at 21:22:17, paused at 21:22:37.898. Ledger time is the first `audit_event.at` of the day:
-
-| day | ledger (PDT) | page lag |
-| --- | --- | --- |
-| 10 | 21:22:22.107 | +0.3 s |
-| 20 | 21:22:27.108 | +0.3 s |
-| 41 | 21:22:37.607 | +0.4 s (0.1 s after the pause) |
-
-All 41 days were drawn (the dev server drew 11 of 41 and trailed by 32.7 s at day 41 in the Task 29 probe). The probe's own sampling interval is 250 ms, so the lag is at most what is shown.
-- Routes on 5173 after demo_up: "/" is the customer view and "/console" and "/console/" the console (HTTP 200, Playwright: no console errors, requests only to 127.0.0.1:5173 and 127.0.0.1:3100, `/console#event-<id>` scrolls to its row, 390 wide scrollWidth 390).
-
-## Tried and rejected
-
-| What | Why rejected |
-| --- | --- |
-| Private `agent_task` table with the worker subscribing | Clients cannot subscribe to private tables in 2.13; made operational tables public and kept company data private |
-| `spacetime login` with GitHub for the local demo | Needs a browser and ties the publisher to a cloud identity; the demo mints a local identity with `POST /v1/identity` and logs the CLI in with that token |
-| Worker-side backtest scored against the answer key | Agent code must never read the key; the module backtests against confirmed controller decisions instead |
-| A pause button in the dashboard | Vite inlines env vars into the bundle, which would ship the controller token; pause is a terminal or ASI:One command |
-
 ## 2026-10-24 21:25 PDT Builder-26: gallery-08, Workflow trigger change, escalations dedupe, trial quota
 
 Commits: 0c50cfb (docs/images/gallery-08.png and docs/images/captions.md), 38a4fec (elastic/workflows/stale_holds.yaml manual only plus guard, elastic/README.md section 8). Every time below is from `date`, git or Kibana. The builder-26 log lines between "16:06" and "17:52" carry wrong hand-typed hours; the log has a correction line, and the director corrected the 17:20 heading above.
@@ -1613,3 +1604,12 @@ The Workflow `caliber-stale-holds` (id `caliber-stale-holds-5`, `elastic/workflo
 ### JUDGE_QA (for the director)
 
 **Is the Workflow scheduled?** No, it runs on a manual trigger only (`caliber-stale-holds-5`, `elastic/workflows/stale_holds.yaml`): the hourly schedule re-briefed the same holds and spent the Elastic trial model quota, so we removed it, and the guard that would let it run hourly again (skip holds briefed since the last mirror) is built but unproven, because every run after 19:03 PDT on 2026-10-24 hit the trial quota's 429.
+
+## Tried and rejected
+
+| What | Why rejected |
+| --- | --- |
+| Private `agent_task` table with the worker subscribing | Clients cannot subscribe to private tables in 2.13; made operational tables public and kept company data private |
+| `spacetime login` with GitHub for the local demo | Needs a browser and ties the publisher to a cloud identity; the demo mints a local identity with `POST /v1/identity` and logs the CLI in with that token |
+| Worker-side backtest scored against the answer key | Agent code must never read the key; the module backtests against confirmed controller decisions instead |
+| A pause button in the dashboard | Vite inlines env vars into the bundle, which would ship the controller token; pause is a terminal or ASI:One command |
