@@ -95,9 +95,7 @@ def derive_kibana_url(es_url: str, explicit: str | None = None) -> str:
 def redact(api_key: str) -> str:
     if not api_key:
         return "<ELASTIC_API_KEY unset>"
-    if len(api_key) <= 8:
-        return "****"
-    return f"****{api_key[-4:]}"
+    return "****"   # never any part of the key, not even the tail
 
 
 @dataclass

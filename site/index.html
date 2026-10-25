@@ -82,7 +82,7 @@
       <thead><tr><th>Time</th><th>What happened</th></tr></thead>
       <tbody>
         <tr><td class="t">0 s</td><td>The day-41 fuel-card export (61 rows, the shape a card provider sends each morning) lands in the inbox folder. The file connector hands it to the ledger.</td></tr>
-        <tr><td class="t">about 2 s</td><td>The kernel matches each row. Clean rows auto-pay within limits. Hold 2231 opens: card FC-1017, assigned to truck 17, bought 120 gallons ($412.00) at Love's 412 in Schulenburg, while truck 17's nearest ping, 13 minutes earlier, was 97 miles away with the engine off.</td></tr>
+        <tr><td class="t">about 2 s</td><td>The kernel matches each row. Clean rows auto-pay within limits. Hold 2231 opens: card FC-1017, assigned to truck 17, bought 120 gallons ($412.00) at Love's 412 in Schulenburg, while truck 17's nearest ping, 13 minutes after the charge, was 97 miles away with the engine off.</td></tr>
         <tr><td class="t">19.0 s</td><td>The Droid finding comes back as typed JSON: truck 22 was at the pump, driven by the same driver, Ramon Ortiz, while truck 17 was in the shop. Only a person can confirm the card use. Recommendation: hold and ask.</td></tr>
         <tr><td class="t"></td><td>On ASI:One the controller types <code>why 2231</code>, reads the evidence, and answers: <code>answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.</code></td></tr>
         <tr><td class="t">about 2 s</td><td>The worker drafts a rule from the answer, scoped to the driver, days 41 to 46, one use, backtested: would have cleared 1 of 1 past rows, 0 of them confirmed exceptions. <code>approve rule 1</code>. The rule clears 2231 and is used up. It never asks that twice.</td></tr>

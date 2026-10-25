@@ -234,7 +234,7 @@ def test_settings_from_env_uses_dotenv_and_derives_kibana(monkeypatch, tmp_path)
     assert headers["Authorization"] == "ApiKey abcdefghijkl"
     assert headers["kbn-xsrf"] == "true"
     assert headers["x-elastic-internal-origin"] == "Kibana"
-    assert common.redacted_headers(headers, s.api_key)["Authorization"] == "ApiKey ****ijkl"
+    assert common.redacted_headers(headers, s.api_key)["Authorization"] == "ApiKey ****"
 
 
 def test_settings_missing_env_fails_fast_unless_dry_run(no_elastic_env):
