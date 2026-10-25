@@ -195,7 +195,19 @@ const run: AuditEvent[] = [
 ].map(([ref, rec], i) => ({ id: BigInt(500 + i), at: ts(500 + i), day: 41, actor: MOD, actorRole: 'agent', action: 'record_investigation', ref: String(10 + i), detail: `${ref} ${rec} (replayed)` }));
 const claims: AuditEvent[] = run.map(r => ({ ...r, id: r.id + 100n, action: 'claim_task', detail: r.detail.split(' ')[0] }));
 const collapsed = activityLines([...run, ...claims, events[9]], lk);
-check('feed: run of 4 collapses to one line', collapsed.length === 2 && collapsed[0].text === 'Caliber looked into 4 invoices; 2 need you.' && collapsed[0].id === 603n - 100n, collapsed.map(l => `${l.id}:${l.text}`).join(' | '));
+check('feed: run of 4 collapses to one line', collapsed.length === 2 && collapsed[0].text === 'Caliber looked into 4 invoices; 2 asked you a question.' && collapsed[0].id === 603n - 100n, collapsed.map(l => `${l.id}:${l.text}`).join(' | '));
+check('feed: automatic payments and their settlement are one line', lines.some(l => l.text === 'Paid 1 charge automatically ($100.00); recorded offline, no bank called.') && !lines.some(l => /charge 1000 recorded offline/.test(l.text)), lines.map(l => l.text).filter(t => /Paid|offline|bank/.test(t)).join(' | '));
+check('feed: a rule payment settlement stays its own line', lines.some(l => l.text === 'The bank sent payment for charge 2010, transfer NESSIE-abc123.'));
+const many: AuditEvent[] = [];
+const manyPay: Payment[] = [];
+for (let k = 0; k < 5; k++) {
+  const ref = `C${k}`;
+  manyPay.push({ txnRef: ref, cents: 1000n, day: 41, releasedBy: MOD, releasedRole: 'kernel', at: ts(41), bankTxnId: k < 3 ? `NES-${k}` : `offline-${ref}` });
+  many.push({ id: BigInt(800 + k), at: ts(800 + k), day: 41, actor: MOD, actorRole: 'seed', action: 'auto_pay', ref, detail: '1000 cents' });
+  many.push({ id: BigInt(900 + k), at: ts(900 + k), day: 41, actor: ME, actorRole: 'agent', action: 'settle', ref, detail: `bank id ${manyPay[k].bankTxnId}` });
+}
+const mixed = activityLines(many, lookupsFrom([], manyPay, [], []));
+check('feed: mixed settlement counts', mixed.length === 1 && mixed[0].text === 'Paid 5 charges automatically ($50.00); 3 paid through the bank, 2 recorded offline, no bank called.' && mixed[0].id === 904n, mixed.map(l => `${l.id}:${l.text}`).join(' | '));
 const two = activityLines(run.slice(0, 2), lk);
 check('feed: run of 2 stays as lines', two.length === 2 && two[0].text === 'Caliber looked into invoice INV-1051 and found nothing wrong.', two.map(l => l.text).join(' | '));
 

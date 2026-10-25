@@ -528,24 +528,76 @@ const COLLAPSE_AT = 3;
  */
 export function activityLines(events: readonly AuditEvent[], lk: Lookups): ActivityLine[] {
   const feed = events.filter(e => e.action !== 'claim_task').sort((a, b) => (a.id === b.id ? 0 : a.id > b.id ? -1 : 1));
+  // A day's automatic payments and their settlements become one line, placed at the newest of its rows.
+  const autoDay = new Map<string, number>();
+  for (const e of feed) if (e.action === 'auto_pay' && !autoDay.has(e.ref)) autoDay.set(e.ref, e.day);
+  const groups = new Map<number, { refs: Set<string>; newest: bigint }>();
+  const groupOf = (e: AuditEvent): number | undefined => {
+    if (e.action === 'auto_pay') return e.day;
+    if (e.action === 'settle' && lk.payments.get(e.ref)?.releasedRole === 'kernel') return autoDay.get(e.ref);
+    return undefined;
+  };
+  for (const e of feed) {
+    const d = groupOf(e);
+    if (d === undefined) continue;
+    const g = groups.get(d) ?? { refs: new Set<string>(), newest: e.id };
+    if (e.action === 'auto_pay') g.refs.add(e.ref);
+    if (e.id > g.newest) g.newest = e.id;
+    groups.set(d, g);
+  }
   const out: ActivityLine[] = [];
   for (let i = 0; i < feed.length; ) {
     const e = feed[i];
+    const d = groupOf(e);
+    if (d !== undefined) {
+      const g = groups.get(d);
+      if (g && g.newest === e.id && g.refs.size > 0) out.push({ id: e.id, day: d, text: autoPaySummary(g.refs, lk) });
+      i++;
+      continue;
+    }
     let j = i;
-    if (e.action === 'record_investigation') while (j + 1 < feed.length && feed[j + 1].action === 'record_investigation' && feed[j + 1].day === e.day) j++;
-    const run = feed.slice(i, j + 1);
+    if (e.action === 'record_investigation') {
+      while (j + 1 < feed.length && feed[j + 1].day === e.day && (feed[j + 1].action === 'record_investigation' || groupOf(feed[j + 1]) !== undefined)) j++;
+    }
+    const run = feed.slice(i, j + 1).filter(r => r.action === 'record_investigation');
     if (run.length >= COLLAPSE_AT) {
       const kinds = new Set(run.map(r => lk.holds.get(investigationOf(r).txnRef)?.kind ?? 'card'));
       const unit = kinds.size === 1 && kinds.has('invoice') ? 'invoice' : kinds.size === 1 && kinds.has('toll') ? 'toll' : 'charge';
       const asks = run.filter(r => NEEDS_YOU.has(investigationOf(r).recommendation)).length;
-      const need = asks === 0 ? 'none need you' : asks === 1 ? '1 needs you' : `${asks} need you`;
-      out.push({ id: e.id, day: e.day, text: `Caliber looked into ${plural(run.length, unit)}; ${need}.` });
+      const asked = asks === 0 ? 'none needed to ask you anything' : `${asks} asked you a question`;
+      out.push({ id: e.id, day: e.day, text: `Caliber looked into ${plural(run.length, unit)}; ${asked}.` });
+      // payment rows interleaved with the run are still emitted at their group's newest row
+      for (const r of feed.slice(i, j + 1)) {
+        const gd = groupOf(r);
+        const g = gd === undefined ? undefined : groups.get(gd);
+        if (gd !== undefined && g && g.newest === r.id && g.refs.size > 0) out.push({ id: r.id, day: gd, text: autoPaySummary(g.refs, lk) });
+      }
+      i = j + 1;
     } else {
-      for (const r of run) out.push({ id: r.id, day: r.day, text: activitySentence(r, lk) });
+      out.push({ id: e.id, day: e.day, text: activitySentence(e, lk) });
+      i++;
     }
-    i = j + 1;
   }
   return out;
+}
+
+function autoPaySummary(refs: Set<string>, lk: Lookups): string {
+  let cents = 0n;
+  let bank = 0;
+  let offline = 0;
+  for (const ref of refs) {
+    const p = lk.payments.get(ref);
+    if (!p) continue;
+    cents += p.cents;
+    if (p.bankTxnId === undefined) continue;
+    if (p.bankTxnId.startsWith('offline-')) offline++;
+    else bank++;
+  }
+  const lead = `Paid ${plural(refs.size, 'charge')} automatically (${money(cents)})`;
+  if (bank === 0 && offline === 0) return `${lead}.`;
+  if (bank === 0) return `${lead}; recorded offline, no bank called.`;
+  if (offline === 0) return `${lead}; paid through the bank.`;
+  return `${lead}; ${bank} paid through the bank, ${offline} recorded offline, no bank called.`;
 }
 
 function refusedSentence(e: AuditEvent, lk: Lookups): string {
