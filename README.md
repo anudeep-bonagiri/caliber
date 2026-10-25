@@ -149,8 +149,8 @@ Droid 0.249 runs tools through `Script` and loads MCP tools with `ToolSearch`, s
 
 | Name | Handle | Address | Role | Code |
 | --- | --- | --- | --- | --- |
-| caliber-controller | pending registration | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | controller seat (Agentverse mailbox registration pending) | `agent/` |
-| caliber-investigator | pending registration | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | read-only investigator (`reader` identity; answers `why <id>` and `status`) | `agent/investigator.py` |
+| caliber-controller | `@caliber-controller` | `agent1qt278cr9luj7xw9cs6c47lnfl9tvx9xsu7asxtmhuqkcqq920m6ju5y5yge` | controller seat (approve, answer, reject, rules; writes only for senders on the allowlist) | `agent/` |
+| caliber-investigator | `@caliber-investigator` | `agent1qvwvlc0vz2amjh4q4yf0p2fglqrzw2rmfm6afrsq82e8lq5df7yyxnrxaqh` | read-only investigator (`reader` identity; answers `why <id>` and `status`) | `agent/investigator.py` |
 
 The addresses are derived from `AGENT_SEED` and `INVESTIGATOR_SEED` and are fixed; they are the ones the running agents printed in `logs/agent.log` and `logs/investigator.log`. Both agents speak the Chat Protocol and run the same handlers as the terminal CLI (`python3 -m agent.cli "..."`). The agent that explains cannot pay: the reader role is refused by `approve_payment` and the refusal is an audit row. Commands and reply shapes are in `agent/README.md` and `agent/INVESTIGATOR_README.md`.
 
