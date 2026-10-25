@@ -478,6 +478,8 @@ export function activitySentence(e: AuditEvent, lk: Lookups): string {
       return `Caliber started looking into ${refWord(e.detail, lk)}.`;
     case 'record_investigation': {
       const { txnRef, recommendation } = investigationOf(e);
+      // "done" closes a rule-drafting task (worker/src/rules.ts), drafted or not; not an investigation
+      if (recommendation === 'done') return `Caliber finished working on your answer about ${refWord(txnRef, lk)}.`;
       return `Caliber looked into ${refWord(txnRef, lk)} ${OUTCOME[recommendation] ?? 'and finished'}.`;
     }
     case 'rematch':
