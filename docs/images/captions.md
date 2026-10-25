@@ -24,7 +24,6 @@ Captured 2026-10-24 between 21:00 and 21:06 PDT in Anudeep's Chrome session, wit
 
 ## gallery-09-benchmark.png
 
-The benchmark table from README "Measurement", rendered at 1800 by 1200 in the site palette. Every figure is from bench/BASELINE.md (run of 2026-10-25T12:55:10Z) and docs/FACTS.md: Caliber 1.00 / 1.00 on the full 7,944-row run; Sonnet 5.5 1.00 / 1.00 and $6.38; Opus 5.5 0.81 / 1.00 with 14 false holds and $12.85; asi1-mini 0.31 / 0.81 with 101 false holds on the free plan; Droid 25.6 s per hold and 2,016,204 credits (about $5.44 at Factory's rate). Median latency per row from the committed outputs. The chip names the simulated carrier and the run date.
+Benchmark at a glance, dark version: four hero tiles for the kernel (precision 1.00, recall 1.00, 0 false holds in 7,944 rows, $0 model cost per paid line) and three bar panels across the four systems on the same 558 rows: precision (Caliber 1.00, Sonnet 5.5 1.00, Opus 5.5 0.81, asi1-mini 0.31), false holds (0, 0, 14, 101) and cost at list rates ($0, $6.38, $12.85, free plan). The kernel's bar is brass, the models grey, every bar carries its value. The footer gives the per-quarter costs and says Sonnet ties the kernel on accuracy. Every figure is from bench/BASELINE.md (run of 2026-10-25T12:55:10Z) and docs/FACTS.md; Droid's credits (2,016,204, about $5.44 at Factory's rate) are in the cost panel's note. The chip names the simulated carrier and the run date.
 
-Rendered 2026-10-25 07:05 PDT by Playwright (Chromium, 1800 by 1200, device scale 1) from a static page; no live system in the picture.
-
+Rendered 2026-10-25 07:10 PDT by Playwright (Chromium, 1800 by 1200, device scale 1) from a static page; no live system in the picture.
