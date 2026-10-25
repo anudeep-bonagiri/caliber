@@ -157,7 +157,7 @@ Other first-contact errors: **401** means the key is wrong or the header says `B
 
 ## 8. The Workflow (Task 26.3)
 
-`workflows/stale_holds.yaml` is `caliber-stale-holds`: a `scheduled` trigger every 1h and a `manual` trigger with one input `min_age_bd` (default 2). Steps: `elasticsearch.esql.query` over `holds` (`is_open == true AND age_bd > min_age_bd`, LIMIT 3), a `foreach` with an `ai.agent` step (`agent-id: dispatch-investigator`, the Agent Builder agent that owns the four tools) asking for a one-paragraph brief, then `elasticsearch.index` into `escalations` with `{hold_ref, code, cents, day, age_bd, min_age_bd, brief, at, workflow_run, workflow, agent_id, source}`.
+`workflows/stale_holds.yaml` is `caliber-stale-holds` (deployed id `caliber-stale-holds-5`): a `manual` trigger only, with one input `min_age_bd` (default 2). The hourly `scheduled` trigger was removed on 2026-10-24 21:02 PDT: the `holds` index changes only when `mirror_holds.py` runs by hand, so every hourly run re-briefed the same three holds (escalations grew from 6 to 18) and spent the Elastic trial model quota until the 20:03 run failed with a 429. Steps: a guard (`last_mirror`: `FROM holds | STATS MAX(mirrored_at)`; `briefed_since_mirror`: hold refs with an escalation at or after that time), then `elasticsearch.esql.query` over `holds` (`is_open == true AND age_bd > min_age_bd AND NOT txn_ref IN (<briefed since mirror>)`, LIMIT 3), a `foreach` with an `ai.agent` step (`agent-id: dispatch-investigator`, the Agent Builder agent that owns the four tools) asking for a one-paragraph brief, then `elasticsearch.index` into `escalations` with `{hold_ref, code, cents, day, age_bd, min_age_bd, brief, at, workflow_run, workflow, agent_id, source}`.
 
 ```bash
 .venv/bin/python mirror_holds.py            # public hold + business_day tables -> holds index (age_bd per hold); run by hand before the demo, the worker does not run it yet
@@ -166,7 +166,7 @@ Other first-contact errors: **401** means the key is wrong or the header says `B
 .venv/bin/python setup_workflow.py --status <execution_id>
 ```
 
-The Workflows API on this build has bulk create and bulk delete only (`docs/evidence/elastic/workflows_api_probe.txt`); runs and status go through the Agent Builder tools. Measured 2026-10-24: the first escalation lands about 90 s after the run starts, the agent step takes about 80 s per hold with tool calls. A new copy of the workflow also fires its scheduled trigger once on creation, so a recreate produces two runs.
+The Workflows API on this build has bulk create and bulk delete only (`docs/evidence/elastic/workflows_api_probe.txt`); runs and status go through the Agent Builder tools. Measured 2026-10-24: the first escalation lands about 90 s after the run starts, the agent step takes about 80 s per hold with tool calls. A copy with a scheduled trigger fires it once on creation, so a recreate produced two runs. The guard is built but not yet proven in a workflow run: three runs on 2026-10-24 (21:04, 21:05, 21:19 PDT) reached the agent step and failed with the trial quota's 429. Its three queries, run by hand against `_query`, return `[1793]` for `min_age_bd` 25 and nothing for 32, because 1068, 1421 and 1468 were already briefed since the last mirror. Restoring the hourly trigger waits on one passing pair of manual runs, the second briefing zero holds.
 
 ## 9. How the worker consumes it
 

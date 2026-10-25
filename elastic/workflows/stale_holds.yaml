@@ -1,18 +1,16 @@
 name: caliber-stale-holds
 description: >
-  Caliber stale-hold escalation. Every hour (and on demand for the demo) read the `holds` index, which
-  elastic/mirror_holds.py copies from the ledger's public hold table, find holds still open after more than
-  min_age_bd business days, ask the Agent Builder agent dispatch-investigator for a one-paragraph brief per hold
-  using its ES|QL tools, and write each brief into the `escalations` index that the controller agent's `status`
-  reply reads. Nothing here moves money or changes a hold; it only writes briefs.
+  Caliber stale-hold escalation. On demand (and hourly when the scheduled trigger is present) read the `holds`
+  index, which elastic/mirror_holds.py copies from the ledger's public hold table, find holds still open after
+  more than min_age_bd business days that have no brief since the last mirror, ask the Agent Builder agent
+  dispatch-investigator for a one-paragraph brief per hold using its ES|QL tools, and write each brief into the
+  `escalations` index that the controller agent's `status` reply reads. Each mirrored stale hold is briefed once;
+  a run with nothing new to brief makes no model call. Nothing here moves money or changes a hold.
 enabled: true
 tags:
   - caliber
   - calhacks
 triggers:
-  - type: scheduled
-    with:
-      every: "1h"
   - type: manual
     inputs:
       - name: min_age_bd
@@ -20,6 +18,22 @@ triggers:
         default: 2
         description: Escalate holds open for more than this many business days (the kernel's default is 2).
 steps:
+  # Guard, part 1: when were the holds last mirrored from the ledger.
+  - name: last_mirror
+    type: elasticsearch.esql.query
+    with:
+      format: json
+      query: "FROM holds | STATS mirrored_at = MAX(mirrored_at)"
+  # Guard, part 2: which holds already have a brief written since that mirror.
+  - name: briefed_since_mirror
+    type: elasticsearch.esql.query
+    with:
+      format: json
+      query: >
+        FROM escalations
+        | WHERE at >= TO_DATETIME("{{ steps.last_mirror.output.values[0][0] | default: '1970-01-01T00:00:00Z' }}")
+        | STATS n = COUNT(*) BY hold_ref
+        | KEEP hold_ref
   - name: find_stale_holds
     type: elasticsearch.esql.query
     with:
@@ -27,6 +41,7 @@ steps:
       query: >
         FROM holds
         | WHERE is_open == true AND age_bd > {{ inputs.min_age_bd | default: 2 }}
+          AND NOT txn_ref IN ("__none__"{% for r in steps.briefed_since_mirror.output.values %}, "{{ r[0] }}"{% endfor %})
         | SORT age_bd DESC, cents DESC
         | KEEP txn_ref, kind, code, cents, opened_day, current_day, age_bd, status, reason, question
         | LIMIT 3
