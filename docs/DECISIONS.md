@@ -50,3 +50,9 @@ Numbered, dated, append-only. Each entry: the decision, why, the consequence. Pa
 - Decision: `scripts/demo_up.sh` builds the web app and serves it with `vite preview` on 5173 instead of running the dev server.
 - Why: measured, not guessed. At the 0.5 s tick the dev server's pages trailed the ledger by up to 33 s and drew 11 of 41 days, on master and on the Task 29 branch alike, so it was not a regression; the production build of the same code trailed by 0.1 s and drew every day (builder-29's probe, 21:15).
 - Consequence: no hot reload on 5173 during the demo, so any web change needs a fresh `demo_up.sh` (or a rebuild) to show; the build adds a few seconds to `demo_up.sh`; the console code is unchanged.
+
+## D-9 (2026-10-25 05:45 PDT) Opus 5.5 joins the model-only baseline after the freeze; no new sponsor integration
+
+- Decision: run Claude Opus 5.5 through the Task 22 harness under the same $15 cap and API defaults; run a GPT model only if an OpenAI key is in .env when the builder starts; publish only measured lines (no model call per paid line; each model's cost at list; tie or miss per model) and never a dollar comparison against Droid, whose credits our files do not price.
+- Why: Anudeep asked whether the comparison holds against stronger models. It costs under $15 and one builder, touches no sponsor path, and either answer is publishable: a tie says the kernel's edge is cost and auditability, a miss says it is accuracy too.
+- Consequence: README, Devpost, cards, JUDGE_QA and the paper table gain one column; the Devpost paragraph changes, so Anudeep re-pastes that paragraph only; effort defaults differ by model (Sonnet 5.5 high, Opus 5.5 medium) and the footnote says so.
