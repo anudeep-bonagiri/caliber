@@ -1,6 +1,6 @@
 # Fifteen-second cards
 
-Anudeep and Shrithik rehearse from this page at 3 AM. One rule: no number that is not on this page. Every number here is copied from docs/FACTS.md as written by the run of 2026-10-24 (FACTS line: "2026-10-25T00:22:27+00:00. Nothing in it is typed by hand."). Where a card has no FACTS number it says so and names the thing the judge can see instead. The line number after each function is its grep hit. "Not built." is a complete answer; say it without a wince.
+Anudeep and Sreesanth rehearse from this page at 3 AM. One rule: no number that is not on this page. Every number here is copied from docs/FACTS.md as written by the run of 2026-10-24 (FACTS line: "2026-10-25T00:22:27+00:00. Nothing in it is typed by hand."). Where a card has no FACTS number it says so and names the thing the judge can see instead. The line number after each function is its grep hit. "Not built." is a complete answer; say it without a wince.
 
 ## The kernel
 
