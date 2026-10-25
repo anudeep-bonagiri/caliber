@@ -1,4 +1,15 @@
 
+## gallery-00.png
+
+The controller's screen in Caliber (`/`, Task 29) for the simulated carrier Mesquite Freight, on business day 41, Wed Aug 26. This is the first gallery image and the Devpost thumbnail.
+
+- **Card.** Fuel charge 2231 is held. The sentence is built from the ledger's own match row (station, gallons, GPS distance 97.2 miles, engine off), not from model prose. The question in brass is the stored question, verbatim: was Ramon Ortiz fueling truck 22 while truck 17 was in the shop?
+- **Map and receipt.** The map is two points and the ledger's distance, with no tile server. The receipt is the quote stored with the investigation. The card says "replay of a recorded investigation" because this run replayed a recorded Droid investigation.
+- **Learned.** The rule from the controller's answer on decoy 2044 (Jerome Watkins, truck 14), approved through the controller agent's CLI and used once.
+- **Tiles and Activity.** Read from the same public tables as the console, with the anonymous identity.
+
+Captured 2026-10-24 at 21:17 PDT by Playwright (Chromium, 1800 by 1200, device scale 1) against a staged ledger: seeded, clock run to day 41 at a 0.5 s tick, worker in replay. The page holds no token and has no button that moves money.
+
 ## gallery-08.png
 
 Elastic Serverless project my-elasticsearch-project-b5e003: Agent Builder tools (4), Workflow caliber-stale-holds executions, one escalations document.
