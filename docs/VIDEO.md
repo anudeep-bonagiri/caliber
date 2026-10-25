@@ -1,32 +1,64 @@
-# Video script, 3:30 to 4:00
+# Video script, under 4:15
 
-One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and CRS (the sandbox call visible). It opens on the moment, in the order the council set (Task 28): the investigator agent is refused when asked to pay, the controller's approval becomes a Nessie bank id, then the hold-to-rule story. Staging, typed lines and pauses for the first 90 s: docs/video/moment-script.md (settlement live, Droid replay, data dropped off camera so 2231 and INV-1075 are open on day 41). Every number spoken is read off a screen element or from docs/FACTS.md; nothing is from memory. Left of frame: the dashboard. Right of frame: ASI:One on the second laptop (or the terminal twin, which runs the same handler). Beats that depend on a live service carry "[if green, else replay]" with the replay line under them.
+One cut serves Cal Hacks, Fetch.ai (3 to 5 minutes) and the sponsor tracks. It opens on the moment in the order the council set: the investigator agent is refused when asked to pay, the controller's approval becomes a bank id, then the hold-to-rule story, then the proof. Staging, typed lines and pauses: docs/video/moment-script.md. Every number below is read off the screen or from docs/FACTS.md and bench/BASELINE.md (runs of 2026-10-25); nothing is from memory. Three dry jokes, no more.
 
-| Time | Shot | Say | On screen | Source of every number |
-| --- | --- | --- | --- | --- |
-| 0:00 | ASI:One, `@caliber-investigator` chat, dashboard beside it | "This is Caliber's investigator agent on ASI:One. It can read the whole ledger. Watch what happens when it is asked to pay." Type `approve 2231`. "The database refused it and wrote down who asked: role reader. The agent that explains cannot pay." | Reply `investigator: refused by the ledger: reader may not do this (needs controller)`; Ledger of trust newest row red, `refused`, actor `reader`, ref `2231` | Reply text; the audit row |
-| 0:15 | ASI:One, `@caliber-controller` chat, then the audit feed | "The controller's seat can." Type `approve INV-1075`. "A clean repair invoice, held only because it is over the auto-pay limit. One reducer checked the role and segregation of duties and wrote the payment, and the transfer posted to Capital One's Nessie mock bank. The bank id is on the audit row." | Reply `approve_payment INV-1075 written to audit_event by controller (event <n>, day 41)`; Ledger of trust `approve_payment` then `settle` ref `INV-1075` `paid, bank id <id>`; Queue resolved `settled <id>` | The id on screen. If the row reads `settlement: offline`, say "offline id, no bank called" and never "live" |
-| 0:30 | Terminal, then the dashboard | Run `scripts/clock.sh step`, then `(cd elastic && .venv/bin/python setup_workflow.py --run --no-wait)`. "Business day 42; the files in the inbox are matched as their day arrives. And I have started Elastic's stale-holds Workflow: it finds holds nobody has answered and has the Agent Builder agent brief each one." | `advanced one day`, Day clock `Day 42 of 92`; `Running <workflow id> once...` | None |
-| 0:40 | Dashboard, click hold 2231 | "Hold 2231, from yesterday. A fuel card assigned to truck 17 bought fuel in Schulenburg while truck 17's own telematics put it far outside the 25 mile threshold, engine off. Nothing paid. The investigator is Factory's Droid, read-only, with MCP as its only reach into data. It asked Elastic which trucks pinged at that pump: truck 22. It read the dispatcher's swap log. Then it wrote one question for a person." | Investigation header: truck, driver, station, distance vs threshold; steps `elastic___find_trips_near` naming truck 22, Read of swap_log.txt, the finding, the `replayed` badge | Gallons, dollars and miles: the Investigation panel header. Truck id: the tool_result row |
-| 1:00 | ASI:One, controller chat | Type `why 2231`. "The controller agent hands that to the investigator agent and relays the reply; the first line shows the hop." Read the question, then type `answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.` | `asked @caliber-investigator agent1q..., <n> s`, then `investigator: 2231 ...`; then `answer_question 2231 written to audit_event by controller (...)` | Reply text as displayed |
-| 1:15 | Rules panel, then ASI:One | "The answer is not a payment. The worker drafts a rule: driver 23, a six-day window, one time. The database backtests it before it will store it." Type `rules`, read the id, type `approve rule <n>`. "The kernel re-runs the same code with the rule in place and clears the hold. The payment is written by the rule, not by anyone's opinion." | Rules panel: the candidate rule with "Would have cleared N past rows; M were confirmed exceptions"; after approval the pill reads `used`. Queue: 2231 moves to resolved as `cleared by rule`, released by rule | N and M: the rule card. Rule id: the `rules` reply |
-| 1:40 | ASI:One, controller chat, at least 63 s after the 0:30 trigger | Type `status`. "And Elastic's brief is back: the status line ends with the escalation count the Workflow wrote." | `investigator: Day 42 of 92 ...`, last line `<N> escalations, newest: <hold ref>: ...` | N: the reply. If it has not moved, wait 10 s and send again |
-| 1:50 | Queue, INV-1077 selected (run `scripts/clock.sh step` twice to day 44 first) | "Vendor three changed its bank account two business days before a nine thousand eight hundred dollar invoice. Hard hold. The vendor check ran against CRS: business credit, public records, OFAC, on the business only, nothing on people. Today the check is a hand-authored fixture, sandbox pending; the card says FIXTURE." | Investigation panel: `call-back required` pill; Vendor check block with the amber `FIXTURE` chip and three rows each sourced `fixture:hand-authored (CRS sandbox pending)` (`docs/RUNBOOK.md` 02:45); once a sandbox call is recorded the chip reads `REPLAYED` and the rows read crs:business_credit, crs:public_records, crs:ofac | Dollars: the queue row. Sources: the three rows |
-| 1:50 alt | if the sandbox call has been recorded | "The vendor check is replaying a recorded CRS sandbox call; the three rows carry their CRS sources." | Same block with the `REPLAYED` chip | Same |
-| 2:05 | ASI:One, controller chat | Type `approve INV-1077`. "No call-back note, no payment." Type `approve INV-1077 Called Gulf Coast Diesel on the number on file; new account confirmed by M. Reyes.` "Released, and settled into the mock bank like INV-1075." | "Refused: call-back note required for a bank change", then "approve_payment INV-1077 written to audit_event by controller", then the `settle` row `paid, bank id <id>` | Reply text |
-| 2:30 | Clock running at 0.5 s tick (shot on a separate replay staging: with settlement live every auto-paid row is a Nessie transfer), then docs/FACTS.md on screen | "Ninety-two business days, seven thousand nine hundred forty-four transactions, in seconds. We planted 52 exceptions across seven classes and six legitimate truck swaps that look like fraud. Precision 1.0, recall 1.0. All six decoys cleared with one answer each. Zero planted exceptions cleared by a rule. The script that computes those numbers is the only program in the demo allowed to read the answer key." | Counters climbing; then the FACTS.md table | docs/FACTS.md: transactions 7944; planted 52 plus 6 decoys; precision 1.0; recall 1.0; decoys 6 of 6; planted cleared by rule 0 |
-| 2:55 | Three stills, five seconds each | "One SpacetimeDB module is the shared room: roles are a table, the clock is a scheduled reducer, the agent cannot approve, every action and every refusal is an audit row." "Droid on a trigger, autonomy off, write tools disabled by id, only MCP and reads allowed, ninety second abort, output schema with no pay." "The company is generated by us with a published key. The controls are real. The not-built list is in the repo." | README principles; worker/README.md options block; docs/not-built.md | None |
-| 3:15 | Dashboard, clock paused | "Caliber. The money does not move until the code has matched the line, and the agent can never approve what it proposed. Repo, Agentverse address and the facts file are in the description." | Dashboard | None |
+[0:00] ASI:One, the @caliber-investigator chat, the console beside it on day 41.
+Say: "This is Caliber, an accounts-payable clerk for a trucking company that cannot pay anything itself. This is its investigator agent on ASI:One. It can read the whole ledger. Watch what happens when it is asked to pay."
+Type: approve 2231
+Say: "Refused by the database, which wrote down who asked: role reader. The agent that explains cannot pay."
 
-Fetch.ai cut: keep every beat; the 0:00, 0:15, 1:00, 1:15 and 1:40 beats must be the live ASI:One chat, so record them only after both mailboxes are connected and `ASI_ALLOWED_SENDERS` holds the recording account. CRS cut: the 1:50 beat must show the live call; if the sandbox is not green by recording time, keep the FIXTURE line and say "fixture, sandbox pending", never "live" or "replayed".
+[0:20] ASI:One, the @caliber-controller chat, then the audit feed on the console.
+Say: "The controller's seat can."
+Type: approve INV-1075
+Say: "A clean repair invoice, held only because it is over the auto-pay limit. One reducer checked the role and segregation of duties, wrote the payment, and the transfer posted to Capital One's Nessie mock bank. The bank id is on the audit row, under a second after the command."
 
-Numbers in this script come from docs/FACTS.md dated 2026-10-25T00:22:27+00:00. If facts.py is rerun before recording, re-read the table and change the spoken numbers to match.
+[0:40] Terminal: scripts/clock.sh step, then the Elastic Workflow trigger (cd elastic && .venv/bin/python setup_workflow.py --run --no-wait). Console shows Day 42 of 92.
+Say: "Business day 42. Files in the inbox are matched as their day arrives. And I have started Elastic's stale-holds Workflow; it finds holds nobody has answered and has the Agent Builder agent brief each one."
+
+[0:55] Console, the day-41 queue in view.
+Say: "We could have paid a frontier model to read every fuel receipt in Texas. We did the math, got a little nervous, and wrote three hundred lines of TypeScript instead. That's our kernel. It works in whole cents and never calls a model. Every fuel charge, toll and repair invoice is matched against the truck's own telematics, its tank size, the purchase order, the contract rate and the vendor's bank details. Clean lines pay themselves. Everything else becomes a hold."
+
+[1:15] Console, click hold 2231.
+Say: "Hold 2231. A fuel card assigned to truck 17 bought one hundred twenty gallons, four hundred twelve dollars, at Love's in Schulenburg, Texas. Truck 17's own telematics put it ninety-seven miles away, engine off, twelve minutes after the charge. Nothing paid. The investigator is Factory's Droid, locked down to read-only, with Elastic's tools over MCP as its only reach into data. It has roughly the permissions of an intern on their first day, which makes it the best-behaved employee we've ever had. It asked Elastic which trucks pinged at that pump: truck 22. It read the dispatcher's swap log. It came back with a typed finding and one question: did Ramon Ortiz fuel truck 22 while truck 17 was in the shop?"
+
+[1:45] ASI:One, the controller chat.
+Type: why 2231
+Say: "The controller agent hands that to the investigator and relays the reply; the first line shows the hop. The controller answers in one sentence."
+Type: answer 2231 Yes. Ortiz drove unit 22 that week while unit 17 was in the shop, per the swap log.
+
+[2:00] Console, the Rules panel, then ASI:One.
+Say: "The answer is not a payment. The worker drafts a rule: that driver, for that week, one use. The database tests it against every charge the controller has already decided before it will store it."
+Type: rules (read the candidate's id off the reply), then: approve rule <n>
+Say: "The kernel re-runs the same code with the rule in place and clears the hold. It will never ask that question twice."
+
+[2:20] ASI:One, the controller chat, at least 63 seconds after the Workflow trigger.
+Type: status
+Say: "And Elastic's brief is back: the status line ends with the escalation count the Workflow wrote."
+
+[2:30] Console, the queue on day 44 (two more clock steps), INV-1077 selected.
+Say: "One more kind of hold. A vendor changed its bank account two business days before a nine thousand eight hundred dollar invoice. The vendor check ran business credit, public records and an OFAC screen on the business, nothing on people. Today it is a hand-authored fixture and the card says so."
+Type: approve INV-1077 Called Gulf Coast Diesel on the number on file; new account confirmed by M. Reyes.
+Say: "Without a call-back note the reducer refuses. With it, released, and settled like the first one."
+
+[2:50] docs/FACTS.md on screen, then the benchmark image.
+Say: "So we made up a whole trucking company. Forty trucks, ninety-two days, a driver named Ortiz. Then we planted 52 mistakes and hid the answers from our own AI, which felt a little mean. It caught all 52. Zero false holds. All six decoys, the legitimate truck swaps that look like fraud, cleared after exactly one answer each."
+Say: "We also gave Claude Sonnet the same inputs with no kernel at all, and it matched us. Which was humbling for about a minute. Then we checked the price: Claude costs money on every charge, and our kernel costs zero. So on cost, we win by infinity. We did the division. A smaller model reached 31 percent precision and held a hundred and one clean charges."
+
+[3:25] Three stills, five seconds each: the architecture drawing, the Droid options block, the honesty chips.
+Say: "One SpacetimeDB module is the shared room: roles are a table, the clock is a scheduled reducer, every action and every refusal is an audit row. Droid runs on a trigger, autonomy off, write tools disabled, a ninety-second abort, an output schema with no pay in it. The company is generated by us with a published answer key, the vendor check is a labelled fixture, the bank is a mock. The controls are not."
+
+[3:45] Console, clock paused.
+Say: "Caliber. The money does not move until the code has matched the line, and the agent can never approve what it proposed. Repo, Agentverse addresses and the facts file are in the description."
+
+Fetch.ai cut: the 0:00, 0:20, 1:45, 2:00 and 2:20 beats must be the live ASI:One chat, recorded only with both mailboxes connected and ASI_ALLOWED_SENDERS holding the recording account (verified 07:41 with an allowlisted pause). If the mailbox drops mid-take, type the same lines through the terminal twin (docs/video/moment-script.md) and keep talking.
+
+Verified before keeping: "caught all 52" is FACTS recall 1.0; "31 percent" is asi1-mini precision 0.31 in BASELINE; "Claude Sonnet matched us" is BASELINE Sonnet 1.00 / 1.00, and Opus is never claimed; "tests it against every charge the controller has already decided" is the module backtest against confirmed controller decisions (D-6); "for that week" matches the drafted rule's five-business-day window; "three hundred lines" is spacetimedb/src/kernel.ts (333 lines, 301 of code); "a driver named Ortiz" because Ramon Ortiz is driver 23 in the swap log, not the dispatcher; the Sonnet run cost $6.38 at list. Never say the kernel beat Claude on accuracy.
 
 ## Never say (from docs/RUNBOOK.md, section 7)
 
-- Never say "rule 1". The rule id keeps counting across resets; read `<n>` from `rules`.
-- `what needs me` lists every hold still waiting, oldest days included, because no one answered them during the run. Point at the 2231 line.
+- Never say "rule 1". The rule id keeps counting across resets; read <n> from `rules`.
+- `what needs me` lists every hold still waiting, oldest days included. Point at the 2231 line.
 - The CLI `rules` reply prints a used rule as `expired`; the Rules panel shows it as `used`. Both mean the one-time rule cleared 2231.
 - Inject only on day 44 or day 42. Those are the days truck 29 sits at San Antonio with the engine off in every ping.
 - No dollar amount or distance from memory. The Investigation panel and the terminal print them; read them off the screen.
-- Never say "live" for a replayed finding, a sandbox-shaped vendor check, or an offline settlement id. The badge on the card is the word to use.
+- Never say "live" for a replayed finding, a fixture vendor check, or an offline settlement id. The badge on the card is the word to use.
