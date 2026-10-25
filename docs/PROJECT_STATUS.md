@@ -1542,6 +1542,29 @@ Pages agreed within 229 ms on milestones and 636 ms on day changes; 0 reloads; 0
 - Sorting hold cards oldest first: on the staged ledger the 2231 card fell below older invoices, so cards are newest first.
 - "Caliber finished drafting a rule from your answer" for recommendation `done`: worker/src/rules.ts also uses `done` when no rule was drafted.
 
+## 2026-10-24 21:24 PDT Builder-29: production build at the table (Task 30)
+
+Brief: the director's message after the Task 29 merge; TASKS.md Task 30, D-8. Log: logs/builder_29.log. Commit a99b61d. No web/ code changed.
+
+### What changed
+- `scripts/demo_up.sh` step 7: `npm run build` with `VITE_STDB_URI="$STDB_URI" VITE_STDB_DB="$STDB_DB"` (Vite reads VITE_ variables at build time, and a production build does not read web/.env.development, so they are passed from the script's own STDB_URI and STDB_DB), then `npx vite preview --host 127.0.0.1 --port 5173 --strictPort`, both into logs/web.log. The step waits up to 10 s for "/" and exits 1 with "web server did not start" if /console is not served; a failed build exits 1 with "web build failed". `--no-web` is unchanged. The step 6 `pkill` pattern is now `vite.*--port 5173`, so a re-run stops either a preview or an old dev server.
+- README "Run it" says demo_up builds and serves the production build on 5173 ("/" and "/console") and why the table never runs the dev server. RUNBOOK boot line quotes the new `dashboard:` line; the `lsof -ti :5173 | xargs kill` line notes it stops the preview server.
+- Behaviour change: `web/public/FACTS.json` is copied into dist at build time, so after `scripts/facts.py` the console charts change only on the next `demo_up.sh` (said in the RUNBOOK boot line and in a comment in step 7).
+
+### Checks, as run
+- `bash -n scripts/demo_up.sh`: ok.
+- Builder-S ran `scripts/demo_up.sh` from 945f1f9 at 21:20: exit 0, build 1.13 s, only `vite preview --host 127.0.0.1 --port 5173 --strictPort` on 5173 (confirmed with `ps`: no dev server).
+- In-page probe on 5173 /console, one light page (a 250 ms interval reading the day number), `scripts/clock.sh tick 500000`, `run` at 21:22:17, paused at 21:22:37.898. Ledger time is the first `audit_event.at` of the day:
+
+| day | ledger (PDT) | page lag |
+| --- | --- | --- |
+| 10 | 21:22:22.107 | +0.3 s |
+| 20 | 21:22:27.108 | +0.3 s |
+| 41 | 21:22:37.607 | +0.4 s (0.1 s after the pause) |
+
+All 41 days were drawn (the dev server drew 11 of 41 and trailed by 32.7 s at day 41 in the Task 29 probe). The probe's own sampling interval is 250 ms, so the lag is at most what is shown.
+- Routes on 5173 after demo_up: "/" is the customer view and "/console" and "/console/" the console (HTTP 200, Playwright: no console errors, requests only to 127.0.0.1:5173 and 127.0.0.1:3100, `/console#event-<id>` scrolls to its row, 390 wide scrollWidth 390).
+
 ## Tried and rejected
 
 | What | Why rejected |
